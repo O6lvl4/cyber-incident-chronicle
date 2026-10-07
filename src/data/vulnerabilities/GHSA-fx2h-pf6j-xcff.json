@@ -1,0 +1,108 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fx2h-pf6j-xcff",
+  "aliases": [
+    "CVE-2026-53571"
+  ],
+  "title": "Vite：Windowsの代替パスでファイル拒否設定を回避",
+  "summary": "ネットワークに公開した開発サーバーで、Windowsの代替パス表現によりserver.fs.denyを回避し、許可ディレクトリ内の機密ファイルが読まれる可能性がある。Viteとvite-plusに修正版が公開されている。",
+  "publishedAt": "2026-06-15T17:17:45Z",
+  "modifiedAt": "2026-07-15T22:05:54Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-07T22:24:54Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-fx2h-pf6j-xcff",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "vite",
+      "ranges": [
+        {
+          "affected": ">= 8.0.0, <= 8.0.15",
+          "fixed": "8.0.16",
+          "sourceUrl": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
+        },
+        {
+          "affected": ">= 7.0.0, <= 7.3.4",
+          "fixed": "7.3.5",
+          "sourceUrl": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
+        },
+        {
+          "affected": "<= 6.4.2",
+          "fixed": "6.4.3",
+          "sourceUrl": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "vite-plus",
+      "ranges": [
+        {
+          "affected": "<= 0.1.23",
+          "fixed": "0.1.24",
+          "sourceUrl": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/vitejs/vite/security/advisories/GHSA-fx2h-pf6j-xcff"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "`server.fs.deny` bypass on Windows alternate paths",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-fx2h-pf6j-xcff",
+      "publishedDate": "2026-06-01",
+      "publishedAt": "2026-06-01T13:32:24Z",
+      "modifiedAt": "2026-08-18T04:24:18Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "vite: `server.fs.deny` bypass on Windows alternate paths",
+      "url": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff",
+      "publishedDate": "2026-06-15",
+      "publishedAt": "2026-06-15T17:17:45Z",
+      "modifiedAt": "2026-07-15T22:05:54Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database API（登録・更新日時）",
+      "url": "https://api.github.com/advisories/GHSA-fx2h-pf6j-xcff",
+      "publishedDate": "2026-06-15"
+    }
+  ],
+  "caveats": [
+    "開発サーバーをネットワークに公開し、機密ファイルがserver.fs.allowの許可ディレクトリ内にあることが前提。",
+    "NTFS上のファイル、またはWindowsで8.3短いファイル名が有効なボリューム上のファイルが対象。",
+    "メンテナーのCVSS 4.0は8.2。GitHub Advisory DatabaseにはCVSS 3.1の7.5も掲載されており、異なる版の数値を混同しない。",
+    "日時はGitHub Advisory Databaseへの登録・更新日時。メンテナーの初回公開日は出典欄に別記。",
+    "確認した公式アドバイザリだけでは実悪用を確認できない。KEV掲載状況も未確認であり、いずれも「なし」を意味しない。"
+  ]
+}

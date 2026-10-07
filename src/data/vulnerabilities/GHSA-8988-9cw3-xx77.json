@@ -1,0 +1,87 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8988-9cw3-xx77",
+  "aliases": [
+    "CVE-2026-97687"
+  ],
+  "title": "urllib3：HTTPSプロキシのTLS設定が無視・上書きされる問題",
+  "summary": "HTTPSプロキシと接続先サーバーのTLS設定が適切に分離されず、プロキシの証明書検証設定が上書きされたり、接続先用のTLS情報がプロキシに適用されたりする可能性がある。2.8.0で修正。",
+  "publishedAt": "2026-09-30T14:46:04Z",
+  "modifiedAt": "2026-09-30T14:46:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-07T22:24:54Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-8988-9cw3-xx77",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "urllib3",
+      "ranges": [
+        {
+          "affected": ">= 1.26.0, < 2.8.0",
+          "fixed": "2.8.0",
+          "sourceUrl": "https://github.com/advisories/GHSA-8988-9cw3-xx77"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/advisories/GHSA-8988-9cw3-xx77",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 7.6,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/urllib3/urllib3/security/advisories/GHSA-8988-9cw3-xx77"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "HTTPS proxy TLS configuration may be ignored or overridden",
+      "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-8988-9cw3-xx77",
+      "publishedDate": "2026-09-15",
+      "publishedAt": "2026-09-15T19:42:08Z",
+      "modifiedAt": "2026-09-29T15:29:27Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "urllib3: HTTPS proxy TLS configuration may be ignored or overridden",
+      "url": "https://github.com/advisories/GHSA-8988-9cw3-xx77",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T14:46:04Z",
+      "modifiedAt": "2026-09-30T14:46:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "urllib3 / urllib3 2.8.0 release",
+      "url": "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database API（登録・更新日時）",
+      "url": "https://api.github.com/advisories/GHSA-8988-9cw3-xx77",
+      "publishedDate": "2026-09-30"
+    }
+  ],
+  "caveats": [
+    "HTTPSプロキシの設定と利用モードによって影響が異なる。通常のHTTPプロキシは本件の対象外。",
+    "CONNECTトンネルでプロキシになりすましても、それだけでは接続先との独立したエンドツーエンドTLSは破られない。",
+    "TLSクライアント証明書が提示される場合でも、秘密鍵そのものがTLSハンドシェイクで送信されるわけではない。",
+    "日時はGitHub Advisory Databaseへの登録・更新日時。メンテナーの初回公開日は出典欄に別記。",
+    "確認した公式アドバイザリだけでは実悪用を確認できない。KEV掲載状況も未確認であり、いずれも「なし」を意味しない。"
+  ]
+}

@@ -131,3 +131,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .lane-label.narrow .lane-name { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *:before, *:after { transition: none !important; animation: none !important; } }
+.category-tabs { display: flex; gap: 6px; border-top: 1px solid var(--border-light); padding: 10px 0; }
+.category-tabs button { border: 1px solid var(--border-light); border-radius: 6px; padding: 8px 13px; background: var(--surface); color: var(--text-sub); font: inherit; font-size: 11px; cursor: pointer; }
+.category-tabs button[aria-pressed="true"] { color: var(--surface); background: var(--accent); border-color: var(--accent); }
+.ecosystem-filter { margin-left: 0; }
+.vulnerability-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.advisory-id { font: 10px var(--font-mono); overflow-wrap: anywhere; }
+.vulnerability-detail h2 { overflow-wrap: anywhere; }
+.vulnerability-detail .date-grid dd { font-size: 10px; line-height: 1.7; overflow-wrap: anywhere; }
+.affected-package h4 { font-weight: 600; margin: 18px 0 8px; overflow-wrap: anywhere; }
+.version-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 11px; }
+.version-table th, .version-table td { text-align: left; vertical-align: top; border: 1px solid var(--border-light); padding: 9px; overflow-wrap: anywhere; }
+.version-table th { background: var(--bg); font-size: 10px; }
+.cvss-vector { font: 10px/1.6 var(--font-mono); overflow-wrap: anywhere; }
+.withdrawn-note { border: 1px solid var(--border); padding: 10px; background: var(--bg); }
+@media (max-width: 640px) { .category-tabs { gap: 5px; } .category-tabs button { font-size: 10px; padding: 7px 10px; } .ecosystem-filter { flex: .8; } }

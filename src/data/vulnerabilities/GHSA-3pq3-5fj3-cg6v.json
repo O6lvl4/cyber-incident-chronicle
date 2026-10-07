@@ -1,0 +1,86 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3pq3-5fj3-cg6v",
+  "aliases": [
+    "CVE-2026-101898"
+  ],
+  "title": "Axios：HTTP/2でDNS・プロキシ制御を回避",
+  "summary": "Node.jsでHTTP/2を有効にすると、設定したDNS lookupやプロキシ制御が適用されない。利用者が送信先URLに影響を与え、これらの制御に依存する構成ではSSRFにつながる可能性がある。1.20.0で修正。",
+  "publishedAt": "2026-09-30T15:02:14Z",
+  "modifiedAt": "2026-09-30T15:02:15Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-07T22:24:54Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-3pq3-5fj3-cg6v",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "axios",
+      "ranges": [
+        {
+          "affected": ">= 1.13.0, < 1.20.0",
+          "fixed": "1.20.0",
+          "sourceUrl": "https://github.com/advisories/GHSA-3pq3-5fj3-cg6v"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/advisories/GHSA-3pq3-5fj3-cg6v",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 7.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N",
+        "sourceUrl": "https://github.com/axios/axios/security/advisories/GHSA-3pq3-5fj3-cg6v"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "HTTP/2 adapter bypasses configured DNS lookup and proxy controls",
+      "url": "https://github.com/axios/axios/security/advisories/GHSA-3pq3-5fj3-cg6v",
+      "publishedDate": "2026-09-16",
+      "publishedAt": "2026-09-16T08:58:16Z",
+      "modifiedAt": "2026-09-28T17:09:37Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Axios: HTTP/2 adapter bypasses configured DNS lookup and proxy controls",
+      "url": "https://github.com/advisories/GHSA-3pq3-5fj3-cg6v",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T15:02:14Z",
+      "modifiedAt": "2026-09-30T15:02:15Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "axios / axios v1.20.0 release",
+      "url": "https://github.com/axios/axios/releases/tag/v1.20.0",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database API（登録・更新日時）",
+      "url": "https://api.github.com/advisories/GHSA-3pq3-5fj3-cg6v",
+      "publishedDate": "2026-09-30"
+    }
+  ],
+  "caveats": [
+    "httpVersion: 2を使用するNode.js構成が対象。ブラウザー用アダプターやHTTP/1の通常経路は対象外。",
+    "メンテナーは影響範囲を「>= 1.13.0」、修正版を「>=1.20.0」と記載。ここではGitHub Reviewedの対応付け済み範囲「>= 1.13.0, < 1.20.0」と修正版1.20.0を使用。",
+    "日時はGitHub Advisory Databaseへの登録・更新日時。メンテナーの初回公開日は出典欄に別記。",
+    "確認した公式アドバイザリだけでは実悪用を確認できない。KEV掲載状況も未確認であり、いずれも「なし」を意味しない。"
+  ]
+}

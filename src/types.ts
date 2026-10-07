@@ -30,7 +30,7 @@ export interface IncidentDataset {
   incidents: Incident[];
 }
 export interface TimelineEvent {
-  id: string; incidentId: string; threadId: string; date: string; endDate?: string;
+  id: string; incidentId?: string; vulnerabilityId?: string; threadId: string; date: string; endDate?: string;
   weight: Weight; title: string; body: string; source: string; sourceUrl?: string; sourceTier?: SourceTier;
 }
 export interface Link { from: string; to: string; why: string }

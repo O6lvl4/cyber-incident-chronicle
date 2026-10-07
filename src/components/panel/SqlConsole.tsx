@@ -4,6 +4,7 @@ import type { QueryResult } from '../../lib/duckdb';
 import { PRESETS } from '../../lib/presets';
 
 interface Props {
+  initialSql?: string;
   db: DuckDBHandle;
   knownIds: Set<string>;
   onSelect: (id: string) => void;
@@ -42,14 +43,14 @@ function ResultTable({ result, knownIds, onSelect }: { result: QueryResult; know
 }
 
 function StatusLine({ db }: { db: DuckDBHandle }) {
-  if (db.status === 'ready') return <span className="db-status ok">DuckDB-WASM ready · tables: incidents (事案), events (タイムライン表示), threads (影響の定義)</span>;
+  if (db.status === 'ready') return <span className="db-status ok">DuckDB-WASM ready · tables: incidents (事案), events (タイムライン表示), threads (影響の定義), vulnerabilities (ライブラリの脆弱性)</span>;
   if (db.status === 'error') return <span className="db-status err">DuckDB の起動に失敗: {db.error}</span>;
   return <span className="db-status">DuckDB-WASM を起動中…</span>;
 }
 
 /** In-browser SQL over the timeline data, powered by DuckDB-WASM. */
-export default function SqlConsole({ db, knownIds, onSelect }: Props) {
-  const [sql, setSql] = useState(PRESETS[0].sql);
+export default function SqlConsole({ db, knownIds, onSelect, initialSql = PRESETS[0].sql }: Props) {
+  const [sql, setSql] = useState(initialSql);
   const [result, setResult] = useState<QueryResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -67,8 +68,8 @@ export default function SqlConsole({ db, knownIds, onSelect }: Props) {
   }, [db]);
 
   useEffect(() => {
-    if (db.status === 'ready' && result === null && !error) void run(PRESETS[0].sql);
-  }, [db.status, result, error, run]);
+    if (db.status === 'ready' && result === null && !error) void run(initialSql);
+  }, [db.status, result, error, run, initialSql]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); void run(sql); }

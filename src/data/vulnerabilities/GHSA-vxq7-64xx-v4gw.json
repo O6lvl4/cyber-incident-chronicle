@@ -1,0 +1,86 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vxq7-64xx-v4gw",
+  "aliases": [
+    "CVE-2026-97689"
+  ],
+  "title": "urllib3：チャンクサイズ行の無制限バッファリング",
+  "summary": "信頼できないサーバーのチャンク転送応答をstreamやread_chunkedで読む際、改行のない長大なチャンクサイズ行をメモリに蓄積してしまう。メモリ消費によるサービス妨害につながる可能性があり、2.8.0で修正。",
+  "publishedAt": "2026-09-30T14:46:18Z",
+  "modifiedAt": "2026-09-30T14:46:20Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-07T22:24:54Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-vxq7-64xx-v4gw",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "urllib3",
+      "ranges": [
+        {
+          "affected": ">= 1.10.3, < 2.8.0",
+          "fixed": "2.8.0",
+          "sourceUrl": "https://github.com/advisories/GHSA-vxq7-64xx-v4gw"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/advisories/GHSA-vxq7-64xx-v4gw",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+        "sourceUrl": "https://github.com/urllib3/urllib3/security/advisories/GHSA-vxq7-64xx-v4gw"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "HTTPResponse.stream()/read_chunked() buffers an unbounded chunk-size line into memory",
+      "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-vxq7-64xx-v4gw",
+      "publishedDate": "2026-09-15",
+      "publishedAt": "2026-09-15T19:42:30Z",
+      "modifiedAt": "2026-09-29T15:34:16Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "urllib3: HTTPResponse.stream()/read_chunked() buffers an unbounded chunk-size line into memory",
+      "url": "https://github.com/advisories/GHSA-vxq7-64xx-v4gw",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T14:46:18Z",
+      "modifiedAt": "2026-09-30T14:46:20Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "urllib3 / urllib3 2.8.0 release",
+      "url": "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database API（登録・更新日時）",
+      "url": "https://api.github.com/advisories/GHSA-vxq7-64xx-v4gw",
+      "publishedDate": "2026-09-30"
+    }
+  ],
+  "caveats": [
+    "信頼できない送信元のチャンク応答をストリーミング処理する場合が対象。内部でurllib3を利用するRequestsのストリーミングAPIにも影響する。",
+    "問題はチャンクのデータ本体ではなく、チャンクサイズ行の処理にある。",
+    "日時はGitHub Advisory Databaseへの登録・更新日時。メンテナーの初回公開日は出典欄に別記。",
+    "確認した公式アドバイザリだけでは実悪用を確認できない。KEV掲載状況も未確認であり、いずれも「なし」を意味しない。"
+  ]
+}

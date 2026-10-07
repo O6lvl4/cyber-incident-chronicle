@@ -21,7 +21,7 @@ try {
   const requests = [];
   page.on('request', request => requests.push(request.url()));
   await page.goto(url); await ready(page);
-  check('desktop has all 13 deduplicated incident cards', await page.locator('.incident-card').count() === data.incidents.length);
+  check('desktop has all deduplicated incident cards', await page.locator('.incident-card').count() === data.incidents.length);
   check('timeline has a single lane', await page.locator('.lane-label').count() === 1);
   check('DuckDB is not loaded before SQL opens', !requests.some(request => /duckdb/.test(request)));
   await noOverflow(page, 'desktop has no page overflow');
