@@ -26,7 +26,8 @@ try {
   check('DuckDB is not loaded before SQL opens', !requests.some(request => /duckdb/.test(request)));
   await noOverflow(page, 'desktop has no page overflow');
   await page.screenshot({ path: `${output}/desktop-light.png`, fullPage: true });
-  await page.locator('.incident-card').first().click();
+  const possible = data.incidents.find(i => i.disclosureStatus === 'possible');
+  await page.locator('.incident-card', { hasText: possible.title }).first().click();
   await page.locator('.drawer.open .incident-detail').waitFor();
   check('detail distinguishes possible leakage', (await page.locator('.drawer').innerText()).includes('流出の可能性'));
   check('detail includes geography, sources, caveats and verification date', (await page.locator('.drawer').innerText()).includes('対象地域・範囲') && (await page.locator('.drawer').innerText()).includes('解釈上の注意'));
