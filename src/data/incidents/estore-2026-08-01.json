@@ -1,0 +1,79 @@
+{
+  "id": "estore-2026-08-01",
+  "company": "株式会社Eストアー",
+  "title": "ショップサーブへの不正アクセスによる個人情報漏えい",
+  "announcementDate": "2026-08-01",
+  "occurredDate": "2026-05-21",
+  "occurredDateLabel": "確認された発生期間の始期（2026年5月21日〜8月1日）",
+  "updatedDate": "2026-08-02",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "サーバ上の不正プログラム実行・情報の外部送信（初期侵入の詳細は調査中）",
+    "status": "confirmed"
+  },
+  "summary": "ショップサーブのサーバー上で不正プログラムが実行され、購入者情報の外部送信を確認。8月2日公表の8,853,839件には同じ人の複数登録が含まれ得る。対象範囲や詳細な原因の調査を継続するとしている。",
+  "affectedData": [
+    "購入者・配送先の氏名、住所、電話、FAX、メール、勤務先、任意入力情報",
+    "会員情報、会員ID・パスワード（暗号化管理と公表）",
+    "カード名義、番号先頭6桁と下4桁、有効期限（CVV/CVCは保持せず対象外）",
+    "店舗の管理画面・メール・FTPのIDとパスワード",
+    "店舗への振込先口座情報"
+  ],
+  "counts": [
+    {
+      "value": 8853839,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "2026年8月2日時点の公表データ件数（同一人の複数登録を含む可能性、人数ではない）",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "不正アクセスによる個人情報漏えいに関するお詫びとお知らせについて",
+      "url": "https://estore.jp/press/20260801/",
+      "publishedDate": "2026-08-01"
+    },
+    {
+      "title": "不正アクセスによる個人情報漏えいに関するお知らせ（第2報）",
+      "url": "https://estore.jp/press/20260802/",
+      "publishedDate": "2026-08-02"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-05-21",
+      "label": "確認された漏えい期間が開始",
+      "kind": "occurrence",
+      "summary": "8月1日までの期間に不正プログラムが購入者情報を外部送信。",
+      "sourceUrl": "https://estore.jp/press/20260802/"
+    },
+    {
+      "date": "2026-08-01",
+      "label": "第一報",
+      "kind": "disclosure",
+      "summary": "ショップサーブへの不正アクセスと個人情報漏えいを公表。",
+      "sourceUrl": "https://estore.jp/press/20260801/"
+    },
+    {
+      "date": "2026-08-02",
+      "label": "第二報・追加漏えい項目を公表",
+      "kind": "update",
+      "summary": "会員認証情報、カード一部情報、店舗認証情報・口座情報などを追加。公表件数は8853839件。",
+      "sourceUrl": "https://estore.jp/press/20260802/"
+    }
+  ],
+  "geography": "日本のEC基盤・利用店舗",
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-08-02",
+  "announcementDateLabel": "初報公表",
+  "caveats": [
+    "人数ではなくデータ件数。複数店舗等への登録による重複を含み得る",
+    "8月2日時点の公表値。10月7日の公式プレス一覧確認では後続の件数訂正は見つからず"
+  ],
+  "scaleLabel": "8,853,839件（8月2日時点・人数ではない）"
+}

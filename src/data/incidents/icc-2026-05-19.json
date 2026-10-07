@@ -1,0 +1,110 @@
+{
+  "id": "icc-2026-05-19",
+  "company": "株式会社石川コンピュータ・センター",
+  "title": "添付ファイル分離メールサーバへの不正アクセス",
+  "announcementDate": "2026-05-19",
+  "occurredDate": "2026-05-08",
+  "occurredDateLabel": "メール送信機能が停止（5月14日にサイバー攻撃と認識）",
+  "updatedDate": "2026-06-29",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "添付ファイルダウンロード用Webシステムの脆弱性悪用",
+    "status": "confirmed"
+  },
+  "summary": "送信機能停止の調査で、添付ファイル分離メールサーバーへの不正アクセスを確認。メール関連ファイルに一時的にアクセス可能だった。最終報では窃取の痕跡や実際の漏えいは確認できなかったが、可能性を完全には否定していない。",
+  "affectedData": [
+    "送信メールの差出人・宛先アドレス、サイズ、件名、添付ファイル（本文を除く）",
+    "90日分ログの差出人・宛先アドレス、サイズ、件名（本文・添付ファイルを除く）"
+  ],
+  "counts": [
+    {
+      "value": 1929,
+      "unit": "件",
+      "status": "possible",
+      "label": "サーバ上の添付ファイル付きメール数（漏えい確認数ではない）",
+      "approximate": false
+    },
+    {
+      "value": 2551,
+      "unit": "ファイル",
+      "status": "possible",
+      "label": "保存されていた添付ファイル数（人数ではない）",
+      "approximate": false
+    },
+    {
+      "value": 14071,
+      "unit": "件",
+      "status": "possible",
+      "label": "ログ中の社外メールアドレス数（重複除外、人数ではない）",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "不正アクセスによる情報漏えいの可能性に関するお詫びとお知らせ",
+      "url": "https://www.icc.co.jp/news/2026/20260519.html",
+      "publishedDate": "2026-05-19"
+    },
+    {
+      "title": "不正アクセスによる情報漏えいの可能性に関するお詫びとお知らせ（第二報）",
+      "url": "https://www.icc.co.jp/news/2026/20260527.html",
+      "publishedDate": "2026-05-27"
+    },
+    {
+      "title": "不正アクセスによる情報漏えいの可能性に関するお詫びとお知らせ（最終報）",
+      "url": "https://www.icc.co.jp/news/2026/20260629.html",
+      "publishedDate": "2026-06-29"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-05-08",
+      "label": "メール送信機能が停止",
+      "kind": "occurrence",
+      "summary": "添付ファイル分離メールサーバを経由しない送信構成へ切り替え、原因調査を開始。",
+      "sourceUrl": "https://www.icc.co.jp/news/2026/20260527.html"
+    },
+    {
+      "date": "2026-05-14",
+      "label": "サイバー攻撃と認識",
+      "kind": "occurrence",
+      "summary": "メーカーによるログ調査で攻撃と認識し、サーバを完全遮断。",
+      "sourceUrl": "https://www.icc.co.jp/news/2026/20260527.html"
+    },
+    {
+      "date": "2026-05-19",
+      "label": "第一報",
+      "kind": "disclosure",
+      "summary": "メール情報が外部漏えいした可能性を否定できないと公表。",
+      "sourceUrl": "https://www.icc.co.jp/news/2026/20260519.html"
+    },
+    {
+      "date": "2026-05-27",
+      "label": "対象範囲・件数を公表",
+      "kind": "update",
+      "summary": "メール1929件、添付2551ファイル、ログ中の社外アドレス14071件が対象。",
+      "sourceUrl": "https://www.icc.co.jp/news/2026/20260527.html"
+    },
+    {
+      "date": "2026-06-29",
+      "label": "最終調査結果",
+      "kind": "update",
+      "summary": "Webシステムの脆弱性悪用を確認。情報窃取の痕跡、実際の漏えい、二次被害は未確認。",
+      "sourceUrl": "https://www.icc.co.jp/news/2026/20260629.html"
+    }
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-06-29",
+  "announcementDateLabel": "初報公表",
+  "caveats": [
+    "未確認は漏えいがなかったとの証明ではない",
+    "メール件数、ファイル数、アドレス件数を人数に換算しない"
+  ],
+  "scaleLabel": "最終調査で実際の漏えいは未確認"
+}

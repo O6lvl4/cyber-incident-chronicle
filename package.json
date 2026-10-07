@@ -1,0 +1,39 @@
+{
+  "name": "cyber-incident-chronicle",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test scripts/*.test.mjs",
+    "format": "oxfmt",
+    "quality": "codopsy analyze ./src --fail-on-warning",
+    "perf": "node perf/fling.mjs",
+    "data:check": "node scripts/data-status.mjs",
+    "test:ui": "node scripts/ui-test.mjs",
+    "check": "pnpm data:check && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "@duckdb/duckdb-wasm": "1.32.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "oxfmt": "^0.2.0",
+    "playwright": "1.58.2",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^8.0.5"
+  },
+  "description": "国内企業のサイバーインシデントを一次資料からたどるタイムライン",
+  "homepage": "https://o6lvl4.github.io/cyber-incident-chronicle/",
+  "packageManager": "pnpm@10.34.5"
+}

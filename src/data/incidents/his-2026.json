@@ -1,0 +1,73 @@
+{
+  "id": "his-2026",
+  "company": "エイチ・アイ・エス",
+  "title": "タイ法人サーバーへの不正アクセス、旅券情報等に流出のおそれ",
+  "announcementDate": "2026-10-07",
+  "announcementDateLabel": "公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入日は非公表（2025-12-11に検知）",
+  "detectedDate": "2025-12-11",
+  "updatedDate": "2026-10-07",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者の不正アクセス。具体的な侵入経路は公表資料に記載なし",
+    "status": "unknown"
+  },
+  "summary": "タイ現地法人のファイルサーバーで不正アクセスを検知。調査の結果、日本で取得した顧客情報の一部が不正に引き出された可能性を公表した。対象は最大627名分の旅券情報およびアレルギー情報。",
+  "affectedData": [
+    "パスポート情報",
+    "アレルギー情報"
+  ],
+  "counts": [
+    {
+      "value": 627,
+      "unit": "名",
+      "status": "possible",
+      "label": "流出した可能性のある情報の対象（最大）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "最大627名分・漏えいのおそれ",
+  "caveats": [
+    "2025-12-11は検知日で、侵入開始日ではない",
+    "最大627名は確認済み漏えい人数ではない",
+    "対象者の詳細は2026-10-07 19:30の追記を含む公式PDFに基づく"
+  ],
+  "geography": "タイ子会社（日本で取得した旅行者情報）",
+  "sources": [
+    {
+      "title": "子会社ファイルサーバへの不正アクセスに関する公表",
+      "url": "https://www.his.co.jp/assets/20261007.pdf",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-12-11",
+      "label": "不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "検知ソフトのアラートを受けサーバーを隔離",
+      "sourceUrl": "https://www.his.co.jp/assets/20261007.pdf"
+    },
+    {
+      "date": "2026-02-24",
+      "label": "旅券情報の存在が判明",
+      "kind": "update",
+      "summary": "外部専門家の調査で最大627名分の旅券情報が含まれると判明",
+      "sourceUrl": "https://www.his.co.jp/assets/20261007.pdf"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "調査と対象を公表",
+      "kind": "disclosure",
+      "summary": "全ファイルの確認を終え、流出のおそれと対象範囲を公表",
+      "sourceUrl": "https://www.his.co.jp/assets/20261007.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-10-07"
+}

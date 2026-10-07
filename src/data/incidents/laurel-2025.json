@@ -1,0 +1,92 @@
+{
+  "id": "laurel-2025",
+  "company": "ローレルバンクマシン",
+  "title": "AI-OCRサービスのデータ削除と窃取のおそれ",
+  "announcementDate": "2025-10-16",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2025-09-25",
+  "occurredDateLabel": "サービス障害・不正アクセス発覚日",
+  "updatedDate": "2026-01-09",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "辞書攻撃等によるデータベース侵入の可能性が高いと調査。マルウェア感染なし",
+    "status": "possible"
+  },
+  "summary": "AI-OCR「Jijilla」でファイル消失とサービス障害が発生。調査ではデータ削除・窃取の可能性が高いとされた。氏名・メールアドレス等とOCR回答データが対象で、身代金要求はあったがランサムウェア感染は否定している。",
+  "affectedData": [
+    "顧客社員・トライアル利用者の氏名とメールアドレス",
+    "無記名アンケートのOCR回答データ"
+  ],
+  "counts": [
+    {
+      "value": 18,
+      "unit": "件",
+      "status": "possible",
+      "label": "利用顧客社員の氏名・メールアドレス",
+      "approximate": false
+    },
+    {
+      "value": 361,
+      "unit": "件",
+      "status": "possible",
+      "label": "その他利用者の氏名・メールアドレス",
+      "approximate": false
+    },
+    {
+      "value": 223000,
+      "unit": "帳票",
+      "status": "possible",
+      "label": "無記名アンケートのOCR回答データ",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "個人情報18件・361件／回答データ22.3万帳票",
+  "caveats": [
+    "22.3万は帳票数で、漏えい人数ではない",
+    "身代金要求をランサムウェア感染と同一視しない",
+    "2025年9月に発生し、10月初報・2026年1月調査結果を掲載"
+  ],
+  "geography": "日本のAI-OCRサービス",
+  "sources": [
+    {
+      "title": "不正アクセスに関する初報",
+      "url": "https://www.lbm.co.jp/news/2025/1016/",
+      "publishedDate": "2025-10-16"
+    },
+    {
+      "title": "調査結果の報告",
+      "url": "https://www.lbm.co.jp/news/2026/260109/",
+      "publishedDate": "2026-01-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-09-25",
+      "label": "障害・ファイル消失が発覚",
+      "kind": "occurrence",
+      "summary": "サービス利用不可の連絡からデータ消失を確認し隔離",
+      "sourceUrl": "https://www.lbm.co.jp/news/2026/260109/"
+    },
+    {
+      "date": "2025-10-16",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと個人情報漏えいのおそれを公表",
+      "sourceUrl": "https://www.lbm.co.jp/news/2025/1016/"
+    },
+    {
+      "date": "2026-01-09",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "窃取可能性と対象範囲を説明。マルウェア感染なし",
+      "sourceUrl": "https://www.lbm.co.jp/news/2026/260109/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-01-09"
+}

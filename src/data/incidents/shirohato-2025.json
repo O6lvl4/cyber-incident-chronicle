@@ -1,0 +1,77 @@
+{
+  "id": "shirohato-2025",
+  "company": "白鳩",
+  "title": "会員登録機能の不具合で他の利用者の情報が閲覧可能に",
+  "announcementDate": "2025-11-07",
+  "announcementDateLabel": "初回公表（12月1日報告に記載）",
+  "occurredDate": "2025-08-20",
+  "occurredDateLabel": "不具合発生期間の開始（2025-11-04まで継続）",
+  "updatedDate": "2025-12-01",
+  "impactTypes": [
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "攻撃ではなく、会員登録機能のセッション管理の不備",
+    "status": "notApplicable"
+  },
+  "summary": "楽天ID連携による会員登録時、同時アクセス等の条件で別の利用者の個人情報が表示される不具合を公表。最終報告では最大176名が対象。第三者によるサイバー攻撃と区別し、閲覧可能状態と実際の閲覧確認を混同しない。",
+  "affectedData": [
+    "氏名、生年月日、性別、メールアドレス、住所、電話番号"
+  ],
+  "counts": [
+    {
+      "value": 176,
+      "unit": "名",
+      "status": "possible",
+      "label": "影響を受けた可能性がある顧客（最大）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "最大176名・他の利用者から閲覧可能",
+  "caveats": [
+    "発生期間は2025-08-20〜11-04で対象期間内まで継続",
+    "会社は漏えい事案として報告しているが、個人情報の欄は『漏えいした可能性』のため保守的にpossibleと分類",
+    "クレジットカード情報とパスワードの漏えいなしと公表"
+  ],
+  "geography": "日本のECサイト",
+  "sources": [
+    {
+      "title": "調査結果と再発防止策",
+      "url": "https://www.shirohato.co.jp/news/doc/news_202512_0603.html",
+      "publishedDate": "2025-12-01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-08-20",
+      "label": "不具合発生期間の開始",
+      "kind": "occurrence",
+      "summary": "会員登録時の個人情報が別の利用者に表示され得る状態が発生",
+      "sourceUrl": "https://www.shirohato.co.jp/news/doc/news_202512_0603.html"
+    },
+    {
+      "date": "2025-11-04",
+      "label": "発生期間の終了",
+      "kind": "occurrence",
+      "summary": "最終報告に記載された発生期間の終期",
+      "sourceUrl": "https://www.shirohato.co.jp/news/doc/news_202512_0603.html"
+    },
+    {
+      "date": "2025-11-07",
+      "label": "閲覧可能状態を公表",
+      "kind": "disclosure",
+      "summary": "個人情報が閲覧可能となった事案を公表",
+      "sourceUrl": "https://www.shirohato.co.jp/news/doc/news_202512_0603.html"
+    },
+    {
+      "date": "2025-12-01",
+      "label": "最終調査結果",
+      "kind": "update",
+      "summary": "対象最大176名、セッション管理不備等の原因と対策を公表",
+      "sourceUrl": "https://www.shirohato.co.jp/news/doc/news_202512_0603.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2025-12-01"
+}

@@ -1,0 +1,103 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CODOPSY_REV: fabfbdc
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.34.5
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: node scripts/data-status.mjs
+      # codopsy v2.2.0 (最新リリース) は TypeScript の型 import を未使用と誤検出する。
+      # 修正 (5626620) は main にのみ入っているので、そのリビジョンをソースからビルドして使う。
+      - name: Restore codopsy
+        id: codopsy-cache
+        uses: actions/cache@v6
+        with:
+          path: ~/.cargo/bin/codopsy
+          key: codopsy-${{ env.CODOPSY_REV }}-${{ runner.os }}
+      - uses: dtolnay/rust-toolchain@stable
+        if: steps.codopsy-cache.outputs.cache-hit != 'true'
+      - name: Build codopsy from source
+        if: steps.codopsy-cache.outputs.cache-hit != 'true'
+        run: cargo install --git https://github.com/O6lvl4/codopsy --rev ${{ env.CODOPSY_REV }} --locked codopsy
+      - name: Quality gate (codopsy)
+        run: ~/.cargo/bin/codopsy analyze ./src --fail-on-warning --verbose
+      - name: Build
+        run: pnpm build
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  # 性能予算: Pixel 5 相当のエミュレーションで盤面をフリックし、長いフレームとタイル描画時間を閾値で落とす。
+  perf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.34.5
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm build
+      - name: Browser checks and fling budget
+        run: |
+          pnpm preview --port 4173 --strictPort --host 127.0.0.1 &
+          sleep 3
+          pnpm test:ui
+          pnpm perf
+
+      - name: Save browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: browser-qa
+          path: artifacts/ui
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: [build, perf]
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

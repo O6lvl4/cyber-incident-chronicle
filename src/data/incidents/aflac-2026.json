@@ -1,0 +1,107 @@
+{
+  "id": "aflac-2026",
+  "company": "アフラック生命保険",
+  "title": "契約者向けシステムへの不正アクセスで個人情報漏えい",
+  "announcementDate": "2026-06-30",
+  "announcementDateLabel": "初報公表（7月31日報告に記載）",
+  "occurredDate": "2026-06-10",
+  "occurredDateLabel": "確認された不正アクセス開始日",
+  "detectedDate": "2026-06-25",
+  "updatedDate": "2026-10-01",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "通常利用に似たアクセス・大量データ照会への検知と制御の不足",
+    "status": "confirmed"
+  },
+  "summary": "「よりそうネット」等への不正アクセスで顧客関連の個人情報が漏えい。調査結果では約440万人が対象となり、うち約22万人には保険料振替口座情報が含まれる。関連システムを停止し、9月28日に一部を除いて再開した。",
+  "affectedData": [
+    "氏名、生年月日、住所、電話番号等",
+    "証券番号・保障内容等",
+    "一部の保険料振替口座情報"
+  ],
+  "counts": [
+    {
+      "value": 4400000,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "顧客関連の個人情報",
+      "approximate": true
+    },
+    {
+      "value": 220000,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "上記のうち口座情報を含む顧客",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "約440万人（うち口座情報 約22万人）",
+  "caveats": [
+    "約22万人は約440万人の内数であり、加算しない",
+    "マイナンバー、クレジットカード情報、メールアドレスは対象外と公表"
+  ],
+  "geography": "日本の契約者向けシステム",
+  "sources": [
+    {
+      "title": "調査結果と再発防止策",
+      "url": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf",
+      "publishedDate": "2026-07-31"
+    },
+    {
+      "title": "情報漏えいに関するFAQ（更新）",
+      "url": "https://www.aflac.co.jp/info/yorisou_faq.html",
+      "publishedDate": "2026-10-01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-10",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "調査で確認された最初の不正アクセス",
+      "sourceUrl": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf"
+    },
+    {
+      "date": "2026-06-25",
+      "label": "判明・システム停止",
+      "kind": "occurrence",
+      "summary": "不正アクセスと情報漏えいが判明し関連システムを停止",
+      "sourceUrl": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf"
+    },
+    {
+      "date": "2026-06-30",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと情報漏えいを公表",
+      "sourceUrl": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf"
+    },
+    {
+      "date": "2026-07-31",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "漏えい範囲と再発防止策を公表",
+      "sourceUrl": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf"
+    },
+    {
+      "date": "2026-09-28",
+      "label": "サービス一部再開",
+      "kind": "update",
+      "summary": "よりそうネットを一部手続きを除き再開",
+      "sourceUrl": "https://www.aflac.co.jp/info/yorisou_faq.html"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "FAQ更新",
+      "kind": "update",
+      "summary": "注意事項やサービス状況を更新",
+      "sourceUrl": "https://www.aflac.co.jp/info/yorisou_faq.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-10-01"
+}

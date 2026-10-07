@@ -1,0 +1,38 @@
+/* ── Programme-guide board: one native 2-D scroller, sticky axis + lane labels, tiled strip ── */
+.board {
+  position: relative; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain;
+  touch-action: pan-x pan-y; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  cursor: grab; user-select: none; -webkit-user-select: none; background: var(--bg);
+}
+.board::-webkit-scrollbar { display: none; }
+.board.dragging { cursor: grabbing; }
+.board.over-chip { cursor: pointer; }
+.board-content { position: relative; }
+
+.axis-strip { position: sticky; top: 0; z-index: 3; background: var(--surface); }
+.axis-corner {
+  position: sticky; left: 0; z-index: 4; height: 100%; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface); border-right: 2px solid var(--border); border-bottom: 2px solid var(--border);
+  font-family: var(--font-mono); font-size: 8px; letter-spacing: 2px; color: var(--text-sub);
+}
+.axis-tiles, .axis-ghost { position: absolute; top: 0; height: 100%; overflow: hidden; transform-origin: 0 0; }
+
+.body { position: relative; }
+.lane-labels { position: sticky; left: 0; z-index: 2; background: var(--surface); border-right: 2px solid var(--border); box-sizing: border-box; }
+.lane-label {
+  position: absolute; left: 0; right: 0; box-sizing: border-box;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px;
+  padding: 4px 8px 4px 12px; border-top: 1px solid var(--border-light);
+}
+.lane-bar { position: absolute; left: 0; top: 4px; bottom: 4px; width: 4px; border-radius: 2px; background: var(--lane); }
+.lane-name { font-family: var(--font-jp); font-weight: 700; font-size: 12px; color: var(--lane); text-align: center; line-height: 1.2; }
+.lane-en { font-family: var(--font-mono); font-size: 8px; letter-spacing: 1.5px; color: var(--text-sub); }
+.lane-label.narrow { padding: 4px 2px 4px 8px; }
+.lane-label.narrow .lane-name { writing-mode: vertical-rl; font-size: 11px; letter-spacing: 1px; }
+
+.lanes { position: absolute; top: 0; }
+.lane-stripe { position: absolute; left: 0; right: 0; border-top: 1px solid var(--border-light); }
+.tile-host, .tile-ghost { position: absolute; inset: 0; transform-origin: 0 0; }
+.tile { position: absolute; display: block; pointer-events: none; }
+.overlay { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }

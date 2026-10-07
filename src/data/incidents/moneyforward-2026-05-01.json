@@ -1,0 +1,117 @@
+{
+  "id": "moneyforward-2026-05-01",
+  "company": "株式会社マネーフォワード",
+  "title": "GitHubの認証情報悪用とリポジトリの不正コピー",
+  "announcementDate": "2026-05-01",
+  "occurredDate": null,
+  "occurredDateLabel": "発生・検知日の具体的記載なし（2026年5月1日に初報）",
+  "updatedDate": "2026-06-23",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "漏えいしたGitHub認証情報を用いた不正アクセス（認証情報が盗まれた具体的方法は非公表）",
+    "status": "confirmed"
+  },
+  "summary": "GitHubの認証情報が不正利用され、リポジトリのコピーを確認。個人データについては流出の可能性として対象範囲を公表した。本番環境からの情報漏えいはないと説明し、予防的に停止した銀行連携は6月5日に全面再開した。",
+  "affectedData": [
+    "ビジネスカードの保持者名（アルファベット）とカード番号下4桁",
+    "顧客・取引先の氏名またはメールアドレス",
+    "従業員（退職者含む）の固有識別子、氏名、メールアドレス、電話番号",
+    "顧客の単独では個人を特定できないシステム管理用識別子"
+  ],
+  "counts": [
+    {
+      "value": 370,
+      "unit": "件",
+      "status": "possible",
+      "label": "第一報：ビジネスカード関連データ（他の人数と単純合算不可）",
+      "approximate": false
+    },
+    {
+      "value": 124,
+      "unit": "名",
+      "status": "possible",
+      "label": "第四報追加：氏名またはメールアドレスを含む顧客情報",
+      "approximate": false
+    },
+    {
+      "value": 28,
+      "unit": "名",
+      "status": "possible",
+      "label": "第四報追加：取引先情報",
+      "approximate": false
+    },
+    {
+      "value": 2300,
+      "unit": "名",
+      "status": "possible",
+      "label": "第四報追加：従業員情報（名寄せ後）",
+      "approximate": false
+    },
+    {
+      "value": 60449,
+      "unit": "名",
+      "status": "possible",
+      "label": "第四報追加：単独では個人特定できない顧客管理識別子",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "GitHubへの不正アクセス発生に関するお知らせとお詫び（第一報）",
+      "url": "https://corp.moneyforward.com/news/info/20260501-mf-press-1/",
+      "publishedDate": "2026-05-01"
+    },
+    {
+      "title": "GitHubへの不正アクセスに関する詳細調査の完了およびセキュリティ対策強化のお知らせ（第四報）",
+      "url": "https://corp.moneyforward.com/news/info/20260623-mf-press-1/",
+      "publishedDate": "2026-06-23"
+    },
+    {
+      "title": "GitHubへの不正アクセスに関する調査結果（第四報）に関するよくあるご質問と回答",
+      "url": "https://support.me.moneyforward.com/hc/ja/articles/59240583832473",
+      "publishedDate": "2026-06-23"
+    },
+    {
+      "title": "更新終了：不正アクセスおよび銀行口座連携の一時停止に関する質問と回答",
+      "url": "https://support.me.moneyforward.com/hc/ja/articles/57548547365145",
+      "publishedDate": "2026-05-03"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-05-01",
+      "label": "第一報・銀行連携の一時停止",
+      "kind": "disclosure",
+      "summary": "GitHubリポジトリの不正コピーとカード関連370件の流出可能性を公表。",
+      "sourceUrl": "https://corp.moneyforward.com/news/info/20260501-mf-press-1/"
+    },
+    {
+      "date": "2026-06-05",
+      "label": "銀行口座連携が全面再開",
+      "kind": "update",
+      "summary": "10時50分にすべての銀行連携が再開したと公式FAQで説明。",
+      "sourceUrl": "https://support.me.moneyforward.com/hc/ja/articles/57548547365145"
+    },
+    {
+      "date": "2026-06-23",
+      "label": "第四報・対象範囲の精査完了",
+      "kind": "update",
+      "summary": "追加対象として顧客124名、取引先28名、従業員2300名、顧客管理識別子60449名分を公表。重複や異なる単位があるため単純合算しない。",
+      "sourceUrl": "https://corp.moneyforward.com/news/info/20260623-mf-press-1/"
+    }
+  ],
+  "geography": "日本企業のGitHub開発環境",
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-06-23",
+  "announcementDateLabel": "初報公表",
+  "caveats": [
+    "リポジトリの不正コピーの確認と、個人データの漏えい可能性を区別",
+    "件数・人数・管理識別子数を単純合算しない"
+  ],
+  "scaleLabel": "個人情報の対象は種類別に公表（単純合算不可）"
+}

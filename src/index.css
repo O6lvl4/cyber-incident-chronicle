@@ -1,0 +1,189 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Avenir Next', 'Hiragino Sans', 'Noto Sans', sans-serif;
+  --font-jp:      'Hiragino Sans', 'Yu Gothic', 'Noto Sans CJK JP', sans-serif;
+  --font-mono:    'SFMono-Regular', Consolas, monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+:root {
+  /* Ground */
+  --bg:       #F5F4EF;
+  --surface:  #FFFFFF;
+  --text:     #1A1A2E;
+  --text-sub: #626576;
+  --ink:      #1A1A2E;
+
+  /* Borders */
+  --border:       #1A1A2E;
+  --border-light: #D8D8E8;
+
+  /* Accent */
+  --accent:   #0D6A67;
+  --accent-hi:#6FDBCC;
+
+  /* Thread colors — saturated */
+  --thread-si: #E84500;
+  --thread-pr: #009E5C;
+  --thread-gp: #0055CC;
+  --thread-ai: #6B21A8;
+  --thread-mm: #CC8800;
+
+  /* Nintendo-style shadow (solid offset, not blurred) */
+  --shadow-sm: 2px 2px 0 var(--ink);
+  --shadow-md: 3px 3px 0 var(--ink);
+  --shadow-lg: 4px 4px 0 var(--ink);
+
+  --radius-sm: 6px;
+  --radius:    10px;
+  --radius-lg: 16px;
+
+  --link-dim:  rgba(26,26,46,0.10);
+  --link-hi:   rgba(228,0,15,0.85);
+}
+
+.dark {
+  --bg:       #12131E;
+  --surface:  #1E2036;
+  --text:     #F0EEF8;
+  --text-sub: #ABB1C9;
+  --ink:      rgba(240,238,248,0.2);
+
+  --border:       rgba(240,238,248,0.18);
+  --border-light: rgba(240,238,248,0.08);
+
+  --accent:   #6FDBCC;
+  --accent-hi:#9BE9DD;
+
+  --thread-si: #FF6B3D;
+  --thread-pr: #00D97E;
+  --thread-gp: #4488FF;
+  --thread-ai: #C084FC;
+  --thread-mm: #FFBB00;
+
+  --shadow-sm: 2px 2px 0 rgba(0,0,0,0.5);
+  --shadow-md: 3px 3px 0 rgba(0,0,0,0.5);
+  --shadow-lg: 4px 4px 0 rgba(0,0,0,0.5);
+
+  --link-dim:  rgba(240,238,248,0.07);
+  --link-hi:   rgba(255,59,78,0.8);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-jp);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+}
+
+/* Nintendo-style button base */
+.n-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: box-shadow 0.08s, transform 0.08s;
+  white-space: nowrap;
+  user-select: none;
+}
+.n-btn:hover {
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: translate(-0.5px, -0.5px);
+}
+.n-btn:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+.n-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--text);
+}
+
+.perf-hud { position: fixed; left: 8px; bottom: 8px; z-index: 50; margin: 0; padding: 6px 8px; font: 11px/1.4 ui-monospace, monospace; color: #fff; background: rgba(0,0,0,0.7); border-radius: 6px; pointer-events: none; }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 99px;
+}
+
+/* Smooth transitions */
+button, .n-btn { transition: all 0.08s ease; }
+
+/* ── App shell ─────────────────────────────────────────── */
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-jp);
+}
+.app-header {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+  padding: 0 16px; min-height: 56px; flex-shrink: 0;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 2px 0 var(--border);
+  position: relative; z-index: 10;
+}
+.brand { display: flex; align-items: baseline; gap: 8px; margin-right: 4px; }
+.brand-main { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--accent); letter-spacing: 0.5px; line-height: 1; }
+.brand-sub  { font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--text); letter-spacing: 0.3px; }
+.brand-range{ font-family: var(--font-mono); font-size: 10px; color: var(--text-sub); letter-spacing: 1px; margin-left: 2px; }
+.vsep { width: 1px; height: 28px; background: var(--border-light); margin: 0 4px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.thread-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 20px;
+  border: 2px solid var(--chip-color);
+  box-shadow: 2px 2px 0 color-mix(in srgb, var(--chip-color) 33%, transparent);
+  background: color-mix(in srgb, var(--chip-color) 10%, transparent);
+  color: var(--chip-color);
+  font-family: var(--font-display); font-weight: 600; font-size: 12px;
+  cursor: pointer; white-space: nowrap; transition: all 0.12s ease;
+}
+.thread-chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--chip-color); flex-shrink: 0; }
+.thread-chip[aria-pressed="false"] {
+  border-color: var(--border-light); box-shadow: none; background: var(--bg);
+  color: var(--text-sub); font-weight: 400; text-decoration: line-through; opacity: 0.55;
+}
+.span-pill {
+  padding: 3px 10px; border-radius: 20px; background: var(--bg);
+  border: 1px solid var(--border-light); font-family: var(--font-mono);
+  font-size: 10px; color: var(--text-sub); white-space: nowrap;
+}
+.search-wrap { position: relative; }
+.search-wrap input {
+  padding: 5px 10px 5px 28px; border-radius: 6px; border: 2px solid var(--border-light);
+  background: var(--bg); color: var(--text); font-family: var(--font-jp); font-size: 12px; width: 130px; outline: none;
+}
+.search-wrap input:focus { border-color: var(--accent); }
+.search-wrap input::placeholder { color: var(--text-sub); }
+.search-icon { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-sub); font-size: 13px; pointer-events: none; }
+.n-btn:disabled { opacity: 0.5; cursor: default; }
+
+.timeline-container { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; position: relative; }
+
+.hint { position: absolute; left: 10px; bottom: 60px; font-family: var(--font-mono); font-size: 10px; color: var(--text-sub); background: var(--surface); padding: 2px 6px; border-radius: 4px; pointer-events: none; opacity: 0.85; z-index: 5; }
+.n-btn.quiet { border-color: var(--border-light); box-shadow: none; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; }

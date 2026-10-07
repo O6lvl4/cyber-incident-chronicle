@@ -1,0 +1,92 @@
+{
+  "id": "charm-2026",
+  "company": "チャーム",
+  "title": "本店サイトへの不正アクセス、確認済み件数を精査・訂正",
+  "announcementDate": "2026-08-13",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日不明（不正ログイン確認期間は2026-07-01〜08-12）",
+  "updatedDate": "2026-09-02",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。不正ログイン用の認証情報の入手経路は未特定",
+    "status": "unknown"
+  },
+  "summary": "本店サイトへの不正アクセスで受注・出荷を停止。9月2日の精査では、漏えい確認約37万件とおそれ約2万件に訂正された。不正ログインを確認した239名は別の指標であり、これらの件数に加算しない。",
+  "affectedData": [
+    "顧客・過去の注文のお届け先に関する個人情報",
+    "氏名、連絡先、社内対応記録、パスワードのハッシュ値等（対象ごとに異なる）"
+  ],
+  "counts": [
+    {
+      "value": 370000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えい確認済み個人情報",
+      "approximate": true
+    },
+    {
+      "value": 20000,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいのおそれがある個人情報",
+      "approximate": true
+    },
+    {
+      "value": 239,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "不正ログインが確認された顧客（漏えい件数とは別指標）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "確認 約37万件／おそれ 約2万件",
+  "caveats": [
+    "訂正前の約39万件・約4万件を最新値として使わない",
+    "初報の判明日8月11日と経緯欄の検知日8月12日に表記差があるため、侵入日を断定しない",
+    "退会済み顧客の範囲について第3報時点では確認中"
+  ],
+  "geography": "日本の通販本店サイト",
+  "sources": [
+    {
+      "title": "システム障害発生（第1報）",
+      "url": "https://www.charm.co.jp/honten/info/notice/20260813.html",
+      "publishedDate": "2026-08-13"
+    },
+    {
+      "title": "第3報・対象件数の訂正",
+      "url": "https://www.charm.co.jp/honten/info/notice/20260901.html",
+      "publishedDate": "2026-09-02"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-12",
+      "label": "受注・出荷停止",
+      "kind": "occurrence",
+      "summary": "不正アクセス検知後に本店を休店",
+      "sourceUrl": "https://www.charm.co.jp/honten/info/notice/20260813.html"
+    },
+    {
+      "date": "2026-08-13",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "個人情報流出のおそれとシステム障害を公表",
+      "sourceUrl": "https://www.charm.co.jp/honten/info/notice/20260813.html"
+    },
+    {
+      "date": "2026-09-02",
+      "label": "確認済み・おそれを訂正",
+      "kind": "update",
+      "summary": "対象データの重複を除き、確認約37万件、おそれ約2万件に修正",
+      "sourceUrl": "https://www.charm.co.jp/honten/info/notice/20260901.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-09-02"
+}

@@ -1,0 +1,11 @@
+import meta from './meta.json';
+import type { Incident, Link, TimelineEvent } from '../types';
+import { projectEvents } from '../lib/incidents';
+export { THREADS } from './threads';
+export const META = meta;
+export const INCIDENTS = Object.values(import.meta.glob<Incident>('./incidents/*.json', { eager: true, import: 'default' }));
+export const INCIDENTS_BY_ID = new Map(INCIDENTS.map(item => [item.id, item]));
+export const EVENTS: TimelineEvent[] = projectEvents(INCIDENTS);
+export const LINKS: Link[] = [];
+export const DATA_START = Math.min(Date.parse(META.windowStart), ...INCIDENTS.map(item => Date.parse(item.announcementDate))) - 14 * 86400000;
+export const DATA_END = Date.parse(META.windowEnd) + 14 * 86400000;

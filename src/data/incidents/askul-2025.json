@@ -1,0 +1,129 @@
+{
+  "id": "askul-2025",
+  "company": "アスクル",
+  "title": "ランサムウェアで受注・出荷停止、情報流出を確認",
+  "announcementDate": "2025-10-19",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2025-10-19",
+  "occurredDateLabel": "攻撃検知・障害発生日",
+  "updatedDate": "2026-08-04",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "不正アクセスによるランサムウェア感染",
+    "status": "confirmed"
+  },
+  "summary": "ランサムウェアによる暗号化で物流・社内システムが停止し、顧客等の情報流出を確認。2026年7月には追加で約60万件を漏えいのおそれとして特定したが、この追加分の外部流出は未確認で、新たな侵害の発生を示すものではない。",
+  "affectedData": [
+    "顧客・取引先・役職員情報の一部",
+    "追加のおそれ対象：氏名、住所、電話番号、メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 590000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "事業所向けサービス顧客情報",
+      "approximate": true
+    },
+    {
+      "value": 132000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "個人向けサービス顧客情報",
+      "approximate": true
+    },
+    {
+      "value": 15000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "取引先情報",
+      "approximate": true
+    },
+    {
+      "value": 2700,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "役員・社員等の情報",
+      "approximate": true
+    },
+    {
+      "value": 600000,
+      "unit": "件",
+      "status": "possible",
+      "label": "2026年7月に追加特定した情報",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "追加約60万件は漏えいのおそれ（確認済みと区別）",
+  "caveats": [
+    "追加約60万件を確定漏えいや新規侵害として扱わない",
+    "初報時点では流出有無を調査中。現在のconfirmedは後日の公式確認に基づく"
+  ],
+  "geography": "日本の物流・社内システム等",
+  "sources": [
+    {
+      "title": "システム障害発生（第1報）",
+      "url": "https://www.askullogist.co.jp/pdf/20251020.pdf",
+      "publishedDate": "2025-10-19"
+    },
+    {
+      "title": "影響調査結果（第13報）",
+      "url": "https://www.askullogist.co.jp/pdf/20251212.pdf",
+      "publishedDate": "2025-12-12"
+    },
+    {
+      "title": "追加の本人通知",
+      "url": "https://www.askul.co.jp/shopnews/news_260730_rw_notification.html",
+      "publishedDate": "2026-07-30"
+    },
+    {
+      "title": "サイバーセキュリティ対策・経緯",
+      "url": "https://www.askul.co.jp/corp/security/",
+      "publishedDate": "2026-08-04"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-10-19",
+      "label": "障害と業務停止を公表",
+      "kind": "disclosure",
+      "summary": "ランサムウェア感染と受注・出荷停止を公表。流出は調査中",
+      "sourceUrl": "https://www.askullogist.co.jp/pdf/20251020.pdf"
+    },
+    {
+      "date": "2025-10-31",
+      "label": "外部流出を確認",
+      "kind": "update",
+      "summary": "公開された情報について外部流出の確認を完了",
+      "sourceUrl": "https://www.askullogist.co.jp/pdf/20251212.pdf"
+    },
+    {
+      "date": "2025-12-12",
+      "label": "確認済み範囲を公表",
+      "kind": "update",
+      "summary": "顧客・取引先・役職員等の情報流出と調査結果を公表",
+      "sourceUrl": "https://www.askullogist.co.jp/pdf/20251212.pdf"
+    },
+    {
+      "date": "2026-07-30",
+      "label": "追加のおそれを通知",
+      "kind": "update",
+      "summary": "漏えいのおそれがある約60万件を追加特定",
+      "sourceUrl": "https://www.askul.co.jp/shopnews/news_260730_rw_notification.html"
+    },
+    {
+      "date": "2026-08-04",
+      "label": "対策ページ更新",
+      "kind": "update",
+      "summary": "発生経緯とセキュリティ強化状況を更新",
+      "sourceUrl": "https://www.askul.co.jp/corp/security/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-08-04"
+}
