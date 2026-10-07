@@ -47,7 +47,7 @@ function IncidentApp(props: CategoryProps) {
     step: delta => { const sorted = [...visible].reverse(); const index = sorted.findIndex(i => i.id === selectedIncidentId); const next = sorted[Math.max(0, Math.min(sorted.length - 1, index + delta))]; if (next) selectIncident(next.id); },
   });
   useEffect(() => {
-    writeUrl({ level: st.view?.level, center: st.view ? (st.view.start + st.view.end) / 2 : undefined, sel: st.selectedId ?? undefined,
+    writeUrl({ level: st.view?.level ?? st.initial?.level, center: st.view ? (st.view.start + st.view.end) / 2 : st.initial?.center, sel: st.selectedId ?? undefined,
       lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status });
   }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status]);
   const zoomed = !!st.view && (st.view.start > DATA_START || st.view.end < DATA_END);
@@ -80,8 +80,7 @@ export default function App() {
   useEffect(() => {
     const restore = () => setRoute(previous => ({ category: readUrl().kind ?? 'incident', revision: previous.revision + 1 }));
     window.addEventListener('popstate', restore);
-    window.addEventListener('hashchange', restore);
-    return () => { window.removeEventListener('popstate', restore); window.removeEventListener('hashchange', restore); };
+    return () => { window.removeEventListener('popstate', restore); };
   }, []);
   const changeCategory = (category: Category) => {
     if (category === route.category) return;
