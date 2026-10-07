@@ -1,0 +1,67 @@
+{
+  "announcementDateLabel": "公表日（初報とは限らない）",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は非公表（2020年10月〜2024年2月2日は旧キーでアクセス可能だった期間）",
+  "counts": [
+    {
+      "value": 25000,
+      "unit": "名",
+      "status": "possible",
+      "label": "メールアドレス・識別番号の漏えい可能性がある利用者",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "約25,000名・漏えいのおそれ",
+  "lastVerifiedDate": "2026-10-07",
+  "id": "toyota-mobility-bookingcar-2024",
+  "company": "トヨタモビリティサービス",
+  "title": "Booking Carの旧アクセスキー悪用、登録情報削除と漏えいのおそれ",
+  "announcementDate": "2024-02-16",
+  "detectedDate": "2024-02-02",
+  "updatedDate": "2024-02-16",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "開発委託先が無効化していなかった他製品用AWSアクセスキーの悪用",
+    "status": "confirmed"
+  },
+  "summary": "データ保管用AWS S3への不正アクセスとデータ削除を確認。利用企業・自治体の従業員等約25,000名のメールアドレス・識別番号等に流出のおそれを公表した。保管サーバーはサービス運用とは独立していた。",
+  "affectedData": [
+    "メールアドレス・顧客識別番号",
+    "登録用一時ファイル・ログの氏名、電話番号、所属等",
+    "アップロードされた顔写真・車両写真等"
+  ],
+  "caveats": [
+    "アクセス可能だった2020年10月からの全期間に侵入が続いたと断定しない",
+    "Booking Car運用と他サービスへの影響はないと公表",
+    "トヨタコネクティッドの2023年クラウド設定不備とは別事案"
+  ],
+  "geography": "日本の社用車管理サービスのデータ保管サーバー",
+  "sources": [
+    {
+      "title": "メールアドレス等の漏洩可能性について",
+      "url": "https://news.t-mobility-s.co.jp/information/20240216-1/",
+      "publishedDate": "2024-02-16"
+    }
+  ],
+  "statusAsOfDate": "2024-02-16",
+  "timeline": [
+    {
+      "date": "2024-02-02",
+      "label": "検知・判明",
+      "kind": "occurrence",
+      "summary": "事案を検知・確認",
+      "sourceUrl": "https://news.t-mobility-s.co.jp/information/20240216-1/"
+    },
+    {
+      "date": "2024-02-16",
+      "label": "公表",
+      "kind": "disclosure",
+      "summary": "公表日（初報とは限らない）",
+      "sourceUrl": "https://news.t-mobility-s.co.jp/information/20240216-1/"
+    }
+  ]
+}

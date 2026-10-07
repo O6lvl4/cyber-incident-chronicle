@@ -1,0 +1,93 @@
+{
+  "id": "tokyu-toko-foods-2024",
+  "company": "東急・東光食品",
+  "title": "検証環境から既存網へ侵入、食品子会社の個人情報に流出のおそれ",
+  "announcementDate": "2024-05-09",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2024-04-28",
+  "occurredDateLabel": "不正アクセスの発生・確認日",
+  "detectedDate": "2024-04-28",
+  "updatedDate": "2024-08-20",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "脆弱な検証環境を経由した既存ネットワーク侵入とファイルサーバーへのアクセス",
+    "status": "confirmed"
+  },
+  "summary": "新ネットワークの検証環境から既存ネットワークへ侵入され、東光食品の一部データ持ち出しの形跡を確認。対象データを特定できず、全ファイル流出を想定して個人情報の対象を調査した。",
+  "affectedData": [
+    "個人顧客の氏名・住所・連絡先",
+    "取引事業者関係者の氏名・所属・連絡先",
+    "従業員・退職者の氏名・住所・連絡先"
+  ],
+  "counts": [
+    {
+      "value": 901,
+      "unit": "件",
+      "status": "possible",
+      "label": "個人顧客に関する個人データ",
+      "approximate": false
+    },
+    {
+      "value": 9942,
+      "unit": "件",
+      "status": "possible",
+      "label": "取引事業者に関する個人データ",
+      "approximate": false
+    },
+    {
+      "value": 5802,
+      "unit": "件",
+      "status": "possible",
+      "label": "従業員・退職者に関する個人データ",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "顧客901件／取引先9,942件／従業員等5,802件・おそれ",
+  "caveats": [
+    "全データ流出は調査上の想定で、全件の持ち出し確認ではない",
+    "ランサムウェア暗号化・マルウェア等はないと公表",
+    "同年の東急リバブル内部不正とは別事案"
+  ],
+  "geography": "日本の東急ネットワーク・東光食品ファイルサーバー",
+  "sources": [
+    {
+      "title": "ファイルサーバ等への不正アクセス発生（初報）",
+      "url": "https://www.tokyu.co.jp/company/news/detail/53806.html",
+      "publishedDate": "2024-05-09"
+    },
+    {
+      "title": "ファイルサーバ等への不正アクセスに関する報告",
+      "url": "https://www.tokyu-store.co.jp/Portals/0/PDF/oshirase/oshirase2024/2024.8.20tokyu.pdf",
+      "publishedDate": "2024-08-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2024-04-28",
+      "label": "不正アクセス確認",
+      "kind": "occurrence",
+      "summary": "検証環境を経由して既存ネットワークへ侵入",
+      "sourceUrl": "https://www.tokyu-store.co.jp/Portals/0/PDF/oshirase/oshirase2024/2024.8.20tokyu.pdf"
+    },
+    {
+      "date": "2024-05-09",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "一部データの不正読み出しと顧客情報を含む可能性を公表",
+      "sourceUrl": "https://www.tokyu.co.jp/company/news/detail/53806.html"
+    },
+    {
+      "date": "2024-08-20",
+      "label": "調査結果公表",
+      "kind": "update",
+      "summary": "全ファイルを調査して漏えいのおそれがある対象を公表",
+      "sourceUrl": "https://www.tokyu-store.co.jp/Portals/0/PDF/oshirase/oshirase2024/2024.8.20tokyu.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2024-08-20"
+}
