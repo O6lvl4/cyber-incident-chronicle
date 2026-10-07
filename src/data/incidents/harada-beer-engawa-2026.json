@@ -1,0 +1,79 @@
+{
+  "id": "harada-beer-engawa-2026",
+  "company": "原田産業",
+  "title": "「ビールの縁側」への不正アクセス、カード情報漏えいのおそれ",
+  "announcementDate": "2026-08-18",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-08-11",
+  "occurredDateLabel": "不正プログラムの稼働期間開始（初侵入日は未公表）",
+  "updatedDate": "2026-09-14",
+  "statusAsOfDate": "2026-09-14",
+  "lastVerifiedDate": "2026-10-07",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "システムの脆弱性を悪用した管理者権限の不正取得",
+    "status": "confirmed"
+  },
+  "summary": "ECサイトの脆弱性が悪用されて管理者権限が奪われ、不正プログラムが動作した可能性がある。9月14日続報では、8月11日から14日に注文確認画面へ情報を入力した9人でカード情報を含む漏えいのおそれ。その他の影響と全面再開時期は調査中とした。",
+  "affectedData": [
+    "氏名、電話番号、メールアドレス、性別、生年月日、住所",
+    "クレジットカード番号、名義、有効期限、セキュリティコード"
+  ],
+  "counts": [
+    {
+      "value": 9,
+      "unit": "人",
+      "status": "possible",
+      "label": "カード情報を含む情報が漏えいした可能性のある顧客",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "カード情報等の漏えいのおそれ9人（その他の範囲は調査中）",
+  "caveats": [
+    "9人は確定流出件数ではなく、漏えいの可能性がある人数",
+    "9人の内訳は決済完了4人、未完了5人。追加計上しない",
+    "公表された不正プログラムの稼働期間は8月11日19時9分から8月14日16時57分で、最初の侵入時刻の公表とは限らない",
+    "2024年12月公表の同サイトのメール配信サーバー事案とは別。過去のカード情報対象外の説明を今回へ適用しない"
+  ],
+  "geography": "日本のECサイト「ビールの縁側」",
+  "sources": [
+    {
+      "title": "原田産業：個人情報流出の可能性に関する初報",
+      "url": "https://www.haradacorp.co.jp/news/detail.php?id=368",
+      "publishedDate": "2026-08-18"
+    },
+    {
+      "title": "原田産業：調査状況の続報",
+      "url": "https://www.haradacorp.co.jp/news/detail.php?id=371",
+      "publishedDate": "2026-09-14"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-11",
+      "label": "不正プログラム稼働期間の開始",
+      "kind": "occurrence",
+      "summary": "続報で示された稼働期間は8月11日19時9分から8月14日16時57分",
+      "sourceUrl": "https://www.haradacorp.co.jp/news/detail.php?id=371"
+    },
+    {
+      "date": "2026-08-18",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと情報流出の可能性、サイト一時閉鎖を公表",
+      "sourceUrl": "https://www.haradacorp.co.jp/news/detail.php?id=368"
+    },
+    {
+      "date": "2026-09-14",
+      "label": "対象9人と原因を公表",
+      "kind": "update",
+      "summary": "カード情報等の漏えいのおそれ9人を通知。その他の範囲と全面再開時期は調査継続",
+      "sourceUrl": "https://www.haradacorp.co.jp/news/detail.php?id=371"
+    }
+  ]
+}

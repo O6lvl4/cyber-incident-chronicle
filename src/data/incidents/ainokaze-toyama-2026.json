@@ -1,0 +1,87 @@
+{
+  "id": "ainokaze-toyama-2026",
+  "company": "あいの風とやま鉄道",
+  "title": "観光列車の座席管理システム侵害で1,409人の情報漏えいのおそれ",
+  "announcementDate": "2026-09-15",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-09-02",
+  "occurredDateLabel": "確認された最初の不正アクセス日",
+  "updatedDate": "2026-09-28",
+  "statusAsOfDate": "2026-09-28",
+  "lastVerifiedDate": "2026-10-07",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "観光列車「一万三千尺物語」の予約キャンセルや不正な予約から侵害を検知。9月2日から8日の複数回の不正アクセスで1,409人の個人情報が漏えいしたおそれがある。ネット新規予約を停止し、9月28日には意図しないキャンセルへの対応完了を追記した。",
+  "affectedData": [
+    "氏名、住所、電話番号、メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 1409,
+      "unit": "人",
+      "status": "possible",
+      "label": "乗車済み・予約済み顧客の漏えいのおそれ",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "個人情報漏えいのおそれ1,409人",
+  "caveats": [
+    "1,409人は漏えい確定人数ではない",
+    "クレジットカード決済は別会社の独立システムで処理され、座席管理システムはカード情報を保持していないためカード情報漏えいはないと公表",
+    "影響は座席管理・予約受付。鉄道の運行制御が侵害されたとは公表されていない",
+    "9月28日の追記は意図しない予約キャンセルへの対応完了であり、情報漏えいの否定やネット予約の全面復旧を意味しない"
+  ],
+  "geography": "富山県の観光列車「一万三千尺物語」の座席管理・予約システム",
+  "sources": [
+    {
+      "title": "あいの風とやま鉄道：不正アクセスと個人情報漏えいのおそれ（9月28日追記）",
+      "url": "https://ainokaze.co.jp/24166",
+      "publishedDate": "2026-09-15"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-02",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "9月8日まで複数回の外部からの不正アクセスを確認",
+      "sourceUrl": "https://ainokaze.co.jp/24166"
+    },
+    {
+      "date": "2026-09-08",
+      "label": "異常検知・予約受付停止",
+      "kind": "occurrence",
+      "summary": "複数の予約キャンセルや正規手順外の予約を確認し、受付を停止",
+      "sourceUrl": "https://ainokaze.co.jp/24166"
+    },
+    {
+      "date": "2026-09-10",
+      "label": "影響範囲を把握",
+      "kind": "occurrence",
+      "summary": "調査で1,409人の情報漏えいのおそれを確認",
+      "sourceUrl": "https://ainokaze.co.jp/24166"
+    },
+    {
+      "date": "2026-09-15",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "対象者・情報項目とネット新規予約の停止継続を公表",
+      "sourceUrl": "https://ainokaze.co.jp/24166"
+    },
+    {
+      "date": "2026-09-28",
+      "label": "予約キャンセルへの対応完了を追記",
+      "kind": "update",
+      "summary": "意図しない予約キャンセルへの対応完了を明記",
+      "sourceUrl": "https://ainokaze.co.jp/24166"
+    }
+  ]
+}

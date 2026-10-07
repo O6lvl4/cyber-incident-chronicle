@@ -1,0 +1,99 @@
+{
+  "id": "applynow-2026",
+  "company": "ApplyNow／きちりホールディングス",
+  "title": "採用管理サービスの不正アクセスで応募者・契約者情報漏えい",
+  "announcementDate": "2026-09-09",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-08-09",
+  "occurredDateLabel": "公表された不正アクセス期間の開始日",
+  "updatedDate": "2026-09-30",
+  "statusAsOfDate": "2026-09-30",
+  "lastVerifiedDate": "2026-10-07",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "社内データ分析ツールの脆弱性悪用",
+    "status": "confirmed"
+  },
+  "summary": "Interview Cloud、ApplyNow、ApplyNow Signで使うデータ分析ツールからデータベースが侵害された。初報は漏えいの可能性だったが、その後の本人向け案内と利用企業の発表で漏えいを確認。全体件数は未公表で、情報項目は対象者ごとに異なる。",
+  "affectedData": [
+    "応募者の氏名、メールアドレス、電話番号、生年月日、性別（一部は住所・職業）",
+    "電子雇用契約の契約者の氏名・連絡先等。一部はマイナンバー、銀行口座情報、基礎年金番号、在留カード番号、雇用保険被保険者番号、扶養家族の情報",
+    "企業ユーザーのユーザー名、メールアドレス、権限等。一部利用企業では暗号化されたパスワード"
+  ],
+  "counts": [],
+  "scaleLabel": "全体の対象件数は未公表",
+  "caveats": [
+    "同じ上流サービスの事故として1件に集約し、利用企業・自治体ごとの発表を独立した侵害として数えない",
+    "9月24日の公式更新で、雇用契約の内容、緊急連絡先、通勤経路は対象外と訂正された",
+    "履歴書等のファイル実体、画像・PDF、面接動画は別領域に保管され、対象外と公表",
+    "応募者にはログインパスワードを使用していない。企業ユーザー側の認証情報とは区別する",
+    "全体の件数は未公表。利用企業の部分的なアカウント数を全体人数と扱わない",
+    "confirmedは後日の公式案内・利用企業の確認に基づき、9月9日の初報時点の確度とは区別する"
+  ],
+  "geography": "日本の採用管理・録画面接・電子雇用契約プラットフォーム",
+  "sources": [
+    {
+      "title": "きちりHD：子会社の個人情報漏えいに関する初報（ApplyNow発表添付）",
+      "url": "https://www.kichiri.co.jp/ir/pdf/2609091111.pdf",
+      "publishedDate": "2026-09-09"
+    },
+    {
+      "title": "ApplyNow：本人向け案内（更新履歴に9月24日の訂正）",
+      "url": "https://biz.applynow.jp/support/",
+      "publishedDate": "2026-09-16"
+    },
+    {
+      "title": "吉野家・はなまる：同じApplyNow事案の漏えい確認",
+      "url": "https://www.yoshinoya.com/wp-content/uploads/2026/09/30185541/news_2026093004.pdf",
+      "publishedDate": "2026-09-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-09",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "公式調査で確認された不正アクセス期間は8月9日から9月7日",
+      "sourceUrl": "https://www.kichiri.co.jp/ir/pdf/2609091111.pdf"
+    },
+    {
+      "date": "2026-09-07",
+      "label": "検知・遮断",
+      "kind": "occurrence",
+      "summary": "異常ログと侵害の痕跡を確認し、同日緊急遮断",
+      "sourceUrl": "https://www.kichiri.co.jp/ir/pdf/2609091111.pdf"
+    },
+    {
+      "date": "2026-09-09",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "3サービスの個人データ漏えいの可能性を公表",
+      "sourceUrl": "https://www.kichiri.co.jp/ir/pdf/2609091111.pdf"
+    },
+    {
+      "date": "2026-09-16",
+      "label": "本人向け案内を公開",
+      "kind": "update",
+      "summary": "漏えい対象の情報項目と、新環境への移行・セキュリティ強化を案内",
+      "sourceUrl": "https://biz.applynow.jp/support/"
+    },
+    {
+      "date": "2026-09-24",
+      "label": "対象外項目を訂正",
+      "kind": "update",
+      "summary": "雇用契約の内容、緊急連絡先、通勤経路は漏えい対象外と公表",
+      "sourceUrl": "https://biz.applynow.jp/support/"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "利用企業が漏えい確認を公表",
+      "kind": "update",
+      "summary": "吉野家・はなまるが同一事案による応募者・採用担当者情報の漏えいを公表",
+      "sourceUrl": "https://www.yoshinoya.com/wp-content/uploads/2026/09/30185541/news_2026093004.pdf"
+    }
+  ]
+}

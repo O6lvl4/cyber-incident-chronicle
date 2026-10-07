@@ -1,0 +1,140 @@
+{
+  "id": "kddi-isp-mail-2026",
+  "company": "KDDI（CPIを含む6社のISPに影響）",
+  "title": "ISP向けメール基盤への不正アクセスで認証情報漏えい",
+  "announcementDate": "2026-06-23",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-05-16",
+  "occurredDateLabel": "一部ISPで確認された不正アクセス開始日",
+  "updatedDate": "2026-08-24",
+  "statusAsOfDate": "2026-08-24",
+  "lastVerifiedDate": "2026-10-07",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者製ソフトウェアの脆弱性悪用",
+    "status": "confirmed"
+  },
+  "summary": "KDDIの共通メール基盤が侵害され、6社のISP利用者のメールアドレスと一部のパスワードが漏えい。7月21日訂正版ではメールアドレスの対象人数は12,231,954人、パスワードはその内数7,616,173人。CPIは8月24日に自社分の調査結果と対応完了を公表した。",
+  "affectedData": [
+    "電子メールアドレス",
+    "一部ISP利用者のパスワード",
+    "CPIの一部プランでハッシュ化されたパスワード情報"
+  ],
+  "counts": [
+    {
+      "value": 12231954,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "KDDI公表のメールアドレス漏えい対象人数（7月21日訂正）",
+      "approximate": false
+    },
+    {
+      "value": 7616173,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "上記のうちパスワード漏えい対象人数",
+      "approximate": false
+    },
+    {
+      "value": 1250543,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "CPI分のメールアカウント情報（全体とは別加算しない）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "メールアドレス12,231,954人／パスワード7,616,173人は内数",
+  "caveats": [
+    "KDDIの共通基盤に起因する6社の影響を1事案として収録し、各ISPを別事件として重複計上しない",
+    "12,231,954人と7,616,173人は人数。CPIの1,250,543件はメールアカウント情報の件数で、人数に置き換えたり全体へ加算しない",
+    "6月23日の最大1,422万件は調査中の上限値。現在の規模は後日の確定・訂正値に基づく",
+    "CPIの対象は6月8日から。全体の発生開始日5月16日と区別する",
+    "CPIの一部プランではハッシュ値が漏えいしたがパスワードそのものの漏えいは否定。これを他ISPの平文パスワード漏えいと混同しない",
+    "auメール、UQ mobileメール、au one netメールは別設備で影響なしと公表"
+  ],
+  "geography": "日本のISP向けメール共通基盤（STNet、CPI、JCOM、中部テレコミュニケーション、ニフティ、BIGLOBE）",
+  "sources": [
+    {
+      "title": "KDDI：ISP事業者向けメールシステムへの不正アクセス（初報）",
+      "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-71_4593/kddi_nr_s-71_4593_pdf_01.pdf",
+      "publishedDate": "2026-06-23"
+    },
+    {
+      "title": "KDDI：調査報告（7月21日訂正版）",
+      "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf",
+      "publishedDate": "2026-07-06"
+    },
+    {
+      "title": "個人情報保護委員会：KDDIおよびISPへの行政上の対応",
+      "url": "https://www.ppc.go.jp/files/pdf/260819_01_houdou.pdf",
+      "publishedDate": "2026-08-19"
+    },
+    {
+      "title": "CPI：調査結果および対応完了の報告",
+      "url": "https://www.cpi.ad.jp/news/support-info/260824/",
+      "publishedDate": "2026-08-24"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-05-16",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "一部のISPで、この日から脆弱性を悪用した不正アクセスが発生",
+      "sourceUrl": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf"
+    },
+    {
+      "date": "2026-06-08",
+      "label": "CPIへの影響開始",
+      "kind": "occurrence",
+      "summary": "CPIメールサービスへの影響が発生",
+      "sourceUrl": "https://www.cpi.ad.jp/news/support-info/260824/"
+    },
+    {
+      "date": "2026-06-17",
+      "label": "確認・脆弱性対処",
+      "kind": "occurrence",
+      "summary": "KDDIが侵害を確認し、同日システムを改修",
+      "sourceUrl": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf"
+    },
+    {
+      "date": "2026-06-23",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "6社のISPに影響する共通メール基盤の侵害を公表",
+      "sourceUrl": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-71_4593/kddi_nr_s-71_4593_pdf_01.pdf"
+    },
+    {
+      "date": "2026-07-06",
+      "label": "漏えい確認を公表",
+      "kind": "update",
+      "summary": "調査結果としてメールアドレスとパスワードの漏えいを確認",
+      "sourceUrl": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf"
+    },
+    {
+      "date": "2026-07-21",
+      "label": "対象人数を訂正",
+      "kind": "update",
+      "summary": "メールアドレスの対象人数を12,231,954人へ訂正",
+      "sourceUrl": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf"
+    },
+    {
+      "date": "2026-08-19",
+      "label": "行政指導を公表",
+      "kind": "update",
+      "summary": "個人情報保護委員会が安全管理措置の改善等を指導",
+      "sourceUrl": "https://www.ppc.go.jp/files/pdf/260819_01_houdou.pdf"
+    },
+    {
+      "date": "2026-08-24",
+      "label": "CPI最終報告",
+      "kind": "update",
+      "summary": "CPI分は1,250,543件。脆弱性解消、経路遮断、対応完了と通常利用可能を公表",
+      "sourceUrl": "https://www.cpi.ad.jp/news/support-info/260824/"
+    }
+  ]
+}
