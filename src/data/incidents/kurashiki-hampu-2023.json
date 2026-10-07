@@ -1,0 +1,81 @@
+{
+  "id": "kurashiki-hampu-2023",
+  "company": "倉敷帆布",
+  "title": "旧通販サイトの決済アプリ改ざんで個人情報40,869件に漏えいのおそれ",
+  "announcementDate": "2023-08-17",
+  "announcementDateLabel": "情報漏えいのおそれ公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は非公表（対象カード利用期間は2021-03-24〜2023-04-17）",
+  "updatedDate": "2023-09-09",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "旧ECシステムの脆弱性を悪用しペイメントアプリケーションを改ざん",
+    "status": "confirmed"
+  },
+  "summary": "旧通販システムが侵害され、個人情報40,869件、うちカード情報8,655件に漏えいのおそれ。カード会社からの連絡後、すでに移行していた新サイトも予防的に停止し調査を行った。",
+  "affectedData": [
+    "氏名、住所、電話番号、メールアドレス、購入履歴等",
+    "カード名義、番号、有効期限、セキュリティコード"
+  ],
+  "counts": [
+    {
+      "value": 40869,
+      "unit": "件",
+      "status": "possible",
+      "label": "個人情報の対象",
+      "approximate": false
+    },
+    {
+      "value": 8655,
+      "unit": "件",
+      "status": "possible",
+      "label": "上記に含まれるカード情報（内数）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "40,869件（カード情報8,655件は内数）",
+  "caveats": [
+    "件数と対象顧客欄の名が併用されるため、冒頭の公表件数で記録",
+    "カード件数を全体件数に合算しない",
+    "2023-09-09は窓口更新日。被害範囲の公表は8月17日"
+  ],
+  "geography": "日本の旧通販サイト",
+  "sources": [
+    {
+      "title": "旧ECサイトへの不正アクセスと対象範囲",
+      "url": "https://www.kurashikihampu.co.jp/news/brand/2023-08-17.html",
+      "publishedDate": "2023-08-17"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-05-02",
+      "label": "カード会社から連絡",
+      "kind": "occurrence",
+      "summary": "漏えい懸念の報告を受領",
+      "sourceUrl": "https://www.kurashikihampu.co.jp/news/brand/2023-08-17.html"
+    },
+    {
+      "date": "2023-05-09",
+      "label": "カード決済停止",
+      "kind": "update",
+      "summary": "移行後の新サイトも予防的に停止",
+      "sourceUrl": "https://www.kurashikihampu.co.jp/news/brand/2023-08-17.html"
+    },
+    {
+      "date": "2023-08-17",
+      "label": "調査結果公表",
+      "kind": "disclosure",
+      "summary": "対象範囲と改ざん原因を説明",
+      "sourceUrl": "https://www.kurashikihampu.co.jp/news/brand/2023-08-17.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-09-09",
+  "detectedDate": "2023-05-02"
+}

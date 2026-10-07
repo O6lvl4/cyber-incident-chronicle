@@ -1,0 +1,83 @@
+{
+  "id": "restar-group-2023",
+  "company": "レスターホールディングス・グループ各社",
+  "title": "ランサムウェアで出荷・サポートに影響、図面等の漏えいを確認",
+  "announcementDate": "2023-12-06",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は非公表（2023-12-05に障害と不正アクセスを確認）",
+  "updatedDate": "2024-01-11",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ランサムウェア感染。後続調査でVPN経由の複数ファイルサーバー侵入を確認",
+    "status": "confirmed"
+  },
+  "summary": "複数のグループ会社でシステム障害と出荷・サポートへの影響を確認。初報で図面等14点の情報漏えいを確認し、12月12日に追加流出も判明。1月時点で対象データの確認を継続していた。",
+  "affectedData": [
+    "ファイルサーバーのフォルダー画像、システム図面、サンプル画像等",
+    "追加の流出情報は対象・全件数を調査中"
+  ],
+  "counts": [],
+  "scaleLabel": "図面等14点を初報で確認、その後に追加漏えい",
+  "caveats": [
+    "14点は初報時点の一部であり最終漏えい総数ではない",
+    "LockBitという種類は初報で推定。ランサムウェア感染自体と区別",
+    "同一グループ事案の各社告知を重複計上しない"
+  ],
+  "geography": "日本企業グループのファイルサーバー等",
+  "sources": [
+    {
+      "title": "グループ不正アクセス初報",
+      "url": "https://www.restargp.com/news/20231206-9d2c7f2273/",
+      "publishedDate": "2023-12-06"
+    },
+    {
+      "title": "関連会社第2報・追加漏えい",
+      "url": "https://www.restarcc.com/dcms_media/other/231212.pdf",
+      "publishedDate": "2023-12-12"
+    },
+    {
+      "title": "関連会社第3報・VPN経由を確認",
+      "url": "https://www.restarcc.com/dcms_media/other/240111_unauthorized-access_ver3.pdf",
+      "publishedDate": "2024-01-11"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-12-05",
+      "label": "侵害・障害を確認",
+      "kind": "occurrence",
+      "summary": "出荷や顧客対応にも影響",
+      "sourceUrl": "https://www.restargp.com/news/20231206-9d2c7f2273/"
+    },
+    {
+      "date": "2023-12-06",
+      "label": "漏えい初報",
+      "kind": "disclosure",
+      "summary": "図面等14点の漏えいを確認",
+      "sourceUrl": "https://www.restargp.com/news/20231206-9d2c7f2273/"
+    },
+    {
+      "date": "2023-12-12",
+      "label": "追加漏えいを確認",
+      "kind": "update",
+      "summary": "初報の14点以外にも情報流出",
+      "sourceUrl": "https://www.restarcc.com/dcms_media/other/231212.pdf"
+    },
+    {
+      "date": "2024-01-11",
+      "label": "調査経過を公表",
+      "kind": "update",
+      "summary": "VPN経由の侵入を確認、データ精査を継続",
+      "sourceUrl": "https://www.restarcc.com/dcms_media/other/240111_unauthorized-access_ver3.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2024-01-11",
+  "detectedDate": "2023-12-05"
+}

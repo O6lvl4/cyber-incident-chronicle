@@ -1,0 +1,80 @@
+{
+  "id": "mimaru-asakusa-booking-2023",
+  "company": "コスモスホテルマネジメント（MIMARU SUITES 東京浅草）",
+  "title": "施設端末の感染から予約管理アカウント侵害、宿泊者へ偽メッセージ",
+  "announcementDate": "2023-06-12",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2023-06-06",
+  "occurredDateLabel": "後続調査で判明した施設端末のマルウェア感染日",
+  "updatedDate": "2023-08-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "施設の予約管理端末1台のマルウェア感染を契機とした予約管理システムへの不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "東京浅草の施設で使う予約管理システムが侵害され、宿泊予約1,001件の個人情報に閲覧のおそれ。予約客へフィッシング誘導メッセージが送られ、一部で金銭的被害を確認した。",
+  "affectedData": [
+    "宿泊予約者の氏名、電話番号、メールアドレス、国籍"
+  ],
+  "counts": [
+    {
+      "value": 1001,
+      "unit": "件",
+      "status": "possible",
+      "label": "予約管理システムに保存された対象予約者の個人情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "予約情報1,001件に閲覧のおそれ",
+  "caveats": [
+    "予約管理システムに保管されたカード・口座情報の流出とはしていない",
+    "不正メッセージを通じたカード情報提供・金銭被害は別の二次被害として確認",
+    "Booking.com本体やMIMARU他施設の侵害と同一視しない",
+    "2026年9月の予約システム関連事案とは別事案"
+  ],
+  "geography": "日本・MIMARU SUITES 東京浅草",
+  "sources": [
+    {
+      "title": "予約管理システム不正アクセスの続報",
+      "url": "https://mimaruhotels.com/ja/news/bookingcom2/",
+      "publishedDate": "2023-08-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-06-06",
+      "label": "施設端末が感染",
+      "kind": "occurrence",
+      "summary": "調査でマルウェア感染日と判断",
+      "sourceUrl": "https://mimaruhotels.com/ja/news/bookingcom2/"
+    },
+    {
+      "date": "2023-06-10",
+      "label": "不正メッセージを確認",
+      "kind": "occurrence",
+      "summary": "予約者へフィッシング誘導を確認",
+      "sourceUrl": "https://mimaruhotels.com/ja/news/bookingcom2/"
+    },
+    {
+      "date": "2023-06-12",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "Booking.com経由の不正メールを告知",
+      "sourceUrl": "https://mimaruhotels.com/ja/news/bookingcom2/"
+    },
+    {
+      "date": "2023-08-09",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "対象1,001件と原因・二次被害を説明",
+      "sourceUrl": "https://mimaruhotels.com/ja/news/bookingcom2/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-08-09",
+  "detectedDate": "2023-06-10"
+}

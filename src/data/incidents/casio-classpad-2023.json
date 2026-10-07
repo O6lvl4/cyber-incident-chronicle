@@ -6,17 +6,17 @@
   "announcementDateLabel": "初報公表",
   "occurredDate": null,
   "occurredDateLabel": "侵入開始日非公表（2023-10-11に障害を検知）",
-  "updatedDate": "2023-10-18",
+  "updatedDate": "2024-03-27",
   "impactTypes": [
     "leak",
     "unauthorizedAccess"
   ],
   "disclosureStatus": "confirmed",
   "attackMethod": {
-    "label": "開発環境の一部セキュリティ設定が解除された状態で第三者が不正アクセス",
+    "label": "開発環境のセキュリティ設定ミスを通じた不正アクセス。テスト用個人データの残存・混入も漏えいにつながった",
     "status": "confirmed"
   },
-  "summary": "教育サービスの開発用データベースから顧客情報の漏えいを確認。国内91,921件、海外35,049件を対象として公表した。サービス本体のアプリへの不正アクセスはなく、アプリ利用への影響はないとしている。",
+  "summary": "開発用データベースから顧客情報の漏えいを確認。後続報告では国内91,921件・海外35,049件を外部漏えいの可能性がある対象として説明し、テスト用個人データの残存と開発環境への混入、設定ミスが重なった経緯を公表した。",
   "affectedData": [
     "氏名、メールアドレス、国・地域",
     "学校・学年・学級・出席番号、購入・利用履歴等"
@@ -25,23 +25,24 @@
     {
       "value": 91921,
       "unit": "件",
-      "status": "confirmed",
-      "label": "国内の対象顧客情報",
+      "status": "possible",
+      "label": "国内の対象顧客情報（後続公表では漏えい可能性の対象件数）",
       "approximate": false
     },
     {
       "value": 35049,
       "unit": "件",
-      "status": "confirmed",
-      "label": "海外の対象顧客情報",
+      "status": "possible",
+      "label": "海外の対象顧客情報（後続公表では漏えい可能性の対象件数）",
       "approximate": false
     }
   ],
-  "scaleLabel": "国内91,921件／海外35,049件",
+  "scaleLabel": "国内91,921件／海外35,049件（対象件数はおそれ）",
   "caveats": [
     "件数を人数と同一視しない",
     "開発環境の停止を利用者向けアプリ全体の停止とは扱わない",
-    "2024年のカシオのランサムウェア事案とは別事案"
+    "2024年のカシオのランサムウェア事案とは別事案",
+    "事案として漏えいを確認しているが、2024-03-27更新の件数欄は「外部漏えいの可能性のあるデータ件数」と記載"
   ],
   "geography": "日本企業の国内・海外利用者情報",
   "sources": [
@@ -49,6 +50,11 @@
       "title": "ClassPad.netの個人情報漏えい公表",
       "url": "https://www.casio.co.jp/release/2023/1018-incident/",
       "publishedDate": "2023-10-18"
+    },
+    {
+      "title": "ClassPad.net漏えいの経緯と対策状況（2024年3月27日更新）",
+      "url": "https://classpad.net/jp/news/041/",
+      "publishedDate": "2024-03-27"
     }
   ],
   "timeline": [
@@ -65,9 +71,16 @@
       "kind": "disclosure",
       "summary": "国内外の対象範囲と原因を公表",
       "sourceUrl": "https://www.casio.co.jp/release/2023/1018-incident/"
+    },
+    {
+      "date": "2024-03-27",
+      "label": "原因と対策状況を更新",
+      "kind": "update",
+      "summary": "個人データの残存・混入経緯と2024年の対策を説明",
+      "sourceUrl": "https://classpad.net/jp/news/041/"
     }
   ],
   "lastVerifiedDate": "2026-10-07",
-  "statusAsOfDate": "2023-10-18",
+  "statusAsOfDate": "2024-03-27",
   "detectedDate": "2023-10-11"
 }

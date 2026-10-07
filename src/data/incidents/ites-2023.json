@@ -1,0 +1,63 @@
+{
+  "id": "ites-2023",
+  "company": "アイテス",
+  "title": "ランサムウェアでサーバーデータが暗号化、情報窃取の明確な痕跡は未確認",
+  "announcementDate": "2023-10-23",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2023-10-20に発覚）",
+  "updatedDate": "2023-12-05",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "社内ネットワーク・サーバーへの不正侵入とランサムウェアによる暗号化",
+    "status": "confirmed"
+  },
+  "summary": "サーバー侵害発覚後にネットワークを遮断し、外部専門機関へ調査を依頼。12月の報告ではデータ暗号化を確認した一方、情報窃取や外部転送を示す明確な痕跡は確認されなかった。",
+  "affectedData": [
+    "サーバー内データが暗号化（外部漏えい未確認）"
+  ],
+  "counts": [],
+  "scaleLabel": "暗号化被害あり、漏えいの明確な痕跡は未確認",
+  "caveats": [
+    "情報流出未確認を被害なしとしない",
+    "他PCの感染未確認は侵害サーバーの被害を否定するものではない"
+  ],
+  "geography": "日本の社内ネットワーク・サーバー",
+  "sources": [
+    {
+      "title": "不正アクセス調査結果",
+      "url": "https://www.ites.co.jp/news/20231205.html",
+      "publishedDate": "2023-12-05"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-10-20",
+      "label": "不正アクセス発覚",
+      "kind": "occurrence",
+      "summary": "外部接続を遮断し専門機関へ相談",
+      "sourceUrl": "https://www.ites.co.jp/news/20231205.html"
+    },
+    {
+      "date": "2023-10-23",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "被害を会社サイトで公表",
+      "sourceUrl": "https://www.ites.co.jp/news/20231205.html"
+    },
+    {
+      "date": "2023-12-05",
+      "label": "調査結果公表",
+      "kind": "update",
+      "summary": "暗号化と外部流出の調査結果を説明",
+      "sourceUrl": "https://www.ites.co.jp/news/20231205.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-12-05",
+  "detectedDate": "2023-10-20"
+}

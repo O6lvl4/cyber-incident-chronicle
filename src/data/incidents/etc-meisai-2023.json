@@ -1,0 +1,56 @@
+{
+  "id": "etc-meisai-2023",
+  "company": "東日本高速道路ほか高速道路6社",
+  "title": "ETC利用照会サービスへの不正ログインで利用履歴等の閲覧のおそれ",
+  "announcementDate": "2023-10-04",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2023-09-30",
+  "occurredDateLabel": "大量アクセスが確認された期間の始期（9月30日〜10月2日）",
+  "updatedDate": "2023-10-04",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "大量アクセスのうちID・パスワードが一致したアカウントへの不正ログイン。認証情報の入手経路は非公表",
+    "status": "confirmed"
+  },
+  "summary": "海外IPからの大量アクセスにより一部アカウントで不正ログインが成立。登録情報や利用履歴が閲覧された可能性を公表し、対象者へ個別通知、アクセス制限と認証情報変更を案内した。",
+  "affectedData": [
+    "メールアドレス、登録ID",
+    "秘密の質問と答え、ETC利用履歴"
+  ],
+  "counts": [],
+  "scaleLabel": "対象人数・件数は確認資料に記載なし",
+  "caveats": [
+    "ETCカード番号・車載器管理番号は漏えい可能性の対象外と説明",
+    "6社共同運営サービスの同一事案を6件として数えない"
+  ],
+  "geography": "日本のETC利用照会サービス",
+  "sources": [
+    {
+      "title": "ETC利用照会サービスへの不正アクセス・ログイン",
+      "url": "https://www.etc-meisai.jp/news/231004.html",
+      "publishedDate": "2023-10-04"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-09-30",
+      "label": "大量アクセス開始",
+      "kind": "occurrence",
+      "summary": "10月2日までの一部アクセスで不正ログイン成立",
+      "sourceUrl": "https://www.etc-meisai.jp/news/231004.html"
+    },
+    {
+      "date": "2023-10-04",
+      "label": "閲覧のおそれを公表",
+      "kind": "disclosure",
+      "summary": "登録情報等と対処を説明",
+      "sourceUrl": "https://www.etc-meisai.jp/news/231004.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-10-04"
+}
