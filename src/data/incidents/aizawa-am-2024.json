@@ -1,0 +1,79 @@
+{
+  "announcementDateLabel": "初報公表（最終報の経緯記載）",
+  "occurredDate": "2024-04-28",
+  "occurredDateLabel": "確認された不正アクセス期間の始期（2024-05-13まで）",
+  "counts": [
+    {
+      "value": 2540,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "顧客・取引先等の個人情報",
+      "approximate": false
+    },
+    {
+      "value": 9,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "別記された役職員等の特定個人情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "顧客・取引先等2,540人／役職員等9人",
+  "lastVerifiedDate": "2026-10-07",
+  "id": "aizawa-am-2024",
+  "company": "あいざわアセットマネジメント",
+  "title": "社員クラウドメールが不正取得され、顧客等の個人情報流出",
+  "announcementDate": "2024-05-31",
+  "detectedDate": "2024-05-13",
+  "updatedDate": "2024-12-06",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "クラウドメールへの認証情報不正利用。外部サイトのパスワード流出の可能性を指摘、原因は未特定",
+    "status": "possible"
+  },
+  "summary": "社員のメールサーバーに保存された約2年分のメールが複数回の不正アクセスでダウンロードされた。最終報で顧客・取引先等2,540人の情報流出と、別途役職員等9人の特定個人情報流出を報告した。",
+  "affectedData": [
+    "顧客・取引先等の氏名・連絡先・所属等（対象により口座・本人確認書類情報等）",
+    "役職員・扶養家族の特定個人情報"
+  ],
+  "caveats": [
+    "不正送信811通は漏えい人数ではないため人数に加算しない",
+    "2,540人と別記9人の重複・総実人数を独自に推計しない"
+  ],
+  "geography": "日本企業のクラウドメール",
+  "sources": [
+    {
+      "title": "個人情報の流出について（最終報告）",
+      "url": "https://www.aizawa-am.co.jp/wp-content/uploads/2024/12/あいざわアセットマネジメント_個人情報の流出について（最終報告）_cleean_20241206.pdf",
+      "publishedDate": "2024-12-06"
+    }
+  ],
+  "statusAsOfDate": "2024-12-06",
+  "timeline": [
+    {
+      "date": "2024-05-13",
+      "label": "検知・判明",
+      "kind": "occurrence",
+      "summary": "不正なスパムメール送信を確認。メールの流出は5月15日に判明",
+      "sourceUrl": "https://www.aizawa-am.co.jp/wp-content/uploads/2024/12/あいざわアセットマネジメント_個人情報の流出について（最終報告）_cleean_20241206.pdf"
+    },
+    {
+      "date": "2024-05-31",
+      "label": "公表",
+      "kind": "disclosure",
+      "summary": "初報公表（最終報の経緯記載）",
+      "sourceUrl": "https://www.aizawa-am.co.jp/wp-content/uploads/2024/12/あいざわアセットマネジメント_個人情報の流出について（最終報告）_cleean_20241206.pdf"
+    },
+    {
+      "date": "2024-12-06",
+      "label": "調査結果・続報",
+      "kind": "update",
+      "summary": "調査結果と対応を公表",
+      "sourceUrl": "https://www.aizawa-am.co.jp/wp-content/uploads/2024/12/あいざわアセットマネジメント_個人情報の流出について（最終報告）_cleean_20241206.pdf"
+    }
+  ]
+}

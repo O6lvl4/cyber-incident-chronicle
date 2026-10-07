@@ -1,0 +1,141 @@
+{
+  "announcementDateLabel": "調査結果の公表日（初報ではない）",
+  "occurredDate": "2024-05-10",
+  "occurredDateLabel": "システム障害発生日",
+  "counts": [
+    {
+      "value": 2331,
+      "unit": "名",
+      "status": "possible",
+      "label": "巴商会の社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 1,
+      "unit": "名",
+      "status": "possible",
+      "label": "クリーンアクトの社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 102,
+      "unit": "名",
+      "status": "possible",
+      "label": "ジャパンガスの社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 12,
+      "unit": "名",
+      "status": "possible",
+      "label": "常磐ヘリウムサプライセンターの社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 95,
+      "unit": "名",
+      "status": "possible",
+      "label": "トモエ運輸の社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 12,
+      "unit": "名",
+      "status": "possible",
+      "label": "湘南エルピージーセンターの社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 18,
+      "unit": "名",
+      "status": "possible",
+      "label": "新潟水素の社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 4,
+      "unit": "名",
+      "status": "possible",
+      "label": "Seed・Fの社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 2,
+      "unit": "名",
+      "status": "possible",
+      "label": "タキシード不動産の社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 2,
+      "unit": "名",
+      "status": "possible",
+      "label": "トモエホールディングスの社員・退職者等",
+      "approximate": false
+    },
+    {
+      "value": 2,
+      "unit": "名",
+      "status": "possible",
+      "label": "クリーンアクトの取引先",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "本体2,331名＋グループ各社の対象（おそれ）",
+  "lastVerifiedDate": "2026-10-07",
+  "id": "tomoe-shokai-2024",
+  "company": "巴商会",
+  "title": "RDP経由のランサムウェアで人事・給与情報に漏えいのおそれ",
+  "announcementDate": "2024-08-02",
+  "updatedDate": "2024-08-03",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "外部接続ファイアウォールからRDP接続で侵入しランサムウェア実行",
+    "status": "confirmed"
+  },
+  "summary": "複数サーバーが不正アクセスを受け、社員・退職者等の個人情報に漏えいのおそれを公表。持ち出しの明確な痕跡はなかったが、可能性を完全に否定できないため対象者に通知した。",
+  "affectedData": [
+    "本体社員・退職者等の連絡先・一部健康診断結果",
+    "グループ会社社員等の連絡先・給与関連識別情報等",
+    "一部グループ取引先の個人情報"
+  ],
+  "caveats": [
+    "2,331名は巴商会本体の社員等でありグループ全体の人数ではない",
+    "各社人数の重複の有無は確認資料で明示されず、独自の総実人数は算出しない"
+  ],
+  "geography": "日本の本体・グループ人事給与システム",
+  "sources": [
+    {
+      "title": "システム障害に関する調査結果",
+      "url": "https://www.tomoeshokai.co.jp/info/202408/index0802.php",
+      "publishedDate": "2024-08-02"
+    },
+    {
+      "title": "個人情報漏えいのおそれ",
+      "url": "https://www.tomoeshokai.co.jp/info/202408/index0803.php",
+      "publishedDate": "2024-08-03"
+    }
+  ],
+  "statusAsOfDate": "2024-08-03",
+  "timeline": [
+    {
+      "date": "2024-08-02",
+      "label": "公表",
+      "kind": "disclosure",
+      "summary": "調査結果の公表日（初報ではない）",
+      "sourceUrl": "https://www.tomoeshokai.co.jp/info/202408/index0802.php"
+    },
+    {
+      "date": "2024-08-03",
+      "label": "調査結果・続報",
+      "kind": "update",
+      "summary": "調査結果と対応を公表",
+      "sourceUrl": "https://www.tomoeshokai.co.jp/info/202408/index0803.php"
+    }
+  ]
+}

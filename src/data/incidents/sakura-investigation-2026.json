@@ -1,0 +1,97 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-09-10",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "sakura-investigation-2026",
+  "company": "さくらインターネット",
+  "title": "レンタルサーバー・販売管理システムの不正アクセスを調査",
+  "announcementDate": "2026-08-17",
+  "occurredDate": null,
+  "occurredDateLabel": "正確な開始日非公表。販売管理側は2023年4月〜2026年3月の侵害を確認",
+  "detectedDate": "2026-08-09",
+  "updatedDate": "2026-09-10",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "レンタルサーバーへのマルウェア設置と販売管理DBへの不正アクセス。両事象の関連・侵入詳細は未確認または非公表",
+    "status": "unknown"
+  },
+  "summary": "調査でレンタルサーバー951アカウントと販売管理システム136万563アカウントに閲覧・取得のおそれがあると公表。最終調査では外部持ち出しを裏付ける明確な事実は未確認。複数システムの侵害の関連性も確認されていない。",
+  "affectedData": [
+    "レンタルサーバー利用領域の情報",
+    "販売管理システムの会員・契約情報等",
+    "一部の初期サーバー・管理者パスワードとハッシュ化された会員パスワード"
+  ],
+  "counts": [
+    {
+      "value": 1360563,
+      "unit": "アカウント",
+      "status": "possible",
+      "label": "販売管理システムの対象会員情報（レンタルサーバー対象を含む）",
+      "approximate": false
+    },
+    {
+      "value": 951,
+      "unit": "アカウント",
+      "status": "possible",
+      "label": "レンタルサーバーの対象",
+      "approximate": false
+    },
+    {
+      "value": 30,
+      "unit": "アカウント",
+      "status": "possible",
+      "label": "ハッシュ化された会員パスワードの閲覧可能性（内数）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "対象136万563アカウントなど／外部流出は未確認",
+  "caveats": [
+    "951アカウント、30アカウントは136万563へ加算しない",
+    "追加368アカウントは当初583との関連を確認できていない",
+    "レンタルサーバーと販売管理システムの侵害が一つの攻撃だと断定しない。会社の同一調査・公表をまとめた記録",
+    "漏えい未確認は閲覧可能性や侵害がなかったという意味ではない",
+    "クレジットカード情報の漏えいのおそれはないと公表"
+  ],
+  "sources": [
+    {
+      "title": "第三報：調査結果と再発防止策",
+      "url": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/",
+      "publishedDate": "2026-09-10"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-09",
+      "label": "メンテナンス用サーバーで異常検知",
+      "kind": "occurrence",
+      "summary": "事実確認と影響範囲の調査を開始",
+      "sourceUrl": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/"
+    },
+    {
+      "date": "2026-08-17",
+      "label": "第一報公表",
+      "kind": "disclosure",
+      "summary": "レンタルサーバー環境への不正アクセスを公表",
+      "sourceUrl": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/"
+    },
+    {
+      "date": "2026-08-19",
+      "label": "第二報公表",
+      "kind": "update",
+      "summary": "販売管理システムへの不正アクセス等を公表",
+      "sourceUrl": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/"
+    },
+    {
+      "date": "2026-09-10",
+      "label": "調査結果公表",
+      "kind": "update",
+      "summary": "対象数の拡大、複数事象の関連未確認、外部持ち出し未確認を公表",
+      "sourceUrl": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/"
+    }
+  ]
+}

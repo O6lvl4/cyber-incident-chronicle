@@ -1,0 +1,106 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-09-29",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "park24-timescar-2026",
+  "company": "パーク２４（タイムズモビリティ）",
+  "title": "タイムズカー会員情報の漏えいと本人確認書類の対象範囲公表",
+  "announcementDate": "2026-09-25",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2026-09-25 09:07に不正アクセス検知）",
+  "detectedDate": "2026-09-25",
+  "updatedDate": "2026-10-01",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "Webシステムへの第三者不正アクセス。初期侵入経路の詳細は調査中",
+    "status": "unknown"
+  },
+  "summary": "タイムズカーのWebシステムへの不正アクセスで約660万アカウントの情報漏えいを確認。第3報では本人確認書類の画像等を含む対象を約160万アカウントと公表した。サービスは通常どおり提供するとしている。",
+  "affectedData": [
+    "氏名、住所、生年月日、連絡先、運転免許情報等",
+    "一部の本人確認書類画像",
+    "復元できない形式のパスワード情報、連携サービスID"
+  ],
+  "counts": [
+    {
+      "value": 6600000,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "個人情報の漏えいが確認された対象（第2報）",
+      "approximate": true
+    },
+    {
+      "value": 1600000,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "本人確認書類の漏えい対象（上記の一部）",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "約660万アカウント（本人確認書類 約160万）",
+  "caveats": [
+    "アカウント数を一意の人数とは扱わない",
+    "本人確認書類約160万アカウントを総数に加算しない",
+    "クレジットカード情報の漏えいは確認されていないと公表",
+    "10月1日の追記はFAQ・退会者向け案内で、件数の追加ではない"
+  ],
+  "sources": [
+    {
+      "title": "連結子会社の不正アクセス・漏えい公表",
+      "url": "https://ssl4.eir-parts.net/doc/4666/tdnet/2887793/00.pdf",
+      "publishedDate": "2026-09-28"
+    },
+    {
+      "title": "第3報：本人確認書類の対象範囲",
+      "url": "https://www.park24.co.jp/news/2026/09/20260929-1.html",
+      "publishedDate": "2026-09-29"
+    },
+    {
+      "title": "サービス公式第3報（10月1日追記）",
+      "url": "https://share.timescar.jp/news/2026/0929/1816.html",
+      "publishedDate": "2026-09-29"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "label": "検知・初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスを検知し、影響の可能性を公表",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/4666/tdnet/2887793/00.pdf"
+    },
+    {
+      "date": "2026-09-26",
+      "label": "侵入経路を遮断",
+      "kind": "occurrence",
+      "summary": "7時25分までに通信遮断と当該経路からのアクセス不能を確認",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/4666/tdnet/2887793/00.pdf"
+    },
+    {
+      "date": "2026-09-28",
+      "label": "約660万アカウントの漏えい",
+      "kind": "update",
+      "summary": "確認済みの対象と情報項目を公表",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/4666/tdnet/2887793/00.pdf"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "本人確認書類の範囲を公表",
+      "kind": "update",
+      "summary": "書類画像等の対象は約160万アカウントと公表",
+      "sourceUrl": "https://www.park24.co.jp/news/2026/09/20260929-1.html"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "利用者向け案内を追記",
+      "kind": "update",
+      "summary": "FAQと退会者専用問い合わせの案内を追加",
+      "sourceUrl": "https://share.timescar.jp/news/2026/0929/1816.html"
+    }
+  ]
+}

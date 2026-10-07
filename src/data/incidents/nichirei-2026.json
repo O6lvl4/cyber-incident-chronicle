@@ -1,0 +1,89 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-09-18",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "nichirei-2026",
+  "company": "ニチレイ",
+  "title": "物流・出荷システム障害後、配送先・取引先・従業員等の情報漏えいを確認",
+  "announcementDate": "2026-07-13",
+  "occurredDate": "2026-07-13",
+  "occurredDateLabel": "システム障害の発生日（侵入開始日は非公表）",
+  "updatedDate": "2026-09-18",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "サーバーへのサイバー攻撃。確認資料では具体的な侵入方法を公表しておらず原因分析を継続",
+    "status": "unknown"
+  },
+  "summary": "システム遮断に伴い冷蔵倉庫の入出庫と冷凍食品出荷へ影響が生じ、7月24日に全拠点が通常稼働へ移行。9月の第7報では配送先3,308件、取引先6,849件、従業員・家族等43,709件の漏えいを確認した。",
+  "affectedData": [
+    "配送先の氏名・住所・電話番号",
+    "取引先役職員の所属・氏名・連絡先",
+    "従業員・退職者・家族・求職者の氏名、連絡先、人事・給与等の情報"
+  ],
+  "counts": [
+    {
+      "value": 3308,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "受託配送業務の配送先顧客情報",
+      "approximate": false
+    },
+    {
+      "value": 6849,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "取引先役職員の情報",
+      "approximate": false
+    },
+    {
+      "value": 43709,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "従業員・退職者・家族・求職者の情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "配送先3,308件／取引先6,849件／従業員等43,709件",
+  "caveats": [
+    "件数をユニークな人数へ換算しない",
+    "委託元が個別に公表する人数をこの件数へ加算しない",
+    "会社確認に基づき、攻撃者名・攻撃者の主張するデータ量を収録しない",
+    "第7報時点でも原因と影響範囲の調査を継続"
+  ],
+  "sources": [
+    {
+      "title": "システム障害第7報・漏えい確認",
+      "url": "https://www.nichirei.co.jp/news/2026/524.html",
+      "publishedDate": "2026-09-18"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "label": "システム障害・初報公表",
+      "kind": "disclosure",
+      "summary": "システムを遮断し対策本部・調査を開始",
+      "sourceUrl": "https://www.nichirei.co.jp/news/2026/524.html"
+    },
+    {
+      "date": "2026-07-24",
+      "label": "全拠点が通常稼働へ",
+      "kind": "update",
+      "summary": "対策と安全確認後、入出庫等が通常稼働に移行",
+      "sourceUrl": "https://www.nichirei.co.jp/news/2026/524.html"
+    },
+    {
+      "date": "2026-09-18",
+      "label": "個人情報漏えいを確認",
+      "kind": "update",
+      "summary": "対象3区分の件数と項目を公表",
+      "sourceUrl": "https://www.nichirei.co.jp/news/2026/524.html"
+    }
+  ]
+}
