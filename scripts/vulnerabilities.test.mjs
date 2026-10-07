@@ -63,3 +63,14 @@ test('category URL round-trip preserves selection and ecosystem; invalid categor
   assert.equal(read.kind, 'vulnerability'); assert.equal(read.ecosystem, 'npm'); assert.equal(read.sel, records[0].id); assert.equal(read.query, 'CVE-2026');
   location.hash = '#kind=unknown'; assert.equal(readUrl().kind, undefined);
 });
+
+test('reject nested null entries, uncited unknown severity and API placeholders safely', () => {
+  const item = structuredClone(records[0]); item.sources.push(null); item.affected.push(null); item.affected[0].ranges.push(null);
+  item.severity.label = 'unknown'; item.severity.sourceUrl = 'http://example.com'; item.severity.cvss = [{ version: '3.1', score: 0, vector: null, sourceUrl: item.sources[0].url }, null];
+  const errors = validateVulnerabilities([item]).join(' ');
+  for (const phrase of ['invalid source', 'invalid package', 'invalid affected range', 'unknown severity must have null source', 'placeholder', 'invalid CVSS']) assert.ok(errors.includes(phrase));
+});
+test('an advisory outside the declared window requires a coverage update', () => {
+  const item = structuredClone(records[0]); item.publishedAt = '2020-01-01T00:00:00Z';
+  assert.match(validateVulnerabilities([item]).join(' '), /outside vulnerability coverage window/);
+});

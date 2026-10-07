@@ -12,7 +12,7 @@
 
 ## 保存先と識別子
 
-`src/data/vulnerabilities/<ID>.json` が正本。型は `src/vulnerabilityTypes.ts`、検証は `scripts/vulnerability-status.mjs`。ファイル名は大文字の GHSA/CVE ID と一致させる。
+`src/data/vulnerabilities/<ID>.json` が正本。公開日の収録範囲は `src/data/vulnerability-meta.json` の `windowStart` / `windowEnd`。範囲外の新規公開日を追加する場合はこの2日付も更新する（企業事案のmetadataは変更不要）。共有描画エンジンは両カテゴリの範囲を包含し、検証は窓の更新漏れを検出する。型は `src/vulnerabilityTypes.ts`、検証は `scripts/vulnerability-status.mjs`。ファイル名は大文字の GHSA/CVE ID と一致させる。
 
 - `kind` は `vulnerability` 固定
 - `id` は安定した GHSA または CVE。初期データはGHSAを採用
