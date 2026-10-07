@@ -1,0 +1,93 @@
+{
+  "id": "ricoh-drive-2023",
+  "company": "リコー",
+  "title": "RICOH DriveのXXE脆弱性悪用でログインID等の流出のおそれ",
+  "announcementDate": "2023-10-13",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2023-09-18",
+  "occurredDateLabel": "確認された不正アクセス発生日（21:46〜22:01）",
+  "updatedDate": "2023-11-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "XXE（XML External Entity）脆弱性を悪用した情報取得",
+    "status": "confirmed"
+  },
+  "summary": "クラウドストレージの不正アクセスで顧客登録情報の流出のおそれを公表。重複を精査した10月26日時点の対象は3,798IDで、一部には暗号化パスワード等も含まれる。11月に恒久対策完了を報告した。",
+  "affectedData": [
+    "ログインID（うち606件はメールアドレス）",
+    "内数3件の氏名・メールアドレス・暗号化パスワード",
+    "別の内数2件の暗号化パスワード"
+  ],
+  "counts": [
+    {
+      "value": 3798,
+      "unit": "ID",
+      "status": "possible",
+      "label": "対象顧客ログインID（重複精査後）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "3,798IDに流出のおそれ",
+  "caveats": [
+    "ID数を人数と扱わない。606件・3件・2件は内数で合算しない",
+    "保存ファイルの外部流出はないと説明",
+    "旧サービス解約済みID369件は移行先に残存していた対象の内数"
+  ],
+  "geography": "日本のクラウドストレージサービス",
+  "sources": [
+    {
+      "title": "情報流出のおそれ・件数訂正を含む報告",
+      "url": "https://jp.ricoh.com/info/notice/2023/1013_1",
+      "publishedDate": "2023-10-13"
+    },
+    {
+      "title": "恒久対策完了",
+      "url": "https://service.ricoh.co.jp/ricoh-drive/announce/ricoh_drive.html",
+      "publishedDate": "2023-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-09-18",
+      "label": "不正アクセス発生",
+      "kind": "occurrence",
+      "summary": "15分間の不正アクセスを後日確認",
+      "sourceUrl": "https://jp.ricoh.com/info/notice/2023/1013_1"
+    },
+    {
+      "date": "2023-10-04",
+      "label": "事象を把握",
+      "kind": "occurrence",
+      "summary": "17時に侵害を把握",
+      "sourceUrl": "https://jp.ricoh.com/info/notice/2023/1013_1"
+    },
+    {
+      "date": "2023-10-13",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "登録情報の流出のおそれを公表",
+      "sourceUrl": "https://jp.ricoh.com/info/notice/2023/1013_1"
+    },
+    {
+      "date": "2023-10-26",
+      "label": "ID数を精査・更新",
+      "kind": "update",
+      "summary": "重複分を除き3,798IDとした",
+      "sourceUrl": "https://jp.ricoh.com/info/notice/2023/1013_1"
+    },
+    {
+      "date": "2023-11-09",
+      "label": "恒久対策完了",
+      "kind": "update",
+      "summary": "対策の完了を報告",
+      "sourceUrl": "https://service.ricoh.co.jp/ricoh-drive/announce/ricoh_drive.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-11-09",
+  "detectedDate": "2023-10-04"
+}

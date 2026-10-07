@@ -1,0 +1,86 @@
+{
+  "id": "y4-health-service-2023",
+  "company": "Y4.com",
+  "title": "残存アクセスキーの悪用で健診関連ファイルの持ち出し・削除",
+  "announcementDate": "2023-12-18",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2023-12-10",
+  "occurredDateLabel": "確認された不正アクセス・ファイル持ち出しと削除の日",
+  "updatedDate": "2024-01-22",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "開発委託時に発行され未削除だったアクセスキーの漏えい・悪用。会社はノーウェアランサム被害と公表",
+    "status": "confirmed"
+  },
+  "summary": "利用サービスに保存されたファイルが持ち出され削除された。最終報告で影響対象1,014名と原因を公表し、健診データ利用者と一括集計ファイル対象者への連絡完了を説明した。",
+  "affectedData": [
+    "健診データ利用者の氏名・住所・連絡先・健診結果・被保険者番号等の一部",
+    "一括集計ファイルの識別ID・名前等とバイタルデータ"
+  ],
+  "counts": [
+    {
+      "value": 1014,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "最終報で公表された影響対象者数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "影響対象1,014名（うち名前記載なし738名）",
+  "caveats": [
+    "分類別93名と937名を単純に加算しない。会社が示した全体1,014名を採用",
+    "名前記載なし738名は全体の内数",
+    "ランサムウェアによる暗号化と、ファイル窃取・削除型の被害を区別",
+    "自治体等の委託元発表を別の攻撃として重複計上しない"
+  ],
+  "geography": "日本の健康支援サービス",
+  "sources": [
+    {
+      "title": "ファイル持ち出し・削除の初報",
+      "url": "https://y-4.jp/wp-content/uploads/2023/12/jyoho1221.pdf",
+      "publishedDate": "2023-12-18"
+    },
+    {
+      "title": "情報漏えい最終報告",
+      "url": "https://y-4.jp/wp-content/uploads/2024/01/jyohoroei0122.pdf",
+      "publishedDate": "2024-01-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-12-10",
+      "label": "ファイル持ち出し・削除",
+      "kind": "occurrence",
+      "summary": "第三者の不正アクセスを確認",
+      "sourceUrl": "https://y-4.jp/wp-content/uploads/2024/01/jyohoroei0122.pdf"
+    },
+    {
+      "date": "2023-12-11",
+      "label": "事象を検知",
+      "kind": "occurrence",
+      "summary": "開発チームが把握しシステムを隔離",
+      "sourceUrl": "https://y-4.jp/wp-content/uploads/2024/01/jyohoroei0122.pdf"
+    },
+    {
+      "date": "2023-12-18",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "影響調査と対応開始を説明",
+      "sourceUrl": "https://y-4.jp/wp-content/uploads/2023/12/jyoho1221.pdf"
+    },
+    {
+      "date": "2024-01-22",
+      "label": "最終報告",
+      "kind": "update",
+      "summary": "残存キー悪用と対象1,014名を説明",
+      "sourceUrl": "https://y-4.jp/wp-content/uploads/2024/01/jyohoroei0122.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2024-01-22",
+  "detectedDate": "2023-12-11"
+}

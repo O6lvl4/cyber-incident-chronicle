@@ -1,0 +1,57 @@
+{
+  "id": "kinokuniya-fujisan-delivery-2023",
+  "company": "紀伊國屋書店／富士山マガジンサービス",
+  "title": "配送委託先の雑誌納品管理サイト侵害で購読情報6,329件におそれ",
+  "announcementDate": "2023-12-21",
+  "announcementDateLabel": "委託元による公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "発生・検知の具体日は採用した委託元資料に記載なし",
+  "updatedDate": "2023-12-21",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "紀伊國屋書店の納品情報サイトへの不正アクセス。データベースのテーブル名を取得された",
+    "status": "confirmed"
+  },
+  "summary": "雑誌配送の委託先が侵害されたと富士山マガジンサービスが公表。テーブル名の取得は確認されたが、個別テーブルの内容へのアクセス・取得は未確認。同社が委託した購読6,329件の氏名・住所等に漏えいのおそれがある。",
+  "affectedData": [
+    "配送用の氏名、氏名カナ、郵便番号、住所"
+  ],
+  "counts": [
+    {
+      "value": 6329,
+      "unit": "件",
+      "status": "possible",
+      "label": "富士山マガジンサービスが配送を委託した購読数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "配送委託の購読6,329件におそれ",
+  "caveats": [
+    "6,329件は購読数でありユニーク人数ではない",
+    "紀伊國屋書店事案全体の件数ではなく、委託元1社が公表した対象範囲",
+    "同じ紀伊國屋書店侵害の追加資料が得られた場合は同一事案に統合する"
+  ],
+  "geography": "日本の海外雑誌納品・配送管理サービス",
+  "sources": [
+    {
+      "title": "配送委託先の個人情報漏えい可能性（委託元公式）",
+      "url": "https://www2.jpx.co.jp/disc/31380/140120231221506480.pdf",
+      "publishedDate": "2023-12-21"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-12-21",
+      "label": "委託元が公表",
+      "kind": "disclosure",
+      "summary": "購読6,329件と流出未確認の状態を説明",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/31380/140120231221506480.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-12-21"
+}

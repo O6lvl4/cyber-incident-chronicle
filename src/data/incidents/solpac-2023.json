@@ -1,0 +1,71 @@
+{
+  "id": "solpac-2023",
+  "company": "ソルパック",
+  "title": "未使用ソフトウェアの脆弱性から侵入、一部情報の外部公開を確認",
+  "announcementDate": "2023-04-07",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2023-02-07",
+  "occurredDateLabel": "調査で確認された不正アクセス期間の始期（2月7日以降）",
+  "updatedDate": "2023-05-01",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "すでに使用していないソフトウェアの脆弱性を悪用したサーバー侵入",
+    "status": "confirmed"
+  },
+  "summary": "警察からの連絡を受けて調査し、4月に侵害サーバーと一部情報の外部公開を確認。全社のインターネット接続・VPNを停止した。5月の調査完了報告では、公開された一部情報以外の漏えいは確認されていないと説明した。",
+  "affectedData": [
+    "氏名、会社名・住所、部署名、電話番号、メールアドレス（流出のおそれとして公表）"
+  ],
+  "counts": [],
+  "scaleLabel": "一部情報の外部公開を確認、対象件数非公表",
+  "caveats": [
+    "事案単位では一部流出確認済み。列挙された個人情報の全項目・全件が漏えい確認済みという意味ではない",
+    "検知の起点は3月24日の警察連絡、侵害サーバー特定は4月5日"
+  ],
+  "geography": "日本の社内サーバー",
+  "sources": [
+    {
+      "title": "サイバー攻撃の調査完了報告",
+      "url": "https://www.solpac.co.jp/news/topics/20230501/",
+      "publishedDate": "2023-05-01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-02-07",
+      "label": "確認された侵入期間の始期",
+      "kind": "occurrence",
+      "summary": "未使用ソフトウェアの脆弱性を悪用",
+      "sourceUrl": "https://www.solpac.co.jp/news/topics/20230501/"
+    },
+    {
+      "date": "2023-03-24",
+      "label": "警察から情報提供",
+      "kind": "occurrence",
+      "summary": "漏えいの可能性を受け社内調査開始",
+      "sourceUrl": "https://www.solpac.co.jp/news/topics/20230501/"
+    },
+    {
+      "date": "2023-04-07",
+      "label": "初報公表・接続停止",
+      "kind": "disclosure",
+      "summary": "全社インターネットとVPNを停止",
+      "sourceUrl": "https://www.solpac.co.jp/news/topics/20230501/"
+    },
+    {
+      "date": "2023-05-01",
+      "label": "調査完了報告",
+      "kind": "update",
+      "summary": "一部情報の公開と再発防止策を説明",
+      "sourceUrl": "https://www.solpac.co.jp/news/topics/20230501/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-05-01",
+  "detectedDate": "2023-03-24"
+}

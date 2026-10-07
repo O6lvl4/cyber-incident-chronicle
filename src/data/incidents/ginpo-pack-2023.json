@@ -1,0 +1,71 @@
+{
+  "id": "ginpo-pack-2023",
+  "company": "ギンポーパック",
+  "title": "ランサムウェアで業務システム障害、応募者情報等に流出のおそれ",
+  "announcementDate": "2023-03-24",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2023-03-03",
+  "occurredDateLabel": "障害検知期間の始期（3月3日夜〜4日早朝、侵入開始日ではない）",
+  "updatedDate": "2023-04-26",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "ランサムウェアでファイル暗号化。VPN経由での侵入と会社が推定",
+    "status": "confirmed"
+  },
+  "summary": "社内サーバーの暗号化による障害後、紙で受注・生産・発送を継続できる体制へ移行。応募者情報や業務情報に漏えいのおそれがあると公表した。4月の調査結果時点でネット上の情報流出は未確認。",
+  "affectedData": [
+    "採用応募者の履歴書等に記載された情報",
+    "個別通知対象の個人情報、業務関連・社内情報"
+  ],
+  "counts": [],
+  "scaleLabel": "対象人数・件数は確認資料に記載なし",
+  "caveats": [
+    "公表された採用応募者は、暗号化で連絡先を確認できなかった対象の説明。全対象が応募者だけとは限らない",
+    "製造・供給継続をシステム被害なしとしない"
+  ],
+  "geography": "日本の社内システム",
+  "sources": [
+    {
+      "title": "不正アクセス・システム障害第2報",
+      "url": "https://www.ginpack.co.jp/ng-wp/wp-content/uploads/2023/04/notice20230426.pdf",
+      "publishedDate": "2023-04-26"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-03-03",
+      "label": "障害検知期間の始期",
+      "kind": "occurrence",
+      "summary": "翌4日早朝までに暗号化被害を確認",
+      "sourceUrl": "https://www.ginpack.co.jp/ng-wp/wp-content/uploads/2023/04/notice20230426.pdf"
+    },
+    {
+      "date": "2023-03-06",
+      "label": "紙での業務体制を整備",
+      "kind": "update",
+      "summary": "受注から発送まで継続できる体制を整えた",
+      "sourceUrl": "https://www.ginpack.co.jp/ng-wp/wp-content/uploads/2023/04/notice20230426.pdf"
+    },
+    {
+      "date": "2023-03-24",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと障害を公表",
+      "sourceUrl": "https://www.ginpack.co.jp/ng-wp/wp-content/uploads/2023/04/notice20230426.pdf"
+    },
+    {
+      "date": "2023-04-26",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "VPN侵入の推定と漏えいのおそれを説明",
+      "sourceUrl": "https://www.ginpack.co.jp/ng-wp/wp-content/uploads/2023/04/notice20230426.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-04-26"
+}
