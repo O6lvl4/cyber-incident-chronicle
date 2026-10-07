@@ -26,7 +26,7 @@
 
 ## 開発
 
-Node.js 24 / pnpm 10.34.5を使用します。
+Node.js 24 / pnpm 10.34.6を使用します。
 
 ```sh
 pnpm install --frozen-lockfile
