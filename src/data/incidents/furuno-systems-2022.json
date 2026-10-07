@@ -1,0 +1,83 @@
+{
+  "id": "furuno-systems-2022",
+  "company": "フルノシステムズ",
+  "title": "サポートサイトへのSQLインジェクションでメールアドレス1,068件が流出",
+  "announcementDate": "2022-12-19",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2022-11-18",
+  "occurredDateLabel": "確認された攻撃期間の始期（2022-11-18〜11-20）",
+  "updatedDate": "2023-08-22",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "サポートサイトのWebアプリケーション脆弱性を悪用したSQLインジェクション",
+    "status": "confirmed"
+  },
+  "summary": "製品サポート専用サーバーが攻撃を受け、問い合わせフォームに登録されたメールアドレス1,068件が流出。停止したサポートサイトは対策後の2023年8月に再開された。",
+  "affectedData": [
+    "問い合わせフォームのメールアドレス（社員分の一部も含む）"
+  ],
+  "counts": [
+    {
+      "value": 1068,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "流出したメールアドレス情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "メールアドレス1,068件",
+  "caveats": [
+    "登録期間2012-07-03〜2022-11-20と攻撃期間を混同しない",
+    "有償契約者向けサポートセンターは対象外"
+  ],
+  "geography": "日本のサポートサイト",
+  "sources": [
+    {
+      "title": "流出範囲確定の調査報告",
+      "url": "https://www.furunosystems.co.jp/news/info/20230127001469.html",
+      "publishedDate": "2023-01-27"
+    },
+    {
+      "title": "最終報告とサイト再開",
+      "url": "https://www.furunosystems.co.jp/news/info/20230822001548.html",
+      "publishedDate": "2023-08-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2022-11-18",
+      "label": "攻撃期間の始期",
+      "kind": "occurrence",
+      "summary": "11月20日まで不正アクセスを確認",
+      "sourceUrl": "https://www.furunosystems.co.jp/news/info/20230127001469.html"
+    },
+    {
+      "date": "2022-12-19",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "個人情報流出のおそれを公表",
+      "sourceUrl": "https://www.furunosystems.co.jp/news/info/20230822001548.html"
+    },
+    {
+      "date": "2023-01-27",
+      "label": "漏えい範囲を確定",
+      "kind": "update",
+      "summary": "メールアドレス1,068件と公表",
+      "sourceUrl": "https://www.furunosystems.co.jp/news/info/20230127001469.html"
+    },
+    {
+      "date": "2023-08-22",
+      "label": "サポートサイト再開",
+      "kind": "update",
+      "summary": "原因調査と対策を終え再開",
+      "sourceUrl": "https://www.furunosystems.co.jp/news/info/20230822001548.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-08-22"
+}

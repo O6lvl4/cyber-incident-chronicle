@@ -1,0 +1,77 @@
+{
+  "id": "mks-shalom-2023",
+  "company": "エムケイシステム",
+  "title": "ランサムウェアで社労夢等が停止、調査で外部流出は未確認",
+  "announcementDate": "2023-06-06",
+  "announcementDateLabel": "ランサムウェア被害公表",
+  "occurredDate": "2023-06-05",
+  "occurredDateLabel": "サーバー暗号化・システム障害の発生日",
+  "updatedDate": "2023-07-31",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "ランサムウェアによるサーバーデータの暗号化（初期侵入経路の詳細は非公表）",
+    "status": "confirmed"
+  },
+  "summary": "複数サーバーが暗号化され、約3,400ユーザーの大半でサービス提供に支障。6月30日から順次再開した。外部調査では情報窃取や外部転送の痕跡は確認されず、窃取の可能性を完全には否定できないとした。",
+  "affectedData": [
+    "サービスで保管する顧客等の情報（漏えい未確認）"
+  ],
+  "counts": [],
+  "scaleLabel": "サービス対象約3,400ユーザーの大半に影響",
+  "caveats": [
+    "約3,400はサービス利用単位であり、漏えい件数・人数ではない",
+    "情報流出未確認は被害なしを意味しない。停止・データ暗号化は確認済み",
+    "マイナンバーは暗号化保管され、会社は流出のおそれの対象に含めていない",
+    "公表日はランサムウェア被害の適時開示日。先行する一般的な障害告知の初日とは限らない"
+  ],
+  "geography": "日本のクラウドサービス基盤",
+  "sources": [
+    {
+      "title": "不正アクセス調査結果第3報",
+      "url": "https://contents.xj-storage.jp/xcontents/AS97180/813d570f/5138/4bc7/a113/f4837598df38/140120230719524126.pdf",
+      "publishedDate": "2023-07-19"
+    },
+    {
+      "title": "調査結果のWeb公表",
+      "url": "https://www.mks.jp/company/topics/20230731",
+      "publishedDate": "2023-07-31"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-06-05",
+      "label": "暗号化とサービス停止",
+      "kind": "occurrence",
+      "summary": "複数サーバーが攻撃を受け停止",
+      "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS97180/813d570f/5138/4bc7/a113/f4837598df38/140120230719524126.pdf"
+    },
+    {
+      "date": "2023-06-06",
+      "label": "ランサムウェア被害を公表",
+      "kind": "disclosure",
+      "summary": "被害を適時開示",
+      "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS97180/813d570f/5138/4bc7/a113/f4837598df38/140120230719524126.pdf"
+    },
+    {
+      "date": "2023-06-30",
+      "label": "サービス再開開始",
+      "kind": "update",
+      "summary": "新基盤で順次提供を再開",
+      "sourceUrl": "https://www.mks.jp/company/topics/20230731"
+    },
+    {
+      "date": "2023-07-19",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "情報窃取や外部転送の痕跡は未確認",
+      "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS97180/813d570f/5138/4bc7/a113/f4837598df38/140120230719524126.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-07-31",
+  "detectedDate": "2023-06-05"
+}

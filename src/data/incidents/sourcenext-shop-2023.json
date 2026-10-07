@@ -1,0 +1,81 @@
+{
+  "id": "sourcenext-shop-2023",
+  "company": "ソースネクスト",
+  "title": "決済アプリ改ざんで顧客情報最大120,982件に漏えいのおそれ",
+  "announcementDate": "2023-02-14",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "初期侵入日は非公表（対象利用期間は2022-11-15〜2023-01-17）",
+  "updatedDate": "2023-02-14",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "システムの脆弱性を悪用した不正アクセスと決済アプリケーションの改ざん",
+    "status": "confirmed"
+  },
+  "summary": "通販サイトの決済アプリが改ざんされ、カード情報を含む顧客情報が漏えいした可能性を公表。一部カードの不正利用のおそれもあり、カード決済を停止して調査を実施した。",
+  "affectedData": [
+    "氏名、メールアドレス、住所・電話番号等",
+    "カード名義、番号、有効期限、セキュリティコード"
+  ],
+  "counts": [
+    {
+      "value": 120982,
+      "unit": "件",
+      "status": "possible",
+      "label": "個人情報の最大漏えい対象件数",
+      "approximate": false
+    },
+    {
+      "value": 112132,
+      "unit": "件",
+      "status": "possible",
+      "label": "上記に含まれるカード情報件数（内数）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "最大120,982件（カード情報112,132件は内数）",
+  "caveats": [
+    "カード件数を個人情報件数に足し合わせない",
+    "原文は冒頭で件、対象顧客欄で名を使用。ここでは最大漏えい件数の表記を採用",
+    "対象利用期間を初期侵入日と断定しない"
+  ],
+  "geography": "日本の通販サイト",
+  "sources": [
+    {
+      "title": "通販サイト不正アクセス公表",
+      "url": "https://www.sourcenext.com/support/i/2023/0214_info/",
+      "publishedDate": "2023-02-14"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-01-04",
+      "label": "カード会社から連絡",
+      "kind": "occurrence",
+      "summary": "カード情報漏えいの懸念を受領",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2023/0214_info/"
+    },
+    {
+      "date": "2023-01-05",
+      "label": "カード決済停止",
+      "kind": "update",
+      "summary": "調査と決済停止を実施",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2023/0214_info/"
+    },
+    {
+      "date": "2023-02-14",
+      "label": "調査結果と対象を公表",
+      "kind": "disclosure",
+      "summary": "個人情報とカード情報の対象を説明",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2023/0214_info/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-02-14",
+  "detectedDate": "2023-01-04"
+}

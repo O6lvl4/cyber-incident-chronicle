@@ -1,0 +1,97 @@
+{
+  "id": "toyota-connected-cloud-2023",
+  "company": "トヨタ自動車／トヨタコネクティッド",
+  "title": "クラウド誤設定で車両データ等が外部アクセス可能に",
+  "announcementDate": "2023-05-12",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2013-11-06",
+  "occurredDateLabel": "最初の国内対象データが外部アクセス可能だった期間の始期",
+  "updatedDate": "2023-07-12",
+  "impactTypes": [
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "クラウドの公開設定誤り。外部攻撃の確認を示す事案ではない",
+    "status": "notApplicable"
+  },
+  "summary": "委託先のクラウド誤設定により顧客関連情報が外部から閲覧可能だったと公表。5月末の追加調査で地図更新関連データとアジア・オセアニア向け情報も対象と判明し、7月に再発防止策を公表した。",
+  "affectedData": [
+    "国内初報：車載端末ID、車台番号、位置情報、時刻",
+    "国内追加：車載端末ID、地図更新関連データ",
+    "海外追加：氏名・連絡先・車両識別情報等"
+  ],
+  "counts": [
+    {
+      "value": 2150000,
+      "unit": "人",
+      "status": "possible",
+      "label": "5月12日公表の国内サービス対象",
+      "approximate": true
+    },
+    {
+      "value": 260000,
+      "unit": "人",
+      "status": "possible",
+      "label": "5月31日公表の国内地図更新サービス対象",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "国内初報約215万人／追加約26万人（重複未精査）",
+  "caveats": [
+    "公表対象人数を確定漏えい人数とは扱わない",
+    "2つの国内対象数は重複を精査せず合算しない",
+    "対象期間より前からの設定不備を2023年に公表した事案",
+    "海外事案の対象人数は確認資料に記載なし"
+  ],
+  "geography": "日本・アジア・オセアニア向けサービス（海外対象は日本を除く）",
+  "sources": [
+    {
+      "title": "クラウド誤設定初報",
+      "url": "https://global.toyota/jp/newsroom/corporate/39174380.html",
+      "publishedDate": "2023-05-12"
+    },
+    {
+      "title": "追加調査結果",
+      "url": "https://global.toyota/jp/newsroom/corporate/39241571.html",
+      "publishedDate": "2023-05-31"
+    },
+    {
+      "title": "再発防止策公表",
+      "url": "https://global.toyota/jp/newsroom/corporate/39529198.html",
+      "publishedDate": "2023-07-12"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2013-11-06",
+      "label": "公開状態の始期",
+      "kind": "occurrence",
+      "summary": "国内初報対象のアクセス可能期間開始",
+      "sourceUrl": "https://global.toyota/jp/newsroom/corporate/39174380.html"
+    },
+    {
+      "date": "2023-05-12",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "約215万人の対象を公表",
+      "sourceUrl": "https://global.toyota/jp/newsroom/corporate/39174380.html"
+    },
+    {
+      "date": "2023-05-31",
+      "label": "追加範囲公表",
+      "kind": "update",
+      "summary": "国内地図更新・海外向けを追加",
+      "sourceUrl": "https://global.toyota/jp/newsroom/corporate/39241571.html"
+    },
+    {
+      "date": "2023-07-12",
+      "label": "再発防止策公表",
+      "kind": "update",
+      "summary": "委員会の指導と対策を報告",
+      "sourceUrl": "https://global.toyota/jp/newsroom/corporate/39529198.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-07-12"
+}
