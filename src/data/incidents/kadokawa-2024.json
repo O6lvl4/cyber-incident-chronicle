@@ -1,0 +1,78 @@
+{
+  "id": "kadokawa-2024",
+  "company": "KADOKAWA・ドワンゴ",
+  "title": "ランサムウェアでニコニコ等停止、個人情報流出を確認",
+  "announcementDate": "2024-06-09",
+  "announcementDateLabel": "公表日（確認資料に記載）",
+  "occurredDate": "2024-06-08",
+  "occurredDateLabel": "障害の発生日",
+  "updatedDate": "2024-08-05",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ランサムウェア。従業員認証情報の窃取が原因と推測、取得経路は未特定",
+    "status": "confirmed"
+  },
+  "summary": "グループのファイルサーバー等への攻撃でサービス障害が発生。ドワンゴ関係者や角川ドワンゴ学園関係者の個人情報、契約書等の外部流出を確認した。",
+  "affectedData": [
+    "取引先・従業員・採用応募者等の個人情報",
+    "角川ドワンゴ学園の生徒・卒業生・保護者等の個人情報",
+    "契約書・社内文書"
+  ],
+  "counts": [
+    {
+      "value": 254241,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "会社が確認した個人情報の対象者",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "254,241人・流出確認",
+  "caveats": [
+    "ニコニコのログイン情報の漏えいは確認されていない",
+    "KADOKAWA・ドワンゴ・学園にまたがる同一事案として集約"
+  ],
+  "geography": "日本のグループデータセンター等",
+  "sources": [
+    {
+      "title": "複数ウェブサイトのサービス停止（初報）",
+      "url": "https://group.kadokawa.co.jp/global/information/media-download/1334/3a6e77ab07342e3c/",
+      "publishedDate": "2024-06-09"
+    },
+    {
+      "title": "ランサムウェア攻撃による情報漏洩に関するお知らせ",
+      "url": "https://www.kadokawa.co.jp/topics/12088/",
+      "publishedDate": "2024-08-05"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2024-06-08",
+      "label": "障害の発生日",
+      "kind": "occurrence",
+      "summary": "障害の発生日",
+      "sourceUrl": "https://group.kadokawa.co.jp/global/information/media-download/1334/3a6e77ab07342e3c/"
+    },
+    {
+      "date": "2024-06-09",
+      "label": "公表",
+      "kind": "disclosure",
+      "summary": "事案について公表",
+      "sourceUrl": "https://group.kadokawa.co.jp/global/information/media-download/1334/3a6e77ab07342e3c/"
+    },
+    {
+      "date": "2024-08-05",
+      "label": "調査結果・続報",
+      "kind": "update",
+      "summary": "対象範囲と調査結果を公表",
+      "sourceUrl": "https://www.kadokawa.co.jp/topics/12088/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2024-08-05"
+}
