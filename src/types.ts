@@ -2,7 +2,7 @@ export type Weight = 1 | 2 | 3;
 export type SourceTier = 'primary' | 'secondary';
 export type ImpactType = 'leak' | 'outage' | 'unauthorizedAccess';
 export type DisclosureStatus = 'confirmed' | 'possible' | 'investigating' | 'noConfirmedLeak';
-export interface Thread { id: string; name: string; en: string; color: string; darkColor: string }
+export interface Thread { id: string; name: string; shortName?: string; en: string; color: string; darkColor: string }
 export interface Incident {
   id: string;
   company: string;

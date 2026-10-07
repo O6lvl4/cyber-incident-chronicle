@@ -21,7 +21,7 @@ function LaneLabels({ threads, rows, labelW, totalH }: Props) {
         return (
           <div key={r.id} className={`lane-label${narrow ? ' narrow' : ''}`} style={{ top: r.top, height: r.height, '--lane': r.color } as React.CSSProperties}>
             <span className="lane-bar" />
-            <span className="lane-name">{t.name}</span>
+            <span className="lane-name">{narrow ? (t.shortName ?? t.name) : t.name}</span>
             {!narrow && <span className="lane-en">{t.en}</span>}
           </div>
         );
