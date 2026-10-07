@@ -5,14 +5,14 @@ export const STATUS_LABELS: Record<DisclosureStatus, string> = {
 export const METHOD_STATUS: Record<Incident['attackMethod']['status'], string> = {
   confirmed: '公表で確認', possible: '可能性あり', unknown: '未公表・不明', notApplicable: '該当なし',
 };
-/** One marker per impact, one incident in all counts and the company list. */
+/** One marker per incident on the single timeline lane; impacts are filters, not lanes. */
 export function projectEvents(incidents: Incident[]): TimelineEvent[] {
-  return incidents.flatMap(item => item.impactTypes.map(impact => ({
-    id: `${item.id}--${impact}`, incidentId: item.id, threadId: impact,
+  return incidents.map(item => ({
+    id: item.id, incidentId: item.id, threadId: 'incidents',
     date: item.announcementDate, weight: 2,
     title: `${item.company} · ${STATUS_LABELS[item.disclosureStatus]}`,
     body: item.summary, source: item.sources[0]?.title ?? '', sourceUrl: item.sources[0]?.url, sourceTier: 'primary',
-  })));
+  }));
 }
 export function filterIncidents(incidents: Incident[], impacts: string[], status: string, query: string): Incident[] {
   const q = query.trim().toLocaleLowerCase('ja');

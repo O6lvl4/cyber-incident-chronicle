@@ -42,7 +42,7 @@ function ResultTable({ result, knownIds, onSelect }: { result: QueryResult; know
 }
 
 function StatusLine({ db }: { db: DuckDBHandle }) {
-  if (db.status === 'ready') return <span className="db-status ok">DuckDB-WASM ready · tables: incidents (事案), events (レーン表示), threads</span>;
+  if (db.status === 'ready') return <span className="db-status ok">DuckDB-WASM ready · tables: incidents (事案), events (タイムライン表示), threads (影響の定義)</span>;
   if (db.status === 'error') return <span className="db-status err">DuckDB の起動に失敗: {db.error}</span>;
   return <span className="db-status">DuckDB-WASM を起動中…</span>;
 }

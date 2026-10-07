@@ -1,7 +1,7 @@
 import meta from './meta.json';
 import type { Incident, Link, TimelineEvent } from '../types';
 import { projectEvents } from '../lib/incidents';
-export { THREADS } from './threads';
+export { LANES, THREADS } from './threads';
 export const META = meta;
 export const INCIDENTS = Object.values(import.meta.glob<Incident>('./incidents/*.json', { eager: true, import: 'default' }));
 export const INCIDENTS_BY_ID = new Map(INCIDENTS.map(item => [item.id, item]));

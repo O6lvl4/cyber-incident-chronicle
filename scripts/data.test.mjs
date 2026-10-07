@@ -12,9 +12,10 @@ test('reject duplicate IDs, unknown status and uncited updates', () => {
   const errors = validateData(copy).join(' ');
   for (const problem of ['duplicate id', 'unknown disclosure', 'timeline source']) assert.match(errors, new RegExp(problem));
 });
-test('multi-impact projections never change incident or company counts', () => {
+test('timeline shows one marker per incident, whatever its impacts', () => {
   const events = projectEvents(data.incidents);
-  assert.ok(events.length > data.incidents.length);
+  assert.equal(events.length, data.incidents.length);
+  assert.ok(events.every(e => e.threadId === 'incidents'));
   assert.equal(new Set(events.map(e => e.id)).size, events.length);
   assert.equal(new Set(events.map(e => e.incidentId)).size, data.incidents.length);
   assert.equal(companyCount([...data.incidents, data.incidents[0]]), companyCount(data.incidents));

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { DATA_END, DATA_START, EVENTS, INCIDENTS, LINKS, META, THREADS } from './data';
+import { DATA_END, DATA_START, EVENTS, INCIDENTS, LANES, LINKS, META, THREADS } from './data';
 import { useAppState } from './hooks/useAppState';
 import { useKeyboardNav } from './hooks/useKeyboardNav';
 import { useDuckDB } from './hooks/useDuckDB';
@@ -15,6 +15,7 @@ import IncidentList from './components/IncidentList';
 import Minimap from './components/Minimap';
 import PerfHud from './components/PerfHud';
 const THREAD_IDS = THREADS.map(t => t.id);
+const LANE_IDS = LANES.map(t => t.id);
 const DATASET = { threads: THREADS, events: EVENTS, links: LINKS, incidents: INCIDENTS };
 export default function App() {
   const st = useAppState({ events: EVENTS, threadIds: THREAD_IDS });
@@ -33,9 +34,8 @@ export default function App() {
     if (ev) board.current?.centerOn(Date.parse(ev.date));
   }, [st.select, eventsById]);
   const selectIncident = useCallback((id: string) => {
-    const event = EVENTS.find(ev => ev.incidentId === id && st.activeIds.includes(ev.threadId));
-    if (event) selectAndCenter(event.id);
-  }, [selectAndCenter, st.activeIds]);
+    if (eventsById.has(id)) selectAndCenter(id);
+  }, [selectAndCenter, eventsById]);
   const selectedIncidentId = st.selectedId ? eventsById.get(st.selectedId)?.incidentId : undefined;
   useEffect(() => {
     if (selectedIncidentId && !shownIds.has(selectedIncidentId)) st.closeDrawer();
@@ -56,14 +56,14 @@ export default function App() {
     <div className="mobile-tabs" role="group" aria-label="表示切替"><button aria-pressed={st.mobileView === 'timeline'} onClick={() => st.setMobileView('timeline')}>タイムライン</button><button aria-pressed={st.mobileView === 'list'} onClick={() => st.setMobileView('list')}>事案一覧 ({visible.length})</button></div>
     <main className={`workspace mobile-${st.mobileView}`}>
       <IncidentList incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>
-      <section className="timeline-container" aria-label="影響別タイムライン">
-        <div className="board-toolbar"><div><strong>収録した公表日のタイムライン</strong><span>同じ事案を、該当する影響のレーンに表示</span></div><div className="zoom-controls"><button className="n-btn" onClick={() => board.current?.zoomBy(-1)} aria-label="縮小">−</button><button className="n-btn" onClick={() => board.current?.zoomBy(1)} aria-label="拡大">＋</button><button className="n-btn" onClick={() => board.current?.fitAll()}>全期間</button></div></div>
-        <Board threads={THREADS} events={shownEvents} links={LINKS} activeIds={st.activeIds} theme={theme}
+      <section className="timeline-container" aria-label="事案のタイムライン">
+        <div className="board-toolbar"><div><strong>収録した公表日のタイムライン</strong><span>1事案を1つの点で表示。影響の種類は上の絞り込みで選択</span></div><div className="zoom-controls"><button className="n-btn" onClick={() => board.current?.zoomBy(-1)} aria-label="縮小">−</button><button className="n-btn" onClick={() => board.current?.zoomBy(1)} aria-label="拡大">＋</button><button className="n-btn" onClick={() => board.current?.fitAll()}>全期間</button></div></div>
+        <Board threads={LANES} events={shownEvents} links={LINKS} activeIds={LANE_IDS} theme={theme}
           selectedId={st.selectedId} matches={st.matches} dataStart={DATA_START} dataEnd={DATA_END}
           initial={st.initial} onSelect={st.select} onIdle={st.setView} apiRef={board}/>
         {visible.length === 0 && <div className="board-empty"><p>表示する事案がありません</p><button className="n-btn" onClick={st.resetFilters}>絞り込みを解除</button></div>}
-        <div className="timeline-caption"><span>{zoomed ? '横にスワイプ・ドラッグで移動 / ピンチ・−で縮小' : '全期間を表示中 / ＋・ピンチ・ダブルクリックで拡大'}</span><span>色は影響の種類。深刻度の順位ではありません</span></div>
-        <Minimap threads={THREADS} events={shownEvents} activeThreadIds={st.activeIds} dataStart={DATA_START} dataEnd={DATA_END}
+        <div className="timeline-caption"><span>{zoomed ? '横にスワイプ・ドラッグで移動 / ピンチ・−で縮小' : '全期間を表示中 / ＋・ピンチ・ダブルクリックで拡大'}</span><span>点の色や大きさは深刻度の順位ではありません</span></div>
+        <Minimap threads={LANES} events={shownEvents} activeThreadIds={LANE_IDS} dataStart={DATA_START} dataEnd={DATA_END}
           viewStart={st.view?.start ?? DATA_START} viewEnd={st.view?.end ?? DATA_END} dark={st.dark} onViewChange={centerRange}/>
       </section>
       <Drawer mode={st.drawerMode} onClose={st.closeDrawer}><DrawerContent state={st} db={db} eventsById={eventsById} onSelect={id => { st.resetFilters(); const event = eventsById.get(id) ?? EVENTS.find(item => item.incidentId === id); if (event) selectAndCenter(event.id); }}/></Drawer>
