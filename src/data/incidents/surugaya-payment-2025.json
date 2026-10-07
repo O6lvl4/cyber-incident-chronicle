@@ -1,0 +1,92 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2025-12-04",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "surugaya-payment-2025",
+  "company": "駿河屋",
+  "title": "決済ページ改ざんでカード情報等が流出、対象範囲を調査",
+  "announcementDate": "2025-08-08",
+  "occurredDate": "2025-07-23",
+  "occurredDateLabel": "調査で特定した漏えい対象期間の開始（8月8日まで）",
+  "updatedDate": "2025-12-04",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "監視ツールの脆弱性を悪用し、決済ページのJavaScriptを改ざん",
+    "status": "confirmed"
+  },
+  "summary": "ECサイトの不正アクセスと決済時入力情報の漏えい事実を初報で確認。12月の調査報告では、漏えいの疑いがあるカード30,431件と顧客29,932名を公表した。カード決済を一時停止した。",
+  "affectedData": [
+    "カード番号・名義・期限・セキュリティコード等",
+    "氏名、住所、電話番号、メール、領収書の宛名等"
+  ],
+  "counts": [
+    {
+      "value": 30431,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えい疑い対象のカード情報",
+      "approximate": false
+    },
+    {
+      "value": 29932,
+      "unit": "名",
+      "status": "possible",
+      "label": "上記カード情報に付随する顧客情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "対象疑い：カード30,431件／顧客29,932名",
+  "caveats": [
+    "初報は漏えい事実確認、後続の対象件数は『漏えいの疑い』として公表。全対象の確定漏えいとはしない",
+    "カード件数と顧客人数は合算しない",
+    "決済機能の停止をサイト全体の停止と同一視しない"
+  ],
+  "sources": [
+    {
+      "title": "情報漏えい・カード決済停止の初報",
+      "url": "https://www.suruga-ya.jp/feature/osirase/2025_08_08.html",
+      "publishedDate": "2025-08-08"
+    },
+    {
+      "title": "フォレンジック調査結果",
+      "url": "https://www.suruga-ya.jp/feature/osirase/2025_12_04.html",
+      "publishedDate": "2025-12-04"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-07-23",
+      "label": "漏えい対象期間の開始",
+      "kind": "occurrence",
+      "summary": "調査で7月23日12時50分以降の対象期間を特定",
+      "sourceUrl": "https://www.suruga-ya.jp/feature/osirase/2025_12_04.html"
+    },
+    {
+      "date": "2025-08-04",
+      "label": "改ざん検知・修正",
+      "kind": "occurrence",
+      "summary": "JavaScript改ざんを把握し同日修正",
+      "sourceUrl": "https://www.suruga-ya.jp/feature/osirase/2025_12_04.html"
+    },
+    {
+      "date": "2025-08-08",
+      "label": "漏えい・決済停止を公表",
+      "kind": "disclosure",
+      "summary": "個人情報の漏えい事実とカード決済停止を公表",
+      "sourceUrl": "https://www.suruga-ya.jp/feature/osirase/2025_08_08.html"
+    },
+    {
+      "date": "2025-12-04",
+      "label": "調査結果公表",
+      "kind": "update",
+      "summary": "対象範囲と原因を公表",
+      "sourceUrl": "https://www.suruga-ya.jp/feature/osirase/2025_12_04.html"
+    }
+  ]
+}

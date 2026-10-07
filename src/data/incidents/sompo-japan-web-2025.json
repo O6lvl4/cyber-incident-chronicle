@@ -1,0 +1,122 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2025-07-25",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "sompo-japan-web-2025",
+  "company": "損害保険ジャパン",
+  "title": "社内Webシステムへの不正アクセス、顧客・代理店データに閲覧のおそれ",
+  "announcementDate": "2025-04-25",
+  "occurredDate": "2025-04-17",
+  "occurredDateLabel": "調査で推測されたアクセス可能期間の開始（4月21日まで）",
+  "detectedDate": "2025-04-21",
+  "updatedDate": "2025-07-25",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者によるWebシステムへの侵入。初期侵入手法は確認資料では非公表",
+    "status": "unknown"
+  },
+  "summary": "業務指標等を管理する社内Webシステムへの不正アクセスを確認し、システムを停止・隔離。顧客や代理店の情報が閲覧・漏えいした可能性を公表したが、実際の外部流出は確認されていない。",
+  "affectedData": [
+    "顧客の氏名・連絡先・証券番号等",
+    "代理店関連情報",
+    "単独では個人を特定できない証券番号・事故番号"
+  ],
+  "counts": [
+    {
+      "value": 3370000,
+      "unit": "件",
+      "status": "possible",
+      "label": "氏名・連絡先・証券番号がある顧客データ",
+      "approximate": true
+    },
+    {
+      "value": 1870000,
+      "unit": "件",
+      "status": "possible",
+      "label": "氏名・証券番号がある顧客データ",
+      "approximate": true
+    },
+    {
+      "value": 1190000,
+      "unit": "件",
+      "status": "possible",
+      "label": "連絡先・証券番号がある顧客データ",
+      "approximate": true
+    },
+    {
+      "value": 830000,
+      "unit": "件",
+      "status": "possible",
+      "label": "その他顧客データ",
+      "approximate": true
+    },
+    {
+      "value": 1780000,
+      "unit": "件",
+      "status": "possible",
+      "label": "代理店関連データ",
+      "approximate": true
+    },
+    {
+      "value": 8440000,
+      "unit": "件",
+      "status": "possible",
+      "label": "証券番号・事故番号のみのデータ",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "種類別データ件数を公表（重複あり・人数ではない）",
+  "caveats": [
+    "公表件数は重複の可能性があり人数への換算や単純合算は不可",
+    "4月17〜21日は調査で推測した閲覧可能期間",
+    "社内の独立したWebシステム停止であり全保険業務停止とは扱わない"
+  ],
+  "sources": [
+    {
+      "title": "不正アクセス第2報",
+      "url": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2025/20250611_1.pdf?la=ja-JP",
+      "publishedDate": "2025-06-11"
+    },
+    {
+      "title": "関連情報・FAQ",
+      "url": "https://www.sompo-japan.co.jp/announce/2025/202504_01/",
+      "publishedDate": "2025-07-25"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-04-21",
+      "label": "不正アクセス確認",
+      "kind": "occurrence",
+      "summary": "対象システムを停止・ネットワーク遮断",
+      "sourceUrl": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2025/20250611_1.pdf?la=ja-JP"
+    },
+    {
+      "date": "2025-04-25",
+      "label": "第一報",
+      "kind": "disclosure",
+      "summary": "不正アクセスと情報流出の可能性を公表",
+      "sourceUrl": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2025/20250611_1.pdf?la=ja-JP"
+    },
+    {
+      "date": "2025-06-11",
+      "label": "対象データを詳報",
+      "kind": "update",
+      "summary": "種類別のデータ件数と留保を公表",
+      "sourceUrl": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2025/20250611_1.pdf?la=ja-JP"
+    },
+    {
+      "date": "2025-07-25",
+      "label": "個別通知方針とFAQ",
+      "kind": "update",
+      "summary": "7月末以降の通知と、外部流出の事実は未確認と案内",
+      "sourceUrl": "https://www.sompo-japan.co.jp/announce/2025/202504_01/"
+    }
+  ]
+}

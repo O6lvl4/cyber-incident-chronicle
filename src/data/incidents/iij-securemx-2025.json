@@ -1,0 +1,107 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2025-04-22",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "iij-securemx-2025",
+  "company": "インターネットイニシアティブ",
+  "title": "IIJセキュアMXの脆弱性悪用でメール・認証情報の漏えい",
+  "announcementDate": "2025-04-15",
+  "occurredDate": "2024-08-03",
+  "occurredDateLabel": "確認された不正アクセス開始日",
+  "updatedDate": "2025-08-21",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "Active! mailの未発見だった脆弱性を悪用した侵入",
+    "status": "confirmed"
+  },
+  "summary": "法人向けメールサービスへの不正アクセスを公表し、続報でメールアカウント・パスワード、本文等、連携クラウドの認証情報の漏えいを確認。初報の全契約への影響可能性と、確認済みの対象を区別した。",
+  "affectedData": [
+    "メールアカウント・パスワード",
+    "メール本文・ヘッダー情報",
+    "連携クラウドサービスの認証情報"
+  ],
+  "counts": [
+    {
+      "value": 311288,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えい確認済みメールアカウント（パスワード未確認の契約も含む）",
+      "approximate": false
+    },
+    {
+      "value": 586,
+      "unit": "契約",
+      "status": "confirmed",
+      "label": "3種類の漏えいを重複除外した対象契約",
+      "approximate": false
+    },
+    {
+      "value": 4072650,
+      "unit": "件",
+      "status": "possible",
+      "label": "初報の最大対象メールアカウント（確認済みを含む）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "確認済み31万1,288アカウント／586契約",
+  "caveats": [
+    "メールアカウント数、契約数、人数は異なる",
+    "初報407万件すべての漏えいが確認されたわけではない",
+    "2024年開始、2025年公表の同一事案",
+    "8月21日は窓口変更の追記であり被害数更新ではない"
+  ],
+  "sources": [
+    {
+      "title": "情報漏えいの可能性（第一報）",
+      "url": "https://www.iij.ad.jp/news/pressrelease/2025/0415.html",
+      "publishedDate": "2025-04-15"
+    },
+    {
+      "title": "確認済み対象と原因（第二報・8月21日窓口追記）",
+      "url": "https://www.iij.ad.jp/news/pressrelease/2025/0422-2.html",
+      "publishedDate": "2025-04-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2024-08-03",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "この日以降の不正アクセスと不正プログラム実行を確認",
+      "sourceUrl": "https://www.iij.ad.jp/news/pressrelease/2025/0415.html"
+    },
+    {
+      "date": "2025-04-10",
+      "label": "漏えい可能性を確認",
+      "kind": "occurrence",
+      "summary": "メールサービスの情報流出のおそれを把握",
+      "sourceUrl": "https://www.iij.ad.jp/news/pressrelease/2025/0415.html"
+    },
+    {
+      "date": "2025-04-15",
+      "label": "第一報",
+      "kind": "disclosure",
+      "summary": "全契約について影響の可能性を公表",
+      "sourceUrl": "https://www.iij.ad.jp/news/pressrelease/2025/0415.html"
+    },
+    {
+      "date": "2025-04-22",
+      "label": "漏えい確認済み範囲",
+      "kind": "update",
+      "summary": "確認済みアカウント・契約数と脆弱性悪用を公表",
+      "sourceUrl": "https://www.iij.ad.jp/news/pressrelease/2025/0422-2.html"
+    },
+    {
+      "date": "2025-08-21",
+      "label": "窓口変更",
+      "kind": "update",
+      "summary": "専用フォーム終了に伴う連絡窓口を更新",
+      "sourceUrl": "https://www.iij.ad.jp/news/pressrelease/2025/0422-2.html"
+    }
+  ]
+}

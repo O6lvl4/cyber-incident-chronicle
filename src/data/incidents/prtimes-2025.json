@@ -1,0 +1,100 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-03-16",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "prtimes-2025",
+  "company": "PR TIMES",
+  "title": "管理者画面への不正アクセス、個人情報と発表前情報に漏えいのおそれ",
+  "announcementDate": "2025-05-07",
+  "occurredDate": "2025-04-24",
+  "occurredDateLabel": "確認されたサーバー内不正アクセスの開始",
+  "detectedDate": "2025-04-25",
+  "updatedDate": "2026-03-16",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "アクセス許可IPアドレスと社内共有アカウントを使った管理者画面への侵入・バックドア設置",
+    "status": "confirmed"
+  },
+  "summary": "サーバーの不審ファイルから不正アクセスを確認。個人情報最大901,603件、発表前プレスリリース1,682件等に漏えいのおそれを公表した。配信サービス自体は通常稼働し、2026年3月に追加対策の完了を報告した。",
+  "affectedData": [
+    "利用者・送信先リスト・スタッフの氏名、連絡先、パスワード関連データ等",
+    "発表前プレスリリース情報"
+  ],
+  "counts": [
+    {
+      "value": 901603,
+      "unit": "件",
+      "status": "possible",
+      "label": "個人情報の最大対象件数",
+      "approximate": false
+    },
+    {
+      "value": 1682,
+      "unit": "件",
+      "status": "possible",
+      "label": "発表前プレスリリース",
+      "approximate": false
+    },
+    {
+      "value": 1182,
+      "unit": "社",
+      "status": "possible",
+      "label": "上記発表前プレスリリースの企業数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "個人情報 最大901,603件／発表前情報1,682件",
+  "caveats": [
+    "最大件数は漏えい確認数でも人数でもない",
+    "記事件数と企業数・個人情報件数を合算しない",
+    "認証情報を最初に取得した方法までは断定しない",
+    "2026年3月16日は再発防止策完了の公表日"
+  ],
+  "sources": [
+    {
+      "title": "不正アクセス・情報漏えい可能性の報告",
+      "url": "https://prtimes.jp/main/html/rd/p/000001531.000000112.html",
+      "publishedDate": "2025-05-07"
+    },
+    {
+      "title": "ログイン関連機能追加・対策完了",
+      "url": "https://prtimes.jp/common/file/20260316_PRTIMES_loginalert.pdf",
+      "publishedDate": "2026-03-16"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-04-24",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "管理者画面への侵入と不審な操作・バックドア設置",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001531.000000112.html"
+    },
+    {
+      "date": "2025-04-25",
+      "label": "不審ファイル検知",
+      "kind": "occurrence",
+      "summary": "調査・遮断等を開始",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001531.000000112.html"
+    },
+    {
+      "date": "2025-05-07",
+      "label": "情報漏えい可能性公表",
+      "kind": "disclosure",
+      "summary": "個人情報と発表前情報の対象範囲を公表",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001531.000000112.html"
+    },
+    {
+      "date": "2026-03-16",
+      "label": "追加対策完了",
+      "kind": "update",
+      "summary": "ログイン通知等を実装し追加再発防止策の完了を公表",
+      "sourceUrl": "https://prtimes.jp/common/file/20260316_PRTIMES_loginalert.pdf"
+    }
+  ]
+}

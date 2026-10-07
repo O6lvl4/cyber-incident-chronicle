@@ -1,0 +1,79 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2025-03-05",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "ntt-com-order-2025",
+  "company": "NTTコミュニケーションズ",
+  "title": "法人サービスのオーダ情報流通システムで情報流出のおそれ",
+  "announcementDate": "2025-03-05",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入日非公表（2025-02-05に発見）",
+  "detectedDate": "2025-02-05",
+  "updatedDate": "2025-03-05",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "社内システム内の装置への不正アクセス。初期侵入手法は非公表",
+    "status": "unknown"
+  },
+  "summary": "社内ネットワークの不審な通信を検知し、法人向けサービスの契約・連絡先等が流出した可能性を公表。対象顧客は17,891社で、個人向けサービス情報は含まれていない。",
+  "affectedData": [
+    "契約番号、契約名、担当者名、電話番号、メール、住所、利用サービス情報"
+  ],
+  "counts": [
+    {
+      "value": 17891,
+      "unit": "社",
+      "status": "possible",
+      "label": "影響を受けた可能性がある法人顧客",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "17,891社・流出のおそれ",
+  "caveats": [
+    "社数を人数・個人データ件数に換算しない",
+    "法人名義のNTTドコモの携帯契約は対象外と公表",
+    "公表時の社名を使用（現NTTドコモビジネスのサイトに掲載）"
+  ],
+  "sources": [
+    {
+      "title": "当社への不正アクセスによる情報流出の可能性",
+      "url": "https://www.ntt.com/about-us/press-releases/news/article/2025/0305_2.html",
+      "publishedDate": "2025-03-05"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-02-05",
+      "label": "不審通信を検知",
+      "kind": "occurrence",
+      "summary": "装置への入口を制限",
+      "sourceUrl": "https://www.ntt.com/about-us/press-releases/news/article/2025/0305_2.html"
+    },
+    {
+      "date": "2025-02-06",
+      "label": "流出の可能性が判明",
+      "kind": "occurrence",
+      "summary": "周辺システムとの通信ログから影響を確認",
+      "sourceUrl": "https://www.ntt.com/about-us/press-releases/news/article/2025/0305_2.html"
+    },
+    {
+      "date": "2025-02-15",
+      "label": "別装置を遮断",
+      "kind": "occurrence",
+      "summary": "追加調査で特定した装置をネットワークから遮断",
+      "sourceUrl": "https://www.ntt.com/about-us/press-releases/news/article/2025/0305_2.html"
+    },
+    {
+      "date": "2025-03-05",
+      "label": "影響を公表",
+      "kind": "disclosure",
+      "summary": "対象17,891社とデータ項目を公表",
+      "sourceUrl": "https://www.ntt.com/about-us/press-releases/news/article/2025/0305_2.html"
+    }
+  ]
+}
