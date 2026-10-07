@@ -1,0 +1,123 @@
+{
+  "id": "adastria-2023",
+  "company": "アダストリア",
+  "title": "社内システム侵害で通販休止、顧客・従業員等に流出のおそれ",
+  "announcementDate": "2023-01-19",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2023-01-18早朝に確認）",
+  "updatedDate": "2023-04-25",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス（侵入経路は特定済みだが詳細非公表）",
+    "status": "confirmed"
+  },
+  "summary": "社内システムへの不正アクセスを受け、物流停止に伴って通販サイトを休止。後続調査で問い合わせ顧客や従業員、応募者等も漏えいのおそれの対象に追加した。調査終了時点で外部流出は確認されていない。",
+  "affectedData": [
+    "通販・配送顧客の連絡先・会員識別番号",
+    "電話問い合わせ内容",
+    "従業員・退職者の人事情報",
+    "応募者・取引先の連絡先等"
+  ],
+  "counts": [
+    {
+      "value": 1044175,
+      "unit": "件",
+      "status": "possible",
+      "label": "1月24日公表の通販・配送等の顧客情報",
+      "approximate": false
+    },
+    {
+      "value": 221272,
+      "unit": "件",
+      "status": "possible",
+      "label": "追加：カスタマーサービス問い合わせ顧客",
+      "approximate": false
+    },
+    {
+      "value": 94435,
+      "unit": "件",
+      "status": "possible",
+      "label": "追加：従業員・退職者",
+      "approximate": false
+    },
+    {
+      "value": 22063,
+      "unit": "件",
+      "status": "possible",
+      "label": "追加：新卒採用応募者",
+      "approximate": false
+    },
+    {
+      "value": 26460,
+      "unit": "件",
+      "status": "possible",
+      "label": "追加：中途・アルバイト採用応募者",
+      "approximate": false
+    },
+    {
+      "value": 6346,
+      "unit": "件",
+      "status": "possible",
+      "label": "追加：取引先情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "当初1,044,175件に加え顧客・従業員等を追加",
+  "caveats": [
+    "各区分の重複を精査せず人数として合算しない",
+    "通販ECサーバー自体は不正アクセスの影響を受けていないと公表",
+    "2023-04-25は窓口情報更新日。調査結果は2023-03-31"
+  ],
+  "geography": "日本の社内業務・物流システム",
+  "sources": [
+    {
+      "title": "第2報・顧客対象範囲",
+      "url": "https://www.adastria.co.jp/news/notice/entry-15641/",
+      "publishedDate": "2023-01-24"
+    },
+    {
+      "title": "第3報・調査結果（窓口更新あり）",
+      "url": "https://www.adastria.co.jp/news/notice/entry-15787/",
+      "publishedDate": "2023-03-31"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-01-18",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "業務システム停止と物流への影響",
+      "sourceUrl": "https://www.adastria.co.jp/news/notice/entry-15641/"
+    },
+    {
+      "date": "2023-01-19",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "社内システムへの侵害を公表",
+      "sourceUrl": "https://www.adastria.co.jp/news/notice/entry-15787/"
+    },
+    {
+      "date": "2023-01-24",
+      "label": "顧客対象範囲を公表",
+      "kind": "update",
+      "summary": "1,044,175件に流出のおそれ",
+      "sourceUrl": "https://www.adastria.co.jp/news/notice/entry-15641/"
+    },
+    {
+      "date": "2023-03-31",
+      "label": "調査終了・対象追加",
+      "kind": "update",
+      "summary": "問い合わせ顧客・従業員・応募者等を追加",
+      "sourceUrl": "https://www.adastria.co.jp/news/notice/entry-15787/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-04-25",
+  "detectedDate": "2023-01-18"
+}

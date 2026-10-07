@@ -1,0 +1,81 @@
+{
+  "id": "tci-us-2022",
+  "company": "東京化成工業グループ",
+  "title": "米国子会社への不正アクセスで取引先等の情報流出のおそれ",
+  "announcementDate": "2022-11-01",
+  "announcementDateLabel": "公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2022-06-23に不正アクセス確認）",
+  "updatedDate": "2022-11-01",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "米国子会社システムへの第三者不正アクセス・マルウェア（詳細経路は非公表）",
+    "status": "confirmed"
+  },
+  "summary": "米国子会社への不正アクセス後、日本を含むグループの企業・個人情報が流出した可能性を公表。社内システムは7月11日に全面再稼働したが、11月の報告時点で流出の事実は確認されていない。",
+  "affectedData": [
+    "取引先の会社名・会社住所",
+    "担当者氏名、メールアドレス、電話番号等"
+  ],
+  "counts": [
+    {
+      "value": 1200,
+      "unit": "件",
+      "status": "possible",
+      "label": "取引先情報",
+      "approximate": true
+    },
+    {
+      "value": 7000,
+      "unit": "名",
+      "status": "possible",
+      "label": "個人情報の対象",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "取引先約1,200件／個人情報約7,000名分",
+  "caveats": [
+    "発生・検知は対象期間より前で、2022-11-01公表として収録",
+    "1,200件と7,000名は単位が異なり合算しない",
+    "全面再稼働は漏えいのおそれの解消を意味しない"
+  ],
+  "geography": "日本企業の米国子会社と日本を含むグループ",
+  "sources": [
+    {
+      "title": "米国子会社不正アクセス・流出可能性公表",
+      "url": "https://www.tcichemicals.com/JP/ja/notice/20221101",
+      "publishedDate": "2022-11-01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2022-06-23",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "米国子会社のシステムで侵害を把握",
+      "sourceUrl": "https://www.tcichemicals.com/JP/ja/notice/20221101"
+    },
+    {
+      "date": "2022-07-11",
+      "label": "全面再稼働",
+      "kind": "update",
+      "summary": "安全確認後に社内システムを再稼働",
+      "sourceUrl": "https://www.tcichemicals.com/JP/ja/notice/20221101"
+    },
+    {
+      "date": "2022-11-01",
+      "label": "流出のおそれを公表",
+      "kind": "disclosure",
+      "summary": "個人情報等の対象範囲を説明",
+      "sourceUrl": "https://www.tcichemicals.com/JP/ja/notice/20221101"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2022-11-01",
+  "detectedDate": "2022-06-23"
+}

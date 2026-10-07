@@ -1,0 +1,89 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2025-12-12",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "huistenbosch-2025",
+  "company": "ハウステンボス",
+  "title": "社内システムの暗号化と個人情報流出のおそれ",
+  "announcementDate": "2025-08-29",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2025-08-29に不正アクセスと暗号化を確認）",
+  "detectedDate": "2025-08-29",
+  "updatedDate": "2025-12-12",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "リモートアクセス機器を経由する侵入とサーバー・端末の暗号化を確認",
+    "status": "confirmed"
+  },
+  "summary": "不正アクセスとファイル暗号化によりアプリの待ち時間表示等が停止。調査で顧客・役職員等・取引先の個人情報が流出した可能性を公表した。影響を受けた機能は10月1日までに復旧した。",
+  "affectedData": [
+    "顧客の氏名、連絡先、生年月日等",
+    "役職員・家族の連絡先、マイナンバー、健康診断等の情報",
+    "取引先の氏名、連絡先、マイナンバー等"
+  ],
+  "counts": [
+    {
+      "value": 1499300,
+      "unit": "人",
+      "status": "possible",
+      "label": "顧客情報",
+      "approximate": true
+    },
+    {
+      "value": 37300,
+      "unit": "人",
+      "status": "possible",
+      "label": "役職員・退職者・家族",
+      "approximate": true
+    },
+    {
+      "value": 9400,
+      "unit": "人",
+      "status": "possible",
+      "label": "取引先",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "顧客 約149万9,300人など・漏えいのおそれ",
+  "caveats": [
+    "暗号化の確認だけからランサムウェアの種類や犯人を断定しない",
+    "事業全体の休業ではなく、公表された機能・発注システム等への影響",
+    "マイナンバー等は情報の種類のみを記載し実データは収録しない"
+  ],
+  "sources": [
+    {
+      "title": "不正アクセス事案の調査結果",
+      "url": "https://www.huistenbosch.co.jp/aboutus/company/pdf/251212_htb10.pdf",
+      "publishedDate": "2025-12-12"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-08-29",
+      "label": "検知・初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと暗号化を確認し、関連システムを停止・隔離",
+      "sourceUrl": "https://www.huistenbosch.co.jp/aboutus/company/pdf/251212_htb10.pdf"
+    },
+    {
+      "date": "2025-10-01",
+      "label": "影響機能の復旧",
+      "kind": "update",
+      "summary": "待ち時間表示等と一部発注システムはこの日までに復旧",
+      "sourceUrl": "https://www.huistenbosch.co.jp/aboutus/company/pdf/251212_htb10.pdf"
+    },
+    {
+      "date": "2025-12-12",
+      "label": "調査結果公表",
+      "kind": "update",
+      "summary": "リモートアクセス機器経由の侵入と情報流出可能性の範囲を公表",
+      "sourceUrl": "https://www.huistenbosch.co.jp/aboutus/company/pdf/251212_htb10.pdf"
+    }
+  ]
+}

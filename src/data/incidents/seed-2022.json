@@ -1,0 +1,100 @@
+{
+  "id": "seed-2022",
+  "company": "シード",
+  "title": "研究所サーバー侵害で一部ファイル漏えい、最大約70,700件におそれ",
+  "announcementDate": "2022-11-30",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2022-11-29に障害確認）",
+  "updatedDate": "2023-05-19",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ランサムウェア事案と会社が説明。保守用ネットワーク機器の脆弱性経由の侵入の可能性が高いと分析",
+    "status": "confirmed"
+  },
+  "summary": "研究所の障害で不正アクセスが発覚し、出荷遅延が発生。調査で11ファイルの漏えいを確認し、その他を含め最大約70,700件の個人情報について漏えいのおそれを公表した。",
+  "affectedData": [
+    "株主・従業員と家族・取引先等の氏名、連絡先、生年月日等",
+    "子会社ファミリーセール利用者の購入履歴等"
+  ],
+  "counts": [
+    {
+      "value": 11,
+      "unit": "ファイル",
+      "status": "confirmed",
+      "label": "漏えいを確認した会社関連ファイル",
+      "approximate": false
+    },
+    {
+      "value": 6,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "上記ファイルに含まれる関連先の個人情報",
+      "approximate": false
+    },
+    {
+      "value": 70700,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいの可能性を完全に否定できない個人情報（最大、重複精査前）",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "11ファイル確認／最大約70,700件におそれ",
+  "caveats": [
+    "11ファイル・6件・約70,700件を合算しない",
+    "子会社の全購入者ではなく、訂正後のファミリーセール購入者等が対象",
+    "ランサムウェアとの分類は2023-05-19決算説明資料に基づく。侵入経路は推定"
+  ],
+  "geography": "日本・鴻巣研究所と社内システム",
+  "sources": [
+    {
+      "title": "個人情報漏えいの可能性公表・対象説明の訂正版",
+      "url": "https://ssl4.eir-parts.net/doc/7743/announcement/88013/00.pdf",
+      "publishedDate": "2023-04-19"
+    },
+    {
+      "title": "2023年3月期決算説明会資料・20ページ",
+      "url": "https://www2.jpx.co.jp/disc/77430/140120230519576658.pdf",
+      "publishedDate": "2023-05-19"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2022-11-29",
+      "label": "障害・不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "社内システム部分停止と出荷遅延",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7743/announcement/88013/00.pdf"
+    },
+    {
+      "date": "2022-11-30",
+      "label": "初報公表・復旧",
+      "kind": "disclosure",
+      "summary": "障害を公表しバックアップから復旧",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7743/announcement/88013/00.pdf"
+    },
+    {
+      "date": "2023-04-19",
+      "label": "調査結果・対象訂正",
+      "kind": "update",
+      "summary": "確認済み漏えいとおそれを区分して公表",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7743/announcement/88013/00.pdf"
+    },
+    {
+      "date": "2023-05-19",
+      "label": "対応状況を説明",
+      "kind": "update",
+      "summary": "ランサムウェア事案として分類し、本人通知の進捗を説明",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/77430/140120230519576658.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-05-19",
+  "detectedDate": "2022-11-29"
+}

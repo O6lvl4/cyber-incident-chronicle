@@ -1,0 +1,83 @@
+{
+  "id": "ntt-business-solutions-2023",
+  "company": "NTTビジネスソリューションズ／NTTマーケティングアクトProCX",
+  "title": "元派遣社員の管理者権限悪用で928万件の顧客情報を不正持ち出し",
+  "announcementDate": "2023-10-17",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "複数年にわたる内部不正。開始日の確定値は本レコードでは採用しない",
+  "updatedDate": "2026-04-24",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "元派遣社員によるシステム管理者アカウントの悪用と顧客情報の持ち出し（内部不正）",
+    "status": "confirmed"
+  },
+  "summary": "コールセンターシステムの運用保守従事者が、委託元企業・団体の顧客情報を不正に持ち出し第三者へ流出させた。12月の調査で持ち出し対象を928万件、69クライアントへ更新した。",
+  "affectedData": [
+    "主に氏名、住所、電話番号",
+    "一部で性別・年齢等"
+  ],
+  "counts": [
+    {
+      "value": 9280000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "不正持ち出しが判明した顧客情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "928万件（69クライアント分）",
+  "caveats": [
+    "持ち出し件数でありユニークな人数ではない",
+    "委託元各社の関連公表を別の攻撃として重複計上しない",
+    "2026-04-24は窓口案内更新日。928万件の被害範囲は2023-12-19公表値",
+    "NTTネクシアの2023年3月の持ち出し事案とは別"
+  ],
+  "geography": "日本のコールセンター業務・複数の委託元",
+  "sources": [
+    {
+      "title": "元派遣社員の不正流出初報",
+      "url": "https://www.nttdata-act.com/info/detail/231017.html",
+      "publishedDate": "2023-10-17"
+    },
+    {
+      "title": "持ち出し928万件への更新",
+      "url": "https://www.nttdata-act.com/info/detail/231219.html",
+      "publishedDate": "2023-12-19"
+    },
+    {
+      "title": "対象者への連絡案内（更新あり）",
+      "url": "https://www.nttdata-act.com/info/detail/240209.html",
+      "publishedDate": "2024-02-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-10-17",
+      "label": "不正持ち出しを公表",
+      "kind": "disclosure",
+      "summary": "管理者権限の悪用を説明",
+      "sourceUrl": "https://www.nttdata-act.com/info/detail/231017.html"
+    },
+    {
+      "date": "2023-12-19",
+      "label": "対象数を更新",
+      "kind": "update",
+      "summary": "928万件・69クライアントと公表",
+      "sourceUrl": "https://www.nttdata-act.com/info/detail/231219.html"
+    },
+    {
+      "date": "2024-02-09",
+      "label": "直接通知を案内",
+      "kind": "update",
+      "summary": "委託元を特定できなかった顧客への通知を説明",
+      "sourceUrl": "https://www.nttdata-act.com/info/detail/240209.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2026-04-24"
+}

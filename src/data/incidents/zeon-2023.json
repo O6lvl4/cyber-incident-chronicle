@@ -1,0 +1,84 @@
+{
+  "id": "zeon-2023",
+  "company": "日本ゼオン",
+  "title": "ディレクトリサーバーへの不正アクセスで13,434件の流出のおそれ",
+  "announcementDate": "2023-08-23",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2023-08-16に攻撃を検知）",
+  "updatedDate": "2023-10-23",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "アカウント管理用ディレクトリサーバーへの不正アクセス（詳細手口は非公表）",
+    "status": "unknown"
+  },
+  "summary": "アカウント管理システムが侵害され、顧客・取引先の連絡先と従業員等のアカウント情報が流出したおそれ。第三者調査終了後も対象は13,434件で、他システムへの侵害の形跡は確認されなかったと報告した。",
+  "affectedData": [
+    "顧客・取引先の氏名とメールアドレス",
+    "従業員等のユーザーID、氏名、所属、社員番号、電話番号等"
+  ],
+  "counts": [
+    {
+      "value": 8236,
+      "unit": "件",
+      "status": "possible",
+      "label": "顧客・取引先の情報",
+      "approximate": false
+    },
+    {
+      "value": 5198,
+      "unit": "件",
+      "status": "possible",
+      "label": "グループ・協力会社社員等のアカウント情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "合計13,434件に流出のおそれ",
+  "caveats": [
+    "会社公表の合計13,434件はデータ件数であり人数ではない",
+    "調査完了後も漏えい確定とは公表していない"
+  ],
+  "geography": "日本企業グループのアカウント管理システム",
+  "sources": [
+    {
+      "title": "不正アクセスと流出可能性の初報",
+      "url": "https://www.zeon.co.jp/news/assets/pdf/230823-2.pdf",
+      "publishedDate": "2023-08-23"
+    },
+    {
+      "title": "社内・第三者調査完了",
+      "url": "https://www.zeon.co.jp/news/assets/pdf/231023.pdf",
+      "publishedDate": "2023-10-23"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-08-16",
+      "label": "攻撃を検知",
+      "kind": "occurrence",
+      "summary": "機器をネットワークから切り離し",
+      "sourceUrl": "https://www.zeon.co.jp/news/assets/pdf/230823-2.pdf"
+    },
+    {
+      "date": "2023-08-23",
+      "label": "流出のおそれを公表",
+      "kind": "disclosure",
+      "summary": "対象13,434件と公表",
+      "sourceUrl": "https://www.zeon.co.jp/news/assets/pdf/230823-2.pdf"
+    },
+    {
+      "date": "2023-10-23",
+      "label": "調査完了を公表",
+      "kind": "update",
+      "summary": "対象システム・情報の範囲を再確認",
+      "sourceUrl": "https://www.zeon.co.jp/news/assets/pdf/231023.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-10-23",
+  "detectedDate": "2023-08-16"
+}

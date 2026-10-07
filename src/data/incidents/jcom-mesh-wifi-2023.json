@@ -1,0 +1,84 @@
+{
+  "id": "jcom-mesh-wifi-2023",
+  "company": "JCOM",
+  "title": "メッシュWi-Fi提供元の提携先への不正アクセスで氏名等が漏えい",
+  "announcementDate": "2023-11-22",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃発生日非公表（2023-11-21に代理店経由で把握）",
+  "updatedDate": "2024-01-05",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "米国Plume Design社の提携先にあるモバイルアプリのアクセスログサーバーへの不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "メッシュWi-Fiの供給網内のサーバーへの侵入により、J:COM利用者と他ケーブルテレビ事業者の顧客情報が漏えい。更新後の対象は226,832件と5,109件で、連絡先を確認できたJ:COM顧客には12月に通知した。",
+  "affectedData": [
+    "J:COM利用者の氏名",
+    "他ケーブルテレビ事業者利用者の氏名・メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 226832,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "J:COMの対象顧客情報",
+      "approximate": false
+    },
+    {
+      "value": 5109,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "他ケーブルテレビ事業者の対象顧客情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "226,832件／他CATV5,109件",
+  "caveats": [
+    "初報226,688件・4,472件ではなく更新後の値を採用",
+    "攻撃対象はJCOM本体のサーバーとは公表されていない"
+  ],
+  "geography": "日本の顧客情報・米国サービス提供元の提携先",
+  "sources": [
+    {
+      "title": "顧客情報漏えい初報",
+      "url": "https://newsreleases.jcom.co.jp/files/2023/11/23112201.pdf",
+      "publishedDate": "2023-11-22"
+    },
+    {
+      "title": "顧客情報漏えい更新",
+      "url": "https://notices.jcom.co.jp/notice/92705.html",
+      "publishedDate": "2024-01-05"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-11-21",
+      "label": "提供元側から連絡",
+      "kind": "occurrence",
+      "summary": "販売代理店経由で事態を把握",
+      "sourceUrl": "https://notices.jcom.co.jp/notice/92705.html"
+    },
+    {
+      "date": "2023-11-22",
+      "label": "漏えいを公表",
+      "kind": "disclosure",
+      "summary": "顧客情報の漏えい確認を公表",
+      "sourceUrl": "https://newsreleases.jcom.co.jp/files/2023/11/23112201.pdf"
+    },
+    {
+      "date": "2024-01-05",
+      "label": "対象件数と通知状況の更新",
+      "kind": "update",
+      "summary": "修正された件数と12月の通知実施を記載",
+      "sourceUrl": "https://notices.jcom.co.jp/notice/92705.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2024-01-05",
+  "detectedDate": "2023-11-21"
+}

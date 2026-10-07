@@ -1,0 +1,85 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2025-08-06",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "furuno-electric-2025",
+  "company": "古野電気",
+  "title": "サーバー不正アクセスで取引先・グループ従業員情報に漏えいのおそれ",
+  "announcementDate": "2025-06-30",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入日不明（2025-06-16に不審な挙動を検知）",
+  "detectedDate": "2025-06-16",
+  "updatedDate": "2025-08-07",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "会社向けにカスタマイズされたマルウェアの設置を確認。初期侵入方法は未知",
+    "status": "confirmed"
+  },
+  "summary": "サーバーの不審な挙動から不正アクセスを確認し隔離。取引先・顧客74名とグループ従業員等1,493名の情報に漏えいのおそれがあると公表した。業務システムは通常稼働し、製品・クラウド利用への影響は確認されていない。",
+  "affectedData": [
+    "取引先・顧客の氏名、会社名、メール、役職、船名",
+    "グループ従業員等の氏名、ユーザーID、所属等"
+  ],
+  "counts": [
+    {
+      "value": 74,
+      "unit": "名",
+      "status": "possible",
+      "label": "取引先・顧客",
+      "approximate": false
+    },
+    {
+      "value": 1493,
+      "unit": "名",
+      "status": "possible",
+      "label": "グループ従業員等（派遣・業務委託者・退職者含む）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "取引先等74名／従業員等1,493名・おそれ",
+  "caveats": [
+    "事業活動への影響なしとの公表を維持し、全面停止とは扱わない",
+    "フルノシステムズの2022年の事案とは別",
+    "ランサムウェア使用を推定しない"
+  ],
+  "sources": [
+    {
+      "title": "サーバー不正アクセス第1報",
+      "url": "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1671",
+      "publishedDate": "2025-06-30"
+    },
+    {
+      "title": "調査と対応状況の第3報",
+      "url": "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1689",
+      "publishedDate": "2025-08-07"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-06-16",
+      "label": "不審挙動を検知",
+      "kind": "occurrence",
+      "summary": "通常と異なる挙動を検知し調査開始",
+      "sourceUrl": "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1671"
+    },
+    {
+      "date": "2025-06-30",
+      "label": "第一報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと情報漏えいのおそれを公表",
+      "sourceUrl": "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1671"
+    },
+    {
+      "date": "2025-08-07",
+      "label": "調査結果の続報",
+      "kind": "update",
+      "summary": "対象範囲とカスタマイズされたマルウェア設置等を公表",
+      "sourceUrl": "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1689"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "takamiya-2022",
+  "company": "タカミヤグループ",
+  "title": "ベトナム拠点経由のランサムウェアで複数社サーバーが暗号化",
+  "announcementDate": "2023-01-23",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2022-12-08",
+  "occurredDateLabel": "調査で公表された攻撃発生日（検知は12月15日）",
+  "updatedDate": "2023-02-10",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "ランサムウェア感染。ベトナム拠点のセキュリティ機器の脆弱性経由と推定",
+    "status": "confirmed"
+  },
+  "summary": "海外拠点からグループの社内サーバーに侵入したとみられ、ファイルが暗号化された。顧客、取引先、退職者、応募者、株主等の情報について漏えいのおそれを否定できないと公表した。",
+  "affectedData": [
+    "顧客・取引先の連絡先等",
+    "取引先関係者の健康診断・資格等の情報",
+    "退職者の人事情報・家族情報等",
+    "応募者・株主情報、業務関連情報"
+  ],
+  "counts": [],
+  "scaleLabel": "対象件数は確認資料に記載なし",
+  "caveats": [
+    "2022-12-08は公表された攻撃日、12-15は発覚日、2023-01-23は対外公表日",
+    "ランサムウェアは確認済みで、初期侵入経路は会社の推定",
+    "会社PDFの旧URLは一覧へ転送されるため、取引所公開の会社発表PDFを採用"
+  ],
+  "geography": "日本企業グループ・ベトナム拠点経由と推定",
+  "sources": [
+    {
+      "title": "不正アクセス第2報（取引所掲載の会社資料）",
+      "url": "https://www2.jpx.co.jp/disc/24450/140120230209504978.pdf",
+      "publishedDate": "2023-02-10"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2022-12-08",
+      "label": "攻撃発生",
+      "kind": "occurrence",
+      "summary": "調査で確認した攻撃日",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/24450/140120230209504978.pdf"
+    },
+    {
+      "date": "2022-12-15",
+      "label": "障害と暗号化を検知",
+      "kind": "occurrence",
+      "summary": "業務システムの障害から感染を確認",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/24450/140120230209504978.pdf"
+    },
+    {
+      "date": "2023-01-23",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "取引所と会社サイトで対外公表",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/24450/140120230209504978.pdf"
+    },
+    {
+      "date": "2023-02-10",
+      "label": "調査結果と対策を公表",
+      "kind": "update",
+      "summary": "漏えいのおそれと侵入経路の分析を説明",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/24450/140120230209504978.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-02-10",
+  "detectedDate": "2022-12-15"
+}

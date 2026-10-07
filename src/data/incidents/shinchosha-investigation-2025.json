@@ -1,0 +1,120 @@
+{
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2025-12-05",
+  "announcementDateLabel": "初報公表",
+  "geography": "日本",
+  "id": "shinchosha-investigation-2025",
+  "company": "審調社",
+  "title": "受託調査データ等の窃取と暗号化、確認済み・おそれを分けて公表",
+  "announcementDate": "2025-07-11",
+  "occurredDate": "2025-06-27",
+  "occurredDateLabel": "会社が公表した不正アクセス・暗号化被害の発生日",
+  "updatedDate": "2026-04-08",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ネットワーク機器の脆弱性悪用とランサムウェア。セキュリティソフト無効化を確認",
+    "status": "confirmed"
+  },
+  "summary": "保険等の調査委託元から預かったデータと社内情報が窃取・暗号化された。最終報では医療情報を含むデータ等の漏えい確認と、ファイル名等からの漏えいのおそれを区別して公表。2026年4月には対策後の業務再開状況を案内した。",
+  "affectedData": [
+    "受託調査の案件番号・証券番号、氏名・連絡先等",
+    "一部の医療情報",
+    "業務委託者・採用応募者・従業員等の情報"
+  ],
+  "counts": [
+    {
+      "value": 1200,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "番号・氏名等・医療情報を含む受託調査情報",
+      "approximate": true
+    },
+    {
+      "value": 12500,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "番号・氏名等を含む受託調査情報（医療情報なし）",
+      "approximate": true
+    },
+    {
+      "value": 89000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "番号のみの受託調査情報",
+      "approximate": true
+    },
+    {
+      "value": 30,
+      "unit": "件",
+      "status": "possible",
+      "label": "番号・氏名がある情報",
+      "approximate": true
+    },
+    {
+      "value": 1000,
+      "unit": "件",
+      "status": "possible",
+      "label": "番号のみの情報",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "確認済みとおそれを区分（本人重複の可能性あり）",
+  "caveats": [
+    "件数に同一人物が重複する可能性があり人数に換算しない",
+    "委託元保険会社ごとの公表を別攻撃として重複計上しない",
+    "countsは受託調査情報の内訳。業務委託者・従業員等の混合区分は対象項目として掲載",
+    "出版社の新潮社とは異なる調査会社"
+  ],
+  "sources": [
+    {
+      "title": "不正アクセスに関する初報",
+      "url": "https://scs-21.co.jp/20250711-2/",
+      "publishedDate": "2025-07-11"
+    },
+    {
+      "title": "調査の最終報告",
+      "url": "https://scs-21.co.jp/20251205-1/",
+      "publishedDate": "2025-12-05"
+    },
+    {
+      "title": "業務再開時のFAQ",
+      "url": "https://scs-21.co.jp/%E6%A5%AD%E5%8B%99%E5%86%8D%E9%96%8B%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8A%E3%80%81%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%8B%E3%82%89%E5%A4%9A%E3%81%8F%E5%AF%84%E3%81%9B%E3%82%89%E3%82%8C%E3%82%8B%E3%81%94/",
+      "publishedDate": "2026-04-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-06-27",
+      "label": "不正アクセス・暗号化",
+      "kind": "occurrence",
+      "summary": "ネットワーク侵入によりファイルの窃取と暗号化が発生",
+      "sourceUrl": "https://scs-21.co.jp/20251205-1/"
+    },
+    {
+      "date": "2025-07-11",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセス事案を公表",
+      "sourceUrl": "https://scs-21.co.jp/20250711-2/"
+    },
+    {
+      "date": "2025-12-05",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "漏えい確認済みとおそれの情報範囲を分類して報告",
+      "sourceUrl": "https://scs-21.co.jp/20251205-1/"
+    },
+    {
+      "date": "2026-04-08",
+      "label": "業務再開のFAQ",
+      "kind": "update",
+      "summary": "是正後の環境での業務再開と質問への回答を公表",
+      "sourceUrl": "https://scs-21.co.jp/%E6%A5%AD%E5%8B%99%E5%86%8D%E9%96%8B%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8A%E3%80%81%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%8B%E3%82%89%E5%A4%9A%E3%81%8F%E5%AF%84%E3%81%9B%E3%82%89%E3%82%8C%E3%82%8B%E3%81%94/"
+    }
+  ]
+}

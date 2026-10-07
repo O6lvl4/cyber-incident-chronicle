@@ -1,0 +1,71 @@
+{
+  "id": "nagoya-port-nuts-2023",
+  "company": "名古屋港運協会／名古屋コンテナー委員会",
+  "title": "ランサムウェアで統一ターミナルシステム停止、全ターミナル作業に影響",
+  "announcementDate": "2023-07-05",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2023-07-04",
+  "occurredDateLabel": "システム障害・作業停止を確認した日（侵入開始日は不明）",
+  "updatedDate": "2023-07-26",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "ランサムウェア感染。リモート接続機器の脆弱性経由の侵入と推定",
+    "status": "confirmed"
+  },
+  "summary": "NUTSのサーバーが暗号化され、コンテナターミナルで作業停止が発生。7月6日夕方までに全ターミナルで再開した。7月26日の経緯報告では情報漏えいの形跡は未確認で、調査を継続するとしている。",
+  "affectedData": [
+    "ターミナルシステム内のデータが暗号化（漏えい未確認）"
+  ],
+  "counts": [],
+  "scaleLabel": "名古屋港全コンテナターミナルの作業停止",
+  "caveats": [
+    "公表した全ターミナルはNUTSを使用するコンテナターミナルの範囲",
+    "ランサムウェアは確認済み、リモート接続機器を通じた侵入経路は推定",
+    "情報漏えい未確認を操業被害なしとは扱わない"
+  ],
+  "geography": "日本・名古屋港のコンテナターミナル",
+  "sources": [
+    {
+      "title": "NUTSシステム障害の経緯報告",
+      "url": "https://meikoukyo.com/wp-content/uploads/2023/07/0bb9d9907568e832da8f400e529efc99.pdf",
+      "publishedDate": "2023-07-26"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-07-04",
+      "label": "システム停止",
+      "kind": "occurrence",
+      "summary": "6時30分頃にNUTS作動停止を確認",
+      "sourceUrl": "https://meikoukyo.com/wp-content/uploads/2023/07/0bb9d9907568e832da8f400e529efc99.pdf"
+    },
+    {
+      "date": "2023-07-05",
+      "label": "ランサムウェア感染公表",
+      "kind": "disclosure",
+      "summary": "協会がプレス発表",
+      "sourceUrl": "https://meikoukyo.com/wp-content/uploads/2023/07/0bb9d9907568e832da8f400e529efc99.pdf"
+    },
+    {
+      "date": "2023-07-06",
+      "label": "全ターミナル再開",
+      "kind": "update",
+      "summary": "18時15分までに作業を再開",
+      "sourceUrl": "https://meikoukyo.com/wp-content/uploads/2023/07/0bb9d9907568e832da8f400e529efc99.pdf"
+    },
+    {
+      "date": "2023-07-26",
+      "label": "経緯報告を公表",
+      "kind": "update",
+      "summary": "暗号化・復旧状況と漏えい未確認を説明",
+      "sourceUrl": "https://meikoukyo.com/wp-content/uploads/2023/07/0bb9d9907568e832da8f400e529efc99.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-07-26",
+  "detectedDate": "2023-07-04"
+}
