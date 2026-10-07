@@ -9,8 +9,8 @@ export default function Drawer({ mode, onClose, children }: Props) {
   useEffect(() => {
     if (!open) return;
     const previous = document.activeElement as HTMLElement | null;
-    close.current?.focus();
-    return () => { if (previous?.isConnected) previous.focus(); };
+    close.current?.focus({ preventScroll: true });
+    return () => { if (previous?.isConnected) previous.focus({ preventScroll: true }); };
   }, [open]);
   return <>{open && <div className="drawer-backdrop" onClick={onClose} aria-hidden="true"/>}
     <aside ref={ref} className={`drawer${open ? ' open' : ''}${mode === 'sql' ? ' wide' : ''}`} role="dialog" aria-label={TITLES[mode] || '詳細'} aria-hidden={!open} inert={!open}
