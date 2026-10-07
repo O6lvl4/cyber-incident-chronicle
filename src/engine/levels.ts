@@ -1,15 +1,16 @@
 import type { Weight } from '../types';
 import meta from '../data/meta.json';
+import vulnerabilityMeta from '../data/vulnerability-meta.json';
 
 /**
  * Discrete zoom levels, like a programme guide's 30 min / 1 h / 2 h grids. Every level has a fixed
  * pixels-per-day, so layout and tiles depend only on the level, never on the device.
  */
 export const DAY = 86400000;
-/** Left edge of the strip: 1 January of the coverage window's first year. */
-export const T0 = Date.UTC(new Date(meta.windowStart).getUTCFullYear(), 0, 1);
+/** Shared strip bounds cover both categories without changing either category's records. */
+export const T0 = Date.UTC(Math.min(new Date(meta.windowStart).getUTCFullYear(), new Date(vulnerabilityMeta.windowStart).getUTCFullYear()), 0, 1);
 /** Right edge of the strip: six months past the coverage window. */
-export const T1 = Date.parse(meta.windowEnd) + 183 * DAY;
+export const T1 = Math.max(Date.parse(meta.windowEnd), Date.parse(vulnerabilityMeta.windowEnd)) + 183 * DAY;
 
 export const PX_PER_DAY = [0.25, 0.4, 0.64, 1, 1.6, 2.56, 4, 6.4, 10, 16, 26, 40];
 export const MAX_LEVEL = PX_PER_DAY.length - 1;

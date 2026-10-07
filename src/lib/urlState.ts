@@ -1,5 +1,5 @@
 /** Shareable timeline view, filter, selection and theme state. */
-export interface UrlState { level?: number; center?: number; sel?: string; lanes?: string[]; dark?: boolean; query?: string; status?: string }
+export interface UrlState { kind?: 'incident' | 'vulnerability'; ecosystem?: string; level?: number; center?: number; sel?: string; lanes?: string[]; dark?: boolean; query?: string; status?: string }
 function readView(p: URLSearchParams): UrlState {
   const view: UrlState = {};
   const level = p.get('l');
@@ -11,6 +11,8 @@ function readView(p: URLSearchParams): UrlState {
 export function readUrl(): UrlState {
   const p = new URLSearchParams(location.hash.replace(/^#/, ''));
   const out = readView(p);
+  if (p.get('kind') === 'vulnerability') out.kind = 'vulnerability';
+  if (p.has('ecosystem')) out.ecosystem = p.get('ecosystem')!.slice(0, 80);
   out.sel = p.get('sel') ?? undefined;
   if (p.has('lanes')) out.lanes = p.get('lanes')!.split(',').filter(Boolean);
   const theme = p.get('theme');
@@ -28,6 +30,8 @@ function writeView(p: URLSearchParams, state: UrlState) {
 export function writeUrl(state: UrlState) {
   const p = new URLSearchParams();
   writeView(p, state);
+  if (state.kind === 'vulnerability') p.set('kind', state.kind);
+  if (state.ecosystem && state.ecosystem !== 'all') p.set('ecosystem', state.ecosystem);
   if (state.sel) p.set('sel', state.sel);
   if (state.lanes) p.set('lanes', state.lanes.join(','));
   if (state.query) p.set('q', state.query);

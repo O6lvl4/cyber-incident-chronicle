@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { DATA_END, DATA_START, EVENTS, INCIDENTS, LANES, LINKS, META, THREADS } from './data';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { DATA_END, DATA_START, EVENTS, INCIDENTS, LANES, LINKS, META, THREADS, DATASET } from './data';
 import { useAppState } from './hooks/useAppState';
 import { useKeyboardNav } from './hooks/useKeyboardNav';
 import { useDuckDB } from './hooks/useDuckDB';
 import { themeFor } from './lib/palette';
-import { writeUrl } from './lib/urlState';
+import { readUrl, writeUrl } from './lib/urlState';
 import { filterIncidents } from './lib/incidents';
 import { perf } from './lib/perf';
 import Board, { type BoardApi } from './board/Board';
@@ -14,16 +14,18 @@ import DrawerContent from './components/DrawerContent';
 import IncidentList from './components/IncidentList';
 import Minimap from './components/Minimap';
 import PerfHud from './components/PerfHud';
+const VulnerabilityView = lazy(() => import('./components/VulnerabilityView'));
+import type { Category, CategoryProps } from './components/CategoryNav';
 const THREAD_IDS = THREADS.map(t => t.id);
 const LANE_IDS = LANES.map(t => t.id);
-const DATASET = { threads: THREADS, events: EVENTS, links: LINKS, incidents: INCIDENTS };
-export default function App() {
+
+function IncidentApp(props: CategoryProps) {
   const st = useAppState({ events: EVENTS, threadIds: THREAD_IDS });
   const board = useRef<BoardApi>(null);
   const eventsById = useMemo(() => new Map(EVENTS.map(e => [e.id, e])), []);
   const visible = useMemo(() => filterIncidents(INCIDENTS, st.activeIds, st.status, st.query), [st.activeIds, st.status, st.query]);
   const shownIds = useMemo(() => new Set(visible.map(item => item.id)), [visible]);
-  const shownEvents = useMemo(() => EVENTS.filter(event => shownIds.has(event.incidentId)), [shownIds]);
+  const shownEvents = useMemo(() => EVENTS.filter(event => shownIds.has(event.incidentId ?? '')), [shownIds]);
   const theme = useMemo(() => themeFor(st.dark), [st.dark]);
   const [dbWanted, setDbWanted] = useState(false);
   useEffect(() => { if (st.sqlOpen) setDbWanted(true); }, [st.sqlOpen]);
@@ -45,13 +47,13 @@ export default function App() {
     step: delta => { const sorted = [...visible].reverse(); const index = sorted.findIndex(i => i.id === selectedIncidentId); const next = sorted[Math.max(0, Math.min(sorted.length - 1, index + delta))]; if (next) selectIncident(next.id); },
   });
   useEffect(() => {
-    writeUrl({ level: st.view?.level, center: st.view ? (st.view.start + st.view.end) / 2 : undefined, sel: st.selectedId ?? undefined,
+    writeUrl({ level: st.view?.level ?? st.initial?.level, center: st.view ? (st.view.start + st.view.end) / 2 : st.initial?.center, sel: st.selectedId ?? undefined,
       lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status });
   }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status]);
   const zoomed = !!st.view && (st.view.start > DATA_START || st.view.end < DATA_END);
   const centerRange = useCallback((s: number, e: number) => board.current?.centerOn((s + e) / 2), []);
   return <div className={`app${st.dark ? ' dark' : ''}`}>
-    <Header threads={THREADS} state={st} onFitAll={() => board.current?.fitAll()}/>
+    <Header {...props} threads={THREADS} state={st} onFitAll={() => board.current?.fitAll()}/>
     <div className="summary-strip"><span><i className="live-dot"/>一次資料からたどる、企業のインシデント</span><span>資料確認 {META.lastVerifiedDate} · 選定事例</span></div>
     <div className="mobile-tabs" role="group" aria-label="表示切替"><button aria-pressed={st.mobileView === 'timeline'} onClick={() => st.setMobileView('timeline')}>タイムライン</button><button aria-pressed={st.mobileView === 'list'} onClick={() => st.setMobileView('list')}>事案一覧 ({visible.length})</button></div>
     <main className={`workspace mobile-${st.mobileView}`}>
@@ -70,4 +72,27 @@ export default function App() {
     </main>
     {perf.enabled && <PerfHud/>}
   </div>;
+}
+
+/** Category navigation gets history entries; filters continue to replace the current view. */
+export default function App() {
+  const [route, setRoute] = useState(() => ({ category: readUrl().kind ?? 'incident', revision: 0 }));
+  useEffect(() => {
+    const restore = () => setRoute(previous => ({ category: readUrl().kind ?? 'incident', revision: previous.revision + 1 }));
+    window.addEventListener('popstate', restore);
+    return () => { window.removeEventListener('popstate', restore); };
+  }, []);
+  const changeCategory = (category: Category) => {
+    if (category === route.category) return;
+    const p = new URLSearchParams();
+    if (category === 'vulnerability') p.set('kind', category);
+    const dark = readUrl().dark;
+    if (dark !== undefined) p.set('theme', dark ? 'dark' : 'light');
+    history.pushState(null, '', `#${p.toString()}`);
+    setRoute(previous => ({ category, revision: previous.revision + 1 }));
+  };
+  const props = { category: route.category, onCategoryChange: changeCategory };
+  return route.category === 'vulnerability'
+    ? <Suspense fallback={<div className="app" role="status">ライブラリの記録を読み込み中…</div>}><VulnerabilityView key={route.revision} {...props}/></Suspense>
+    : <IncidentApp key={route.revision} {...props}/>;
 }

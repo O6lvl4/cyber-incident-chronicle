@@ -1,3 +1,4 @@
+import type { Vulnerability } from '../vulnerabilityTypes';
 import type * as duckdb from '@duckdb/duckdb-wasm';
 import type { Incident, Link, Thread, TimelineEvent } from '../types';
 
@@ -12,6 +13,7 @@ export interface Dataset {
   events: TimelineEvent[];
   links: Link[];
   incidents: Incident[];
+  loadVulnerabilities: () => Promise<Vulnerability[]>;
 }
 
 let dbPromise: Promise<duckdb.AsyncDuckDB> | null = null;
@@ -47,6 +49,7 @@ async function loadTables(db: duckdb.AsyncDuckDB, data: Dataset) {
     ['threads', data.threads],
     ['events', data.events],
     ['incidents', data.incidents],
+    ['vulnerabilities', await data.loadVulnerabilities()],
   ];
   const conn = await db.connect();
   try {
@@ -62,7 +65,7 @@ async function loadTables(db: duckdb.AsyncDuckDB, data: Dataset) {
   }
 }
 
-/** Boots DuckDB-WASM once and loads the dataset as three tables. */
+/** Boots DuckDB-WASM once and loads the incident and advisory datasets as separate tables. */
 export function getDb(data: Dataset): Promise<duckdb.AsyncDuckDB> {
   dbPromise ??= boot(data);
   return dbPromise;

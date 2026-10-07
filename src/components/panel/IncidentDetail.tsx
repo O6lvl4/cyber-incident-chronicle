@@ -6,7 +6,7 @@ function countStatus(status: string) {
   return labels[status] ?? status;
 }
 export default function IncidentDetail({ ev }: { ev: TimelineEvent }) {
-  const item = INCIDENTS_BY_ID.get(ev.incidentId);
+  const item = INCIDENTS_BY_ID.get(ev.incidentId ?? '');
   if (!item) return null;
   return <article className="panel-body incident-detail">
     <span className="eyebrow">PUBLIC DISCLOSURE / 事案記録</span>

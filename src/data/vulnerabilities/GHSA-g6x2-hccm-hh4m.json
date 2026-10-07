@@ -1,0 +1,86 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-g6x2-hccm-hh4m",
+  "aliases": [
+    "CVE-2026-102598"
+  ],
+  "title": "Werkzeug：Windowsの特殊デバイス名によるサービス妨害",
+  "summary": "WindowsのNTFS環境で、safe_joinが空のADSマーカー付き特殊デバイス名を許可する。send_from_directoryでそのパスを開くと読み取りが停止し続ける可能性がある。3.1.9で修正。",
+  "publishedAt": "2026-10-05T23:48:39Z",
+  "modifiedAt": "2026-10-05T23:48:40Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-07T22:24:54Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-g6x2-hccm-hh4m",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Werkzeug",
+      "ranges": [
+        {
+          "affected": "< 3.1.9",
+          "fixed": "3.1.9",
+          "sourceUrl": "https://github.com/advisories/GHSA-g6x2-hccm-hh4m"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/advisories/GHSA-g6x2-hccm-hh4m",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 6.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/pallets/werkzeug/security/advisories/GHSA-g6x2-hccm-hh4m"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Werkzeug safe_join() allows Windows special device names",
+      "url": "https://github.com/pallets/werkzeug/security/advisories/GHSA-g6x2-hccm-hh4m",
+      "publishedDate": "2026-09-27",
+      "publishedAt": "2026-09-27T18:38:58Z",
+      "modifiedAt": "2026-09-29T15:15:58Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Werkzeug safe_join() allows Windows special device names",
+      "url": "https://github.com/advisories/GHSA-g6x2-hccm-hh4m",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T23:48:39Z",
+      "modifiedAt": "2026-10-05T23:48:40Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "pallets / werkzeug 3.1.9 release",
+      "url": "https://github.com/pallets/werkzeug/releases/tag/3.1.9",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database API（登録・更新日時）",
+      "url": "https://api.github.com/advisories/GHSA-g6x2-hccm-hh4m",
+      "publishedDate": "2026-10-05"
+    }
+  ],
+  "caveats": [
+    "WindowsかつNTFSを利用し、ユーザー指定パスをsend_from_directoryで処理する場合が対象。",
+    "過去の特殊デバイス名対策の不備に関する別のアドバイザリであり、過去のGHSA識別子を本件の別名として統合しない。",
+    "日時はGitHub Advisory Databaseへの登録・更新日時。メンテナーの初回公開日は出典欄に別記。",
+    "確認した公式アドバイザリだけでは実悪用を確認できない。KEV掲載状況も未確認であり、いずれも「なし」を意味しない。"
+  ]
+}
