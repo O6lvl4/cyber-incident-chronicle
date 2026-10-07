@@ -48,6 +48,7 @@ export default function App() {
     writeUrl({ level: st.view?.level, center: st.view ? (st.view.start + st.view.end) / 2 : undefined, sel: st.selectedId ?? undefined,
       lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status });
   }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status]);
+  const zoomed = !!st.view && (st.view.start > DATA_START || st.view.end < DATA_END);
   const centerRange = useCallback((s: number, e: number) => board.current?.centerOn((s + e) / 2), []);
   return <div className={`app${st.dark ? ' dark' : ''}`}>
     <Header threads={THREADS} state={st} onFitAll={() => board.current?.fitAll()}/>
@@ -61,7 +62,7 @@ export default function App() {
           selectedId={st.selectedId} matches={st.matches} dataStart={DATA_START} dataEnd={DATA_END}
           initial={st.initial} onSelect={st.select} onIdle={st.setView} apiRef={board}/>
         {visible.length === 0 && <div className="board-empty"><p>表示する事案がありません</p><button className="n-btn" onClick={st.resetFilters}>絞り込みを解除</button></div>}
-        <div className="timeline-caption"><span>横にスワイプ・ドラッグで移動 / ピンチで拡大縮小</span><span>色は影響の種類。深刻度の順位ではありません</span></div>
+        <div className="timeline-caption"><span>{zoomed ? '横にスワイプ・ドラッグで移動 / ピンチ・−で縮小' : '全期間を表示中 / ＋・ピンチ・ダブルクリックで拡大'}</span><span>色は影響の種類。深刻度の順位ではありません</span></div>
         <Minimap threads={THREADS} events={shownEvents} activeThreadIds={st.activeIds} dataStart={DATA_START} dataEnd={DATA_END}
           viewStart={st.view?.start ?? DATA_START} viewEnd={st.view?.end ?? DATA_END} dark={st.dark} onViewChange={centerRange}/>
       </section>

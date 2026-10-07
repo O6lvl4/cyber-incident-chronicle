@@ -25,6 +25,7 @@ export function validateData({ meta, incidents }) {
     if (incident.occurredDate !== null && !validDate(incident.occurredDate)) fail('invalid occurredDate');
     if (incident.updatedDate < incident.announcementDate) fail('update before disclosure');
     if (incident.updatedDate < meta.windowStart || incident.announcementDate > meta.windowEnd) fail('outside coverage window');
+    if (incident.announcementDate < `${meta.windowStart.slice(0, 4)}-01-01`) fail('announcement before timeline start');
     if (!statuses.has(incident.disclosureStatus)) fail('unknown disclosure status');
     if (!incident.impactTypes.length || incident.impactTypes.some(type => !impactTypes.has(type))) fail('invalid impact');
     if (new Set(incident.impactTypes).size !== incident.impactTypes.length) fail('duplicate impact');
