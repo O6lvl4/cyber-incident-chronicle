@@ -1,0 +1,84 @@
+{
+  "announcementDateLabel": "公表日（確認資料に記載）",
+  "occurredDate": "2013-10-17",
+  "occurredDateLabel": "第3報の漏えい可能性期間の始期（2024-06-10まで継続）",
+  "impactTypes": [
+    "leak"
+  ],
+  "counts": [
+    {
+      "value": 200578,
+      "unit": "名",
+      "status": "possible",
+      "label": "第3報の追加不具合で閲覧された可能性があるユーザー",
+      "approximate": false
+    },
+    {
+      "value": 24435,
+      "unit": "件",
+      "status": "possible",
+      "label": "第3報対象の会社ページ",
+      "approximate": false
+    },
+    {
+      "value": 194733,
+      "unit": "件",
+      "status": "possible",
+      "label": "第3報対象の募集記事",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "第3報：ユーザー200,578名・閲覧可能性",
+  "lastVerifiedDate": "2026-10-07",
+  "id": "wantedly-2024",
+  "company": "ウォンテッドリー",
+  "title": "公開範囲の設定不備で未公開記事・ページ等が閲覧可能",
+  "announcementDate": "2024-04-24",
+  "detectedDate": "2024-04-10",
+  "updatedDate": "2024-07-30",
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "システムのアクセス設定不備。外部攻撃との公表ではない",
+    "status": "confirmed"
+  },
+  "summary": "未公開・削除済みの募集記事や会社ページ等が権限外から閲覧できる不具合を発見。追加の機能検査で類似の不具合10件を確認し、2024年6月11日までに修正した。",
+  "affectedData": [
+    "ユーザーの氏名・所属・職種・プロフィール画像・自己紹介等",
+    "募集記事・会社ページの内容"
+  ],
+  "caveats": [
+    "会社ページ・記事件数をユーザー数に加算しない",
+    "第3報は類似不具合の対象範囲。前報の数値との重複・合算はしない",
+    "対象期間前に始まり2024年まで継続した事案"
+  ],
+  "geography": "日本企業が提供するWantedly",
+  "sources": [
+    {
+      "title": "システム設定不備の初報",
+      "url": "https://wantedlyinc.com/ja/news/entries/920",
+      "publishedDate": "2024-04-24"
+    },
+    {
+      "title": "システム設定不備の第三報",
+      "url": "https://wantedlyinc.com/ja/news/entries/925",
+      "publishedDate": "2024-07-30"
+    }
+  ],
+  "statusAsOfDate": "2024-07-30",
+  "timeline": [
+    {
+      "date": "2024-04-24",
+      "label": "公表",
+      "kind": "disclosure",
+      "summary": "事案と対象範囲を公表",
+      "sourceUrl": "https://wantedlyinc.com/ja/news/entries/920"
+    },
+    {
+      "date": "2024-07-30",
+      "label": "調査結果・続報",
+      "kind": "update",
+      "summary": "対象範囲と調査結果を更新",
+      "sourceUrl": "https://wantedlyinc.com/ja/news/entries/925"
+    }
+  ]
+}
