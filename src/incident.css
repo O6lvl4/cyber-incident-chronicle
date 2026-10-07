@@ -146,3 +146,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .cvss-vector { font: 10px/1.6 var(--font-mono); overflow-wrap: anywhere; }
 .withdrawn-note { border: 1px solid var(--border); padding: 10px; background: var(--bg); }
 @media (max-width: 640px) { .category-tabs { gap: 5px; } .category-tabs button { font-size: 10px; padding: 7px 10px; } .ecosystem-filter { flex: .8; } }
+
+/* Short advisory labels avoid platform-dependent vertical CJK glyph metrics. */
+.lane-label.narrow .lane-name.compact { writing-mode: horizontal-tb; letter-spacing: 0; white-space: nowrap; }
