@@ -1,0 +1,73 @@
+{
+  "id": "casio-classpad-2023",
+  "company": "カシオ計算機",
+  "title": "ClassPad.net開発環境への不正アクセスで国内外の顧客情報が漏えい",
+  "announcementDate": "2023-10-18",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2023-10-11に障害を検知）",
+  "updatedDate": "2023-10-18",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "開発環境の一部セキュリティ設定が解除された状態で第三者が不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "教育サービスの開発用データベースから顧客情報の漏えいを確認。国内91,921件、海外35,049件を対象として公表した。サービス本体のアプリへの不正アクセスはなく、アプリ利用への影響はないとしている。",
+  "affectedData": [
+    "氏名、メールアドレス、国・地域",
+    "学校・学年・学級・出席番号、購入・利用履歴等"
+  ],
+  "counts": [
+    {
+      "value": 91921,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "国内の対象顧客情報",
+      "approximate": false
+    },
+    {
+      "value": 35049,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "海外の対象顧客情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "国内91,921件／海外35,049件",
+  "caveats": [
+    "件数を人数と同一視しない",
+    "開発環境の停止を利用者向けアプリ全体の停止とは扱わない",
+    "2024年のカシオのランサムウェア事案とは別事案"
+  ],
+  "geography": "日本企業の国内・海外利用者情報",
+  "sources": [
+    {
+      "title": "ClassPad.netの個人情報漏えい公表",
+      "url": "https://www.casio.co.jp/release/2023/1018-incident/",
+      "publishedDate": "2023-10-18"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-10-11",
+      "label": "障害を検知",
+      "kind": "occurrence",
+      "summary": "開発用データベースの障害を把握",
+      "sourceUrl": "https://www.casio.co.jp/release/2023/1018-incident/"
+    },
+    {
+      "date": "2023-10-18",
+      "label": "漏えいと対象件数を公表",
+      "kind": "disclosure",
+      "summary": "国内外の対象範囲と原因を公表",
+      "sourceUrl": "https://www.casio.co.jp/release/2023/1018-incident/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-10-18",
+  "detectedDate": "2023-10-11"
+}

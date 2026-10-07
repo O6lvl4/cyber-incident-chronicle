@@ -1,0 +1,96 @@
+{
+  "id": "line-yahoo-2023",
+  "company": "LINEヤフー",
+  "title": "委託先端末の感染を契機とした不正アクセスと情報漏えい",
+  "announcementDate": "2023-11-27",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2023-09-14",
+  "occurredDateLabel": "後続調査で判明した不正アクセス開始日",
+  "updatedDate": "2024-02-14",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "委託先PCのマルウェア感染を契機とし、関係会社のシステム・共通認証基盤を経由",
+    "status": "confirmed"
+  },
+  "summary": "委託先PCの感染に関連する不正アクセスでユーザー、取引先、従業者情報が漏えい。2024年2月に影響範囲の最終調査を公表した。公表件数には漏えいのおそれや推計値が含まれる。",
+  "affectedData": [
+    "ユーザー内部識別子にひもづく利用履歴等",
+    "取引先の連絡先",
+    "従業者の氏名、メールアドレス、識別情報、顔写真等"
+  ],
+  "counts": [
+    {
+      "value": 302980,
+      "unit": "件",
+      "status": "possible",
+      "label": "ユーザー個人データ（確認済み・おそれ・推計値を含む）",
+      "approximate": false
+    },
+    {
+      "value": 86211,
+      "unit": "件",
+      "status": "possible",
+      "label": "取引先等個人データ（確認済み・おそれ・推計値を含む）",
+      "approximate": false
+    },
+    {
+      "value": 130315,
+      "unit": "件",
+      "status": "possible",
+      "label": "従業者等個人データ（確認済み・おそれ・推計値を含む）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "ユーザー302,980件など（おそれ・推計を含む）",
+  "caveats": [
+    "事案として漏えい確認済みだが、各公表件数の全件が確定漏えいとは限らない",
+    "従業者のアカウント数は重複があり従業者人数と一致しない",
+    "2024年1月公表の外部サービス設定不備は別事案",
+    "更新日は被害範囲の最終調査公表日。再発防止の後続報告全件を収録したものではない"
+  ],
+  "geography": "日本企業の国内外ユーザー・取引先・グループ従業者",
+  "sources": [
+    {
+      "title": "不正アクセスによる情報漏えい（2024年2月14日更新）",
+      "url": "https://www.lycorp.co.jp/ja/news/announcements/007712/",
+      "publishedDate": "2023-11-27"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-09-14",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "開始日を後続調査で訂正",
+      "sourceUrl": "https://www.lycorp.co.jp/ja/news/announcements/007712/"
+    },
+    {
+      "date": "2023-10-17",
+      "label": "不審なアクセスを検知",
+      "kind": "occurrence",
+      "summary": "分析・調査を開始",
+      "sourceUrl": "https://www.lycorp.co.jp/ja/news/announcements/007712/"
+    },
+    {
+      "date": "2023-11-27",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "ユーザー等への通知を開始",
+      "sourceUrl": "https://www.lycorp.co.jp/ja/news/announcements/007712/"
+    },
+    {
+      "date": "2024-02-14",
+      "label": "影響範囲の最終調査",
+      "kind": "update",
+      "summary": "社外サービス内の情報も調査して件数を追加",
+      "sourceUrl": "https://www.lycorp.co.jp/ja/news/announcements/007712/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2024-02-14",
+  "detectedDate": "2023-10-17"
+}

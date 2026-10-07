@@ -1,0 +1,73 @@
+{
+  "id": "seiko-2023",
+  "company": "セイコーグループ",
+  "title": "ランサムウェアによる不正アクセスで約6万件の個人データ漏えい",
+  "announcementDate": "2023-08-10",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2023-07-28に検知）",
+  "updatedDate": "2023-10-25",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者によるランサムウェア攻撃（具体的な初期侵入経路は公表資料に記載なし）",
+    "status": "confirmed"
+  },
+  "summary": "一部サーバーへの攻撃後、外部専門家と調査・復旧を実施。グループ3社が保有する約6万件の個人データの外部漏えいを確認した。",
+  "affectedData": [
+    "顧客・取引先担当者の連絡先",
+    "採用応募者情報",
+    "従業員・退職者の人事情報等"
+  ],
+  "counts": [
+    {
+      "value": 60000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "グループ3社が保有する個人データ",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "約60,000件の漏えい確認",
+  "caveats": [
+    "約6万件は個人データ件数で、被害人数とは限らない",
+    "グループ各社の転載を別事件として数えない"
+  ],
+  "geography": "日本のグループ会社システム",
+  "sources": [
+    {
+      "title": "不正アクセスに関する第3報",
+      "url": "https://www.seiko.co.jp/information/202310251000.html",
+      "publishedDate": "2023-10-25"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-07-28",
+      "label": "不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "一部サーバーで異常を把握",
+      "sourceUrl": "https://www.seiko.co.jp/information/202310251000.html"
+    },
+    {
+      "date": "2023-08-10",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスについて公表",
+      "sourceUrl": "https://www.seiko.co.jp/information/202310251000.html"
+    },
+    {
+      "date": "2023-10-25",
+      "label": "漏えい範囲を公表",
+      "kind": "update",
+      "summary": "約6万件の個人データの流出を確認",
+      "sourceUrl": "https://www.seiko.co.jp/information/202310251000.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-10-25",
+  "detectedDate": "2023-07-28"
+}

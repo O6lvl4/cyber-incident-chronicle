@@ -1,0 +1,86 @@
+{
+  "id": "teikoku-databank-2023",
+  "company": "帝国データバンク",
+  "title": "ランサムウェアで一部商品提供に支障、社内ファイルの不正閲覧のおそれ",
+  "announcementDate": "2023-02-24",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2023-02-21に異常検知）",
+  "updatedDate": "2023-06-14",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "侵入型ランサムウェア攻撃",
+    "status": "confirmed"
+  },
+  "summary": "不正アクセスで社内システムに不具合が生じ、一部商品提供に影響。後続調査で170ファイルに攻撃者とみられる遠隔閲覧やコピーの記録を確認した一方、外部転送の事実は確認されなかった。",
+  "affectedData": [
+    "システム管理情報",
+    "公開学校情報を収めたファイル",
+    "担当者間メールの内容・連絡先"
+  ],
+  "counts": [
+    {
+      "value": 170,
+      "unit": "ファイル",
+      "status": "possible",
+      "label": "攻撃者による閲覧またはコピーの疑いがあるファイル",
+      "approximate": false
+    },
+    {
+      "value": 15,
+      "unit": "名",
+      "status": "possible",
+      "label": "メールの一部内容に含まれたグループ・委託先従業員",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "170ファイルに不正閲覧等の疑い",
+  "caveats": [
+    "170ファイルは漏えい人数ではない",
+    "外部転送未確認でも、社内での不正閲覧のおそれは否定されていない"
+  ],
+  "geography": "日本の社内システム",
+  "sources": [
+    {
+      "title": "ネットワークへの不正アクセス初報",
+      "url": "https://www.tdb.co.jp/newsroom/news/rcvpts1mbhy/",
+      "publishedDate": "2023-02-24"
+    },
+    {
+      "title": "不正アクセス第3報",
+      "url": "https://www.tdb.co.jp/newsroom/news/zzewpgg_cu/",
+      "publishedDate": "2023-06-14"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-02-21",
+      "label": "異常を検知",
+      "kind": "occurrence",
+      "summary": "ネットワークの不正アクセスを確認",
+      "sourceUrl": "https://www.tdb.co.jp/newsroom/news/rcvpts1mbhy/"
+    },
+    {
+      "date": "2023-02-24",
+      "label": "商品提供への影響を公表",
+      "kind": "disclosure",
+      "summary": "一部商品が提供できない状態を公表",
+      "sourceUrl": "https://www.tdb.co.jp/newsroom/news/rcvpts1mbhy/"
+    },
+    {
+      "date": "2023-06-14",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "不正閲覧等の疑いがあるファイルの範囲を説明",
+      "sourceUrl": "https://www.tdb.co.jp/newsroom/news/zzewpgg_cu/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-07",
+  "statusAsOfDate": "2023-06-14",
+  "detectedDate": "2023-02-21"
+}
