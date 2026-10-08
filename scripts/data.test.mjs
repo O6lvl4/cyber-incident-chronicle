@@ -38,8 +38,8 @@ test('all possible counts remain explicitly possible rather than confirmed', () 
 });
 test('URL round-trip preserves empty lanes, query, status and theme', () => {
   globalThis.location = { hash: '' }; globalThis.history = { replaceState: (_a, _b, value) => { location.hash = value; } };
-  writeUrl({ level: 6, center: Date.parse('2026-03-12'), lanes: [], query: 'アスクル', status: 'possible', dark: false });
-  assert.deepEqual(readUrl(), { level: 6, center: Date.parse('2026-03-12'), sel: undefined, lanes: [], query: 'アスクル', status: 'possible', dark: false });
+  writeUrl({ view: 'list', level: 6, center: Date.parse('2026-03-12'), lanes: [], query: 'アスクル', status: 'possible', dark: false });
+  assert.deepEqual(readUrl(), { view: 'list', level: 6, center: Date.parse('2026-03-12'), sel: undefined, lanes: [], query: 'アスクル', status: 'possible', dark: false });
 });
 test('untrusted URL values are bounded or ignored', () => {
   globalThis.location = { hash: '#l=999&t=bad&status=accused' };

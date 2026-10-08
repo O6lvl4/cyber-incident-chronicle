@@ -19,12 +19,17 @@ export function createUrlNavigation() {
     } };
   };
   let current = capture();
-  return { initial: current, restore: () => {
+  const restore = () => {
     // A fragment traversal may emit both popstate and hashchange.
     if (location.hash === hash) return current;
     hash = location.hash;
     revision += 1;
     current = capture();
     return current;
+  };
+  return { initial: current, restore, navigate: (state: UrlState, owner: number) => {
+    if (owner !== revision) return current;
+    writeUrl(state, 'push');
+    return restore();
   } };
 }

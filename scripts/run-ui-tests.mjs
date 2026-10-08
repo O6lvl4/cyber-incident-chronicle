@@ -1,7 +1,7 @@
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 // Collect all independent browser evidence; any failed suite still fails the gate.
-const suites = ['ui-test.mjs', 'vulnerability-ui.mjs', 'classification-ui.mjs', 'classification-viewport-ui.mjs', 'mobile-webkit-ui.mjs', 'drawer-ui.mjs'];
+const suites = ['ui-test.mjs', 'vulnerability-ui.mjs', 'classification-ui.mjs', 'classification-viewport-ui.mjs', 'mobile-webkit-ui.mjs', 'drawer-ui.mjs', 'list-navigation-ui.mjs'];
 const failures = [];
 for (const name of suites) {
   console.log(`\n=== ${name} ===`);

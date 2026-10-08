@@ -1,0 +1,21 @@
+/* Display modes are explicit on every screen; the timeline is opt-in. */
+.view-tabs { display: flex; flex: 0 0 auto; gap: 8px; padding: 8px 24px; border-bottom: 1px solid var(--border-light); background: var(--surface); }
+.view-tabs [role="tab"] { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 18px; border: 1px solid var(--border-light); border-radius: 6px; background: var(--surface); color: var(--text-sub); font: inherit; font-size: 12px; cursor: pointer; }
+.view-tabs [aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); font-weight: 600; }
+.view-tabs [role="tab"] span { font-size: 10px; }
+.workspace.view-list, .workspace.view-timeline { min-width: 0; }
+.workspace.view-list > .incident-list, .workspace.view-list > .list-panel { flex: 1; width: 100%; min-width: 0; border-right: 0; }
+.workspace.view-timeline > .incident-list { display: none !important; }
+.workspace > [hidden], .workspace > .incident-list[hidden], .workspace > .timeline-container[hidden] { display: none !important; }
+.workspace.view-list .incident-scroll { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); align-content: start; gap: 12px; padding: 0 22px 16px; }
+.workspace.view-list .incident-card { margin: 0; height: 100%; }
+.workspace.view-list .empty-state { grid-column: 1 / -1; }
+.workspace.view-list .list-heading { padding-top: 16px; }
+.workspace.view-list .package-advisory-list .incident-scroll { grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); }
+.workspace.view-timeline > .timeline-container { flex: 1; width: 100%; min-width: 0; }
+@media (max-width: 640px) {
+  .view-tabs { padding: 4px 14px; gap: 6px; }
+  .view-tabs [role="tab"] { padding: 6px 14px; }
+  .workspace.view-list .incident-scroll { grid-template-columns: minmax(0, 1fr); padding: 0 18px 12px; }
+  .workspace.view-list .list-heading { padding-top: 10px; }
+}
