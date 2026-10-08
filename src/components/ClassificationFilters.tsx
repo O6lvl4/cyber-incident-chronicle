@@ -3,9 +3,9 @@ import type { AppState } from '../hooks/useAppState';
 import ClassificationDialog from './ClassificationDialog';
 import { CLASSIFICATION_FIELDS } from './ClassificationFields';
 
-interface Props { state: AppState; resultCount: number; onShowResults: () => void }
+interface Props { secondaryActive?: boolean; state: AppState; resultCount: number; onShowResults: () => void }
 
-export default function ClassificationFilters({ state, resultCount, onShowResults }: Props) {
+export default function ClassificationFilters({ state, resultCount, onShowResults, secondaryActive = false }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const opener = useRef<HTMLButtonElement>(null);
   const selected = CLASSIFICATION_FIELDS.filter(field => state.classification[field.key] !== 'all');
@@ -21,7 +21,7 @@ export default function ClassificationFilters({ state, resultCount, onShowResult
         {selected.length > 0 && <span className="classification-filter-count">{selected.length}条件</span>}
       </button>
       <span className="classification-result-count">{resultCount}件</span>
-      <button type="button" className="classification-reset" onClick={state.resetFilters} aria-label="すべての絞り込みを解除">すべての絞り込みを解除</button>
+      <button type="button" className="classification-reset" data-active={selected.length > 0 || !!state.query || secondaryActive} onClick={state.resetFilters} aria-label="すべての絞り込みを解除">解除</button>
     </div>
     {selected.length > 0 && <div className="classification-chips" aria-label="選択中の分類条件">
       {selected.map(field => {

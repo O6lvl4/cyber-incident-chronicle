@@ -19,3 +19,6 @@ import './drawer.css'
 
 import './packages.css'
 import './view-tabs.css'
+
+import './research-shell.css'
+import './research-rows.css'
