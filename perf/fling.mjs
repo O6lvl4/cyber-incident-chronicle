@@ -1,6 +1,6 @@
 // Performance budget: fling both full-corpus boards on an emulated phone.
 import { chromium, devices } from 'playwright';
-const base = process.env.PERF_URL ?? 'http://127.0.0.1:4173/?perf=1#l=6&t=2025-09-01';
+const base = process.env.PERF_URL ?? 'http://127.0.0.1:4173/?perf=1#view=timeline&l=6&t=2025-09-01';
 const scenarios = process.env.PERF_URL ? [['requested board', base]] : [
   ['incidents', base], ['advisories', `${base}&kind=vulnerability`],
 ];

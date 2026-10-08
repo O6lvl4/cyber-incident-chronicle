@@ -1,21 +1,21 @@
+import IncidentTimeline from './components/IncidentTimeline';
+import ViewTabs from './components/ViewTabs';
 import { matchesClassification } from './lib/classification';
 import ClassificationSummary from './components/ClassificationSummary';
 import { Component, lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { DATA_END, DATA_START, EVENTS, INCIDENTS, LANES, LINKS, META, THREADS, DATASET } from './data';
+import { EVENTS, INCIDENTS, META, THREADS, DATASET } from './data';
 import { useAppState } from './hooks/useAppState';
 import { useKeyboardNav } from './hooks/useKeyboardNav';
 import { useDuckDB } from './hooks/useDuckDB';
-import { themeFor } from './lib/palette';
-import { readUrl } from './lib/urlState';
+import { readUrl, type UrlState } from './lib/urlState';
 import { createUrlNavigation } from './lib/urlNavigation';
 import { filterIncidents } from './lib/incidents';
 import { perf } from './lib/perf';
-import Board, { type BoardApi } from './board/Board';
+import type { BoardApi } from './board/Board';
 import Header from './components/Header';
 import Drawer from './components/Drawer';
 import DrawerContent from './components/DrawerContent';
 import IncidentList from './components/IncidentList';
-import Minimap from './components/Minimap';
 import PerfHud from './components/PerfHud';
 const VulnerabilityView = lazy(() => import('./components/VulnerabilityView'));
 import CategoryNav, { type Category, type CategoryProps, type CategoryRouteProps } from './components/CategoryNav';
@@ -28,7 +28,6 @@ class AdvisoryLoadBoundary extends Component<CategoryProps & { children: React.R
   }
 }
 const THREAD_IDS = THREADS.map(t => t.id);
-const LANE_IDS = LANES.map(t => t.id);
 
 function IncidentApp(props: CategoryRouteProps) {
   const st = useAppState({ events: EVENTS, threadIds: THREAD_IDS, initialUrl: props.initialUrl });
@@ -37,7 +36,6 @@ function IncidentApp(props: CategoryRouteProps) {
   const visible = useMemo(() => filterIncidents(INCIDENTS, st.activeIds, st.status, st.query).filter(item => matchesClassification(item, st.classification)), [st.activeIds, st.status, st.query, st.classification]);
   const shownIds = useMemo(() => new Set(visible.map(item => item.id)), [visible]);
   const shownEvents = useMemo(() => EVENTS.filter(event => shownIds.has(event.incidentId ?? '')), [shownIds]);
-  const theme = useMemo(() => themeFor(st.dark), [st.dark]);
   const [dbWanted, setDbWanted] = useState(false);
   useEffect(() => { if (st.sqlOpen) setDbWanted(true); }, [st.sqlOpen]);
   const db = useDuckDB(DATASET, dbWanted);
@@ -55,39 +53,29 @@ function IncidentApp(props: CategoryRouteProps) {
   }, [selectedIncidentId, shownIds, st.closeDrawer]);
   useKeyboardNav({ clearSelection: st.closeDrawer, resetView: () => board.current?.fitAll(),
     zoom: factor => board.current?.zoomBy(factor < 1 ? 1 : -1),
-    step: delta => { const sorted = [...visible].reverse(); const index = sorted.findIndex(i => i.id === selectedIncidentId); const next = sorted[Math.max(0, Math.min(sorted.length - 1, index + delta))]; if (next) selectIncident(next.id); },
+    step: delta => { if (st.displayView !== 'timeline') return; const sorted = [...visible].reverse(); const index = sorted.findIndex(i => i.id === selectedIncidentId); const next = sorted[Math.max(0, Math.min(sorted.length - 1, index + delta))]; if (next) selectIncident(next.id); },
   });
   useEffect(() => {
     props.onUrlChange({ level: st.view?.level ?? st.initial?.level, center: st.view ? (st.view.start + st.view.end) / 2 : st.initial?.center, sel: st.selectedId ?? undefined,
-      lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status, classification: st.classification });
-  }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status, st.classification, props.onUrlChange]);
+      lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status, classification: st.classification, view: st.displayView });
+  }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status, st.classification, st.displayView, props.onUrlChange]);
   const showResults = useCallback(() => {
-    const id = window.matchMedia('(max-width: 640px)').matches && st.mobileView === 'timeline' ? 'incident-timeline-results' : 'incident-results-heading';
+    const id = st.displayView === 'timeline' ? 'incident-timeline-results' : 'incident-results-heading';
     requestAnimationFrame(() => {
       const target = document.getElementById(id);
       target?.focus({ preventScroll: true });
       target?.scrollIntoView({ block: 'start' });
     });
-  }, [st.mobileView]);
-  const zoomed = !!st.view && (st.view.start > DATA_START || st.view.end < DATA_END);
-  const centerRange = useCallback((s: number, e: number) => board.current?.centerOn((s + e) / 2), []);
-  return <div className={`app incident-app${st.dark ? ' dark' : ''}`}>
+  }, [st.displayView]);
+  const changeView = (view: 'list' | 'timeline') => props.onNavigate({ ...readUrl(), view });
+  return <div data-filtered={visible.length} data-total={INCIDENTS.length} className={`app incident-app${st.dark ? ' dark' : ''}`}>
     <Header {...props} threads={THREADS} state={st} resultCount={visible.length} onShowResults={showResults} onFitAll={() => board.current?.fitAll()}/>
     <div className="summary-strip"><span><i className="live-dot"/>一次資料からたどる、企業のインシデント</span><span>資料確認 {META.lastVerifiedDate} · 選定事例</span></div>
     <ClassificationSummary incidents={visible}/>
-    <div className="mobile-tabs" role="group" aria-label="表示切替"><button aria-pressed={st.mobileView === 'timeline'} onClick={() => st.setMobileView('timeline')}>タイムライン</button><button aria-pressed={st.mobileView === 'list'} onClick={() => st.setMobileView('list')}>事案一覧 ({visible.length})</button></div>
-    <main className={`workspace mobile-${st.mobileView}`}>
-      <IncidentList incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>
-      <section id="incident-timeline-results" tabIndex={-1} className="timeline-container" aria-label="事案のタイムライン">
-        <div className="board-toolbar"><div><strong>収録した公表日のタイムライン</strong><span>1事案を1つの点で表示。影響の種類は上の絞り込みで選択</span></div><div className="zoom-controls"><button className="n-btn" onClick={() => board.current?.zoomBy(-1)} aria-label="縮小">−</button><button className="n-btn" onClick={() => board.current?.zoomBy(1)} aria-label="拡大">＋</button><button className="n-btn" onClick={() => board.current?.fitAll()}>全期間</button></div></div>
-        <Board threads={LANES} events={shownEvents} links={LINKS} activeIds={LANE_IDS} theme={theme}
-          selectedId={st.selectedId} matches={st.matches} dataStart={DATA_START} dataEnd={DATA_END}
-          initial={st.initial} onSelect={st.select} onIdle={st.setView} apiRef={board}/>
-        {visible.length === 0 && <div className="board-empty"><p>表示する事案がありません</p><button className="n-btn" onClick={st.resetFilters}>絞り込みを解除</button></div>}
-        <div className="timeline-caption"><span>{zoomed ? '横にスワイプ・ドラッグで移動 / ピンチ・−で縮小' : '全期間を表示中 / ＋・ピンチ・ダブルクリックで拡大'}</span><span>点の色や大きさは深刻度の順位ではありません</span></div>
-        <Minimap threads={LANES} events={shownEvents} activeThreadIds={LANE_IDS} dataStart={DATA_START} dataEnd={DATA_END}
-          viewStart={st.view?.start ?? DATA_START} viewEnd={st.view?.end ?? DATA_END} dark={st.dark} onViewChange={centerRange}/>
-      </section>
+    <ViewTabs value={st.displayView} onChange={changeView} listId="incident-list-panel" timelineId="incident-timeline-results"/>
+    <main className={`workspace view-${st.displayView}`}>
+      <IncidentList hidden={st.displayView !== 'list'} incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>
+      <IncidentTimeline state={st} events={shownEvents} hasResults={visible.length > 0} board={board}/>
       <Drawer mode={st.drawerMode} onClose={st.closeDrawer}><DrawerContent state={st} db={db} eventsById={eventsById} onSelect={id => { st.resetFilters(); const event = eventsById.get(id) ?? EVENTS.find(item => item.incidentId === id); if (event) selectAndCenter(event.id); }}/></Drawer>
     </main>
     {perf.enabled && <PerfHud/>}
@@ -114,7 +102,8 @@ export default function App() {
     history.pushState(null, '', `#${p.toString()}`);
     setRoute(navigation.restore());
   };
-  const props = { category, onCategoryChange: changeCategory, initialUrl: route.initialUrl, onUrlChange: route.onUrlChange };
+  const onNavigate = (state: UrlState) => setRoute(navigation.navigate(state, route.revision));
+  const props = { onNavigate, category, onCategoryChange: changeCategory, initialUrl: route.initialUrl, onUrlChange: route.onUrlChange };
   return category === 'vulnerability'
     ? <AdvisoryLoadBoundary key={route.revision} {...props}><Suspense fallback={<div className="app"><CategoryNav {...props}/><p role="status">ライブラリの全記録を読み込み中…</p></div>}><VulnerabilityView {...props}/></Suspense></AdvisoryLoadBoundary>
     : <IncidentApp key={route.revision} {...props}/>;

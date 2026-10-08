@@ -13,8 +13,11 @@ try {
     const page = await browser.newPage({ ...devices['iPhone 13'], viewport: { width, height } });
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(url);
+    await page.locator('.incident-card').first().waitFor();
+    check(`${width}: list is the default`, await page.getByRole('tab', { name: '一覧', exact: true }).getAttribute('aria-selected') === 'true');
+    await page.screenshot({ path: `${output}/${width}x${height}-list-default.png`, fullPage: true });
+    await page.getByRole('tab', { name: 'タイムライン', exact: true }).tap();
     await page.waitForSelector('.tile-host .tile');
-    check(`${width}: timeline default preserved`, await page.getByRole('button', { name: 'タイムライン', exact: true }).getAttribute('aria-pressed') === 'true');
     await page.locator('.classification-toggle').tap();
     await page.locator('.classification-dialog[open]').waitFor();
     await page.getByLabel('製造業の細分類', { exact: true }).selectOption('food');
@@ -26,8 +29,8 @@ try {
     await results.tap();
     await page.waitForFunction(() => !document.querySelector('.classification-dialog[open]'));
     await page.waitForFunction(() => document.activeElement?.id === 'incident-timeline-results');
-    check(`${width}: result action preserves timeline choice`, await page.getByRole('button', { name: 'タイムライン', exact: true }).getAttribute('aria-pressed') === 'true');
-    await page.getByRole('button', { name: '事案一覧 (4)', exact: true }).tap();
+    check(`${width}: result action preserves timeline choice`, await page.getByRole('tab', { name: 'タイムライン', exact: true }).getAttribute('aria-selected') === 'true');
+    await page.getByRole('tab', { name: '一覧', exact: true }).tap();
     await page.locator('.incident-card').first().waitFor({ state: 'visible' });
     await page.screenshot({ path: `${output}/${width}x${height}-results.png`, fullPage: true });
     await page.getByRole('button', { name: '製造業の細分類：食品・飲料の条件を解除', exact: true }).tap();

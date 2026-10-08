@@ -10,7 +10,12 @@ const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePa
 const results = [];
 const errors = [];
 const check = (label, ok) => { assert.ok(ok, label); results.push(label); };
-async function ready(page) { await page.waitForSelector('.tile-host .tile'); await page.waitForTimeout(300); }
+async function ready(page) {
+  await page.getByRole('tab', { name: '一覧', exact: true }).waitFor();
+  if (await page.getByRole('tab', { name: 'タイムライン', exact: true }).getAttribute('aria-selected') === 'true') await page.locator('.tile-host .tile').first().waitFor();
+  else await page.locator('.incident-list').waitFor();
+  await page.evaluate(() => document.fonts.ready);
+}
 async function noOverflow(page, label) {
   check(label, await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
 }
@@ -22,7 +27,7 @@ try {
   page.on('request', request => requests.push(request.url()));
   await page.goto(url); await ready(page);
   check('desktop has all deduplicated incident cards', await page.locator('.incident-card').count() === data.incidents.length);
-  check('timeline has a single lane', await page.locator('.lane-label').count() === 1);
+  check('desktop defaults to a mutually exclusive list', await page.getByRole('tab', { name: '一覧', exact: true }).getAttribute('aria-selected') === 'true' && !(await page.locator('.timeline-container').isVisible()));
   check('DuckDB is not loaded before SQL opens', !requests.some(request => /duckdb/.test(request)));
   await noOverflow(page, 'desktop has no page overflow');
   await page.screenshot({ path: `${output}/desktop-light.png`, fullPage: true });
@@ -55,6 +60,8 @@ try {
   await page.reload();
   check('empty lane state persists after reload', await page.locator('.thread-chip[aria-pressed="false"]').count() === 3);
   await page.locator('.empty-state').getByRole('button').click(); await ready(page);
+  await page.getByRole('tab', { name: 'タイムライン', exact: true }).click(); await ready(page);
+  check('timeline has a single lane and replaces the list', await page.locator('.lane-label').count() === 1 && !(await page.locator('.incident-list').isVisible()));
   for (let i = 0; i < 3; i++) { await page.getByRole('button', { name: '拡大', exact: true }).click(); await page.getByRole('button', { name: '縮小', exact: true }).click(); }
   await page.getByRole('button', { name: '全期間', exact: true }).click(); await ready(page);
   await page.getByRole('button', { name: 'テーマ切替' }).click();
@@ -72,16 +79,15 @@ try {
   const mobile = await browser.newContext({ ...devices['Pixel 5'], colorScheme: 'light' });
   const phone = await mobile.newPage(); phone.on('pageerror', error => errors.push(error.message));
   await phone.goto(url); await ready(phone); await noOverflow(phone, 'mobile has no page overflow');
-  check('mobile defaults to timeline', await phone.locator('.board').isVisible());
-  await phone.screenshot({ path: `${output}/mobile-timeline.png`, fullPage: true });
-  await phone.getByRole('button', { name: `事案一覧 (${data.incidents.length})`, exact: true }).click();
+  check('mobile defaults to list', await phone.getByRole('tab', { name: '一覧', exact: true }).getAttribute('aria-selected') === 'true' && !(await phone.locator('.timeline-container').isVisible()));
   check('mobile list shows all unique incident cards', await phone.locator('.incident-card:visible').count() === data.incidents.length);
   await phone.screenshot({ path: `${output}/mobile-list.png`, fullPage: true });
   await phone.locator('.incident-card').first().click();
   check('mobile detail sheet is visible', await phone.locator('.drawer.open').isVisible());
   await phone.screenshot({ path: `${output}/mobile-detail.png`, fullPage: true });
   await phone.getByRole('button', { name: '閉じる', exact: true }).click();
-  await phone.getByRole('button', { name: 'タイムライン', exact: true }).click();
+  await phone.getByRole('tab', { name: 'タイムライン', exact: true }).click(); await ready(phone);
+  await phone.screenshot({ path: `${output}/mobile-timeline.png`, fullPage: true });
   await phone.getByRole('button', { name: '掲載方針', exact: true }).click();
   check('methodology explains source-date limitations', (await phone.locator('.drawer').innerText()).includes('事案の最初の発表日とは限りません'));
   await phone.getByRole('button', { name: '閉じる', exact: true }).click();

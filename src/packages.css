@@ -1,0 +1,27 @@
+/* Package coordinates stay readable even when scoped names and module paths are long. */
+.package-list, .package-advisory-list { min-height: 0; }
+.package-list .list-heading, .package-advisory-list .list-heading { gap: 12px; }
+.package-scroll { min-height: 0; overscroll-behavior: contain; }
+.package-card .package-name, .package-heading h2 { overflow-wrap: anywhere; }
+.package-card .package-name { font-family: var(--font-mono); line-height: 1.5; }
+.package-ecosystem { font-weight: 600; }
+.package-card-summary { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 18px; font-size: 11px; color: var(--text-sub); }
+.package-card-summary b { color: var(--text); font-weight: 650; }
+.package-card-action { color: var(--accent); font-size: 11px; line-height: 1.6; }
+.package-back-row { padding: 14px 22px 0; }
+.package-back { min-height: 44px; }
+.package-heading { min-width: 0; flex: 1; }
+.package-heading .eyebrow { overflow-wrap: anywhere; }
+.package-advisory-list .package-heading h2 { font: 650 16px/1.5 var(--font-mono); }
+.package-advisory-list .package-advisory-title { font-size: 14px; line-height: 1.6; }
+.package-advisory-list .advisory-id { overflow-wrap: anywhere; }
+.package-advisory-list .vulnerability-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.package-advisory-list .status-badge[data-lifecycle="withdrawn"] { border-style: dashed; }
+.package-advisory-list .list-footer { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .package-back-row { padding: 6px 18px 0; }
+  .package-back { font-size: 11px; }
+  .package-list .count-badge { font-size: 20px; }
+  .package-list .package-count-note { font-size: 10px; }
+  .package-advisory-list .package-heading .eyebrow { display: block; margin-bottom: 3px; }
+}

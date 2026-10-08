@@ -26,7 +26,7 @@ const body = page => drawer(page).locator('.drawer-content');
 const close = page => drawer(page).locator('.drawer-close');
 const route = (category, extra = {}) => {
   const target = new URL(url);
-  target.hash = new URLSearchParams({ ...(category.kind === 'vulnerability' ? { kind: category.kind } : {}), ...extra }).toString();
+  target.hash = new URLSearchParams({ view: 'list', ...(category.kind === 'vulnerability' ? { kind: category.kind } : {}), ...extra }).toString();
   return target.href;
 };
 async function settled(page) {
@@ -49,19 +49,22 @@ async function prepare(page, label) {
   });
 }
 async function ready(page, category) {
-  await page.waitForFunction(({ selector, count }) => document.querySelectorAll(selector).length === count,
-    { selector: category.card, count: category.kind === 'vulnerability' ? Math.min(50, category.records.filter(item => !item.withdrawnAt).length) : category.records.length });
-  if (category.kind === 'vulnerability') check('drawer fixture starts with all records searchable', Number(await page.locator('.vulnerability-list').getAttribute('data-total')) === category.records.length);
-  await page.locator('.tile-host .tile').first().waitFor({ state: 'attached' });
-  if (page.viewportSize().width <= 640) await page.getByRole('button', { name: category.list }).click();
+  await page.getByRole('tab', { name: '一覧', exact: true }).waitFor();
+  check(`${category.kind}: drawer starts from list mode`, await page.getByRole('tab', { name: '一覧', exact: true }).getAttribute('aria-selected') === 'true');
+  if (category.kind === 'vulnerability') await page.locator('.package-card').first().waitFor();
+  else await page.waitForFunction(count => document.querySelectorAll('.incident-card').length === count, category.records.length);
   await settled(page);
 }
 async function openItem(page, category) {
   if (category.kind === 'vulnerability' && await page.locator(`[data-advisory-id="${category.item.id}"]`).count() === 0) {
     await page.getByRole('textbox', { name: category.query, exact: true }).fill(category.item.id);
+    await page.locator('.package-card').first().waitFor();
+    await page.locator('.package-card').first().click();
     await page.locator(`[data-advisory-id="${category.item.id}"]`).waitFor();
   }
-  const opener = page.locator(category.card).filter({ has: page.locator('.incident-card-title', { hasText: category.item.title }) }).first();
+  const opener = category.kind === 'vulnerability'
+    ? page.locator(`[data-advisory-id="${category.item.id}"]`)
+    : page.locator(category.card).filter({ has: page.locator('.incident-card-title', { hasText: category.item.title }) }).first();
   await opener.scrollIntoViewIfNeeded();
   // A keyboard opener gives a defined focus target on both Chromium and Safari.
   await opener.focus();
@@ -232,11 +235,16 @@ async function resizeAndHistory(browser, engine) {
     check(`${label}: reload restores advisory selection, query and category`, await page.getByRole('textbox', { name: vulnerability.query, exact: true }).inputValue() === vulnerability.item.id
       && (await drawer(page).innerText()).includes(vulnerability.item.title)
       && new URLSearchParams(new URL(page.url()).hash.slice(1)).get('kind') === 'vulnerability');
-    // Back is browser navigation while the modal is open, not a click through it.
+    // Package drill-in has its own history entry. Back first exits the open detail
+    // to matching groups, then crosses the category boundary without a stale modal.
+    await page.goBack();
+    await page.locator('.package-list').waitFor(); await closed(page);
+    check(`${label}: Back from an open advisory restores matching package groups`, await page.getByRole('textbox', { name: vulnerability.query, exact: true }).inputValue() === vulnerability.item.id);
     await page.goBack();
     await page.getByRole('textbox', { name: incident.query, exact: true }).waitFor();
     await closed(page);
     check(`${label}: Back while open restores the incident query without a stale advisory`, await page.getByRole('textbox', { name: incident.query, exact: true }).inputValue() === incident.item.company);
+    await page.goForward(); await page.locator('.package-list').waitFor();
     await page.goForward(); await drawer(page).locator(vulnerability.detail).waitFor();
     check(`${label}: Forward restores the open advisory and its query`, await page.getByRole('textbox', { name: vulnerability.query, exact: true }).inputValue() === vulnerability.item.id
       && (await drawer(page).innerText()).includes(vulnerability.item.title));

@@ -17,7 +17,7 @@ const check = (name, value) => { assert.ok(value, name); results.push(name); };
 const labels = { industry: '被害対象企業の業種', manufacturingType: '製造業の細分類', listingStatus: '被害対象企業の上場区分', attackKind: '攻撃・事象の種類', initialAccess: '初期侵入経路', confidence: '攻撃・経路の確度' };
 const dialog = page => page.locator('dialog.classification-dialog');
 const reset = page => page.getByRole('button', { name: 'すべての絞り込みを解除', exact: true }).click();
-const count = (page, expected) => page.waitForFunction(n => document.querySelectorAll('.incident-card').length === n, expected);
+const count = (page, expected) => page.waitForFunction(n => document.querySelector('.classification-summary strong')?.textContent === `表示中 ${n}件`, expected);
 const matching = classification => filterIncidents(incidents, ['leak', 'outage', 'unauthorizedAccess'], 'all', '').filter(item => matchesClassification(item, classification));
 
 async function prepare(page) {
@@ -35,7 +35,8 @@ async function prepare(page) {
 }
 async function screenshot(page, name) {
   await page.waitForFunction(() => {
-    const tiles = [...document.querySelectorAll('.tile-host .tile, .axis-tiles .tile')];
+    if (document.querySelector('[role=tab][aria-selected=true]')?.getAttribute('aria-label') !== 'タイムライン') return true;
+    const tiles = [...document.querySelectorAll('.tile-host .tile, .axis-tiles .tile')].filter(tile => tile.getBoundingClientRect().width > 0);
     return tiles.length > 0 && tiles.every(tile => window.__classificationPaintedTiles.has(tile))
       && document.querySelectorAll('.tile-ghost .tile').length === 0;
   });
@@ -179,13 +180,14 @@ try {
   const mobileUrl = new URL(url);
   mobileUrl.hash = new URLSearchParams(Object.entries(mobileSelection).filter(([, value]) => value !== 'all')).toString();
   await mobile.goto(mobileUrl.href); await count(mobile, mobileExpected.length);
-  check('mobile shared route preserves default timeline', await mobile.getByRole('button', { name: 'タイムライン', exact: true }).getAttribute('aria-pressed') === 'true');
+  check('mobile shared filters default to list', await mobile.getByRole('tab', { name: '一覧', exact: true }).getAttribute('aria-selected') === 'true');
+  await mobile.getByRole('tab', { name: 'タイムライン', exact: true }).click();
   await openFilters(mobile);
   check('URL-restored advanced selections are revealed when the dialog opens', await dialog(mobile).locator('.classification-advanced').evaluate(node => node.open));
   for (const key of ['attackKind', 'initialAccess', 'confidence']) check(`mobile URL restores ${key}`, await dialog(mobile).getByLabel(labels[key], { exact: true }).inputValue() === mobileSelection[key]);
   await showResults(mobile, mobileExpected.length, 'incident-timeline-results');
-  check('results action preserves the chosen timeline view', await mobile.getByRole('button', { name: 'タイムライン', exact: true }).getAttribute('aria-pressed') === 'true');
-  await mobile.getByRole('button', { name: /^事案一覧/ }).click();
+  check('results action preserves the chosen timeline view', await mobile.getByRole('tab', { name: 'タイムライン', exact: true }).getAttribute('aria-selected') === 'true');
+  await mobile.getByRole('tab', { name: '一覧', exact: true }).click();
   await mobile.locator('.classification-chips').scrollIntoViewIfNeeded();
   await screenshot(mobile, 'classification-mobile-selected-chips');
 
@@ -208,7 +210,7 @@ try {
   await openFilters(mobile); await expandAdvanced(mobile);
   for (const key of ['attackKind', 'initialAccess', 'confidence']) check(`chip removal leaves ${key} correct`, await dialog(mobile).getByLabel(labels[key], { exact: true }).inputValue() === afterRemoval[key]);
   await showResults(mobile, removalExpected.length, 'incident-results-heading');
-  check('results action preserves the chosen list view', await mobile.getByRole('button', { name: /^事案一覧/ }).getAttribute('aria-pressed') === 'true');
+  check('results action preserves the chosen list view', await mobile.getByRole('tab', { name: '一覧', exact: true }).getAttribute('aria-selected') === 'true');
 
   await reset(mobile); await count(mobile, incidents.length);
   await openFilters(mobile); await selectFilter(mobile, 'attackKind', 'unknown');

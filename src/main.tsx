@@ -16,3 +16,6 @@ import './incident.css'
 import './mobile-usability.css'
 
 import './drawer.css'
+
+import './packages.css'
+import './view-tabs.css'

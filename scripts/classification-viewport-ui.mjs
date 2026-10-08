@@ -34,7 +34,8 @@ async function prepare(page) {
 }
 async function screenshot(page, name) {
   await page.waitForFunction(() => {
-    const tiles = [...document.querySelectorAll('.tile-host .tile, .axis-tiles .tile')];
+    if (document.querySelector('[role=tab][aria-selected=true]')?.getAttribute('aria-label') !== 'タイムライン') return true;
+    const tiles = [...document.querySelectorAll('.tile-host .tile, .axis-tiles .tile')].filter(tile => tile.getBoundingClientRect().width > 0);
     return tiles.length > 0 && tiles.every(tile => window.__classificationPaintedTiles.has(tile))
       && document.querySelectorAll('.tile-ghost .tile').length === 0;
   });
@@ -94,13 +95,13 @@ try {
       && await page.locator('.classification-toggle').getAttribute('aria-expanded') === 'false');
     check(`${size}: reset stays available`, await page.getByRole('button', { name: 'すべての絞り込みを解除', exact: true }).isVisible());
     check(`${size}: no collapsed page overflow`, await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
-    check(`${size}: default timeline is preserved`, await page.locator('.board').isVisible());
-    check(`${size}: timeline retains useful height`, await page.locator('.workspace').evaluate(node => node.clientHeight) >= 300);
+    check(`${size}: both categories use list-first browsing`, await page.getByRole('tab', { name: '一覧', exact: true }).getAttribute('aria-selected') === 'true'
+      && await page.locator('.incident-list').isVisible() && !(await page.locator('.timeline-container').isVisible()));
     await screenshot(page, `${size}-collapsed-initial-light`);
     if (mobile) {
       check(`${size}: disclosure and reset have touch-sized targets`, (await page.locator('.classification-toggle').boundingBox()).height >= 44
         && (await page.getByRole('button', { name: 'すべての絞り込みを解除', exact: true }).boundingBox()).height >= 44);
-      await page.getByRole('button', { name: /^事案一覧/ }).click();
+      await page.getByRole('tab', { name: '一覧', exact: true }).click();
       const placement = await page.locator('.incident-card').first().evaluate(card => {
         const cardBounds = card.getBoundingClientRect();
         const company = card.querySelector('strong').getBoundingClientRect();
@@ -112,7 +113,7 @@ try {
           titleVisible: title.top >= top && title.bottom <= bottom, outerScroll: document.querySelector('.app').scrollTop,
           innerScroll: card.closest('.incident-scroll').scrollTop };
       });
-      check(`${size}: first incident is meaningfully visible without scrolling ${JSON.stringify(placement)}`, placement.cardTop < height * 0.7
+      check(`${size}: first incident is meaningfully visible without scrolling ${JSON.stringify(placement)}`, placement.cardTop >= 0 && placement.cardTop < height
         && placement.companyVisible && placement.titleVisible && placement.outerScroll === 0 && placement.innerScroll === 0);
       await screenshot(page, `${size}-collapsed-list-light`);
     }
@@ -173,7 +174,7 @@ try {
     const resultHeading = 'incident-results-heading';
     await showResults(page, foodCount, resultHeading);
     check(`${size}: result action closes and focuses visible results`, !(await dialog(page).isVisible()));
-    if (mobile) check(`${size}: result action preserves list selection`, await page.getByRole('button', { name: /^事案一覧/ }).getAttribute('aria-pressed') === 'true');
+    check(`${size}: result action preserves list selection`, await page.getByRole('tab', { name: '一覧', exact: true }).getAttribute('aria-selected') === 'true');
     await screenshot(page, `${size}-results-after-close-light`);
     const chip = page.locator('.classification-chips').getByRole('button', { name: `${labels.manufacturingType}：${CLASSIFICATION_OPTIONS.manufacturingType.food}の条件を解除`, exact: true });
     await chip.scrollIntoViewIfNeeded();
@@ -217,10 +218,13 @@ try {
     await page.getByRole('button', { name: '閉じる', exact: true }).click();
     await reset(page); await waitForCount(page, incidents.length);
     check(`${size}: all-incident reset clears search`, await page.getByRole('textbox', { name: '企業名・事案を検索', exact: true }).inputValue() === '');
-    if (mobile) {
-      await page.getByRole('button', { name: 'タイムライン', exact: true }).click();
+    {
+      await page.getByRole('tab', { name: 'タイムライン', exact: true }).click();
+      await page.locator('.tile-host .tile').first().waitFor();
+      check(`${size}: timeline replaces the list`, await page.locator('.timeline-container').isVisible() && !(await page.locator('.incident-list').isVisible()));
+      await screenshot(page, `${size}-timeline-dark`);
       await openFilters(page); await showResults(page, incidents.length, 'incident-timeline-results');
-      check(`${size}: result action also preserves timeline selection`, await page.getByRole('button', { name: 'タイムライン', exact: true }).getAttribute('aria-pressed') === 'true');
+      check(`${size}: result action also preserves timeline selection`, await page.getByRole('tab', { name: 'タイムライン', exact: true }).getAttribute('aria-selected') === 'true');
     }
     await page.getByRole('button', { name: 'ライブラリの脆弱性', exact: true }).click();
     await page.getByLabel('ライブラリ・脆弱性を検索').waitFor();

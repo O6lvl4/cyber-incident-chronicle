@@ -16,7 +16,7 @@ export function useAppState({ events, threadIds, initialUrl }: Params) {
   const [sqlOpen, setSqlOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [view, setView] = useState<ViewInfo | null>(null);
-  const [mobileView, setMobileView] = useState<'timeline' | 'list'>('timeline');
+  const [displayView, setDisplayView] = useState<'timeline' | 'list'>(url.view ?? 'list');
   const matches = useMemo(() => new Set<string>(), []);
   const select = useCallback((id: string | null) => { setSelectedId(id); setSqlOpen(false); setAboutOpen(false); }, []);
   const toggleLane = useCallback((id: string) => setActiveIds(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]), []);
@@ -30,6 +30,6 @@ export function useAppState({ events, threadIds, initialUrl }: Params) {
   return { initial: url.level !== undefined && url.center !== undefined ? { level: url.level, center: url.center } : null,
     classification, setClassification, selectedId, select, activeIds, toggleLane, query, setQuery, status, setStatus, matches,
     dark, toggleDark, sqlOpen, toggleSql, aboutOpen, toggleAbout, drawerMode, closeDrawer, view, setView,
-    mobileView, setMobileView, resetFilters };
+    displayView, setDisplayView, resetFilters };
 }
 export type AppState = ReturnType<typeof useAppState>;
