@@ -14,10 +14,19 @@ const withdrawn = source.find(item => item.withdrawnAt && item.severity.label ==
 assert.ok(unknown && withdrawn);
 // Independent oracle from full source records; never use production aggregators.
 async function verifyRows(page, records, label) {
+  const ecosystemFilter = new URL(page.url()).hash.slice(1);
+  const ecosystem = new URLSearchParams(ecosystemFilter).get('ecosystem') ?? 'all';
+  const expectedKeys = new Set(records.flatMap(item => item.affected.filter(pkg => ecosystem === 'all' || pkg.ecosystem === ecosystem).map(pkg => JSON.stringify([pkg.ecosystem, pkg.packageName]))));
+  await page.waitForFunction(({ packages, advisories }) => {
+    const list = document.querySelector('.package-list');
+    return Number(list?.dataset.packageCount) === packages && Number(list?.dataset.advisoryCount) === advisories;
+  }, { packages: expectedKeys.size, advisories: new Set(records.map(item => item.id)).size });
   await page.locator('.package-card').first().waitFor();
   const rows = await page.locator('.package-card').all();
   for (const row of rows) {
-    const [ecosystem, packageName] = JSON.parse(await row.getAttribute('data-package-key'));
+    const key = await row.getAttribute('data-package-key');
+    check(`${label}: rendered coordinate belongs to filtered results`, expectedKeys.has(key));
+    const [ecosystem, packageName] = JSON.parse(key);
     const recordsById = new Map(records.filter(item => item.affected.some(pkg => pkg.ecosystem === ecosystem && pkg.packageName === packageName)).map(item => [item.id, item]));
     const items = [...recordsById.values()];
     assert.ok(items.length);
@@ -30,7 +39,8 @@ async function verifyRows(page, records, label) {
     }
     const latest = [...items].sort((a, b) => Date.parse(b.modifiedAt) - Date.parse(a.modifiedAt))[0].modifiedAt;
     check(`${label}/${packageName}: update date matches current source`, await row.locator('.package-updated time').getAttribute('dateTime') === latest);
-    check(`${label}/${packageName}: withdrawn history is explicit`, await row.locator('.package-withdrawn').count() === (items.some(item => item.withdrawnAt) ? 1 : 0));
+    const withdrawnCount = items.filter(item => item.withdrawnAt).length;
+    check(`${label}/${packageName}: withdrawn history has exact count`, withdrawnCount ? await row.locator('.package-withdrawn').innerText() === `撤回済み ${withdrawnCount.toLocaleString()}件を含む` : await row.locator('.package-withdrawn').count() === 0);
     const overflow = await row.evaluate(node => node.scrollWidth > node.clientWidth + 1 || [...node.querySelectorAll('.package-severity, .package-identity, .package-dates')].some(child => { const a = child.getBoundingClientRect(), b = node.getBoundingClientRect(); return a.left < b.left || a.right > b.right + 1; }));
     check(`${label}/${packageName}: summary stays within row`, !overflow);
   }
@@ -52,6 +62,13 @@ for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
         await page.goto(route({ q: 'lodash', ecosystem: 'npm', lifecycle }));
         await verifyRows(page, expected, `${name}/${width}/mixed-${lifecycle}`);
         await page.screenshot({ path: `${output}/${name}-${width}-mixed-${lifecycle}.png` });
+      }
+      const historyPackage = withdrawn.affected[0];
+      const historyQuery = historyPackage.packageName.toLowerCase();
+      for (const lifecycle of ['all', 'withdrawn']) {
+        const expected = source.filter(item => (lifecycle === 'all' || !!item.withdrawnAt) && item.affected.some(pkg => pkg.ecosystem === historyPackage.ecosystem) && [item.id, ...item.aliases, item.title, item.summary, ...item.affected.map(pkg => `${pkg.ecosystem} ${pkg.packageName}`)].join(' ').toLowerCase().includes(historyQuery));
+        await page.goto(route({ q: historyPackage.packageName, ecosystem: historyPackage.ecosystem, lifecycle }));
+        await verifyRows(page, expected, `${name}/${width}/history-${lifecycle}`);
       }
       const yearRecord = source.find(item => !item.withdrawnAt && item.publishedAt.startsWith('2025') && item.affected.some(pkg => pkg.ecosystem === 'npm'));
       await page.goto(route({ q: yearRecord.id, ecosystem: 'npm', year: '2025' }));
