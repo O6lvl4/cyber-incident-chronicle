@@ -8,6 +8,7 @@ const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePa
 const url = process.env.UI_URL ?? 'http://127.0.0.1:4173/';
 const checks = [];
 const errors = [];
+const failures = [];
 const check = (label, result) => { assert.ok(result, label); checks.push(label); };
 const output = `${process.env.UI_OUTPUT ?? 'artifacts/ui'}/classification-viewports`;
 mkdirSync(output, { recursive: true });
@@ -48,6 +49,7 @@ async function openFilters(page) {
 async function closedWithFocus(page) {
   await dialog(page).waitFor({ state: 'hidden' });
   await page.waitForFunction(() => document.activeElement === document.querySelector('.classification-toggle'));
+  await page.waitForFunction(() => document.querySelector('.classification-toggle')?.getAttribute('aria-expanded') === 'false');
 }
 async function backdropClick(page) {
   const bounds = await dialog(page).boundingBox();
@@ -85,6 +87,7 @@ try {
     const size = `${width}x${height}`;
     const mobile = width <= 640;
     const page = await browser.newPage({ viewport: { width, height }, colorScheme: 'light' });
+    try {
     await prepare(page);
     await page.goto(url); await waitForCount(page, incidents.length);
     check(`${size}: classification controls collapsed by default`, !(await dialog(page).isVisible())
@@ -222,10 +225,15 @@ try {
     await page.getByRole('button', { name: 'ライブラリの脆弱性', exact: true }).click();
     await page.getByLabel('ライブラリ・脆弱性を検索').waitFor();
     check(`${size}: vulnerability view has no incident classification controls`, await page.locator('.classification-controls').count() === 0);
-    await page.close();
+    } catch (error) {
+      failures.push({ size, error: error.message });
+      console.error(`${size}: ${error.stack}`);
+      await page.screenshot({ path: `${output}/${size}-failure.png`, fullPage: true, animations: 'disabled' }).catch(() => {});
+    } finally { await page.close(); }
   }
+  writeFileSync(`${output}/results.json`, JSON.stringify({ ok: failures.length === 0 && errors.length === 0, checks, errors, failures }, null, 2));
+  check('all viewport cases pass', failures.length === 0);
   check('no runtime JavaScript errors', errors.length === 0);
-  writeFileSync(`${output}/results.json`, JSON.stringify({ ok: true, checks, errors }, null, 2));
   console.log(`Classification viewport UI: ${checks.length} checks passed`);
 } catch (error) {
   for (const [index, page] of browser.contexts().flatMap(context => context.pages()).entries()) {
