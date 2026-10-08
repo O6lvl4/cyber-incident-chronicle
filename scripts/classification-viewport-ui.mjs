@@ -72,4 +72,9 @@ try {
   check('no runtime JavaScript errors', errors.length === 0);
   writeFileSync(`${output}/results.json`, JSON.stringify({ ok: true, checks, errors }, null, 2));
   console.log(`Classification viewport UI: ${checks.length} checks passed`);
+} catch (error) {
+  for (const [index, page] of browser.contexts().flatMap(context => context.pages()).entries()) {
+    await page.screenshot({ path: `${output}/failure-${index}.png`, fullPage: true }).catch(() => {});
+  }
+  throw error;
 } finally { await browser.close(); }

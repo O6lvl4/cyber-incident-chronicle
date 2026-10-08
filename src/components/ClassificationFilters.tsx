@@ -15,7 +15,7 @@ const FIELDS: FilterField[] = [
 function FilterSelect({ field, state }: { field: FilterField; state: AppState }) {
   return <label className="classification-field">
     <span>{field.label}</span>
-    <select value={state.classification[field.key]} aria-describedby={field.key === 'confidence' ? 'classification-confidence-help' : undefined} onChange={event => {
+    <select value={state.classification[field.key]} aria-label={field.label} aria-describedby={field.key === 'confidence' ? 'classification-confidence-help' : undefined} onChange={event => {
       const value = event.target.value;
       state.setClassification(previous => ({ ...previous, [field.key]: value }));
     }}>
