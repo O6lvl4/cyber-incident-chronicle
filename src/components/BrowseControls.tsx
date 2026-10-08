@@ -1,5 +1,4 @@
 import ViewTabs, { type DisplayView } from './ViewTabs';
-import '../browse-controls.css';
 
 export interface BrowseSortOption {
   value: string;
