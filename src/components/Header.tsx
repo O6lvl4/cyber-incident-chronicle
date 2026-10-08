@@ -5,6 +5,7 @@ import type { AppState } from '../hooks/useAppState';
 import { threadColor } from '../lib/palette';
 import { META } from '../data';
 import { STATUS_LABELS } from '../lib/incidents';
+import ClassificationFilters from './ClassificationFilters';
 interface Props extends CategoryProps { filters?: ReactNode; threads: Thread[]; state: AppState; onFitAll: () => void }
 export default function Header({ threads, state, onFitAll, category, onCategoryChange, filters }: Props) {
   return <header className="app-header">
@@ -38,6 +39,7 @@ export default function Header({ threads, state, onFitAll, category, onCategoryC
         <input value={state.query} onChange={e => state.setQuery(e.target.value)} placeholder="企業名・キーワード" aria-label="企業名・事案を検索"/>
         <span className="search-icon" aria-hidden="true">⌕</span>
       </label>
+      {category === 'incident' && <ClassificationFilters state={state}/>}
     </>}</div>
   </header>;
 }

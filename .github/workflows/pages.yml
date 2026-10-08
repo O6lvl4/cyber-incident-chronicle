@@ -34,7 +34,7 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
-      - run: node scripts/data-status.mjs
+      - run: pnpm data:check
       # codopsy v2.2.0 (最新リリース) は TypeScript の型 import を未使用と誤検出する。
       # 修正 (5626620) は main にのみ入っているので、そのリビジョンをソースからビルドして使う。
       - name: Restore codopsy
