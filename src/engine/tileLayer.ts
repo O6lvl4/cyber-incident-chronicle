@@ -95,6 +95,8 @@ export class TileLayer {
 
   dispose() {
     this.unsub();
+    // Invalidation may refresh a live viewport; disposal must only release it.
+    this.lastVp = null;
     for (const key of [...this.mounted.keys()]) this.unmount(key);
     this.invalidate();
   }

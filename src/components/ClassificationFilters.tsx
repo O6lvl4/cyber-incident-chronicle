@@ -1,41 +1,40 @@
+import { useRef, useState } from 'react';
 import type { AppState } from '../hooks/useAppState';
-import { INDUSTRY_LABELS, MANUFACTURING_LABELS, LISTING_LABELS, ATTACK_LABELS, ACCESS_LABELS, CONFIDENCE_LABELS } from '../lib/classification';
+import ClassificationDialog from './ClassificationDialog';
+import { CLASSIFICATION_FIELDS } from './ClassificationFields';
 
-type FilterKey = keyof AppState['classification'];
-interface FilterField { key: FilterKey; label: string; options: Record<string, string> }
-const FIELDS: FilterField[] = [
-  { key: 'industry', label: '被害対象企業の業種', options: INDUSTRY_LABELS },
-  { key: 'manufacturingType', label: '製造業の細分類', options: MANUFACTURING_LABELS },
-  { key: 'listingStatus', label: '被害対象企業の上場区分', options: LISTING_LABELS },
-  { key: 'attackKind', label: '攻撃・事象の種類', options: ATTACK_LABELS },
-  { key: 'initialAccess', label: '初期侵入経路', options: ACCESS_LABELS },
-  { key: 'confidence', label: '攻撃・経路の確度', options: CONFIDENCE_LABELS },
-];
+interface Props { state: AppState; resultCount: number; onShowResults: () => void }
 
-function FilterSelect({ field, state }: { field: FilterField; state: AppState }) {
-  return <label className="classification-field">
-    <span>{field.label}</span>
-    <select value={state.classification[field.key]} aria-label={field.label} aria-describedby={field.key === 'confidence' ? 'classification-confidence-help' : undefined} onChange={event => {
-      const value = event.target.value;
-      state.setClassification(previous => ({ ...previous, [field.key]: value }));
-    }}>
-      <option value="all">すべて</option>
-      {Object.entries(field.options).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
-    </select>
-  </label>;
-}
-
-export default function ClassificationFilters({ state }: { state: AppState }) {
-  const active = Object.values(state.classification).filter(value => value !== 'all').length;
+export default function ClassificationFilters({ state, resultCount, onShowResults }: Props) {
+  const [isOpen, setIsOpen] = useState(false);
+  const opener = useRef<HTMLButtonElement>(null);
+  const selected = CLASSIFICATION_FIELDS.filter(field => state.classification[field.key] !== 'all');
+  const close = () => {
+    setIsOpen(false);
+    opener.current?.focus({ preventScroll: true });
+  };
   return <div className="classification-controls">
-    <details className="classification-filters">
-      <summary>企業・攻撃の分類 <span className="classification-filter-count">{active ? `${active}条件` : '指定なし'}</span></summary>
-      <div className="classification-filter-body">
-        <div className="classification-grid">{FIELDS.map(field => <FilterSelect key={field.key} field={field} state={state}/>)}</div>
-        <p className="classification-help">食品・電機などの製造細分類を選ぶと該当するメーカーに絞り込みます。上場区分は被害対象企業自身の分類です。事象の種類と初期侵入経路は別に扱います。</p>
-        <p className="classification-help" id="classification-confidence-help">確度は選択した事象の種類・初期侵入経路のそれぞれに適用します。両方とも「すべて」の場合は事象の種類の確度で絞り込みます。</p>
-      </div>
-    </details>
-    <button className="classification-reset" onClick={state.resetFilters} aria-label="すべての絞り込みを解除">すべて解除</button>
+    <div className="classification-toolbar">
+      <button ref={opener} type="button" className="classification-toggle" aria-label="絞り込み"
+        aria-haspopup="dialog" aria-expanded={isOpen} aria-controls="classification-dialog" onClick={() => setIsOpen(true)}>
+        絞り込み
+        {selected.length > 0 && <span className="classification-filter-count">{selected.length}条件</span>}
+      </button>
+      <span className="classification-result-count">{resultCount}件</span>
+      <button type="button" className="classification-reset" onClick={state.resetFilters} aria-label="すべての絞り込みを解除">すべての絞り込みを解除</button>
+    </div>
+    {selected.length > 0 && <div className="classification-chips" aria-label="選択中の分類条件">
+      {selected.map(field => {
+        const label = field.options[state.classification[field.key]];
+        return <button type="button" key={field.key} className="classification-chip" aria-label={`${field.label}：${label}の条件を解除`}
+          title={`${field.label}：${label}`} onClick={() => {
+            state.setClassification(previous => ({ ...previous, [field.key]: 'all' }));
+            opener.current?.focus({ preventScroll: true });
+          }}>
+          <span>{field.shortLabel}：{label}</span><span aria-hidden="true">×</span>
+        </button>;
+      })}
+    </div>}
+    {isOpen && <ClassificationDialog state={state} resultCount={resultCount} onClose={close} onShowResults={onShowResults}/>}
   </div>;
 }

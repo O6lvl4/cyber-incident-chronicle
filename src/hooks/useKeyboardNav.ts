@@ -29,6 +29,7 @@ export function useKeyboardNav(actions: KeyboardActions) {
   ref.current = actions;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if ((e.target as HTMLElement).closest('dialog[open]')) return;
       const tag = (e.target as HTMLElement).tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
       const act = actionFor(e.key, ref.current);

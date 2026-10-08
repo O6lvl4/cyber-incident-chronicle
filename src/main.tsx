@@ -12,3 +12,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 )
 
 import './incident.css'
+
+import './mobile-usability.css'
