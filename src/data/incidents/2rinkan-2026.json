@@ -1,0 +1,97 @@
+{
+  "id": "2rinkan-2026",
+  "company": "２りんかんイエローハット",
+  "title": "アプリAPIの悪用で会員情報流出、最終調査で対象人数を下方修正",
+  "announcementDate": "2026-04-23",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日不明（2026-04-20夕刻に検知）",
+  "updatedDate": "2026-06-19",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "アプリの仕組み（API）を悪用した不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "会員専用サーバーへの不正アクセスでアプリを一部停止。最終調査で3,179,454名分の取得を特定し、暫定上限から修正した。公表した再開目途は予定であり、復旧完了とは扱わない。",
+  "affectedData": [
+    "氏名・連絡先、生年月日・性別、会員番号",
+    "アプリユーザーID・パスワード、ポイント残高、車両情報"
+  ],
+  "counts": [
+    {
+      "value": 3179454,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "最終調査で特定された漏えい対象者",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "3,179,454名",
+  "caveats": [
+    "第二報の最大3,455,754名は旧値。確定人数と加算しない",
+    "クレジットカード情報は外部決済で扱われ、本件の漏えいはないと公表",
+    "イエローハット店舗・他ブランドの顧客情報への影響はないと公表。別のWEB作業予約事案と混同しない",
+    "API悪用の詳しい入口やパスワードの保存方式は本公表資料から確定できない",
+    "最終報のサービス再開目途は2026年10月。実際の再開日を確認した記録ではない"
+  ],
+  "geography": "日本のオートバイ用品店会員サービス",
+  "sources": [
+    {
+      "title": "イエローハット：２りんかんにおける個人情報漏えいの可能性（初報）",
+      "url": "https://www.yellowhat.jp/information/2rinnkan/202604.html",
+      "publishedDate": "2026-04-23"
+    },
+    {
+      "title": "イエローハット：調査状況（第二報）",
+      "url": "https://www.yellowhat.jp/information/2rinnkan/202605.html",
+      "publishedDate": "2026-05-01"
+    },
+    {
+      "title": "イエローハット：調査結果（第三報・最終報）",
+      "url": "https://www.yellowhat.jp/information/2rinnkan/202606.html",
+      "publishedDate": "2026-06-19"
+    },
+    {
+      "title": "２りんかん：初報・第二報・最終報と再開目途の案内",
+      "url": "https://2rinkan.jp/annai/20260423/",
+      "publishedDate": "2026-06-19"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-20",
+      "label": "不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "夕刻に検知し、ネットワークを遮断",
+      "sourceUrl": "https://www.yellowhat.jp/information/2rinnkan/202604.html"
+    },
+    {
+      "date": "2026-04-23",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "会員情報漏えいの可能性とアプリ一部停止を公表",
+      "sourceUrl": "https://2rinkan.jp/annai/20260423/"
+    },
+    {
+      "date": "2026-05-01",
+      "label": "暫定対象範囲を公表",
+      "kind": "update",
+      "summary": "最大3,455,754名との調査途中の対象範囲を案内",
+      "sourceUrl": "https://www.yellowhat.jp/information/2rinnkan/202605.html"
+    },
+    {
+      "date": "2026-06-19",
+      "label": "最終調査結果を公表",
+      "kind": "update",
+      "summary": "API悪用と確定対象者数、個別通知完了を報告",
+      "sourceUrl": "https://www.yellowhat.jp/information/2rinnkan/202606.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-08",
+  "statusAsOfDate": "2026-06-19"
+}

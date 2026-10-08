@@ -1,0 +1,135 @@
+{
+  "id": "helpfeel-gyazo-2026",
+  "company": "Helpfeel（Gyazo）",
+  "title": "Gyazoのユーザーデータと画像メタデータ流出、対策後にサービス再開",
+  "announcementDate": "2026-09-16",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-09-11",
+  "occurredDateLabel": "不正アクセス発生・検知日",
+  "updatedDate": "2026-09-29",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "画像アップロードサーバーの脆弱性悪用による任意コマンド実行とデータベースへの不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "Gyazoへの侵入でユーザー情報と画像メタデータの流出を確認。9月25日の続報でユーザーデータの内訳と削除済み画像のメタデータ流出が判明し、サービスは9月27日に再開した。",
+  "affectedData": [
+    "ユーザー情報（メールアドレス、パスワードのハッシュ値、利用者・端末・セッションID等。項目はユーザーごとに異なる）",
+    "画像メタデータ（画像ID、IPアドレス、OCRテキスト、EXIF位置情報等。画像ファイルの流出件数ではない）"
+  ],
+  "counts": [
+    {
+      "value": 23620000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "ユーザーに関するデータ総数（人数ではない）",
+      "approximate": true
+    },
+    {
+      "value": 18010000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "総数の内数：メール登録のない匿名ユーザーデータ",
+      "approximate": true
+    },
+    {
+      "value": 5620000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "総数の内数：メール登録のあるユーザーデータ",
+      "approximate": true
+    },
+    {
+      "value": 490000000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "画像メタデータ（主に2019年1月以前のアップロード）",
+      "approximate": true
+    },
+    {
+      "value": 2400000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "条件を絞って取得された画像メタデータ",
+      "approximate": true
+    },
+    {
+      "value": 174000000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "削除済み画像のメタデータ（主に2023年2月以前の削除）",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "ユーザーデータ約2,362万件（メール登録あり約562万件を含む）と画像メタデータ",
+  "caveats": [
+    "総数・内数・画像メタデータを合算しない。四捨五入によりユーザーデータ内訳の合計は総数と一致しない",
+    "全ユーザーデータにメールアドレスが含まれるわけではなく、人数とも同一ではない",
+    "メタデータ流出と画像自体の流出・不正閲覧の可能性を区別。削除済み画像のファイル自体は今回追加確認した流出に含まない",
+    "Helpfeel・Cosense自身のシステムへの侵害・流出は確認されていない。決済情報は流出対象外",
+    "再開通知のページ表示日は9月26日、本文の再開日は9月27日。9月29日の追記も収録",
+    "再開後も過去画像の公開範囲は自動復元されず、所有者が配信を再開する方式。9月29日からTeams内の閲覧に一部例外を適用"
+  ],
+  "geography": "日本企業が運営するGyazo（海外利用者を含む）",
+  "sources": [
+    {
+      "title": "Gyazoへの不正アクセス・情報漏えい（初報、9月27日追記あり）",
+      "url": "https://corp.helpfeel.com/news/news-20260916-1",
+      "publishedDate": "2026-09-16"
+    },
+    {
+      "title": "Gyazoへの不正アクセス・情報漏えい（第二報、9月27日追記あり）",
+      "url": "https://corp.helpfeel.com/news/news-20260925-01",
+      "publishedDate": "2026-09-25"
+    },
+    {
+      "title": "Gyazoサービス再開（ページ表示9月26日、本文は9月27日再開）",
+      "url": "https://corp.helpfeel.com/news/news-20260927-01",
+      "publishedDate": "2026-09-26"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-11",
+      "label": "侵入・検知",
+      "kind": "occurrence",
+      "summary": "脆弱性が悪用され、同日夜に異常を検知",
+      "sourceUrl": "https://corp.helpfeel.com/news/news-20260916-1"
+    },
+    {
+      "date": "2026-09-16",
+      "label": "情報流出を公表",
+      "kind": "disclosure",
+      "summary": "ユーザー情報・画像メタデータの流出を確認",
+      "sourceUrl": "https://corp.helpfeel.com/news/news-20260916-1"
+    },
+    {
+      "date": "2026-09-25",
+      "label": "影響範囲を更新",
+      "kind": "update",
+      "summary": "内訳の精査と削除済み画像メタデータの追加流出を公表",
+      "sourceUrl": "https://corp.helpfeel.com/news/news-20260925-01"
+    },
+    {
+      "date": "2026-09-27",
+      "label": "サービス再開",
+      "kind": "update",
+      "summary": "対策と検証後にGyazoの提供を再開",
+      "sourceUrl": "https://corp.helpfeel.com/news/news-20260927-01"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "画像閲覧の対応を追記",
+      "kind": "update",
+      "summary": "過去画像の配信停止は継続し、Teams内の閲覧仕様を一部変更",
+      "sourceUrl": "https://corp.helpfeel.com/news/news-20260927-01"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-08",
+  "statusAsOfDate": "2026-09-29"
+}

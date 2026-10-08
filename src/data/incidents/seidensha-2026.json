@@ -1,0 +1,84 @@
+{
+  "id": "seidensha-2026",
+  "company": "精電舎電子工業",
+  "title": "VPN経由の侵入とランサムウェア被害、認証基盤データの外部転送",
+  "announcementDate": "2026-05-07",
+  "announcementDateLabel": "システム障害の初報公表",
+  "occurredDate": "2026-04-08",
+  "occurredDateLabel": "調査で確認したVPN経由の侵入日（暗号化・検知は4月22日）",
+  "updatedDate": "2026-07-21",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "VPNから侵入後、複数サーバー・パソコンにランサムウェアによる暗号化",
+    "status": "confirmed"
+  },
+  "summary": "4月の侵入・暗号化を受け全社ネットワークを遮断。7月の調査報告でランサムウェアと認証基盤サーバーのデータ外部転送を確認。暫定システムによる生産・出荷等は5月18日に再開した。",
+  "affectedData": [
+    "Active Directoryサーバー上のデータ（外部転送と会社が判断）",
+    "社員の認証情報（侵入後に取得されたと推定）"
+  ],
+  "counts": [],
+  "scaleLabel": "流出データの件数・対象人数は非公表",
+  "caveats": [
+    "VPN経由という公表から脆弱性悪用や初期侵入時の認証情報悪用を推定しない",
+    "顧客・取引先から受領した情報が転送された形跡はない。認証基盤の外部転送と区別する",
+    "5月18日は暫定運用の再開日であり、社内ネットワーク全体の完全復旧を意味しない"
+  ],
+  "geography": "日本・社内ネットワーク",
+  "sources": [
+    {
+      "title": "サイバー攻撃の可能性があるシステム障害",
+      "url": "https://www.sedeco.co.jp/news/detail/?dispmid=567&itemid=105",
+      "publishedDate": "2026-05-07"
+    },
+    {
+      "title": "サイバー攻撃に関する調査報告",
+      "url": "https://www.sedeco.co.jp/news/detail/?dispmid=567&itemid=111",
+      "publishedDate": "2026-07-21"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-08",
+      "label": "VPNから侵入",
+      "kind": "occurrence",
+      "summary": "第三者が社内ネットワークに侵入",
+      "sourceUrl": "https://www.sedeco.co.jp/news/detail/?dispmid=567&itemid=111"
+    },
+    {
+      "date": "2026-04-22",
+      "label": "暗号化・ネットワーク遮断",
+      "kind": "occurrence",
+      "summary": "不正アクセスを検知し全社ネットワークを遮断",
+      "sourceUrl": "https://www.sedeco.co.jp/news/detail/?dispmid=567&itemid=111"
+    },
+    {
+      "date": "2026-05-07",
+      "label": "障害を公表",
+      "kind": "disclosure",
+      "summary": "攻撃の可能性と情報資産への影響を調査中と公表",
+      "sourceUrl": "https://www.sedeco.co.jp/news/detail/?dispmid=567&itemid=105"
+    },
+    {
+      "date": "2026-05-18",
+      "label": "暫定業務再開",
+      "kind": "update",
+      "summary": "暫定システムで見積・受発注・生産・出荷を再開",
+      "sourceUrl": "https://www.sedeco.co.jp/news/detail/?dispmid=567&itemid=111"
+    },
+    {
+      "date": "2026-07-21",
+      "label": "調査結果公表",
+      "kind": "update",
+      "summary": "ランサムウェアとActive Directoryデータの外部転送を報告",
+      "sourceUrl": "https://www.sedeco.co.jp/news/detail/?dispmid=567&itemid=111"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-08",
+  "statusAsOfDate": "2026-07-21"
+}
