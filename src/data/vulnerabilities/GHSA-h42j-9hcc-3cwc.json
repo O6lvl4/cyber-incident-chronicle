@@ -1,0 +1,120 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-h42j-9hcc-3cwc",
+  "aliases": [
+    "CVE-2026-105746",
+    "PYSEC-2026-4193"
+  ],
+  "title": "Docling：リモート処理禁止設定をOCR経路で適用しない",
+  "summary": "KServe v2 OCRエンジンがenable_remote_services=Falseを確認せず、設定済みのリモートエンドポイントにページ画像を送信する。doclingとdocling-slimが影響を受け、2.131.0で修正された。送信先は呼び出し元が設定するもので、攻撃者が指定する宛先への送信を意味しない。",
+  "publishedAt": "2026-10-05T22:16:57.480Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/PYSEC-2026-4193",
+  "modifiedAt": "2026-10-08T10:00:03.859179287Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T21:52:05Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "docling",
+      "ranges": [
+        {
+          "affected": ">= 2.83.0, < 2.131.0",
+          "fixed": "2.131.0",
+          "sourceUrl": "https://github.com/docling-project/docling/security/advisories/GHSA-h42j-9hcc-3cwc"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.83.0"
+            },
+            {
+              "fixed": "2.131.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [
+        "2.100.0", "2.101.0", "2.102.0", "2.102.1", "2.102.2", "2.103.0",
+        "2.104.0", "2.105.0", "2.106.0", "2.107.0", "2.108.0", "2.109.0",
+        "2.110.0", "2.111.0", "2.112.0", "2.113.0", "2.114.0", "2.115.0",
+        "2.116.0", "2.117.0", "2.118.0", "2.118.1", "2.119.0", "2.120.1",
+        "2.120.2", "2.120.3", "2.121.0", "2.122.0", "2.123.0", "2.123.1",
+        "2.124.0", "2.125.0", "2.126.0", "2.127.0", "2.128.0", "2.129.0",
+        "2.130.0", "2.83.0", "2.84.0", "2.85.0", "2.86.0", "2.87.0",
+        "2.88.0", "2.89.0", "2.90.0", "2.91.0", "2.92.0", "2.93.0",
+        "2.94.0", "2.95.0", "2.96.0", "2.96.1", "2.97.0", "2.98.0",
+        "2.99.0"
+      ],
+      "packageUrl": "pkg:pypi/docling"
+    },
+    {
+      "ecosystem": "pip",
+      "packageName": "docling-slim",
+      "ranges": [
+        {
+          "affected": ">= 2.92.0, < 2.131.0",
+          "fixed": "2.131.0",
+          "sourceUrl": "https://github.com/docling-project/docling/security/advisories/GHSA-h42j-9hcc-3cwc"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/docling-project/docling/security/advisories/GHSA-h42j-9hcc-3cwc",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 2.2,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://github.com/docling-project/docling/security/advisories/GHSA-h42j-9hcc-3cwc"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://api.osv.dev/v1/vulns/PYSEC-2026-4193"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV公式API：PYSEC-2026-4193（公開・更新・別名・影響範囲）",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4193",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T22:16:57.480Z",
+      "modifiedAt": "2026-10-08T10:00:03.859179287Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Docling開発元：KServe v2 OCR engine does not enforce enable_remote_services",
+      "url": "https://github.com/docling-project/docling/security/advisories/GHSA-h42j-9hcc-3cwc",
+      "publishedDate": "2026-09-29"
+    }
+  ],
+  "caveats": [
+    "GitHub Reviewedの固定スナップショットには別名一致せず、公式OSVと個別に読んだ開発元資料に基づく追加記録。固定リポジトリ由来の全件収録数には含めない。",
+    "publishedAt / modifiedAtは引用したOSVレコードの日時。開発元資料の初回公表日や修正コミット日時とは区別する。",
+    "実悪用は未確認。CISA KEV公式JSONは2026-10-08の取得でHTTP 403となり、KEVはunknownを維持した。未確認は未掲載や実悪用なしを意味しない。",
+    "修正版はこの問題に対する修正境界であり、現在の最新安全版を保証しない。",
+    "OSV API取得日時：2026-10-08T21:50:00.959820+00:00。保存応答のSHA-256：7e64ecac6f93e660a42fe6a1e2f2928e0829b4e7f67e64f3508c782f6545ec73。",
+    "開発元はLow、CVSS v3.1 2.2（AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N）。PYSECは異なるベクトル（AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N）を掲載している。双方を出典付きで残し、PYSECの数値スコアを推計しない。",
+    "開発元はdocling（>=2.83.0,<2.131.0）に加えdocling-slim（>=2.92.0,<2.131.0）を明記。取得したPYSEC-2026-4193のaffectedはdoclingだけで、導入2.83.0・修正2.131.0。表示用パッケージは開発元に従い2種類とし、doclingのrawRanges/explicitVersionsはPYSEC原文を保持する。",
+    "GitHubの全体アドバイザリAPI https://api.github.com/advisories/GHSA-h42j-9hcc-3cwc は2026-10-08T21:45:24ZにHTTP 404だった。一方、上記の開発元アドバイザリはHTTP 200で本文を確認できた。404の理由やReviewed状態は推測しない。",
+    "開発元の表示公表日は2026-09-29。タイムライン上の2026-10-05T22:16:57.480Zは引用したOSV/PYSECのpublished値であり、開発元の初回公表日ではない。"
+  ]
+}

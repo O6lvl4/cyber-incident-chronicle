@@ -1,0 +1,58 @@
+{
+  "id": "world-wide-system-ses-2026",
+  "company": "World Wide System",
+  "title": "Amazon SESの認証情報悪用で大量送信、SaaSのメール機能が停止",
+  "announcementDate": "2026-10-08",
+  "announcementDateLabel": "初報公表（17時50分）",
+  "occurredDate": "2026-10-08",
+  "occurredDateLabel": "メール送信障害の開始日（午前7時頃。認証情報が漏れた時期は調査中）",
+  "detectedDate": "2026-10-08",
+  "updatedDate": "2026-10-08",
+  "statusAsOfDate": "2026-10-08",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "同社が利用するAmazon SESの認証情報の不正利用（取得経路は調査中）",
+    "status": "confirmed"
+  },
+  "summary": "第三者が同社のAmazon SES認証情報を悪用して大量のメールを送信し、送信上限に到達。キャンペーン用SaaSの登録・応募等に障害が生じた。認証情報は無効化済みで、メール送信方式を変更中。",
+  "affectedData": [
+    "顧客の個人情報等の漏えいは公表時点で未確認"
+  ],
+  "counts": [],
+  "scaleLabel": "対象件数・人数は非公表／メール機能の障害",
+  "caveats": [
+    "Amazon SES本体の侵害を公表したものではなく、同社が利用する認証情報の悪用",
+    "7時頃は障害開始、10時頃は送信上限到達の検知。侵入経路・認証情報取得時期は調査中",
+    "対象はSmartStampRally、SmartKuji、SmartContestの指定ドメイン。smartcontest.digitalは対象外",
+    "SmartStampRallyの既存登録者の参加は継続可能。SaaS全機能の停止としない"
+  ],
+  "geography": "日本企業のキャンペーン用SaaS",
+  "sources": [
+    {
+      "title": "当社メール送信サービス（AWS SES）の障害情報について",
+      "url": "https://ww-system.com/data/1122/news_dtl/",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-08",
+      "label": "メール送信障害を検知・対処",
+      "kind": "occurrence",
+      "summary": "7時頃から障害、10時頃に送信数上限を検知。認証情報悪用を確認して無効化",
+      "sourceUrl": "https://ww-system.com/data/1122/news_dtl/"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "メール送信障害と認証情報の不正利用を公表。個人情報の漏えいは未確認",
+      "sourceUrl": "https://ww-system.com/data/1122/news_dtl/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09"
+}

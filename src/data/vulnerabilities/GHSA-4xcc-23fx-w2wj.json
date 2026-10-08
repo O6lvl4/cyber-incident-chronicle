@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4xcc-23fx-w2wj",
+  "aliases": [
+    "RUSTSEC-2026-0333"
+  ],
+  "title": "noyalib：型付きデシリアライズで一部の資源制限を適用しない",
+  "summary": "型付きデシリアライズ経路が一部のParserConfig資源制限を適用せず、利用者が厳しくした上限が反映されない。既定の文書長・深さ・エイリアス数の上限は引き続き有効で、無制限な入力を受け付けるという意味ではない。0.0.53で経路間の制限適用を統一した。",
+  "publishedAt": "2026-10-06T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0333",
+  "modifiedAt": "2026-10-08T15:00:03.204356893Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T21:52:05Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "noyalib",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 0.0.53",
+          "fixed": "0.0.53",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0333"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.0.53"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/noyalib"
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/sebastienrousseau/noyalib/pulls/470",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV公式API：RUSTSEC-2026-0333（公開・更新・別名・影響範囲）",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0333",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T12:00:00Z",
+      "modifiedAt": "2026-10-08T15:00:03.204356893Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec：RUSTSEC-2026-0333（種別・影響経路・修正版）",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0333.html",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "type": "maintainer",
+      "title": "noyalib開発元のマージ済みリリースPR：v0.0.53と資源制限の統一",
+      "url": "https://api.github.com/repos/sebastienrousseau/noyalib/pulls/470",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T23:36:13Z",
+      "modifiedAt": "2026-10-06T12:29:19Z"
+    }
+  ],
+  "caveats": [
+    "GitHub Reviewedの固定スナップショットには別名一致せず、公式OSVと個別に読んだ開発元資料に基づく追加記録。固定リポジトリ由来の全件収録数には含めない。",
+    "publishedAt / modifiedAtは引用したOSVレコードの日時。開発元資料の初回公表日や修正コミット日時とは区別する。",
+    "実悪用は未確認。CISA KEV公式JSONは2026-10-08の取得でHTTP 403となり、KEVはunknownを維持した。未確認は未掲載や実悪用なしを意味しない。",
+    "修正版はこの問題に対する修正境界であり、現在の最新安全版を保証しない。",
+    "OSV API取得日時：2026-10-08T21:50:00.796087+00:00。保存応答のSHA-256：fdf4265a12b133c6095e8eec127d9d7c2784ad9f2cf8a9b8ccf8edf28e86ae49。",
+    "開発元PR #470本文はGHSA-4xcc-23fx-w2wjとseverity Lowを明示し、0.0.53で型付き経路にも資源制限を適用したことを確認できる。RustSec/OSVはCVSSを掲載していないため、数値スコアは付けない。",
+    "RustSecページはReported 2026-10-06、Issued 2026-10-08を区別する。publishedAtの2026-10-06T12:00:00ZはOSVレコードの値であり、RustSecページのIssued日とは異なる。",
+    "OSVのSEMVER導入境界0.0.0-0・修正境界0.0.53をrawRangesにそのまま保存した。OSVのrelated/upstreamではなく、明示されたaliasesだけを識別子として採用した。",
+    "GitHubの全体アドバイザリAPI https://api.github.com/advisories/GHSA-4xcc-23fx-w2wj は2026-10-08T21:45:24ZにHTTP 404だった。識別子は実際に読んだRustSecと開発元PRの明示に基づく。404の理由やReviewed状態は推測しない。"
+  ]
+}

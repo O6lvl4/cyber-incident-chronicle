@@ -1,0 +1,90 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8r5x-fm3f-whwj",
+  "aliases": [
+    "CVE-2026-106446"
+  ],
+  "title": "Handlebars：未信頼ASTの型検証回避によるコード注入",
+  "summary": "未信頼のオブジェクトをcompile/precompileに渡す構成で、生成されるJavaScriptへコードを注入される可能性がある。文字列のテンプレートだけを渡す利用は対象外と開発元が説明。4.7.10で修正。",
+  "publishedAt": "2026-10-08T17:52:32Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-8r5x-fm3f-whwj/GHSA-8r5x-fm3f-whwj.json",
+  "modifiedAt": "2026-10-08T17:52:33Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T21:43:48Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "handlebars",
+      "ranges": [
+        {
+          "affected": ">= 4.0.0, < 4.7.10",
+          "fixed": "4.7.10",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-8r5x-fm3f-whwj/GHSA-8r5x-fm3f-whwj.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.7.10"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-8r5x-fm3f-whwj",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-8r5x-fm3f-whwj/GHSA-8r5x-fm3f-whwj.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-8r5x-fm3f-whwj/GHSA-8r5x-fm3f-whwj.json",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T17:52:32Z",
+      "modifiedAt": "2026-10-08T17:52:33Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Handlebars: JavaScript Injection via AST Type Confusion in compile (bypass of CVE-2026-33937)",
+      "url": "https://github.com/advisories/GHSA-8r5x-fm3f-whwj",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元セキュリティアドバイザリ（影響条件・修正系列）",
+      "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-8r5x-fm3f-whwj",
+      "publishedDate": "2026-10-05"
+    }
+  ],
+  "caveats": [
+    "影響範囲は4.0.0以上4.7.10未満。前提となる未信頼AST入力と通常の文字列テンプレート利用を区別する。",
+    "公表・更新日時は固定データベースの記録。開発元資料の公表日とは区別する。",
+    "掲載は利用環境の影響や実悪用を示さない。CISA KEVは取得失敗のため未確認を維持。"
+  ]
+}

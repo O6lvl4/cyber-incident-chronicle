@@ -1,0 +1,73 @@
+{
+  "id": "flex-gallery-2026",
+  "company": "フレックス（FLEX GALLERY）",
+  "geography": "日本の雑貨・インテリア販売企業の委託先クラウドシステム",
+  "title": "委託先の管理者アカウント誤記載で顧客情報63,116件が他社から閲覧可能に",
+  "announcementDate": "2026-10-08",
+  "announcementDateLabel": "公表日",
+  "occurredDate": "2026-03-26",
+  "occurredDateLabel": "顧客情報が他社から閲覧可能となった日（攻撃発生日ではない）",
+  "detectedDate": "2026-06-23",
+  "updatedDate": "2026-10-08",
+  "statusAsOfDate": "2026-10-08",
+  "impactTypes": [
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "委託先が他の利用企業向け手順書へ管理者アカウント情報を誤記載（攻撃は確認されていない）",
+    "status": "notApplicable"
+  },
+  "summary": "委託先のクラウド型本部システムで、他の利用企業1社向け手順書に管理者アカウント情報を誤記載。顧客情報63,116件がその企業から閲覧可能となった。閲覧・不正利用は未確認で、該当アカウント無効化等により解消済み。",
+  "affectedData": [
+    "顧客の氏名、生年月日、性別、住所、電話番号、メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 63116,
+      "unit": "件",
+      "status": "possible",
+      "label": "特定の他社1社による閲覧が可能だった顧客情報（実際の閲覧は未確認）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "顧客情報63,116件が閲覧可能／実際の閲覧は未確認",
+  "caveats": [
+    "閲覧できた可能性がある相手は同一サーバーの特定利用企業1社。不特定多数がインターネットで閲覧可能だった事象ではない",
+    "委託先は当該企業から閲覧していない旨を確認。実際の閲覧、不正利用、被害は公表時点で未確認",
+    "発覚後のアカウント無効化・パスワード変更で閲覧可能状態は解消済み。具体的な解消日は非公表",
+    "侵入や認証情報の悪用を確認した発表ではなく、手順書への管理者アカウント誤記載による管理不備",
+    "63,116件はフレックスの顧客情報だけを対象とし、クラウド提供事業者の全利用企業における総件数ではない"
+  ],
+  "sources": [
+    {
+      "title": "フレックス：顧客情報への不適切なアクセスが可能な状態となっていたことに関するお知らせ",
+      "url": "https://www.flex-g.com/topics/?c=zoom&pk=648",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-03-26",
+      "label": "他社から閲覧可能に",
+      "kind": "occurrence",
+      "summary": "特定の利用企業1社がフレックスの顧客情報へアクセスできる状態となる",
+      "sourceUrl": "https://www.flex-g.com/topics/?c=zoom&pk=648"
+    },
+    {
+      "date": "2026-06-23",
+      "label": "管理不備が発覚",
+      "kind": "occurrence",
+      "summary": "提供事業者の管理不備を確認。発覚後に該当アカウントを無効化する等の対策を実施",
+      "sourceUrl": "https://www.flex-g.com/topics/?c=zoom&pk=648"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "顧客情報の露出を公表",
+      "kind": "disclosure",
+      "summary": "閲覧可能だった63,116件の情報と対策済みの状況を公表。閲覧・不正利用は未確認",
+      "sourceUrl": "https://www.flex-g.com/topics/?c=zoom&pk=648"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09"
+}
