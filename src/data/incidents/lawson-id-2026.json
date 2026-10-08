@@ -1,0 +1,89 @@
+{
+  "id": "lawson-id-2026",
+  "company": "ローソン",
+  "title": "ローソンIDとアプリ予約への不正アクセスで個人情報漏えい",
+  "announcementDate": "2026-10-08",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-09-12",
+  "occurredDateLabel": "ローソンIDへの不正アクセス開始日（9月14日まで。アプリ予約は9月17日）",
+  "detectedDate": "2026-10-07",
+  "updatedDate": "2026-10-08",
+  "statusAsOfDate": "2026-10-08",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "アプリの本人向け情報表示のセキュリティ機構に対する不正アクセス（詳細な侵入経路は非公表）",
+    "status": "confirmed"
+  },
+  "summary": "ローソンIDの情報2,155,345件とアプリ予約26件の漏えいを確認。10月7日の調査で9月の不正アクセスが判明し、不審なアクセス元を遮断して予約機能を停止した。",
+  "affectedData": [
+    "ローソンID：メールアドレス、氏名。応募等で入力した場合は性別、電話番号、住所、メルマガ取得情報",
+    "ローソンアプリ予約：氏名、電話番号、クレジットカード番号の一部"
+  ],
+  "counts": [
+    {
+      "value": 2155345,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "ローソンIDの個人情報",
+      "approximate": false
+    },
+    {
+      "value": 26,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "ローソンアプリ予約の個人情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "ローソンID 2,155,345件／アプリ予約26件",
+  "caveats": [
+    "原文の見出しは「対象人数」だが数値の単位は「件」。人数に読み替えず、二つのサービスの件数も合算しない",
+    "予約情報のクレジットカード番号は一部のみ。完全な番号の漏えいとは公表していない",
+    "10月8日時点で本件による不正利用・二次被害は確認されていない",
+    "アプリ予約は10月中旬の再開予定であり、復旧完了の確認ではない"
+  ],
+  "geography": "日本のローソンID・ローソン公式アプリ予約",
+  "sources": [
+    {
+      "title": "第三者による不正アクセスに伴う個人情報漏えいに関するお詫びとお知らせ",
+      "url": "https://www.lawson.co.jp/contents/cont07/1533174_3310.html",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-12",
+      "label": "ローソンIDへの不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "9月12日から14日までの不正アクセスを後日の調査で確認",
+      "sourceUrl": "https://www.lawson.co.jp/contents/cont07/1533174_3310.html"
+    },
+    {
+      "date": "2026-09-17",
+      "label": "アプリ予約への不正アクセス",
+      "kind": "occurrence",
+      "summary": "予約サービスへの不正アクセス日",
+      "sourceUrl": "https://www.lawson.co.jp/contents/cont07/1533174_3310.html"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "調査で判明",
+      "kind": "occurrence",
+      "summary": "ローソンIDとアプリ予約の侵害を調査で確認",
+      "sourceUrl": "https://www.lawson.co.jp/contents/cont07/1533174_3310.html"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "漏えいを公表",
+      "kind": "disclosure",
+      "summary": "サービス別の件数、予約機能停止、個別通知と再開予定を公表",
+      "sourceUrl": "https://www.lawson.co.jp/contents/cont07/1533174_3310.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09"
+}

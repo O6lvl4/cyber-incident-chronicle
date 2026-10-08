@@ -1,0 +1,139 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-r3rv-jm3r-62q2",
+  "aliases": [
+    "CVE-2026-107385"
+  ],
+  "title": "MariaDB Connector/Node.js：特定SQLモードでパラメーターがSQLへ混入",
+  "summary": "NO_BACKSLASH_ESCAPESが有効な接続で、テキストプロトコルのエスケープがSQLインジェクションを防げない可能性がある。開発元はexecute/batchによるバイナリプロトコルを影響対象外としている。",
+  "publishedAt": "2026-10-08T19:42:28Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-r3rv-jm3r-62q2/GHSA-r3rv-jm3r-62q2.json",
+  "modifiedAt": "2026-10-08T19:42:29Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T21:43:48Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "mariadb",
+      "ranges": [
+        {
+          "affected": "< 3.2.5",
+          "fixed": "3.2.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-r3rv-jm3r-62q2/GHSA-r3rv-jm3r-62q2.json"
+        },
+        {
+          "affected": ">= 3.3.0, < 3.3.4",
+          "fixed": "3.3.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-r3rv-jm3r-62q2/GHSA-r3rv-jm3r-62q2.json"
+        },
+        {
+          "affected": ">= 3.4.0, < 3.4.7",
+          "fixed": "3.4.7",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-r3rv-jm3r-62q2/GHSA-r3rv-jm3r-62q2.json"
+        },
+        {
+          "affected": ">= 3.5.0-rc.0, < 3.5.4",
+          "fixed": "3.5.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-r3rv-jm3r-62q2/GHSA-r3rv-jm3r-62q2.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.5"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.3.0"
+            },
+            {
+              "fixed": "3.3.4"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.4.0"
+            },
+            {
+              "fixed": "3.4.7"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.5.0-rc.0"
+            },
+            {
+              "fixed": "3.5.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/mariadb-corporation/mariadb-connector-nodejs/security/advisories/GHSA-r3rv-jm3r-62q2",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-r3rv-jm3r-62q2/GHSA-r3rv-jm3r-62q2.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-r3rv-jm3r-62q2/GHSA-r3rv-jm3r-62q2.json",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T19:42:28Z",
+      "modifiedAt": "2026-10-08T19:42:29Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "MariaDB Connector/Node.js: SQL injection in the text protocol when the session uses NO_BACKSLASH_ESCAPES",
+      "url": "https://github.com/advisories/GHSA-r3rv-jm3r-62q2",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元セキュリティアドバイザリ（影響条件・修正系列）",
+      "url": "https://github.com/mariadb-corporation/mariadb-connector-nodejs/security/advisories/GHSA-r3rv-jm3r-62q2",
+      "publishedDate": "2026-09-21"
+    }
+  ],
+  "caveats": [
+    "修正境界3.2.5、3.3.4、3.4.7、3.5.4を各系列の影響範囲と対にして保存。",
+    "SQLモードと使用APIが成立条件。全てのMariaDB接続やexecute/batchが影響するとは扱わない。",
+    "公表・更新日時は固定データベースの記録。開発元資料の公表日とは区別する。",
+    "掲載は利用環境の影響や実悪用を示さない。CISA KEVは取得失敗のため未確認を維持。"
+  ]
+}

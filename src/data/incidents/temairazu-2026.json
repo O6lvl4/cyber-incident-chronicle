@@ -1,0 +1,92 @@
+{
+  "id": "temairazu-2026",
+  "company": "手間いらず",
+  "geography": "日本の宿泊施設向け予約管理システム",
+  "announcementDateLabel": "日本語初報公表",
+  "statusAsOfDate": "2026-10-07",
+  "title": "宿泊予約管理システムへの不正アクセスと予約者情報の閲覧・取得の可能性",
+  "announcementDate": "2026-09-28",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセスの発生日は未公表（不審メッセージの連絡は9月21日深夜頃から）",
+  "updatedDate": "2026-10-08",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "不正アクセス（具体的手法は非公表）",
+    "status": "unknown"
+  },
+  "summary": "宿泊施設向けTEMAIRAZUへの第三者の不正アクセスを確認。10月7日の第二報で、宿泊者の連絡先や予約内容が閲覧・取得された可能性を公表した。予約者を偽サイトへ誘導するメッセージも確認され、外部専門機関と調査中。対象件数は未公表。10月8日に英語版第二報を公開した。",
+  "affectedData": [
+    "宿泊者の氏名",
+    "電話番号",
+    "メールアドレス",
+    "宿泊施設名",
+    "チェックイン日",
+    "チェックアウト日",
+    "宿泊料金"
+  ],
+  "counts": [],
+  "caveats": [
+    "不正アクセスは確認済みだが、宿泊者情報の閲覧・取得は可能性として公表されている",
+    "対象人数・予約件数・施設数は未公表で、件数を推計しない",
+    "事業者が提供するTEMAIRAZUへの侵害として1件に集約し、同一事案の利用宿泊施設の告知を別件として加算しない",
+    "フィッシングは予約者への二次的な不審メッセージの説明。事業者システムへの初期侵入をフィッシングや宿泊施設アカウントの認証情報悪用と確定しない",
+    "手間いらずはクレジットカード情報と宿泊予約サイトのログイン情報を保有していないと公表",
+    "初報時点で原因対策と一時停止機能の再開を公表。現時点の全面停止を意味しない",
+    "9月21日は不審メッセージに関する連絡の開始時期であり、侵入開始日ではない",
+    "10月8日は英語版第二報の公開日。調査内容の基準日は日本語第二報の10月7日"
+  ],
+  "sources": [
+    {
+      "title": "手間いらず：不審なメッセージおよび当社システムへの不正アクセスに関するお詫びとお知らせ",
+      "url": "https://www.temairazu.co.jp/pdf/1206/news-update",
+      "publishedDate": "2026-09-28"
+    },
+    {
+      "title": "手間いらず：当社システムへの不正アクセスに関する経過および対応について（第二報）",
+      "url": "https://www.temairazu.co.jp/pdf/1210/news-update",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "title": "Temairazu: Update on Unauthorized Access to Our Systems and Our Response (Second Report)",
+      "url": "https://www.temairazu.co.jp/pdf/1211/news-update",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-21",
+      "label": "不審メッセージの連絡",
+      "kind": "occurrence",
+      "summary": "深夜頃から、複数施設より予約者への不審メッセージの連絡。侵入開始日ではない。",
+      "sourceUrl": "https://www.temairazu.co.jp/pdf/1206/news-update"
+    },
+    {
+      "date": "2026-09-28",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと宿泊者情報の閲覧・取得の可能性を公表。原因対策と停止機能の再開も案内。",
+      "sourceUrl": "https://www.temairazu.co.jp/pdf/1206/news-update"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "第二報公表",
+      "kind": "update",
+      "summary": "対象となり得る情報項目を提示。外部専門機関との調査と予約者への注意喚起を継続。",
+      "sourceUrl": "https://www.temairazu.co.jp/pdf/1210/news-update"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "英語版第二報",
+      "kind": "update",
+      "summary": "第二報の英語版を公開。同一事案・同じ調査内容として扱う。",
+      "sourceUrl": "https://www.temairazu.co.jp/pdf/1211/news-update"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09",
+  "scaleLabel": "対象人数・予約件数・施設数は未公表"
+}

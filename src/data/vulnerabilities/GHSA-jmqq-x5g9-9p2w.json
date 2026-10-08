@@ -1,0 +1,108 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-jmqq-x5g9-9p2w",
+  "aliases": [
+    "CVE-2026-107282"
+  ],
+  "title": "AsyncHttpClient：別ホストへのリプレイ時に元ホストの認証情報を送信",
+  "summary": "別ホストへリクエストを再実行する構成で、元ホストのリクエストや認証情報が転送先へ送られる可能性がある。開発元は2系を2.16.1、3系を3.0.13で修正した。",
+  "publishedAt": "2026-10-08T16:30:46Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-jmqq-x5g9-9p2w/GHSA-jmqq-x5g9-9p2w.json",
+  "modifiedAt": "2026-10-08T16:30:46Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T21:43:48Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.asynchttpclient:async-http-client",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 3.0.13",
+          "fixed": "3.0.13",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-jmqq-x5g9-9p2w/GHSA-jmqq-x5g9-9p2w.json"
+        },
+        {
+          "affected": ">= 2.0.0, < 2.16.1",
+          "fixed": "2.16.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-jmqq-x5g9-9p2w/GHSA-jmqq-x5g9-9p2w.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.13"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.16.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/AsyncHttpClient/async-http-client/security/advisories/GHSA-jmqq-x5g9-9p2w",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-jmqq-x5g9-9p2w/GHSA-jmqq-x5g9-9p2w.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/4d346ec8cec9ac2b5f8c602880f039a166679001/advisories/github-reviewed/2026/10/GHSA-jmqq-x5g9-9p2w/GHSA-jmqq-x5g9-9p2w.json",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T16:30:46Z",
+      "modifiedAt": "2026-10-08T16:30:46Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "AsyncHttpClient: Replay to a different host sends the original host request and credentials to the new host",
+      "url": "https://github.com/advisories/GHSA-jmqq-x5g9-9p2w",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元セキュリティアドバイザリ（影響条件・修正系列）",
+      "url": "https://github.com/AsyncHttpClient/async-http-client/security/advisories/GHSA-jmqq-x5g9-9p2w",
+      "publishedDate": "2026-08-09"
+    }
+  ],
+  "caveats": [
+    "開発元ページの深刻度はHigh、固定GitHub Reviewed JSONのラベルはCritical。開発元表示を採用し、DBとの差分とCVSS v4ベクトルを保持する。",
+    "公開日時はDBの登録時刻。開発元ページの公表日2026-08-09とは別。",
+    "ホストを変えないリプレイは対象外と開発元が説明。",
+    "公表・更新日時は固定データベースの記録。開発元資料の公表日とは区別する。",
+    "掲載は利用環境の影響や実悪用を示さない。CISA KEVは取得失敗のため未確認を維持。"
+  ]
+}

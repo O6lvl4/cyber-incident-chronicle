@@ -1,0 +1,95 @@
+{
+  "id": "daiichikosho-2026",
+  "company": "第一興商（ビッグエコー等）",
+  "geography": "日本のカラオケ・飲食店舗の顧客情報と従業員情報（委託先端末）",
+  "title": "委託先端末のマルウェア感染で約872万4,000件の情報漏えいのおそれ",
+  "announcementDate": "2026-10-08",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "感染開始日は未公表（10月1〜2日に感染判明）",
+  "updatedDate": "2026-10-08",
+  "statusAsOfDate": "2026-10-08",
+  "impactTypes": [
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "委託先従業員のPC1台へのマルウェア感染（感染経路は未公表）",
+    "status": "confirmed"
+  },
+  "summary": "個人情報の取扱委託先である日本コロムビアグループのPC1台がマルウェアに感染。一時保管されていた顧客・従業員情報約872万4,000件に漏えいのおそれがある。実際の漏えい、不正利用、第一興商のシステムへの影響はいずれも未確認。",
+  "affectedData": [
+    "氏名（登録名）、性別、生年月日、メールアドレス、電話番号",
+    "店舗で会員登録・予約した顧客の情報および従業員情報"
+  ],
+  "counts": [
+    {
+      "value": 8724000,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいのおそれがある顧客・従業員情報の総合計",
+      "approximate": true
+    },
+    {
+      "value": 8631000,
+      "unit": "件",
+      "status": "possible",
+      "label": "総合計の内数：顧客情報（公表された重複分を控除後）",
+      "approximate": true
+    },
+    {
+      "value": 93000,
+      "unit": "件",
+      "status": "possible",
+      "label": "総合計の内数：従業員情報",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "約872万4,000件は漏えいが確定した人数ではなく、漏えいのおそれがある情報の件数。顧客・従業員の内訳を総合計に重ねて加算しない",
+    "顧客情報のブランド別内訳は、ビッグエコー約555万8,000件、メガビッグ約4万3,000件、カラオケCLUB DAM約7万4,000件、バナナクラブ約5,000件、B-GARAGE約4,000件、DKダイニング約346万2,000件。公表表では重複約51万5,000件を控除し、顧客合計約863万1,000件としている",
+    "10月1〜2日は委託先で感染が判明した期間。感染開始日や流出期間は公表されていない",
+    "漏えいのおそれがある情報に顧客のパスワードは含まれない。委託先がリセットした認証情報と区別する",
+    "10月8日時点で漏えい・個人情報やポイントの不正利用は未確認。第一興商のシステムへの影響も未確認と公表",
+    "マルウェアの種類、感染経路は未公表。ランサムウェアや第一興商のシステムへの直接侵入とは分類しない"
+  ],
+  "sources": [
+    {
+      "title": "第一興商：委託先における個人情報漏えいのおそれについて",
+      "url": "https://www.dkkaraoke.co.jp/news/newsletter/261008_2.html",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-01",
+      "label": "委託先で感染判明（10月1〜2日）",
+      "kind": "occurrence",
+      "summary": "日本コロムビアグループ従業員のPC1台で10月1〜2日にマルウェア感染が判明。感染開始日は未公表",
+      "sourceUrl": "https://www.dkkaraoke.co.jp/news/newsletter/261008_2.html"
+    },
+    {
+      "date": "2026-10-02",
+      "label": "感染端末を隔離",
+      "kind": "occurrence",
+      "summary": "委託先が該当PCをネットワークから隔離",
+      "sourceUrl": "https://www.dkkaraoke.co.jp/news/newsletter/261008_2.html"
+    },
+    {
+      "date": "2026-10-05",
+      "label": "第一興商が報告を受領",
+      "kind": "occurrence",
+      "summary": "委託先による影響範囲の調査を経て、第一興商が報告を受領",
+      "sourceUrl": "https://www.dkkaraoke.co.jp/news/newsletter/261008_2.html"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "漏えいのおそれを公表",
+      "kind": "disclosure",
+      "summary": "約872万4,000件を対象として公表。委託先・外部専門機関が漏えいの有無、原因、影響範囲を調査中",
+      "sourceUrl": "https://www.dkkaraoke.co.jp/news/newsletter/261008_2.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09",
+  "scaleLabel": "約8,724,000件に漏えいのおそれ"
+}
