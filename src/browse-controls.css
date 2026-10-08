@@ -1,0 +1,77 @@
+/* Keep view and ordering controls in one fixed-size row above all filters. */
+.browse-controls {
+  display: flex;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+}
+
+.browse-controls .view-tabs {
+  flex: 0 0 144px;
+  width: 144px;
+  height: 44px;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.browse-controls .view-tabs [role="tab"] {
+  flex: 0 0 94px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 6px 8px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.browse-controls .view-tabs [role="tab"]:first-child { flex-basis: 48px; }
+
+.browse-controls .browse-sort {
+  flex: 0 0 192px;
+  width: 192px;
+  min-width: 0;
+  height: 44px;
+  min-height: 44px;
+  padding: 6px 8px;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--text);
+  font: 12px/1.4 var(--font-jp);
+  cursor: pointer;
+}
+
+.browse-controls .browse-sort:disabled {
+  appearance: none;
+  color: var(--text-sub);
+  -webkit-text-fill-color: var(--text-sub);
+  opacity: 1;
+  cursor: default;
+}
+
+@media (max-width: 767px) {
+  .browse-controls .browse-sort {
+    flex-basis: 136px;
+    width: 136px;
+    padding-inline: 6px;
+    font-size: 11px;
+  }
+}
+
+/* The shared masthead remains usable while a short timeline's outer page scrolls. */
+.app-header { position:sticky; top:0; }
+/* Result headings no longer need the height of their former nested tab controls. */
+ .workspace.view-list .research-list > .list-heading { min-height:28px; padding-top:0; padding-bottom:0; }
+.research-list .list-heading > .list-note { margin:0 0 0 auto; padding:0; font-size:12px; line-height:1.55; color:var(--text-sub); }
+@media (min-width:768px) { .header-filters { padding-block:7px; } }
+@media (max-width:767px) {
+  .workspace.view-list .research-list > .list-heading { padding-block:4px; }
+  .research-list .list-heading > .list-note { flex-basis:100%; margin:0; }
+  .research-incidents .list-heading > .list-note { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+}

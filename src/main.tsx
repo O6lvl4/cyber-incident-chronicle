@@ -22,3 +22,5 @@ import './view-tabs.css'
 
 import './research-shell.css'
 import './research-rows.css'
+
+import './browse-controls.css'

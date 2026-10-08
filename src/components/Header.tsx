@@ -4,8 +4,8 @@ import type { Thread } from '../types';
 import type { AppState } from '../hooks/useAppState';
 import { META } from '../data';
 import IncidentFilters from './IncidentFilters';
-interface Props extends CategoryProps { filters?: ReactNode; resultCount?: number; onShowResults?: () => void; threads: Thread[]; state: AppState; onFitAll: () => void }
-export default function Header({ threads, state, onFitAll, category, onCategoryChange, filters, resultCount = 0, onShowResults = onFitAll }: Props) {
+interface Props extends CategoryProps { filters?: ReactNode; viewControls?: ReactNode; resultCount?: number; onShowResults?: () => void; threads: Thread[]; state: AppState; onFitAll: () => void }
+export default function Header({ threads, state, onFitAll, category, onCategoryChange, filters, viewControls, resultCount = 0, onShowResults = onFitAll }: Props) {
   return <header className="app-header">
     <div className="header-top">
       <a className="brand" href="#" onClick={e => { e.preventDefault(); onFitAll(); }} aria-label="Cyber Incident Chronicle 全期間表示">
@@ -20,6 +20,7 @@ export default function Header({ threads, state, onFitAll, category, onCategoryC
         <button className="n-btn theme-toggle" onClick={state.toggleDark} aria-label="テーマ切替">{state.dark ? '☀' : '☾'}</button>
       </div>
     </div>
+    {viewControls}
     <div className="header-filters">{filters ?? <IncidentFilters threads={threads} state={state} resultCount={resultCount} onShowResults={onShowResults}/>}</div>
   </header>;
 }

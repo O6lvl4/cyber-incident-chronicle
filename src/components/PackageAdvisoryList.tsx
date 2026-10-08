@@ -53,8 +53,8 @@ export default function PackageAdvisoryList({ hidden, group, positionKey, initia
   return <aside hidden={hidden} id="vulnerability-list-panel" role="tabpanel" aria-labelledby="vulnerability-list-panel-tab" className="incident-list vulnerability-list package-advisory-list research-list research-advisories" data-package-key={group.key} data-filtered={group.advisories.length}>
     <div className="package-back-row"><button className="n-btn package-back" onClick={onBack}><span aria-hidden="true">←</span> パッケージ一覧に戻る</button></div>
     <div className="list-heading"><div className="package-heading"><span className="eyebrow">{group.ecosystem}</span><h2 id="package-advisory-heading" tabIndex={-1}>{group.packageName}</h2></div>
-      <span className="count-badge">{group.advisories.length.toLocaleString()}<small> 件</small></span>{viewTabs}</div>
-    <p className="list-note">{group.advisories.length.toLocaleString()}件のアドバイザリ · 公表日の新しい順</p>
+      <span className="count-badge">{group.advisories.length.toLocaleString()}<small> 件</small></span>{viewTabs}
+    <p className="list-note">{group.advisories.length.toLocaleString()}件のアドバイザリ</p></div>
     <VirtualRecordList ref={position.list} items={group.advisories} getItemKey={advisoryItemKey} estimateHeight={112}
       className="incident-scroll package-scroll" data-package-scroll="advisories" ariaLabel="パッケージの脆弱性一覧"
       initialIndex={initialIndex} initialPosition={selectedId ? undefined : position.initialPosition} onPositionChange={position.onPositionChange} onFocusCapture={position.onFocusCapture}
