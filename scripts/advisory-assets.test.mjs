@@ -24,6 +24,7 @@ test('compact browse index retains every searchable identity, package, lifecycle
     assert.equal(item.title, source.title);
     assert.equal(item.summary ?? item.title, source.summary);
     assert.equal(item.publishedAt, source.publishedAt);
+    assert.equal(item.modifiedAt, source.modifiedAt);
     assert.equal(item.withdrawnAt, source.withdrawnAt);
     assert.deepEqual(item.affected, source.affected.map(({ ecosystem, packageName }) => ({ ecosystem, packageName })));
     assert.equal(fixLabel(item), fixLabel(source));

@@ -25,3 +25,36 @@
   .package-list .package-count-note { font-size: 10px; }
   .package-advisory-list .package-heading .eyebrow { display: block; margin-bottom: 3px; }
 }
+
+/* Compact source-backed severity summaries within package rows. */
+.research-list .package-identity { display: flex; flex-direction: column; gap: 5px; }
+.research-list .package-severity-counts { display: flex; flex-wrap: wrap; gap: 3px 10px; color: var(--text-sub); font: 500 10px/1.5 var(--font-mono); }
+.research-list .package-severity-counts > span { white-space: nowrap; }
+.research-list .package-severity-counts b { color: var(--text); font-weight: 650; }
+.research-list .package-severity { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+.research-list .package-severity small { font-size: 10px; line-height: 1.4; color: var(--text-sub); }
+.research-list .package-dates { display: flex; flex-direction: column; gap: 3px; color: var(--text-sub); font: 400 11px/1.5 var(--font-mono); }
+.research-list .package-card .package-ecosystem {
+  display: inline-block;
+  color: var(--text-sub);
+  font: 500 12px/1.5 var(--font-jp);
+  overflow-wrap: anywhere;
+}
+.research-list .package-card .package-name {
+  font: 600 14px/1.6 var(--font-jp);
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.research-list .package-card .package-card-summary { display: contents; }
+.research-list .package-card .package-latest { color: var(--text-sub); }
+.research-list .package-card .row-meta-label { display: inline; font: 400 10px/1.5 var(--font-jp); }
+.research-list .package-card .package-advisory-count {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 5px;
+  color: var(--text-sub);
+  font-size: 12px;
+}
+.research-list .package-card .package-advisory-count b { color: var(--text); font: 500 14px/1.5 var(--font-mono); }
+
