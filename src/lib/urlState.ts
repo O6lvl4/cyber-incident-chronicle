@@ -1,9 +1,10 @@
+import { normalizeIncidentSort, normalizePackageSort, normalizeAdvisorySort, type IncidentSort, type PackageSort, type AdvisorySort } from './browseSort.ts';
 import { parsePackageKey, packageKey } from './packageGroups.ts';
 import type { ClassificationFilters } from '../classificationTypes';
 import { CLASSIFICATION_OPTIONS } from './classification.ts';
 import { LEGACY_LEVEL_OFFSET, MAX_LEVEL, ZOOM_VERSION } from '../engine/zoom.ts';
 /** Shareable timeline view, filter, selection and theme state. */
-export interface UrlState { view?: 'list' | 'timeline'; packageKey?: string; packagePage?: number; classification?: Partial<ClassificationFilters>; kind?: 'incident' | 'vulnerability'; ecosystem?: string; year?: string; lifecycle?: 'active' | 'all' | 'withdrawn'; page?: number; level?: number; center?: number; sel?: string; lanes?: string[]; dark?: boolean; query?: string; status?: string }
+export interface UrlState { sort?: IncidentSort; packageSort?: PackageSort; advisorySort?: AdvisorySort; view?: 'list' | 'timeline'; packageKey?: string; packagePage?: number; classification?: Partial<ClassificationFilters>; kind?: 'incident' | 'vulnerability'; ecosystem?: string; year?: string; lifecycle?: 'active' | 'all' | 'withdrawn'; page?: number; level?: number; center?: number; sel?: string; lanes?: string[]; dark?: boolean; query?: string; status?: string }
 function readView(p: URLSearchParams): UrlState {
   const view: UrlState = {};
   const level = p.get('l');
@@ -39,12 +40,26 @@ function readAdvisory(p: URLSearchParams, out: UrlState) {
   if (/^\d{4}$/.test(p.get('year') ?? '')) out.year = p.get('year')!;
   if (/^\d+$/.test(p.get('page') ?? '')) out.page = Math.min(100000, Number(p.get('page')));
 }
+function readSort(p: URLSearchParams, out: UrlState) {
+  if (p.has('sort')) out.sort = normalizeIncidentSort(p.get('sort')!);
+  if (p.has('packageSort')) out.packageSort = normalizePackageSort(p.get('packageSort')!);
+  if (p.has('advisorySort')) out.advisorySort = normalizeAdvisorySort(p.get('advisorySort')!);
+}
+function writeSort(p: URLSearchParams, state: UrlState) {
+  const sort = normalizeIncidentSort(state.sort);
+  const packages = normalizePackageSort(state.packageSort);
+  const advisories = normalizeAdvisorySort(state.advisorySort);
+  if (sort !== 'published-desc') p.set('sort', sort);
+  if (packages !== 'latest-desc') p.set('packageSort', packages);
+  if (advisories !== 'published-desc') p.set('advisorySort', advisories);
+}
 export function readUrl(): UrlState {
   const p = new URLSearchParams(location.hash.replace(/^#/, ''));
   const out = readView(p);
   readAdvisory(p, out);
   readDisplay(p, out);
   readPackage(p, out);
+  readSort(p, out);
   out.sel = p.get('sel') ?? undefined;
   if (p.has('lanes')) out.lanes = p.get('lanes')!.split(',').filter(Boolean);
   const theme = p.get('theme');
@@ -83,6 +98,7 @@ export function writeUrl(state: UrlState, mode: 'replace' | 'push' = 'replace') 
   writeView(p, state);
   writeAdvisory(p, state);
   writePackage(p, state);
+  writeSort(p, state);
   if (state.sel) p.set('sel', state.sel);
   if (state.lanes) p.set('lanes', state.lanes.join(','));
   if (state.query) p.set('q', state.query);

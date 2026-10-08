@@ -22,8 +22,8 @@ export default function PackageList({ hidden, groups, positionKey, initialIndex,
   const position = usePackageListPosition(positionKey, { active: !hidden, restorePosition, hasSelection, headingId: 'package-results-heading', hasKey: key => groups.some(group => group.key === key) });
   return <aside hidden={hidden} id="vulnerability-list-panel" role="tabpanel" aria-labelledby="vulnerability-list-panel-tab" className="incident-list vulnerability-list package-list research-list research-packages" data-package-count={groups.length} data-advisory-count={uniqueAdvisoryCount} data-filtered={uniqueAdvisoryCount}>
     <div className="list-heading"><div><h2 id="package-results-heading" tabIndex={-1}>パッケージ</h2></div>
-      <span className="count-badge">{groups.length.toLocaleString()}<small className="sr-only"> パッケージ</small></span>{viewTabs}</div>
-    <p className="list-note package-count-note" role="status" aria-live="polite">アドバイザリ {uniqueAdvisoryCount.toLocaleString()}件（重複を除く） · 公表日順</p>
+      <span className="count-badge">{groups.length.toLocaleString()}<small className="sr-only"> パッケージ</small></span>{viewTabs}
+    <p className="list-note package-count-note" role="status" aria-live="polite">アドバイザリ {uniqueAdvisoryCount.toLocaleString()}件（重複を除く）</p></div>
     <VirtualRecordList ref={position.list} items={groups} getItemKey={packageItemKey} estimateHeight={86}
       className="incident-scroll package-scroll" data-package-scroll="packages" ariaLabel="パッケージ一覧"
       initialIndex={initialIndex} initialPosition={position.initialPosition} onPositionChange={position.onPositionChange} onFocusCapture={position.onFocusCapture}
