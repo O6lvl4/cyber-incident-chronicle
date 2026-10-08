@@ -52,16 +52,24 @@ function IncidentApp(props: CategoryProps) {
     writeUrl({ level: st.view?.level ?? st.initial?.level, center: st.view ? (st.view.start + st.view.end) / 2 : st.initial?.center, sel: st.selectedId ?? undefined,
       lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status, classification: st.classification });
   }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status, st.classification]);
+  const showResults = useCallback(() => {
+    const id = window.matchMedia('(max-width: 640px)').matches && st.mobileView === 'timeline' ? 'incident-timeline-results' : 'incident-results-heading';
+    requestAnimationFrame(() => {
+      const target = document.getElementById(id);
+      target?.focus({ preventScroll: true });
+      target?.scrollIntoView({ block: 'start' });
+    });
+  }, [st.mobileView]);
   const zoomed = !!st.view && (st.view.start > DATA_START || st.view.end < DATA_END);
   const centerRange = useCallback((s: number, e: number) => board.current?.centerOn((s + e) / 2), []);
-  return <div className={`app${st.dark ? ' dark' : ''}`}>
-    <Header {...props} threads={THREADS} state={st} onFitAll={() => board.current?.fitAll()}/>
+  return <div className={`app incident-app${st.dark ? ' dark' : ''}`}>
+    <Header {...props} threads={THREADS} state={st} resultCount={visible.length} onShowResults={showResults} onFitAll={() => board.current?.fitAll()}/>
     <div className="summary-strip"><span><i className="live-dot"/>一次資料からたどる、企業のインシデント</span><span>資料確認 {META.lastVerifiedDate} · 選定事例</span></div>
     <ClassificationSummary incidents={visible}/>
     <div className="mobile-tabs" role="group" aria-label="表示切替"><button aria-pressed={st.mobileView === 'timeline'} onClick={() => st.setMobileView('timeline')}>タイムライン</button><button aria-pressed={st.mobileView === 'list'} onClick={() => st.setMobileView('list')}>事案一覧 ({visible.length})</button></div>
     <main className={`workspace mobile-${st.mobileView}`}>
       <IncidentList incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>
-      <section className="timeline-container" aria-label="事案のタイムライン">
+      <section id="incident-timeline-results" tabIndex={-1} className="timeline-container" aria-label="事案のタイムライン">
         <div className="board-toolbar"><div><strong>収録した公表日のタイムライン</strong><span>1事案を1つの点で表示。影響の種類は上の絞り込みで選択</span></div><div className="zoom-controls"><button className="n-btn" onClick={() => board.current?.zoomBy(-1)} aria-label="縮小">−</button><button className="n-btn" onClick={() => board.current?.zoomBy(1)} aria-label="拡大">＋</button><button className="n-btn" onClick={() => board.current?.fitAll()}>全期間</button></div></div>
         <Board threads={LANES} events={shownEvents} links={LINKS} activeIds={LANE_IDS} theme={theme}
           selectedId={st.selectedId} matches={st.matches} dataStart={DATA_START} dataEnd={DATA_END}

@@ -25,7 +25,9 @@
 ## 操作
 
 - 企業名・概要・攻撃手法を検索し、影響と確認状況で絞り込み
-- 「企業・攻撃の分類」を開き、業種、メーカー細分類、対象企業自体の上場区分、攻撃種別、初期侵入経路、各軸の確度を組み合わせて絞り込み
+- 「絞り込み」を開き、業種、メーカー細分類、対象企業自体の上場区分、攻撃種別、初期侵入経路、各軸の確度を組み合わせて絞り込み
+- 「○件の結果を見る」で絞り込みを閉じ、選択中の一覧／タイムラインに戻る。選択済み条件は名前付きタグから個別に解除できます
+- 侵入経路・確度は「詳細条件」、説明は「分類について」「集計について」で確認。スマホの影響・確認状況は専用ボタンで展開
 - 表示中のランサムウェア確認済み・可能性と攻撃種別不明の件数を表示。分類の根拠と基準は [docs/classifications.md](docs/classifications.md) を参照
 - タイムラインを横ドラッグ・スワイプ、ピンチ、Ctrl/⌘+ホイール、ダブルクリックで移動・拡大
 - `+` / `-` で拡大縮小、`0` で全期間、`←` / `→` で事案選択、`Esc` で閉じる
@@ -42,10 +44,13 @@ pnpm install --frozen-lockfile
 pnpm dev
 pnpm check           # データ検証、単体テスト、型チェック、production build
 pnpm quality         # codopsyによる品質検査（codopsyの導入が必要）
+pnpm exec playwright install --with-deps chromium webkit
 pnpm preview --host 127.0.0.1 --port 4173
 pnpm test:ui         # 別ターミナルで実行
 pnpm perf            # Pixel 5相当のフリック性能予算
 ```
+
+UI検証はChromiumに加えてWebKitのiPhone相当タッチ操作も含みます。実機Safariそのものではありません。
 
 システムのChromiumを使用する場合は`CHROMIUM_PATH=/usr/bin/chromium`を付けます。別ポートで動かすときは`UI_URL`と`PERF_URL`を指定します。
 

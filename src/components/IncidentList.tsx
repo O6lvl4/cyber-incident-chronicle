@@ -3,7 +3,7 @@ import { STATUS_LABELS, companyCount } from '../lib/incidents';
 interface Props { incidents: Incident[]; total: number; selectedId?: string; onSelect: (id: string) => void; onReset: () => void }
 export default function IncidentList({ incidents, total, selectedId, onSelect, onReset }: Props) {
   return <section className="incident-list" aria-label="企業別の事案一覧">
-    <div className="list-heading"><div><span className="eyebrow">INCIDENT INDEX</span><h2>公表された事案</h2></div>
+    <div className="list-heading"><div><span className="eyebrow">INCIDENT INDEX</span><h2 id="incident-results-heading" tabIndex={-1}>公表された事案</h2></div>
       <span className="count-badge" aria-live="polite">{incidents.length}<small> / {total}</small></span></div>
     <p className="list-note">{companyCount(incidents)}社・{incidents.length}事案 / 収録した公表日の新しい順</p>
     <div className="incident-scroll">
