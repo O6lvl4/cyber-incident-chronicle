@@ -145,10 +145,19 @@ try {
   await page.locator('.incident-card').first().click();
   await page.locator('.drawer.open .classification-detail').waitFor();
   check('detail shows evidence and current listing basis', (await page.locator('.drawer').innerText()).includes('上場区分') && (await page.locator('.drawer').innerText()).includes('初期侵入経路'));
+  await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).has('sel'));
+  const selectedDetailUrl = new URL(page.url());
+  // A native modal intentionally makes background filters inert. Close it before editing.
+  await page.locator('.drawer-close').click();
   await page.getByRole('textbox', { name: '企業名・事案を検索', exact: true }).fill('no-match-classification-zz');
   await count(page, 0);
-  await page.waitForFunction(() => !document.querySelector('.drawer.open'));
-  check('filtering selected incident out closes the drawer', await page.locator('.drawer.open').count() === 0);
+  // Keep the selected-item invalidation regression check through a real share URL.
+  const excludedSelection = new URLSearchParams(selectedDetailUrl.hash.slice(1));
+  excludedSelection.set('q', 'no-match-classification-zz');
+  selectedDetailUrl.hash = excludedSelection.toString();
+  await page.goto(selectedDetailUrl.href); await count(page, 0);
+  await page.waitForFunction(() => !document.querySelector('.drawer.open') && !new URLSearchParams(location.hash.slice(1)).has('sel'));
+  check('filtering selected incident out closes the drawer and clears its URL selection', await page.locator('.drawer.open').count() === 0);
   check('zero results are explicit', await page.getByText('条件に合う事案がありません', { exact: true }).isVisible());
   await openFilters(page); await resultCount(page, 0, 'zero-result action is enabled and accurately labelled');
   await showResults(page, 0);
