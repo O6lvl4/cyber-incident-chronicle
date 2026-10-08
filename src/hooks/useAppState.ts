@@ -2,11 +2,11 @@ import { DEFAULT_CLASSIFICATION, normalizeClassification } from '../lib/classifi
 import { useCallback, useMemo, useState } from 'react';
 import type { TimelineEvent } from '../types';
 import type { ViewInfo } from '../board/Board';
-import { readUrl } from '../lib/urlState';
+import type { UrlState } from '../lib/urlState';
 export type DrawerMode = 'none' | 'event' | 'sql' | 'about';
-interface Params { events: TimelineEvent[]; threadIds: string[] }
-export function useAppState({ events, threadIds }: Params) {
-  const [url] = useState(readUrl);
+interface Params { events: TimelineEvent[]; threadIds: string[]; initialUrl: UrlState }
+export function useAppState({ events, threadIds, initialUrl }: Params) {
+  const [url] = useState(initialUrl);
   const [selectedId, setSelectedId] = useState<string | null>(events.some(e => e.id === url.sel) ? url.sel! : null);
   const [activeIds, setActiveIds] = useState<string[]>(() => url.lanes?.filter(id => threadIds.includes(id)) ?? threadIds);
   const [query, setQuery] = useState(url.query ?? '');

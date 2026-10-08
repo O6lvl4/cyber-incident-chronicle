@@ -243,7 +243,17 @@ async function resizeAndHistory(browser, engine) {
     // A fresh selected route must replace an already open category modal cleanly.
     await page.goto(selectedIncidentUrl); await drawer(page).locator(incident.detail).waitFor();
     check(`${label}: navigating to an incident selection replaces the advisory modal`, await page.locator('dialog:modal').count() === 1 && await page.locator('.vulnerability-detail').count() === 0);
+    check(`${label}: selected incident navigation never consumes the outgoing advisory query`, await page.getByRole('textbox', { name: incident.query, exact: true }).inputValue() === incident.item.company
+      && (await drawer(page).innerText()).includes(incident.item.title)
+      && new URLSearchParams(new URL(page.url()).hash.slice(1)).get('sel') === new URLSearchParams(new URL(selectedIncidentUrl).hash.slice(1)).get('sel'));
     await page.goto(selectedVulnerabilityUrl); await drawer(page).locator(vulnerability.detail).waitFor();
+    for (const [destination, category] of [[selectedIncidentUrl, incident], [selectedVulnerabilityUrl, vulnerability]]) {
+      await page.evaluate(href => { location.hash = new URL(href).hash; }, destination);
+      await drawer(page).locator(category.detail).waitFor();
+      check(`${label}: fragment-only navigation restores ${category.kind} without cross-category state`, await page.getByRole('textbox', { name: category.query, exact: true }).inputValue() === (category.kind === 'incident' ? category.item.company : category.item.id)
+        && (await drawer(page).innerText()).includes(category.item.title)
+        && await page.locator('dialog:modal').count() === 1);
+    }
     await bounds(page, `${label} advisory route`);
     await close(page).click(); await closed(page);
     await page.getByRole('button', { name: incident.tab, exact: true }).click(); await ready(page, incident);

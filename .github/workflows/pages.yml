@@ -84,8 +84,10 @@ jobs:
         run: |
           pnpm preview --port 4173 --strictPort --host 127.0.0.1 &
           sleep 3
-          pnpm test:ui
-          pnpm perf
+          status=0
+          pnpm test:ui || status=$?
+          pnpm perf || status=$?
+          exit "$status"
 
       - name: Save browser screenshots
         if: always()
