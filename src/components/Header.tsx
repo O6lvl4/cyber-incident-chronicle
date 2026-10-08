@@ -12,6 +12,7 @@ export default function Header({ threads, state, onFitAll, category, onCategoryC
         <span className="brand-symbol" aria-hidden="true">◈</span>
         <span><span className="brand-main">Cyber Incident</span><span className="brand-sub">CHRONICLE / セキュリティの記録</span></span>
       </a>
+      <CategoryNav category={category} onCategoryChange={onCategoryChange}/>
       {category === 'incident' && <span className="brand-range">公表・更新 {META.windowStart.replace(/-/g, '.')} – {META.windowEnd.replace(/-/g, '.')}</span>}
       <div className="header-actions">
         <button className="n-btn quiet" onClick={state.toggleAbout} aria-expanded={state.aboutOpen}>掲載方針</button>
@@ -19,7 +20,6 @@ export default function Header({ threads, state, onFitAll, category, onCategoryC
         <button className="n-btn theme-toggle" onClick={state.toggleDark} aria-label="テーマ切替">{state.dark ? '☀' : '☾'}</button>
       </div>
     </div>
-    <CategoryNav category={category} onCategoryChange={onCategoryChange}/>
     <div className="header-filters">{filters ?? <IncidentFilters threads={threads} state={state} resultCount={resultCount} onShowResults={onShowResults}/>}</div>
   </header>;
 }

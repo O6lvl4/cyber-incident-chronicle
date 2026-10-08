@@ -2,13 +2,15 @@ import type { KeyboardEvent } from 'react';
 export type DisplayView = 'list' | 'timeline';
 interface Props {
   value: DisplayView;
+  when?: DisplayView;
   onChange: (view: DisplayView) => void;
   listId: string;
   timelineId: string;
   listLabel?: string;
   timelineLabel?: string;
 }
-export default function ViewTabs({ value, onChange, listId, timelineId, listLabel, timelineLabel }: Props) {
+export default function ViewTabs({ value, when, onChange, listId, timelineId, listLabel, timelineLabel }: Props) {
+  if (when && when !== value) return null;
   const tabs = [{ value: 'list' as const, name: '一覧', panel: listId, note: listLabel }, { value: 'timeline' as const, name: 'タイムライン', panel: timelineId, note: timelineLabel }];
   const activate = (next: DisplayView) => {
     if (next !== value) onChange(next);

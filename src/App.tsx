@@ -72,9 +72,9 @@ function IncidentApp(props: CategoryRouteProps) {
     <Header {...props} threads={THREADS} state={st} resultCount={visible.length} onShowResults={showResults} onFitAll={() => board.current?.fitAll()}/>
     <div className="summary-strip"><span><i className="live-dot"/>一次資料からたどる、企業のインシデント</span><span>資料確認 {META.lastVerifiedDate} · 選定事例</span></div>
     <ClassificationSummary incidents={visible}/>
-    <ViewTabs value={st.displayView} onChange={changeView} listId="incident-list-panel" timelineId="incident-timeline-results"/>
+    <ViewTabs when="timeline" value={st.displayView} onChange={changeView} listId="incident-list-panel" timelineId="incident-timeline-results"/>
     <main className={`workspace view-${st.displayView}`}>
-      <IncidentList hidden={st.displayView !== 'list'} incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>
+      <IncidentList viewTabs={<ViewTabs when="list" value={st.displayView} onChange={changeView} listId="incident-list-panel" timelineId="incident-timeline-results"/>} hidden={st.displayView !== 'list'} incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>
       <IncidentTimeline state={st} events={shownEvents} hasResults={visible.length > 0} board={board}/>
       <Drawer mode={st.drawerMode} onClose={st.closeDrawer}><DrawerContent state={st} db={db} eventsById={eventsById} onSelect={id => { st.resetFilters(); const event = eventsById.get(id) ?? EVENTS.find(item => item.incidentId === id); if (event) selectAndCenter(event.id); }}/></Drawer>
     </main>

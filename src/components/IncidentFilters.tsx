@@ -30,6 +30,6 @@ export default function IncidentFilters({ threads, state, resultCount, onShowRes
       <input value={state.query} onChange={event => state.setQuery(event.target.value)} placeholder="企業名・キーワード" aria-label="企業名・事案を検索"/>
       <span className="search-icon" aria-hidden="true">⌕</span>
     </label>
-    <ClassificationFilters state={state} resultCount={resultCount} onShowResults={onShowResults}/>
+    <ClassificationFilters secondaryActive={secondaryActive} state={state} resultCount={resultCount} onShowResults={onShowResults}/>
   </>;
 }
