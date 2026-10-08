@@ -104,3 +104,5 @@ dialog.drawer::backdrop { background:#14242D38; }
   .header-top,.incident-app .header-top,.vulnerability-app .header-top { position:static; min-height:44px; }.brand { display:none; }.header-actions { order:2; }.category-tabs,.incident-app .category-tabs,.vulnerability-app .category-tabs { order:0; width:auto; flex:1; padding:0; border:0; }.header-filters,.incident-app .header-filters,.vulnerability-app .header-filters { padding:4px 0; }.incident-app .search-wrap { flex-basis:160px; }.classification-summary,.incident-app .classification-summary { display:none; }.vulnerability-app .header-filters .search-wrap { flex-basis:150px; }.workspace { min-height:0; }
 }
 @media (max-width:900px) and (max-height:500px) and (pointer:coarse) { dialog.drawer,dialog.drawer.wide { width:100vw; height:100dvh; inset:0; border:0; } }
+/* A short landscape timeline keeps enough canvas height and uses the outer scroll. */
+@media (max-width:900px) and (max-height:640px) { .workspace.view-timeline { flex:1 0 360px; } }
