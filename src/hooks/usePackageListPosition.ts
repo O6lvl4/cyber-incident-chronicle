@@ -21,7 +21,7 @@ export function usePackageListPosition(listKey: string, active: boolean, hasSele
       restored = true;
       if (!position || !scroll.isConnected) return;
       if (position.top !== undefined) scroll.scrollTop = position.top;
-      if (hasSelection) return;
+      if (hasSelection || (document.activeElement instanceof HTMLElement && document.activeElement !== document.body)) return;
       const opener = [...scroll.querySelectorAll<HTMLElement>('[data-package-key]')].find(item => item.dataset.packageKey === position.focusKey);
       const target = opener ?? document.getElementById('package-results-heading');
       target?.focus({ preventScroll: true });

@@ -82,6 +82,21 @@ async function tabsCase(browser, engine, viewport, category) {
     await page.goForward(); await tabState(page, 'timeline', `${label} browser Forward`);
     await page.reload(); await tabState(page, 'timeline', `${label} reload`);
     await listTab(page).click(); await page.reload(); await tabState(page, 'list', `${label} list reload after timeline coordinates`);
+    if (category === 'vulnerability') {
+      const scopedPackage = await page.locator('.package-card').first().getAttribute('data-package-key');
+      await page.locator('.package-card').first().click();
+      await page.locator('.package-advisory-list').waitFor();
+      await listTab(page).focus();
+      await page.keyboard.press('ArrowRight'); await tabState(page, 'timeline', `${label} scoped package`);
+      await page.waitForFunction(() => document.activeElement?.getAttribute('aria-label') === 'タイムライン');
+      await page.keyboard.press('ArrowRight'); await tabState(page, 'list', `${label} scoped package arrow wrap`);
+      // Let both the tab focus and the package heading restoration frames run.
+      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      check(`${label}: scoped heading restoration does not steal list tab focus`, await listTab(page).evaluate(tab => document.activeElement === tab));
+      check(`${label}: keyboard view changes retain the selected package`, await page.locator('.package-advisory-list').getAttribute('data-package-key') === scopedPackage);
+      await page.keyboard.press('End'); await tabState(page, 'timeline', `${label} scoped package subsequent End`);
+      await page.keyboard.press('Home'); await tabState(page, 'list', `${label} scoped package Home`);
+    }
   } catch (error) {
     failures.push({ label, error: error.stack });
     await page.screenshot({ path: `${output}/${engine}-${viewport.width}-${category}-failure.png`, fullPage: true }).catch(() => {});
@@ -139,7 +154,7 @@ async function packagePagesCase(browser) {
     await page.getByRole('textbox', { name: 'ライブラリ・脆弱性を検索' }).fill(abundant.advisories[0].id);
     await page.waitForFunction(() => {
       const params = new URLSearchParams(location.hash.slice(1));
-      return !params.has('page') && !params.has('packagePage');
+      return !params.has('page') && params.get('packagePage') === '0';
     });
     check('changing filters resets both pagination coordinates', true);
     check('search results remain reachable after pagination reset', await page.locator('.package-card').count() > 0 || await page.locator('.vulnerability-card').count() === 1);
