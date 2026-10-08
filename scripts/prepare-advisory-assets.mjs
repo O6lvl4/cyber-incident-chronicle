@@ -14,7 +14,7 @@ export function buildBrowseAssets(records, sourceHash) {
     const ranges = item.affected.flatMap(pkg => pkg.ranges);
     const fixStatus = ranges.every(range => range.fixed !== null) ? 'fixed' : ranges.some(range => range.fixed !== null) ? 'partial' : 'unknown';
     return { id: item.id, aliases: item.aliases, title: item.title, ...(item.summary !== item.title ? { summary: item.summary } : {}),
-      publishedAt: item.publishedAt, withdrawnAt: item.withdrawnAt, affected: item.affected.map(({ ecosystem, packageName }) => ({ ecosystem, packageName })),
+      publishedAt: item.publishedAt, modifiedAt: item.modifiedAt, withdrawnAt: item.withdrawnAt, affected: item.affected.map(({ ecosystem, packageName }) => ({ ecosystem, packageName })),
       severity: { label: item.severity.label }, fixStatus, shard };
   });
   const files = new Map(), shards = {};

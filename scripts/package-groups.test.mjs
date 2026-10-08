@@ -7,7 +7,7 @@ import { ADVISORY_PAGE_SIZE, paginate } from '../src/lib/pagination.ts';
 
 const coordinate = (ecosystem, packageName) => ({ ecosystem, packageName });
 const advisory = (id, affected, overrides = {}) => ({ id, aliases: [], title: `Advisory ${id}`,
-  publishedAt: '2026-01-02T00:00:00Z', withdrawnAt: null, affected,
+  publishedAt: '2026-01-02T00:00:00Z', modifiedAt: '2026-01-02T00:00:00Z', withdrawnAt: null, affected,
   severity: { label: 'high' }, fixStatus: 'unknown', shard: '00', ...overrides });
 const groupIds = group => group.advisories.map(item => item.id);
 
@@ -48,6 +48,111 @@ test('duplicate package entries and repeated advisory IDs count only once per pa
   assert.deepEqual(groupIds(groups.find(group => group.ecosystem === 'PyPI')), ['A']);
   assert.equal(new Set(groups.flatMap(groupIds)).size, 2);
   assert.equal(groups.reduce((sum, group) => sum + group.advisories.length, 0), 3);
+  assert.equal(groups.find(group => group.ecosystem === 'npm').severityCounts.high, 2);
+  assert.equal(groups.find(group => group.ecosystem === 'PyPI').severityCounts.high, 1);
+});
+
+test('highest severity and its complete breakdown use only source categorical labels', () => {
+  const pkg = coordinate('npm', 'severity-mix');
+  const records = ['unknown', 'low', 'medium', 'high', 'critical', 'high'].map((label, index) =>
+    advisory(`A-${index}`, [pkg], { severity: { label, cvss: [{ score: label === 'unknown' ? 10 : 0 }] },
+      exploitation: { status: 'reported' }, kev: { status: 'listed' } }));
+  const group = groupPackages(records)[0];
+  assert.equal(group.highestSeverity, 'critical');
+  assert.deepEqual(group.severityCounts, { critical: 1, high: 2, medium: 1, low: 1, unknown: 1 });
+  assert.equal(Object.values(group.severityCounts).reduce((sum, count) => sum + count, 0), group.advisories.length);
+  for (const label of ['critical', 'high', 'medium', 'low', 'unknown']) {
+    const selected = groupPackages(records.filter(item => item.severity.label === label))[0];
+    assert.equal(selected.highestSeverity, label);
+    assert.equal(selected.severityCounts[label], selected.advisories.length);
+  }
+  assert.equal('cvss' in group, false);
+  assert.equal('exploitation' in group, false);
+  assert.equal('kev' in group, false);
+});
+
+test('unknown-only packages remain unknown and do not borrow severity from another coordinate', () => {
+  const groups = groupPackages([
+    advisory('unknown-a', [coordinate('npm', 'Widget')], { severity: { label: 'unknown' } }),
+    advisory('unknown-b', [coordinate('npm', 'Widget')], { severity: { label: 'unknown', cvss: [{ score: 10 }] } }),
+    advisory('known', [coordinate('npm', 'widget'), coordinate('PyPI', 'Widget')], { severity: { label: 'critical' } }),
+  ]);
+  const unknown = groups.find(group => group.key === packageKey('npm', 'Widget'));
+  assert.equal(unknown.highestSeverity, 'unknown');
+  assert.deepEqual(unknown.severityCounts, { critical: 0, high: 0, medium: 0, low: 0, unknown: 2 });
+  assert.ok(groups.filter(group => group !== unknown).every(group => group.highestSeverity === 'critical'));
+});
+
+test('duplicate advisory IDs keep one current source record rather than summing versions', () => {
+  const pkg = coordinate('npm', 'updated');
+  const older = advisory('A', [pkg, pkg], { severity: { label: 'critical' }, modifiedAt: '2026-01-03T00:00:00Z' });
+  const newer = advisory('A', [pkg], { severity: { label: 'low' }, modifiedAt: '2026-02-01T00:00:00Z',
+    withdrawnAt: '2026-02-01T00:00:00Z' });
+  const group = groupPackages([older, newer, newer])[0];
+  assert.deepEqual(group.advisories, [newer]);
+  assert.equal(group.highestSeverity, 'low');
+  assert.deepEqual(group.severityCounts, { critical: 0, high: 0, medium: 0, low: 1, unknown: 0 });
+  assert.equal(group.latestModifiedAt, newer.modifiedAt);
+  assert.equal(group.withdrawnCount, 1);
+  assert.deepEqual(groupPackages([newer, older, newer])[0], group);
+});
+
+test('summary severity, update date, and withdrawn count reflect all current upstream filters', () => {
+  const pkg = coordinate('npm', 'filtered');
+  const records = [
+    advisory('old', [pkg], { publishedAt: '2025-12-01T00:00:00Z', modifiedAt: '2026-09-01T00:00:00Z',
+      severity: { label: 'critical' } }),
+    advisory('withdrawn', [pkg], { modifiedAt: '2026-08-01T00:00:00Z', withdrawnAt: '2026-08-01T00:00:00Z',
+      severity: { label: 'critical' } }),
+    advisory('selected', [pkg, coordinate('PyPI', 'filtered')], { aliases: ['CVE-2026-12345'],
+      modifiedAt: '2026-03-01T00:00:00Z', severity: { label: 'medium' } }),
+    advisory('other', [pkg], { modifiedAt: '2026-04-01T00:00:00Z', severity: { label: 'high' } }),
+  ];
+  const selected = groupPackages(filterVulnerabilities(records, 'npm', 'CVE-2026-12345',
+    { lifecycle: 'active', year: '2026' }), 'npm');
+  assert.equal(selected.length, 1);
+  assert.equal(selected[0].key, packageKey('npm', 'filtered'));
+  assert.equal(selected[0].highestSeverity, 'medium');
+  assert.deepEqual(selected[0].severityCounts, { critical: 0, high: 0, medium: 1, low: 0, unknown: 0 });
+  assert.equal(selected[0].latestModifiedAt, '2026-03-01T00:00:00Z');
+  assert.equal(selected[0].withdrawnCount, 0);
+  const active = groupPackages(filterVulnerabilities(records, 'npm', '', { lifecycle: 'active', year: '2026' }), 'npm')[0];
+  assert.equal(active.highestSeverity, 'high');
+  assert.equal(active.latestModifiedAt, '2026-04-01T00:00:00Z');
+  assert.equal(active.withdrawnCount, 0);
+  const history = groupPackages(filterVulnerabilities(records, 'npm', '', { year: '2026' }), 'npm')[0];
+  assert.equal(history.highestSeverity, 'critical');
+  assert.equal(history.latestModifiedAt, '2026-08-01T00:00:00Z');
+  assert.equal(history.withdrawnCount, 1);
+  const withdrawn = groupPackages(filterVulnerabilities(records, 'npm', '', { lifecycle: 'withdrawn' }), 'npm')[0];
+  assert.deepEqual(groupIds(withdrawn), ['withdrawn']);
+  assert.equal(withdrawn.withdrawnCount, withdrawn.advisories.length);
+});
+
+test('latest modification uses timestamp instants independently from publication ordering', () => {
+  const records = [
+    advisory('recently-published', [coordinate('npm', 'a')], { publishedAt: '2026-04-01T00:00:00Z',
+      modifiedAt: '2026-04-01T00:00:00Z' }),
+    advisory('recently-updated', [coordinate('npm', 'b')], { publishedAt: '2026-01-01T00:00:00Z',
+      modifiedAt: '2026-04-02T00:00:00.100000Z' }),
+    advisory('later-clock-earlier-instant', [coordinate('npm', 'b')], { publishedAt: '2026-02-01T00:00:00Z',
+      modifiedAt: '2026-04-02T09:00:00+09:00' }),
+  ];
+  const groups = groupPackages(records);
+  assert.deepEqual(groups.map(group => group.packageName), ['a', 'b']);
+  assert.deepEqual(groupIds(groups[1]), ['later-clock-earlier-instant', 'recently-updated']);
+  assert.equal(groups[1].latestPublishedAt, '2026-02-01T00:00:00Z');
+  assert.equal(groups[1].latestModifiedAt, '2026-04-02T00:00:00.100000Z');
+  assert.deepEqual(groupPackages([...records].reverse()), groups);
+});
+
+test('missing or invalid update evidence is not replaced with a publication date', () => {
+  const pkg = coordinate('npm', 'update-unknown');
+  const records = [advisory('missing', [pkg], { modifiedAt: undefined }),
+    advisory('invalid', [pkg], { modifiedAt: 'not a date' })];
+  assert.equal(groupPackages(records)[0].latestModifiedAt, '');
+  const valid = advisory('valid', [pkg], { modifiedAt: '2026-03-01T00:00:00Z' });
+  assert.equal(groupPackages([...records, valid])[0].latestModifiedAt, valid.modifiedAt);
 });
 
 test('ecosystem filtering removes unrelated package coordinates within matching advisories', () => {
@@ -151,6 +256,14 @@ test('the complete pinned corpus preserves all exact package/advisory relationsh
   for (const group of groups) {
     assert.deepEqual(new Set(groupIds(group)), expected.get(group.key));
     assert.equal(group.advisories.length, expected.get(group.key).size);
+    for (const severity of ['critical', 'high', 'medium', 'low', 'unknown']) {
+      assert.equal(group.severityCounts[severity], group.advisories.filter(item => item.severity.label === severity).length);
+    }
+    assert.equal(group.highestSeverity, ['critical', 'high', 'medium', 'low', 'unknown']
+      .find(severity => group.severityCounts[severity] > 0));
+    assert.equal(Date.parse(group.latestModifiedAt), group.advisories.reduce((latest, item) =>
+      Math.max(latest, Date.parse(item.modifiedAt)), -Infinity));
+    assert.equal(group.withdrawnCount, group.advisories.filter(item => item.withdrawnAt).length);
   }
   for (const ecosystem of ['npm', 'PyPI', 'Go', 'Maven', 'NuGet', 'RubyGems', 'crates.io']) {
     const selected = groupPackages(filterVulnerabilities(records, ecosystem, ''), ecosystem);

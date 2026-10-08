@@ -1,6 +1,6 @@
 import type { TimelineEvent } from '../types';
 import type { Vulnerability } from '../vulnerabilityTypes';
-export interface VulnerabilitySummary extends Pick<Vulnerability, 'id' | 'aliases' | 'title' | 'publishedAt' | 'withdrawnAt'> {
+export interface VulnerabilitySummary extends Pick<Vulnerability, 'id' | 'aliases' | 'title' | 'publishedAt' | 'modifiedAt' | 'withdrawnAt'> {
   summary?: string;
   affected: { ecosystem: string; packageName: string }[];
   severity: Pick<Vulnerability['severity'], 'label'>;
