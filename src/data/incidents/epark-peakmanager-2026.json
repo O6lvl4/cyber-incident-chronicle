@@ -1,0 +1,86 @@
+{
+  "id": "epark-peakmanager-2026",
+  "company": "EPARKリラク＆エステ",
+  "title": "PeakManagerの顧客データ流出・削除、精査後も実人数は特定困難",
+  "announcementDate": "2026-07-31",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日不明（2026-07-27に不正アクセス・データ削除を確認）",
+  "updatedDate": "2026-09-24",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "データベースへの不正アクセス。具体的な侵入経路・手法は非公表",
+    "status": "unknown"
+  },
+  "summary": "PeakManagerの顧客データが外部へ転送され、その後削除されたことを調査で確認。復旧は完了し、他システムへの影響の痕跡は未確認。重複を可能な範囲で除いた約2,218万レコードを公表した。",
+  "affectedData": [
+    "氏名・フリガナ、連絡先、生年月日・性別",
+    "施術申し送りの備考欄。一部に健康状態などの要配慮個人情報"
+  ],
+  "counts": [
+    {
+      "value": 22180000,
+      "unit": "レコード",
+      "status": "confirmed",
+      "label": "精査後の漏えいレコード数（実人数ではない）",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "約2,218万レコード／実人数は特定困難",
+  "caveats": [
+    "全レコードに全項目が含まれるわけではない。電話・メール未登録等により名寄せには限界がある",
+    "初報の約3,300万レコードは精査前の値であり、最新値に加算しない",
+    "初報の暗号化パスワードは漏えいの可能性として案内されたが、第二報の確定項目一覧には記載されていない",
+    "カード情報を含まないとの初報は訂正。備考欄5件に該当する可能性があり、真偽未確認・有効期限はいずれも経過",
+    "第二報時点で、把握する範囲では二次被害は確認されていない"
+  ],
+  "geography": "日本の予約・顧客管理プラットフォーム",
+  "sources": [
+    {
+      "title": "不正アクセスによる個人情報漏えいの可能性に関するお知らせ（第一報）",
+      "url": "https://www.epark-relax.co.jp/news/225",
+      "publishedDate": "2026-07-31"
+    },
+    {
+      "title": "不正アクセスと個人情報漏えいに関するお知らせ（第二報）",
+      "url": "https://www.epark-relax.co.jp/news/231",
+      "publishedDate": "2026-09-24"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-27",
+      "label": "不正アクセス・削除を確認",
+      "kind": "occurrence",
+      "summary": "顧客データベースへの不正なアクセスとデータ削除を確認",
+      "sourceUrl": "https://www.epark-relax.co.jp/news/225"
+    },
+    {
+      "date": "2026-07-30",
+      "label": "個人情報保護委員会へ報告",
+      "kind": "update",
+      "summary": "法令に基づく報告を実施",
+      "sourceUrl": "https://www.epark-relax.co.jp/news/225"
+    },
+    {
+      "date": "2026-07-31",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "漏えいの可能性と復旧・認証情報変更等を案内",
+      "sourceUrl": "https://www.epark-relax.co.jp/news/225"
+    },
+    {
+      "date": "2026-09-24",
+      "label": "転送確認と件数精査を公表",
+      "kind": "update",
+      "summary": "調査結果、精査後の規模、カード情報に関する訂正を公表",
+      "sourceUrl": "https://www.epark-relax.co.jp/news/231"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-08",
+  "statusAsOfDate": "2026-09-24"
+}

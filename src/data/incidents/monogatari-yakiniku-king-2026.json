@@ -1,0 +1,73 @@
+{
+  "id": "monogatari-yakiniku-king-2026",
+  "company": "物語コーポレーション",
+  "title": "焼肉きんぐ公式アプリの会員管理システムから情報漏えい",
+  "announcementDate": "2026-10-05",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日不明（2026-10-02に不正アクセス確認）",
+  "updatedDate": "2026-10-05",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入経路・手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "公式アプリの会員情報10,788,963件の漏えいを確認した。通信遮断・防御措置を実施したうえでサービスは継続し、原因を調査している。",
+  "affectedData": [
+    "会員番号、氏名（アプリ登録名）、メールアドレス、電話番号"
+  ],
+  "counts": [
+    {
+      "value": 10788963,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えいした会員情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "10,788,963件",
+  "caveats": [
+    "全登録数10,808,784件とは異なる。登録数を漏えい件数として使用しない",
+    "ログインパスワード、生年月日、性別、郵便番号、保有ポイントを含む利用履歴の漏えいはないと公表",
+    "決済情報は保有していない。ほかの運営ブランドの公式アプリで情報漏えい等の事実はないと公表",
+    "防御措置後もサービスを継続しているため、サービス停止は計上しない",
+    "具体的な原因・侵入経路は10月5日時点で調査中"
+  ],
+  "geography": "日本の外食チェーン公式アプリ",
+  "sources": [
+    {
+      "title": "焼肉きんぐ公式アプリ：不正アクセスによる個人情報漏えいに関するお詫び",
+      "url": "https://www.monogatari.co.jp/news/261005_news/",
+      "publishedDate": "2026-10-05"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "会員管理システムへの不正アクセスを確認し、防御措置を実施",
+      "sourceUrl": "https://www.monogatari.co.jp/news/261005_news/"
+    },
+    {
+      "date": "2026-10-03",
+      "label": "情報漏えいを確認",
+      "kind": "update",
+      "summary": "会員情報の漏えいを確認",
+      "sourceUrl": "https://www.monogatari.co.jp/news/261005_news/"
+    },
+    {
+      "date": "2026-10-05",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "対象項目・件数と継続対応を公表",
+      "sourceUrl": "https://www.monogatari.co.jp/news/261005_news/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-08",
+  "statusAsOfDate": "2026-10-05"
+}

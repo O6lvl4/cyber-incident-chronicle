@@ -1,0 +1,100 @@
+{
+  "id": "murauchi-2026",
+  "company": "ムラウチドットコム",
+  "title": "Webシステムの脆弱性を起点とした侵入で顧客情報流出",
+  "announcementDate": "2026-07-24",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日不明（2026-07-15障害、07-16に痕跡確認）",
+  "updatedDate": "2026-09-15",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "Webシステムの脆弱性を悪用して侵入し、複数システムへ不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "社内システム障害の復旧中に侵害の痕跡を発見。フォレンジック調査後、7,716,811件の顧客情報の外部持ち出しを確認した。",
+  "affectedData": [
+    "氏名、住所、電話番号、メールアドレス、生年月日、性別"
+  ],
+  "counts": [
+    {
+      "value": 7716811,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えいが確認された顧客情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "7,716,811件",
+  "caveats": [
+    "対象件数は公式発表の単位「件」を維持し、人数へ置き換えない",
+    "クレジットカード情報・パスワードは対象に含まれない",
+    "7月24日の初報公表日は第二報の経緯欄で確認。侵入開始日・脆弱性の製品名・CVEは特定しない"
+  ],
+  "geography": "日本のインターネット通販事業者",
+  "sources": [
+    {
+      "title": "不正アクセスによるお客様情報漏えいに関するお詫びとご報告（第二報）",
+      "url": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf",
+      "publishedDate": "2026-09-15"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-15",
+      "label": "社内システム障害",
+      "kind": "occurrence",
+      "summary": "未明に社内システムの障害が発生",
+      "sourceUrl": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf"
+    },
+    {
+      "date": "2026-07-16",
+      "label": "侵害の痕跡を確認",
+      "kind": "occurrence",
+      "summary": "復旧作業中に痕跡を発見し、外部アクセスを遮断",
+      "sourceUrl": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf"
+    },
+    {
+      "date": "2026-07-20",
+      "label": "個人情報保護委員会へ速報",
+      "kind": "update",
+      "summary": "委員会への速報を提出",
+      "sourceUrl": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf"
+    },
+    {
+      "date": "2026-07-24",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "公式サイトで初報と専用窓口を案内",
+      "sourceUrl": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf"
+    },
+    {
+      "date": "2026-07-27",
+      "label": "専門会社による調査開始",
+      "kind": "update",
+      "summary": "フォレンジック調査を開始",
+      "sourceUrl": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf"
+    },
+    {
+      "date": "2026-09-14",
+      "label": "個人情報保護委員会へ確報",
+      "kind": "update",
+      "summary": "本件の確報を提出",
+      "sourceUrl": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf"
+    },
+    {
+      "date": "2026-09-15",
+      "label": "調査結果公表・個別通知開始",
+      "kind": "update",
+      "summary": "原因・漏えい項目・対象件数と再発防止策を公表",
+      "sourceUrl": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-08",
+  "statusAsOfDate": "2026-09-15"
+}

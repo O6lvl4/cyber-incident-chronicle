@@ -2,6 +2,7 @@ import { chromium, devices } from 'playwright';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { loadData } from './data-status.mjs';
+import { SQL_PAGE_SIZE } from '../src/lib/pagination.ts';
 const url = process.env.UI_URL ?? 'http://127.0.0.1:4173/';
 const output = process.env.UI_OUTPUT ?? 'artifacts/ui';
 mkdirSync(output, { recursive: true });
@@ -70,7 +71,14 @@ try {
   await page.getByRole('button', { name: 'SQL', exact: true }).click();
   await page.locator('.db-status.ok').waitFor({ timeout: 30000 });
   await page.locator('.sql-result tbody tr').first().waitFor();
-  check('SQL default table has unique incidents', await page.locator('.sql-result tbody tr').count() === data.incidents.length);
+  check('SQL default query contains every incident with bounded rendered rows', Number(await page.locator('.sql-result').getAttribute('data-total')) === data.incidents.length && await page.locator('.sql-result tbody tr').count() === Math.min(SQL_PAGE_SIZE, data.incidents.length));
+  const sqlIds = [];
+  const sqlPages = Math.ceil(data.incidents.length / SQL_PAGE_SIZE);
+  for (let index = 0; index < sqlPages; index++) {
+    await page.getByRole('combobox', { name: 'SQL結果のページ', exact: true }).selectOption(String(index));
+    sqlIds.push(...await page.locator('.sql-result tbody tr td:first-child').allTextContents());
+  }
+  check('SQL pagination exposes every source incident ID exactly once', sqlIds.length === data.incidents.length && new Set(sqlIds).size === data.incidents.length && [...sqlIds].sort().join('\n') === data.incidents.map(item => item.id).sort().join('\n'));
   for (const preset of await page.locator('.preset').all()) { await preset.click(); await page.waitForFunction(() => !document.querySelector('.sql-actions button').disabled); check('SQL preset executes: ' + await preset.innerText(), await page.locator('.sql-error').count() === 0); }
   await page.locator('.preset').first().click(); await page.waitForFunction(() => !document.querySelector('.sql-actions button').disabled);
   await page.locator('.sql-result tbody tr.clickable').first().click();

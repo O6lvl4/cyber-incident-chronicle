@@ -1,6 +1,8 @@
 import { webkit, devices } from 'playwright';
+import { loadData } from './data-status.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
+const incidentCount = loadData().incidents.length;
 const output = `${process.env.UI_OUTPUT ?? 'artifacts/ui'}/mobile-webkit`;
 mkdirSync(output, { recursive: true });
 const browser = await webkit.launch();
@@ -34,7 +36,7 @@ try {
     await page.locator('.incident-card').first().waitFor({ state: 'visible' });
     await page.screenshot({ path: `${output}/${width}x${height}-results.png`, fullPage: true });
     await page.getByRole('button', { name: '製造業の細分類：食品・飲料の条件を解除', exact: true }).tap();
-    await page.waitForFunction(() => document.querySelectorAll('.incident-card').length === 95);
+    await page.waitForFunction(expected => document.querySelectorAll('.incident-card').length === expected, incidentCount);
     check(`${width}: chip removal restores all records`, await page.locator('.classification-chip').count() === 0);
     await page.locator('.classification-toggle').tap();
     await page.locator('.classification-dialog[open]').waitFor();

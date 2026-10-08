@@ -1,0 +1,89 @@
+{
+  "id": "gmo-infoq-2026",
+  "company": "GMOリサーチ＆AI",
+  "title": "infoQの会員情報持ち出しとポイント不正交換を確認",
+  "announcementDate": "2026-10-05",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-10-02",
+  "occurredDateLabel": "調査で確認された不正アクセス開始日",
+  "updatedDate": "2026-10-05",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "サイトで利用するソフトウェアの脆弱性を悪用した侵入",
+    "status": "confirmed"
+  },
+  "summary": "infoQへの侵入で個人情報の持ち出しとポイントの不正交換を確認。10月3日に攻撃経路と外部アクセスを遮断し、サービスを停止した。対象上限は保有情報の全件に相当する。",
+  "affectedData": [
+    "氏名、フリガナ、連絡先、生年月日・性別、会員ID、暗号化されたパスワード",
+    "ニックネーム、保有ポイント数、最終回答日などの登録・利用状況"
+  ],
+  "counts": [
+    {
+      "value": 948498,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えい対象の上限（10月5日時点の全保有個人情報）",
+      "approximate": false
+    },
+    {
+      "value": 611,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "本人の意思によらないポイント交換",
+      "approximate": false
+    },
+    {
+      "value": 2869500,
+      "unit": "円",
+      "status": "confirmed",
+      "label": "不正交換されたポイント相当額",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "対象上限948,498件／不正交換611件",
+  "caveats": [
+    "情報持ち出しは確認済みだが、948,498件は最大値として公表された対象範囲",
+    "クレジットカード情報・マイナンバーは保有していない",
+    "取引先情報は対象外。infoQ以外の同社サービスへの不正アクセスは未確認",
+    "暗号化パスワードの方式・解読可否は本告知から確定できない",
+    "10月5日時点では調査継続中。交換されたポイントは全額補填すると公表"
+  ],
+  "geography": "日本のアンケートサイトinfoQ",
+  "sources": [
+    {
+      "title": "infoQへの不正アクセスによる個人情報漏えいに関するお詫びとお知らせ",
+      "url": "https://gmo-research.ai/pressroom/notice/notice-20261005",
+      "publishedDate": "2026-10-05"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "後日の調査で、この日以降の不正アクセスを確認",
+      "sourceUrl": "https://gmo-research.ai/pressroom/notice/notice-20261005"
+    },
+    {
+      "date": "2026-10-03",
+      "label": "検知・遮断・サービス停止",
+      "kind": "occurrence",
+      "summary": "会員の問い合わせを受けて検知し、ポイント交換停止と経路遮断を実施",
+      "sourceUrl": "https://gmo-research.ai/pressroom/notice/notice-20261005"
+    },
+    {
+      "date": "2026-10-05",
+      "label": "初報公表・個別通知開始",
+      "kind": "disclosure",
+      "summary": "対象範囲、不正交換、補填方針と委員会への報告を公表",
+      "sourceUrl": "https://gmo-research.ai/pressroom/notice/notice-20261005"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-08",
+  "statusAsOfDate": "2026-10-05"
+}
