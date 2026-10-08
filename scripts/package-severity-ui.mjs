@@ -9,7 +9,7 @@ const source = loadVulnerabilities();
 const levels = ['critical', 'high', 'medium', 'low', 'unknown'];
 const check = (label, value) => { assert.ok(value, label); checks.push(label); };
 const checks = [], errors = [], failures = [];
-const unknown = source.find(item => !item.withdrawnAt && item.severity.label === 'unknown');
+const unknown = { ...source.find(item => !item.withdrawnAt), id: 'GHSA-test-unknown-fixture', severity: { label: 'unknown' } };
 const withdrawn = source.find(item => item.withdrawnAt && item.severity.label === 'high');
 assert.ok(unknown && withdrawn);
 // Independent oracle from full source records; never use production aggregators.
@@ -56,9 +56,18 @@ for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
       const yearRecord = source.find(item => !item.withdrawnAt && item.publishedAt.startsWith('2025') && item.affected.some(pkg => pkg.ecosystem === 'npm'));
       await page.goto(route({ q: yearRecord.id, ecosystem: 'npm', year: '2025' }));
       await verifyRows(page, [yearRecord], `${name}/${width}/year`);
+      // The pinned corpus has no unknown ratings; exercise that supported state
+      // through an isolated browse-index response fixture, never production data.
+      await page.route('**/advisories/**/index.json?schema=2', async route => {
+        const response = await route.fetch();
+        const index = await response.json();
+        index.records[0] = { ...index.records[0], id: unknown.id, aliases: [], severity: { label: 'unknown' }, withdrawnAt: null, affected: unknown.affected.map(({ ecosystem, packageName }) => ({ ecosystem, packageName })), publishedAt: unknown.publishedAt, modifiedAt: unknown.modifiedAt };
+        await route.fulfill({ response, json: index });
+      });
       await page.goto(route({ q: unknown.id }));
       await verifyRows(page, [unknown], `${name}/${width}/unknown`);
       check('unknown is visibly unverified', (await page.locator('.package-card').first().innerText()).includes('評価未確認'));
+      await page.unroute('**/advisories/**/index.json?schema=2');
       await page.goto(route({ q: withdrawn.id, lifecycle: 'withdrawn' }));
       await verifyRows(page, [withdrawn], `${name}/${width}/withdrawn`);
       await page.screenshot({ path: `${output}/${name}-${width}-withdrawn.png` });
