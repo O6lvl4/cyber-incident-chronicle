@@ -65,10 +65,12 @@ for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
         await route.fulfill({ response, json: index });
       });
       await page.goto(route({ q: unknown.id }));
+      await page.reload();
       await verifyRows(page, [unknown], `${name}/${width}/unknown`);
       check('unknown is visibly unverified', (await page.locator('.package-card').first().innerText()).includes('評価未確認'));
       await page.unroute('**/advisories/**/index.json?schema=2');
       await page.goto(route({ q: withdrawn.id, lifecycle: 'withdrawn' }));
+      await page.reload();
       await verifyRows(page, [withdrawn], `${name}/${width}/withdrawn`);
       await page.screenshot({ path: `${output}/${name}-${width}-withdrawn.png` });
       await page.getByRole('combobox', { name: '撤回状況', exact: true }).selectOption('active');
