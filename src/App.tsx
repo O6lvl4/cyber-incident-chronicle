@@ -1,3 +1,5 @@
+import { matchesClassification } from './lib/classification';
+import ClassificationSummary from './components/ClassificationSummary';
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DATA_END, DATA_START, EVENTS, INCIDENTS, LANES, LINKS, META, THREADS, DATASET } from './data';
 import { useAppState } from './hooks/useAppState';
@@ -23,7 +25,7 @@ function IncidentApp(props: CategoryProps) {
   const st = useAppState({ events: EVENTS, threadIds: THREAD_IDS });
   const board = useRef<BoardApi>(null);
   const eventsById = useMemo(() => new Map(EVENTS.map(e => [e.id, e])), []);
-  const visible = useMemo(() => filterIncidents(INCIDENTS, st.activeIds, st.status, st.query), [st.activeIds, st.status, st.query]);
+  const visible = useMemo(() => filterIncidents(INCIDENTS, st.activeIds, st.status, st.query).filter(item => matchesClassification(item, st.classification)), [st.activeIds, st.status, st.query, st.classification]);
   const shownIds = useMemo(() => new Set(visible.map(item => item.id)), [visible]);
   const shownEvents = useMemo(() => EVENTS.filter(event => shownIds.has(event.incidentId ?? '')), [shownIds]);
   const theme = useMemo(() => themeFor(st.dark), [st.dark]);
@@ -48,13 +50,14 @@ function IncidentApp(props: CategoryProps) {
   });
   useEffect(() => {
     writeUrl({ level: st.view?.level ?? st.initial?.level, center: st.view ? (st.view.start + st.view.end) / 2 : st.initial?.center, sel: st.selectedId ?? undefined,
-      lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status });
-  }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status]);
+      lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status, classification: st.classification });
+  }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status, st.classification]);
   const zoomed = !!st.view && (st.view.start > DATA_START || st.view.end < DATA_END);
   const centerRange = useCallback((s: number, e: number) => board.current?.centerOn((s + e) / 2), []);
   return <div className={`app${st.dark ? ' dark' : ''}`}>
     <Header {...props} threads={THREADS} state={st} onFitAll={() => board.current?.fitAll()}/>
     <div className="summary-strip"><span><i className="live-dot"/>一次資料からたどる、企業のインシデント</span><span>資料確認 {META.lastVerifiedDate} · 選定事例</span></div>
+    <ClassificationSummary incidents={visible}/>
     <div className="mobile-tabs" role="group" aria-label="表示切替"><button aria-pressed={st.mobileView === 'timeline'} onClick={() => st.setMobileView('timeline')}>タイムライン</button><button aria-pressed={st.mobileView === 'list'} onClick={() => st.setMobileView('list')}>事案一覧 ({visible.length})</button></div>
     <main className={`workspace mobile-${st.mobileView}`}>
       <IncidentList incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>

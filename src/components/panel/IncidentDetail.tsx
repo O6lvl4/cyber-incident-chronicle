@@ -1,6 +1,7 @@
 import { INCIDENTS_BY_ID, THREADS } from '../../data';
 import type { TimelineEvent } from '../../types';
 import { METHOD_STATUS, STATUS_LABELS } from '../../lib/incidents';
+import ClassificationDetail from './ClassificationDetail';
 function countStatus(status: string) {
   const labels: Record<string, string> = { confirmed: '確認済み', possible: '可能性あり', investigating: '調査中', maximum: '最大' };
   return labels[status] ?? status;
@@ -23,6 +24,7 @@ export default function IncidentDetail({ ev }: { ev: TimelineEvent }) {
     <h3>公表された影響・可能性</h3>
     <div className="detail-tags">{item.impactTypes.map(type => <span key={type}>{THREADS.find(t => t.id === type)?.name}</span>)}</div>
     <p className="method-note">攻撃手法：{item.attackMethod.label}（{METHOD_STATUS[item.attackMethod.status]}）</p>
+    <ClassificationDetail item={item}/>
     {item.affectedData.length > 0 && <><h3>対象情報</h3><ul>{item.affectedData.map(text => <li key={text}>{text}</li>)}</ul></>}
     {item.counts.length > 0 && <><h3>公表された規模</h3><ul>{item.counts.map((count, index) => <li key={index}><strong>{count.approximate ? '約' : ''}{count.value.toLocaleString('ja-JP')}{count.unit}</strong> {count.label} <span className="muted">({countStatus(count.status)})</span></li>)}</ul><p className="fine-print">人数・件数・メール数など、単位や対象の異なる値は合算しません</p></>}
     {item.caveats && item.caveats.length > 0 && <><h3>解釈上の注意</h3><ul>{item.caveats.map(note => <li key={note}>{note}</li>)}</ul></>}
