@@ -8,7 +8,6 @@
   min-width: 0;
   color: var(--text);
 }
-
 .workspace.view-list .research-list > .list-heading {
   display: flex;
   flex-wrap: wrap;
@@ -183,7 +182,6 @@
 }
 .research-list .empty-state { padding: 40px var(--research-row-inset); font-size: 14px; }
 .research-list .empty-state p { margin: 0 0 16px; }
-
 /* Exact package coordinates remain visible, including long scopes and module paths. */
 .workspace.view-list .research-list .package-card { grid-template-columns: var(--research-package-columns); }
 .research-list .package-card .package-ecosystem {
@@ -253,6 +251,7 @@
   .research-list > .list-heading .count-badge small { font-size: 12px; }
   .research-list > .list-heading > .view-tabs { gap: 4px; }
   .research-list > .list-note { display: block; padding-bottom: 5px; font-size: 12px; }
+  .research-incidents > .list-note { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
   .research-list .research-columns { display: none; }
   .workspace.view-list .research-list > .incident-scroll { border-top: 1px solid var(--border-light); }
   .workspace.view-list .research-list .incident-card {
@@ -283,7 +282,8 @@
   .research-list .package-card .package-advisory-count b { font-size: 13px; }
   .research-advisories > .package-back-row { padding-top: 4px; }
   .research-advisories .package-back { min-height: 44px; }
-  .research-advisories > .list-heading .package-heading { flex: 1 1 180px; }
+  .research-advisories > .list-heading .package-heading { flex: 1 1 0; }
+  .research-advisories > .list-heading .count-badge { display:none; }
   .research-advisories > .list-heading .package-heading h2 { font-size: 16px; }
   .workspace.view-list .research-list .vulnerability-card {
     grid-template-columns: minmax(0, 1fr) auto 18px;

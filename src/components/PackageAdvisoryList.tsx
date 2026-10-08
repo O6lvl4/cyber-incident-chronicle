@@ -36,7 +36,7 @@ export default function PackageAdvisoryList({ hidden, group, page, onPageChange,
     <div className="package-back-row"><button className="n-btn package-back" onClick={onBack}><span aria-hidden="true">←</span> パッケージ一覧に戻る</button></div>
     <div className="list-heading"><div className="package-heading"><span className="eyebrow">{group.ecosystem}</span><h2 id="package-advisory-heading" tabIndex={-1}>{group.packageName}</h2></div>
       <span className="count-badge">{group.advisories.length.toLocaleString()}<small> 件</small></span>{viewTabs}</div>
-    <p className="list-note">条件に合うアドバイザリ · 公表日の新しい順</p>
+    <p className="list-note">{group.advisories.length.toLocaleString()}件のアドバイザリ · 公表日の新しい順</p>
     <div className="incident-scroll package-scroll" data-package-scroll="advisories" ref={scroll}>
       <div className="research-columns advisory-columns" aria-hidden="true"><span>公表日</span><span>脆弱性</span><span>CVE / アドバイザリ</span><span>深刻度</span><span/></div>
       {!group.advisories.length && <div className="empty-state"><p>このパッケージには、現在の絞り込み条件に合うアドバイザリがありません</p><button className="n-btn" onClick={onBack}>パッケージ一覧に戻る</button></div>}
