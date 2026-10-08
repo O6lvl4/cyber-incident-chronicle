@@ -1,6 +1,6 @@
 import { matchesClassification } from './lib/classification';
 import ClassificationSummary from './components/ClassificationSummary';
-import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Component, lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DATA_END, DATA_START, EVENTS, INCIDENTS, LANES, LINKS, META, THREADS, DATASET } from './data';
 import { useAppState } from './hooks/useAppState';
 import { useKeyboardNav } from './hooks/useKeyboardNav';
@@ -17,7 +17,15 @@ import IncidentList from './components/IncidentList';
 import Minimap from './components/Minimap';
 import PerfHud from './components/PerfHud';
 const VulnerabilityView = lazy(() => import('./components/VulnerabilityView'));
-import type { Category, CategoryProps } from './components/CategoryNav';
+import CategoryNav, { type Category, type CategoryProps } from './components/CategoryNav';
+class AdvisoryLoadBoundary extends Component<CategoryProps & { children: React.ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return <div className="app"><CategoryNav category={this.props.category} onCategoryChange={this.props.onCategoryChange}/><p role="alert">脆弱性データを読み込めませんでした。接続を確認して再読み込みしてください。</p><button className="n-btn" onClick={() => location.reload()}>再読み込み</button></div>;
+  }
+}
 const THREAD_IDS = THREADS.map(t => t.id);
 const LANE_IDS = LANES.map(t => t.id);
 
@@ -104,6 +112,6 @@ export default function App() {
   };
   const props = { category: route.category, onCategoryChange: changeCategory };
   return route.category === 'vulnerability'
-    ? <Suspense fallback={<div className="app" role="status">ライブラリの記録を読み込み中…</div>}><VulnerabilityView key={route.revision} {...props}/></Suspense>
+    ? <AdvisoryLoadBoundary key={route.revision} {...props}><Suspense fallback={<div className="app"><CategoryNav {...props}/><p role="status">ライブラリの全記録を読み込み中…</p></div>}><VulnerabilityView {...props}/></Suspense></AdvisoryLoadBoundary>
     : <IncidentApp key={route.revision} {...props}/>;
 }

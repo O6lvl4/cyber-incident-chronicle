@@ -1,0 +1,81 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v9mx-4pqq-h232",
+  "aliases": [
+    "CVE-2024-21548"
+  ],
+  "title": "Bun：オブジェクトを受け取るAPIのプロトタイプ汚染",
+  "summary": "オブジェクトを受け取るBunのAPIに不適切なプロパティ処理があり、プロトタイプ汚染の影響を受ける可能性がある。GitHub APIは1.1.30を修正版としている。",
+  "publishedAt": "2024-12-18T06:30:49Z",
+  "modifiedAt": "2025-07-24T15:04:55Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T02:38:19Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-v9mx-4pqq-h232",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "bun",
+      "ranges": [
+        {
+          "affected": "> 0.0.12, < 1.1.30",
+          "fixed": "1.1.30",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-v9mx-4pqq-h232"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-v9mx-4pqq-h232",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-v9mx-4pqq-h232"
+      },
+      {
+        "version": "4.0",
+        "score": 6.8,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-v9mx-4pqq-h232"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed API：固定リポジトリ外の追加確認（公開・更新・撤回・影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-v9mx-4pqq-h232",
+      "publishedDate": "2024-12-18",
+      "publishedAt": "2024-12-18T06:30:49Z",
+      "modifiedAt": "2025-07-24T15:04:55Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Bun開発元の変更：Object.prototypeを参照しないプロパティ取得",
+      "url": "https://github.com/oven-sh/bun/commit/a234e067a5dc7837602df3fb5489e826920cc65a",
+      "publishedDate": "2024-10-08",
+      "publishedAt": "2024-10-08T07:34:31Z"
+    }
+  ],
+  "caveats": [
+    "この記録はGitHub advisory-databaseの固定コミットには存在せず、GitHub Reviewed APIを別途確認した追加分。固定リポジトリの全件取得数には含めない。",
+    "GitHub API確認日時：2026-10-08T02:34:56Z。取得した応答のSHA-256：82b64cee16b01509f39182849ac8b339bc5528dbdd9749d2af020bdc383e0b27。",
+    "タイムラインはGitHub Advisory Databaseへの登録日。開発元の公表・修正日とは区別する。",
+    "npm名bunの0.0.12以前は同名の旧プロジェクトであり、このBunランタイムの対象範囲に含めない。",
+    "KEV掲載と実悪用は未確認。未確認は未掲載や実悪用なしを意味しない。",
+    "GitHub APIのseverityはmedium。CVSS v3.1の7.5とv4.0の6.8をそのまま保存し、単一スコアへ再計算しない。",
+    "修正版1.1.30と影響範囲はGitHub APIの記載。開発元コミットはObject.prototypeの扱いに関する実装変更を確認する資料。"
+  ]
+}

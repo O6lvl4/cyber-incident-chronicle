@@ -44,9 +44,10 @@ const MinimapDots = memo(function MinimapDots({ lanes, events, dark, laneH, xFor
         return (
           <g key={th.id}>
             <rect x={MM_LW} y={4 + li * laneH} width={NOM_W - MM_LW} height={laneH} fill={col} opacity={li % 2 === 0 ? 0 : 0.04} />
-            {events.filter(ev => ev.threadId === th.id).map(ev => (
-              <circle key={ev.id} cx={xFor(ms(ev.date))} cy={cy} r={DOT_R[ev.weight]} fill={col} opacity={0.75} />
-            ))}
+            <path data-minimap-events={events.filter(ev => ev.threadId === th.id).length} d={[...new Set(events.filter(ev => ev.threadId === th.id).map(ev => {
+              const x = xFor(ms(ev.date)), r = DOT_R[ev.weight];
+              return `M${x - r},${cy}a${r},${r} 0 1,0 ${2 * r},0a${r},${r} 0 1,0 ${-2 * r},0`;
+            }))].join('')} fill={col} opacity={0.75} />
           </g>
         );
       })}
