@@ -1,0 +1,72 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2j8r-3c22-8565",
+  "aliases": [
+    "CVE-2026-69522"
+  ],
+  "title": "Microsoft.DiaSymReader.Native：PDB処理の領域外書き込み",
+  "summary": "Windows上のMicrosoft.DiaSymReader.NativeでPDBファイルを処理するとき、領域外書き込みが起きる可能性がある。Microsoftはユーザー操作を要するリモートコード実行の脆弱性と評価し、NuGetパッケージ18.9.0-beta1.26405.2を修正版としている。",
+  "publishedAt": "2026-09-09T16:04:04Z",
+  "modifiedAt": "2026-09-09T16:04:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-2j8r-3c22-8565",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.DiaSymReader.Native",
+      "ranges": [
+        {
+          "affected": ">= 17.10.0-beta1.24272.1, <= 18.9.0-beta1.26405.1",
+          "fixed": "18.9.0-beta1.26405.2",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-2j8r-3c22-8565"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-2j8r-3c22-8565",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-2j8r-3c22-8565"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Microsoft Security Advisory CVE-2026-69522 – .NET and Visual Studio Remote Code Execution Vulnerability",
+      "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-2j8r-3c22-8565",
+      "publishedDate": "2026-09-08",
+      "publishedAt": "2026-09-08T19:38:10Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-2j8r-3c22-8565",
+      "url": "https://api.github.com/advisories/GHSA-2j8r-3c22-8565",
+      "publishedDate": "2026-09-09",
+      "publishedAt": "2026-09-09T16:04:04Z",
+      "modifiedAt": "2026-09-09T16:04:05Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公式資料の対象プラットフォームはWindows、対象アーキテクチャはすべて。NuGetパッケージの収録範囲であり、.NET FrameworkやVisual Studio全体の製品バージョン判定ではない。",
+    "公式のパッケージ表は.NET 11 RC1で>=17.10.0-beta1.24272.1、.NET 8/9/10で>=17.12.0-beta1.24603.5を下限としており、いずれも上限18.9.0-beta1.26405.1、修正版18.9.0-beta1.26405.2。ここでは同一NuGetパッケージの全体範囲を保持し、フレームワーク別の下限をこの留保に残す。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cjq9-62q9-8jv4",
+  "aliases": [
+    "CVE-2026-94483"
+  ],
+  "title": "Next.js：画像最適化のSSRF",
+  "summary": "画像最適化で許可されたリモートURLを攻撃者が制御すると、プライベートIPなどへのサーバー側リクエストにつながる可能性がある。16.3.8で修正。",
+  "publishedAt": "2026-10-07T20:30:55Z",
+  "modifiedAt": "2026-10-07T20:30:56Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:54:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-cjq9-62q9-8jv4",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "next",
+      "ranges": [
+        {
+          "affected": ">= 16.0.0, < 16.3.8",
+          "fixed": "16.3.8",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cjq9-62q9-8jv4"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-cjq9-62q9-8jv4",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-cjq9-62q9-8jv4"
+      },
+      {
+        "version": "4.0",
+        "score": 8.3,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-cjq9-62q9-8jv4"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Next.js has Server-Side Request Forgery in Image Optimization",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-cjq9-62q9-8jv4",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T16:15:36Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-cjq9-62q9-8jv4",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:30:55Z",
+      "modifiedAt": "2026-10-07T20:30:56Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Next.js has Server-Side Request Forgery in Image Optimization",
+      "url": "https://github.com/advisories/GHSA-cjq9-62q9-8jv4",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "type": "release",
+      "title": "Next.js v16.3.8 公式リリース",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.8",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T16:13:46Z"
+    }
+  ],
+  "caveats": [
+    "開発元アドバイザリのパッケージ表には修正版が16.3.?と未確定表記のまま残る。影響範囲と修正境界はGitHub Reviewed APIの16.3.8を採用し、公式リリースの存在も確認。",
+    "images.remotePatternsで許可したホストのDNSを信頼できるかが前提。remotePatterns未設定のアプリは対象外。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

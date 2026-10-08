@@ -1,0 +1,72 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6wcg-mqvh-fcvg",
+  "aliases": [
+    "CVE-2026-62314"
+  ],
+  "title": "Anubis：クライアント指定のX-Original-URIによるボット保護の回避",
+  "summary": "Anubisのパス判定がクライアントからのX-Original-URIを信頼するため、リバースプロキシ構成で実際のURLとは異なる許可対象パスを指定できる。既定設定のパス許可ルールに一致させることで、チャレンジやJWT検証を経ずに上流のコンテンツへアクセスできる。",
+  "publishedAt": "2026-10-02T18:22:08Z",
+  "modifiedAt": "2026-10-02T18:22:09Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-6wcg-mqvh-fcvg",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/TecharoHQ/anubis",
+      "ranges": [
+        {
+          "affected": ">= 1.22.0, < 1.26.0",
+          "fixed": "1.26.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-6wcg-mqvh-fcvg"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-6wcg-mqvh-fcvg",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-6wcg-mqvh-fcvg"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Policy bypass via client controlled X-Original-URI header",
+      "url": "https://github.com/TecharoHQ/anubis/security/advisories/GHSA-6wcg-mqvh-fcvg",
+      "publishedDate": "2026-06-26",
+      "publishedAt": "2026-06-26T03:58:30Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: Anubis: Policy bypass via client controlled X-Original-URI header",
+      "url": "https://api.github.com/advisories/GHSA-6wcg-mqvh-fcvg",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T18:22:08Z",
+      "modifiedAt": "2026-10-02T18:22:09Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "クライアントが当該ヘッダーを制御でき、パスのみで許可するルールが適用される構成が対象。上流アプリケーション自身の認証を直接破ることを示すものではない。",
+    "開発元は影響「>= 1.22.0」、修正版「1.26.0-pre1」と記載し、本文では1.22.0〜1.25.0を対象としている。Reviewed Advisory Databaseは「>= 1.22.0, < 1.26.0」、修正「1.26.0」としており、affectedには後者を保存した。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

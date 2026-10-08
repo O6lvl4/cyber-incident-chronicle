@@ -1,0 +1,80 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-jrfj-fhj2-jjvm",
+  "aliases": [
+    "CVE-2026-107219"
+  ],
+  "title": "Excelize：暗号化ファイルの反復回数に上限がなくCPUを占有する問題",
+  "summary": "ExcelizeがOLE形式の入力を開く際、ファイル中のspinCountを上限なしに使って復号鍵を導出する。信頼できないファイルを処理するサービスでは、パスワードを指定していなくても過大な反復処理が実行され、CPUを長時間占有してサービスを妨げる可能性がある。",
+  "publishedAt": "2026-10-07T20:23:22Z",
+  "modifiedAt": "2026-10-07T20:23:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-jrfj-fhj2-jjvm",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/xuri/excelize/v2",
+      "ranges": [
+        {
+          "affected": ">= 2.3.1, < 2.11.1-0.20260906004932-2badfcd5841d",
+          "fixed": "2.11.1-0.20260906004932-2badfcd5841d",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-jrfj-fhj2-jjvm"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-jrfj-fhj2-jjvm",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-jrfj-fhj2-jjvm"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Unbounded spinCount in agile decryption burns CPU during OpenFile",
+      "url": "https://github.com/qax-os/excelize/security/advisories/GHSA-jrfj-fhj2-jjvm",
+      "publishedDate": "2026-09-06",
+      "publishedAt": "2026-09-06T00:47:54Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: Excelize: Unbounded spinCount in agile decryption burns CPU during OpenFile",
+      "url": "https://api.github.com/advisories/GHSA-jrfj-fhj2-jjvm",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:23:22Z",
+      "modifiedAt": "2026-10-07T20:23:23Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "This fixes GHSA-jrfj-fhj2-jjvm, limit the spin count when deriving th…",
+      "url": "https://github.com/qax-os/excelize/commit/2badfcd5841d0d88b0ffea119f5a2f3c53b4910b",
+      "publishedDate": "2026-09-06",
+      "publishedAt": "2026-09-06T00:49:32Z"
+    }
+  ],
+  "caveats": [
+    "開発元のアドバイザリは影響範囲を「>= 2.3.1, <= 2.11.0」、修正版を「None」と記載する。Reviewed Advisory Databaseは修正コミット2badfcd5841dに対応するGo擬似バージョンを修正境界としている。",
+    "実際に取得した開発元の修正コミットでspinCountの上限検証を確認した。擬似バージョンを正式リリース2.11.1と読み替えていない。",
+    "信頼できないファイルを開く用途が対象。開発元は、運用者自身が作成したファイルしか開かないプログラムは対象外としている。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

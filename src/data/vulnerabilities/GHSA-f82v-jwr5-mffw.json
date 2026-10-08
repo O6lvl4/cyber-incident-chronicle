@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-f82v-jwr5-mffw",
+  "aliases": [
+    "CVE-2025-29927"
+  ],
+  "title": "Next.js：Middlewareの認可処理を回避",
+  "summary": "認可をMiddleware内だけで行うアプリケーションでは、細工したリクエストでチェックを回避できる。12〜15系には系列別の修正版があり、11系には回避策が案内されている。",
+  "publishedAt": "2025-03-21T15:20:12Z",
+  "modifiedAt": "2026-03-02T16:59:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-f82v-jwr5-mffw",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "next",
+      "ranges": [
+        {
+          "affected": ">= 13.0.0, < 13.5.9",
+          "fixed": "13.5.9",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-f82v-jwr5-mffw"
+        },
+        {
+          "affected": ">= 14.0.0, < 14.2.25",
+          "fixed": "14.2.25",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-f82v-jwr5-mffw"
+        },
+        {
+          "affected": ">= 15.0.0, < 15.2.3",
+          "fixed": "15.2.3",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-f82v-jwr5-mffw"
+        },
+        {
+          "affected": "=> 11.1.4 < 12.3.5",
+          "fixed": "12.3.5",
+          "sourceUrl": "https://github.com/vercel/next.js/security/advisories/GHSA-f82v-jwr5-mffw"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-f82v-jwr5-mffw",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-f82v-jwr5-mffw"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Authorization Bypass in Next.js Middleware",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-f82v-jwr5-mffw",
+      "publishedDate": "2025-03-21",
+      "publishedAt": "2025-03-21T10:17:21Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-f82v-jwr5-mffw",
+      "publishedDate": "2025-03-21",
+      "publishedAt": "2025-03-21T15:20:12Z",
+      "modifiedAt": "2026-03-02T16:59:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Authorization Bypass in Next.js Middleware",
+      "url": "https://github.com/advisories/GHSA-f82v-jwr5-mffw",
+      "publishedDate": "2025-03-21"
+    }
+  ],
+  "caveats": [
+    "Vercelホストのデプロイは自動保護されると開発元が記載。",
+    "開発元の影響範囲は11.1.4以上12.3.5未満を含む一方、Reviewed APIは12.0.0始まり。11系の欠落を避けるため、該当範囲は開発元の表記を保存。11系内の修正版は示されず、12.3.5への移行または回避策が必要。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

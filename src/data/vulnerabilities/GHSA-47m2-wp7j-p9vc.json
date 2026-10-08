@@ -1,0 +1,85 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-47m2-wp7j-p9vc",
+  "aliases": [
+    "CVE-2026-85396"
+  ],
+  "title": "rubyzip：展開先と同じ接頭辞を持つ隣接ディレクトリへのパストラバーサル",
+  "summary": "Zip::Entry#extractの展開先検証がディレクトリ区切りを含まない接頭辞比較になっており、細工されたZIPエントリーによって、指定先と名前の接頭辞が一致する隣接ディレクトリにファイルを書き込める。3.4.0で修正。",
+  "publishedAt": "2026-09-03T21:31:16Z",
+  "modifiedAt": "2026-09-25T19:25:56Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-47m2-wp7j-p9vc",
+  "affected": [
+    {
+      "ecosystem": "rubygems",
+      "packageName": "rubyzip",
+      "ranges": [
+        {
+          "affected": "< 3.4.0",
+          "fixed": "3.4.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-47m2-wp7j-p9vc"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-47m2-wp7j-p9vc",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-47m2-wp7j-p9vc"
+      },
+      {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-47m2-wp7j-p9vc"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Release v3.4.0",
+      "url": "https://github.com/rubyzip/rubyzip/releases/tag/v3.4.0",
+      "publishedDate": "2026-06-14",
+      "publishedAt": "2026-06-14T10:26:18Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: rubyzip path traversal vulnerability",
+      "url": "https://api.github.com/advisories/GHSA-47m2-wp7j-p9vc",
+      "publishedDate": "2026-09-03",
+      "publishedAt": "2026-09-03T21:31:16Z",
+      "modifiedAt": "2026-09-25T19:25:56Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Prevent entries from being extracted outside specified directory.",
+      "url": "https://github.com/rubyzip/rubyzip/commit/17edfbf4423b83211b075acc23a7d8640da63449",
+      "publishedDate": "2026-06-13",
+      "publishedAt": "2026-06-13T08:50:58Z"
+    }
+  ],
+  "caveats": [
+    "信頼できないZIPを展開する用途が対象。任意の場所への無条件な書き込みではなく、展開先との接頭辞一致を悪用する。",
+    "開発元の修正コミットでパス区切りを含む検証と回帰テストを確認した。影響範囲と修正版の対応はGitHub Reviewed Advisory Databaseの記載を保持している。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

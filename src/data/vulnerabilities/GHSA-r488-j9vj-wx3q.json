@@ -1,0 +1,82 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-r488-j9vj-wx3q",
+  "aliases": [
+    "CVE-2026-105857"
+  ],
+  "title": "Payload Form Builder：フォーム送信によるコード実行",
+  "summary": "Form Builderプラグインで細工した送信データを処理すると、サーバー上でコードを実行される可能性がある。安定版3.90.0、4系canary.34で修正。",
+  "publishedAt": "2026-10-07T20:28:33Z",
+  "modifiedAt": "2026-10-07T20:28:48Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-r488-j9vj-wx3q",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@payloadcms/plugin-form-builder",
+      "ranges": [
+        {
+          "affected": "< 3.90.0",
+          "fixed": "3.90.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-r488-j9vj-wx3q"
+        },
+        {
+          "affected": ">= 4.0.0-canary.0, < 4.0.0-canary.34",
+          "fixed": "4.0.0-canary.34",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-r488-j9vj-wx3q"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-r488-j9vj-wx3q",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-r488-j9vj-wx3q"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Payload Form Builder has an RCE issue",
+      "url": "https://github.com/payloadcms/payload/security/advisories/GHSA-r488-j9vj-wx3q",
+      "publishedDate": "2026-09-18",
+      "publishedAt": "2026-09-18T14:37:58Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-r488-j9vj-wx3q",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:28:33Z",
+      "modifiedAt": "2026-10-07T20:28:48Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Payload Form Builder has an RCE issue",
+      "url": "https://github.com/advisories/GHSA-r488-j9vj-wx3q",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "caveats": [
+    "@payloadcms/plugin-form-builderを使用する構成が対象。Payloadのすべての構成が影響を受けるという意味ではない。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

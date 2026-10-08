@@ -1,0 +1,79 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v76p-62qx-wwq2",
+  "aliases": [
+    "CVE-2026-106118"
+  ],
+  "title": "ImageSharp：FAX圧縮のタイルTIFFでヒープ領域外書き込み",
+  "summary": "FAX圧縮されたタイルTIFFで、タイル幅に合わせて確保したバッファへ画像全体の幅を使って展開データを書き込む。信頼できないTIFFの読み込みでヒープ領域外書き込みとプロセス停止が起きる可能性があり、4.1.1で修正。",
+  "publishedAt": "2026-10-07T16:18:57Z",
+  "modifiedAt": "2026-10-07T16:18:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "SixLabors.ImageSharp",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 4.1.1",
+          "fixed": "4.1.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "ImageSharp: Tiled fax TIFF: tile buffer sized by TileWidth but fax decompressor writes scanlines of ImageWidth — heap OOB write",
+      "url": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-v76p-62qx-wwq2",
+      "publishedDate": "2026-08-20",
+      "publishedAt": "2026-08-20T09:48:49Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-v76p-62qx-wwq2",
+      "url": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T16:18:57Z",
+      "modifiedAt": "2026-10-07T16:18:57Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "ImageSharp v4.1.1の公式プロジェクトファイル（NuGet PackageId）",
+      "url": "https://raw.githubusercontent.com/SixLabors/ImageSharp/v4.1.1/src/ImageSharp/ImageSharp.csproj",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "タイル形式かつT4/T6/MHのFAX圧縮TIFFを読み込む経路が対象。公式資料はヒープ破損からコード実行につながる可能性を述べるが、実悪用やコード実行の成立を確認したとは扱わない。",
+    "アドバイザリのパッケージ欄はImageSharpと記載する一方、公式v4.1.1のプロジェクトファイルはPackageId=SixLabors.ImageSharpと定義する。本記録のNuGet名は取得した公式プロジェクトファイルに合わせた。",
+    "メンテナーの影響欄は>=3.0.0、修正欄は4.1.1。修正版を除外したGitHub Reviewedの>=3.0.0, <4.1.1を保持。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

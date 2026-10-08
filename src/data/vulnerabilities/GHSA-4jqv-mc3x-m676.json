@@ -1,0 +1,103 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4jqv-mc3x-m676",
+  "aliases": [
+    "CVE-2026-94543"
+  ],
+  "title": "Next.js：自己ホスト環境のSSG・ISRキャッシュ汚染",
+  "summary": "Pages Routerの静的生成・再生成ページで、別ルートの内容がキャッシュに混入し、再検証まで訪問者に誤った内容を配信する可能性がある。15.5.27と16.3.8で修正。",
+  "publishedAt": "2026-10-07T20:32:06Z",
+  "modifiedAt": "2026-10-07T20:32:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:54:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-4jqv-mc3x-m676",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "next",
+      "ranges": [
+        {
+          "affected": ">= 15.0.0, < 15.5.27",
+          "fixed": "15.5.27",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-4jqv-mc3x-m676"
+        },
+        {
+          "affected": ">= 16.0.0, < 16.3.8",
+          "fixed": "16.3.8",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-4jqv-mc3x-m676"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-4jqv-mc3x-m676",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-4jqv-mc3x-m676"
+      },
+      {
+        "version": "4.0",
+        "score": 6.3,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-4jqv-mc3x-m676"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Next.js has cache poisoning of SSG and ISR pages in self-hosted applications",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-4jqv-mc3x-m676",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T16:14:22Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-4jqv-mc3x-m676",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:32:06Z",
+      "modifiedAt": "2026-10-07T20:32:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Next.js has cache poisoning of SSG and ISR pages in self-hosted applications",
+      "url": "https://github.com/advisories/GHSA-4jqv-mc3x-m676",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "type": "release",
+      "title": "Next.js v15.5.27 公式リリース",
+      "url": "https://github.com/vercel/next.js/releases/tag/v15.5.27",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T16:13:42Z"
+    },
+    {
+      "type": "release",
+      "title": "Next.js v16.3.8 公式リリース",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.8",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T16:13:46Z"
+    }
+  ],
+  "caveats": [
+    "開発元アドバイザリのパッケージ表には修正版が15.5.?／16.3.?と未確定表記のまま残る。影響範囲と修正境界はGitHub Reviewed APIの15.5.27／16.3.8を採用し、両公式リリースの存在も確認。",
+    "自己ホストのPages RouterでSSGまたはISRを使う構成が対象。Vercelへのデプロイは対象外。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

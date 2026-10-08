@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5293-mq8x-g3xj",
+  "aliases": [
+    "CVE-2026-105801"
+  ],
+  "title": "openapi-python-client：不正なOpenAPIから実行コードを生成",
+  "summary": "細工したOpenAPI文書から任意のPythonコードを含むクライアントが生成され、そのクライアントをインポートした時に実行される可能性がある。0.29.1で修正。",
+  "publishedAt": "2026-10-06T15:32:53Z",
+  "modifiedAt": "2026-10-06T15:32:54Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-5293-mq8x-g3xj",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "openapi-python-client",
+      "ranges": [
+        {
+          "affected": "< 0.29.1",
+          "fixed": "0.29.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-5293-mq8x-g3xj"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-5293-mq8x-g3xj",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.4,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:H/SI:H/SA:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-5293-mq8x-g3xj"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "openapi-python-client: Malicious OpenAPI Documents can cause Arbitrary Code Generation",
+      "url": "https://github.com/openapi-generators/openapi-python-client/security/advisories/GHSA-5293-mq8x-g3xj",
+      "publishedDate": "2026-08-30",
+      "publishedAt": "2026-08-30T19:41:06Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-5293-mq8x-g3xj",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T15:32:53Z",
+      "modifiedAt": "2026-10-06T15:32:54Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "openapi-python-client: Malicious OpenAPI Documents can cause Arbitrary Code Generation",
+      "url": "https://github.com/advisories/GHSA-5293-mq8x-g3xj",
+      "publishedDate": "2026-10-06"
+    }
+  ],
+  "caveats": [
+    "生成だけで直ちにコードが実行されるとの断定はしない。開発元は、信頼できない文書から過去に生成したコードの監査も案内。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

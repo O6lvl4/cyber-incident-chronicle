@@ -1,0 +1,73 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mggc-4xg6-vcxf",
+  "aliases": [
+    "CVE-2026-85756"
+  ],
+  "title": "SSH.NET：SCPのリモートパスを介したサーバー側コマンド実行",
+  "summary": "ScpClientへ攻撃者が影響するリモートパスを渡すと、シェルベースのSSHサーバーで引用処理を突破し、認証済みSSH利用者としてコマンドが実行される可能性がある。2026.0.0はパス変換を明示的に選ぶコンストラクターを追加し、暗黙の既定値を使う旧コンストラクターを非推奨にした。",
+  "publishedAt": "2026-09-17T17:18:01Z",
+  "modifiedAt": "2026-09-17T17:18:02Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-mggc-4xg6-vcxf",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "SSH.NET",
+      "ranges": [
+        {
+          "affected": "< 2026.0.0",
+          "fixed": "2026.0.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-mggc-4xg6-vcxf"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-mggc-4xg6-vcxf",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-mggc-4xg6-vcxf"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "SSH.NET: ScpClient allows server-side RCE via default SCP path handling",
+      "url": "https://github.com/sshnet/SSH.NET/security/advisories/GHSA-mggc-4xg6-vcxf",
+      "publishedDate": "2026-08-09",
+      "publishedAt": "2026-08-09T19:19:01Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-mggc-4xg6-vcxf",
+      "url": "https://api.github.com/advisories/GHSA-mggc-4xg6-vcxf",
+      "publishedDate": "2026-09-17",
+      "publishedAt": "2026-09-17T17:18:01Z",
+      "modifiedAt": "2026-09-17T17:18:02Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026.0.0でも互換性のため旧来のDoubleQuote既定動作は変更されない。バージョン更新だけで任意のリモートシェルに対する安全性が保証されるわけではなく、適切な変換の選択が必要。",
+    "POSIXシェル向けにはShellQuoteが提供される。公式資料は、リモートシェルを介さないSftpClientの利用を推奨している。",
+    "メンテナーは>=0, <=2025.1.0を影響範囲とし、GitHub Reviewedは<2026.0.0と記載。修正版はいずれも2026.0.0。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

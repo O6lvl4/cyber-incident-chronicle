@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7hhh-6rmp-j9qf",
+  "aliases": [
+    "CVE-2026-89425"
+  ],
+  "title": "Jackson Core：DataInput解析のエラー処理でメモリーを無制限に消費",
+  "summary": "DataInputを使うJSONパーサーが不正なトークンの例外メッセージを作る際、maxErrorTokenLengthを適用しない。信頼できない入力でメモリーを大量消費しJVMのサービス拒否につながる。2系・3系の各修正版を系列別に保持。",
+  "publishedAt": "2026-10-01T15:20:27Z",
+  "modifiedAt": "2026-10-01T15:20:28Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "com.fasterxml.jackson.core:jackson-core",
+      "ranges": [
+        {
+          "affected": ">= 2.19.0, <= 2.21.6",
+          "fixed": "2.21.7",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf"
+        },
+        {
+          "affected": ">= 2.22.0, <= 2.22.2",
+          "fixed": "2.22.3",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf"
+        },
+        {
+          "affected": ">= 2.8.0, <= 2.18.10",
+          "fixed": "2.18.11",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf"
+        }
+      ]
+    },
+    {
+      "ecosystem": "maven",
+      "packageName": "tools.jackson.core:jackson-core",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, <= 3.1.6",
+          "fixed": "3.1.7",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf"
+        },
+        {
+          "affected": ">= 3.2.0, <= 3.2.2",
+          "fixed": "3.2.3",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "jackson-core: UTF8DataInputJsonParser._reportInvalidToken() missing maxErrorTokenLength limit -> unbounded StringBuilder growth (DoS)",
+      "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-7hhh-6rmp-j9qf",
+      "publishedDate": "2026-09-22",
+      "publishedAt": "2026-09-22T04:08:54Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-7hhh-6rmp-j9qf",
+      "url": "https://api.github.com/advisories/GHSA-7hhh-6rmp-j9qf",
+      "publishedDate": "2026-10-01",
+      "publishedAt": "2026-10-01T15:20:27Z",
+      "modifiedAt": "2026-10-01T15:20:28Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "対象はJsonFactory.createParser(DataInput)の経路。公式資料はInputStream、Reader、非同期パーサーの同様の経路には上限があると区別している。",
+    "2系は2.18.11・2.21.7・2.22.3、3系は3.1.7・3.2.3。com.fasterxml.jackson.coreとtools.jackson.coreの別座標、およびそれぞれの影響系列を統合しない。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

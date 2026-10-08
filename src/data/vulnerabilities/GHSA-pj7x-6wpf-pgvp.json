@@ -1,0 +1,121 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pj7x-6wpf-pgvp",
+  "aliases": [
+    "CVE-2026-105856"
+  ],
+  "title": "Payload：SQLite・PostgresアダプターのSQLインジェクション",
+  "summary": "読み取りと作成または更新の権限を持つ利用者が、JSON型フィールドなどを介してSQLを注入できる可能性がある。SQLite系とPostgres系で影響範囲・修正版が異なる。",
+  "publishedAt": "2026-10-07T20:30:04Z",
+  "modifiedAt": "2026-10-07T20:30:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@payloadcms/db-sqlite",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 3.90.0",
+          "fixed": "3.90.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp"
+        },
+        {
+          "affected": ">= 4.0.0-canary.0, < 4.0.0-canary.34",
+          "fixed": "4.0.0-canary.34",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@payloadcms/db-d1-sqlite",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 3.90.0",
+          "fixed": "3.90.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp"
+        },
+        {
+          "affected": ">= 4.0.0-canary.0, < 4.0.0-canary.34",
+          "fixed": "4.0.0-canary.34",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@payloadcms/db-postgres",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 3.73.0",
+          "fixed": "3.73.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@payloadcms/db-vercel-postgres",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 3.73.0",
+          "fixed": "3.73.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.6,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Payload: SQL injection in SQLite/Postgres",
+      "url": "https://github.com/payloadcms/payload/security/advisories/GHSA-pj7x-6wpf-pgvp",
+      "publishedDate": "2026-09-18",
+      "publishedAt": "2026-09-18T16:49:45Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-pj7x-6wpf-pgvp",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:30:04Z",
+      "modifiedAt": "2026-10-07T20:30:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Payload: SQL injection in SQLite/Postgres",
+      "url": "https://github.com/advisories/GHSA-pj7x-6wpf-pgvp",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "caveats": [
+    "jsonまたはblocksAsJSONを使う読み取り可能なコレクションが前提。richTextは対象外。",
+    "SQLite系は3.90.0／4.0.0-canary.34、Postgres系は3.73.0を各パッケージの修正境界として保持。全パッケージに同じ版を当てはめない。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

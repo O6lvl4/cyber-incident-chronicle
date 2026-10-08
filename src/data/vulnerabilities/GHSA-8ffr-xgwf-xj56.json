@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8ffr-xgwf-xj56",
+  "aliases": [
+    "CVE-2026-18140"
+  ],
+  "title": "aws-smithy-json：深いJSONによるスタック枯渇",
+  "summary": "未知のJSONキーを読み飛ばす処理で再帰の深さを制限していない。smithy-rs生成サーバーに深く入れ子になったJSONを送ることで、認証なしの攻撃者がスタック枯渇によるプロセス停止を引き起こす可能性があり、0.62.7で修正。",
+  "publishedAt": "2026-10-02T22:44:52Z",
+  "modifiedAt": "2026-10-02T22:44:53Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-8ffr-xgwf-xj56",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "aws-smithy-json",
+      "ranges": [
+        {
+          "affected": "<= 0.62.6",
+          "fixed": "0.62.7",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-8ffr-xgwf-xj56"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-8ffr-xgwf-xj56",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-8ffr-xgwf-xj56"
+      },
+      {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-8ffr-xgwf-xj56"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "aws-smithy-json: Uncontrolled recursion in the aws-smithy-json unknown-key skip path allows unauthenticated remote denial of service in smithy-rs generated servers",
+      "url": "https://github.com/smithy-lang/smithy-rs/security/advisories/GHSA-8ffr-xgwf-xj56",
+      "publishedDate": "2026-07-30",
+      "publishedAt": "2026-07-30T18:33:10Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-8ffr-xgwf-xj56",
+      "url": "https://api.github.com/advisories/GHSA-8ffr-xgwf-xj56",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T22:44:52Z",
+      "modifiedAt": "2026-10-02T22:44:53Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公式資料で説明される遠隔攻撃経路は、攻撃者のJSONを解析するsmithy-rs生成サーバー。AWS SDK全体で無条件に攻撃が成立するとの意味ではない。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

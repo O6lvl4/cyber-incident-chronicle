@@ -1,0 +1,72 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mvxr-6m87-mv2q",
+  "aliases": [
+    "CVE-2026-63435"
+  ],
+  "title": "Mail：不正なRFC 2047 encoded-wordによるメールアドレスの偽装",
+  "summary": "MailのQ/Bデコーダーが不正なRFC 2047 encoded-wordを一貫せず処理し、表示名やアドレスの復号結果と元のヘッダーを検証した結果が食い違う可能性がある。復号済みのFrom・To・Reply-To等を表示や認可に利用するアプリケーションで、アドレス偽装や認可チェック回避につながる。",
+  "publishedAt": "2026-09-02T22:02:32Z",
+  "modifiedAt": "2026-09-02T22:02:33Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-mvxr-6m87-mv2q",
+  "affected": [
+    {
+      "ecosystem": "rubygems",
+      "packageName": "mail",
+      "ranges": [
+        {
+          "affected": "< 2.9.1",
+          "fixed": "2.9.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-mvxr-6m87-mv2q"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-mvxr-6m87-mv2q",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-mvxr-6m87-mv2q"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Email address spoofing via malformed RFC 2047 encoded-words in mail",
+      "url": "https://github.com/mikel/mail/security/advisories/GHSA-mvxr-6m87-mv2q",
+      "publishedDate": "2026-07-01",
+      "publishedAt": "2026-07-01T06:08:28Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: Mail: Email address spoofing via malformed RFC 2047 encoded-words",
+      "url": "https://api.github.com/advisories/GHSA-mvxr-6m87-mv2q",
+      "publishedDate": "2026-09-02",
+      "publishedAt": "2026-09-02T22:02:32Z",
+      "modifiedAt": "2026-09-02T22:02:33Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の影響範囲欄は「< 2.9.0」、GitHub Reviewed Advisory Databaseは「< 2.9.1」と記載している。affectedには後者を採用し、両出典が示す修正版2.9.1を保持した。",
+    "確認した開発元資料は主な影響を偽装・フィッシング・認可チェック回避としており、リモートコード実行とはしていない。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

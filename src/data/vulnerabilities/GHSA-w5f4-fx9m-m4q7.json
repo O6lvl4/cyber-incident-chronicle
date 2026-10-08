@@ -1,0 +1,83 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-w5f4-fx9m-m4q7",
+  "aliases": [
+    "CVE-2026-105794"
+  ],
+  "title": "MsQuic：TLSホスト名検証の不備によるサーバーなりすまし",
+  "summary": "OpenSSLまたはQuicTLSバックエンドでTLS証明書のホスト名を正しく検証しない。経路上の攻撃者が接続先と一致しない証明書を使ってサーバーになりすます可能性があり、2.4.20・2.5.11・2.6.1で修正。",
+  "publishedAt": "2026-10-06T15:33:08Z",
+  "modifiedAt": "2026-10-06T15:33:09Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-w5f4-fx9m-m4q7",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.Native.Quic.MsQuic.OpenSSL",
+      "ranges": [
+        {
+          "affected": "< 2.4.20",
+          "fixed": "2.4.20",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-w5f4-fx9m-m4q7"
+        },
+        {
+          "affected": ">= 2.5.0, < 2.5.11",
+          "fixed": "2.5.11",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-w5f4-fx9m-m4q7"
+        },
+        {
+          "affected": ">= 2.6.0, < 2.6.1",
+          "fixed": "2.6.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-w5f4-fx9m-m4q7"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-w5f4-fx9m-m4q7",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 9.1,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-w5f4-fx9m-m4q7"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "MsQuic: Improper Certificate Validation in Microsoft.Native.Quic.MsQuic.OpenSSL",
+      "url": "https://github.com/microsoft/msquic/security/advisories/GHSA-w5f4-fx9m-m4q7",
+      "publishedDate": "2026-08-31",
+      "publishedAt": "2026-08-31T23:22:55Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-w5f4-fx9m-m4q7",
+      "url": "https://api.github.com/advisories/GHSA-w5f4-fx9m-m4q7",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T15:33:08Z",
+      "modifiedAt": "2026-10-06T15:33:09Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Schannelバックエンドは対象外。OpenSSL/QuicTLSを使う構成に限定される。",
+    "メンテナーは影響欄を<2.6.1、修正欄を2.6.1・2.5.11・2.4.20と表示。各保守系列の修正版を除外するためGitHub Reviewedの3範囲に分けて保持する。",
+    "メンテナーの深刻度表示はHigh、GitHub Reviewedはcritical（CVSS 4.0: 9.1）。本記録の深刻度とCVSSは後者に基づく。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

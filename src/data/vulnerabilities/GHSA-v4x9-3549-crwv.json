@@ -1,0 +1,84 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v4x9-3549-crwv",
+  "aliases": [
+    "CVE-2026-96749"
+  ],
+  "title": "PyMongo：巨大なBSONエンコードでヒープ境界外書き込み",
+  "summary": "非常に大きな入力をBSONへ変換すると、同梱C拡張の符号付き整数演算により、アプリケーションプロセス内のバッファ境界外へ書き込む可能性がある。4.18.2で修正。",
+  "publishedAt": "2026-10-05T23:47:10Z",
+  "modifiedAt": "2026-10-05T23:47:11Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:54:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-v4x9-3549-crwv",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pymongo",
+      "ranges": [
+        {
+          "affected": "< 4.18.2",
+          "fixed": "4.18.2",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-v4x9-3549-crwv"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-v4x9-3549-crwv",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.4,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-v4x9-3549-crwv"
+      },
+      {
+        "version": "4.0",
+        "score": 7.5,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-v4x9-3549-crwv"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "PyMongo: PYTHON-5996 Heap out-of-bounds write via signed size overflow in BSON document encoding",
+      "url": "https://github.com/mongodb/mongo-python-driver/security/advisories/GHSA-v4x9-3549-crwv",
+      "publishedDate": "2026-09-24",
+      "publishedAt": "2026-09-24T18:32:09Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-v4x9-3549-crwv",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T23:47:10Z",
+      "modifiedAt": "2026-10-05T23:47:11Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "PyMongo: PYTHON-5996 Heap out-of-bounds write via signed size overflow in BSON document encoding",
+      "url": "https://github.com/advisories/GHSA-v4x9-3549-crwv",
+      "publishedDate": "2026-10-05"
+    }
+  ],
+  "caveats": [
+    "開発元のパッケージ表は影響版を単に「1.9」と表示しており、Reviewed APIの「< 4.18.2」と一致しない。ここでは範囲と修正版を対応付けるReviewed APIを採用し、元表の不整合を留保する。",
+    "巨大な値をエンコード対象へ投入できることとネイティブ拡張のビルド条件に依存。MongoDBサーバー自体の脆弱性を示す記録ではない。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

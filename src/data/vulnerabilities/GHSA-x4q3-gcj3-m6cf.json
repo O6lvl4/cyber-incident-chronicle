@@ -1,0 +1,79 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-x4q3-gcj3-m6cf",
+  "aliases": [
+    "CVE-2026-73802"
+  ],
+  "title": "gitea-runner：特権モード無効時もコンテナー設定からホストへ到達できる問題",
+  "summary": "Dockerベースのgitea-runnerでワークフローのcontainer.optionsが十分に制限されず、特権モードを無効にしていてもホスト名前空間や追加ケーパビリティーを指定できる。ワークフローを実行できる攻撃者がランナーホストでrootとしてコマンドを実行し、秘密情報や他のジョブへアクセスするおそれがある。",
+  "publishedAt": "2026-10-02T23:18:12Z",
+  "modifiedAt": "2026-10-02T23:18:13Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-x4q3-gcj3-m6cf",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "gitea.com/gitea/runner",
+      "ranges": [
+        {
+          "affected": "< 1.0.9-0.20260731160927-34bfa1915022",
+          "fixed": "1.0.9-0.20260731160927-34bfa1915022",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-x4q3-gcj3-m6cf"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-x4q3-gcj3-m6cf",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-x4q3-gcj3-m6cf"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "gitea-runner: workflow container.options passes host namespaces and capability flags to job container when privileged mode is disabled",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-x4q3-gcj3-m6cf",
+      "publishedDate": "2026-08-15",
+      "publishedAt": "2026-08-15T12:32:17Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: gitea-runner: workflow container.options passes host namespaces and capability flags to job container when privileged mode is disabled",
+      "url": "https://api.github.com/advisories/GHSA-x4q3-gcj3-m6cf",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T23:18:12Z",
+      "modifiedAt": "2026-10-02T23:18:13Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "v3.0.0 - runner - Gitea: Git with a cup of tea",
+      "url": "https://gitea.com/gitea/runner/releases/tag/v3.0.0",
+      "publishedDate": "2026-07-31",
+      "publishedAt": "2026-07-31T16:19:35Z"
+    }
+  ],
+  "caveats": [
+    "攻撃者が対象ランナーで実行されるワークフローを作成・実行できることが前提。信頼できない利用者が共有Dockerランナーを利用する環境で特に影響が大きい。",
+    "開発元アドバイザリの欄は影響「< 3.0.0」、修正「> 3.0.0」と記載している。一方、実際に取得したv3.0.0リリースノートは本件の修正を掲載し、同タグのコミットは34bfa19150。表記の相違を残し、affectedにはReviewed Advisory DatabaseのGo擬似バージョンによる境界を保存した。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

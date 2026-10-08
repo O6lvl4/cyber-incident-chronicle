@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rfx3-98h7-v3xp",
+  "aliases": [
+    "CVE-2026-75513"
+  ],
+  "title": "Marten：LINQ等の文字列埋め込みによるSQLインジェクション",
+  "summary": "LINQの辞書キーや一部のテナント管理処理が、実行時文字列をエスケープせずSQLへ埋め込む。攻撃者が値を制御するとフィルター・テナント境界の回避や情報取得につながり、構成次第ではデータ変更も可能。メンテナーは8.37.4と9.13.0を修正版としている。",
+  "publishedAt": "2026-09-17T14:51:41Z",
+  "modifiedAt": "2026-09-17T14:51:44Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-rfx3-98h7-v3xp",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "Marten",
+      "ranges": [
+        {
+          "affected": ">= 7.0.0, < 8.37.4",
+          "fixed": "8.37.4",
+          "sourceUrl": "https://github.com/JasperFx/marten/security/advisories/GHSA-rfx3-98h7-v3xp"
+        },
+        {
+          "affected": ">= 9.0.0, < 9.13.0",
+          "fixed": "9.13.0",
+          "sourceUrl": "https://github.com/JasperFx/marten/security/advisories/GHSA-rfx3-98h7-v3xp"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-rfx3-98h7-v3xp",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-rfx3-98h7-v3xp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Marten's LINQ provider has SQL injection via unescaped string literals",
+      "url": "https://github.com/JasperFx/marten/security/advisories/GHSA-rfx3-98h7-v3xp",
+      "publishedDate": "2026-07-08",
+      "publishedAt": "2026-07-08T18:32:42Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-rfx3-98h7-v3xp",
+      "url": "https://api.github.com/advisories/GHSA-rfx3-98h7-v3xp",
+      "publishedDate": "2026-09-17",
+      "publishedAt": "2026-09-17T14:51:41Z",
+      "modifiedAt": "2026-09-17T14:51:44Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "メンテナーのパッケージ表は>=7.0.0, <8.37.4→8.37.4と、>=9.0.0, <9.13.0→9.13.0。GitHub Reviewedは>=7.0.0, <=9.12.0→9.13.0にまとめているため、修正済み8系列を巻き込まないメンテナーの2範囲を採用した。",
+    "攻撃者の入力が辞書インデクサーのキー、ContainsKey引数、Selectの定数、テナントID等の対象経路へ到達することが前提。複数SQL文の実行可否などで影響が変わる。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

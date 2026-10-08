@@ -1,0 +1,137 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fv66-9v8q-g76r",
+  "aliases": [
+    "CVE-2025-55182"
+  ],
+  "title": "React Server Components：認証不要のリモートコード実行",
+  "summary": "React Server Componentsの処理で認証なしにサーバー上のコードを実行できる。webpack・parcel・turbopack向けの各パッケージに影響し、19.0.1、19.1.2、19.2.1でこの脆弱性を修正。",
+  "publishedAt": "2025-12-03T19:07:39Z",
+  "modifiedAt": "2025-12-09T16:53:25Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "react-server-dom-webpack",
+      "ranges": [
+        {
+          "affected": ">= 19.1.0, < 19.1.2",
+          "fixed": "19.1.2",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        },
+        {
+          "affected": "= 19.2.0",
+          "fixed": "19.2.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        },
+        {
+          "affected": "= 19.0.0",
+          "fixed": "19.0.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "react-server-dom-turbopack",
+      "ranges": [
+        {
+          "affected": ">= 19.1.0, < 19.1.2",
+          "fixed": "19.1.2",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        },
+        {
+          "affected": "= 19.2.0",
+          "fixed": "19.2.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        },
+        {
+          "affected": "= 19.0.0",
+          "fixed": "19.0.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "react-server-dom-parcel",
+      "ranges": [
+        {
+          "affected": ">= 19.1.0, < 19.1.2",
+          "fixed": "19.1.2",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        },
+        {
+          "affected": "= 19.2.0",
+          "fixed": "19.2.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        },
+        {
+          "affected": "= 19.0.0",
+          "fixed": "19.0.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "reported",
+    "sourceUrl": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/"
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "React Server Components are Vulnerable to RCE",
+      "url": "https://github.com/facebook/react/security/advisories/GHSA-fv66-9v8q-g76r",
+      "publishedDate": "2025-12-03",
+      "publishedAt": "2025-12-03T15:48:19Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-fv66-9v8q-g76r",
+      "publishedDate": "2025-12-03",
+      "publishedAt": "2025-12-03T19:07:39Z",
+      "modifiedAt": "2025-12-09T16:53:25Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "React Server Components are Vulnerable to RCE",
+      "url": "https://github.com/advisories/GHSA-fv66-9v8q-g76r",
+      "publishedDate": "2025-12-03"
+    },
+    {
+      "type": "exploitation",
+      "title": "AWS：React2Shellの実悪用試行を観測",
+      "url": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/",
+      "publishedDate": "2025-12-04"
+    }
+  ],
+  "caveats": [
+    "サーバーを使わないReactアプリや、Server Componentsをサポートしない構成は対象外。",
+    "記載版はこのCVEに対応する最初の修正境界であり、後続の別脆弱性も含めた最新安全版を保証するものではない。",
+    "AWSは2025-12-04に、公開直後からハニーポットで観測した実際の悪用試行を報告。特定企業の侵害成立や被害をこの記録から推定しない。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}
