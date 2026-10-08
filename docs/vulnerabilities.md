@@ -4,8 +4,8 @@
 
 ## 対象と出典
 
-- 初期対象は npm / PyPI（GitHub API の ecosystem 表記は `npm` / `pip`）の公開ライブラリ。開発元資料を確認できる重要な公開、修正、影響範囲の変更、撤回を選定する。全件網羅や「すべての最新脆弱性」を保証しない
-- 初期5件は2026年のAxios、urllib3（2件）、Werkzeug、Vite/vite-plusの公式アドバイザリ。収録時点は各ファイルの `lastVerifiedAt`
+- 対象は npm / PyPI / RubyGems / Go / Rust / Maven / NuGet（GitHub API の ecosystem 表記は `npm` / `pip` / `rubygems` / `go` / `rust` / `maven` / `nuget`）の公開ライブラリ・SDK・関連フレームワーク。開発元資料を確認できる重要な公開、修正、影響範囲の変更、撤回を選定する。全件網羅や「すべての最新脆弱性」を保証しない
+- 2026-10-08の拡充で初期5件に45件を追加し、計50件。直近90日の公表・登録を中心に、React Server Components、Next.js Middleware、Requests、node-tarの過去の重要事例も収録。収録時点は各ファイルの `lastVerifiedAt`
 - GitHub Reviewed Advisory Database / OSV を発見・構造化の入口にできるが、開発元のアドバイザリ、公式リリース、影響範囲の一次資料まで確認する
 - 脆弱性スキャナーは実行しない。ユーザーの依存関係、ソースコード、非公開資料を送信しない。ライブラリや依存関係を更新しない
 - 公開API仕様を参考にした独立実装。非公開プロジェクトのコード・データ・説明文は含めない
@@ -15,7 +15,7 @@
 `src/data/vulnerabilities/<ID>.json` が正本。公開日の収録範囲は `src/data/vulnerability-meta.json` の `windowStart` / `windowEnd`。範囲外の新規公開日を追加する場合はこの2日付も更新する（企業事案のmetadataは変更不要）。共有描画エンジンは両カテゴリの範囲を包含し、検証は窓の更新漏れを検出する。型は `src/vulnerabilityTypes.ts`、検証は `scripts/vulnerability-status.mjs`。ファイル名は大文字の GHSA/CVE ID と一致させる。
 
 - `kind` は `vulnerability` 固定
-- `id` は安定した GHSA または CVE。初期データはGHSAを採用
+- `id` は安定した GHSA または CVE。現在のデータはGHSAを採用
 - `aliases` は同一脆弱性のCVE/GHSA別名だけ。`id` 自身は重複して入れない。追加前に全ファイルの `[id, ...aliases]` と照合する。複数レコードに交差した場合は既存レコードへ統合する必要があり、そのまま新規追加しない
 - OSV `related` / `upstream` は同一性を保証しないので別名として統合しない。続報を別イベントに水増ししない。撤回記録も消さない
 
@@ -44,3 +44,10 @@ OSVを利用する場合、`fixed` はその版を影響範囲から除外する
 SQLは `vulnerabilities` を独立テーブルとして提供する。既存の `incidents` / `events` / `threads` の意味は維持する。
 
 参考：[OSV schema](https://ossf.github.io/osv-schema/)、[OSV data](https://google.github.io/osv.dev/data/)、[GitHub global advisory API](https://docs.github.com/en/rest/security-advisories/global-advisories)
+
+## 2026-10-08の拡充時の注意
+
+- GitHub Reviewed APIの登録日と開発元の公開日を分離。最近登録された過去の開発元公表を「最近発生した攻撃」とは扱わない
+- メンテナーとデータベースで影響範囲・修正版・深刻度が異なる場合は、各レコードの出典と留保に保存。複数系列や複数パッケージを1つの修正版へ平坦化しない
+- CISA公式カタログの取得がHTTP 403で失敗したため、今回の追加レコードではKEVを未確認のまま保持。React Server Componentsの実悪用試行はAWSの観測報告を独立に引用
+- 記載する修正版は各脆弱性に対応する修正境界であり、後続の別脆弱性も含めた最新安全版を保証しない

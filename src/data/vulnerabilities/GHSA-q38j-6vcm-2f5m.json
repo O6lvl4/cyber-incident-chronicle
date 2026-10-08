@@ -1,0 +1,83 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-q38j-6vcm-2f5m",
+  "aliases": [
+    "CVE-2026-106455"
+  ],
+  "title": "Backstage TechDocs：MkDocsプラグイン設定からの内部情報取得",
+  "summary": "TechDocsのソースリポジトリを制御する認証済み利用者が、文書ビルド環境から到達できるネットワーク上の情報を取得し、文書に公開させる可能性がある。1.14.7と1.15.5で修正。",
+  "publishedAt": "2026-10-07T20:25:19Z",
+  "modifiedAt": "2026-10-07T20:25:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-q38j-6vcm-2f5m",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@backstage/plugin-techdocs-node",
+      "ranges": [
+        {
+          "affected": ">= 0.11.12, < 1.14.7",
+          "fixed": "1.14.7",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-q38j-6vcm-2f5m"
+        },
+        {
+          "affected": ">= 1.15.0, < 1.15.5",
+          "fixed": "1.15.5",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-q38j-6vcm-2f5m"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-q38j-6vcm-2f5m",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.7,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-q38j-6vcm-2f5m"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Backstage: Improper validation of MkDocs plugin configuration in TechDocs",
+      "url": "https://github.com/backstage/backstage/security/advisories/GHSA-q38j-6vcm-2f5m",
+      "publishedDate": "2026-09-16",
+      "publishedAt": "2026-09-16T08:29:36Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-q38j-6vcm-2f5m",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:25:19Z",
+      "modifiedAt": "2026-10-07T20:25:23Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Backstage: Improper validation of MkDocs plugin configuration in TechDocs",
+      "url": "https://github.com/advisories/GHSA-q38j-6vcm-2f5m",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "caveats": [
+    "影響はビルド方式、ネットワーク構成、取得先の保護に依存。トークンや特殊ヘッダーを要求するクラウドメタデータには、この挙動だけでは直接アクセスできない。",
+    "メンテナーは現行系列の2.0.0も修正済みとして案内。影響範囲にはReviewed APIが対応付ける1.14系・1.15系を保存。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

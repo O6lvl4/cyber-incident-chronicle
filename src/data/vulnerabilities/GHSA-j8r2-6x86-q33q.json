@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-j8r2-6x86-q33q",
+  "aliases": [
+    "CVE-2023-32681"
+  ],
+  "title": "Requests：HTTPSリダイレクト時にプロキシ認証情報が漏れる",
+  "summary": "認証情報をURLに含むプロキシを使いHTTPSへリダイレクトすると、Proxy-Authorizationヘッダーが本来の送信先サーバーへ渡る可能性がある。2.31.0で修正。",
+  "publishedAt": "2023-05-22T20:36:32Z",
+  "modifiedAt": "2024-03-27T20:09:55Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-j8r2-6x86-q33q",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "requests",
+      "ranges": [
+        {
+          "affected": ">= 2.3.0, < 2.31.0",
+          "fixed": "2.31.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-j8r2-6x86-q33q"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-j8r2-6x86-q33q",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.1,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-j8r2-6x86-q33q"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Unintended leak of Proxy-Authorization header in requests",
+      "url": "https://github.com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q",
+      "publishedDate": "2023-05-22",
+      "publishedAt": "2023-05-22T15:13:30Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-j8r2-6x86-q33q",
+      "publishedDate": "2023-05-22",
+      "publishedAt": "2023-05-22T20:36:32Z",
+      "modifiedAt": "2024-03-27T20:09:55Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Unintended leak of Proxy-Authorization header in requests",
+      "url": "https://github.com/advisories/GHSA-j8r2-6x86-q33q",
+      "publishedDate": "2023-05-22"
+    }
+  ],
+  "caveats": [
+    "プロキシ利用とURL内の認証情報が前提。HTTP宛てのリダイレクトには同じ漏えい挙動は確認されていない。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

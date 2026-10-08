@@ -1,0 +1,71 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5wf9-h793-w73c",
+  "aliases": [],
+  "title": "Xray-core：CA固定時のホスト名検証不足による中間者攻撃の可能性",
+  "summary": "pinnedPeerCertSha256でCA証明書を固定し、接続経路の設定によってServerNameが空になる場合、証明書の接続先名が検証されない。同じCAから別の名前の証明書を取得できる攻撃者が通信経路を制御すると、中間者攻撃が成立する可能性がある。",
+  "publishedAt": "2026-10-02T22:35:51Z",
+  "modifiedAt": "2026-10-02T22:35:52Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-5wf9-h793-w73c",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/xtls/xray-core",
+      "ranges": [
+        {
+          "affected": ">= 1.260113.0, < 1.260327.1-0.20260710210335-64fada32b5b9",
+          "fixed": "1.260327.1-0.20260710210335-64fada32b5b9",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-5wf9-h793-w73c"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-5wf9-h793-w73c",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 7.6,
+        "vector": "CVSS:4.0/AV:A/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-5wf9-h793-w73c"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Pinning a CA certificate via pinnedPeerCertSha256 can lead to the success of MITM attacks (Hy2, gRPC)",
+      "url": "https://github.com/XTLS/Xray-core/security/advisories/GHSA-5wf9-h793-w73c",
+      "publishedDate": "2026-07-10",
+      "publishedAt": "2026-07-10T21:18:07Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: Xray-core: Pinning a CA certificate via pinnedPeerCertSha256 can lead to the success of MITM attacks",
+      "url": "https://api.github.com/advisories/GHSA-5wf9-h793-w73c",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T22:35:51Z",
+      "modifiedAt": "2026-10-02T22:35:52Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元はHysteria系およびIPアドレス宛てのgRPCなど、ServerNameが補完されない経路を挙げる。CA固定を使うすべての接続に無条件で影響するわけではない。",
+    "開発元の版表記は影響「>= v26.1.13」、修正「>= v26.7.11」。affectedはReviewed Advisory DatabaseのGoモジュール版と修正コミットに対応する擬似バージョンをそのまま保持した。",
+    "重大度の評価に差がある。開発元の公開ページはLow、GitHub Reviewed Advisory DatabaseはHigh・CVSS 4.0 7.6としており、severityには出典付きで後者を記録した。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

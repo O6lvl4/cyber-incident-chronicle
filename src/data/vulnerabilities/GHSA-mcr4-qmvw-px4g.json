@@ -1,0 +1,84 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mcr4-qmvw-px4g",
+  "aliases": [
+    "CVE-2026-106451"
+  ],
+  "title": "LZ4 Java：共有一時ディレクトリの競合でネイティブコードを差し替え",
+  "summary": "同梱JNIライブラリを共有一時ディレクトリへ展開する際、予測可能なファイルパスを排他的に作成しない。別のローカル利用者が競合に勝ち、ホスト側の保護設定が許す場合、JVMが読み込むコードを差し替える可能性がある。at.yawk.lz4:lz4-javaは1.11.4で修正。",
+  "publishedAt": "2026-10-07T20:35:51Z",
+  "modifiedAt": "2026-10-07T20:35:52Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-mcr4-qmvw-px4g",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "at.yawk.lz4:lz4-java",
+      "ranges": [
+        {
+          "affected": "<= 1.11.3",
+          "fixed": "1.11.4",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-mcr4-qmvw-px4g"
+        }
+      ]
+    },
+    {
+      "ecosystem": "maven",
+      "packageName": "org.lz4:lz4-java",
+      "ranges": [
+        {
+          "affected": ">= 1.7.0, <= 1.8.1",
+          "fixed": null,
+          "sourceUrl": "https://api.github.com/advisories/GHSA-mcr4-qmvw-px4g"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-mcr4-qmvw-px4g",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 7.3,
+        "vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-mcr4-qmvw-px4g"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "yawkat LZ4 Java: Native library extraction to a shared temporary directory is vulnerable to file replacement by another local user",
+      "url": "https://github.com/yawkat/lz4-java/security/advisories/GHSA-mcr4-qmvw-px4g",
+      "publishedDate": "2026-09-25",
+      "publishedAt": "2026-09-25T18:11:24Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-mcr4-qmvw-px4g",
+      "url": "https://api.github.com/advisories/GHSA-mcr4-qmvw-px4g",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:35:51Z",
+      "modifiedAt": "2026-10-07T20:35:52Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "同梱JNIの展開、他利用者が書き込める一時ディレクトリ、競合への勝利、許容的なホスト設定が前提。専用一時ディレクトリ、システムのliblz4-java、Java実装のみの利用ではこの経路は対象外。",
+    "org.lz4:lz4-javaの>=1.7.0, <=1.8.1には両出典とも修正版を示していない。別座標at.yawk.lz4:lz4-javaの1.11.4を旧座標の修正版として扱わない。",
+    "メンテナーの深刻度表示はLow、GitHub Reviewedはhigh（CVSS 4.0: 7.3）。本記録の深刻度とCVSSは後者に基づく。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

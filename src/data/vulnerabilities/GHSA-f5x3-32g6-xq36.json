@@ -1,0 +1,88 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-f5x3-32g6-xq36",
+  "aliases": [
+    "CVE-2024-28863"
+  ],
+  "title": "node-tar：過度に深い展開パスによるサービス不能",
+  "summary": "多数の入れ子ディレクトリーを持つtarアーカイブの展開で、CPU・メモリーを消費してNode.jsプロセスが停止する可能性がある。6.2.1で修正。",
+  "publishedAt": "2024-03-22T16:57:05Z",
+  "modifiedAt": "2024-06-10T18:30:53Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-f5x3-32g6-xq36",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "node-tar",
+      "ranges": [
+        {
+          "affected": "< 6.2.1",
+          "fixed": "6.2.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-f5x3-32g6-xq36"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "tar",
+      "ranges": [
+        {
+          "affected": "< 6.2.1",
+          "fixed": "6.2.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-f5x3-32g6-xq36"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-f5x3-32g6-xq36",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-f5x3-32g6-xq36"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Denial of service while parsing a tar file due to lack of folders count validation",
+      "url": "https://github.com/isaacs/node-tar/security/advisories/GHSA-f5x3-32g6-xq36",
+      "publishedDate": "2024-03-21",
+      "publishedAt": "2024-03-21T21:15:23Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-f5x3-32g6-xq36",
+      "publishedDate": "2024-03-22",
+      "publishedAt": "2024-03-22T16:57:05Z",
+      "modifiedAt": "2024-06-10T18:30:53Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Denial of service while parsing a tar file due to lack of folders count validation",
+      "url": "https://github.com/advisories/GHSA-f5x3-32g6-xq36",
+      "publishedDate": "2024-03-22"
+    }
+  ],
+  "caveats": [
+    "信頼できないアーカイブを解析・展開する処理が対象。Reviewed APIに記載されたtarとnode-tarの両パッケージ名を保持。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

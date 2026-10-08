@@ -1,0 +1,104 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cjx3-73hr-rpw7",
+  "aliases": [
+    "CVE-2026-61741"
+  ],
+  "title": "http4s-scala-xml：XML外部実体の処理による情報漏えい・SSRF",
+  "summary": "XMLのEntityDecoderが安全化されていないSAXParserFactoryを利用する。信頼できないXMLを解析するサービスでは、外部実体を使うローカルファイル読み取り、内部ネットワークへのSSRF、実体展開によるサービス拒否が可能になり、0.24.1と1.0.0-M39で修正。",
+  "publishedAt": "2026-09-24T19:35:16Z",
+  "modifiedAt": "2026-09-24T19:35:18Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.http4s:http4s-scala-xml_2.12",
+      "ranges": [
+        {
+          "affected": "<= 0.24.0",
+          "fixed": "0.24.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7"
+        }
+      ]
+    },
+    {
+      "ecosystem": "maven",
+      "packageName": "org.http4s:http4s-scala-xml_2.13",
+      "ranges": [
+        {
+          "affected": "<= 0.24.0",
+          "fixed": "0.24.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7"
+        },
+        {
+          "affected": ">= 1.0.0-M1, <= 1.0.0-M38.1",
+          "fixed": "1.0.0-M39",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7"
+        }
+      ]
+    },
+    {
+      "ecosystem": "maven",
+      "packageName": "org.http4s:http4s-scala-xml_3",
+      "ranges": [
+        {
+          "affected": "<= 0.24.0",
+          "fixed": "0.24.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7"
+        },
+        {
+          "affected": ">= 1.0.0-M1, <= 1.0.0-M38.1",
+          "fixed": "1.0.0-M39",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "http4s-scala-xml has an XML External Entity (XXE) processing issue",
+      "url": "https://github.com/http4s/http4s-scala-xml/security/advisories/GHSA-cjx3-73hr-rpw7",
+      "publishedDate": "2026-06-24",
+      "publishedAt": "2026-06-24T13:14:49Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-cjx3-73hr-rpw7",
+      "url": "https://api.github.com/advisories/GHSA-cjx3-73hr-rpw7",
+      "publishedDate": "2026-09-24",
+      "publishedAt": "2026-09-24T19:35:16Z",
+      "modifiedAt": "2026-09-24T19:35:18Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "このライブラリから導出したXML EntityDecoderで、攻撃者が制御するXMLを解析する場合が対象。",
+    "Scala 2.12向け成果物は0.24.1、Scala 2.13/3向け成果物は0.24系列と1.0マイルストーン系列を個別に対応付けた。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

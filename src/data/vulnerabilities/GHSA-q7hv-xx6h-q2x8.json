@@ -1,0 +1,72 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-q7hv-xx6h-q2x8",
+  "aliases": [
+    "CVE-2026-26287"
+  ],
+  "title": "External Secrets Operator：Webhookのラベル検証回避によるSecret流出",
+  "summary": "Webhookジェネレーターの初期化順序の不具合でEnforceLabelsが解除され、参照するSecretに必要なラベルの検証が省略される。Webhookジェネレーターを作成できる利用者が、用途を許可されていないSecretを参照し、攻撃者のURLへ送信させる可能性がある。1.3.2で修正。",
+  "publishedAt": "2026-10-06T15:29:25Z",
+  "modifiedAt": "2026-10-06T15:29:26Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-q7hv-xx6h-q2x8",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/external-secrets/external-secrets",
+      "ranges": [
+        {
+          "affected": ">= 0.10.0, < 1.3.2",
+          "fixed": "1.3.2",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-q7hv-xx6h-q2x8"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-q7hv-xx6h-q2x8",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-q7hv-xx6h-q2x8"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Label enforcement bypass in webhook generator enables secret exfiltration",
+      "url": "https://github.com/external-secrets/external-secrets/security/advisories/GHSA-q7hv-xx6h-q2x8",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T09:50:45Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: External Secrets Operator: label enforcement bypass in webhook generator enables secret exfiltration",
+      "url": "https://api.github.com/advisories/GHSA-q7hv-xx6h-q2x8",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T15:29:25Z",
+      "modifiedAt": "2026-10-06T15:29:26Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "攻撃にはWebhookジェネレーターの作成権限が必要。すべての未認証利用者が任意のSecretを取得できるという意味ではない。",
+    "開発元は影響範囲を「v0.10.0–v1.3.1」、修正を「v1.3.2; v2.0.0+」と記載している。affectedにはGoパッケージとしてのReviewed Advisory Databaseの範囲と最初の修正版を保存した。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

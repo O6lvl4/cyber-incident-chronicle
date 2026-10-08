@@ -26,7 +26,8 @@ test('malformed data is rejected without silently inventing dates or fixes', () 
   assert.doesNotThrow(() => validateVulnerabilities([null, {}]));
 });
 test('nullable fix and withdrawn advisory remain explicit history', () => {
-  const item = structuredClone(records[0]); item.affected[0].ranges[0].fixed = null;
+  const item = structuredClone(records[0]);
+  for (const pkg of item.affected) for (const range of pkg.ranges) range.fixed = null;
   assert.equal(fixLabel(item), '修正版未確認');
   assert.deepEqual(validateVulnerabilities([item]), []);
   item.withdrawnAt = item.modifiedAt;
@@ -35,7 +36,7 @@ test('nullable fix and withdrawn advisory remain explicit history', () => {
   assert.equal(filterVulnerabilities([item], 'all', '').length, 1);
 });
 test('multi-package ranges remain paired and project to one non-incident marker', () => {
-  const multi = records.find(item => item.affected.length > 1);
+  const multi = records.find(item => item.id === 'GHSA-fx2h-pf6j-xcff');
   assert.ok(multi);
   assert.equal(multi.affected.flatMap(pkg => pkg.ranges).length, 4);
   const events = projectVulnerabilities(records);

@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pq68-rvw4-xp4r",
+  "aliases": [
+    "CVE-2026-93605"
+  ],
+  "title": "vm2：NodeVMの組み込みモジュール制御からの脱出",
+  "summary": "NodeVMで組み込みモジュール全許可またはchild_processを明示許可する構成では、禁止リストの漏れによりホスト上のコマンドを実行される可能性がある。3.12.1で修正。",
+  "publishedAt": "2026-10-07T18:05:00Z",
+  "modifiedAt": "2026-10-07T18:05:01Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-pq68-rvw4-xp4r",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "vm2",
+      "ranges": [
+        {
+          "affected": "<= 3.12.0",
+          "fixed": "3.12.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-pq68-rvw4-xp4r"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-pq68-rvw4-xp4r",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-pq68-rvw4-xp4r"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "vm2 contains a sandbox escape vulnerability",
+      "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-pq68-rvw4-xp4r",
+      "publishedDate": "2026-09-03",
+      "publishedAt": "2026-09-03T15:23:43Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-pq68-rvw4-xp4r",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T18:05:00Z",
+      "modifiedAt": "2026-10-07T18:05:01Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "vm2 contains a sandbox escape vulnerability",
+      "url": "https://github.com/advisories/GHSA-pq68-rvw4-xp4r",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "caveats": [
+    "信頼できないコードを実行し、require.builtinに全許可またはchild_processを許可する構成が前提。すべてのvm2構成に同じ条件で成立するわけではない。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

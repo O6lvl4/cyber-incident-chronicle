@@ -1,0 +1,79 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-x33g-cr3x-6449",
+  "aliases": [
+    "CVE-2026-102275"
+  ],
+  "title": "PyJWT：OKP鍵の公開成分・秘密成分の不整合を受理",
+  "summary": "OKP形式の秘密JWKで公開鍵xと秘密鍵dの対応を検証せず、JWKに記載された公開鍵と実際の署名・検証鍵が異なる状態を受け入れる。2.15.0で修正。",
+  "publishedAt": "2026-10-05T23:44:03Z",
+  "modifiedAt": "2026-10-05T23:44:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-x33g-cr3x-6449",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "PyJWT",
+      "ranges": [
+        {
+          "affected": ">= 2.1.0, <= 2.14.0",
+          "fixed": "2.15.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-x33g-cr3x-6449"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-x33g-cr3x-6449",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-x33g-cr3x-6449"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "PyJWT accepts inconsistent OKP x/d JWKs, causing public/private key identity confusion",
+      "url": "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-x33g-cr3x-6449",
+      "publishedDate": "2026-09-23",
+      "publishedAt": "2026-09-23T19:17:22Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-x33g-cr3x-6449",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T23:44:03Z",
+      "modifiedAt": "2026-10-05T23:44:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "PyJWT accepts inconsistent OKP x/d JWKs, causing public/private key identity confusion",
+      "url": "https://github.com/advisories/GHSA-x33g-cr3x-6449",
+      "publishedDate": "2026-10-05"
+    }
+  ],
+  "caveats": [
+    "Ed25519は2.1.0、Ed448は2.2.0からの導入と開発元が記載。パッケージ全体の影響範囲は2.1.0〜2.14.0。",
+    "盗まれたDPoPトークンの利用には、アプリ側がRFCに反して証明ヘッダーの秘密鍵パラメーターを受け入れる追加条件が必要。一般的な認証回避と一律には扱わない。",
+    "説明中の「未リリース」は2026-09-23の開発元追記で更新済み。修正版はリリース済み2.15.0を採用。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

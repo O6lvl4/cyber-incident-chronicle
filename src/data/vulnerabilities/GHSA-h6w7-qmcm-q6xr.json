@@ -1,0 +1,72 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-h6w7-qmcm-q6xr",
+  "aliases": [
+    "CVE-2026-106123"
+  ],
+  "title": "RabbitMQ Java Client：接続URIの解析エラーで認証情報が露出",
+  "summary": "プロパティファイルやMapからConnectionFactoryを設定する際、接続URIの解析等に失敗すると、ユーザー名とパスワードを含むURIが例外メッセージへ入る。例外を保存するログやエラー監視先への認証情報露出につながり、5.35.0で修正。",
+  "publishedAt": "2026-10-07T16:19:22Z",
+  "modifiedAt": "2026-10-07T16:19:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-h6w7-qmcm-q6xr",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "com.rabbitmq:amqp-client",
+      "ranges": [
+        {
+          "affected": "<= 5.34.0",
+          "fixed": "5.35.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-h6w7-qmcm-q6xr"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-h6w7-qmcm-q6xr",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 5.7,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-h6w7-qmcm-q6xr"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "RabbitMQ Java client: plaintext broker credentials leaked in exception message from ConnectionFactoryConfigurator.load()",
+      "url": "https://github.com/rabbitmq/rabbitmq-java-client/security/advisories/GHSA-h6w7-qmcm-q6xr",
+      "publishedDate": "2026-08-21",
+      "publishedAt": "2026-08-21T09:39:10Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-h6w7-qmcm-q6xr",
+      "url": "https://api.github.com/advisories/GHSA-h6w7-qmcm-q6xr",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T16:19:22Z",
+      "modifiedAt": "2026-10-07T16:19:23Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "接続設定時のURI解析エラー等と、その例外を記録・共有する経路が前提。通常の正常な接続処理が常に認証情報を出力するという意味ではない。",
+    "公式資料はURISyntaxExceptionと、amqpsおよび制約のあるTLSプロバイダーでのNoSuchAlgorithmExceptionを到達可能な経路として区別している。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

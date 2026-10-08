@@ -1,0 +1,89 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-x3q2-h9hx-4r4j",
+  "aliases": [
+    "CVE-2026-105744"
+  ],
+  "title": "Docling：Tectonic描画での任意ファイル読み書き",
+  "summary": "任意設定のTectonicエンジンで信頼できないLaTeXを描画すると、プロセス権限でファイルを読み書きされる可能性がある。シェル実行を許可した構成ではコマンド実行にもつながる。2.132.0で緩和。",
+  "publishedAt": "2026-10-07T20:42:05Z",
+  "modifiedAt": "2026-10-07T20:42:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-x3q2-h9hx-4r4j",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "docling",
+      "ranges": [
+        {
+          "affected": ">= 2.94.0, < 2.132.0",
+          "fixed": "2.132.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-x3q2-h9hx-4r4j"
+        }
+      ]
+    },
+    {
+      "ecosystem": "pip",
+      "packageName": "docling-slim",
+      "ranges": [
+        {
+          "affected": ">= 2.94.0, < 2.132.0",
+          "fixed": "2.132.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-x3q2-h9hx-4r4j"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-x3q2-h9hx-4r4j",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-x3q2-h9hx-4r4j"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Docling has arbitrary file read/write (and command execution when shell-escape is enabled) when rendering untrusted TikZ with the opt-in Tectonic engine",
+      "url": "https://github.com/docling-project/docling/security/advisories/GHSA-x3q2-h9hx-4r4j",
+      "publishedDate": "2026-10-01",
+      "publishedAt": "2026-10-01T11:54:36Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-x3q2-h9hx-4r4j",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:42:05Z",
+      "modifiedAt": "2026-10-07T20:42:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Docling has arbitrary file read/write (and command execution when shell-escape is enabled) when rendering untrusted TikZ with the opt-in Tectonic engine",
+      "url": "https://github.com/advisories/GHSA-x3q2-h9hx-4r4j",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "caveats": [
+    "既定のtikz_engine=Noneは対象外。Tectonicの有効化と実行ファイルの存在が前提。",
+    "2.132.0の入力検査はベストエフォートであり、信頼できないLaTeXは引き続き隔離環境で処理するよう開発元が案内。完全なサンドボックス化を保証する修正ではない。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cc4v-rvgp-2pf3",
+  "aliases": [
+    "CVE-2026-59990"
+  ],
+  "title": "Jawn：JSONの入れ子深度を制限せずヒープを枯渇",
+  "summary": "JSONパーサーに入れ子深度の上限がなく、攻撃者が入力する深いJSONでJVMヒープを枯渇させる可能性がある。OutOfMemoryErrorは通常の回復可能な解析エラーとして扱われず、サービス拒否につながる。",
+  "publishedAt": "2026-09-23T21:23:54Z",
+  "modifiedAt": "2026-09-23T21:23:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-cc4v-rvgp-2pf3",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.typelevel:jawn-parser_2.12",
+      "ranges": [
+        {
+          "affected": "<= 1.6.0",
+          "fixed": "1.7.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cc4v-rvgp-2pf3"
+        }
+      ]
+    },
+    {
+      "ecosystem": "maven",
+      "packageName": "org.typelevel:jawn-parser_2.13",
+      "ranges": [
+        {
+          "affected": "<= 1.6.0",
+          "fixed": "1.7.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cc4v-rvgp-2pf3"
+        }
+      ]
+    },
+    {
+      "ecosystem": "maven",
+      "packageName": "org.typelevel:jawn-parser_3",
+      "ranges": [
+        {
+          "affected": "<= 1.6.0",
+          "fixed": "1.7.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-cc4v-rvgp-2pf3"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-cc4v-rvgp-2pf3",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-cc4v-rvgp-2pf3"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Jawn: Uncontrolled nesting depth in JSON parser",
+      "url": "https://github.com/typelevel/jawn/security/advisories/GHSA-cc4v-rvgp-2pf3",
+      "publishedDate": "2026-06-24",
+      "publishedAt": "2026-06-24T14:06:13Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-cc4v-rvgp-2pf3",
+      "url": "https://api.github.com/advisories/GHSA-cc4v-rvgp-2pf3",
+      "publishedDate": "2026-09-23",
+      "publishedAt": "2026-09-23T21:23:54Z",
+      "modifiedAt": "2026-09-23T21:23:57Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "メンテナー本文は深度制限導入版を1.6.1と記載するが、同じアドバイザリのパッケージ表とGitHub Reviewedは修正版1.7.0、影響範囲<=1.6.0と記載。本記録は一致するパッケージ表を採用し、本文との差異を残す。",
+    "Scala 2.12・2.13・3向けの3成果物を保持。入力サイズ制限や事前の深度検査が回避策として挙げられている。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

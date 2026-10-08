@@ -1,0 +1,72 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5p9g-j988-pcwv",
+  "aliases": [
+    "CVE-2026-67431"
+  ],
+  "title": "MCP Ruby SDK：セッション所有者の検証不足による不正なツール呼び出し",
+  "summary": "MCP Ruby SDKのStreamable/SSE HTTPトランスポートでセッションと利用者の対応が十分に検証されず、盗まれたセッションIDを持つ攻撃者が被害者のセッションを使ってツールを実行できる。応答が被害者のSSEストリームへ流れ、不正操作を見分けにくくなる。0.23.0で修正。",
+  "publishedAt": "2026-07-30T14:44:28Z",
+  "modifiedAt": "2026-07-30T14:44:29Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-5p9g-j988-pcwv",
+  "affected": [
+    {
+      "ecosystem": "rubygems",
+      "packageName": "mcp",
+      "ranges": [
+        {
+          "affected": "<= 0.22.0",
+          "fixed": "0.23.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-5p9g-j988-pcwv"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-5p9g-j988-pcwv",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-5p9g-j988-pcwv"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Ruby SSE Session Poisoning",
+      "url": "https://github.com/modelcontextprotocol/ruby-sdk/security/advisories/GHSA-5p9g-j988-pcwv",
+      "publishedDate": "2026-07-08",
+      "publishedAt": "2026-07-08T02:23:36Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: MCP Ruby SDK: Ruby SSE Session Poisoning",
+      "url": "https://api.github.com/advisories/GHSA-5p9g-j988-pcwv",
+      "publishedDate": "2026-07-30",
+      "publishedAt": "2026-07-30T14:44:28Z",
+      "modifiedAt": "2026-07-30T14:44:29Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "攻撃者が有効なセッションIDを入手していることが前提。IDの窃取手段や推測可能性を本件だけから示すものではない。",
+    "SSE接続を置き換えて切断する別のアドバイザリとは異なり、本件は被害者の接続を維持したまま行われるツール呼び出しを扱う。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

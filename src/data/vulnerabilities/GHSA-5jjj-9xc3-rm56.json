@@ -1,0 +1,83 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5jjj-9xc3-rm56",
+  "aliases": [
+    "CVE-2026-106440"
+  ],
+  "title": "Hydra Optuna Sweeper：探索設定による実行ポリシー回避",
+  "summary": "外部から制御できるOptuna探索設定やコマンドライン指定で、環境内のPython関数を選択して実行できる可能性がある。安定版1.3.0と開発版1.4.0.dev10で修正。",
+  "publishedAt": "2026-10-07T20:24:02Z",
+  "modifiedAt": "2026-10-07T20:24:04Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:48:26Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-5jjj-9xc3-rm56",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "hydra-optuna-sweeper",
+      "ranges": [
+        {
+          "affected": ">= 1.2.0, < 1.3.0",
+          "fixed": "1.3.0",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-5jjj-9xc3-rm56"
+        },
+        {
+          "affected": ">= 1.4.0.dev4, < 1.4.0.dev10",
+          "fixed": "1.4.0.dev10",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-5jjj-9xc3-rm56"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-5jjj-9xc3-rm56",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.8,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-5jjj-9xc3-rm56"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Hydra: Optuna custom_search_space can resolve and execute untrusted callables via get_method",
+      "url": "https://github.com/hydra-ecosystem/hydra/security/advisories/GHSA-5jjj-9xc3-rm56",
+      "publishedDate": "2026-09-14",
+      "publishedAt": "2026-09-14T21:53:58Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-5jjj-9xc3-rm56",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:24:02Z",
+      "modifiedAt": "2026-10-07T20:24:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Hydra: Optuna custom_search_space can resolve and execute untrusted callables via get_method",
+      "url": "https://github.com/advisories/GHSA-5jjj-9xc3-rm56",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "caveats": [
+    "探索設定・引数を攻撃者が制御でき、選択した関数が環境に存在することが前提。",
+    "Hydra 1.4では実行許可リストの回避。1.3には同じ許可リストのセキュリティ境界がなく、旧禁止リストを適用する多層防御としての修正。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}

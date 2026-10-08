@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2hw9-mc66-jc2q",
+  "aliases": [
+    "CVE-2026-104855"
+  ],
+  "title": "Wasmtime：バルク処理の中断と再開によるVM状態の破損",
+  "summary": "WebAssemblyのバルク転送中にepochやfuelで中断し、組み込み側がストアを変更したり中断後に処理を再開したりすると、未初期化テーブルや無効なポインターにアクセスする可能性がある。46.0.2と47.0.3で修正。",
+  "publishedAt": "2026-10-02T22:45:29Z",
+  "modifiedAt": "2026-10-02T22:45:30Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-2hw9-mc66-jc2q",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 46.0.0, < 46.0.2",
+          "fixed": "46.0.2",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-2hw9-mc66-jc2q"
+        },
+        {
+          "affected": ">= 47.0.0, < 47.0.3",
+          "fixed": "47.0.3",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-2hw9-mc66-jc2q"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-2hw9-mc66-jc2q",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 2.0,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-2hw9-mc66-jc2q"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Wasmtime: Preemption and traps during bulk operations enable breaking internal VM state",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-2hw9-mc66-jc2q",
+      "publishedDate": "2026-07-31",
+      "publishedAt": "2026-07-31T16:23:26Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory API: GHSA-2hw9-mc66-jc2q",
+      "url": "https://api.github.com/advisories/GHSA-2hw9-mc66-jc2q",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T22:45:29Z",
+      "modifiedAt": "2026-10-02T22:45:30Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "epochコールバック中のストア変更、またはタイムアウトやfuel枯渇後の同一ストアの再利用など、組み込みアプリケーション側の特定の処理が必要。すべてのWebAssembly実行が影響を受けるわけではない。",
+    "46系列は46.0.2、47系列は47.0.3に対応付けた。修正ではバルク処理途中の中断点を取り除いている。",
+    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+  ]
+}

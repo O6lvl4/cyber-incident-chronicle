@@ -1,0 +1,73 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6r3q-mjv7-xr8m",
+  "aliases": [
+    "CVE-2026-41510"
+  ],
+  "title": "Coraza：引数上限超過によるWAF検査回避とJSON展開のメモリ増幅",
+  "summary": "Corazaが引数数の上限を超えた値を検査対象から黙って除外するため、多数のパラメーターによってARGS系のWAFルールを回避できる。関連するリクエスト本文処理にはメモリ消費の問題もあり、3.8.0の不完全な修正を含めて3.8.1で対応した。",
+  "publishedAt": "2026-10-06T20:38:03Z",
+  "modifiedAt": "2026-10-06T20:38:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-6r3q-mjv7-xr8m",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/corazawaf/coraza/v3",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 3.8.1",
+          "fixed": "3.8.1",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-6r3q-mjv7-xr8m"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-6r3q-mjv7-xr8m",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.2,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:L",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-6r3q-mjv7-xr8m"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Silent argument drop at ArgumentLimit allows bypass of ARGS-targeted rules via parameter flooding",
+      "url": "https://github.com/corazawaf/coraza/security/advisories/GHSA-6r3q-mjv7-xr8m",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:55:36Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: Coraza: Silent argument drop at ArgumentLimit allows bypass of ARGS-targeted rules via parameter flooding",
+      "url": "https://api.github.com/advisories/GHSA-6r3q-mjv7-xr8m",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T20:38:03Z",
+      "modifiedAt": "2026-10-06T20:38:05Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "WAF検査の回避が保護対象アプリケーションへの侵害につながるには、そのアプリケーション側にも攻撃対象となる弱点が必要。",
+    "3.8.0は修正済みとは扱わない。開発元はJSON配列長の補助エントリーに対するバイト予算の検証漏れを3.8.1で修正し、3.8.0を影響範囲に含めている。",
+    "同じ修正に関連するGHSA-3ww9-vw83-9w5xへの言及があるが、同一性を示す別名とは扱っていない。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pp92-crg2-gfv9",
+  "aliases": [
+    "CVE-2026-54603"
+  ],
+  "title": "oauth2：別ホストへのリダイレクトでBearerトークンが漏えいする問題",
+  "summary": "OAuth2::Clientがプロトコル相対形式のLocationを含むリダイレクトを追跡すると、接続先ホストが変わってもAuthorizationヘッダーを引き継ぐ。認可サーバーのリダイレクトを攻撃者が制御できる場合、アクセストークンが攻撃者のホストへ送信される可能性がある。2.0.22で修正。",
+  "publishedAt": "2026-07-28T16:32:45Z",
+  "modifiedAt": "2026-07-28T16:32:45Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:49:33Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-pp92-crg2-gfv9",
+  "affected": [
+    {
+      "ecosystem": "rubygems",
+      "packageName": "oauth2",
+      "ranges": [
+        {
+          "affected": ">= 0.4.0, <= 2.0.21",
+          "fixed": "2.0.22",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-pp92-crg2-gfv9"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-pp92-crg2-gfv9",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-pp92-crg2-gfv9"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Protocol-relative redirect Location overrides authority in OAuth2::Client#request, leaking bearer Authorization to attacker host",
+      "url": "https://github.com/ruby-oauth/oauth2/security/advisories/GHSA-pp92-crg2-gfv9",
+      "publishedDate": "2026-06-07",
+      "publishedAt": "2026-06-07T07:16:43Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database API: OAuth2::Client#request: Protocol-relative redirect Location overrides authority, leaking bearer Authorization to attacker host",
+      "url": "https://api.github.com/advisories/GHSA-pp92-crg2-gfv9",
+      "publishedDate": "2026-07-28",
+      "publishedAt": "2026-07-28T16:32:45Z",
+      "modifiedAt": "2026-07-28T16:32:45Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "認可サーバー側の侵害、攻撃者管理のテナント、または操作可能なリダイレクトなど、元の応答のLocationに攻撃者が影響できることが前提。",
+    "公開・更新・撤回日時はGitHub Reviewed Advisory Databaseの日時。開発元資料の公開日時は出典欄に別記した。",
+    "確認した公式資料から実悪用の有無は判断していない。CISA KEVは未照合であり、いずれも「なし」を意味しない。"
+  ]
+}

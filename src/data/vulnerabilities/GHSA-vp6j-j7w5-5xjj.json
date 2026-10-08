@@ -1,0 +1,84 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vp6j-j7w5-5xjj",
+  "aliases": [
+    "CVE-2026-96748"
+  ],
+  "title": "PyMongo：接続文字列へのホスト注入",
+  "summary": "信頼できない入力を接続URIのホスト部分へ組み込むと、パーセントエンコードされた区切り文字で攻撃者のホストが追加される可能性がある。認証情報の露出や接続先操作につながり、4.18.2で修正。",
+  "publishedAt": "2026-10-05T23:47:07Z",
+  "modifiedAt": "2026-10-05T23:47:09Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-08T01:54:04Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-vp6j-j7w5-5xjj",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pymongo",
+      "ranges": [
+        {
+          "affected": ">= 3.5.0, <= 4.18.1",
+          "fixed": "4.18.2",
+          "sourceUrl": "https://api.github.com/advisories/GHSA-vp6j-j7w5-5xjj"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-vp6j-j7w5-5xjj",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-vp6j-j7w5-5xjj"
+      },
+      {
+        "version": "4.0",
+        "score": 8.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-vp6j-j7w5-5xjj"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "PyMongo: PYTHON-5986 Host injection in PyMongo connection string parsing via percent-encoded delimiters",
+      "url": "https://github.com/mongodb/mongo-python-driver/security/advisories/GHSA-vp6j-j7w5-5xjj",
+      "publishedDate": "2026-09-24",
+      "publishedAt": "2026-09-24T18:32:03Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed Advisory Database（登録・更新・撤回日時、影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-vp6j-j7w5-5xjj",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T23:47:07Z",
+      "modifiedAt": "2026-10-05T23:47:09Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "PyMongo: PYTHON-5986 Host injection in PyMongo connection string parsing via percent-encoded delimiters",
+      "url": "https://github.com/advisories/GHSA-vp6j-j7w5-5xjj",
+      "publishedDate": "2026-10-05"
+    }
+  ],
+  "caveats": [
+    "開発元本文には「Fixed in PyMongo TBD」と未確定表記が残る一方、同ページのパッケージ表とReviewed APIは4.18.2を修正版として記載。ここでは両者が一致する修正境界4.18.2を採用。",
+    "アプリケーションが外部入力を接続文字列へ補間する構成が前提。Unixドメインソケットの正当なパーセントエンコードは対象外。",
+    "タイムラインの日付はGitHub Advisory Databaseへの登録日。開発元の初回公開日は出典欄に分けて記録。",
+    "CISA公式カタログは今回取得できず、KEVは未確認。未確認は未掲載や実悪用なしを意味しない。"
+  ]
+}
