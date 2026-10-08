@@ -109,7 +109,7 @@ try {
           titleVisible: title.top >= top && title.bottom <= bottom, outerScroll: document.querySelector('.app').scrollTop,
           innerScroll: card.closest('.incident-scroll').scrollTop };
       });
-      check(`${size}: first incident is meaningfully visible without scrolling`, placement.cardTop < height * 0.7
+      check(`${size}: first incident is meaningfully visible without scrolling ${JSON.stringify(placement)}`, placement.cardTop < height * 0.7
         && placement.companyVisible && placement.titleVisible && placement.outerScroll === 0 && placement.innerScroll === 0);
       await screenshot(page, `${size}-collapsed-list-light`);
     }

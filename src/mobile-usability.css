@@ -17,7 +17,8 @@
   .incident-app .impact-filters[data-expanded="true"] { display: flex; flex-wrap: wrap; gap: 6px; }
   .incident-app .impact-filters .thread-chip { min-height: 44px; }
   .incident-app .impact-filters .status-filter select { min-height: 44px; }
-  .incident-app .classification-controls { order: 3; }
+  .incident-app .classification-controls { order: 3; border-top: 0; padding-top: 0; }
+  .incident-app .workspace.mobile-list .zoom-controls { display: none; }
   .incident-app > .summary-strip { display: none; }
   .incident-app .classification-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; padding: 4px 14px; }
   .incident-app .classification-summary > p { display: flex; flex: 1; flex-wrap: wrap; gap: 0 6px; font-size: 9px; }
@@ -41,5 +42,7 @@
   .incident-app .classification-controls:has(.classification-chips) { flex-basis: 100%; }
   .incident-app .search-wrap { flex: 1 1 120px; }
   .incident-app .mobile-tabs { padding: 2px 14px; }
-  .incident-app .list-heading { padding-top: 4px; }
+  .incident-app .list-heading { padding-top: 2px; padding-bottom: 2px; }
+  .incident-app .list-heading .count-badge { font-size: 22px; }
+  .incident-app .list-note { padding-bottom: 4px; }
 }
