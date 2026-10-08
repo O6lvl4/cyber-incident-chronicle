@@ -33,6 +33,9 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # Recreate full public data from the immutable manifest; fail closed on any hash/coverage mismatch.
+      - name: Prepare pinned advisory dataset
+        run: pnpm data:prepare
       - run: pnpm test
       - run: pnpm data:check
       # codopsy v2.2.0 (最新リリース) は TypeScript の型 import を未使用と誤検出する。
@@ -72,14 +75,19 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # Recreate full public data from the immutable manifest; fail closed on any hash/coverage mismatch.
+      - name: Prepare pinned advisory dataset
+        run: pnpm data:prepare
       - run: pnpm exec playwright install --with-deps chromium webkit
       - run: pnpm build
       - name: Browser checks and fling budget
         run: |
           pnpm preview --port 4173 --strictPort --host 127.0.0.1 &
           sleep 3
-          pnpm test:ui
-          pnpm perf
+          status=0
+          pnpm test:ui || status=$?
+          pnpm perf || status=$?
+          exit "$status"
 
       - name: Save browser screenshots
         if: always()

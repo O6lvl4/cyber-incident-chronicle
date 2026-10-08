@@ -1,19 +1,17 @@
 import type { Weight } from '../types';
 import meta from '../data/meta.json';
 import vulnerabilityMeta from '../data/vulnerability-meta.json';
+import { DAY, PX_PER_DAY, MAX_LEVEL } from './zoom';
+export { DAY, PX_PER_DAY, MAX_LEVEL, fitLevel } from './zoom';
 
 /**
  * Discrete zoom levels, like a programme guide's 30 min / 1 h / 2 h grids. Every level has a fixed
  * pixels-per-day, so layout and tiles depend only on the level, never on the device.
  */
-export const DAY = 86400000;
 /** Shared strip bounds cover both categories without changing either category's records. */
 export const T0 = Date.UTC(Math.min(new Date(meta.windowStart).getUTCFullYear(), new Date(vulnerabilityMeta.windowStart).getUTCFullYear()), 0, 1);
 /** Right edge of the strip: six months past the coverage window. */
 export const T1 = Math.max(Date.parse(meta.windowEnd), Date.parse(vulnerabilityMeta.windowEnd)) + 183 * DAY;
-
-export const PX_PER_DAY = [0.25, 0.4, 0.64, 1, 1.6, 2.56, 4, 6.4, 10, 16, 26, 40];
-export const MAX_LEVEL = PX_PER_DAY.length - 1;
 
 export const TILE_W = 512;
 export const AXIS_H = 44;
@@ -61,14 +59,6 @@ export function labelWeightFor(level: number): Weight {
   if (p <= 0.5) return 3;
   if (p <= 1.5) return 2;
   return 1;
-}
-
-/** The finest level at which `spanMs` still fits into `plotW` px. */
-export function fitLevel(spanMs: number, plotW: number): number {
-  const days = spanMs / DAY;
-  let best = 0;
-  PX_PER_DAY.forEach((p, i) => { if (days * p <= plotW) best = i; });
-  return best;
 }
 
 export function labelWidthFor(width: number): number {

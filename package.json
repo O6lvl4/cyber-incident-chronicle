@@ -4,18 +4,19 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "dev": "pnpm data:prepare && vite",
+    "build": "pnpm data:prepare && tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "test": "node --test scripts/*.test.mjs",
     "format": "oxfmt",
     "quality": "codopsy analyze ./src --fail-on-warning",
     "perf": "node perf/fling.mjs",
-    "data:check": "node scripts/classification-index.mjs --check && node scripts/data-status.mjs",
+    "data:check": "node scripts/classification-index.mjs --check && node scripts/data-status.mjs && node scripts/vulnerability-coverage.mjs && node scripts/prepare-advisory-assets.mjs --check",
     "test:ui": "node scripts/run-ui-tests.mjs",
-    "check": "pnpm data:check && pnpm test && pnpm build",
-    "data:index": "node scripts/classification-index.mjs"
+    "check": "pnpm data:prepare && pnpm data:check && pnpm test && pnpm build",
+    "data:index": "node scripts/classification-index.mjs",
+    "data:prepare": "node scripts/bootstrap-reviewed-advisories.mjs && node scripts/prepare-advisory-assets.mjs"
   },
   "dependencies": {
     "@duckdb/duckdb-wasm": "1.32.0",

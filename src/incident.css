@@ -233,3 +233,48 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .classification-toggle { padding-left: 8px; padding-right: 8px; }
   .classification-reset { padding-left: 6px; padding-right: 6px; }
 }
+
+/* Keep every advisory searchable while bounding the list and SQL table DOM. */
+.result-pagination { padding: 8px 14px; border-top: 1px solid var(--border-light); flex-shrink: 0; }
+.page-range { display: block; color: var(--text-sub); font-size: 10px; margin-bottom: 5px; }
+.page-controls { display: flex; align-items: center; gap: 7px; }
+.page-controls .n-btn, .page-controls select { min-height: 44px; min-width: 44px; }
+.page-controls label { flex: 1; min-width: 0; }
+.page-controls select { width: 100%; padding: 0 8px; color: var(--text); background: var(--surface); border: 1px solid var(--border-light); border-radius: 4px; font: inherit; }
+.page-controls .n-btn:disabled { opacity: .4; cursor: default; }
+.vulnerability-card strong, .vulnerability-card .incident-card-title { overflow-wrap: anywhere; }
+.vulnerability-list .list-note { padding-bottom: 10px; }
+.verification-note { padding: 12px; border: 1px solid var(--border-light); border-radius: 5px; line-height: 1.8; font-size: 11px; }
+.coverage-counts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.coverage-counts div { padding: 10px; border: 1px solid var(--border-light); }
+.coverage-counts dt { font-size: 11px; color: var(--text-sub); }
+.coverage-counts dd { margin: 4px 0 0; font-size: 17px; }
+.vulnerability-list .list-heading { flex-wrap: wrap; gap: 6px; }
+.vulnerability-list .count-badge { font-size: 22px; }
+.vulnerability-list .list-heading h2 { font-size: 14px; }
+.vulnerability-app .header-filters .status-filter { margin-left: 0; }
+@media (max-width: 640px) {
+  .vulnerability-app .header-top { min-height: 56px; }
+  .vulnerability-app .header-actions .n-btn { min-height: 44px; min-width: 44px; }
+  .vulnerability-app .category-tabs { padding: 4px 0; }
+  .vulnerability-app .category-tabs button { min-height: 44px; }
+  .vulnerability-app .header-filters { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 6px 0; gap: 6px; }
+  .vulnerability-app .status-filter select, .vulnerability-app .search-wrap input { min-height: 44px; width: 100%; }
+  .vulnerability-app > .summary-strip { display: none; }
+  .vulnerability-app .mobile-tabs { padding: 4px 14px; }
+  .vulnerability-app .mobile-tabs button { min-height: 44px; }
+  .vulnerability-list .list-heading { padding: 8px 18px 4px; }
+  .vulnerability-list .list-heading .eyebrow { display: none; }
+  .vulnerability-list .list-heading h2 { margin: 0; }
+  .vulnerability-list .list-note { padding: 0 18px 6px; }
+  .vulnerability-list .list-footer { display: none; }
+  .vulnerability-list .result-pagination { padding-top: 5px; padding-bottom: max(5px, env(safe-area-inset-bottom)); }
+}
+@media (min-width: 480px) and (max-width: 640px) and (max-height: 440px) {
+  .vulnerability-app .header-top { position: absolute; top: 0; right: 14px; min-height: 44px; }
+  .vulnerability-app .header-top .brand { display: none; }
+  .vulnerability-app .category-tabs { padding: 0 120px 0 0; }
+  .vulnerability-app .header-filters { grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 2px 0; }
+  .vulnerability-list .list-heading { padding-top: 2px; padding-bottom: 2px; }
+  .vulnerability-list .list-note { display: none; }
+}

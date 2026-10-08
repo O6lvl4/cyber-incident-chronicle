@@ -88,9 +88,14 @@ function drawMarker(ctx: Ctx, c: Chip, y: number, { color, theme }: ChipStyle) {
   ctx.arc(c.x, y, r, 0, Math.PI * 2);
   ctx.fillStyle = color;
   ctx.fill();
-  ctx.lineWidth = 1.5;
-  ctx.strokeStyle = theme.surface;
-  ctx.stroke();
+  // Background outlines erase earlier dots when thousands of unlabelled points
+  // share a coarse overview pixel. Keep that density visible instead of painting
+  // white trails; labelled, individually separated markers retain their outline.
+  if (c.labeled) {
+    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = theme.surface;
+    ctx.stroke();
+  }
 }
 
 function drawLabel(ctx: Ctx, c: Chip, y: number, { color, theme, title }: ChipStyle) {

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { loadData, validateData } from './data-status.mjs';
 import { companyCount, filterIncidents, projectEvents } from '../src/lib/incidents.ts';
 import { readUrl, writeUrl } from '../src/lib/urlState.ts';
+import { MAX_LEVEL } from '../src/engine/zoom.ts';
 const data = loadData();
 const impacts = ['leak', 'outage', 'unauthorizedAccess'];
 test('all sourced records pass data quality checks', () => assert.deepEqual(validateData(data), []));
@@ -42,5 +43,5 @@ test('URL round-trip preserves empty lanes, query, status and theme', () => {
 });
 test('untrusted URL values are bounded or ignored', () => {
   globalThis.location = { hash: '#l=999&t=bad&status=accused' };
-  assert.equal(readUrl().level, 11); assert.equal(readUrl().center, undefined); assert.equal(readUrl().status, undefined);
+  assert.equal(readUrl().level, MAX_LEVEL); assert.equal(readUrl().center, undefined); assert.equal(readUrl().status, undefined);
 });

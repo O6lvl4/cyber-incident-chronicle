@@ -39,9 +39,14 @@ async function boot(data: Dataset): Promise<duckdb.AsyncDuckDB> {
   const bundle = await lib.selectBundle(bundles);
   const worker = new Worker(bundle.mainWorker!);
   const db = new lib.AsyncDuckDB(new lib.VoidLogger(), worker);
-  await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
-  await loadTables(db, data);
-  return db;
+  try {
+    await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
+    await loadTables(db, data);
+    return db;
+  } catch (error) {
+    await db.terminate().catch(() => worker.terminate());
+    throw error;
+  }
 }
 
 async function loadTables(db: duckdb.AsyncDuckDB, data: Dataset) {
@@ -67,7 +72,7 @@ async function loadTables(db: duckdb.AsyncDuckDB, data: Dataset) {
 
 /** Boots DuckDB-WASM once and loads the incident and advisory datasets as separate tables. */
 export function getDb(data: Dataset): Promise<duckdb.AsyncDuckDB> {
-  dbPromise ??= boot(data);
+  dbPromise ??= boot(data).catch(error => { dbPromise = null; throw error; });
   return dbPromise;
 }
 

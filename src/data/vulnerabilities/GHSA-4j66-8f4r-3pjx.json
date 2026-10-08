@@ -1,0 +1,81 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4j66-8f4r-3pjx",
+  "aliases": [
+    "CVE-2025-8022"
+  ],
+  "title": "Bun Shell：コマンド注入のアドバイザリを撤回",
+  "summary": "Bun自体の脆弱性を示すものではないとして、2025年8月11日に撤回。補間値は単一の引数として渡されるが、外部コマンドの引数検証は呼び出し側アプリケーションの責任となる。",
+  "publishedAt": "2025-07-23T06:33:50Z",
+  "modifiedAt": "2025-08-11T21:15:22Z",
+  "withdrawnAt": "2025-08-11T21:15:20Z",
+  "lastVerifiedAt": "2026-10-08T02:38:19Z",
+  "dateSourceUrl": "https://api.github.com/advisories/GHSA-4j66-8f4r-3pjx",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "bun",
+      "ranges": [
+        {
+          "affected": "> 0.0.12, <= 1.1.39",
+          "fixed": null,
+          "sourceUrl": "https://api.github.com/advisories/GHSA-4j66-8f4r-3pjx"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/advisories/GHSA-4j66-8f4r-3pjx",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-4j66-8f4r-3pjx"
+      },
+      {
+        "version": "4.0",
+        "score": 7.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+        "sourceUrl": "https://api.github.com/advisories/GHSA-4j66-8f4r-3pjx"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Reviewed API：固定リポジトリ外の追加確認（公開・更新・撤回・影響範囲）",
+      "url": "https://api.github.com/advisories/GHSA-4j66-8f4r-3pjx",
+      "publishedDate": "2025-07-23",
+      "publishedAt": "2025-07-23T06:33:50Z",
+      "modifiedAt": "2025-08-11T21:15:22Z",
+      "withdrawnAt": "2025-08-11T21:15:20Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bun公式ドキュメント：Shellの補間処理と引数インジェクションの注意点",
+      "url": "https://bun.com/docs/runtime/shell#security-in-the-bun-shell",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "この記録はGitHub advisory-databaseの固定コミットには存在せず、GitHub Reviewed APIを別途確認した追加分。固定リポジトリの全件取得数には含めない。",
+    "GitHub API確認日時：2026-10-08T02:34:56Z。取得した応答のSHA-256：dedc1152d5dc46fb8dde400bf29e52aa0afe83125550f6729a1e18b5bffe788c。",
+    "タイムラインはGitHub Advisory Databaseへの登録日。開発元の公表・修正日とは区別する。",
+    "npm名bunの0.0.12以前は同名の旧プロジェクトであり、このBunランタイムの対象範囲に含めない。",
+    "KEV掲載と実悪用は未確認。未確認は未掲載や実悪用なしを意味しない。",
+    "撤回済み。影響範囲とCVSSはGitHub APIに残る当初の評価を履歴として保存しており、現在有効なBunの脆弱性・修正必要性を示さない。",
+    "OSVの取得済みエクスポートには撤回日時がなかったため、GitHub APIの撤回日時と説明を優先した。",
+    "開発元資料はShellの現行仕様の確認に使用。撤回の根拠・日時はGitHub APIの記載による。"
+  ]
+}

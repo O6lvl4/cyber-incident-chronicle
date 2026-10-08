@@ -10,12 +10,16 @@ mkdirSync(output, { recursive: true });
 const checks = [], errors = [], failures = [];
 const check = (name, value) => { assert.ok(value, name); checks.push(name); };
 // Exercise genuine long records, including their evidence, rather than injecting filler.
-const longest = records => [...records].sort((a, b) => JSON.stringify(b).length - JSON.stringify(a).length)[0];
+const longest = records => {
+  let item, length = -1;
+  for (const record of records) { const size = JSON.stringify(record).length; if (size > length) { item = record; length = size; } }
+  return item;
+};
 const incidents = loadData().incidents;
 const vulnerabilities = loadVulnerabilities();
 const categories = [
   { kind: 'incident', records: incidents, item: longest(incidents), card: '.incident-card', detail: '.incident-detail', query: '企業名・事案を検索', tab: '企業のインシデント', list: /^事案一覧/ },
-  { kind: 'vulnerability', records: vulnerabilities, item: longest(vulnerabilities), card: '.vulnerability-card', detail: '.vulnerability-detail', query: 'ライブラリ・脆弱性を検索', tab: 'ライブラリの脆弱性', list: /^脆弱性一覧/ },
+  { kind: 'vulnerability', records: vulnerabilities, item: longest(vulnerabilities.filter(item => !item.withdrawnAt)), card: '.vulnerability-card', detail: '.vulnerability-detail', query: 'ライブラリ・脆弱性を検索', tab: 'ライブラリの脆弱性', list: /^脆弱性一覧/ },
 ];
 const drawer = page => page.locator('.drawer.open');
 const body = page => drawer(page).locator('.drawer-content');
@@ -46,12 +50,17 @@ async function prepare(page, label) {
 }
 async function ready(page, category) {
   await page.waitForFunction(({ selector, count }) => document.querySelectorAll(selector).length === count,
-    { selector: category.card, count: category.records.length });
+    { selector: category.card, count: category.kind === 'vulnerability' ? Math.min(50, category.records.filter(item => !item.withdrawnAt).length) : category.records.length });
+  if (category.kind === 'vulnerability') check('drawer fixture starts with all records searchable', Number(await page.locator('.vulnerability-list').getAttribute('data-total')) === category.records.length);
   await page.locator('.tile-host .tile').first().waitFor({ state: 'attached' });
   if (page.viewportSize().width <= 640) await page.getByRole('button', { name: category.list }).click();
   await settled(page);
 }
 async function openItem(page, category) {
+  if (category.kind === 'vulnerability' && await page.locator(`[data-advisory-id="${category.item.id}"]`).count() === 0) {
+    await page.getByRole('textbox', { name: category.query, exact: true }).fill(category.item.id);
+    await page.locator(`[data-advisory-id="${category.item.id}"]`).waitFor();
+  }
   const opener = page.locator(category.card).filter({ has: page.locator('.incident-card-title', { hasText: category.item.title }) }).first();
   await opener.scrollIntoViewIfNeeded();
   // A keyboard opener gives a defined focus target on both Chromium and Safari.
@@ -234,7 +243,17 @@ async function resizeAndHistory(browser, engine) {
     // A fresh selected route must replace an already open category modal cleanly.
     await page.goto(selectedIncidentUrl); await drawer(page).locator(incident.detail).waitFor();
     check(`${label}: navigating to an incident selection replaces the advisory modal`, await page.locator('dialog:modal').count() === 1 && await page.locator('.vulnerability-detail').count() === 0);
+    check(`${label}: selected incident navigation never consumes the outgoing advisory query`, await page.getByRole('textbox', { name: incident.query, exact: true }).inputValue() === incident.item.company
+      && (await drawer(page).innerText()).includes(incident.item.title)
+      && new URLSearchParams(new URL(page.url()).hash.slice(1)).get('sel') === new URLSearchParams(new URL(selectedIncidentUrl).hash.slice(1)).get('sel'));
     await page.goto(selectedVulnerabilityUrl); await drawer(page).locator(vulnerability.detail).waitFor();
+    for (const [destination, category] of [[selectedIncidentUrl, incident], [selectedVulnerabilityUrl, vulnerability]]) {
+      await page.evaluate(href => { location.hash = new URL(href).hash; }, destination);
+      await drawer(page).locator(category.detail).waitFor();
+      check(`${label}: fragment-only navigation restores ${category.kind} without cross-category state`, await page.getByRole('textbox', { name: category.query, exact: true }).inputValue() === (category.kind === 'incident' ? category.item.company : category.item.id)
+        && (await drawer(page).innerText()).includes(category.item.title)
+        && await page.locator('dialog:modal').count() === 1);
+    }
     await bounds(page, `${label} advisory route`);
     await close(page).click(); await closed(page);
     await page.getByRole('button', { name: incident.tab, exact: true }).click(); await ready(page, incident);

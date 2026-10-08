@@ -11,4 +11,4 @@ export const LINKS: Link[] = [];
 export const DATA_START = Math.min(Date.parse(META.windowStart), ...INCIDENTS.map(item => Date.parse(item.announcementDate))) - 14 * 86400000;
 export const DATA_END = Date.parse(META.windowEnd) + 14 * 86400000;
 
-export const DATASET = { threads: THREADS, events: EVENTS, links: LINKS, incidents: INCIDENTS, loadVulnerabilities: async () => (await import('./vulnerability-index')).VULNERABILITIES };
+export const DATASET = { threads: THREADS, events: EVENTS, links: LINKS, incidents: INCIDENTS, loadVulnerabilities: async () => (await import('./vulnerability-index')).loadFullVulnerabilities() };

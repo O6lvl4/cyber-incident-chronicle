@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState, type KeyboardEvent } from 'react';
 import type { DuckDBHandle } from '../../hooks/useDuckDB';
 import type { QueryResult } from '../../lib/duckdb';
+import Pagination from '../Pagination';
+import { paginate, SQL_PAGE_SIZE } from '../../lib/pagination';
 import { PRESETS } from '../../lib/presets';
 
 interface Props {
@@ -18,14 +20,18 @@ function cell(v: unknown): string {
 
 function ResultTable({ result, knownIds, onSelect }: { result: QueryResult; knownIds: Set<string>; onSelect: (id: string) => void }) {
   const idCol = result.columns.indexOf('id');
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [result]);
+  const slice = paginate(result.rows, page, SQL_PAGE_SIZE);
   return (
-    <div className="sql-result">
+    <div className="sql-result" data-total={result.rows.length}>
       <div className="sql-meta">{result.rows.length} 行 · {result.ms.toFixed(1)} ms</div>
+      <Pagination {...slice} total={result.rows.length} label="SQL結果" onChange={setPage}/>
       <div style={{ overflowX: 'auto' }}>
         <table>
           <thead><tr>{result.columns.map(c => <th key={c}>{c}</th>)}</tr></thead>
           <tbody>
-            {result.rows.map((row, i) => {
+            {slice.items.map((row, i) => {
               const id = idCol >= 0 ? String(row[idCol]) : '';
               const clickable = knownIds.has(id);
               return (
@@ -44,7 +50,7 @@ function ResultTable({ result, knownIds, onSelect }: { result: QueryResult; know
 
 function StatusLine({ db }: { db: DuckDBHandle }) {
   if (db.status === 'ready') return <span className="db-status ok">DuckDB-WASM ready · tables: incidents (事案), events (タイムライン表示), threads (影響の定義), vulnerabilities (ライブラリの脆弱性)</span>;
-  if (db.status === 'error') return <span className="db-status err">DuckDB の起動に失敗: {db.error}</span>;
+  if (db.status === 'error') return <div><span className="db-status err" role="alert">DuckDB の起動に失敗: {db.error}</span><button type="button" className="n-btn" onClick={db.retry} aria-label="SQLデータの読み込みを再試行">再試行</button></div>;
   return <span className="db-status">DuckDB-WASM を起動中…</span>;
 }
 

@@ -8,13 +8,16 @@ export interface DuckDBHandle {
   status: DbStatus;
   error: string | null;
   run: (sql: string) => Promise<QueryResult>;
+  retry: () => void;
 }
 
 /** Boots DuckDB-WASM once `enabled` becomes true (the SQL console is opened) and exposes a query runner. */
 export function useDuckDB(data: Dataset, enabled: boolean): DuckDBHandle {
   const [status, setStatus] = useState<DbStatus>('booting');
   const [error, setError] = useState<string | null>(null);
+  const [attempt, setAttempt] = useState(0);
   const dbRef = useRef<AsyncDuckDB | null>(null);
+  const retry = useCallback(() => { setError(null); setStatus('booting'); setAttempt(value => value + 1); }, []);
 
   useEffect(() => {
     if (!enabled) return;
@@ -23,7 +26,7 @@ export function useDuckDB(data: Dataset, enabled: boolean): DuckDBHandle {
       .then(db => { if (alive) { dbRef.current = db; setStatus('ready'); } })
       .catch((e: unknown) => { if (alive) { setError(String(e)); setStatus('error'); } });
     return () => { alive = false; };
-  }, [data, enabled]);
+  }, [data, enabled, attempt]);
 
   const run = useCallback(async (sql: string) => {
     const db = dbRef.current;
@@ -31,5 +34,5 @@ export function useDuckDB(data: Dataset, enabled: boolean): DuckDBHandle {
     return runQuery(db, sql);
   }, []);
 
-  return { status, error, run };
+  return { status, error, run, retry };
 }

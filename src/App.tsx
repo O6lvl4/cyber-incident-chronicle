@@ -1,12 +1,13 @@
 import { matchesClassification } from './lib/classification';
 import ClassificationSummary from './components/ClassificationSummary';
-import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Component, lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DATA_END, DATA_START, EVENTS, INCIDENTS, LANES, LINKS, META, THREADS, DATASET } from './data';
 import { useAppState } from './hooks/useAppState';
 import { useKeyboardNav } from './hooks/useKeyboardNav';
 import { useDuckDB } from './hooks/useDuckDB';
 import { themeFor } from './lib/palette';
-import { readUrl, writeUrl } from './lib/urlState';
+import { readUrl } from './lib/urlState';
+import { createUrlNavigation } from './lib/urlNavigation';
 import { filterIncidents } from './lib/incidents';
 import { perf } from './lib/perf';
 import Board, { type BoardApi } from './board/Board';
@@ -17,12 +18,20 @@ import IncidentList from './components/IncidentList';
 import Minimap from './components/Minimap';
 import PerfHud from './components/PerfHud';
 const VulnerabilityView = lazy(() => import('./components/VulnerabilityView'));
-import type { Category, CategoryProps } from './components/CategoryNav';
+import CategoryNav, { type Category, type CategoryProps, type CategoryRouteProps } from './components/CategoryNav';
+class AdvisoryLoadBoundary extends Component<CategoryProps & { children: React.ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return <div className="app"><CategoryNav category={this.props.category} onCategoryChange={this.props.onCategoryChange}/><p role="alert">脆弱性データを読み込めませんでした。接続を確認して再読み込みしてください。</p><button className="n-btn" onClick={() => location.reload()}>再読み込み</button></div>;
+  }
+}
 const THREAD_IDS = THREADS.map(t => t.id);
 const LANE_IDS = LANES.map(t => t.id);
 
-function IncidentApp(props: CategoryProps) {
-  const st = useAppState({ events: EVENTS, threadIds: THREAD_IDS });
+function IncidentApp(props: CategoryRouteProps) {
+  const st = useAppState({ events: EVENTS, threadIds: THREAD_IDS, initialUrl: props.initialUrl });
   const board = useRef<BoardApi>(null);
   const eventsById = useMemo(() => new Map(EVENTS.map(e => [e.id, e])), []);
   const visible = useMemo(() => filterIncidents(INCIDENTS, st.activeIds, st.status, st.query).filter(item => matchesClassification(item, st.classification)), [st.activeIds, st.status, st.query, st.classification]);
@@ -49,9 +58,9 @@ function IncidentApp(props: CategoryProps) {
     step: delta => { const sorted = [...visible].reverse(); const index = sorted.findIndex(i => i.id === selectedIncidentId); const next = sorted[Math.max(0, Math.min(sorted.length - 1, index + delta))]; if (next) selectIncident(next.id); },
   });
   useEffect(() => {
-    writeUrl({ level: st.view?.level ?? st.initial?.level, center: st.view ? (st.view.start + st.view.end) / 2 : st.initial?.center, sel: st.selectedId ?? undefined,
+    props.onUrlChange({ level: st.view?.level ?? st.initial?.level, center: st.view ? (st.view.start + st.view.end) / 2 : st.initial?.center, sel: st.selectedId ?? undefined,
       lanes: st.activeIds, dark: st.dark, query: st.query, status: st.status, classification: st.classification });
-  }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status, st.classification]);
+  }, [st.view, st.selectedId, st.activeIds, st.dark, st.query, st.status, st.classification, props.onUrlChange]);
   const showResults = useCallback(() => {
     const id = window.matchMedia('(max-width: 640px)').matches && st.mobileView === 'timeline' ? 'incident-timeline-results' : 'incident-results-heading';
     requestAnimationFrame(() => {
@@ -87,23 +96,26 @@ function IncidentApp(props: CategoryProps) {
 
 /** Category navigation gets history entries; filters continue to replace the current view. */
 export default function App() {
-  const [route, setRoute] = useState(() => ({ category: readUrl().kind ?? 'incident', revision: 0 }));
+  const [navigation] = useState(createUrlNavigation);
+  const [route, setRoute] = useState(navigation.initial);
+  const category = route.initialUrl.kind ?? 'incident';
   useEffect(() => {
-    const restore = () => setRoute(previous => ({ category: readUrl().kind ?? 'incident', revision: previous.revision + 1 }));
+    const restore = () => setRoute(navigation.restore());
     window.addEventListener('popstate', restore);
-    return () => { window.removeEventListener('popstate', restore); };
-  }, []);
-  const changeCategory = (category: Category) => {
-    if (category === route.category) return;
+    window.addEventListener('hashchange', restore);
+    return () => { window.removeEventListener('popstate', restore); window.removeEventListener('hashchange', restore); };
+  }, [navigation]);
+  const changeCategory = (nextCategory: Category) => {
+    if (nextCategory === category) return;
     const p = new URLSearchParams();
-    if (category === 'vulnerability') p.set('kind', category);
+    if (nextCategory === 'vulnerability') p.set('kind', nextCategory);
     const dark = readUrl().dark;
     if (dark !== undefined) p.set('theme', dark ? 'dark' : 'light');
     history.pushState(null, '', `#${p.toString()}`);
-    setRoute(previous => ({ category, revision: previous.revision + 1 }));
+    setRoute(navigation.restore());
   };
-  const props = { category: route.category, onCategoryChange: changeCategory };
-  return route.category === 'vulnerability'
-    ? <Suspense fallback={<div className="app" role="status">ライブラリの記録を読み込み中…</div>}><VulnerabilityView key={route.revision} {...props}/></Suspense>
+  const props = { category, onCategoryChange: changeCategory, initialUrl: route.initialUrl, onUrlChange: route.onUrlChange };
+  return category === 'vulnerability'
+    ? <AdvisoryLoadBoundary key={route.revision} {...props}><Suspense fallback={<div className="app"><CategoryNav {...props}/><p role="status">ライブラリの全記録を読み込み中…</p></div>}><VulnerabilityView {...props}/></Suspense></AdvisoryLoadBoundary>
     : <IncidentApp key={route.revision} {...props}/>;
 }
