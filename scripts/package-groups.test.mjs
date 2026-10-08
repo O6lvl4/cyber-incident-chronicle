@@ -163,6 +163,7 @@ test('package cards use compact summaries and never imply a package-level fix st
   for (const component of ['PackageList', 'PackageAdvisoryList']) {
     const source = readFileSync(new URL(`../src/components/${component}.tsx`, import.meta.url), 'utf8');
     assert.doesNotMatch(source, /loadVulnerability|loadFullVulnerabilities|fixLabel|fixStatus|vulnerability-index/);
-    assert.match(source, /paginate\([^\n]+ADVISORY_PAGE_SIZE\)/);
+    assert.match(source, /<VirtualRecordList/);
+    assert.doesNotMatch(source, /<Pagination|paginate\(/);
   }
 });

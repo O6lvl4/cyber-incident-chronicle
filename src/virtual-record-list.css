@@ -1,0 +1,35 @@
+.virtual-record-list {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-anchor: none;
+  scroll-behavior: auto;
+}
+.virtual-record-list-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.virtual-record-list-items {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow-anchor: none;
+}
+.virtual-record-list-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 0;
+  display: flow-root;
+  overflow-anchor: none;
+}
+/* Rows grow with long titles, identifiers, narrower windows, and browser zoom. */
+.research-list .virtual-record-list .incident-card > .incident-card-title {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  overflow-wrap: anywhere;
+}
