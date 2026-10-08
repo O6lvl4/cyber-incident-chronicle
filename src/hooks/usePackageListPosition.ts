@@ -1,42 +1,68 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useRef, type FocusEvent } from 'react';
+import type { VirtualRecordListHandle, VirtualRecordListPosition } from '../components/VirtualRecordList';
 
-interface Position { top?: number; focusKey?: string }
+interface Position { anchor?: VirtualRecordListPosition; focusKey?: string }
 const positions = new Map<string, Position>();
 
-/** A direct package link has no opener DOM, but Back still has a useful focus target. */
-export function rememberPackageReturn(listKey: string, focusKey: string) {
-  const scroll = document.querySelector<HTMLElement>('[data-package-scroll="packages"]');
-  positions.set(listKey, { top: scroll?.scrollTop ?? positions.get(listKey)?.top, focusKey });
+function remember(listKey: string, position: Position) {
+  positions.delete(listKey);
+  positions.set(listKey, position);
+  if (positions.size > 80) positions.delete(positions.keys().next().value!);
 }
 
-/** Route remounts preserve the package page's scroll and the package that opened it. */
-export function usePackageListPosition(listKey: string, active: boolean, hasSelection: boolean) {
+/** An explicit new drill-in starts at the first advisory. History restores keep their anchor. */
+export function resetPackageListPosition(listKey: string) {
+  positions.delete(listKey);
+}
+
+/** Preserve the exact package coordinate, including for links without an opener DOM. */
+export function rememberPackageReturn(listKey: string, focusKey: string) {
+  remember(listKey, { ...positions.get(listKey), focusKey });
+}
+
+interface Options {
+  active: boolean;
+  restorePosition: boolean;
+  hasSelection?: boolean;
+  headingId: string;
+  hasKey: (key: string) => boolean;
+}
+
+/** The anchor survives route remounts and width changes without depending on old pixels. */
+export function usePackageListPosition(listKey: string, { active, restorePosition, hasSelection, headingId, hasKey }: Options) {
+  const list = useRef<VirtualRecordListHandle>(null);
+  const initial = useRef(restorePosition ? positions.get(listKey) : undefined);
+  const focusRestored = useRef(false);
+  const onPositionChange = useCallback((anchor: VirtualRecordListPosition) => {
+    if (!active || !list.current?.element?.isConnected) return;
+    remember(listKey, { ...positions.get(listKey), anchor });
+  }, [listKey, active]);
+  const onFocusCapture = useCallback((event: FocusEvent<HTMLDivElement>) => {
+    const row = (event.target as HTMLElement).closest<HTMLElement>('[data-virtual-key]');
+    if (row?.dataset.virtualKey) remember(listKey, { ...positions.get(listKey), focusKey: row.dataset.virtualKey });
+  }, [listKey]);
   useEffect(() => {
-    if (!active) return;
-    const scroll = document.querySelector<HTMLElement>('[data-package-scroll="packages"]');
-    if (!scroll) return;
-    const position = positions.get(listKey);
-    let restored = false;
+    if (hasSelection) { focusRestored.current = true; return; }
+    if (!active || !restorePosition || focusRestored.current) return;
     const frame = requestAnimationFrame(() => {
-      restored = true;
-      if (!position || !scroll.isConnected) return;
-      if (position.top !== undefined) scroll.scrollTop = position.top;
-      if (hasSelection || (document.activeElement instanceof HTMLElement && document.activeElement !== document.body)) return;
-      const opener = [...scroll.querySelectorAll<HTMLElement>('[data-package-key]')].find(item => item.dataset.packageKey === position.focusKey);
-      const target = opener ?? document.getElementById('package-results-heading');
-      target?.focus({ preventScroll: true });
-      if (position.top === undefined) opener?.scrollIntoView({ block: 'nearest' });
+      if (!list.current?.element?.isConnected) return;
+      focusRestored.current = true;
+      const focused = document.activeElement;
+      if (focused instanceof HTMLElement && focused !== document.body) return;
+      const focusKey = initial.current?.focusKey;
+      if (focusKey && hasKey(focusKey)) {
+        const host = list.current.element;
+        const row = [...host.querySelectorAll<HTMLElement>('[data-virtual-key]')].find(item => item.dataset.virtualKey === focusKey);
+        const opener = row?.querySelector<HTMLElement>('button, a[href], [tabindex]');
+        const bounds = host.getBoundingClientRect();
+        const rowBounds = row?.getBoundingClientRect();
+        // Keep an already visible opener at its saved offset, even if the row is
+        // only partially visible. Direct links still bring an absent row in.
+        if (opener && rowBounds && rowBounds.bottom > bounds.top && rowBounds.top < bounds.bottom) opener.focus({ preventScroll: true });
+        else list.current.scrollToKey(focusKey, { align: 'auto', focus: true });
+      } else document.getElementById(headingId)?.focus({ preventScroll: true });
     });
-    const remember = () => {
-      // StrictMode's first cleanup runs before restoration and must not replace
-      // an earlier route's saved offset with this new DOM node's initial zero.
-      if (!restored) return;
-      const focused = document.activeElement instanceof HTMLElement ? document.activeElement.closest<HTMLElement>('[data-package-key]') : null;
-      positions.set(listKey, { top: scroll.scrollTop, focusKey: focused?.dataset.packageKey ?? positions.get(listKey)?.focusKey });
-      if (positions.size > 40) positions.delete(positions.keys().next().value!);
-    };
-    scroll.addEventListener('scroll', remember);
-    scroll.addEventListener('focusin', remember);
-    return () => { cancelAnimationFrame(frame); remember(); scroll.removeEventListener('scroll', remember); scroll.removeEventListener('focusin', remember); };
-  }, [listKey, active, hasSelection]);
+    return () => cancelAnimationFrame(frame);
+  }, [active, hasSelection, restorePosition, headingId, hasKey]);
+  return { list, initialPosition: initial.current?.anchor, onPositionChange, onFocusCapture };
 }

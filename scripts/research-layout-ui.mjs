@@ -56,11 +56,8 @@ async function listLayout(page, label, defaultList) {
     const innerLeft = scrollBox.left + scroll.clientLeft;
     const innerRight = innerLeft + scroll.clientWidth;
     const complete = rows.filter(row => row.top >= top - 1 && row.bottom <= bottom + 1);
-    const pagination = list.querySelector('.result-pagination');
-    const pageBox = pagination ? box(pagination) : null;
-    const pageControls = pagination ? [...pagination.querySelectorAll('.page-range, button, select')].map(box) : [];
-    const overlap = pageControls.some((a, index) => pageControls.slice(index + 1).some(b =>
-      Math.min(a.right, b.right) - Math.max(a.left, b.left) > 1 && Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 1));
+    const listBox = box(list);
+    const visibleRows = rows.filter(row => row.bottom > top && row.top < bottom);
     return {
       viewport: { width: innerWidth, height: innerHeight },
       first: rows[0], completeRecords: complete.length, renderedRecords: rows.length,
@@ -71,10 +68,9 @@ async function listLayout(page, label, defaultList) {
       rowTargets: rows.every(row => row.height >= 44 && row.width >= 44),
       horizontalOverflow: [document.documentElement, document.querySelector('.app'), list, scroll]
         .some(node => node.scrollWidth > node.clientWidth + 1),
-      pagination: pageBox,
-      paginationSeparated: !pageBox || scrollBox.bottom <= pageBox.top + 1,
-      paginationInViewport: !pageBox || pageBox.top >= 0 && pageBox.bottom <= innerHeight + 1 && pageBox.left >= 0 && pageBox.right <= innerWidth + 1,
-      paginationControlsOverlap: overlap,
+      pagerCount: list.querySelectorAll('.result-pagination').length,
+      reachesListBottom: Math.abs(scrollBox.bottom - listBox.bottom) <= 2,
+      recordsReachFormerPagerSpace: visibleRows.some(row => row.bottom > bottom - 54),
       listOnly: !document.querySelector('.board, .tile-host .tile'),
     };
   });
@@ -84,8 +80,9 @@ async function listLayout(page, label, defaultList) {
   check(`${label}: records stack as a single list rather than a card grid`, actual.sequentialRows, actual);
   check(`${label}: entire records are usable touch targets`, actual.rowTargets, actual.first);
   check(`${label}: at least one full record is visible without scrolling`, actual.completeRecords >= 1 && Object.values(actual.scrollOffsets).every(value => value === 0), actual);
-  check(`${label}: pagination does not overlap the list or its own controls`, actual.paginationSeparated && !actual.paginationControlsOverlap, actual);
-  check(`${label}: pagination is inside the viewport`, actual.paginationInViewport, actual.pagination);
+  check(`${label}: continuous research lists have no pager`, actual.pagerCount === 0, actual);
+  check(`${label}: list scrolling reaches the full available bottom edge`, actual.reachesListBottom, actual);
+  if (defaultList) check(`${label}: additional records use the former pager area`, actual.recordsReachFormerPagerSpace, actual);
   check(`${label}: list browsing does not mount timeline canvases`, actual.listOnly);
   if (defaultList && actual.viewport.width >= 1180) {
     const required = actual.viewport.width === 1180 ? 5 : 7;
@@ -96,7 +93,7 @@ async function listLayout(page, label, defaultList) {
 }
 
 async function controls(page, label) {
-  const actual = await page.locator('.app-header button, .app-header input, .app-header select, .research-list .view-tabs button, .research-list .package-back, .result-pagination button, .result-pagination select').evaluateAll(nodes => nodes.flatMap(node => {
+  const actual = await page.locator('.app-header button, .app-header input, .app-header select, .research-list .view-tabs button, .research-list .package-back').evaluateAll(nodes => nodes.flatMap(node => {
     const rect = node.getBoundingClientRect();
     if (!rect.width || !rect.height || getComputedStyle(node).visibility === 'hidden') return [];
     const target = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
