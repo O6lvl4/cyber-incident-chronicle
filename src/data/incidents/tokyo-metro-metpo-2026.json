@@ -1,0 +1,76 @@
+{
+  "id": "tokyo-metro-metpo-2026",
+  "company": "東京地下鉄（東京メトロ）",
+  "title": "メトポの配信停止済みメールアドレス約5.9万件に閲覧・取得のおそれ",
+  "announcementDate": "2026-09-27",
+  "announcementDateLabel": "公表",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセス開始日非公表（2026-09-25に異常な利用記録を発見）",
+  "updatedDate": "2026-09-27",
+  "statusAsOfDate": "2026-09-27",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "メトポのメール配信関連サーバーへの不正アクセス。具体的な侵入手法は調査中",
+    "status": "unknown"
+  },
+  "summary": "9月20日のメール配信サービス不具合を調査し、25日に通常と異なる利用記録から不正アクセスを把握。送信不能により配信を停止したメールアドレス約5.9万件の一覧が閲覧または取得された可能性がある。被疑箇所を特定し、防御措置を実施した。",
+  "affectedData": [
+    "メール配信を停止した顧客のメールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 59000,
+      "unit": "件",
+      "status": "possible",
+      "label": "閲覧または取得された可能性があるメールアドレス",
+      "approximate": true
+    }
+  ],
+  "sources": [
+    {
+      "title": "メトポ会員向けサービスの不正アクセス（詳細）",
+      "url": "https://www.to-me-card.jp/important/202609-01/index.html",
+      "publishedDate": "2026-09-27"
+    },
+    {
+      "title": "東京地下鉄による事案公表",
+      "url": "https://www.tokyometro.jp/info/files/9172e2efa7222d15f8d4f601b6385457.pdf",
+      "publishedDate": "2026-09-27"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-20",
+      "label": "メール配信に不具合",
+      "kind": "occurrence",
+      "summary": "メール配信サービスの不具合を受け調査を開始",
+      "sourceUrl": "https://www.to-me-card.jp/important/202609-01/index.html"
+    },
+    {
+      "date": "2026-09-25",
+      "label": "異常記録から不正アクセス判明",
+      "kind": "update",
+      "summary": "通常と異なる利用記録を確認し、不正アクセスを把握",
+      "sourceUrl": "https://www.to-me-card.jp/important/202609-01/index.html"
+    },
+    {
+      "date": "2026-09-27",
+      "label": "対象範囲を公表",
+      "kind": "disclosure",
+      "summary": "配信停止済みアドレス約5.9万件に閲覧・取得のおそれと公表",
+      "sourceUrl": "https://www.to-me-card.jp/important/202609-01/index.html"
+    }
+  ],
+  "caveats": [
+    "約5.9万件はメールアドレス件数であり、全会員の情報や実人数ではない",
+    "当該サーバーにはメールアドレス以外の会員情報は含まれない。影響範囲の確認は継続中",
+    "9月20日は不具合の発生日であり、侵入開始日を意味しない"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09",
+  "detectedDate": "2026-09-25"
+}

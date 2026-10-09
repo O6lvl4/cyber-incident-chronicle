@@ -1,0 +1,85 @@
+{
+  "id": "seicomart-app-2026",
+  "company": "セイコーマート",
+  "title": "アプリ経由の不正アクセスで57万2,022人分の会員情報閲覧を確認",
+  "announcementDate": "2026-09-29",
+  "announcementDateLabel": "公表",
+  "occurredDate": "2026-09-24",
+  "occurredDateLabel": "2026-09-24 22～23時に1アカウントの不正退会（全侵入期間は未公表）",
+  "updatedDate": "2026-09-30",
+  "statusAsOfDate": "2026-09-30",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "アプリサーバー経由の会員情報サーバーへの不正アクセス。詳細手法は非公表",
+    "status": "unknown"
+  },
+  "summary": "1アカウントの不正退会を端緒に9月28日にサーバーへの不正アクセスの可能性を把握し、接続を停止。9月30日の第三報で、過去にアプリへ登録した会員57万2,022人分の情報が閲覧されたと確認した。新規入会・情報変更等のアプリやWeb機能と公式通販を一時停止している。",
+  "affectedData": [
+    "姓名、性別、生年月日、住所、電話番号、メールアドレス、クラブカード入会・退会年月日"
+  ],
+  "counts": [
+    {
+      "value": 572022,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "第三報で不正閲覧を確認した会員情報",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "アプリへの不正アクセス（第一報）",
+      "url": "https://online.seicomart.co.jp/delivery/cms/preview.php?disp_flg=pc&pre_no=119",
+      "publishedDate": "2026-09-29"
+    },
+    {
+      "title": "アプリへの不正アクセス（第三報）",
+      "url": "https://online.seicomart.co.jp/delivery/cms/preview.php?disp_flg=pc&pre_no=121",
+      "publishedDate": "2026-09-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-24",
+      "label": "1アカウントの不正退会",
+      "kind": "occurrence",
+      "summary": "22～23時にクラブカードの退会が不正処理された",
+      "sourceUrl": "https://online.seicomart.co.jp/delivery/cms/preview.php?disp_flg=pc&pre_no=119"
+    },
+    {
+      "date": "2026-09-28",
+      "label": "サーバーへのアクセスを停止",
+      "kind": "update",
+      "summary": "17時過ぎに不正アクセスの可能性を把握し、20時に接続停止",
+      "sourceUrl": "https://online.seicomart.co.jp/delivery/cms/preview.php?disp_flg=pc&pre_no=119"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "約57万アカウントに漏えいの可能性と公表",
+      "sourceUrl": "https://online.seicomart.co.jp/delivery/cms/preview.php?disp_flg=pc&pre_no=119"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "不正閲覧の人数を確定",
+      "kind": "update",
+      "summary": "572,022人分の閲覧を確認したと公表",
+      "sourceUrl": "https://online.seicomart.co.jp/delivery/cms/preview.php?disp_flg=pc&pre_no=121"
+    }
+  ],
+  "caveats": [
+    "初報の約57万アカウントと第三報の572,022人を別の被害として加算しない",
+    "確認済みなのは第三者による閲覧。全データの外部持ち出しまで確認したとの表現に拡張しない",
+    "パスワード漏えいはなく、クレジットカード情報は保有しない。アプリ未登録会員は対象外",
+    "店舗や電子マネーの利用・チャージなどは利用可能と説明"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09",
+  "detectedDate": "2026-09-28"
+}

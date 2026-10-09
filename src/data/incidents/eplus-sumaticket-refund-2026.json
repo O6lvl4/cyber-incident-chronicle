@@ -1,0 +1,93 @@
+{
+  "id": "eplus-sumaticket-refund-2026",
+  "company": "イープラス",
+  "title": "スマチケ払戻し管理システムから1,463件の個人情報漏えい",
+  "announcementDate": "2026-09-29",
+  "announcementDateLabel": "公表",
+  "occurredDate": "2026-09-11",
+  "occurredDateLabel": "2026-09-11 19:58～09-12 02:44に不正アクセス",
+  "updatedDate": "2026-09-29",
+  "statusAsOfDate": "2026-09-29",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "払戻し情報管理システムへの不正アクセス。具体的な侵入手法は非公表",
+    "status": "unknown"
+  },
+  "summary": "電子チケット「スマチケ」の払戻し情報を管理するシステムから個人情報1,463件が漏えい。9月14～15日に確認し、15日中に設定見直しと遮断を実施した。会員・購入情報のデータベースとは独立しており、カード情報やパスワードは漏えい対象に含まれない。",
+  "affectedData": [
+    "メールアドレス、カナ氏名、公演名・会場・開催日時",
+    "銀行振込対象では振込先口座情報",
+    "郵便振替払出証書対象では送付先住所・氏名"
+  ],
+  "counts": [
+    {
+      "value": 1463,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えいした払戻し情報の合計",
+      "approximate": false
+    },
+    {
+      "value": 751,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "合計の内数：銀行振込",
+      "approximate": false
+    },
+    {
+      "value": 644,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "合計の内数：クレジットカード返金（カード情報は対象外）",
+      "approximate": false
+    },
+    {
+      "value": 68,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "合計の内数：郵便振替払出証書",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "スマチケ払戻し管理システムへの不正アクセス・漏えい公表",
+      "url": "https://support-qa.eplus.jp/hc/ja/articles/62711500727961-%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AE%E7%99%BA-%E3%81%8A%E3%82%88%E3%81%B3%E5%80%8B-%E6%83%85%E5%A0%B1-%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B",
+      "publishedDate": "2026-09-29"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-11",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "翌12日まで複数回の不正アクセス",
+      "sourceUrl": "https://support-qa.eplus.jp/hc/ja/articles/62711500727961-%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AE%E7%99%BA-%E3%81%8A%E3%82%88%E3%81%B3%E5%80%8B-%E6%83%85%E5%A0%B1-%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B"
+    },
+    {
+      "date": "2026-09-15",
+      "label": "侵入・漏えい確認と遮断",
+      "kind": "update",
+      "summary": "14～15日に確認し、15日中に設定見直しと遮断を実施",
+      "sourceUrl": "https://support-qa.eplus.jp/hc/ja/articles/62711500727961-%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AE%E7%99%BA-%E3%81%8A%E3%82%88%E3%81%B3%E5%80%8B-%E6%83%85%E5%A0%B1-%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "1,463件の漏えいを公表",
+      "kind": "disclosure",
+      "summary": "対象者へ順次個別通知",
+      "sourceUrl": "https://support-qa.eplus.jp/hc/ja/articles/62711500727961-%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AE%E7%99%BA-%E3%81%8A%E3%82%88%E3%81%B3%E5%80%8B-%E6%83%85%E5%A0%B1-%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B"
+    }
+  ],
+  "caveats": [
+    "2022-06-30～2026-09-11にスマチケから払戻し申請をした利用者の一部が対象であり、全会員数ではない",
+    "件数を実人数と扱わず、返金方法別内数と合計を重複加算しない",
+    "紙チケット等の払戻し利用者は対象外"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09"
+}

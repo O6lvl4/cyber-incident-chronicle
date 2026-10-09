@@ -1,0 +1,65 @@
+{
+  "id": "nimoca-history-2026",
+  "company": "ニモカ",
+  "title": "利用履歴照会サービスへの攻撃で521件の情報漏えい",
+  "announcementDate": "2026-10-06",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-04",
+  "occurredDateLabel": "公表された攻撃発生日（0時頃〜17時40分）",
+  "updatedDate": "2026-10-06",
+  "statusAsOfDate": "2026-10-06",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "利用履歴照会サービスが10月4日に攻撃され、カード番号・生年月日・登録メールアドレス521件の漏えいを確認。同日9時頃の利用者からの問い合わせで調査を開始し、17時40分に照会サービスを停止した。",
+  "affectedData": [
+    "nimocaカード番号、生年月日、登録メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 521,
+      "unit": "件",
+      "label": "漏えいした情報",
+      "status": "confirmed",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "氏名、住所、電話番号、性別、利用履歴の漏えいは確認されていない",
+    "nimocaカード自体は通常利用可能であり、決済・交通利用の停止とは異なる",
+    "一部利用者が受信したメールは本サービスの自動送信であり、第三者から送信されたメールではない",
+    "具体的な脆弱性や認証回避手法は未公表"
+  ],
+  "geography": "日本国内の対象システム・利用者",
+  "sources": [
+    {
+      "title": "ニモカ：利用履歴照会サービスへの不正アクセスによる情報漏えい",
+      "url": "https://www.nimoca.jp/storage/files/information/107/20261006.pdf",
+      "publishedDate": "2026-10-06"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-04",
+      "label": "不正アクセス・サービス停止",
+      "summary": "0時頃から17時40分。9時頃の問い合わせ後に調査しサービス停止",
+      "sourceUrl": "https://www.nimoca.jp/storage/files/information/107/20261006.pdf",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "漏えい公表",
+      "summary": "521件の対象情報と停止状況を公表",
+      "sourceUrl": "https://www.nimoca.jp/storage/files/information/107/20261006.pdf",
+      "kind": "disclosure"
+    }
+  ]
+}
