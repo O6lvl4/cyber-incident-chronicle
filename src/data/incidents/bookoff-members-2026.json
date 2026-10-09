@@ -1,0 +1,80 @@
+{
+  "id": "bookoff-members-2026",
+  "company": "ブックオフグループ（子会社）",
+  "title": "子会社の会員管理システムから情報流出、最大約643万会員番号に影響のおそれ",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入日は非公表（2026-10-06に不正アクセスを確認）",
+  "updatedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "会員管理システムへの第三者の不正アクセス。脆弱性是正を公表したが具体的侵入手法は非公表",
+    "status": "unknown"
+  },
+  "summary": "子会社の会員管理システムからの会員情報流出を確認。影響のおそれがある最大約643万件は会員番号ベースで、実人数や確認済み流出件数ではない。対象範囲を調査中。",
+  "affectedData": [
+    "氏名、生年月日、性別",
+    "メールアドレス、電話番号、郵便番号・住所",
+    "パスワードのハッシュ値",
+    "ポイントカード番号、会員番号"
+  ],
+  "counts": [
+    {
+      "value": 6430000,
+      "unit": "件",
+      "status": "possible",
+      "label": "流出した可能性がある会員番号（最大、実人数ではない）",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "情報流出そのものは確認済み。最大約643万件すべての流出確認を意味しない",
+    "最大約643万件は漏えいのおそれがある会員番号の件数。対象となる実人数は精査中",
+    "10月6日は不正アクセスを確認した日であり、侵入日を意味しない",
+    "公式公表は対象を子会社と記載し、法人名を特定していない。上場親会社と直接被害法人を区別する",
+    "クレジットカード等の決済情報は対象システムで保有せず対象外。10月9日時点で改ざん、外部公開、悪用は確認されていない",
+    "脆弱性是正・通信遮断・外部アクセス遮断は確認できるが、具体的初期侵入経路やサービス停止は断定しない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "不正アクセスによる個人情報漏えいに関するお詫びとお知らせ（公式IR）",
+      "url": "https://ssl4.eir-parts.net/doc/9278/tdnet/2893077/00.pdf",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "BOOKOFF公式のお知らせ",
+      "url": "https://www.bookoff.co.jp/info/news/2026/post_113.html",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "BOOKOFF公式掲載の告知画像",
+      "url": "https://www.bookoff.co.jp/info/20261009.png",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-06",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "子会社の会員管理システムへの不正アクセスを確認し、調査で外部取得が判明",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/9278/tdnet/2893077/00.pdf"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "会員情報流出を公表",
+      "kind": "disclosure",
+      "summary": "流出の事実と最大約643万会員番号の影響可能性を公表。判明済みの取得経路を封じ込め、詳細調査を継続",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/9278/tdnet/2893077/00.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "scaleLabel": "最大約643万会員番号・影響範囲を精査中"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "skyticket-bus-2026",
+  "company": "アドベンチャー（skyticket）",
+  "title": "認証不要のバス予約ページを機械的に閲覧、約1.2万予約に影響",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "事案詳細の公表",
+  "occurredDate": "2026-08-03",
+  "occurredDateLabel": "2026-08-03〜10-01に発生（10-01に発覚・修正）",
+  "updatedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "ログインせず表示できた予約完了ページを第三者が機械的に閲覧",
+    "status": "confirmed"
+  },
+  "summary": "バス予約完了ページに認証なしでアクセスでき、第三者による機械的な閲覧が発生。閲覧済みまたは閲覧のおそれのある対象は約12,000予約で、同行者を含む人数はこれを上回る。",
+  "affectedData": [
+    "予約者の氏名（カナ）、年齢、性別、生年月日（登録がある場合）",
+    "メールアドレス、電話番号、会員ID",
+    "利用端末の種類、支払方法・金額、予約日時",
+    "乗車日時・乗降地・運行会社・便名・運行会社の予約番号",
+    "同行者の氏名、年齢、性別"
+  ],
+  "counts": [
+    {
+      "value": 12000,
+      "unit": "件",
+      "status": "possible",
+      "label": "閲覧された、または閲覧されたおそれのある予約",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "公式が異なる経路の3事案と明記したうちのバス予約事案",
+    "約12,000件は予約件数であり人数ではない。同行者を含む人数はこれより多い",
+    "閲覧された情報と閲覧のおそれのある情報の内訳は非公表。3事案の件数を合計して実人数にしない",
+    "予約ページの認証不足は公表済みだが、設定誤りか実装上の脆弱性かは公表文から特定しない",
+    "カード情報と旅券画像は同社で保存せず、3事案とも流出なしと公表",
+    "10月9日は3事案の詳細公表日。10月8日には通知メールの真正性に関する先行案内がある"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "不正アクセスによるお客様情報の流出に関するお詫びとお知らせ",
+      "url": "https://skyticket.jp/news/maintenance/67603",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "アドベンチャー公式の同内容の公表",
+      "url": "https://jp.adventurekk.com/news/apology-notice-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "個人情報流出の通知メールが正式なものと案内",
+      "url": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-03",
+      "label": "予約情報への機械的な閲覧開始",
+      "kind": "occurrence",
+      "summary": "10月1日まで認証不要の予約完了ページへの閲覧が発生",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "事案を把握し修正",
+      "kind": "occurrence",
+      "summary": "予約完了ページがログインなしで表示される状態を修正",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "バス予約事案を公表",
+      "kind": "disclosure",
+      "summary": "約12,000予約と同行者情報への影響を公表",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "scaleLabel": "約12,000予約・閲覧／おそれ"
+}

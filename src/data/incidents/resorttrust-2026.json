@@ -1,0 +1,81 @@
+{
+  "id": "resorttrust-2026",
+  "company": "リゾートトラスト",
+  "title": "ウェブサイトへの不正アクセスで会員・ホテル予約者情報が流出",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "公表日",
+  "occurredDate": "2026-10-05",
+  "occurredDateLabel": "異常作動のあった日時（20時30分頃〜23時30分頃、認知は翌10月6日）",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "不正アクセス（具体的手法・初期侵入経路は未公表）",
+    "status": "unknown"
+  },
+  "summary": "管理するウェブサイトへの不正アクセスにより、グループ会員情報約2.6万件とザ・カハラホテル＆リゾート横浜の予約者情報約3.6万件の漏えいを確認。ホテル・施設は通常営業を継続している。",
+  "affectedData": [
+    "一部のリゾートトラストグループ会員情報（具体的な流出項目は未列挙）",
+    "ザ・カハラホテル＆リゾート横浜の予約者情報（具体的な流出項目は未列挙）"
+  ],
+  "counts": [
+    {
+      "value": 26000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "一部のグループ会員情報",
+      "approximate": true
+    },
+    {
+      "value": 36000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "ザ・カハラホテル＆リゾート横浜の予約者情報",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "会員情報約2.6万件／ホテル予約者情報約3.6万件（合算しない）",
+  "caveats": [
+    "2区分は件数として公表されており、重複の有無や対象者実人数は未公表。合算して人数としない",
+    "具体的な流出情報項目は公表資料に列挙されていないため推測しない",
+    "利用履歴・医療情報・クレジットカード情報・銀行口座情報・メールアドレス・本人確認書類等は対象システムに含まれない",
+    "ホテル・各施設への直接的な運営影響はなく、予約・滞在にも支障はないと公表",
+    "脆弱性改修は今後の対策として記載されるが、侵入経路・悪用された脆弱性の特定を意味しない"
+  ],
+  "sources": [
+    {
+      "title": "ウェブサイトへの不正アクセスで会員・ホテル予約者情報が流出",
+      "url": "https://www.resorttrust.co.jp/wp_api/wp-content/uploads/2026/10/20261009.pdf",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-05",
+      "label": "システムの異常作動",
+      "kind": "occurrence",
+      "summary": "20時30分頃〜23時30分頃に異常作動。翌6日に認知",
+      "sourceUrl": "https://www.resorttrust.co.jp/wp_api/wp-content/uploads/2026/10/20261009.pdf"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "情報漏えいを確認",
+      "kind": "occurrence",
+      "summary": "調査で漏えいを確認し、不正アクセスを遮断",
+      "sourceUrl": "https://www.resorttrust.co.jp/wp_api/wp-content/uploads/2026/10/20261009.pdf"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "情報流出を公表",
+      "kind": "disclosure",
+      "summary": "会員情報とホテル予約者情報の2区分、対象外の情報、通常営業を公表",
+      "sourceUrl": "https://www.resorttrust.co.jp/wp_api/wp-content/uploads/2026/10/20261009.pdf"
+    }
+  ],
+  "geography": "日本のリゾートトラスト管理ウェブサイトと横浜のホテル予約者情報"
+}

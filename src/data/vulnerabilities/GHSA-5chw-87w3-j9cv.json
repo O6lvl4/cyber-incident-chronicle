@@ -1,0 +1,106 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5chw-87w3-j9cv",
+  "aliases": [
+    "RUSTSEC-2026-0334"
+  ],
+  "title": "bip322：Bitcoinアドレス所有者の署名検証を回避",
+  "summary": "公開鍵と対象アドレスの対応を検証せず、攻撃者自身の鍵で作成した証明を別人のP2WPKH・P2SH-P2WPKHアドレスの証明として受理する。所有権確認に使うアプリで認証を回避できる。P2TRは対象外で、0.0.11で修正された。",
+  "publishedAt": "2026-08-14T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0334",
+  "modifiedAt": "2026-10-09T08:15:18.366782769Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-09T13:58:03.573990Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "bip322",
+      "ranges": [
+        {
+          "affected": ">= 0.0.6, < 0.0.11 (P2WPKH)",
+          "fixed": "0.0.11",
+          "sourceUrl": "https://github.com/rust-bitcoin/bip322/security/advisories/GHSA-5chw-87w3-j9cv"
+        },
+        {
+          "affected": ">= 0.0.7, < 0.0.11 (P2SH-P2WPKH)",
+          "fixed": "0.0.11",
+          "sourceUrl": "https://github.com/rust-bitcoin/bip322/security/advisories/GHSA-5chw-87w3-j9cv"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.6"
+            },
+            {
+              "fixed": "0.0.11"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/bip322"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/rust-bitcoin/bip322/security/advisories/GHSA-5chw-87w3-j9cv",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://github.com/rust-bitcoin/bip322/security/advisories/GHSA-5chw-87w3-j9cv"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV公式API：RUSTSEC-2026-0334（日時・別名・影響範囲）",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0334",
+      "publishedDate": "2026-08-14",
+      "publishedAt": "2026-08-14T12:00:00Z",
+      "modifiedAt": "2026-10-09T08:15:18.366782769Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec：BIP-322アドレス所有者検証の回避",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0334.html",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "type": "maintainer",
+      "title": "bip322開発元：GHSA-5chw-87w3-j9cv",
+      "url": "https://github.com/rust-bitcoin/bip322/security/advisories/GHSA-5chw-87w3-j9cv",
+      "publishedDate": "2026-08-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "bip322開発元：公開鍵とアドレスの対応検証を追加したコミット",
+      "url": "https://api.github.com/repos/rust-bitcoin/bip322/commits/e8accbe7d39f48f030e44f333b4796e28f6aad80",
+      "publishedDate": "2026-07-28"
+    }
+  ],
+  "caveats": [
+    "GitHub Reviewed固定スナップショットには別名一致せず、公式OSV・RustSecと実際に読んだ開発元資料に基づく追加記録。固定リポジトリ由来の全件収録数には含めない。",
+    "OSVのpublishedAtは2026-08-14T12:00:00Z。RustSecページはReported 2026-08-14とIssued 2026-10-09を区別し、開発元アドバイザリは2026-08-14公開と表示している。",
+    "パッケージ全体のOSV範囲は>=0.0.6,<0.0.11。開発元はP2WPKHを0.0.6以降、P2SH-P2WPKHを0.0.7以降と区別しており、表示用範囲にこの条件を保持した。P2TRの検証は影響しない。",
+    "Critical・CVSS 3.1 9.1とベクトルは開発元とRustSecの公表値であり、独自計算ではない。",
+    "実悪用は未確認。CISA KEV公式JSONは2026-10-09の取得でHTTP 403となったためKEVはunknownを維持した。未確認は未掲載や実悪用なしを意味しない。",
+    "修正版は本件の修正境界であり、現在の最新安全版を保証しない。",
+    "GitHub全体アドバイザリAPIは今回HTTP 404だった。理由やReviewed状態は推測せず、実際に取得した開発元アドバイザリとRustSecが明示する識別子を採用した。",
+    "OSV API確認日時：2026-10-09T13:55:11.336143Z。保存応答のSHA-256：4d05835392996e38489d860528ca92cf755faa6da58c3bd235766373e4fe67b3。"
+  ]
+}

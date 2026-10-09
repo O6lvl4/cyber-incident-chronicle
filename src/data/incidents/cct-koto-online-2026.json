@@ -1,0 +1,82 @@
+{
+  "id": "cct-koto-online-2026",
+  "company": "コアコンセプト・テクノロジー（Koto Online）",
+  "title": "会員機能の不具合でメールアドレス・一部パスワードが外部ツール等へ記録",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "公表日",
+  "occurredDate": "2023-03-31",
+  "occurredDateLabel": "公表された対象期間の開始日（2026年9月18日まで）",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "会員登録・ログイン機能の不具合による意図しない記録（非攻撃）",
+    "status": "notApplicable"
+  },
+  "summary": "Koto Onlineの会員登録・ログイン機能の不具合により、1,673名のメールアドレスと、そのうち20名のパスワードがサーバ記録・解析・広告等のツールに記録された。9月18日までに修正し、10月9日に停止機能の再開を案内した。",
+  "affectedData": [
+    "メールアドレス",
+    "上記の一部対象者のパスワード"
+  ],
+  "counts": [
+    {
+      "value": 1673,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "メールアドレスがサーバ・解析・広告等のツールに記録された対象者",
+      "approximate": false
+    },
+    {
+      "value": 20,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "1,673名の内数：パスワードも記録された対象者",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "メールアドレス1,673名／内数20名はパスワードも記録",
+  "caveats": [
+    "確認されたのは意図しない情報記録で、攻撃者による取得や不正アクセスを確認した発表ではない",
+    "外部事業者のサービスを含むツールへの記録を明記しているが、ツール別の件数は未公表",
+    "20名は1,673名の内数で、加算しない",
+    "氏名、会社名、部署、役職、電話番号、記事閲覧履歴等は記録対象外",
+    "9月18日までに修正済み。データ削除は順次対応中で、外部事業者への照会が必要な一部は未完了",
+    "該当20名のパスワードは無効化済み。10月9日は停止した会員機能を再開する旨の公表日で、全データ削除完了日ではない"
+  ],
+  "sources": [
+    {
+      "title": "会員機能の不具合でメールアドレス・一部パスワードが外部ツール等へ記録",
+      "url": "https://www.cct-inc.co.jp/koto-online/contents/information-20261009",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-03-31",
+      "label": "対象期間の開始",
+      "kind": "occurrence",
+      "summary": "会員登録・ログイン利用者の対象期間が開始",
+      "sourceUrl": "https://www.cct-inc.co.jp/koto-online/contents/information-20261009"
+    },
+    {
+      "date": "2026-09-18",
+      "label": "修正期限・対象期間終了",
+      "kind": "occurrence",
+      "summary": "この日までに不具合修正を完了したと公表",
+      "sourceUrl": "https://www.cct-inc.co.jp/koto-online/contents/information-20261009"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "情報記録と対応を公表",
+      "kind": "disclosure",
+      "summary": "対象人数・パスワード無効化・削除継続と、会員機能の同日再開を案内",
+      "sourceUrl": "https://www.cct-inc.co.jp/koto-online/contents/information-20261009"
+    }
+  ],
+  "geography": "日本のKoto Online会員機能と運営元・外部事業者の関連ツール"
+}
