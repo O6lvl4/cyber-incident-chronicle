@@ -1,0 +1,87 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6v25-8wq6-xq4j",
+  "aliases": [
+    "CVE-2026-107726"
+  ],
+  "title": "Hazelcastで低権限クライアントからクラスターメモリーへアクセスされる問題",
+  "summary": "低権限クライアントがクラスターメンバーのメモリーを読み取り、停止を引き起こすおそれがある。一部Enterprise構成ではメモリー破壊とコード実行の可能性もある。CommunityとEnterprise、slimとfullの双方が対象。",
+  "publishedAt": "2026-10-08T22:10:29Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/0ec11012960aad3e5fb0c8b5a3f1ad78be61f46c/advisories/github-reviewed/2026/10/GHSA-6v25-8wq6-xq4j/GHSA-6v25-8wq6-xq4j.json",
+  "modifiedAt": "2026-10-08T22:10:29Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-09T13:56:05Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "com.hazelcast:hazelcast",
+      "ranges": [
+        {
+          "affected": "= 5.6.0",
+          "fixed": "5.6.1（Enterprise）；5.7.0（Community）",
+          "sourceUrl": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-6v25-8wq6-xq4j"
+        },
+        {
+          "affected": ">= 5.5.0, < 5.5.10",
+          "fixed": "5.5.10（Enterprise）；5.7.0（Community）",
+          "sourceUrl": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-6v25-8wq6-xq4j"
+        },
+        {
+          "affected": "< 5.4.5",
+          "fixed": "5.4.5（Enterprise）；5.7.0（Community）",
+          "sourceUrl": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-6v25-8wq6-xq4j"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-6v25-8wq6-xq4j",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-6v25-8wq6-xq4j"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Hazelcastで低権限クライアントからクラスターメモリーへアクセスされる問題",
+      "url": "https://github.com/hazelcast/hazelcast/security/advisories/GHSA-6v25-8wq6-xq4j",
+      "publishedDate": "2026-08-04"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/0ec11012960aad3e5fb0c8b5a3f1ad78be61f46c/advisories/github-reviewed/2026/10/GHSA-6v25-8wq6-xq4j/GHSA-6v25-8wq6-xq4j.json",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T22:10:29Z",
+      "modifiedAt": "2026-10-08T22:10:29Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Hazelcast allows arbitrary member memory access by low-privileged client",
+      "url": "https://github.com/advisories/GHSA-6v25-8wq6-xq4j",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "caveats": [
+    "Enterpriseの修正は5.4.5、5.5.10、5.6.1、5.7.0。Community向けには5.7.0への更新を開発元が案内しており、Enterpriseの保守版をCommunityの修正版と誤認しない。",
+    "固定DBは複数系列の修正境界を5.7.0として記録する一方、開発元は系列別境界を示す。表示は開発元の範囲を採用し、原DBはprovenance.databaseAffectedに保持。",
+    "開発元の公表日は2026-08-04。タイムラインの公表・更新日時は固定GitHub Advisory Databaseの登録日時であり、初回公表日と区別する。",
+    "今回開発元資料を個別確認。実悪用とCISA KEVは未確認で、未確認は悪用なし・未掲載を意味しない。"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "coconala-skillmarket-2026",
+  "company": "ココナラ",
+  "title": "スキルマーケットへの不正アクセスで履歴書・職務経歴書関連書類が流出",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "公表日",
+  "occurredDate": "2026-10-08",
+  "occurredDateLabel": "初回検知日時は10月8日2時05分（初期侵入時刻は未公表）",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "不正アクセス（具体的手法・初期侵入経路は未公表）",
+    "status": "unknown"
+  },
+  "summary": "ココナラスキルマーケットで会員が登録した履歴書449件と職務経歴書関連書類1,845件の流出を確認。10月8日に複数回の不正アクセスを検知し、同日中に経路遮断と脆弱性修正を実施した。",
+  "affectedData": [
+    "会員が登録した履歴書",
+    "職務経歴書関連書類"
+  ],
+  "counts": [
+    {
+      "value": 449,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "流出した履歴書",
+      "approximate": false
+    },
+    {
+      "value": 1845,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "流出した職務経歴書関連書類",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "履歴書449件／職務経歴書関連書類1,845件（人数ではない）",
+  "caveats": [
+    "2区分は書類の件数であり、重複を除く会員数は未公表。人数として合算しない",
+    "クレジットカード情報・各種パスワード等は対象外と確認されている",
+    "エージェント事業など当該サイト以外のサービスへの影響はないと公表",
+    "不特定多数への公開・不正利用は10月9日時点で未確認。流出を否定する意味ではない",
+    "脆弱性の修正は公表されているが、具体的な悪用手法・初期侵入経路は断定しない"
+  ],
+  "sources": [
+    {
+      "title": "スキルマーケットへの不正アクセスで履歴書・職務経歴書関連書類が流出",
+      "url": "https://coconala.co.jp/news-20261009/",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-08",
+      "label": "不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "2時05分に検知・遮断し、13時頃再検知。15時頃に持ち出しの形跡を確認。15時44分に遮断し21時27分までに脆弱性修正",
+      "sourceUrl": "https://coconala.co.jp/news-20261009/"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "個人情報流出を公表",
+      "kind": "disclosure",
+      "summary": "履歴書と職務経歴書関連書類の流出、対策後のサービス提供継続を公表",
+      "sourceUrl": "https://coconala.co.jp/news-20261009/"
+    }
+  ],
+  "geography": "日本のココナラスキルマーケット"
+}

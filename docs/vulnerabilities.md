@@ -18,7 +18,7 @@
 
 ## 保存先・再現性
 
-- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認53件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalibの6件を含む計59件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
+- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認57件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalib・Go・bip322の22件を含む計79件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
 - `src/data/vulnerability-imported.json`: 固定ソース全件を変換・別名統合し、個別確認済み記録を重ねた表示用正本。上記の個別編集記録を追加連結して二重計上しない
 - `src/data/vulnerability-coverage.json`: 簡潔な公開カバレッジ・再実行コマンド・出力ハッシュ
 - `docs/data/vulnerability-import-audit.json`: ファイル単位の収録/除外/失敗監査。ブラウザーに全量を同梱しない
@@ -53,7 +53,7 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - `affected[]`: パッケージごとにecosystem/packageName、影響範囲とそれに対応する修正境界・出典を持つ。複数パッケージや複数系列を平坦化しない
 - `rawRanges`, `explicitVersions`, `packageUrl`: OSV原文のイベント、列挙版、purlを必要に応じてそのまま保持。版比較や安全版の推定はしない
 - OSVの `fixed` は除外境界、`last_affected` は含む境界。同じrange内で両者を混在させない。変換は導入・終了イベントが交互に並ぶ `ECOSYSTEM` / `SEMVER` の表示用投影に限定し、版比較や順序の推測は行わない。修正版不明はnullのままにする
-- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-09（JST）確認の表示データでは34,027 rangeが `ECOSYSTEM`、noyalibの個別確認1 rangeが `SEMVER`。`GIT` / `limit` は0件
+- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-09（JST）確認の表示データでは34,059 rangeが `ECOSYSTEM`、noyalib・Go・bip322の個別確認27 rangeが `SEMVER`。`GIT` / `limit` は0件
 - 個別編集との相違は、元DBの `provenance.databaseAffected` と相違理由も保持する
 
 修正版はその脆弱性に対応する最初の修正境界であり、後続の別脆弱性も含めた「現在の最新安全版」を保証しない。アプリはインストール済み版の脆弱性該当判定をしない。

@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c6rp-p8xm-4q9f",
+  "aliases": [
+    "CVE-2026-107399"
+  ],
+  "title": "Mechanizeのmeta refreshで認証ヘッダーが別オリジンへ送信される問題",
+  "summary": "meta refreshを有効にしている場合、request_headersで設定した認証ヘッダーが別オリジンの遷移先へ送信される。2.14.1で修正。",
+  "publishedAt": "2026-10-08T22:09:03Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/0ec11012960aad3e5fb0c8b5a3f1ad78be61f46c/advisories/github-reviewed/2026/10/GHSA-c6rp-p8xm-4q9f/GHSA-c6rp-p8xm-4q9f.json",
+  "modifiedAt": "2026-10-08T22:09:03Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-09T13:56:05Z",
+  "affected": [
+    {
+      "ecosystem": "rubygems",
+      "packageName": "mechanize",
+      "ranges": [
+        {
+          "affected": "< 2.14.1",
+          "fixed": "2.14.1",
+          "sourceUrl": "https://github.com/sparklemotion/mechanize/security/advisories/GHSA-c6rp-p8xm-4q9f"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/sparklemotion/mechanize/security/advisories/GHSA-c6rp-p8xm-4q9f",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.8,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N",
+        "sourceUrl": "https://github.com/sparklemotion/mechanize/security/advisories/GHSA-c6rp-p8xm-4q9f"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Mechanizeのmeta refreshで認証ヘッダーが別オリジンへ送信される問題",
+      "url": "https://github.com/sparklemotion/mechanize/security/advisories/GHSA-c6rp-p8xm-4q9f",
+      "publishedDate": "2026-08-23"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/0ec11012960aad3e5fb0c8b5a3f1ad78be61f46c/advisories/github-reviewed/2026/10/GHSA-c6rp-p8xm-4q9f/GHSA-c6rp-p8xm-4q9f.json",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T22:09:03Z",
+      "modifiedAt": "2026-10-08T22:09:03Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Mechanize sends credential headers to another origin after a meta refresh",
+      "url": "https://github.com/advisories/GHSA-c6rp-p8xm-4q9f",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "caveats": [
+    "follow_meta_refreshは既定でfalse。本件は有効化した構成で起こり、既定構成は影響を受けない。",
+    "HTTPリダイレクトのGHSA-2mwr-xjcg-37j7とは別のコード経路であり、同じIDに統合しない。",
+    "開発元の公表日は2026-08-23。タイムラインの公表・更新日時は固定GitHub Advisory Databaseの登録日時であり、初回公表日と区別する。",
+    "今回開発元資料を個別確認。実悪用とCISA KEVは未確認で、未確認は悪用なし・未掲載を意味しない。"
+  ]
+}

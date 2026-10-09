@@ -1,0 +1,115 @@
+{
+  "id": "skyticket-management-2026",
+  "company": "アドベンチャー（skyticket）",
+  "title": "業務管理システムの脆弱性悪用、返金口座情報等17,780件に流出・おそれ",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "事案詳細の公表",
+  "occurredDate": "2026-09-20",
+  "occurredDateLabel": "業務管理システムへの不正アクセス発生日（09-28に発覚）",
+  "updatedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "業務管理システムの脆弱性を悪用。製品名・CVEは非公表",
+    "status": "confirmed"
+  },
+  "summary": "業務管理システムへの不正アクセスで返金先口座などが流出または流出したおそれがある。対象17,780件は重複を含み、別に件数調査中の情報もある。",
+  "affectedData": [
+    "氏名、電話番号",
+    "返金口座の金融機関・支店名、種別、番号、名義",
+    "一部のメールアドレス・生年月日、住所",
+    "パスポート番号の流出有無は継続確認中"
+  ],
+  "counts": [
+    {
+      "value": 17780,
+      "unit": "件",
+      "status": "possible",
+      "label": "流出・流出のおそれのある対象（重複含む、ほかに件数調査中あり）",
+      "approximate": false
+    },
+    {
+      "value": 68,
+      "unit": "件",
+      "status": "possible",
+      "label": "メールアドレス・生年月日を含む対象（上記対象の一部）",
+      "approximate": false
+    },
+    {
+      "value": 18,
+      "unit": "件",
+      "status": "possible",
+      "label": "住所を含む対象（上記対象の一部）",
+      "approximate": false
+    },
+    {
+      "value": 1,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "9月9日に不正ログインが確認された会員（漏えい件数とは別指標）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "公式が異なる経路の3事案と明記したうちの業務管理システム事案",
+    "17,780件は確認済み流出数や実人数ではなく、流出とおそれが混在する件数。未集計の対象も残る",
+    "68件・18件は対象の一部であり、17,780件に加算しない。各内数や3事案間の重複は不明",
+    "9月9日の1名の不正ログインは公式が同項に併記した事実。9月20日より前であり、因果関係や追加の独立事案とは断定しない",
+    "パスポート番号の流出は確認されていないが、流出なしと確定していない。カード情報と旅券画像は3事案とも流出なしと公表",
+    "10月9日は3事案の詳細公表日。10月8日には通知メールの真正性に関する先行案内がある"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "不正アクセスによるお客様情報の流出に関するお詫びとお知らせ",
+      "url": "https://skyticket.jp/news/maintenance/67603",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "アドベンチャー公式の同内容の公表",
+      "url": "https://jp.adventurekk.com/news/apology-notice-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "個人情報流出の通知メールが正式なものと案内",
+      "url": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-09",
+      "label": "会員1名の不正ログインを確認",
+      "kind": "occurrence",
+      "summary": "公式資料が同項で併記。業務管理システム事案との因果関係は断定しない",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-09-20",
+      "label": "業務管理システムに不正アクセス",
+      "kind": "occurrence",
+      "summary": "システムの脆弱性を悪用された日",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-09-28",
+      "label": "業務管理システム事案が発覚",
+      "kind": "occurrence",
+      "summary": "不正アクセスを把握",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "影響範囲を公表",
+      "kind": "disclosure",
+      "summary": "重複を含む17,780件と未集計対象、口座情報などの流出・おそれを公表",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "scaleLabel": "17,780件（重複含む）・流出／おそれ"
+}

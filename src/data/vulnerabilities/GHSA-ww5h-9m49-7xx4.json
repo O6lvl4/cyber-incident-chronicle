@@ -1,0 +1,78 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-ww5h-9m49-7xx4",
+  "aliases": [
+    "CVE-2026-107722"
+  ],
+  "title": "fast-jwtの公開鍵形式判定に関する不完全な修正で署名アルゴリズム混同",
+  "summary": "公開鍵の先頭に空白以外の文字がある構成で、RSA公開鍵をHMAC共有鍵と誤認する。許可アルゴリズムを非対称方式に制限せず、該当形式の検証鍵を読み込む場合に署名検証を回避されるおそれ。6.3.0で修正。",
+  "publishedAt": "2026-10-08T22:02:07Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/0ec11012960aad3e5fb0c8b5a3f1ad78be61f46c/advisories/github-reviewed/2026/10/GHSA-ww5h-9m49-7xx4/GHSA-ww5h-9m49-7xx4.json",
+  "modifiedAt": "2026-10-08T22:02:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-09T13:56:05Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "fast-jwt",
+      "ranges": [
+        {
+          "affected": ">= 6.2.0, <= 6.2.4",
+          "fixed": "6.3.0",
+          "sourceUrl": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-ww5h-9m49-7xx4"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-ww5h-9m49-7xx4",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-ww5h-9m49-7xx4"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "fast-jwtの公開鍵形式判定に関する不完全な修正で署名アルゴリズム混同",
+      "url": "https://github.com/nearform/fast-jwt/security/advisories/GHSA-ww5h-9m49-7xx4",
+      "publishedDate": "2026-07-28"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/0ec11012960aad3e5fb0c8b5a3f1ad78be61f46c/advisories/github-reviewed/2026/10/GHSA-ww5h-9m49-7xx4/GHSA-ww5h-9m49-7xx4.json",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T22:02:07Z",
+      "modifiedAt": "2026-10-08T22:02:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "fast-jwt: Incomplete patch of CVE-2026-34950: Non-whitespace key-prefix re-enables RSA→HS256 algorithm confusion",
+      "url": "https://github.com/advisories/GHSA-ww5h-9m49-7xx4",
+      "publishedDate": "2026-10-08"
+    }
+  ],
+  "caveats": [
+    "影響は鍵の形式や許可アルゴリズム設定等の条件に依存する。PoC公開を実悪用の確認とは扱わない。",
+    "RS256等の非対称方式だけを許可する設定は本件を防ぐ。HS256だけを指定した許可リストでは防げず、単に許可リストを設定すれば安全という意味ではない。",
+    "開発元の影響範囲は>=6.2.0, <=6.2.4。固定DBの>=6.2.0, <6.3.0とは表記が異なり、開発元表記を優先して原DB範囲も保持する。",
+    "開発元の公表日は2026-07-28。タイムラインの公表・更新日時は固定GitHub Advisory Databaseの登録日時であり、初回公表日と区別する。",
+    "今回開発元資料を個別確認。実悪用とCISA KEVは未確認で、未確認は悪用なし・未掲載を意味しない。"
+  ]
+}

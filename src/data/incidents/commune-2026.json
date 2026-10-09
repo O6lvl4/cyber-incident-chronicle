@@ -1,0 +1,152 @@
+{
+  "id": "commune-2026",
+  "company": "コミューン（Sansan User Forum・LINEヤフーDS.LAB等）",
+  "title": "コミュニティ基盤への不正アクセスで会員情報流出、サービスを一時停止",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "公表日",
+  "occurredDate": "2026-10-05",
+  "occurredDateLabel": "公表された不正アクセス開始日時（10月5日18時頃、検知は10月6日）",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "システム不備の悪用、不正な招待リンク取得と管理者なりすまし",
+    "status": "confirmed"
+  },
+  "summary": "Commune／Commune for Workへの不正アクセスで会員情報約30.7万人分の流出を推計。システム不備を利用した会員登録・管理者なりすましが確認され、全コミュニティを一時停止。利用企業別の確認済み・可能性の内訳も同一事案に収録する。",
+  "affectedData": [
+    "会員のメールアドレス、表示名、自己紹介、非公開グループの所属等（コミュニティ・会員により異なる）",
+    "一部会員のパスワードを無断で仮パスワードに変更（パスワード漏えいとは別）",
+    "Sansan User Forumのプロフィール画像等",
+    "LINEヤフーDS.LABの氏名、カスタムプロフィール、ポイント、最終アクティブ日時等は閲覧・取得の可能性"
+  ],
+  "counts": [
+    {
+      "value": 307000,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "提供元が公表した流出会員数の推計（同一会員ID重複・攻撃者アカウントを除外）",
+      "approximate": true
+    },
+    {
+      "value": 126000,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "総数のうちメールアドレスを含む情報が流出した会員の推計",
+      "approximate": true
+    },
+    {
+      "value": 42000,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "メールアドレスを含む区分の内数：当社従業員・テスト用デモアカウントの公表合計",
+      "approximate": true
+    },
+    {
+      "value": 181000,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "総数のうちメールアドレスを含まない情報が流出した会員の推計",
+      "approximate": true
+    },
+    {
+      "value": 144,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "総数の内数：本人操作によらず仮パスワードへ変更された会員",
+      "approximate": false
+    },
+    {
+      "value": 1325,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "Sansan User Forumが公表した漏えい確認範囲（提供元総数へ加算しない）",
+      "approximate": false
+    },
+    {
+      "value": 8687,
+      "unit": "名",
+      "status": "possible",
+      "label": "Sansan User Forumが公表した漏えい可能性範囲（確認済み区分と合算しない）",
+      "approximate": false
+    },
+    {
+      "value": 1750,
+      "unit": "名",
+      "status": "possible",
+      "label": "LINEヤフーDS.LABが公表した閲覧・取得の可能性（提供元総数へ加算しない）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "提供元推計約30.7万人（内数・利用企業別公表を別記、加算しない）",
+  "caveats": [
+    "30.7万人は提供元が記録から算出した推計値。調査進展により変わり得る。公式は同一会員IDの重複と攻撃者アカウントを除外した数と説明",
+    "12.6万人・18.1万人は30.7万人の内訳。4.2万人は12.6万人の内数で、従業員とテスト用デモアカウントを含む公表値。一般顧客の実人数として扱わない",
+    "144名は仮パスワードへの無断変更を受けた内数で、パスワード漏えい人数ではない",
+    "Sansan・LINEヤフーの値は各社コミュニティの公表範囲。提供元の推計・確度と一律に置き換えず、総数に加算しない",
+    "Sansanの業務サービスおよびLINEヤフー自身のシステムの侵害を示す事案ではない。両社が利用する外部Commune基盤が対象",
+    "会員間ダイレクトメッセージとパスワードの漏えいは未確認。決済情報は保持していない",
+    "10月8日から希望するコミュニティを順次再開しており、全コミュニティの復旧完了を意味しない"
+  ],
+  "sources": [
+    {
+      "title": "コミューン：Commune／Commune for Workへの不正アクセスによる個人情報漏えい",
+      "url": "https://communeinc.com/ja/news/2026oct09",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "Sansan：Sansan User Forumの会員情報漏えい",
+      "url": "https://jp.corp-sansan.com/news/2026/1009.html",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "LINEヤフー：委託先Communeへの不正アクセスに伴う情報漏えい",
+      "url": "https://www.lycorp.co.jp/ja/privacy-security/announcement/020892/",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-05",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "18時頃から翌6日にかけて不正アクセス。会員情報の流出を確認",
+      "sourceUrl": "https://communeinc.com/ja/news/2026oct09"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "検知と全体停止",
+      "kind": "occurrence",
+      "summary": "不正アクセスを検知。21時頃から全コミュニティをメンテナンスモードに変更",
+      "sourceUrl": "https://communeinc.com/ja/news/2026oct09"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "残存経路の悪用を遮断",
+      "kind": "occurrence",
+      "summary": "メンテナンス中の経路から不正登録・閲覧が発生。14時58分に遮断",
+      "sourceUrl": "https://communeinc.com/ja/news/2026oct09"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "順次再開",
+      "kind": "occurrence",
+      "summary": "12時頃から希望するコミュニティを順次再開",
+      "sourceUrl": "https://communeinc.com/ja/news/2026oct09"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "提供元と利用企業が公表",
+      "kind": "disclosure",
+      "summary": "提供元の推計約30.7万人と、Sansan・LINEヤフー各社の対象範囲を公表",
+      "sourceUrl": "https://communeinc.com/ja/news/2026oct09"
+    }
+  ],
+  "geography": "日本のコミューンが提供するコミュニティ基盤（国内利用企業の公表を含む）"
+}

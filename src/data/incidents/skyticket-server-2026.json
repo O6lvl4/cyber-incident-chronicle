@@ -1,0 +1,119 @@
+{
+  "id": "skyticket-server-2026",
+  "company": "アドベンチャー（skyticket）",
+  "title": "サーバー・クラウドへの不正アクセスで顧客情報約1,464万件が流出",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "事案詳細の公表",
+  "occurredDate": "2026-10-02",
+  "occurredDateLabel": "2026-10-02〜10-04に発生（10-05に発覚）",
+  "updatedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "管理機能の不正操作を起点に他のサーバー・クラウドへアクセス。最初の侵入手法は非公表",
+    "status": "unknown"
+  },
+  "summary": "管理機能を悪用され、サーバーとクラウドに保管していた顧客情報が流出した。対象約1,464万件のうち、ハッシュ化パスワードを含むものは約413万件。",
+  "affectedData": [
+    "氏名（旅券表記を含む）、生年月日",
+    "メールアドレス、電話番号、郵便番号・住所",
+    "振込依頼人名義",
+    "会員ログインパスワードのハッシュ値"
+  ],
+  "counts": [
+    {
+      "value": 14640000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "流出した顧客情報",
+      "approximate": true
+    },
+    {
+      "value": 4130000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "ハッシュ化パスワードを含むもの（約1,464万件の内数）",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "公式が異なる経路の3事案と明記したうちのサーバー事案。業務管理システム・バス予約事案は別に収録",
+    "件数は人数ではない。約413万件は約1,464万件の内数であり加算しない。3事案間の対象重複は不明",
+    "この事案のパスポート番号は流出していないと確認。カード番号と旅券画像は同社で保存せず、3事案とも流出なしと公表",
+    "10月8日に通知メールの真正性について予告的公表あり。10月9日は3事案の詳細公表日",
+    "10月9日のメール障害は公表後の問い合わせ増加による共通の影響。特定の1事案への因果関係や新たな攻撃とは断定しない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "不正アクセスによるお客様情報の流出に関するお詫びとお知らせ",
+      "url": "https://skyticket.jp/news/maintenance/67603",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "アドベンチャー公式の同内容の公表",
+      "url": "https://jp.adventurekk.com/news/apology-notice-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "個人情報流出の通知メールが正式なものと案内",
+      "url": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "title": "お問い合わせ窓口の混雑およびメール送受信の遅延・障害について",
+      "url": "https://skyticket.jp/news/maintenance/67613",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "label": "不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "10月4日までサーバー・クラウド保管情報へのアクセスが発生",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-10-05",
+      "label": "サーバー事案を把握",
+      "kind": "occurrence",
+      "summary": "サーバーへの不正アクセスが発覚",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "保存カード決済などを停止",
+      "kind": "update",
+      "summary": "3事案に関する共通対策として、18時ごろに保存済みカード決済とカード保存機能を停止",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "対象者へのメール通知を開始",
+      "kind": "disclosure",
+      "summary": "19時ごろから順次通知し、通知メールの真正性と翌日以降の詳細公表予定を案内",
+      "sourceUrl": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "3事案の詳細を公表",
+      "kind": "disclosure",
+      "summary": "このサーバー事案の流出と件数・対象情報を公表",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67603"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "問い合わせ増加によるメール障害",
+      "kind": "update",
+      "summary": "3事案の公表後に問い合わせが増加し、メール送信の遅延・不能が発生。単一事案への帰属は非公表",
+      "sourceUrl": "https://skyticket.jp/news/maintenance/67613"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "scaleLabel": "約1,464万件流出／うちパスワード約413万件"
+}
