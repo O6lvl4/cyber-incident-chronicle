@@ -1,0 +1,138 @@
+{
+  "id": "scala-iask-2026",
+  "company": "スカラコミュニケーションズ（大和証券・シチズン時計・損保ジャパン等）",
+  "title": "FAQ管理サイト侵害で最大713,126件の問い合わせ情報漏えいのおそれ",
+  "announcementDate": "2026-10-05",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-02",
+  "occurredDateLabel": "公表された攻撃期間の開始（翌3日朝まで）",
+  "updatedDate": "2026-10-07",
+  "statusAsOfDate": "2026-10-07",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "管理サイトへの不正ログイン後に不正プログラムを設置",
+    "status": "confirmed"
+  },
+  "summary": "i-askの管理サイトへの不正ログイン後に不正プログラムが置かれ、同一サーバー上の最大5社の問い合わせ情報が取得された可能性。全体は最大713,126件の延べ問い合わせ記録であり、利用企業が公表した対象数はその範囲に関係する。",
+  "affectedData": [
+    "利用企業の問い合わせ情報：氏名、メールアドレス、問い合わせ内容等（項目は企業ごとに異なる）",
+    "大和証券：氏名、メールアドレス、口座番号等",
+    "シチズン時計：氏名、住所、電話番号、メールアドレス等。問い合わせ欄に記載した口座・カード情報を含む可能性",
+    "損保ジャパン：勤務先、ドライバーID、運転アラート、機器情報等"
+  ],
+  "counts": [
+    {
+      "value": 713126,
+      "unit": "件",
+      "label": "全体の最大延べ問い合わせ件数（同一人の複数問い合わせを含む）",
+      "status": "possible",
+      "approximate": false
+    },
+    {
+      "value": 110000,
+      "unit": "人",
+      "label": "関連する大和証券の対象顧客",
+      "status": "possible",
+      "approximate": true
+    },
+    {
+      "value": 220000,
+      "unit": "件",
+      "label": "大和証券の対象情報：個人特定情報のない問い合わせ等も含む",
+      "status": "possible",
+      "approximate": true
+    },
+    {
+      "value": 100000,
+      "unit": "人",
+      "label": "関連するシチズン時計の問い合わせ顧客",
+      "status": "possible",
+      "approximate": true
+    },
+    {
+      "value": 60000,
+      "unit": "件",
+      "label": "関連する損保ジャパンの延べ問い合わせ記録",
+      "status": "possible",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "最大713,126件は重複を含む問い合わせ件数であり、人数ではない。名寄せ中",
+    "利用企業の人数・件数は全体と関連する内訳で、全体に加算しない。単位が異なるため企業間でも横断合算しない",
+    "不正プログラムの設置は確認されたが、ランサムウェアとは公表されていない",
+    "攻撃対象は委託先サーバー。大和証券・シチズン・損保ジャパン自身のシステムへの不正アクセスは未確認",
+    "東武鉄道は自社情報の閲覧・取得の形跡を確認していないため、漏えい対象人数を置かず独立事案も作らない",
+    "タイトルに情報漏えいとあっても本文は可能性として公表しており、確認済み漏えいと断定しない"
+  ],
+  "geography": "日本国内の対象システム・利用者",
+  "sources": [
+    {
+      "title": "大和証券：外部委託先への不正アクセス",
+      "url": "https://ssl4.eir-parts.net/doc/8601/tdnet/2891437/00.pdf",
+      "publishedDate": "2026-10-05"
+    },
+    {
+      "title": "スカラコミュニケーションズ：i-askへの不正アクセス",
+      "url": "https://scala-com.jp/news/2026/10-1/",
+      "publishedDate": "2026-10-06"
+    },
+    {
+      "title": "シチズン時計：委託先の不正アクセス",
+      "url": "https://citizen.jp/news/2026/20261006.html",
+      "publishedDate": "2026-10-06"
+    },
+    {
+      "title": "損保ジャパン：SMILING ROAD委託先の不正アクセス",
+      "url": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2026/20261007_1.pdf",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "title": "東武鉄道：委託先事業者への不正アクセス（情報取得の形跡は未確認）",
+      "url": "https://www.tobu.co.jp/cms-pdf/news/20261007153424wpo2m-MJPLTJzWJHnUDkVw.pdf",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "label": "管理サイトへの不正アクセス開始",
+      "summary": "10月2日夜〜3日朝に不正ログイン・プログラム設置と情報取得の可能性",
+      "sourceUrl": "https://scala-com.jp/news/2026/10-1/",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-10-03",
+      "label": "検知・遮断・利用企業へ連絡",
+      "summary": "監視アラートを契機に調査し8時頃に遮断、同日中に利用企業へ報告",
+      "sourceUrl": "https://scala-com.jp/news/2026/10-1/",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-10-05",
+      "label": "大和証券が公表",
+      "summary": "対象顧客約11万人と個人特定情報のない問い合わせ等を含む約22万件を公表",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/8601/tdnet/2891437/00.pdf",
+      "kind": "disclosure"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "提供元とシチズンが公表",
+      "summary": "提供元は最大5社・713,126件、シチズンは約10万人を公表",
+      "sourceUrl": "https://scala-com.jp/news/2026/10-1/",
+      "kind": "update"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "追加の利用企業が公表",
+      "summary": "損保ジャパンは約6万件。東武鉄道は自社情報の閲覧・取得の形跡は未確認と公表",
+      "sourceUrl": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2026/20261007_1.pdf",
+      "kind": "update"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "digital-agency-gss-2026",
+  "company": "デジタル庁",
+  "title": "GSSへのVPN脆弱性経由の侵入、職員・業務関係者情報約24.6万件に漏えいのおそれ",
+  "announcementDate": "2026-09-11",
+  "announcementDateLabel": "公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2026-06-25に大量ファイルアクセスを検知）",
+  "updatedDate": "2026-09-11",
+  "statusAsOfDate": "2026-09-11",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "VPN機器の脆弱性を悪用した侵入と保守運用担当者アカウントの利用",
+    "status": "confirmed"
+  },
+  "summary": "保守運用担当者アカウントによる大量アクセスを検知し、7月9日にVPN経由の不正侵入と判明。同日アカウント停止と通信遮断を実施した。GSS利用機関の職員や業務関係者の情報に漏えいのおそれがあり、一般の方の個人情報は含まれないとしている。",
+  "affectedData": [
+    "氏名、メールアドレス、電話番号、住所等"
+  ],
+  "counts": [
+    {
+      "value": 246000,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいした可能性がある個人情報の合計",
+      "approximate": true
+    },
+    {
+      "value": 189000,
+      "unit": "件",
+      "status": "possible",
+      "label": "合計の内数：利用機関の職員・業務に携わった公務員等",
+      "approximate": true
+    },
+    {
+      "value": 57000,
+      "unit": "件",
+      "status": "possible",
+      "label": "合計の内数：業務に携わった事業者・個人",
+      "approximate": true
+    }
+  ],
+  "sources": [
+    {
+      "title": "GSSへの不正アクセスと個人情報漏えいの可能性",
+      "url": "https://www.digital.go.jp/news/2026-0911-01",
+      "publishedDate": "2026-09-11"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-25",
+      "label": "大量アクセスを検知",
+      "kind": "occurrence",
+      "summary": "保守運用担当者アカウントによる大量のファイルアクセスを検知",
+      "sourceUrl": "https://www.digital.go.jp/news/2026-0911-01"
+    },
+    {
+      "date": "2026-07-09",
+      "label": "侵入を特定し遮断",
+      "kind": "update",
+      "summary": "VPN脆弱性経由の侵入と判明し、アカウント停止・通信遮断を実施",
+      "sourceUrl": "https://www.digital.go.jp/news/2026-0911-01"
+    },
+    {
+      "date": "2026-09-11",
+      "label": "対象範囲を公表",
+      "kind": "disclosure",
+      "summary": "約24.6万件に漏えいのおそれと公表",
+      "sourceUrl": "https://www.digital.go.jp/news/2026-0911-01"
+    }
+  ],
+  "caveats": [
+    "件数を実人数と同一視しない。18.9万件と5.7万件は合計24.6万件の内訳",
+    "マイナンバー、金融機関口座情報、年金番号は含まれないとの公表",
+    "一般の国民全体の情報漏えいを示すものではない"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09",
+  "detectedDate": "2026-06-25"
+}

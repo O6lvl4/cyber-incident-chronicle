@@ -1,0 +1,71 @@
+{
+  "id": "kufu-zaim-tampering-2026",
+  "company": "くふうカンパニー（くふう Zaim）",
+  "title": "処理不具合を悪用され14名の登録情報が改ざん、流出・不正ログインは未確認",
+  "announcementDate": "2026-09-22",
+  "announcementDateLabel": "公表",
+  "occurredDate": "2026-09-18",
+  "occurredDateLabel": "2026-09-18 20:09～09-19 01:42に不正書き込み",
+  "updatedDate": "2026-09-22",
+  "statusAsOfDate": "2026-09-22",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "システム処理の不具合を悪用した登録情報の不正書き換え",
+    "status": "confirmed"
+  },
+  "summary": "第三者による不正書き込みで14名のニックネームやメールアドレス等が改ざんされた。9月21日の検知当日に修正と復旧を完了。一部新規利用者に記録保存エラーも発生したが、元の登録情報を第三者が読み取れる仕組みではなく、家計簿データの改ざんや不正ログインはないと説明した。",
+  "affectedData": [
+    "ニックネーム、メールアドレス、旧認証方式のパスワード関連情報（書き換え対象）"
+  ],
+  "counts": [
+    {
+      "value": 14,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "登録情報を書き換えられた利用者（漏えい人数ではない）",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "くふうZaimの登録情報書き換えに関する公表",
+      "url": "https://kufu.co.jp/2026/09/22/zaim-announce/",
+      "publishedDate": "2026-09-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-18",
+      "label": "登録情報の不正書き換え",
+      "kind": "occurrence",
+      "summary": "翌19日未明まで不正書き込みが発生",
+      "sourceUrl": "https://kufu.co.jp/2026/09/22/zaim-announce/"
+    },
+    {
+      "date": "2026-09-21",
+      "label": "検知・修正・復旧",
+      "kind": "update",
+      "summary": "エラー通知を基に把握し、当日中に修正と対象14名のデータ復旧",
+      "sourceUrl": "https://kufu.co.jp/2026/09/22/zaim-announce/"
+    },
+    {
+      "date": "2026-09-22",
+      "label": "改ざんと対応状況を公表",
+      "kind": "disclosure",
+      "summary": "情報漏えい・不正ログインはないと説明",
+      "sourceUrl": "https://kufu.co.jp/2026/09/22/zaim-announce/"
+    }
+  ],
+  "caveats": [
+    "14名は改ざんの影響人数であり、漏えい人数ではない",
+    "旧認証方式のパスワード関連情報は現在のログインに利用されていない",
+    "2026-10-05公表の「くふう まちトークβ版」事案とは別に扱う"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09",
+  "detectedDate": "2026-09-21"
+}

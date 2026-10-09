@@ -1,0 +1,83 @@
+{
+  "id": "sagawa-tracking-2026",
+  "company": "佐川急便",
+  "title": "荷物問い合わせシステム侵害で送り主・届け先等の情報流出の可能性",
+  "announcementDate": "2026-09-30",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-09-30",
+  "occurredDateLabel": "不正アクセス発覚日（7時30分、攻撃開始日は調査中）",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "荷物問い合わせサービスへの不正アクセスを9月30日に発見。送り主・届け先、運賃契約者、スマートクラブ登録者の情報流出の可能性があり、10月9日の第4報でも人数・件数を調査中。一部Webサービスを停止する一方、集荷・輸送・配達は継続している。",
+  "affectedData": [
+    "送り主・届け先と運賃契約者の氏名または法人・担当者名、住所、電話番号",
+    "スマートクラブ登録者の上記情報、メールアドレス、会員ID"
+  ],
+  "counts": [],
+  "caveats": [
+    "第2報の約100日間は送り主・届け先データの保存対象期間であり、攻撃継続期間ではない",
+    "同じ利用者の複数データと表記ゆれを整理中であり、件数・人数は未確定",
+    "クレジットカード情報・パスワードは対象に含まれないと公表",
+    "第4報時点では他システム・グループ会社への影響と情報不正利用は未確認",
+    "公式サイトが読み込む公開XML本文も確認。Webサービス停止と配送業務停止を混同しない"
+  ],
+  "geography": "日本国内の対象システム・利用者",
+  "sources": [
+    {
+      "title": "佐川急便：荷物問い合わせサービスへの不正アクセス（第1報）",
+      "url": "https://www2.sagawa-exp.co.jp/information/detail/419/",
+      "publishedDate": "2026-09-30"
+    },
+    {
+      "title": "佐川急便：個人情報流出の可能性（第2報）",
+      "url": "https://www2.sagawa-exp.co.jp/information/detail/420/",
+      "publishedDate": "2026-10-01"
+    },
+    {
+      "title": "佐川急便：個人情報流出の可能性（第4報）",
+      "url": "https://www2.sagawa-exp.co.jp/information/detail/426/",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "label": "不正アクセス発覚",
+      "kind": "occurrence",
+      "summary": "7時30分に発覚したと第4報で説明。攻撃開始時刻は調査中",
+      "sourceUrl": "https://www2.sagawa-exp.co.jp/information/detail/426/"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "不正アクセス発覚・初報",
+      "summary": "当日に不正アクセス確認とアクセスの一部制限を公表",
+      "sourceUrl": "https://www2.sagawa-exp.co.jp/information/detail/419/",
+      "kind": "disclosure"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "流出の可能性とWebサービス停止",
+      "summary": "第2報で対象情報を公表。正午に対象システムの外部アクセスを遮断",
+      "sourceUrl": "https://www2.sagawa-exp.co.jp/information/detail/426/",
+      "kind": "update"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "第4報",
+      "summary": "重複整理などのため対象件数は調査継続。集荷・輸送・配達は継続",
+      "sourceUrl": "https://www2.sagawa-exp.co.jp/information/detail/426/",
+      "kind": "update"
+    }
+  ]
+}

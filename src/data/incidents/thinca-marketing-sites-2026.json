@@ -1,0 +1,80 @@
+{
+  "id": "thinca-marketing-sites-2026",
+  "company": "シンカ",
+  "title": "CMSプラグインの脆弱性を悪用され紹介サイトにマルウェア、調査で流出は未確認",
+  "announcementDate": "2026-08-28",
+  "announcementDateLabel": "初報公表（9月に復旧・調査結果公表）",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2026-08-24に不正プログラムを検知）",
+  "updatedDate": "2026-09-17",
+  "statusAsOfDate": "2026-09-17",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "CMSプラグインの脆弱性を悪用したサーバー侵入と不正プログラム設置",
+    "status": "confirmed"
+  },
+  "summary": "サービス紹介サイトなど同一サーバーの4サイトを調査のため停止し、9月1日までに安全な環境へ移して再開。9月17日の調査結果では不正プログラムによる外部送信の形跡と個人情報漏えいは未確認とした。紹介サイトと分離された「カイクラ」サービスへの影響はない。",
+  "affectedData": [
+    "セミナー・ウェビナー申込者や問い合わせ者の氏名、会社名、メールアドレス、電話番号等（外部アクセス可能性を調査した範囲）"
+  ],
+  "counts": [],
+  "sources": [
+    {
+      "title": "サービス紹介サイトへの不正アクセス（初報）",
+      "url": "https://ssl4.eir-parts.net/doc/149A/tdnet/2879167/00.pdf",
+      "publishedDate": "2026-08-28"
+    },
+    {
+      "title": "全サイトの公開再開",
+      "url": "https://www.thinca.co.jp/news/20260901_news/",
+      "publishedDate": "2026-09-01"
+    },
+    {
+      "title": "調査結果・再発防止策",
+      "url": "https://www.thinca.co.jp/news/202609017_news/",
+      "publishedDate": "2026-09-17"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-24",
+      "label": "不正プログラムを検知",
+      "kind": "occurrence",
+      "summary": "サービス紹介サイトで複数の不正プログラムを検知",
+      "sourceUrl": "https://www.thinca.co.jp/news/202609017_news/"
+    },
+    {
+      "date": "2026-08-28",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "紹介サイトへの不正アクセスを公表",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/149A/tdnet/2879167/00.pdf"
+    },
+    {
+      "date": "2026-09-01",
+      "label": "全サイト公開再開",
+      "kind": "update",
+      "summary": "新環境への移設を完了",
+      "sourceUrl": "https://www.thinca.co.jp/news/20260901_news/"
+    },
+    {
+      "date": "2026-09-17",
+      "label": "調査結果公表",
+      "kind": "update",
+      "summary": "CMSプラグイン脆弱性経由の侵入を確認し、情報漏えいは未確認",
+      "sourceUrl": "https://www.thinca.co.jp/news/202609017_news/"
+    }
+  ],
+  "caveats": [
+    "初報は8月だが9月の復旧・重要な調査結果公表が今回の確認対象",
+    "4サイトは同一サーバー上の同じ侵害であり、独立4件に分割しない",
+    "紹介サイトの停止を「カイクラ」サービス全体の停止と扱わない"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09",
+  "detectedDate": "2026-08-24"
+}

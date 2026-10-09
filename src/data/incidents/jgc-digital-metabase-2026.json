@@ -1,0 +1,79 @@
+{
+  "id": "jgc-digital-metabase-2026",
+  "company": "JGC Digital",
+  "title": "Metabase脆弱性を悪用され「アザス」「するーぷ」計約6万アカウントの情報流出",
+  "announcementDate": "2026-09-18",
+  "announcementDateLabel": "公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2026-09-16に異常検知・取得を確認）",
+  "updatedDate": "2026-09-18",
+  "statusAsOfDate": "2026-09-18",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "BIツールMetabaseの脆弱性を悪用した不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "データ集計・分析に使うMetabaseの脆弱性を悪用され、9月16日に異常と顧客情報の取得を確認し、同日経路を遮断。「アザス」約4万件、「するーぷ」約2万件のアカウントが対象となる。同システムではパスワードを管理しておらず、その漏えいはない。",
+  "affectedData": [
+    "アザス：氏名、生年月日、性別、メール、勤務年数、言語、役割、体温情報、所属、元請・一次請企業、プロジェクト情報、称賛回数",
+    "するーぷ：メール、生年月、性別、郵便番号、子供の有無、職業、年収・興味（任意項目）"
+  ],
+  "counts": [
+    {
+      "value": 60000,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "対象となる登録アカウント合計",
+      "approximate": true
+    },
+    {
+      "value": 40000,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "合計の内数：アザス",
+      "approximate": true
+    },
+    {
+      "value": 20000,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "合計の内数：するーぷ",
+      "approximate": true
+    }
+  ],
+  "sources": [
+    {
+      "title": "個人情報流出に関する公式公表",
+      "url": "https://jgc-digital.com/topics/topics-3049/",
+      "publishedDate": "2026-09-18"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-16",
+      "label": "検知・確認・遮断",
+      "kind": "occurrence",
+      "summary": "異常検知後、不正アクセスと情報取得を確認し、同日遮断",
+      "sourceUrl": "https://jgc-digital.com/topics/topics-3049/"
+    },
+    {
+      "date": "2026-09-18",
+      "label": "対象範囲と原因を公表",
+      "kind": "disclosure",
+      "summary": "2サービス合計約6万アカウントが対象と公表",
+      "sourceUrl": "https://jgc-digital.com/topics/topics-3049/"
+    }
+  ],
+  "caveats": [
+    "一人が複数アカウントを持つ場合があり、会社は実人数が件数を下回る見込みと明記",
+    "2サービスは同じBIツール侵害の影響として1事案に集約し、約4万件と約2万件は約6万件の内数",
+    "公式に記載のないCVE番号や製品バージョンを補完しない"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09",
+  "detectedDate": "2026-09-16"
+}

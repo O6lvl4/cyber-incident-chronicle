@@ -1,0 +1,71 @@
+{
+  "id": "nipponrentacar-app-second-2026",
+  "company": "ニッポンレンタカーサービス",
+  "title": "NRアプリの別手法による不正アクセスで55人の会員情報が閲覧されたおそれ",
+  "announcementDate": "2026-10-01",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-09-19",
+  "occurredDateLabel": "確認された不正アクセス期間の開始（9月21日まで）",
+  "updatedDate": "2026-10-01",
+  "statusAsOfDate": "2026-10-01",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "9月26日公表事案の調査中、異なる手法による別の不正アクセスを9月29日に確認。9月19〜21日に会員55人の情報ページへ不正アクセスがあり、会員情報や一部の免許証情報などが閲覧されたおそれがある。",
+  "affectedData": [
+    "氏名、電話番号、メールアドレス、ログインID、利用履歴、予約情報",
+    "登録していた場合の免許証番号、住所、生年月日、カード番号下4桁、カード名義人"
+  ],
+  "counts": [
+    {
+      "value": 55,
+      "unit": "人",
+      "label": "会員情報ページへの不正アクセスに伴う閲覧のおそれ",
+      "status": "possible",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "9月26日公表の第一事象とは異なる攻撃として明示されているため別IDとする",
+    "55人は閲覧された可能性のある対象であり、漏えい確定人数ではない",
+    "カード番号全桁の流出は公表されていない。二次被害は公表時点で未確認"
+  ],
+  "geography": "日本国内の対象システム・利用者",
+  "sources": [
+    {
+      "title": "ニッポンレンタカー：NRアプリの不正アクセス（9月29日判明分）",
+      "url": "https://www.nipponrentacar.co.jp/info/202610_2.html",
+      "publishedDate": "2026-10-01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-19",
+      "label": "別の不正アクセス開始",
+      "summary": "9月21日まで外部から攻撃",
+      "sourceUrl": "https://www.nipponrentacar.co.jp/info/202610_2.html",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "別事象を確認",
+      "summary": "先に公表した事案の調査過程で確認",
+      "sourceUrl": "https://www.nipponrentacar.co.jp/info/202610_2.html",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "別事象を公表",
+      "summary": "55人の会員情報ページへのアクセスと閲覧のおそれを公表",
+      "sourceUrl": "https://www.nipponrentacar.co.jp/info/202610_2.html",
+      "kind": "disclosure"
+    }
+  ]
+}

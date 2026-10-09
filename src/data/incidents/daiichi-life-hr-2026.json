@@ -1,0 +1,78 @@
+{
+  "id": "daiichi-life-hr-2026",
+  "company": "第一ライフグループ・第一生命保険",
+  "title": "人事システム侵害で従業員・退職者約12万人の情報流出の可能性",
+  "announcementDate": "2026-10-02",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-09-24",
+  "occurredDateLabel": "不正アクセス検知日（攻撃開始日は未公表）",
+  "updatedDate": "2026-10-02",
+  "statusAsOfDate": "2026-10-02",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "両社が利用する従業員向け人事システムへの不正アクセスを9月24日に検知。10月2日の退職者向け公表では、従業員約5万人と退職者約7万人、計約12万人の情報が閲覧され外部へ流出した可能性を示した。",
+  "affectedData": [
+    "従業員番号、氏名、住所、電話番号、性別、所属、職位・資格、職務、管理職上司氏名"
+  ],
+  "counts": [
+    {
+      "value": 120000,
+      "unit": "人",
+      "label": "従業員・退職者の合計対象",
+      "status": "possible",
+      "approximate": true
+    },
+    {
+      "value": 50000,
+      "unit": "人",
+      "label": "合計約12万人の内数：従業員",
+      "status": "possible",
+      "approximate": true
+    },
+    {
+      "value": 70000,
+      "unit": "人",
+      "label": "合計約12万人の内数：退職者",
+      "status": "possible",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "10月2日は収録した退職者向け資料の公表日であり、攻撃日や必ずしも最初の発表日ではない",
+    "約5万人と約7万人は約12万人の内数で重複加算しない",
+    "対象退職者は内勤職員1967年以降・営業職員2017年以降。一部グループ会社への出向者等を含む",
+    "顧客情報への不正アクセスと退職者に関する二次被害は公表時点で未確認"
+  ],
+  "geography": "日本国内の対象システム・利用者",
+  "sources": [
+    {
+      "title": "第一ライフグループ・第一生命：退職者向け人事システム不正アクセスのお知らせ",
+      "url": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf",
+      "publishedDate": "2026-10-02"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-24",
+      "label": "人事システム侵害を検知",
+      "summary": "両社の従業員・退職者の情報が閲覧され外部流出した可能性を確認",
+      "sourceUrl": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-10-02",
+      "label": "退職者向け対象範囲を公表",
+      "summary": "従業員・退職者約12万人と対象項目を公表",
+      "sourceUrl": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf",
+      "kind": "disclosure"
+    }
+  ]
+}

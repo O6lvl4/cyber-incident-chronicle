@@ -1,0 +1,72 @@
+{
+  "id": "voising-bi-tool-2026",
+  "company": "VOISING",
+  "title": "BIツールの脆弱性経由で個人情報約17万件漏えい、9月に最終調査結果",
+  "announcementDate": "2026-08-18",
+  "announcementDateLabel": "初報公表（9月に最終調査結果）",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2026-08-17に発覚後のBIツール停止）",
+  "updatedDate": "2026-09-30",
+  "statusAsOfDate": "2026-09-30",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "BIツールの脆弱性を悪用した不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "9月30日の最終調査結果で、BIツールの脆弱性を修正する前に侵入され、個人情報約17万件が漏えいしたと報告。8月17日にツールを停止し、不正作成アカウントやAPIキーを無効化、侵害環境を廃棄した。カード番号やログインパスワードは保有せず、漏えい対象外としている。",
+  "affectedData": [
+    "氏名、住所、電話番号、メールアドレス、生年月日、性別",
+    "購買履歴、決済金額記録、サービス加入状況、応援対象タレントの選択情報"
+  ],
+  "counts": [
+    {
+      "value": 170000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "最終調査で漏えいが確認された個人情報",
+      "approximate": true
+    }
+  ],
+  "sources": [
+    {
+      "title": "調査結果と再発防止策（第四報）",
+      "url": "https://voising-official.com/news/1015",
+      "publishedDate": "2026-09-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-17",
+      "label": "BIツールを停止",
+      "kind": "occurrence",
+      "summary": "発覚後にツールを停止し、不正アカウント・APIキーを無効化",
+      "sourceUrl": "https://voising-official.com/news/1015"
+    },
+    {
+      "date": "2026-08-18",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと個人情報漏えいを初公表した日として第四報に記載",
+      "sourceUrl": "https://voising-official.com/news/1015"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "最終調査結果公表",
+      "kind": "update",
+      "summary": "約17万件の漏えいとBIツール脆弱性を確認",
+      "sourceUrl": "https://voising-official.com/news/1015"
+    }
+  ],
+  "caveats": [
+    "初報は8月だが、9月30日の最終調査結果という重要な続報を対象に収録",
+    "公式はBIツールと記載しており、製品名をMetabaseと推定しない",
+    "約17万件は情報件数であり、実人数とは記載されていない"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09",
+  "detectedDate": "2026-08-17"
+}

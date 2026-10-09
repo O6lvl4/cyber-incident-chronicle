@@ -1,0 +1,92 @@
+{
+  "id": "lean-body-metabase-2026",
+  "company": "LEAN BODY",
+  "title": "分析ツールの脆弱性経由で約44万アカウントの情報が取得される",
+  "announcementDate": "2026-09-15",
+  "announcementDateLabel": "公表（公式ページ埋め込みの公開日時を確認）",
+  "occurredDate": "2026-08-11",
+  "occurredDateLabel": "2026-08-11に最初の侵入、08-31・09-07・09-09に情報取得",
+  "updatedDate": "2026-09-15",
+  "statusAsOfDate": "2026-09-15",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "社内分析ツールMetabaseの脆弱性を悪用した不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "Metabaseの脆弱性を悪用され、退会者を含む約44万アカウントの登録・身体・決済関連情報等が取得された。9月8日に異常を検知し、翌9日に経路遮断と修正版への更新を実施した。複数アカウントを持つ利用者がいるため、対象実人数は件数より少ない見込みとしている。",
+  "affectedData": [
+    "メールアドレス、ニックネーム、性別、生年月日、都道府県",
+    "身長・体重・目標体重、活動量、運動頻度・目的、登録・利用記録",
+    "暗号化されたパスワード情報",
+    "決済サービス識別番号、請求・返金記録、カード番号下4桁",
+    "法人福利厚生を通じた一部利用者の氏名・所属法人・従業員番号"
+  ],
+  "counts": [
+    {
+      "value": 440000,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "退会者を含む対象アカウント",
+      "approximate": true
+    }
+  ],
+  "sources": [
+    {
+      "title": "分析ツールへの不正アクセスによる顧客情報取得",
+      "url": "https://lean-body.co.jp/news/JlBWMCs7",
+      "publishedDate": "2026-09-15"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-11",
+      "label": "最初の不正アクセス",
+      "kind": "occurrence",
+      "summary": "会社環境への最初の侵入が発生",
+      "sourceUrl": "https://lean-body.co.jp/news/JlBWMCs7"
+    },
+    {
+      "date": "2026-08-31",
+      "label": "情報取得",
+      "kind": "occurrence",
+      "summary": "データベースから情報を取得。9月7日・9日にも取得された",
+      "sourceUrl": "https://lean-body.co.jp/news/JlBWMCs7"
+    },
+    {
+      "date": "2026-09-08",
+      "label": "異常検知",
+      "kind": "update",
+      "summary": "異常を検知して調査を開始",
+      "sourceUrl": "https://lean-body.co.jp/news/JlBWMCs7"
+    },
+    {
+      "date": "2026-09-09",
+      "label": "経路遮断・修正版適用",
+      "kind": "update",
+      "summary": "同日に再度の情報取得があり、経路を遮断してツールを更新",
+      "sourceUrl": "https://lean-body.co.jp/news/JlBWMCs7"
+    },
+    {
+      "date": "2026-09-15",
+      "label": "公表・対象者へ通知開始",
+      "kind": "disclosure",
+      "summary": "公式ページの公開日時は2026-09-15T05:00:03Z。本文でも9月15日から対象者への通知開始と説明",
+      "sourceUrl": "https://lean-body.co.jp/news/JlBWMCs7"
+    }
+  ],
+  "caveats": [
+    "公表日は公式ページに埋め込まれた公開日時2026-09-15T05:00:03Zで確認。9月16日のCMS更新日時だけでは実質的な続報とは確認できないため、最終公表日は9月15日とした",
+    "約44万はアカウント数であり実人数ではない。対象項目は登録内容により異なる",
+    "パスワードは暗号化状態の情報。会社は復号に別途必要な情報は取得されていないと説明",
+    "カード番号全体・セキュリティコードは対象外。下4桁の取得と区別",
+    "一般会員の氏名は原則保有せず、一部の法人福利厚生利用者等では氏名が対象",
+    "公表時点で改ざん、不正利用、不正請求、サービス提供への影響は未確認"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-09",
+  "detectedDate": "2026-09-08"
+}

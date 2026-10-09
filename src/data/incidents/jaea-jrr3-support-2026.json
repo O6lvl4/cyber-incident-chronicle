@@ -1,0 +1,95 @@
+{
+  "id": "jaea-jrr3-support-2026",
+  "company": "日本原子力研究開発機構（JAEA）",
+  "title": "JRR-3研究支援サイト侵害で175人の本人確認・健康診断等の情報流出",
+  "announcementDate": "2026-10-01",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-09-25",
+  "occurredDateLabel": "不正ダウンロードを確認した日（攻撃開始日は未公表）",
+  "updatedDate": "2026-10-01",
+  "statusAsOfDate": "2026-10-01",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "研究用原子炉JRR-3の外部利用者向け研究支援サイトで2,419ファイルの不正ダウンロードを9月25日に確認。9月29日の確認で、うち367ファイルに175人分の個人情報を含むことが判明した。",
+  "affectedData": [
+    "顔写真付き身分証画像200件（うち6人分にはマイナンバーを含む）",
+    "放射線業務の特殊健康診断結果146件",
+    "放射線業務従事者証明書21件"
+  ],
+  "counts": [
+    {
+      "value": 2419,
+      "unit": "ファイル",
+      "label": "不正にダウンロードされた全ファイル",
+      "status": "confirmed",
+      "approximate": false
+    },
+    {
+      "value": 367,
+      "unit": "ファイル",
+      "label": "全2,419ファイルの内数：個人情報を含むファイル",
+      "status": "confirmed",
+      "approximate": false
+    },
+    {
+      "value": 175,
+      "unit": "人",
+      "label": "個人情報を含む367ファイルの対象者",
+      "status": "confirmed",
+      "approximate": false
+    },
+    {
+      "value": 6,
+      "unit": "人",
+      "label": "175人の内数：マイナンバーを含む対象",
+      "status": "confirmed",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "ファイル数・人数・内数を合算しない。同一人物に複数ファイルがある",
+    "研究支援サイトは機構内業務ネットワークから独立しており、他システムへの影響はないと公表",
+    "利用者アカウントのID・パスワード・登録フォーム上の氏名などは漏えいしていないと公表",
+    "原子炉制御・運転システムの侵害を示す公表ではない"
+  ],
+  "geography": "茨城県東海村のJRR-3外部利用者向けクラウド上の研究支援サイト",
+  "sources": [
+    {
+      "title": "JAEA：研究支援サイトへの不正アクセスによる情報漏えい",
+      "url": "https://www.jaea.go.jp/02/press2026/p26100105/",
+      "publishedDate": "2026-10-01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "label": "不正ダウンロード確認・遮断",
+      "summary": "2,419ファイルの不正ダウンロードを確認しサイトの外部アクセスを停止",
+      "sourceUrl": "https://www.jaea.go.jp/02/press2026/p26100105/",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "個人情報漏えい確認",
+      "summary": "取得された一部ファイルに個人情報が含まれることを確認",
+      "sourceUrl": "https://www.jaea.go.jp/02/press2026/p26100105/",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "175人の情報漏えいを公表",
+      "summary": "身分証・健康診断等の367ファイルの内訳を公表",
+      "sourceUrl": "https://www.jaea.go.jp/02/press2026/p26100105/",
+      "kind": "disclosure"
+    }
+  ]
+}

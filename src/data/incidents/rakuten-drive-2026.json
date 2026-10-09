@@ -1,0 +1,89 @@
+{
+  "id": "rakuten-drive-2026",
+  "company": "楽天モバイル（楽天ドライブ）",
+  "title": "管理用認証情報の悪用で保存データなどを取得・閲覧",
+  "announcementDate": "2026-10-06",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-01-29",
+  "occurredDateLabel": "公表された保存データの取得・閲覧期間の開始（9月17日まで）",
+  "updatedDate": "2026-10-06",
+  "statusAsOfDate": "2026-10-06",
+  "lastVerifiedDate": "2026-10-09",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "管理用アカウントの認証情報を不正取得しシステムへアクセス",
+    "status": "confirmed"
+  },
+  "summary": "一部システムの管理用アカウントの認証情報が不正取得され、保存データやアカウント情報が取得・閲覧された。保存データは15,382アカウントが対象。8月27日の別区分として名称等687件、暗号化パスワード等を含む313件を公表した。",
+  "affectedData": [
+    "保存された写真・文書などのデータ",
+    "アカウント名、表示名、プロフィール画像URL",
+    "一部対象の暗号化パスワードおよび変換時に加えた文字列"
+  ],
+  "counts": [
+    {
+      "value": 15382,
+      "unit": "アカウント",
+      "label": "事象③：保存データの取得・閲覧",
+      "status": "confirmed",
+      "approximate": false
+    },
+    {
+      "value": 687,
+      "unit": "アカウント",
+      "label": "事象①：名称・画像URL等の取得・閲覧",
+      "status": "confirmed",
+      "approximate": false
+    },
+    {
+      "value": 313,
+      "unit": "アカウント",
+      "label": "事象②：暗号化パスワード等も含む取得・閲覧",
+      "status": "confirmed",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "3区分の対象の重複関係は本文で明示されていないため、件数を合算せず313件を687件の内数とも断定しない",
+    "サポートページの更新メタデータは10月8日だが、本文に記された内容時点は10月6日10時10分。本文の実質更新を確認できないため最終公表時点は10月6日とした",
+    "一般の楽天会員情報全体への侵害や、別の攻撃者の販売主張とは同一視しない",
+    "7月の不審プッシュ通知との同一原因は本文に明示されていないため統合しない",
+    "2026年4月30日改定の現行利用規約は提供主体を楽天モバイルと明記。過去の提供体制を示す2024年資料で現行法人を代用しない"
+  ],
+  "geography": "日本企業が提供するクラウドサービス。公表件数の国別内訳は未公表",
+  "sources": [
+    {
+      "title": "楽天ドライブ：不正アクセスの発生（10月6日10時10分時点）",
+      "url": "https://support.rakuten-drive.com/hc/ja/articles/62934949147929",
+      "publishedDate": "2026-10-06"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-01-29",
+      "label": "保存データへのアクセス期間開始",
+      "summary": "事象③は9月17日までの期間と公表",
+      "sourceUrl": "https://support.rakuten-drive.com/hc/ja/articles/62934949147929",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-08-27",
+      "label": "アカウント情報へのアクセス",
+      "summary": "事象①・②の対象情報が取得・閲覧",
+      "sourceUrl": "https://support.rakuten-drive.com/hc/ja/articles/62934949147929",
+      "kind": "occurrence"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "3区分の情報取得・閲覧を公表",
+      "summary": "侵入経路遮断、監視強化、新規登録等の制限を案内",
+      "sourceUrl": "https://support.rakuten-drive.com/hc/ja/articles/62934949147929",
+      "kind": "disclosure"
+    }
+  ]
+}
