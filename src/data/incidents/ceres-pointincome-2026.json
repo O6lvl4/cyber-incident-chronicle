@@ -1,0 +1,81 @@
+{
+  "id": "ceres-pointincome-2026",
+  "company": "セレス",
+  "title": "ポイントインカムへの不正アクセスで195件の個人情報が閲覧された可能性",
+  "announcementDate": "2026-10-07",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "最初の侵入日時は未公表。10月5日未明から不審な挙動を検知",
+  "updatedDate": "2026-10-07",
+  "statusAsOfDate": "2026-10-07",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "ポイントサイトへの不正アクセス（具体的な手法・侵入経路は未公表）",
+    "status": "confirmed"
+  },
+  "summary": "10月5日未明から不審な挙動を検知してサービスを一時停止。調査で195件の個人情報が閲覧された可能性を確認し、10月7日21時の再開予定を公表した。",
+  "geography": "日本のポイントサイト「ポイントインカム」",
+  "lastVerifiedDate": "2026-10-11",
+  "detectedDate": "2026-10-05",
+  "affectedData": [
+    "一部アカウントの個人情報。会員情報と従業員等情報の個別項目は公表資料に記載なし"
+  ],
+  "counts": [
+    {
+      "value": 195,
+      "unit": "件",
+      "status": "possible",
+      "label": "個人情報が閲覧された可能性のある合計",
+      "approximate": false
+    },
+    {
+      "value": 88,
+      "unit": "件",
+      "status": "possible",
+      "label": "195件の内数：会員情報",
+      "approximate": false
+    },
+    {
+      "value": 107,
+      "unit": "件",
+      "status": "possible",
+      "label": "195件の内数：従業員等情報",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "閲覧可能性195件（会員88件、従業員等107件）",
+  "caveats": [
+    "195件は閲覧された可能性のある個人情報の件数であり、漏えい確定人数ではない。88件と107件は合計195件の内数",
+    "不正アクセス自体は調査後に認めて当局へ報告しているが、個人情報への影響は閲覧の可能性",
+    "カード情報など決済関連情報は同社サーバーに保持しておらず、同情報の漏えいはないとしている",
+    "10月7日21時は公表時点のサービス再開予定であり、実際の復旧完了を確認したものではない"
+  ],
+  "sources": [
+    {
+      "title": "セレス：ポイントインカムの不正アクセスと緊急メンテナンスについて",
+      "url": "https://ceres-inc.jp/news/detail/20261007-2/",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-05",
+      "label": "不審な挙動を検知",
+      "kind": "occurrence",
+      "summary": "未明から断続的に検知し、サービスを一時停止して点検・アクセス遮断を実施",
+      "sourceUrl": "https://ceres-inc.jp/news/detail/20261007-2/"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "調査結果と再開予定を公表",
+      "kind": "disclosure",
+      "summary": "閲覧可能性195件の内訳と、同日21時の再開予定を説明",
+      "sourceUrl": "https://ceres-inc.jp/news/detail/20261007-2/"
+    }
+  ]
+}

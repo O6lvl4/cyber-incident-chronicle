@@ -1,0 +1,86 @@
+{
+  "id": "starts-ozmall-2026",
+  "company": "スターツ出版（オズモール）",
+  "title": "オズモールへの不正アクセス、最大442,779人の個人情報が流出した可能性",
+  "announcementDate": "2026-09-27",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日非公表（2026-09-26に不正アクセスを検知）",
+  "updatedDate": "2026-10-01",
+  "statusAsOfDate": "2026-10-01",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "海外からの大量の不正アクセス。原因となった脆弱性への対策を実施したが、具体的な脆弱性・手法は非公表",
+    "status": "unknown"
+  },
+  "summary": "9月26日にオズモールへの大量の不正アクセスを検知し、対象ページを一時停止して対策後に再開。10月1日の続報では、情報流出の可能性がある範囲を会員と一部退会者の最大442,779人分に修正した。二次被害は確認されていない。",
+  "affectedData": [
+    "会員および一部退会者のメールアドレス",
+    "一部対象者の氏名、住所（都道府県まで）"
+  ],
+  "counts": [
+    {
+      "value": 442779,
+      "unit": "人",
+      "status": "possible",
+      "label": "情報流出の可能性がある最大人数（会員および一部退会者、10月1日修正値）",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "当社への不正アクセスによる個人情報流出の可能性に関するお知らせ",
+      "url": "https://starts-pub.jp/info20260927",
+      "publishedDate": "2026-09-27"
+    },
+    {
+      "title": "当社への不正アクセスによる個人情報流出の可能性に関するお知らせ（第2報）",
+      "url": "https://starts-pub.jp/info20261001",
+      "publishedDate": "2026-10-01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-26",
+      "label": "不正アクセス検知・対象ページ一時停止",
+      "kind": "occurrence",
+      "summary": "海外からの大量アクセスを検知し、原因を特定して遮断のためのシステム修正を実施",
+      "sourceUrl": "https://starts-pub.jp/info20260927"
+    },
+    {
+      "date": "2026-09-27",
+      "label": "個人情報流出の可能性を公表",
+      "kind": "disclosure",
+      "summary": "初報では最大447,610人分と公表。対策と改ざん等の被害がないことの確認後、サービスを再開",
+      "sourceUrl": "https://starts-pub.jp/info20260927"
+    },
+    {
+      "date": "2026-09-28",
+      "label": "個人情報保護委員会へ報告",
+      "kind": "occurrence",
+      "summary": "続報で同日の報告を明らかにした",
+      "sourceUrl": "https://starts-pub.jp/info20261001"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "対象人数・範囲を修正",
+      "kind": "update",
+      "summary": "最大442,779人分へ修正し、一部退会者も含むと公表。対象者に順次メール連絡",
+      "sourceUrl": "https://starts-pub.jp/info20261001"
+    }
+  ],
+  "caveats": [
+    "初報の最大447,610人は続報で最大442,779人に修正された旧値。別の被害人数として加算しない",
+    "閲覧・流出は可能性としての公表であり、確認済み漏えい人数ではない",
+    "退会者情報は取引履歴管理のため一定期間保存していたもの",
+    "電話番号や番地を含む詳細住所の閲覧痕跡は未確認。クレジットカード情報は外部決済システムを利用し、会社は漏えいの可能性がないと説明",
+    "具体的な脆弱性やCVE、ランサムウェアの使用は公表されていない"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-11"
+}

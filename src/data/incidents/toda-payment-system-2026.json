@@ -1,0 +1,86 @@
+{
+  "id": "toda-payment-system-2026",
+  "company": "戸田建設",
+  "title": "支払い管理システム等への不正アクセスで取引先情報と従業員4,778人分の情報漏えい",
+  "announcementDate": "2026-10-07",
+  "announcementDateLabel": "公表",
+  "occurredDate": "2026-10-01",
+  "occurredDateLabel": "情報漏えいの形跡が確認された期間の開始（10月5日まで、同日に検知）",
+  "updatedDate": "2026-10-07",
+  "statusAsOfDate": "2026-10-07",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "取引先への支払い管理システム等に対する外部からの不正アクセス。原因・具体的手法は調査中",
+    "status": "unknown"
+  },
+  "summary": "10月5日に支払い管理システム等への不正アクセスを検知。調査で10月1〜5日の漏えい痕跡を確認し、通信を遮断した。取引先担当者のメールアドレス最大7,200件、取引データ最大6,000件、従業員4,778人分の個人情報が対象。",
+  "affectedData": [
+    "対象システムを利用する取引先の担当者メールアドレス、取引データ",
+    "従業員の氏名、住所、電話番号、メールアドレス、所属部署"
+  ],
+  "counts": [
+    {
+      "value": 7200,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "取引先担当者のメールアドレス（最大件数）",
+      "approximate": false
+    },
+    {
+      "value": 6000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "取引データ（最大件数）",
+      "approximate": false
+    },
+    {
+      "value": 4778,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "個人情報が漏えいした従業員",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "個人情報漏洩に関するお知らせとお詫び",
+      "url": "https://www.toda.co.jp/news/2026/20261007_006350.html",
+      "publishedDate": "2026-10-07"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-01",
+      "label": "漏えい痕跡の確認対象期間が開始",
+      "kind": "occurrence",
+      "summary": "事後調査により10月1〜5日の情報漏えいの形跡を確認",
+      "sourceUrl": "https://www.toda.co.jp/news/2026/20261007_006350.html"
+    },
+    {
+      "date": "2026-10-05",
+      "label": "不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "検知後の調査で漏えいを確認し、対象システム等をネットワークから隔離",
+      "sourceUrl": "https://www.toda.co.jp/news/2026/20261007_006350.html"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "漏えい範囲を公表",
+      "kind": "disclosure",
+      "summary": "取引先情報・従業員情報の範囲と、個人情報保護委員会への報告を公表。原因等の詳細調査を継続",
+      "sourceUrl": "https://www.toda.co.jp/news/2026/20261007_006350.html"
+    }
+  ],
+  "caveats": [
+    "メールアドレスと取引データは最大件数、従業員情報は人数であり、単位と対象が異なる。重複関係も示されていないため合算しない",
+    "10月1日は確認された漏えい痕跡の期間の開始であり、侵入開始日とは断定しない。検知日は10月5日",
+    "10月7日時点では漏えい情報の不特定多数への公開や不正利用は確認されていない",
+    "原因と被害全容は調査中。具体的な脆弱性やランサムウェアの使用は公表されていない"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-11"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "evergreen-marketing-mail-2026",
+  "company": "エバーグリーン・マーケティング",
+  "title": "従業員メール侵害の続報で取引先237件・法人顧客763件の情報に閲覧のおそれ",
+  "announcementDate": "2026-07-31",
+  "announcementDateLabel": "初報",
+  "occurredDate": "2026-06-26",
+  "occurredDateLabel": "2026-06-26に従業員1名のメールアカウントへの不正ログインを検知",
+  "updatedDate": "2026-10-06",
+  "statusAsOfDate": "2026-10-06",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "従業員メールアカウントへの不正ログインとフィッシングメール送信",
+    "status": "confirmed"
+  },
+  "summary": "6月26日に従業員のメールアカウントが不正利用され、社内外へ不審メールを送信。7月31日の初報後の追加調査で、10月6日に取引先関係者237件と法人顧客763件の情報が閲覧された可能性を公表した。",
+  "affectedData": [
+    "代理店等取引先関係者：会社・団体名、メールアドレス（個人を識別できる情報を含む）",
+    "電力契約のある法人顧客：会社・団体名、住所、個人名が含まれる口座情報、電気料金の請求金額など"
+  ],
+  "counts": [
+    {
+      "value": 1,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "6月26日に不正ログインされた従業員メールアカウント",
+      "approximate": false
+    },
+    {
+      "value": 237,
+      "unit": "件",
+      "status": "possible",
+      "label": "10月6日に追加公表した代理店等取引先関係者の情報",
+      "approximate": false
+    },
+    {
+      "value": 763,
+      "unit": "件",
+      "status": "possible",
+      "label": "10月6日に追加公表した電力需給契約の法人顧客の情報",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "メールアカウントの不正利用に関するお知らせ（初報）",
+      "url": "https://www.egmkt.co.jp/newsroom/news/2026/10630/",
+      "publishedDate": "2026-07-31"
+    },
+    {
+      "title": "メールアカウントの不正利用：漏えいの可能性がある個人情報の追加公表",
+      "url": "https://www.egmkt.co.jp/newsroom/news/2026/10982/",
+      "publishedDate": "2026-10-06"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-26",
+      "label": "不正ログインと不審メール送信",
+      "kind": "occurrence",
+      "summary": "従業員1名のアカウントの不正利用を同日検知し、停止・パスワード変更・セッション無効化を実施",
+      "sourceUrl": "https://www.egmkt.co.jp/newsroom/news/2026/10630/"
+    },
+    {
+      "date": "2026-07-31",
+      "label": "初報",
+      "kind": "disclosure",
+      "summary": "メールアカウント不正利用を公表。当時は情報漏洩や二次被害を未確認と説明",
+      "sourceUrl": "https://www.egmkt.co.jp/newsroom/news/2026/10630/"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "閲覧可能性の対象を追加公表",
+      "kind": "update",
+      "summary": "追加調査で判明した取引先関係者237件、法人顧客763件の情報と個別通知方針を公表",
+      "sourceUrl": "https://www.egmkt.co.jp/newsroom/news/2026/10982/"
+    }
+  ],
+  "caveats": [
+    "10月6日は6月26日の同じ不正利用事案の続報であり、新たな10月の侵入として数えない",
+    "237件と763件は追加公表した情報の各区分で、事案全体の確定流出人数ではない。アカウント数と合算しない",
+    "口座情報は口座振替申込の法人顧客のうち個人名を口座名義に含む情報。すべての法人顧客の口座情報が流出したと一般化しない",
+    "フィッシングメールは侵害後の送信行為。被害企業側の初期侵入がフィッシングだったとは公表されていない"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-11",
+  "detectedDate": "2026-06-26"
+}

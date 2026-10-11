@@ -1,0 +1,71 @@
+{
+  "id": "paperlogic-2026",
+  "company": "ペーパーロジック",
+  "title": "クラウドサーバーへの不正アクセス、調査後も顧客情報取得・送信の事実は確認されず",
+  "announcementDate": "2026-09-01",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日時は未公表。8月27日に不正アクセスと異常動作を検知",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "利用クラウドサーバーへの第三者による不正アクセス（侵入手法は未公表）",
+    "status": "confirmed"
+  },
+  "summary": "8月27日にクラウドサーバーへの不正アクセスを検知し、遮断・認証情報の無効化・システム停止を実施。10月9日の続報でも顧客文書・個人情報・認証情報の取得や外部送信を示す事実はないと公表した。",
+  "geography": "日本のクラウドサービス「paperlogic」が利用するシステムの一部",
+  "lastVerifiedDate": "2026-10-10",
+  "detectedDate": "2026-08-27",
+  "affectedData": [
+    "顧客が保管した文書、顧客データベース内の個人情報、顧客の認証情報について、調査で攻撃者による取得・外部送信等の事実は認められなかった"
+  ],
+  "counts": [],
+  "scaleLabel": "情報流出は確認されず（規模の公表なし）",
+  "caveats": [
+    "不正アクセス自体は確認されている。顧客情報の取得・外部送信が確認されなかったことと、侵害がなかったことは異なる",
+    "9月1日の初報と10月9日の続報を同一事案に集約。8月27日は検知・対策実施日で、最初の侵入日とは断定しない",
+    "マルウェア検査による安全確認を記載しているが、感染やランサムウェア被害を認めた公表ではない",
+    "認証情報や開発環境・ソースコードの管理強化は再発防止策であり、それ自体から具体的な侵入原因を推定しない",
+    "初報はシステム停止を緊急措置として記載するが、停止時間・影響利用者数・再開完了日は公表されていない"
+  ],
+  "sources": [
+    {
+      "title": "ペーパーロジック：当社サービスへの不正アクセスについて",
+      "url": "https://paperlogic.co.jp/post_17046/",
+      "publishedDate": "2026-09-01"
+    },
+    {
+      "title": "ペーパーロジック：9月1日付公表の続報",
+      "url": "https://paperlogic.co.jp/post_17055/",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-27",
+      "label": "不正アクセスを検知・封じ込め",
+      "kind": "occurrence",
+      "summary": "異常動作を検知し、アクセス遮断、認証情報無効化、システム停止などを実施",
+      "sourceUrl": "https://paperlogic.co.jp/post_17046/"
+    },
+    {
+      "date": "2026-09-01",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "顧客情報の閲覧・持ち出しの痕跡は見つかっていないと説明",
+      "sourceUrl": "https://paperlogic.co.jp/post_17046/"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "調査結果の続報",
+      "kind": "update",
+      "summary": "顧客文書・個人情報・認証情報の取得・外部送信の事実は認められないと報告",
+      "sourceUrl": "https://paperlogic.co.jp/post_17055/"
+    }
+  ]
+}
