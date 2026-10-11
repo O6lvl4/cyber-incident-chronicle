@@ -1,0 +1,84 @@
+{
+  "id": "asahi-kasei-pharma-digital-2026",
+  "company": "旭化成セラピューティクス",
+  "title": "Pharma DIGITALの会員データベースへ不正アクセス、個人情報漏えいの可能性",
+  "announcementDate": "2026-10-06",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセス発生日は未公表。委託先からの報告受領は10月2日",
+  "updatedDate": "2026-10-06",
+  "statusAsOfDate": "2026-10-06",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "委託運営サイトの会員データベースへの不正アクセス（手法・侵入経路の詳細は未公表）",
+    "status": "confirmed"
+  },
+  "summary": "運営・情報管理委託先から10月2日に不正アクセスの報告を受け、Pharma DIGITALを停止。医療従事者と従業員の情報が閲覧・取得された可能性を公表した。",
+  "geography": "日本の医療従事者向けサイト「Pharma DIGITAL」",
+  "lastVerifiedDate": "2026-10-11",
+  "affectedData": [
+    "医療従事者：氏名、所属施設名、施設住所、職種、診療科など",
+    "医療従事者の別区分：上記の情報に加えメールアドレスなど",
+    "従業員：氏名、メールアドレス、写真"
+  ],
+  "counts": [
+    {
+      "value": 514000,
+      "unit": "名",
+      "status": "possible",
+      "label": "医療従事者：氏名・施設情報などの最大対象",
+      "approximate": true
+    },
+    {
+      "value": 44000,
+      "unit": "名",
+      "status": "possible",
+      "label": "医療従事者：メールアドレスなども含む区分の最大対象",
+      "approximate": true
+    },
+    {
+      "value": 700,
+      "unit": "名",
+      "status": "possible",
+      "label": "従業員の最大対象",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "可能性のある最大対象：医療従事者約51.4万名／メール等を含む区分約4.4万名／従業員約700名",
+  "caveats": [
+    "いずれも漏えいした可能性がある情報の最大対象人数であり、取得・漏えいが確認された人数ではない",
+    "医療従事者の表は約51万4,000名と、上記にメールアドレス等を加えた約4万4,000名を分けている。両区分の重複関係や全体の実人数は明示されていないため合算しない",
+    "10月2日は株式会社医薬情報ネットから報告を受けた日で、最初の侵入日や委託先の検知日と断定しない",
+    "クレジットカード情報・要配慮個人情報は保管していない。公表時点で情報の不正利用や被害は未確認",
+    "原因となった経路は是正済みとしているが詳細は未公表。サイトの運用停止は公表時点で継続",
+    "公開本文に表示された10月6日を公表日とする。HTMLのtime属性には別日付が入っているが、本文日付を優先する"
+  ],
+  "sources": [
+    {
+      "title": "旭化成セラピューティクス：Pharma DIGITALへの不正アクセスと情報漏えいの可能性",
+      "url": "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html",
+      "publishedDate": "2026-10-06"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "label": "委託先から報告受領",
+      "kind": "occurrence",
+      "summary": "医薬情報ネットから会員データベースの侵害と情報閲覧・取得の可能性を報告され、サイトを停止",
+      "sourceUrl": "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "対象情報と対応を公表",
+      "kind": "disclosure",
+      "summary": "情報の種類別に最大対象人数を示し、経路の是正とサイト停止継続を説明",
+      "sourceUrl": "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html"
+    }
+  ]
+}

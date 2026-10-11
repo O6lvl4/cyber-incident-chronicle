@@ -1,0 +1,70 @@
+{
+  "id": "lawson-mail-server-2026",
+  "company": "ローソン",
+  "title": "メールサーバーの不正利用で推計約70万件の不審メールを送信",
+  "announcementDate": "2026-10-01",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-09-25",
+  "occurredDateLabel": "不審メール送信の開始日（9月27日まで）",
+  "updatedDate": "2026-10-01",
+  "statusAsOfDate": "2026-10-01",
+  "lastVerifiedDate": "2026-10-11",
+  "impactTypes": [
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "メールサーバーの第三者による不正利用（原因は確認中）",
+    "status": "confirmed"
+  },
+  "summary": "第三者がローソンのメールサーバーを不正利用し、9月25日から27日まで推計約70万件の不審な英文メールを送信した。設定変更・通信制限を実施し、10月1日時点で本件による個人情報等の流出は確認されていない。",
+  "affectedData": [
+    "本件による個人情報等の流出は確認されていない"
+  ],
+  "counts": [
+    {
+      "value": 700000,
+      "unit": "件",
+      "label": "不審メールの送信件数（推計約70万件）",
+      "status": "confirmed",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "約70万件は送信メールの推計件数であり、漏えい人数や被害者数ではない",
+    "10月1日時点で情報流出、データセンター内への侵入、データ改ざん、マルウェア感染は確認されていない。侵害全般の不存在を確定するものではない",
+    "10月8日公表のローソンID・アプリ予約の情報漏えいとは対象システム・公表資料が異なるため別事案として扱う",
+    "送信先の大半は海外のメールアドレスで、国内への送信も確認された"
+  ],
+  "geography": "日本企業ローソンのメールサーバー。送信先は主に海外、一部国内",
+  "sources": [
+    {
+      "title": "ローソン：当社メールサーバーの不正利用による不審メール送信について",
+      "url": "https://www.lawson.co.jp/contents/cont07/1532969_3310.html",
+      "publishedDate": "2026-10-01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "label": "不審メール送信開始",
+      "kind": "occurrence",
+      "summary": "15時頃から第三者の不正利用による送信が発生。9月27日17時15分頃まで継続",
+      "sourceUrl": "https://www.lawson.co.jp/contents/cont07/1532969_3310.html"
+    },
+    {
+      "date": "2026-09-27",
+      "label": "不正送信防止の対策",
+      "kind": "occurrence",
+      "summary": "メールサーバーの設定変更と通信制限等を実施",
+      "sourceUrl": "https://www.lawson.co.jp/contents/cont07/1532969_3310.html"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "メールサーバーの不正利用を公表",
+      "kind": "disclosure",
+      "summary": "送信件数を推計約70万件と公表。情報流出等は未確認で、原因の確認と恒久対策を進めると説明",
+      "sourceUrl": "https://www.lawson.co.jp/contents/cont07/1532969_3310.html"
+    }
+  ]
+}

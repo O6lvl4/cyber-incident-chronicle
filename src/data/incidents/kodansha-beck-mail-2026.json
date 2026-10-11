@@ -1,0 +1,72 @@
+{
+  "id": "kodansha-beck-mail-2026",
+  "company": "講談社BECK",
+  "title": "旧講談社ビーシーのメールアカウントへの不正アクセスと情報漏えいのおそれ",
+  "announcementDate": "2026-10-02",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-09-14",
+  "occurredDateLabel": "不審メールの一斉送信日（それ以前の不正アクセス開始日は未公表）",
+  "updatedDate": "2026-10-02",
+  "statusAsOfDate": "2026-10-02",
+  "lastVerifiedDate": "2026-10-11",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "旧メールアカウントの認証情報の不正取得と推測（取得手法は不明）",
+    "status": "possible"
+  },
+  "summary": "旧講談社ビーシー時代の従業員1名のメールアカウントが侵害され、不審メール50件を送信。過去の不正アクセスとメールデータ取得の形跡も判明し、保存されていた個人情報等が漏えいした可能性を公表した。",
+  "affectedData": [
+    "対象の旧メールボックスに保存された個人情報等（具体的な項目・対象人数は未公表）"
+  ],
+  "counts": [
+    {
+      "value": 1,
+      "unit": "アカウント",
+      "label": "不正アクセスを受けた従業員1名の旧アカウント",
+      "status": "confirmed",
+      "approximate": false
+    },
+    {
+      "value": 50,
+      "unit": "件",
+      "label": "外部に送信された不審メール",
+      "status": "confirmed",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "1アカウントと50件は侵害アカウント数・送信メール数であり、個人情報の漏えい人数ではない",
+    "メールデータ取得の形跡は確認されたが、個人情報等は漏えいの可能性として公表。全容と対象者を特定できていない",
+    "合併前の旧講談社ビーシーのアカウントが対象。現在の講談社BECKのアカウントへの不正アクセスはないと公表",
+    "9月14日は不審メール送信日。過去にさかのぼる不正アクセスの開始日は未公表",
+    "10月2日時点で本件による情報の不正利用や金銭的被害は確認されていない"
+  ],
+  "geography": "日本の講談社BECK従業員が旧講談社ビーシーで使用していたメールアカウント",
+  "sources": [
+    {
+      "title": "講談社BECK：不正アクセスによる迷惑メール発信に関するおわびとご報告",
+      "url": "https://kodansha-beck.co.jp/news/unauthorizedaccess20261002",
+      "publishedDate": "2026-10-02"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-14",
+      "label": "不審メール送信・対象アカウント遮断",
+      "kind": "occurrence",
+      "summary": "10時47分頃に不審メールを一斉送信。判明後、同日中にアカウントの停止・削除を行い完全遮断",
+      "sourceUrl": "https://kodansha-beck.co.jp/news/unauthorizedaccess20261002"
+    },
+    {
+      "date": "2026-10-02",
+      "label": "不正アクセスと漏えいのおそれを公表",
+      "kind": "disclosure",
+      "summary": "ログ調査で過去の不正アクセスとメールデータ取得の形跡を確認。個人情報等は漏えいの可能性として公表",
+      "sourceUrl": "https://kodansha-beck.co.jp/news/unauthorizedaccess20261002"
+    }
+  ]
+}

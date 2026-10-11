@@ -1,0 +1,1821 @@
+{
+  "reportDateJst": "2026-10-11",
+  "session": "manual-recovery",
+  "generatedAt": "2026-10-11T01:48:41.959056Z",
+  "scope": {
+    "operation": "Full fresh-body supplemental source audit; no automatic import",
+    "overlapWindow": {
+      "fromInclusive": "2026-10-08T21:13:21.412143Z",
+      "throughInclusive": "2026-10-11T01:39:21.190249Z",
+      "basis": "Recovered successful per-ecosystem 2026-10-10 report checkpoint minus 24 hours; modified OR published. Full recovered-archive canonical comparison additionally catches retroactive content edits."
+    },
+    "ingestionSnapshotCommit": "2a957af1aac1c931d1e50224421d1549e6da4ae9",
+    "ingestionSnapshotCommittedAt": "2026-10-11T00:35:13Z",
+    "ingestionPolicy": "Preserve 79 curated records: 57 overlays on eligible Reviewed records and 22 records outside the fixed scope. Only source id/aliases define identity. MAL and unmatched backlogs are not bulk imported.",
+    "baselineReport": "https://api.github.com/repos/O6lvl4/cyber-incident-chronicle/git/blobs/6f14497b26ba5f805da4ea2b0959f2d3c87c50c4",
+    "baselineReportSha256": "1aa91a49bbeb6b44b03fa6a89ee701e7a5714873e3f3ae46c25492f94c9487c7",
+    "baselineInventory": "https://api.github.com/repos/O6lvl4/cyber-incident-chronicle/git/blobs/4ff2863d73cd0f50ca277ad3034a7a79b746b097",
+    "baselineArtifacts": [
+      {
+        "url": "https://api.github.com/repos/O6lvl4/cyber-incident-chronicle/git/blobs/6f14497b26ba5f805da4ea2b0959f2d3c87c50c4",
+        "gitBlobSha": "6f14497b26ba5f805da4ea2b0959f2d3c87c50c4",
+        "apiResponseEncoding": "json",
+        "contentEncoding": "base64",
+        "decodedFileEncoding": "utf-8 JSON",
+        "decodedBytes": 35268,
+        "decodedSha256": "1aa91a49bbeb6b44b03fa6a89ee701e7a5714873e3f3ae46c25492f94c9487c7"
+      },
+      {
+        "url": "https://api.github.com/repos/O6lvl4/cyber-incident-chronicle/git/blobs/4ff2863d73cd0f50ca277ad3034a7a79b746b097",
+        "gitBlobSha": "4ff2863d73cd0f50ca277ad3034a7a79b746b097",
+        "apiResponseEncoding": "json",
+        "contentEncoding": "base64",
+        "decodedFileEncoding": "gzip",
+        "decodedBytes": 130656,
+        "decodedSha256": "35b9496e16de94c71c5150e43b5ba3c5cf4bd2fdadf61cb3cd8c81f6e5d5a9db",
+        "uncompressedBytes": 1699777,
+        "uncompressedSha256": "96996fee4f313b64464ab72f0a59e414f9e00748e8622d551ea999c6412e10c4"
+      }
+    ],
+    "baselineRetrievalNote": "Immutable GitHub Git Blobs API URLs return JSON envelopes with base64 content, not raw JSON/gzip file bodies. Decode content, verify the decoded-file SHA256, then decompress the inventory gzip. The historical source-snapshot bundle was not uploaded and remains unavailable; no unqualified relative link to it is supplied."
+  },
+  "github": {
+    "repository": "https://github.com/github/advisory-database",
+    "commit": "2a957af1aac1c931d1e50224421d1549e6da4ae9",
+    "reviewedRecords": 36780,
+    "eligibleRecords": 18851,
+    "eligibleWithdrawn": 848,
+    "exclusions": {
+      "beforeWindow": 13864,
+      "outsideSupportedEcosystems": 4065
+    },
+    "eligibleWithoutAnyOSVExportAliasMatch": 0,
+    "eligibleWithoutAnyOSVExportAliasMatchIds": []
+  },
+  "osv": {
+    "generatedAt": "2026-10-11T01:40:49.546661Z",
+    "perEcosystem": {
+      "npm": {
+        "archiveRecordsReadWithCrc": 230261,
+        "malRecords": 222424,
+        "nonMalRecords": 7837,
+        "prefixes": {
+          "EEF": 1,
+          "GHSA": 7835,
+          "GSD": 1,
+          "MAL": 222424
+        },
+        "canonicalDiff": {
+          "malAdded": 1,
+          "malModified": 0,
+          "malRemoved": 0,
+          "nonMalAdded": 3,
+          "nonMalModified": 0,
+          "nonMalRemoved": 0
+        }
+      },
+      "PyPI": {
+        "archiveRecordsReadWithCrc": 26219,
+        "malRecords": 11820,
+        "nonMalRecords": 14399,
+        "prefixes": {
+          "GHSA": 6565,
+          "MAL": 11820,
+          "OSV": 12,
+          "PYSEC": 7822
+        },
+        "canonicalDiff": {
+          "malAdded": 5,
+          "malModified": 0,
+          "malRemoved": 0,
+          "nonMalAdded": 1,
+          "nonMalModified": 2,
+          "nonMalRemoved": 0
+        }
+      },
+      "RubyGems": {
+        "archiveRecordsReadWithCrc": 5440,
+        "malRecords": 4280,
+        "nonMalRecords": 1160,
+        "prefixes": {
+          "GHSA": 1160,
+          "MAL": 4280
+        },
+        "canonicalDiff": {
+          "malAdded": 0,
+          "malModified": 0,
+          "malRemoved": 0,
+          "nonMalAdded": 0,
+          "nonMalModified": 0,
+          "nonMalRemoved": 0
+        }
+      },
+      "Go": {
+        "archiveRecordsReadWithCrc": 9618,
+        "malRecords": 20,
+        "nonMalRecords": 9598,
+        "prefixes": {
+          "GHSA": 4965,
+          "GO": 4632,
+          "MAL": 20,
+          "OSV": 1
+        },
+        "canonicalDiff": {
+          "malAdded": 0,
+          "malModified": 0,
+          "malRemoved": 0,
+          "nonMalAdded": 10,
+          "nonMalModified": 8,
+          "nonMalRemoved": 0
+        }
+      },
+      "crates.io": {
+        "archiveRecordsReadWithCrc": 2899,
+        "malRecords": 21,
+        "nonMalRecords": 2878,
+        "prefixes": {
+          "GHSA": 1601,
+          "MAL": 21,
+          "RUSTSEC": 1277
+        },
+        "canonicalDiff": {
+          "malAdded": 0,
+          "malModified": 0,
+          "malRemoved": 0,
+          "nonMalAdded": 0,
+          "nonMalModified": 0,
+          "nonMalRemoved": 0
+        }
+      },
+      "Maven": {
+        "archiveRecordsReadWithCrc": 7190,
+        "malRecords": 2,
+        "nonMalRecords": 7188,
+        "prefixes": {
+          "GHSA": 7188,
+          "MAL": 2
+        },
+        "canonicalDiff": {
+          "malAdded": 0,
+          "malModified": 0,
+          "malRemoved": 0,
+          "nonMalAdded": 0,
+          "nonMalModified": 0,
+          "nonMalRemoved": 0
+        }
+      },
+      "NuGet": {
+        "archiveRecordsReadWithCrc": 1922,
+        "malRecords": 782,
+        "nonMalRecords": 1140,
+        "prefixes": {
+          "GHSA": 1140,
+          "MAL": 782
+        },
+        "canonicalDiff": {
+          "malAdded": 0,
+          "malModified": 0,
+          "malRemoved": 0,
+          "nonMalAdded": 0,
+          "nonMalModified": 0,
+          "nonMalRemoved": 0
+        }
+      }
+    },
+    "crossArchiveContentVariants": [],
+    "archiveRecordsReadWithCrc": 283549,
+    "uniqueSourceIds": 283143,
+    "status": "success",
+    "sources": [
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip",
+        "requestMethod": "GET",
+        "conditionalRequest": false,
+        "lastAttemptAt": "2026-10-11T01:39:13.180730Z",
+        "ecosystem": "npm",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:21.190249Z",
+        "bytes": 218230289,
+        "sha256": "e6e7f1220eb76dd4c6349908709809f0358739154c6dc996576e180fcf8f1b9c",
+        "sourceLastModified": "Sat, 10 Oct 2026 10:03:02 GMT",
+        "etag": "\"ccc21a21bcdde75181561b00f806decf\"",
+        "generation": "1791626582334037",
+        "contentType": "application/zip",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:21.190249Z",
+        "outcome": "fresh-body-fetched",
+        "lastSuccessfulContentCheckAt": "2026-10-11T01:40:42.671209Z",
+        "recordCount": 230261,
+        "crcReadCompleted": true,
+        "allRecordsCanonicalHashed": true,
+        "previousLastSuccessfulFetchAt": "2026-10-09T21:12:09.815967Z",
+        "previousLastSuccessfulContentCheckAt": "2026-10-09T21:13:21.412143Z",
+        "previousSha256": "acecd5bcaae576712d3a2c72bdaf369fe240b037162652633b85b24c0d295dbf",
+        "previousBytes": 218213513,
+        "overlapFromInclusive": "2026-10-08T21:13:21.412143Z",
+        "recoveryRefetch": true,
+        "contentAvailable": true,
+        "status": "changed-content-fetched",
+        "malAdded": 1,
+        "malModified": 0,
+        "malRemoved": 0,
+        "nonMalAdded": 3,
+        "nonMalModified": 0,
+        "nonMalRemoved": 0,
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip?generation=1791626582334037"
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip",
+        "requestMethod": "GET",
+        "conditionalRequest": false,
+        "lastAttemptAt": "2026-10-11T01:39:13.181347Z",
+        "ecosystem": "PyPI",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:18.869065Z",
+        "bytes": 35968268,
+        "sha256": "159fe3dc8e1545604fb515c1e60deead3785bd5b6c4b936920fd2e6c1963d035",
+        "sourceLastModified": "Sat, 10 Oct 2026 12:02:52 GMT",
+        "etag": "\"243bb93027de13b423ea2f2a828bb617\"",
+        "generation": "1791633772253334",
+        "contentType": "application/zip",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:18.869065Z",
+        "outcome": "fresh-body-fetched",
+        "lastSuccessfulContentCheckAt": "2026-10-11T01:40:45.969120Z",
+        "recordCount": 26219,
+        "crcReadCompleted": true,
+        "allRecordsCanonicalHashed": true,
+        "previousLastSuccessfulFetchAt": "2026-10-09T21:12:04.534858Z",
+        "previousLastSuccessfulContentCheckAt": "2026-10-09T21:13:26.228094Z",
+        "previousSha256": "b9b5ee99364ef6e0233c095150eb14931f29a03d1f09e851ee3548ed4192f0ec",
+        "previousBytes": 35960984,
+        "overlapFromInclusive": "2026-10-08T21:13:26.228094Z",
+        "recoveryRefetch": true,
+        "contentAvailable": true,
+        "status": "changed-content-fetched",
+        "malAdded": 5,
+        "malModified": 0,
+        "malRemoved": 0,
+        "nonMalAdded": 1,
+        "nonMalModified": 2,
+        "nonMalRemoved": 0,
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1791633772253334"
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip",
+        "requestMethod": "GET",
+        "conditionalRequest": false,
+        "lastAttemptAt": "2026-10-11T01:39:13.181825Z",
+        "ecosystem": "RubyGems",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:18.378692Z",
+        "bytes": 5148232,
+        "sha256": "2468393b6f83d5ff2e21f2f59d114a3a0f1d5665d5429717f69351045cb95279",
+        "sourceLastModified": "Thu, 08 Oct 2026 22:32:43 GMT",
+        "etag": "\"9f9bd8e574c71487def8682be92bca63\"",
+        "generation": "1791498763735670",
+        "contentType": "application/zip",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:18.378692Z",
+        "outcome": "fresh-body-fetched",
+        "lastSuccessfulContentCheckAt": "2026-10-11T01:40:46.324332Z",
+        "recordCount": 5440,
+        "crcReadCompleted": true,
+        "allRecordsCanonicalHashed": true,
+        "previousLastSuccessfulFetchAt": "2026-10-09T13:55:47.690559Z",
+        "previousLastSuccessfulContentCheckAt": "2026-10-09T21:13:26.988443Z",
+        "previousSha256": "2468393b6f83d5ff2e21f2f59d114a3a0f1d5665d5429717f69351045cb95279",
+        "previousBytes": 5148232,
+        "overlapFromInclusive": "2026-10-08T21:13:26.988443Z",
+        "recoveryRefetch": true,
+        "contentAvailable": true,
+        "status": "unchanged-content-fresh-body-fetched",
+        "malAdded": 0,
+        "malModified": 0,
+        "malRemoved": 0,
+        "nonMalAdded": 0,
+        "nonMalModified": 0,
+        "nonMalRemoved": 0,
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip?generation=1791498763735670"
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip",
+        "requestMethod": "GET",
+        "conditionalRequest": false,
+        "lastAttemptAt": "2026-10-11T01:39:13.182232Z",
+        "ecosystem": "Go",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:18.671893Z",
+        "bytes": 12337267,
+        "sha256": "dfe6c3aecd51e8d513c8c4bec54f9fbd4e2aee14b399e02c3af8c0038fe5edc8",
+        "sourceLastModified": "Sat, 10 Oct 2026 12:02:51 GMT",
+        "etag": "\"3657c5ba26e4826cc0ab06918800c9b1\"",
+        "generation": "1791633771842263",
+        "contentType": "application/zip",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:18.671893Z",
+        "outcome": "fresh-body-fetched",
+        "lastSuccessfulContentCheckAt": "2026-10-11T01:40:47.702764Z",
+        "recordCount": 9618,
+        "crcReadCompleted": true,
+        "allRecordsCanonicalHashed": true,
+        "previousLastSuccessfulFetchAt": "2026-10-09T21:12:03.544598Z",
+        "previousLastSuccessfulContentCheckAt": "2026-10-09T21:13:28.814459Z",
+        "previousSha256": "e715c545c806526feea4f8568238c3b62c30579969266d69693a827d0d39f270",
+        "previousBytes": 12308755,
+        "overlapFromInclusive": "2026-10-08T21:13:28.814459Z",
+        "recoveryRefetch": true,
+        "contentAvailable": true,
+        "status": "changed-content-fetched",
+        "malAdded": 0,
+        "malModified": 0,
+        "malRemoved": 0,
+        "nonMalAdded": 10,
+        "nonMalModified": 8,
+        "nonMalRemoved": 0,
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip?generation=1791633771842263"
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip",
+        "requestMethod": "GET",
+        "conditionalRequest": false,
+        "lastAttemptAt": "2026-10-11T01:39:13.182953Z",
+        "ecosystem": "crates.io",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:18.428480Z",
+        "bytes": 3556536,
+        "sha256": "b24f179d0985a66f5f7f425afda26f31dd89ed5f2768323b3ae6e71257c63308",
+        "sourceLastModified": "Fri, 09 Oct 2026 12:32:49 GMT",
+        "etag": "\"7d13ac6c188292fbb2990a3352f3c04a\"",
+        "generation": "1791549169090036",
+        "contentType": "application/zip",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:18.428480Z",
+        "outcome": "fresh-body-fetched",
+        "lastSuccessfulContentCheckAt": "2026-10-11T01:40:48.058550Z",
+        "recordCount": 2899,
+        "crcReadCompleted": true,
+        "allRecordsCanonicalHashed": true,
+        "previousLastSuccessfulFetchAt": "2026-10-09T13:55:47.759944Z",
+        "previousLastSuccessfulContentCheckAt": "2026-10-09T21:13:30.355289Z",
+        "previousSha256": "b24f179d0985a66f5f7f425afda26f31dd89ed5f2768323b3ae6e71257c63308",
+        "previousBytes": 3556536,
+        "overlapFromInclusive": "2026-10-08T21:13:30.355289Z",
+        "recoveryRefetch": true,
+        "contentAvailable": true,
+        "status": "unchanged-content-fresh-body-fetched",
+        "malAdded": 0,
+        "malModified": 0,
+        "malRemoved": 0,
+        "nonMalAdded": 0,
+        "nonMalModified": 0,
+        "nonMalRemoved": 0,
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip?generation=1791549169090036"
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip",
+        "requestMethod": "GET",
+        "conditionalRequest": false,
+        "lastAttemptAt": "2026-10-11T01:39:13.183527Z",
+        "ecosystem": "Maven",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:18.617366Z",
+        "bytes": 10404829,
+        "sha256": "c0e8f6d2aaeab6904d0b0277b002c759290611d725e9446884eb5a833e84dfaf",
+        "sourceLastModified": "Thu, 08 Oct 2026 22:32:43 GMT",
+        "etag": "\"c3e0a1657373ddfa76fd409e57f4d136\"",
+        "generation": "1791498763770015",
+        "contentType": "application/zip",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:18.617366Z",
+        "outcome": "fresh-body-fetched",
+        "lastSuccessfulContentCheckAt": "2026-10-11T01:40:49.153979Z",
+        "recordCount": 7190,
+        "crcReadCompleted": true,
+        "allRecordsCanonicalHashed": true,
+        "previousLastSuccessfulFetchAt": "2026-10-09T13:55:47.825461Z",
+        "previousLastSuccessfulContentCheckAt": "2026-10-09T21:13:32.183786Z",
+        "previousSha256": "c0e8f6d2aaeab6904d0b0277b002c759290611d725e9446884eb5a833e84dfaf",
+        "previousBytes": 10404829,
+        "overlapFromInclusive": "2026-10-08T21:13:32.183786Z",
+        "recoveryRefetch": true,
+        "contentAvailable": true,
+        "status": "unchanged-content-fresh-body-fetched",
+        "malAdded": 0,
+        "malModified": 0,
+        "malRemoved": 0,
+        "nonMalAdded": 0,
+        "nonMalModified": 0,
+        "nonMalRemoved": 0,
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip?generation=1791498763770015"
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip",
+        "requestMethod": "GET",
+        "conditionalRequest": false,
+        "lastAttemptAt": "2026-10-11T01:39:13.185075Z",
+        "ecosystem": "NuGet",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:18.369855Z",
+        "bytes": 2541101,
+        "sha256": "b590e301e245c9920a9f696fa91039d685ddbb788f4c27475adcd53372490b35",
+        "sourceLastModified": "Wed, 07 Oct 2026 20:33:08 GMT",
+        "etag": "\"6209d6c5047d55ebd13d513d96a55057\"",
+        "generation": "1791405188500350",
+        "contentType": "application/zip",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:18.369855Z",
+        "outcome": "fresh-body-fetched",
+        "lastSuccessfulContentCheckAt": "2026-10-11T01:40:49.545240Z",
+        "recordCount": 1922,
+        "crcReadCompleted": true,
+        "allRecordsCanonicalHashed": true,
+        "previousLastSuccessfulFetchAt": "2026-10-09T13:55:49.957810Z",
+        "previousLastSuccessfulContentCheckAt": "2026-10-09T21:13:32.973093Z",
+        "previousSha256": "b590e301e245c9920a9f696fa91039d685ddbb788f4c27475adcd53372490b35",
+        "previousBytes": 2541101,
+        "overlapFromInclusive": "2026-10-08T21:13:32.973093Z",
+        "recoveryRefetch": true,
+        "contentAvailable": true,
+        "status": "unchanged-content-fresh-body-fetched",
+        "malAdded": 0,
+        "malModified": 0,
+        "malRemoved": 0,
+        "nonMalAdded": 0,
+        "nonMalModified": 0,
+        "nonMalRemoved": 0,
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip?generation=1791405188500350"
+      }
+    ],
+    "previousArchiveRecordsReadWithCrc": 283529,
+    "canonicalDiffCompletedAt": "2026-10-11T01:41:45.903832Z",
+    "nonMalChangedUniqueSourceIds": 24,
+    "nonMalAddedUniqueSourceIds": 14,
+    "nonMalModifiedUniqueSourceIds": 10,
+    "nonMalRemovedSourceIds": 0,
+    "malChangedUniqueSourceIds": 6,
+    "malAddedSourceIds": 6,
+    "malModifiedSourceIds": 0,
+    "nonMalOverlapUniqueSourceIds": 147,
+    "currentNonMalUnmatchedBacklogSourceRecords": 999,
+    "currentBacklogWithdrawn": 73,
+    "currentBacklogPrefixes": {
+      "GHSA": 5,
+      "GO": 194,
+      "OSV": 7,
+      "PYSEC": 401,
+      "RUSTSEC": 392
+    },
+    "backlogAddedIds": [],
+    "backlogRemovedIds": [],
+    "newChangedOutsideReviewedCandidates": [],
+    "scopedSourceRecords": 261208,
+    "scopedWithdrawnRecords": 1306,
+    "scopedPrefixes": {
+      "EEF": 1,
+      "GHSA": 18858,
+      "GO": 4344,
+      "MAL": 232015,
+      "OSV": 7,
+      "PYSEC": 5193,
+      "RUSTSEC": 790
+    },
+    "exclusions": {
+      "beforeWindow": 21935
+    },
+    "outcomes": {
+      "aliasMatchedEligibleReviewed": 27036,
+      "unmatched": 232994,
+      "aliasMatchedCuratedOnly": 22,
+      "aliasMatchedReviewedOutsideScope": 1156
+    },
+    "recovery": {
+      "status": "baseline-bodies-recovered-and-full-comparison-verified",
+      "baselineReport": "https://api.github.com/repos/O6lvl4/cyber-incident-chronicle/git/blobs/6f14497b26ba5f805da4ea2b0959f2d3c87c50c4",
+      "note": "Three historical export generations were freshly fetched and matched the retained report SHA256 and bytes. Four unchanged current bodies match the same baseline hashes. Every current and recovered baseline ZIP member was read with CRC validation and canonical JSON compared. Lost later observations are not claimed as the comparison baseline. Historical JVN raw bodies remain unavailable.",
+      "sources": [
+        {
+          "ecosystem": "npm",
+          "expectedSha256": "acecd5bcaae576712d3a2c72bdaf369fe240b037162652633b85b24c0d295dbf",
+          "expectedBytes": 218213513,
+          "previousSuccessfulContentCheckAt": "2026-10-09T21:13:21.412143Z",
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip?generation=1791577968293383",
+          "lastAttemptAt": "2026-10-11T01:40:54.954819Z",
+          "requestMethod": "GET",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-11T01:41:07.085806Z",
+          "sha256": "acecd5bcaae576712d3a2c72bdaf369fe240b037162652633b85b24c0d295dbf",
+          "bytes": 218213513,
+          "recovered": true
+        },
+        {
+          "ecosystem": "PyPI",
+          "expectedSha256": "b9b5ee99364ef6e0233c095150eb14931f29a03d1f09e851ee3548ed4192f0ec",
+          "expectedBytes": 35960984,
+          "previousSuccessfulContentCheckAt": "2026-10-09T21:13:26.228094Z",
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1791579767518862",
+          "lastAttemptAt": "2026-10-11T01:40:54.546081Z",
+          "requestMethod": "GET",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-11T01:41:03.976900Z",
+          "sha256": "b9b5ee99364ef6e0233c095150eb14931f29a03d1f09e851ee3548ed4192f0ec",
+          "bytes": 35960984,
+          "recovered": true
+        },
+        {
+          "ecosystem": "RubyGems",
+          "expectedSha256": "2468393b6f83d5ff2e21f2f59d114a3a0f1d5665d5429717f69351045cb95279",
+          "expectedBytes": 5148232,
+          "previousSuccessfulContentCheckAt": "2026-10-09T21:13:26.988443Z",
+          "recovered": true,
+          "basis": "Fresh current full body exactly matches retained successful manifest SHA256 and bytes"
+        },
+        {
+          "ecosystem": "Go",
+          "expectedSha256": "e715c545c806526feea4f8568238c3b62c30579969266d69693a827d0d39f270",
+          "expectedBytes": 12308755,
+          "previousSuccessfulContentCheckAt": "2026-10-09T21:13:28.814459Z",
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip?generation=1791579767169686",
+          "lastAttemptAt": "2026-10-11T01:40:54.484446Z",
+          "requestMethod": "GET",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-11T01:41:03.620004Z",
+          "sha256": "e715c545c806526feea4f8568238c3b62c30579969266d69693a827d0d39f270",
+          "bytes": 12308755,
+          "recovered": true
+        },
+        {
+          "ecosystem": "crates.io",
+          "expectedSha256": "b24f179d0985a66f5f7f425afda26f31dd89ed5f2768323b3ae6e71257c63308",
+          "expectedBytes": 3556536,
+          "previousSuccessfulContentCheckAt": "2026-10-09T21:13:30.355289Z",
+          "recovered": true,
+          "basis": "Fresh current full body exactly matches retained successful manifest SHA256 and bytes"
+        },
+        {
+          "ecosystem": "Maven",
+          "expectedSha256": "c0e8f6d2aaeab6904d0b0277b002c759290611d725e9446884eb5a833e84dfaf",
+          "expectedBytes": 10404829,
+          "previousSuccessfulContentCheckAt": "2026-10-09T21:13:32.183786Z",
+          "recovered": true,
+          "basis": "Fresh current full body exactly matches retained successful manifest SHA256 and bytes"
+        },
+        {
+          "ecosystem": "NuGet",
+          "expectedSha256": "b590e301e245c9920a9f696fa91039d685ddbb788f4c27475adcd53372490b35",
+          "expectedBytes": 2541101,
+          "previousSuccessfulContentCheckAt": "2026-10-09T21:13:32.973093Z",
+          "recovered": true,
+          "basis": "Fresh current full body exactly matches retained successful manifest SHA256 and bytes"
+        }
+      ]
+    },
+    "limitations": [
+      "Seven ecosystem exports have independent source update times; not all OSV or a single transactionally synchronized snapshot.",
+      "Only id/aliases create symmetric transitive identity. related/upstream and matching package names are not used as identity.",
+      "Alias matching does not establish matching affected ranges, package names, severity, withdrawal state, or maintainer-level review.",
+      "Backlog counts are source records including withdrawals and informational notices, not proven new independent vulnerabilities.",
+      "MAL records counted and compared separately; no MAL bulk import."
+    ],
+    "changedOutsideReviewedSourceIds": [
+      "GO-2026-5038",
+      "GO-2026-5972",
+      "GO-2026-6090",
+      "GO-2026-6091",
+      "GO-2026-6218"
+    ],
+    "changedExistingUnmatchedBacklogSourceIds": [
+      "GO-2026-5038",
+      "GO-2026-5972",
+      "GO-2026-6090",
+      "GO-2026-6091",
+      "GO-2026-6218"
+    ],
+    "nonMalCrossArchiveContentVariants": [],
+    "duplicateIdsAcrossArchives": 406
+  },
+  "curatedBunApi": {
+    "checkedThisRun": false,
+    "note": "Existing curated records and withdrawal overrides preserved; no fresh API or maintainer recheck claimed."
+  },
+  "ingestionResolution": {
+    "status": "no-new-actionable-supplemental-proposals",
+    "individuallyVerifiedSourceIds": [],
+    "preparedCanonicalIds": [],
+    "curatedOverlayCount": 57,
+    "note": "17 changed source records alias-match eligible Reviewed, 2 additional changed Go source records match curated records outside fixed scope, and 5 existing unmatched Go backlog records only update related references. No new supplemental import is proposed. Package/range/source differences and all 79 curated records, comprising 57 overlays and 22 outside fixed scope, remain preserved.",
+    "changedExistingBacklogReferenceOnlyUpdates": 5,
+    "unchangedUnmatchedBacklogSourceRecords": 999,
+    "curatedRecordCount": 79,
+    "curatedOutsideFixedScopeCount": 22
+  },
+  "idInventoryFile": "supplemental-id-inventory-2026-10-11.json.gz",
+  "candidateReviewFile": "supplemental-candidate-review-2026-10-11.json",
+  "sourceSnapshotFile": "supplemental-source-snapshots-2026-10-11.json.gz",
+  "cisaKev": {
+    "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "requestMethod": "GET",
+    "conditionalRequest": false,
+    "lastAttemptAt": "2026-10-11T01:39:13.186737Z",
+    "httpStatus": 403,
+    "checkedAt": "2026-10-11T01:39:16.837923Z",
+    "bytes": 454,
+    "sha256": "0b4bd631a95ed7f0243dd2a16c3f58c05489ffb7747a6eb45f81e2067ec0f1fa",
+    "sourceLastModified": null,
+    "etag": null,
+    "generation": null,
+    "contentType": "text/html",
+    "outcome": "failed-http-403",
+    "previousLastAttemptAt": "2026-10-09T21:11:55.813952Z",
+    "lastSuccessfulFetchAt": null,
+    "lastSuccessfulFetchAtAdvanced": false,
+    "retainedKevStatus": "unknown/unverified",
+    "note": "One ordinary fresh GET returned403. No retry, bypass, alternate host or catalog conclusion. Existing unknown/unverified status preserved."
+  },
+  "jvnIpedia": {
+    "query": "getVulnOverviewList/feed=hnd; modification date 2026-10-09 through 2026-10-11 JST calendar days; 50 per page",
+    "totalRes": 241,
+    "retrievedUniqueIds": 241,
+    "pages": 5,
+    "allPagesRetCd": "0",
+    "lastSuccessfulWindowFetchAt": "2026-10-11T01:39:50.924897Z",
+    "latestRecordModifiedAt": "2026-10-09T19:08:08+09:00",
+    "firstPageRereadStableTotalAndIds": true,
+    "firstPageRereadStableItemContent": true,
+    "firstPageRecheck": {
+      "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=1&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11",
+      "lastAttemptAt": "2026-10-11T01:39:50.925489Z",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-11T01:39:55.529242Z",
+      "bytes": 100197,
+      "sha256": "52f1cc86ede9ed59530fec77434c345e7387c3d711bca1414e1ea1f5becb38b6",
+      "etag": null,
+      "sourceLastModified": null,
+      "outcome": "success",
+      "lastSuccessfulFetchAt": "2026-10-11T01:39:55.529242Z",
+      "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+      "sourceSnapshotEntryUrl": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=1&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11"
+    },
+    "newIdsSinceBaseline": [],
+    "changedComparedFieldsSinceBaseline": [],
+    "comparisonFields": [
+      "title",
+      "link",
+      "identifier",
+      "date",
+      "issued",
+      "modified",
+      "cpe",
+      "cves",
+      "cvss",
+      "explicitWithdrawalFields",
+      "withdrawalStatus"
+    ],
+    "pageEvidence": [
+      {
+        "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=1&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11",
+        "lastAttemptAt": "2026-10-11T01:39:38.758643Z",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:44.058119Z",
+        "bytes": 100197,
+        "sha256": "8bde52dc2c79e7913594d86107d7451928a0f04fcd3007bf5f46870a3c992bc5",
+        "etag": null,
+        "sourceLastModified": null,
+        "outcome": "success",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:44.058119Z",
+        "apiStatus": {
+          "version": "3.3",
+          "method": "getVulnOverviewList",
+          "lang": "ja",
+          "retCd": "0",
+          "retMax": "50",
+          "errCd": "",
+          "errMsg": "",
+          "totalRes": "241",
+          "totalResRet": "50",
+          "firstRes": "1",
+          "feed": "hnd",
+          "startItem": "1",
+          "maxCountItem": "50",
+          "rangeDatePublic": "n",
+          "rangeDatePublished": "n",
+          "rangeDateFirstPublished": "n",
+          "datePublishedStartY": "2026",
+          "datePublishedStartM": "10",
+          "datePublishedStartD": "9",
+          "datePublishedEndY": "2026",
+          "datePublishedEndM": "10",
+          "datePublishedEndD": "11"
+        },
+        "recordsRead": 50,
+        "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+        "sourceSnapshotEntryUrl": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=1&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11"
+      },
+      {
+        "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=51&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11",
+        "lastAttemptAt": "2026-10-11T01:39:45.115603Z",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:50.894676Z",
+        "bytes": 93742,
+        "sha256": "5cdbd579fa0c504d62e415f76698f9316553b4a1274e0d21b8ad5e6b6b7dd96c",
+        "etag": null,
+        "sourceLastModified": null,
+        "outcome": "success",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:50.894676Z",
+        "apiStatus": {
+          "version": "3.3",
+          "method": "getVulnOverviewList",
+          "lang": "ja",
+          "retCd": "0",
+          "retMax": "50",
+          "errCd": "",
+          "errMsg": "",
+          "totalRes": "241",
+          "totalResRet": "50",
+          "firstRes": "51",
+          "feed": "hnd",
+          "startItem": "51",
+          "maxCountItem": "50",
+          "rangeDatePublic": "n",
+          "rangeDatePublished": "n",
+          "rangeDateFirstPublished": "n",
+          "datePublishedStartY": "2026",
+          "datePublishedStartM": "10",
+          "datePublishedStartD": "9",
+          "datePublishedEndY": "2026",
+          "datePublishedEndM": "10",
+          "datePublishedEndD": "11"
+        },
+        "recordsRead": 50,
+        "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+        "sourceSnapshotEntryUrl": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=51&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11"
+      },
+      {
+        "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=101&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11",
+        "lastAttemptAt": "2026-10-11T01:39:45.116060Z",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:50.744581Z",
+        "bytes": 155744,
+        "sha256": "41e898b89d3921228886749fcb6f9502c4e687c65ac717fc18c006935b2014f3",
+        "etag": null,
+        "sourceLastModified": null,
+        "outcome": "success",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:50.744581Z",
+        "apiStatus": {
+          "version": "3.3",
+          "method": "getVulnOverviewList",
+          "lang": "ja",
+          "retCd": "0",
+          "retMax": "50",
+          "errCd": "",
+          "errMsg": "",
+          "totalRes": "241",
+          "totalResRet": "50",
+          "firstRes": "101",
+          "feed": "hnd",
+          "startItem": "101",
+          "maxCountItem": "50",
+          "rangeDatePublic": "n",
+          "rangeDatePublished": "n",
+          "rangeDateFirstPublished": "n",
+          "datePublishedStartY": "2026",
+          "datePublishedStartM": "10",
+          "datePublishedStartD": "9",
+          "datePublishedEndY": "2026",
+          "datePublishedEndM": "10",
+          "datePublishedEndD": "11"
+        },
+        "recordsRead": 50,
+        "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+        "sourceSnapshotEntryUrl": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=101&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11"
+      },
+      {
+        "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=151&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11",
+        "lastAttemptAt": "2026-10-11T01:39:45.116351Z",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:50.882762Z",
+        "bytes": 112157,
+        "sha256": "9434680557de168faa3724ac09bed31fb698ca62b2e1079fd236305a08105ae5",
+        "etag": null,
+        "sourceLastModified": null,
+        "outcome": "success",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:50.882762Z",
+        "apiStatus": {
+          "version": "3.3",
+          "method": "getVulnOverviewList",
+          "lang": "ja",
+          "retCd": "0",
+          "retMax": "50",
+          "errCd": "",
+          "errMsg": "",
+          "totalRes": "241",
+          "totalResRet": "50",
+          "firstRes": "151",
+          "feed": "hnd",
+          "startItem": "151",
+          "maxCountItem": "50",
+          "rangeDatePublic": "n",
+          "rangeDatePublished": "n",
+          "rangeDateFirstPublished": "n",
+          "datePublishedStartY": "2026",
+          "datePublishedStartM": "10",
+          "datePublishedStartD": "9",
+          "datePublishedEndY": "2026",
+          "datePublishedEndM": "10",
+          "datePublishedEndD": "11"
+        },
+        "recordsRead": 50,
+        "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+        "sourceSnapshotEntryUrl": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=151&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11"
+      },
+      {
+        "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=201&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11",
+        "lastAttemptAt": "2026-10-11T01:39:45.116748Z",
+        "httpStatus": 200,
+        "checkedAt": "2026-10-11T01:39:50.924897Z",
+        "bytes": 134606,
+        "sha256": "6bd01dd5ac3336a523d6f89e2345024b27d8e3880c3080eec0403925ec45bb0f",
+        "etag": null,
+        "sourceLastModified": null,
+        "outcome": "success",
+        "lastSuccessfulFetchAt": "2026-10-11T01:39:50.924897Z",
+        "apiStatus": {
+          "version": "3.3",
+          "method": "getVulnOverviewList",
+          "lang": "ja",
+          "retCd": "0",
+          "retMax": "50",
+          "errCd": "",
+          "errMsg": "",
+          "totalRes": "241",
+          "totalResRet": "41",
+          "firstRes": "201",
+          "feed": "hnd",
+          "startItem": "201",
+          "maxCountItem": "50",
+          "rangeDatePublic": "n",
+          "rangeDatePublished": "n",
+          "rangeDateFirstPublished": "n",
+          "datePublishedStartY": "2026",
+          "datePublishedStartM": "10",
+          "datePublishedStartD": "9",
+          "datePublishedEndY": "2026",
+          "datePublishedEndM": "10",
+          "datePublishedEndD": "11"
+        },
+        "recordsRead": 41,
+        "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+        "sourceSnapshotEntryUrl": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=201&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11"
+      }
+    ],
+    "selectedExistingCpeCandidates": [
+      {
+        "identifier": "JVNDB-2026-037472",
+        "title": "langflowにおけるパストラバーサルの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037472.html",
+        "issued": "2026-10-09T19:07:32+09:00",
+        "modified": "2026-10-09T19:07:32+09:00",
+        "cves": [
+          "CVE-2026-103360"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037471",
+        "title": "langflowにおけるコードインジェクションの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037471.html",
+        "issued": "2026-10-09T19:07:28+09:00",
+        "modified": "2026-10-09T19:07:28+09:00",
+        "cves": [
+          "CVE-2026-104334"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037470",
+        "title": "Apache Software FoundationのApache Strutsにおける言語構文の表現に使用される特殊な要素の不適切な無効化に関する脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037470.html",
+        "issued": "2026-10-09T19:07:25+09:00",
+        "modified": "2026-10-09T19:07:25+09:00",
+        "cves": [
+          "CVE-2026-104711"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037469",
+        "title": "Apache Software FoundationのApache Strutsにおける非対称のリソース消費に関する脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037469.html",
+        "issued": "2026-10-09T19:07:22+09:00",
+        "modified": "2026-10-09T19:07:22+09:00",
+        "cves": [
+          "CVE-2026-104712"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037468",
+        "title": "Apache Software FoundationのApache Strutsにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037468.html",
+        "issued": "2026-10-09T19:07:18+09:00",
+        "modified": "2026-10-09T19:07:18+09:00",
+        "cves": [
+          "CVE-2026-104713"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037467",
+        "title": "Apache Software FoundationのApache Strutsにおける競合状態に関する脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037467.html",
+        "issued": "2026-10-09T19:07:14+09:00",
+        "modified": "2026-10-09T19:07:14+09:00",
+        "cves": [
+          "CVE-2026-104714"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037327",
+        "title": "langflowにおけるコードインジェクションの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037327.html",
+        "issued": "2026-10-09T18:59:25+09:00",
+        "modified": "2026-10-09T18:59:25+09:00",
+        "cves": [
+          "CVE-2026-88962"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037326",
+        "title": "Apache Software FoundationのApache KarafにおけるLDAP インジェクションの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037326.html",
+        "issued": "2026-10-09T18:59:22+09:00",
+        "modified": "2026-10-09T18:59:22+09:00",
+        "cves": [
+          "CVE-2026-90979"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037325",
+        "title": "Apache Software FoundationのApache KarafにおけるOS コマンドインジェクションの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037325.html",
+        "issued": "2026-10-09T18:59:18+09:00",
+        "modified": "2026-10-09T18:59:18+09:00",
+        "cves": [
+          "CVE-2026-91006"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037301",
+        "title": "langflowにおけるコードインジェクションの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037301.html",
+        "issued": "2026-10-09T18:58:01+09:00",
+        "modified": "2026-10-09T18:58:01+09:00",
+        "cves": [
+          "CVE-2026-93443"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037300",
+        "title": "langflowにおけるコードインジェクションの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037300.html",
+        "issued": "2026-10-09T18:57:58+09:00",
+        "modified": "2026-10-09T18:57:58+09:00",
+        "cves": [
+          "CVE-2026-93445"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037299",
+        "title": "langflowにおける信頼できないデータのデシリアライゼーションに関する脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037299.html",
+        "issued": "2026-10-09T18:57:55+09:00",
+        "modified": "2026-10-09T18:57:55+09:00",
+        "cves": [
+          "CVE-2026-93447"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037298",
+        "title": "langflowにおけるパストラバーサルの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037298.html",
+        "issued": "2026-10-09T18:57:51+09:00",
+        "modified": "2026-10-09T18:57:51+09:00",
+        "cves": [
+          "CVE-2026-93448"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037297",
+        "title": "langflowにおけるコードインジェクションの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037297.html",
+        "issued": "2026-10-09T18:57:48+09:00",
+        "modified": "2026-10-09T18:57:48+09:00",
+        "cves": [
+          "CVE-2026-93449"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037296",
+        "title": "langflowにおけるコードインジェクションの脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037296.html",
+        "issued": "2026-10-09T18:57:45+09:00",
+        "modified": "2026-10-09T18:57:45+09:00",
+        "cves": [
+          "CVE-2026-93674"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037295",
+        "title": "langflowにおける予期せぬ動作に関する脆弱性　",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037295.html",
+        "issued": "2026-10-09T18:57:41+09:00",
+        "modified": "2026-10-09T18:57:41+09:00",
+        "cves": [
+          "CVE-2026-93675"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037294",
+        "title": "langflowにおける情報漏えいに関する脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037294.html",
+        "issued": "2026-10-09T18:57:38+09:00",
+        "modified": "2026-10-09T18:57:38+09:00",
+        "cves": [
+          "CVE-2026-93677"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037266",
+        "title": "langflowにおけるアクセス制御に関する脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037266.html",
+        "issued": "2026-10-09T18:53:16+09:00",
+        "modified": "2026-10-09T18:53:16+09:00",
+        "cves": [
+          "CVE-2026-101329"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      },
+      {
+        "identifier": "JVNDB-2026-037265",
+        "title": "langflowにおける認証情報の不十分な保護に関する脆弱性",
+        "link": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037265.html",
+        "issued": "2026-10-09T18:53:12+09:00",
+        "modified": "2026-10-09T18:53:12+09:00",
+        "cves": [
+          "CVE-2026-101331"
+        ],
+        "status": "existing-cpe-level-library-candidate-not-imported",
+        "observedUnchangedComparedFields": true,
+        "reason": "CPE/title selection does not verify package name, affected ranges, maintainer evidence or eligibility"
+      }
+    ],
+    "limitations": [
+      "241 is an all-product/CPE row count, not a seven-ecosystem library vulnerability count.",
+      "Existing 19 langflow/Struts/Karaf triage candidates remain unverified at package/range/maintainer level and are not automatically imported.",
+      "Comparison covers all record fields retained in the recovered Oct10 inventory, excluding its derived reconciliation fields and unknown canonical hash recipe. Baseline descriptions and complete references were not available; full-item unchanged is not asserted.",
+      "Pagination totals and first-page items were stable at recheck; MyJVN does not provide a transactionally pinned snapshot.",
+      "The overlap query starts Oct9 JST. This audit does not assess modifications before that calendar date.",
+      "A successful read is source observation, not source publication time or application ingestion."
+    ],
+    "window": {
+      "previousSuccessfulWindowCheckpoint": "2026-10-09T21:12:50.906903Z",
+      "fromInclusive": "2026-10-08T21:12:50.906903Z",
+      "throughInclusive": "2026-10-11T01:39:55.529242Z",
+      "basis": "Prior successful per-source MyJVN window checkpoint minus 24h, then exact dcterms:modified UTC filter after broad JST calendar query"
+    },
+    "exactOverlapModifiedRows": 241,
+    "modifiedSincePreviousCheckpointRows": 0,
+    "baselineStatusSha256": "1aa91a49bbeb6b44b03fa6a89ee701e7a5714873e3f3ae46c25492f94c9487c7",
+    "baselineInventoryCompressedSha256": "35b9496e16de94c71c5150e43b5ba3c5cf4bd2fdadf61cb3cd8c81f6e5d5a9db",
+    "canonicalItemXmlHashMethod": "SHA-256 of ElementTree canonicalize(item XML, strip_text=True), UTF-8; not compared to prior unknown hash recipe",
+    "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=1&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=9&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=11",
+    "httpStatus": 200,
+    "outcome": "successfully-fetched-and-parsed",
+    "lastAttemptAt": "2026-10-11T01:39:50.925489Z",
+    "lastSuccessfulContentCheckAt": "2026-10-11T01:39:55.529242Z",
+    "rawOriginalBodiesRetained": true,
+    "retainedLangflowStrutsKarafTriageRows": 19,
+    "retainedLangflowStrutsKarafTriageRowsInExactOverlap": 19,
+    "supportedReviewedCveMatches": 21,
+    "osvBacklogCveMatches": 0,
+    "baselineStatusUrl": "https://api.github.com/repos/O6lvl4/cyber-incident-chronicle/git/blobs/6f14497b26ba5f805da4ea2b0959f2d3c87c50c4",
+    "baselineInventoryUrl": "https://api.github.com/repos/O6lvl4/cyber-incident-chronicle/git/blobs/4ff2863d73cd0f50ca277ad3034a7a79b746b097",
+    "baselineSourceSnapshotBundleAvailable": false
+  },
+  "jvnJpcertFeeds": [
+    {
+      "url": "https://jvn.jp/rss/jvn.rdf",
+      "httpStatus": 200,
+      "lastAttemptAt": "2026-10-11T01:39:06.655870Z",
+      "checkedAt": "2026-10-11T01:39:10.872567Z",
+      "bytes": 16256,
+      "sha256": "2d38b41f0c1ab05f5e523ac6d2d476416c5cb91dd065f59ba51046d07022fc99",
+      "etag": "\"c1b427d607221e34550a79ffd4f5c797cbec9d44\"",
+      "sourceLastModified": "Fri, 09 Oct 2026 00:00:09 GMT",
+      "outcome": "success",
+      "lastSuccessfulFetchAt": "2026-10-11T01:39:10.872567Z",
+      "bodyHashMatchesRetainedBaselineReceipt": true,
+      "baselineReceiptSha256": "2d38b41f0c1ab05f5e523ac6d2d476416c5cb91dd065f59ba51046d07022fc99",
+      "priorRawBodyIndependentlyRevalidated": false,
+      "recordsRead": 20,
+      "records": [
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月08日）",
+          "link": "https://jvn.jp/vu/JVNVU91137775/",
+          "date": "2026-10-09T09:00:00+09:00",
+          "issued": "2026-10-09T09:00:00+09:00",
+          "modified": "2026-10-09T09:00:00+09:00"
+        },
+        {
+          "title": "Movable Typeにおける複数の脆弱性",
+          "link": "https://jvn.jp/jp/JVN91153973/",
+          "date": "2026-10-07T14:00:00+09:00",
+          "issued": "2026-10-07T14:00:00+09:00",
+          "modified": "2026-10-07T14:00:00+09:00"
+        },
+        {
+          "title": "キーエンス製複数製品におけるXML外部エンティティ参照（XXE）の不適切な制限の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU98062224/",
+          "date": "2026-10-07T13:00:00+09:00",
+          "issued": "2026-09-02T13:00:00+09:00",
+          "modified": "2026-10-07T13:00:00+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月06日）",
+          "link": "https://jvn.jp/vu/JVNVU94062711/",
+          "date": "2026-10-07T09:00:00+09:00",
+          "issued": "2026-10-07T09:00:00+09:00",
+          "modified": "2026-10-07T09:00:00+09:00"
+        },
+        {
+          "title": "MCC製Universal Library for Linux (uldaq)におけるバッファオーバーフローの脆弱性",
+          "link": "https://jvn.jp/jp/JVN13510969/",
+          "date": "2026-10-06T12:00:15+09:00",
+          "issued": "2026-10-06T12:00:15+09:00",
+          "modified": "2026-10-06T12:00:15+09:00"
+        },
+        {
+          "title": "Androidアプリ「チケット流通センター」における複数の脆弱性",
+          "link": "https://jvn.jp/jp/JVN53292492/",
+          "date": "2026-10-06T12:00:00+09:00",
+          "issued": "2026-10-06T12:00:00+09:00",
+          "modified": "2026-10-06T12:00:00+09:00"
+        },
+        {
+          "title": "GROWIにおけるアクセス制限不備の脆弱性",
+          "link": "https://jvn.jp/jp/JVN24352487/",
+          "date": "2026-10-05T15:00:00+09:00",
+          "issued": "2026-10-05T15:00:00+09:00",
+          "modified": "2026-10-05T15:00:00+09:00"
+        },
+        {
+          "title": "Apache HTTP Server 2.4における複数の脆弱性に対するアップデート（2026年10月1日）",
+          "link": "https://jvn.jp/vu/JVNVU94648869/",
+          "date": "2026-10-02T10:00:30+09:00",
+          "issued": "2026-10-02T10:00:30+09:00",
+          "modified": "2026-10-02T10:00:30+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月01日）",
+          "link": "https://jvn.jp/vu/JVNVU91842649/",
+          "date": "2026-10-02T10:00:15+09:00",
+          "issued": "2026-10-02T10:00:15+09:00",
+          "modified": "2026-10-02T10:00:15+09:00"
+        },
+        {
+          "title": "InsydeH2O IHISIにおける安全でないメモリ書き込みの脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU92911062/",
+          "date": "2026-10-02T10:00:00+09:00",
+          "issued": "2026-10-02T10:00:00+09:00",
+          "modified": "2026-10-02T10:00:00+09:00"
+        },
+        {
+          "title": "OpenSSLにおける脆弱性に対するアップデート（2026年9月29日）",
+          "link": "https://jvn.jp/vu/JVNVU93468181/",
+          "date": "2026-10-01T11:30:00+09:00",
+          "issued": "2026-10-01T11:30:00+09:00",
+          "modified": "2026-10-01T11:30:00+09:00"
+        },
+        {
+          "title": "富士フイルムビジネスイノベーション製およびシャープ製複合機（MFP）におけるパストラバーサルの脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU90160989/",
+          "date": "2026-09-30T12:30:00+09:00",
+          "issued": "2026-09-30T12:30:00+09:00",
+          "modified": "2026-09-30T12:30:00+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年09月29日）",
+          "link": "https://jvn.jp/vu/JVNVU93754811/",
+          "date": "2026-09-30T09:00:00+09:00",
+          "issued": "2026-09-30T09:00:00+09:00",
+          "modified": "2026-09-30T09:00:00+09:00"
+        },
+        {
+          "title": "PFU製Image Scanner Driver for Linuxにおける複数の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU96968110/",
+          "date": "2026-09-29T15:00:00+09:00",
+          "issued": "2026-09-29T15:00:00+09:00",
+          "modified": "2026-09-29T15:00:00+09:00"
+        },
+        {
+          "title": "Pgpool-IIにおける複数の脆弱性",
+          "link": "https://jvn.jp/jp/JVN22475874/",
+          "date": "2026-09-29T14:00:00+09:00",
+          "issued": "2026-09-29T14:00:00+09:00",
+          "modified": "2026-09-29T14:00:00+09:00"
+        },
+        {
+          "title": "Authlibライブラリにおける署名検証が回避される脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU99151548/",
+          "date": "2026-09-29T09:15:00+09:00",
+          "issued": "2026-09-29T09:15:00+09:00",
+          "modified": "2026-09-29T09:15:00+09:00"
+        },
+        {
+          "title": "Siemens製品に対するアップデート（2026年9月）",
+          "link": "https://jvn.jp/vu/JVNVU97027767/",
+          "date": "2026-09-29T09:00:00+09:00",
+          "issued": "2026-09-04T10:15:00+09:00",
+          "modified": "2026-09-29T09:00:00+09:00"
+        },
+        {
+          "title": "バッファロー製Wi-Fi製品における複数の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU94863997/",
+          "date": "2026-09-28T13:30:00+09:00",
+          "issued": "2026-09-28T13:30:00+09:00",
+          "modified": "2026-09-28T13:30:00+09:00"
+        },
+        {
+          "title": "ISC BINDにおける複数の脆弱性（2026年9月）",
+          "link": "https://jvn.jp/vu/JVNVU97703430/",
+          "date": "2026-09-28T11:30:00+09:00",
+          "issued": "2026-09-18T16:45:00+09:00",
+          "modified": "2026-09-28T11:30:00+09:00"
+        },
+        {
+          "title": "Androidアプリ「Readwise Reader」における複数のクロスサイトスクリプティングの脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU96520526/",
+          "date": "2026-09-28T09:15:00+09:00",
+          "issued": "2026-09-28T09:15:00+09:00",
+          "modified": "2026-09-28T09:15:00+09:00"
+        }
+      ],
+      "latestSourceRecordDate": "2026-10-09T09:00:00+09:00",
+      "recordsDatedAfterBaselineCheckpoint": [],
+      "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+      "sourceSnapshotEntryUrl": "https://jvn.jp/rss/jvn.rdf"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/rss/jpcert.rdf",
+      "lastAttemptAt": "2026-10-11T01:39:38.756550Z",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-11T01:39:44.129014Z",
+      "bytes": 14157,
+      "sha256": "768e04e96567adc21a7b4a5d66d47441947d146e54f649520379a13bf0fa4932",
+      "etag": "\"374d-65d5e0efc7900\"",
+      "sourceLastModified": "Fri, 09 Oct 2026 01:13:40 GMT",
+      "outcome": "success",
+      "lastSuccessfulFetchAt": "2026-10-11T01:39:44.129014Z",
+      "bodyHashMatchesRetainedBaselineReceipt": true,
+      "baselineReceiptSha256": "768e04e96567adc21a7b4a5d66d47441947d146e54f649520379a13bf0fa4932",
+      "priorRawBodyIndependentlyRevalidated": false,
+      "recordsRead": 21,
+      "records": [
+        {
+          "title": "注意喚起: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260030.html",
+          "date": "2026-10-09T10:12+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260029.html",
+          "date": "2026-10-02T14:15+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: F5 BIG-IP Access Policy Managerにおけるヒープベースのバッファオーバーフローの脆弱性（CVE-2026-94127）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260028.html",
+          "date": "2026-09-24T16:14+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: Cisco Secure Email GatewayにおけるSQLインジェクションの脆弱性（CVE-2026-76461）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260027.html",
+          "date": "2026-09-15T15:42+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: Adobe AcrobatおよびReaderの脆弱性（APSB26-141）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260026.html",
+          "date": "2026-09-09T11:20+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: 2026年9月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260025.html",
+          "date": "2026-09-09T11:20+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: Google Chromeに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#1",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: Apache HTTP Server 2.4に複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#2",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: FortinetのFortiMailに未認証のリモートコード実行につながる脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#3",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のMozilla製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#4",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: Cisco Catalyst SD-WAN Managerに認証回避につながる脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#5",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: OpenSSLに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#6",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のWatchGuard製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#7",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のHPE製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#8",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: Pgpool-IIに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#9",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のApple製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#10",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のElastic製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#11",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: NCOが「サイバーセキュリティ関係法令Q&AハンドブックVer.3.0」を公開",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#12",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: NICTが「NICTER観測統計 - 2026年4月-6月」を公開",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#13",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 「情報セキュリティ早期警戒パートナーシップガイドライン」の2026年版を公開",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#14",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: NetScaler ADCおよびNetScaler Gatewayに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#15",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        }
+      ],
+      "latestSourceRecordDate": "2026-10-09T10:12+09:00",
+      "recordsDatedAfterBaselineCheckpoint": [],
+      "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+      "sourceSnapshotEntryUrl": "https://www.jpcert.or.jp/rss/jpcert.rdf"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/rss/jpcert-all.rdf",
+      "lastAttemptAt": "2026-10-11T01:39:38.757186Z",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-11T01:39:44.061610Z",
+      "bytes": 29243,
+      "sha256": "25cf5f565340e9203c4d66c8059806ad4a311c397cdbda6d7764d8faab709818",
+      "etag": "\"723b-65d5e0efc7900\"",
+      "sourceLastModified": "Fri, 09 Oct 2026 01:13:40 GMT",
+      "outcome": "success",
+      "lastSuccessfulFetchAt": "2026-10-11T01:39:44.061610Z",
+      "bodyHashMatchesRetainedBaselineReceipt": true,
+      "baselineReceiptSha256": "25cf5f565340e9203c4d66c8059806ad4a311c397cdbda6d7764d8faab709818",
+      "priorRawBodyIndependentlyRevalidated": false,
+      "recordsRead": 32,
+      "records": [
+        {
+          "title": "お知らせ：インシデント報告Webフォームメンテナンス（2026年10月22日）のお知らせ",
+          "link": "https://www.jpcert.or.jp/maintenance20261008.html",
+          "date": "2026-10-08T13:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "お知らせ：2026年度「フィッシング対策協議会 報告受け付け用メールサーバー構築」に関する入札のご案内",
+          "link": "https://www.jpcert.or.jp/solicitation/",
+          "date": "2026-10-08T09:22+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "お知らせ：JPCERT/CC 30周年を迎えて",
+          "link": "https://www.jpcert.or.jp/30th-anniversary.html",
+          "date": "2026-10-01T09:03+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "お知らせ：CyberNewsFlash「JetBrains TeamCity（オンプレミス版）におけるリモートコード実行につながる脆弱性（CVE-2026-63077）について」",
+          "link": "https://www.jpcert.or.jp/newsflash/2026081301.html",
+          "date": "2026-08-13T16:52+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "お知らせ：制御システムセキュリティカンファレンス2027講演募集（Call for Presentation）",
+          "link": "https://www.jpcert.or.jp/event/ics-conf-cfp2027/",
+          "date": "2026-08-13T14:13+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260030.html",
+          "date": "2026-10-09T10:12+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260029.html",
+          "date": "2026-10-02T14:15+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: F5 BIG-IP Access Policy Managerにおけるヒープベースのバッファオーバーフローの脆弱性（CVE-2026-94127）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260028.html",
+          "date": "2026-09-24T16:14+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: Cisco Secure Email GatewayにおけるSQLインジェクションの脆弱性（CVE-2026-76461）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260027.html",
+          "date": "2026-09-15T15:42+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: Adobe AcrobatおよびReaderの脆弱性（APSB26-141）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260026.html",
+          "date": "2026-09-09T11:20+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "注意喚起: 2026年9月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260025.html",
+          "date": "2026-09-09T11:20+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: Google Chromeに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#1",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: Apache HTTP Server 2.4に複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#2",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: FortinetのFortiMailに未認証のリモートコード実行につながる脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#3",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のMozilla製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#4",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: Cisco Catalyst SD-WAN Managerに認証回避につながる脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#5",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: OpenSSLに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#6",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のWatchGuard製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#7",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のHPE製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#8",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: Pgpool-IIに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#9",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のApple製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#10",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 複数のElastic製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#11",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: NCOが「サイバーセキュリティ関係法令Q&AハンドブックVer.3.0」を公開",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#12",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: NICTが「NICTER観測統計 - 2026年4月-6月」を公開",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#13",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: 「情報セキュリティ早期警戒パートナーシップガイドライン」の2026年版を公開",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#14",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "Weekly Report: NetScaler ADCおよびNetScaler Gatewayに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261007.html#15",
+          "date": "2026-10-07T09:05+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "JVN: CISA ICS Advisory / ICS Medical Advisory（2026年10月08日）",
+          "link": "https://jvn.jp/vu/JVNVU91137775/",
+          "date": "2026-10-09T09:00:00+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "JVN: Movable Typeにおける複数の脆弱性",
+          "link": "https://jvn.jp/jp/JVN91153973/",
+          "date": "2026-10-07T14:00:00+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "JVN: キーエンス製複数製品におけるXML外部エンティティ参照（XXE）の不適切な制限の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU98062224/",
+          "date": "2026-10-07T13:00:00+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "JVN: CISA ICS Advisory / ICS Medical Advisory（2026年10月06日）",
+          "link": "https://jvn.jp/vu/JVNVU94062711/",
+          "date": "2026-10-07T09:00:00+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "JVN: MCC製Universal Library for Linux (uldaq)におけるバッファオーバーフローの脆弱性",
+          "link": "https://jvn.jp/jp/JVN13510969/",
+          "date": "2026-10-06T12:00:15+09:00",
+          "issued": null,
+          "modified": null
+        },
+        {
+          "title": "JVN: Androidアプリ「チケット流通センター」における複数の脆弱性",
+          "link": "https://jvn.jp/jp/JVN53292492/",
+          "date": "2026-10-06T12:00:00+09:00",
+          "issued": null,
+          "modified": null
+        }
+      ],
+      "latestSourceRecordDate": "2026-10-09T10:12+09:00",
+      "recordsDatedAfterBaselineCheckpoint": [],
+      "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+      "sourceSnapshotEntryUrl": "https://www.jpcert.or.jp/rss/jpcert-all.rdf"
+    }
+  ],
+  "jpcertGuidance": {
+    "url": "https://www.jpcert.or.jp/at/2026/at260030.html",
+    "lastAttemptAt": "2026-10-11T01:39:38.757662Z",
+    "httpStatus": 200,
+    "checkedAt": "2026-10-11T01:39:44.060246Z",
+    "bytes": 37230,
+    "sha256": "76e138a930764a7513ba69e20e1ce3d8f0db9fe0f01794553e81eddb35cc3a86",
+    "etag": "\"916e-65d5e0eddf480\"",
+    "sourceLastModified": "Fri, 09 Oct 2026 01:13:38 GMT",
+    "outcome": "success",
+    "lastSuccessfulFetchAt": "2026-10-11T01:39:44.060246Z",
+    "bodyHashMatchesRetainedBaselineReceipt": true,
+    "baselineReceiptSha256": "76e138a930764a7513ba69e20e1ce3d8f0db9fe0f01794553e81eddb35cc3a86",
+    "priorRawBodyIndependentlyRevalidated": false,
+    "read": true,
+    "classification": "organizational intrusion guidance, not a new package advisory",
+    "publishedDate": "2026-10-08",
+    "updateDate": "2026-10-09",
+    "newSinceBaseline": false,
+    "note": "Oct9 update adds suspicious source addresses for cases A/B and case D involving WAR/JSP web shells on application servers reachable from public web servers. The guidance explicitly does not say all incidents share the same attack method. No victim attribution or new package CVE is inferred.",
+    "sourceCveReferences": [
+      "CVE-2026-72898"
+    ],
+    "sourceCveScope": "Reference to an existing Metabase advisory, not a newly published CVE",
+    "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+    "sourceSnapshotEntryUrl": "https://www.jpcert.or.jp/at/2026/at260030.html"
+  },
+  "jvnRecentAdvisory": {
+    "url": "https://jvn.jp/vu/JVNVU91137775/",
+    "lastAttemptAt": "2026-10-11T01:39:38.758086Z",
+    "httpStatus": 200,
+    "checkedAt": "2026-10-11T01:39:45.113034Z",
+    "bytes": 10001,
+    "sha256": "8e4ee9be85c5f9b9502a62dcb033a6ff6e1cb360f13233840d627abe8c28751b",
+    "etag": "\"7cbccc27e94d7699f11c7986a2575d5962074259\"",
+    "sourceLastModified": "Fri, 09 Oct 2026 00:00:13 GMT",
+    "outcome": "success",
+    "lastSuccessfulFetchAt": "2026-10-11T01:39:45.113034Z",
+    "bodyHashMatchesRetainedBaselineReceipt": true,
+    "baselineReceiptSha256": "8e4ee9be85c5f9b9502a62dcb033a6ff6e1cb360f13233840d627abe8c28751b",
+    "priorRawBodyIndependentlyRevalidated": false,
+    "read": true,
+    "classification": "ICS/medical advisory roundup, no package mapping inferred",
+    "publishedDate": "2026-10-09",
+    "updateDate": "2026-10-09",
+    "newSinceBaseline": false,
+    "note": "Three new and three updated CISA ICS/medical notices are listed in the unchanged Oct9 JVN roundup. This does not establish KEV catalog coverage.",
+    "listedNewAdvisories": [
+      "ICSA-26-281-01",
+      "ICSA-26-281-02",
+      "ICSA-26-281-03"
+    ],
+    "listedUpdatedAdvisories": [
+      "ICSA-26-069-02",
+      "ICSA-25-259-02",
+      "ICSMA-26-223-02"
+    ],
+    "sourceSnapshotArtifact": "supplemental-source-snapshots-2026-10-11.json.gz",
+    "sourceSnapshotEntryUrl": "https://jvn.jp/vu/JVNVU91137775/"
+  },
+  "jvnAuditSummary": {
+    "freshHttp200Receipts": 11,
+    "feedAndNoticeHashesMatchingRetainedBaselineReceipts": 5,
+    "allProductRowsRead": 241,
+    "newAllProductIdsVsBaseline": 0,
+    "changedComparedRecordFieldsVsBaseline": 0,
+    "newVerifiedPackageAdvisories": 0,
+    "existingSelectedCpeCandidatesRetained": 19,
+    "latestMyJvnModifiedAt": "2026-10-09T19:08:08+09:00",
+    "checkedThrough": "2026-10-11T01:39:55.529242Z",
+    "conclusion": "No newly added JVN ID or changes to compared inventory fields were observed in the Oct9–11 JST query relative to the recovered Oct10 baseline. Fresh JVN/JPCERT feed and selected notice hashes match the retained baseline receipts. This is not a claim of exhaustive seven-ecosystem library coverage."
+  },
+  "compressionNote": "Public audit inventory, raw source-body bundle and optional status copy use deterministic lossless gzip with compressed/uncompressed hashes. Full OSV archive bodies are identified by immutable generation URL and SHA256; bundled original record bodies cover changed/overlap records plus documented discrepancies.",
+  "artifacts": [
+    {
+      "file": "supplemental-id-inventory-2026-10-11.json.gz",
+      "bytes": 146217,
+      "sha256": "0e2783335c95fd75eaa732b5efd91368cb3b2d402609a859e90b68ac66c8fbc1",
+      "encoding": "gzip",
+      "uncompressedBytes": 1501268,
+      "uncompressedSha256": "78c81db5748bdd4000cbd669059e5ca25f41cd6d8748565970cf1a6612a3e1be"
+    },
+    {
+      "file": "supplemental-candidate-review-2026-10-11.json",
+      "bytes": 9830,
+      "sha256": "1cc3b9173fb6f22fa28cf49b84d409dccecaf2d93d982c099dbe62ad7a624472"
+    },
+    {
+      "file": "supplemental-source-snapshots-2026-10-11.json.gz",
+      "bytes": 402368,
+      "sha256": "bfecca1f83786b479cc9d20e4439e9d9776f321ee5f7cef8689b6eec0bd4e478",
+      "encoding": "gzip",
+      "uncompressedBytes": 1986733,
+      "uncompressedSha256": "b3e6a4bee985ee2805826e5bc1f0478712c81fd4d8b82661d5c119e12c6e6793"
+    }
+  ]
+}

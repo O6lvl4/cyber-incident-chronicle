@@ -1,0 +1,72 @@
+{
+  "id": "active-shop-sqli-2026",
+  "company": "アクティブ",
+  "title": "通販サイトへのSQLインジェクションで最大54,916件の顧客・受注情報に流出のおそれ",
+  "announcementDate": "2026-10-06",
+  "announcementDateLabel": "初報",
+  "occurredDate": "2026-10-02",
+  "occurredDateLabel": "2026-10-02にSQLインジェクション攻撃、10月3日に痕跡を確認",
+  "updatedDate": "2026-10-06",
+  "statusAsOfDate": "2026-10-06",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "SQLインジェクションと不正作成管理者アカウント経由のデータ出力",
+    "status": "confirmed"
+  },
+  "summary": "通販サイトで10月2日にSQLインジェクション攻撃が発生し、翌日のチェックで検知。不正な管理者アカウントを使って顧客・受注データが出力された形跡を確認した。最大54,916件が流出の可能性の対象で、脆弱性修正とアカウント削除等を実施。",
+  "affectedData": [
+    "店名・屋号、住所、電話番号、メールアドレス",
+    "受注情報（注文金額、商品コード、届け先住所）"
+  ],
+  "counts": [
+    {
+      "value": 54916,
+      "unit": "件",
+      "status": "possible",
+      "label": "流出した可能性のある通販サイト登録顧客情報の最大件数",
+      "approximate": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "通販サイトへの不正アクセスによる個人情報漏えいの可能性に関するお詫びとお知らせ",
+      "url": "https://shop.active-pro.jp/news/76",
+      "publishedDate": "2026-10-06"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "label": "SQLインジェクション攻撃",
+      "kind": "occurrence",
+      "summary": "特定のWebページへのSQLインジェクション攻撃が発生",
+      "sourceUrl": "https://shop.active-pro.jp/news/76"
+    },
+    {
+      "date": "2026-10-03",
+      "label": "痕跡検知",
+      "kind": "occurrence",
+      "summary": "定期チェックとログ解析で不正アクセスの痕跡を確認。後続調査で不正アカウントからのデータ出力の形跡を確認",
+      "sourceUrl": "https://shop.active-pro.jp/news/76"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "可能性のある対象範囲を公表",
+      "kind": "disclosure",
+      "summary": "最大54,916件と対策を公表。外部専門機関の詳細調査を手配中",
+      "sourceUrl": "https://shop.active-pro.jp/news/76"
+    }
+  ],
+  "caveats": [
+    "データ出力の形跡は確認されたが、会社の公表する漏えいの確認状況は可能性。54,916件を確定流出人数へ変換しない",
+    "クレジットカード情報・銀行口座情報は保持せず、ログインパスワードも漏えい対象外と会社が説明",
+    "Webシステムに限定され、基幹システム・社内ネットワークへの影響や漏えいはなく基幹業務は通常運用と説明"
+  ],
+  "geography": "日本",
+  "lastVerifiedDate": "2026-10-11",
+  "detectedDate": "2026-10-03"
+}
