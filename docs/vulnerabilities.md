@@ -18,7 +18,7 @@
 
 ## 保存先・再現性
 
-- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認57件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalib・Go・bip322の22件を含む計79件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
+- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認58件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalib・Go・bip322・mykey・IronCrypto・quinn-protoの31件を含む計89件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
 - `src/data/vulnerability-imported.json`: 固定ソース全件を変換・別名統合し、個別確認済み記録を重ねた表示用正本。上記の個別編集記録を追加連結して二重計上しない
 - `src/data/vulnerability-coverage.json`: 簡潔な公開カバレッジ・再実行コマンド・出力ハッシュ
 - `docs/data/vulnerability-import-audit.json`: ファイル単位の収録/除外/失敗監査。ブラウザーに全量を同梱しない
@@ -53,7 +53,7 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - `affected[]`: パッケージごとにecosystem/packageName、影響範囲とそれに対応する修正境界・出典を持つ。複数パッケージや複数系列を平坦化しない
 - `rawRanges`, `explicitVersions`, `packageUrl`: OSV原文のイベント、列挙版、purlを必要に応じてそのまま保持。版比較や安全版の推定はしない
 - OSVの `fixed` は除外境界、`last_affected` は含む境界。同じrange内で両者を混在させない。変換は導入・終了イベントが交互に並ぶ `ECOSYSTEM` / `SEMVER` の表示用投影に限定し、版比較や順序の推測は行わない。修正版不明はnullのままにする
-- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-11（JST）確認の表示データでは34,134 rangeが `ECOSYSTEM`、noyalib・Go・bip322の個別確認27 rangeが `SEMVER`。`GIT` / `limit` は0件
+- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-13（JST）確認の表示データでは34,133 rangeが `ECOSYSTEM`、noyalib・Go・bip322・mykey・IronCrypto・quinn-protoの個別確認36 rangeが `SEMVER`。`GIT` / `limit` は0件
 - 個別編集との相違は、元DBの `provenance.databaseAffected` と相違理由も保持する
 
 修正版はその脆弱性に対応する最初の修正境界であり、後続の別脆弱性も含めた「現在の最新安全版」を保証しない。アプリはインストール済み版の脆弱性該当判定をしない。
@@ -67,6 +67,14 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - 未訪問の参照先を確認済み資料として扱わない。機械収録は固定JSONへの直接リンクが必須
 
 2026-10-08の個別50件拡充ではCISA公式カタログがHTTP403で取得できなかったためKEV未確認を維持した。React Server Componentsの実悪用試行はAWSの独立した一次観測報告を引用している。
+
+## 2026-10-13の確認結果
+
+固定ソースは `6a254e681c55741e314a3b40977185df6090ea19`（2026-10-12T18:38:40Z）。Reviewed全36,780件、対象18,851件と範囲外の個別確認31件を合わせ18,882件。撤回履歴849件、未撤回18,033件。前回より9件増えたが、当日の新規公表件数ではない。既存の個別編集79件を維持した上で、9件の補助ソース収録とImageSharpの1件の重ね合わせ確認を追加した。
+
+既存Reviewedの変更は3件。ImageSharpの系列別修正境界3.2.0／4.1.1と、Handlebarsの影響下限3.0.0への変更を反映。ImageSharpは開発元が示すNuGet名 `SixLabors.ImageSharp` を表示し、DB名 `ImageSharp` との差を保存した。Djangoは参照資料の追加。これらの別名・CVSS・撤回状態に変更はない。
+
+OSVの7全エクスポート283,650件を前回283,595件と全文比較。新たなRustSecソース11件のうち9件を開発元の公開アドバイザリと照合し収録。残る2件は期間外の過去公表と未保守通知。通常情報の変更161件、MALの追加44・変更84件を別計数し、MALは通常の脆弱性に追加しない。開発元とRustSecで範囲が異なる場合や、OSVの公表日とRustSecのIssued日が異なる場合は、その違いを記録する。詳しくは[ソース別カバレッジ](advisory-source-coverage.md)と[補助ソース監査](data/supplemental-source-status-2026-10-13.json)を参照。
 
 ## 品質・公開
 

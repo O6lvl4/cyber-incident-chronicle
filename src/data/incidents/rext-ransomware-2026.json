@@ -1,0 +1,99 @@
+{
+  "id": "rext-ransomware-2026",
+  "company": "REXT・REXT Holdings（RIZAPグループ）",
+  "title": "ランサムウェアで店舗・業務システムに影響、確認済み流出と漏えいのおそれを公表",
+  "announcementDate": "2026-08-10",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-08-09",
+  "occurredDateLabel": "暗号化被害・システム障害の確認日（侵入はそれ以前、開始日は未公表）",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "lastVerifiedDate": "2026-10-13",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ランサムウェア攻撃。ネットワーク機器経由の侵入は可能性が高いとの調査見解",
+    "status": "confirmed"
+  },
+  "summary": "REXT等のネットワークがランサムウェア被害を受け、POS・会計システムや一部店舗営業に影響。10月9日の調査結果で310ファイルの流出確認と、別範囲の1,044,906件の漏えいのおそれを区別して公表。全店舗の営業再開も報告した。",
+  "affectedData": [
+    "流出確認：採用応募者のエントリーシート、従業員の人事書類、会員登録情報、取引先の請求書・支払通知書等",
+    "流出確認ファイルには個人情報を含まない会計・給与関連資料、発注・POS・売上・在庫データやシステム関連ファイルも含む",
+    "漏えいのおそれ：REXT・REXT Holdings従業員、REXT会員登録、WonderGOO・新星堂予約、WonderREX買取、APORITO顧客・取引先の情報",
+    "おそれのある項目は会員コード、氏名、フリガナ、生年月日、性別、郵便番号、住所、電話番号、メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 310,
+      "unit": "ファイル",
+      "status": "confirmed",
+      "label": "会社が公開・漏えいを確認したファイル（個人情報を含まない資料も含む）",
+      "approximate": false
+    },
+    {
+      "value": 27,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "確認済みファイルのうち採用応募者・従業員の通知対象者（全流出人数ではない）",
+      "approximate": false
+    },
+    {
+      "value": 1044906,
+      "unit": "件",
+      "status": "possible",
+      "label": "暗号化被害サーバーにあり、漏えいのおそれがある情報（確認済みファイルと合算しない）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "310ファイル流出確認／1,044,906件におそれ（異なる範囲・単位）",
+  "caveats": [
+    "310はファイル数、27名は採用応募者・従業員の通知対象者、1,044,906件はおそれのある情報件数。範囲・単位・確度が異なり合算しない",
+    "確認済み310ファイルには個人情報を含まないものもあり、310人分の漏えいを意味しない。27名は確認済み全被害者数ではない",
+    "1,044,906件について窃取を示す事実は未確認だがアクセスを否定できないため、おそれとして扱う。クレジットカード情報は含まれないと説明",
+    "ネットワーク機器を経由した侵入は可能性が高いとの見解で、確定経路・機器名・VPNやCVEは公表されていない",
+    "8月9日は暗号化被害の確認日。調査ではそれ以前の侵入を確認しているが、開始日時は未公表",
+    "RIZAPグループの初報と第5報を同じ事案に集約。RIZAP・chocoZAPの全会員情報が対象になったとの公表ではない",
+    "全店舗営業再開、侵入経路対策・ランサムウェア駆除完了は10月9日の会社説明。情報流出の範囲とは別に記録する",
+    "流出の確認は会社の公式調査結果に基づき、攻撃者の主張や漏えいデータそのものを根拠にしない"
+  ],
+  "geography": "日本のREXT・REXT Holdingsネットワークと店舗（運営委託を受けるAPORITO事業を含む）",
+  "sources": [
+    {
+      "title": "RIZAPグループ：REXTのランサムウェアによるシステム障害（初報）",
+      "url": "https://www.rizapgroup.com/news/detail?topics_id=1527",
+      "publishedDate": "2026-08-10"
+    },
+    {
+      "title": "RIZAPグループ：調査結果、確認済みとおそれの範囲、営業再開（第5報）",
+      "url": "https://www.rizapgroup.com/news/detail?topics_id=1567",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-09",
+      "label": "暗号化被害・障害を確認",
+      "kind": "occurrence",
+      "summary": "本部・店舗のサーバーやパソコンの多くで暗号化被害を確認。POS・会計システム等が停止",
+      "sourceUrl": "https://www.rizapgroup.com/news/detail?topics_id=1567"
+    },
+    {
+      "date": "2026-08-10",
+      "label": "ランサムウェア被害を公表",
+      "kind": "disclosure",
+      "summary": "REXTおよび運営委託を受けるAPORITOの一部店舗休業・サービス制限を公表",
+      "sourceUrl": "https://www.rizapgroup.com/news/detail?topics_id=1527"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "第5報で調査結果を公表",
+      "kind": "update",
+      "summary": "310ファイルの流出確認と1,044,906件のおそれを区別。27名への通知済み、全店営業再開と駆除完了を報告",
+      "sourceUrl": "https://www.rizapgroup.com/news/detail?topics_id=1567"
+    }
+  ]
+}

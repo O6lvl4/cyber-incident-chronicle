@@ -1,0 +1,59 @@
+{
+  "id": "applabo-mail-server-2026",
+  "company": "あっぷらぼ",
+  "title": "メールサーバへの不正アクセス、メールアドレスと暗号化保存パスワードに参照の可能性",
+  "announcementDate": "2026-10-12",
+  "announcementDateLabel": "公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表。10月11日に不正アクセスを確認",
+  "detectedDate": "2026-10-11",
+  "updatedDate": "2026-10-12",
+  "statusAsOfDate": "2026-10-12",
+  "lastVerifiedDate": "2026-10-13",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "管理用経路の設定不備を伴うメールサーバのデータベース管理用認証の突破（突破の具体的手法は未公表）",
+    "status": "confirmed"
+  },
+  "summary": "メールサーバのデータベース管理用認証を突破されたことを10月11日に確認。メールアドレスと暗号化保存したパスワード情報の一部が参照された可能性があり、経路遮断・接続制限等を実施して利用者へパスワード変更を案内した。",
+  "affectedData": [
+    "メールアドレス",
+    "暗号化して保存していたパスワード情報の一部"
+  ],
+  "counts": [],
+  "scaleLabel": "参照の可能性／件数・人数は未公表",
+  "caveats": [
+    "不正アクセスは確認されたが、情報の参照は可能性として公表されている。対象件数・人数は未公表",
+    "公式の「暗号化して保存」という説明を保持し、ハッシュ方式や平文流出、解読済みとは推定しない",
+    "管理用経路が絞られていなかった設定上の不備を会社が認めているが、総当たりや特定の脆弱性・製品は公表されていない",
+    "10月12日時点で不正アクセスの継続は未確認。メール本文の流出やサービス全面停止は公表されていない"
+  ],
+  "geography": "日本のあっぷらぼ運用メールサーバ",
+  "sources": [
+    {
+      "title": "あっぷらぼ：メールサーバへの不正アクセスとパスワード変更のお願い",
+      "url": "https://www.applabo.co.jp/news-blog/?p=954",
+      "publishedDate": "2026-10-12"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-11",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "メールサーバのデータベース管理用認証を突破されたことを確認",
+      "sourceUrl": "https://www.applabo.co.jp/news-blog/?p=954"
+    },
+    {
+      "date": "2026-10-12",
+      "label": "参照の可能性と対策を公表",
+      "kind": "disclosure",
+      "summary": "メールアドレス・暗号化保存パスワードの参照可能性を公表。接続経路遮断等と利用者への変更案内を実施",
+      "sourceUrl": "https://www.applabo.co.jp/news-blog/?p=954"
+    }
+  ]
+}
