@@ -1,0 +1,95 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-465w-v9q3-7j98",
+  "aliases": [
+    "RUSTSEC-2026-0338"
+  ],
+  "title": "quinn-proto：順不同のストリーム読み取りで空フレームによるpanic",
+  "summary": "順不同のストリーム読み取りを使うアプリケーションで、空のSTREAMフレームを含む少数のフレームを接続相手が送ると、受信範囲の管理が壊れてpanicが起きる。0.11.18で修正。",
+  "publishedAt": "2026-09-14T12:00:00Z",
+  "modifiedAt": "2026-10-12T18:15:01.969514645Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-12T21:35:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0338",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "quinn-proto",
+      "ranges": [
+        {
+          "affected": ">= 0.7.0, < 0.11.18",
+          "fixed": "0.11.18",
+          "sourceUrl": "https://rustsec.org/advisories/RUSTSEC-2026-0338.html"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.7.0"
+            },
+            {
+              "fixed": "0.11.18"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/quinn-proto"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/quinn-rs/quinn/security-advisories/GHSA-465w-v9q3-7j98",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Quinn maintainer advisory API: Remote peer can panic quinn-proto with five small STREAM frames",
+      "url": "https://api.github.com/repos/quinn-rs/quinn/security-advisories/GHSA-465w-v9q3-7j98",
+      "publishedDate": "2026-09-14",
+      "publishedAt": "2026-09-14T10:14:13Z",
+      "modifiedAt": "2026-09-14T10:15:16Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec: RUSTSEC-2026-0338（Issued 2026-10-12）",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0338.html",
+      "publishedDate": "2026-10-12"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec record: RUSTSEC-2026-0338",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0338",
+      "publishedDate": "2026-09-14",
+      "publishedAt": "2026-09-14T12:00:00Z",
+      "modifiedAt": "2026-10-12T18:15:01.969514645Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Quinn修正PR: Security fixes",
+      "url": "https://api.github.com/repos/quinn-rs/quinn/pulls/2868",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "順不同の読み取りを使う場合に限る。既定の順序付き読み取り経路は影響を受けない。攻撃にはQUICハンドシェイクを完了した接続相手が必要。",
+    "影響範囲はRustSecの未影響 <0.7.0、修正済み >=0.11.18に基づく。メンテナーの影響欄は >0.7.0であり、0.7.0を含めるかが一致していない。元のSEMVER範囲を保持し、この相違を解消済みとは扱わない。",
+    "公開・更新日時はOSVのRustSecレコードに記録された値。OSVのpublishedはRustSecのReported日を反映し、RustSecページのIssued日は2026-10-12。メンテナーのアドバイザリ公開日時は出典欄に別記しており、OSVのpublishedや更新日を初回公表日時とは扱わない。",
+    "確認時点でGitHubのグローバルAdvisory APIは404だが、quinn-rs/quinnのリポジトリアドバイザリAPIとRustSecは公開済みの脆弱性として取得できた。Reviewed収録済みや撤回済みと推定しない。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。",
+    "深刻度はメンテナーの公開ラベルを採用。CVSS数値・ベクトルは公開資料にないため、推計しない。"
+  ]
+}

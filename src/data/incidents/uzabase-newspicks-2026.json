@@ -1,0 +1,130 @@
+{
+  "id": "uzabase-newspicks-2026",
+  "company": "ユーザベース（NewsPicks）",
+  "title": "業務管理ツールへの不正アクセスで利用者・取引先情報に漏えいの可能性",
+  "announcementDate": "2026-10-08",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表。10月8日12時48分に検知",
+  "detectedDate": "2026-10-08",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "lastVerifiedDate": "2026-10-13",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "業務で利用する管理ツールの脆弱性を悪用した不正アクセス（製品・CVEは未公表）",
+    "status": "confirmed"
+  },
+  "summary": "NewsPicksの業務管理ツールに不正アクセス。利用者情報やカード名義・番号末尾等、取引先の窓口情報に漏えいの可能性がある。10月9日に項目別の最大想定件数を公表し、アクセス遮断等を実施してサービスを継続している。",
+  "affectedData": [
+    "利用者のメールアドレス、氏名、生年月日、配送先住所・宛名、所属、所属先電話番号、役職の7分類",
+    "ウェブ決済のクレジットカード名義・カード番号下3桁または下4桁等",
+    "NewsPicks Enterprise・Educationの運営担当窓口名と連絡先メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 323000,
+      "unit": "件",
+      "status": "possible",
+      "label": "メールアドレス：公表された最大想定件数（他区分と合算しない）",
+      "approximate": true
+    },
+    {
+      "value": 59000,
+      "unit": "件",
+      "status": "possible",
+      "label": "氏名：公表された最大想定件数（他区分と合算しない）",
+      "approximate": true
+    },
+    {
+      "value": 28000,
+      "unit": "件",
+      "status": "possible",
+      "label": "生年月日：公表された最大想定件数（他区分と合算しない）",
+      "approximate": true
+    },
+    {
+      "value": 31000,
+      "unit": "件",
+      "status": "possible",
+      "label": "配送先住所・宛名：公表された最大想定件数（他区分と合算しない）",
+      "approximate": true
+    },
+    {
+      "value": 65000,
+      "unit": "件",
+      "status": "possible",
+      "label": "所属：公表された最大想定件数（他区分と合算しない）",
+      "approximate": true
+    },
+    {
+      "value": 29000,
+      "unit": "件",
+      "status": "possible",
+      "label": "所属先の電話番号：公表された最大想定件数（他区分と合算しない）",
+      "approximate": true
+    },
+    {
+      "value": 273000,
+      "unit": "件",
+      "status": "possible",
+      "label": "所属先の役職の7分類：公表された最大想定件数（他区分と合算しない）",
+      "approximate": true
+    },
+    {
+      "value": 362000,
+      "unit": "件",
+      "status": "possible",
+      "label": "クレジットカード名義・番号下3桁または下4桁等：公表された最大想定件数（他区分と合算しない）",
+      "approximate": true
+    },
+    {
+      "value": 122,
+      "unit": "件",
+      "status": "possible",
+      "label": "NewsPicks Enterprise・Educationの運営担当窓口名と連絡先メールアドレス：最大想定件数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "メール最大32.3万件／カード一部最大36.2万件等（項目別、合算しない）",
+  "caveats": [
+    "各件数は10月9日時点の最大想定値で、確定漏えい件数ではない。項目間の重複を除いた人数は未公表で、合算しない",
+    "カード番号全体は決済代行会社が管理し、ユーザベースのシステムには保存されていないため流出していないと説明。セキュリティコードも保持していない",
+    "NewsPicksサービス本体・ユーザベースの他システムへの侵入、顧客企業とのやり取り・パスワードの漏えい、二次被害は公表時点で未確認",
+    "10月8日は検知・遮断の日で、最初の侵入日とは断定しない",
+    "管理ツールの脆弱性悪用は公表済みだが、製品名・CVEや詳細な原因の全容は未公表。特定のBI製品や他事案との共通原因を推定しない"
+  ],
+  "geography": "日本のNewsPicks業務管理ツール",
+  "sources": [
+    {
+      "title": "ユーザベース：NewsPicks利用者の個人情報漏洩の可能性（初報）",
+      "url": "https://corp.newspicks.com/info/20261008",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "title": "ユーザベース：NewsPicksの漏洩可能性と項目別最大想定件数（第二報）",
+      "url": "https://corp.newspicks.com/info/20261009",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-08",
+      "label": "検知・遮断・初報",
+      "kind": "disclosure",
+      "summary": "12時48分に検知、14時1分に不正アクセスと判断してサーバー遮断。個人情報の漏えい可能性を公表",
+      "sourceUrl": "https://corp.newspicks.com/info/20261008"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "第二報で最大範囲を公表",
+      "kind": "update",
+      "summary": "管理ツールの脆弱性悪用と、漏えい可能性のある情報の項目別最大件数を公表",
+      "sourceUrl": "https://corp.newspicks.com/info/20261009"
+    }
+  ]
+}

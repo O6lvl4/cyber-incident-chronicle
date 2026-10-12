@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "dateJst": "2026-10-13",
+  "checkedAt": "2026-10-12T21:39:41.972743Z",
+  "previousPublishedCommit": "6da3deb48c28af959fab89dbdab2c65aa11025f5",
+  "incidents": {
+    "incidentCountBefore": 154,
+    "incidentCountAfter": 158,
+    "sourceCountBefore": 266,
+    "sourceCountAfter": 278,
+    "addedIds": [
+      "applabo-mail-server-2026",
+      "dip-baitoru-2026",
+      "uzabase-newspicks-2026",
+      "rext-ransomware-2026"
+    ],
+    "sameIncidentEnrichments": [
+      "commune-2026",
+      "idc-frontier-2026",
+      "park24-timescar-2026"
+    ],
+    "verificationOnlyIds": [
+      "nikkei-bp-mail-phishing-2026",
+      "paperlogic-2026"
+    ]
+  },
+  "incidentAudit": "incident-source-audit-2026-10-13.json",
+  "githubReviewed": {
+    "source": {
+      "name": "GitHub Advisory Database",
+      "repository": "https://github.com/github/advisory-database",
+      "snapshotSha": "6a254e681c55741e314a3b40977185df6090ea19",
+      "snapshotCommittedAt": "2026-10-12T18:38:40Z",
+      "snapshotUrl": "https://github.com/github/advisory-database/commit/6a254e681c55741e314a3b40977185df6090ea19",
+      "reviewedPath": "advisories/github-reviewed",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://github.com/github/advisory-database/blob/6a254e681c55741e314a3b40977185df6090ea19/LICENSE.md"
+    },
+    "verifiedAt": "2026-10-12T21:35:45Z",
+    "counts": {
+      "reviewedFiles": 36780,
+      "eligibleAdvisories": 18851,
+      "coveredEligibleAdvisories": 18851,
+      "importedAdvisories": 18851,
+      "importedRecords": 18851,
+      "includedRecords": 18882,
+      "duplicateAliasRecords": 0,
+      "curatedRecords": 89,
+      "curatedOverlays": 58,
+      "curatedOutsideScope": 31,
+      "withdrawnAdvisories": 848,
+      "excludedBeforeWindow": 13864,
+      "excludedAfterWindow": 0,
+      "excludedUnsupportedEcosystem": 4065,
+      "excludedUnsupportedAffectedPackages": 0,
+      "retainedAdditionalAffectedPackages": 71,
+      "failed": 0,
+      "conflictedRecords": 24,
+      "newerDatabaseRecords": 1,
+      "byEcosystem": {
+        "npm": 4992,
+        "pip": 4421,
+        "rubygems": 469,
+        "go": 4127,
+        "rust": 1052,
+        "maven": 3370,
+        "nuget": 656
+      },
+      "byPublicationYear": {
+        "2022": 518,
+        "2023": 2629,
+        "2024": 2679,
+        "2025": 3089,
+        "2026": 9936
+      }
+    }
+  },
+  "supplementalAudit": "supplemental-source-status-2026-10-13.json",
+  "supplementalManifest": "supplemental-audit-manifest-2026-10-13.json",
+  "publicationScope": "Factual incident/vulnerability data, source-check metadata and generated classification imports only. Existing collection policy, UI, dependencies and CI gates are unchanged.",
+  "limitations": [
+    "The selected official incident survey is not exhaustive.",
+    "Source-specific unchanged, changed and failed results are separate. Failed retrievals do not advance successful source watermarks.",
+    "Global GHSA API 404 results for nine RustSec candidates are retained; published repository-specific maintainer advisory evidence supports inclusion.",
+    "CISA KEV catalog returned HTTP403. Unknown/unverified status remains; no absence-of-exploitation conclusion."
+  ],
+  "validationBeforePublication": {
+    "dataAndCoverage": "passed",
+    "unitTests": {
+      "passed": 128,
+      "failed": 0,
+      "skipped": 0
+    },
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "codopsy": {
+      "score": 100,
+      "errors": 0,
+      "warnings": 0
+    },
+    "browserAndPerformance": "Local executor browser socket restriction; unchanged required repository CI jobs must pass for the exact PR head before merge.",
+    "deployment": "Must verify exact merged commit Pages deployment and public data before completion."
+  },
+  "independentDataReview": {
+    "incidents": "passed focused official source review",
+    "vulnerabilities": "passed retained source/provenance review after defragmentation wording correction"
+  }
+}

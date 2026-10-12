@@ -1,0 +1,106 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fwjg-cm92-j3hj",
+  "aliases": [
+    "RUSTSEC-2026-0335"
+  ],
+  "title": "mykey：事前共有鍵モードでのセッション鍵漏えい",
+  "summary": "MIKEYの事前共有鍵モードがTEK Generation Keyを平文で送信し、共有鍵を知らない受信者にもSRTPの鍵情報が露出する。開発元は2.0.0を修正版としている。",
+  "publishedAt": "2026-10-09T12:00:00Z",
+  "modifiedAt": "2026-10-12T09:15:02.450106103Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-12T21:34:01.013539Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0335",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "mykey",
+      "ranges": [
+        {
+          "affected": "<= 1.0.0",
+          "fixed": "2.0.0",
+          "sourceUrl": "https://api.github.com/repos/waxspin/mykey/security-advisories/GHSA-fwjg-cm92-j3hj"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "2.0.0"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/mykey"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/waxspin/mykey/security-advisories/GHSA-fwjg-cm92-j3hj",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://rustsec.org/advisories/RUSTSEC-2026-0335.html"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0335（全エクスポートの原文と照合）",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0335",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T12:00:00Z",
+      "modifiedAt": "2026-10-12T09:15:02.450106103Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式アドバイザリ：RUSTSEC-2026-0335",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0335.html",
+      "publishedDate": "2026-10-12"
+    },
+    {
+      "type": "maintainer",
+      "title": "waxspin/mykey公式セキュリティアドバイザリAPI",
+      "url": "https://api.github.com/repos/waxspin/mykey/security-advisories/GHSA-fwjg-cm92-j3hj",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T05:16:55Z",
+      "modifiedAt": "2026-10-09T05:16:55Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の修正プルリクエスト",
+      "url": "https://api.github.com/repos/waxspin/mykey/pulls/25",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T04:14:37Z"
+    }
+  ],
+  "caveats": [
+    "固定GitHub Reviewedスナップショット外の個別確認記録。OSVのid/aliasesによる対応を開発元リポジトリの公開アドバイザリAPIで確認した。",
+    "タイムラインはOSV/RustSecが記録した公表・更新日時で、開発元の初回公表日時とは区別する。",
+    "GitHubのグローバルアドバイザリAPIは今回404だったが、開発元リポジトリのアドバイザリAPIは200かつpublished。グローバルAPIに存在しない理由は未確定。",
+    "表示範囲と修正境界は開発元の記載。rawRangesはOSVの原文を保持し、版比較や現在の最新安全版を推定していない。",
+    "KEVは公式JSONの取得が403のため未確認。PoCや脆弱性の説明を実悪用の証拠とは扱わない。",
+    "開発元の影響範囲は<= 1.0.0、OSVのSEMVER表現は>= 0.0.0-0, < 2.0.0。両方を保持し、存在する版を推定しない。",
+    "2.0.0ではプロトコルのワイヤ形式が変わるため両端の更新が必要。旧版と新版ではエラーなく異なる鍵を導出しうる。",
+    "開発元の重大度ラベルとRustSecのCVSSベクトルを別出典として保持。CVSSスコアは独自計算しない。",
+    "RustSecページはReported 2026-10-09、Issued 2026-10-12を区別している。OSV publishedの10月9日を表示日とし、今回の収録追加を当日の初公開とはみなさない。"
+  ]
+}

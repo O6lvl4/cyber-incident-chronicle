@@ -1,0 +1,66 @@
+{
+  "id": "dip-baitoru-2026",
+  "company": "ディップ（バイトル・バイトルNEXT）",
+  "title": "サイト機能の仕様不備を突いた不正アクセスで会員メールアドレスの一部が流出",
+  "announcementDate": "2026-10-09",
+  "announcementDateLabel": "収録した公表日（利用者向け案内は10月6日）",
+  "occurredDate": "2026-10-06",
+  "occurredDateLabel": "公表された不正アクセス・確認日（最初の侵入時刻は未公表）",
+  "updatedDate": "2026-10-09",
+  "statusAsOfDate": "2026-10-09",
+  "lastVerifiedDate": "2026-10-13",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "Webサイトの一部機能の仕様不備を悪用した不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "バイトル・バイトルNEXTの会員メールアドレスの一部流出を確認。漏えいした可能性のある最大範囲は3,885,771件であり、全件の流出確認ではない。プログラム改修と防御措置を実施し、サービスは継続している。",
+  "affectedData": [
+    "バイトル・バイトルNEXTの会員登録メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 3885771,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいした可能性のある最大件数（確認済み流出件数ではない）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "一部流出を確認／最大3,885,771件に可能性",
+  "caveats": [
+    "一部メールアドレスの流出確認と、最大3,885,771件の漏えい可能性を区別する。確認済み件数や重複を除いた人数は未公表",
+    "氏名、電話番号、パスワード、クレジットカード情報等は流出情報に含まれないと説明",
+    "仕様不備の悪用は確認済み。具体的な機能・脆弱性名やCVEは未公表",
+    "10月6日に両サービス上で対象者へ告知したと10月9日の会社公表が説明。収録公表日を事案の初報日とはしない",
+    "公表時点でインターネット上への公開・不正利用は未確認。サイトやサービスの全面停止は公表されていない"
+  ],
+  "geography": "日本の求人サービス「バイトル」「バイトルNEXT」",
+  "sources": [
+    {
+      "title": "ディップ：バイトル・バイトルNEXTの不正アクセスによる一部メールアドレス漏えい",
+      "url": "https://www.dip-net.co.jp/news/2192",
+      "publishedDate": "2026-10-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-06",
+      "label": "不正アクセスを確認・対応",
+      "kind": "occurrence",
+      "summary": "仕様不備を突く不正アクセスを確認。防御措置とプログラム改修を実施しサービス上で利用者へ案内",
+      "sourceUrl": "https://www.dip-net.co.jp/news/2192"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "漏えいと最大対象範囲を公表",
+      "kind": "disclosure",
+      "summary": "一部流出の確認と、最大3,885,771件の可能性を区別して公表",
+      "sourceUrl": "https://www.dip-net.co.jp/news/2192"
+    }
+  ]
+}

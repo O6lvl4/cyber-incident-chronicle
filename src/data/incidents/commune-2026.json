@@ -6,9 +6,9 @@
   "announcementDateLabel": "公表日",
   "occurredDate": "2026-10-05",
   "occurredDateLabel": "公表された不正アクセス開始日時（10月5日18時頃、検知は10月6日）",
-  "updatedDate": "2026-10-11",
-  "statusAsOfDate": "2026-10-11",
-  "lastVerifiedDate": "2026-10-12",
+  "updatedDate": "2026-10-12",
+  "statusAsOfDate": "2026-10-12",
+  "lastVerifiedDate": "2026-10-13",
   "impactTypes": [
     "leak",
     "outage",
@@ -26,7 +26,10 @@
     "Sansan User Forumのプロフィール画像等",
     "LINEヤフーDS.LABの氏名、カスタムプロフィール、ポイント、最終アクティブ日時等は閲覧・取得の可能性",
     "渋谷未来デザイン COMMUNITYのメールアドレス、ニックネーム、アカウント名等は参照の可能性",
-    "高知の知のメールアドレス、ニックネーム、アカウント名、年齢、性別、自己紹介、カスタムプロフィール、所属グループ、ポイント、アイコン、最終利用日時は閲覧・取得の可能性。氏名・住所の漏えいは10月11日更新で否定"
+    "高知の知のメールアドレス、ニックネーム、アカウント名、年齢、性別、自己紹介、カスタムプロフィール、所属グループ、ポイント、アイコン、最終利用日時は閲覧・取得の可能性。氏名・住所の漏えいは10月11日更新で否定",
+    "パナソニックのLUMIXコミュニティ・ヘアサプ by Panasonic Beautyのメールアドレスを含む会員情報",
+    "ヤマハのYNE会員のメールアドレス、表示名、アカウント名、自己紹介、アイコン、所属グループ",
+    "ヤマハ発動機のPAS Life会員の氏名、生年月日、性別、住所、メールアドレス、会員ID、ニックネーム、自己紹介、所属グループは閲覧・取得の可能性"
   ],
   "counts": [
     {
@@ -98,6 +101,34 @@
       "status": "possible",
       "label": "高知の知の全会員：公表本文が個別項目について閲覧・取得の可能性とする範囲（提供元総数へ加算しない）",
       "approximate": false
+    },
+    {
+      "value": 2000,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "パナソニックが流出報告を受けたLUMIXコミュニティ会員（提供元総数へ加算しない）",
+      "approximate": true
+    },
+    {
+      "value": 3000,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "パナソニックが流出報告を受けたヘアサプ by Panasonic Beauty会員（提供元総数へ加算しない）",
+      "approximate": true
+    },
+    {
+      "value": 1600,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "ヤマハが漏えいを公表したYNE会員（提供元総数へ加算しない）",
+      "approximate": true
+    },
+    {
+      "value": 1600,
+      "unit": "名",
+      "status": "possible",
+      "label": "ヤマハ発動機が閲覧・取得の可能性を公表したPAS Life会員（ヤマハのYNEとは別範囲、提供元総数へ加算しない）",
+      "approximate": true
     }
   ],
   "scaleLabel": "提供元推計約30.7万人（内数・利用企業別公表を別記、加算しない）",
@@ -111,7 +142,9 @@
     "10月8日から希望するコミュニティを順次再開しており、全コミュニティの復旧完了を意味しない",
     "渋谷未来デザイン・高知県の公表はCommune基盤の同一事案の利用者別範囲。495名と358人を提供元推計や他の利用企業の人数へ加算しない",
     "高知県は冒頭で一部情報の閲覧・取得を確認したとする一方、全会員358人の個別項目は漏えいの可能性として列挙。358人全員の全項目の確定流出とはしない。10月11日9時更新で氏名・住所の漏えいを否定",
-    "2026年10月12日の再確認は渋谷未来デザイン・高知県の2資料。以前の提供元・他利用企業資料を同日に再検証したことを意味しない"
+    "パナソニックの2コミュニティ、ヤマハのYNE、ヤマハ発動機のPAS LifeはCommune基盤の同一事案の利用者別範囲。提供元の約30.7万人に加算せず、各コミュニティ間の重複を除いた人数とも扱わない",
+    "ヤマハのYNE約1,600名は漏えい確認、ヤマハ発動機のPAS Life約1,600名は閲覧・取得の可能性。別法人・別コミュニティであり、数値が同じでも同一対象や同じ確度とはしない",
+    "PAS Lifeにはクレジットカード情報・決済情報を含まない。ヤマハおよびヤマハ発動機自身のシステム侵害は公表時点で未確認"
   ],
   "sources": [
     {
@@ -138,6 +171,21 @@
       "title": "高知県：高知の知への不正アクセスによる個人情報漏洩（10月9日公表・10月11日更新）",
       "url": "https://doppuri.kochi-tabi.jp/news/information.html?id=77",
       "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "パナソニック：委託先Communeへの不正アクセスによる2コミュニティの会員情報漏えい",
+      "url": "https://www.panasonic.com/jp/about/news/20261009.html",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "ヤマハ：YNE会員情報の漏えい",
+      "url": "https://www.yamaha.com/ja/news_release/files/news/26100901/pdf/2610090101.pdf",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "ヤマハ発動機：PAS Life会員情報の漏えいの可能性",
+      "url": "https://global.yamaha-motor.com/jp/news/2026/1012/leakage.html",
+      "publishedDate": "2026-10-12"
     }
   ],
   "timeline": [
@@ -184,6 +232,20 @@
       "sourceUrl": "https://doppuri.kochi-tabi.jp/news/information.html?id=77"
     },
     {
+      "date": "2026-10-09",
+      "label": "パナソニックが利用者別の流出範囲を公表",
+      "kind": "update",
+      "summary": "LUMIX約2,000名とヘアサプ約3,000名の会員情報流出の報告を受けたと説明。両コミュニティを一時停止",
+      "sourceUrl": "https://www.panasonic.com/jp/about/news/20261009.html"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "ヤマハがYNE会員情報の流出を公表",
+      "kind": "update",
+      "summary": "YNE約1,600名の会員情報漏えいを公表。ヤマハ自身のシステムへの不正アクセスは未確認",
+      "sourceUrl": "https://www.yamaha.com/ja/news_release/files/news/26100901/pdf/2610090101.pdf"
+    },
+    {
       "date": "2026-10-11",
       "label": "渋谷未来デザインが公表",
       "kind": "update",
@@ -196,6 +258,13 @@
       "kind": "update",
       "summary": "9時更新。提供元調査により会員の氏名・住所の漏えいはないと確認。その他の列挙項目は可能性の記載を保持",
       "sourceUrl": "https://doppuri.kochi-tabi.jp/news/information.html?id=77"
+    },
+    {
+      "date": "2026-10-12",
+      "label": "ヤマハ発動機がPAS Lifeの対象範囲を公表",
+      "kind": "update",
+      "summary": "PAS Life約1,600名の情報が閲覧・取得された可能性を公表。同社自身のシステムへの不正アクセスは未確認",
+      "sourceUrl": "https://global.yamaha-motor.com/jp/news/2026/1012/leakage.html"
     }
   ],
   "geography": "日本のコミューンが提供するコミュニティ基盤（国内利用企業の公表を含む）"
