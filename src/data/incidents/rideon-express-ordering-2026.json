@@ -1,0 +1,100 @@
+{
+  "id": "rideon-express-ordering-2026",
+  "company": "ライドオンエクスプレスホールディングス（銀のさら・釜寅・すし上等）",
+  "title": "委託先サーバーへの攻撃で注文サイト停止、最大約650万件に漏えいのおそれ",
+  "announcementDate": "2026-10-07",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表",
+  "updatedDate": "2026-10-13",
+  "statusAsOfDate": "2026-10-13",
+  "lastVerifiedDate": "2026-10-14",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "委託先サーバーのランサムウェア被害（サーバー運営事業者からの報告）",
+    "status": "confirmed"
+  },
+  "summary": "委託先サーバーのランサムウェア被害により10月7日にシステムを停止。13日の第3報で顧客情報最大約650万件の漏えいのおそれを公表したが、流出の事実・明確な痕跡は未確認。公式Web・アプリの注文停止が続く。",
+  "affectedData": [
+    "氏名、住所、電話番号、メールアドレス、性別、生年月日、パスワードのハッシュ値、注文履歴、デリポイント会員ID",
+    "登録されていた家族の氏名・生年月日、配送先の氏名・住所・電話番号を含む可能性"
+  ],
+  "counts": [
+    {
+      "value": 6500000,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいのおそれがある顧客情報の最大件数（調査中、人数ではない）",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "最大約650万件に漏えいのおそれ",
+  "caveats": [
+    "最大約650万件は可能性のある範囲で、確定漏えい件数や人数ではない。10月13日時点で外部流出の明確な痕跡・事実・範囲は未確認",
+    "ランサムウェア被害はサーバー運営事業者からの報告として公表。運営事業者名や初期侵入経路は明示されず、時期の一致だけでIDCF等の別事案と統合しない",
+    "クレジットカード情報は保有しておらず対象外。電話注文のみ・出前館のみ・Uber Eatsのみの利用者は対象外",
+    "公式Web・アプリ注文は停止し再開時期未定。電話注文、持ち帰り、出前館・Uber Eats等まで停止した意味ではない",
+    "10月13日時点で不正利用・二次被害は未確認。対象者へ順次通知する方針",
+    "不正アクセスの検知は10月5日以降と公表されており、正確な最初の検知日は特定されていない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "ライドオンエクスプレス：公式サイト・アプリ停止の初報",
+      "url": "https://www.rideonexpresshd.co.jp/news/2026/10/post-482.html",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "title": "ライドオンエクスプレス：停止に関する第2報（10月9日追記あり）",
+      "url": "https://www.rideonexpresshd.co.jp/news/2026/10/post-484.html",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "title": "ライドオンエクスプレス：漏えい可能性に関する第3報",
+      "url": "https://www.rideonexpresshd.co.jp/news/2026/10/3-33.html",
+      "publishedDate": "2026-10-13"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-05",
+      "label": "10月5日以降に不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "第3報が10月5日以降の不正アクセス検知を説明",
+      "sourceUrl": "https://www.rideonexpresshd.co.jp/news/2026/10/3-33.html"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "障害・システム停止を公表",
+      "kind": "disclosure",
+      "summary": "公式サイト・アプリの障害と停止を公表",
+      "sourceUrl": "https://www.rideonexpresshd.co.jp/news/2026/10/post-482.html"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "委託先から被害報告",
+      "kind": "occurrence",
+      "summary": "第3報で、早朝の障害時にサーバー運営事業者からランサムウェア被害の報告を受けたと説明",
+      "sourceUrl": "https://www.rideonexpresshd.co.jp/news/2026/10/3-33.html"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "停止継続を案内",
+      "kind": "update",
+      "summary": "第2報を公表。9日にメニュー・店舗検索等の案内を追記",
+      "sourceUrl": "https://www.rideonexpresshd.co.jp/news/2026/10/post-484.html"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "個人情報の可能性範囲を公表",
+      "kind": "update",
+      "summary": "最大約650万件の漏えいのおそれを説明。公式Web・アプリ注文は停止継続",
+      "sourceUrl": "https://www.rideonexpresshd.co.jp/news/2026/10/3-33.html"
+    }
+  ]
+}

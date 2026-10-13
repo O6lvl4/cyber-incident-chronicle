@@ -1,0 +1,81 @@
+{
+  "id": "japanpost-app-2026",
+  "company": "日本郵政・日本郵便（郵便局アプリ）",
+  "title": "郵便局アプリへの不正アクセスで69件・19名分の情報取得を確認",
+  "announcementDate": "2026-09-29",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表",
+  "updatedDate": "2026-09-29",
+  "statusAsOfDate": "2026-09-29",
+  "lastVerifiedDate": "2026-10-14",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "郵便局アプリへの不正アクセスにより、ゆうID・アプリ関連の顧客情報69件（19名分）の不正取得を確認。9月25日夜に緊急メンテナンスを行い、調査・対策後の26日にサービスを再開した。",
+  "affectedData": [
+    "ゆうID会員情報（氏名、住所、生年月日、性別、電話番号、メールアドレス、登録時は勤務先・家族状況・住所録情報）",
+    "住所録登録情報、送り状の差出人・受取人情報、追跡番号、品名、発送・配達予定情報（対象者により異なる）"
+  ],
+  "counts": [
+    {
+      "value": 69,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "不正取得された顧客情報の件数",
+      "approximate": false
+    },
+    {
+      "value": 19,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "69件に対応する顧客人数（件数と合算しない）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "69件（19名分）",
+  "caveats": [
+    "69件と19名は同じ取得範囲の異なる単位であり、合算しない",
+    "対象情報は個人によって異なり、任意登録情報は登録されていた場合のみ",
+    "9月29日時点で取得情報の不正利用の形跡は未確認。侵入開始日時と具体的手法は未公表",
+    "9月25日公表の調査請求Web受付サービス事案との同一性はこの資料から確認できず、混同しない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "日本郵政・日本郵便：郵便局アプリへの不正アクセス",
+      "url": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/c6b030844cf0412ab0d48f8bae7b3a75/20260929_01_01.pdf",
+      "publishedDate": "2026-09-29"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "label": "緊急メンテナンス",
+      "kind": "occurrence",
+      "summary": "22時30分頃にゆうIDと郵便局アプリを緊急メンテナンス",
+      "sourceUrl": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/c6b030844cf0412ab0d48f8bae7b3a75/20260929_01_01.pdf"
+    },
+    {
+      "date": "2026-09-26",
+      "label": "サービス再開",
+      "kind": "update",
+      "summary": "必要な調査・対策を行いサービスを再開",
+      "sourceUrl": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/c6b030844cf0412ab0d48f8bae7b3a75/20260929_01_01.pdf"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "不正取得の範囲を公表",
+      "kind": "disclosure",
+      "summary": "顧客情報69件・19名分の不正取得を確認したと公表",
+      "sourceUrl": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/c6b030844cf0412ab0d48f8bae7b3a75/20260929_01_01.pdf"
+    }
+  ]
+}

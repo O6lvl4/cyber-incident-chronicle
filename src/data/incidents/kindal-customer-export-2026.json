@@ -1,0 +1,107 @@
+{
+  "id": "kindal-customer-export-2026",
+  "company": "カインドオル（トレジャー・ファクトリー子会社）",
+  "title": "従業員アカウントの侵害で顧客データ流出、136,464名で調査確定",
+  "announcementDate": "2026-08-28",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-08-23",
+  "occurredDateLabel": "顧客情報の一括出力を確認した日（最初の侵入日時は未公表）",
+  "updatedDate": "2026-10-13",
+  "statusAsOfDate": "2026-10-13",
+  "lastVerifiedDate": "2026-10-14",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "フィッシングによる従業員認証情報の侵害とアカウント悪用",
+    "status": "confirmed"
+  },
+  "summary": "従業員の認証情報を悪用され8月23日に顧客情報を一括出力。24日に検知し、9月2日に出力ファイルの取得確認を公表。10月13日の第3報で対象136,464名を確定し、うち109,311名に住所情報を含むと公表した。",
+  "affectedData": [
+    "顧客ID、氏名、住所、電話番号、生年月日、メールアドレス、メールマガジン購読状況",
+    "総注文回数、総購入額、顧客タグ、ポイント履歴（保有・失効・累計等）"
+  ],
+  "counts": [
+    {
+      "value": 136464,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "調査完了により確定した漏えい対象者数",
+      "approximate": false
+    },
+    {
+      "value": 109311,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "総数の内数：住所情報を含む対象者数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "136,464名／うち住所情報109,311名",
+  "caveats": [
+    "136,464名は10月13日の第3報で調査完了とともに公表された確定人数。住所情報109,311名は内数で、合算しない",
+    "8月23日は2回の一括出力を確認した日、24日は従業員アカウントのメール変更に気付いた日。初期侵入日時とは区別する",
+    "情報項目は登録状況により異なる。クレジットカード番号・セキュリティコード・顧客のECログインパスワードは含まれない",
+    "従業員向けフィッシング、二段階認証未導入等を公表。従業員認証情報の侵害と顧客パスワード流出を混同しない",
+    "10月6日に個人情報保護委員会へ確報を提出。10月13日時点で具体的な二次被害は確認されていない",
+    "トレジャー・ファクトリーが公表する同じカインドオル事案の続報であり、10月13日に別の攻撃が発生した意味ではない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "カインドオル：個人情報漏えいに関する初報",
+      "url": "https://www.kind.co.jp/notice-20260828",
+      "publishedDate": "2026-08-28"
+    },
+    {
+      "title": "カインドオル：出力ファイルの取得確認（第2報）",
+      "url": "https://www.kind.co.jp/notice-20260902",
+      "publishedDate": "2026-09-02"
+    },
+    {
+      "title": "トレジャー・ファクトリー：子会社の調査結果・再発防止策（第3報、JPX掲載英訳）",
+      "url": "https://www2.jpx.co.jp/disc/30930/140120261013549472.pdf",
+      "publishedDate": "2026-10-13"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-23",
+      "label": "顧客情報を一括出力",
+      "kind": "occurrence",
+      "summary": "侵害された従業員アカウントによる2回の一括出力を後日確認",
+      "sourceUrl": "https://www.kind.co.jp/notice-20260828"
+    },
+    {
+      "date": "2026-08-24",
+      "label": "アカウントの異常を検知",
+      "kind": "occurrence",
+      "summary": "注文出力作業で従業員アカウントのメールアドレス変更に気付き調査開始",
+      "sourceUrl": "https://www.kind.co.jp/notice-20260828"
+    },
+    {
+      "date": "2026-08-28",
+      "label": "漏えいの可能性を公表",
+      "kind": "disclosure",
+      "summary": "対象情報と従業員向けフィッシング等の原因を説明",
+      "sourceUrl": "https://www.kind.co.jp/notice-20260828"
+    },
+    {
+      "date": "2026-09-02",
+      "label": "ファイル取得の確認を公表",
+      "kind": "update",
+      "summary": "顧客情報の出力ファイルがダウンロードされたことを確認したと公表",
+      "sourceUrl": "https://www.kind.co.jp/notice-20260902"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "調査完了と確定人数を公表",
+      "kind": "update",
+      "summary": "対象136,464名と住所情報の内数109,311名、認証・出力権限等の対策を公表",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/30930/140120261013549472.pdf"
+    }
+  ],
+  "detectedDate": "2026-08-24"
+}

@@ -1,0 +1,87 @@
+{
+  "id": "kufu-machitalk-2026",
+  "company": "くふうカンパニー（くふう まちトークβ版）",
+  "title": "308名分の生年月日・性別が閲覧可能、うち1名のメール取得を確認",
+  "announcementDate": "2026-10-05",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表",
+  "updatedDate": "2026-10-13",
+  "statusAsOfDate": "2026-10-13",
+  "lastVerifiedDate": "2026-10-14",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "システムの一部の脆弱性を悪用した不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "10月2日の検知後にサービスを停止。13日の調査結果で308名分の生年月日・性別が外部から閲覧可能だったと説明し、うち1名のメールアドレス取得を確認。残る307名のメール閲覧・取得は否定した。",
+  "affectedData": [
+    "生年月日・性別（308名分が外部から閲覧できる状態）",
+    "メールアドレス（内数1名の取得を確認）"
+  ],
+  "counts": [
+    {
+      "value": 308,
+      "unit": "名",
+      "status": "possible",
+      "label": "生年月日・性別が外部から閲覧できる状態にあった対象（全員の取得確認ではない）",
+      "approximate": false
+    },
+    {
+      "value": 1,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "308名の内数：メールアドレスが外部に取得され、生年月日・性別と結び付けられる状態だった利用者",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "閲覧可能な範囲308名／内数1名のメール取得確認",
+  "caveats": [
+    "308名は閲覧可能な状態にあった対象であり、308名全員の全項目が取得されたとの公表ではない",
+    "残る307名について、メールアドレスの第三者閲覧・取得はないと調査で確認。1名と308名を合算しない",
+    "10月13日時点でサービス停止中、近日再開を目指す段階。再開完了ではない",
+    "同社の9月公表「くふう Zaim」の登録情報書き換えとは別サービス・別事案"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "くふうカンパニー：まちトークβ版への不正アクセス（初報）",
+      "url": "https://kufu.co.jp/2026/10/05/kufu-announce/",
+      "publishedDate": "2026-10-05"
+    },
+    {
+      "title": "くふうカンパニー：まちトークβ版の調査結果",
+      "url": "https://kufu.co.jp/2026/10/13/kufu-announce-2/",
+      "publishedDate": "2026-10-13"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "label": "不審なアクセスを確認",
+      "kind": "occurrence",
+      "summary": "不審なアクセスの確認を受けて調査開始",
+      "sourceUrl": "https://kufu.co.jp/2026/10/05/kufu-announce/"
+    },
+    {
+      "date": "2026-10-05",
+      "label": "サービス停止と初報公表",
+      "kind": "disclosure",
+      "summary": "少なくとも1名のメール流出と他項目の可能性を公表",
+      "sourceUrl": "https://kufu.co.jp/2026/10/05/kufu-announce/"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "閲覧可能範囲308名とメール取得確認1名を区別し、脆弱性対策を報告",
+      "sourceUrl": "https://kufu.co.jp/2026/10/13/kufu-announce-2/"
+    }
+  ],
+  "detectedDate": "2026-10-02"
+}
