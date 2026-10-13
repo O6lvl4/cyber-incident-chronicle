@@ -1,0 +1,190 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rv87-ccxw-8ggf",
+  "aliases": [
+    "CVE-2026-88092"
+  ],
+  "title": "ASP.NET Core：中断されたHTTP/1接続の再解析によるリクエストスマグリング",
+  "summary": "Kestrelの中断されたHTTP/1接続で、未読のリクエスト本文が別のリクエストとして再解析され、リクエストスマグリングや非同期化につながる可能性がある。開発元の対象パッケージ・系列別の修正境界を保持する。",
+  "publishedAt": "2026-10-13T20:40:50Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/96d67ec0f9a258b05b8d4ef805425ec9dc0d0489/advisories/github-reviewed/2026/10/GHSA-rv87-ccxw-8ggf/GHSA-rv87-ccxw-8ggf.json",
+  "modifiedAt": "2026-10-13T20:40:51Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-13T21:47:18.600413Z",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.linux-musl-arm",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.linux-musl-arm64",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.linux-musl-x64",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.osx-arm64",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.osx-x64",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.win-arm",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.win-arm64",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.win-x64",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Microsoft.AspNetCore.App.Runtime.win-x86",
+      "ranges": [
+        {"affected": ">= 8.0.0, <= 8.0.31", "fixed": "8.0.32", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 10.0.0, <= 10.0.12", "fixed": "10.0.13", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 11.0.0-preview.1, <= 11.0.0-rc.1", "fixed": "11.0.0-rc.2", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"},
+        {"affected": ">= 9.0.0, <= 9.0.20", "fixed": "9.0.21", "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"}
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.4,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+        "sourceUrl": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/96d67ec0f9a258b05b8d4ef805425ec9dc0d0489/advisories/github-reviewed/2026/10/GHSA-rv87-ccxw-8ggf/GHSA-rv87-ccxw-8ggf.json",
+      "publishedDate": "2026-10-13",
+      "publishedAt": "2026-10-13T20:40:50Z",
+      "modifiedAt": "2026-10-13T20:40:51Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Microsoft Security Advisory CVE-2026-88092 - ASP.NET Core Security Feature Bypass Vulnerability",
+      "url": "https://github.com/advisories/GHSA-rv87-ccxw-8ggf",
+      "publishedDate": "2026-10-13"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公式セキュリティアドバイザリAPI：影響パッケージ・範囲・修正境界",
+      "url": "https://api.github.com/repos/dotnet/aspnetcore/security-advisories/GHSA-rv87-ccxw-8ggf",
+      "publishedDate": "2026-10-13",
+      "publishedAt": "2026-10-13T18:23:04Z",
+      "modifiedAt": "2026-10-13T18:31:16Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日時は固定GitHub Advisory Databaseの記録。開発元の初回公表・更新日時は出典固有の日時として別に保持する。",
+    "開発元の構造化欄の影響範囲と対応する修正境界をそのまま保存。<=の上限を次の版に読み替えたり、範囲の同値性を独自に推定したりしない。",
+    "修正境界はこの脆弱性に対する情報であり、後続の別脆弱性も含めた最新安全版の保証ではない。",
+    "実悪用は未確認。CISA KEV公式JSONはHTTP403で取得できず未知のまま保持。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "固定Reviewed JSONには開発元が列挙するWindows ARM（win-arm）のNuGetパッケージ行がない。開発元の全パッケージ・系列を表示し、元DBの影響関係と差をprovenance.databaseAffectedとconflictsに保持する。"
+  ]
+}

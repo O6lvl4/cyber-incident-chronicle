@@ -18,7 +18,7 @@
 
 ## 保存先・再現性
 
-- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認58件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalib・Go・bip322・mykey・IronCrypto・quinn-protoの31件を含む計89件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
+- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認63件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalib・Go・bip322・mykey・IronCrypto・quinn-proto・kuva・log4net・Langflow・Backstageの40件を含む計103件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
 - `src/data/vulnerability-imported.json`: 固定ソース全件を変換・別名統合し、個別確認済み記録を重ねた表示用正本。上記の個別編集記録を追加連結して二重計上しない
 - `src/data/vulnerability-coverage.json`: 簡潔な公開カバレッジ・再実行コマンド・出力ハッシュ
 - `docs/data/vulnerability-import-audit.json`: ファイル単位の収録/除外/失敗監査。ブラウザーに全量を同梱しない
@@ -53,7 +53,7 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - `affected[]`: パッケージごとにecosystem/packageName、影響範囲とそれに対応する修正境界・出典を持つ。複数パッケージや複数系列を平坦化しない
 - `rawRanges`, `explicitVersions`, `packageUrl`: OSV原文のイベント、列挙版、purlを必要に応じてそのまま保持。版比較や安全版の推定はしない
 - OSVの `fixed` は除外境界、`last_affected` は含む境界。同じrange内で両者を混在させない。変換は導入・終了イベントが交互に並ぶ `ECOSYSTEM` / `SEMVER` の表示用投影に限定し、版比較や順序の推測は行わない。修正版不明はnullのままにする
-- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-13（JST）確認の表示データでは34,133 rangeが `ECOSYSTEM`、noyalib・Go・bip322・mykey・IronCrypto・quinn-protoの個別確認36 rangeが `SEMVER`。`GIT` / `limit` は0件
+- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-14（JST）確認の表示データでは34,761 rangeが `ECOSYSTEM`、noyalib・Go・bip322・mykey・IronCrypto・quinn-proto・kuvaの個別確認37 rangeが `SEMVER`。`GIT` / `limit` は0件
 - 個別編集との相違は、元DBの `provenance.databaseAffected` と相違理由も保持する
 
 修正版はその脆弱性に対応する最初の修正境界であり、後続の別脆弱性も含めた「現在の最新安全版」を保証しない。アプリはインストール済み版の脆弱性該当判定をしない。
@@ -67,6 +67,14 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - 未訪問の参照先を確認済み資料として扱わない。機械収録は固定JSONへの直接リンクが必須
 
 2026-10-08の個別50件拡充ではCISA公式カタログがHTTP403で取得できなかったためKEV未確認を維持した。React Server Componentsの実悪用試行はAWSの独立した一次観測報告を引用している。
+
+## 2026-10-14の確認結果
+
+固定ソースは `96d67ec0f9a258b05b8d4ef805425ec9dc0d0489`（2026-10-13T21:40:32Z）。Reviewed全36,820件、対象18,891件と範囲外の個別確認40件を合わせ18,931件。撤回履歴849件、未撤回18,082件。新規Reviewedの.NET40件と、過去公表の補助ソース9件（log4net6・Langflow1・Backstage1・kuva1）を追加した。既存89個別編集を保ち、追加9件とoauthlib・.NETの相違を保存する5重ね合わせで個別確認103件となった。
+
+OSVは7エクスポートの全283,708件をCRC検証し、前回の全本文と正規化JSONを比較。非MAL追加43・変更33、MAL追加15・変更6、削除0。未収録非MAL候補1,001件は独立した有効脆弱性数ではない。ruzstdはGHSA/CVE主IDの根拠が未確認、vLLMは原文の再現結果と修正範囲が未解決のため保留。MyJVNは10月12〜14日JSTの変更窓を全3ページ・137製品/CPE記録取得。CISA KEVは公式JSONが403のため未知の状態と成功checkpointを維持した。
+
+oauthlib PKCEの開発元修正境界3.3.2とDBの4.0.0、.NET4件のWindows ARMパッケージ行の差、BackstageのCVSS出典差を明記。開発元APIの成功29件（新規26・既存3）とレート制限403の14件を分け、database収録を全開発元の個別確認とはしない。[ソース別カバレッジ](advisory-source-coverage.md)と[補助ソース監査](data/supplemental-source-status-2026-10-14.json)を参照。
 
 ## 2026-10-13の確認結果
 

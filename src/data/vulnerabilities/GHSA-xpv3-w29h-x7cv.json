@@ -1,0 +1,81 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xpv3-w29h-x7cv",
+  "aliases": [
+    "CVE-2026-49265"
+  ],
+  "title": "oauthlib：PKCE検証文字列の比較にタイミングサイドチャネル",
+  "summary": "PKCEの検証文字列比較に定数時間比較ではない処理が使われ、制御された条件でタイミング差が観測される。開発元は実環境のネットワーク雑音と認可コードの単回利用により実用的な悪用が制限されると説明している。開発元の構造化欄は影響範囲>=3.0.0, <3.3.2、修正境界3.3.2を示す。",
+  "publishedAt": "2026-09-29T17:56:31Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/96d67ec0f9a258b05b8d4ef805425ec9dc0d0489/advisories/github-reviewed/2026/09/GHSA-xpv3-w29h-x7cv/GHSA-xpv3-w29h-x7cv.json",
+  "modifiedAt": "2026-10-13T15:47:41Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-13T21:46:51.516034Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "oauthlib",
+      "ranges": [
+        {
+          "affected": "<3.3.2,>=3.0.0",
+          "fixed": "3.3.2",
+          "sourceUrl": "https://api.github.com/repos/oauthlib/oauthlib/security-advisories/GHSA-xpv3-w29h-x7cv"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/oauthlib/oauthlib/security-advisories/GHSA-xpv3-w29h-x7cv",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.8,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://api.github.com/repos/oauthlib/oauthlib/security-advisories/GHSA-xpv3-w29h-x7cv"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/96d67ec0f9a258b05b8d4ef805425ec9dc0d0489/advisories/github-reviewed/2026/09/GHSA-xpv3-w29h-x7cv/GHSA-xpv3-w29h-x7cv.json",
+      "publishedDate": "2026-09-29",
+      "publishedAt": "2026-09-29T17:56:31Z",
+      "modifiedAt": "2026-10-13T15:47:41Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Oauthlib: Timing Attack Vulnerability in PKCE code_verifier Comparison (CWE-208)",
+      "url": "https://github.com/advisories/GHSA-xpv3-w29h-x7cv",
+      "publishedDate": "2026-09-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公式セキュリティアドバイザリAPI：影響パッケージ・範囲・修正境界",
+      "url": "https://api.github.com/repos/oauthlib/oauthlib/security-advisories/GHSA-xpv3-w29h-x7cv",
+      "publishedDate": "2026-09-28",
+      "publishedAt": "2026-09-28T09:17:11Z",
+      "modifiedAt": "2026-09-28T09:17:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日時は固定GitHub Advisory Databaseの記録。開発元の初回公表・更新日時は出典固有の日時として別に保持する。",
+    "開発元の構造化欄の影響範囲と対応する修正境界をそのまま保存。<=の上限を次の版に読み替えたり、範囲の同値性を独自に推定したりしない。",
+    "修正境界はこの脆弱性に対する情報であり、後続の別脆弱性も含めた最新安全版の保証ではない。",
+    "実悪用は未確認。CISA KEV公式JSONはHTTP403で取得できず未知のまま保持。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元は>=3.0.0, <3.3.2と修正境界3.3.2を指定するが、固定Reviewed JSONは>=3.0.0, <4.0.0と修正境界4.0.0を記録している。表示は開発元を優先し、元DBの範囲と相違をprovenanceに保持する。別のJSONP脆弱性の修正情報とは統合しない。"
+  ]
+}

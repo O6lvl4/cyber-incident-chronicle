@@ -1,0 +1,107 @@
+{
+  "id": "arcadia-speecan-raiden-2026",
+  "company": "アルカディア（SpeeCAN RAIDEN・ライデン・スクール）",
+  "title": "一斉配信基盤への不正アクセス、連絡先・配信本文に漏えいの可能性",
+  "announcementDate": "2026-10-13",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表",
+  "updatedDate": "2026-10-13",
+  "statusAsOfDate": "2026-10-13",
+  "lastVerifiedDate": "2026-10-14",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月11日に不審な挙動を確認し、12日に応急遮断。13日に一部サービスを緊急停止し、連絡先や配信履歴本文の漏えい可能性を公表した。最大件数は推計で調査中。",
+  "affectedData": [
+    "登録された連絡先・担当者・契約者情報（名前、メールアドレス、電話・FAX番号）",
+    "配信履歴として保存された本文の内容"
+  ],
+  "counts": [
+    {
+      "value": 3136000,
+      "unit": "件",
+      "status": "possible",
+      "label": "メールアドレスの漏えい可能性がある最大推定件数",
+      "approximate": true
+    },
+    {
+      "value": 105000,
+      "unit": "件",
+      "status": "possible",
+      "label": "電話番号の漏えい可能性がある最大推定件数",
+      "approximate": true
+    },
+    {
+      "value": 15000,
+      "unit": "件",
+      "status": "possible",
+      "label": "FAX番号の漏えい可能性がある最大推定件数",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "最大推計：メール約313.6万件／電話約10.5万件／FAX約1.5万件（合算しない）",
+  "caveats": [
+    "各値は連絡先項目別の最大推計件数で、確定漏えい人数や重複を除く人数ではない。項目間や自治体別公表を合算しない",
+    "流出可能性の調査対象は公式に列挙された6サービス。緊急停止はraiden3.ktaiwork.jpとs2.ktaiwork.jpの利用者が対象で、全サービス停止とはしない",
+    "停止していないサービスで不正プログラムが設定されていないとの確認は、全情報の漏えい否定を意味しない",
+    "クレジットカード等の決済情報は取り扱っておらず対象外。10月13日時点で復旧日時は未定",
+    "自治体・学校等の利用組織の影響は同じ提供元事案に含め、独立した攻撃件数にしない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "アルカディア：不正アクセスによる個人情報漏洩の可能性",
+      "url": "https://www.arcadia.co.jp/info/4076",
+      "publishedDate": "2026-10-13"
+    },
+    {
+      "title": "SpeeCAN RAIDEN公式：対象情報と最大推定件数（18時47分更新）",
+      "url": "https://raiden.site.ktaiwork.jp/archives/4597",
+      "publishedDate": "2026-10-13"
+    },
+    {
+      "title": "SpeeCAN RAIDEN公式：一部サービス緊急停止（15時50分更新）",
+      "url": "https://raiden.site.ktaiwork.jp/archives/4601",
+      "publishedDate": "2026-10-13"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-11",
+      "label": "不審な挙動を検知",
+      "kind": "occurrence",
+      "summary": "16時30分に不正アクセスが疑われる挙動を確認",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597"
+    },
+    {
+      "date": "2026-10-12",
+      "label": "侵入経路を応急遮断",
+      "kind": "occurrence",
+      "summary": "3時頃に応急措置を実施し、影響範囲を調査",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "可能性・対象範囲を公表",
+      "kind": "disclosure",
+      "summary": "連絡先情報と配信履歴本文の漏えい可能性、項目別の最大推計件数を公表",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "一部サービスを緊急停止",
+      "kind": "update",
+      "summary": "11時から対象2サービスを停止。復旧日時は未定",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4601"
+    }
+  ],
+  "detectedDate": "2026-10-11"
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vmqh-7cj9-mvcj",
+  "aliases": [
+    "CVE-2026-106507"
+  ],
+  "title": "Backstage TechDocs：MkDocsスニペット経由のファイル読み取り",
+  "summary": "ドキュメント登録権限のある認証済みユーザーが、TechDocsのパス処理を通じてドキュメントの範囲外にあるファイルを取り込める可能性がある。@backstage/plugin-techdocs-node 1.15.4で修正。",
+  "publishedAt": "2026-10-06T21:46:08.014Z",
+  "modifiedAt": "2026-10-07T15:03:20.623Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-13T21:51:34.007682Z",
+  "dateSourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-106507",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@backstage/plugin-techdocs-node",
+      "ranges": [
+        {
+          "affected": "< 1.15.4",
+          "fixed": "1.15.4",
+          "sourceUrl": "https://github.com/backstage/backstage/security/advisories/GHSA-vmqh-7cj9-mvcj"
+        }
+      ],
+      "packageUrl": "pkg:npm/%40backstage/plugin-techdocs-node"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-106507",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.3,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-106507"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE公式API：CNA原文・公開/更新日時・PUBLISHED状態",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106507",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T21:46:08.014Z",
+      "modifiedAt": "2026-10-07T15:03:20.623Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Backstage公式セキュリティアドバイザリ：GHSA-vmqh-7cj9-mvcj",
+      "url": "https://github.com/backstage/backstage/security/advisories/GHSA-vmqh-7cj9-mvcj",
+      "publishedDate": "2026-08-28",
+      "publishedAt": "2026-08-28T14:40:24Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "JVN iPedia：JVNDB-2026-037568",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037568.html",
+      "publishedDate": "2026-10-13"
+    }
+  ],
+  "caveats": [
+    "固定GitHub Reviewedスナップショットと表示コーパスのid/aliasesに存在しないため、CNAと開発元原文を個別に確認した追加記録。",
+    "タイムラインはCVEレコードの公開・更新日時。2026年10月13日のJVN収録や今回の確認を初公開とはみなさない。",
+    "公式CVEレコードはPUBLISHED。withdrawnAtがnullであることは、撤回の可能性を将来まで否定するものではない。",
+    "CISA KEV公式JSONは今回403のため未確認。PoCの公開や脆弱性の説明を実悪用の証拠とは扱わない。",
+    "修正版は各脆弱性の修正境界として示す。現在の最新安全版や、すべての別脆弱性が修正済みであることは保証しない。",
+    "開発元の初回公表は2026-08-28T14:40:24Z。タイムラインの2026年10月6日はCVE公開日。更新時刻はCVEレコードのものを保持。",
+    "開発元ページとGitHub CNA原文はCVSS 3.1 5.3（攻撃複雑度High）。JVN概要のCVSS 3.0 6.5（攻撃複雑度Low）とは異なるため、開発元値を採用して差異を明記する。",
+    "Dockerによる隔離だけではコンテナ内のファイルや秘密情報の露出を防げないと開発元が注意している。",
+    "開発元リポジトリAPIは未認証レート制限403だったが、通常の公開アドバイザリページは200で内容・パッケージ・範囲・修正版・CVSS・CVEを確認した。"
+  ]
+}
