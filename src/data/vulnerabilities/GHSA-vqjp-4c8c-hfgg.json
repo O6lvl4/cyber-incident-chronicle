@@ -1,0 +1,133 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vqjp-4c8c-hfgg",
+  "aliases": [
+    "RUSTSEC-2026-0269"
+  ],
+  "title": "Wasmtime：末尾スラッシュを用いたファイルシステム隔離の脱出",
+  "summary": "wasmtime-wasiのファイルシステム実装が利用するcap-stdで、パスやシンボリックリンクの末尾スラッシュを特定条件で処理すると、ゲストが隔離先の外にあるホストのファイルへアクセスできる。書込み可能なディレクトリを渡されたゲストはホストの権限内で読書きでき、読取り専用でも既存リンクの条件により外部ファイルを読める可能性がある。",
+  "publishedAt": "2026-08-20T12:00:00Z",
+  "modifiedAt": "2026-10-12T18:00:10.942612968Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T00:28:04.712070Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0269",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 24.0.13",
+          "fixed": "24.0.13",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0269"
+        },
+        {
+          "affected": ">= 25.0.0, < 36.0.14",
+          "fixed": "36.0.14",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0269"
+        },
+        {
+          "affected": ">= 37.0.0, < 46.0.3",
+          "fixed": "46.0.3",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0269"
+        },
+        {
+          "affected": ">= 47.0.0, < 47.0.4",
+          "fixed": "47.0.4",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0269"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "24.0.13"
+            },
+            {
+              "introduced": "25.0.0"
+            },
+            {
+              "fixed": "36.0.14"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "46.0.3"
+            },
+            {
+              "introduced": "47.0.0"
+            },
+            {
+              "fixed": "47.0.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-vqjp-4c8c-hfgg",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.8,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:L/SC:H/SI:H/SA:L",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-vqjp-4c8c-hfgg"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0269",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0269",
+      "publishedDate": "2026-08-20",
+      "publishedAt": "2026-08-20T12:00:00Z",
+      "modifiedAt": "2026-10-12T18:00:10.942612968Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0269",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/6aed84668c23d7f535077a9fe918bf1fa0f6a5bc/crates/wasmtime/RUSTSEC-2026-0269.md",
+      "publishedDate": "2026-08-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-vqjp-4c8c-hfgg",
+      "publishedDate": "2026-08-20",
+      "publishedAt": "2026-08-20T17:59:17Z",
+      "modifiedAt": "2026-08-20T17:59:17Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026-08-20に公表された事案の収録補完。収録日を脆弱性の初回公表日や実悪用日と混同しない。",
+    "固定GitHub Reviewedには未収録だが、OSV/RustSecの別名と開発元の公開アドバイザリを照合した個別記録。",
+    "表示する範囲はOSVのSEMVERイベントを系列ごとに保持し、その原文をrawRangesにも残す。開発元の列挙・不等号表記は取得原文と照合記録に保持する。修正境界を現在の全脆弱性に対する安全保証とはしない。",
+    "重大度・CVSSの版、数値、ベクトルは開発元の公表値で、ベクトルはRustSec/OSVとも一致。独自計算や重大度からの実悪用推定は行わない。",
+    "実悪用とCISA KEVは未確認。既存のソース全体の取得時刻や取得失敗の状態は、この個別確認で更新しない。",
+    "開発元は、Linuxのopenat2とRESOLVE_BENEATHを利用する経路はこの不備の対象外と説明する。macOSや古いLinuxでは影響し得る。OS名やバージョンだけから、その実行環境が実際にopenat2を使うとは推定しない。",
+    "修正版は24.0.13、36.0.14、46.0.3、47.0.4。開発元は48.0.0以降が対象外であることも明記する。既知の回避策はなく、修正済みwasmtime-wasiを含む更新版を推奨している。",
+    "RustSec/OSVと開発元APIの構造化パッケージ名はwasmtime。開発元本文は実装箇所をwasmtime-wasi、原因となる依存先をcap-stdと説明するが、それらの独立したパッケージ範囲を同じ版番号から推定して追加しない。GHSA-hp8f-xmx4-4qrgは関連するcap-stdの別アドバイザリであり、別名として統合しない。",
+    "下限0.0.0-0はOSV原文の値であり、実在する最初のリリースや導入版を独自に特定したものではない。"
+  ]
+}

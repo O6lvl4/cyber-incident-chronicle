@@ -1,0 +1,109 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-32h6-97mm-8q3c",
+  "aliases": [
+    "RUSTSEC-2026-0327"
+  ],
+  "title": "Wasmtime：非同期コールバック検証不備でスタック破損",
+  "summary": "component-model-asyncのコールバック戻り値検証が欠け、不正なゲストがネイティブスタックへ任意データを書き込める。開発元は任意のホストコード実行を伴うサンドボックス脱出として扱うよう推奨している。 修正版は48.0.4と49.0.2。",
+  "publishedAt": "2026-10-02T12:00:00Z",
+  "modifiedAt": "2026-10-02T20:30:02.598161714Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T00:23:46.068107Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0327",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 39.0.0, < 48.0.4",
+          "fixed": "48.0.4",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-32h6-97mm-8q3c"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.2",
+          "fixed": "49.0.2",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-32h6-97mm-8q3c"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "39.0.0"
+            },
+            {
+              "fixed": "48.0.4"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-32h6-97mm-8q3c",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:H/SC:L/SI:H/SA:H",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-32h6-97mm-8q3c"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0327",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0327",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T12:00:00Z",
+      "modifiedAt": "2026-10-02T20:30:02.598161714Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0327",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/6aed84668c23d7f535077a9fe918bf1fa0f6a5bc/crates/wasmtime/RUSTSEC-2026-0327.md",
+      "publishedDate": "2026-10-02"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-32h6-97mm-8q3c",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T19:39:24Z",
+      "modifiedAt": "2026-10-02T19:39:24Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026年10月2日に公表された事案の収録補完。収録日を脆弱性の公表日や実悪用日と混同しない。",
+    "固定GitHub Reviewedには未収録だが、OSV/RustSecの別名と開発元の公開アドバイザリを照合して個別収録した。",
+    "影響は機能の有効化と実行条件に依存する。パッケージを含むだけで実際の悪用や企業の被害が確認された意味ではない。",
+    "修正境界は二つの系列に分けて保持する。修正版はこの脆弱性に対するもので、現在の全脆弱性に対する安全性を保証しない。",
+    "CVSSの版・数値・ベクトルは開発元公表値。独自計算や重大度からの実悪用推定は行っていない。",
+    "CISA KEVの最新取得は未確認で、既存の取得失敗・成功取得点を変更しない。",
+    "component-model-asyncを無効化する回避策を開発元が案内。OSの防御機能がある場合も、サンドボックス脱出の可能性を軽視しないよう勧告している。"
+  ]
+}

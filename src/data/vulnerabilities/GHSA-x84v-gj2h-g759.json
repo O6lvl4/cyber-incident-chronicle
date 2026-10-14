@@ -1,0 +1,109 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-x84v-gj2h-g759",
+  "aliases": [
+    "RUSTSEC-2026-0268"
+  ],
+  "title": "Wasmtime：WASIp3ストリーム経由のホストメモリ過剰確保",
+  "summary": "WASIp3のファイル・HTTPストリームへの書込みで、ゲストが指定した長さのデータをホストが上限なく複製・保持し、ホストのメモリを消費させるおそれがある。修正版は46.0.3と47.0.4。",
+  "publishedAt": "2026-08-20T12:00:00Z",
+  "modifiedAt": "2026-10-12T18:00:10.937350063Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T00:28:04.712070Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0268",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 46.0.0, < 46.0.3",
+          "fixed": "46.0.3",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0268"
+        },
+        {
+          "affected": ">= 47.0.0, < 47.0.4",
+          "fixed": "47.0.4",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0268"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "46.0.0"
+            },
+            {
+              "fixed": "46.0.3"
+            },
+            {
+              "introduced": "47.0.0"
+            },
+            {
+              "fixed": "47.0.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-x84v-gj2h-g759",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 6.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-x84v-gj2h-g759"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0268",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0268",
+      "publishedDate": "2026-08-20",
+      "publishedAt": "2026-08-20T12:00:00Z",
+      "modifiedAt": "2026-10-12T18:00:10.937350063Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0268",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/6aed84668c23d7f535077a9fe918bf1fa0f6a5bc/crates/wasmtime/RUSTSEC-2026-0268.md",
+      "publishedDate": "2026-08-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-x84v-gj2h-g759",
+      "publishedDate": "2026-08-20",
+      "publishedAt": "2026-08-20T17:59:21Z",
+      "modifiedAt": "2026-08-20T17:59:21Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026-08-20に公表された事案の収録補完。収録日を脆弱性の初回公表日や実悪用日と混同しない。",
+    "固定GitHub Reviewedには未収録だが、OSV/RustSecの別名と開発元の公開アドバイザリを照合した個別記録。",
+    "表示する範囲はOSVのSEMVERイベントを系列ごとに保持し、その原文をrawRangesにも残す。開発元の列挙・不等号表記は取得原文と照合記録に保持する。修正境界を現在の全脆弱性に対する安全保証とはしない。",
+    "重大度・CVSSの版、数値、ベクトルは開発元の公表値で、ベクトルはRustSec/OSVとも一致。独自計算や重大度からの実悪用推定は行わない。",
+    "実悪用とCISA KEVは未確認。既存のソース全体の取得時刻や取得失敗の状態は、この個別確認で更新しない。",
+    "開発元は46.0.0より前ではWASIp3が既定で有効ではなかったと説明する。表示する影響範囲はRustSec/OSVの明示範囲を用い、機能を手動で有効にした旧版の範囲は推定しない。",
+    "開発元は既知の回避策なしとして更新を推奨する。GHSA-852m-cvvp-9p4wと類似するが、新しいWASIp3の処理箇所に関する別アドバイザリであり、同一IDには統合しない。"
+  ]
+}

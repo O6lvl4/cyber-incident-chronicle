@@ -1,0 +1,121 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-jqpg-j7w6-42pr",
+  "aliases": [
+    "RUSTSEC-2026-0316"
+  ],
+  "title": "Wasmtime：動的Val APIのレコード読込みでホストメモリ制限を超過",
+  "summary": "動的型付けのcomponent::Val APIがゲストの値を読み込む際、ホストのメモリ確保量を十分に計上せず、想定より多くのメモリを確保させられる。ホストのサービス拒否につながる可能性がある。修正版は36.0.16、48.0.3、49.0.1。",
+  "publishedAt": "2026-09-24T12:00:00Z",
+  "modifiedAt": "2026-09-29T07:45:02.372301126Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T00:28:04.712070Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0316",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 36.0.16",
+          "fixed": "36.0.16",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0316"
+        },
+        {
+          "affected": ">= 37.0.0, < 48.0.3",
+          "fixed": "48.0.3",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0316"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.1",
+          "fixed": "49.0.1",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0316"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "36.0.16"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "48.0.3"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jqpg-j7w6-42pr",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 1.0,
+        "vector": "CVSS:4.0/AV:A/AC:H/AT:P/PR:L/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jqpg-j7w6-42pr"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0316",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0316",
+      "publishedDate": "2026-09-24",
+      "publishedAt": "2026-09-24T12:00:00Z",
+      "modifiedAt": "2026-09-29T07:45:02.372301126Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0316",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/6aed84668c23d7f535077a9fe918bf1fa0f6a5bc/crates/wasmtime/RUSTSEC-2026-0316.md",
+      "publishedDate": "2026-09-24"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jqpg-j7w6-42pr",
+      "publishedDate": "2026-09-24",
+      "publishedAt": "2026-09-24T19:25:09Z",
+      "modifiedAt": "2026-09-24T19:25:09Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026-09-24に公表された事案の収録補完。収録日を脆弱性の初回公表日や実悪用日と混同しない。",
+    "固定GitHub Reviewedには未収録だが、OSV/RustSecの別名と開発元の公開アドバイザリを照合した個別記録。",
+    "表示する範囲はOSVのSEMVERイベントを系列ごとに保持し、その原文をrawRangesにも残す。開発元の列挙・不等号表記は取得原文と照合記録に保持する。修正境界を現在の全脆弱性に対する安全保証とはしない。",
+    "重大度・CVSSの版、数値、ベクトルは開発元の公表値で、ベクトルはRustSec/OSVとも一致。独自計算や重大度からの実悪用推定は行わない。",
+    "実悪用とCISA KEVは未確認。既存のソース全体の取得時刻や取得失敗の状態は、この個別確認で更新しない。",
+    "影響は動的Val APIを使うホストに限定される。bindgen!などの静的型付けAPIを使うホストは開発元によると対象外。開発元は既知の回避策なしとして更新を推奨する。",
+    "GHSA-852m-cvvp-9p4wでの対策が及んでいなかった処理に関する別アドバイザリであり、関連IDを別名として統合しない。",
+    "下限0.0.0-0はOSV原文の値であり、実在する最初のリリースや導入版を独自に特定したものではない。"
+  ]
+}

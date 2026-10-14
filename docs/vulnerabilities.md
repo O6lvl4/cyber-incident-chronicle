@@ -18,7 +18,7 @@
 
 ## 保存先・再現性
 
-- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認63件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalib・Go・bip322・mykey・IronCrypto・quinn-proto・kuva・log4net・Langflow・Backstageの40件を含む計103件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
+- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認63件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalib・Go・bip322・mykey・IronCrypto・quinn-proto・kuva・log4net・Langflow・Backstage・Wasmtimeの48件を含む計111件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
 - `src/data/vulnerability-imported.json`: 固定ソース全件を変換・別名統合し、個別確認済み記録を重ねた表示用正本。上記の個別編集記録を追加連結して二重計上しない
 - `src/data/vulnerability-coverage.json`: 簡潔な公開カバレッジ・再実行コマンド・出力ハッシュ
 - `docs/data/vulnerability-import-audit.json`: ファイル単位の収録/除外/失敗監査。ブラウザーに全量を同梱しない
@@ -53,7 +53,7 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - `affected[]`: パッケージごとにecosystem/packageName、影響範囲とそれに対応する修正境界・出典を持つ。複数パッケージや複数系列を平坦化しない
 - `rawRanges`, `explicitVersions`, `packageUrl`: OSV原文のイベント、列挙版、purlを必要に応じてそのまま保持。版比較や安全版の推定はしない
 - OSVの `fixed` は除外境界、`last_affected` は含む境界。同じrange内で両者を混在させない。変換は導入・終了イベントが交互に並ぶ `ECOSYSTEM` / `SEMVER` の表示用投影に限定し、版比較や順序の推測は行わない。修正版不明はnullのままにする
-- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-14（JST）確認の表示データでは34,761 rangeが `ECOSYSTEM`、noyalib・Go・bip322・mykey・IronCrypto・quinn-proto・kuvaの個別確認37 rangeが `SEMVER`。`GIT` / `limit` は0件
+- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-14（JST）確認の表示データでは34,761 rangeが `ECOSYSTEM`、noyalib・Go・bip322・mykey・IronCrypto・quinn-proto・kuva・Wasmtimeの個別確認45 rangeが `SEMVER`。`GIT` / `limit` は0件
 - 個別編集との相違は、元DBの `provenance.databaseAffected` と相違理由も保持する
 
 修正版はその脆弱性に対応する最初の修正境界であり、後続の別脆弱性も含めた「現在の最新安全版」を保証しない。アプリはインストール済み版の脆弱性該当判定をしない。
@@ -95,3 +95,7 @@ OSVの7全エクスポート283,650件を前回283,595件と全文比較。新�
 GitHub Advisory DatabaseのデータはCC-BY-4.0。GitHub Advisory Databaseと各貢献者に帰属する。選定、形式変換、重複統合、個別編集の重ね合わせを行っており、元資料と変更点を保持する。[公式リポジトリ](https://github.com/github/advisory-database)、[ライセンス](https://github.com/github/advisory-database/blob/ccd4868bd8cfbed178f5ada1194b4fe30674c25b/LICENSE.md)。
 
 参考：[OSV schema](https://ossf.github.io/osv-schema/)、[OSV data](https://google.github.io/osv.dev/data/)、[GitHub global advisory API](https://docs.github.com/en/rest/security-advisories/global-advisories)
+
+### 10月14日 Wasmtime補完
+
+上記の日次収集後、以前から未収録候補として保持していたWasmtimeの8件を開発元・OSV・固定RustSecソースで個別確認して追加した。公表日は各原文の7月31日・8月20日・9月24日・10月2日のまま。現在の表示は18,939件、撤回849件、未撤回18,090件、個別確認111件（重ね合わせ63・範囲外48）。日次監査の当時の集計・成功取得点は変更しない。[確認根拠](data/wasmtime-backfill-2026-10-14.json)
