@@ -1,0 +1,132 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-hgjw-h833-99q9",
+  "aliases": [
+    "RUSTSEC-2026-0222"
+  ],
+  "title": "Wasmtime：異なるEngineの混在で型の取り違え・スタック破損",
+  "summary": "ホスト側の一部公開APIが、異なるEngineに属するModule・型などをStoreへ渡すことを検証せず、誤った型索引や呼び出し用コードを使用する。スタックへの範囲外書込み、GCヒープ破損、型混同やパニックにつながる。ゲストWebAssemblyだけでは誘発できず、wasmtime CLIは対象外。",
+  "publishedAt": "2026-07-31T12:00:00Z",
+  "modifiedAt": "2026-10-12T18:00:14.395534562Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T00:28:04.712070Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0222",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 24.0.12",
+          "fixed": "24.0.12",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0222"
+        },
+        {
+          "affected": ">= 25.0.0, < 36.0.13",
+          "fixed": "36.0.13",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0222"
+        },
+        {
+          "affected": ">= 37.0.0, < 46.0.2",
+          "fixed": "46.0.2",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0222"
+        },
+        {
+          "affected": ">= 47.0.0, < 47.0.3",
+          "fixed": "47.0.3",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0222"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "24.0.12"
+            },
+            {
+              "introduced": "25.0.0"
+            },
+            {
+              "fixed": "36.0.13"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "46.0.2"
+            },
+            {
+              "introduced": "47.0.0"
+            },
+            {
+              "fixed": "47.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hgjw-h833-99q9",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.8,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hgjw-h833-99q9"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0222",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0222",
+      "publishedDate": "2026-07-31",
+      "publishedAt": "2026-07-31T12:00:00Z",
+      "modifiedAt": "2026-10-12T18:00:14.395534562Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0222",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/6aed84668c23d7f535077a9fe918bf1fa0f6a5bc/crates/wasmtime/RUSTSEC-2026-0222.md",
+      "publishedDate": "2026-07-31"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hgjw-h833-99q9",
+      "publishedDate": "2026-07-31",
+      "publishedAt": "2026-07-31T16:23:22Z",
+      "modifiedAt": "2026-07-31T16:23:22Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026-07-31に公表された事案の収録補完。収録日を脆弱性の初回公表日や実悪用日と混同しない。",
+    "固定GitHub Reviewedには未収録だが、OSV/RustSecの別名と開発元の公開アドバイザリを照合した個別記録。",
+    "表示する範囲はOSVのSEMVERイベントを系列ごとに保持し、その原文をrawRangesにも残す。開発元の列挙・不等号表記は取得原文と照合記録に保持する。修正境界を現在の全脆弱性に対する安全保証とはしない。",
+    "重大度・CVSSの版、数値、ベクトルは開発元の公表値で、ベクトルはRustSec/OSVとも一致。独自計算や重大度からの実悪用推定は行わない。",
+    "実悪用とCISA KEVは未確認。既存のソース全体の取得時刻や取得失敗の状態は、この個別確認で更新しない。",
+    "ホストが二つのEngineを作り、その間でオブジェクトを混在させることが条件。単一Engineを使い続ける埋込み環境や、対象APIを直接呼ばない環境は開発元によると影響しない。",
+    "修正版は24.0.12、36.0.13、46.0.2、47.0.3。更新できない場合は、Storeへ渡す各オブジェクトとStoreが同一Engineに属することを検証する。",
+    "下限0.0.0-0はOSV原文の値であり、実在する最初のリリースや導入版を独自に特定したものではない。"
+  ]
+}
