@@ -4,202 +4,202 @@ import record0 from './attack-classifications/2rinkan-2026.json' with { type: 'j
 import record1 from './attack-classifications/abahouse-2026.json' with { type: 'json' };
 import record2 from './attack-classifications/active-shop-sqli-2026.json' with { type: 'json' };
 import record3 from './attack-classifications/adastria-2023.json' with { type: 'json' };
-import record4 from './attack-classifications/aflac-2026.json' with { type: 'json' };
-import record5 from './attack-classifications/ainokaze-toyama-2026.json' with { type: 'json' };
-import record6 from './attack-classifications/aiphone-australia-2026.json' with { type: 'json' };
-import record7 from './attack-classifications/aizawa-am-2024.json' with { type: 'json' };
-import record8 from './attack-classifications/applabo-mail-server-2026.json' with { type: 'json' };
-import record9 from './attack-classifications/applynow-2026.json' with { type: 'json' };
-import record10 from './attack-classifications/arcadia-speecan-raiden-2026.json' with { type: 'json' };
-import record11 from './attack-classifications/asahi-2025.json' with { type: 'json' };
-import record12 from './attack-classifications/asahi-kasei-pharma-digital-2026.json' with { type: 'json' };
-import record13 from './attack-classifications/askul-2025.json' with { type: 'json' };
-import record14 from './attack-classifications/atex-2024.json' with { type: 'json' };
-import record15 from './attack-classifications/avant-disclosure-2023.json' with { type: 'json' };
-import record16 from './attack-classifications/bilcom-2024.json' with { type: 'json' };
-import record17 from './attack-classifications/bookoff-members-2026.json' with { type: 'json' };
-import record18 from './attack-classifications/casio-2024.json' with { type: 'json' };
-import record19 from './attack-classifications/casio-classpad-2023.json' with { type: 'json' };
-import record20 from './attack-classifications/cct-koto-online-2026.json' with { type: 'json' };
-import record21 from './attack-classifications/ceres-pointincome-2026.json' with { type: 'json' };
-import record22 from './attack-classifications/charm-2026.json' with { type: 'json' };
-import record23 from './attack-classifications/chuden-2026.json' with { type: 'json' };
-import record24 from './attack-classifications/coconala-skillmarket-2026.json' with { type: 'json' };
-import record25 from './attack-classifications/commune-2026.json' with { type: 'json' };
-import record26 from './attack-classifications/cress-tech-2024.json' with { type: 'json' };
-import record27 from './attack-classifications/ctc-subcontractor-2024.json' with { type: 'json' };
-import record28 from './attack-classifications/daiichi-life-hr-2026.json' with { type: 'json' };
-import record29 from './attack-classifications/daiichikosho-2026.json' with { type: 'json' };
-import record30 from './attack-classifications/daiki-suisan-app-2026.json' with { type: 'json' };
-import record31 from './attack-classifications/digital-agency-gss-2026.json' with { type: 'json' };
-import record32 from './attack-classifications/dip-baitoru-2026.json' with { type: 'json' };
-import record33 from './attack-classifications/docomo-plala-hikari-2023.json' with { type: 'json' };
-import record34 from './attack-classifications/enecom-2026.json' with { type: 'json' };
-import record35 from './attack-classifications/epark-peakmanager-2026.json' with { type: 'json' };
-import record36 from './attack-classifications/eplus-sumaticket-refund-2026.json' with { type: 'json' };
-import record37 from './attack-classifications/estore-2026-08-01.json' with { type: 'json' };
-import record38 from './attack-classifications/etc-meisai-2023.json' with { type: 'json' };
-import record39 from './attack-classifications/evergreen-marketing-mail-2026.json' with { type: 'json' };
-import record40 from './attack-classifications/flex-gallery-2026.json' with { type: 'json' };
-import record41 from './attack-classifications/fujikura-2024.json' with { type: 'json' };
-import record42 from './attack-classifications/fujitsu-2024.json' with { type: 'json' };
-import record43 from './attack-classifications/furuno-electric-2025.json' with { type: 'json' };
-import record44 from './attack-classifications/furuno-systems-2022.json' with { type: 'json' };
-import record45 from './attack-classifications/gdo-system-2026.json' with { type: 'json' };
-import record46 from './attack-classifications/ginpo-pack-2023.json' with { type: 'json' };
-import record47 from './attack-classifications/glory-2023.json' with { type: 'json' };
-import record48 from './attack-classifications/gmo-infoq-2026.json' with { type: 'json' };
-import record49 from './attack-classifications/harada-beer-engawa-2026.json' with { type: 'json' };
-import record50 from './attack-classifications/helpfeel-gyazo-2026.json' with { type: 'json' };
-import record51 from './attack-classifications/hi-ho-mypage-2026.json' with { type: 'json' };
-import record52 from './attack-classifications/his-2026.json' with { type: 'json' };
-import record53 from './attack-classifications/hoya-2024.json' with { type: 'json' };
-import record54 from './attack-classifications/huistenbosch-2025.json' with { type: 'json' };
-import record55 from './attack-classifications/hulu-credential-stuffing-2025.json' with { type: 'json' };
-import record56 from './attack-classifications/icc-2026-05-19.json' with { type: 'json' };
-import record57 from './attack-classifications/idc-frontier-2026.json' with { type: 'json' };
-import record58 from './attack-classifications/iij-securemx-2025.json' with { type: 'json' };
-import record59 from './attack-classifications/ikegami-cyberattack-2026.json' with { type: 'json' };
-import record60 from './attack-classifications/iseto-2024.json' with { type: 'json' };
-import record61 from './attack-classifications/ites-2023.json' with { type: 'json' };
-import record62 from './attack-classifications/jaea-jrr3-support-2026.json' with { type: 'json' };
-import record63 from './attack-classifications/japanpost-app-2026.json' with { type: 'json' };
-import record64 from './attack-classifications/jcom-mesh-wifi-2023.json' with { type: 'json' };
-import record65 from './attack-classifications/jgc-digital-metabase-2026.json' with { type: 'json' };
-import record66 from './attack-classifications/jogmec-2026.json' with { type: 'json' };
-import record67 from './attack-classifications/jtech-rokkasho-2023.json' with { type: 'json' };
-import record68 from './attack-classifications/kadokawa-2024.json' with { type: 'json' };
-import record69 from './attack-classifications/kanamoto-2024.json' with { type: 'json' };
-import record70 from './attack-classifications/kantsu-2024.json' with { type: 'json' };
-import record71 from './attack-classifications/kddi-isp-mail-2026.json' with { type: 'json' };
-import record72 from './attack-classifications/keio-ransomware-2026.json' with { type: 'json' };
-import record73 from './attack-classifications/kindal-customer-export-2026.json' with { type: 'json' };
-import record74 from './attack-classifications/kinokuniya-fujisan-delivery-2023.json' with { type: 'json' };
-import record75 from './attack-classifications/kodansha-beck-mail-2026.json' with { type: 'json' };
-import record76 from './attack-classifications/kokuyo-2023.json' with { type: 'json' };
-import record77 from './attack-classifications/kufu-machitalk-2026.json' with { type: 'json' };
-import record78 from './attack-classifications/kufu-zaim-tampering-2026.json' with { type: 'json' };
-import record79 from './attack-classifications/kurashiki-hampu-2023.json' with { type: 'json' };
-import record80 from './attack-classifications/kyusai-callcenter-2025.json' with { type: 'json' };
-import record81 from './attack-classifications/lashinbang-2026.json' with { type: 'json' };
-import record82 from './attack-classifications/laurel-2025.json' with { type: 'json' };
-import record83 from './attack-classifications/lawson-id-2026.json' with { type: 'json' };
-import record84 from './attack-classifications/lawson-mail-server-2026.json' with { type: 'json' };
-import record85 from './attack-classifications/lean-body-metabase-2026.json' with { type: 'json' };
-import record86 from './attack-classifications/line-yahoo-2023.json' with { type: 'json' };
-import record87 from './attack-classifications/livable-insider-2024.json' with { type: 'json' };
-import record88 from './attack-classifications/mazda-2026-03-19.json' with { type: 'json' };
-import record89 from './attack-classifications/mimaru-asakusa-booking-2023.json' with { type: 'json' };
-import record90 from './attack-classifications/mitsubishi-home-2024.json' with { type: 'json' };
-import record91 from './attack-classifications/mitsui-fudosan-credentials-2026.json' with { type: 'json' };
-import record92 from './attack-classifications/mks-shalom-2023.json' with { type: 'json' };
-import record93 from './attack-classifications/moneyforward-2026-05-01.json' with { type: 'json' };
-import record94 from './attack-classifications/monogatari-yakiniku-king-2026.json' with { type: 'json' };
-import record95 from './attack-classifications/moonstar-2026.json' with { type: 'json' };
-import record96 from './attack-classifications/morinaga-confectionery-2024.json' with { type: 'json' };
-import record97 from './attack-classifications/murauchi-2026.json' with { type: 'json' };
-import record98 from './attack-classifications/nagoya-port-nuts-2023.json' with { type: 'json' };
-import record99 from './attack-classifications/naniwa-pump-2024.json' with { type: 'json' };
+import record4 from './attack-classifications/aena-ec-app-2026.json' with { type: 'json' };
+import record5 from './attack-classifications/aflac-2026.json' with { type: 'json' };
+import record6 from './attack-classifications/ainokaze-toyama-2026.json' with { type: 'json' };
+import record7 from './attack-classifications/aiphone-australia-2026.json' with { type: 'json' };
+import record8 from './attack-classifications/aizawa-am-2024.json' with { type: 'json' };
+import record9 from './attack-classifications/applabo-mail-server-2026.json' with { type: 'json' };
+import record10 from './attack-classifications/applynow-2026.json' with { type: 'json' };
+import record11 from './attack-classifications/arcadia-speecan-raiden-2026.json' with { type: 'json' };
+import record12 from './attack-classifications/asahi-2025.json' with { type: 'json' };
+import record13 from './attack-classifications/asahi-kasei-pharma-digital-2026.json' with { type: 'json' };
+import record14 from './attack-classifications/askul-2025.json' with { type: 'json' };
+import record15 from './attack-classifications/atex-2024.json' with { type: 'json' };
+import record16 from './attack-classifications/avant-disclosure-2023.json' with { type: 'json' };
+import record17 from './attack-classifications/bilcom-2024.json' with { type: 'json' };
+import record18 from './attack-classifications/bookoff-members-2026.json' with { type: 'json' };
+import record19 from './attack-classifications/casio-2024.json' with { type: 'json' };
+import record20 from './attack-classifications/casio-classpad-2023.json' with { type: 'json' };
+import record21 from './attack-classifications/cct-koto-online-2026.json' with { type: 'json' };
+import record22 from './attack-classifications/ceres-pointincome-2026.json' with { type: 'json' };
+import record23 from './attack-classifications/charm-2026.json' with { type: 'json' };
+import record24 from './attack-classifications/chuden-2026.json' with { type: 'json' };
+import record25 from './attack-classifications/coconala-skillmarket-2026.json' with { type: 'json' };
+import record26 from './attack-classifications/commune-2026.json' with { type: 'json' };
+import record27 from './attack-classifications/cress-tech-2024.json' with { type: 'json' };
+import record28 from './attack-classifications/ctc-subcontractor-2024.json' with { type: 'json' };
+import record29 from './attack-classifications/daiichi-life-hr-2026.json' with { type: 'json' };
+import record30 from './attack-classifications/daiichikosho-2026.json' with { type: 'json' };
+import record31 from './attack-classifications/daiki-suisan-app-2026.json' with { type: 'json' };
+import record32 from './attack-classifications/digital-agency-gss-2026.json' with { type: 'json' };
+import record33 from './attack-classifications/dip-baitoru-2026.json' with { type: 'json' };
+import record34 from './attack-classifications/docomo-plala-hikari-2023.json' with { type: 'json' };
+import record35 from './attack-classifications/enecom-2026.json' with { type: 'json' };
+import record36 from './attack-classifications/epark-peakmanager-2026.json' with { type: 'json' };
+import record37 from './attack-classifications/eplus-sumaticket-refund-2026.json' with { type: 'json' };
+import record38 from './attack-classifications/estore-2026-08-01.json' with { type: 'json' };
+import record39 from './attack-classifications/etc-meisai-2023.json' with { type: 'json' };
+import record40 from './attack-classifications/evergreen-marketing-mail-2026.json' with { type: 'json' };
+import record41 from './attack-classifications/flex-gallery-2026.json' with { type: 'json' };
+import record42 from './attack-classifications/fujikura-2024.json' with { type: 'json' };
+import record43 from './attack-classifications/fujitsu-2024.json' with { type: 'json' };
+import record44 from './attack-classifications/furuno-electric-2025.json' with { type: 'json' };
+import record45 from './attack-classifications/furuno-systems-2022.json' with { type: 'json' };
+import record46 from './attack-classifications/gdo-system-2026.json' with { type: 'json' };
+import record47 from './attack-classifications/ginpo-pack-2023.json' with { type: 'json' };
+import record48 from './attack-classifications/glory-2023.json' with { type: 'json' };
+import record49 from './attack-classifications/gmo-infoq-2026.json' with { type: 'json' };
+import record50 from './attack-classifications/harada-beer-engawa-2026.json' with { type: 'json' };
+import record51 from './attack-classifications/helpfeel-gyazo-2026.json' with { type: 'json' };
+import record52 from './attack-classifications/hi-ho-mypage-2026.json' with { type: 'json' };
+import record53 from './attack-classifications/his-2026.json' with { type: 'json' };
+import record54 from './attack-classifications/hoya-2024.json' with { type: 'json' };
+import record55 from './attack-classifications/huistenbosch-2025.json' with { type: 'json' };
+import record56 from './attack-classifications/hulu-credential-stuffing-2025.json' with { type: 'json' };
+import record57 from './attack-classifications/icc-2026-05-19.json' with { type: 'json' };
+import record58 from './attack-classifications/idc-frontier-2026.json' with { type: 'json' };
+import record59 from './attack-classifications/iij-securemx-2025.json' with { type: 'json' };
+import record60 from './attack-classifications/ikegami-cyberattack-2026.json' with { type: 'json' };
+import record61 from './attack-classifications/iseto-2024.json' with { type: 'json' };
+import record62 from './attack-classifications/ites-2023.json' with { type: 'json' };
+import record63 from './attack-classifications/jaea-jrr3-support-2026.json' with { type: 'json' };
+import record64 from './attack-classifications/japanpost-app-2026.json' with { type: 'json' };
+import record65 from './attack-classifications/jcom-mesh-wifi-2023.json' with { type: 'json' };
+import record66 from './attack-classifications/jgc-digital-metabase-2026.json' with { type: 'json' };
+import record67 from './attack-classifications/jogmec-2026.json' with { type: 'json' };
+import record68 from './attack-classifications/jtech-rokkasho-2023.json' with { type: 'json' };
+import record69 from './attack-classifications/kadokawa-2024.json' with { type: 'json' };
+import record70 from './attack-classifications/kanamoto-2024.json' with { type: 'json' };
+import record71 from './attack-classifications/kantsu-2024.json' with { type: 'json' };
+import record72 from './attack-classifications/kddi-isp-mail-2026.json' with { type: 'json' };
+import record73 from './attack-classifications/keio-ransomware-2026.json' with { type: 'json' };
+import record74 from './attack-classifications/kindal-customer-export-2026.json' with { type: 'json' };
+import record75 from './attack-classifications/kinokuniya-fujisan-delivery-2023.json' with { type: 'json' };
+import record76 from './attack-classifications/kodansha-beck-mail-2026.json' with { type: 'json' };
+import record77 from './attack-classifications/kokuyo-2023.json' with { type: 'json' };
+import record78 from './attack-classifications/kufu-machitalk-2026.json' with { type: 'json' };
+import record79 from './attack-classifications/kufu-zaim-tampering-2026.json' with { type: 'json' };
+import record80 from './attack-classifications/kurashiki-hampu-2023.json' with { type: 'json' };
+import record81 from './attack-classifications/kyusai-callcenter-2025.json' with { type: 'json' };
+import record82 from './attack-classifications/lashinbang-2026.json' with { type: 'json' };
+import record83 from './attack-classifications/laurel-2025.json' with { type: 'json' };
+import record84 from './attack-classifications/lawson-id-2026.json' with { type: 'json' };
+import record85 from './attack-classifications/lawson-mail-server-2026.json' with { type: 'json' };
+import record86 from './attack-classifications/lean-body-metabase-2026.json' with { type: 'json' };
+import record87 from './attack-classifications/line-yahoo-2023.json' with { type: 'json' };
+import record88 from './attack-classifications/livable-insider-2024.json' with { type: 'json' };
+import record89 from './attack-classifications/mazda-2026-03-19.json' with { type: 'json' };
+import record90 from './attack-classifications/medley-atlink-2026.json' with { type: 'json' };
+import record91 from './attack-classifications/mimaru-asakusa-booking-2023.json' with { type: 'json' };
+import record92 from './attack-classifications/mitsubishi-home-2024.json' with { type: 'json' };
+import record93 from './attack-classifications/mitsui-fudosan-credentials-2026.json' with { type: 'json' };
+import record94 from './attack-classifications/mks-shalom-2023.json' with { type: 'json' };
+import record95 from './attack-classifications/moneyforward-2026-05-01.json' with { type: 'json' };
+import record96 from './attack-classifications/monogatari-yakiniku-king-2026.json' with { type: 'json' };
+import record97 from './attack-classifications/moonstar-2026.json' with { type: 'json' };
+import record98 from './attack-classifications/morinaga-confectionery-2024.json' with { type: 'json' };
+import record99 from './attack-classifications/murauchi-2026.json' with { type: 'json' };
 
 export const ATTACKS_PART_1 = {
   "2rinkan-2026": record0,
   "abahouse-2026": record1,
   "active-shop-sqli-2026": record2,
   "adastria-2023": record3,
-  "aflac-2026": record4,
-  "ainokaze-toyama-2026": record5,
-  "aiphone-australia-2026": record6,
-  "aizawa-am-2024": record7,
-  "applabo-mail-server-2026": record8,
-  "applynow-2026": record9,
-  "arcadia-speecan-raiden-2026": record10,
-  "asahi-2025": record11,
-  "asahi-kasei-pharma-digital-2026": record12,
-  "askul-2025": record13,
-  "atex-2024": record14,
-  "avant-disclosure-2023": record15,
-  "bilcom-2024": record16,
-  "bookoff-members-2026": record17,
-  "casio-2024": record18,
-  "casio-classpad-2023": record19,
-  "cct-koto-online-2026": record20,
-  "ceres-pointincome-2026": record21,
-  "charm-2026": record22,
-  "chuden-2026": record23,
-  "coconala-skillmarket-2026": record24,
-  "commune-2026": record25,
-  "cress-tech-2024": record26,
-  "ctc-subcontractor-2024": record27,
-  "daiichi-life-hr-2026": record28,
-  "daiichikosho-2026": record29,
-  "daiki-suisan-app-2026": record30,
-  "digital-agency-gss-2026": record31,
-  "dip-baitoru-2026": record32,
-  "docomo-plala-hikari-2023": record33,
-  "enecom-2026": record34,
-  "epark-peakmanager-2026": record35,
-  "eplus-sumaticket-refund-2026": record36,
-  "estore-2026-08-01": record37,
-  "etc-meisai-2023": record38,
-  "evergreen-marketing-mail-2026": record39,
-  "flex-gallery-2026": record40,
-  "fujikura-2024": record41,
-  "fujitsu-2024": record42,
-  "furuno-electric-2025": record43,
-  "furuno-systems-2022": record44,
-  "gdo-system-2026": record45,
-  "ginpo-pack-2023": record46,
-  "glory-2023": record47,
-  "gmo-infoq-2026": record48,
-  "harada-beer-engawa-2026": record49,
-  "helpfeel-gyazo-2026": record50,
-  "hi-ho-mypage-2026": record51,
-  "his-2026": record52,
-  "hoya-2024": record53,
-  "huistenbosch-2025": record54,
-  "hulu-credential-stuffing-2025": record55,
-  "icc-2026-05-19": record56,
-  "idc-frontier-2026": record57,
-  "iij-securemx-2025": record58,
-  "ikegami-cyberattack-2026": record59,
-  "iseto-2024": record60,
-  "ites-2023": record61,
-  "jaea-jrr3-support-2026": record62,
-  "japanpost-app-2026": record63,
-  "jcom-mesh-wifi-2023": record64,
-  "jgc-digital-metabase-2026": record65,
-  "jogmec-2026": record66,
-  "jtech-rokkasho-2023": record67,
-  "kadokawa-2024": record68,
-  "kanamoto-2024": record69,
-  "kantsu-2024": record70,
-  "kddi-isp-mail-2026": record71,
-  "keio-ransomware-2026": record72,
-  "kindal-customer-export-2026": record73,
-  "kinokuniya-fujisan-delivery-2023": record74,
-  "kodansha-beck-mail-2026": record75,
-  "kokuyo-2023": record76,
-  "kufu-machitalk-2026": record77,
-  "kufu-zaim-tampering-2026": record78,
-  "kurashiki-hampu-2023": record79,
-  "kyusai-callcenter-2025": record80,
-  "lashinbang-2026": record81,
-  "laurel-2025": record82,
-  "lawson-id-2026": record83,
-  "lawson-mail-server-2026": record84,
-  "lean-body-metabase-2026": record85,
-  "line-yahoo-2023": record86,
-  "livable-insider-2024": record87,
-  "mazda-2026-03-19": record88,
-  "mimaru-asakusa-booking-2023": record89,
-  "mitsubishi-home-2024": record90,
-  "mitsui-fudosan-credentials-2026": record91,
-  "mks-shalom-2023": record92,
-  "moneyforward-2026-05-01": record93,
-  "monogatari-yakiniku-king-2026": record94,
-  "moonstar-2026": record95,
-  "morinaga-confectionery-2024": record96,
-  "murauchi-2026": record97,
-  "nagoya-port-nuts-2023": record98,
-  "naniwa-pump-2024": record99,
+  "aena-ec-app-2026": record4,
+  "aflac-2026": record5,
+  "ainokaze-toyama-2026": record6,
+  "aiphone-australia-2026": record7,
+  "aizawa-am-2024": record8,
+  "applabo-mail-server-2026": record9,
+  "applynow-2026": record10,
+  "arcadia-speecan-raiden-2026": record11,
+  "asahi-2025": record12,
+  "asahi-kasei-pharma-digital-2026": record13,
+  "askul-2025": record14,
+  "atex-2024": record15,
+  "avant-disclosure-2023": record16,
+  "bilcom-2024": record17,
+  "bookoff-members-2026": record18,
+  "casio-2024": record19,
+  "casio-classpad-2023": record20,
+  "cct-koto-online-2026": record21,
+  "ceres-pointincome-2026": record22,
+  "charm-2026": record23,
+  "chuden-2026": record24,
+  "coconala-skillmarket-2026": record25,
+  "commune-2026": record26,
+  "cress-tech-2024": record27,
+  "ctc-subcontractor-2024": record28,
+  "daiichi-life-hr-2026": record29,
+  "daiichikosho-2026": record30,
+  "daiki-suisan-app-2026": record31,
+  "digital-agency-gss-2026": record32,
+  "dip-baitoru-2026": record33,
+  "docomo-plala-hikari-2023": record34,
+  "enecom-2026": record35,
+  "epark-peakmanager-2026": record36,
+  "eplus-sumaticket-refund-2026": record37,
+  "estore-2026-08-01": record38,
+  "etc-meisai-2023": record39,
+  "evergreen-marketing-mail-2026": record40,
+  "flex-gallery-2026": record41,
+  "fujikura-2024": record42,
+  "fujitsu-2024": record43,
+  "furuno-electric-2025": record44,
+  "furuno-systems-2022": record45,
+  "gdo-system-2026": record46,
+  "ginpo-pack-2023": record47,
+  "glory-2023": record48,
+  "gmo-infoq-2026": record49,
+  "harada-beer-engawa-2026": record50,
+  "helpfeel-gyazo-2026": record51,
+  "hi-ho-mypage-2026": record52,
+  "his-2026": record53,
+  "hoya-2024": record54,
+  "huistenbosch-2025": record55,
+  "hulu-credential-stuffing-2025": record56,
+  "icc-2026-05-19": record57,
+  "idc-frontier-2026": record58,
+  "iij-securemx-2025": record59,
+  "ikegami-cyberattack-2026": record60,
+  "iseto-2024": record61,
+  "ites-2023": record62,
+  "jaea-jrr3-support-2026": record63,
+  "japanpost-app-2026": record64,
+  "jcom-mesh-wifi-2023": record65,
+  "jgc-digital-metabase-2026": record66,
+  "jogmec-2026": record67,
+  "jtech-rokkasho-2023": record68,
+  "kadokawa-2024": record69,
+  "kanamoto-2024": record70,
+  "kantsu-2024": record71,
+  "kddi-isp-mail-2026": record72,
+  "keio-ransomware-2026": record73,
+  "kindal-customer-export-2026": record74,
+  "kinokuniya-fujisan-delivery-2023": record75,
+  "kodansha-beck-mail-2026": record76,
+  "kokuyo-2023": record77,
+  "kufu-machitalk-2026": record78,
+  "kufu-zaim-tampering-2026": record79,
+  "kurashiki-hampu-2023": record80,
+  "kyusai-callcenter-2025": record81,
+  "lashinbang-2026": record82,
+  "laurel-2025": record83,
+  "lawson-id-2026": record84,
+  "lawson-mail-server-2026": record85,
+  "lean-body-metabase-2026": record86,
+  "line-yahoo-2023": record87,
+  "livable-insider-2024": record88,
+  "mazda-2026-03-19": record89,
+  "medley-atlink-2026": record90,
+  "mimaru-asakusa-booking-2023": record91,
+  "mitsubishi-home-2024": record92,
+  "mitsui-fudosan-credentials-2026": record93,
+  "mks-shalom-2023": record94,
+  "moneyforward-2026-05-01": record95,
+  "monogatari-yakiniku-king-2026": record96,
+  "moonstar-2026": record97,
+  "morinaga-confectionery-2024": record98,
+  "murauchi-2026": record99,
 } as Record<string, AttackClassification>;

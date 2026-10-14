@@ -1,0 +1,116 @@
+{
+  "ghsa_id": "GHSA-m4ch-rfv5-x5g3",
+  "cve_id": "CVE-2023-22742",
+  "url": "https://api.github.com/repos/rust-lang/git2-rs/security-advisories/GHSA-m4ch-rfv5-x5g3",
+  "html_url": "https://github.com/rust-lang/git2-rs/security/advisories/GHSA-m4ch-rfv5-x5g3",
+  "summary": "git2-rs fails to verify SSH keys by default",
+  "description": "The git2 and libgit2-sys crates are Rust wrappers around the [libgit2](https://libgit2.org/) C library. It was discovered that libgit2 1.5.0 and below did not verify SSH host keys when establishing an SSH connection, exposing users of the library to Man-In-the-Middle attacks.\r\n\r\nThe libgit2 team assigned [CVE-2023-22742](https://github.com/libgit2/libgit2/security/advisories/GHSA-8643-3wh5-rmjq) to this vulnerability. The following versions of the libgit2-sys Rust crate have been released:\r\n\r\n* libgit2-sys 0.14.2, updating the underlying libgit2 C library to version 1.5.1.\r\n* libgit2-sys 0.13.5, updating the underlying libgit2 C library to version 1.4.5.\r\n\r\nA new git2 crate version has also been released, 0.16.1. This version only bumps its libgit2-sys dependency to ensure no vulnerable libgit2-sys versions are used, but contains no code changes: if you update the libgit2-sys version there is no need to also update the git2 crate version.\r\n\r\n[You can learn more about this vulnerability in libgit2's advisory](https://github.com/libgit2/libgit2/security/advisories/GHSA-8643-3wh5-rmjq)",
+  "severity": "medium",
+  "author": null,
+  "publisher": {
+    "login": "emilyalbini",
+    "id": 2299951,
+    "node_id": "MDQ6VXNlcjIyOTk5NTE=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2299951?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/emilyalbini",
+    "html_url": "https://github.com/emilyalbini",
+    "followers_url": "https://api.github.com/users/emilyalbini/followers",
+    "following_url": "https://api.github.com/users/emilyalbini/following{/other_user}",
+    "gists_url": "https://api.github.com/users/emilyalbini/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/emilyalbini/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/emilyalbini/subscriptions",
+    "organizations_url": "https://api.github.com/users/emilyalbini/orgs",
+    "repos_url": "https://api.github.com/users/emilyalbini/repos",
+    "events_url": "https://api.github.com/users/emilyalbini/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/emilyalbini/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-m4ch-rfv5-x5g3",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2023-22742",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2023-01-20T22:59:43Z",
+  "published_at": "2023-01-20T22:59:43Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "rust",
+        "name": "libgit2-sys"
+      },
+      "vulnerable_version_range": ">= 0.14.0, < 0.14.2",
+      "patched_versions": "0.14.2",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "rust",
+        "name": "libgit2-sys"
+      },
+      "vulnerable_version_range": "< 0.13.5",
+      "patched_versions": "0.13.5",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "rust",
+        "name": "git2"
+      },
+      "vulnerable_version_range": "< 0.16.1",
+      "patched_versions": "0.16.1",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "score": 6.8
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-322",
+      "name": "Key Exchange without Entity Authentication"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-322"
+  ],
+  "credits": [
+
+  ],
+  "credits_detailed": [
+
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 0,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+    "score": 6.8
+  }
+}

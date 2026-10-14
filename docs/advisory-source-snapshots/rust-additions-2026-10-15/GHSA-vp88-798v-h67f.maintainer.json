@@ -1,0 +1,87 @@
+{
+  "ghsa_id": "GHSA-vp88-798v-h67f",
+  "cve_id": null,
+  "url": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-vp88-798v-h67f",
+  "html_url": "https://github.com/rustls/rustls/security/advisories/GHSA-vp88-798v-h67f",
+  "summary": "ECH rejection can expose buffered application data to authenticated outer server before `ech_required` alert",
+  "description": "In rustls 0.23.44 and 0.23.45, application data that a client buffers before the handshake completes is sent to the server even when the server rejects Encrypted Client Hello (ECH).\r\n\r\nWhen the server rejects ECH, the client completes the handshake with the outer ClientHello and authenticates the server against the ECH config's `public_name`. At the end of the handshake, `start_traffic()` encrypts and queues any plaintext buffered by `ClientConnection::writer()`. It does this *before* checking for `EchStatus::Rejected` and queueing the `ech_required` alert.\r\n\r\nThe application then receives `Error::PeerIncompatible(ServerRejectedEncryptedClientHello)`, as expected. However, the client is still expected to call `write_tls()` to send the fatal alert, and that call also sends the encrypted application data. The server decrypts the data and only then receives the alert.\r\n\r\nThe ordering bug is older than 0.23.44. Before 0.23.44, the client checked the server certificate against the inner server name rather than `public_name`, so a correctly configured server failed certificate verification first and no data was sent. 0.23.44 fixed that check, which makes the ordinary rejection path reachable.\r\n\r\n# Impact\r\n\r\nPlaintext meant for the inner server, the one named in the encrypted ClientHello, goes to the client-facing server identified by `public_name`. That server is properly authenticated, so this is not an attack by an unauthenticated party. However this violates [RFC 9849](https://www.rfc-editor.org/info/rfc9849), which says the following:\r\n\r\n- Section 6.1.6: if the handshake and authentication succeed after ECH rejection, the client \"MUST ... abort the connection with an \"ech_required\" alert **before sending any application data to the server.**\"\r\n- Section 6.1.7: the certificate is checked only against `public_name`, and the connection \"MUST NOT\" be reported as successful to the application. rustls does report failure correctly. The problem is only that data is sent before the alert.\r\n\r\nThis affects only clients that meet all of these conditions:\r\n\r\n- They use `EchMode::Enable`. GREASE ECH is not affected.\r\n- They write application data before the handshake completes.\r\n- They connect to a server that rejects their ECH config, for example because the config is stale. This is the same case where the server returns retry configs.\r\n\r\nThe usual client response to rejection is to retry with the server's retry configs. In that case, the data has already gone to the outer server.\r\n",
+  "severity": "low",
+  "author": null,
+  "publisher": {
+    "login": "ctz",
+    "id": 579363,
+    "node_id": "MDQ6VXNlcjU3OTM2Mw==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/579363?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ctz",
+    "html_url": "https://github.com/ctz",
+    "followers_url": "https://api.github.com/users/ctz/followers",
+    "following_url": "https://api.github.com/users/ctz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ctz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ctz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ctz/subscriptions",
+    "organizations_url": "https://api.github.com/users/ctz/orgs",
+    "repos_url": "https://api.github.com/users/ctz/repos",
+    "events_url": "https://api.github.com/users/ctz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ctz/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-vp88-798v-h67f",
+      "type": "GHSA"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-10-14T09:55:10Z",
+  "published_at": "2026-10-14T09:55:10Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "rust",
+        "name": "rustls"
+      },
+      "vulnerable_version_range": "0.23.44,0.23.45",
+      "patched_versions": "",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N",
+      "score": 2.3
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+
+  ],
+  "cwe_ids": [
+
+  ],
+  "credits": [
+
+  ],
+  "credits_detailed": [
+
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 1,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N",
+    "score": 2.3
+  }
+}

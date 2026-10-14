@@ -1,0 +1,90 @@
+{
+  "ghsa_id": "GHSA-h2v8-394m-p7vv",
+  "cve_id": null,
+  "url": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-h2v8-394m-p7vv",
+  "html_url": "https://github.com/rustls/rustls/security/advisories/GHSA-h2v8-394m-p7vv",
+  "summary": "Brotli certificate decompression can allocate an attacker-controlled amount of memory up to 1 GiB before authentication.",
+  "description": "### Summary\r\n\r\nThe built-in (but disabled by default) Brotli certificate decoder bounds the output buffer but accepts an input-selected history window. A header of five bytes can specify a 1 GiB window allocation. A peer can abort a process whose allocator cannot satisfy that request. A client must enable Brotli and connect to the peer; a server must enable Brotli and request a client certificate. Neither direction requires a trusted attacker certificate.\r\n\r\n### Details\r\n\r\nrustls calls `BrotliDecompress` which enables Brotli's large-window extension. rustls applies a limit to certificates, but this applies to the decompressed result, and not to any internal allocations the process requires.\r\n\r\n### Impact\r\n\r\nClient applications that enable the `brotli` feature will be vulnerable to malicious servers. Server applications that enable the `brotli` feature and enable client authentication will be vulnerable to malicious clients.\r\n\r\nPotential for denial of service due to memory exhaustion from peers sending malicious Brotli-encoded certificates, for applications that enable Brotli decompression.\r\n\r\n### Acknowlegement\r\nThanks to OpenAI [OutboundDisclosures@openai.com](mailto:OutboundDisclosures@openai.com) for the disclosure.",
+  "severity": "low",
+  "author": null,
+  "publisher": {
+    "login": "ctz",
+    "id": 579363,
+    "node_id": "MDQ6VXNlcjU3OTM2Mw==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/579363?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ctz",
+    "html_url": "https://github.com/ctz",
+    "followers_url": "https://api.github.com/users/ctz/followers",
+    "following_url": "https://api.github.com/users/ctz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ctz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ctz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ctz/subscriptions",
+    "organizations_url": "https://api.github.com/users/ctz/orgs",
+    "repos_url": "https://api.github.com/users/ctz/repos",
+    "events_url": "https://api.github.com/users/ctz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ctz/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-h2v8-394m-p7vv",
+      "type": "GHSA"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-10-14T09:54:53Z",
+  "published_at": "2026-10-14T09:54:52Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "rust",
+        "name": "rustls"
+      },
+      "vulnerable_version_range": "< 0.23.46",
+      "patched_versions": ">= 0.23.46, >= 0.24.0-dev.2",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "score": 3.7
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-770",
+      "name": "Allocation of Resources Without Limits or Throttling"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-770"
+  ],
+  "credits": [
+
+  ],
+  "credits_detailed": [
+
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 0,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "score": 3.7
+  }
+}

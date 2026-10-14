@@ -1,0 +1,84 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-g2hj-v2j6-vfvg",
+  "aliases": [
+    "CVE-2026-106556"
+  ],
+  "title": "Backstage TechDocs：MkDocs設定検証の回避",
+  "summary": "認証済みのドキュメント編集者がビルド環境でコマンドを実行できる可能性がある。パッケージの2系列の修正境界を保持する。",
+  "publishedAt": "2026-10-07T14:39:36.015Z",
+  "modifiedAt": "2026-10-07T16:16:36.009Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T22:57:11.821943Z",
+  "dateSourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-106556",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@backstage/plugin-techdocs-node",
+      "ranges": [
+        {
+          "affected": "< 1.14.6",
+          "fixed": "1.14.6",
+          "sourceUrl": "https://github.com/backstage/backstage/security/advisories/GHSA-g2hj-v2j6-vfvg"
+        },
+        {
+          "affected": ">= 1.15.0, < 1.15.4",
+          "fixed": "1.15.4",
+          "sourceUrl": "https://github.com/backstage/backstage/security/advisories/GHSA-g2hj-v2j6-vfvg"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-106556",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.7,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-106556"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE公式API：CNA原文と日時",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106556",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T14:39:36.015Z",
+      "modifiedAt": "2026-10-07T16:16:36.009Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "MyJVN公式API概要：JVNDB-2026-037763",
+      "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=51&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=13&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=15",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公開アドバイザリ",
+      "url": "https://github.com/backstage/backstage/security/advisories/GHSA-g2hj-v2j6-vfvg",
+      "publishedDate": "2026-08-28"
+    }
+  ],
+  "caveats": [
+    "CVEレコードの公開・更新日時を使用。JVN収録日や今回確認日は初回公開日ではない。",
+    "固定Reviewed範囲外で個別確認。既存記録の別名と照合して追加した。",
+    "修正境界は現在の最新安全版を保証しない。CISA KEVは403で未確認のまま。",
+    "開発元HTMLはWeb取得で本文を照合。APIの接続タイムアウトを成功とは扱わない。",
+    "CNAのBackstage製品版1.50.5/1.54.6はパッケージ版と別。npmには開発元が明示した@backstage/plugin-techdocs-nodeの範囲を採用する。",
+    "JVNの個別HTMLは未取得。出典は全ページ取得して照合したMyJVN APIの概要本文を指す。"
+  ]
+}

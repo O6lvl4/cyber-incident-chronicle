@@ -1,0 +1,77 @@
+{
+  "id": "toppan-payments-portal-2026",
+  "company": "TOPPANペイメンツ",
+  "title": "加盟店ポータル等への不正アクセス、調査で顧客情報漏えいを否定",
+  "announcementDate": "2026-09-28",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-09-28",
+  "occurredDateLabel": "公表されたサービス停止日時（22時、侵入開始日時は未公表）",
+  "updatedDate": "2026-10-14",
+  "statusAsOfDate": "2026-10-14",
+  "lastVerifiedDate": "2026-10-15",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "9月28日22時に加盟店ポータル等を停止。10月14日の調査結果でテーブル名一覧の参照痕跡を確認した一方、顧客個別情報の参照・取得・流出等を否定。一部機能は再開し、検索機能は10月下旬再開予定。",
+  "affectedData": [
+    "参照されたのはデータベースのテーブル名一覧。顧客個別データの参照・取得・外部持ち出しは確認されず"
+  ],
+  "counts": [],
+  "scaleLabel": "対象人数・件数は未公表",
+  "caveats": [
+    "精算情報ダウンロードサイトと加盟店ポータルサイトは同じ公表事案にまとめる。Thincacloud電子マネー決済サービスへの影響は否定",
+    "10月14日の会社まとめは精算情報等を10月10日再開と記載するが、運用第11報は動作確認延伸により10月11日1時頃に再開と説明。正確な時刻は運用続報に従い、両資料の差を残す",
+    "検索機能の10月下旬再開は予定であり、全面復旧ではない",
+    "テーブル名一覧の参照確認と顧客個人情報の漏えいを混同しない",
+    "脆弱性対策の強化予定から、侵入が脆弱性悪用だったとは断定しない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "TOPPANペイメンツ：停止初報から第13報までの経過",
+      "url": "https://pfinfo.thincacloud.jp/kamepo",
+      "publishedDate": "2026-09-28"
+    },
+    {
+      "title": "TOPPANペイメンツ：調査結果と部分再開状況",
+      "url": "https://thincacloud.toppan.com/newsrelease/20261014/",
+      "publishedDate": "2026-10-14"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-28",
+      "label": "不正アクセスと停止を公表",
+      "kind": "disclosure",
+      "summary": "22時から加盟店ポータルを停止。翌日の続報で精算情報ダウンロードサイト等も影響範囲に追記",
+      "sourceUrl": "https://pfinfo.thincacloud.jp/kamepo"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "証明書ダウンロード再開",
+      "kind": "update",
+      "summary": "20時に加盟店ポータルの証明書ダウンロード機能を再開",
+      "sourceUrl": "https://pfinfo.thincacloud.jp/kamepo"
+    },
+    {
+      "date": "2026-10-11",
+      "label": "精算情報等の一部再開",
+      "kind": "update",
+      "summary": "第11報で、当初予定を2時間繰り下げ1時頃に精算情報の閲覧・ダウンロードと一部売上連携を再開と説明",
+      "sourceUrl": "https://pfinfo.thincacloud.jp/kamepo"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "調査結果を公表",
+      "kind": "update",
+      "summary": "テーブル名一覧の参照を確認。顧客個別情報の参照・取得・流出は確認されず、漏えいは発生していないと判断",
+      "sourceUrl": "https://thincacloud.toppan.com/newsrelease/20261014/"
+    }
+  ]
+}

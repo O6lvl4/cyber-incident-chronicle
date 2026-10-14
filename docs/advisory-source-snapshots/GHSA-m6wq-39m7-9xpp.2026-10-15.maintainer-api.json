@@ -1,0 +1,154 @@
+{
+  "ghsa_id": "GHSA-m6wq-39m7-9xpp",
+  "cve_id": "CVE-2026-62847",
+  "url": "https://api.github.com/repos/metalama/Metalama/security-advisories/GHSA-m6wq-39m7-9xpp",
+  "html_url": "https://github.com/metalama/Metalama/security/advisories/GHSA-m6wq-39m7-9xpp",
+  "summary": "Local code execution via DLL planting in world-writable temporary directories (Linux/macOS)",
+  "description": "## Summary\r\n\r\nMetalama loaded and executed compile-time assemblies, auxiliary executable tools, and embedded helper assemblies from predictable temporary directories. On Linux and macOS the default cache location was the world-writable system temporary directory (`Path.GetTempPath()`, i.e. `/tmp`), and previously-generated artifacts were trusted based on the presence of a sentinel/`.completed` marker file rather than on any integrity verification.\r\n\r\nA local, unprivileged user on a shared machine or CI/build agent can pre-create the deterministic cache directory structure and plant a malicious DLL together with the matching sentinel file. When a higher-privileged user (or build/service account) subsequently runs a build, Metalama finds the sentinel, skips regeneration, and loads and executes the attacker-supplied assembly inside the compiler / IDE / MSBuild process.\r\n\r\nAffected load-and-execute paths:\r\n- the cache of compile-time assemblies that Metalama generates from your aspects;\r\n- auxiliary executable tools that Metalama extracts to a local directory and then launches;\r\n- embedded .NET helper assemblies that Metalama extracts to a local directory and loads into the build / IDE process.\r\n\r\n## Impact\r\n\r\nArbitrary code execution in the security context of the building user — i.e. a local privilege escalation across user accounts on shared POSIX systems (multi-user developer machines, CI/build agents). The attacker obtains code execution as the victim without holding the victim's privileges, and can read source/secrets, tamper with build output (supply-chain injection), or disrupt builds.\r\n\r\n## Affected configurations\r\n\r\n- **Linux and macOS, default configuration — affected.** The shipped default uses the world-writable system temp directory.\r\n- **Windows, default configuration — not affected.** The default per-user temporary directory is protected by OS ACLs, so cross-user planting is not possible.\r\n- The `METALAMA_TEMP` environment variable is a deployer-controlled override and is **out of scope**: pointing it at an insecure (e.g. world-writable or attacker-owned) location is a deployment misconfiguration, not a defect in the product.\r\n\r\n## Severity\r\n\r\nCVSS v3.1: `AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H` = **8.2 (High)** for the affected POSIX default configuration (Scope:Changed reflects the cross-user privilege escalation).\r\n\r\nCVSS v4.0 cross-check: `CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:H/VA:L/SC:L/SI:H/SA:H` = 6.0 (Medium), which more granularly attributes low impact to the cache itself and high impact to the subsequent build process. The honest range is therefore Medium-High depending on the scoring model and platform.\r\n\r\n## Fix\r\n\r\nCaches and extraction directories were relocated from the world-writable system temp directory to per-user application-data locations (`$XDG_CACHE_HOME` / `~/.cache/Metalama` on POSIX), relying on OS-enforced per-user ownership as the trust boundary. Fixed in **2026.1.19**.\r\n\r\n## Weaknesses\r\n\r\n- CWE-377: Insecure Temporary File\r\n- CWE-427: Uncontrolled Search Path Element\r\n\r\n## Affected packages\r\n\r\n- Metalama.Framework < 2026.1.19, \r\n- Metalama.Tool < 2026.1.19\r\n\r\nInternal tracking: metalama/Metalama#1650.",
+  "severity": "high",
+  "author": null,
+  "publisher": {
+    "login": "gfraiteur",
+    "id": 951549,
+    "node_id": "MDQ6VXNlcjk1MTU0OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/951549?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gfraiteur",
+    "html_url": "https://github.com/gfraiteur",
+    "followers_url": "https://api.github.com/users/gfraiteur/followers",
+    "following_url": "https://api.github.com/users/gfraiteur/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gfraiteur/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gfraiteur/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gfraiteur/subscriptions",
+    "organizations_url": "https://api.github.com/users/gfraiteur/orgs",
+    "repos_url": "https://api.github.com/users/gfraiteur/repos",
+    "events_url": "https://api.github.com/users/gfraiteur/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gfraiteur/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-m6wq-39m7-9xpp",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-62847",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-07-14T22:33:25Z",
+  "published_at": "2026-06-27T09:47:57Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Metalama.Framework"
+      },
+      "vulnerable_version_range": "< 2026.1.19",
+      "patched_versions": "2026.1.19",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Metalama.Tool"
+      },
+      "vulnerable_version_range": "< 2026.1.19",
+      "patched_versions": "2026.1.19",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Metalama.Framework"
+      },
+      "vulnerable_version_range": "< 2025.1.18",
+      "patched_versions": "2025.1.18",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Metalama.Tool"
+      },
+      "vulnerable_version_range": "< 2025.1.18",
+      "patched_versions": "2025.1.18",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Metalama.Tool"
+      },
+      "vulnerable_version_range": "< 2026.0.25",
+      "patched_versions": "2026.0.25",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Metalama.Framework"
+      },
+      "vulnerable_version_range": "< 2026.0.25",
+      "patched_versions": "2026.0.25",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 8.2
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-377",
+      "name": "Insecure Temporary File"
+    },
+    {
+      "cwe_id": "CWE-427",
+      "name": "Uncontrolled Search Path Element"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-377",
+    "CWE-427"
+  ],
+  "credits": [
+
+  ],
+  "credits_detailed": [
+
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 1,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+    "score": 8.2
+  }
+}

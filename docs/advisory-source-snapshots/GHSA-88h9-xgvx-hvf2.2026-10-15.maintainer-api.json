@@ -1,0 +1,137 @@
+{
+  "ghsa_id": "GHSA-88h9-xgvx-hvf2",
+  "cve_id": "CVE-2026-101914",
+  "url": "https://api.github.com/repos/grpc/grpc-node/security-advisories/GHSA-88h9-xgvx-hvf2",
+  "html_url": "https://github.com/grpc/grpc-node/security/advisories/GHSA-88h9-xgvx-hvf2",
+  "summary": "The exact path match matcher incorrectly only applies a prefix match for case-insensitive matches",
+  "description": "### Impact\r\nWhen using RBAC to apply authentication rules, the exact path (method name) matcher applies a prefix match instead of an exact match for case-insensitive matches. As a result, if a service has a method with a name that is a prefix of the name of a different method, and they have different access rules, and case-insensitive matching is used, this bug can cause improper authentication.\r\n\r\n### Patches\r\n_Has the problem been patched? What versions should users upgrade to?_\r\n\r\n### Workarounds\r\nThis problem can be avoided by enabling case-sensitive path matching. \r\n",
+  "severity": "medium",
+  "author": null,
+  "publisher": {
+    "login": "murgatroid99",
+    "id": 961599,
+    "node_id": "MDQ6VXNlcjk2MTU5OQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/961599?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/murgatroid99",
+    "html_url": "https://github.com/murgatroid99",
+    "followers_url": "https://api.github.com/users/murgatroid99/followers",
+    "following_url": "https://api.github.com/users/murgatroid99/following{/other_user}",
+    "gists_url": "https://api.github.com/users/murgatroid99/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/murgatroid99/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/murgatroid99/subscriptions",
+    "organizations_url": "https://api.github.com/users/murgatroid99/orgs",
+    "repos_url": "https://api.github.com/users/murgatroid99/repos",
+    "events_url": "https://api.github.com/users/murgatroid99/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/murgatroid99/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-88h9-xgvx-hvf2",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-101914",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-09-28T19:35:10Z",
+  "published_at": "2026-09-17T20:24:47Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@grpc/grpc-js-xds"
+      },
+      "vulnerable_version_range": "<1.13.1",
+      "patched_versions": "1.13.1",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@grpc/grpc-js-xds"
+      },
+      "vulnerable_version_range": "1.14.0",
+      "patched_versions": "1.14.1",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
+      "score": 6.5
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-187",
+      "name": "Partial String Comparison"
+    },
+    {
+      "cwe_id": "CWE-863",
+      "name": "Incorrect Authorization"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-187",
+    "CWE-863"
+  ],
+  "credits": [
+    {
+      "login": "manqingzhou",
+      "type": "reporter"
+    }
+  ],
+  "credits_detailed": [
+    {
+      "user": {
+        "login": "manqingzhou",
+        "id": 45668289,
+        "node_id": "MDQ6VXNlcjQ1NjY4Mjg5",
+        "avatar_url": "https://avatars.githubusercontent.com/u/45668289?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/manqingzhou",
+        "html_url": "https://github.com/manqingzhou",
+        "followers_url": "https://api.github.com/users/manqingzhou/followers",
+        "following_url": "https://api.github.com/users/manqingzhou/following{/other_user}",
+        "gists_url": "https://api.github.com/users/manqingzhou/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/manqingzhou/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/manqingzhou/subscriptions",
+        "organizations_url": "https://api.github.com/users/manqingzhou/orgs",
+        "repos_url": "https://api.github.com/users/manqingzhou/repos",
+        "events_url": "https://api.github.com/users/manqingzhou/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/manqingzhou/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "type": "reporter",
+      "state": "accepted"
+    }
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 2,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
+    "score": 6.5
+  }
+}

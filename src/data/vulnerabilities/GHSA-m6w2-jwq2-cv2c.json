@@ -1,0 +1,105 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m6w2-jwq2-cv2c",
+  "aliases": [
+    "RUSTSEC-2026-0353"
+  ],
+  "title": "Wasmtime：非同期リフト関数を同期callで呼び出した際のpanic",
+  "summary": "component::Func::callで非同期リフトされたゲスト関数を呼び出すと、内部アサーションによりホストがpanicする。任意コンポーネントのエクスポートをこのAPIで呼ぶ埋め込み側が対象。",
+  "publishedAt": "2026-10-14T12:00:00Z",
+  "modifiedAt": "2026-10-14T20:30:03.594709577Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T23:09:03.560882Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0353",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 46.0.0, < 48.0.6",
+          "fixed": "48.0.6",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0353.md"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.3",
+          "fixed": "49.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0353.md"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "46.0.0"
+            },
+            {
+              "fixed": "48.0.6"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m6w2-jwq2-cv2c",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 5.9,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m6w2-jwq2-cv2c"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0353",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0353",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T12:00:00Z",
+      "modifiedAt": "2026-10-14T20:30:03.594709577Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0353",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0353.md",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m6w2-jwq2-cv2c",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T17:26:51Z",
+      "modifiedAt": "2026-10-14T17:26:51Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "影響範囲と系列別修正境界はRustSec公式固定ソースとOSVの原文を保持する。修正版は現在のすべての脆弱性に対する安全性を保証しない。",
+    "公表・更新日時はOSVのデータベース日時。開発元の初回公表日時と更新日時は出典ごとに別保存する。",
+    "CVSSは開発元公表の点数・ベクトルで独自計算しない。脆弱性公表は実悪用や企業被害の確認ではない。CISA KEVの最新掲載状況は未確認。"
+  ]
+}

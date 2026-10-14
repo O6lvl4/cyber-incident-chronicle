@@ -1,0 +1,198 @@
+{
+  "ghsa_id": "GHSA-7pxr-59rr-hqj2",
+  "cve_id": "CVE-2026-72923",
+  "url": "https://api.github.com/repos/microsoft/OpenAPI.NET/security-advisories/GHSA-7pxr-59rr-hqj2",
+  "html_url": "https://github.com/microsoft/OpenAPI.NET/security/advisories/GHSA-7pxr-59rr-hqj2",
+  "summary": "Microsoft.OpenApi.YamlReader/Readers vulnerable to denial of service via YAML alias expansion",
+  "description": "### Impact\r\n\r\nA small YAML OpenAPI document containing nested anchors and aliases can cause uncontrolled resource consumption in Microsoft.OpenApi.YamlReader and Microsoft.OpenApi.Readers. The issue affects OpenAPI document parsing through the public YAML reader APIs and can cause the parsing process to allocate excessive memory and terminate through out-of-memory conditions.\r\n\r\n## Affected versions\r\n\r\n### Microsoft.OpenApi.YamlReader\r\n\r\n* `>= 2.0.0-preview.11, < 2.12.0`\r\n* `>= 3.0.0, < 3.10.0`\r\n\r\n### Microsoft.OpenApi.Readers\r\n\r\n* `< 1.6.30`\r\n\r\n### Patches\r\n\r\n* For the 1.X major version, versions 1.6.30 and above are patched.\r\n* For the 2.X major version, versions 2.12.0 and above are patched.\r\n* For the 3.X major version, versions 3.10.0 and above are patched.\r\n\r\n## Impact\r\n\r\nApplications, CLIs, developer tools, or services that parse untrusted YAML OpenAPI documents in-process may be terminated by a crafted YAML document containing nested anchors and aliases.\r\n\r\nThe impact is availability/process termination only. This report does not claim remote code execution, authentication bypass, credential exposure, privilege escalation, data exposure, or Microsoft hosted service impact.\r\n\r\n## Details\r\n\r\nMicrosoft.OpenApi.YamlReader and Microsoft.OpenApi.Readers parses YAML through SharpYaml. SharpYaml represents aliases as shared `YamlNode` instances in a directed acyclic graph, so the initial parsed YAML graph remains small. During conversion to `System.Text.Json.Nodes.JsonNode`, aliases must be materialized as independent nodes because `JsonNode` instances cannot be attached to multiple parents.\r\n\r\nWithout a bound on that conversion work, a small YAML document using nested anchors and aliases can expand exponentially during conversion. With `N` nested anchors each referenced `k` times, conversion can require `k^N` materialized JSON nodes, leading to excessive memory allocation and possible process termination.\r\n\r\nThis is an uncontrolled resource consumption vulnerability, also known as a \"billion laughs\" style denial of service.\r\n\r\n### Example payload\r\n\r\n```yaml\r\nopenapi: 3.0.0\r\ninfo:\r\n  title: Test\r\n  version: 0.0.1\r\npaths: {}\r\nx-a: &a [\"lol\", \"lol\", \"lol\", \"lol\", \"lol\", \"lol\", \"lol\", \"lol\", \"lol\"]\r\nx-b: &b [*a, *a, *a, *a, *a, *a, *a, *a, *a]\r\nx-c: &c [*b, *b, *b, *b, *b, *b, *b, *b, *b]\r\nx-d: &d [*c, *c, *c, *c, *c, *c, *c, *c, *c]\r\nx-e: &e [*d, *d, *d, *d, *d, *d, *d, *d, *d]\r\nx-f: &f [*e, *e, *e, *e, *e, *e, *e, *e, *e]\r\n```\r\n\r\n## Remediation\r\n\r\nUsers should upgrade to Microsoft.OpenApi.YamlReader `2.12.0` or `3.10.0`, or Microsoft.OpenApi.Readers `1.6.30`, depending on the major version line they consume.\r\n\r\nThe patched versions bound YAML-to-JSON conversion work and fail fast instead of allowing unbounded expansion. The default limits are:\r\n\r\n* Maximum materialized node count: `5,000,000`\r\n* Maximum nesting depth: `64`\r\n\r\nWhen the limits are exceeded, `OpenApiYamlReader.Read` reports an `OpenApiDiagnostic` error and does not return a parsed document.\r\n\r\nThe limits are exposed as process-wide static properties on `YamlConverter` for consumers that need to tune them for trusted workloads:\r\n\r\n* `YamlConverter.MaxNodeCount`\r\n* `YamlConverter.MaxDepth`\r\n\r\nApplications that parse OpenAPI documents from untrusted sources should avoid parsing those documents in the primary application process when possible. Running parsing in an isolated process can reduce the blast radius of parser failures.",
+  "severity": "high",
+  "author": null,
+  "publisher": {
+    "login": "baywet",
+    "id": 7905502,
+    "node_id": "MDQ6VXNlcjc5MDU1MDI=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/7905502?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/baywet",
+    "html_url": "https://github.com/baywet",
+    "followers_url": "https://api.github.com/users/baywet/followers",
+    "following_url": "https://api.github.com/users/baywet/following{/other_user}",
+    "gists_url": "https://api.github.com/users/baywet/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/baywet/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/baywet/subscriptions",
+    "organizations_url": "https://api.github.com/users/baywet/orgs",
+    "repos_url": "https://api.github.com/users/baywet/repos",
+    "events_url": "https://api.github.com/users/baywet/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/baywet/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-7pxr-59rr-hqj2",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-72923",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-09-08T18:42:52Z",
+  "published_at": "2026-08-13T15:49:57Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Microsoft.OpenApi.YamlReader"
+      },
+      "vulnerable_version_range": ">= 3.0.0, < 3.10.0",
+      "patched_versions": "3.10.0",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Microsoft.OpenApi.YamlReader"
+      },
+      "vulnerable_version_range": ">= 2.0.0-preview.11, < 2.12.0",
+      "patched_versions": "2.12.0",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "nuget",
+        "name": "Microsoft.OpenApi.Readers"
+      },
+      "vulnerable_version_range": "< 1.6.30",
+      "patched_versions": "1.6.30",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "score": 7.5
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+
+  ],
+  "cwe_ids": [
+
+  ],
+  "credits": [
+    {
+      "login": "baywet",
+      "type": "coordinator"
+    },
+    {
+      "login": "gavinbarron",
+      "type": "remediation_reviewer"
+    },
+    {
+      "login": "myDosGyarados",
+      "type": "finder"
+    }
+  ],
+  "credits_detailed": [
+    {
+      "user": {
+        "login": "baywet",
+        "id": 7905502,
+        "node_id": "MDQ6VXNlcjc5MDU1MDI=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7905502?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/baywet",
+        "html_url": "https://github.com/baywet",
+        "followers_url": "https://api.github.com/users/baywet/followers",
+        "following_url": "https://api.github.com/users/baywet/following{/other_user}",
+        "gists_url": "https://api.github.com/users/baywet/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/baywet/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/baywet/subscriptions",
+        "organizations_url": "https://api.github.com/users/baywet/orgs",
+        "repos_url": "https://api.github.com/users/baywet/repos",
+        "events_url": "https://api.github.com/users/baywet/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/baywet/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "type": "coordinator",
+      "state": "accepted"
+    },
+    {
+      "user": {
+        "login": "gavinbarron",
+        "id": 7122716,
+        "node_id": "MDQ6VXNlcjcxMjI3MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7122716?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/gavinbarron",
+        "html_url": "https://github.com/gavinbarron",
+        "followers_url": "https://api.github.com/users/gavinbarron/followers",
+        "following_url": "https://api.github.com/users/gavinbarron/following{/other_user}",
+        "gists_url": "https://api.github.com/users/gavinbarron/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/gavinbarron/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/gavinbarron/subscriptions",
+        "organizations_url": "https://api.github.com/users/gavinbarron/orgs",
+        "repos_url": "https://api.github.com/users/gavinbarron/repos",
+        "events_url": "https://api.github.com/users/gavinbarron/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/gavinbarron/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "type": "remediation_reviewer",
+      "state": "accepted"
+    },
+    {
+      "user": {
+        "login": "myDosGyarados",
+        "id": 174028283,
+        "node_id": "U_kgDOCl91-w",
+        "avatar_url": "https://avatars.githubusercontent.com/u/174028283?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/myDosGyarados",
+        "html_url": "https://github.com/myDosGyarados",
+        "followers_url": "https://api.github.com/users/myDosGyarados/followers",
+        "following_url": "https://api.github.com/users/myDosGyarados/following{/other_user}",
+        "gists_url": "https://api.github.com/users/myDosGyarados/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/myDosGyarados/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/myDosGyarados/subscriptions",
+        "organizations_url": "https://api.github.com/users/myDosGyarados/orgs",
+        "repos_url": "https://api.github.com/users/myDosGyarados/repos",
+        "events_url": "https://api.github.com/users/myDosGyarados/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/myDosGyarados/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "type": "finder",
+      "state": "accepted"
+    }
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 1,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "score": 7.5
+  }
+}

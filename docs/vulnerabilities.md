@@ -18,7 +18,7 @@
 
 ## 保存先・再現性
 
-- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認63件と、固定ソース外で個別確認したBun・Airflow・Docling・noyalib・Go・bip322・mykey・IronCrypto・quinn-proto・kuva・log4net・Langflow・Backstage・Wasmtimeの48件を含む計111件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
+- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認67件と、固定ソース外で個別確認した71件を含む計138件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
 - `src/data/vulnerability-imported.json`: 固定ソース全件を変換・別名統合し、個別確認済み記録を重ねた表示用正本。上記の個別編集記録を追加連結して二重計上しない
 - `src/data/vulnerability-coverage.json`: 簡潔な公開カバレッジ・再実行コマンド・出力ハッシュ
 - `docs/data/vulnerability-import-audit.json`: ファイル単位の収録/除外/失敗監査。ブラウザーに全量を同梱しない
@@ -53,7 +53,7 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - `affected[]`: パッケージごとにecosystem/packageName、影響範囲とそれに対応する修正境界・出典を持つ。複数パッケージや複数系列を平坦化しない
 - `rawRanges`, `explicitVersions`, `packageUrl`: OSV原文のイベント、列挙版、purlを必要に応じてそのまま保持。版比較や安全版の推定はしない
 - OSVの `fixed` は除外境界、`last_affected` は含む境界。同じrange内で両者を混在させない。変換は導入・終了イベントが交互に並ぶ `ECOSYSTEM` / `SEMVER` の表示用投影に限定し、版比較や順序の推測は行わない。修正版不明はnullのままにする
-- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-14（JST）確認の表示データでは34,761 rangeが `ECOSYSTEM`、noyalib・Go・bip322・mykey・IronCrypto・quinn-proto・kuva・Wasmtimeの個別確認45 rangeが `SEMVER`。`GIT` / `limit` は0件
+- `GIT` のコミットグラフ、range全体を制限する `limit`（複数指定・`*` を含む）は、この変換では未対応。遭遇したら全インポートを失敗させ、単純な修正境界に読み替えたり対象外として捨てたりしない。2026-10-15（JST）確認の表示データでは34,771 rangeが `ECOSYSTEM`、64 rangeが `SEMVER`。`GIT` / `limit` は0件
 - 個別編集との相違は、元DBの `provenance.databaseAffected` と相違理由も保持する
 
 修正版はその脆弱性に対応する最初の修正境界であり、後続の別脆弱性も含めた「現在の最新安全版」を保証しない。アプリはインストール済み版の脆弱性該当判定をしない。
@@ -67,6 +67,19 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - 未訪問の参照先を確認済み資料として扱わない。機械収録は固定JSONへの直接リンクが必須
 
 2026-10-08の個別50件拡充ではCISA公式カタログがHTTP403で取得できなかったためKEV未確認を維持した。React Server Componentsの実悪用試行はAWSの独立した一次観測報告を引用している。
+
+## 2026-10-15の確認結果
+
+固定コミットを `b950a40c9ce07b70b943775709034132dd9614cb`（2026-10-14T21:37:11Z）へ更新し、Reviewed全36,824件、対象18,895件を全件再照合した。新規4件、既存変更4件。対象外4,065件、期間前13,864件、変換失敗0件を区別する。最終表示は18,966件、撤回履歴849件、未撤回18,117件。前回より27件増えたが、過去公表分の補完を含み、当日の新規公表件数ではない。既存111個別編集を変更せず、現在の個別編集138件（重ね合わせ67、固定範囲外71）を保持する。
+
+- 新規ReviewedはOpenAPI.NET YAML、Apprise、Metalama、BBOT。既存変更はgit2の更新日時、OmniFacesのCVE別名、flyto-coreの参照、grpcの参照URLエンコードと日時。既存4件のDB影響範囲・CVSS・撤回は変更なし
+- 8件の開発元API本文を取得し、原文・HTTPヘッダー・ハッシュを保存。MetalamaのHigh/CVSS3.1 8.2と本文のCVSS4.0 6.0、OmniFacesの現在の説明範囲/CVSS、BBOTの影響上限・修正版表記、Appriseの追加設定が必要な緩和策を4個別編集に反映。固定DBとの差を残し、日時・評価を混ぜない
+- OSV7全エクスポート283,746件（283,340ソースID）をCRC検証し、前回283,708件の保存済みサイズ・ハッシュを再確認して正規化全文比較。非MAL追加23・変更23、MAL追加15・変更22、削除0、同一IDのエクスポート間内容差0。成功確認時刻−24時間を含む窓と全件比較で後日訂正を確認する
+- 新しいRustSec19件（rustls4・Wasmtime15）は固定RustSec・OSV・開発元資料で個別確認。OSV公表日時と開発元の初回公開日時を区別し、系列別修正境界・機能依存・評価の出典差を残す。候補ソース数を独立した有効脆弱性数としない
+- MyJVNは10月13〜15日JST変更窓を全7ページ・348製品/CPE記録取得し、先頭ページの再読で総数・ID・本文の安定を確認。前回137件の比較可能フィールドは不変、追加211件。うちBackstage、Pydantic AI、Jackrabbit2件の計4ライブラリ事例を開発元/CNAで確認し追加。製品版とパッケージ版、Jackrabbitの含む上限と明示された修正版、CNA本文のHIGHと構造化CVSS4.0 6.9/MEDIUMの差を保存
+- JPCERT2フィード取得成功、JVNフィードは接続タイムアウト。新しい8告知URLのうちJPCERT2本文を確認し、取得不可のJVN6本文を確認済みとは扱わない。CISA KEVは公式JSONが403で、未知の状態と以前の成功取得点を維持。すべての公式ソース・全開発元の個別再確認という意味ではない
+
+[Reviewed差分と原文](data/github-reviewed-delta-2026-10-15.json)、[補助ソース取得状況](data/supplemental-source-status-2026-10-15.json)、[候補の判定](data/supplemental-candidate-review-2026-10-15.json)、[公開更新の監査](data/publication-update-2026-10-15.json)を参照。以降の節は当時の確認履歴として保持する。
 
 ## 2026-10-14の確認結果
 

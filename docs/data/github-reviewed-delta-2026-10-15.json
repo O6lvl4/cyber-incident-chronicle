@@ -1,0 +1,1708 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-14T23:01:04Z",
+  "baseCommit": "96d67ec0f9a258b05b8d4ef805425ec9dc0d0489",
+  "headCommit": "b950a40c9ce07b70b943775709034132dd9614cb",
+  "counts": {
+    "added": 4,
+    "modified": 4,
+    "deleted": 0,
+    "maintainerPagesRead": 8,
+    "rawMaintainerHttpResponses": 8,
+    "newCuratedOverlays": 4
+  },
+  "limitations": [
+    "Initial API attempt stalled; subsequent explicit network retry succeeded for all 8. Exact response bytes and response headers retained; web extracts remain supplementary and are not raw HTTP.",
+    "No exploit, scanner or proof-of-concept was executed. Public source comparison only.",
+    "No independent KEV or exploitation verification; preserve unknown states."
+  ],
+  "records": [
+    {
+      "id": "GHSA-m4ch-rfv5-x5g3",
+      "change": "M",
+      "databasePublishedAt": "2023-01-20T23:36:41Z",
+      "databaseModifiedAt": "2026-10-14T17:07:22Z",
+      "databaseWithdrawnAt": null,
+      "maintainerPublishedDate": "2023-01-20",
+      "changedFields": [
+        {
+          "field": "modified",
+          "beforePresent": true,
+          "before": "2023-01-20T23:36:41Z",
+          "afterPresent": true,
+          "after": "2026-10-14T17:07:22Z"
+        }
+      ],
+      "observations": [
+        "Only modified timestamp changed. Maintainer fixes agree. Maintainer also names CVE-2023-22742 for underlying libgit2; the Reviewed alias array remains empty. Do not infer a new alias union from a reference alone."
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-m4ch-rfv5-x5g3.2026-10-15.reviewed-before.json",
+          "sha256": "bc63fdcb70dde67103bded1aafcc4f168f7c98494873fb43e118b5531b4e6e04",
+          "bytes": 3367,
+          "url": "https://github.com/github/advisory-database/blob/96d67ec0f9a258b05b8d4ef805425ec9dc0d0489/advisories/github-reviewed/2023/01/GHSA-m4ch-rfv5-x5g3/GHSA-m4ch-rfv5-x5g3.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-m4ch-rfv5-x5g3.2026-10-15.reviewed-after.json",
+          "sha256": "c1299c021b98ab164324fdb7f242b3576e5b07fcdc374879acaa7d3803f14234",
+          "bytes": 3367,
+          "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2023/01/GHSA-m4ch-rfv5-x5g3/GHSA-m4ch-rfv5-x5g3.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-m4ch-rfv5-x5g3.2026-10-15.maintainer-web-response.json",
+          "sha256": "010a22061506440a91efbe10b6fa07c7c54dbaccee7715a9e71a4f5b3ab37356",
+          "bytes": 9276,
+          "url": "https://github.com/rust-lang/git2-rs/security/advisories/GHSA-m4ch-rfv5-x5g3",
+          "method": "web.run extracted page response, serialized unchanged as response string; not raw HTTP",
+          "checkedAt": "2026-10-14T22:59:00Z",
+          "pagePublishedDate": "2023-01-20",
+          "httpStatus": null,
+          "limitations": "Search retrieval may be cached; raw HTML, headers and precise upstream update/withdrawal timestamps unavailable."
+        },
+        {
+          "url": "https://api.github.com/repos/rust-lang/git2-rs/security-advisories/GHSA-m4ch-rfv5-x5g3",
+          "path": "docs/advisory-source-snapshots/GHSA-m4ch-rfv5-x5g3.2026-10-15.maintainer-api.json",
+          "sha256": "9790792717972f211d7b9cb9b593ab9a26ddc7004f0d5e048b08dad3b42422bf",
+          "bytes": 4279,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-m4ch-rfv5-x5g3.2026-10-15.maintainer-api.headers.txt.gz",
+          "headersSha256": "586bd4d1973d2941b3d3e87564ced145852c65db65f4d2b81071d0da5befec95",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-14T23:01:04Z",
+          "method": "curl GET; exact response body and HTTP headers saved",
+          "headersEncoding": "gzip",
+          "headersCompressedSha256": "f4428c384ede740e99be4917b3eba020058f9c8de928e14959f49fea152e9d4c"
+        }
+      ],
+      "datePolicy": "Keep Reviewed published/modified/withdrawn values; maintainers page publication dates are separate and do not replace database dates.",
+      "withdrawalComparison": "Both pinned Reviewed and maintainer API have no withdrawal (null/absent).",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-m4ch-rfv5-x5g3",
+        "cve_id": "CVE-2023-22742",
+        "published_at": "2023-01-20T22:59:43Z",
+        "updated_at": "2023-01-20T22:59:43Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+          "score": 6.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+            "score": 6.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "libgit2-sys"
+            },
+            "vulnerable_version_range": ">= 0.14.0, < 0.14.2",
+            "patched_versions": "0.14.2",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "libgit2-sys"
+            },
+            "vulnerable_version_range": "< 0.13.5",
+            "patched_versions": "0.13.5",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "git2"
+            },
+            "vulnerable_version_range": "< 0.16.1",
+            "patched_versions": "0.16.1",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "GHSA-fp43-vj7g-pg92",
+      "change": "M",
+      "databasePublishedAt": "2026-07-24T22:35:27Z",
+      "databaseModifiedAt": "2026-10-14T15:58:54Z",
+      "databaseWithdrawnAt": null,
+      "maintainerPublishedDate": "2026-07-23",
+      "changedFields": [
+        {
+          "field": "aliases",
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "after": [
+            "CVE-2026-102695"
+          ]
+        },
+        {
+          "field": "modified",
+          "beforePresent": true,
+          "before": "2026-07-24T22:35:27Z",
+          "afterPresent": true,
+          "after": "2026-10-14T15:58:54Z"
+        }
+      ],
+      "observations": [
+        "Only modified timestamp and CVE alias changed in Reviewed. Current maintainer scope is forged combined-resource IDs; other output/push/cache findings are tracked as separate advisories. Reviewed description still bundles those findings.",
+        "Maintainer CVSS 3.1 is 8.2 (C:L), whereas Reviewed vector has C:N. All five fix boundaries agree."
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-fp43-vj7g-pg92.2026-10-15.reviewed-before.json",
+          "sha256": "da9a5064b5bbb6062d73adbcc5dd96669ee66d96db73324d0bca38fd86160407",
+          "bytes": 8335,
+          "url": "https://github.com/github/advisory-database/blob/96d67ec0f9a258b05b8d4ef805425ec9dc0d0489/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-fp43-vj7g-pg92.2026-10-15.reviewed-after.json",
+          "sha256": "d5354e25112e00497a988161774e8cffd56b265fe27c78030fbcaf5763e44dbe",
+          "bytes": 8360,
+          "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-fp43-vj7g-pg92.2026-10-15.maintainer-web-response.json",
+          "sha256": "7b328056d0ebecb9c4b067967b204a16f05ae277d174aa277792ee1b952e79fe",
+          "bytes": 13840,
+          "url": "https://github.com/omnifaces/omnifaces/security/advisories/GHSA-fp43-vj7g-pg92",
+          "method": "web.run extracted page response, serialized unchanged as response string; not raw HTTP",
+          "checkedAt": "2026-10-14T22:59:00Z",
+          "pagePublishedDate": "2026-07-23",
+          "httpStatus": null,
+          "limitations": "Search retrieval may be cached; raw HTML, headers and precise upstream update/withdrawal timestamps unavailable."
+        },
+        {
+          "url": "https://api.github.com/repos/omnifaces/omnifaces/security-advisories/GHSA-fp43-vj7g-pg92",
+          "path": "docs/advisory-source-snapshots/GHSA-fp43-vj7g-pg92.2026-10-15.maintainer-api.json",
+          "sha256": "9a1ad3cc232a143a197751e89296607e773cb17397209b8543ea67d7f7dba272",
+          "bytes": 8341,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-fp43-vj7g-pg92.2026-10-15.maintainer-api.headers.txt.gz",
+          "headersSha256": "dbaa2c976d68e77216049f19816b925af041a2d03f55a45f319158f689164cfd",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-14T23:01:04Z",
+          "method": "curl GET; exact response body and HTTP headers saved",
+          "headersEncoding": "gzip",
+          "headersCompressedSha256": "5997ab3d3c9cc6a5ed09c91625ebfd95f73a66a2e09bf27c96b797805708da28"
+        }
+      ],
+      "datePolicy": "Keep Reviewed published/modified/withdrawn values; maintainers page publication dates are separate and do not replace database dates.",
+      "withdrawalComparison": "Both pinned Reviewed and maintainer API have no withdrawal (null/absent).",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-fp43-vj7g-pg92",
+        "cve_id": "CVE-2026-102695",
+        "published_at": "2026-07-23T17:15:08Z",
+        "updated_at": "2026-09-29T17:25:12Z",
+        "withdrawn_at": null,
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+          "score": 8.2
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+            "score": 8.2
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.omnifaces:omnifaces"
+            },
+            "vulnerable_version_range": "< 1.14.3",
+            "patched_versions": "1.14.3",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.omnifaces:omnifaces"
+            },
+            "vulnerable_version_range": ">= 2.0, < 2.7.33",
+            "patched_versions": "2.7.33",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.omnifaces:omnifaces"
+            },
+            "vulnerable_version_range": ">= 3.0, < 3.14.23",
+            "patched_versions": "3.14.23",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.omnifaces:omnifaces"
+            },
+            "vulnerable_version_range": ">= 4.0, < 4.7.12",
+            "patched_versions": "4.7.12",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.omnifaces:omnifaces"
+            },
+            "vulnerable_version_range": ">= 5.0, < 5.4.2",
+            "patched_versions": "5.4.2",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "GHSA-h9f9-h6gm-wc85",
+      "change": "M",
+      "databasePublishedAt": "2026-07-06T17:41:03Z",
+      "databaseModifiedAt": "2026-10-14T18:15:45Z",
+      "databaseWithdrawnAt": null,
+      "maintainerPublishedDate": "2026-05-30",
+      "changedFields": [
+        {
+          "field": "modified",
+          "beforePresent": true,
+          "before": "2026-07-06T17:41:03Z",
+          "afterPresent": true,
+          "after": "2026-10-14T18:15:45Z"
+        },
+        {
+          "field": "references",
+          "beforePresent": true,
+          "before": [
+            {
+              "type": "WEB",
+              "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-h9f9-h6gm-wc85"
+            },
+            {
+              "type": "PACKAGE",
+              "url": "https://github.com/flytohub/flyto-core"
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "WEB",
+              "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-h9f9-h6gm-wc85"
+            },
+            {
+              "type": "ADVISORY",
+              "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55786"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/flytohub/flyto-core/commit/db7f116b1d3c5dcf94aded00d14118f81f3e225e"
+            },
+            {
+              "type": "PACKAGE",
+              "url": "https://github.com/flytohub/flyto-core"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/flytohub/flyto-core/releases/tag/v2.26.4"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/pypa/advisory-database/tree/main/vulns/flyto-core/PYSEC-2026-2482.yaml"
+            }
+          ]
+        }
+      ],
+      "observations": [
+        "Only modified timestamp and references changed. Maintainer range >=2.26.2,<2.26.4 and fix 2.26.4 agree. Local-default High score is not a blanket claim that default localhost service is network-exposed."
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-h9f9-h6gm-wc85.2026-10-15.reviewed-before.json",
+          "sha256": "0b7ed8b380853609116a30597434351508b63259c910bcfd7460eb1b9e179fd6",
+          "bytes": 14509,
+          "url": "https://github.com/github/advisory-database/blob/96d67ec0f9a258b05b8d4ef805425ec9dc0d0489/advisories/github-reviewed/2026/07/GHSA-h9f9-h6gm-wc85/GHSA-h9f9-h6gm-wc85.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-h9f9-h6gm-wc85.2026-10-15.reviewed-after.json",
+          "sha256": "7f5e99486dc7b24df38ad2f327567805057a45f2c3322e206732be4695229cf1",
+          "bytes": 14995,
+          "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-h9f9-h6gm-wc85/GHSA-h9f9-h6gm-wc85.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-h9f9-h6gm-wc85.2026-10-15.maintainer-web-response.json",
+          "sha256": "c6ceb4c6076786c16fdb835effc400b2c39d49d05c4e339f6fc7c3e5d98e50f1",
+          "bytes": 24503,
+          "url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-h9f9-h6gm-wc85",
+          "method": "web.run extracted page response, serialized unchanged as response string; not raw HTTP",
+          "checkedAt": "2026-10-14T22:59:00Z",
+          "pagePublishedDate": "2026-05-30",
+          "httpStatus": null,
+          "limitations": "Search retrieval may be cached; raw HTML, headers and precise upstream update/withdrawal timestamps unavailable."
+        },
+        {
+          "url": "https://api.github.com/repos/flytohub/flyto-core/security-advisories/GHSA-h9f9-h6gm-wc85",
+          "path": "docs/advisory-source-snapshots/GHSA-h9f9-h6gm-wc85.2026-10-15.maintainer-api.json",
+          "sha256": "2418d3df5856baa101dfc6bf92c33a4ab800c52b38ec90b6444a4b50ba39cc5e",
+          "bytes": 19358,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-h9f9-h6gm-wc85.2026-10-15.maintainer-api.headers.txt.gz",
+          "headersSha256": "a850e9f4d2add2861d8a72a74c61ee71f5f612396d484c81263673e4c5f31d72",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-14T23:01:04Z",
+          "method": "curl GET; exact response body and HTTP headers saved",
+          "headersEncoding": "gzip",
+          "headersCompressedSha256": "9ce225661aa37ae427d101b3144104e7261f61d713a62b20128d89a02558925e"
+        }
+      ],
+      "datePolicy": "Keep Reviewed published/modified/withdrawn values; maintainers page publication dates are separate and do not replace database dates.",
+      "withdrawalComparison": "Both pinned Reviewed and maintainer API have no withdrawal (null/absent).",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-h9f9-h6gm-wc85",
+        "cve_id": "CVE-2026-55786",
+        "published_at": "2026-05-30T13:06:14Z",
+        "updated_at": "2026-06-17T16:42:39Z",
+        "withdrawn_at": null,
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 8.4
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 8.4
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "flyto-core"
+            },
+            "vulnerable_version_range": ">= 2.26.2, < 2.26.4",
+            "patched_versions": "2.26.4",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "GHSA-88h9-xgvx-hvf2",
+      "change": "M",
+      "databasePublishedAt": "2026-09-28T19:43:51Z",
+      "databaseModifiedAt": "2026-09-28T19:46:29Z",
+      "databaseWithdrawnAt": null,
+      "maintainerPublishedDate": "2026-09-17",
+      "changedFields": [
+        {
+          "field": "modified",
+          "beforePresent": true,
+          "before": "2026-09-28T19:43:51Z",
+          "afterPresent": true,
+          "after": "2026-09-28T19:46:29Z"
+        },
+        {
+          "field": "references",
+          "beforePresent": true,
+          "before": [
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/security/advisories/GHSA-88h9-xgvx-hvf2"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/commit/6cf64b596da03f1942a6b168998f0670217a99c4"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/commit/a6c5b31180cc8cea94d0a5ea215ce31a49e0409f"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/commit/f32f3712e44581d8dfc8359bd8d30096662f4c75"
+            },
+            {
+              "type": "PACKAGE",
+              "url": "https://github.com/grpc/grpc-node"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/releases/tag/@grpc/grpc-js-xds/1.13.1"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/releases/tag/@grpc/grpc-js-xds/1.14.1"
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/security/advisories/GHSA-88h9-xgvx-hvf2"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/commit/6cf64b596da03f1942a6b168998f0670217a99c4"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/commit/a6c5b31180cc8cea94d0a5ea215ce31a49e0409f"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/commit/f32f3712e44581d8dfc8359bd8d30096662f4c75"
+            },
+            {
+              "type": "PACKAGE",
+              "url": "https://github.com/grpc/grpc-node"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/releases/tag/@grpc/grpc-js-xds%401.13.1"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/grpc/grpc-node/releases/tag/@grpc/grpc-js-xds%401.14.1"
+            }
+          ]
+        }
+      ],
+      "observations": [
+        "Only modified timestamp and percent-encoded release URLs changed. New modified timestamp remains 2026-09-28; do not advance it to this collection date. Maintainer fixes 1.13.1 and 1.14.1 agree."
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-88h9-xgvx-hvf2.2026-10-15.reviewed-before.json",
+          "sha256": "9ead31563d9bb196ffba4478f18821e3958d45a85c4b8e2753aaacb7231c69ab",
+          "bytes": 2838,
+          "url": "https://github.com/github/advisory-database/blob/96d67ec0f9a258b05b8d4ef805425ec9dc0d0489/advisories/github-reviewed/2026/09/GHSA-88h9-xgvx-hvf2/GHSA-88h9-xgvx-hvf2.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-88h9-xgvx-hvf2.2026-10-15.reviewed-after.json",
+          "sha256": "a8187a2cc1e51a1369da40d156d9cb910ca78177c1942d3d01dd9efec586976e",
+          "bytes": 2842,
+          "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/09/GHSA-88h9-xgvx-hvf2/GHSA-88h9-xgvx-hvf2.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-88h9-xgvx-hvf2.2026-10-15.maintainer-web-response.json",
+          "sha256": "1adc248ae86122aa8b38054113054b70986bab8116678ce60b91b3d33650a0b5",
+          "bytes": 9396,
+          "url": "https://github.com/grpc/grpc-node/security/advisories/GHSA-88h9-xgvx-hvf2",
+          "method": "web.run extracted page response, serialized unchanged as response string; not raw HTTP",
+          "checkedAt": "2026-10-14T22:59:00Z",
+          "pagePublishedDate": "2026-09-17",
+          "httpStatus": null,
+          "limitations": "Search retrieval may be cached; raw HTML, headers and precise upstream update/withdrawal timestamps unavailable."
+        },
+        {
+          "url": "https://api.github.com/repos/grpc/grpc-node/security-advisories/GHSA-88h9-xgvx-hvf2",
+          "path": "docs/advisory-source-snapshots/GHSA-88h9-xgvx-hvf2.2026-10-15.maintainer-api.json",
+          "sha256": "ffcbe69ebc3a39813917bd4daf4ee826704d512b24c6ccb88f7d930d56710dd5",
+          "bytes": 4985,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-88h9-xgvx-hvf2.2026-10-15.maintainer-api.headers.txt.gz",
+          "headersSha256": "74e5bc8734a6d8674910ecc09b638fb79bd5052e78c8c6d35377cba10fa4c550",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-14T23:01:04Z",
+          "method": "curl GET; exact response body and HTTP headers saved",
+          "headersEncoding": "gzip",
+          "headersCompressedSha256": "31be18f260fbdb1174b8605f7b7cb483bc38f35640aa7d67a35961aa76c1155e"
+        }
+      ],
+      "datePolicy": "Keep Reviewed published/modified/withdrawn values; maintainers page publication dates are separate and do not replace database dates.",
+      "withdrawalComparison": "Both pinned Reviewed and maintainer API have no withdrawal (null/absent).",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-88h9-xgvx-hvf2",
+        "cve_id": "CVE-2026-101914",
+        "published_at": "2026-09-17T20:24:47Z",
+        "updated_at": "2026-09-28T19:35:10Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@grpc/grpc-js-xds"
+            },
+            "vulnerable_version_range": "<1.13.1",
+            "patched_versions": "1.13.1",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@grpc/grpc-js-xds"
+            },
+            "vulnerable_version_range": "1.14.0",
+            "patched_versions": "1.14.1",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "GHSA-7pxr-59rr-hqj2",
+      "change": "A",
+      "databasePublishedAt": "2026-10-14T20:11:29Z",
+      "databaseModifiedAt": "2026-10-14T20:11:30Z",
+      "databaseWithdrawnAt": null,
+      "maintainerPublishedDate": "2026-08-13",
+      "changedFields": [
+        {
+          "field": "affected",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Microsoft.OpenApi.YamlReader"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "3.0.0"
+                    },
+                    {
+                      "fixed": "3.10.0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Microsoft.OpenApi.YamlReader"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "2.0.0-preview.11"
+                    },
+                    {
+                      "fixed": "2.12.0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Microsoft.OpenApi.Readers"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "1.6.30"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            "CVE-2026-72923"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": {
+            "cwe_ids": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "severity": "HIGH",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-14T20:11:29Z",
+            "nvd_published_at": "2026-09-08T18:20:16Z"
+          }
+        },
+        {
+          "field": "details",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "### Impact\n\nA small YAML OpenAPI document containing nested anchors and aliases can cause uncontrolled resource consumption in Microsoft.OpenApi.YamlReader and Microsoft.OpenApi.Readers. The issue affects OpenAPI document parsing through the public YAML reader APIs and can cause the parsing process to allocate excessive memory and terminate through out-of-memory conditions.\n\n## Affected versions\n\n### Microsoft.OpenApi.YamlReader\n\n* `>= 2.0.0-preview.11, < 2.12.0`\n* `>= 3.0.0, < 3.10.0`\n\n### Microsoft.OpenApi.Readers\n\n* `< 1.6.30`\n\n### Patches\n\n* For the 1.X major version, versions 1.6.30 and above are patched.\n* For the 2.X major version, versions 2.12.0 and above are patched.\n* For the 3.X major version, versions 3.10.0 and above are patched.\n\n## Impact\n\nApplications, CLIs, developer tools, or services that parse untrusted YAML OpenAPI documents in-process may be terminated by a crafted YAML document containing nested anchors and aliases.\n\nThe impact is availability/process termination only. This report does not claim remote code execution, authentication bypass, credential exposure, privilege escalation, data exposure, or Microsoft hosted service impact.\n\n## Details\n\nMicrosoft.OpenApi.YamlReader and Microsoft.OpenApi.Readers parses YAML through SharpYaml. SharpYaml represents aliases as shared `YamlNode` instances in a directed acyclic graph, so the initial parsed YAML graph remains small. During conversion to `System.Text.Json.Nodes.JsonNode`, aliases must be materialized as independent nodes because `JsonNode` instances cannot be attached to multiple parents.\n\nWithout a bound on that conversion work, a small YAML document using nested anchors and aliases can expand exponentially during conversion. With `N` nested anchors each referenced `k` times, conversion can require `k^N` materialized JSON nodes, leading to excessive memory allocation and possible process termination.\n\nThis is an uncontrolled resource consumption vulnerability, also known as a \"billion laughs\" style denial of service.\n\n### Example payload\n\n```yaml\nopenapi: 3.0.0\ninfo:\n  title: Test\n  version: 0.0.1\npaths: {}\nx-a: &a [\"lol\", \"lol\", \"lol\", \"lol\", \"lol\", \"lol\", \"lol\", \"lol\", \"lol\"]\nx-b: &b [*a, *a, *a, *a, *a, *a, *a, *a, *a]\nx-c: &c [*b, *b, *b, *b, *b, *b, *b, *b, *b]\nx-d: &d [*c, *c, *c, *c, *c, *c, *c, *c, *c]\nx-e: &e [*d, *d, *d, *d, *d, *d, *d, *d, *d]\nx-f: &f [*e, *e, *e, *e, *e, *e, *e, *e, *e]\n```\n\n## Remediation\n\nUsers should upgrade to Microsoft.OpenApi.YamlReader `2.12.0` or `3.10.0`, or Microsoft.OpenApi.Readers `1.6.30`, depending on the major version line they consume.\n\nThe patched versions bound YAML-to-JSON conversion work and fail fast instead of allowing unbounded expansion. The default limits are:\n\n* Maximum materialized node count: `5,000,000`\n* Maximum nesting depth: `64`\n\nWhen the limits are exceeded, `OpenApiYamlReader.Read` reports an `OpenApiDiagnostic` error and does not return a parsed document.\n\nThe limits are exposed as process-wide static properties on `YamlConverter` for consumers that need to tune them for trusted workloads:\n\n* `YamlConverter.MaxNodeCount`\n* `YamlConverter.MaxDepth`\n\nApplications that parse OpenAPI documents from untrusted sources should avoid parsing those documents in the primary application process when possible. Running parsing in an isolated process can reduce the blast radius of parser failures."
+        },
+        {
+          "field": "id",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "GHSA-7pxr-59rr-hqj2"
+        },
+        {
+          "field": "modified",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "2026-10-14T20:11:30Z"
+        },
+        {
+          "field": "published",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "2026-10-14T20:11:29Z"
+        },
+        {
+          "field": "references",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/security/advisories/GHSA-7pxr-59rr-hqj2"
+            },
+            {
+              "type": "ADVISORY",
+              "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72923"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/pull/3000"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/pull/3005"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/pull/3020"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/commit/1f9aea9bdcbf4066b59ce33b3bd8f97ed9cb4766"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/commit/21793261d6860fb6e607b71fd95c0bd320724764"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/commit/4db9af07d112cdf45170b7a946f956ffe74fa14e"
+            },
+            {
+              "type": "PACKAGE",
+              "url": "https://github.com/microsoft/OpenAPI.NET"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/releases/tag/v1.6.30"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/releases/tag/v2.12.0"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/microsoft/OpenAPI.NET/releases/tag/v3.10.0"
+            }
+          ]
+        },
+        {
+          "field": "schema_version",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "Microsoft.OpenApi.YamlReader vulnerable to denial of service via YAML alias expansion"
+        }
+      ],
+      "observations": [
+        "Maintainer package names, three ranges, and fixes 1.6.30,2.12.0,3.10.0 agree. Availability-only YAML expansion issue, not code execution."
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-7pxr-59rr-hqj2.2026-10-15.reviewed-after.json",
+          "sha256": "73e59d7c5a630295879c75b6f05c00df6e9bddcb50263a266a36ca7c06b5bdeb",
+          "bytes": 6607,
+          "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-7pxr-59rr-hqj2/GHSA-7pxr-59rr-hqj2.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-7pxr-59rr-hqj2.2026-10-15.maintainer-web-response.json",
+          "sha256": "a63a0bab89428da5aedcaebb5f1e6c4da4515164889b8c97c751ded8524c7471",
+          "bytes": 12292,
+          "url": "https://github.com/microsoft/OpenAPI.NET/security/advisories/GHSA-7pxr-59rr-hqj2",
+          "method": "web.run extracted page response, serialized unchanged as response string; not raw HTTP",
+          "checkedAt": "2026-10-14T22:59:00Z",
+          "pagePublishedDate": "2026-08-13",
+          "httpStatus": null,
+          "limitations": "Search retrieval may be cached; raw HTML, headers and precise upstream update/withdrawal timestamps unavailable."
+        },
+        {
+          "url": "https://api.github.com/repos/microsoft/OpenAPI.NET/security-advisories/GHSA-7pxr-59rr-hqj2",
+          "path": "docs/advisory-source-snapshots/GHSA-7pxr-59rr-hqj2.2026-10-15.maintainer-api.json",
+          "sha256": "02cbe9a7ddf2a6698fc6b2fedad8eb74e79bad948daf185fd1127b02f8664dd1",
+          "bytes": 10648,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-7pxr-59rr-hqj2.2026-10-15.maintainer-api.headers.txt.gz",
+          "headersSha256": "4a06075cf9098014898d90a1a80e6d3a9750a00290ae8c5d566abdf6bf50e943",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-14T23:01:04Z",
+          "method": "curl GET; exact response body and HTTP headers saved",
+          "headersEncoding": "gzip",
+          "headersCompressedSha256": "3a3e0f84be8a73871114f1465f7dfaaffda77d37f1996ccefedd1eb25be4e044"
+        }
+      ],
+      "datePolicy": "Keep Reviewed published/modified/withdrawn values; maintainers page publication dates are separate and do not replace database dates.",
+      "withdrawalComparison": "Both pinned Reviewed and maintainer API have no withdrawal (null/absent).",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-7pxr-59rr-hqj2",
+        "cve_id": "CVE-2026-72923",
+        "published_at": "2026-08-13T15:49:57Z",
+        "updated_at": "2026-09-08T18:42:52Z",
+        "withdrawn_at": null,
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.OpenApi.YamlReader"
+            },
+            "vulnerable_version_range": ">= 3.0.0, < 3.10.0",
+            "patched_versions": "3.10.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.OpenApi.YamlReader"
+            },
+            "vulnerable_version_range": ">= 2.0.0-preview.11, < 2.12.0",
+            "patched_versions": "2.12.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.OpenApi.Readers"
+            },
+            "vulnerable_version_range": "< 1.6.30",
+            "patched_versions": "1.6.30",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "GHSA-856c-92hv-3vxx",
+      "change": "A",
+      "databasePublishedAt": "2026-10-14T18:38:05Z",
+      "databaseModifiedAt": "2026-10-14T18:38:05Z",
+      "databaseWithdrawnAt": null,
+      "maintainerPublishedDate": "2026-06-29",
+      "changedFields": [
+        {
+          "field": "affected",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "apprise"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "1.11.0"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "last_known_affected_version_range": "<= 1.10.0"
+              }
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            "CVE-2026-59180"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": {
+            "cwe_ids": [
+              "CWE-200",
+              "CWE-601"
+            ],
+            "severity": "LOW",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-14T18:38:05Z",
+            "nvd_published_at": "2026-07-10T17:17:02Z"
+          }
+        },
+        {
+          "field": "details",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "# Summary\n\nApprise's HTTP-based notification plugins and its HTTP attachment / config loaders (`apprise/attachment/http.py`, `apprise/config/http.py`) follow HTTP 3xx redirects by default and **re-send the user-configured auth headers and query parameters on the redirected request**. If an operator-configured destination is later compromised (service takeover, malicious update), or an attacker holds a MITM position on an unprotected network path, that destination can return a `302 Location:` to an arbitrary host and Apprise forwards the user's secret (`X-Gotify-Key`, `Authorization`, bearer tokens in query, custom `+Header=` values) to that cross-origin host. The attacker does **not** need to control the original Apprise URL — only the response from a destination the operator already trusts.\n\nThis is the application-layer analogue of urllib3 [`GHSA-34jh-p97f-mpxf`](https://github.com/urllib3/urllib3/security/advisories/GHSA-34jh-p97f-mpxf) / `CVE-2026-44431` (\"`Proxy-Authorization` forwarded across cross-origin redirect\").\n\n# Affected versions\n\nAll releases up to and including `v1.10.0` (latest PyPI release as of filing, 2026-04-26). Fixed in v1.11.0 (released 2026-05-29), which includes [PR #1610](https://github.com/caronc/apprise/pull/1610) (merged 2026-05-16, commit 68c0aef218055e4586cf4605fd6b56358f5f462d).\n\n# Details\n\n`apprise/plugins/gotify.py` (pre-fix HEAD, lines 226-244, verbatim):\n\n```python\nheaders = {\n    \"User-Agent\": self.app_id,\n    \"Content-Type\": \"application/json\",\n    \"X-Gotify-Key\": self.token,    # user-supplied secret\n}\n...\nr = requests.post(\n    url,\n    data=dumps(payload),\n    headers=headers,\n    verify=self.verify_certificate,\n    timeout=self.request_timeout,\n    # NO allow_redirects=False -- requests default is True\n)\n```\n\n`requests` follows 3xx redirects by default and re-attaches the `headers=` dict on the redirected request, regardless of origin. The same shape exists across ~50 plugins (`custom_json`, `custom_xml`, `custom_form`, `gotify`, `ntfy`, `mattermost`, `apprise_api`, and most other HTTP-based plugins), plus in `apprise/attachment/http.py` and `apprise/config/http.py`.\n\n## Reproduction (local, safe)\n\n```python\n# attacker_redirector.py -- 127.0.0.1:8081 returns 302 to a cross-origin sink\nimport http.server\nclass H(http.server.BaseHTTPRequestHandler):\n    def do_POST(self):\n        self.send_response(302)\n        self.send_header(\"Location\", \"http://127.0.0.1:8082/exfil\")\n        self.end_headers()\nhttp.server.HTTPServer((\"127.0.0.1\", 8081), H).serve_forever()\n```\n\n```python\n# attacker_sink.py -- 127.0.0.1:8082 logs the leaked headers\nimport http.server\nclass H(http.server.BaseHTTPRequestHandler):\n    def do_POST(self):\n        print(\"LEAKED HEADERS:\", dict(self.headers))\n        self.send_response(204); self.end_headers()\nhttp.server.HTTPServer((\"127.0.0.1\", 8082), H).serve_forever()\n```\n\n```python\n# victim\nfrom apprise import Apprise\na = Apprise()\na.add(\"gotify://127.0.0.1:8081?token=SECRETTOKEN\")\na.notify(body=\"x\")\n```\n\nObserved on `master` HEAD (2026-05-13): `attacker_sink.py` prints `X-Gotify-Key: SECRETTOKEN` -- the user-supplied token followed the cross-origin redirect.\n\n# Patch\n\nFix landed in [`caronc/apprise#1610`](https://github.com/caronc/apprise/pull/1610) (merged 2026-05-16, commit `68c0aef`):\n\n- Adds `?redirect=yes|no` URL parameter on every plugin URL\n- Adds `AppriseAsset.http_redirects` global default\n- Equivalent flags wired into `apprise/attachment/http.py` and `apprise/config/http.py`\n\nThe default remains `redirects=True` for backwards compatibility -- operators who relay notifications through destinations they don't fully trust should append `?redirect=no` to their Apprise URLs or set `AppriseAsset(http_redirects=False)` globally.\n\nReleased in v1.11.0 (2026-05-29, available on PyPI).\n\nRelated:\n- Documentation: [`caronc/apprise-docs#60`](https://github.com/caronc/apprise-docs/pull/60) (merged 2026-05-16)\n- API counterpart: [`caronc/apprise-api#331`](https://github.com/caronc/apprise-api/pull/331) (merged 2026-05-29; shipped in apprise-api v1.5.1, built on Apprise v1.11.0)\n\n# Remediation\n\nUpgrade to Apprise v1.11.0 or later (`pip install -U apprise`).\n\nThe default remains `redirect=yes` for backwards compatibility, so after upgrading, operators who relay notifications through destinations they don't fully trust should also set `AppriseAsset(http_redirects=False)` globally or append `?redirect=no` to each plugin URL.\n\nIf you cannot upgrade yet, operate Apprise only against fully trusted notification destinations (the maintainer-documented supported model).\n\n# Classification\n\n- **CWE-200** Exposure of Sensitive Information to an Unauthorized Actor -- user's auth tokens / API keys / custom `+Header=` values are forwarded onto the cross-origin redirected request.\n- **CWE-601** URL Redirection to Untrusted Site -- a 3xx response from the initial (operator-configured) target sends the request and its credentials to a host the operator never configured.\n\nCVSS 3.1: `AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N` -> **3.1 LOW**.\n\nAttack requires the operator-configured destination to be compromised or an attacker to be on the network path. Impact is partial confidentiality loss: a single user-supplied secret per redirected request, scoped to that one notification channel. This is intentionally a narrow redirect/header-forwarding hardening issue, not a claim that remote destinations or remote configuration are themselves vulnerabilities."
+        },
+        {
+          "field": "id",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "GHSA-856c-92hv-3vxx"
+        },
+        {
+          "field": "modified",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "2026-10-14T18:38:05Z"
+        },
+        {
+          "field": "published",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "2026-10-14T18:38:05Z"
+        },
+        {
+          "field": "references",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "WEB",
+              "url": "https://github.com/caronc/apprise/security/advisories/GHSA-856c-92hv-3vxx"
+            },
+            {
+              "type": "ADVISORY",
+              "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59180"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/caronc/apprise/pull/1610"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/caronc/apprise/commit/68c0aef218055e4586cf4605fd6b56358f5f462d"
+            },
+            {
+              "type": "PACKAGE",
+              "url": "https://github.com/caronc/apprise"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/caronc/apprise/releases/tag/v1.11.0"
+            }
+          ]
+        },
+        {
+          "field": "schema_version",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "Apprise forwards configured auth headers across cross-origin HTTP redirects"
+        }
+      ],
+      "observations": [
+        "Maintainer <=1.10.0/fixed1.11.0 agrees with the DB boundary and last-known-affected metadata. Upgrade adds redirect controls; redirects remain enabled by default. Explicit redirect=no or AppriseAsset(http_redirects=False) is advised for less-trusted destinations."
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-856c-92hv-3vxx.2026-10-15.reviewed-after.json",
+          "sha256": "7b660a6a21531300791ab52386522e6276aa4f4fa6bd0d71e3f7ff269d0c1d62",
+          "bytes": 7349,
+          "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-856c-92hv-3vxx/GHSA-856c-92hv-3vxx.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-856c-92hv-3vxx.2026-10-15.maintainer-web-response.json",
+          "sha256": "64d67739bbbdc48de9da8fb2d522bb52faedb3b0f6219d026ecd1b17b8543253",
+          "bytes": 14553,
+          "url": "https://github.com/caronc/apprise/security/advisories/GHSA-856c-92hv-3vxx",
+          "method": "web.run extracted page response, serialized unchanged as response string; not raw HTTP",
+          "checkedAt": "2026-10-14T22:59:00Z",
+          "pagePublishedDate": "2026-06-29",
+          "httpStatus": null,
+          "limitations": "Search retrieval may be cached; raw HTML, headers and precise upstream update/withdrawal timestamps unavailable."
+        },
+        {
+          "url": "https://api.github.com/repos/caronc/apprise/security-advisories/GHSA-856c-92hv-3vxx",
+          "path": "docs/advisory-source-snapshots/GHSA-856c-92hv-3vxx.2026-10-15.maintainer-api.json",
+          "sha256": "b3f1dfb7543f5fcb7efe3d8fa6c99609399b316661951b8b78145440647bada4",
+          "bytes": 9668,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-856c-92hv-3vxx.2026-10-15.maintainer-api.headers.txt.gz",
+          "headersSha256": "93543193a03851ad85e979e96252f4a467cf3c6b2f606d8d5ecc06457e394b94",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-14T23:01:04Z",
+          "method": "curl GET; exact response body and HTTP headers saved",
+          "headersEncoding": "gzip",
+          "headersCompressedSha256": "09cccef6a23fa5de8bf8bed66f3e421b0a55e2774473fa5046029ea1c216668f"
+        }
+      ],
+      "datePolicy": "Keep Reviewed published/modified/withdrawn values; maintainers page publication dates are separate and do not replace database dates.",
+      "withdrawalComparison": "Both pinned Reviewed and maintainer API have no withdrawal (null/absent).",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-856c-92hv-3vxx",
+        "cve_id": "CVE-2026-59180",
+        "published_at": "2026-06-29T20:38:39Z",
+        "updated_at": "2026-07-02T22:37:37Z",
+        "withdrawn_at": null,
+        "severity": "low",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+          "score": 3.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "score": 3.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "Apprise"
+            },
+            "vulnerable_version_range": "<= 1.10.0",
+            "patched_versions": "1.11.0",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "GHSA-m6wq-39m7-9xpp",
+      "change": "A",
+      "databasePublishedAt": "2026-10-14T19:24:53Z",
+      "databaseModifiedAt": "2026-10-14T19:24:53Z",
+      "databaseWithdrawnAt": null,
+      "maintainerPublishedDate": "2026-06-27",
+      "changedFields": [
+        {
+          "field": "affected",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Metalama.Framework"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "2026.1.0-preview"
+                    },
+                    {
+                      "fixed": "2026.1.19"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Metalama.Tool"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "2026.1.0-preview"
+                    },
+                    {
+                      "fixed": "2026.1.19"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Metalama.Framework"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "2025.1.18"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Metalama.Tool"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "2025.1.18"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Metalama.Tool"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "2026.0.0-preview"
+                    },
+                    {
+                      "fixed": "2026.0.25"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "NuGet",
+                "name": "Metalama.Framework"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "2026.0.0-preview"
+                    },
+                    {
+                      "fixed": "2026.0.25"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            "CVE-2026-62847"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": {
+            "cwe_ids": [
+              "CWE-377",
+              "CWE-427"
+            ],
+            "severity": "MODERATE",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-14T19:24:53Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "## Summary\n\nMetalama loaded and executed compile-time assemblies, auxiliary executable tools, and embedded helper assemblies from predictable temporary directories. On Linux and macOS the default cache location was the world-writable system temporary directory (`Path.GetTempPath()`, i.e. `/tmp`), and previously-generated artifacts were trusted based on the presence of a sentinel/`.completed` marker file rather than on any integrity verification.\n\nA local, unprivileged user on a shared machine or CI/build agent can pre-create the deterministic cache directory structure and plant a malicious DLL together with the matching sentinel file. When a higher-privileged user (or build/service account) subsequently runs a build, Metalama finds the sentinel, skips regeneration, and loads and executes the attacker-supplied assembly inside the compiler / IDE / MSBuild process.\n\nAffected load-and-execute paths:\n- the cache of compile-time assemblies that Metalama generates from your aspects;\n- auxiliary executable tools that Metalama extracts to a local directory and then launches;\n- embedded .NET helper assemblies that Metalama extracts to a local directory and loads into the build / IDE process.\n\n## Impact\n\nArbitrary code execution in the security context of the building user — i.e. a local privilege escalation across user accounts on shared POSIX systems (multi-user developer machines, CI/build agents). The attacker obtains code execution as the victim without holding the victim's privileges, and can read source/secrets, tamper with build output (supply-chain injection), or disrupt builds.\n\n## Affected configurations\n\n- **Linux and macOS, default configuration — affected.** The shipped default uses the world-writable system temp directory.\n- **Windows, default configuration — not affected.** The default per-user temporary directory is protected by OS ACLs, so cross-user planting is not possible.\n- The `METALAMA_TEMP` environment variable is a deployer-controlled override and is **out of scope**: pointing it at an insecure (e.g. world-writable or attacker-owned) location is a deployment misconfiguration, not a defect in the product.\n\n## Severity\n\nCVSS v3.1: `AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H` = **8.2 (High)** for the affected POSIX default configuration (Scope:Changed reflects the cross-user privilege escalation).\n\nCVSS v4.0 cross-check: `CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:H/VA:L/SC:L/SI:H/SA:H` = 6.0 (Medium), which more granularly attributes low impact to the cache itself and high impact to the subsequent build process. The honest range is therefore Medium-High depending on the scoring model and platform.\n\n## Fix\n\nCaches and extraction directories were relocated from the world-writable system temp directory to per-user application-data locations (`$XDG_CACHE_HOME` / `~/.cache/Metalama` on POSIX), relying on OS-enforced per-user ownership as the trust boundary. Fixed in **2026.1.19**.\n\n## Weaknesses\n\n- CWE-377: Insecure Temporary File\n- CWE-427: Uncontrolled Search Path Element\n\n## Affected packages\n\n- Metalama.Framework < 2026.1.19, \n- Metalama.Tool < 2026.1.19\n\nInternal tracking: metalama/Metalama#1650."
+        },
+        {
+          "field": "id",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "GHSA-m6wq-39m7-9xpp"
+        },
+        {
+          "field": "modified",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "2026-10-14T19:24:53Z"
+        },
+        {
+          "field": "published",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "2026-10-14T19:24:53Z"
+        },
+        {
+          "field": "references",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "WEB",
+              "url": "https://github.com/metalama/Metalama/security/advisories/GHSA-m6wq-39m7-9xpp"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/metalama/Metalama/pull/1719"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/metalama/Metalama/commit/09911349a916e82194b1cfaa6d0a38acad928fc9"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/metalama/Metalama/commit/92c4feecfce86d18fcb007ab6d3a1b4383326a2e"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/metalama/Metalama/commit/ab9407263203c66d7c5680a34c28dba31f9951c9"
+            },
+            {
+              "type": "PACKAGE",
+              "url": "https://github.com/metalama/Metalama"
+            }
+          ]
+        },
+        {
+          "field": "schema_version",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+            },
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:H/VA:L/SC:L/SI:H/SA:H"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "Metalama allows local code execution through DLL planting in shared temporary directories"
+        }
+      ],
+      "observations": [
+        "Maintainer label High with CVSS3.1=8.2; maintainer prose also gives CVSS4.0=6.0 Medium. Reviewed label MODERATE retains both vectors without numeric scores. Preserve both attributed assessments.",
+        "Six package/fix pairs agree (Framework and Tool, each 2025.1.18,2026.0.25,2026.1.19). Maintainer lists overlapping <fix ranges; Reviewed adds preview branch lower bounds. Preserve Reviewed branch segmentation rather than invent a universal version ordering. Linux/macOS default shared-temp configuration affected; Windows default not affected.",
+        "Metalama CVSS4.0 score 6.0 is in maintainer description only; API cvss_severities.cvss_v4 is null. Structured API CVSS3.1 is 8.2."
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-m6wq-39m7-9xpp.2026-10-15.reviewed-after.json",
+          "sha256": "c3d00b8366a9859b66427d3b1d5fe206a97db78c0658cc5b02504d44b04c1b69",
+          "bytes": 6829,
+          "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-m6wq-39m7-9xpp.2026-10-15.maintainer-web-response.json",
+          "sha256": "f77c7089f1c19b5a919ec36dbdc23456fde48ba9990abf407cf11698186b3edf",
+          "bytes": 12246,
+          "url": "https://github.com/metalama/Metalama/security/advisories/GHSA-m6wq-39m7-9xpp",
+          "method": "web.run extracted page response, serialized unchanged as response string; not raw HTTP",
+          "checkedAt": "2026-10-14T22:59:00Z",
+          "pagePublishedDate": "2026-06-27",
+          "httpStatus": null,
+          "limitations": "Search retrieval may be cached; raw HTML, headers and precise upstream update/withdrawal timestamps unavailable."
+        },
+        {
+          "url": "https://api.github.com/repos/metalama/Metalama/security-advisories/GHSA-m6wq-39m7-9xpp",
+          "path": "docs/advisory-source-snapshots/GHSA-m6wq-39m7-9xpp.2026-10-15.maintainer-api.json",
+          "sha256": "21b68f746e8248edc7ff189b926fa4fca978a2547454566aac5520292e66b0fc",
+          "bytes": 7288,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-m6wq-39m7-9xpp.2026-10-15.maintainer-api.headers.txt.gz",
+          "headersSha256": "4cb0f6b081cbbe913c08d3b016fcb97b8bc3f328fa18a0efda2cbb6df45c3eda",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-14T23:01:04Z",
+          "method": "curl GET; exact response body and HTTP headers saved",
+          "headersEncoding": "gzip",
+          "headersCompressedSha256": "0b12ef98735ef56ab668749535066d208e1664922ddca4e42e03b30d2113c7cc"
+        }
+      ],
+      "datePolicy": "Keep Reviewed published/modified/withdrawn values; maintainers page publication dates are separate and do not replace database dates.",
+      "withdrawalComparison": "Both pinned Reviewed and maintainer API have no withdrawal (null/absent).",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-m6wq-39m7-9xpp",
+        "cve_id": "CVE-2026-62847",
+        "published_at": "2026-06-27T09:47:57Z",
+        "updated_at": "2026-07-14T22:33:25Z",
+        "withdrawn_at": null,
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+          "score": 8.2
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+            "score": 8.2
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Metalama.Framework"
+            },
+            "vulnerable_version_range": "< 2026.1.19",
+            "patched_versions": "2026.1.19",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Metalama.Tool"
+            },
+            "vulnerable_version_range": "< 2026.1.19",
+            "patched_versions": "2026.1.19",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Metalama.Framework"
+            },
+            "vulnerable_version_range": "< 2025.1.18",
+            "patched_versions": "2025.1.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Metalama.Tool"
+            },
+            "vulnerable_version_range": "< 2025.1.18",
+            "patched_versions": "2025.1.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Metalama.Tool"
+            },
+            "vulnerable_version_range": "< 2026.0.25",
+            "patched_versions": "2026.0.25",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Metalama.Framework"
+            },
+            "vulnerable_version_range": "< 2026.0.25",
+            "patched_versions": "2026.0.25",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "GHSA-xpf3-p7gm-7756",
+      "change": "A",
+      "databasePublishedAt": "2026-10-14T19:34:31Z",
+      "databaseModifiedAt": "2026-10-14T19:34:31Z",
+      "databaseWithdrawnAt": null,
+      "maintainerPublishedDate": "2026-07-08",
+      "changedFields": [
+        {
+          "field": "affected",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "bbot"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "2.3.1"
+                    },
+                    {
+                      "fixed": "3.0.0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            "CVE-2026-14966"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": {
+            "cwe_ids": [
+              "CWE-22",
+              "CWE-59"
+            ],
+            "severity": "LOW",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-14T19:34:31Z",
+            "nvd_published_at": "2026-07-08T16:16:27Z"
+          }
+        },
+        {
+          "field": "details",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "BBOT's `unarchive` module rejects archives containing symlink entries before extraction, but for zip and 7z archives it failed to detect symlinks whose listing carries a DOS-attribute prefix before the unix mode, as produced by legacy versions of p7zip. Such an archive, downloaded and extracted during a scan (for example via `filedownload`), bypassed the guard and caused an attacker-controlled symlink to be written into the extraction directory. The effect is limited to planting the symlink (its target is not written through), and only hosts using such a legacy p7zip build are affected; current mainline 7-Zip is not."
+        },
+        {
+          "field": "id",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "GHSA-xpf3-p7gm-7756"
+        },
+        {
+          "field": "modified",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "2026-10-14T19:34:31Z"
+        },
+        {
+          "field": "published",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "2026-10-14T19:34:31Z"
+        },
+        {
+          "field": "references",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "WEB",
+              "url": "https://github.com/blacklanternsecurity/bbot/security/advisories/GHSA-xpf3-p7gm-7756"
+            },
+            {
+              "type": "ADVISORY",
+              "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14966"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/blacklanternsecurity/bbot/commit/3bc8d3a96f34f312853c9fcf8decee2a4e905f26"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/blacklanternsecurity/bbot/commit/a3f1a2292e2b0a553827c6175b761abe28807735"
+            },
+            {
+              "type": "PACKAGE",
+              "url": "https://github.com/blacklanternsecurity/bbot"
+            },
+            {
+              "type": "WEB",
+              "url": "https://github.com/pypa/advisory-database/tree/main/vulns/bbot/PYSEC-2026-3719.yaml"
+            }
+          ]
+        },
+        {
+          "field": "schema_version",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "beforePresent": false,
+          "before": null,
+          "afterPresent": true,
+          "after": "BBOT's Symlink guard bypass in unarchive module allows planting symlinks during extraction"
+        }
+      ],
+      "observations": [
+        "Maintainer affected <=2.8.6 and patched 3.0 differ from DB >=2.3.1,<3.0.0. Preserve both without assuming equivalence or filling intermediate versions. Legacy p7zip only; current mainline 7-Zip not affected. Symlink planting does not imply target overwrite."
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-xpf3-p7gm-7756.2026-10-15.reviewed-after.json",
+          "sha256": "34cb7aba8d447d4e33e029ba092bc450182a146c973be24532e8037112563fc5",
+          "bytes": 2403,
+          "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-xpf3-p7gm-7756/GHSA-xpf3-p7gm-7756.json",
+          "method": "git show pinned commit: exact Git blob bytes"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-xpf3-p7gm-7756.2026-10-15.maintainer-web-response.json",
+          "sha256": "f85da1148469ddce90a67b150395363d7901e70f45d93321e6b0a100cc0f77cd",
+          "bytes": 9625,
+          "url": "https://github.com/blacklanternsecurity/bbot/security/advisories/GHSA-xpf3-p7gm-7756",
+          "method": "web.run extracted page response, serialized unchanged as response string; not raw HTTP",
+          "checkedAt": "2026-10-14T22:59:00Z",
+          "pagePublishedDate": "2026-07-08",
+          "httpStatus": null,
+          "limitations": "Search retrieval may be cached; raw HTML, headers and precise upstream update/withdrawal timestamps unavailable."
+        },
+        {
+          "url": "https://api.github.com/repos/blacklanternsecurity/bbot/security-advisories/GHSA-xpf3-p7gm-7756",
+          "path": "docs/advisory-source-snapshots/GHSA-xpf3-p7gm-7756.2026-10-15.maintainer-api.json",
+          "sha256": "da667fd64225b6caf49ee9e4319c25221ca89b4df68c1d7e00528e30db89d59c",
+          "bytes": 4833,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-xpf3-p7gm-7756.2026-10-15.maintainer-api.headers.txt.gz",
+          "headersSha256": "cd56e89f5b0364984addc15566550139b2f4632ca47a81e62b51f0929b97be66",
+          "httpStatus": 200,
+          "checkedAt": "2026-10-14T23:01:04Z",
+          "method": "curl GET; exact response body and HTTP headers saved",
+          "headersEncoding": "gzip",
+          "headersCompressedSha256": "4632c7f0c14346460bc03813aa881ed14f961363bd0106bb087ca383a4c267fc"
+        }
+      ],
+      "datePolicy": "Keep Reviewed published/modified/withdrawn values; maintainers page publication dates are separate and do not replace database dates.",
+      "withdrawalComparison": "Both pinned Reviewed and maintainer API have no withdrawal (null/absent).",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-xpf3-p7gm-7756",
+        "cve_id": "CVE-2026-14966",
+        "published_at": "2026-07-08T15:13:10Z",
+        "updated_at": "2026-07-08T15:13:11Z",
+        "withdrawn_at": null,
+        "severity": "low",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+          "score": 3.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+            "score": 3.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "bbot"
+            },
+            "vulnerable_version_range": "<= 2.8.6",
+            "patched_versions": "3.0",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    }
+  ],
+  "curatedOverlays": [
+    {
+      "id": "GHSA-m6wq-39m7-9xpp",
+      "path": "src/data/vulnerabilities/GHSA-m6wq-39m7-9xpp.json",
+      "sha256": "e03715ddc16a84031ce10c490fd904a51f1f1a210f3159e2708338bc13c65057"
+    },
+    {
+      "id": "GHSA-fp43-vj7g-pg92",
+      "path": "src/data/vulnerabilities/GHSA-fp43-vj7g-pg92.json",
+      "sha256": "4bafa8536826ec4f82ae4ddebbaf89949ec113a275c1e7bf5c6c7ec15a8ce891"
+    },
+    {
+      "id": "GHSA-xpf3-p7gm-7756",
+      "path": "src/data/vulnerabilities/GHSA-xpf3-p7gm-7756.json",
+      "sha256": "cb9d6e1a039731aa0c6a0289ed3b52e37199c3f6e123cf4baf8d1b2d9ed61af0"
+    },
+    {
+      "id": "GHSA-856c-92hv-3vxx",
+      "path": "src/data/vulnerabilities/GHSA-856c-92hv-3vxx.json",
+      "sha256": "1c4d810c2f182a56b6ab1cf7fbb34817b40cb1716777b7f77294dc657a855ec2"
+    }
+  ],
+  "overlayQa": "Removed inherited database-only/untranslated caveats; normalized BBOT ecosystem to pip; BBOT and Apprise CVSS3.1=3.1 attributed to successful maintainer API responses."
+}

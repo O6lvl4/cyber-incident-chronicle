@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "dateJst": "2026-10-15",
+  "completedAt": "2026-10-14T22:56:58.586068+00:00",
+  "previousPublishedCommit": "3803180605214f57744c52d0de48790ad6eb1e51",
+  "baseline": {
+    "lastSuccessfulDateJst": "2026-10-14",
+    "lastSuccessfulCheckAt": "2026-10-13T21:53:53.722209+00:00",
+    "auditFile": "docs/data/incident-source-audit-2026-10-14.json",
+    "incidents": 164,
+    "sources": 296
+  },
+  "strategy": {
+    "scope": "Broad Japanese official disclosure discovery for October14-15, targeted active incident followups and selected immediately relevant backfill. Japanese organizations and overseas subsidiaries; no blanket completeness claim.",
+    "queries": [
+      "不正アクセス 情報漏えい 2026年10月14日",
+      "サイバー攻撃 2026年10月14日",
+      "情報流出 2026年10月15日",
+      "Japanese subsidiary cyber incident October14 2026"
+    ],
+    "rules": [
+      "Same incident downstream disclosures merged",
+      "Occurrence/detection/publication/check dates separate",
+      "Confirmed/possible/unknown counts, units, maximums and subsets preserved"
+    ]
+  },
+  "result": {
+    "incidentCountBefore": 164,
+    "incidentCountAfter": 167,
+    "sourceCountBefore": 296,
+    "sourceCountAfter": 309,
+    "addedIds": [
+      "aena-ec-app-2026",
+      "medley-atlink-2026",
+      "toppan-payments-portal-2026"
+    ],
+    "sameIncidentEnrichments": [
+      "arcadia-speecan-raiden-2026",
+      "commune-2026",
+      "idc-frontier-2026",
+      "gmo-infoq-2026"
+    ]
+  },
+  "records": [
+    {
+      "incidentId": "aena-ec-app-2026",
+      "file": "src/data/incidents/aena-ec-app-2026.json",
+      "changeType": "added",
+      "sha256": "6f7021411f1b6f84c36fb10d14ff6348d9a07a805ac46c6cbba5aa95cdcb3c37",
+      "updatedDate": "2026-10-14",
+      "statusAsOfDate": "2026-10-14",
+      "lastVerifiedDate": "2026-10-15"
+    },
+    {
+      "incidentId": "medley-atlink-2026",
+      "file": "src/data/incidents/medley-atlink-2026.json",
+      "changeType": "added",
+      "sha256": "ebf191f52f8a619de8708a3ac8ab775ad0557a613fa377aa60adfb911d491ef9",
+      "updatedDate": "2026-10-15",
+      "statusAsOfDate": "2026-10-15",
+      "lastVerifiedDate": "2026-10-15"
+    },
+    {
+      "incidentId": "toppan-payments-portal-2026",
+      "file": "src/data/incidents/toppan-payments-portal-2026.json",
+      "changeType": "added",
+      "sha256": "0a3a3c2aa20f6243d04aa07514d7fa456f71e231d7a425c060ee801d28665519",
+      "updatedDate": "2026-10-14",
+      "statusAsOfDate": "2026-10-14",
+      "lastVerifiedDate": "2026-10-15"
+    },
+    {
+      "incidentId": "arcadia-speecan-raiden-2026",
+      "file": "src/data/incidents/arcadia-speecan-raiden-2026.json",
+      "changeType": "same_incident_enrichment",
+      "sha256": "8e49b11d16a8ebd2ee51e95fa3a30492dc1464478091b38704a62e1b81b5b94a",
+      "updatedDate": "2026-10-14",
+      "statusAsOfDate": "2026-10-14",
+      "lastVerifiedDate": "2026-10-15"
+    },
+    {
+      "incidentId": "commune-2026",
+      "file": "src/data/incidents/commune-2026.json",
+      "changeType": "same_incident_enrichment",
+      "sha256": "2bd1e8f50594687b7dae7ef32347db985674477dd11c95ad44897f06513ef29e",
+      "updatedDate": "2026-10-14",
+      "statusAsOfDate": "2026-10-14",
+      "lastVerifiedDate": "2026-10-15"
+    },
+    {
+      "incidentId": "idc-frontier-2026",
+      "file": "src/data/incidents/idc-frontier-2026.json",
+      "changeType": "same_incident_enrichment",
+      "sha256": "2bc57a55c564889205e98e35b95d3efc459ae8886d39ce7741fa3da1ad33ee85",
+      "updatedDate": "2026-10-14",
+      "statusAsOfDate": "2026-10-14",
+      "lastVerifiedDate": "2026-10-15"
+    },
+    {
+      "incidentId": "gmo-infoq-2026",
+      "file": "src/data/incidents/gmo-infoq-2026.json",
+      "changeType": "same_incident_enrichment",
+      "sha256": "d779f279f2ea74d290576121b390832bfbde79300c87cb4e66f28bc6583f4516",
+      "updatedDate": "2026-10-14",
+      "statusAsOfDate": "2026-10-14",
+      "lastVerifiedDate": "2026-10-15"
+    }
+  ],
+  "verified": [
+    {
+      "incidentId": "aena-ec-app-2026",
+      "url": "https://www.aena.co.jp/news/detail/7826/",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:44:55.747547+00:00",
+      "method": "Direct official response and complete body inspection",
+      "classification": "new_selected_incident",
+      "httpStatus": 200,
+      "bytes": 12487,
+      "sha256": "93a54776be4da9e873fb0144aac678c3eeb84f8f79ecd33f7dabd4eabc1c5132",
+      "finding": "Unauthorized viewing confirmed, maximum817215-person scope remains possible; discovery Oct13 05:58, not attack start. Card last4/expiry/name differ from excluded full number/security code/password."
+    },
+    {
+      "incidentId": "medley-atlink-2026",
+      "url": "https://www.matsushima-wh.or.jp/2026/10/14/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%A2%E3%83%97%E3%83%AA%E3%80%81web%E4%BA%88%E7%B4%84%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8A%E3%82%88%E3%81%B3%E5%91%A8%E8%BE%BA%E3%82%B5/",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "new_selected_incident",
+      "finding": "Provider-authored notice on official client-hospital site; suspected access detected Oct11, Oct14 announcements for Oct15 00:00 suspension. Personal data impact still investigating. Clinic Oct15 page has Oct14 letter date; no live-system outage check claimed.",
+      "extractedBodyReceiptSha256": "2df28b0e70c92f35bd54afa9d913746393fc999c55ae5cdb9bb46e3f87d1c223",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "medley-atlink-2026",
+      "url": "https://miyake-miyakegroup.jp/news/detail/1430",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "new_selected_incident",
+      "finding": "Provider-authored notice on official client-hospital site; suspected access detected Oct11, Oct14 announcements for Oct15 00:00 suspension. Personal data impact still investigating. Clinic Oct15 page has Oct14 letter date; no live-system outage check claimed.",
+      "extractedBodyReceiptSha256": "1e3339f79f96bd54ca17e885dc8c2454641767fccd06b883e2b3dc67f87551bf",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "medley-atlink-2026",
+      "url": "https://kamagaya-bc.com/2026/10/15/1672/",
+      "publishedDate": "2026-10-15",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "new_selected_incident",
+      "finding": "Provider-authored notice on official client-hospital site; suspected access detected Oct11, Oct14 announcements for Oct15 00:00 suspension. Personal data impact still investigating. Clinic Oct15 page has Oct14 letter date; no live-system outage check claimed.",
+      "extractedBodyReceiptSha256": "350d7d30e8944561725076590b79173cf8ee072197cf7a1b4dd288b1b86d02a4",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "toppan-payments-portal-2026",
+      "url": "https://pfinfo.thincacloud.jp/kamepo",
+      "publishedDate": "2026-09-28",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "new_selected_incident",
+      "finding": "Sept28 first release and22:00 stop; Oct14 no individual customer-data leak determination. Operational Oct11 report says1am delayed restoration versus Oct14 summary saying Oct10; discrepancy retained. Search functions planned lateOct, not fully restored.",
+      "extractedBodyReceiptSha256": "a43cc8d5eec517231cdeefbf02b294f99d7ce347ce8f16854733b7841ed46907",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "toppan-payments-portal-2026",
+      "url": "https://thincacloud.toppan.com/newsrelease/20261014/",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "new_selected_incident",
+      "finding": "Sept28 first release and22:00 stop; Oct14 no individual customer-data leak determination. Operational Oct11 report says1am delayed restoration versus Oct14 summary saying Oct10; discrepancy retained. Search functions planned lateOct, not fully restored.",
+      "extractedBodyReceiptSha256": "4b091efcb15f6149ad4297889ee5de6420a04c23f7a82cbc2624580c3b1d0de7",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "arcadia-speecan-raiden-2026",
+      "url": "https://raiden.site.ktaiwork.jp/archives/4597",
+      "publishedDate": "2026-10-13",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "same_incident_enrichment",
+      "finding": "Oct14 expansion to NET119 max13000 records and119RAIDEN email97000/phone17000/fax400.16:00 excludes fs119.speecan.jp/119r.speecan.jp;17:12 excludes video calls. Original two-service outage distinct from added operating services.",
+      "extractedBodyReceiptSha256": "51ca4b944737a6c3912eb4222a20c99d9d5e34eeb1bb3ff74687e8f39beeaf52",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "commune-2026",
+      "url": "https://mixi.co.jp/news/2026/1014/58033/",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "same_incident_enrichment",
+      "finding": "MIXI750 possible people,749 email subset; Mazda max4103 including operators; Unirita max1169 still confirming despite report of viewing/acquisition. All merged, no addition to provider total.",
+      "extractedBodyReceiptSha256": "63a30a43cb6ea43f802ef40c3565f09a4b98e326b6c51feb5afad4546009bbd0",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "commune-2026",
+      "url": "https://newsroom.mazda.com/ja/publicity/release/2026/202610/261014a.pdf",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "same_incident_enrichment",
+      "finding": "MIXI750 possible people,749 email subset; Mazda max4103 including operators; Unirita max1169 still confirming despite report of viewing/acquisition. All merged, no addition to provider total.",
+      "extractedBodyReceiptSha256": "ea948cc6bc388384370f9270bf733f9578c79c394e6f612f20a8d28960930f9b",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "commune-2026",
+      "url": "https://www.unirita.co.jp/news/2026/media_20261013.html",
+      "publishedDate": "2026-10-13",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "same_incident_enrichment",
+      "finding": "MIXI750 possible people,749 email subset; Mazda max4103 including operators; Unirita max1169 still confirming despite report of viewing/acquisition. All merged, no addition to provider total.",
+      "extractedBodyReceiptSha256": "020296d252f60edfa330e096e54280d3b241a1ebb6f49b89e888e42bd4dc7c50",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "idc-frontier-2026",
+      "url": "https://www.idcf.jp/news/topics/20261014001",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "same_incident_enrichment",
+      "finding": "Fifth report: no exfiltration of4-zone VM data judged;194 of495 customers can retrieve snapshot backups, restoration not guaranteed. Portal48companies queried,2 emails may include personal names, external transfer unconfirmed. SB C&S own no-leak judgment versus Peach John same-day possibility retained by scope.",
+      "extractedBodyReceiptSha256": "b52924d25a85ae5f3d49a9e43c21642bf28ea23f02401c9f4026723f37315348",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "idc-frontier-2026",
+      "url": "https://cas.softbank.jp/information/261007_01/",
+      "publishedDate": "2026-10-07",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "same_incident_enrichment",
+      "finding": "Fifth report: no exfiltration of4-zone VM data judged;194 of495 customers can retrieve snapshot backups, restoration not guaranteed. Portal48companies queried,2 emails may include personal names, external transfer unconfirmed. SB C&S own no-leak judgment versus Peach John same-day possibility retained by scope.",
+      "extractedBodyReceiptSha256": "c016c2023c99a8e147616aa1e3fa5190439e46e34f8883845c6d277276f51c95",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "idc-frontier-2026",
+      "url": "https://www.peachjohn.co.jp/information/detail/137",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "same_incident_enrichment",
+      "finding": "Fifth report: no exfiltration of4-zone VM data judged;194 of495 customers can retrieve snapshot backups, restoration not guaranteed. Portal48companies queried,2 emails may include personal names, external transfer unconfirmed. SB C&S own no-leak judgment versus Peach John same-day possibility retained by scope.",
+      "extractedBodyReceiptSha256": "04fb173fe7f6637396fc4de230e249657466a64111af865aceae53dc93d9c11f",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    },
+    {
+      "incidentId": "gmo-infoq-2026",
+      "url": "https://gmo-research.ai/pressroom/notice/notice-20261014",
+      "publishedDate": "2026-10-14",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Complete official body read through web extraction; reviewed against data entry",
+      "classification": "same_incident_enrichment",
+      "finding": "Second report finalizes894082 personal-data records exported;9068 exported records without personal data and45348 unexported records explain old948498 maximum.611point exchanges/JPY2869500 unchanged; Oct7 password invalidation and ongoing stop.",
+      "extractedBodyReceiptSha256": "b129fbc356c7014e67597bd2fc1b1932907bb763d26fdf13d51b47da90b4b748",
+      "receiptNote": "Hash of retained full web-tool extraction, not raw HTTP response bytes; official open-result body read."
+    }
+  ],
+  "classificationChecks": [
+    {
+      "entityId": "aena",
+      "url": "https://www.aena.co.jp/summary/",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Official body read",
+      "finding": "Entity business/identity checked; standalone listing only confirmed for Medley; Aena and TOPPAN Payments unknown"
+    },
+    {
+      "entityId": "aena",
+      "url": "https://www.aena.co.jp/news/detail/7826/",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Official body read",
+      "finding": "Entity business/identity checked; standalone listing only confirmed for Medley; Aena and TOPPAN Payments unknown"
+    },
+    {
+      "entityId": "medley",
+      "url": "https://at-link.net/",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Official body read",
+      "finding": "Entity business/identity checked; standalone listing only confirmed for Medley; Aena and TOPPAN Payments unknown"
+    },
+    {
+      "entityId": "medley",
+      "url": "https://www.medley.jp/ir/stock/",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Official body read",
+      "finding": "Entity business/identity checked; standalone listing only confirmed for Medley; Aena and TOPPAN Payments unknown"
+    },
+    {
+      "entityId": "toppan-payments",
+      "url": "https://thincacloud.toppan.com/",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Official body read",
+      "finding": "Entity business/identity checked; standalone listing only confirmed for Medley; Aena and TOPPAN Payments unknown"
+    },
+    {
+      "entityId": "toppan-payments",
+      "url": "https://thincacloud.toppan.com/newsrelease/20260302/",
+      "checkedAt": "2026-10-14T22:52:22.484564+00:00",
+      "method": "Official body read",
+      "finding": "Entity business/identity checked; standalone listing only confirmed for Medley; Aena and TOPPAN Payments unknown"
+    }
+  ],
+  "unchanged": [
+    {
+      "url": "https://communeinc.com/ja/news/2026oct09",
+      "checkedAt": "2026-10-14T22:50:55.237695+00:00",
+      "httpStatus": 200,
+      "bytes": 73362,
+      "sha256": "564f6281dd7f4ee11dcb5d6726b33126d3d4f20720d9a4ab2780913cafacdb9d",
+      "finding": "Official response bytes identical to October14 audit; no provider totals changed"
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://www.idcf.jp/news/topics/20261014001",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "Official text subsequently verified through web extraction"
+    },
+    {
+      "url": "https://raiden.site.ktaiwork.jp/archives/4597",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "Official text subsequently verified through web extraction"
+    },
+    {
+      "url": "https://cas.softbank.jp/information/261007_01/",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "Official text subsequently verified through web extraction"
+    },
+    {
+      "url": "https://communeinc.com/ja/news/2026oct09",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "No record verification date advanced from this failed retrieval"
+    },
+    {
+      "url": "https://company.golfdigest.co.jp/brand/news/2026101301.html",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "No record verification date advanced from this failed retrieval"
+    },
+    {
+      "url": "https://www.rideonexpresshd.co.jp/news/2026/10/3-33.html",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "No record verification date advanced from this failed retrieval"
+    },
+    {
+      "url": "https://ssl4.eir-parts.net/doc/9278/ir_material10/287328/00.pdf",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "No record verification date advanced from this failed retrieval"
+    },
+    {
+      "url": "https://www.lawson.co.jp/contents/cont07/1533174_3310.html",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "No record verification date advanced from this failed retrieval"
+    },
+    {
+      "url": "https://www2.sagawa-exp.co.jp/sagawa_xml/importance/importance_detail_426.xml",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "No record verification date advanced from this failed retrieval"
+    },
+    {
+      "url": "https://gmo-research.ai/pressroom/notice/notice-20261014",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "Official text subsequently verified through web extraction"
+    },
+    {
+      "url": "https://www.unirita.co.jp/news/2026/media_20261014.html",
+      "result": "<urlopen error timed out>",
+      "method": "Direct urllib GET",
+      "handling": "No record verification date advanced from this failed retrieval"
+    }
+  ],
+  "discoveryOnly": {
+    "urls": [
+      "https://rouei-watch.com/",
+      "https://smartscope.blog/blog/japan-data-breach-list-tier-2026-09-10/",
+      "https://scan.netsecurity.ne.jp/category/incident/incident/2026/10/"
+    ],
+    "handling": "Discovery only; included facts independently checked in official bodies"
+  },
+  "limits": [
+    "Not all historical source URLs were re-read. Unread source and incident verification dates retained.",
+    "Unirita /media_20261014.html candidate unreadable; official index links October13 disclosure, read and merged into Commune. No October14 publication invented.",
+    "TOPPAN restoration dates disagree between operational report and corporate summary; explicit caveat retains both.",
+    "No new overseas subsidiary incident verified in this selected pass; absence is not evidence of no incident.",
+    "Some direct GETs timed out. Successful complete web body recovery recorded without inventing response hashes.",
+    "Medley suspended functions do not establish leaked medical fields; suspected access remains possible and data impact investigating.",
+    "IDCF VM no-leak judgment and portal unauthorized query are separate. Historical customer possibility counts retained as historical, not current confirmed leak totals."
+  ],
+  "auditPolicy": "Hashes only for bytes actually retrieved; UTC review timestamps separate from source publication dates and JST audit date. Raw caches remain outside repository.",
+  "formattingNote": "Two long incident source arrays and Commune count rows use one JSON object per line; decoded data unchanged, existing quality gate retained."
+}

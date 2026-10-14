@@ -1,0 +1,117 @@
+{
+  "ghsa_id": "GHSA-w44r-93j7-qv28",
+  "cve_id": null,
+  "url": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-w44r-93j7-qv28",
+  "html_url": "https://github.com/rustls/rustls/security/advisories/GHSA-w44r-93j7-qv28",
+  "summary": "An unauthenticated ServerHello poisons the per-name key-exchange record, so later ClientHellos carry only a classical X25519 share",
+  "description": "## Summary\r\n\r\nThe client records the server-selected key-exchange group per server name when it processes the ServerHello, before the server is authenticated. A network attacker can answer one connection attempt for a target name with a ServerHello that selects X25519 and close the connection. Later ClientHellos for that name carry one X25519 share while supported_groups still lists X25519MLKEM768 first. If the server accepts that share instead of sending a HelloRetryRequest, the handshake completes with classical key exchange only and no error.\r\n\r\nAn attacker that answers one connection attempt for the target name with a ServerHello selecting X25519 changes every later ClientHello of that client for that name, for as long as the entry stays in the store. No certificate or completed handshake is needed: it parses the ClientHello, sends the ServerHello, and closes.\r\n\r\nTLS 1.3 transcript binding stops an on-path attacker from editing the ClientHello of one connection. It does not stop the attacker from steering the client's prediction state beforehand, because that state is written from an unauthenticated message.\r\n\r\n## What does not trigger it\r\n\r\n- Servers that send a HelloRetryRequest. The connection stays hybrid and costs one extra round trip.\r\n- A client configuration with resumption disabled: nothing is stored.\r\n- A different server name: the record is per name.\r\n\r\n## Impact\r\n\r\nIf the genuine server picks the group for which a share is present, instead of sending a HelloRetryRequest for its preferred hybrid group, the handshake completes with classical key exchange only, between two peers that both support the hybrid group. No error is raised. The confidentiality of recorded sessions against a future quantum adversary is lost for those connections (harvest now, decrypt later). There is no key compromise and no authentication bypass.\r\n\r\nNote that this behaviour is discussed at length in [draft-ietf-tls-key-share-prediction](https://www.ietf.org/archive/id/draft-ietf-tls-key-share-prediction-01.html#name-security-considerations) so the actual security impact is largely down to a server policy decision.",
+  "severity": "low",
+  "author": null,
+  "publisher": {
+    "login": "ctz",
+    "id": 579363,
+    "node_id": "MDQ6VXNlcjU3OTM2Mw==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/579363?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ctz",
+    "html_url": "https://github.com/ctz",
+    "followers_url": "https://api.github.com/users/ctz/followers",
+    "following_url": "https://api.github.com/users/ctz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ctz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ctz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ctz/subscriptions",
+    "organizations_url": "https://api.github.com/users/ctz/orgs",
+    "repos_url": "https://api.github.com/users/ctz/repos",
+    "events_url": "https://api.github.com/users/ctz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ctz/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-w44r-93j7-qv28",
+      "type": "GHSA"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-10-14T09:55:05Z",
+  "published_at": "2026-10-14T09:55:05Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "rust",
+        "name": "rustls"
+      },
+      "vulnerable_version_range": "< 0.23.46",
+      "patched_versions": ">= 0.23.46, >= 0.24.0-dev.2",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "score": 3.7
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-757",
+      "name": "Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-757"
+  ],
+  "credits": [
+    {
+      "login": "Adam010341",
+      "type": "reporter"
+    }
+  ],
+  "credits_detailed": [
+    {
+      "user": {
+        "login": "Adam010341",
+        "id": 180733882,
+        "node_id": "U_kgDOCsXHug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/180733882?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Adam010341",
+        "html_url": "https://github.com/Adam010341",
+        "followers_url": "https://api.github.com/users/Adam010341/followers",
+        "following_url": "https://api.github.com/users/Adam010341/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Adam010341/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Adam010341/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Adam010341/subscriptions",
+        "organizations_url": "https://api.github.com/users/Adam010341/orgs",
+        "repos_url": "https://api.github.com/users/Adam010341/repos",
+        "events_url": "https://api.github.com/users/Adam010341/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Adam010341/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "type": "reporter",
+      "state": "accepted"
+    }
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 4,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "score": 3.7
+  }
+}
