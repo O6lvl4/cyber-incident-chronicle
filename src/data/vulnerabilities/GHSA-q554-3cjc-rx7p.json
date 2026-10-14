@@ -1,0 +1,116 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-q554-3cjc-rx7p",
+  "aliases": [
+    "RUSTSEC-2026-0363"
+  ],
+  "title": "Wasmtime：コンポーネントハンドルによるホストメモリ上限の迂回",
+  "summary": "コンポーネントのハンドル表がインスタンス単位でしか制限されず、通常のメモリ・テーブル制限にも計上されないため、ゲストがホストメモリを増大させられる。修正版はStore全体の生存ハンドル数制限を導入する。",
+  "publishedAt": "2026-10-14T12:00:00Z",
+  "modifiedAt": "2026-10-14T20:30:02.540760961Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T23:09:03.560882Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0363",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 36.0.18",
+          "fixed": "36.0.18",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0363.md"
+        },
+        {
+          "affected": ">= 37.0.0, < 48.0.6",
+          "fixed": "48.0.6",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0363.md"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.3",
+          "fixed": "49.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0363.md"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "36.0.18"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "48.0.6"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.2,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0363",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0363",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T12:00:00Z",
+      "modifiedAt": "2026-10-14T20:30:02.540760961Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0363",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0363.md",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T17:25:27Z",
+      "modifiedAt": "2026-10-14T17:25:27Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "影響範囲と系列別修正境界はRustSec公式固定ソースとOSVの原文を保持する。修正版は現在のすべての脆弱性に対する安全性を保証しない。",
+    "公表・更新日時はOSVのデータベース日時。開発元の初回公表日時と更新日時は出典ごとに別保存する。",
+    "CVSSは開発元公表の点数・ベクトルで独自計算しない。脆弱性公表は実悪用や企業被害の確認ではない。CISA KEVの最新掲載状況は未確認。"
+  ]
+}

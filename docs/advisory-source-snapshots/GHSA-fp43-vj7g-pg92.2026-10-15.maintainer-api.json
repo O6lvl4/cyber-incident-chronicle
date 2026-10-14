@@ -1,0 +1,148 @@
+{
+  "ghsa_id": "GHSA-fp43-vj7g-pg92",
+  "cve_id": "CVE-2026-102695",
+  "url": "https://api.github.com/repos/omnifaces/omnifaces/security-advisories/GHSA-fp43-vj7g-pg92",
+  "html_url": "https://github.com/omnifaces/omnifaces/security/advisories/GHSA-fp43-vj7g-pg92",
+  "summary": "Forged combined resource IDs are accepted without authenticity check",
+  "description": "### Summary\n\n`CombinedResourceHandler` serves a combined resource for any structurally valid ID presented in the URL, without distinguishing a server issued ID from an attacker minted one. A forged ID can exhaust memory through decompression amplification, grow a process lifetime cache without bound, and name inner resources which the handler is never meant to serve, including Facelets files and dynamic resources.\n\n### Details\n\nA combined resource ID is a deflated and base64 encoded list of resource identifiers. It travels in the URL and is decoded at serve time. Nothing binds it to the deployment which issued it, so any structurally valid ID is honored.\n\nThree consequences follow from that one root cause:\n\n**Decompression amplification.** Decoding had no output limit. A 5 KB forged ID inflates to 2,000,000 characters, a ratio of roughly 380:1, with each request holding the result in memory.\n\n**Unbounded cache growth.** The serve path cached every distinct reconstructed ID in a static map with no eviction, so each unique forged ID left a permanent entry.\n\n**Disclosure of resources which may not be served directly.** Reconstructed identifiers were resolved through `ResourceHandler.createResource` and streamed into the combined response without checking what kind of resource they name. `jakarta.faces.RESOURCE_EXCLUDES`, whose default value includes `.xhtml`, is by specification consulted only by `ResourceHandler.handleResourceRequest`, and it cannot be enforced in `createResource` because that is also how composite components are resolved. A resource handler which resolves and streams resources itself therefore has to apply that policy itself, and this one did not. A forged ID naming an `.xhtml` under `/resources` or `META-INF/resources` returns its raw source. Composite components are the practical case, since every one of them is an `.xhtml` in that tree.\n\nDisclosure is bounded to what the Faces resource pipeline can resolve: the webapp resource tree and `META-INF/resources` in JARs on the classpath. It is not arbitrary file read.\n\nA forged ID naming a dynamic resource such as `omnifaces.graphic` additionally reaches that handler, which in a deployment configured with the wildcard CDN mapping performs a server side fetch whose destination derives in part from the request `Host` header. That behavior is blind and deployment dependent; arbitrary scheme or arbitrary destination SSRF is not claimed.\n\nThe amplification, the cache growth and the acceptance of non-combinable resources reproduce on 5.4.1 and are closed on 5.4.2.\n\nThis is a distinct root cause from CVE-2026-41883 / GHSA-vp6r-9m58-5xv8, which concerned EL evaluation order in the wildcard CDN path. These behaviors reproduce after that fix.\n\n### Why this is one vulnerability\n\nThe three consequences above are not independently fixable. They share a single root cause and a single fix: the handler accepted an ID it did not issue and then acted on its contents. Bounding decoding alone still leaves forged IDs selecting arbitrary inner resources; gating the resource type alone still leaves the amplification and the cache. The fix is one commit which closes the serve path as a whole, and any one of the three mitigations in isolation leaves the vulnerability exploitable.\n\n### Patches\n\nFixed by capping inflated output at 64 KiB, populating the info cache only from the render path so the serve path can no longer grow it, and serving a reconstructed ID only when every inner resource is a stylesheet or a script. That last gate is an allowlist, so Facelets files and dynamic resources are no longer reachable as inner resources of a combined resource regardless of how `jakarta.faces.RESOURCE_EXCLUDES` is configured.\n\nUpgrade to 1.14.3, 2.7.33, 3.14.23, 4.7.12 or 5.4.2.\n\n### Workarounds\n\nDisable `CombinedResourceHandler`.\n\n### Related advisories\n\nFour further weaknesses affecting the same releases are tracked separately, each with its own affected range and fix:\n\n- GHSA-7qfp-gggj-2fv4 — script injection through the URL fragment value of `o:hashParam`\n- GHSA-4w3g-h8rh-9hwj — session and view scoped WebSocket push channels not bound to their owning HTTP session\n- GHSA-w3w6-9m25-g88p — the same weakness on the SSE transport, fixed in 5.4.3\n- GHSA-3r7q-f6gv-vv3q — unbounded source map cache\n\n### Credits\n\nReported by Daniel Birtwhistle.\n",
+  "severity": "high",
+  "author": null,
+  "publisher": {
+    "login": "BalusC",
+    "id": 173372,
+    "node_id": "MDQ6VXNlcjE3MzM3Mg==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/173372?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/BalusC",
+    "html_url": "https://github.com/BalusC",
+    "followers_url": "https://api.github.com/users/BalusC/followers",
+    "following_url": "https://api.github.com/users/BalusC/following{/other_user}",
+    "gists_url": "https://api.github.com/users/BalusC/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/BalusC/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/BalusC/subscriptions",
+    "organizations_url": "https://api.github.com/users/BalusC/orgs",
+    "repos_url": "https://api.github.com/users/BalusC/repos",
+    "events_url": "https://api.github.com/users/BalusC/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/BalusC/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-fp43-vj7g-pg92",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-102695",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-09-29T17:25:12Z",
+  "published_at": "2026-07-23T17:15:08Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "maven",
+        "name": "org.omnifaces:omnifaces"
+      },
+      "vulnerable_version_range": "< 1.14.3",
+      "patched_versions": "1.14.3",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "maven",
+        "name": "org.omnifaces:omnifaces"
+      },
+      "vulnerable_version_range": ">= 2.0, < 2.7.33",
+      "patched_versions": "2.7.33",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "maven",
+        "name": "org.omnifaces:omnifaces"
+      },
+      "vulnerable_version_range": ">= 3.0, < 3.14.23",
+      "patched_versions": "3.14.23",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "maven",
+        "name": "org.omnifaces:omnifaces"
+      },
+      "vulnerable_version_range": ">= 4.0, < 4.7.12",
+      "patched_versions": "4.7.12",
+      "vulnerable_functions": [
+
+      ]
+    },
+    {
+      "package": {
+        "ecosystem": "maven",
+        "name": "org.omnifaces:omnifaces"
+      },
+      "vulnerable_version_range": ">= 5.0, < 5.4.2",
+      "patched_versions": "5.4.2",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+      "score": 8.2
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-345",
+      "name": "Insufficient Verification of Data Authenticity"
+    },
+    {
+      "cwe_id": "CWE-409",
+      "name": "Improper Handling of Highly Compressed Data (Data Amplification)"
+    },
+    {
+      "cwe_id": "CWE-552",
+      "name": "Files or Directories Accessible to External Parties"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-345",
+    "CWE-409",
+    "CWE-552"
+  ],
+  "credits": [
+
+  ],
+  "credits_detailed": [
+
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 2,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+    "score": 8.2
+  }
+}

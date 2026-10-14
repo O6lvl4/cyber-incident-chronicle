@@ -1,0 +1,72 @@
+{
+  "id": "aena-ec-app-2026",
+  "company": "アエナ（ECアプリ）",
+  "title": "ECアプリの会員マイページを不正閲覧、最大81万7,215人に影響の可能性",
+  "announcementDate": "2026-10-14",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表",
+  "updatedDate": "2026-10-14",
+  "statusAsOfDate": "2026-10-14",
+  "lastVerifiedDate": "2026-10-15",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "ログ解析で10月13日5時58分に会員マイページの不正閲覧が判明。閲覧された可能性のある本会員は最大817,215人で、ECサイトへのアクセスを遮断して調査・改修中。",
+  "affectedData": [
+    "氏名、フリガナ、住所、電話番号、メールアドレス、生年月日、性別、職業",
+    "第三者宛を含む配送先の住所・氏名・電話番号",
+    "お気に入り店舗、メール配信設定",
+    "登録済みカードの下4桁、有効期限、名義"
+  ],
+  "counts": [
+    {
+      "value": 817215,
+      "unit": "人",
+      "status": "possible",
+      "label": "閲覧された可能性のあるアプリ本会員の最大人数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "最大817,215人（閲覧範囲は可能性）",
+  "caveats": [
+    "不正閲覧の発生自体は確認済みだが、817,215人全員の情報閲覧・取得を確認した数値ではない。確認状況は公表された対象範囲に合わせ可能性とする",
+    "10月13日5時58分はログ解析で判明した日時であり、攻撃開始時刻ではない",
+    "LINE会員、Amazon・楽天等の利用者は対象外",
+    "カード番号全桁・セキュリティコードは保有せず、ログインパスワードの閲覧・流出も否定。下4桁等とは区別する",
+    "会員情報変更・退会・購入確定操作は未実施と確認。二次被害は公表時点で未確認",
+    "機械的な連続アクセスとの説明だけから脆弱性・認証情報悪用等の侵入手法を断定しない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "アエナ：ECアプリの不正閲覧と対象範囲",
+      "url": "https://www.aena.co.jp/news/detail/7826/",
+      "publishedDate": "2026-10-14"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-13",
+      "label": "不正閲覧の判明",
+      "kind": "occurrence",
+      "summary": "5時58分、システムログ解析で会員マイページの不正閲覧が判明",
+      "sourceUrl": "https://www.aena.co.jp/news/detail/7826/"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "対象範囲とアクセス遮断を公表",
+      "kind": "disclosure",
+      "summary": "最大817,215人の閲覧可能性と除外情報、ECサイトのアクセス遮断を公表",
+      "sourceUrl": "https://www.aena.co.jp/news/detail/7826/"
+    }
+  ],
+  "detectedDate": "2026-10-13"
+}

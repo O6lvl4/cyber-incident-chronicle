@@ -1,14 +1,14 @@
 {
   "id": "arcadia-speecan-raiden-2026",
-  "company": "アルカディア（SpeeCAN RAIDEN・ライデン・スクール）",
+  "company": "アルカディア（SpeeCAN RAIDEN・NET119・119RAIDEN等）",
   "title": "一斉配信基盤への不正アクセス、連絡先・配信本文に漏えいの可能性",
   "announcementDate": "2026-10-13",
   "announcementDateLabel": "収録した公表日",
   "occurredDate": null,
   "occurredDateLabel": "侵入開始日は未公表",
-  "updatedDate": "2026-10-13",
-  "statusAsOfDate": "2026-10-13",
-  "lastVerifiedDate": "2026-10-14",
+  "updatedDate": "2026-10-14",
+  "statusAsOfDate": "2026-10-14",
+  "lastVerifiedDate": "2026-10-15",
   "impactTypes": [
     "leak",
     "outage",
@@ -19,10 +19,12 @@
     "label": "具体的な侵入手法は未公表",
     "status": "unknown"
   },
-  "summary": "10月11日に不審な挙動を確認し、12日に応急遮断。13日に一部サービスを緊急停止し、連絡先や配信履歴本文の漏えい可能性を公表した。最大件数は推計で調査中。",
+  "summary": "10月11日に不審な挙動を確認し、13日に一部配信サービスを停止。14日にNET119・119RAIDENでも侵入形跡と漏えい可能性を公表し、一部URLと映像通報を対象外に訂正した。項目別最大推計は合算しない。",
   "affectedData": [
     "登録された連絡先・担当者・契約者情報（名前、メールアドレス、電話・FAX番号）",
-    "配信履歴として保存された本文の内容"
+    "配信履歴として保存された本文の内容",
+    "NET119：利用者の名前、生年月日、性別、住所、電話番号、メールアドレス、FAX番号、他サービス登録時に入力した情報",
+    "119RAIDEN：連絡先の名前・メール・電話・FAX、担当者・契約情報、保存された配信本文"
   ],
   "counts": [
     {
@@ -45,15 +47,47 @@
       "status": "possible",
       "label": "FAX番号の漏えい可能性がある最大推定件数",
       "approximate": true
+    },
+    {
+      "value": 13000,
+      "unit": "件",
+      "status": "possible",
+      "label": "NET119の漏えい可能性がある最大件数",
+      "approximate": true
+    },
+    {
+      "value": 97000,
+      "unit": "件",
+      "status": "possible",
+      "label": "119RAIDENのメールアドレスの最大件数",
+      "approximate": true
+    },
+    {
+      "value": 17000,
+      "unit": "件",
+      "status": "possible",
+      "label": "119RAIDENの電話番号の最大件数",
+      "approximate": true
+    },
+    {
+      "value": 400,
+      "unit": "件",
+      "status": "possible",
+      "label": "119RAIDENのFAX番号の最大件数",
+      "approximate": true
     }
   ],
-  "scaleLabel": "最大推計：メール約313.6万件／電話約10.5万件／FAX約1.5万件（合算しない）",
+  "scaleLabel": "サービス・項目別の最大推計件数（重複不明、合算しない）",
   "caveats": [
     "各値は連絡先項目別の最大推計件数で、確定漏えい人数や重複を除く人数ではない。項目間や自治体別公表を合算しない",
-    "流出可能性の調査対象は公式に列挙された6サービス。緊急停止はraiden3.ktaiwork.jpとs2.ktaiwork.jpの利用者が対象で、全サービス停止とはしない",
+    "10月13日の調査対象は列挙された6サービス。14日にNET119・119RAIDENが追加された。緊急停止対象2サービスと調査対象全体を混同しない",
     "停止していないサービスで不正プログラムが設定されていないとの確認は、全情報の漏えい否定を意味しない",
     "クレジットカード等の決済情報は取り扱っておらず対象外。10月13日時点で復旧日時は未定",
-    "自治体・学校等の利用組織の影響は同じ提供元事案に含め、独立した攻撃件数にしない"
+    "自治体・学校等の利用組織の影響は同じ提供元事案に含め、独立した攻撃件数にしない",
+    "10月14日16時更新でfs119.speecan.jpと119r.speecan.jpを対象外に訂正。119RAIDENの対象はfs119.ktaiwork.jp",
+    "NET119の対象はnet119.speecan.jpとnet119fd.speecan.jp。17時12分更新で映像通報は現時点で漏えい可能性なしと明記",
+    "10月14日追加対象のNET119・119RAIDENは同日時点で停止を検討しておらず通常利用可能。既に停止した2サービスの復旧を意味しない",
+    "追加の各数値も件単位の最大値であり、人数・確定漏えい数ではない"
   ],
   "geography": "日本",
   "sources": [
@@ -63,7 +97,7 @@
       "publishedDate": "2026-10-13"
     },
     {
-      "title": "SpeeCAN RAIDEN公式：対象情報と最大推定件数（18時47分更新）",
+      "title": "SpeeCAN RAIDEN公式：最大推計件数とNET119・119RAIDEN追加、対象外訂正（10月14日17時12分更新）",
       "url": "https://raiden.site.ktaiwork.jp/archives/4597",
       "publishedDate": "2026-10-13"
     },
@@ -101,6 +135,13 @@
       "kind": "update",
       "summary": "11時から対象2サービスを停止。復旧日時は未定",
       "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4601"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "NET119・119RAIDENの範囲を追加",
+      "kind": "update",
+      "summary": "15時に追加サービスの侵入形跡と漏えい可能性を公表。16時に2つのURLを除外、17時12分に映像通報を対象外と明記",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597"
     }
   ],
   "detectedDate": "2026-10-11"

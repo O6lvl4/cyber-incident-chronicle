@@ -1,0 +1,116 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m9f7-9w4p-gv38",
+  "aliases": [
+    "RUSTSEC-2026-0352"
+  ],
+  "title": "Wasmtime：末尾スラッシュ付きシンボリックリンクの改名によるサンドボックス逸脱",
+  "summary": "macOSとFreeBSDで、書き込み可能なゲストが末尾スラッシュ付きシンボリックリンクを改名し、ホストからアクセス可能な外部ディレクトリをサンドボックス内へ移動して読み書きできる。LinuxとWindowsは対象外。",
+  "publishedAt": "2026-10-14T12:00:00Z",
+  "modifiedAt": "2026-10-14T20:30:02.524338627Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T23:09:03.560882Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0352",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime-wasi",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 36.0.18",
+          "fixed": "36.0.18",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime-wasi/RUSTSEC-2026-0352.md"
+        },
+        {
+          "affected": ">= 37.0.0, < 48.0.6",
+          "fixed": "48.0.6",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime-wasi/RUSTSEC-2026-0352.md"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.3",
+          "fixed": "49.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime-wasi/RUSTSEC-2026-0352.md"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "36.0.18"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "48.0.6"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime-wasi"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.8,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:L/SC:H/SI:H/SA:L",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0352",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0352",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T12:00:00Z",
+      "modifiedAt": "2026-10-14T20:30:02.524338627Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0352",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime-wasi/RUSTSEC-2026-0352.md",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T17:23:56Z",
+      "modifiedAt": "2026-10-14T17:23:56Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "影響範囲と系列別修正境界はRustSec公式固定ソースとOSVの原文を保持する。修正版は現在のすべての脆弱性に対する安全性を保証しない。",
+    "公表・更新日時はOSVのデータベース日時。開発元の初回公表日時と更新日時は出典ごとに別保存する。",
+    "CVSSは開発元公表の点数・ベクトルで独自計算しない。脆弱性公表は実悪用や企業被害の確認ではない。CISA KEVの最新掲載状況は未確認。"
+  ]
+}

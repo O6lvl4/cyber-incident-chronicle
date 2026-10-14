@@ -1,0 +1,105 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-p79w-pv2r-29qp",
+  "aliases": [
+    "RUSTSEC-2026-0364"
+  ],
+  "title": "Wasmtime：例外タグによる内部データ構造の不整列",
+  "summary": "奇数個の例外タグを含むモジュールで内部VMContextのフィールドが不正なアラインメントとなり、Rustの未定義動作が発生する。例外機能を有効にした構成が対象で、開発元は公表時点で具体的な悪用方法を把握していない。",
+  "publishedAt": "2026-10-14T12:00:00Z",
+  "modifiedAt": "2026-10-14T20:30:03.597701258Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T23:09:03.560882Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0364",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 47.0.0, < 48.0.6",
+          "fixed": "48.0.6",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0364.md"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.3",
+          "fixed": "49.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0364.md"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "47.0.0"
+            },
+            {
+              "fixed": "48.0.6"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-p79w-pv2r-29qp",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 2.1,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-p79w-pv2r-29qp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0364",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0364",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T12:00:00Z",
+      "modifiedAt": "2026-10-14T20:30:03.597701258Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0364",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/edb58f5974b83eb8302332821cb6d389777aa351/crates/wasmtime/RUSTSEC-2026-0364.md",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-p79w-pv2r-29qp",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T17:25:12Z",
+      "modifiedAt": "2026-10-14T17:25:13Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "影響範囲と系列別修正境界はRustSec公式固定ソースとOSVの原文を保持する。修正版は現在のすべての脆弱性に対する安全性を保証しない。",
+    "公表・更新日時はOSVのデータベース日時。開発元の初回公表日時と更新日時は出典ごとに別保存する。",
+    "CVSSは開発元公表の点数・ベクトルで独自計算しない。脆弱性公表は実悪用や企業被害の確認ではない。CISA KEVの最新掲載状況は未確認。"
+  ]
+}

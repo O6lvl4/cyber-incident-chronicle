@@ -1,0 +1,126 @@
+{
+  "ghsa_id": "GHSA-xpf3-p7gm-7756",
+  "cve_id": "CVE-2026-14966",
+  "url": "https://api.github.com/repos/blacklanternsecurity/bbot/security-advisories/GHSA-xpf3-p7gm-7756",
+  "html_url": "https://github.com/blacklanternsecurity/bbot/security/advisories/GHSA-xpf3-p7gm-7756",
+  "summary": "Symlink guard bypass in unarchive module allows planting symlinks during extraction",
+  "description": "BBOT's `unarchive` module rejects archives containing symlink entries before extraction, but for zip and 7z archives it failed to detect symlinks whose listing carries a DOS-attribute prefix before the unix mode, as produced by legacy versions of p7zip. Such an archive, downloaded and extracted during a scan (for example via `filedownload`), bypassed the guard and caused an attacker-controlled symlink to be written into the extraction directory. The effect is limited to planting the symlink (its target is not written through), and only hosts using such a legacy p7zip build are affected; current mainline 7-Zip is not.",
+  "severity": "low",
+  "author": null,
+  "publisher": {
+    "login": "liquidsec",
+    "id": 24899338,
+    "node_id": "MDQ6VXNlcjI0ODk5MzM4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/24899338?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/liquidsec",
+    "html_url": "https://github.com/liquidsec",
+    "followers_url": "https://api.github.com/users/liquidsec/followers",
+    "following_url": "https://api.github.com/users/liquidsec/following{/other_user}",
+    "gists_url": "https://api.github.com/users/liquidsec/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/liquidsec/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/liquidsec/subscriptions",
+    "organizations_url": "https://api.github.com/users/liquidsec/orgs",
+    "repos_url": "https://api.github.com/users/liquidsec/repos",
+    "events_url": "https://api.github.com/users/liquidsec/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/liquidsec/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-xpf3-p7gm-7756",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-14966",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-07-08T15:13:11Z",
+  "published_at": "2026-07-08T15:13:10Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "bbot"
+      },
+      "vulnerable_version_range": "<= 2.8.6",
+      "patched_versions": "3.0",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+      "score": 3.1
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-22",
+      "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    },
+    {
+      "cwe_id": "CWE-59",
+      "name": "Improper Link Resolution Before File Access ('Link Following')"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-22",
+    "CWE-59"
+  ],
+  "credits": [
+    {
+      "login": "tonghuaroot",
+      "type": "reporter"
+    }
+  ],
+  "credits_detailed": [
+    {
+      "user": {
+        "login": "tonghuaroot",
+        "id": 23011166,
+        "node_id": "MDQ6VXNlcjIzMDExMTY2",
+        "avatar_url": "https://avatars.githubusercontent.com/u/23011166?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/tonghuaroot",
+        "html_url": "https://github.com/tonghuaroot",
+        "followers_url": "https://api.github.com/users/tonghuaroot/followers",
+        "following_url": "https://api.github.com/users/tonghuaroot/following{/other_user}",
+        "gists_url": "https://api.github.com/users/tonghuaroot/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/tonghuaroot/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/tonghuaroot/subscriptions",
+        "organizations_url": "https://api.github.com/users/tonghuaroot/orgs",
+        "repos_url": "https://api.github.com/users/tonghuaroot/repos",
+        "events_url": "https://api.github.com/users/tonghuaroot/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/tonghuaroot/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "type": "reporter",
+      "state": "accepted"
+    }
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 6,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+    "score": 3.1
+  }
+}

@@ -6,7 +6,7 @@
   "announcementDateLabel": "初報公表",
   "occurredDate": "2026-10-02",
   "occurredDateLabel": "調査で確認された不正アクセス開始日",
-  "updatedDate": "2026-10-05",
+  "updatedDate": "2026-10-14",
   "impactTypes": [
     "leak",
     "outage",
@@ -17,17 +17,17 @@
     "label": "サイトで利用するソフトウェアの脆弱性を悪用した侵入",
     "status": "confirmed"
   },
-  "summary": "infoQへの侵入で個人情報の持ち出しとポイントの不正交換を確認。10月3日に攻撃経路と外部アクセスを遮断し、サービスを停止した。対象上限は保有情報の全件に相当する。",
+  "summary": "10月14日第2報で個人情報の外部持ち出しを894,082件と確定。初報最大948,498件には、個人情報削除済みの9,068件と持ち出しのなかった45,348件が含まれていた。全会員のパスワードは10月7日に無効化し、サービス停止を継続。",
   "affectedData": [
     "氏名、フリガナ、連絡先、生年月日・性別、会員ID、暗号化されたパスワード",
     "ニックネーム、保有ポイント数、最終回答日などの登録・利用状況"
   ],
   "counts": [
     {
-      "value": 948498,
+      "value": 894082,
       "unit": "件",
-      "status": "possible",
-      "label": "漏えい対象の上限（10月5日時点の全保有個人情報）",
+      "status": "confirmed",
+      "label": "第2報で確定した個人情報の外部持ち出し件数",
       "approximate": false
     },
     {
@@ -43,15 +43,30 @@
       "status": "confirmed",
       "label": "不正交換されたポイント相当額",
       "approximate": false
+    },
+    {
+      "value": 9068,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "外部持ち出し記録のうち個人情報を含まない記録（個人情報漏えい数に加算しない）",
+      "approximate": false
+    },
+    {
+      "value": 45348,
+      "unit": "件",
+      "status": "noConfirmedLeak",
+      "label": "初報対象のうち外部に持ち出されていなかった記録",
+      "approximate": false
     }
   ],
-  "scaleLabel": "対象上限948,498件／不正交換611件",
+  "scaleLabel": "個人情報持ち出し894,082件／不正交換611件",
   "caveats": [
-    "情報持ち出しは確認済みだが、948,498件は最大値として公表された対象範囲",
+    "初報最大948,498件は旧値。第2報の個人情報持ち出し894,082件、個人情報を含まない持ち出し9,068件、持ち出されなかった45,348件に区分し、人数に読み替えない",
     "クレジットカード情報・マイナンバーは保有していない",
     "取引先情報は対象外。infoQ以外の同社サービスへの不正アクセスは未確認",
     "暗号化パスワードの方式・解読可否は本告知から確定できない",
-    "10月5日時点では調査継続中。交換されたポイントは全額補填すると公表"
+    "10月14日時点でも調査とサービス停止は継続。不正交換611件・2,869,500円の補填は再開時の方針であり、完了とはしない",
+    "9,068件は退会から2か月以上経過し個人情報が削除済みの記録。初報時の通知対象全員が漏えい対象だったわけではない"
   ],
   "geography": "日本のアンケートサイトinfoQ",
   "sources": [
@@ -59,6 +74,11 @@
       "title": "infoQへの不正アクセスによる個人情報漏えいに関するお詫びとお知らせ",
       "url": "https://gmo-research.ai/pressroom/notice/notice-20261005",
       "publishedDate": "2026-10-05"
+    },
+    {
+      "title": "GMOリサーチ＆AI：infoQ第2報、持ち出し件数確定とパスワード無効化",
+      "url": "https://gmo-research.ai/pressroom/notice/notice-20261014",
+      "publishedDate": "2026-10-14"
     }
   ],
   "timeline": [
@@ -82,8 +102,22 @@
       "kind": "disclosure",
       "summary": "対象範囲、不正交換、補填方針と委員会への報告を公表",
       "sourceUrl": "https://gmo-research.ai/pressroom/notice/notice-20261005"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "全会員パスワードを無効化",
+      "kind": "occurrence",
+      "summary": "全会員のパスワードを無効化したことを第2報で公表",
+      "sourceUrl": "https://gmo-research.ai/pressroom/notice/notice-20261014"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "第2報で個人情報件数を確定",
+      "kind": "update",
+      "summary": "894,082件の個人情報持ち出しを確定。個人情報を含まない記録と非持ち出し記録を区別",
+      "sourceUrl": "https://gmo-research.ai/pressroom/notice/notice-20261014"
     }
   ],
-  "lastVerifiedDate": "2026-10-08",
-  "statusAsOfDate": "2026-10-05"
+  "lastVerifiedDate": "2026-10-15",
+  "statusAsOfDate": "2026-10-14"
 }

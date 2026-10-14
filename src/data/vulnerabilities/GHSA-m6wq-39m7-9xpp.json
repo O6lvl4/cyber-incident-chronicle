@@ -1,0 +1,227 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m6wq-39m7-9xpp",
+  "aliases": [
+    "CVE-2026-62847"
+  ],
+  "title": "Metalama：共有一時ディレクトリへのDLL配置によるローカルコード実行",
+  "summary": "Linux/macOSの既定キャッシュで、他のローカル利用者が配置したDLLがビルド利用者の権限で読み込まれる可能性がある。FrameworkとToolの各系列は2025.1.18、2026.0.25、2026.1.19で修正。Windowsの既定構成は対象外。",
+  "publishedAt": "2026-10-14T19:24:53Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json",
+  "modifiedAt": "2026-10-14T19:24:53Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T23:01:04Z",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "Metalama.Framework",
+      "ranges": [
+        {
+          "affected": ">= 2026.1.0-preview, < 2026.1.19",
+          "fixed": "2026.1.19",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json"
+        },
+        {
+          "affected": "< 2025.1.18",
+          "fixed": "2025.1.18",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json"
+        },
+        {
+          "affected": ">= 2026.0.0-preview, < 2026.0.25",
+          "fixed": "2026.0.25",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2026.1.0-preview"
+            },
+            {
+              "fixed": "2026.1.19"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2025.1.18"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2026.0.0-preview"
+            },
+            {
+              "fixed": "2026.0.25"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "nuget",
+      "packageName": "Metalama.Tool",
+      "ranges": [
+        {
+          "affected": ">= 2026.1.0-preview, < 2026.1.19",
+          "fixed": "2026.1.19",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json"
+        },
+        {
+          "affected": "< 2025.1.18",
+          "fixed": "2025.1.18",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json"
+        },
+        {
+          "affected": ">= 2026.0.0-preview, < 2026.0.25",
+          "fixed": "2026.0.25",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2026.1.0-preview"
+            },
+            {
+              "fixed": "2026.1.19"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2025.1.18"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2026.0.0-preview"
+            },
+            {
+              "fixed": "2026.0.25"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/metalama/Metalama/security/advisories/GHSA-m6wq-39m7-9xpp",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.2,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/metalama/Metalama/security/advisories/GHSA-m6wq-39m7-9xpp"
+      },
+      {
+        "version": "4.0",
+        "score": 6.0,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:H/VA:L/SC:L/SI:H/SA:H",
+        "sourceUrl": "https://github.com/metalama/Metalama/security/advisories/GHSA-m6wq-39m7-9xpp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T19:24:53Z",
+      "modifiedAt": "2026-10-14T19:24:53Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Metalama allows local code execution through DLL planting in shared temporary directories",
+      "url": "https://github.com/advisories/GHSA-m6wq-39m7-9xpp",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元セキュリティアドバイザリ（本文・版・評価を個別確認）",
+      "url": "https://github.com/metalama/Metalama/security/advisories/GHSA-m6wq-39m7-9xpp",
+      "publishedDate": "2026-06-27",
+      "publishedAt": "2026-06-27T09:47:57Z",
+      "modifiedAt": "2026-07-14T22:33:25Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：日時・撤回・版・評価",
+      "url": "https://api.github.com/repos/metalama/Metalama/security-advisories/GHSA-m6wq-39m7-9xpp",
+      "publishedDate": "2026-06-27",
+      "publishedAt": "2026-06-27T09:47:57Z",
+      "modifiedAt": "2026-07-14T22:33:25Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedデータに、個別確認した開発元アドバイザリに基づく日本語要約・注記・訂正を重ねたmixed記録。日時と影響範囲・評価の根拠は各フィールドの出典で区別する。独自のCVSS計算は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "タイムラインはReviewedの公開・更新日時を保持。開発元ページの初回公開日とは異なる。",
+    "開発元のHigh・CVSS 3.1 8.2を表示。開発元本文はCVSS 4.0 6.0（Medium）も併記。DBのMODERATEとは異なり、独自に再計算していない。",
+    "開発元の版一覧は各系列の上限のみを示す。DBが示すpreview系列の下限を保持し、系列をまたぐ版順序を推定しない。",
+    "開発元APIのHTTP 200応答本文とヘッダーを保存し、ページ本文とも照合した。",
+    "CVSS 4.0の6.0は開発元本文のcross-check。APIのcvss_v4構造化欄はnullであり、API採点値としては扱わない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "b950a40c9ce07b70b943775709034132dd9614cb",
+    "checkedAt": "2026-10-14T23:01:04Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-m6wq-39m7-9xpp",
+        "aliases": [
+          "CVE-2026-62847"
+        ],
+        "publishedAt": "2026-10-14T19:24:53Z",
+        "modifiedAt": "2026-10-14T19:24:53Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-m6wq-39m7-9xpp/GHSA-m6wq-39m7-9xpp.json"
+      }
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer label High with CVSS3.1=8.2; maintainer prose also gives CVSS4.0=6.0 Medium. Reviewed label MODERATE retains both vectors without numeric scores. Preserve both attributed assessments.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

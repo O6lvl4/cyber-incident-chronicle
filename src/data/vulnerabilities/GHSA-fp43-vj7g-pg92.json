@@ -1,0 +1,200 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fp43-vj7g-pg92",
+  "aliases": [
+    "CVE-2026-102695"
+  ],
+  "title": "OmniFaces：偽造された結合リソースIDによる資源消費・リソース開示",
+  "summary": "結合リソースIDの真正性を区別しない処理により、展開時のメモリ消費、キャッシュ増大、配信対象外リソースの開示が起こり得る。開発元はこの根本原因を一件として扱い、HashParamやpush等の別問題は別アドバイザリに分離している。",
+  "publishedAt": "2026-07-24T22:35:27Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json",
+  "modifiedAt": "2026-10-14T15:58:54Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T23:01:04Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.omnifaces:omnifaces",
+      "ranges": [
+        {
+          "affected": "< 1.14.3",
+          "fixed": "1.14.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json"
+        },
+        {
+          "affected": ">= 2.0.0, < 2.7.33",
+          "fixed": "2.7.33",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json"
+        },
+        {
+          "affected": ">= 3.0.0, < 3.14.23",
+          "fixed": "3.14.23",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json"
+        },
+        {
+          "affected": ">= 4.0.0, < 4.7.12",
+          "fixed": "4.7.12",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json"
+        },
+        {
+          "affected": ">= 5.0.0, < 5.4.2",
+          "fixed": "5.4.2",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.14.3"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.7.33"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.14.23"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.7.12"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.4.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/omnifaces/omnifaces/security/advisories/GHSA-fp43-vj7g-pg92",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.2,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+        "sourceUrl": "https://github.com/omnifaces/omnifaces/security/advisories/GHSA-fp43-vj7g-pg92"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json",
+      "publishedDate": "2026-07-24",
+      "publishedAt": "2026-07-24T22:35:27Z",
+      "modifiedAt": "2026-10-14T15:58:54Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OmniFaces: Forged combined-resource IDs and related output/push boundaries",
+      "url": "https://github.com/advisories/GHSA-fp43-vj7g-pg92",
+      "publishedDate": "2026-07-24"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元セキュリティアドバイザリ（本文・版・評価を個別確認）",
+      "url": "https://github.com/omnifaces/omnifaces/security/advisories/GHSA-fp43-vj7g-pg92",
+      "publishedDate": "2026-07-23",
+      "publishedAt": "2026-07-23T17:15:08Z",
+      "modifiedAt": "2026-09-29T17:25:12Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：日時・撤回・版・評価",
+      "url": "https://api.github.com/repos/omnifaces/omnifaces/security-advisories/GHSA-fp43-vj7g-pg92",
+      "publishedDate": "2026-07-23",
+      "publishedAt": "2026-07-23T17:15:08Z",
+      "modifiedAt": "2026-09-29T17:25:12Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedデータに、個別確認した開発元アドバイザリに基づく日本語要約・注記・訂正を重ねたmixed記録。日時と影響範囲・評価の根拠は各フィールドの出典で区別する。独自のCVSS計算は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "タイムラインはReviewedの公開・更新日時を保持。開発元ページの初回公開日とは異なる。",
+    "DB本文は複数のoutput/push境界問題を含む旧説明。表示要約は現在の開発元の結合リソースID問題に限定。別GHSAを同一性の別名とは扱わない。",
+    "開発元CVSSはC:L・8.2、DBベクトルはC:N。修正版の5系列の境界は一致する。",
+    "開発元APIのHTTP 200応答本文とヘッダーを保存し、ページ本文とも照合した。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "b950a40c9ce07b70b943775709034132dd9614cb",
+    "checkedAt": "2026-10-14T23:01:04Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-fp43-vj7g-pg92",
+        "aliases": [
+          "CVE-2026-102695"
+        ],
+        "publishedAt": "2026-07-24T22:35:27Z",
+        "modifiedAt": "2026-10-14T15:58:54Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/07/GHSA-fp43-vj7g-pg92/GHSA-fp43-vj7g-pg92.json"
+      }
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Only modified timestamp and CVE alias changed in Reviewed. Current maintainer scope is forged combined-resource IDs; other output/push/cache findings are tracked as separate advisories. Reviewed description still bundles those findings.",
+        "newerDatabase": false
+      },
+      {
+        "field": "severity",
+        "reason": "Maintainer CVSS 3.1 is 8.2 (C:L), whereas Reviewed vector has C:N. All five fix boundaries agree.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

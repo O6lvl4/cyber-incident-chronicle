@@ -1,0 +1,99 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-22h6-qm39-v87j",
+  "aliases": [
+    "CVE-2026-107288"
+  ],
+  "title": "Pydantic AI：ホスト名の正規化差による拒否ドメイン回避",
+  "summary": "ローカルWeb取得ツールで拒否ドメインの比較を回避できる。許可リストとプライベートIP・メタデータ保護には同じ影響はない。",
+  "publishedAt": "2026-10-08T15:18:40.047Z",
+  "modifiedAt": "2026-10-08T17:28:53.801Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T22:57:11.821943Z",
+  "dateSourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-107288",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pydantic-ai",
+      "ranges": [
+        {
+          "affected": ">= 1.77.0, < 1.107.6",
+          "fixed": "1.107.6",
+          "sourceUrl": "https://github.com/pydantic/pydantic-ai/security/advisories/GHSA-22h6-qm39-v87j"
+        },
+        {
+          "affected": ">= 2.0.0b1, < 2.44.0",
+          "fixed": "2.44.0",
+          "sourceUrl": "https://github.com/pydantic/pydantic-ai/security/advisories/GHSA-22h6-qm39-v87j"
+        }
+      ]
+    },
+    {
+      "ecosystem": "pip",
+      "packageName": "pydantic-ai-slim",
+      "ranges": [
+        {
+          "affected": ">= 1.77.0, < 1.107.6",
+          "fixed": "1.107.6",
+          "sourceUrl": "https://github.com/pydantic/pydantic-ai/security/advisories/GHSA-22h6-qm39-v87j"
+        },
+        {
+          "affected": ">= 2.0.0b1, < 2.44.0",
+          "fixed": "2.44.0",
+          "sourceUrl": "https://github.com/pydantic/pydantic-ai/security/advisories/GHSA-22h6-qm39-v87j"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-107288",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.7,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-107288"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE公式API：CNA原文と日時",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-107288",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T15:18:40.047Z",
+      "modifiedAt": "2026-10-08T17:28:53.801Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "MyJVN公式API概要：JVNDB-2026-037740",
+      "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=51&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=13&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=15",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公開アドバイザリ",
+      "url": "https://github.com/pydantic/pydantic-ai/security/advisories/GHSA-22h6-qm39-v87j",
+      "publishedDate": "2026-09-17"
+    }
+  ],
+  "caveats": [
+    "CVEレコードの公開・更新日時を使用。JVN収録日や今回確認日は初回公開日ではない。",
+    "固定Reviewed範囲外で個別確認。既存記録の別名と照合して追加した。",
+    "修正境界は現在の最新安全版を保証しない。CISA KEVは403で未確認のまま。",
+    "開発元HTMLはWeb取得で本文を照合。APIの接続タイムアウトを成功とは扱わない。",
+    "JVNの個別HTMLは未取得。出典は全ページ取得して照合したMyJVN APIの概要本文を指す。"
+  ]
+}

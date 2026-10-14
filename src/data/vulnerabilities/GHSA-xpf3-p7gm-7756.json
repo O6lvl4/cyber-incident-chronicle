@@ -1,0 +1,143 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xpf3-p7gm-7756",
+  "aliases": [
+    "CVE-2026-14966"
+  ],
+  "title": "BBOT：旧p7zipのアーカイブ一覧でシンボリックリンク検出を回避",
+  "summary": "旧p7zipが生成する属性表記をunarchiveモジュールが検出できず、展開先に攻撃者のシンボリックリンクを配置できる。リンク先への書き込みは示されていない。現在のmainline 7-Zipは対象外。",
+  "publishedAt": "2026-10-14T19:34:31Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-xpf3-p7gm-7756/GHSA-xpf3-p7gm-7756.json",
+  "modifiedAt": "2026-10-14T19:34:31Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-14T23:01:04Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "bbot",
+      "ranges": [
+        {
+          "affected": "<= 2.8.6",
+          "fixed": "3.0",
+          "sourceUrl": "https://github.com/blacklanternsecurity/bbot/security/advisories/GHSA-xpf3-p7gm-7756"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/blacklanternsecurity/bbot/security-advisories/GHSA-xpf3-p7gm-7756",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.1,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://api.github.com/repos/blacklanternsecurity/bbot/security-advisories/GHSA-xpf3-p7gm-7756"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-xpf3-p7gm-7756/GHSA-xpf3-p7gm-7756.json",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T19:34:31Z",
+      "modifiedAt": "2026-10-14T19:34:31Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "BBOT's Symlink guard bypass in unarchive module allows planting symlinks during extraction",
+      "url": "https://github.com/advisories/GHSA-xpf3-p7gm-7756",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元セキュリティアドバイザリ（本文・版・評価を個別確認）",
+      "url": "https://github.com/blacklanternsecurity/bbot/security/advisories/GHSA-xpf3-p7gm-7756",
+      "publishedDate": "2026-07-08",
+      "publishedAt": "2026-07-08T15:13:10Z",
+      "modifiedAt": "2026-07-08T15:13:11Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：日時・撤回・版・評価",
+      "url": "https://api.github.com/repos/blacklanternsecurity/bbot/security-advisories/GHSA-xpf3-p7gm-7756",
+      "publishedDate": "2026-07-08",
+      "publishedAt": "2026-07-08T15:13:10Z",
+      "modifiedAt": "2026-07-08T15:13:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedデータに、個別確認した開発元アドバイザリに基づく日本語要約・注記・訂正を重ねたmixed記録。日時と影響範囲・評価の根拠は各フィールドの出典で区別する。独自のCVSS計算は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "タイムラインはReviewedの公開・更新日時を保持。開発元ページの初回公開日とは異なる。",
+    "開発元は影響<=2.8.6、修正版3.0と表記。DBは>=2.3.1,<3.0.0。中間版の影響や両表記の同値性を推測せず両方を保存。",
+    "開発元APIのHTTP 200応答本文とヘッダーを保存し、ページ本文とも照合した。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "b950a40c9ce07b70b943775709034132dd9614cb",
+    "checkedAt": "2026-10-14T23:01:04Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-xpf3-p7gm-7756",
+        "aliases": [
+          "CVE-2026-14966"
+        ],
+        "publishedAt": "2026-10-14T19:34:31Z",
+        "modifiedAt": "2026-10-14T19:34:31Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-xpf3-p7gm-7756/GHSA-xpf3-p7gm-7756.json"
+      }
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "Maintainer affected <=2.8.6 and patched 3.0 differ from DB >=2.3.1,<3.0.0. Preserve both without assuming equivalence or filling intermediate versions. Legacy p7zip only; current mainline 7-Zip not affected. Symlink planting does not imply target overwrite.",
+        "newerDatabase": false
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "bbot",
+        "ranges": [
+          {
+            "affected": ">= 2.3.1, < 3.0.0",
+            "fixed": "3.0.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-xpf3-p7gm-7756/GHSA-xpf3-p7gm-7756.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.3.1"
+              },
+              {
+                "fixed": "3.0.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ]
+  }
+}
