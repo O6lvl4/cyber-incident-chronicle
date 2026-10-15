@@ -1,0 +1,75 @@
+{
+  "id": "ntv-wands-faveconnect-2026",
+  "company": "日テレWands（FaveConnect）",
+  "title": "管理者アカウントへの不正ログイン、2サービス計117,392アカウントに閲覧の可能性",
+  "announcementDate": "2026-10-14",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-11",
+  "occurredDateLabel": "管理画面を通じた不正閲覧の形跡がある期間の開始日（10月13日まで）",
+  "updatedDate": "2026-10-14",
+  "statusAsOfDate": "2026-10-14",
+  "lastVerifiedDate": "2026-10-16",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "管理者アカウントへの不正ログイン。認証情報の取得手段は未公表",
+    "status": "confirmed"
+  },
+  "summary": "FaveConnectの管理画面で不正閲覧の形跡を確認。高嶺のなでしこオフィシャルファンクラブとHEROINES OFFICIAL WEBSITEの計117,392アカウントを閲覧可能性の範囲として公表した。",
+  "affectedData": [
+    "氏名、メールアドレス、住所、電話番号、職業、生年月日、性別、ニックネーム等",
+    "会員情報、サイトでの任意コメント・アンケート回答"
+  ],
+  "counts": [
+    {
+      "value": 117392,
+      "unit": "アカウント",
+      "status": "possible",
+      "label": "対象2サービス合計の閲覧可能性があるアカウント件数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "117,392アカウント（閲覧の可能性）",
+  "caveats": [
+    "117,392はアカウント件数であり、重複を除いた人数や全件の確定流出数ではない",
+    "対象は会員および退会後6か月以内の元会員。2サービスを同一提供基盤の1事案に集約する",
+    "不正閲覧の形跡と可能性のある対象範囲を区別する。データベースサーバー等への直接侵入、情報の不特定多数への公開・不正利用は未確認",
+    "管理者アカウント削除と接続遮断を実施。他サービスの同じ手口による被害や情報改ざん等は確認されていないと説明",
+    "クレジットカード番号等の決済に関する機微情報は対象外。パスワード流出や侵入経路の脆弱性を推定しない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "日テレWands：FaveConnectの不正ログインと個人情報閲覧の可能性",
+      "url": "https://www.ntv-wands.co.jp/news/articles/pbs9b02rgl3oubrj.html",
+      "publishedDate": "2026-10-14"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-11",
+      "label": "不正閲覧の形跡がある期間開始",
+      "kind": "occurrence",
+      "summary": "管理者アカウントへの不正ログイン後、10月13日まで会員情報を閲覧した形跡",
+      "sourceUrl": "https://www.ntv-wands.co.jp/news/articles/pbs9b02rgl3oubrj.html"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "不審アクセスを検知",
+      "kind": "occurrence",
+      "summary": "管理画面への不審アクセスを検知して調査、対象アカウント削除・接続遮断",
+      "sourceUrl": "https://www.ntv-wands.co.jp/news/articles/pbs9b02rgl3oubrj.html"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "2サービスの対象範囲を公表",
+      "kind": "disclosure",
+      "summary": "117,392アカウントに閲覧の可能性。全件の情報取得確認ではない",
+      "sourceUrl": "https://www.ntv-wands.co.jp/news/articles/pbs9b02rgl3oubrj.html"
+    }
+  ],
+  "detectedDate": "2026-10-13"
+}

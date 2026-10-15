@@ -1,0 +1,161 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fh4f-47mf-f2gj",
+  "aliases": [
+    "CVE-2026-100347"
+  ],
+  "title": "kin-openapi：非標準HTTPメソッドによるパニック",
+  "summary": "従来のルーターで非標準・未対応HTTPメソッドを処理すると停止する可能性がある。現行の構造化情報は0.145.0を修正版とするが、本文には古い「修正版なし」の記載が残る。",
+  "publishedAt": "2026-10-15T20:15:48Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-fh4f-47mf-f2gj/GHSA-fh4f-47mf-f2gj.json",
+  "modifiedAt": "2026-10-15T20:15:48Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/getkin/kin-openapi",
+      "ranges": [
+        {
+          "affected": "< 0.145.0",
+          "fixed": "0.145.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-fh4f-47mf-f2gj/GHSA-fh4f-47mf-f2gj.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.145.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-fh4f-47mf-f2gj",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-fh4f-47mf-f2gj"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-fh4f-47mf-f2gj/GHSA-fh4f-47mf-f2gj.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:15:48Z",
+      "modifiedAt": "2026-10-15T20:15:48Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "kin-openapi: Unauthenticated panic (DoS) in openapi3filter legacy router via non-canonical/unsupported HTTP method on a static path",
+      "url": "https://github.com/advisories/GHSA-fh4f-47mf-f2gj",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-fh4f-47mf-f2gj",
+      "publishedDate": "2026-07-25",
+      "publishedAt": "2026-07-25T12:58:54Z",
+      "modifiedAt": "2026-09-25T19:20:09Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元patched_versionsはv0.145.0、Reviewedのfixedは0.145.0で一致。本文の「no patched version」を現在も未修正という意味に取らず、現行フィールドとの不一致として保持する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-fh4f-47mf-f2gj",
+        "aliases": [
+          "CVE-2026-100347"
+        ],
+        "publishedAt": "2026-10-15T20:15:48Z",
+        "modifiedAt": "2026-10-15T20:15:48Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-fh4f-47mf-f2gj/GHSA-fh4f-47mf-f2gj.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-fh4f-47mf-f2gj"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/getkin/kin-openapi",
+        "ranges": [
+          {
+            "affected": "< 0.145.0",
+            "fixed": "0.145.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-fh4f-47mf-f2gj/GHSA-fh4f-47mf-f2gj.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.145.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "medium",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-fh4f-47mf-f2gj/GHSA-fh4f-47mf-f2gj.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-fh4f-47mf-f2gj/GHSA-fh4f-47mf-f2gj.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "開発元patched_versionsはv0.145.0、Reviewedのfixedは0.145.0で一致。本文の「no patched version」を現在も未修正という意味に取らず、現行フィールドとの不一致として保持する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

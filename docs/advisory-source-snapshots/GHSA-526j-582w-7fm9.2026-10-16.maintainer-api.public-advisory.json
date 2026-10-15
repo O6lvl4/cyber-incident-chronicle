@@ -1,0 +1,55 @@
+{
+  "ghsa_id": "GHSA-526j-582w-7fm9",
+  "cve_id": "CVE-2026-62322",
+  "url": "https://api.github.com/repos/python-social-auth/social-core/security-advisories/GHSA-526j-582w-7fm9",
+  "html_url": "https://github.com/python-social-auth/social-core/security/advisories/GHSA-526j-582w-7fm9",
+  "summary": "Login CSRF in LINE backend (LineOAuth2) — missing OAuth state validation (incomplete fix of 5.0.0 campaign)",
+  "severity": "medium",
+  "identifiers": [
+    {
+      "value": "GHSA-526j-582w-7fm9",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-62322",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-07-13T21:55:03Z",
+  "published_at": "2026-06-30T07:25:24Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "social-auth-core"
+      },
+      "vulnerable_version_range": "< 5.0.2",
+      "patched_versions": "5.0.2"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+      "score": 6.5
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-352",
+      "name": "Cross-Site Request Forgery (CSRF)"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-352"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+    "score": 6.5
+  }
+}

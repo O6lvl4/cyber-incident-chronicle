@@ -1,0 +1,113 @@
+{
+  "id": "carry-lili-2026",
+  "company": "キャリー（Lili）",
+  "title": "サーバー侵入・再侵入により最大約98,256名の情報に流出の可能性",
+  "announcementDate": "2026-10-14",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-07-11",
+  "occurredDateLabel": "調査で確認した最初の不正侵入期間の開始日（10月6日まで、11日に再侵入）",
+  "updatedDate": "2026-10-14",
+  "statusAsOfDate": "2026-10-14",
+  "lastVerifiedDate": "2026-10-16",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "プログラム不備を起点とするサーバー侵入、不正プログラム設置と別経路からの再侵入",
+    "status": "confirmed"
+  },
+  "summary": "7月11日からの侵入を10月6日に検知し、11日にも再侵入を受けた。会員最大約98,256名と非会員問い合わせ最大1,364件に流出の可能性があり、パスワードを全会員で無効化。本人確認画像最大7,261名は会員の内数。",
+  "affectedData": [
+    "会員メールアドレス、パスワード、生年月日・都道府県等のプロフィール、サイト内メッセージ、ログイン時IPアドレス",
+    "対象期間に提出された本人確認書類の画像",
+    "非会員の問い合わせ時の氏名・メールアドレス・問い合わせ内容・任意の電話番号"
+  ],
+  "counts": [
+    {
+      "value": 98256,
+      "unit": "名",
+      "status": "possible",
+      "label": "現会員・退会者を合わせた最大対象人数（精査中）",
+      "approximate": true
+    },
+    {
+      "value": 71456,
+      "unit": "名",
+      "status": "possible",
+      "label": "上記のうち現会員",
+      "approximate": true
+    },
+    {
+      "value": 26800,
+      "unit": "名",
+      "status": "possible",
+      "label": "上記のうち退会者",
+      "approximate": true
+    },
+    {
+      "value": 7261,
+      "unit": "名",
+      "status": "possible",
+      "label": "上記会員のうち本人確認書類画像が対象となる最大人数",
+      "approximate": false
+    },
+    {
+      "value": 1364,
+      "unit": "件",
+      "status": "possible",
+      "label": "会員以外の問い合わせフォーム情報の最大対象件数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "最大約98,256名／別途問い合わせ最大1,364件",
+  "caveats": [
+    "最大人数・件数であり流出確認数ではない。本人確認画像7,261名、現会員・退会者は98,256名の内数で合算しない",
+    "1,364は非会員の問い合わせ件数であり人数ではない。会員人数と合算しない",
+    "10月12日3時20分頃より後の新規会員は対象外。本人確認画像は2025年12月1日〜2026年10月12日3時20分頃の提出分が対象となり得る",
+    "2025年11月30日以前の提出画像は侵入時点でバックアップにも残っておらず、2026年7月10日以前に依頼により削除した画像も対象外と説明",
+    "パスワードを読み戻すプログラムの設置を確認し、運営側は平文流出の可能性が高いと判断。全件の流出確定ではない。カード番号等は自社サーバーに保存せず対象外",
+    "10月6日および11〜12日に偽Cloudflare画面からコマンド実行を促す表示を確認。これは閲覧者への誘導であり、サーバーの最初の侵入経路と混同しない",
+    "初回侵入と別経路による再侵入を公式が一連の公表にまとめているため同一事案に集約。公表時点で情報悪用の報告はない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "Lili運営事務局：不正アクセスと流出可能性・対象範囲",
+      "url": "https://lili-jo.com/notice/20261014.html",
+      "publishedDate": "2026-10-14"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-11",
+      "label": "初回侵入期間の開始",
+      "kind": "occurrence",
+      "summary": "10月6日までサーバーに侵入されパスワードを読み取るプログラムが設置された",
+      "sourceUrl": "https://lili-jo.com/notice/20261014.html"
+    },
+    {
+      "date": "2026-10-06",
+      "label": "不審プログラムを検知",
+      "kind": "occurrence",
+      "summary": "サーバー上の不審プログラムに気付き調査を開始",
+      "sourceUrl": "https://lili-jo.com/notice/20261014.html"
+    },
+    {
+      "date": "2026-10-11",
+      "label": "別経路から再侵入",
+      "kind": "occurrence",
+      "summary": "23時45分頃に再侵入され、12日3時20分頃までに経路遮断・不正プログラム削除",
+      "sourceUrl": "https://lili-jo.com/notice/20261014.html"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "対象範囲を公表・パスワード無効化",
+      "kind": "disclosure",
+      "summary": "最大約98,256名等の可能性範囲を公表し、全会員のパスワードを無効化",
+      "sourceUrl": "https://lili-jo.com/notice/20261014.html"
+    }
+  ],
+  "detectedDate": "2026-10-06"
+}

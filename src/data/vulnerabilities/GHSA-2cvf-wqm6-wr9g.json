@@ -1,0 +1,213 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2cvf-wqm6-wr9g",
+  "aliases": [
+    "CVE-2026-94603"
+  ],
+  "title": "Podman：イメージ注釈によるサンドボックス設定の回避",
+  "summary": "チェックポイント扱いのイメージをpodman runで実行すると、利用者が指定した権限制限が無視される可能性がある。5.8.8と6.1.3で該当機能を削除。rootlessコンテナは対象外。",
+  "publishedAt": "2026-10-15T20:22:16Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json",
+  "modifiedAt": "2026-10-15T20:22:16Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/containers/podman",
+      "ranges": [
+        {
+          "affected": ">= 4.4.0, < 5.8.8",
+          "fixed": "5.8.8",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "5.8.8"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "go",
+      "packageName": "go.podman.io/podman/v6",
+      "ranges": [
+        {
+          "affected": ">= 6.0.0, < 6.1.3",
+          "fixed": "6.1.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.1.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/podman-container-tools/podman/security-advisories/GHSA-2cvf-wqm6-wr9g",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/repos/podman-container-tools/podman/security-advisories/GHSA-2cvf-wqm6-wr9g"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:22:16Z",
+      "modifiedAt": "2026-10-15T20:22:16Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Podman: The `podman run` command can be instructed to disable almost all sandboxing by image annotation",
+      "url": "https://github.com/advisories/GHSA-2cvf-wqm6-wr9g",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/podman-container-tools/podman/security-advisories/GHSA-2cvf-wqm6-wr9g",
+      "publishedDate": "2026-09-29",
+      "publishedAt": "2026-09-29T15:26:59Z",
+      "modifiedAt": "2026-10-08T11:41:06Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "CRITICAL・CVSS v3.1 10.0と修正版5.8.8／6.1.3は一致。",
+    "開発元のgo.podman.io/podman/v6欄は影響範囲を文字どおり>=v4.4.0と記載する一方、Reviewedは同モジュールを6.0.0からとする。表示はReviewedのモジュール別範囲を保持し、開発元の表記を勝手に正規化しない。",
+    "rootlessはチェックポイント／復元をサポートしないため対象外。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-2cvf-wqm6-wr9g",
+        "aliases": [
+          "CVE-2026-94603"
+        ],
+        "publishedAt": "2026-10-15T20:22:16Z",
+        "modifiedAt": "2026-10-15T20:22:16Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-2cvf-wqm6-wr9g"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/containers/podman",
+        "ranges": [
+          {
+            "affected": ">= 4.4.0, < 5.8.8",
+            "fixed": "5.8.8",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.4.0"
+              },
+              {
+                "fixed": "5.8.8"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      },
+      {
+        "ecosystem": "go",
+        "packageName": "go.podman.io/podman/v6",
+        "ranges": [
+          {
+            "affected": ">= 6.0.0, < 6.1.3",
+            "fixed": "6.1.3",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "6.0.0"
+              },
+              {
+                "fixed": "6.1.3"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "critical",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "CRITICAL・CVSS v3.1 10.0と修正版5.8.8／6.1.3は一致。; 開発元のgo.podman.io/podman/v6欄は影響範囲を文字どおり>=v4.4.0と記載する一方、Reviewedは同モジュールを6.0.0からとする。表示はReviewedのモジュール別範囲を保持し、開発元の表記を勝手に正規化しない。; rootlessはチェックポイント／復元をサポートしないため対象外。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

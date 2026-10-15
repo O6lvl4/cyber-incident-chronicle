@@ -1,0 +1,60 @@
+{
+  "ghsa_id": "GHSA-637c-6jxx-4rwm",
+  "cve_id": "CVE-2026-77524",
+  "url": "https://api.github.com/repos/kedacore/keda/security-advisories/GHSA-637c-6jxx-4rwm",
+  "html_url": "https://github.com/kedacore/keda/security/advisories/GHSA-637c-6jxx-4rwm",
+  "summary": "Privilege escalation from namespace admin to cluster admin via KEDA TriggerAuthentication",
+  "severity": "critical",
+  "identifiers": [
+    {
+      "value": "GHSA-637c-6jxx-4rwm",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-77524",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-23T10:09:24Z",
+  "published_at": "2026-09-23T10:09:24Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/kedacore/keda"
+      },
+      "vulnerable_version_range": "<= 2.20.2",
+      "patched_versions": ""
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-269",
+      "name": "Improper Privilege Management"
+    },
+    {
+      "cwe_id": "CWE-918",
+      "name": "Server-Side Request Forgery (SSRF)"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-269",
+    "CWE-918"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+    "score": 9.9
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "ghsa_id": "GHSA-2vc4-c4r6-p6v6",
+  "cve_id": "CVE-2026-100409",
+  "url": "https://api.github.com/repos/opennextjs/opennextjs-cloudflare/security-advisories/GHSA-2vc4-c4r6-p6v6",
+  "html_url": "https://github.com/opennextjs/opennextjs-cloudflare/security/advisories/GHSA-2vc4-c4r6-p6v6",
+  "summary": "Cache interception can bypass middleware protection for encoded paths",
+  "severity": "high",
+  "identifiers": [
+    {
+      "value": "GHSA-2vc4-c4r6-p6v6",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-100409",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-28T13:51:39Z",
+  "published_at": "2026-07-21T17:52:55Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@opennextjs/cloudflare"
+      },
+      "vulnerable_version_range": ">= 0.3.0, < 1.20.2",
+      "patched_versions": "1.20.2"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "score": 7.5
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-177",
+      "name": "Improper Handling of URL Encoding (Hex Encoding)"
+    },
+    {
+      "cwe_id": "CWE-180",
+      "name": "Incorrect Behavior Order: Validate Before Canonicalize"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-177",
+    "CWE-180"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "score": 7.5
+  }
+}

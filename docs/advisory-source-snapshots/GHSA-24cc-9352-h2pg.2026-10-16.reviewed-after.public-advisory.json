@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-24cc-9352-h2pg/GHSA-24cc-9352-h2pg.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-24cc-9352-h2pg/GHSA-24cc-9352-h2pg.json",
+    "originalGitBlobSha256": "f023d2a60bcdb4bebb0b5e5e9877d30e87ae864142241fe5bdc955e5b484e7cb",
+    "originalGitBlobBytes": 2080
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-24cc-9352-h2pg",
+    "modified": "2026-10-15T20:16:47Z",
+    "published": "2026-10-15T20:16:47Z",
+    "aliases": [
+      "CVE-2026-104266"
+    ],
+    "summary": "tinytag: Infinite loop when parsing certain M4A files containing invalid atoms",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "tinytag"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.0.0"
+              },
+              {
+                "fixed": "2.3.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/tinytag/tinytag/security/advisories/GHSA-24cc-9352-h2pg"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104266"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/tinytag/tinytag/pull/326"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/tinytag/tinytag/commit/9ada221ba44990cb02cd9002d992186e037b515e"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/tinytag/tinytag"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/tinytag/tinytag/releases/tag/2.3.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-835"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:16:47Z",
+      "nvd_published_at": "2026-10-15T18:17:22Z"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "id": "toyobo-group-mail-2026",
+  "company": "東洋紡せんい・東洋紡エムシー",
+  "title": "メールアカウント侵害で約1,500件の不審メール、グループ内の関連被害も確認",
+  "announcementDate": "2026-09-25",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "最初の侵入日時は未公表（9月24日11時頃に不正アクセス・不審メール送信を確認）",
+  "updatedDate": "2026-09-30",
+  "statusAsOfDate": "2026-09-30",
+  "lastVerifiedDate": "2026-10-16",
+  "impactTypes": [
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "investigating",
+  "attackMethod": {
+    "label": "メールアカウントへの不正アクセスとフィッシングメール送信。受信した東洋紡エムシー従業員のフィッシング被害も確認",
+    "status": "confirmed"
+  },
+  "summary": "東洋紡せんいの従業員メールから社内外へ約1,500件の不審メールを送信。そのメールを受信した東洋紡エムシー従業員2名のアカウント侵害も確認され、保存メール・連絡先と個人情報漏えいの有無を調査している。",
+  "affectedData": [
+    "侵害アカウントに保存されていたメール・連絡先情報等（漏えい有無を調査中）"
+  ],
+  "counts": [
+    {
+      "value": 1500,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "東洋紡せんいの侵害メールアカウントから送信された不審メール",
+      "approximate": true
+    },
+    {
+      "value": 2,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "関連するフィッシング被害とアカウント侵害を確認した東洋紡エムシー従業員",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "不審メール約1,500件／関連被害の従業員2名（別の単位）",
+  "caveats": [
+    "約1,500件は不審メール送信件数であり、個人情報流出数や受信者の実人数ではない",
+    "2名は東洋紡エムシーで侵害を確認した従業員数。漏えいした個人情報の人数・件数ではなく、メール件数と合算しない",
+    "東洋紡エムシーが同じ不審メールを受信した関連被害と明記しているため1事案に集約する",
+    "東洋紡せんい側の最初の認証情報取得手段は未公表。エムシー側のフィッシング確認と区別する",
+    "9月25日時点でグループ基幹・業務システムへの不正アクセスは未確認。9月30日時点でエムシー側からの不審メール送信は未確認",
+    "個人情報漏えいの有無は調査中であり、流出確認・流出可能性の対象人数は公表されていない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "東洋紡：グループ会社メールアカウントの侵害と不審メール送信",
+      "url": "https://www.toyobo.co.jp/system/files/News_Release/202609/press_20260925_3J.pdf",
+      "publishedDate": "2026-09-25"
+    },
+    {
+      "title": "東洋紡エムシー：関連する従業員2名のフィッシング被害",
+      "url": "https://www.toyobo-mc.jp/news/press_release-260930_2/",
+      "publishedDate": "2026-09-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-24",
+      "label": "不正アクセス・不審メール送信を確認",
+      "kind": "occurrence",
+      "summary": "11時頃に確認、13時頃にパスワード変更・認証セッション失効等を実施",
+      "sourceUrl": "https://www.toyobo.co.jp/system/files/News_Release/202609/press_20260925_3J.pdf"
+    },
+    {
+      "date": "2026-09-25",
+      "label": "東洋紡せんいの被害を公表",
+      "kind": "disclosure",
+      "summary": "約1,500件の不審メール送信を確認。個人情報漏えいの有無は調査中",
+      "sourceUrl": "https://www.toyobo.co.jp/system/files/News_Release/202609/press_20260925_3J.pdf"
+    },
+    {
+      "date": "2026-09-28",
+      "label": "エムシーの関連被害を確認",
+      "kind": "occurrence",
+      "summary": "不審メールを受信した従業員2名のアカウント侵害を確認し対処",
+      "sourceUrl": "https://www.toyobo-mc.jp/news/press_release-260930_2/"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "関連被害を公表",
+      "kind": "update",
+      "summary": "エムシーのフィッシング被害を公表。メール・連絡先情報等を調査",
+      "sourceUrl": "https://www.toyobo-mc.jp/news/press_release-260930_2/"
+    }
+  ],
+  "detectedDate": "2026-09-24"
+}

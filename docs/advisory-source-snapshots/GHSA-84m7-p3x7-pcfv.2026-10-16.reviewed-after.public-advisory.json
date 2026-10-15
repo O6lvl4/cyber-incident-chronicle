@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json",
+    "originalGitBlobSha256": "7bfa1744f20661e89b545dfeb5d483ed980bd1745938c06ac3f75f688ca330d4",
+    "originalGitBlobBytes": 4918
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-84m7-p3x7-pcfv",
+    "modified": "2026-10-15T20:13:13Z",
+    "published": "2026-10-15T20:13:13Z",
+    "aliases": [
+      "CVE-2026-59951"
+    ],
+    "summary": "MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "mcp"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.8.0"
+              },
+              {
+                "fixed": "1.30.0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "mcp"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.0.0"
+              },
+              {
+                "fixed": "2.2.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-84m7-p3x7-pcfv"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59951"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/modelcontextprotocol/python-sdk/pull/3395"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/modelcontextprotocol/python-sdk/pull/3426"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/modelcontextprotocol/python-sdk/commit/92120b4b0f50385af096592d7cee932fc1d994e7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/modelcontextprotocol/python-sdk/commit/d2290ca3434731b68ea3e2270bc06a6e6575931b"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/modelcontextprotocol/python-sdk"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.30.0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/modelcontextprotocol/python-sdk/releases/tag/v2.2.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-400",
+        "CWE-770",
+        "CWE-772"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:13:13Z",
+      "nvd_published_at": "2026-10-14T17:18:29Z"
+    }
+  }
+}

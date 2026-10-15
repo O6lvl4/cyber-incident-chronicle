@@ -1,0 +1,167 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-23vg-4cjm-66q5",
+  "aliases": [
+    "CVE-2026-100351"
+  ],
+  "title": "kin-openapi：符号化パスの解釈差による認証要件回避",
+  "summary": "ValidationHandlerとルーターのパス解釈差で別操作の認証要件が適用される可能性がある。構造化範囲は0.144.0から0.147.0未満だが、本文では0.143.0でも再現し導入時期は不明とされる。",
+  "publishedAt": "2026-10-15T20:19:20Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-23vg-4cjm-66q5/GHSA-23vg-4cjm-66q5.json",
+  "modifiedAt": "2026-10-15T20:19:20Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/getkin/kin-openapi",
+      "ranges": [
+        {
+          "affected": ">= 0.144.0, < 0.147.0",
+          "fixed": "0.147.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-23vg-4cjm-66q5/GHSA-23vg-4cjm-66q5.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.144.0"
+            },
+            {
+              "fixed": "0.147.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-23vg-4cjm-66q5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.4,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-23vg-4cjm-66q5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-23vg-4cjm-66q5/GHSA-23vg-4cjm-66q5.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:19:20Z",
+      "modifiedAt": "2026-10-15T20:19:20Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "kin-openapi: ValidationHandler security-requirement bypass via encoded-path operation confusion",
+      "url": "https://github.com/advisories/GHSA-23vg-4cjm-66q5",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-23vg-4cjm-66q5",
+      "publishedDate": "2026-08-18",
+      "publishedAt": "2026-08-18T14:15:37Z",
+      "modifiedAt": "2026-09-25T19:21:21Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "現行構造化評価はHIGH・CVSS v3.1 7.4でReviewedと一致。本文の9.1は配備条件を別の方法で扱う場合の代替評価であり、公式フィールドへ上書きしない。",
+    "0.144.0という下限は先行修正後の問題として扱うための境界。本文は0.143.0での再現と、より前の版は未検証と明記しており、最初の導入版と断定しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-23vg-4cjm-66q5",
+        "aliases": [
+          "CVE-2026-100351"
+        ],
+        "publishedAt": "2026-10-15T20:19:20Z",
+        "modifiedAt": "2026-10-15T20:19:20Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-23vg-4cjm-66q5/GHSA-23vg-4cjm-66q5.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-23vg-4cjm-66q5"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/getkin/kin-openapi",
+        "ranges": [
+          {
+            "affected": ">= 0.144.0, < 0.147.0",
+            "fixed": "0.147.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-23vg-4cjm-66q5/GHSA-23vg-4cjm-66q5.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.144.0"
+              },
+              {
+                "fixed": "0.147.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-23vg-4cjm-66q5/GHSA-23vg-4cjm-66q5.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-23vg-4cjm-66q5/GHSA-23vg-4cjm-66q5.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "現行構造化評価はHIGH・CVSS v3.1 7.4でReviewedと一致。本文の9.1は配備条件を別の方法で扱う場合の代替評価であり、公式フィールドへ上書きしない。; 0.144.0という下限は先行修正後の問題として扱うための境界。本文は0.143.0での再現と、より前の版は未検証と明記しており、最初の導入版と断定しない。",
+        "newerDatabase": false
+      },
+      {
+        "field": "severity",
+        "reason": "現行構造化評価はHIGH・CVSS v3.1 7.4でReviewedと一致。本文の9.1は配備条件を別の方法で扱う場合の代替評価であり、公式フィールドへ上書きしない。; 0.144.0という下限は先行修正後の問題として扱うための境界。本文は0.143.0での再現と、より前の版は未検証と明記しており、最初の導入版と断定しない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v75v-6fpf-gvw8",
+  "aliases": [
+    "CVE-2026-104252"
+  ],
+  "title": "Vitess：vttablet管理画面の反射型XSS",
+  "summary": "vttabletの管理用HTTP画面で入力がエスケープされず、閲覧者のブラウザ上でスクリプトが実行される可能性がある。Goモジュールの修正版は0.23.5と0.24.2。開発元本文には古い修正状況と異なるCVSS評価が混在する。",
+  "publishedAt": "2026-10-15T20:16:29Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json",
+  "modifiedAt": "2026-10-15T20:16:29Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "vitess.io/vitess",
+      "ranges": [
+        {
+          "affected": "< 0.23.5",
+          "fixed": "0.23.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json"
+        },
+        {
+          "affected": ">= 0.24.0, < 0.24.2",
+          "fixed": "0.24.2",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.23.5"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.24.0"
+            },
+            {
+              "fixed": "0.24.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/vitessio/vitess/security-advisories/GHSA-v75v-6fpf-gvw8",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/repos/vitessio/vitess/security-advisories/GHSA-v75v-6fpf-gvw8"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:16:29Z",
+      "modifiedAt": "2026-10-15T20:16:29Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Vitess vttablet /twopcz reflected XSS",
+      "url": "https://github.com/advisories/GHSA-v75v-6fpf-gvw8",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/vitessio/vitess/security-advisories/GHSA-v75v-6fpf-gvw8",
+      "publishedDate": "2026-07-27",
+      "publishedAt": "2026-07-27T15:55:12Z",
+      "modifiedAt": "2026-10-07T18:28:31Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "構造化APIとReviewedはCRITICAL・CVSS v3.1 9.8。一方、本文中の報告はHIGH・7.7（UI:R、S:C、C:H、I:N、A:N）とする。本文の代替評価を公式の構造化評価へ上書きしない。",
+    "本文前半の「修正版なし」と、後半のFix節・構造化フィールドの修正版記載は矛盾する。現行の構造化修正版を保持し、前半を現状の修正版不在と扱わない。",
+    "製品版23.0.5／24.0.2とGoモジュール版0.23.5／0.24.2は開発元がそれぞれ明記した値。一般的なバージョン変換規則は推定しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-v75v-6fpf-gvw8",
+        "aliases": [
+          "CVE-2026-104252"
+        ],
+        "publishedAt": "2026-10-15T20:16:29Z",
+        "modifiedAt": "2026-10-15T20:16:29Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-v75v-6fpf-gvw8"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "vitess.io/vitess",
+        "ranges": [
+          {
+            "affected": "< 0.23.5",
+            "fixed": "0.23.5",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json"
+          },
+          {
+            "affected": ">= 0.24.0, < 0.24.2",
+            "fixed": "0.24.2",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.23.5"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.24.0"
+              },
+              {
+                "fixed": "0.24.2"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "critical",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "構造化APIとReviewedはCRITICAL・CVSS v3.1 9.8。一方、本文中の報告はHIGH・7.7（UI:R、S:C、C:H、I:N、A:N）とする。本文の代替評価を公式の構造化評価へ上書きしない。; 本文前半の「修正版なし」と、後半のFix節・構造化フィールドの修正版記載は矛盾する。現行の構造化修正版を保持し、前半を現状の修正版不在と扱わない。; 製品版23.0.5／24.0.2とGoモジュール版0.23.5／0.24.2は開発元がそれぞれ明記した値。一般的なバージョン変換規則は推定しない。",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "構造化APIとReviewedはCRITICAL・CVSS v3.1 9.8。一方、本文中の報告はHIGH・7.7（UI:R、S:C、C:H、I:N、A:N）とする。本文の代替評価を公式の構造化評価へ上書きしない。; 本文前半の「修正版なし」と、後半のFix節・構造化フィールドの修正版記載は矛盾する。現行の構造化修正版を保持し、前半を現状の修正版不在と扱わない。; 製品版23.0.5／24.0.2とGoモジュール版0.23.5／0.24.2は開発元がそれぞれ明記した値。一般的なバージョン変換規則は推定しない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "ghsa_id": "GHSA-g74g-rg72-j2p3",
+  "cve_id": "CVE-2026-103929",
+  "url": "https://api.github.com/repos/jdx/mise/security-advisories/GHSA-g74g-rg72-j2p3",
+  "html_url": "https://github.com/jdx/mise/security/advisories/GHSA-g74g-rg72-j2p3",
+  "summary": "Untrusted local .mise.toml [settings] can set the shell-interpreter args (default_inline/default_file shell_args), giving arbitrary command execution, because those interpreter settings were left off the global_only denylist added for CVE-2026-55448",
+  "severity": "high",
+  "identifiers": [
+    {
+      "value": "GHSA-g74g-rg72-j2p3",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-103929",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-10-01T17:48:05Z",
+  "published_at": "2026-07-26T18:40:44Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "rust",
+        "name": "jdx/mise"
+      },
+      "vulnerable_version_range": "<= 2026.7.13",
+      "patched_versions": "2026.7.14"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "score": 7.8
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-78",
+      "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+    },
+    {
+      "cwe_id": "CWE-284",
+      "name": "Improper Access Control"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-78",
+    "CWE-284"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "score": 7.8
+  }
+}

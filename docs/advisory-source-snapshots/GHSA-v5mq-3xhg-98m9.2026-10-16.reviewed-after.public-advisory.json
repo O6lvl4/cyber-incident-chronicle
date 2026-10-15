@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v5mq-3xhg-98m9/GHSA-v5mq-3xhg-98m9.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-v5mq-3xhg-98m9/GHSA-v5mq-3xhg-98m9.json",
+    "originalGitBlobSha256": "419aef72c6d5bb4d78bf8baff26e593fae46124c5a46bf925631eb1647f554b5",
+    "originalGitBlobBytes": 5270
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-v5mq-3xhg-98m9",
+    "modified": "2026-10-15T20:16:18Z",
+    "published": "2026-10-15T20:16:18Z",
+    "aliases": [
+      "CVE-2026-104250"
+    ],
+    "summary": "unstructured: Stored XSS via unescaped HTML generation",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "unstructured"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.24.1"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 0.24.0"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/Unstructured-IO/unstructured/security/advisories/GHSA-v5mq-3xhg-98m9"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104250"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Unstructured-IO/unstructured/pull/4394"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Unstructured-IO/unstructured/commit/cda16b3f2170019be9c6ea5635946fb3eaa2d66f"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/Unstructured-IO/unstructured"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Unstructured-IO/unstructured/releases/tag/0.24.1"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-116",
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:16:18Z",
+      "nvd_published_at": "2026-10-13T17:17:15Z"
+    }
+  }
+}

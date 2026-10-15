@@ -1,0 +1,206 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-84m7-p3x7-pcfv",
+  "aliases": [
+    "CVE-2026-59951"
+  ],
+  "title": "MCP Python SDK：状態保持HTTPセッションの累積によるメモリ枯渇",
+  "summary": "状態を保持するStreamable HTTPのセッションが解放されず、到達可能な利用者がメモリを消費し続ける可能性がある。1.30.0と2.2.0で上限・期限・解放処理を導入。開発元はHIGH・7.5、ReviewedはMODERATEと評価が異なる。",
+  "publishedAt": "2026-10-15T20:13:13Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json",
+  "modifiedAt": "2026-10-15T20:13:13Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "mcp",
+      "ranges": [
+        {
+          "affected": ">= 1.8.0, < 1.30.0",
+          "fixed": "1.30.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json"
+        },
+        {
+          "affected": ">= 2.0.0, < 2.2.0",
+          "fixed": "2.2.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.8.0"
+            },
+            {
+              "fixed": "1.30.0"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.2.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/python-sdk/security-advisories/GHSA-84m7-p3x7-pcfv",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/python-sdk/security-advisories/GHSA-84m7-p3x7-pcfv"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:13:13Z",
+      "modifiedAt": "2026-10-15T20:13:13Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion",
+      "url": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/modelcontextprotocol/python-sdk/security-advisories/GHSA-84m7-p3x7-pcfv",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T20:53:30Z",
+      "modifiedAt": "2026-09-30T20:53:30Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元はCVSS v3.1 7.5を公表。Reviewedのv3ベクトルは同じだが、追加のv4ベクトルはVA:Lであり、開発元APIにはv4評価がない。両評価を出典別に保持する。",
+    "1.12.0以降のstateless_http=True、stdio、SSEは対象外。修正版も生存中セッションの初期化データは保持するため、小規模ホストではセッション数・期限・本文上限を調整する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-84m7-p3x7-pcfv",
+        "aliases": [
+          "CVE-2026-59951"
+        ],
+        "publishedAt": "2026-10-15T20:13:13Z",
+        "modifiedAt": "2026-10-15T20:13:13Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-84m7-p3x7-pcfv"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "mcp",
+        "ranges": [
+          {
+            "affected": ">= 1.8.0, < 1.30.0",
+            "fixed": "1.30.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json"
+          },
+          {
+            "affected": ">= 2.0.0, < 2.2.0",
+            "fixed": "2.2.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.8.0"
+              },
+              {
+                "fixed": "1.30.0"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.0.0"
+              },
+              {
+                "fixed": "2.2.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "medium",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json"
+        },
+        {
+          "version": "4.0",
+          "score": null,
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-84m7-p3x7-pcfv/GHSA-84m7-p3x7-pcfv.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "開発元はCVSS v3.1 7.5を公表。Reviewedのv3ベクトルは同じだが、追加のv4ベクトルはVA:Lであり、開発元APIにはv4評価がない。両評価を出典別に保持する。; 1.12.0以降のstateless_http=True、stdio、SSEは対象外。修正版も生存中セッションの初期化データは保持するため、小規模ホストではセッション数・期限・本文上限を調整する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

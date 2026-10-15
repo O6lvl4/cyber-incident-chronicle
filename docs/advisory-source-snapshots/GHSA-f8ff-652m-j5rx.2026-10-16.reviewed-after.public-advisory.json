@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-f8ff-652m-j5rx/GHSA-f8ff-652m-j5rx.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-f8ff-652m-j5rx/GHSA-f8ff-652m-j5rx.json",
+    "originalGitBlobSha256": "6be74a59756a74cf6cfdbb59eb884c9947faf20c7a48ff125d69fff247ce3fdf",
+    "originalGitBlobBytes": 4319
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-f8ff-652m-j5rx",
+    "modified": "2026-10-15T20:13:03Z",
+    "published": "2026-10-15T20:13:02Z",
+    "aliases": [
+      "CVE-2026-62858"
+    ],
+    "summary": "YOURLS: Unauthenticated File Inclusion",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Packagist",
+          "name": "yourls/yourls"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.10.5"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 1.10.4"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/YOURLS/YOURLS/security/advisories/GHSA-f8ff-652m-j5rx"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62858"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/YOURLS/YOURLS/pull/4142"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/YOURLS/YOURLS/commit/4e85972160a96e03a419a442d5bd8f21f2f02ddb"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/YOURLS/YOURLS"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/YOURLS/YOURLS/releases/tag/1.10.5"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-98"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:13:02Z",
+      "nvd_published_at": "2026-10-14T16:17:47Z"
+    }
+  }
+}

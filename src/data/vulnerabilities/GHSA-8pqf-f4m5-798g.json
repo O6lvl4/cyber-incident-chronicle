@@ -1,0 +1,115 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8pqf-f4m5-798g",
+  "aliases": [
+    "CVE-2026-106454"
+  ],
+  "title": "Twisted：IMAPワイルドカードの正規表現変換によるReDoS",
+  "summary": "認証済みIMAP利用者が指定したパターンの正規表現処理により、単一スレッドのイベントループが長時間停止する可能性がある。影響上限は26.4.0を含む範囲へ訂正され、確認した開発元APIは修正版を示していない。",
+  "publishedAt": "2026-10-07T16:18:30Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-8pqf-f4m5-798g/GHSA-8pqf-f4m5-798g.json",
+  "modifiedAt": "2026-10-15T14:02:08Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:23:15Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Twisted",
+      "ranges": [
+        {
+          "affected": "<= 26.4.0",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-8pqf-f4m5-798g/GHSA-8pqf-f4m5-798g.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "26.4.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/twisted/twisted/security-advisories/GHSA-8pqf-f4m5-798g",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://api.github.com/repos/twisted/twisted/security-advisories/GHSA-8pqf-f4m5-798g"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-8pqf-f4m5-798g/GHSA-8pqf-f4m5-798g.json",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T16:18:30Z",
+      "modifiedAt": "2026-10-15T14:02:08Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Twisted: IMAP wildcardToRegexp() ReDoS",
+      "url": "https://github.com/advisories/GHSA-8pqf-f4m5-798g",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：日時・撤回・版・評価を個別確認",
+      "url": "https://api.github.com/repos/twisted/twisted/security-advisories/GHSA-8pqf-f4m5-798g",
+      "publishedDate": "2026-08-15",
+      "publishedAt": "2026-08-15T01:39:26Z",
+      "modifiedAt": "2026-10-08T18:31:16Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・版・評価を照合。開発元の初回公開日時とDBの収録日時を区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "DBの含む上限が25.5.0から26.4.0へ拡張され、開発元の<=26.4.0と一致。修正コミットへの参照だけからリリース済み修正版を推定せずnullを保持する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:23:15Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-8pqf-f4m5-798g",
+        "aliases": [
+          "CVE-2026-106454"
+        ],
+        "publishedAt": "2026-10-07T16:18:30Z",
+        "modifiedAt": "2026-10-15T14:02:08Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-8pqf-f4m5-798g/GHSA-8pqf-f4m5-798g.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-8pqf-f4m5-798g"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ghsa_id": "GHSA-2cvf-wqm6-wr9g",
+  "cve_id": "CVE-2026-94603",
+  "url": "https://api.github.com/repos/podman-container-tools/podman/security-advisories/GHSA-2cvf-wqm6-wr9g",
+  "html_url": "https://github.com/podman-container-tools/podman/security/advisories/GHSA-2cvf-wqm6-wr9g",
+  "summary": "The `podman run` command can be instructed to disable almost all sandboxing - including user-requested sandboxing - by image annotation",
+  "severity": "critical",
+  "identifiers": [
+    {
+      "value": "GHSA-2cvf-wqm6-wr9g",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-94603",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-10-08T11:41:06Z",
+  "published_at": "2026-09-29T15:26:59Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/containers/podman"
+      },
+      "vulnerable_version_range": ">= v4.4.0",
+      "patched_versions": "v5.8.8"
+    },
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "go.podman.io/podman/v6"
+      },
+      "vulnerable_version_range": ">= v4.4.0",
+      "patched_versions": "v6.1.3"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [],
+  "cwe_ids": [],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "score": 10.0
+  }
+}

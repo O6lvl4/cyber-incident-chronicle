@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-h9h9-2rmf-rvhp/GHSA-h9h9-2rmf-rvhp.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-h9h9-2rmf-rvhp/GHSA-h9h9-2rmf-rvhp.json",
+    "originalGitBlobSha256": "efea3ca76ff6ef420dfdcbeb5b6567250a7f94d1851563dfd3ad40870d737cb6",
+    "originalGitBlobBytes": 4033
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-h9h9-2rmf-rvhp",
+    "modified": "2026-10-15T20:09:47Z",
+    "published": "2026-10-15T20:09:47Z",
+    "aliases": [
+      "CVE-2026-97370"
+    ],
+    "summary": "Junrar: RarVM VM_JMP maxOpCount bypass causes infinite CPU loop during RAR4 extraction",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Maven",
+          "name": "com.github.junrar:junrar"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "7.6.1"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 7.6.0"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/junrar/junrar/security/advisories/GHSA-h9h9-2rmf-rvhp"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/junrar/junrar/commit/687a09c42f46066447faa9179ee11314ad6d9afb"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/junrar/junrar"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/junrar/junrar/releases/tag/v7.6.1"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-835"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:09:47Z",
+      "nvd_published_at": null
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-54mm-6729-r5wp/GHSA-54mm-6729-r5wp.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-54mm-6729-r5wp/GHSA-54mm-6729-r5wp.json",
+    "originalGitBlobSha256": "c86a5309d13e127fa8f71d572d5c9adfc2e6d38d4da8ffaee7274a6698b830c0",
+    "originalGitBlobBytes": 14818
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-54mm-6729-r5wp",
+    "modified": "2026-10-15T20:14:43Z",
+    "published": "2026-10-15T20:14:43Z",
+    "aliases": [
+      "CVE-2026-85990"
+    ],
+    "summary": "Leantime: Any Authenticated User Can Self-Escalate to Admin via Unauthorized JSON-RPC Methods",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Packagist",
+          "name": "leantime/leantime"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.10.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/Leantime/leantime/security/advisories/GHSA-54mm-6729-r5wp"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85990"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Leantime/leantime/pull/3583"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Leantime/leantime/pull/3797"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Leantime/leantime/commit/5605e5ee86bbd01acb85c6b5d8fb337faf8bcf02"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Leantime/leantime/commit/7ebf7a9517e2aaa05ec15b8130ab1841a4bde43e"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/Leantime/leantime"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Leantime/leantime/releases/tag/v3.10.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-269",
+        "CWE-862"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:14:43Z",
+      "nvd_published_at": "2026-10-13T17:17:47Z"
+    }
+  }
+}

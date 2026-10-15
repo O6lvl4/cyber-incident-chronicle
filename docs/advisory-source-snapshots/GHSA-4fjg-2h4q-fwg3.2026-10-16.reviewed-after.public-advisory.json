@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-4fjg-2h4q-fwg3/GHSA-4fjg-2h4q-fwg3.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-4fjg-2h4q-fwg3/GHSA-4fjg-2h4q-fwg3.json",
+    "originalGitBlobSha256": "bc033fa282ab58bce318734f4c775fa785b615ac3c78f63b0db7ba05cb253c5f",
+    "originalGitBlobBytes": 2776
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-4fjg-2h4q-fwg3",
+    "modified": "2026-10-15T18:07:15Z",
+    "published": "2026-10-15T18:07:14Z",
+    "aliases": [
+      "CVE-2026-64653"
+    ],
+    "summary": "GitHub CLI allows path traversal through unescaped request URL components",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/cli/cli/v2"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.97.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/cli/cli/security/advisories/GHSA-4fjg-2h4q-fwg3"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64653"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/cli/cli/commit/0c2eea6338a2323cfff000160b9b5a56a38d2a06"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/cli/cli"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/cli/cli/releases/tag/v2.97.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T18:07:14Z",
+      "nvd_published_at": "2026-08-06T22:18:13Z"
+    }
+  }
+}

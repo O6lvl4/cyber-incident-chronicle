@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-v75v-6fpf-gvw8/GHSA-v75v-6fpf-gvw8.json",
+    "originalGitBlobSha256": "d287faa674a6c522b532c8bf65bcd7ff8042d0ef258c91921c549f627f060c2f",
+    "originalGitBlobBytes": 10837
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-v75v-6fpf-gvw8",
+    "modified": "2026-10-15T20:16:29Z",
+    "published": "2026-10-15T20:16:29Z",
+    "aliases": [
+      "CVE-2026-104252"
+    ],
+    "summary": "Vitess vttablet /twopcz reflected XSS",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "vitess.io/vitess"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.23.5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "vitess.io/vitess"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.24.0"
+              },
+              {
+                "fixed": "0.24.2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/security/advisories/GHSA-v75v-6fpf-gvw8"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104252"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/pull/20255"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/pull/20273"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/pull/20274"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/commit/3140c1846cd120db34f33b2083139b4ab638aed2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/commit/976e1e0d78f9d29d02e5e31b4aa7e180648f08af"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/commit/c1ed96302e658190168c971afdac730cf70e43f7"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/vitessio/vitess"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/releases/tag/v23.0.5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/vitessio/vitess/releases/tag/v24.0.2"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-116",
+        "CWE-79",
+        "CWE-80"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:16:29Z",
+      "nvd_published_at": "2026-10-13T20:17:12Z"
+    }
+  }
+}

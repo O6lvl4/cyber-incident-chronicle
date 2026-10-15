@@ -1,0 +1,168 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-gfrc-g87h-7h5w",
+  "aliases": [
+    "CVE-2026-84313"
+  ],
+  "title": "Nginx UI：再認証なしの認証要素登録によるアカウント乗っ取り",
+  "summary": "既存セッションを持つ攻撃者がTOTPやパスキーを登録して継続的なアクセスを得る可能性がある。登録処理へのsecure-session検査追加だけでは、OTP未設定の利用者への対策が不足する。",
+  "publishedAt": "2026-10-15T20:11:32Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json",
+  "modifiedAt": "2026-10-15T20:11:32Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "Nginx-UI",
+      "ranges": [
+        {
+          "affected": "< 1.9.10-0.20260703131214-23d1934099b0",
+          "fixed": "1.9.10-0.20260703131214-23d1934099b0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.9.10-0.20260703131214-23d1934099b0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/0xJacky/nginx-ui/security-advisories/GHSA-gfrc-g87h-7h5w",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/repos/0xJacky/nginx-ui/security-advisories/GHSA-gfrc-g87h-7h5w"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:11:32Z",
+      "modifiedAt": "2026-10-15T20:11:32Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Nginx UI: TOTP / passkey enrolment requires no re-authentication, enabling persistent account takeover",
+      "url": "https://github.com/advisories/GHSA-gfrc-g87h-7h5w",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/0xJacky/nginx-ui/security-advisories/GHSA-gfrc-g87h-7h5w",
+      "publishedDate": "2026-07-17",
+      "publishedAt": "2026-07-17T03:02:28Z",
+      "modifiedAt": "2026-09-01T20:03:55Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元はRequireSecureSessionの内側へルートを移すだけでは不十分で、OTP未設定の利用者にも現在のパスワード等で再認証する必要があると説明する。",
+    "開発元の影響欄は<=v2.3.9、修正版欄はnull。表示するGo疑似版の修正境界はReviewed由来。開発元が修正版を明示したと扱わない。",
+    "両出典がパッケージ名をNginx-UIとしており、根拠なく完全なGoモジュール名へ置き換えない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-gfrc-g87h-7h5w",
+        "aliases": [
+          "CVE-2026-84313"
+        ],
+        "publishedAt": "2026-10-15T20:11:32Z",
+        "modifiedAt": "2026-10-15T20:11:32Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-gfrc-g87h-7h5w"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "Nginx-UI",
+        "ranges": [
+          {
+            "affected": "< 1.9.10-0.20260703131214-23d1934099b0",
+            "fixed": "1.9.10-0.20260703131214-23d1934099b0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.9.10-0.20260703131214-23d1934099b0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "開発元はRequireSecureSessionの内側へルートを移すだけでは不十分で、OTP未設定の利用者にも現在のパスワード等で再認証する必要があると説明する。; 開発元の影響欄は<=v2.3.9、修正版欄はnull。表示するGo疑似版の修正境界はReviewed由来。開発元が修正版を明示したと扱わない。; 両出典がパッケージ名をNginx-UIとしており、根拠なく完全なGoモジュール名へ置き換えない。",
+        "newerDatabase": false
+      },
+      {
+        "field": "affected",
+        "reason": "開発元はRequireSecureSessionの内側へルートを移すだけでは不十分で、OTP未設定の利用者にも現在のパスワード等で再認証する必要があると説明する。; 開発元の影響欄は<=v2.3.9、修正版欄はnull。表示するGo疑似版の修正境界はReviewed由来。開発元が修正版を明示したと扱わない。; 両出典がパッケージ名をNginx-UIとしており、根拠なく完全なGoモジュール名へ置き換えない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-3xr5-8w6c-p5gw/GHSA-3xr5-8w6c-p5gw.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-3xr5-8w6c-p5gw/GHSA-3xr5-8w6c-p5gw.json",
+    "originalGitBlobSha256": "db35d109c9b31b4c0fe3f4fb44cf85497c1e67618f2b419cb4396749ef0c448d",
+    "originalGitBlobBytes": 1955
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-3xr5-8w6c-p5gw",
+    "modified": "2026-10-15T20:21:54Z",
+    "published": "2026-10-15T20:21:54Z",
+    "aliases": [
+      "CVE-2026-106495"
+    ],
+    "summary": "Backstage: Improper access control in backend action invocation",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@backstage/backend-defaults"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.17.8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/backstage/backstage/security/advisories/GHSA-3xr5-8w6c-p5gw"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106495"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/backstage/backstage/commit/a8fb34a990a69bcb745e85a3213cf9e5ba2d31a3"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/backstage/backstage"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/backstage/backstage/releases/tag/v1.54.6"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:21:54Z",
+      "nvd_published_at": "2026-10-12T21:17:08Z"
+    }
+  }
+}

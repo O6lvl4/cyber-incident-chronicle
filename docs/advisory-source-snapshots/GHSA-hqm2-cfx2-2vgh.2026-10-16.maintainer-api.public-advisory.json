@@ -1,0 +1,65 @@
+{
+  "ghsa_id": "GHSA-hqm2-cfx2-2vgh",
+  "cve_id": "CVE-2026-102682",
+  "url": "https://api.github.com/repos/pipecat-ai/pipecat/security-advisories/GHSA-hqm2-cfx2-2vgh",
+  "html_url": "https://github.com/pipecat-ai/pipecat/security/advisories/GHSA-hqm2-cfx2-2vgh",
+  "summary": "Public exposure of Pipecat’s development runner can allow unauthenticated bot session creation",
+  "severity": "medium",
+  "identifiers": [
+    {
+      "value": "GHSA-hqm2-cfx2-2vgh",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-102682",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-29T17:39:30Z",
+  "published_at": "2026-09-29T17:39:30Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "pipecat-ai "
+      },
+      "vulnerable_version_range": ">= 0.0.98, <= 1.5.0   ",
+      "patched_versions": "1.6.0"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+      "score": 5.6
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-345",
+      "name": "Insufficient Verification of Data Authenticity"
+    },
+    {
+      "cwe_id": "CWE-770",
+      "name": "Allocation of Resources Without Limits or Throttling"
+    },
+    {
+      "cwe_id": "CWE-862",
+      "name": "Missing Authorization"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-345",
+    "CWE-770",
+    "CWE-862"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+    "score": 5.6
+  }
+}

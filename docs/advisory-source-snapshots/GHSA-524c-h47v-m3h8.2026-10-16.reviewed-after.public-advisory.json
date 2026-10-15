@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-524c-h47v-m3h8/GHSA-524c-h47v-m3h8.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-524c-h47v-m3h8/GHSA-524c-h47v-m3h8.json",
+    "originalGitBlobSha256": "cec1ec0e60aa60fb8a52888f2e1bd521a11e17f26a58599d03e1e0657002f2b7",
+    "originalGitBlobBytes": 4464
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-524c-h47v-m3h8",
+    "modified": "2026-10-15T20:09:52Z",
+    "published": "2026-10-15T20:09:52Z",
+    "aliases": [
+      "CVE-2026-104150"
+    ],
+    "summary": "AdonisJS HTTP Server: Uncontrolled Resource Consumption and Inefficient Regular Expression Complexity",
+    "severity": [],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@adonisjs/http-server"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "9.0.0"
+              },
+              {
+                "fixed": "9.1.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@adonisjs/http-server"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.2.2"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 8.2.1"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/adonisjs/http-server/security/advisories/GHSA-524c-h47v-m3h8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/adonisjs/http-server/commit/86af38ca861528f673dcac6a4806197de038d1f7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/adonisjs/http-server/commit/d8c749aa9f66d5d214bad1cad727264aef4be727"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/adonisjs/http-server"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/adonisjs/http-server/releases/tag/v8.2.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/adonisjs/http-server/releases/tag/v9.1.1"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-1333",
+        "CWE-400"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:09:52Z",
+      "nvd_published_at": null
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7cxh-94cf-mfp6",
+  "aliases": [
+    "CVE-2026-77564"
+  ],
+  "title": "Talos Linux：サポートバンドル内のレジストリ認証情報",
+  "summary": "サポートバンドルにプライベートレジストリの認証情報が残り、共有先に露出する可能性がある。開発元は製品版1.13.3と1.12.9を修正版として示す一方、ReviewedはGoの疑似バージョンで記録する。",
+  "publishedAt": "2026-10-15T20:20:16Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json",
+  "modifiedAt": "2026-10-15T20:20:16Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/talos-systems/talos",
+      "ranges": [
+        {
+          "affected": "< 1.14.0-alpha.0.0.20260513110206-76080416beee",
+          "fixed": "1.14.0-alpha.0.0.20260513110206-76080416beee",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.14.0-alpha.0.0.20260513110206-76080416beee"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/siderolabs/talos/security-advisories/GHSA-7cxh-94cf-mfp6",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://api.github.com/repos/siderolabs/talos/security-advisories/GHSA-7cxh-94cf-mfp6"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:20:16Z",
+      "modifiedAt": "2026-10-15T20:20:16Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Talos Linux: Support bundle does not redact registry credentials",
+      "url": "https://github.com/advisories/GHSA-7cxh-94cf-mfp6",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/siderolabs/talos/security-advisories/GHSA-7cxh-94cf-mfp6",
+      "publishedDate": "2026-08-24",
+      "publishedAt": "2026-08-24T07:57:11Z",
+      "modifiedAt": "2026-08-24T07:57:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元は空のecosystem／Talos、影響欄<1.13.3,<1.12.9、修正版1.13.3,1.12.9をそのまま記載する。",
+    "Reviewedはgithub.com/talos-systems/talosの修正版を1.14.0-alpha.0.0.20260513110206-76080416beeeとする。表示はDB値を保持し、製品版の分岐境界やGo疑似版との同値性を推測しない。",
+    "1.14以降の既定バンドル暗号化は露出を軽減するが、1.13.3／1.12.9の修正版情報とは区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-7cxh-94cf-mfp6",
+        "aliases": [
+          "CVE-2026-77564"
+        ],
+        "publishedAt": "2026-10-15T20:20:16Z",
+        "modifiedAt": "2026-10-15T20:20:16Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-7cxh-94cf-mfp6"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/talos-systems/talos",
+        "ranges": [
+          {
+            "affected": "< 1.14.0-alpha.0.0.20260513110206-76080416beee",
+            "fixed": "1.14.0-alpha.0.0.20260513110206-76080416beee",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.14.0-alpha.0.0.20260513110206-76080416beee"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "low",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元は空のecosystem／Talos、影響欄<1.13.3,<1.12.9、修正版1.13.3,1.12.9をそのまま記載する。; Reviewedはgithub.com/talos-systems/talosの修正版を1.14.0-alpha.0.0.20260513110206-76080416beeeとする。表示はDB値を保持し、製品版の分岐境界やGo疑似版との同値性を推測しない。; 1.14以降の既定バンドル暗号化は露出を軽減するが、1.13.3／1.12.9の修正版情報とは区別する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

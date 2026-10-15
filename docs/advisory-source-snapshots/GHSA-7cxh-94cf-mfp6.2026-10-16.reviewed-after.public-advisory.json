@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json",
+    "originalGitBlobSha256": "a6160b6848bae8adcffd72174f5ed14a9fc8a745fd778e5fee348a4c64f93e20",
+    "originalGitBlobBytes": 3818
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-7cxh-94cf-mfp6",
+    "modified": "2026-10-15T20:20:16Z",
+    "published": "2026-10-15T20:20:16Z",
+    "aliases": [
+      "CVE-2026-77564"
+    ],
+    "summary": "Talos Linux: Support bundle does not redact registry credentials",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/talos-systems/talos"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.14.0-alpha.0.0.20260513110206-76080416beee"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/security/advisories/GHSA-7cxh-94cf-mfp6"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77564"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/pull/13345"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/pull/13434"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/pull/13611"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/commit/4c288caf2de1db7f84bba0539ca5ed7d6ecb9142"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/commit/76080416beee6460375c0d0db3cab76cc493ad3e"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/commit/7dc716d850e43373ba8702c702105f4edd68fceb"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/siderolabs/talos"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/releases/tag/v1.12.9"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/siderolabs/talos/releases/tag/v1.13.3"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-312"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:20:16Z",
+      "nvd_published_at": "2026-10-14T17:19:11Z"
+    }
+  }
+}

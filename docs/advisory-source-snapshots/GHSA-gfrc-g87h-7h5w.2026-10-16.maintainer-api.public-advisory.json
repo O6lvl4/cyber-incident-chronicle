@@ -1,0 +1,60 @@
+{
+  "ghsa_id": "GHSA-gfrc-g87h-7h5w",
+  "cve_id": "CVE-2026-84313",
+  "url": "https://api.github.com/repos/0xJacky/nginx-ui/security-advisories/GHSA-gfrc-g87h-7h5w",
+  "html_url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-gfrc-g87h-7h5w",
+  "summary": "TOTP / passkey enrolment requires no re-authentication, enabling persistent account takeover",
+  "severity": "high",
+  "identifiers": [
+    {
+      "value": "GHSA-gfrc-g87h-7h5w",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-84313",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-01T20:03:55Z",
+  "published_at": "2026-07-17T03:02:28Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "Nginx-UI"
+      },
+      "vulnerable_version_range": "<= v2.3.9",
+      "patched_versions": null
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-287",
+      "name": "Improper Authentication"
+    },
+    {
+      "cwe_id": "CWE-306",
+      "name": "Missing Authentication for Critical Function"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-287",
+    "CWE-306"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "score": 8.8
+  }
+}

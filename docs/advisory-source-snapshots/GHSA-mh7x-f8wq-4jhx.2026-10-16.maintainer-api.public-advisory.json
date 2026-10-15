@@ -1,0 +1,55 @@
+{
+  "ghsa_id": "GHSA-mh7x-f8wq-4jhx",
+  "cve_id": "CVE-2026-100348",
+  "url": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-mh7x-f8wq-4jhx",
+  "html_url": "https://github.com/getkin/kin-openapi/security/advisories/GHSA-mh7x-f8wq-4jhx",
+  "summary": "kin-openapi spec loader panics on a self-referential additionalProperties $ref (nil-pointer DoS)",
+  "severity": "medium",
+  "identifiers": [
+    {
+      "value": "GHSA-mh7x-f8wq-4jhx",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-100348",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-25T19:20:19Z",
+  "published_at": "2026-07-25T12:58:58Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/getkin/kin-openapi"
+      },
+      "vulnerable_version_range": "<= 0.144.0",
+      "patched_versions": "v0.145.0"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "score": 5.3
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-476",
+      "name": "NULL Pointer Dereference"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-476"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "score": 5.3
+  }
+}

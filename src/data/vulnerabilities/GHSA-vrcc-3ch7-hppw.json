@@ -1,0 +1,162 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vrcc-3ch7-hppw",
+  "aliases": [
+    "CVE-2026-100353"
+  ],
+  "title": "kin-openapi：items欠落による停止の修正漏れ",
+  "summary": "OpenAPI 3.1の配列スキーマ検証に複数のnil参照経路が残る問題。修正版0.149.0は一致するが、開発元の影響欄は0.144.0まで、Reviewedは0.149.0未満と範囲が異なる。",
+  "publishedAt": "2026-10-15T20:20:47Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-vrcc-3ch7-hppw/GHSA-vrcc-3ch7-hppw.json",
+  "modifiedAt": "2026-10-15T20:20:47Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/getkin/kin-openapi",
+      "ranges": [
+        {
+          "affected": ">= 0.136.0, < 0.149.0",
+          "fixed": "0.149.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-vrcc-3ch7-hppw/GHSA-vrcc-3ch7-hppw.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.136.0"
+            },
+            {
+              "fixed": "0.149.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-vrcc-3ch7-hppw",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-vrcc-3ch7-hppw"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-vrcc-3ch7-hppw/GHSA-vrcc-3ch7-hppw.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:20:47Z",
+      "modifiedAt": "2026-10-15T20:20:47Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "kin-openapi: Incomplete Fix for GHSA-p6wj-qrr4-pgh5: Three Unpatched nil-Items Panic Paths in openapi3filter",
+      "url": "https://github.com/advisories/GHSA-vrcc-3ch7-hppw",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-vrcc-3ch7-hppw",
+      "publishedDate": "2026-08-28",
+      "publishedAt": "2026-08-28T09:15:54Z",
+      "modifiedAt": "2026-09-25T19:21:49Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元の影響欄は文字どおり >= 0.136.0 through v0.144.0、修正版v0.149.0。Reviewedの>=0.136.0,<0.149.0と同一の範囲に書き換えず、表示はDB範囲を保持する。",
+    "GHSA-p6wj-qrr4-pgh5の不完全な修正と説明される。標準net/httpの回復処理では接続単位の失敗、回復処理のないホスト等ではプロセス停止となり得る。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-vrcc-3ch7-hppw",
+        "aliases": [
+          "CVE-2026-100353"
+        ],
+        "publishedAt": "2026-10-15T20:20:47Z",
+        "modifiedAt": "2026-10-15T20:20:47Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-vrcc-3ch7-hppw/GHSA-vrcc-3ch7-hppw.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-vrcc-3ch7-hppw"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/getkin/kin-openapi",
+        "ranges": [
+          {
+            "affected": ">= 0.136.0, < 0.149.0",
+            "fixed": "0.149.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-vrcc-3ch7-hppw/GHSA-vrcc-3ch7-hppw.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.136.0"
+              },
+              {
+                "fixed": "0.149.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-vrcc-3ch7-hppw/GHSA-vrcc-3ch7-hppw.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-vrcc-3ch7-hppw/GHSA-vrcc-3ch7-hppw.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元の影響欄は文字どおり >= 0.136.0 through v0.144.0、修正版v0.149.0。Reviewedの>=0.136.0,<0.149.0と同一の範囲に書き換えず、表示はDB範囲を保持する。; GHSA-p6wj-qrr4-pgh5の不完全な修正と説明される。標準net/httpの回復処理では接続単位の失敗、回復処理のないホスト等ではプロセス停止となり得る。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}
