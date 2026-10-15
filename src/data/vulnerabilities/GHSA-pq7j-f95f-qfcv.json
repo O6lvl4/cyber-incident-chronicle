@@ -1,0 +1,168 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pq7j-f95f-qfcv",
+  "aliases": [
+    "CVE-2026-86063"
+  ],
+  "title": "Claude Code：プラグインのコミットSHA固定を回避",
+  "summary": "上流リポジトリにSHAと同名のブランチを用意されると、固定したコミットと異なるコードがプラグインとして導入される可能性がある。2.1.179で修正。CVSS v4の利用者操作条件は開発元とReviewedで異なる。",
+  "publishedAt": "2026-10-15T20:22:07Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-pq7j-f95f-qfcv/GHSA-pq7j-f95f-qfcv.json",
+  "modifiedAt": "2026-10-15T20:22:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@anthropic-ai/claude-code",
+      "ranges": [
+        {
+          "affected": "< 2.1.179",
+          "fixed": "2.1.179",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-pq7j-f95f-qfcv/GHSA-pq7j-f95f-qfcv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.1.179"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/anthropics/claude-code/security-advisories/GHSA-pq7j-f95f-qfcv",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 7.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/repos/anthropics/claude-code/security-advisories/GHSA-pq7j-f95f-qfcv"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-pq7j-f95f-qfcv/GHSA-pq7j-f95f-qfcv.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-pq7j-f95f-qfcv/GHSA-pq7j-f95f-qfcv.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:22:07Z",
+      "modifiedAt": "2026-10-15T20:22:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Claude Code: Plugin Hash Pin Bypass Allows Bypass of Hash Pinning",
+      "url": "https://github.com/advisories/GHSA-pq7j-f95f-qfcv",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/anthropics/claude-code/security-advisories/GHSA-pq7j-f95f-qfcv",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T15:14:01Z",
+      "modifiedAt": "2026-10-09T15:14:01Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "両者ともHIGH。開発元のCVSS v4はUI:P・7.7、ReviewedはUI:A。異なるベクトルを出典別に保持し、同一評価に統合しない。",
+    "利用者が悪意あるプラグインを安全なハッシュに固定して導入し、GitホストがSHA形式のブランチ名を許可することが条件。本文はClaude Desktopにも言及するが、Desktopの修正版番号は推測しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-pq7j-f95f-qfcv",
+        "aliases": [
+          "CVE-2026-86063"
+        ],
+        "publishedAt": "2026-10-15T20:22:07Z",
+        "modifiedAt": "2026-10-15T20:22:07Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-pq7j-f95f-qfcv/GHSA-pq7j-f95f-qfcv.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-pq7j-f95f-qfcv"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "@anthropic-ai/claude-code",
+        "ranges": [
+          {
+            "affected": "< 2.1.179",
+            "fixed": "2.1.179",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-pq7j-f95f-qfcv/GHSA-pq7j-f95f-qfcv.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.1.179"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-pq7j-f95f-qfcv/GHSA-pq7j-f95f-qfcv.json",
+      "cvss": [
+        {
+          "version": "4.0",
+          "score": null,
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-pq7j-f95f-qfcv/GHSA-pq7j-f95f-qfcv.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "両者ともHIGH。開発元のCVSS v4はUI:P・7.7、ReviewedはUI:A。異なるベクトルを出典別に保持し、同一評価に統合しない。; 利用者が悪意あるプラグインを安全なハッシュに固定して導入し、GitホストがSHA形式のブランチ名を許可することが条件。本文はClaude Desktopにも言及するが、Desktopの修正版番号は推測しない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

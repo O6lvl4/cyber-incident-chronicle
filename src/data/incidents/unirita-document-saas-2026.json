@@ -1,0 +1,85 @@
+{
+  "id": "unirita-document-saas-2026",
+  "company": "ユニリタ（社内文書管理システム）",
+  "title": "SaaS型文書管理システムから情報窃取、契約書・認証情報等の漏えいを確認",
+  "announcementDate": "2026-09-29",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表（9月28日に疑いを把握）",
+  "updatedDate": "2026-10-14",
+  "statusAsOfDate": "2026-10-14",
+  "lastVerifiedDate": "2026-10-16",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "社内の特定SaaS型文書管理システムへの不正アクセス。具体的手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "社内のSaaS型文書管理システムから情報が窃取されたことを確認。10月9日に契約書、システム認証情報、個人情報等の種類を公表し、14日には公開情報に自社情報が含まれることを会社側が確認した。",
+  "affectedData": [
+    "顧客・取引先との契約書、顧客システムの認証情報",
+    "顧客の従業員・社外関係者の個人情報（特定個人情報を含まない）",
+    "顧客から預かった重要情報、社内システム認証情報、社員個人情報等"
+  ],
+  "counts": [],
+  "scaleLabel": "件数・人数は未公表",
+  "caveats": [
+    "同社のUNIRITAユーザ会に関するCommune利用事案とは、対象システムと公表内容が異なる別事案",
+    "情報窃取・漏えいの確認は会社自身の調査結果による。攻撃者の主張や漏えいデータそのものを根拠・リンクとして収録しない",
+    "10月14日時点で漏えいファイルは特定済みだが内容の解析・整理は継続中。全対象者・件数の確定や個別通知完了を意味しない",
+    "9月29日・10月9日時点でシステム障害や業務支障は発生していないと説明。アクセス遮断を全面的なサービス停止としない",
+    "9月28日は事案把握日であり、侵入・窃取開始日ではない。ランサムウェアやSaaS製品名は未公表"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "ユニリタ：社内システムの情報漏えい（第1報）",
+      "url": "https://www.unirita.co.jp/news/2026/media_20260929.html",
+      "publishedDate": "2026-09-29"
+    },
+    {
+      "title": "ユニリタ：漏えい確認情報と対応（第2報）",
+      "url": "https://www.unirita.co.jp/dcms_media/other/261009_kaiji001.pdf",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "ユニリタ：会社による公開情報の確認と解析状況（第3報）",
+      "url": "https://www.unirita.co.jp/news/2026/media_20261014.html",
+      "publishedDate": "2026-10-14"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-28",
+      "label": "情報漏えいの疑いを把握",
+      "kind": "occurrence",
+      "summary": "13時30分頃に疑いを把握し、外部専門家と調査・アクセス遮断を開始",
+      "sourceUrl": "https://www.unirita.co.jp/news/2026/media_20260929.html"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "社内文書管理システム事案を公表",
+      "kind": "disclosure",
+      "summary": "特定システムの不正アクセスと情報窃取を公表。影響範囲を調査",
+      "sourceUrl": "https://www.unirita.co.jp/news/2026/media_20260929.html"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "漏えい情報の種類を公表",
+      "kind": "update",
+      "summary": "契約書、顧客・社内システム認証情報、個人情報等の漏えいを確認",
+      "sourceUrl": "https://www.unirita.co.jp/dcms_media/other/261009_kaiji001.pdf"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "会社情報の公開を確認",
+      "kind": "update",
+      "summary": "外部専門家との確認で自社情報が含まれると判断。漏えいファイルの内容解析・整理を継続",
+      "sourceUrl": "https://www.unirita.co.jp/news/2026/media_20261014.html"
+    }
+  ],
+  "detectedDate": "2026-09-28"
+}

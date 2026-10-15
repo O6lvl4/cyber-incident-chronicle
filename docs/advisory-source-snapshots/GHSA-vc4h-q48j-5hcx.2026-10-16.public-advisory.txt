@@ -1,0 +1,24 @@
+Public factual advisory excerpt
+Source: https://github.com/payloadcms/payload/security/advisories/GHSA-vc4h-q48j-5hcx
+Representation: selected public text, not the original HTTP response; navigation, publisher attribution and technical reproduction details omitted
+Advisory: GHSA-vc4h-q48j-5hcx
+
+Field access control bypass on auth collections
+Critical
+Published: Sep 18, 2026
+Package
+npm payload ( npm )
+Affected versions
+> 3.0.0, < 3.90.0
+> 4.0.0-canary.0, < 4.0.0-canary.34
+Patched versions
+3.90.0
+4.0.0-canary.34
+Description
+Impact
+Payload's duplicate operation copies field values from the source document even when a field is hidden, or its access.read or access.create rule would reject the value for that caller.
+The disableDuplicate collection setting, enabled by default on auth collections, did not stop this.
+Patches
+Users should upgrade Payload packages to >= 3.90.0 or >= 4.0.0-canary.34 .
+Workarounds
+Add a beforeDuplicate field hook to fields and set the value to empty or your default value.

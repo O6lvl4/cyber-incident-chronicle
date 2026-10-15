@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-3hcj-9m7p-wwm9/GHSA-3hcj-9m7p-wwm9.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-3hcj-9m7p-wwm9/GHSA-3hcj-9m7p-wwm9.json",
+    "originalGitBlobSha256": "305164858c11607c7e6e8887900bb18b50d423f50c310a177db3ccdb6fe9450d",
+    "originalGitBlobBytes": 2963
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-3hcj-9m7p-wwm9",
+    "modified": "2026-10-15T20:15:38Z",
+    "published": "2026-10-15T20:15:38Z",
+    "aliases": [
+      "CVE-2026-102603"
+    ],
+    "summary": "Gotify: Insufficiently Protected Password Change endpoint",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/gotify/server/v2"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "2.9.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/gotify/server/v3"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.0.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/gotify/server/security/advisories/GHSA-3hcj-9m7p-wwm9"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102603"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/gotify/server/pull/952"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/gotify/server/commit/a8744482c668e07a61798573ec8e17bd3f6009f9"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/gotify/server"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/gotify/server/releases/tag/v3.0.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-620"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:15:38Z",
+      "nvd_published_at": "2026-10-13T15:17:30Z"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-g4f2-2pf3-2pwj/GHSA-g4f2-2pf3-2pwj.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-g4f2-2pf3-2pwj/GHSA-g4f2-2pf3-2pwj.json",
+    "originalGitBlobSha256": "b05f8f44089b028707f8e27fddeedff4c519103ab7018b14919516b64bf78652",
+    "originalGitBlobBytes": 4735
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-g4f2-2pf3-2pwj",
+    "modified": "2026-10-15T20:09:56Z",
+    "published": "2026-10-15T20:09:56Z",
+    "aliases": [
+      "CVE-2026-104827"
+    ],
+    "summary": "react/http: Unbounded HTTP Client Response Header Buffering Leads to Memory Exhaustion DoS",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Packagist",
+          "name": "react/http"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.0.0"
+              },
+              {
+                "fixed": "1.11.1"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 1.11.0"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/reactphp/http/security/advisories/GHSA-g4f2-2pf3-2pwj"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/reactphp/http/commit/2558622d0b76227c60c61eac8a61572cb6638e8c"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/reactphp/http"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/reactphp/http/releases/tag/v1.11.1"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:09:56Z",
+      "nvd_published_at": null
+    }
+  }
+}

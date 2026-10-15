@@ -1,0 +1,79 @@
+{
+  "ghsa_id": "GHSA-qx66-fv34-fjm8",
+  "cve_id": "CVE-2026-102989",
+  "url": "https://api.github.com/repos/TanStack/router/security-advisories/GHSA-qx66-fv34-fjm8",
+  "html_url": "https://github.com/TanStack/router/security/advisories/GHSA-qx66-fv34-fjm8",
+  "summary": "Unauthenticated reflected XSS in TanStack Start server-function responses",
+  "severity": "critical",
+  "identifiers": [
+    {
+      "value": "GHSA-qx66-fv34-fjm8",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-102989",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-30T17:57:08Z",
+  "published_at": "2026-09-30T17:57:08Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@tanstack/start-server-core"
+      },
+      "vulnerable_version_range": ">= 1.143.12, < 1.169.39",
+      "patched_versions": "1.169.39"
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@tanstack/react-start"
+      },
+      "vulnerable_version_range": ">= 1.143.12, < 1.168.60",
+      "patched_versions": "1.168.60"
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@tanstack/solid-start"
+      },
+      "vulnerable_version_range": ">= 1.143.12, < 1.168.57",
+      "patched_versions": "1.168.57"
+    },
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@tanstack/vue-start"
+      },
+      "vulnerable_version_range": ">= 1.143.12, < 1.168.56",
+      "patched_versions": "1.168.56"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-79",
+      "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-79"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+    "score": 9.3
+  }
+}

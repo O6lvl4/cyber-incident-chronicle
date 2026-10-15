@@ -1,0 +1,27 @@
+Public factual advisory excerpt
+Source: https://github.com/backstage/backstage/security/advisories/GHSA-292q-8mf5-h6g3
+Representation: selected public text, not the original HTTP response; navigation, publisher attribution and technical reproduction details omitted
+Advisory: GHSA-292q-8mf5-h6g3
+
+Improper input validation in TechDocs MkDocs configuration
+High
+Published: Aug 28, 2026
+Package
+npm @backstage/plugin-techdocs-node ( npm )
+Affected versions
+< 1.14.6
+>= 1.15.0, < 1.15.4
+Patched versions
+1.14.6
+1.15.4
+Description
+Impact
+An authenticated user with permission to register or modify a TechDocs source could cause unintended code execution in the documentation generation environment. Impact is limited to resources available to the TechDocs backend or build container.
+Patches
+Patched in @backstage/plugin-techdocs-node version 1.15.4
+Workarounds
+Use external TechDocs generation in a locked-down, least-privilege CI environment.
+Restrict catalog registration and write access to TechDocs source repositories to trusted users.
+Run documentation generation in an isolated container without secrets or unnecessary network access.
+References
+Backstage TechDocs configuration

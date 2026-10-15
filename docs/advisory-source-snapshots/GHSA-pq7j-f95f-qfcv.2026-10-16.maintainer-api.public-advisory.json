@@ -1,0 +1,60 @@
+{
+  "ghsa_id": "GHSA-pq7j-f95f-qfcv",
+  "cve_id": "CVE-2026-86063",
+  "url": "https://api.github.com/repos/anthropics/claude-code/security-advisories/GHSA-pq7j-f95f-qfcv",
+  "html_url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-pq7j-f95f-qfcv",
+  "summary": "Plugin Commit SHA Pin Bypass Allows Installation of Attacker-Controlled Code",
+  "severity": "high",
+  "identifiers": [
+    {
+      "value": "GHSA-pq7j-f95f-qfcv",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-86063",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-10-09T15:14:01Z",
+  "published_at": "2026-10-09T15:14:01Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@anthropic-ai/claude-code"
+      },
+      "vulnerable_version_range": "< 2.1.179",
+      "patched_versions": "2.1.179"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": null,
+      "score": null
+    },
+    "cvss_v4": {
+      "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+      "score": 7.7
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-494",
+      "name": "Download of Code Without Integrity Check"
+    },
+    {
+      "cwe_id": "CWE-829",
+      "name": "Inclusion of Functionality from Untrusted Control Sphere"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-494",
+    "CWE-829"
+  ],
+  "cvss": {
+    "vector_string": null,
+    "score": null
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "ghsa_id": "GHSA-jwrc-gm9j-263p",
+  "cve_id": "CVE-2026-102832",
+  "url": "https://api.github.com/repos/jupyterlab/jupyterlab/security-advisories/GHSA-jwrc-gm9j-263p",
+  "html_url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-jwrc-gm9j-263p",
+  "summary": "Command link trust prompt in JupyterLab can trust a document other than the one clicked",
+  "severity": "medium",
+  "identifiers": [
+    {
+      "value": "GHSA-jwrc-gm9j-263p",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-102832",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-29T19:24:52Z",
+  "published_at": "2026-09-22T08:34:07Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "jupyterlab"
+      },
+      "vulnerable_version_range": ">=4.6.0, <=4.6.3",
+      "patched_versions": "4.6.4"
+    },
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "jupyterlab"
+      },
+      "vulnerable_version_range": ">=4.5.7, <=4.5.10",
+      "patched_versions": "4.5.11"
+    },
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "notebook"
+      },
+      "vulnerable_version_range": ">=7.5.6, <=7.6.2",
+      "patched_versions": "7.6.3"
+    },
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "jupyterlite-core"
+      },
+      "vulnerable_version_range": ">=0.7.5, <=0.8.3",
+      "patched_versions": "0.8.4"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+      "score": 4.2
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-367",
+      "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+    },
+    {
+      "cwe_id": "CWE-863",
+      "name": "Incorrect Authorization"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-367",
+    "CWE-863"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+    "score": 4.2
+  }
+}

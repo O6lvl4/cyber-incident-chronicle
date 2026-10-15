@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-663m-7x7m-g4fw/GHSA-663m-7x7m-g4fw.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-663m-7x7m-g4fw/GHSA-663m-7x7m-g4fw.json",
+    "originalGitBlobSha256": "3ba33944ec4c0b5c115a1f793fdd541b46104226abda26396632488f8bf88dc7",
+    "originalGitBlobBytes": 21967
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-663m-7x7m-g4fw",
+    "modified": "2026-10-15T20:09:33Z",
+    "published": "2026-10-15T20:09:33Z",
+    "aliases": [
+      "CVE-2026-77622"
+    ],
+    "summary": "Sliver: Unauthenticated Memory Exhaustion Denial of Service in Sliver HTTP(S) Listener PNG Decoder",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/BishopFox/sliver"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.7.6"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/BishopFox/sliver/security/advisories/GHSA-663m-7x7m-g4fw"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/BishopFox/sliver/commit/80273462bd8b2a3cd724d2d6d0301a0cabfa977d"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/BishopFox/sliver"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.6"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:09:33Z",
+      "nvd_published_at": null
+    }
+  }
+}

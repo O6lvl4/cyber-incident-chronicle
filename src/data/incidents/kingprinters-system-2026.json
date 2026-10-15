@@ -1,0 +1,72 @@
+{
+  "id": "kingprinters-system-2026",
+  "company": "キングプリンターズ",
+  "title": "不正アクセスでサイトを一時停止、顧客情報流出は未確認",
+  "announcementDate": "2026-09-14",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表（9月10日に不正アクセスを検知）",
+  "updatedDate": "2026-09-25",
+  "statusAsOfDate": "2026-09-25",
+  "lastVerifiedDate": "2026-10-16",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "システム基盤への不正アクセス。保有認証情報による生成AIサービスの不正利用が目的との見方、初期侵入手段は未公表",
+    "status": "unknown"
+  },
+  "summary": "9月10日に不正アクセスを検知し、14日16時までサイト等を停止。25日の社内調査報告では顧客データの外部送信痕跡は未確認で、認証情報を用いた生成AIサービスの不正利用が目的とみて外部調査を予定している。",
+  "affectedData": [
+    "顧客の個人情報・各種データについて漏えい未確認",
+    "会社保有の認証情報による生成AIサービス不正利用が目的とみられるとの説明"
+  ],
+  "counts": [],
+  "scaleLabel": "顧客情報流出は未確認（調査継続）",
+  "caveats": [
+    "9月25日時点の社内調査で漏えい未確認という状況。外部専門機関の最終調査で漏えいを否定したものではない",
+    "生成AIサービスの不正利用が目的との会社見解であり、AIが攻撃を実行したことや初期侵入経路を示す公表ではない",
+    "9月14日16時のサービス再開と、一部機能が利用できない可能性があるという同日案内を区別する",
+    "顧客のクレジットカード等決済情報は自社サーバーに保持せず、ログインパスワードはハッシュ化保存と説明",
+    "10月初旬からの外部フォレンジック調査と約1か月の所要見込みは9月25日時点の予定。開始・完了を独立確認したものではない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "キングプリンターズ：サイト停止・サービス再開と調査状況",
+      "url": "https://kingprinters.com/news/2026/oshirase_20260914-2",
+      "publishedDate": "2026-09-14"
+    },
+    {
+      "title": "キングプリンターズ：社内調査結果と外部調査予定（第2報）",
+      "url": "https://kingprinters.com/news/2026/oshirase_20260925",
+      "publishedDate": "2026-09-25"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-10",
+      "label": "不正アクセス検知・サイト停止",
+      "kind": "occurrence",
+      "summary": "第三者からの不正アクセスを検知し18時からサイトおよび関連機能を停止",
+      "sourceUrl": "https://kingprinters.com/news/2026/oshirase_20260914-2"
+    },
+    {
+      "date": "2026-09-14",
+      "label": "サービス再開と調査状況を公表",
+      "kind": "disclosure",
+      "summary": "16時から再開。顧客情報漏えいは未確認で一部機能には利用制限の可能性",
+      "sourceUrl": "https://kingprinters.com/news/2026/oshirase_20260914-2"
+    },
+    {
+      "date": "2026-09-25",
+      "label": "第2報で社内調査の見解を公表",
+      "kind": "update",
+      "summary": "外部データ送信痕跡は未確認。生成AIサービスの不正利用が目的とみるが調査は継続",
+      "sourceUrl": "https://kingprinters.com/news/2026/oshirase_20260925"
+    }
+  ],
+  "detectedDate": "2026-09-10"
+}

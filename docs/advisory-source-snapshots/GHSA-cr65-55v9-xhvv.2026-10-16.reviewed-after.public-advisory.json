@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-cr65-55v9-xhvv/GHSA-cr65-55v9-xhvv.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-cr65-55v9-xhvv/GHSA-cr65-55v9-xhvv.json",
+    "originalGitBlobSha256": "a20961467cdcb2070766892aa67b4da166b3d4ba2bf34fd4dbcd78aa7a100b27",
+    "originalGitBlobBytes": 21019
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-cr65-55v9-xhvv",
+    "modified": "2026-10-15T20:18:37Z",
+    "published": "2026-10-15T20:18:37Z",
+    "aliases": [
+      "CVE-2026-103030"
+    ],
+    "summary": "Dio: Cross-origin redirect leaks sensitive request headers in `dio_http2_adapter`",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Pub",
+          "name": "dio_http2_adapter"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.0.0"
+              },
+              {
+                "fixed": "2.8.0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 2.7.1"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/cfug/dio/security/advisories/GHSA-cr65-55v9-xhvv"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103030"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/cfug/dio/commit/9d7ac913340084f3b4987b121e076f28d637a81e"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/cfug/dio"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/cfug/dio/releases/tag/http2_adapter_v2.8.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:18:37Z",
+      "nvd_published_at": "2026-10-13T17:17:14Z"
+    }
+  }
+}

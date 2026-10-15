@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-637c-6jxx-4rwm/GHSA-637c-6jxx-4rwm.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-637c-6jxx-4rwm/GHSA-637c-6jxx-4rwm.json",
+    "originalGitBlobSha256": "61b5cdcf9ed03576e103d244fd4bb022120a6df4940ded1313bc342a23911855",
+    "originalGitBlobBytes": 11733
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-637c-6jxx-4rwm",
+    "modified": "2026-10-15T20:19:43Z",
+    "published": "2026-10-15T20:19:42Z",
+    "aliases": [
+      "CVE-2026-77524"
+    ],
+    "summary": "KEDA: Privilege escalation from namespace admin to cluster admin via KEDA TriggerAuthentication",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/kedacore/keda"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "1.5.0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/kedacore/keda/v2"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.21.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/kedacore/keda/security/advisories/GHSA-637c-6jxx-4rwm"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77524"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/kedacore/keda/commit/1e21cc798dedd079e696cdb45388eddc5e18365d"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/kedacore/keda"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/kedacore/keda/releases/tag/v2.21.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-269",
+        "CWE-918"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:19:42Z",
+      "nvd_published_at": "2026-10-14T17:19:11Z"
+    }
+  }
+}

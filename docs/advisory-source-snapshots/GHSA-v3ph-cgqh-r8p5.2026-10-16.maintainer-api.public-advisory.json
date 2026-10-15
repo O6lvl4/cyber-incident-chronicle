@@ -1,0 +1,60 @@
+{
+  "ghsa_id": "GHSA-v3ph-cgqh-r8p5",
+  "cve_id": "CVE-2026-82416",
+  "url": "https://api.github.com/repos/php/frankenphp/security-advisories/GHSA-v3ph-cgqh-r8p5",
+  "html_url": "https://github.com/php/frankenphp/security/advisories/GHSA-v3ph-cgqh-r8p5",
+  "summary": "Cross-request PHP session ID leak in worker mode when the session extension is a shared module",
+  "severity": "high",
+  "identifiers": [
+    {
+      "value": "GHSA-v3ph-cgqh-r8p5",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-82416",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-08-31T23:04:48Z",
+  "published_at": "2026-07-18T13:45:42Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/dunglas/frankenphp"
+      },
+      "vulnerable_version_range": "<= 1.12.4",
+      "patched_versions": ""
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "score": 7.7
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-362",
+      "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+    },
+    {
+      "cwe_id": "CWE-488",
+      "name": "Exposure of Data Element to Wrong Session"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-362",
+    "CWE-488"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+    "score": 7.7
+  }
+}

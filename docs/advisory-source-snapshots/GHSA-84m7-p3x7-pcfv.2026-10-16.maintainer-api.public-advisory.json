@@ -1,0 +1,68 @@
+{
+  "ghsa_id": "GHSA-84m7-p3x7-pcfv",
+  "cve_id": "CVE-2026-59951",
+  "url": "https://api.github.com/repos/modelcontextprotocol/python-sdk/security-advisories/GHSA-84m7-p3x7-pcfv",
+  "html_url": "https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-84m7-p3x7-pcfv",
+  "summary": "Streamable HTTP sessions were never reclaimed by default and kept their initialize payloads",
+  "severity": "high",
+  "identifiers": [
+    {
+      "value": "GHSA-84m7-p3x7-pcfv",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-59951",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-30T20:53:30Z",
+  "published_at": "2026-09-30T20:53:30Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "mcp"
+      },
+      "vulnerable_version_range": ">= 1.8.0, < 1.30.0",
+      "patched_versions": "1.30.0"
+    },
+    {
+      "package": {
+        "ecosystem": "pip",
+        "name": "mcp"
+      },
+      "vulnerable_version_range": ">= 2.0.0, < 2.2.0",
+      "patched_versions": "2.2.0"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "score": 7.5
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-770",
+      "name": "Allocation of Resources Without Limits or Throttling"
+    },
+    {
+      "cwe_id": "CWE-772",
+      "name": "Missing Release of Resource after Effective Lifetime"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-770",
+    "CWE-772"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "score": 7.5
+  }
+}

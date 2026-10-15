@@ -1,0 +1,200 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-gfp8-w835-v44j",
+  "aliases": [
+    "CVE-2026-62268"
+  ],
+  "title": "BorgBackup：悪意あるアーカイブ展開で範囲外ファイルを変更",
+  "summary": "細工されたアーカイブのシンボリックリンク等により、展開先外のファイルが削除・上書きされる可能性がある。1.4.5で修正。開発元はLOW、ReviewedはMODERATEと評価が異なる。",
+  "publishedAt": "2026-10-15T20:09:23Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json",
+  "modifiedAt": "2026-10-15T20:09:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "borgbackup",
+      "ranges": [
+        {
+          "affected": "< 1.4.5",
+          "fixed": "1.4.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json"
+        },
+        {
+          "affected": ">= 2.0.0b1, < 2.0.0b22",
+          "fixed": "2.0.0b22",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.5"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0b1"
+            },
+            {
+              "fixed": "2.0.0b22"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/borgbackup/borg/security-advisories/GHSA-gfp8-w835-v44j",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:09:23Z",
+      "modifiedAt": "2026-10-15T20:09:23Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "borg extract might modify out-of-tree files when extracting maliciously crafted archives",
+      "url": "https://github.com/advisories/GHSA-gfp8-w835-v44j",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/borgbackup/borg/security-advisories/GHSA-gfp8-w835-v44j",
+      "publishedDate": "2026-08-26",
+      "publishedAt": "2026-08-26T18:40:45Z",
+      "modifiedAt": "2026-08-26T18:40:45Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元はLOWでCVSS数値・ベクトルなし。ReviewedのMODERATEとv4ベクトルを別に保持。",
+    "開発元の構造化欄は1.xだけだが、本文は2.0.0b22より前のベータも対象とし、修正はb22に入る予定と記す。Reviewedのb1〜b22範囲を保持し、本文の将来形だけから現時点のリリース状況を断定しない。",
+    "悪意あるアーカイブ作成にはリポジトリへのアクセスが必要で、暗号化・認証付きリポジトリでは鍵とパスフレーズも必要。1.2.xは修正コミットのみで新規リリースなしとされる。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-gfp8-w835-v44j",
+        "aliases": [
+          "CVE-2026-62268"
+        ],
+        "publishedAt": "2026-10-15T20:09:23Z",
+        "modifiedAt": "2026-10-15T20:09:23Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-gfp8-w835-v44j"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "borgbackup",
+        "ranges": [
+          {
+            "affected": "< 1.4.5",
+            "fixed": "1.4.5",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json"
+          },
+          {
+            "affected": ">= 2.0.0b1, < 2.0.0b22",
+            "fixed": "2.0.0b22",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.4.5"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.0.0b1"
+              },
+              {
+                "fixed": "2.0.0b22"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "medium",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json",
+      "cvss": [
+        {
+          "version": "4.0",
+          "score": null,
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfp8-w835-v44j/GHSA-gfp8-w835-v44j.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "開発元はLOWでCVSS数値・ベクトルなし。ReviewedのMODERATEとv4ベクトルを別に保持。; 開発元の構造化欄は1.xだけだが、本文は2.0.0b22より前のベータも対象とし、修正はb22に入る予定と記す。Reviewedのb1〜b22範囲を保持し、本文の将来形だけから現時点のリリース状況を断定しない。; 悪意あるアーカイブ作成にはリポジトリへのアクセスが必要で、暗号化・認証付きリポジトリでは鍵とパスフレーズも必要。1.2.xは修正コミットのみで新規リリースなしとされる。",
+        "newerDatabase": false
+      },
+      {
+        "field": "affected",
+        "reason": "開発元はLOWでCVSS数値・ベクトルなし。ReviewedのMODERATEとv4ベクトルを別に保持。; 開発元の構造化欄は1.xだけだが、本文は2.0.0b22より前のベータも対象とし、修正はb22に入る予定と記す。Reviewedのb1〜b22範囲を保持し、本文の将来形だけから現時点のリリース状況を断定しない。; 悪意あるアーカイブ作成にはリポジトリへのアクセスが必要で、暗号化・認証付きリポジトリでは鍵とパスフレーズも必要。1.2.xは修正コミットのみで新規リリースなしとされる。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

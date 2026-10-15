@@ -1,0 +1,163 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-wv6g-x823-wx9m",
+  "aliases": [
+    "CVE-2026-64672"
+  ],
+  "title": "Terragrunt：予測可能な一時パス経由のディレクトリ上書き",
+  "summary": "共有ホストのローカル攻撃者が一時パスにシンボリックリンクを置くと、terragrunt catalogの処理が意図しないディレクトリを削除・再取得する可能性がある。1.1.1で修正。評価は開発元LOW、Reviewed MODERATE。",
+  "publishedAt": "2026-10-15T18:21:35Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-wv6g-x823-wx9m/GHSA-wv6g-x823-wx9m.json",
+  "modifiedAt": "2026-10-15T18:21:35Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/gruntwork-io/terragrunt",
+      "ranges": [
+        {
+          "affected": "< 1.1.1",
+          "fixed": "1.1.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-wv6g-x823-wx9m/GHSA-wv6g-x823-wx9m.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.1.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/gruntwork-io/terragrunt/security-advisories/GHSA-wv6g-x823-wx9m",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-wv6g-x823-wx9m/GHSA-wv6g-x823-wx9m.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-wv6g-x823-wx9m/GHSA-wv6g-x823-wx9m.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T18:21:35Z",
+      "modifiedAt": "2026-10-15T18:21:35Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Terragrunt catalog predictable temp symlink clobber",
+      "url": "https://github.com/advisories/GHSA-wv6g-x823-wx9m",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/gruntwork-io/terragrunt/security-advisories/GHSA-wv6g-x823-wx9m",
+      "publishedDate": "2026-09-22",
+      "publishedAt": "2026-09-22T12:20:24Z",
+      "modifiedAt": "2026-09-22T12:20:24Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元はLOWでCVSS数値・ベクトルなし。ReviewedはMODERATEとv4ベクトルを持つ。修正版1.1.1は一致する。",
+    "ローカル攻撃者が共有一時ディレクトリへ書き込め、被害者がcatalogを実行することが条件。リモートから直接悪用できる問題とはしない。",
+    "開発元のGoパッケージ名は空。表示するモジュール名はReviewed由来。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-wv6g-x823-wx9m",
+        "aliases": [
+          "CVE-2026-64672"
+        ],
+        "publishedAt": "2026-10-15T18:21:35Z",
+        "modifiedAt": "2026-10-15T18:21:35Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-wv6g-x823-wx9m/GHSA-wv6g-x823-wx9m.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-wv6g-x823-wx9m"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/gruntwork-io/terragrunt",
+        "ranges": [
+          {
+            "affected": "< 1.1.1",
+            "fixed": "1.1.1",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-wv6g-x823-wx9m/GHSA-wv6g-x823-wx9m.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.1.1"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "medium",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-wv6g-x823-wx9m/GHSA-wv6g-x823-wx9m.json",
+      "cvss": [
+        {
+          "version": "4.0",
+          "score": null,
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-wv6g-x823-wx9m/GHSA-wv6g-x823-wx9m.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "開発元はLOWでCVSS数値・ベクトルなし。ReviewedはMODERATEとv4ベクトルを持つ。修正版1.1.1は一致する。; ローカル攻撃者が共有一時ディレクトリへ書き込め、被害者がcatalogを実行することが条件。リモートから直接悪用できる問題とはしない。; 開発元のGoパッケージ名は空。表示するモジュール名はReviewed由来。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

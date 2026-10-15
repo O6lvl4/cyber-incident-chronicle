@@ -1,0 +1,20 @@
+Public factual advisory excerpt
+Source: https://github.com/Borewit/music-metadata/security/advisories/GHSA-qc8q-pw95-mq6c
+Representation: selected public text, not the original HTTP response; navigation, publisher attribution and technical reproduction details omitted
+Advisory: GHSA-qc8q-pw95-mq6c
+
+MP4 parser allows memory exhaustion via oversized extended atom length
+Moderate
+Published: Sep 23, 2026
+Package
+npm music-metadata ( npm )
+Affected versions
+11.12.3
+Patched versions
+11.16.0
+Description
+Summary
+The MP4 parser accepts attacker-controlled 64-bit extended atom sizes and converts them to a JavaScript Number without validating that the atom fits inside the actual file or parent container. That resulting length is used to drive readToken() calls for atom payload parsers such as mvhd , stsd , stsz , and date .
+Because strtok3.readToken() allocates the destination Uint8Array before checking whether enough bytes exist, a tiny crafted MP4-family file can trigger a huge allocation attempt and crash the process.
+Impact
+Remote, unauthenticated denial of service in applications that parse untrusted MP4-family files using music-metadata .

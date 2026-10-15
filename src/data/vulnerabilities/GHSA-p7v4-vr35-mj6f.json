@@ -1,0 +1,200 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-p7v4-vr35-mj6f",
+  "aliases": [
+    "CVE-2026-95837"
+  ],
+  "title": "containerd：チェックポイント復元時のセキュリティ設定回避",
+  "summary": "CRI経由の信頼できないチェックポイント復元で、要求された権限・seccomp等の制約を回避する可能性がある。2.2.7と2.3.4は復元を既定で無効化するが、再有効化すると脆弱性が残る。",
+  "publishedAt": "2026-10-15T20:21:57Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json",
+  "modifiedAt": "2026-10-15T20:21:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/containerd/containerd/v2",
+      "ranges": [
+        {
+          "affected": ">= 2.1.0, < 2.2.7",
+          "fixed": "2.2.7",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json"
+        },
+        {
+          "affected": ">= 2.3.0, < 2.3.4",
+          "fixed": "2.3.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.1.0"
+            },
+            {
+              "fixed": "2.2.7"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "fixed": "2.3.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/containerd/containerd/security-advisories/GHSA-p7v4-vr35-mj6f",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:21:57Z",
+      "modifiedAt": "2026-10-15T20:21:57Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "containerd CRI plugin: Checkpoint restore bypasses destination security context",
+      "url": "https://github.com/advisories/GHSA-p7v4-vr35-mj6f",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/containerd/containerd/security-advisories/GHSA-p7v4-vr35-mj6f",
+      "publishedDate": "2026-09-01",
+      "publishedAt": "2026-09-01T20:49:11Z",
+      "modifiedAt": "2026-09-23T14:47:28Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元はCRITICALだがCVSS数値・ベクトルは未公表。ReviewedはHIGHでCVSS v3ベクトルを保持する。CRITICALの数値を推定しない。",
+    "LinuxでCRIチェックポイント復元を利用する場合に影響。enable_experimental_restore_via_createで再有効化すると修正版でも問題が残る。2.4.0では機能自体を削除。",
+    "信頼できないチェックポイントから既に復元したコンテナは、開発元の案内に従い停止・削除・再作成が必要。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-p7v4-vr35-mj6f",
+        "aliases": [
+          "CVE-2026-95837"
+        ],
+        "publishedAt": "2026-10-15T20:21:57Z",
+        "modifiedAt": "2026-10-15T20:21:57Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-p7v4-vr35-mj6f"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/containerd/containerd/v2",
+        "ranges": [
+          {
+            "affected": ">= 2.1.0, < 2.2.7",
+            "fixed": "2.2.7",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json"
+          },
+          {
+            "affected": ">= 2.3.0, < 2.3.4",
+            "fixed": "2.3.4",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.1.0"
+              },
+              {
+                "fixed": "2.2.7"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.3.0"
+              },
+              {
+                "fixed": "2.3.4"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-p7v4-vr35-mj6f/GHSA-p7v4-vr35-mj6f.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "開発元はCRITICALだがCVSS数値・ベクトルは未公表。ReviewedはHIGHでCVSS v3ベクトルを保持する。CRITICALの数値を推定しない。; LinuxでCRIチェックポイント復元を利用する場合に影響。enable_experimental_restore_via_createで再有効化すると修正版でも問題が残る。2.4.0では機能自体を削除。; 信頼できないチェックポイントから既に復元したコンテナは、開発元の案内に従い停止・削除・再作成が必要。",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "開発元はCRITICALだがCVSS数値・ベクトルは未公表。ReviewedはHIGHでCVSS v3ベクトルを保持する。CRITICALの数値を推定しない。; LinuxでCRIチェックポイント復元を利用する場合に影響。enable_experimental_restore_via_createで再有効化すると修正版でも問題が残る。2.4.0では機能自体を削除。; 信頼できないチェックポイントから既に復元したコンテナは、開発元の案内に従い停止・削除・再作成が必要。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

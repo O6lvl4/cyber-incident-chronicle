@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-2cvf-wqm6-wr9g/GHSA-2cvf-wqm6-wr9g.json",
+    "originalGitBlobSha256": "7b0a7df95e45d208506332f291bfc1e167d9dbbbf6bc618f8d15de4112779fa1",
+    "originalGitBlobBytes": 4986
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-2cvf-wqm6-wr9g",
+    "modified": "2026-10-15T20:22:16Z",
+    "published": "2026-10-15T20:22:16Z",
+    "aliases": [
+      "CVE-2026-94603"
+    ],
+    "summary": "Podman: The `podman run` command can be instructed to disable almost all sandboxing by image annotation",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/containers/podman"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.4.0"
+              },
+              {
+                "fixed": "5.8.8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "go.podman.io/podman/v6"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "6.0.0"
+              },
+              {
+                "fixed": "6.1.3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/security/advisories/GHSA-2cvf-wqm6-wr9g"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94603"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/commit/24706290d5c974f078d8ca284026802515f28e92"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/commit/3721ff82ffb44a4ceeaecc5abd3808e924a6b669"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/commit/450c64426dbcff1097d3c7911d791101e3d16f4c"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/commit/7728ba0a90094408ad9078e36c3622a651d49616"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/commit/c74b1d37b3fb834b0de43e176565d9d8c254b627"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/commit/ea9243e04d1db3886dc3a51ee3300ffb547cfc02"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/podman-container-tools/podman"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/releases/tag/v5.8.8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/podman-container-tools/podman/releases/tag/v6.1.3"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-693"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:22:16Z",
+      "nvd_published_at": "2026-10-13T17:17:49Z"
+    }
+  }
+}

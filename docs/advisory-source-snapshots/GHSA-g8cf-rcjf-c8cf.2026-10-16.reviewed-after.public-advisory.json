@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-g8cf-rcjf-c8cf/GHSA-g8cf-rcjf-c8cf.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-g8cf-rcjf-c8cf/GHSA-g8cf-rcjf-c8cf.json",
+    "originalGitBlobSha256": "e7f76be8dd285dcd4d36c975bd81dafe13b19b6a3f5d60db0bf87a8c0e63b171",
+    "originalGitBlobBytes": 8906
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-g8cf-rcjf-c8cf",
+    "modified": "2026-10-15T20:20:37Z",
+    "published": "2026-10-15T20:20:37Z",
+    "aliases": [
+      "CVE-2026-100354"
+    ],
+    "summary": "kin-openapi: Uncontrolled Recursion on Circular allOf/anyOf/oneOf Schemas Causes Fatal Process Crash",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/getkin/kin-openapi"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.149.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/getkin/kin-openapi/security/advisories/GHSA-g8cf-rcjf-c8cf"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100354"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/getkin/kin-openapi/commit/9245cef66c840e27a08409a8a5cd0ee930c5bcff"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/getkin/kin-openapi"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/getkin/kin-openapi/releases/tag/v0.149.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-674"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:20:37Z",
+      "nvd_published_at": "2026-10-15T17:17:07Z"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-mm27-mwq9-fr5g/GHSA-mm27-mwq9-fr5g.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-mm27-mwq9-fr5g/GHSA-mm27-mwq9-fr5g.json",
+    "originalGitBlobSha256": "7116df8738c9fd446d4787bcdedee3c2dd3a85a218214d9575d840817de3737a",
+    "originalGitBlobBytes": 4164
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-mm27-mwq9-fr5g",
+    "modified": "2026-10-15T18:08:20Z",
+    "published": "2026-10-15T18:08:20Z",
+    "aliases": [
+      "CVE-2026-64655"
+    ],
+    "summary": "GitHub CLI allows attestation verification bypass through unescaped regex metacharacters",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/cli/cli/v2"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.97.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/cli/cli/security/advisories/GHSA-mm27-mwq9-fr5g"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64655"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/cli/cli/commit/55dbb4dc6b7edb10b48e3d7fc5bccd32318d1b55"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/cli/cli"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/cli/cli/releases/tag/v2.97.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-185"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T18:08:20Z",
+      "nvd_published_at": "2026-08-06T22:18:13Z"
+    }
+  }
+}

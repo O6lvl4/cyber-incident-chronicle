@@ -1,0 +1,141 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-hxpf-9xvq-wph8",
+  "aliases": [
+    "CVE-2026-57496"
+  ],
+  "title": "netlicensing-mcp：RESTパスの検証不足でトークン秘匿処理を回避",
+  "summary": "認証済みMCP利用者が製品識別子にパス要素を指定すると、別のRESTエンドポイントへアクセスしてトークン用の秘匿処理を迂回できる可能性がある。開発元の影響表記は0.1.5以下、修正版は0.1.8。",
+  "publishedAt": "2026-06-18T17:22:02Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/06/GHSA-hxpf-9xvq-wph8/GHSA-hxpf-9xvq-wph8.json",
+  "modifiedAt": "2026-10-15T18:41:03Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:23:15Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "netlicensing-mcp",
+      "ranges": [
+        {
+          "affected": "<= 0.1.5",
+          "fixed": "0.1.8",
+          "sourceUrl": "https://api.github.com/repos/Labs64/NetLicensing-MCP/security-advisories/GHSA-hxpf-9xvq-wph8"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/Labs64/NetLicensing-MCP/security-advisories/GHSA-hxpf-9xvq-wph8",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.6,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+        "sourceUrl": "https://api.github.com/repos/Labs64/NetLicensing-MCP/security-advisories/GHSA-hxpf-9xvq-wph8"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/06/GHSA-hxpf-9xvq-wph8/GHSA-hxpf-9xvq-wph8.json",
+      "publishedDate": "2026-06-18",
+      "publishedAt": "2026-06-18T17:22:02Z",
+      "modifiedAt": "2026-10-15T18:41:03Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "netlicensing-mcp: REST Path Traversal Bypasses Token Redaction",
+      "url": "https://github.com/advisories/GHSA-hxpf-9xvq-wph8",
+      "publishedDate": "2026-06-18"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：日時・撤回・版・評価を個別確認",
+      "url": "https://api.github.com/repos/Labs64/NetLicensing-MCP/security-advisories/GHSA-hxpf-9xvq-wph8",
+      "publishedDate": "2026-06-18",
+      "publishedAt": "2026-06-18T05:23:16Z",
+      "modifiedAt": "2026-06-24T22:33:33Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・版・評価を照合。開発元の初回公開日時とDBの収録日時を区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元の影響<=0.1.5とDBの<0.1.8は異なる。修正0.1.8は一致するが、中間版の影響を補完しない。",
+    "開発元APIはCritical/CVSS3.1 9.6、本文には8.3 Highとの記述も残る。後者の版・ベクトルは不明なため構造化CVSSに変換しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:23:15Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-hxpf-9xvq-wph8",
+        "aliases": [
+          "CVE-2026-57496"
+        ],
+        "publishedAt": "2026-06-18T17:22:02Z",
+        "modifiedAt": "2026-10-15T18:41:03Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/06/GHSA-hxpf-9xvq-wph8/GHSA-hxpf-9xvq-wph8.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-hxpf-9xvq-wph8"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "netlicensing-mcp",
+        "ranges": [
+          {
+            "affected": "< 0.1.8",
+            "fixed": "0.1.8",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/06/GHSA-hxpf-9xvq-wph8/GHSA-hxpf-9xvq-wph8.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.1.8"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元は<=0.1.5・修正0.1.8、固定DBは<0.1.8。中間版の影響を推定せず、表示は開発元の表記を採用してDB範囲も保持。",
+        "newerDatabase": false
+      },
+      {
+        "field": "severity",
+        "reason": "開発元APIの構造化評価はCritical/CVSS3.1 9.6。本文冒頭には版・ベクトルなしの8.3 Highもある。構造化評価を表示し、この出典内の不一致を保持する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

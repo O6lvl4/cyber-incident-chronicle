@@ -1,0 +1,63 @@
+{
+  "ghsa_id": "GHSA-fmxq-cgp8-87wp",
+  "cve_id": "CVE-2026-77459",
+  "url": "https://api.github.com/repos/argoproj/argo-cd/security-advisories/GHSA-fmxq-cgp8-87wp",
+  "html_url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-fmxq-cgp8-87wp",
+  "summary": "AppProject restrictions bypassed by PreDelete/PostDelete resource hooks",
+  "severity": "critical",
+  "identifiers": [
+    {
+      "value": "GHSA-fmxq-cgp8-87wp",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-77459",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-10-07T15:58:43Z",
+  "published_at": "2026-10-07T15:58:43Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/argoproj/argo-cd/v2"
+      },
+      "vulnerable_version_range": ">= 2.10.0",
+      "patched_versions": ""
+    },
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/argoproj/argo-cd/v3"
+      },
+      "vulnerable_version_range": ">= 3.0.0, < 3.3.15 || >= 3.4.0, < 3.4.10 || >= 3.5.0, < 3.5.4 || = 3.6.0-rc1",
+      "patched_versions": "3.3.15, 3.4.10, 3.5.4, 3.6.0-rc2"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-863",
+      "name": "Incorrect Authorization"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-863"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+    "score": 9.9
+  }
+}

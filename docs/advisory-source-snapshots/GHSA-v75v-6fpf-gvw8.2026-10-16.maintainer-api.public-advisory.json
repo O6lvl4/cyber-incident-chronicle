@@ -1,0 +1,89 @@
+{
+  "ghsa_id": "GHSA-v75v-6fpf-gvw8",
+  "cve_id": "CVE-2026-104252",
+  "url": "https://api.github.com/repos/vitessio/vitess/security-advisories/GHSA-v75v-6fpf-gvw8",
+  "html_url": "https://github.com/vitessio/vitess/security/advisories/GHSA-v75v-6fpf-gvw8",
+  "summary": "Vitess vttablet /twopcz reflected XSS",
+  "severity": "critical",
+  "identifiers": [
+    {
+      "value": "GHSA-v75v-6fpf-gvw8",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-104252",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-10-07T18:28:31Z",
+  "published_at": "2026-07-27T15:55:12Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "vitess.io/vitess"
+      },
+      "vulnerable_version_range": "< 0.23.5",
+      "patched_versions": "0.23.5"
+    },
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "vitess.io/vitess"
+      },
+      "vulnerable_version_range": ">= 0.24.0, < 0.24.2",
+      "patched_versions": "0.24.2"
+    },
+    {
+      "package": {
+        "ecosystem": "other",
+        "name": "Vitess"
+      },
+      "vulnerable_version_range": "< 23.0.5",
+      "patched_versions": "23.0.5"
+    },
+    {
+      "package": {
+        "ecosystem": "other",
+        "name": "Vitess"
+      },
+      "vulnerable_version_range": ">= 24.0.0, < 24.0.2",
+      "patched_versions": "24.0.2"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-79",
+      "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    },
+    {
+      "cwe_id": "CWE-80",
+      "name": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)"
+    },
+    {
+      "cwe_id": "CWE-116",
+      "name": "Improper Encoding or Escaping of Output"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-79",
+    "CWE-80",
+    "CWE-116"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "score": 9.8
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "ryomo-systems-2026",
+  "company": "両毛システムズ",
+  "title": "VPNアカウント悪用によるランサムウェア攻撃、個人情報等に漏えいのおそれ",
+  "announcementDate": "2026-08-15",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-08-12",
+  "occurredDateLabel": "調査で確認したVPNアカウントを使った社内ネットワーク侵入日",
+  "updatedDate": "2026-09-25",
+  "statusAsOfDate": "2026-09-25",
+  "lastVerifiedDate": "2026-10-16",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "VPN機器のアカウントを悪用した侵入とランサムウェア攻撃",
+    "status": "confirmed"
+  },
+  "summary": "8月12日にVPN機器のアカウントを悪用して侵入され、14日に異常を検知。8月19日第2報でランサムウェア攻撃と社内システム停止を公表し、9月25日第3報で一部サーバーの営業・取引情報や委託元顧客・自社従業員等の個人情報に漏えいのおそれがあると説明した。",
+  "affectedData": [
+    "営業情報、取引情報",
+    "取引先顧客、問い合わせをした事業者・個人、自社従業員に関する個人情報（対象を精査中）"
+  ],
+  "counts": [],
+  "scaleLabel": "全体の対象件数・人数は精査中",
+  "caveats": [
+    "ランサムウェア攻撃と不正アクセスの痕跡は確認済みだが、情報漏えいはおそれとして公表されている",
+    "VPNアカウント悪用は公表済み。認証情報の取得方法、VPNの脆弱性・製品名・CVEは公表本文から断定しない",
+    "第1・2報本文の日付は2026年8月、第3報本文は2026年9月。公式お知らせ一覧の掲載日8月15日・19日・9月25日で公表日を特定した",
+    "委託元ごとの影響数は全社被害規模ではない。この記録では会社の全体件数が未確定のため人数を推計しない",
+    "9月25日時点で漏えいのおそれがある個人情報の件数・項目を精査し対象者へ順次連絡。二次被害は未確認"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "両毛システムズ：社内システムへの不正アクセス（初報）",
+      "url": "https://www.ryomo.co.jp/news/202608_02.html",
+      "publishedDate": "2026-08-15"
+    },
+    {
+      "title": "両毛システムズ：ランサムウェア確認と社内システム停止（第2報）",
+      "url": "https://www.ryomo.co.jp/news/202608_03.html",
+      "publishedDate": "2026-08-19"
+    },
+    {
+      "title": "両毛システムズ：VPNアカウント悪用・ランサムウェアと漏えいのおそれ（第3報）",
+      "url": "https://www.ryomo.co.jp/news/202609_02.html",
+      "publishedDate": "2026-09-25"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-12",
+      "label": "VPNアカウント悪用で侵入",
+      "kind": "occurrence",
+      "summary": "外部の第三者がVPN機器のアカウントを悪用して社内ネットワークへ侵入",
+      "sourceUrl": "https://www.ryomo.co.jp/news/202609_02.html"
+    },
+    {
+      "date": "2026-08-14",
+      "label": "異常検知・ネットワーク遮断",
+      "kind": "occurrence",
+      "summary": "死活監視で異常を検知し調査、サイバー攻撃と確認してネットワークを遮断",
+      "sourceUrl": "https://www.ryomo.co.jp/news/202609_02.html"
+    },
+    {
+      "date": "2026-08-15",
+      "label": "不正アクセスを公表",
+      "kind": "disclosure",
+      "summary": "原因・侵入経路・被害範囲の調査と復旧対応を公表",
+      "sourceUrl": "https://www.ryomo.co.jp/news/202608_02.html"
+    },
+    {
+      "date": "2026-08-19",
+      "label": "ランサムウェアと社内システム停止を公表",
+      "kind": "update",
+      "summary": "第2報でランサムウェア攻撃と被害拡大防止のための社内システム停止を確認。漏えいは当時未確認",
+      "sourceUrl": "https://www.ryomo.co.jp/news/202608_03.html"
+    },
+    {
+      "date": "2026-09-25",
+      "label": "第3報で手法と漏えいのおそれを公表",
+      "kind": "update",
+      "summary": "ランサムウェアとVPNアカウント悪用を確認。情報件数・項目は精査中",
+      "sourceUrl": "https://www.ryomo.co.jp/news/202609_02.html"
+    }
+  ],
+  "detectedDate": "2026-08-14"
+}

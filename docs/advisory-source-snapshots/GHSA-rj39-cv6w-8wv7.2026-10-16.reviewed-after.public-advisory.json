@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-rj39-cv6w-8wv7/GHSA-rj39-cv6w-8wv7.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-rj39-cv6w-8wv7/GHSA-rj39-cv6w-8wv7.json",
+    "originalGitBlobSha256": "9a94b4bdc0bc1cd555e695b60eae986b2de0724af11dfecf1b8a887092aa847c",
+    "originalGitBlobBytes": 9130
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-rj39-cv6w-8wv7",
+    "modified": "2026-10-15T20:20:27Z",
+    "published": "2026-10-15T20:20:27Z",
+    "aliases": [
+      "CVE-2026-100352"
+    ],
+    "summary": "kin-openapi: YAML NaN/Inf Values Bypass Built-in Guards and Panic via OAS 3.1 Validation Path",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/getkin/kin-openapi"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.148.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/getkin/kin-openapi/security/advisories/GHSA-rj39-cv6w-8wv7"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100352"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/getkin/kin-openapi/commit/4487f198ab8be0c37d6ca72c54f5dca4dc25270e"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/getkin/kin-openapi"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/getkin/kin-openapi/releases/tag/v0.148.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-754"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:20:27Z",
+      "nvd_published_at": "2026-10-15T16:17:31Z"
+    }
+  }
+}

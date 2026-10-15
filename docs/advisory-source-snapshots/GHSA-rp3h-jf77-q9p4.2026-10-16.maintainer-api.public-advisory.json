@@ -1,0 +1,63 @@
+{
+  "ghsa_id": "GHSA-rp3h-jf77-q9p4",
+  "cve_id": "CVE-2026-95838",
+  "url": "https://api.github.com/repos/containerd/containerd/security-advisories/GHSA-rp3h-jf77-q9p4",
+  "html_url": "https://github.com/containerd/containerd/security/advisories/GHSA-rp3h-jf77-q9p4",
+  "summary": "Unpack DoS via repeated opaque whiteouts",
+  "severity": "medium",
+  "identifiers": [
+    {
+      "value": "GHSA-rp3h-jf77-q9p4",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-95838",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-23T14:47:39Z",
+  "published_at": "2026-09-04T21:23:07Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/containerd/containerd/v2"
+      },
+      "vulnerable_version_range": "< 2.0.12, >= 2.2.0, < 2.2.8, >= 2.3.0, < 2.3.5",
+      "patched_versions": "2.3.5, 2.2.8, 2.0.12"
+    },
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/containerd/containerd"
+      },
+      "vulnerable_version_range": "< 1.7.35",
+      "patched_versions": "1.7.35"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": null,
+      "score": null
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-400",
+      "name": "Uncontrolled Resource Consumption"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-400"
+  ],
+  "cvss": {
+    "vector_string": null,
+    "score": null
+  }
+}

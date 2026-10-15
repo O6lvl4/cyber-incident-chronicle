@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/b950a40c9ce07b70b943775709034132dd9614cb/advisories/github-reviewed/2026/10/GHSA-8pqf-f4m5-798g/GHSA-8pqf-f4m5-798g.json",
+    "commit": "b950a40c9ce07b70b943775709034132dd9614cb",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-8pqf-f4m5-798g/GHSA-8pqf-f4m5-798g.json",
+    "originalGitBlobSha256": "d0251389e82c314fd605241904ec4c1dced226b1aeb462bf821fe3920331f78d",
+    "originalGitBlobBytes": 5181
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-8pqf-f4m5-798g",
+    "modified": "2026-10-07T16:18:30Z",
+    "published": "2026-10-07T16:18:30Z",
+    "aliases": [
+      "CVE-2026-106454"
+    ],
+    "summary": "Twisted: IMAP wildcardToRegexp() ReDoS",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "Twisted"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "25.5.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/twisted/twisted/security/advisories/GHSA-8pqf-f4m5-798g"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106454"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/twisted/twisted/pull/12788"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/twisted/twisted/commit/2f8a3c29246f4eb324690e06a9767a11dc4aec9f"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/twisted/twisted"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-1333"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-07T16:18:30Z",
+      "nvd_published_at": "2026-10-06T20:17:27Z"
+    }
+  }
+}

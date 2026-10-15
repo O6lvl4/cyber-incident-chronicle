@@ -1,0 +1,82 @@
+{
+  "id": "sourcenext-members-api-2026",
+  "company": "ソースネクスト（会員情報システム）",
+  "title": "会員情報APIを悪用した情報流出、22,519,960件を可能性の範囲として公表",
+  "announcementDate": "2026-10-15",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-09",
+  "occurredDateLabel": "調査で確認した不正アクセス開始日時（10時頃）",
+  "updatedDate": "2026-10-15",
+  "statusAsOfDate": "2026-10-15",
+  "lastVerifiedDate": "2026-10-16",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "会員情報取得APIの不正利用。FAQは原因となったシステムの脆弱性修正を説明",
+    "status": "confirmed"
+  },
+  "summary": "10月9日から会員情報取得APIを不正利用され、13日9時頃に検知して13時36分までに封じ込めた。会社は情報流出の発生を公表する一方、22,519,960件と各情報項目は流出可能性の範囲として示し、パスワード再設定を案内している。",
+  "affectedData": [
+    "メールアドレス、パスワード、氏名・氏名カナ、住所、性別、電話番号、FAX番号、生年月日",
+    "会社名、役職名、部署名、加入サービス・登録日・ログイン日等の識別情報"
+  ],
+  "counts": [
+    {
+      "value": 22519960,
+      "unit": "件",
+      "status": "possible",
+      "label": "流出した可能性のある会員情報の対象件数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "22,519,960件（対象範囲は可能性）",
+  "caveats": [
+    "告知冒頭と経緯は情報流出・取得の発生を確認したと説明する一方、対象件数と項目は可能性として記載。FAQも流出可能性が高いと表現しており、全件確定漏えい数に置き換えない",
+    "22,519,960は件数であり重複を除いた人数ではない。対象項目は登録状況によって異なり、全員が全項目の対象ではない",
+    "FAQの対象範囲は2026年10月13日13時36分までの登録者。クレジットカード情報は対象システムに保存されておらず除外",
+    "パスワードの保存形式は未公表。ハッシュ化・平文流出のいずれも断定しない",
+    "10月13日は検知・封じ込め日、10月9日は確認された不正アクセス開始日、10月15日は公表日。2023年の決済アプリ改ざんとは別事案",
+    "個人情報保護委員会への10月15日の報告は完了、10月16日の警察への被害申告は予定として公表。確認日をもって実施済みにしない",
+    "FAQにはパスワードリセットの順次実施と措置完了の両表現があり、全利用者の再設定完了や外部調査完了と読み替えない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "ソースネクスト：会員情報システムへの不正アクセスと情報流出",
+      "url": "https://www.sourcenext.com/support/i/2026/1015_info/",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "title": "ソースネクスト：情報漏えいFAQ・対象範囲と対応",
+      "url": "https://www.sourcenext.com/support/i/2026/1015_1/",
+      "publishedDate": "2026-10-15"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-09",
+      "label": "API不正利用を開始",
+      "kind": "occurrence",
+      "summary": "10時頃から会員情報取得APIを不正利用し登録情報を取得したと調査で判明",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2026/1015_info/"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "不正アクセス検知・封じ込め",
+      "kind": "occurrence",
+      "summary": "9時頃に確認、13時36分までに不正通信の遮断等を完了",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2026/1015_info/"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "流出発生と可能性のある対象件数を公表",
+      "kind": "disclosure",
+      "summary": "22,519,960件と情報項目を可能性として公表。パスワード再設定と順次通知を案内",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2026/1015_info/"
+    }
+  ],
+  "detectedDate": "2026-10-13"
+}

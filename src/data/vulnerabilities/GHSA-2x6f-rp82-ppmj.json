@@ -1,0 +1,167 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2x6f-rp82-ppmj",
+  "aliases": [
+    "CVE-2026-102527"
+  ],
+  "title": "Nuxt OG Image：動的画像キャッシュの内容改変",
+  "summary": "導出可能なキャッシュキーを使い、署名されていない動的画像ルートの内容を改変できる可能性がある。構造化情報は6.7.0を修正版とするが、本文には異なる推奨版とCVSS値も残る。",
+  "publishedAt": "2026-10-15T20:15:27Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2x6f-rp82-ppmj/GHSA-2x6f-rp82-ppmj.json",
+  "modifiedAt": "2026-10-15T20:15:28Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "nuxt-og-image",
+      "ranges": [
+        {
+          "affected": ">= 6.2.5, < 6.7.0",
+          "fixed": "6.7.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2x6f-rp82-ppmj/GHSA-2x6f-rp82-ppmj.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "6.2.5"
+            },
+            {
+              "fixed": "6.7.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/nuxt-modules/og-image/security-advisories/GHSA-2x6f-rp82-ppmj",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 6.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/repos/nuxt-modules/og-image/security-advisories/GHSA-2x6f-rp82-ppmj"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2x6f-rp82-ppmj/GHSA-2x6f-rp82-ppmj.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:15:27Z",
+      "modifiedAt": "2026-10-15T20:15:28Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Nuxt OG Image cache poisoning through derivable cache keys on unsigned dynamic image routes",
+      "url": "https://github.com/advisories/GHSA-2x6f-rp82-ppmj",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/nuxt-modules/og-image/security-advisories/GHSA-2x6f-rp82-ppmj",
+      "publishedDate": "2026-07-22",
+      "publishedAt": "2026-07-22T09:53:06Z",
+      "modifiedAt": "2026-09-29T14:09:39Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "構造化APIとReviewedはMODERATE相当・CVSS v4 6.9、修正版6.7.0で一致。本文前半は8.8と6.7.2＋secret設定を案内している。",
+    "追記されたRemediation節は6.7.0でURL署名を既定有効化し、cacheKeyも署名対象になると明記する。前半の評価・推奨版との相違を消去せず保持する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-2x6f-rp82-ppmj",
+        "aliases": [
+          "CVE-2026-102527"
+        ],
+        "publishedAt": "2026-10-15T20:15:27Z",
+        "modifiedAt": "2026-10-15T20:15:28Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2x6f-rp82-ppmj/GHSA-2x6f-rp82-ppmj.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-2x6f-rp82-ppmj"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "nuxt-og-image",
+        "ranges": [
+          {
+            "affected": ">= 6.2.5, < 6.7.0",
+            "fixed": "6.7.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2x6f-rp82-ppmj/GHSA-2x6f-rp82-ppmj.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "6.2.5"
+              },
+              {
+                "fixed": "6.7.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "medium",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2x6f-rp82-ppmj/GHSA-2x6f-rp82-ppmj.json",
+      "cvss": [
+        {
+          "version": "4.0",
+          "score": null,
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-2x6f-rp82-ppmj/GHSA-2x6f-rp82-ppmj.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "構造化APIとReviewedはMODERATE相当・CVSS v4 6.9、修正版6.7.0で一致。本文前半は8.8と6.7.2＋secret設定を案内している。; 追記されたRemediation節は6.7.0でURL署名を既定有効化し、cacheKeyも署名対象になると明記する。前半の評価・推奨版との相違を消去せず保持する。",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "構造化APIとReviewedはMODERATE相当・CVSS v4 6.9、修正版6.7.0で一致。本文前半は8.8と6.7.2＋secret設定を案内している。; 追記されたRemediation節は6.7.0でURL署名を既定有効化し、cacheKeyも署名対象になると明記する。前半の評価・推奨版との相違を消去せず保持する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

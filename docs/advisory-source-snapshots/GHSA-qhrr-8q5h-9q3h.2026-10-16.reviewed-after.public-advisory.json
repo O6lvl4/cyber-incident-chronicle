@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-qhrr-8q5h-9q3h/GHSA-qhrr-8q5h-9q3h.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-qhrr-8q5h-9q3h/GHSA-qhrr-8q5h-9q3h.json",
+    "originalGitBlobSha256": "66e529291d1e560670c5d2083195d92bf10642f347f9d922a05919f5d943c0ff",
+    "originalGitBlobBytes": 5571
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-qhrr-8q5h-9q3h",
+    "modified": "2026-10-15T18:35:46Z",
+    "published": "2026-10-15T18:35:46Z",
+    "aliases": [
+      "CVE-2026-92707"
+    ],
+    "summary": "MessagePack: Nested arrays can blow past buffer length limits",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "NuGet",
+          "name": "MessagePack"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.5.303"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "NuGet",
+          "name": "MessagePack"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0"
+              },
+              {
+                "fixed": "3.1.9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-qhrr-8q5h-9q3h"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/commit/7fd78bbf3476e03beae8b0f7a521125525a8a64a"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/commit/95b63fca4f7097d3cac12d1a95286af4b4bbf02c"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/releases/tag/v2.5.303"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/releases/tag/v3.1.9"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-1325"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T18:35:46Z",
+      "nvd_published_at": null
+    }
+  }
+}

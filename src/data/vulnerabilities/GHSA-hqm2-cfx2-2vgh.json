@@ -1,0 +1,163 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-hqm2-cfx2-2vgh",
+  "aliases": [
+    "CVE-2026-102682"
+  ],
+  "title": "Pipecat：開発用ランナーの公開による未認証セッション作成",
+  "summary": "開発用ランナーを外部公開すると、未認証でボットセッションやDailyルームが作成される可能性がある。1.6.0は警告・文書を追加した版で、開発用エンドポイントへの認証を追加する修正ではない。",
+  "publishedAt": "2026-10-15T20:22:18Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-hqm2-cfx2-2vgh/GHSA-hqm2-cfx2-2vgh.json",
+  "modifiedAt": "2026-10-15T20:22:18Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pipecat-ai",
+      "ranges": [
+        {
+          "affected": ">= 0.0.98, < 1.6.0",
+          "fixed": "1.6.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-hqm2-cfx2-2vgh/GHSA-hqm2-cfx2-2vgh.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.0.98"
+            },
+            {
+              "fixed": "1.6.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/pipecat-ai/pipecat/security-advisories/GHSA-hqm2-cfx2-2vgh",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.6,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "sourceUrl": "https://api.github.com/repos/pipecat-ai/pipecat/security-advisories/GHSA-hqm2-cfx2-2vgh"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-hqm2-cfx2-2vgh/GHSA-hqm2-cfx2-2vgh.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:22:18Z",
+      "modifiedAt": "2026-10-15T20:22:18Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pipecat: Public exposure of Pipecat’s development runner can allow unauthenticated bot session creation",
+      "url": "https://github.com/advisories/GHSA-hqm2-cfx2-2vgh",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/pipecat-ai/pipecat/security-advisories/GHSA-hqm2-cfx2-2vgh",
+      "publishedDate": "2026-09-29",
+      "publishedAt": "2026-09-29T17:39:30Z",
+      "modifiedAt": "2026-09-29T17:39:30Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元は1.6.0をpatched_versionsに記載する一方、本文で未認証の開発動作は設計上維持されると明記。更新だけを公開環境の完全な対策としない。",
+    "既定はlocalhost待受。信頼できないネットワークに公開せず、本番は認証付きディスパッチャーまたは管理された実行環境を利用する。",
+    "開発元のパッケージ名・範囲には末尾空白があるため、生のフィールドを監査記録に保持している。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-hqm2-cfx2-2vgh",
+        "aliases": [
+          "CVE-2026-102682"
+        ],
+        "publishedAt": "2026-10-15T20:22:18Z",
+        "modifiedAt": "2026-10-15T20:22:18Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-hqm2-cfx2-2vgh/GHSA-hqm2-cfx2-2vgh.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-hqm2-cfx2-2vgh"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "pipecat-ai",
+        "ranges": [
+          {
+            "affected": ">= 0.0.98, < 1.6.0",
+            "fixed": "1.6.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-hqm2-cfx2-2vgh/GHSA-hqm2-cfx2-2vgh.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.0.98"
+              },
+              {
+                "fixed": "1.6.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "medium",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-hqm2-cfx2-2vgh/GHSA-hqm2-cfx2-2vgh.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-hqm2-cfx2-2vgh/GHSA-hqm2-cfx2-2vgh.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "開発元は1.6.0をpatched_versionsに記載する一方、本文で未認証の開発動作は設計上維持されると明記。更新だけを公開環境の完全な対策としない。; 既定はlocalhost待受。信頼できないネットワークに公開せず、本番は認証付きディスパッチャーまたは管理された実行環境を利用する。; 開発元のパッケージ名・範囲には末尾空白があるため、生のフィールドを監査記録に保持している。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

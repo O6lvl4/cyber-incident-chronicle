@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-gfrc-g87h-7h5w/GHSA-gfrc-g87h-7h5w.json",
+    "originalGitBlobSha256": "d0409a56c12daf133aaaffe21f577bd326d3c392259ff01cc2e1ada1d111b293",
+    "originalGitBlobBytes": 6951
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-gfrc-g87h-7h5w",
+    "modified": "2026-10-15T20:11:32Z",
+    "published": "2026-10-15T20:11:32Z",
+    "aliases": [
+      "CVE-2026-84313"
+    ],
+    "summary": "Nginx UI: TOTP / passkey enrolment requires no re-authentication, enabling persistent account takeover",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "Nginx-UI"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.9.10-0.20260703131214-23d1934099b0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-gfrc-g87h-7h5w"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84313"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/0xJacky/nginx-ui/commit/23d1934099b05b2a01589b48129dc3d3159d91c2"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/0xJacky/nginx-ui"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/0xJacky/nginx-ui/releases/tag/v2.4.1"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-306"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:11:32Z",
+      "nvd_published_at": "2026-10-12T21:17:21Z"
+    }
+  }
+}

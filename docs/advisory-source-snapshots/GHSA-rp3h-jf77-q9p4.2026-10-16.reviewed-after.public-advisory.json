@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "artifactRepresentation": "minimized-public-reviewed-advisory-projection",
+  "source": {
+    "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-rp3h-jf77-q9p4/GHSA-rp3h-jf77-q9p4.json",
+    "commit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "repositoryPath": "advisories/github-reviewed/2026/10/GHSA-rp3h-jf77-q9p4/GHSA-rp3h-jf77-q9p4.json",
+    "originalGitBlobSha256": "a232e2aada86ddafa1e85f94bf7d382ab817606f7d12949eb46093d204d2c19d",
+    "originalGitBlobBytes": 4337
+  },
+  "omittedFields": [
+    "details"
+  ],
+  "note": "Structured public advisory facts only. The full details narrative, code examples and unrelated reporting references are omitted. This projection is not the original Git blob; original-byte digests and projection artifact digests are distinct.",
+  "advisory": {
+    "schema_version": "1.4.0",
+    "id": "GHSA-rp3h-jf77-q9p4",
+    "modified": "2026-10-15T20:22:05Z",
+    "published": "2026-10-15T20:22:05Z",
+    "aliases": [
+      "CVE-2026-95838"
+    ],
+    "summary": "containerd: Unpack DoS via repeated opaque whiteouts",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/containerd/containerd/v2"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.0.12"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/containerd/containerd"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.7.35"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/containerd/containerd/v2"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.2.0"
+              },
+              {
+                "fixed": "2.2.8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/containerd/containerd/v2"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.3.0"
+              },
+              {
+                "fixed": "2.3.5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/containerd/containerd/security/advisories/GHSA-rp3h-jf77-q9p4"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95838"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/containerd/containerd/commit/e6ca378dcfa610d06589a3ac96aa992de866e4f0"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/containerd/containerd"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-400",
+        "CWE-407"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-15T20:22:05Z",
+      "nvd_published_at": "2026-10-12T20:17:10Z"
+    }
+  }
+}

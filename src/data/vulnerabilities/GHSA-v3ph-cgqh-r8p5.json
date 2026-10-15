@@ -1,0 +1,162 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v3ph-cgqh-r8p5",
+  "aliases": [
+    "CVE-2026-82416"
+  ],
+  "title": "FrankenPHP：ワーカーモードで別リクエストのセッションIDが漏れる",
+  "summary": "PHPのsession拡張を共有モジュールとして読み込む構成で、前のリクエストのセッションIDが再利用される可能性がある。公式静的バイナリとDockerイメージは対象外。Reviewedの修正版1.12.5は開発元APIの修正版欄では未記入。",
+  "publishedAt": "2026-10-15T20:14:29Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v3ph-cgqh-r8p5/GHSA-v3ph-cgqh-r8p5.json",
+  "modifiedAt": "2026-10-15T20:14:29Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-15T21:30:56Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/dunglas/frankenphp",
+      "ranges": [
+        {
+          "affected": "< 1.12.5",
+          "fixed": "1.12.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v3ph-cgqh-r8p5/GHSA-v3ph-cgqh-r8p5.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.12.5"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/php/frankenphp/security-advisories/GHSA-v3ph-cgqh-r8p5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.7,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+        "sourceUrl": "https://api.github.com/repos/php/frankenphp/security-advisories/GHSA-v3ph-cgqh-r8p5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v3ph-cgqh-r8p5/GHSA-v3ph-cgqh-r8p5.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T20:14:29Z",
+      "modifiedAt": "2026-10-15T20:14:29Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "FrankenPHP: Cross-request PHP session ID leak in worker mode when the session extension is a shared module",
+      "url": "https://github.com/advisories/GHSA-v3ph-cgqh-r8p5",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/php/frankenphp/security-advisories/GHSA-v3ph-cgqh-r8p5",
+      "publishedDate": "2026-07-18",
+      "publishedAt": "2026-07-18T13:45:42Z",
+      "modifiedAt": "2026-08-31T23:04:48Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元APIの本文・日時・影響範囲・修正版・評価を照合。タイムラインはDB公開・更新日時を保持し、開発元初回公開日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元は<=1.12.4を影響範囲とし修正版欄は空。本文は修正内容を説明するがリリース番号を記さない。表示する1.12.5はReviewed由来。",
+    "影響はワーカーモードとsession拡張のリンク方式に依存する。単に版番号だけで全ビルドを対象とせず、静的に組み込まれた公式ビルド等は除外する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+    "checkedAt": "2026-10-15T21:30:56Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-v3ph-cgqh-r8p5",
+        "aliases": [
+          "CVE-2026-82416"
+        ],
+        "publishedAt": "2026-10-15T20:14:29Z",
+        "modifiedAt": "2026-10-15T20:14:29Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v3ph-cgqh-r8p5/GHSA-v3ph-cgqh-r8p5.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-v3ph-cgqh-r8p5"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/dunglas/frankenphp",
+        "ranges": [
+          {
+            "affected": "< 1.12.5",
+            "fixed": "1.12.5",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v3ph-cgqh-r8p5/GHSA-v3ph-cgqh-r8p5.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.12.5"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v3ph-cgqh-r8p5/GHSA-v3ph-cgqh-r8p5.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2026/10/GHSA-v3ph-cgqh-r8p5/GHSA-v3ph-cgqh-r8p5.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元は<=1.12.4を影響範囲とし修正版欄は空。本文は修正内容を説明するがリリース番号を記さない。表示する1.12.5はReviewed由来。; 影響はワーカーモードとsession拡張のリンク方式に依存する。単に版番号だけで全ビルドを対象とせず、静的に組み込まれた公式ビルド等は除外する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "ghsa_id": "GHSA-qjpp-gffx-2wm9",
+  "cve_id": "CVE-2026-100394",
+  "url": "https://api.github.com/repos/nezhahq/nezha/security-advisories/GHSA-qjpp-gffx-2wm9",
+  "html_url": "https://github.com/nezhahq/nezha/security/advisories/GHSA-qjpp-gffx-2wm9",
+  "summary": "Whole-instance DoS in Nezha dashboard: a member can crash the process for every tenant",
+  "severity": "medium",
+  "identifiers": [
+    {
+      "value": "GHSA-qjpp-gffx-2wm9",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-100394",
+      "type": "CVE"
+    }
+  ],
+  "state": "published",
+  "updated_at": "2026-09-25T20:15:47Z",
+  "published_at": "2026-07-21T13:59:45Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/nezhahq/nezha"
+      },
+      "vulnerable_version_range": ">= 2.2.7, < 2.2.11",
+      "patched_versions": ">= 2.2.11"
+    }
+  ],
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "score": 6.5
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "cwes": [
+    {
+      "cwe_id": "CWE-362",
+      "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+    },
+    {
+      "cwe_id": "CWE-476",
+      "name": "NULL Pointer Dereference"
+    }
+  ],
+  "cwe_ids": [
+    "CWE-362",
+    "CWE-476"
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "score": 6.5
+  }
+}
