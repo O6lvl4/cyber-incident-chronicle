@@ -1,0 +1,79 @@
+{
+  "id": "recruit-studysapuri-permissions-2026",
+  "company": "リクルート（学校向けスタディサプリ）",
+  "title": "閲覧権限制御の不備で139校の添付483ファイルを権限のない利用者が閲覧",
+  "announcementDate": "2026-10-15",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2024-06-13",
+  "occurredDateLabel": "公表された不備発生期間の開始（2024年6月13日〜2026年9月30日）",
+  "updatedDate": "2026-10-15",
+  "statusAsOfDate": "2026-10-15",
+  "lastVerifiedDate": "2026-10-17",
+  "impactTypes": [
+    "leak"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "添付ファイルの閲覧権限制御の不備。外部攻撃・第三者不正アクセスではない",
+    "status": "confirmed"
+  },
+  "summary": "「先生からのお知らせ」機能の閲覧権限制御に不備があり、数名の利用者が139校からの添付483ファイルを本来の権限なく閲覧した。9月30日までに修正し、保存・第三者提供等は行われていないと確認した。",
+  "affectedData": [
+    "学校の先生から生徒へ送信された「先生からのお知らせ」の添付ファイル（個人情報の具体的項目・対象人数は未公表）"
+  ],
+  "counts": [
+    {
+      "value": 483,
+      "unit": "ファイル",
+      "status": "confirmed",
+      "label": "権限のない利用者に閲覧された添付ファイル",
+      "approximate": false
+    },
+    {
+      "value": 139,
+      "unit": "校",
+      "status": "confirmed",
+      "label": "対象ファイルの送信元学校",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "483ファイル・送信元139校",
+  "caveats": [
+    "ファイル数・学校数であり、漏えいした個人情報の件数や対象人数ではない。個人情報を含む場合は学校・自治体と対応すると公表",
+    "外部攻撃や外部第三者の不正アクセスは明示的に否定されているため、不正アクセス影響は付与しない",
+    "不備の存在期間と各ファイルが閲覧された日時を混同しない。修正完了は9月30日、公表は10月15日",
+    "保存・第三者提供その他利用を行っていないとの確認と、権限のない閲覧が起きた事実を区別する",
+    "10月3日公表のメールアドレス登録有無の特定可能性は、別機能・別事象として分離"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "閲覧権限制御の不備で139校の添付483ファイルを権限のない利用者が閲覧",
+      "url": "https://studysapuri.jp/info/important/",
+      "publishedDate": "2026-10-15"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2024-06-13",
+      "label": "権限制御不備の期間開始",
+      "summary": "不備期間は2024年6月13日〜2026年9月30日と公表",
+      "kind": "occurrence",
+      "sourceUrl": "https://studysapuri.jp/info/important/"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "修正対応完了",
+      "summary": "権限のない利用者が添付ファイルを閲覧できないよう修正",
+      "kind": "occurrence",
+      "sourceUrl": "https://studysapuri.jp/info/important/"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "権限のない閲覧と範囲を公表",
+      "summary": "483ファイル、送信元139校。対象学校への個別連絡済みと説明",
+      "kind": "disclosure",
+      "sourceUrl": "https://studysapuri.jp/info/important/"
+    }
+  ]
+}

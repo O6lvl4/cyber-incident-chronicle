@@ -1,0 +1,164 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-w5f2-9q9c-ff4h",
+  "aliases": [
+    "CVE-2026-105192"
+  ],
+  "title": "LMCache：マルチプロセス転送の危険なデシリアライズ",
+  "summary": "ネットワーク到達可能なマルチプロセス転送で、未認証入力からコードを実行される可能性がある。0.5.6で修正。ワイヤ形式が変わるためワーカーとサーバーを同時に更新する必要がある。",
+  "publishedAt": "2026-10-16T20:08:44Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json",
+  "modifiedAt": "2026-10-16T20:09:10Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-16T21:24:32.150577Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "lmcache",
+      "ranges": [
+        {
+          "affected": ">= 0.3.9, < 0.5.6",
+          "fixed": "0.5.6",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.3.9"
+            },
+            {
+              "fixed": "0.5.6"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/LMCache/LMCache/security-advisories/GHSA-w5f2-9q9c-ff4h",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/repos/LMCache/LMCache/security-advisories/GHSA-w5f2-9q9c-ff4h"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T20:08:44Z",
+      "modifiedAt": "2026-10-16T20:09:10Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+      "url": "https://github.com/advisories/GHSA-w5f2-9q9c-ff4h",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/LMCache/LMCache/security-advisories/GHSA-w5f2-9q9c-ff4h",
+      "publishedDate": "2026-10-13",
+      "publishedAt": "2026-10-13T19:01:07Z",
+      "modifiedAt": "2026-10-13T19:14:54Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元資料を照合。DB公開・更新日時と開発元公開・更新日時は区別する。",
+    "実悪用とKEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元本文前半は修正版なしとする一方、後半Patches節と構造化欄は0.5.6で修正と明記。古い前半だけから未修正と判断しない。",
+    "0.3.9〜0.5.5に加え0.5.6のリリース候補も本文では影響ありとされる。",
+    "9.8の評価は外部到達可能な転送設定を対象とする。既定localhostと、ポートを開かないin-processモードは区別する。",
+    "GHSA-vv44-hjm2-qw2fはDBで撤回された重複記録。別名配列が空のため勝手にaliasを追加せず、撤回履歴を維持する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+    "checkedAt": "2026-10-16T21:24:32.150577Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-w5f2-9q9c-ff4h",
+        "aliases": [
+          "CVE-2026-105192"
+        ],
+        "publishedAt": "2026-10-16T20:08:44Z",
+        "modifiedAt": "2026-10-16T20:09:10Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-w5f2-9q9c-ff4h"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "lmcache",
+        "ranges": [
+          {
+            "affected": ">= 0.3.9, < 0.5.6",
+            "fixed": "0.5.6",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.3.9"
+              },
+              {
+                "fixed": "0.5.6"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "critical",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "開発元本文前半は修正版なしとする一方、後半Patches節と構造化欄は0.5.6で修正と明記。古い前半だけから未修正と判断しない。; 0.3.9〜0.5.5に加え0.5.6のリリース候補も本文では影響ありとされる。; 9.8の評価は外部到達可能な転送設定を対象とする。既定localhostと、ポートを開かないin-processモードは区別する。; GHSA-vv44-hjm2-qw2fはDBで撤回された重複記録。別名配列が空のため勝手にaliasを追加せず、撤回履歴を維持する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

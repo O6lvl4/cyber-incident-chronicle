@@ -1,0 +1,96 @@
+{
+  "id": "studio-cloud-2026",
+  "company": "Studio（Web制作プラットフォーム）",
+  "title": "クラウド環境の脆弱性悪用、登録者情報・フォーム・連携認証情報に流出可能性",
+  "announcementDate": "2026-10-16",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-09-30",
+  "occurredDateLabel": "確認された不正アクセス期間の開始（9月30日〜10月1日）",
+  "detectedDate": "2026-10-13",
+  "updatedDate": "2026-10-16",
+  "statusAsOfDate": "2026-10-16",
+  "lastVerifiedDate": "2026-10-17",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "Studioの一部機能の脆弱性を悪用したクラウド環境への不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "一部機能の脆弱性を悪用され、クラウド内データが外部から取得可能な状態となった。10月13日に確認し14日までに修正・遮断。全登録者の情報等に流出可能性があるが、実際の第三者取得は未確認、件数は精査中と公表した。",
+  "affectedData": [
+    "アカウントのユーザー名・メールアドレス・ハッシュ化パスワード等",
+    "デザインエディタ・CMSの内容、フォーム回答、ライブプレビューURL、reCAPTCHA設定、Webhook通知先URL",
+    "外部サービスのAPIキー・トークン、パスワード保護ページのハッシュ化パスワード、Googleスプレッドシート連携認証情報、カスタムプロキシキー",
+    "2022年12月〜2023年8月のStudio AI先行利用申込者のメールアドレス・ユーザー名・IPアドレスから判定した居住国（アカウント未保有者を含む）"
+  ],
+  "counts": [
+    {
+      "value": 30,
+      "unit": "件",
+      "status": "possible",
+      "label": "京都市芸術文化協会「アート×ビジネス推進事業」の問い合わせ情報（提供元総数の一部）",
+      "approximate": false
+    },
+    {
+      "value": 3,
+      "unit": "件",
+      "status": "possible",
+      "label": "同「京の伝統文化体験事業」の問い合わせ情報（提供元総数の一部）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "提供元総数は精査中／利用2事業は30件・3件",
+  "caveats": [
+    "全登録者は流出可能性の対象範囲であり、全件の取得が確認されたわけではない。取得されたものとみなした対応と確定流出を区別する",
+    "一部の暗号化情報は復号鍵も同じ不正アクセスで読み出されたため内容が知られた可能性。パスワードはハッシュ化され平文保存ではなく、平文漏えいとしない",
+    "確認された侵入期間と、外部取得可能な状態が解消した10月14日を区別する。サービス全体停止は公表本文から確認できず、停止影響は付与しない",
+    "二次被害は調査中。現時点で改ざん・削除は確認されていない。認証情報の一部切替は完了、残りは順次無効化・変更中であり全対応完了とはしない",
+    "京都市が公表した30件・3件は委託事業2サイトの問い合わせ情報の可能性範囲であり、Studio全体の件数ではない。同一提供元事案へ統合し、別侵害・人数として合算しない"
+  ],
+  "geography": "日本（サービス利用者全体、国別件数は未公表）",
+  "sources": [
+    {
+      "title": "Studio：不正アクセスによる情報流出に関するお詫びとお願い（第一報）",
+      "url": "https://studio.design/ja/whats-new/unauthorized-access-2026-10",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "title": "京都市：Studio利用の委託2事業サイトの問い合わせ情報に流出可能性",
+      "url": "https://www.city.kyoto.lg.jp/bunshi/page/0000359411.html",
+      "publishedDate": "2026-10-16"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "label": "確認された侵入期間の開始",
+      "kind": "occurrence",
+      "summary": "9月30日〜10月1日に不正アクセス。クラウド環境内データが外部取得可能な状態に",
+      "sourceUrl": "https://studio.design/ja/whats-new/unauthorized-access-2026-10"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "社内調査で不正アクセス確認",
+      "kind": "occurrence",
+      "summary": "13日〜14日に脆弱性修正と経路遮断を完了し、外部取得可能な状態を解消",
+      "sourceUrl": "https://studio.design/ja/whats-new/unauthorized-access-2026-10"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "第一報と利用者対応を公表",
+      "kind": "disclosure",
+      "summary": "パスワード変更、ライブプレビューURL再発行、連携認証情報の切替等を案内。件数と二次被害は調査中",
+      "sourceUrl": "https://studio.design/ja/whats-new/unauthorized-access-2026-10"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "京都市が利用事業の部分範囲を公表",
+      "kind": "update",
+      "summary": "委託先の京都市芸術文化協会が運営する2サイトの問い合わせ30件・3件に漏えい可能性。実際の流出は未確認と説明",
+      "sourceUrl": "https://www.city.kyoto.lg.jp/bunshi/page/0000359411.html"
+    }
+  ]
+}

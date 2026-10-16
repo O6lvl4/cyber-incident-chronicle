@@ -1,0 +1,65 @@
+{
+  "id": "recruit-studysapuri-enumeration-2026",
+  "company": "リクルート（スタディサプリ）",
+  "title": "仕様不備を突く操作で3,687メールアドレスの登録有無を特定された可能性",
+  "announcementDate": "2026-10-03",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "開始日は未公表",
+  "updatedDate": "2026-10-03",
+  "statusAsOfDate": "2026-10-03",
+  "lastVerifiedDate": "2026-10-17",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "一部機能の仕様不備を突く登録メールアドレスの照会",
+    "status": "confirmed"
+  },
+  "summary": "9月30日に、第三者が一部機能の仕様不備を突いてメールアドレスの登録有無を確認した可能性が判明。3,687件について登録済みと特定された可能性を10月3日に公表。9月30日時点で修正済みと説明している。",
+  "affectedData": [
+    "小学講座・中学講座・高校講座／大学受験講座の登録ユーザーのメールアドレスが登録済みであること"
+  ],
+  "counts": [
+    {
+      "value": 3687,
+      "unit": "件",
+      "status": "possible",
+      "label": "登録済みであることを特定された可能性があるメールアドレス",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "3,687メールアドレス（登録有無の特定可能性）",
+  "caveats": [
+    "登録有無を特定された可能性の件数であり、メールアドレス一覧の一括流出や全件確定漏えい人数へ読み替えない",
+    "氏名・パスワード・決済情報等の流出、不正ログイン、二次被害は公表時点で未確認",
+    "学校向け添付ファイルの閲覧権限不備（10月15日公表）とは公式が別に説明する別事象"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "仕様不備を突く操作で3,687メールアドレスの登録有無を特定された可能性",
+      "url": "https://studysapuri.jp/info/important/",
+      "publishedDate": "2026-10-03"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "label": "可能性の判明・機能改修",
+      "summary": "登録済みメールアドレスの照会可能性が判明し同日時点で修正完了",
+      "kind": "occurrence",
+      "sourceUrl": "https://studysapuri.jp/info/important/"
+    },
+    {
+      "date": "2026-10-03",
+      "label": "対象3,687件と注意喚起を公表",
+      "summary": "対象利用者への個別連絡と不審メールへの注意を案内",
+      "kind": "disclosure",
+      "sourceUrl": "https://studysapuri.jp/info/important/"
+    }
+  ],
+  "detectedDate": "2026-09-30"
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dateJst": "2026-10-17",
+  "checkedAt": "2026-10-16T21:25:58.803125+00:00",
+  "previousPublishedCommit": "02b0f474ab30f5886a509662298b9b6c51cfe125",
+  "incidents": {
+    "before": 176,
+    "after": 183,
+    "sourcesBefore": 327,
+    "sourcesAfter": 340,
+    "addedIds": [
+      "astemo-cloud-2026",
+      "burgerking-app-2026",
+      "ntt-solmare-cmoa-2026",
+      "recruit-studysapuri-enumeration-2026",
+      "recruit-studysapuri-permissions-2026",
+      "studio-cloud-2026",
+      "yamato-atobarai-2026"
+    ],
+    "sameIncidentEnrichments": [
+      "arcadia-speecan-raiden-2026",
+      "park24-timescar-2026",
+      "idc-frontier-2026"
+    ]
+  },
+  "incidentAudit": "incident-source-audit-2026-10-17.json",
+  "githubReviewed": {
+    "source": {
+      "name": "GitHub Advisory Database",
+      "repository": "https://github.com/github/advisory-database",
+      "snapshotSha": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+      "snapshotCommittedAt": "2026-10-16T21:17:43Z",
+      "snapshotUrl": "https://github.com/github/advisory-database/commit/8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+      "reviewedPath": "advisories/github-reviewed",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/LICENSE.md"
+    },
+    "verifiedAt": "2026-10-16T21:21:06Z",
+    "counts": {
+      "reviewedFiles": 36899,
+      "eligibleAdvisories": 18965,
+      "coveredEligibleAdvisories": 18965,
+      "importedAdvisories": 18965,
+      "importedRecords": 18965,
+      "includedRecords": 19075,
+      "duplicateAliasRecords": 0,
+      "curatedRecords": 203,
+      "curatedOverlays": 93,
+      "curatedOutsideScope": 110,
+      "withdrawnAdvisories": 849,
+      "excludedBeforeWindow": 13864,
+      "excludedAfterWindow": 0,
+      "excludedUnsupportedEcosystem": 4070,
+      "excludedUnsupportedAffectedPackages": 0,
+      "retainedAdditionalAffectedPackages": 71,
+      "failed": 0,
+      "conflictedRecords": 38,
+      "newerDatabaseRecords": 1,
+      "byEcosystem": {
+        "npm": 5001,
+        "pip": 4435,
+        "rubygems": 469,
+        "go": 4170,
+        "rust": 1055,
+        "maven": 3372,
+        "nuget": 699
+      },
+      "byPublicationYear": {
+        "2022": 518,
+        "2023": 2629,
+        "2024": 2679,
+        "2025": 3089,
+        "2026": 10050
+      }
+    },
+    "deltaAudit": "github-reviewed-delta-2026-10-17.json"
+  },
+  "vulnerabilities": {
+    "before": 19061,
+    "after": 19075,
+    "added": 14,
+    "withdrawnHistory": 850,
+    "active": 18225,
+    "newReviewed": 13,
+    "newSupplemental": 1,
+    "prior195CuratedByteIdentical": true
+  },
+  "sourceFailures": [
+    {
+      "name": "CISA KEV",
+      "status": 403,
+      "result": "Preserve prior successful checkpoint and unknown state; not proof of no exploitation"
+    }
+  ],
+  "verification": {
+    "pnpmCheck": "passed: data validators,128 unit tests,TypeScript,production build",
+    "codopsy": "passed pinned fabfbdc:100/100,zero warnings/errors",
+    "localBrowser": "Attempted all suites and performance; Chromium socket EPERM and unavailable WebKit prevent execution. Unchanged remote CI Chromium/WebKit/performance gates must pass before merge.",
+    "publication": "pending; exact commit/CI/Pages/live-byte verification to be recorded in PR receipt"
+  },
+  "changeScope": "Public data, source snapshots/audits and required classification indexes only; no UI, application, toolchain, auth, schedule or quality-gate changes"
+}

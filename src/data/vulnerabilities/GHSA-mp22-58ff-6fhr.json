@@ -1,0 +1,162 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mp22-58ff-6fhr",
+  "aliases": [
+    "CVE-2026-96628"
+  ],
+  "title": "Arcane：環境トークンで管理者用診断画面にアクセス",
+  "summary": "有効な環境アクセストークンで管理者専用のpprof診断機能にアクセスできる可能性がある。修正版は2.11.0。開発元が確認した版は2.10.2で、Reviewedのより広い範囲と区別する。",
+  "publishedAt": "2026-10-16T21:12:03Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json",
+  "modifiedAt": "2026-10-16T21:12:04Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-16T21:24:32.150577Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/getarcaneapp/arcane/backend/v2",
+      "ranges": [
+        {
+          "affected": "< 2.11.0",
+          "fixed": "2.11.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/getarcaneapp/arcane/security-advisories/GHSA-mp22-58ff-6fhr",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://api.github.com/repos/getarcaneapp/arcane/security-advisories/GHSA-mp22-58ff-6fhr"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T21:12:03Z",
+      "modifiedAt": "2026-10-16T21:12:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`",
+      "url": "https://github.com/advisories/GHSA-mp22-58ff-6fhr",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/getarcaneapp/arcane/security-advisories/GHSA-mp22-58ff-6fhr",
+      "publishedDate": "2026-09-12",
+      "publishedAt": "2026-09-12T01:54:40Z",
+      "modifiedAt": "2026-09-23T19:44:13Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元資料を照合。DB公開・更新日時と開発元公開・更新日時は区別する。",
+    "実悪用とKEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元の影響欄はv2.10.2のみ、修正版はv2.11.0。Reviewedの<2.11.0を保持するが、確認版だけから最初の導入時期を推定しない。",
+    "開発元は認証情報の取り出し、任意プロセスメモリ開示、管理者乗っ取りを実証したとは主張していない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+    "checkedAt": "2026-10-16T21:24:32.150577Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-mp22-58ff-6fhr",
+        "aliases": [
+          "CVE-2026-96628"
+        ],
+        "publishedAt": "2026-10-16T21:12:03Z",
+        "modifiedAt": "2026-10-16T21:12:04Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-mp22-58ff-6fhr"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/getarcaneapp/arcane/backend/v2",
+        "ranges": [
+          {
+            "affected": "< 2.11.0",
+            "fixed": "2.11.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.11.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "medium",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元の影響欄はv2.10.2のみ、修正版はv2.11.0。Reviewedの<2.11.0を保持するが、確認版だけから最初の導入時期を推定しない。; 開発元は認証情報の取り出し、任意プロセスメモリ開示、管理者乗っ取りを実証したとは主張していない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

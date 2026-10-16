@@ -1,0 +1,163 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pw5q-rjx4-7f7p",
+  "aliases": [
+    "CVE-2026-96627"
+  ],
+  "title": "Arcane：委任ユーザー管理権限による管理者乗っ取り",
+  "summary": "users:update権限を委任された利用者が管理者パスワードを変更できる可能性がある。修正版は2.6.0。開発元の構造化範囲と本文の上限が異なるため記録を分ける。",
+  "publishedAt": "2026-10-16T21:15:03Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json",
+  "modifiedAt": "2026-10-16T21:15:03Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-16T21:24:32.150577Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/getarcaneapp/arcane/backend/v2",
+      "ranges": [
+        {
+          "affected": "< 2.6.0",
+          "fixed": "2.6.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/getarcaneapp/arcane/security-advisories/GHSA-pw5q-rjx4-7f7p",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/repos/getarcaneapp/arcane/security-advisories/GHSA-pw5q-rjx4-7f7p"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T21:15:03Z",
+      "modifiedAt": "2026-10-16T21:15:03Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
+      "url": "https://github.com/advisories/GHSA-pw5q-rjx4-7f7p",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/getarcaneapp/arcane/security-advisories/GHSA-pw5q-rjx4-7f7p",
+      "publishedDate": "2026-07-29",
+      "publishedAt": "2026-07-29T17:19:30Z",
+      "modifiedAt": "2026-09-23T19:43:28Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元資料を照合。DB公開・更新日時と開発元公開・更新日時は区別する。",
+    "実悪用とKEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元の構造化範囲は<2.5.0、本文は<=2.5.0、修正版はv2.6.0。Reviewedは<2.6.0とする。いずれかへ無断で同一化しない。",
+    "開発元は同じパッケージ名をotherとして分類し、ReviewedはGoモジュールとして分類。表示ではDBのGoを保持する。",
+    "users:updateの委任が前提であり、未認証攻撃とはしない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+    "checkedAt": "2026-10-16T21:24:32.150577Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-pw5q-rjx4-7f7p",
+        "aliases": [
+          "CVE-2026-96627"
+        ],
+        "publishedAt": "2026-10-16T21:15:03Z",
+        "modifiedAt": "2026-10-16T21:15:03Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-pw5q-rjx4-7f7p"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/getarcaneapp/arcane/backend/v2",
+        "ranges": [
+          {
+            "affected": "< 2.6.0",
+            "fixed": "2.6.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.6.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元の構造化範囲は<2.5.0、本文は<=2.5.0、修正版はv2.6.0。Reviewedは<2.6.0とする。いずれかへ無断で同一化しない。; 開発元は同じパッケージ名をotherとして分類し、ReviewedはGoモジュールとして分類。表示ではDBのGoを保持する。; users:updateの委任が前提であり、未認証攻撃とはしない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

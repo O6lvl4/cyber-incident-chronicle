@@ -1,0 +1,50 @@
+{
+  "ghsa_id": "GHSA-cv23-7vc5-jfh7",
+  "cve_id": "CVE-2026-102941",
+  "summary": "IsSafeURL computes url[:nPath] before the len(url) >= nPath check, so a 0/1/2-byte URL panics slice-bounds; reached end to end via markdown.ToHTML(..., html.Safelink) on an empty link destination [x]() (unrecoverable DoS; same class as CVE-2026-40890)",
+  "severity": "high",
+  "state": "published",
+  "published_at": "2026-07-25T00:13:38Z",
+  "updated_at": "2026-09-29T21:09:54Z",
+  "withdrawn_at": null,
+  "vulnerabilities": [
+    {
+      "package": {
+        "ecosystem": "go",
+        "name": "github.com/gomarkdown/markdown"
+      },
+      "vulnerable_version_range": "<= 0.0.0-20991231235959-ffffffffffff",
+      "patched_versions": null,
+      "vulnerable_functions": []
+    }
+  ],
+  "cvss": {
+    "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "score": 7.5
+  },
+  "cvss_severities": {
+    "cvss_v3": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "score": 7.5
+    },
+    "cvss_v4": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  "identifiers": [
+    {
+      "value": "GHSA-cv23-7vc5-jfh7",
+      "type": "GHSA"
+    },
+    {
+      "value": "CVE-2026-102941",
+      "type": "CVE"
+    }
+  ],
+  "omittedNarrative": {
+    "sha256": "b80851bd7a649c47123afb16eb106c376f84eaec79b0b7706af11b78a0d4047e",
+    "utf8Bytes": 2992
+  },
+  "representation": "allowlisted-public-structured-source-projection"
+}

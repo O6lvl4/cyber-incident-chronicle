@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-vqff-r82h-9crc",
+  "modified": "2026-10-16T19:23:48Z",
+  "published": "2026-10-16T19:23:48Z",
+  "aliases": [
+    "CVE-2026-76894"
+  ],
+  "summary": "ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin \"*\" (out)",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "npm",
+        "name": "@aborruso/ckan-mcp-server"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.4.112"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/ondata/ckan-mcp-server/security/advisories/GHSA-vqff-r82h-9crc"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/ondata/ckan-mcp-server"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-345",
+      "CWE-940"
+    ],
+    "severity": "LOW",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-10-16T19:23:48Z",
+    "nvd_published_at": null
+  },
+  "representation": "minimized-public-reviewed-advisory-projection",
+  "omittedDetails": {
+    "sha256": "d6999815606743edaf305b1d560ada4c20b08cd30c85990c589fd9c35757329a",
+    "utf8Bytes": 3138
+  }
+}

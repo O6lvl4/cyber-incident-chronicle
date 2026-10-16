@@ -1,0 +1,1787 @@
+{
+  "schemaVersion": 2,
+  "reportDateJst": "2026-10-17",
+  "checkedAt": "2026-10-16T21:23:46.959239Z",
+  "baseCommit": "5a755a2d9f25ca36b15794f53c360a26021f6bad",
+  "headCommit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+  "headCommittedAt": "2026-10-16T21:17:43Z",
+  "counts": {
+    "added": 14,
+    "modified": 1,
+    "deleted": 0,
+    "eligibleAdded": 13,
+    "excludedNewUnsupportedEcosystem": 1,
+    "newWithdrawnRecords": 1,
+    "newCuratedOverlays": 7
+  },
+  "contentMode": "minimized-public-structured-evidence",
+  "maintainerReviewFile": "reviewed-maintainer-review-2026-10-17.json",
+  "supplementalStatusFile": "supplemental-source-status-2026-10-17.json",
+  "coverageManifestFile": "../../src/data/vulnerability-coverage.json",
+  "limitations": [
+    "Primary API description review covers the delta only, not the entire Reviewed corpus.",
+    "lopdf release endpoint v0.42.0 returned 404; its fix version remains database-attributed. Primary PR supports the remediation mechanism only.",
+    "No independent KEV or exploitation verification; unknown does not mean absent.",
+    "Maintainer canonical LMCache advisory was fetched twice to compare both Reviewed identifiers; duplicate withdrawal is not a conflicting withdrawal of the canonical advisory."
+  ],
+  "methodology": [
+    "Compared exact pinned database records to fetched public maintainer advisory prose and structured fields, or primary PR/release sources where no repository advisory was linked. No code or proof of concept executed.",
+    "Publication retains only allowlisted structured fields, public HTTP headers, narrative digests and independently written comparison observations. Original response and Git-blob hashes are separate from retained artifact hashes. No author, credits, private-report references, full narratives or code examples are published.",
+    "Raw version strings and source dates remain separately attributed. No CVSS score computed and no version equivalence inferred."
+  ],
+  "records": [
+    {
+      "id": "GHSA-76p7-773f-r4q5",
+      "change": "M",
+      "eligibleEcosystem": true,
+      "summary": "Cross-site Scripting (XSS) in serialize-javascript",
+      "databasePublishedAt": "2025-02-10T18:30:47Z",
+      "databaseModifiedAt": "2026-10-15T21:35:15Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "modified",
+          "before": "2026-09-01T21:31:14Z",
+          "after": "2026-10-15T21:35:15Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 28,
+          "afterCount": 29,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-76p7-773f-r4q5.2026-10-17.reviewed-before.public-advisory.json",
+          "sha256": "75c4c82e456e30bf58580af007f2f523b7e167293cf58a745b18844a2fe05c70",
+          "bytes": 4011,
+          "url": "https://github.com/github/advisory-database/blob/5a755a2d9f25ca36b15794f53c360a26021f6bad/advisories/github-reviewed/2025/02/GHSA-76p7-773f-r4q5/GHSA-76p7-773f-r4q5.json",
+          "originalGitBlobSha256": "6532c5a33c26a8261057058bc8bbb52cb59ab6cc4ddf1ff05ad9c7f9b8b11bc0",
+          "originalGitBlobBytes": 4361,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        },
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-76p7-773f-r4q5.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "ebb55fd6d18d528acd92ed696190605c496a8e1095db20fe8d4fdbe713adb6ba",
+          "bytes": 4109,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2025/02/GHSA-76p7-773f-r4q5/GHSA-76p7-773f-r4q5.json",
+          "originalGitBlobSha256": "458befa42d9db401aaf2ac1e194c4a9aae695b667bb24cd85fea52df64cbf9d5",
+          "originalGitBlobBytes": 4459,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-4ch3-9j33-3pmj",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "Wasmtime: WASI hard links bypass wasmtime-wasi's FilePerms for destination",
+      "databasePublishedAt": "2026-10-16T19:57:26Z",
+      "databaseModifiedAt": "2026-10-16T19:57:26Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "crates.io",
+                "name": "wasmtime-wasi"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "24.0.11"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "crates.io",
+                "name": "wasmtime-wasi"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "25.0.0"
+                    },
+                    {
+                      "fixed": "36.0.12"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "crates.io",
+                "name": "wasmtime-wasi"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "37.0.0"
+                    },
+                    {
+                      "fixed": "45.0.3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "package": {
+                "ecosystem": "crates.io",
+                "name": "wasmtime-wasi"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "46.0.0"
+                    },
+                    {
+                      "fixed": "46.0.1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-58494"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-281",
+              "CWE-863"
+            ],
+            "severity": "MODERATE",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:57:26Z",
+            "nvd_published_at": "2026-07-08T21:16:54Z"
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "ed67f50b22914ea757f3e6570324d618157dcf678c7b9f99a084137ad000adb4",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 3005
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-4ch3-9j33-3pmj"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:57:26Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:57:26Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 13,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "Wasmtime: WASI hard links bypass wasmtime-wasi's FilePerms for destination"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-4ch3-9j33-3pmj.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "9d780088be525dc8e8d96f22c0d521ce566df5f2e73e8bb6df3a410c54c4d612",
+          "bytes": 3820,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-4ch3-9j33-3pmj/GHSA-4ch3-9j33-3pmj.json",
+          "originalGitBlobSha256": "287933e7f156cdd5665123ee133f82999dc7135faf58f5ee98b5ffee9eac497b",
+          "originalGitBlobBytes": 6693,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-6fj4-rcr3-r7rr",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "lopdf has a stack overflow via deeply nested PDF objects",
+      "databasePublishedAt": "2026-10-16T19:55:39Z",
+      "databaseModifiedAt": "2026-10-16T19:55:39Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "crates.io",
+                "name": "lopdf"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.42.0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": []
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-1124"
+            ],
+            "severity": "HIGH",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:55:39Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "e58128c423f1eb2ac36cf2cd6b45b428be205cd222e8f95eac7dce829181c4c4",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 1082
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-6fj4-rcr3-r7rr"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:55:39Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:55:39Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 5,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "lopdf has a stack overflow via deeply nested PDF objects"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-6fj4-rcr3-r7rr.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "b8931441e461f96c15e4a784a17a566f88952722992cff10c2b7330613023582",
+          "bytes": 1629,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-6fj4-rcr3-r7rr/GHSA-6fj4-rcr3-r7rr.json",
+          "originalGitBlobSha256": "f4f3a7b0a882e9b857cadc136748ec86ab5d357e06e73e0a4803533ef7985b49",
+          "originalGitBlobBytes": 2552,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-74vm-87hj-r66f",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
+      "databasePublishedAt": "2026-10-16T19:58:46Z",
+      "databaseModifiedAt": "2026-10-16T19:58:46Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "Go",
+                "name": "github.com/getkin/kin-openapi"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.146.0"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "last_known_affected_version_range": "<= 0.145.0"
+              }
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-100349"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-476"
+            ],
+            "severity": "HIGH",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:58:46Z",
+            "nvd_published_at": "2026-10-15T16:17:30Z"
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "4a23a8344d52e0fd2f2333dc52b87aec993ac6831ade9bcd13738edfa7bfce79",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 6234
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-74vm-87hj-r66f"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:58:46Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:58:46Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 5,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-74vm-87hj-r66f.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "35fcfb08de67a6fe0565c83461453e01aeac486950caa43b8ded7eff730dc14f",
+          "bytes": 1918,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json",
+          "originalGitBlobSha256": "dbc5b403ba08d48d4a310c92760fca696f81e256e0920a61978c0bf8332495e2",
+          "originalGitBlobBytes": 8250,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-74w3-63xv-x9mv",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "CoreDNS `k8s_external` headless AXFR can emit an empty transfer batch that panics the `transfer` plugin",
+      "databasePublishedAt": "2026-10-16T19:26:42Z",
+      "databaseModifiedAt": "2026-10-16T19:26:42Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "Go",
+                "name": "github.com/coredns/coredns"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.9.4"
+                    },
+                    {
+                      "fixed": "1.14.5"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "last_known_affected_version_range": "<= 1.14.4"
+              }
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-62994"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-248",
+              "CWE-755"
+            ],
+            "severity": "LOW",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:26:42Z",
+            "nvd_published_at": "2026-07-16T20:16:47Z"
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "72cb11a405f47c14121624f1c1c2c83bf286c108024a388c2ff7961ace5e505a",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 7955
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-74w3-63xv-x9mv"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:26:42Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:26:42Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 6,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "CoreDNS `k8s_external` headless AXFR can emit an empty transfer batch that panics the `transfer` plugin"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-74w3-63xv-x9mv.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "e2e67b1f4ef43412653499945cd18c9de44cc9f8b815452050e1d90984953c81",
+          "bytes": 1988,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74w3-63xv-x9mv/GHSA-74w3-63xv-x9mv.json",
+          "originalGitBlobSha256": "81efda0a9150b79b8ddf6885d80b25b4771b673f4f71df257ed8287d1f16363c",
+          "originalGitBlobBytes": 10071,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-754j-98wh-57rf",
+      "change": "A",
+      "eligibleEcosystem": false,
+      "summary": "swoosh has email-derived URL path injection in Microsoft Graph endpoint",
+      "databasePublishedAt": "2026-10-16T19:22:31Z",
+      "databaseModifiedAt": "2026-10-16T19:22:31Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "Hex",
+                "name": "swoosh"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "1.12.0"
+                    },
+                    {
+                      "fixed": "1.26.3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-54893"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-116",
+              "CWE-1284",
+              "CWE-789"
+            ],
+            "severity": "LOW",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:22:31Z",
+            "nvd_published_at": "2026-07-06T15:16:39Z"
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "48c78abf00a9f2eb3bc74d37eb632b5e7000344822412edcdef40c2ab6d21caa",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 2984
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-754j-98wh-57rf"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:22:31Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:22:31Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 7,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "swoosh has email-derived URL path injection in Microsoft Graph endpoint"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-754j-98wh-57rf.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "5365ce58b49ed0173b50e69777fad03601e1596a1604bd20358a219910517df8",
+          "bytes": 1999,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-754j-98wh-57rf/GHSA-754j-98wh-57rf.json",
+          "originalGitBlobSha256": "aa4556168dff65f68003b8ae2a1a0e4d8e25fdfdda367718ae77b78c7dcb0db4",
+          "originalGitBlobBytes": 4827,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-cv23-7vc5-jfh7",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "gomarkdown/markdown IsSafeURL panics on short URLs",
+      "databasePublishedAt": "2026-10-16T15:41:39Z",
+      "databaseModifiedAt": "2026-10-16T15:41:39Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "Go",
+                "name": "github.com/gomarkdown/markdown"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.0.0-20260724235538-61af6e1e6971"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-102941"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-125"
+            ],
+            "severity": "HIGH",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T15:41:39Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "bff47b8e748dbf1c3c165e4f021c47a32d4837718b4cdcb90d9a884eb1660867",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 2994
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-cv23-7vc5-jfh7"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T15:41:39Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T15:41:39Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 3,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "gomarkdown/markdown IsSafeURL panics on short URLs"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-cv23-7vc5-jfh7.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "beddde68684627c265bb056ef7791c0780ff5cbc077c5258d593177f2b169ced",
+          "bytes": 1545,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json",
+          "originalGitBlobSha256": "0d5a196af605cd585231182ae7e2b21aa8a76c1092c17722b4a1879bc7abcdb7",
+          "originalGitBlobBytes": 4405,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-h4mw-j7qp-8mwm",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+      "databasePublishedAt": "2026-10-16T19:44:37Z",
+      "databaseModifiedAt": "2026-10-16T19:44:37Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "claude-agent-sdk"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.2.121"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-96620"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-20",
+              "CWE-78",
+              "CWE-88"
+            ],
+            "severity": "CRITICAL",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:44:37Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "bc43fde146fbaa5d6ae946776398b3f72078dee91edabdd7af28ec24020458ca",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 628
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-h4mw-j7qp-8mwm"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:44:37Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:44:37Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 5,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-h4mw-j7qp-8mwm.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "314be6052d1e84a4d506cca685cce408520ac20f2493304295387903a6f237f5",
+          "bytes": 1881,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-h4mw-j7qp-8mwm/GHSA-h4mw-j7qp-8mwm.json",
+          "originalGitBlobSha256": "6b49804dc00f3db7d62330580537b4363055cb430b114c7a3e77206cc44e97d6",
+          "originalGitBlobBytes": 2330,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-mp22-58ff-6fhr",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`",
+      "databasePublishedAt": "2026-10-16T21:12:03Z",
+      "databaseModifiedAt": "2026-10-16T21:12:04Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "Go",
+                "name": "github.com/getarcaneapp/arcane/backend/v2"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "2.11.0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-96628"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-863"
+            ],
+            "severity": "MODERATE",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T21:12:03Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "e36e807b07fb99faa659113b7250320f4927248b1e33e7373ce77291e595767f",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 11856
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-mp22-58ff-6fhr"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T21:12:04Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T21:12:03Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 5,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-mp22-58ff-6fhr.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "9cab830234ad6e0ad81417a4af582a53f9f60b42f91f9afb00d0348b89f28c91",
+          "bytes": 1799,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json",
+          "originalGitBlobSha256": "41bff540d445c4ed18006a3a33a4b0d82a583be1b51714d8ce6e1b58ee04db59",
+          "originalGitBlobBytes": 13851,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-pw5q-rjx4-7f7p",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
+      "databasePublishedAt": "2026-10-16T21:15:03Z",
+      "databaseModifiedAt": "2026-10-16T21:15:03Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "Go",
+                "name": "github.com/getarcaneapp/arcane/backend/v2"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "2.6.0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-96627"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-266",
+              "CWE-269"
+            ],
+            "severity": "HIGH",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T21:15:03Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "ea332d03e8373a4d40fc214bbe257b871c52f078dc09f51f9e32be7c2239deb2",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 2290
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-pw5q-rjx4-7f7p"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T21:15:03Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T21:15:03Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 5,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-pw5q-rjx4-7f7p.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "02a28dcd2bca3319089fb3c540ccde9934067723c2eec67bc29da036283e7141",
+          "bytes": 1829,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json",
+          "originalGitBlobSha256": "c351127ff51f524d68830472216572d5540b4efa01e827d2f50762e202cd8487",
+          "originalGitBlobBytes": 3980,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-rxjv-24xq-76wc",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
+      "databasePublishedAt": "2026-10-16T19:53:06Z",
+      "databaseModifiedAt": "2026-10-16T19:53:06Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "Maven",
+                "name": "org.bytedeco:javacv"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "1.5.14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-102834"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-190"
+            ],
+            "severity": "HIGH",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:53:06Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "ee00146f834822b8ae70196e020bcde2e50353cd58e44b006597c184eebfb323",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 5854
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-rxjv-24xq-76wc"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:53:06Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:53:06Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 4,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-rxjv-24xq-76wc.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "222e503189436d0ba79cb32fc03855c06cbc2e0665ca99569fa716b04143787a",
+          "bytes": 1625,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json",
+          "originalGitBlobSha256": "8242735b8cd925c60a64679bfafab47f980bb153e6d07a8e838c277dd7920af3",
+          "originalGitBlobBytes": 7416,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-vgf9-9mxx-hq54",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "ClickMigrate has Path Traversal in \"revision -m\" argument",
+      "databasePublishedAt": "2026-10-16T19:17:28Z",
+      "databaseModifiedAt": "2026-10-16T19:17:28Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "ClickMigrate"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "1.0.3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-68549"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-22"
+            ],
+            "severity": "LOW",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:17:28Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "2793e87d08ef719ea975fa66ef67b0fd82dd90e4a9b6e964047eefad933f9bb2",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 1115
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-vgf9-9mxx-hq54"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:17:28Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:17:28Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 3,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "ClickMigrate has Path Traversal in \"revision -m\" argument"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-vgf9-9mxx-hq54.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "4fb4b6eff71c9665405dfba1be6e9ea36d1141a930b0f693cfff99d4c3189893",
+          "bytes": 1519,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json",
+          "originalGitBlobSha256": "e4ac144adb9cb10c583c7e8c0e409c05b3da361c6c9648fafd039a2982af9ac5",
+          "originalGitBlobBytes": 2468,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-vqff-r82h-9crc",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin \"*\" (out)",
+      "databasePublishedAt": "2026-10-16T19:23:48Z",
+      "databaseModifiedAt": "2026-10-16T19:23:48Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "@aborruso/ckan-mcp-server"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.4.112"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-76894"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-345",
+              "CWE-940"
+            ],
+            "severity": "LOW",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T19:23:48Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "d6999815606743edaf305b1d560ada4c20b08cd30c85990c589fd9c35757329a",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 3138
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-vqff-r82h-9crc"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T19:23:48Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T19:23:48Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 2,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin \"*\" (out)"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-vqff-r82h-9crc.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "555f5afc5187548b502821145e74af7ff4762af59fe2cabb6cae157598cc35ef",
+          "bytes": 1474,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vqff-r82h-9crc/GHSA-vqff-r82h-9crc.json",
+          "originalGitBlobSha256": "423eb8927f6b699bc690fe08218afc75909e30966f055cae126f774a6900ac05",
+          "originalGitBlobBytes": 4492,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-vv44-hjm2-qw2f",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "Duplicate Advisory: Remote code execution via unsafe deserialization in multiprocess mode transport",
+      "databasePublishedAt": "2026-10-07T12:31:58Z",
+      "databaseModifiedAt": "2026-10-16T20:08:50Z",
+      "databaseWithdrawnAt": "2026-10-16T20:08:50Z",
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "lmcache"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0.3.9"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "last_known_affected_version_range": "< 0.5.6"
+              }
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": []
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-306"
+            ],
+            "severity": "CRITICAL",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T20:08:50Z",
+            "nvd_published_at": "2026-10-07T10:17:32Z"
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "51798562feefe685b63801e46e98801f0e024a7e1e108c109753419eb31a5bfa",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 892
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-vv44-hjm2-qw2f"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T20:08:50Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-07T12:31:58Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 5,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "Duplicate Advisory: Remote code execution via unsafe deserialization in multiprocess mode transport"
+        },
+        {
+          "field": "withdrawn",
+          "before": null,
+          "after": "2026-10-16T20:08:50Z"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-vv44-hjm2-qw2f.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "056e88f132b101493f16d37d8b1ecf99acab6dd350f4346b67d60d32b5105a9c",
+          "bytes": 1802,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vv44-hjm2-qw2f/GHSA-vv44-hjm2-qw2f.json",
+          "originalGitBlobSha256": "204cbf25abc5130503cf8f332c2a6114cf25ea1442fcc943c228dc8a75258ac2",
+          "originalGitBlobBytes": 2516,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    },
+    {
+      "id": "GHSA-w5f2-9q9c-ff4h",
+      "change": "A",
+      "eligibleEcosystem": true,
+      "summary": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+      "databasePublishedAt": "2026-10-16T20:08:44Z",
+      "databaseModifiedAt": "2026-10-16T20:09:10Z",
+      "databaseWithdrawnAt": null,
+      "changedFields": [
+        {
+          "field": "affected",
+          "before": null,
+          "after": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "lmcache"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0.3.9"
+                    },
+                    {
+                      "fixed": "0.5.6"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "field": "aliases",
+          "before": null,
+          "after": [
+            "CVE-2026-105192"
+          ]
+        },
+        {
+          "field": "database_specific",
+          "before": null,
+          "after": {
+            "cwe_ids": [
+              "CWE-306"
+            ],
+            "severity": "CRITICAL",
+            "github_reviewed": true,
+            "github_reviewed_at": "2026-10-16T20:08:44Z",
+            "nvd_published_at": null
+          }
+        },
+        {
+          "field": "details",
+          "valueRepresentation": "omitted-narrative-presence-and-digest",
+          "beforeSha256": null,
+          "afterSha256": "e5e75d6e0e5281fbe9554ef7a3390fb10a550fb023e6445634d9fe40d883d6bd",
+          "beforeUtf8Bytes": null,
+          "afterUtf8Bytes": 5394
+        },
+        {
+          "field": "id",
+          "before": null,
+          "after": "GHSA-w5f2-9q9c-ff4h"
+        },
+        {
+          "field": "modified",
+          "before": null,
+          "after": "2026-10-16T20:09:10Z"
+        },
+        {
+          "field": "published",
+          "before": null,
+          "after": "2026-10-16T20:08:44Z"
+        },
+        {
+          "field": "references",
+          "beforeCount": 0,
+          "afterCount": 13,
+          "valueRepresentation": "public references in retained projections; no narrative/report metadata copied"
+        },
+        {
+          "field": "schema_version",
+          "before": null,
+          "after": "1.4.0"
+        },
+        {
+          "field": "severity",
+          "before": null,
+          "after": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          ]
+        },
+        {
+          "field": "summary",
+          "before": null,
+          "after": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "docs/advisory-source-snapshots/GHSA-w5f2-9q9c-ff4h.2026-10-17.reviewed-after.public-advisory.json",
+          "sha256": "60a87434f85b48dccf6ef03e68a01c6a4f6b3c3511db0e6b936ce659d2a7ce2d",
+          "bytes": 2819,
+          "url": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json",
+          "originalGitBlobSha256": "2589d8f2a8f5a19548685ac0a15f1a171f7c1265a763eaff32464360a9a183a7",
+          "originalGitBlobBytes": 8149,
+          "artifactRepresentation": "minimized-public-reviewed-advisory-projection"
+        }
+      ],
+      "datePolicy": "Database publication and modification are distinct from maintainer source timestamps."
+    }
+  ]
+}

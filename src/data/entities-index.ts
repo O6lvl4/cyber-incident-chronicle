@@ -2,8 +2,10 @@
 import type { EntityClassification } from '../classificationTypes';
 import { ENTITIES_PART_1 } from './entities-index-part-1.ts';
 import { ENTITIES_PART_2 } from './entities-index-part-2.ts';
+import { ENTITIES_PART_3 } from './entities-index-part-3.ts';
 
 export const ENTITIES = {
   ...ENTITIES_PART_1,
   ...ENTITIES_PART_2,
+  ...ENTITIES_PART_3,
 } as Record<string, EntityClassification>;

@@ -1,0 +1,1718 @@
+{
+  "schemaVersion": 1,
+  "reportDate": "2026-10-17",
+  "checkedAt": "2026-10-16T21:23:46.959239Z",
+  "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+  "scope": "All 13 eligible additions and one existing change; excluded Hex addition separately recorded. Includes canonical primary advisory review for one withdrawn duplicate.",
+  "counts": {
+    "newRecords": 14,
+    "eligibleNewRecords": 13,
+    "excludedNewRecords": 1,
+    "modifiedRecords": 1,
+    "primaryRequestsAttempted": 17,
+    "primaryRequestsSucceeded": 15,
+    "failedFetches": 1,
+    "reviewedMaintainerAdvisoryDescriptions": 12,
+    "uniqueMaintainerAdvisories": 11,
+    "primaryPullRequestsReviewed": 2,
+    "primaryReleaseResponsesReviewed": 1,
+    "severityBandDisagreements": 1,
+    "sameVersionVectorDisagreements": 0,
+    "sameIdentifierWithdrawalDisagreements": 0,
+    "newCuratedOverlays": 7,
+    "primaryReleaseListsReviewed": 1,
+    "primaryAdditionalParsedReleaseLists": 1
+  },
+  "methodology": [
+    "Compared exact pinned database records to fetched public maintainer advisory prose and structured fields, or primary PR/release sources where no repository advisory was linked. No code or proof of concept executed.",
+    "Publication retains only allowlisted structured fields, public HTTP headers, narrative digests and independently written comparison observations. Original response and Git-blob hashes are separate from retained artifact hashes. No author, credits, private-report references, full narratives or code examples are published.",
+    "Raw version strings and source dates remain separately attributed. No CVSS score computed and no version equivalence inferred."
+  ],
+  "limitations": [
+    "Primary API description review covers the delta only, not the entire Reviewed corpus.",
+    "lopdf release endpoint v0.42.0 returned 404; its fix version remains database-attributed. Primary PR supports the remediation mechanism only.",
+    "No independent KEV or exploitation verification; unknown does not mean absent.",
+    "Maintainer canonical LMCache advisory was fetched twice to compare both Reviewed identifiers; duplicate withdrawal is not a conflicting withdrawal of the canonical advisory."
+  ],
+  "newCuratedOverlayIds": [
+    "GHSA-74vm-87hj-r66f",
+    "GHSA-cv23-7vc5-jfh7",
+    "GHSA-mp22-58ff-6fhr",
+    "GHSA-pw5q-rjx4-7f7p",
+    "GHSA-rxjv-24xq-76wc",
+    "GHSA-vgf9-9mxx-hq54",
+    "GHSA-w5f2-9q9c-ff4h"
+  ],
+  "excluded": [
+    {
+      "id": "GHSA-754j-98wh-57rf",
+      "ecosystems": [
+        "Hex"
+      ],
+      "reason": "Outside seven supported ecosystems"
+    }
+  ],
+  "records": [
+    {
+      "id": "GHSA-76p7-773f-r4q5",
+      "change": "M",
+      "reviewStatus": "related-primary-source-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2025/02/GHSA-76p7-773f-r4q5/GHSA-76p7-773f-r4q5.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2025/02/GHSA-76p7-773f-r4q5/GHSA-76p7-773f-r4q5.json",
+        "sha256": "458befa42d9db401aaf2ac1e194c4a9aae695b667bb24cd85fea52df64cbf9d5",
+        "bytes": 4459,
+        "summary": "Cross-site Scripting (XSS) in serialize-javascript",
+        "publishedAt": "2025-02-10T18:30:47Z",
+        "modifiedAt": "2026-10-15T21:35:15Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2024-11831"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "serialize-javascript"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0.0"
+                  },
+                  {
+                    "fixed": "6.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "title": "Serialize URL string contents to prevent XSS",
+        "updated_at": "2025-10-11T10:33:00Z",
+        "state": "closed",
+        "merged_at": "2024-01-09T01:04:16Z"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": false,
+        "severityBandAgrees": null,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "CVSS_V3"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": null,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Existing change only advances modified timestamp and adds Red Hat erratum RHSA-2026:83548; ranges, CVSS, publication and withdrawal are unchanged.",
+        "Maintainer merged PR 173 and release v6.0.2 explicitly describe URL serialization XSS fix. These sources confirm the fix release but do not independently attest the full affected lower bound or CVSS."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/yahoo/serialize-javascript/pulls/173",
+          "checkedAt": "2026-10-16T21:21:37.145338Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "9c6669cb5c20f13aa256949533e5ff29c38269ab672b5c3c2f4a1f22f55f07ce",
+          "originalFetchedResponseBytes": 21081,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-76p7-773f-r4q5.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "8da2325b14ee081a2bc6fc49355fdfbcfe4a02cf758b60b19a9b8b1fdc107df1",
+          "bytes": 437,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-76p7-773f-r4q5.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "644b0915a858be0c63aab695632f0f02d91f4d1046a8c11c694faf942dbc1c54",
+          "headersBytes": 264,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        },
+        {
+          "url": "https://api.github.com/repos/yahoo/serialize-javascript/releases/tags/v6.0.2",
+          "checkedAt": "2026-10-16T21:21:37.145688Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "b111b118c2250502b1bc3b738adf468b9468d97080880c3e05b11f48c6c04f12",
+          "originalFetchedResponseBytes": 2351,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-76p7-773f-r4q5.2026-10-17.primary-1.public-advisory.json",
+          "sha256": "0715aeb3b9f6d4410d00613af94d668cecced779f82c40e0a6d5fc90b0ea5ef0",
+          "bytes": 395,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-76p7-773f-r4q5.2026-10-17.primary-1.public-headers.txt",
+          "headersSha256": "1939e7222f2c2280c857b33a167dc3d7505338e210a4ec1c1d0f21ba53ef90bc",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4ch3-9j33-3pmj",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-4ch3-9j33-3pmj/GHSA-4ch3-9j33-3pmj.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-4ch3-9j33-3pmj/GHSA-4ch3-9j33-3pmj.json",
+        "sha256": "287933e7f156cdd5665123ee133f82999dc7135faf58f5ee98b5ffee9eac497b",
+        "bytes": 6693,
+        "summary": "Wasmtime: WASI hard links bypass wasmtime-wasi's FilePerms for destination",
+        "publishedAt": "2026-10-16T19:57:26Z",
+        "modifiedAt": "2026-10-16T19:57:26Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-58494"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "crates.io",
+              "name": "wasmtime-wasi"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "24.0.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "crates.io",
+              "name": "wasmtime-wasi"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "25.0.0"
+                  },
+                  {
+                    "fixed": "36.0.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "crates.io",
+              "name": "wasmtime-wasi"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "37.0.0"
+                  },
+                  {
+                    "fixed": "45.0.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "crates.io",
+              "name": "wasmtime-wasi"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "46.0.0"
+                  },
+                  {
+                    "fixed": "46.0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-4ch3-9j33-3pmj",
+        "summary": "WASI hard links and renames bypass wasmtime-wasi's FilePerms for destination",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": "< 24.0.11, >= 25.0.0, < 36.0.12, >= 37.0.0, < 45.0.3, 46.0.0",
+            "patched_versions": "24.0.11, 36.0.12, 45.0.3, 46.0.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-06-24T19:40:02Z",
+        "updated_at": "2026-07-02T19:23:22Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Four Reviewed release branches preserve fixed 24.0.11, 36.0.12, 45.0.3 and 46.0.1. Maintainer combines those branches in a single comma-delimited field; do not interpret that text as one conjunction.",
+        "Medium/CVSS 3.1 6.5 vector agrees. Requires differing file permissions between preopens plus directory mutation; wasmtime-cli is explicitly unaffected."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-4ch3-9j33-3pmj",
+          "checkedAt": "2026-10-16T21:21:37.145974Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "3fd174c62ad5a6dfd2231d2ff2f6ef45137a7cb648df65a828f58be95e0090b8",
+          "originalFetchedResponseBytes": 7291,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-4ch3-9j33-3pmj.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "e858ab17cfc03d63acd1cd865df7624a63f7aa05a41070fec8d34ef89f625469",
+          "bytes": 1320,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-4ch3-9j33-3pmj.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "dc32af258f7e58d3f0b5b2ee0da187032080aed91e575735b09e3ebc5543d1c8",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6fj4-rcr3-r7rr",
+      "change": "A",
+      "reviewStatus": "related-primary-source-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-6fj4-rcr3-r7rr/GHSA-6fj4-rcr3-r7rr.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-6fj4-rcr3-r7rr/GHSA-6fj4-rcr3-r7rr.json",
+        "sha256": "f4f3a7b0a882e9b857cadc136748ec86ab5d357e06e73e0a4803533ef7985b49",
+        "bytes": 2552,
+        "summary": "lopdf has a stack overflow via deeply nested PDF objects",
+        "publishedAt": "2026-10-16T19:55:39Z",
+        "modifiedAt": "2026-10-16T19:55:39Z",
+        "withdrawnAt": null,
+        "aliases": [],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "crates.io",
+              "name": "lopdf"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.42.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "title": "fix(parser): bound array/dictionary nesting depth ",
+        "updated_at": "2026-06-22T11:06:25Z",
+        "state": "closed",
+        "merged_at": "2026-06-22T11:06:24Z"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": false,
+        "severityBandAgrees": null,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "CVSS_V3"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": null,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Merged maintainer PR 503 confirms bounding array/dictionary nesting depth. Reviewed fixed 0.42.0 is retained as database-attributed; release endpoint v0.42.0 returned 404 and available release list has no 0.42.0 release entry. This does not establish absence of a package release or tag.",
+        "No primary numeric CVSS, complete affected range, or advisory publication/withdrawal state was independently confirmed from the PR."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/J-F-Liu/lopdf/pulls/503",
+          "checkedAt": "2026-10-16T21:21:37.146288Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "886fcafb8461b22c85312501e34aeb3b60f073b610eb86cbb1070b93a5a56f8e",
+          "originalFetchedResponseBytes": 18969,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-6fj4-rcr3-r7rr.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "5d9103d1d1f847cd822d5dbceb10db5d6578d0620aad67fbe39e51d2a643071e",
+          "bytes": 429,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-6fj4-rcr3-r7rr.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "174d8162b5f57e0b1c2b2cd51769dc82b886299cb23a2f8068efcc11d597348c",
+          "headersBytes": 264,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        },
+        {
+          "url": "https://api.github.com/repos/J-F-Liu/lopdf/releases/tags/v0.42.0",
+          "checkedAt": "2026-10-16T21:21:42.333925Z",
+          "httpStatus": 404,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "e6fa3955395b2945df66f9729a57f8884e9388e275389539561dcb03aeb4f05b",
+          "originalFetchedResponseBytes": 147,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-6fj4-rcr3-r7rr.2026-10-17.primary-1.public-advisory.json",
+          "sha256": "faab49793957a626f61676219ee02e70994244615e4145ce78d10bb8dacd8ca8",
+          "bytes": 204,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-6fj4-rcr3-r7rr.2026-10-17.primary-1.public-headers.txt",
+          "headersSha256": "bed863dfb9ad66a628e911c840ded413bdbaf526bf9b380e140480c5fc24b763",
+          "headersBytes": 146,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        },
+        {
+          "url": "https://api.github.com/repos/J-F-Liu/lopdf/releases",
+          "checkedAt": "2026-10-16T21:22:30Z",
+          "status": "parsed-release-list",
+          "httpStatus": null,
+          "httpStatusLimitation": "HTTP status and headers were not retained for this auxiliary discovery request; parsed response contains release metadata.",
+          "path": "docs/advisory-source-snapshots/lopdf-releases.2026-10-17.public-release-index.json",
+          "sha256": "00f1c2fa725ff8e425041e3fc957c8f7aefbc290047e7edf634607c6afb2a278",
+          "bytes": 4757,
+          "originalFetchedResponseSha256": "8f09e4c40b0c5816100f8e5f87a2b12bf50f2b1fd664e1bf623b9803adb4e73f",
+          "originalFetchedResponseBytes": 72994,
+          "artifactRepresentation": "allowlisted-public-release-index"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-74vm-87hj-r66f",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json",
+        "sha256": "dbc5b403ba08d48d4a310c92760fca696f81e256e0920a61978c0bf8332495e2",
+        "bytes": 8250,
+        "summary": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
+        "publishedAt": "2026-10-16T19:58:46Z",
+        "modifiedAt": "2026-10-16T19:58:46Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-100349"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/getkin/kin-openapi"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.146.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 0.145.0"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-74vm-87hj-r66f",
+        "summary": "openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/getkin/kin-openapi"
+            },
+            "vulnerable_version_range": "<= 0.145.0",
+            "patched_versions": "v0.146.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-08-03T11:03:59Z",
+        "updated_at": "2026-09-25T19:20:29Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "CVSS_V4"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer medium has no CVSS vector or numeric score; Reviewed HIGH supplies CVSS v4. Do not invent a medium score or equate the evaluations.",
+        "Maintainer <=0.145.0, patch v0.146.0 aligns with Reviewed fixed 0.146.0; source lower introduction is unspecified. Prose says severity unset, while current structured API says medium.",
+        "Requires content-typed response headers in a specification; source describes differing trust models for external and operator-owned specifications."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-74vm-87hj-r66f",
+          "checkedAt": "2026-10-16T21:21:42.359626Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "d853f963a22b1ab523f71dfc29e1edb96ee9e8e4a0dcb24bfd8d2c9f7db67612",
+          "originalFetchedResponseBytes": 10915,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-74vm-87hj-r66f.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "9cf18f3cec3a7bb255fc1be37886ef0a1f5db619619a45557de95405f6a07edb",
+          "bytes": 1200,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-74vm-87hj-r66f.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "5493df6524a58c4a1db5012212f23c2620d70306b6885cd47b30ee110898af5f",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-74vm-87hj-r66f.json"
+    },
+    {
+      "id": "GHSA-74w3-63xv-x9mv",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-74w3-63xv-x9mv/GHSA-74w3-63xv-x9mv.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74w3-63xv-x9mv/GHSA-74w3-63xv-x9mv.json",
+        "sha256": "81efda0a9150b79b8ddf6885d80b25b4771b673f4f71df257ed8287d1f16363c",
+        "bytes": 10071,
+        "summary": "CoreDNS `k8s_external` headless AXFR can emit an empty transfer batch that panics the `transfer` plugin",
+        "publishedAt": "2026-10-16T19:26:42Z",
+        "modifiedAt": "2026-10-16T19:26:42Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-62994"
+        ],
+        "severityLabel": "LOW",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coredns/coredns"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.9.4"
+                  },
+                  {
+                    "fixed": "1.14.5"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.14.4"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-74w3-63xv-x9mv",
+        "summary": "CoreDNS `k8s_external` headless AXFR can emit an empty transfer batch that panics the `transfer` plugin",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/coredns/coredns"
+            },
+            "vulnerable_version_range": ">= 1.9.4, <= 1.14.4",
+            "patched_versions": "1.14.5",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 3.7
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "score": 3.7
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-07-10T00:36:15Z",
+        "updated_at": "2026-07-22T19:09:20Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer >=1.9.4, <=1.14.4 / fixed 1.14.5 aligns with Reviewed. Low/CVSS 3.1 3.7 vector agrees.",
+        "Requires AXFR permission, k8s_external headless-service transfers, and endpoint with no declared ports. Normal server recovers panic with SERVFAIL; debug mode can disable recovery and permit process crash."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/coredns/coredns/security-advisories/GHSA-74w3-63xv-x9mv",
+          "checkedAt": "2026-10-16T21:21:42.492206Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "1a65feeb80706938e35a5f9569b9302c61de24e2b814ee1ad76ac00ec7dba8a2",
+          "originalFetchedResponseBytes": 12915,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-74w3-63xv-x9mv.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "61acf3577fc20ef45680599e00f36b9070c6606709cd584a663f5179ea3c1a9c",
+          "bytes": 1288,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-74w3-63xv-x9mv.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "3b71a24af1fa2e289c1de68ec404335c7032276e612168f5dba64dd047536a38",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cv23-7vc5-jfh7",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json",
+        "sha256": "0d5a196af605cd585231182ae7e2b21aa8a76c1092c17722b4a1879bc7abcdb7",
+        "bytes": 4405,
+        "summary": "gomarkdown/markdown IsSafeURL panics on short URLs",
+        "publishedAt": "2026-10-16T15:41:39Z",
+        "modifiedAt": "2026-10-16T15:41:39Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-102941"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/gomarkdown/markdown"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.0.0-20260724235538-61af6e1e6971"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-cv23-7vc5-jfh7",
+        "summary": "IsSafeURL computes url[:nPath] before the len(url) >= nPath check, so a 0/1/2-byte URL panics slice-bounds; reached end to end via markdown.ToHTML(..., html.Safelink) on an empty link destination [x]() (unrecoverable DoS; same class as CVE-2026-40890)",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/gomarkdown/markdown"
+            },
+            "vulnerable_version_range": "<= 0.0.0-20991231235959-ffffffffffff",
+            "patched_versions": null,
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-07-25T00:13:38Z",
+        "updated_at": "2026-09-29T21:09:54Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer affected field is literally <=0.0.0-20991231235959-ffffffffffff and patched_versions is null; Reviewed fixes at 0.0.0-20260724235538-61af6e1e6971. The future-looking sentinel is not treated as a verified release upper bound. Display keeps separately attributed Reviewed fix.",
+        "High/CVSS 3.1 7.5 vector agrees. Safelink rendering or direct IsSafeURL calls are relevant; default rendering without Safelink does not reach this path."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/gomarkdown/markdown/security-advisories/GHSA-cv23-7vc5-jfh7",
+          "checkedAt": "2026-10-16T21:21:42.827762Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "1a14b2759cc632f4346abd2cf7bf49755bb976fe0820899a51376b3834ce12cb",
+          "originalFetchedResponseBytes": 7199,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-cv23-7vc5-jfh7.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "b60f9de35adcb24f7027aaa46e7d1f2ec7333de08b3885ae98154f63fd5d1c20",
+          "bytes": 1456,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-cv23-7vc5-jfh7.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "4da6c3cc3e1d327618de48f393d97bf37f7a1025e1c5425666eb8de5ee83db91",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-cv23-7vc5-jfh7.json"
+    },
+    {
+      "id": "GHSA-h4mw-j7qp-8mwm",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-h4mw-j7qp-8mwm/GHSA-h4mw-j7qp-8mwm.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-h4mw-j7qp-8mwm/GHSA-h4mw-j7qp-8mwm.json",
+        "sha256": "6b49804dc00f3db7d62330580537b4363055cb430b114c7a3e77206cc44e97d6",
+        "bytes": 2330,
+        "summary": "Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution",
+        "publishedAt": "2026-10-16T19:44:37Z",
+        "modifiedAt": "2026-10-16T19:44:37Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-96620"
+        ],
+        "severityLabel": "CRITICAL",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "claude-agent-sdk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.2.121"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-h4mw-j7qp-8mwm",
+        "summary": "Argument Injection via resume Option Allows Arbitrary Command Execution",
+        "severity": "critical",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "claude-agent-sdk"
+            },
+            "vulnerable_version_range": "< 0.2.121",
+            "patched_versions": "0.2.121",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "score": 9.2
+          }
+        },
+        "published_at": "2026-09-12T08:42:34Z",
+        "updated_at": "2026-09-23T16:32:56Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer <0.2.121 and fixed 0.2.121 align with Reviewed; Critical/CVSS 4.0 9.2 vector agrees.",
+        "Exploitation requires application-controlled untrusted input to the resume session identifier; not a claim that every SDK use is exposed."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/anthropics/claude-agent-sdk-python/security-advisories/GHSA-h4mw-j7qp-8mwm",
+          "checkedAt": "2026-10-16T21:21:45.195651Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "3419a7533eeac975b70608d3c735b769617eef7709ade8c5e81fbdd30cfa4dea",
+          "originalFetchedResponseBytes": 3699,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-h4mw-j7qp-8mwm.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "db771dba77fcfc1697b05aada8feb0b2cd3955fc7d94e6f9bcf10adf3c1b3db3",
+          "bytes": 1220,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-h4mw-j7qp-8mwm.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "4b7aaf1ac07653bdb1fdc381b2791ff1671e101a77e13979ba2acd578f289f27",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mp22-58ff-6fhr",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-mp22-58ff-6fhr/GHSA-mp22-58ff-6fhr.json",
+        "sha256": "41bff540d445c4ed18006a3a33a4b0d82a583be1b51714d8ce6e1b58ee04db59",
+        "bytes": 13851,
+        "summary": "Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`",
+        "publishedAt": "2026-10-16T21:12:03Z",
+        "modifiedAt": "2026-10-16T21:12:04Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-96628"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/getarcaneapp/arcane/backend/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.11.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-mp22-58ff-6fhr",
+        "summary": "Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/getarcaneapp/arcane/backend/v2"
+            },
+            "vulnerable_version_range": "v2.10.2",
+            "patched_versions": "v2.11.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "score": 4.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "score": 4.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-12T01:54:40Z",
+        "updated_at": "2026-09-23T19:44:13Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer names confirmed v2.10.2 only, with patch v2.11.0; Reviewed represents all versions before 2.11.0. Do not infer first introduction from the single tested version.",
+        "Medium/CVSS 3.1 4.3 vector agrees. Valid environment token is required. Source explicitly disclaims demonstrated credential extraction, arbitrary process-memory disclosure or administrator takeover."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/getarcaneapp/arcane/security-advisories/GHSA-mp22-58ff-6fhr",
+          "checkedAt": "2026-10-16T21:21:45.520175Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "0d02c98aea16bc37215329946cd74708ec228a329677eb970b8d5be69a59aca9",
+          "originalFetchedResponseBytes": 16927,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-mp22-58ff-6fhr.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "41bcb900fee1346d8b07b1b855827d206b5abc26cec27638561de353c269151f",
+          "bytes": 1286,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-mp22-58ff-6fhr.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "899a5a0cdf21b1f534865061d49d4cf727fa9e2b92392ef20645dc3511b47290",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-mp22-58ff-6fhr.json"
+    },
+    {
+      "id": "GHSA-pw5q-rjx4-7f7p",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pw5q-rjx4-7f7p/GHSA-pw5q-rjx4-7f7p.json",
+        "sha256": "c351127ff51f524d68830472216572d5540b4efa01e827d2f50762e202cd8487",
+        "bytes": 3980,
+        "summary": "Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
+        "publishedAt": "2026-10-16T21:15:03Z",
+        "modifiedAt": "2026-10-16T21:15:03Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-96627"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/getarcaneapp/arcane/backend/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.6.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-pw5q-rjx4-7f7p",
+        "summary": "Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "other",
+              "name": "github.com/getarcaneapp/arcane/backend/v2"
+            },
+            "vulnerable_version_range": "<2.5.0",
+            "patched_versions": "v2.6.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "score": 8.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "score": 8.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-07-29T17:19:30Z",
+        "updated_at": "2026-09-23T19:43:28Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer structured range <2.5.0 conflicts with prose <=2.5.0; patch v2.6.0. Reviewed Go module range is <2.6.0. Preserve all three without silently normalizing. Maintainer ecosystem is other while Reviewed uses Go for the same package coordinate.",
+        "High/CVSS 3.1 8.8 vector agrees. Requires delegated users:update permission, not an unauthenticated attack."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/getarcaneapp/arcane/security-advisories/GHSA-pw5q-rjx4-7f7p",
+          "checkedAt": "2026-10-16T21:21:45.553487Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "e7ff85ce9b3d14c1529f7d03faf822510581e059033542375c995e365c86efd5",
+          "originalFetchedResponseBytes": 6540,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-pw5q-rjx4-7f7p.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "d3c30685b0060024c5702470cc1d59ec9c9454e8294b08e7f2a59367e2cff34a",
+          "bytes": 1304,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-pw5q-rjx4-7f7p.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "e8c6eb342bbce42b4f2fd7aa21add7b2b179dde1ff41c7d25aa8415c90b0c54a",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-pw5q-rjx4-7f7p.json"
+    },
+    {
+      "id": "GHSA-rxjv-24xq-76wc",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json",
+        "sha256": "8242735b8cd925c60a64679bfafab47f980bb153e6d07a8e838c277dd7920af3",
+        "bytes": 7416,
+        "summary": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
+        "publishedAt": "2026-10-16T19:53:06Z",
+        "modifiedAt": "2026-10-16T19:53:06Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-102834"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.bytedeco:javacv"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.5.14"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-rxjv-24xq-76wc",
+        "summary": "Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.bytedeco:javacv"
+            },
+            "vulnerable_version_range": "<= 1.5.13",
+            "patched_versions": "cd19778",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-07-25T02:14:19Z",
+        "updated_at": "2026-09-29T20:19:37Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer affected <=1.5.13 and patch field cd19778 is a commit identifier; Reviewed fixed 1.5.14 is a release version. No commit-to-release equivalence is inferred from these two fields alone.",
+        "High/CVSS 3.1 7.5 vector agrees. A malicious camera endpoint or attacker able to tamper with the camera HTTP stream can cause an unbounded CPU loop."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/bytedeco/javacv/security-advisories/GHSA-rxjv-24xq-76wc",
+          "checkedAt": "2026-10-16T21:21:45.675858Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "b359a98eee151b2ca8fadaac1d4919f8732114fde56c39e1aec5bb20a78917cc",
+          "originalFetchedResponseBytes": 10087,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-rxjv-24xq-76wc.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "cded3cc5022688bf9067169a109ca82ad9e09a8b41be9778c1df03f892383745",
+          "bytes": 1240,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-rxjv-24xq-76wc.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "7e358462ee8a00a7766412c394a7d03549628f12b414915aa3934afe1df089a4",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-rxjv-24xq-76wc.json"
+    },
+    {
+      "id": "GHSA-vgf9-9mxx-hq54",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json",
+        "sha256": "e4ac144adb9cb10c583c7e8c0e409c05b3da361c6c9648fafd039a2982af9ac5",
+        "bytes": 2468,
+        "summary": "ClickMigrate has Path Traversal in \"revision -m\" argument",
+        "publishedAt": "2026-10-16T19:17:28Z",
+        "modifiedAt": "2026-10-16T19:17:28Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-68549"
+        ],
+        "severityLabel": "LOW",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "ClickMigrate"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-vgf9-9mxx-hq54",
+        "summary": "Path Traversal in \"revision -m\" argument",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "clickmigrate"
+            },
+            "vulnerable_version_range": "<1.0.3",
+            "patched_versions": "1.03",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "score": 3.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "score": 3.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-07-04T23:48:57Z",
+        "updated_at": "2026-07-31T21:27:45Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer patched_versions literally says 1.03, while its Patches section explicitly says 1.0.3 and matches Reviewed fixed 1.0.3. Preserve the field discrepancy and use the explicit prose correction. Package case differs (ClickMigrate/clickmigrate).",
+        "Low/CVSS 3.1 3.3 vector agrees. Attacker influence on the migration name, such as unsafe automation, is required."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/QueueForge/ClickMigrate/security-advisories/GHSA-vgf9-9mxx-hq54",
+          "checkedAt": "2026-10-16T21:21:49.297149Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "18026ffcee439727a4238f28950bf0942afcfe657899554cdd94f8ed23d0f2d4",
+          "originalFetchedResponseBytes": 3871,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-vgf9-9mxx-hq54.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "92bcd642d5e3e419274e7c2c44dc44ffdcdb75c24aa7b0e735f3f76adcc3e1d5",
+          "bytes": 1199,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-vgf9-9mxx-hq54.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "294f6505aed31e8f9450f65f541bbf1b75baaf565bd1d8a3b663beb2ad77be9f",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-vgf9-9mxx-hq54.json"
+    },
+    {
+      "id": "GHSA-vqff-r82h-9crc",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-vqff-r82h-9crc/GHSA-vqff-r82h-9crc.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vqff-r82h-9crc/GHSA-vqff-r82h-9crc.json",
+        "sha256": "423eb8927f6b699bc690fe08218afc75909e30966f055cae126f774a6900ac05",
+        "bytes": 4492,
+        "summary": "ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin \"*\" (out)",
+        "publishedAt": "2026-10-16T19:23:48Z",
+        "modifiedAt": "2026-10-16T19:23:48Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-76894"
+        ],
+        "severityLabel": "LOW",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@aborruso/ckan-mcp-server"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.4.112"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-vqff-r82h-9crc",
+        "summary": "DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin \"*\" (out)",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@aborruso/ckan-mcp-server"
+            },
+            "vulnerable_version_range": "< 0.4.112",
+            "patched_versions": "0.4.112",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+          "score": 3.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "score": 3.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-07-09T21:06:45Z",
+        "updated_at": "2026-08-20T19:02:42Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer <0.4.112, fixed 0.4.112, Low and CVSS 3.1 3.1 vector agree with Reviewed.",
+        "Impact is content spoofing, handshake interference and conditional outbound leakage depending on embedding context; source explicitly distinguishes escaped content from XSS."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/ondata/ckan-mcp-server/security-advisories/GHSA-vqff-r82h-9crc",
+          "checkedAt": "2026-10-16T21:21:49.345610Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "429dc1b6f54a6b20e0aaeb896095acf12fc2aec7ed8174b4c7ef9dcb0069d34f",
+          "originalFetchedResponseBytes": 8779,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-vqff-r82h-9crc.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "3f043491bf5b7a175285c52b97fc656234575314620086266f6687ef2403f815",
+          "bytes": 1283,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-vqff-r82h-9crc.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "04077510563d3ea7df87ccbe2fbfdef7d928a26978260c574f3dd23cd761caab",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vv44-hjm2-qw2f",
+      "change": "A",
+      "reviewStatus": "related-primary-source-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-vv44-hjm2-qw2f/GHSA-vv44-hjm2-qw2f.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vv44-hjm2-qw2f/GHSA-vv44-hjm2-qw2f.json",
+        "sha256": "204cbf25abc5130503cf8f332c2a6114cf25ea1442fcc943c228dc8a75258ac2",
+        "bytes": 2516,
+        "summary": "Duplicate Advisory: Remote code execution via unsafe deserialization in multiprocess mode transport",
+        "publishedAt": "2026-10-07T12:31:58Z",
+        "modifiedAt": "2026-10-16T20:08:50Z",
+        "withdrawnAt": "2026-10-16T20:08:50Z",
+        "aliases": [],
+        "severityLabel": "CRITICAL",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "lmcache"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0.3.9"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "< 0.5.6"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-w5f2-9q9c-ff4h",
+        "summary": "Remote code execution via unsafe deserialization in multiprocess mode transport",
+        "severity": "critical",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "lmcache"
+            },
+            "vulnerable_version_range": ">= 0.3.9, < 0.5.6",
+            "patched_versions": "0.5.6",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-13T19:01:07Z",
+        "updated_at": "2026-10-13T19:14:54Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": false,
+        "severityBandAgrees": null,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": null,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Reviewed explicitly withdraws this duplicate of GHSA-w5f2-9q9c-ff4h at 2026-10-16T20:08:50Z, with aliases empty. Keep withdrawal history and separate record under the alias-only deduplication contract; narrative cross-reference is not an alias.",
+        "Primary evidence is the canonical maintainer advisory GHSA-w5f2-9q9c-ff4h, not an advisory with this withdrawn ID. Canonical remains published; this is not a withdrawal disagreement on one source identifier. Duplicate Reviewed has no fixed event, only last-known affected <0.5.6; do not fill its raw event from another ID."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/LMCache/LMCache/security-advisories/GHSA-w5f2-9q9c-ff4h",
+          "checkedAt": "2026-10-16T21:21:49.701834Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "2ae19591b7d735930bc5070a6091b1483555ba3797fffde3022a74fef3d46d35",
+          "originalFetchedResponseBytes": 8796,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-vv44-hjm2-qw2f.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "7a2c479e2a997a5947f0c00dd4d077e76dbc9f8772fdb41a5a532351e77da1e3",
+          "bytes": 1250,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-vv44-hjm2-qw2f.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "1063306a85f6ec3a3dce4338a196b1f6a7b942e9a8a935567550af3142c72d56",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w5f2-9q9c-ff4h",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "database": {
+        "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "path": "advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-w5f2-9q9c-ff4h/GHSA-w5f2-9q9c-ff4h.json",
+        "sha256": "2589d8f2a8f5a19548685ac0a15f1a171f7c1265a763eaff32464360a9a183a7",
+        "bytes": 8149,
+        "summary": "LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport",
+        "publishedAt": "2026-10-16T20:08:44Z",
+        "modifiedAt": "2026-10-16T20:09:10Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-105192"
+        ],
+        "severityLabel": "CRITICAL",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "lmcache"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0.3.9"
+                  },
+                  {
+                    "fixed": "0.5.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-w5f2-9q9c-ff4h",
+        "summary": "Remote code execution via unsafe deserialization in multiprocess mode transport",
+        "severity": "critical",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "lmcache"
+            },
+            "vulnerable_version_range": ">= 0.3.9, < 0.5.6",
+            "patched_versions": "0.5.6",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-13T19:01:07Z",
+        "updated_at": "2026-10-13T19:14:54Z",
+        "withdrawn_at": null,
+        "state": "published"
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer >=0.3.9,<0.5.6 and fixed 0.5.6 agree with Reviewed; Critical/CVSS 3.1 9.8 vector agrees.",
+        "Earlier description says no fix published; later Patches section and current structured fields explicitly state 0.5.6. Preserve this internal stale-prose difference; release candidates are described as affected.",
+        "Score concerns routable multiprocess transport. Default localhost and in-process mode differ. Wire format changed and all workers and servers must upgrade together; no real-world exploitation inference."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/LMCache/LMCache/security-advisories/GHSA-w5f2-9q9c-ff4h",
+          "checkedAt": "2026-10-16T21:21:49.757575Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "2ae19591b7d735930bc5070a6091b1483555ba3797fffde3022a74fef3d46d35",
+          "originalFetchedResponseBytes": 8796,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-w5f2-9q9c-ff4h.2026-10-17.primary-0.public-advisory.json",
+          "sha256": "7a2c479e2a997a5947f0c00dd4d077e76dbc9f8772fdb41a5a532351e77da1e3",
+          "bytes": 1250,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-w5f2-9q9c-ff4h.2026-10-17.primary-0.public-headers.txt",
+          "headersSha256": "1063306a85f6ec3a3dce4338a196b1f6a7b942e9a8a935567550af3142c72d56",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-w5f2-9q9c-ff4h.json"
+    }
+  ]
+}

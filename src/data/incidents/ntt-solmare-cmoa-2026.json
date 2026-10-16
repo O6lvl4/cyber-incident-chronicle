@@ -1,0 +1,73 @@
+{
+  "id": "ntt-solmare-cmoa-2026",
+  "company": "NTTソルマーレ（コミックシーモア）",
+  "title": "会員情報の流出を確認、サービス停止を継続し対象件数を精査",
+  "announcementDate": "2026-10-15",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセス開始日は未公表",
+  "detectedDate": "2026-10-15",
+  "updatedDate": "2026-10-16",
+  "statusAsOfDate": "2026-10-16",
+  "lastVerifiedDate": "2026-10-17",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "会員情報管理システムへの第三者の不正アクセス。具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月15日11時35分にコミックシーモアを停止し、16日に一部会員情報の外部流出を確認。メールアドレスやハッシュ化パスワード等が対象で、件数は精査中。再開時の全会員パスワード再設定を予定している。",
+  "affectedData": [
+    "メールアドレス、ハッシュ化されたパスワード、生年月日、性別、ニックネーム"
+  ],
+  "counts": [],
+  "scaleLabel": "対象件数は精査中",
+  "caveats": [
+    "一部会員情報の流出は確認済みだが対象件数は未公表。全会員分の流出を確認したとは扱わない",
+    "パスワードはハッシュ化されたものと公表。平文の流出や解析されたことは確認されていない",
+    "クレジットカード情報は対象システムに保有しておらず流出していないと説明。購入履歴の流出、MY本棚の流出・消失・欠損は公表時点で未確認",
+    "10月15日は不正アクセスの可能性が高いと判断しサービスを停止した日であり、侵入開始日ではない。初報URLの0616-1という文字列にかかわらず本文公表日は10月15日",
+    "10月16日時点でサービス再開に向けた対応中。全会員のパスワード再設定は再開時の予定であり、再開・再設定の実施済みを意味しない",
+    "不正アクセス遮断を継続し、新たな不正アクセスや被害拡大は確認されていないと説明。二次被害防止のため同一パスワードを利用する他サービスでの変更を案内"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "NTTソルマーレ：コミックシーモアの緊急メンテナンス",
+      "url": "https://www.nttsolmare.com/press/2026/0616-1.html",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "title": "NTTソルマーレ：コミックシーモア会員情報の流出と対応",
+      "url": "https://www.nttsolmare.com/press/2026/1016.html",
+      "publishedDate": "2026-10-16"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-15",
+      "label": "不正アクセスを疑いサービス停止",
+      "kind": "occurrence",
+      "summary": "11時35分にサービスを停止し、不正アクセスの遮断対応を実施",
+      "sourceUrl": "https://www.nttsolmare.com/press/2026/1016.html"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "緊急メンテナンスを公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスの可能性が高いと判断し、影響範囲・原因を調査中と説明",
+      "sourceUrl": "https://www.nttsolmare.com/press/2026/0616-1.html"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "一部会員情報の流出を確認",
+      "kind": "update",
+      "summary": "会員情報管理システムからの流出を確認し、対象項目と再開時のパスワード再設定予定を公表。件数は精査中",
+      "sourceUrl": "https://www.nttsolmare.com/press/2026/1016.html"
+    }
+  ]
+}
