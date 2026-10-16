@@ -1,0 +1,162 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vgf9-9mxx-hq54",
+  "aliases": [
+    "CVE-2026-68549"
+  ],
+  "title": "ClickMigrate：マイグレーション名によるパストラバーサル",
+  "summary": "revisionの-m引数に信頼できない名前を渡すと、意図したディレクトリ外にSQLファイルを作成する可能性がある。本文とReviewedは1.0.3での修正を示す。",
+  "publishedAt": "2026-10-16T19:17:28Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json",
+  "modifiedAt": "2026-10-16T19:17:28Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-16T21:24:32.150577Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "ClickMigrate",
+      "ranges": [
+        {
+          "affected": "< 1.0.3",
+          "fixed": "1.0.3",
+          "sourceUrl": "https://api.github.com/repos/QueueForge/ClickMigrate/security-advisories/GHSA-vgf9-9mxx-hq54"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/QueueForge/ClickMigrate/security-advisories/GHSA-vgf9-9mxx-hq54",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://api.github.com/repos/QueueForge/ClickMigrate/security-advisories/GHSA-vgf9-9mxx-hq54"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T19:17:28Z",
+      "modifiedAt": "2026-10-16T19:17:28Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ClickMigrate has Path Traversal in \"revision -m\" argument",
+      "url": "https://github.com/advisories/GHSA-vgf9-9mxx-hq54",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/QueueForge/ClickMigrate/security-advisories/GHSA-vgf9-9mxx-hq54",
+      "publishedDate": "2026-07-04",
+      "publishedAt": "2026-07-04T23:48:57Z",
+      "modifiedAt": "2026-07-31T21:27:45Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元資料を照合。DB公開・更新日時と開発元公開・更新日時は区別する。",
+    "実悪用とKEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元patched_versions欄は文字どおり1.03だが、同じ資料のPatches節は1.0.3と明記し、Reviewedの修正版と一致する。表示は本文の明示的な1.0.3を根拠にし、元フィールドの差も保持する。",
+    "攻撃者がマイグレーション名へ入力できる自動化などが条件。通常の信頼されたローカル操作だけで外部から直接攻撃できるとはしない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+    "checkedAt": "2026-10-16T21:24:32.150577Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-vgf9-9mxx-hq54",
+        "aliases": [
+          "CVE-2026-68549"
+        ],
+        "publishedAt": "2026-10-16T19:17:28Z",
+        "modifiedAt": "2026-10-16T19:17:28Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-vgf9-9mxx-hq54"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "ClickMigrate",
+        "ranges": [
+          {
+            "affected": "< 1.0.3",
+            "fixed": "1.0.3",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.0.3"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "low",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-vgf9-9mxx-hq54/GHSA-vgf9-9mxx-hq54.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元patched_versions欄は文字どおり1.03だが、同じ資料のPatches節は1.0.3と明記し、Reviewedの修正版と一致する。表示は本文の明示的な1.0.3を根拠にし、元フィールドの差も保持する。; 攻撃者がマイグレーション名へ入力できる自動化などが条件。通常の信頼されたローカル操作だけで外部から直接攻撃できるとはしない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

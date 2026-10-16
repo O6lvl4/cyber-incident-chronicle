@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-6fj4-rcr3-r7rr",
+  "modified": "2026-10-16T19:55:39Z",
+  "published": "2026-10-16T19:55:39Z",
+  "aliases": [],
+  "summary": "lopdf has a stack overflow via deeply nested PDF objects",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "crates.io",
+        "name": "lopdf"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.42.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/J-F-Liu/lopdf/issues/502"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/J-F-Liu/lopdf/pull/503"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/J-F-Liu/lopdf/commit/c755394ad7dd651ccfe77c618f90ab779da1dfd9"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/J-F-Liu/lopdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0187.html"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-1124"
+    ],
+    "severity": "HIGH",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-10-16T19:55:39Z",
+    "nvd_published_at": null
+  },
+  "representation": "minimized-public-reviewed-advisory-projection",
+  "omittedDetails": {
+    "sha256": "e58128c423f1eb2ac36cf2cd6b45b428be205cd222e8f95eac7dce829181c4c4",
+    "utf8Bytes": 1082
+  }
+}

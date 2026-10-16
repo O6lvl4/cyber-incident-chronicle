@@ -1,0 +1,168 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-74vm-87hj-r66f",
+  "aliases": [
+    "CVE-2026-100349"
+  ],
+  "title": "kin-openapi：content型応答ヘッダー検証での停止",
+  "summary": "OpenAPI仕様でcontent型の応答ヘッダーを宣言すると、ValidateResponseがnil参照で停止する可能性がある。0.146.0で修正。開発元はmedium・CVSS未評価、ReviewedはHIGH・CVSS v4で評価が異なる。",
+  "publishedAt": "2026-10-16T19:58:46Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json",
+  "modifiedAt": "2026-10-16T19:58:46Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-16T21:24:32.150577Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/getkin/kin-openapi",
+      "ranges": [
+        {
+          "affected": "< 0.146.0",
+          "fixed": "0.146.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.146.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-74vm-87hj-r66f",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T19:58:46Z",
+      "modifiedAt": "2026-10-16T19:58:46Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content",
+      "url": "https://github.com/advisories/GHSA-74vm-87hj-r66f",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/getkin/kin-openapi/security-advisories/GHSA-74vm-87hj-r66f",
+      "publishedDate": "2026-08-03",
+      "publishedAt": "2026-08-03T11:03:59Z",
+      "modifiedAt": "2026-09-25T19:20:29Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元資料を照合。DB公開・更新日時と開発元公開・更新日時は区別する。",
+    "実悪用とKEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元の影響範囲は<=0.145.0、修正版はv0.146.0。DBは導入版不明として0.146.0未満を記録。",
+    "本文の「評価未設定」と現行APIのmediumが異なる。数値は推定せず、Reviewedのv4ベクトルはDB由来として保持する。",
+    "外部由来か自社管理かという仕様の信頼関係で攻撃条件が異なる。応答ヘッダー宣言が条件で、単なる全リクエストへの影響とはしない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+    "checkedAt": "2026-10-16T21:24:32.150577Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-74vm-87hj-r66f",
+        "aliases": [
+          "CVE-2026-100349"
+        ],
+        "publishedAt": "2026-10-16T19:58:46Z",
+        "modifiedAt": "2026-10-16T19:58:46Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-74vm-87hj-r66f"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/getkin/kin-openapi",
+        "ranges": [
+          {
+            "affected": "< 0.146.0",
+            "fixed": "0.146.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.146.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json",
+      "cvss": [
+        {
+          "version": "4.0",
+          "score": null,
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-74vm-87hj-r66f/GHSA-74vm-87hj-r66f.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "開発元の影響範囲は<=0.145.0、修正版はv0.146.0。DBは導入版不明として0.146.0未満を記録。; 本文の「評価未設定」と現行APIのmediumが異なる。数値は推定せず、Reviewedのv4ベクトルはDB由来として保持する。; 外部由来か自社管理かという仕様の信頼関係で攻撃条件が異なる。応答ヘッダー宣言が条件で、単なる全リクエストへの影響とはしない。",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "開発元の影響範囲は<=0.145.0、修正版はv0.146.0。DBは導入版不明として0.146.0未満を記録。; 本文の「評価未設定」と現行APIのmediumが異なる。数値は推定せず、Reviewedのv4ベクトルはDB由来として保持する。; 外部由来か自社管理かという仕様の信頼関係で攻撃条件が異なる。応答ヘッダー宣言が条件で、単なる全リクエストへの影響とはしない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

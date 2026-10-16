@@ -1,0 +1,162 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rxjv-24xq-76wc",
+  "aliases": [
+    "CVE-2026-102834"
+  ],
+  "title": "JavaCV：カメラ応答処理の整数オーバーフローによる停止",
+  "summary": "IPCameraFrameGrabberで細工されたカメラHTTP応答を処理すると、バッファ拡張が無限ループになる可能性がある。開発元は修正コミット、Reviewedは修正版1.5.14を示す。",
+  "publishedAt": "2026-10-16T19:53:06Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json",
+  "modifiedAt": "2026-10-16T19:53:06Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-16T21:24:32.150577Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.bytedeco:javacv",
+      "ranges": [
+        {
+          "affected": "< 1.5.14",
+          "fixed": "1.5.14",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.5.14"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/bytedeco/javacv/security-advisories/GHSA-rxjv-24xq-76wc",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/bytedeco/javacv/security-advisories/GHSA-rxjv-24xq-76wc"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T19:53:06Z",
+      "modifiedAt": "2026-10-16T19:53:06Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS",
+      "url": "https://github.com/advisories/GHSA-rxjv-24xq-76wc",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/bytedeco/javacv/security-advisories/GHSA-rxjv-24xq-76wc",
+      "publishedDate": "2026-07-25",
+      "publishedAt": "2026-07-25T02:14:19Z",
+      "modifiedAt": "2026-09-29T20:19:37Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元資料を照合。DB公開・更新日時と開発元公開・更新日時は区別する。",
+    "実悪用とKEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元の影響上限は<=1.5.13、修正版欄はコミットcd19778。Reviewedのfixed 1.5.14と文字どおり区別する。",
+    "この照合では修正コミットとリリースの包含関係を独立検証していない。1.5.14はDB由来として表示する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+    "checkedAt": "2026-10-16T21:24:32.150577Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-rxjv-24xq-76wc",
+        "aliases": [
+          "CVE-2026-102834"
+        ],
+        "publishedAt": "2026-10-16T19:53:06Z",
+        "modifiedAt": "2026-10-16T19:53:06Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-rxjv-24xq-76wc"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "maven",
+        "packageName": "org.bytedeco:javacv",
+        "ranges": [
+          {
+            "affected": "< 1.5.14",
+            "fixed": "1.5.14",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.5.14"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-rxjv-24xq-76wc/GHSA-rxjv-24xq-76wc.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元の影響上限は<=1.5.13、修正版欄はコミットcd19778。Reviewedのfixed 1.5.14と文字どおり区別する。; この照合では修正コミットとリリースの包含関係を独立検証していない。1.5.14はDB由来として表示する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

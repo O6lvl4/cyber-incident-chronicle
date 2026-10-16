@@ -1,0 +1,163 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cv23-7vc5-jfh7",
+  "aliases": [
+    "CVE-2026-102941"
+  ],
+  "title": "gomarkdown：短いURLの安全性検査によるパニック",
+  "summary": "IsSafeURLが長さ確認前に短いURLを処理して停止する可能性がある。Reviewedは修正疑似版を示すが、開発元の修正版欄は空で影響欄には将来日時の値が残る。",
+  "publishedAt": "2026-10-16T15:41:39Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json",
+  "modifiedAt": "2026-10-16T15:41:39Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-16T21:24:32.150577Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/gomarkdown/markdown",
+      "ranges": [
+        {
+          "affected": "< 0.0.0-20260724235538-61af6e1e6971",
+          "fixed": "0.0.0-20260724235538-61af6e1e6971",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.0.0-20260724235538-61af6e1e6971"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/gomarkdown/markdown/security-advisories/GHSA-cv23-7vc5-jfh7",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/gomarkdown/markdown/security-advisories/GHSA-cv23-7vc5-jfh7"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T15:41:39Z",
+      "modifiedAt": "2026-10-16T15:41:39Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "gomarkdown/markdown IsSafeURL panics on short URLs",
+      "url": "https://github.com/advisories/GHSA-cv23-7vc5-jfh7",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "url": "https://api.github.com/repos/gomarkdown/markdown/security-advisories/GHSA-cv23-7vc5-jfh7",
+      "publishedDate": "2026-07-25",
+      "publishedAt": "2026-07-25T00:13:38Z",
+      "modifiedAt": "2026-09-29T21:09:54Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定Reviewedと開発元資料を照合。DB公開・更新日時と開発元公開・更新日時は区別する。",
+    "実悪用とKEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "開発元の影響欄は文字どおり<=0.0.0-20991231235959-ffffffffffffで、修正版はnull。この値を実在する検証済みリリース上限と扱わない。",
+    "表示する修正版0.0.0-20260724235538-61af6e1e6971はReviewed由来。開発元APIで同じ版を確認済みとしない。",
+    "Safelinkを有効にした描画またはIsSafeURL直接呼び出しが対象。通常のSafelinkなしの描画経路とは区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+    "checkedAt": "2026-10-16T21:24:32.150577Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-cv23-7vc5-jfh7",
+        "aliases": [
+          "CVE-2026-102941"
+        ],
+        "publishedAt": "2026-10-16T15:41:39Z",
+        "modifiedAt": "2026-10-16T15:41:39Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json"
+      }
+    ],
+    "curatedIds": [
+      "GHSA-cv23-7vc5-jfh7"
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/gomarkdown/markdown",
+        "ranges": [
+          {
+            "affected": "< 0.0.0-20260724235538-61af6e1e6971",
+            "fixed": "0.0.0-20260724235538-61af6e1e6971",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.0-20260724235538-61af6e1e6971"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "databaseSeverity": {
+      "label": "high",
+      "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json",
+      "cvss": [
+        {
+          "version": "3.1",
+          "score": null,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-cv23-7vc5-jfh7/GHSA-cv23-7vc5-jfh7.json"
+        }
+      ]
+    },
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元の影響欄は文字どおり<=0.0.0-20991231235959-ffffffffffffで、修正版はnull。この値を実在する検証済みリリース上限と扱わない。; 表示する修正版0.0.0-20260724235538-61af6e1e6971はReviewed由来。開発元APIで同じ版を確認済みとしない。; Safelinkを有効にした描画またはIsSafeURL直接呼び出しが対象。通常のSafelinkなしの描画経路とは区別する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

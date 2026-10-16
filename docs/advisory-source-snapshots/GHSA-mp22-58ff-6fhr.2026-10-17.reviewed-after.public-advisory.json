@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.4.0",
+  "id": "GHSA-mp22-58ff-6fhr",
+  "modified": "2026-10-16T21:12:04Z",
+  "published": "2026-10-16T21:12:03Z",
+  "aliases": [
+    "CVE-2026-96628"
+  ],
+  "summary": "Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`",
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+    }
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Go",
+        "name": "github.com/getarcaneapp/arcane/backend/v2"
+      },
+      "ranges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/getarcaneapp/arcane/security/advisories/GHSA-mp22-58ff-6fhr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/getarcaneapp/arcane/pull/3881"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/getarcaneapp/arcane/commit/4fe4c7ed9483dff7d43e3c4bee6a92037ce886b4"
+    },
+    {
+      "type": "PACKAGE",
+      "url": "https://github.com/getarcaneapp/arcane"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/getarcaneapp/arcane/releases/tag/backend/v2.11.0"
+    }
+  ],
+  "database_specific": {
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "severity": "MODERATE",
+    "github_reviewed": true,
+    "github_reviewed_at": "2026-10-16T21:12:03Z",
+    "nvd_published_at": null
+  },
+  "representation": "minimized-public-reviewed-advisory-projection",
+  "omittedDetails": {
+    "sha256": "e36e807b07fb99faa659113b7250320f4927248b1e33e7373ce77291e595767f",
+    "utf8Bytes": 11856
+  }
+}

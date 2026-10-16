@@ -1,0 +1,129 @@
+{
+  "id": "yamato-atobarai-2026",
+  "company": "ヤマト運輸（クロネコ代金後払いサービス）",
+  "title": "顧客情報約526万件などの持ち出しを確認、後払いサービスは10月9日に再開",
+  "announcementDate": "2026-09-29",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセス開始日は未公表",
+  "detectedDate": "2026-09-28",
+  "updatedDate": "2026-10-16",
+  "statusAsOfDate": "2026-10-16",
+  "lastVerifiedDate": "2026-10-17",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "クロネコ代金後払いサービスへの第三者の不正アクセス。具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "9月28日に不正アクセスを確認してサービスを停止し、10月9日に再開。16日の第4報で、顧客情報約526万件、お届け先情報約5万件、加盟店情報約4,100件の不正持ち出しを公表した。",
+  "affectedData": [
+    "一部利用者の氏名、住所、電話番号、メールアドレス、商品明細（商品名・数量・単価等）、社内管理情報（申込番号・受注日・与信番号等）",
+    "一部のお届け先の氏名、住所、電話番号、送り状番号",
+    "一部加盟店の名称、社内管理情報（加盟店コード）"
+  ],
+  "counts": [
+    {
+      "value": 5260000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "利用者情報（対象期間2018年10月1日〜2026年9月28日）",
+      "approximate": true
+    },
+    {
+      "value": 490000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "上記約526万件のうちメールアドレスを含む件数",
+      "approximate": true
+    },
+    {
+      "value": 50000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "お届け先情報（対象期間2021年2月5日〜2026年9月28日）",
+      "approximate": true
+    },
+    {
+      "value": 4100,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "加盟店情報（対象期間2018年10月1日〜2026年9月28日）",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "顧客約526万件／お届け先約5万件／加盟店約4,100件",
+  "caveats": [
+    "いずれも概数の情報件数であり、重複を除いた人数ではない。顧客情報・お届け先情報・加盟店情報は別区分として示し、合算人数を作らない",
+    "メールアドレスを含む約49万件は顧客情報約526万件の内数。表の対象期間は情報の対象範囲であり、不正アクセスが継続していた期間ではない",
+    "第2報で流出可能性の対象とした請求金額・債権残高・社員氏名は、調査後の第4報で不正持ち出し未確認と説明。最新の確定流出項目には含めない",
+    "クレジットカード情報とパスワード情報は含まれない。公表時点で持ち出された情報の不正利用による二次被害は未確認だが、不審なメール・SMS・電話の問い合わせはある",
+    "9月28日は不正アクセス確認日であり侵入開始日は未公表。同日22時28分の停止から10月9日13時の再開までのサービス影響を収録。宅急便等の他サービスは通常利用可能と説明",
+    "第3報で9月28日以降に支払期限を迎える払込票の期限を17日間延長すると案内。サービス再開と情報流出範囲の調査完了は別の事実",
+    "同じ事案の初報から第4報を集約。本文を更新するHTMLのURLには260929が残るが、収録した最新本文の公表日は10月16日"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "ヤマト：クロネコ代金後払いへの不正アクセス（初報）",
+      "url": "https://www.yamato-hd.co.jp/important/img/info_260929_1_1.pdf",
+      "publishedDate": "2026-09-29"
+    },
+    {
+      "title": "ヤマト：流出可能性のある情報項目（第2報）",
+      "url": "https://www.yamato-hd.co.jp/important/img/info_260929_1_6.pdf",
+      "publishedDate": "2026-10-02"
+    },
+    {
+      "title": "ヤマト：後払いサービス再開（第3報）",
+      "url": "https://www.yamato-hd.co.jp/important/img/info_260929_1_7.pdf",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "ヤマト：不正持ち出しの調査結果と対応（第4報）",
+      "url": "https://www.yamato-hd.co.jp/important/info_260929_1.html",
+      "publishedDate": "2026-10-16"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-28",
+      "label": "不正アクセスを確認・サービス停止",
+      "kind": "occurrence",
+      "summary": "外部アクセスを制限するなど対応し、22時28分に後払いサービスを停止",
+      "sourceUrl": "https://www.yamato-hd.co.jp/important/img/info_260929_1_1.pdf"
+    },
+    {
+      "date": "2026-09-29",
+      "label": "初報を公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスとサービス停止を公表。原因・影響範囲の調査と復旧対応を開始",
+      "sourceUrl": "https://www.yamato-hd.co.jp/important/img/info_260929_1_1.pdf"
+    },
+    {
+      "date": "2026-10-02",
+      "label": "一部情報の流出可能性を公表",
+      "kind": "update",
+      "summary": "利用者・加盟店の情報や社員氏名に流出可能性があるとして、対象範囲を調査",
+      "sourceUrl": "https://www.yamato-hd.co.jp/important/img/info_260929_1_6.pdf"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "後払いサービスを再開",
+      "kind": "update",
+      "summary": "13時にサービスを再開。流出可能性と範囲の調査を継続し、払込票の期限延長を案内",
+      "sourceUrl": "https://www.yamato-hd.co.jp/important/img/info_260929_1_7.pdf"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "不正持ち出しの範囲を公表",
+      "kind": "update",
+      "summary": "顧客・お届け先・加盟店情報の不正持ち出しを確認し対象へ順次連絡。請求金額・債権残高・社員氏名の持ち出しは未確認",
+      "sourceUrl": "https://www.yamato-hd.co.jp/important/info_260929_1.html"
+    }
+  ]
+}
