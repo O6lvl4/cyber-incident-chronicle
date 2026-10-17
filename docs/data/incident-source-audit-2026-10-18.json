@@ -1,0 +1,998 @@
+{
+  "schemaVersion": 1,
+  "dateJst": "2026-10-18",
+  "completedAt": "2026-10-17T21:31:43Z",
+  "previousPublishedCommit": "5e514b96a4e4e5d3555d2368f9b19d8c66cdfb0e",
+  "baseline": {
+    "lastSuccessfulDateJst": "2026-10-17",
+    "auditFile": "docs/data/incident-source-audit-2026-10-17.json",
+    "incidents": 183,
+    "sources": 340
+  },
+  "strategy": {
+    "scope": "Bounded October15–17 official Japanese disclosures and same-incident corrections, including the October18 01:45 JST WASABI page update; overlap covers September occurrences and older initial announcements referenced by October followups. Not exhaustive.",
+    "queries": [
+      "不正アクセス 2026年10月17日",
+      "情報漏えい 2026年10月16日",
+      "サイバー攻撃 2026年10月17日",
+      "Eストアー 2026年10月16日 最終報",
+      "発車オーライネット 工房 不正アクセス",
+      "WASABI SWITCH 第三報 2026年10月17日",
+      "日本郵便 調査請求 2026年10月16日",
+      "M3 ACCESS 大和総研 イエローハット ファンケル 公式",
+      "skyticket 第2報 2026年10月16日"
+    ],
+    "rules": [
+      "Incident facts require full company-authored primary bodies; secondary indexes only discover candidates",
+      "One provider incident aggregates explicitly linked downstream disclosures; no duplicate incidents for affected customers",
+      "Preserve publication, occurrence, detection, status and review dates separately",
+      "Retain confirmed versus possible, original units, bounds, approximations, subsets and unresolved unit discrepancies",
+      "No leaked records or attacker-source links"
+    ]
+  },
+  "result": {
+    "incidentCountBefore": 183,
+    "incidentCountAfter": 191,
+    "sourceCountBefore": 340,
+    "sourceCountAfter": 362,
+    "addedIds": [
+      "m3-mrkun-2026",
+      "access-cros-taiwan-2026",
+      "daiwa-research-naito-wb4-2026",
+      "fancl-attenir-ec-2026",
+      "yellowhat-web-reservation-2026",
+      "japanpost-international-inquiry-2026",
+      "khobho-hassha-allright-api-2026",
+      "wasabi-switch-2026"
+    ],
+    "sameIncidentEnrichments": [
+      "estore-2026-08-01",
+      "resorttrust-2026",
+      "studio-cloud-2026",
+      "skyticket-server-2026",
+      "skyticket-management-2026",
+      "skyticket-bus-2026",
+      "idc-frontier-2026"
+    ]
+  },
+  "records": [
+    {
+      "incidentId": "m3-mrkun-2026",
+      "file": "src/data/incidents/m3-mrkun-2026.json",
+      "changeType": "added",
+      "sha256": "a0fc07e102bbb5743a45800469b1d575973c6590af6c7d73cfe8ec3514454602",
+      "updatedDate": "2026-10-15",
+      "statusAsOfDate": "2026-10-15",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "access-cros-taiwan-2026",
+      "file": "src/data/incidents/access-cros-taiwan-2026.json",
+      "changeType": "added",
+      "sha256": "2ed458c4e3e8a8308c5b2001396b231f6e4ce852d0ea608e440176e3e1f2e7e6",
+      "updatedDate": "2026-10-15",
+      "statusAsOfDate": "2026-10-15",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "daiwa-research-naito-wb4-2026",
+      "file": "src/data/incidents/daiwa-research-naito-wb4-2026.json",
+      "changeType": "added",
+      "sha256": "2d712901a057e9c7dbea710a10162d8ae042827eb50d9a2e1d5704a97300a584",
+      "updatedDate": "2026-10-15",
+      "statusAsOfDate": "2026-10-15",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "fancl-attenir-ec-2026",
+      "file": "src/data/incidents/fancl-attenir-ec-2026.json",
+      "changeType": "added",
+      "sha256": "3986ed85810ec08c4a4560f3ddb77e81ee182f39879bdd59f88b9e0945c672ff",
+      "updatedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-16",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "yellowhat-web-reservation-2026",
+      "file": "src/data/incidents/yellowhat-web-reservation-2026.json",
+      "changeType": "added",
+      "sha256": "d0e5a1ff91df075bb9343a8944aac5b8a5149e8ab90243904510fb754df2537c",
+      "updatedDate": "2026-10-15",
+      "statusAsOfDate": "2026-10-15",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "japanpost-international-inquiry-2026",
+      "file": "src/data/incidents/japanpost-international-inquiry-2026.json",
+      "changeType": "added",
+      "sha256": "0061d32e26130efbbf999c08f3c3313643a259783327ed6146741f6d0117031d",
+      "updatedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-16",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "khobho-hassha-allright-api-2026",
+      "file": "src/data/incidents/khobho-hassha-allright-api-2026.json",
+      "changeType": "added",
+      "sha256": "01be2056135227d9685695e57242d6f44b982008943b36c6a59c97e1d54b8411",
+      "updatedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-15",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "wasabi-switch-2026",
+      "file": "src/data/incidents/wasabi-switch-2026.json",
+      "changeType": "added",
+      "sha256": "d8d8ae0912e2a29476759c50a68795edb5a49702dd8bdd359d54074b02ca9405",
+      "updatedDate": "2026-10-18",
+      "statusAsOfDate": "2026-10-18",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "estore-2026-08-01",
+      "file": "src/data/incidents/estore-2026-08-01.json",
+      "changeType": "same-incident-update",
+      "sha256": "bd7c59fc3c6f0831537fd333cdc0da59d5389bc752df7f9252049f677f4ac726",
+      "updatedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-16",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "resorttrust-2026",
+      "file": "src/data/incidents/resorttrust-2026.json",
+      "changeType": "same-incident-update",
+      "sha256": "1a1405f8b2d9f1f9ebaff359af9a7f313cd6ff2586d49f9d786fa3679b57253a",
+      "updatedDate": "2026-10-17",
+      "statusAsOfDate": "2026-10-16",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "studio-cloud-2026",
+      "file": "src/data/incidents/studio-cloud-2026.json",
+      "changeType": "same-incident-update",
+      "sha256": "3c28c1741f37abda7c0ccfa9bbf26a277828547ecd9624970f03db5d9896dc92",
+      "updatedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-16",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "skyticket-server-2026",
+      "file": "src/data/incidents/skyticket-server-2026.json",
+      "changeType": "same-incident-update",
+      "sha256": "6e3f528096ffc3fb5a3f96fb65dcd78d71da3fc0e787c67838f42b99e140085c",
+      "updatedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-16",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "skyticket-management-2026",
+      "file": "src/data/incidents/skyticket-management-2026.json",
+      "changeType": "same-incident-update",
+      "sha256": "ae728b00350234acb0717498ba22f2aba6288c0e6c4df55060bce8634f62ca0c",
+      "updatedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-09",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "skyticket-bus-2026",
+      "file": "src/data/incidents/skyticket-bus-2026.json",
+      "changeType": "same-incident-update",
+      "sha256": "de9daf7310484e82a204f07cb523f6569a9d447229ae2da0be36952653bda9d3",
+      "updatedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-09",
+      "lastVerifiedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "idc-frontier-2026",
+      "file": "src/data/incidents/idc-frontier-2026.json",
+      "changeType": "same-incident-update",
+      "sha256": "2f849f071796a818c16c526f0296a9d902cf69f996c3497e1433e841bc5f9718",
+      "updatedDate": "2026-10-17",
+      "statusAsOfDate": "2026-10-15",
+      "lastVerifiedDate": "2026-10-18"
+    }
+  ],
+  "sourceChecks": [
+    {
+      "incidentId": "m3-mrkun-2026",
+      "url": "https://corporate.m3.com/assets.ctfassets.net/1pwj74siywcy/4YBQ3JACTocGVgQmIVkSHe/c7865f094fe436292d7c81e1116a9c7f/20261015_Public_J.pdf",
+      "publishedDate": "2026-10-15",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "10月14日に「MR君」への不正アクセスと一部情報の流出を確認。医師会員全体の1割未満、製薬企業担当者数百名規模の氏名・勤務先などが対象で、正確な人数と詳細は精査中。判明した経路を遮断した。",
+      "method": "Direct official HTTP PDF download and pdftotext -layout, corroborated by web PDF extraction",
+      "bodySha256": "fb10b66000dfac8e0998d109d3d305f7ebb8a5895b60cc94cd1ede3f4fd21cc0",
+      "responseSha256": "0f2a8d101f557b80fbf738ba92403297569e3917cc4dafa8d2a79877b937df35",
+      "verifiedFacts": {
+        "announcementDate": "2026-10-15",
+        "occurredDate": null,
+        "occurredDateLabel": "侵入開始日は未公表（10月14日に不正アクセスと流出を確認）",
+        "detectedDate": "2026-10-14",
+        "statusAsOfDate": "2026-10-15",
+        "disclosureStatus": "confirmed",
+        "affectedData": [
+          "医師会員・製薬企業担当者の氏名、勤務先、一部のメールアドレス等"
+        ],
+        "counts": [],
+        "caveats": [
+          "10月14日は不正アクセスと漏えいの確認日であり、侵入開始日とはしていない",
+          "「1割未満」「数百名規模」を根拠なく人数へ換算しない。正確な対象人数と情報項目は調査中",
+          "ログインパスワード・保有m3ポイントは対象外。クレジットカード番号等は保有していない",
+          "情報の不特定多数への公開や不正利用は未確認。サービス停止は公表されていない"
+        ]
+      }
+    },
+    {
+      "incidentId": "access-cros-taiwan-2026",
+      "url": "https://www.access-company.com/files/2026/10/n261015.pdf",
+      "publishedDate": "2026-10-15",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "台湾子会社のCROSで9月11日に侵入の徴候を検知。取引先1社の顧客ID155,280件・受注ID231,998件、決済未完了のカード情報1,305アカウント等の流出を確認。窃取された送信鍵で不正メール11,441件も送信された。",
+      "method": "Direct official HTTP PDF download and pdftotext -layout, corroborated by web PDF extraction",
+      "bodySha256": "93eeb506f0f978217b7f654b9a15c2e7f551c89badd92300777e3d024479c510",
+      "responseSha256": "23841d5c48d61ae7676f359016170b1012b35d0a289a4aaaa4ba6dc554840f9f",
+      "verifiedFacts": {
+        "announcementDate": "2026-10-15",
+        "occurredDate": null,
+        "occurredDateLabel": "侵入開始日は未公表（9月11日に徴候検知）",
+        "detectedDate": "2026-09-11",
+        "statusAsOfDate": "2026-10-15",
+        "disclosureStatus": "confirmed",
+        "affectedData": [
+          "通販利用者の氏名・電話番号・住所・メールアドレス・顧客ID・受注ID・受注情報",
+          "決済未完了の受注に係るカード番号・有効期限・氏名・対象顧客ID・受注ID。1,305アカウント中4件はセキュリティコードも含む",
+          "決済サービスのアカウント情報、メール送信サービスの鍵情報"
+        ],
+        "counts": [
+          {
+            "value": 155280,
+            "unit": "件",
+            "status": "confirmed",
+            "label": "漏えいしたお客様ID（実人数ではない）",
+            "approximate": false
+          },
+          {
+            "value": 231998,
+            "unit": "件",
+            "status": "confirmed",
+            "label": "漏えいした受注ID（顧客IDとは別の数え方）",
+            "approximate": false
+          },
+          {
+            "value": 1305,
+            "unit": "件",
+            "status": "confirmed",
+            "label": "カード情報のアカウント件数（重複登録・複数注文を突合後、原文単位は件）",
+            "approximate": false
+          },
+          {
+            "value": 1671,
+            "unit": "件",
+            "status": "confirmed",
+            "label": "カード情報の延べ件数（1,305アカウントと同じ対象の別集計）",
+            "approximate": false
+          },
+          {
+            "value": 4,
+            "unit": "件",
+            "status": "confirmed",
+            "label": "カード関連全項目にセキュリティコードを含む部分件数（1,305アカウントの内数）",
+            "approximate": false
+          },
+          {
+            "value": 11441,
+            "unit": "件",
+            "status": "confirmed",
+            "label": "窃取した送信鍵を使った不正メール送信数（漏えい人数ではない）",
+            "approximate": false
+          }
+        ],
+        "caveats": [
+          "顧客ID件数・受注ID件数・カードのアカウント件数・延べ件数・メール送信数は異なる母数であり合算しない",
+          "カード1,305アカウントのうち4件にセキュリティコードを含み、残り1,301件は含まない。決済未完了の受注のみが対象",
+          "不正メールは流出顧客の個人情報を宛先に使ったものではなく、侵入者が別途用意したリストと盗んだ送信鍵を使用したと会社は判断",
+          "他の取引先の個人情報流出、当該BIツールから参照できたデータベース以外への影響、CROS基盤への直接侵入は未確認",
+          "CROS全体は予防的に一時停止後、復旧済み。対象BIツールの再稼働は対策予定であり、決済秘密鍵の更新も一部作業中",
+          "BIツールの製品名、具体的脆弱性・CVE、最初の侵入日時は未公表"
+        ]
+      }
+    },
+    {
+      "incidentId": "daiwa-research-naito-wb4-2026",
+      "url": "https://www.dir.co.jp/release/2026101501.pdf",
+      "publishedDate": "2026-10-15",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "内藤証券のネット取引システムを運用する大和総研が、10月14日早朝の侵入を公表。ログイン中の最大631名について連絡先・証券口座番号・出金先口座等が漏えいした可能性がある。資産・取引の業務用DBへの侵入は未確認。",
+      "method": "Direct official HTTP PDF download and pdftotext -layout, corroborated by web PDF extraction",
+      "bodySha256": "34251f2dd3f8d975cc0fe9e3fcec59f526cea0c2bed7b55cc38ea29eb6af0f81",
+      "responseSha256": "cf58e767e20bcf80c6ce520a70e487592e36173ca88aaaee75272327dfcdf1dd",
+      "verifiedFacts": {
+        "announcementDate": "2026-10-15",
+        "occurredDate": "2026-10-14",
+        "occurredDateLabel": "確認された不正アクセス日（午前4時46分〜6時56分）",
+        "detectedDate": null,
+        "statusAsOfDate": "2026-10-15",
+        "disclosureStatus": "possible",
+        "affectedData": [
+          "氏名、住所、電話番号、メールアドレス、証券口座番号、勤務先",
+          "出金先金融機関名・支店名・口座番号"
+        ],
+        "counts": [
+          {
+            "value": 631,
+            "unit": "名",
+            "status": "possible",
+            "label": "不正アクセス時間帯にログインしていた利用者の最大対象人数",
+            "approximate": false
+          }
+        ],
+        "caveats": [
+          "631名は対象時間帯のログイン利用者の上限であり、流出が確認された人数ではない",
+          "アクセス対象はログイン状態を一時保持するDB。全利用者の資産・取引内容を保管する業務用DBへの不正アクセス・情報取得の痕跡は未確認",
+          "対象情報だけでは証券口座へのログイン・取引はできず、不正利用・出金・取引等の被害も未確認と説明",
+          "不正プログラムの削除は公表されているが、具体的な侵入手法・脆弱性やランサムウェアを推定しない。検知日時は未公表",
+          "なりすまし防止のためログイン状態を一時解除したことと、サービス全体停止を区別する"
+        ]
+      }
+    },
+    {
+      "incidentId": "fancl-attenir-ec-2026",
+      "url": "https://www.fancl.jp/news/pdf/husei.pdf",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "10月15日の内部調査で、3〜10日の侵入と会員情報の流出を確認。ファンケル393,785件・368,184名、アテニア441,162件・417,312名が対象。原因機能を停止し、16日に個人情報保護委員会と警察へ報告・相談した。",
+      "method": "Direct official HTTP PDF download and pdftotext -layout, corroborated by web PDF extraction",
+      "bodySha256": "f7ee17f239219d3f027f9fd4aafed537dda02813718d027e29417254dff0411e",
+      "responseSha256": "b7f8550dfc84a1c835c6138be7d250efdbca965eb2bc1d0da0cb5d47f12d0cb7",
+      "verifiedFacts": {
+        "announcementDate": "2026-10-16",
+        "occurredDate": "2026-10-03",
+        "occurredDateLabel": "確認された不正アクセス期間の開始（10月3日〜10日）",
+        "detectedDate": "2026-10-15",
+        "statusAsOfDate": "2026-10-16",
+        "disclosureStatus": "confirmed",
+        "affectedData": [
+          "メールアドレス、氏名、住所、電話番号、生年月日、性別、お客様番号、サブメールアドレス",
+          "一部会員のハッシュ化された2次パスワード、本人認証の質問項目（回答は対象外）",
+          "ポイント・会員ステージ情報、メールマガジン配信希望の有無、店舗での購入の有無"
+        ],
+        "counts": [
+          {
+            "value": 393785,
+            "unit": "件",
+            "status": "confirmed",
+            "label": "ファンケルの流出会員情報件数（人数とは別集計）",
+            "approximate": false
+          },
+          {
+            "value": 368184,
+            "unit": "名",
+            "status": "confirmed",
+            "label": "ファンケルの対象人数",
+            "approximate": false
+          },
+          {
+            "value": 441162,
+            "unit": "件",
+            "status": "confirmed",
+            "label": "アテニアの流出会員情報件数（人数とは別集計）",
+            "approximate": false
+          },
+          {
+            "value": 417312,
+            "unit": "名",
+            "status": "confirmed",
+            "label": "アテニアの対象人数",
+            "approximate": false
+          }
+        ],
+        "caveats": [
+          "両社の件数と人数は別の単位。社間の重複人数が不明なため、合算した実人数として扱わない",
+          "パスワードは一部のハッシュ化された2次パスワード。メインパスワード、本人認証質問の回答、クレジットカード等の決済情報は対象外",
+          "原因となった機能の停止は実施したが、事業活動・サービスへの影響はないと公表しているため、サービス停止事案とは分類しない",
+          "情報の不特定多数への公開、不正利用、二次被害は未確認。攻撃の詳細は被害拡大防止のため非公表"
+        ]
+      }
+    },
+    {
+      "incidentId": "yellowhat-web-reservation-2026",
+      "url": "https://www.release.tdnet.info/inbs/140120261015551164.pdf",
+      "publishedDate": "2026-10-15",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "8月28日の初報後、10月15日の第二報で会員1,797,124名分の流出を確認。初報より住所・生年月日・性別・ログインID・復元できない状態のパスワードを追加した。対策後にシステムを再開し、対象者への案内を完了。",
+      "method": "Direct official HTTP PDF download and pdftotext -layout, corroborated by web PDF extraction",
+      "bodySha256": "06a13a74269fdafecd7bda08b9cc64bb4a44ce9e49d68db21d0503fcf15c7534",
+      "responseSha256": "94d0852bd268cf72263b3be4bb007baafc808d21ef9d5279623e1d9cb961bf24",
+      "verifiedFacts": {
+        "announcementDate": "2026-08-28",
+        "occurredDate": null,
+        "occurredDateLabel": "侵入開始日は未公表（第二報は8月19日を検知日と記載）",
+        "detectedDate": "2026-08-19",
+        "statusAsOfDate": "2026-10-15",
+        "disclosureStatus": "confirmed",
+        "affectedData": [
+          "氏名、住所、生年月日、性別、電話番号、メールアドレス、会員番号",
+          "ログインID、復元できない状態で保管されたパスワード"
+        ],
+        "counts": [
+          {
+            "value": 1797124,
+            "unit": "名",
+            "status": "confirmed",
+            "label": "ログ解析で特定した実際の漏えい対象のイエローハット会員",
+            "approximate": false
+          }
+        ],
+        "caveats": [
+          "初報の最大1,801,499名という可能性範囲は、第二報で1,797,124名の流出確認へ更新された。同じ事案の旧値と新値を合算しない",
+          "パスワードは公式の「復元できない状態」という説明を保持し、平文流出や具体的なハッシュ方式を推定しない",
+          "クレジットカード情報は対象システムで保持・取り扱いがなく、漏えいはないと説明",
+          "検知日は今回本文を確認できた第二報の8月19日を採用。初報本文は取得できておらず、初報について報じられている日付との差の理由は未確認",
+          "第三者調査で原因究明と影響範囲特定は完了したが、具体的手法は非公表。脆弱性診断の実施予定だけから脆弱性悪用と断定しない",
+          "２りんかんイエローハットの別事案とは対象法人・システムを区別する"
+        ]
+      }
+    },
+    {
+      "incidentId": null,
+      "candidateId": "nikkeibp-downstream",
+      "url": "https://www.nikkeibp.co.jp/atcl/newsrelease/corp/20261017/",
+      "publishedDate": "2026-10-17",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-candidate-deferred",
+      "finding": "日経BPは10月16日に日経が公表した不正アクセスに伴う流出情報に、BPサービス利用者の情報が一部含まれる可能性を公表。詳細は調査中。件数・侵入日・手法は記載なし。提供元本文は取得できず、独立事案追加を保留。",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "c9d8f1c206005413eb2488d216182dd831895cfb8118155543137bf80006d93d",
+      "responseSha256": "ddb904e1071e174b841bba6a6f696e04cec8e1a64ceccd680087df1e22a9a963"
+    },
+    {
+      "incidentId": null,
+      "candidateId": "pwm",
+      "url": "https://www.pwm.co.jp/archives/176665",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-candidate-deferred",
+      "finding": "不正アクセス試行を検知し10月15日19:56〜16日06:00に電子交付サービスを予防停止後復旧。不正ログイン・内部侵入は未確認、情報漏洩等は発生していないと公表。共有提供元の重複確認が未了のため追加保留。",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "05c6bf802c6322a1f085267ee917000bf1b45931970f32a292a8728e2a55a0fb",
+      "responseSha256": "d8216f6c8a8e55dc4968797c8018bf6cc4139ee8c7a136ee904dc80073bd2532"
+    },
+    {
+      "incidentId": null,
+      "candidateId": "smds",
+      "url": "https://direct.smd-am.co.jp/news/2026/1016",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-candidate-deferred",
+      "finding": "取引委託業者システムの不正アクセス検知に伴い10月15日19:50頃〜16日06:00頃にマイページを予防停止後復旧。口座情報・取引への影響は未確認。委託先名はなく共有提供元の重複確認が未了のため追加保留。",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "89a172b04e6ef09643765eabf28320532ad2815d149f924892a0fbeea646f70d",
+      "responseSha256": "d606980327d7e66145e4381645dea93a47793fe7c13e37da66823b908a412414"
+    },
+    {
+      "incidentId": null,
+      "url": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1561.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "official-body-not-retrieved",
+      "finding": "提供元本文はweb・urllibとも取得不可（403）。183万件・内訳・認証情報窃取などの二次資料情報は未収録。",
+      "method": "web open and direct HTTP urllib; HTTP403"
+    },
+    {
+      "incidentId": "yellowhat-web-reservation-2026",
+      "url": "https://www.yellowhat.jp/information/yellowhat/202608.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "official-body-not-retrieved",
+      "finding": "初報本文はweb・urllibとも403。第二報が8月28日の初報と旧最大1,801,499名を参照しているため、その範囲のみ第二報から収録。初報について報じられる検知8月18日との食い違いは直接照合できず。",
+      "method": "web open and direct HTTP urllib; HTTP403"
+    },
+    {
+      "incidentId": "yellowhat-web-reservation-2026",
+      "url": "https://www.yellowhat.jp/information/yellowhat/202610_2.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "official-body-not-retrieved",
+      "finding": "公式HTMLはweb・urllibとも403。企業作成のTDnet第二報PDFを別の公式公開先として取得して採用。",
+      "method": "web open and direct HTTP urllib; HTTP403"
+    },
+    {
+      "url": "https://corporate.m3.com/corporate/",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-entity-evidence",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "e8d8e85e15b3e4c4ef0c24ebf1e5b999f119384f690caf68b28cf605aa054471",
+      "responseSha256": "d8b276aac40b7207f6efc1603d2ddbb18dd1bad68dc389ba5478210a94fb331d"
+    },
+    {
+      "url": "https://www.fancl.jp/en/about/outline/index.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-entity-evidence",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "2f352a58f84d27e3c3c25ac9694b81a511f811c928c740f701d78985f627a80e",
+      "responseSha256": "2558162bc20d4e0a3086e989acbbe4d1d398921179d35dab76f926c231fcc5db"
+    },
+    {
+      "url": "https://www.fancl.jp/ir/notice/index.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-entity-evidence",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "49b0a4433faaa367a141fb1b1e5ef538627c5e46793bac382f0be81214a1be0c",
+      "responseSha256": "8dbd0654a64120be4683982249fcf1b781f5cee8602d42d3f157de6bc1ba3e81"
+    },
+    {
+      "url": "https://www.attenir.co.jp/brand/company/index.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-entity-evidence",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "1cdd36c9df0474a818197afecc2b223cc46561852a8a5569f54bc9c74be085e8",
+      "responseSha256": "27eaedd9f63acb8e3314ebb67441b95ed1cae41007c6e0ccabf55aa4432e15bf"
+    },
+    {
+      "url": "https://www.dir.co.jp/corporate/souken/index.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-entity-evidence",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "c10d5561e9bfc4623a16e4489d99e6befa6f8c15b5b80d7bef556c0ff88ac02d",
+      "responseSha256": "8f4224f4e0d4f902e990cc6b550b6002556e435c3d2e8905f3861338857433a1"
+    },
+    {
+      "url": "https://www.fancl.jp/about/group/index.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-entity-evidence",
+      "method": "Direct official HTTP HTML extraction",
+      "bodySha256": "19972c1e1f29215c6393d2e128ff77d6577b9431af27fe6aeac82c35508721f8",
+      "responseSha256": "6ebee9c0a7aff6f321a16437953a40ca300a7f66ee1849da589e5efa33eb04c1"
+    },
+    {
+      "url": "https://www.yellowhat.jp/corp/about/profile.html",
+      "checkedDateJst": "2026-10-18",
+      "result": "official-search-result-only",
+      "finding": "公式検索結果にカー用品等の販売（卸売及び小売）と東証プライム9882を確認。本文はweb/urllibとも403。上場区分は本文取得済みTDnetでも確認。",
+      "method": "web search official-domain result; full-body attempts403"
+    },
+    {
+      "incidentId": "japanpost-international-inquiry-2026",
+      "url": "https://www.post.japanpost.jp/newsrelease/pressrelease/6267689171.html",
+      "publishedDate": "2026-09-25",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "9月25日に不正アクセスの可能性を検知してWeb受付を停止。10月16日の続報で約600件の登録情報が第三者から閲覧可能だったと公表した。実際の閲覧は未確認。サービス用メールアカウントからのスパム送信も確認した。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "c9c3d223ed85fb2f28a03db93768e650dbaf793f00808f456c31e68e2ff0d735",
+      "responseSha256": "b883b077f521f55fac33eab8279e15c7c7494d695af57857ac1af6003e611aab"
+    },
+    {
+      "incidentId": "japanpost-international-inquiry-2026",
+      "url": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/99a38c8fdea24951b26188d86b797684/20261016_04_01.pdf",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "9月25日に不正アクセスの可能性を検知してWeb受付を停止。10月16日の続報で約600件の登録情報が第三者から閲覧可能だったと公表した。実際の閲覧は未確認。サービス用メールアカウントからのスパム送信も確認した。",
+      "method": "Direct company-authored PDF retrieval and pdftotext -layout (Link-U PDF hosted by publisher IR distribution)",
+      "bodySha256": "9ecb83bc2368135c457b7f7d866c1e5033307a8d55477cd65e3dddd5141de320",
+      "responseSha256": "2b044494af6228ab1302af4f4508cd9f0ece13da81acc1b82d8558ae31baf333"
+    },
+    {
+      "incidentId": "khobho-hassha-allright-api-2026",
+      "url": "https://www.khobho.co.jp/wp-content/themes/kobo/pdf/20261015.pdf",
+      "publishedDate": "2026-10-15",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "バス予約サービスの外部取引先連携用APIへの不正アクセスと一部予約情報の外部流出痕跡を確認。最大8,341件は流出可能性の対象範囲として最終確認中。発車オーライネットの直接利用分や北都交通の範囲は同じ提供元事案の一部として扱う。",
+      "method": "Direct company-authored PDF retrieval and pdftotext -layout (Link-U PDF hosted by publisher IR distribution)",
+      "bodySha256": "b21503cf16e72ae3cd846515f339eb336248d59fac3bcd95b71e7b743891685a",
+      "responseSha256": "c1027b09ac3f909ece2b6ca0b65b915c7b1c194dc66e61fd8300b5c1149a1be6"
+    },
+    {
+      "incidentId": "khobho-hassha-allright-api-2026",
+      "url": "https://secure.j-bus.co.jp/hon/News?code=1",
+      "publishedDate": "2026-10-15",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "バス予約サービスの外部取引先連携用APIへの不正アクセスと一部予約情報の外部流出痕跡を確認。最大8,341件は流出可能性の対象範囲として最終確認中。発車オーライネットの直接利用分や北都交通の範囲は同じ提供元事案の一部として扱う。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "1a2e704464c2e0c50f6eb6b832ade1ccb60c86c961353a03ae40c1dd17cfad37",
+      "responseSha256": "6243e70c78bd51d20726f411343aae239437efc8c0496dd98d6246c6d30e9cc0"
+    },
+    {
+      "incidentId": "khobho-hassha-allright-api-2026",
+      "url": "https://www.hokto.co.jp/information/49133/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "バス予約サービスの外部取引先連携用APIへの不正アクセスと一部予約情報の外部流出痕跡を確認。最大8,341件は流出可能性の対象範囲として最終確認中。発車オーライネットの直接利用分や北都交通の範囲は同じ提供元事案の一部として扱う。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "f53a79e74dea525ca5e1cd06a4510bb8fe733a00f7cdf9dc59ec92ac308ce325",
+      "responseSha256": "07dd918e082378790d80d0f5c94a656783a54607c50c8440ce698acdb2c9c5c6"
+    },
+    {
+      "incidentId": "wasabi-switch-2026",
+      "url": "https://wasabi-inc.biz/help/news/20261016-01/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "10月14日の侵入で注文情報等が流出し、16日・17日は漏えい管理者パスワードを使った別経路のログインと不正プログラム設置を確認。17日の注文データやメール認証情報の抜き取り、店舗の正規メールからの不審送信も判明した。範囲は調査中。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "3a9536a50219bf64708b610becc1a9211d7dc2617d2cd5922722a219fa9ea9c0",
+      "responseSha256": "931ccb1821e6ee6c234aad867dc6bc9d91846fcd7610cfc9a9ad650fe3b29a6a"
+    },
+    {
+      "incidentId": "wasabi-switch-2026",
+      "url": "https://wasabi-inc.biz/help/news/20261016-02/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "10月14日の侵入で注文情報等が流出し、16日・17日は漏えい管理者パスワードを使った別経路のログインと不正プログラム設置を確認。17日の注文データやメール認証情報の抜き取り、店舗の正規メールからの不審送信も判明した。範囲は調査中。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "bed6da34e0949cb26e9dca7c4404fcfa136f20786c608b5852d8bef1d08effe6",
+      "responseSha256": "ffcd34ede3cc2e601d5e6a4ee2a03109b47eba5586683fd7dcd07a6b67146e46"
+    },
+    {
+      "incidentId": "wasabi-switch-2026",
+      "url": "https://wasabi-inc.biz/help/news/20261017-02/",
+      "publishedDate": "2026-10-17",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "10月14日の侵入で注文情報等が流出し、16日・17日は漏えい管理者パスワードを使った別経路のログインと不正プログラム設置を確認。17日の注文データやメール認証情報の抜き取り、店舗の正規メールからの不審送信も判明した。範囲は調査中。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "1ee62650b53f31cb433f1f7bab79aa011dabc0589cc05f73f119c8e5ecbe1a95",
+      "responseSha256": "082a342195feebaf1b241d82b6e9a22fac8b7f82d5659367da4972b5dd5cff18"
+    },
+    {
+      "incidentId": "wasabi-switch-2026",
+      "url": "https://wasabi-inc.biz/help/news/20261017-03/",
+      "publishedDate": "2026-10-17",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "第三報は10月17日20:08公開・18日01:45更新。14日の脆弱性と16日・17日の流出管理者パスワード悪用を区別し、注文・メール認証情報流出を確認。暗号化実装は18日中の予定で未完了。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "103c8df4240ff5bd53b134e125bf2aec9899678fb39ab598075339410ea37764",
+      "responseSha256": "23220a75a32de5d936ea9e1d8deec8ac177fa4c2bd4c5167d87db5d514038f20",
+      "sourceUpdatedDate": "2026-10-18"
+    },
+    {
+      "incidentId": "estore-2026-08-01",
+      "url": "https://estore.jp/press/20261016/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "10月16日の最終報で調査完了を公表。アプリケーションの脆弱性を悪用した外部送信を確認し、漏えい対象は名寄せ後の概数で約23,356,000人、対象店舗7,858店とした。以前対象とした店舗メール・FTP認証情報と振込先口座情報は除外した。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "e9ed2dbfc3ee5e5e162dfa78d48b87d8876bb8bddc8c369f8d77342563bebf76",
+      "responseSha256": "f59548f35f029eca2932e3ba61f10bef713c7504a0a0a75761680abfdcda2ac6"
+    },
+    {
+      "incidentId": "resorttrust-2026",
+      "url": "https://www.resorttrust.co.jp/topics/20261016/3397/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "統合予約サイトへの不正アクセスで会員情報約2.6万件と横浜のホテル予約者情報約3.6万件が漏えい。10月16日に家族・勤務先を含む対象項目を追加公表し、17日は統合予約・法人会員予約サイト・RTTGアプリの休止と電話予約による代替を案内した。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "f29518961e63cf172bf9ce98bb09caf53d54b8e77c29a0568712fa84a2be08f6",
+      "responseSha256": "cd823f89943c40984c95b6167f68559251a77bf4fc4c8ef76b00882cb15ad223"
+    },
+    {
+      "incidentId": "resorttrust-2026",
+      "url": "https://www.resorttrust.co.jp/topics/20261017/3403/",
+      "publishedDate": "2026-10-17",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "統合予約サイトへの不正アクセスで会員情報約2.6万件と横浜のホテル予約者情報約3.6万件が漏えい。10月16日に家族・勤務先を含む対象項目を追加公表し、17日は統合予約・法人会員予約サイト・RTTGアプリの休止と電話予約による代替を案内した。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "ce18a6abf9f5f8828ac9f73574f1145a86522e5958688b6cc5b617f556a358c0",
+      "responseSha256": "8f0681d29bdd9604377096b1eb97301a908fe3243aff638e756675ffdd03728b"
+    },
+    {
+      "incidentId": "studio-cloud-2026",
+      "url": "https://www.nikkei.com/markets/ir/irftp/data/tdnr/tdnetg3/20261016/g6lrwl/140120261016552453.pdf",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "一部機能の脆弱性を悪用され、クラウド内データが外部から取得可能な状態となった。10月13日に確認し14日までに修正・遮断。全登録者の情報等に流出可能性があるが、実際の第三者取得は未確認、件数は精査中と公表した。",
+      "method": "Direct company-authored PDF retrieval and pdftotext -layout (Link-U PDF hosted by publisher IR distribution)",
+      "bodySha256": "12c5bbc7eedf4254cd10ff0bd1414129a0165fcbcfa92f1b41c1f1871aa6240f",
+      "responseSha256": "81f5559bd425e271ecbe126d04d5b1f787d2dfe8fc7b702959414b612c854b2c"
+    },
+    {
+      "incidentId": "studio-cloud-2026",
+      "url": "https://kufu.co.jp/2026/10/16/kufuhd-announce/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "一部機能の脆弱性を悪用され、クラウド内データが外部から取得可能な状態となった。10月13日に確認し14日までに修正・遮断。全登録者の情報等に流出可能性があるが、実際の第三者取得は未確認、件数は精査中と公表した。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "6ad158efc6b394ae6a30518bdde91a2a72a0ec361b6b913df576678c29ff3321",
+      "responseSha256": "7f59d543919978028ca0ea564612924e67898ead4a42347a035a88b1f93cc528"
+    },
+    {
+      "incidentId": "skyticket-server-2026",
+      "url": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-08",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "サーバー・クラウド保管の顧客情報約1,464万件が流出し、うち約413万件はハッシュ化パスワードを含む。10月16日の第2報で、旧決済ログに残る最大6,140名のカード情報と会員特典用の認証情報の流出を追加し、カード番号流出なしとの初報を訂正した。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "ea294a6df03184bff6caf564d19b8d0bbac4ef0e441116cf81b391d052e128fa",
+      "responseSha256": "eb505c3bce78d7dd2f2bd6244a9a33fa1a60b54f45d8a0e3ae33d8006020d4fc"
+    },
+    {
+      "incidentId": "skyticket-server-2026",
+      "url": "https://jp.adventurekk.com/news/news-2026-unauthorized-access-notice-2/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "サーバー・クラウド保管の顧客情報約1,464万件が流出し、うち約413万件はハッシュ化パスワードを含む。10月16日の第2報で、旧決済ログに残る最大6,140名のカード情報と会員特典用の認証情報の流出を追加し、カード番号流出なしとの初報を訂正した。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "e6d7a5d267e9e5fd427619c44b203d5bea6a3effda9f27d4ae61661f8622d478",
+      "responseSha256": "a5fa12c2c7846563c4f55703180cb0e1c3cc607af9fff3993b3d572d3f5e745a"
+    },
+    {
+      "incidentId": "skyticket-management-2026",
+      "url": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-08",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "第2報は別のサーバー事案の旧決済ログにカード情報が残り、10月3日に取得されたことを確認。3事案全てカード流出なしとの共通の旧説明のみ訂正し、この事案固有の件数・確認状況は維持。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "ea294a6df03184bff6caf564d19b8d0bbac4ef0e441116cf81b391d052e128fa",
+      "responseSha256": "eb505c3bce78d7dd2f2bd6244a9a33fa1a60b54f45d8a0e3ae33d8006020d4fc"
+    },
+    {
+      "incidentId": "skyticket-management-2026",
+      "url": "https://jp.adventurekk.com/news/news-2026-unauthorized-access-notice-2/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "第2報は別のサーバー事案の旧決済ログにカード情報が残り、10月3日に取得されたことを確認。3事案全てカード流出なしとの共通の旧説明のみ訂正し、この事案固有の件数・確認状況は維持。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "e6d7a5d267e9e5fd427619c44b203d5bea6a3effda9f27d4ae61661f8622d478",
+      "responseSha256": "a5fa12c2c7846563c4f55703180cb0e1c3cc607af9fff3993b3d572d3f5e745a"
+    },
+    {
+      "incidentId": "skyticket-bus-2026",
+      "url": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/",
+      "publishedDate": "2026-10-08",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "第2報は別のサーバー事案の旧決済ログにカード情報が残り、10月3日に取得されたことを確認。3事案全てカード流出なしとの共通の旧説明のみ訂正し、この事案固有の件数・確認状況は維持。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "ea294a6df03184bff6caf564d19b8d0bbac4ef0e441116cf81b391d052e128fa",
+      "responseSha256": "eb505c3bce78d7dd2f2bd6244a9a33fa1a60b54f45d8a0e3ae33d8006020d4fc"
+    },
+    {
+      "incidentId": "skyticket-bus-2026",
+      "url": "https://jp.adventurekk.com/news/news-2026-unauthorized-access-notice-2/",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "第2報は別のサーバー事案の旧決済ログにカード情報が残り、10月3日に取得されたことを確認。3事案全てカード流出なしとの共通の旧説明のみ訂正し、この事案固有の件数・確認状況は維持。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "e6d7a5d267e9e5fd427619c44b203d5bea6a3effda9f27d4ae61661f8622d478",
+      "responseSha256": "a5fa12c2c7846563c4f55703180cb0e1c3cc607af9fff3993b3d572d3f5e745a"
+    },
+    {
+      "incidentId": "idc-frontier-2026",
+      "url": "https://www.idcf.jp/",
+      "publishedDate": "2026-10-17",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved",
+      "finding": "公式トップは10月17日18:00更新。影響調査・復旧継続、新たに公表すべき重要事実なし。番号付き最新は第5報のまま。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "f750f192c9702c63d08aaa21cd1b7feaaaa3a135fa2d39ab5b1b4e1f087efd75",
+      "responseSha256": "efad9b0e9219304e66cf36d5eb12a999dfbae896063ddd3b12a70586f0f0ac9a"
+    },
+    {
+      "incidentId": "arcadia-speecan-raiden-2026",
+      "url": "https://raiden.site.ktaiwork.jp/archives/4597",
+      "publishedDate": "2026-10-16",
+      "checkedDateJst": "2026-10-18",
+      "result": "full-official-body-retrieved-no-change",
+      "finding": "最新は10月16日18:10の第11報。NET119は9,020メールアドレスに紐づく情報、既存レコードと一致。データや個別資料の確認日は変更しない。",
+      "method": "Direct official HTTP HTML retrieval and text extraction",
+      "bodySha256": "ad7a13b1d2ebf8f89af73e2f8a4def3fb1c70e981fb5b02c6ee3655a1ca21e0d",
+      "responseSha256": "ea987c29e78c4241a284acfb6b8b0b51b62c00d28fe84b3aff0367abf0ecc7a1"
+    }
+  ],
+  "partialChecksAndFailures": [
+    {
+      "id": "nikkei",
+      "url": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1561.html",
+      "status": "failed",
+      "method": "urllib-request",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "yellowhat-tdnet-discovery",
+      "url": "https://alumina-ai.jp/record/2026-10-15/",
+      "status": "failed",
+      "method": "urllib-request",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "yellowhat-japanir-discovery",
+      "url": "https://japanir.jp/company/company-9882/ir/9882-20261015-01_wp_disclosure_update/",
+      "status": "failed",
+      "method": "urllib-request",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "attenir-company",
+      "url": "https://www.attenir.co.jp/corporate/",
+      "status": "failed",
+      "method": "urllib-request",
+      "error": "HTTP Error 404: 404"
+    },
+    {
+      "id": "yellowhat-company",
+      "url": "https://www.yellowhat.jp/corp/about/profile.html",
+      "status": "failed",
+      "method": "urllib-request",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.post.japanpost.jp/newsrelease/pressrelease/383542224171.html",
+      "result": "Web tool inaccessible; direct official HTML and linked full PDF successfully read"
+    },
+    {
+      "url": "https://secure.j-bus.co.jp/hon/News?code=1",
+      "result": "Web tool HTTP503; direct official HTML successfully read"
+    },
+    {
+      "url": "https://www.khobho.co.jp/wp-content/themes/kobo/pdf/20261015.pdf",
+      "result": "Web parser failed; direct official PDF and text extraction succeeded"
+    },
+    {
+      "url": "https://stationai.co.jp/news/mhv1CXpZ",
+      "result": "Search disclosed a downstream Studio candidate; web returned zero lines and direct HTML only title. Not incorporated; no full-body verification claimed"
+    }
+  ],
+  "verificationScope": "Only sourceChecks were newly read. Earlier source bodies in updated incidents were retained and were not all reverified. Arcadia body was unchanged. IDCF October17 homepage is operational status only. Skyticket bus/management records receive the correction to shared first-report wording, with no new case-specific impact count. YellowHat initial announcement is known from the retrieved October15 company report; initial body remains inaccessible. Entity classification has one explicitly labeled official-search-only company profile; incident substance is full-primary verified.",
+  "unresolvedCandidates": [
+    "Nikkei cloud October16: corporate official body HTTP403. NikkeiBP October17 downstream body confirms possible inclusion of BP customers but does not independently establish parent totals or cause; do not elevate secondary 1.83million figures.",
+    "PWM electronic delivery and SMDS direct-net October16 preventive outages verified, but shared vendor relationship not resolved in this pass; deferred to avoid duplicate provider events.",
+    "STATION Ai Studio downstream October17: current full body unavailable. Other Studio downstreams were not exhaustively enumerated."
+  ],
+  "classificationFindings": [
+    "Eストアー final report establishes confirmed application-vulnerability entry; malware execution remains confirmed, persistent backdoor installation explicitly not found.",
+    "WASABI is one related provider incident with initial vulnerability access and later leaked-administrator-password access; both paths remain explicit in the narrative.",
+    "Daiwa report states unauthorized program deletion: malware attack-kind confirmed; initial access method remains unknown.",
+    "ACCESS Taiwan BI-tool origin is explicitly identified as the entry point but no product/CVE or initial credential mechanism is asserted.",
+    "Fancl is delisted; Attenir and ACCESS Taiwan do not inherit the parent listing.",
+    "Khobho is the software provider, not a bus operator. Its 対象人数 fields are published with 件 units; this inconsistency is retained rather than silently converted."
+  ],
+  "validation": {
+    "incidentSchema": "pass:191 incidents /362 sources using in-memory October18 meta pending parent integration",
+    "classificationSchemaAndReferences": "pass",
+    "generatedIndexes": "regenerated with classification-index.mjs",
+    "gitDiffCheck": "pass",
+    "parentIntegration": "README/meta/publication audit/full check/build/CI/publication handled by parent"
+  },
+  "entitySourceChecks": [
+    {
+      "entityId": "m3",
+      "sources": [
+        {
+          "url": "https://corporate.m3.com/corporate/",
+          "title": "エムスリー：企業情報・会社概要",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "公式会社概要はテクノロジーを活用した医療関連サービスの提供と説明するためサービスに編集分類。対象法人自身が東証プライム上場（2413）と明記。",
+      "sha256": "43e3caf40429090d87b2e203ddbc04c4322ece3b7c22476a9c3ec9b12d304d18"
+    },
+    {
+      "entityId": "access-ap-taiwan",
+      "sources": [
+        {
+          "url": "https://www.access-company.com/files/2026/10/n261015.pdf",
+          "title": "ACCESS：台湾子会社のCROS不正アクセスに関する適時開示",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "被害対象法人はEC事業者向け業務支援サービスCROSを提供する台湾子会社。親会社ACCESSの東証プライム上場を子会社に継承しない。子会社自身の上場区分は今回の資料では確認できず不明。",
+      "sha256": "09ade8216cd10144739aa304a41ca4c0bc51572aa212dc6e3a6ce4b1e3b4f637"
+    },
+    {
+      "entityId": "daiwa-institute-research",
+      "sources": [
+        {
+          "url": "https://www.dir.co.jp/corporate/souken/index.html",
+          "title": "大和総研：会社概要・役員一覧",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "システムインテグレーション・データセンター・アウトソーシング等を行う対象法人。公式会社概要で大和証券グループ本社の持株比率100%を確認し非上場と分類。大和証券本体や上場親会社と区別する。",
+      "sha256": "8ca56457baff2b59f0cae423ec35fed117561a2bca69be4ae3596e24e8c59e02"
+    },
+    {
+      "entityId": "naito-securities",
+      "sources": [
+        {
+          "url": "https://www.dir.co.jp/release/2026101501.pdf",
+          "title": "大和総研：内藤証券から受託したネット取引システムの公式公表",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "内藤証券の顧客向け証券取引システムが対象。受託運用者の大和総研と法人を分ける。当該資料で対象法人自身の上場区分は確認できないため不明。",
+      "sha256": "cd2734aaa62042296c09cf6f6122ab603545b0097e9b0acad07909c958480246"
+    },
+    {
+      "entityId": "fancl",
+      "sources": [
+        {
+          "url": "https://www.fancl.jp/en/about/outline/index.html",
+          "title": "FANCL：Corporate Overview",
+          "checkedDate": "2026-10-18"
+        },
+        {
+          "url": "https://www.fancl.jp/ir/notice/index.html",
+          "title": "ファンケル：上場廃止・株主優待廃止等に関して",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "公式概要に化粧品・健康食品の研究開発、製造、販売と記載。化粧品を含むメーカーとして化学・素材に編集分類。2024年12月18日の東証プライム上場廃止を公式確認し、上場親会社キリンの属性を継承しない。",
+      "sha256": "77c75368afb0380ed4ebcf558f708d1827415f4417a6346665b41194c8ce00fc"
+    },
+    {
+      "entityId": "attenir",
+      "sources": [
+        {
+          "url": "https://www.attenir.co.jp/brand/company/index.html",
+          "title": "アテニア：会社情報",
+          "checkedDate": "2026-10-18"
+        },
+        {
+          "url": "https://www.fancl.jp/about/group/index.html",
+          "title": "ファンケル：グループ会社一覧",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "対象法人自身の公式概要に化粧品・サプリメントの製造・販売と記載。化粧品メーカーとして化学・素材に編集分類。ファンケル連結子会社であることは確認したが、それだけで上場区分を断定せず不明とする。",
+      "sha256": "d9740f3c327f0e2cb556fc1516701000f971bee6244ca9891b5da83518958104"
+    },
+    {
+      "entityId": "yellowhat",
+      "sources": [
+        {
+          "url": "https://www.release.tdnet.info/inbs/140120261015551164.pdf",
+          "title": "イエローハット：不正アクセス第二報（TDnet）",
+          "checkedDate": "2026-10-18"
+        },
+        {
+          "url": "https://www.yellowhat.jp/corp/about/profile.html",
+          "title": "イエローハット：会社概要（公式検索結果で業種を確認、本文403）",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "対象法人自身が東証プライム上場（9882）と第二報に明記。公式会社概要の検索結果にカー用品等の販売（卸売及び小売）と記載されるため小売に分類。会社概要の本文は403で再取得できず、この部分の根拠は公式検索結果。子会社２りんかんと区別する。",
+      "sha256": "7453f4237a3294cc75dbd7d3b6b282dcc380a1e259d909321e1ddcc6cf788a6e"
+    },
+    {
+      "entityId": "wasabi",
+      "sources": [
+        {
+          "url": "https://wasabi-inc.biz/company/",
+          "title": "株式会社ワサビ：会社概要・事業内容",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "公式会社概要でEC一元管理システム・アプリ・ASP等の開発提供を確認しITに分類。対象法人自身の上場・非上場を確定できる資料は未確認。",
+      "sha256": "0c720dbaaa090d088468831148a6b21edff8aeb3e0d7c001dac757694ed8ac8c"
+    },
+    {
+      "entityId": "khobho",
+      "sources": [
+        {
+          "url": "https://www.khobho.co.jp/company/",
+          "title": "株式会社工房：会社概要・事業内容",
+          "checkedDate": "2026-10-18"
+        }
+      ],
+      "finding": "公式会社案内のバス業界向けシステム開発・予約ネットワーク提供を根拠にITへ分類。バス運行会社そのものではない。対象法人自身の上場区分は今回資料から確定できず不明。",
+      "sha256": "fde58515c4d4693d73bb0c1539bb9d2b8e9b3190d1ad16118d65e2d61ac63af4"
+    }
+  ]
+}

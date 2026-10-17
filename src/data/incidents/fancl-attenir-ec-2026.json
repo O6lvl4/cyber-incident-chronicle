@@ -1,0 +1,96 @@
+{
+  "id": "fancl-attenir-ec-2026",
+  "company": "ファンケル／アテニア（ECサイト）",
+  "title": "両社ECサイトに不正アクセス、会員情報と一部のハッシュ化2次パスワードが流出",
+  "announcementDate": "2026-10-16",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-10-03",
+  "occurredDateLabel": "確認された不正アクセス期間の開始（10月3日〜10日）",
+  "detectedDate": "2026-10-15",
+  "updatedDate": "2026-10-16",
+  "statusAsOfDate": "2026-10-16",
+  "lastVerifiedDate": "2026-10-18",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ファンケル・アテニアECサイトへの第三者による不正アクセス（詳細非公表）",
+    "status": "confirmed"
+  },
+  "summary": "10月15日の内部調査で、3〜10日の侵入と会員情報の流出を確認。ファンケル393,785件・368,184名、アテニア441,162件・417,312名が対象。原因機能を停止し、16日に個人情報保護委員会と警察へ報告・相談した。",
+  "affectedData": [
+    "メールアドレス、氏名、住所、電話番号、生年月日、性別、お客様番号、サブメールアドレス",
+    "一部会員のハッシュ化された2次パスワード、本人認証の質問項目（回答は対象外）",
+    "ポイント・会員ステージ情報、メールマガジン配信希望の有無、店舗での購入の有無"
+  ],
+  "counts": [
+    {
+      "value": 393785,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "ファンケルの流出会員情報件数（人数とは別集計）",
+      "approximate": false
+    },
+    {
+      "value": 368184,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "ファンケルの対象人数",
+      "approximate": false
+    },
+    {
+      "value": 441162,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "アテニアの流出会員情報件数（人数とは別集計）",
+      "approximate": false
+    },
+    {
+      "value": 417312,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "アテニアの対象人数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "ファンケル368,184名／アテニア417,312名（社間重複は未公表）",
+  "caveats": [
+    "両社の件数と人数は別の単位。社間の重複人数が不明なため、合算した実人数として扱わない",
+    "パスワードは一部のハッシュ化された2次パスワード。メインパスワード、本人認証質問の回答、クレジットカード等の決済情報は対象外",
+    "原因となった機能の停止は実施したが、事業活動・サービスへの影響はないと公表しているため、サービス停止事案とは分類しない",
+    "情報の不特定多数への公開、不正利用、二次被害は未確認。攻撃の詳細は被害拡大防止のため非公表"
+  ],
+  "geography": "日本（対象会員の国別内訳は未公表）",
+  "sources": [
+    {
+      "title": "ファンケル・アテニア：第三者による不正アクセスに伴う個人情報漏えいに関するお詫びとお知らせ",
+      "url": "https://www.fancl.jp/news/pdf/husei.pdf",
+      "publishedDate": "2026-10-16"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-03",
+      "label": "不正アクセス期間の開始",
+      "kind": "occurrence",
+      "summary": "10月3日〜10日に両社ECサイトへ不正アクセス",
+      "sourceUrl": "https://www.fancl.jp/news/pdf/husei.pdf"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "内部調査で侵入・流出を確認",
+      "kind": "occurrence",
+      "summary": "緊急対策本部を設置し、原因機能を特定して停止",
+      "sourceUrl": "https://www.fancl.jp/news/pdf/husei.pdf"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "両社共同で流出範囲を公表",
+      "kind": "disclosure",
+      "summary": "両社ごとの件数・人数と対象項目を公表。個人情報保護委員会・警察へ報告・相談し、対象者へ順次個別連絡する方針",
+      "sourceUrl": "https://www.fancl.jp/news/pdf/husei.pdf"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "japanpost-international-inquiry-2026",
+  "company": "日本郵便（国際郵便物の調査請求Web受付サービス）",
+  "title": "調査請求サーバーへの不正アクセス、約600件が閲覧可能な状態",
+  "announcementDate": "2026-09-25",
+  "announcementDateLabel": "収録した初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日未公表（9月25日15時頃に検知）",
+  "updatedDate": "2026-10-16",
+  "statusAsOfDate": "2026-10-16",
+  "lastVerifiedDate": "2026-10-18",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "不正アクセス（具体的手法・初期侵入経路は未公表）",
+    "status": "unknown"
+  },
+  "summary": "9月25日に不正アクセスの可能性を検知してWeb受付を停止。10月16日の続報で約600件の登録情報が第三者から閲覧可能だったと公表した。実際の閲覧は未確認。サービス用メールアカウントからのスパム送信も確認した。",
+  "affectedData": [
+    "差出人の氏名・住所・電話番号・メールアドレス",
+    "受取人の氏名・住所、任意登録の電話番号・メールアドレス",
+    "調査対象郵便物のお問い合わせ番号、郵便種別・料金、差出郵便局等"
+  ],
+  "counts": [
+    {
+      "value": 600,
+      "unit": "件",
+      "status": "possible",
+      "label": "第三者から閲覧可能だった調査請求の登録情報",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "約600件は閲覧可能な状態だった登録情報であり、確定流出件数や人数ではない",
+    "登録情報の不正利用の形跡は公表時点で未確認。スパム送信先には当該登録情報は利用されていないと確認",
+    "スパム通数や送信開始日は今回確認した公式本文では公表されず、報道値は採用しない",
+    "9月25日は検知・初報日であり侵入開始日とはしない。郵便局アプリや別サービスの事案とは区別する",
+    "対象者への連絡は準備後に順次実施予定。受付停止の解消や全員への通知完了を意味しない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "日本郵便：調査請求Web受付サービスへの不正アクセス等の発生について",
+      "url": "https://www.post.japanpost.jp/newsrelease/pressrelease/6267689171.html",
+      "publishedDate": "2026-09-25"
+    },
+    {
+      "title": "日本郵便：調査請求Web受付サービスへの不正アクセスなどの発生について（調査結果）",
+      "url": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/99a38c8fdea24951b26188d86b797684/20261016_04_01.pdf",
+      "publishedDate": "2026-10-16"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "label": "不正アクセスの可能性を検知・受付停止",
+      "kind": "disclosure",
+      "summary": "15時頃に可能性を認知し、国際郵便の調査請求Web受付を一時停止",
+      "sourceUrl": "https://www.post.japanpost.jp/newsrelease/pressrelease/6267689171.html"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "閲覧可能範囲とスパム送信を公表",
+      "kind": "update",
+      "summary": "約600件が第三者から閲覧可能だったが実閲覧は未確認。検知後は当該メールアドレスを使用せず、対象者への連絡を準備",
+      "sourceUrl": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/99a38c8fdea24951b26188d86b797684/20261016_04_01.pdf"
+    }
+  ],
+  "detectedDate": "2026-09-25",
+  "scaleLabel": "約600件が閲覧可能（実際の閲覧は未確認）"
+}

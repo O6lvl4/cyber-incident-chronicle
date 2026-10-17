@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4684-h2q9-2vcp",
+  "aliases": [
+    "RUSTSEC-2026-0369"
+  ],
+  "title": "zip：シンボリックリンク先への権限変更が展開先外へ到達",
+  "summary": "Unix環境で信頼できないZIPを展開すると、シンボリックリンクを経由して展開先外の権限を変更する可能性がある。開発元は9.0.0以下を影響範囲、9.0.1を修正版とし、OSV/RustSecの修正境界9.0.0との差を保持する。",
+  "publishedAt": "2026-10-10T12:00:00Z",
+  "modifiedAt": "2026-10-16T23:30:02.387698467Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-17T21:27:30.707714Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0369",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "zip",
+      "ranges": [
+        {
+          "affected": "<= 9.0.0",
+          "fixed": "9.0.1",
+          "sourceUrl": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4684-h2q9-2vcp"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "9.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/zip"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4684-h2q9-2vcp",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+        "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0369"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0369（全エクスポートとAPI原文を照合）",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0369",
+      "publishedDate": "2026-10-10",
+      "publishedAt": "2026-10-10T12:00:00Z",
+      "modifiedAt": "2026-10-16T23:30:02.387698467Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公開GitHub Advisory API：本文・影響範囲・修正版・評価",
+      "url": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4684-h2q9-2vcp",
+      "publishedDate": "2026-10-10",
+      "publishedAt": "2026-10-10T06:14:40Z",
+      "modifiedAt": "2026-10-10T06:14:40Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定GitHub Reviewedスナップショット外の個別確認記録。OSV/RustSecのGHSA別名と開発元の公開アドバイザリ本文を照合した。",
+    "公表・更新日時はOSV原文に基づき、開発元の日時と区別する。今回の収録日を初回公表日とはみなさない。",
+    "開発元の構造化欄は<=9.0.0、修正版9.0.1。OSV/RustSecは>=0.0.0-0,<9.0.0、fixed9.0.0としており相違する。表示は開発元の明示値を採用し、rawRangesにはOSV原文を保持する。",
+    "開発元の表題はZipStreamReaderとZipArchiveのextractを含むが、本文の詳しい到達経路はZipStreamReaderのUnixメタデータ処理。両者について同一の実行検証を行ったという意味ではない。",
+    "攻撃者がZIPの内容とUnix権限メタデータを制御でき、アプリケーションが展開することが前提。外部対象の権限変更には展開プロセス自身のOS権限が必要で、変更に失敗すると部分展開後にエラー終了する可能性がある。",
+    "Highは開発元のラベル。開発元本文はCVSS3.1ベクトルを提案するが、構造化CVSS値はnull。OSVにも同じベクトルがあるためOSV由来で保持し、数値スコアを計算しない。",
+    "開発元はソースレビューによる検証で実行検証はしていないと記載する。再現例は実悪用の証拠としない。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味せず、修正版も後続のすべての脆弱性に対する安全性を保証しない。"
+  ]
+}

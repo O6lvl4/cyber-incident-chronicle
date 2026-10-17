@@ -1,0 +1,104 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-x43w-36pp-96g3",
+  "aliases": [
+    "RUSTSEC-2026-0373"
+  ],
+  "title": "ammonia：CSS URL関数の大文字小文字処理でURL制限を回避",
+  "summary": "CSSサニタイズ時に引用符付きURL関数の大文字小文字を区別するため、意図したURL制限を回避される可能性がある。開発元の修正版は4.1.8と4.2.4で、トラッキング画像の挿入が可能だがXSSではないと説明する。",
+  "publishedAt": "2026-10-16T12:00:00Z",
+  "modifiedAt": "2026-10-17T15:30:02.378211969Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-17T21:27:30.707714Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0373",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "ammonia",
+      "ranges": [
+        {
+          "affected": ">= 4.1.0, < 4.1.8",
+          "fixed": "4.1.8",
+          "sourceUrl": "https://api.github.com/repos/rust-ammonia/ammonia/security-advisories/GHSA-x43w-36pp-96g3"
+        },
+        {
+          "affected": ">= 4.2.0, < 4.2.4",
+          "fixed": "4.2.4",
+          "sourceUrl": "https://api.github.com/repos/rust-ammonia/ammonia/security-advisories/GHSA-x43w-36pp-96g3"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "4.1.8"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/ammonia"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/rust-ammonia/ammonia/security-advisories/GHSA-x43w-36pp-96g3",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.4,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+        "sourceUrl": "https://api.github.com/repos/rust-ammonia/ammonia/security-advisories/GHSA-x43w-36pp-96g3"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0373（全エクスポートとAPI原文を照合）",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0373",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T12:00:00Z",
+      "modifiedAt": "2026-10-17T15:30:02.378211969Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公開GitHub Advisory API：本文・影響範囲・修正版・評価",
+      "url": "https://api.github.com/repos/rust-ammonia/ammonia/security-advisories/GHSA-x43w-36pp-96g3",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T03:43:17Z",
+      "modifiedAt": "2026-10-17T03:43:17Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "固定GitHub Reviewedスナップショット外の個別確認記録。OSV/RustSecのGHSA別名と開発元の公開アドバイザリ本文を照合した。",
+    "公表・更新日時はOSV原文に基づき、開発元の日時と区別する。今回の収録日を初回公表日とはみなさない。",
+    "開発元は>=4.1.0,<4.1.8と>=4.2.0,<4.2.4の二つの系列を記載する。OSV/RustSecの最初の導入境界は0.0.0-0で下限が異なるため、表示には開発元の4.1.0を使用し、rawRangesはOSV原文のまま保持する。",
+    "CSSサニタイズを使い、style属性と対象CSSプロパティを許可しながらURLのスキームや相対URLを制限する設定が関係する。すべての既定の使用方法へ一律に影響するとは判断しない。",
+    "開発元はトラッキング画像の挿入に利用できるが、XSSにはならずデータ持ち出しへの有用性も限定的と明記する。",
+    "CVSS3.1の5.4とMediumは開発元公表値。OSV/RustSecにはCVSSがないため、そのデータベースが同じ評価を掲載したとはしない。",
+    "OSVのpublishedは2026-10-16T12:00:00Z、開発元の初回公開は2026-10-17T03:43:17Z。別々の出典日時であり、OSV日時を開発元の公表日時へ無断で置換しない。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味せず、修正版も後続のすべての脆弱性に対する安全性を保証しない。"
+  ]
+}

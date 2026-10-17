@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.9.0",
+  "id": "RUSTSEC-2026-0369",
+  "published": "2026-10-10T12:00:00Z",
+  "modified": "2026-10-16T23:30:02.387698467Z",
+  "aliases": [
+    "GHSA-4684-h2q9-2vcp"
+  ],
+  "summary": "ZipStreamReader::extract() and ZipArchive::extract() apply Unix permissions through symlinks without confining the target",
+  "affected": [
+    {
+      "package": {
+        "name": "zip",
+        "ecosystem": "crates.io",
+        "purl": "pkg:cargo/zip"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "9.0.0"
+            }
+          ]
+        }
+      ],
+      "ecosystem_specific": {
+        "affects": {
+          "arch": [],
+          "os": [],
+          "functions": []
+        },
+        "affected_functions": null
+      },
+      "database_specific": {
+        "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0369.json",
+        "categories": [
+          "privilege-escalation"
+        ],
+        "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+        "informational": null
+      }
+    }
+  ],
+  "severity": [
+    {
+      "type": "CVSS_V3",
+      "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+    }
+  ],
+  "representation": "allowlisted-public-structured-source-projection",
+  "omittedNarrative": {
+    "sha256": "3d17c0319742a8baf3480cc2fa12cb1a43d9c596ff4b426eaa7d178515665e68",
+    "utf8Bytes": 244
+  }
+}

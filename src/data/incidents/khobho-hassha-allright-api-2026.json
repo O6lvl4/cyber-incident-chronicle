@@ -1,0 +1,121 @@
+{
+  "id": "khobho-hassha-allright-api-2026",
+  "company": "工房（発車オーライネット連携用API）",
+  "title": "予約連携APIへの不正アクセスで一部流出、最大8,341件を最終確認中",
+  "announcementDate": "2026-10-15",
+  "announcementDateLabel": "収録した初報公表",
+  "occurredDate": "2026-09-16",
+  "occurredDateLabel": "確認された不審アクセス期間の始期（9月16日〜19日）",
+  "updatedDate": "2026-10-16",
+  "statusAsOfDate": "2026-10-15",
+  "lastVerifiedDate": "2026-10-18",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "不正アクセス（具体的手法・初期侵入経路は未公表）",
+    "status": "unknown"
+  },
+  "summary": "バス予約サービスの外部取引先連携用APIへの不正アクセスと一部予約情報の外部流出痕跡を確認。最大8,341件は流出可能性の対象範囲として最終確認中。発車オーライネットの直接利用分や北都交通の範囲は同じ提供元事案の一部として扱う。",
+  "affectedData": [
+    "カタカナ予約名（氏名）・電話番号",
+    "予約したバスの乗車日・路線・予約番号等"
+  ],
+  "counts": [
+    {
+      "value": 8341,
+      "unit": "件",
+      "status": "possible",
+      "label": "連携用API全体の最大対象件数（最終確認中）",
+      "approximate": false
+    },
+    {
+      "value": 5614,
+      "unit": "件",
+      "status": "possible",
+      "label": "原文の「対象人数」欄の数値（原文単位は件、最終確認中）",
+      "approximate": false
+    },
+    {
+      "value": 548,
+      "unit": "件",
+      "status": "possible",
+      "label": "発車オーライネット本サイトの対象件数（全体の内数、最終確認中）",
+      "approximate": false
+    },
+    {
+      "value": 448,
+      "unit": "件",
+      "status": "possible",
+      "label": "本サイトの「対象人数」欄（原文単位は件、内数、最終確認中）",
+      "approximate": false
+    },
+    {
+      "value": 90,
+      "unit": "名",
+      "status": "possible",
+      "label": "北都交通が公表した自社利用者の部分範囲（提供元全体の内数）",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "流出痕跡・一部流出は確認済みだが、8,341件等の数値は可能性の最大範囲で最終確認中。全件の流出確定とはしない",
+    "公式PDFとサービス本文は「対象人数：5,614件」、サービス本文は本サイト「対象人数：448件」と表記。人数ラベルと単位が一致しないため原文の件を保存し、人数への自動換算は行わない",
+    "本サイト548件・448件および北都交通約90名は部分範囲。全体や相互の重複を含み得るため合算しない",
+    "7月16日〜11月29日は対象予約の乗車日範囲であり、攻撃期間や公表日ではない",
+    "クレジットカード・銀行口座・住所・メールアドレス・パスワードは対象APIサーバーに保存されていない",
+    "通信遮断と対策後は継続侵入・被害拡大なしと説明。予約サービス全体停止は確認していない"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "工房：発車オーライネット連携用APIサーバーへの不正アクセスによる個人情報流出",
+      "url": "https://www.khobho.co.jp/wp-content/themes/kobo/pdf/20261015.pdf",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "title": "発車オーライネット：工房からのお知らせ・直接利用分の内訳",
+      "url": "https://secure.j-bus.co.jp/hon/News?code=1",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "title": "北都交通：発車オーライネットにおけるお客様情報の漏えいについて",
+      "url": "https://www.hokto.co.jp/information/49133/",
+      "publishedDate": "2026-10-16"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-16",
+      "label": "確認された不審アクセス期間の始期",
+      "kind": "occurrence",
+      "summary": "9月16日〜19日の連携用APIへの不審なアクセスを後日確認",
+      "sourceUrl": "https://www.khobho.co.jp/wp-content/themes/kobo/pdf/20261015.pdf"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "検知・APIサーバー通信遮断",
+      "kind": "occurrence",
+      "summary": "不審アクセスを検知して通信遮断。一部予約情報が外部へ漏えいした痕跡を確認",
+      "sourceUrl": "https://www.khobho.co.jp/wp-content/themes/kobo/pdf/20261015.pdf"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "提供元が流出と最大範囲を公表",
+      "kind": "disclosure",
+      "summary": "最大8,341件と「対象人数」欄5,614件を最終確認中として公表。本サイト分548件・448件も内数として案内",
+      "sourceUrl": "https://secure.j-bus.co.jp/hon/News?code=1"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "北都交通が利用者範囲を公表",
+      "kind": "update",
+      "summary": "自社利用者約90名の予約情報が提供元事案の対象に含まれる可能性を公表",
+      "sourceUrl": "https://www.hokto.co.jp/information/49133/"
+    }
+  ],
+  "detectedDate": "2026-10-13",
+  "scaleLabel": "最大8,341件／「対象人数」5,614件（原文単位、最終確認中）"
+}
