@@ -1,0 +1,77 @@
+{
+  "id": "yellowhat-web-reservation-2026",
+  "company": "イエローハット（WEB作業予約システム）",
+  "title": "最終調査で会員1,797,124名の流出を確認、住所・ログインID・復元できない状態のパスワードを追加",
+  "announcementDate": "2026-08-28",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表（第二報は8月19日を検知日と記載）",
+  "detectedDate": "2026-08-19",
+  "updatedDate": "2026-10-15",
+  "statusAsOfDate": "2026-10-15",
+  "lastVerifiedDate": "2026-10-18",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "WEB作業予約システムへの不正侵入（具体的手法は非公表）",
+    "status": "confirmed"
+  },
+  "summary": "8月28日の初報後、10月15日の第二報で会員1,797,124名分の流出を確認。初報より住所・生年月日・性別・ログインID・復元できない状態のパスワードを追加した。対策後にシステムを再開し、対象者への案内を完了。",
+  "affectedData": [
+    "氏名、住所、生年月日、性別、電話番号、メールアドレス、会員番号",
+    "ログインID、復元できない状態で保管されたパスワード"
+  ],
+  "counts": [
+    {
+      "value": 1797124,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "ログ解析で特定した実際の漏えい対象のイエローハット会員",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "1,797,124名（第二報で流出確認）",
+  "caveats": [
+    "初報の最大1,801,499名という可能性範囲は、第二報で1,797,124名の流出確認へ更新された。同じ事案の旧値と新値を合算しない",
+    "パスワードは公式の「復元できない状態」という説明を保持し、平文流出や具体的なハッシュ方式を推定しない",
+    "クレジットカード情報は対象システムで保持・取り扱いがなく、漏えいはないと説明",
+    "検知日は今回本文を確認できた第二報の8月19日を採用。初報本文は取得できておらず、初報について報じられている日付との差の理由は未確認",
+    "第三者調査で原因究明と影響範囲特定は完了したが、具体的手法は非公表。脆弱性診断の実施予定だけから脆弱性悪用と断定しない",
+    "２りんかんイエローハットの別事案とは対象法人・システムを区別する"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "イエローハット：不正アクセスによる個人情報漏えいに関するお詫びとお知らせ【第二報】（TDnet掲載）",
+      "url": "https://www.release.tdnet.info/inbs/140120261015551164.pdf",
+      "publishedDate": "2026-10-15"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-19",
+      "label": "不正アクセス検知（第二報記載）",
+      "kind": "occurrence",
+      "summary": "検知後に対象システムを遮断・停止。セキュリティ強化と改修を施し再開",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261015551164.pdf"
+    },
+    {
+      "date": "2026-08-28",
+      "label": "初報公表（第二報が参照）",
+      "kind": "disclosure",
+      "summary": "最大1,801,499名分に漏えい可能性とした初報を公表",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261015551164.pdf"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "調査結果・再発防止策を公表",
+      "kind": "update",
+      "summary": "1,797,124名分の流出と追加項目を確認。対象者への通知と個人情報保護委員会への確報を完了",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261015551164.pdf"
+    }
+  ]
+}

@@ -1,0 +1,852 @@
+{
+  "reportDateJst": "2026-10-18",
+  "checkedAt": "2026-10-17T21:30:22.271624+00:00",
+  "scope": "Six individually checked public maintainer advisories outside pinned Reviewed; no pre-existing curated record changed.",
+  "addedIds": [
+    "GHSA-jcg8-qg98-373g",
+    "GHSA-7632-4q2x-hvjw",
+    "GHSA-vv5m-jxxh-4627",
+    "GHSA-4v9h-p7m9-rh26",
+    "GHSA-4684-h2q9-2vcp",
+    "GHSA-x43w-36pp-96g3"
+  ],
+  "records": [
+    {
+      "id": "GHSA-4684-h2q9-2vcp",
+      "sourceId": "RUSTSEC-2026-0369",
+      "decision": "added-outside-reviewed",
+      "recordPath": "src/data/vulnerabilities/GHSA-4684-h2q9-2vcp.json",
+      "package": "zip",
+      "reviewedMaintainerDescription": true,
+      "sourceRangesPreserved": true,
+      "displayAffected": [
+        {
+          "ecosystem": "rust",
+          "packageName": "zip",
+          "ranges": [
+            {
+              "affected": "<= 9.0.0",
+              "fixed": "9.0.1",
+              "sourceUrl": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4684-h2q9-2vcp"
+            }
+          ],
+          "rawRanges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "9.0.0"
+                }
+              ]
+            }
+          ],
+          "explicitVersions": [],
+          "packageUrl": "pkg:cargo/zip"
+        }
+      ],
+      "databasePublishedAt": "2026-10-10T12:00:00Z",
+      "databaseModifiedAt": "2026-10-16T23:30:02.387698467Z",
+      "maintainerPublishedAt": "2026-10-10T06:14:40Z",
+      "maintainerModifiedAt": "2026-10-10T06:14:40Z",
+      "observations": [
+        "開発元の構造化欄は<=9.0.0、修正版9.0.1。OSV/RustSecは>=0.0.0-0,<9.0.0、fixed9.0.0としており相違する。表示は開発元の明示値を採用し、rawRangesにはOSV原文を保持する。",
+        "開発元の表題はZipStreamReaderとZipArchiveのextractを含むが、本文の詳しい到達経路はZipStreamReaderのUnixメタデータ処理。両者について同一の実行検証を行ったという意味ではない。",
+        "攻撃者がZIPの内容とUnix権限メタデータを制御でき、アプリケーションが展開することが前提。外部対象の権限変更には展開プロセス自身のOS権限が必要で、変更に失敗すると部分展開後にエラー終了する可能性がある。",
+        "Highは開発元のラベル。開発元本文はCVSS3.1ベクトルを提案するが、構造化CVSS値はnull。OSVにも同じベクトルがあるためOSV由来で保持し、数値スコアを計算しない。",
+        "開発元はソースレビューによる検証で実行検証はしていないと記載する。再現例は実悪用の証拠としない。"
+      ],
+      "evidence": [
+        {
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0369",
+          "checkedAt": "2026-10-17T21:26:35.803548Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "34d5e2b6a3f667fc01d73d0b6634a9f7005d5342e63feb9c4a8a3b77e43c2470",
+          "originalFetchedResponseBytes": 1327,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-4684-h2q9-2vcp.2026-10-18.osv.public-advisory.json",
+          "sha256": "f4683241e23626860d13a682a45061c4eac59ba2dc0528fa7f8ff2bb0f89164a",
+          "bytes": 1512,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-4684-h2q9-2vcp.2026-10-18.osv.public-headers.txt",
+          "headersSha256": "3df8cbc3b07f8242b0dd7b95a8fbecc1949082eeedd2c0492df31f9c6e54639d",
+          "headersBytes": 131,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        },
+        {
+          "url": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4684-h2q9-2vcp",
+          "checkedAt": "2026-10-17T21:25:44.294743+00:00",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "da209d8bbb26ee0fd278a745fa3113e8f2d91468716d4cd59c18da3211bd30d2",
+          "originalFetchedResponseBytes": 11800,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-4684-h2q9-2vcp.2026-10-18.maintainer.public-advisory.json",
+          "sha256": "9c764929189473f5c2a2a8e30a94a259f5f9eba16d21e69a8d7877f9b0037a50",
+          "bytes": 1114,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-4684-h2q9-2vcp.2026-10-18.maintainer.public-headers.txt",
+          "headersSha256": "7d2d818089702faf0b6eb5776d0ba2c2041bf4e5f004cc346d8243018cab9d7d",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x43w-36pp-96g3",
+      "sourceId": "RUSTSEC-2026-0373",
+      "decision": "added-outside-reviewed",
+      "recordPath": "src/data/vulnerabilities/GHSA-x43w-36pp-96g3.json",
+      "package": "ammonia",
+      "reviewedMaintainerDescription": true,
+      "sourceRangesPreserved": true,
+      "displayAffected": [
+        {
+          "ecosystem": "rust",
+          "packageName": "ammonia",
+          "ranges": [
+            {
+              "affected": ">= 4.1.0, < 4.1.8",
+              "fixed": "4.1.8",
+              "sourceUrl": "https://api.github.com/repos/rust-ammonia/ammonia/security-advisories/GHSA-x43w-36pp-96g3"
+            },
+            {
+              "affected": ">= 4.2.0, < 4.2.4",
+              "fixed": "4.2.4",
+              "sourceUrl": "https://api.github.com/repos/rust-ammonia/ammonia/security-advisories/GHSA-x43w-36pp-96g3"
+            }
+          ],
+          "rawRanges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "4.1.8"
+                },
+                {
+                  "introduced": "4.2.0"
+                },
+                {
+                  "fixed": "4.2.4"
+                }
+              ]
+            }
+          ],
+          "explicitVersions": [],
+          "packageUrl": "pkg:cargo/ammonia"
+        }
+      ],
+      "databasePublishedAt": "2026-10-16T12:00:00Z",
+      "databaseModifiedAt": "2026-10-17T15:30:02.378211969Z",
+      "maintainerPublishedAt": "2026-10-17T03:43:17Z",
+      "maintainerModifiedAt": "2026-10-17T03:43:17Z",
+      "observations": [
+        "開発元は>=4.1.0,<4.1.8と>=4.2.0,<4.2.4の二つの系列を記載する。OSV/RustSecの最初の導入境界は0.0.0-0で下限が異なるため、表示には開発元の4.1.0を使用し、rawRangesはOSV原文のまま保持する。",
+        "CSSサニタイズを使い、style属性と対象CSSプロパティを許可しながらURLのスキームや相対URLを制限する設定が関係する。すべての既定の使用方法へ一律に影響するとは判断しない。",
+        "開発元はトラッキング画像の挿入に利用できるが、XSSにはならずデータ持ち出しへの有用性も限定的と明記する。",
+        "CVSS3.1の5.4とMediumは開発元公表値。OSV/RustSecにはCVSSがないため、そのデータベースが同じ評価を掲載したとはしない。",
+        "OSVのpublishedは2026-10-16T12:00:00Z、開発元の初回公開は2026-10-17T03:43:17Z。別々の出典日時であり、OSV日時を開発元の公表日時へ無断で置換しない。"
+      ],
+      "evidence": [
+        {
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0373",
+          "checkedAt": "2026-10-17T21:26:35.923387Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "d615a5ac655f7120cfceeaa4b981de2194b3a63fd36d7645873318c8b46ad797",
+          "originalFetchedResponseBytes": 2444,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-x43w-36pp-96g3.2026-10-18.osv.public-advisory.json",
+          "sha256": "34c4df5d0e2d20710c1041f87e7d6290e830f452bd6f5f4b017b32c289d9ee2d",
+          "bytes": 1413,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-x43w-36pp-96g3.2026-10-18.osv.public-headers.txt",
+          "headersSha256": "3df8cbc3b07f8242b0dd7b95a8fbecc1949082eeedd2c0492df31f9c6e54639d",
+          "headersBytes": 131,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        },
+        {
+          "url": "https://api.github.com/repos/rust-ammonia/ammonia/security-advisories/GHSA-x43w-36pp-96g3",
+          "checkedAt": "2026-10-17T21:25:44.303639+00:00",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "9727ff61aaaff8866967ce565254b49bd451d1a2fbbe0161932f8e23142b28ad",
+          "originalFetchedResponseBytes": 3842,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-x43w-36pp-96g3.2026-10-18.maintainer.public-advisory.json",
+          "sha256": "97cfb390b0dcf067559624ea0f406d9c38f2ee58c9ef3d8949be6fb4c9e7b079",
+          "bytes": 1166,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-x43w-36pp-96g3.2026-10-18.maintainer.public-headers.txt",
+          "headersSha256": "6f1a506a37190a307cfea67fe1f0625048c6080a7661311e29ddf2a385a66a92",
+          "headersBytes": 266,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jcg8-qg98-373g",
+      "sourceId": "RUSTSEC-2026-0365",
+      "decision": "added-outside-reviewed",
+      "recordPath": "src/data/vulnerabilities/GHSA-jcg8-qg98-373g.json",
+      "package": "negentropy",
+      "reviewedMaintainerDescription": true,
+      "osvApiMatchesFullExport": true,
+      "aliasLinkSuppliedByOsv": false,
+      "observations": [
+        "reconcileとreconcile_with_idsが対象。stdを無効にしたビルドはBTreeSetを使い、この事前メモリ確保を行わない。",
+        "既定のメモリ確保失敗はプロセスを終了させるためcatch_unwindでは封じ込められない。メッセージ長の制限だけでも防げない。",
+        "公表・更新日時は取得した開発元の公開アドバイザリAPIによる。GitHubの全体アドバイザリAPIは404で、Reviewed登録日時やOSV登録日時とみなさない。",
+        "RUSTSEC-2026-0365を起点に開発元のGHSAを確認したが、OSVのaliasesにこのGHSAはないためRustSec IDを別名へ追加せず、ソース候補の照合と別名統合を区別した。",
+        "公表された脆弱性の収録であり、企業被害や実悪用を示すものではない。CISA公式JSONはHTTP 403のためKEV状態は未確認。"
+      ],
+      "evidence": [
+        {
+          "receipt": {
+            "name": "negentropy-single",
+            "url": "https://api.github.com/repos/nostrdevkit/negentropy/security-advisories/GHSA-jcg8-qg98-373g",
+            "lastAttemptAt": "2026-10-17T21:26:20.258095+00:00",
+            "previousLastSuccessfulFetchAt": null,
+            "previousLastSuccessfulContentCheckAt": null,
+            "checkedAt": "2026-10-17T21:26:25.739518+00:00",
+            "curlExit": 0,
+            "httpStatus": 200,
+            "error": null,
+            "responseHeaders": {
+              "date": "Sat, 17 Oct 2026 21:26:25 GMT",
+              "content-type": "application/json; charset=utf-8",
+              "etag": "W/\"886596afa40e3d9cd1fdd972296d705faf5f385ba8a61db6b12527832f754358\"",
+              "last-modified": "Fri, 16 Oct 2026 06:05:11 GMT"
+            },
+            "outcome": "success",
+            "lastSuccessfulFetchAt": "2026-10-17T21:26:25.739518+00:00",
+            "originalFetchedResponseBytes": 6178,
+            "originalFetchedResponseSha256": "4ee2fbb7ce10d4e3f0306b10c6bd193ae0b62fa57700d6902bc7e87be4c1787a",
+            "previousFetchedResponseSha256": null,
+            "receiptContentNote": "Original response digest, not public minimized evidence digest."
+          },
+          "publicStructuredFields": {
+            "ghsa_id": "GHSA-jcg8-qg98-373g",
+            "cve_id": null,
+            "summary": "Remote DoS through unchecked `IdList` allocation in negentropy",
+            "severity": "high",
+            "published_at": "2026-10-15T07:39:27Z",
+            "updated_at": "2026-10-16T06:05:11Z",
+            "withdrawn_at": null,
+            "identifiers": [
+              {
+                "value": "GHSA-jcg8-qg98-373g",
+                "type": "GHSA"
+              }
+            ],
+            "vulnerabilities": [
+              {
+                "package": {
+                  "ecosystem": "rust",
+                  "name": "negentropy"
+                },
+                "vulnerable_version_range": ">= 0.2.0, < 0.4.4",
+                "patched_versions": "0.4.4",
+                "vulnerable_functions": []
+              },
+              {
+                "package": {
+                  "ecosystem": "rust",
+                  "name": "negentropy"
+                },
+                "vulnerable_version_range": ">= 0.5.0, < 0.5.2",
+                "patched_versions": "0.5.2",
+                "vulnerable_functions": []
+              }
+            ],
+            "cvss": {
+              "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "score": 7.5
+            },
+            "cvss_severities": {
+              "cvss_v3": {
+                "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "score": 7.5
+              },
+              "cvss_v4": {
+                "vector_string": null,
+                "score": null
+              }
+            },
+            "descriptionSha256": "160e44ab232c66dab108e52d3db6c5a24f47f6c9d0b1de6ff61ffa9d72fc857c",
+            "descriptionBytes": 1952
+          }
+        },
+        {
+          "receipt": {
+            "name": "osv-365",
+            "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0365",
+            "lastAttemptAt": "2026-10-17T21:26:20.254343+00:00",
+            "previousLastSuccessfulFetchAt": null,
+            "previousLastSuccessfulContentCheckAt": null,
+            "checkedAt": "2026-10-17T21:26:23.871913+00:00",
+            "curlExit": 0,
+            "httpStatus": 200,
+            "error": null,
+            "responseHeaders": {
+              "date": "Sat, 17 Oct 2026 21:26:23 GMT",
+              "content-type": "application/json"
+            },
+            "outcome": "success",
+            "lastSuccessfulFetchAt": "2026-10-17T21:26:23.871913+00:00",
+            "originalFetchedResponseBytes": 3412,
+            "originalFetchedResponseSha256": "c9e304c3ab889a4b9b1d02bcfc539d503b9fa15a32d0a90de5f27842f68f6198",
+            "previousFetchedResponseSha256": null,
+            "receiptContentNote": "Original response digest, not public minimized evidence digest."
+          },
+          "publicStructuredFields": {
+            "id": "RUSTSEC-2026-0365",
+            "published": "2026-10-14T12:00:00Z",
+            "modified": "2026-10-16T23:30:02.383532013Z",
+            "summary": " Remote DoS through unchecked `IdList` allocation in negentropy",
+            "severity": [
+              {
+                "type": "CVSS_V3",
+                "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+              }
+            ],
+            "affected": [
+              {
+                "package": {
+                  "name": "negentropy",
+                  "ecosystem": "crates.io",
+                  "purl": "pkg:cargo/negentropy"
+                },
+                "ranges": [
+                  {
+                    "type": "SEMVER",
+                    "events": [
+                      {
+                        "introduced": "0.2.0"
+                      },
+                      {
+                        "fixed": "0.4.4"
+                      },
+                      {
+                        "introduced": "0.5.0"
+                      },
+                      {
+                        "fixed": "0.5.2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7632-4q2x-hvjw",
+      "sourceId": "RUSTSEC-2026-0366",
+      "decision": "added-outside-reviewed",
+      "recordPath": "src/data/vulnerabilities/GHSA-7632-4q2x-hvjw.json",
+      "package": "pest_grammars",
+      "reviewedMaintainerDescription": true,
+      "osvApiMatchesFullExport": true,
+      "aliasLinkSuppliedByOsv": true,
+      "observations": [
+        "安全なネスト数の一律な閾値はない。修正版の検査はベストエフォートで、スタック境界を取得できない環境やno_stdビルドのネイティブスタックは保護しない。",
+        "呼び出し予算はスタック深度の保証ではなく、修正後も入力・作業量・メモリ・同時実行数の制限が必要。時間制限は別途必要。",
+        "公表・更新日時はOSVの日時。開発元の公開・更新日時とは区別し、出典欄に保持した。",
+        "公表された脆弱性の収録であり、企業被害や実悪用を示すものではない。CISA公式JSONはHTTP 403のためKEV状態は未確認。"
+      ],
+      "evidence": [
+        {
+          "receipt": {
+            "name": "pest",
+            "url": "https://api.github.com/repos/pest-parser/pest/security-advisories/GHSA-7632-4q2x-hvjw",
+            "lastAttemptAt": "2026-10-17T21:25:37.996273+00:00",
+            "previousLastSuccessfulFetchAt": null,
+            "previousLastSuccessfulContentCheckAt": null,
+            "checkedAt": "2026-10-17T21:25:44.291709+00:00",
+            "curlExit": 0,
+            "httpStatus": 200,
+            "error": null,
+            "responseHeaders": {
+              "date": "Sat, 17 Oct 2026 21:25:44 GMT",
+              "content-type": "application/json; charset=utf-8",
+              "etag": "W/\"86b687833e7810a56bd804c0ece358a225c61a404be3056ee386e78eb50e96d5\"",
+              "last-modified": "Fri, 16 Oct 2026 03:50:03 GMT"
+            },
+            "outcome": "success",
+            "lastSuccessfulFetchAt": "2026-10-17T21:25:44.291709+00:00",
+            "originalFetchedResponseBytes": 5888,
+            "originalFetchedResponseSha256": "2c59fb204d44051d85e137c9e8718db89dfda149d9285cbaf05bdf89d16242bf",
+            "previousFetchedResponseSha256": null,
+            "receiptContentNote": "Original response digest, not public minimized evidence digest."
+          },
+          "publicStructuredFields": {
+            "ghsa_id": "GHSA-7632-4q2x-hvjw",
+            "cve_id": null,
+            "summary": "Stack overflow when parsing deeply nested input in pest_grammars",
+            "severity": "low",
+            "published_at": "2026-10-16T03:50:03Z",
+            "updated_at": "2026-10-16T03:50:03Z",
+            "withdrawn_at": null,
+            "identifiers": [
+              {
+                "value": "GHSA-7632-4q2x-hvjw",
+                "type": "GHSA"
+              }
+            ],
+            "vulnerabilities": [
+              {
+                "package": {
+                  "ecosystem": "rust",
+                  "name": "pest_grammars"
+                },
+                "vulnerable_version_range": "< 2.9.3",
+                "patched_versions": ">= 2.9.3",
+                "vulnerable_functions": []
+              }
+            ],
+            "cvss": {
+              "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "score": 3.3
+            },
+            "cvss_severities": {
+              "cvss_v3": {
+                "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                "score": 3.3
+              },
+              "cvss_v4": {
+                "vector_string": null,
+                "score": null
+              }
+            },
+            "descriptionSha256": "1079db2247096f678549b4b993224f6df70636584bb2a4b6fe2ea7506505a584",
+            "descriptionBytes": 2097
+          }
+        },
+        {
+          "receipt": {
+            "name": "osv-366",
+            "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0366",
+            "lastAttemptAt": "2026-10-17T21:26:20.254876+00:00",
+            "previousLastSuccessfulFetchAt": null,
+            "previousLastSuccessfulContentCheckAt": null,
+            "checkedAt": "2026-10-17T21:26:23.899314+00:00",
+            "curlExit": 0,
+            "httpStatus": 200,
+            "error": null,
+            "responseHeaders": {
+              "date": "Sat, 17 Oct 2026 21:26:23 GMT",
+              "content-type": "application/json"
+            },
+            "outcome": "success",
+            "lastSuccessfulFetchAt": "2026-10-17T21:26:23.899314+00:00",
+            "originalFetchedResponseBytes": 3260,
+            "originalFetchedResponseSha256": "da9842ee92159bcd403657256303f3c77ba67b9ece51818671b664998f0e2c2f",
+            "previousFetchedResponseSha256": null,
+            "receiptContentNote": "Original response digest, not public minimized evidence digest."
+          },
+          "publicStructuredFields": {
+            "id": "RUSTSEC-2026-0366",
+            "aliases": [
+              "GHSA-7632-4q2x-hvjw"
+            ],
+            "published": "2026-10-16T12:00:00Z",
+            "modified": "2026-10-16T23:30:02.385972501Z",
+            "summary": "Stack overflow when parsing deeply nested input in pest_grammars",
+            "severity": [
+              {
+                "type": "CVSS_V3",
+                "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+              }
+            ],
+            "affected": [
+              {
+                "package": {
+                  "name": "pest_grammars",
+                  "ecosystem": "crates.io",
+                  "purl": "pkg:cargo/pest_grammars"
+                },
+                "ranges": [
+                  {
+                    "type": "SEMVER",
+                    "events": [
+                      {
+                        "introduced": "0.0.0-0"
+                      },
+                      {
+                        "fixed": "2.9.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vv5m-jxxh-4627",
+      "sourceId": "RUSTSEC-2026-0367",
+      "decision": "added-outside-reviewed",
+      "recordPath": "src/data/vulnerabilities/GHSA-vv5m-jxxh-4627.json",
+      "package": "zip",
+      "reviewedMaintainerDescription": true,
+      "osvApiMatchesFullExport": true,
+      "aliasLinkSuppliedByOsv": true,
+      "observations": [
+        "開発元は影響上限を含む<=9.0.0-pre3、OSVは修正版を除外する<9.0.0と表記する。版の順序や等価性を推定せず、開発元の範囲とOSVの原文範囲を区別して保存した。",
+        "開発元は2.4.2と8.5.1で再現を報告している。昇格は展開プロセスの権限やファイルの所有者・実行環境に依存する。",
+        "公表・更新日時はOSVの日時。開発元の公開・更新日時とは区別し、出典欄に保持した。",
+        "公表された脆弱性の収録であり、企業被害や実悪用を示すものではない。CISA公式JSONはHTTP 403のためKEV状態は未確認。"
+      ],
+      "evidence": [
+        {
+          "receipt": {
+            "name": "zip-suid",
+            "url": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-vv5m-jxxh-4627",
+            "lastAttemptAt": "2026-10-17T21:25:37.996563+00:00",
+            "previousLastSuccessfulFetchAt": null,
+            "previousLastSuccessfulContentCheckAt": null,
+            "checkedAt": "2026-10-17T21:25:44.379167+00:00",
+            "curlExit": 0,
+            "httpStatus": 200,
+            "error": null,
+            "responseHeaders": {
+              "date": "Sat, 17 Oct 2026 21:25:44 GMT",
+              "content-type": "application/json; charset=utf-8",
+              "etag": "W/\"75ae27e15e3bbfbd06aaf023c023436d97fc167931b0622b8f62c40ee0ce520f\"",
+              "last-modified": "Fri, 09 Oct 2026 04:51:03 GMT"
+            },
+            "outcome": "success",
+            "lastSuccessfulFetchAt": "2026-10-17T21:25:44.379167+00:00",
+            "originalFetchedResponseBytes": 10685,
+            "originalFetchedResponseSha256": "6ed1d56700d775b73a43c82f0b44ec9b090a019e69416aeb2c1fd3fd8d4f4f43",
+            "previousFetchedResponseSha256": null,
+            "receiptContentNote": "Original response digest, not public minimized evidence digest."
+          },
+          "publicStructuredFields": {
+            "ghsa_id": "GHSA-vv5m-jxxh-4627",
+            "cve_id": null,
+            "summary": "Insecure Preservation of SUID/SGID Bits during ZIP Extraction Leading to Potential Privilege Escalation",
+            "severity": "high",
+            "published_at": "2026-10-09T04:51:02Z",
+            "updated_at": "2026-10-09T04:51:03Z",
+            "withdrawn_at": null,
+            "identifiers": [
+              {
+                "value": "GHSA-vv5m-jxxh-4627",
+                "type": "GHSA"
+              }
+            ],
+            "vulnerabilities": [
+              {
+                "package": {
+                  "ecosystem": "rust",
+                  "name": "zip"
+                },
+                "vulnerable_version_range": "<= 9.0.0-pre3",
+                "patched_versions": "9.0.0",
+                "vulnerable_functions": []
+              }
+            ],
+            "cvss": {
+              "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "score": 7.3
+            },
+            "cvss_severities": {
+              "cvss_v3": {
+                "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+                "score": 7.3
+              },
+              "cvss_v4": {
+                "vector_string": null,
+                "score": null
+              }
+            },
+            "descriptionSha256": "88c8917963bdf765f0277b8d1508bd10599dabf4ed370c7f1b586442bfa859c9",
+            "descriptionBytes": 5098
+          }
+        },
+        {
+          "receipt": {
+            "name": "osv-367",
+            "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0367",
+            "lastAttemptAt": "2026-10-17T21:26:20.256307+00:00",
+            "previousLastSuccessfulFetchAt": null,
+            "previousLastSuccessfulContentCheckAt": null,
+            "checkedAt": "2026-10-17T21:26:23.963319+00:00",
+            "curlExit": 0,
+            "httpStatus": 200,
+            "error": null,
+            "responseHeaders": {
+              "date": "Sat, 17 Oct 2026 21:26:23 GMT",
+              "content-type": "application/json"
+            },
+            "outcome": "success",
+            "lastSuccessfulFetchAt": "2026-10-17T21:26:23.963319+00:00",
+            "originalFetchedResponseBytes": 1755,
+            "originalFetchedResponseSha256": "0a822481bd18c93b7b5e811be716d3c4695af79659c6eb154929ef27709c8bf1",
+            "previousFetchedResponseSha256": null,
+            "receiptContentNote": "Original response digest, not public minimized evidence digest."
+          },
+          "publicStructuredFields": {
+            "id": "RUSTSEC-2026-0367",
+            "aliases": [
+              "GHSA-vv5m-jxxh-4627"
+            ],
+            "published": "2026-10-09T12:00:00Z",
+            "modified": "2026-10-16T23:30:02.392172556Z",
+            "summary": " Insecure Preservation of SUID/SGID Bits during ZIP Extraction Leading to Potential Privilege Escalation",
+            "severity": [
+              {
+                "type": "CVSS_V3",
+                "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+              }
+            ],
+            "affected": [
+              {
+                "package": {
+                  "name": "zip",
+                  "ecosystem": "crates.io",
+                  "purl": "pkg:cargo/zip"
+                },
+                "ranges": [
+                  {
+                    "type": "SEMVER",
+                    "events": [
+                      {
+                        "introduced": "0.0.0-0"
+                      },
+                      {
+                        "fixed": "9.0.0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4v9h-p7m9-rh26",
+      "sourceId": "RUSTSEC-2026-0368",
+      "decision": "added-outside-reviewed",
+      "recordPath": "src/data/vulnerabilities/GHSA-4v9h-p7m9-rh26.json",
+      "package": "zip",
+      "reviewedMaintainerDescription": true,
+      "osvApiMatchesFullExport": true,
+      "aliasLinkSuppliedByOsv": true,
+      "observations": [
+        "開発元は9.0.0-pre2でmacOSとLinuxの再現を報告する。影響には、アーカイブを展開した後にアプリケーションがリンクを読み書きすることと、外部の対象へのOS権限が必要。",
+        "開発元の影響範囲は<=9.0.0-pre3、修正版は9.0.0。OSVの<9.0.0との表記差を保持し、CVSSスコア・ベクトルは公開資料にないため補完しない。",
+        "公表・更新日時はOSVの日時。開発元の公開・更新日時とは区別し、出典欄に保持した。",
+        "公表された脆弱性の収録であり、企業被害や実悪用を示すものではない。CISA公式JSONはHTTP 403のためKEV状態は未確認。"
+      ],
+      "evidence": [
+        {
+          "receipt": {
+            "name": "zip-target",
+            "url": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4v9h-p7m9-rh26",
+            "lastAttemptAt": "2026-10-17T21:25:37.996851+00:00",
+            "previousLastSuccessfulFetchAt": null,
+            "previousLastSuccessfulContentCheckAt": null,
+            "checkedAt": "2026-10-17T21:25:44.435012+00:00",
+            "curlExit": 0,
+            "httpStatus": 200,
+            "error": null,
+            "responseHeaders": {
+              "date": "Sat, 17 Oct 2026 21:25:44 GMT",
+              "content-type": "application/json; charset=utf-8",
+              "etag": "W/\"42a3aacb7222b229159f0c8d704e97aa77a594186c3b8a044acd352a35caa4c6\"",
+              "last-modified": "Fri, 09 Oct 2026 04:52:17 GMT"
+            },
+            "outcome": "success",
+            "lastSuccessfulFetchAt": "2026-10-17T21:25:44.435012+00:00",
+            "originalFetchedResponseBytes": 13206,
+            "originalFetchedResponseSha256": "fed44bf3b8ffa5a9fb8ba7c5dc1b5a699044cd2eac2d20686daeb94b02c2000f",
+            "previousFetchedResponseSha256": null,
+            "receiptContentNote": "Original response digest, not public minimized evidence digest."
+          },
+          "publicStructuredFields": {
+            "ghsa_id": "GHSA-4v9h-p7m9-rh26",
+            "cve_id": null,
+            "summary": "zip: `ZipArchive::extract` creates symbolic links whose attacker-controlled targets are outside the destination directory",
+            "severity": "high",
+            "published_at": "2026-10-09T04:52:16Z",
+            "updated_at": "2026-10-09T04:52:17Z",
+            "withdrawn_at": null,
+            "identifiers": [
+              {
+                "value": "GHSA-4v9h-p7m9-rh26",
+                "type": "GHSA"
+              }
+            ],
+            "vulnerabilities": [
+              {
+                "package": {
+                  "ecosystem": "rust",
+                  "name": "zip"
+                },
+                "vulnerable_version_range": "<= 9.0.0-pre3",
+                "patched_versions": "9.0.0",
+                "vulnerable_functions": []
+              }
+            ],
+            "cvss": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_severities": {
+              "cvss_v3": {
+                "vector_string": null,
+                "score": null
+              },
+              "cvss_v4": {
+                "vector_string": null,
+                "score": null
+              }
+            },
+            "descriptionSha256": "7fb8232d38d8a0af1fed233dbb315791dc6ada55f1683f8747d8d742a0b6d184",
+            "descriptionBytes": 6306
+          }
+        },
+        {
+          "receipt": {
+            "name": "osv-368",
+            "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0368",
+            "lastAttemptAt": "2026-10-17T21:26:20.256601+00:00",
+            "previousLastSuccessfulFetchAt": null,
+            "previousLastSuccessfulContentCheckAt": null,
+            "checkedAt": "2026-10-17T21:26:23.911474+00:00",
+            "curlExit": 0,
+            "httpStatus": 200,
+            "error": null,
+            "responseHeaders": {
+              "date": "Sat, 17 Oct 2026 21:26:23 GMT",
+              "content-type": "application/json"
+            },
+            "outcome": "success",
+            "lastSuccessfulFetchAt": "2026-10-17T21:26:23.911474+00:00",
+            "originalFetchedResponseBytes": 1581,
+            "originalFetchedResponseSha256": "d1d7ae1044e96b51aba469912ed984b78dc8db7b71ff528985e553936d086666",
+            "previousFetchedResponseSha256": null,
+            "receiptContentNote": "Original response digest, not public minimized evidence digest."
+          },
+          "publicStructuredFields": {
+            "id": "RUSTSEC-2026-0368",
+            "aliases": [
+              "GHSA-4v9h-p7m9-rh26"
+            ],
+            "published": "2026-10-09T12:00:00Z",
+            "modified": "2026-10-16T23:30:02.383750571Z",
+            "summary": "zip: `ZipArchive::extract` creates symbolic links whose attacker-controlled targets are outside the destination directory",
+            "affected": [
+              {
+                "package": {
+                  "name": "zip",
+                  "ecosystem": "crates.io",
+                  "purl": "pkg:cargo/zip"
+                },
+                "ranges": [
+                  {
+                    "type": "SEMVER",
+                    "events": [
+                      {
+                        "introduced": "0.0.0-0"
+                      },
+                      {
+                        "fixed": "9.0.0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "externalEvidenceArtifacts": [
+    {
+      "file": "docs/advisory-source-snapshots/GHSA-4684-h2q9-2vcp.2026-10-18.osv.public-advisory.json",
+      "bytes": 1512,
+      "sha256": "f4683241e23626860d13a682a45061c4eac59ba2dc0528fa7f8ff2bb0f89164a"
+    },
+    {
+      "file": "docs/advisory-source-snapshots/GHSA-4684-h2q9-2vcp.2026-10-18.osv.public-headers.txt",
+      "bytes": 131,
+      "sha256": "3df8cbc3b07f8242b0dd7b95a8fbecc1949082eeedd2c0492df31f9c6e54639d"
+    },
+    {
+      "file": "docs/advisory-source-snapshots/GHSA-4684-h2q9-2vcp.2026-10-18.maintainer.public-advisory.json",
+      "bytes": 1114,
+      "sha256": "9c764929189473f5c2a2a8e30a94a259f5f9eba16d21e69a8d7877f9b0037a50"
+    },
+    {
+      "file": "docs/advisory-source-snapshots/GHSA-4684-h2q9-2vcp.2026-10-18.maintainer.public-headers.txt",
+      "bytes": 266,
+      "sha256": "7d2d818089702faf0b6eb5776d0ba2c2041bf4e5f004cc346d8243018cab9d7d"
+    },
+    {
+      "file": "docs/advisory-source-snapshots/GHSA-x43w-36pp-96g3.2026-10-18.osv.public-advisory.json",
+      "bytes": 1413,
+      "sha256": "34c4df5d0e2d20710c1041f87e7d6290e830f452bd6f5f4b017b32c289d9ee2d"
+    },
+    {
+      "file": "docs/advisory-source-snapshots/GHSA-x43w-36pp-96g3.2026-10-18.osv.public-headers.txt",
+      "bytes": 131,
+      "sha256": "3df8cbc3b07f8242b0dd7b95a8fbecc1949082eeedd2c0492df31f9c6e54639d"
+    },
+    {
+      "file": "docs/advisory-source-snapshots/GHSA-x43w-36pp-96g3.2026-10-18.maintainer.public-advisory.json",
+      "bytes": 1166,
+      "sha256": "97cfb390b0dcf067559624ea0f406d9c38f2ee58c9ef3d8949be6fb4c9e7b079"
+    },
+    {
+      "file": "docs/advisory-source-snapshots/GHSA-x43w-36pp-96g3.2026-10-18.maintainer.public-headers.txt",
+      "bytes": 266,
+      "sha256": "6f1a506a37190a307cfea67fe1f0625048c6080a7661311e29ddf2a385a66a92"
+    }
+  ],
+  "limitations": [
+    "Seven independently updated full OSV exports, not synchronized global coverage. All old/current ZIP members CRC-read and canonical JSON compared, including retroactive changes outside overlap timestamps.",
+    "MAL, withdrawn and informational records remain distinct. Source additions and unmatched backlog are not independent active vulnerability counts.",
+    "MyJVN census covers all product/CPE rows in selected modification-date window; package mapping is not exhaustive. Rows leaving a rolling window are retained as history, not asserted to be source deletions.",
+    "CISA official JSON failed403; no change to unknown KEV state or prior successful checkpoints.",
+    "Public evidence contains allowlisted structured fields and original-content digests only, not raw HTML/XML/API bodies, advisory descriptions, private-report references, code examples, credentials or tracking metadata."
+  ],
+  "negentropyGlobalAdvisoryApi": {
+    "name": "negentropy-global",
+    "url": "https://api.github.com/advisories/GHSA-jcg8-qg98-373g",
+    "lastAttemptAt": "2026-10-17T21:26:57.757703+00:00",
+    "previousLastSuccessfulFetchAt": null,
+    "previousLastSuccessfulContentCheckAt": null,
+    "checkedAt": "2026-10-17T21:27:01.531423+00:00",
+    "curlExit": 0,
+    "httpStatus": 404,
+    "error": null,
+    "responseHeaders": {
+      "date": "Sat, 17 Oct 2026 21:27:01 GMT",
+      "content-type": "application/json; charset=utf-8"
+    },
+    "outcome": "failed",
+    "lastSuccessfulFetchAt": null,
+    "originalFetchedResponseBytes": 172,
+    "originalFetchedResponseSha256": "023bc67c5a6eb30fda1239b047c401148787d621562719a8e22382b52f729376",
+    "previousFetchedResponseSha256": null,
+    "receiptContentNote": "Original response digest, not public minimized evidence digest.",
+    "decision": "HTTP404 does not invalidate the separately retrieved published repository advisory. No Reviewed identity or date inferred."
+  }
+}

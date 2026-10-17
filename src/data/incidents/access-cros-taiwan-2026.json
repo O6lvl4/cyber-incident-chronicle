@@ -1,0 +1,106 @@
+{
+  "id": "access-cros-taiwan-2026",
+  "company": "ACCESS AP TAIWAN（ACCESS子会社／CROS）",
+  "title": "取引先1社向けBIツールを起点に顧客情報・カード情報が流出、盗まれた鍵で不正メール送信",
+  "announcementDate": "2026-10-15",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表（9月11日に徴候検知）",
+  "detectedDate": "2026-09-11",
+  "updatedDate": "2026-10-15",
+  "statusAsOfDate": "2026-10-15",
+  "lastVerifiedDate": "2026-10-18",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "特定取引先1社に提供するBIツールを起点とするアプリケーション層への不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "台湾子会社のCROSで9月11日に侵入の徴候を検知。取引先1社の顧客ID155,280件・受注ID231,998件、決済未完了のカード情報1,305アカウント等の流出を確認。窃取された送信鍵で不正メール11,441件も送信された。",
+  "affectedData": [
+    "通販利用者の氏名・電話番号・住所・メールアドレス・顧客ID・受注ID・受注情報",
+    "決済未完了の受注に係るカード番号・有効期限・氏名・対象顧客ID・受注ID。1,305アカウント中4件はセキュリティコードも含む",
+    "決済サービスのアカウント情報、メール送信サービスの鍵情報"
+  ],
+  "counts": [
+    {
+      "value": 155280,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えいしたお客様ID（実人数ではない）",
+      "approximate": false
+    },
+    {
+      "value": 231998,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えいした受注ID（顧客IDとは別の数え方）",
+      "approximate": false
+    },
+    {
+      "value": 1305,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "カード情報のアカウント件数（重複登録・複数注文を突合後、原文単位は件）",
+      "approximate": false
+    },
+    {
+      "value": 1671,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "カード情報の延べ件数（1,305アカウントと同じ対象の別集計）",
+      "approximate": false
+    },
+    {
+      "value": 4,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "カード関連全項目にセキュリティコードを含む部分件数（1,305アカウントの内数）",
+      "approximate": false
+    },
+    {
+      "value": 11441,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "窃取した送信鍵を使った不正メール送信数（漏えい人数ではない）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "顧客ID155,280件／受注ID231,998件／カード1,305アカウント",
+  "caveats": [
+    "顧客ID件数・受注ID件数・カードのアカウント件数・延べ件数・メール送信数は異なる母数であり合算しない",
+    "カード1,305アカウントのうち4件にセキュリティコードを含み、残り1,301件は含まない。決済未完了の受注のみが対象",
+    "不正メールは流出顧客の個人情報を宛先に使ったものではなく、侵入者が別途用意したリストと盗んだ送信鍵を使用したと会社は判断",
+    "他の取引先の個人情報流出、当該BIツールから参照できたデータベース以外への影響、CROS基盤への直接侵入は未確認",
+    "CROS全体は予防的に一時停止後、復旧済み。対象BIツールの再稼働は対策予定であり、決済秘密鍵の更新も一部作業中",
+    "BIツールの製品名、具体的脆弱性・CVE、最初の侵入日時は未公表"
+  ],
+  "geography": "台湾・香港・マカオ・シンガポール（日本企業の台湾子会社が提供するサービス）",
+  "sources": [
+    {
+      "title": "ACCESS：連結子会社における不正アクセスの発生及び個人情報漏洩に関するお知らせ",
+      "url": "https://www.access-company.com/files/2026/10/n261015.pdf",
+      "publishedDate": "2026-10-15"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-11",
+      "label": "徴候検知・サーバ停止と隔離",
+      "kind": "occurrence",
+      "summary": "CROSで利用するサーバへの不正アクセスの徴候を検知し、調査を開始",
+      "sourceUrl": "https://www.access-company.com/files/2026/10/n261015.pdf"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "流出確認と影響範囲を公表",
+      "kind": "disclosure",
+      "summary": "取引先1社向けBIツールが起点と説明。顧客・受注・カードの異なる件数と、送信鍵を悪用した不正メールを公表",
+      "sourceUrl": "https://www.access-company.com/files/2026/10/n261015.pdf"
+    }
+  ]
+}

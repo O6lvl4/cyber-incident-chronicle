@@ -1,0 +1,88 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7632-4q2x-hvjw",
+  "aliases": [
+    "RUSTSEC-2026-0366"
+  ],
+  "title": "pest_grammars：深いJSONネストによるスタック枯渇",
+  "summary": "攻撃者が制御する深くネストしたJSONを解析すると、ネイティブスタックを使い切ってホストプロセスが終了する可能性がある。2.9.3では対応するstdビルドにスタック残量の検査を追加した。",
+  "publishedAt": "2026-10-16T12:00:00Z",
+  "modifiedAt": "2026-10-16T23:30:02.385972501Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-17T21:27:26.642459Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0366",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "pest_grammars",
+      "ranges": [
+        {
+          "affected": "< 2.9.3",
+          "fixed": "2.9.3",
+          "sourceUrl": "https://api.github.com/repos/pest-parser/pest/security-advisories/GHSA-7632-4q2x-hvjw"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "2.9.3"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/pest_grammars"
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/pest-parser/pest/security-advisories/GHSA-7632-4q2x-hvjw",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://api.github.com/repos/pest-parser/pest/security-advisories/GHSA-7632-4q2x-hvjw"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Stack overflow when parsing deeply nested input in pest_grammars",
+      "url": "https://api.github.com/repos/pest-parser/pest/security-advisories/GHSA-7632-4q2x-hvjw",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T03:50:03Z",
+      "modifiedAt": "2026-10-16T03:50:03Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV: RUSTSEC-2026-0366",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0366",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T12:00:00Z",
+      "modifiedAt": "2026-10-16T23:30:02.385972501Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "安全なネスト数の一律な閾値はない。修正版の検査はベストエフォートで、スタック境界を取得できない環境やno_stdビルドのネイティブスタックは保護しない。",
+    "呼び出し予算はスタック深度の保証ではなく、修正後も入力・作業量・メモリ・同時実行数の制限が必要。時間制限は別途必要。",
+    "公表・更新日時はOSVの日時。開発元の公開・更新日時とは区別し、出典欄に保持した。",
+    "公表された脆弱性の収録であり、企業被害や実悪用を示すものではない。CISA公式JSONはHTTP 403のためKEV状態は未確認。"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4v9h-p7m9-rh26",
+  "aliases": [
+    "RUSTSEC-2026-0368"
+  ],
+  "title": "zip：展開先外を指すシンボリックリンクの作成",
+  "summary": "ZIP内のリンク名を検証してもリンク先を展開ディレクトリ内に制限しないため、展開先外を指すシンボリックリンクを作成できる。アプリケーションが展開後にそのリンクを読み書きすると、プロセス権限で外部ファイルへアクセスする可能性がある。",
+  "publishedAt": "2026-10-09T12:00:00Z",
+  "modifiedAt": "2026-10-16T23:30:02.383750571Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-17T21:27:26.643708Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0368",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "zip",
+      "ranges": [
+        {
+          "affected": "<= 9.0.0-pre3",
+          "fixed": "9.0.0",
+          "sourceUrl": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4v9h-p7m9-rh26"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "9.0.0"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/zip"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4v9h-p7m9-rh26",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "zip: `ZipArchive::extract` creates symbolic links whose attacker-controlled targets are outside the destination directory",
+      "url": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-4v9h-p7m9-rh26",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T04:52:16Z",
+      "modifiedAt": "2026-10-09T04:52:17Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV: RUSTSEC-2026-0368",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0368",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T12:00:00Z",
+      "modifiedAt": "2026-10-16T23:30:02.383750571Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元は9.0.0-pre2でmacOSとLinuxの再現を報告する。影響には、アーカイブを展開した後にアプリケーションがリンクを読み書きすることと、外部の対象へのOS権限が必要。",
+    "開発元の影響範囲は<=9.0.0-pre3、修正版は9.0.0。OSVの<9.0.0との表記差を保持し、CVSSスコア・ベクトルは公開資料にないため補完しない。",
+    "公表・更新日時はOSVの日時。開発元の公開・更新日時とは区別し、出典欄に保持した。",
+    "公表された脆弱性の収録であり、企業被害や実悪用を示すものではない。CISA公式JSONはHTTP 403のためKEV状態は未確認。"
+  ]
+}

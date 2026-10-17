@@ -1,0 +1,68 @@
+{
+  "id": "daiwa-research-naito-wb4-2026",
+  "company": "大和総研／内藤証券（Financial Plate/WB4）",
+  "title": "受託ネット取引システムに不正アクセス、ログイン中の最大631名の情報に漏えい可能性",
+  "announcementDate": "2026-10-15",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": "2026-10-14",
+  "occurredDateLabel": "確認された不正アクセス日（午前4時46分〜6時56分）",
+  "detectedDate": null,
+  "updatedDate": "2026-10-15",
+  "statusAsOfDate": "2026-10-15",
+  "lastVerifiedDate": "2026-10-18",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "Financial Plate/WB4のWebサーバへの不正アクセスと一時データベースへのアクセス",
+    "status": "confirmed"
+  },
+  "summary": "内藤証券のネット取引システムを運用する大和総研が、10月14日早朝の侵入を公表。ログイン中の最大631名について連絡先・証券口座番号・出金先口座等が漏えいした可能性がある。資産・取引の業務用DBへの侵入は未確認。",
+  "affectedData": [
+    "氏名、住所、電話番号、メールアドレス、証券口座番号、勤務先",
+    "出金先金融機関名・支店名・口座番号"
+  ],
+  "counts": [
+    {
+      "value": 631,
+      "unit": "名",
+      "status": "possible",
+      "label": "不正アクセス時間帯にログインしていた利用者の最大対象人数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "最大631名（漏えい可能性）",
+  "caveats": [
+    "631名は対象時間帯のログイン利用者の上限であり、流出が確認された人数ではない",
+    "アクセス対象はログイン状態を一時保持するDB。全利用者の資産・取引内容を保管する業務用DBへの不正アクセス・情報取得の痕跡は未確認",
+    "対象情報だけでは証券口座へのログイン・取引はできず、不正利用・出金・取引等の被害も未確認と説明",
+    "不正プログラムの削除は公表されているが、具体的な侵入手法・脆弱性やランサムウェアを推定しない。検知日時は未公表",
+    "なりすまし防止のためログイン状態を一時解除したことと、サービス全体停止を区別する"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "大和総研：当社運用システムへの不正アクセスによる個人情報漏えいの可能性について",
+      "url": "https://www.dir.co.jp/release/2026101501.pdf",
+      "publishedDate": "2026-10-15"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-14",
+      "label": "Webサーバと一時DBへの不正アクセス",
+      "kind": "occurrence",
+      "summary": "午前4時46分〜6時56分の間に不正アクセス。ログイン中の利用者情報が対象となった可能性",
+      "sourceUrl": "https://www.dir.co.jp/release/2026101501.pdf"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "漏えい可能性と対応を公表",
+      "kind": "disclosure",
+      "summary": "不正プログラム削除、通信遮断、防御設定強化、ログイン状態の一時解除を実施。外部専門家による原因・影響調査を継続",
+      "sourceUrl": "https://www.dir.co.jp/release/2026101501.pdf"
+    }
+  ]
+}

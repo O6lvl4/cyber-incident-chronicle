@@ -1,0 +1,88 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vv5m-jxxh-4627",
+  "aliases": [
+    "RUSTSEC-2026-0367"
+  ],
+  "title": "zip：展開時のSUID・SGIDビット保持による権限昇格",
+  "summary": "ZIPのメタデータに含まれる特権Unixパーミッションを展開時に除去せず適用する。特権プロセスが信頼できないアーカイブを展開すると、作成されたファイルの所有権や実行環境によってローカル権限昇格につながる。開発元は9.0.0を修正版とする。",
+  "publishedAt": "2026-10-09T12:00:00Z",
+  "modifiedAt": "2026-10-16T23:30:02.392172556Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-17T21:27:26.643207Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0367",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "zip",
+      "ranges": [
+        {
+          "affected": "<= 9.0.0-pre3",
+          "fixed": "9.0.0",
+          "sourceUrl": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-vv5m-jxxh-4627"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "9.0.0"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/zip"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-vv5m-jxxh-4627",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-vv5m-jxxh-4627"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Insecure Preservation of SUID/SGID Bits during ZIP Extraction Leading to Potential Privilege Escalation",
+      "url": "https://api.github.com/repos/zip-rs/zip2/security-advisories/GHSA-vv5m-jxxh-4627",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T04:51:02Z",
+      "modifiedAt": "2026-10-09T04:51:03Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV: RUSTSEC-2026-0367",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0367",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T12:00:00Z",
+      "modifiedAt": "2026-10-16T23:30:02.392172556Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元は影響上限を含む<=9.0.0-pre3、OSVは修正版を除外する<9.0.0と表記する。版の順序や等価性を推定せず、開発元の範囲とOSVの原文範囲を区別して保存した。",
+    "開発元は2.4.2と8.5.1で再現を報告している。昇格は展開プロセスの権限やファイルの所有者・実行環境に依存する。",
+    "公表・更新日時はOSVの日時。開発元の公開・更新日時とは区別し、出典欄に保持した。",
+    "公表された脆弱性の収録であり、企業被害や実悪用を示すものではない。CISA公式JSONはHTTP 403のためKEV状態は未確認。"
+  ]
+}

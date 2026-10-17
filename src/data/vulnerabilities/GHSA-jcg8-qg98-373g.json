@@ -1,0 +1,69 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-jcg8-qg98-373g",
+  "aliases": [],
+  "title": "negentropy：ID件数の検証不足によるメモリ枯渇",
+  "summary": "信頼できない接続相手から受け取ったID件数を、残りのメッセージ長と照合する前にメモリ確保へ使う。既定のstd機能を有効にしたアプリケーションでは、短い不正メッセージでプロセスが異常終了する可能性がある。0.4.4と0.5.2で修正。",
+  "publishedAt": "2026-10-15T07:39:27Z",
+  "modifiedAt": "2026-10-16T06:05:11Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-17T21:26:25.739518Z",
+  "dateSourceUrl": "https://api.github.com/repos/nostrdevkit/negentropy/security-advisories/GHSA-jcg8-qg98-373g",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "negentropy",
+      "ranges": [
+        {
+          "affected": ">= 0.2.0, < 0.4.4",
+          "fixed": "0.4.4",
+          "sourceUrl": "https://api.github.com/repos/nostrdevkit/negentropy/security-advisories/GHSA-jcg8-qg98-373g"
+        },
+        {
+          "affected": ">= 0.5.0, < 0.5.2",
+          "fixed": "0.5.2",
+          "sourceUrl": "https://api.github.com/repos/nostrdevkit/negentropy/security-advisories/GHSA-jcg8-qg98-373g"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/nostrdevkit/negentropy/security-advisories/GHSA-jcg8-qg98-373g",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/nostrdevkit/negentropy/security-advisories/GHSA-jcg8-qg98-373g"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Remote DoS through unchecked `IdList` allocation in negentropy",
+      "url": "https://api.github.com/repos/nostrdevkit/negentropy/security-advisories/GHSA-jcg8-qg98-373g",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T07:39:27Z",
+      "modifiedAt": "2026-10-16T06:05:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "reconcileとreconcile_with_idsが対象。stdを無効にしたビルドはBTreeSetを使い、この事前メモリ確保を行わない。",
+    "既定のメモリ確保失敗はプロセスを終了させるためcatch_unwindでは封じ込められない。メッセージ長の制限だけでも防げない。",
+    "公表・更新日時は取得した開発元の公開アドバイザリAPIによる。GitHubの全体アドバイザリAPIは404で、Reviewed登録日時やOSV登録日時とみなさない。",
+    "RUSTSEC-2026-0365を起点に開発元のGHSAを確認したが、OSVのaliasesにこのGHSAはないためRustSec IDを別名へ追加せず、ソース候補の照合と別名統合を区別した。",
+    "公表された脆弱性の収録であり、企業被害や実悪用を示すものではない。CISA公式JSONはHTTP 403のためKEV状態は未確認。"
+  ]
+}
