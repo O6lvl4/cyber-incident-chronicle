@@ -22,5 +22,6 @@ import './view-tabs.css'
 
 import './research-shell.css'
 import './research-rows.css'
+import './incident-dates.css'
 
 import './browse-controls.css'

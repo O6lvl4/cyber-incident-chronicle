@@ -1,6 +1,7 @@
 import { INCIDENTS_BY_ID, THREADS } from '../../data';
 import type { TimelineEvent } from '../../types';
 import { METHOD_STATUS, STATUS_LABELS } from '../../lib/incidents';
+import { incidentDateComparisons } from '../../lib/incidentDates';
 import ClassificationDetail from './ClassificationDetail';
 function countStatus(status: string) {
   const labels: Record<string, string> = { confirmed: '確認済み', possible: '可能性あり', investigating: '調査中', maximum: '最大' };
@@ -15,8 +16,13 @@ export default function IncidentDetail({ ev }: { ev: TimelineEvent }) {
     <span className="status-badge" data-status={item.disclosureStatus}>{STATUS_LABELS[item.disclosureStatus]}</span>
     {item.geography && <p className="method-note">対象地域・範囲：{item.geography}</p>}
     <p className="detail-summary">{item.summary}</p>
+    <h3>攻撃・被害確認・公表の時期</h3>
+    <dl className="date-grid event-date-grid">{incidentDateComparisons(item).map(date => <div key={date.key}>
+      <dt>{date.title}</dt><dd>{date.text}</dd>
+      {date.evidence && <><p>{date.evidence.note}</p><a href={date.evidence.sourceUrl} target="_blank" rel="noopener noreferrer">日付の根拠 ↗</a><small>資料確認 {date.evidence.reviewedDate}</small></>}
+    </div>)}</dl>
+    <p className="method-note">公表日は収録資料の起点で、初報とは限りません。侵入や異常の検知、流出のおそれの把握を、被害の初確認とは同一視しません。未確認・不明は、攻撃や被害がなかったことを意味しません。</p>
     <dl className="date-grid">
-      <div><dt>収録した公表日</dt><dd>{item.announcementDate}</dd></div>
       <div><dt>{item.occurredDateLabel || '発生・検知日'}</dt><dd>{item.occurredDate ?? '未公表・不明'}</dd></div>
       <div><dt>収録した最終公表日</dt><dd>{item.updatedDate}</dd></div>
       <div><dt>資料の最終確認日</dt><dd>{item.lastVerifiedDate}</dd></div>

@@ -1,7 +1,7 @@
 {
   "announcementDateLabel": "個人情報流出を公表（初報ではない）",
   "occurredDate": null,
-  "occurredDateLabel": "侵入開始日は非公表。改ざん確認期間は2024-07-19〜07-22",
+  "occurredDateLabel": "初期侵入日は未特定。確認されたアクセスは2024-07-11、改ざん期間は07-19〜07-22",
   "counts": [
     {
       "value": 203,
@@ -56,6 +56,11 @@
   "geography": "日本のCOCORO STORE・ヘルシオデリ",
   "sources": [
     {
+      "title": "個人情報の流出に関するお知らせ",
+      "url": "https://corporate.jp.sharp/info/notices/240729-a.html",
+      "publishedDate": "2024-07-29"
+    },
+    {
       "title": "個人情報流出に関する調査結果",
       "url": "https://corporate.jp.sharp/info/notices/241030-a.html",
       "publishedDate": "2024-10-30"
@@ -84,5 +89,23 @@
       "summary": "調査結果と対応を公表",
       "sourceUrl": "https://corporate.jp.sharp/info/notices/241030-a.html"
     }
-  ]
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2024-07-11（確認分）",
+      "note": "7月29日の公表資料が明示する不正アクセス・情報流出の日。初期侵入日とは断定しない。最終報では別途7月19日4:19〜22日10:50（日本時間）のスクリプト埋め込み期間を記載。",
+      "sourceUrl": "https://corporate.jp.sharp/info/notices/240729-a.html",
+      "reviewedDate": "2026-10-18",
+      "startDate": "2024-07-11"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2024-07-22",
+      "note": "7月22日10:52に不正アクセスによるサイト改ざんが判明。ここで確認した被害は改ざん。個人情報の流出は翌23日の調査で別途確認しており、流出確認日とは区別する。",
+      "sourceUrl": "https://corporate.jp.sharp/info/notices/240729-a.html",
+      "reviewedDate": "2026-10-18",
+      "startDate": "2024-07-22"
+    }
+  }
 }

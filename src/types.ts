@@ -3,6 +3,15 @@ export type SourceTier = 'primary' | 'secondary';
 export type ImpactType = 'leak' | 'outage' | 'unauthorizedAccess';
 export type DisclosureStatus = 'confirmed' | 'possible' | 'investigating' | 'noConfirmedLeak';
 export interface Thread { id: string; name: string; shortName?: string; en: string; color: string; darkColor: string }
+export interface IncidentDateEvidence {
+  precision: 'day' | 'month' | 'year' | 'period' | 'approximate' | 'unknown' | 'notApplicable';
+  label: string;
+  startDate?: string;
+  endDate?: string;
+  note: string;
+  sourceUrl: string;
+  reviewedDate: string;
+}
 export interface Incident {
   id: string;
   company: string;
@@ -12,6 +21,7 @@ export interface Incident {
   statusAsOfDate?: string;
   title: string;
   announcementDate: string;
+  eventDates?: { attack?: IncidentDateEvidence; damageConfirmed?: IncidentDateEvidence };
   occurredDate: string | null;
   occurredDateLabel: string;
   updatedDate: string;
