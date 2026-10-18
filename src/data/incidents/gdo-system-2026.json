@@ -1,33 +1,51 @@
 {
   "id": "gdo-system-2026",
   "company": "ゴルフダイジェスト・オンライン（GDO）",
-  "title": "不正アクセスで一部サービスに障害、個人情報流出の有無を調査",
+  "title": "不正アクセスでサービス障害、従業員等の情報流出と会員情報の照会のおそれ",
   "announcementDate": "2026-10-13",
   "announcementDateLabel": "収録した公表日",
   "occurredDate": "2026-10-13",
   "occurredDateLabel": "システム障害が発生した日（朝）。侵入開始日時は未公表",
-  "updatedDate": "2026-10-13",
-  "statusAsOfDate": "2026-10-13",
-  "lastVerifiedDate": "2026-10-14",
+  "updatedDate": "2026-10-16",
+  "statusAsOfDate": "2026-10-16",
+  "lastVerifiedDate": "2026-10-18",
   "impactTypes": [
+    "leak",
     "outage",
     "unauthorizedAccess"
   ],
-  "disclosureStatus": "investigating",
+  "disclosureStatus": "confirmed",
   "attackMethod": {
     "label": "具体的な侵入手法は未公表",
     "status": "unknown"
   },
-  "summary": "10月13日朝からシステム障害が発生し、不正アクセスを確認。安全確保のためネットワークの一部を遮断し、クーポン利用・配送・プレーチケット購入等に影響。個人情報流出は未確認で、可能性を含め調査中。",
+  "summary": "10月13日の不正アクセスにより一部サービスに障害。10月14日にファイルの不正ダウンロードを確認し、従業員・退職者・委託先等の氏名・社用メールアドレス1,789件の流出が判明した。別サーバー経由で会員情報55件が照会された可能性も公表し、侵入経路や影響範囲の調査を継続している。",
   "affectedData": [
-    "個人情報流出の有無・対象項目は調査中"
+    "流出を確認：従業員・退職者・委託先・パートナー企業の氏名（一部フリガナを含む）、社用メールアドレス",
+    "外部から照会された可能性：会員の識別子ID55件（うち4件は氏名、性別、生年月日、電話番号、メールアドレス、住所、ログインID、保有ポイント等の個人情報を含む可能性。項目は対象者により異なる）"
   ],
-  "counts": [],
-  "scaleLabel": "対象件数・人数は未公表",
+  "counts": [
+    {
+      "value": 1789,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "流出を確認した従業員・退職者・委託先等の情報",
+      "approximate": false
+    },
+    {
+      "value": 55,
+      "unit": "件",
+      "status": "possible",
+      "label": "外部から照会された可能性がある会員情報（51件は識別子IDのみ、4件は個人情報を含む可能性）",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "従業員等1,789件の流出を確認、会員情報55件の照会のおそれ",
   "caveats": [
-    "不正アクセスとサービス影響は確認済みだが、個人情報流出が確認された公表ではない",
-    "10月13日朝は障害発生時点。最初の侵入時点を示さない",
-    "対象サービスの一部に影響が残り復旧対応中。全面停止・全面復旧とはしない"
+    "従業員等の情報流出は確認済み。会員55件については照会の可能性として公表され、全55件に氏名等の個人情報が含まれるとはしない",
+    "10月13日10時16分〜10時20分頃は攻撃者により会員情報が照会された時刻。最初の侵入時点を示さない",
+    "会員のパスワード・決済情報の流出や不正利用等の二次被害は10月16日時点で未確認。クレジットカード番号は管理サーバーで保持していない",
+    "件数は10月16日時点の調査結果で変更の可能性がある。侵入経路およびその他の情報流出は調査中"
   ],
   "geography": "日本",
   "sources": [
@@ -35,6 +53,11 @@
       "title": "GDO：不正アクセスによるシステム障害およびサービス影響",
       "url": "https://company.golfdigest.co.jp/brand/news/2026101301.html",
       "publishedDate": "2026-10-13"
+    },
+    {
+      "title": "GDO：従業員・委託先等の個人情報の流出およびお客様情報の照会のおそれについて",
+      "url": "https://company.golfdigest.co.jp/corp/pr/2026101601.html",
+      "publishedDate": "2026-10-16"
     }
   ],
   "timeline": [
@@ -44,21 +67,30 @@
       "kind": "disclosure",
       "summary": "同日朝からの障害、ネットワークの一部遮断、個人情報流出の調査を公表",
       "sourceUrl": "https://company.golfdigest.co.jp/brand/news/2026101301.html"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "情報流出と会員情報照会のおそれを続報",
+      "kind": "update",
+      "summary": "10月14日にファイルの不正ダウンロードを確認。従業員等1,789件の流出、会員情報55件の照会のおそれと調査経緯を公表。",
+      "sourceUrl": "https://company.golfdigest.co.jp/corp/pr/2026101601.html"
     }
   ],
   "eventDates": {
     "attack": {
-      "precision": "unknown",
-      "label": "未公表・不明",
-      "note": "確認した公表資料に記載なし。10月13日朝はシステム障害発生の記載であり、不正アクセスが実際に行われた時期は明記されていない。",
-      "sourceUrl": "https://company.golfdigest.co.jp/brand/news/2026101301.html",
+      "precision": "day",
+      "label": "2026年10月13日（会員情報照会）",
+      "startDate": "2026-10-13",
+      "note": "10月16日続報は、攻撃者が侵害した別サーバーを経由し、10月13日10時16分〜10時20分頃に会員情報を照会したことを10月15日に確認したと明記。同じ不正アクセス事案内の攻撃行為の時期であり、最初の侵入日や7時9分の兆候検知日からの推定ではない。",
+      "sourceUrl": "https://company.golfdigest.co.jp/corp/pr/2026101601.html",
       "reviewedDate": "2026-10-18"
     },
     "damageConfirmed": {
-      "precision": "unknown",
-      "label": "未公表・不明",
-      "note": "確認した公表資料に記載なし。10月13日朝からの障害発生と、影響拡大防止のネットワーク遮断に伴う配送等への影響は記載されているが、被害の最初の確認日時とは明示されていない。情報流出は未確認で、障害発生日や公表日を初確認日へ転用しない。",
-      "sourceUrl": "https://company.golfdigest.co.jp/brand/news/2026101301.html",
+      "precision": "day",
+      "label": "2026年10月14日（14時頃）",
+      "startDate": "2026-10-14",
+      "note": "10月16日続報の経緯で、10月14日14時頃に操作ログから攻撃者によるファイルのダウンロードを確認し、従業員・退職者・委託先等の情報が含まれると判明したと明記。情報流出の確認日を採用し、10月13日の障害発生・兆候検知とは区別する。",
+      "sourceUrl": "https://company.golfdigest.co.jp/corp/pr/2026101601.html",
       "reviewedDate": "2026-10-18"
     }
   }
