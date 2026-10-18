@@ -1,4 +1,5 @@
 import { useEffect, useRef, type ReactNode } from 'react';
+import { incidentDateText } from '../lib/incidentDates';
 import type { Incident } from '../types';
 import { STATUS_LABELS, companyCount } from '../lib/incidents';
 interface Props { hidden?: boolean; incidents: Incident[]; total: number; selectedId?: string; onSelect: (id: string) => void; onReset: () => void; viewTabs?: ReactNode }
@@ -10,16 +11,17 @@ export default function IncidentList({ hidden, incidents, total, selectedId, onS
       <span className="count-badge" aria-live="polite">{incidents.length}<small className={incidents.length === total ? 'sr-only' : undefined}> / {total}</small><span className="sr-only"> 事案</span></span>{viewTabs}
     <p className="list-note">{companyCount(incidents)}社 · 公表資料から収録</p></div>
     <div className="incident-scroll" ref={scroll}>
-      <div className="research-columns incident-columns" aria-hidden="true"><span>公表日</span><span>企業・組織</span><span>事案</span><span>公表状況</span><span/></div>
+      <div className="research-columns incident-columns" aria-hidden="true"><span>攻撃時期</span><span>被害の初確認</span><span>公表日 ※</span><span>企業・組織 / 事案</span><span>公表状況</span><span/></div>
       {incidents.length === 0 && <div className="empty-state"><p>条件に合う事案がありません</p><button className="n-btn" onClick={onReset}>絞り込みを解除</button></div>}
       {incidents.map(item => <button key={item.id} data-incident-id={item.id} className={`incident-card${selectedId === item.id ? ' selected' : ''}`} onClick={() => onSelect(item.id)} aria-pressed={selectedId === item.id}>
-          <span className="incident-card-top"><time dateTime={item.announcementDate}>{item.announcementDate.replace(/-/g, '.')}</time></span>
-          <strong>{item.company}</strong>
-          <span className="incident-card-title">{item.title}</span>
+          <span className="incident-date-cell attack-date"><span className="date-mobile-label">攻撃時期</span>{incidentDateText(item.eventDates?.attack)}</span>
+          <span className="incident-date-cell damage-date"><span className="date-mobile-label">被害の初確認</span>{incidentDateText(item.eventDates?.damageConfirmed)}</span>
+          <span className="incident-card-top"><span className="date-mobile-label">公表日 ※</span><time dateTime={item.announcementDate}>{item.announcementDate.replace(/-/g, '.')}</time></span>
+          <span className="incident-subject"><strong>{item.company}</strong><span className="incident-card-title">{item.title}</span></span>
           <span className="status-badge" data-status={item.disclosureStatus}>{STATUS_LABELS[item.disclosureStatus]}</span>
           <span className="card-arrow" aria-hidden="true">↗</span>
         </button>)}
-      <p className="list-footer">一次資料に基づく選定事例です。企業の安全性を評価するものではありません</p>
+      <p className="list-footer">※ 公表日は収録資料の起点で、初報とは限りません。未確認・不明は攻撃や被害がなかったことを意味しません。一次資料に基づく選定事例です。企業の安全性を評価するものではありません</p>
     </div>
   </section>;
 }

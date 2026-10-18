@@ -1,3 +1,4 @@
+import { validateIncidentDates } from './incident-dates-status.mjs';
 import { loadClassifications, validateClassifications } from './classification-status.mjs';
 import { loadVulnerabilities, validateVulnerabilities } from './vulnerability-status.mjs';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -39,6 +40,7 @@ export function validateData({ meta, incidents }) {
       if (source.publishedDate > meta.lastVerifiedDate) fail('future source');
       urls.add(source.url);
     }
+    for (const error of validateIncidentDates(incident, meta.lastVerifiedDate)) fail(error);
     for (const update of incident.timeline) {
       if (!validDate(update.date) || update.date > meta.lastVerifiedDate) fail('invalid timeline date');
       if (!urls.has(update.sourceUrl)) fail('timeline source not in source list');
