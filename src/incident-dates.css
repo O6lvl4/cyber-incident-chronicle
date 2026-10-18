@@ -1,0 +1,31 @@
+/* Incident chronology keeps three meanings separate; advisory rows are unchanged. */
+.research-incidents { --research-incident-columns: 128px 128px 104px minmax(180px, 1fr) 130px 20px; }
+.incident-date-cell { font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; color: var(--text-sub); }
+.date-mobile-label { display: none; }
+.incident-subject { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.incident-subject strong { font-size: 14px; overflow-wrap: anywhere; }
+.incident-subject .incident-card-title { font-size: 12px; }
+.event-date-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.event-date-grid > div { min-width: 0; overflow-wrap: anywhere; }
+.event-date-grid p, .event-date-grid a, .event-date-grid small { font-size: 11px; line-height: 1.6; }
+.event-date-grid small { display: block; margin-top: 5px; color: var(--text-sub); }
+@media (min-width: 768px) and (max-width: 1100px) {
+  .research-incidents { --research-incident-columns: 100px 100px 94px minmax(120px, 1fr) 100px 18px; --research-row-gap: 10px; }
+}
+@media (max-width: 767px) {
+  .workspace.view-list .research-incidents .incident-card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: 'company company company' 'attack damage date' 'status status arrow';
+  }
+  .research-incidents .incident-subject { grid-area: company; }
+  .research-incidents .attack-date { grid-area: attack; }
+  .research-incidents .damage-date { grid-area: damage; }
+  .research-incidents .incident-card > .status-badge { justify-self: start; }
+  .research-incidents .date-mobile-label { display: block; font: 10px/1.6 var(--font-jp); color: var(--text-sub); }
+  .research-incidents .incident-card time { font-size: 11px; white-space: normal; overflow-wrap: anywhere; }
+  .research-incidents .incident-date-cell { font-size: 11px; }
+  .event-date-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 768px) {
+  .research-incidents .date-mobile-label { display: block; position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+}
