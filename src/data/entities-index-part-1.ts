@@ -77,29 +77,29 @@ import record73 from './entities/iseto.json' with { type: 'json' };
 import record74 from './entities/ishikawa-computer-center.json' with { type: 'json' };
 import record75 from './entities/ites.json' with { type: 'json' };
 import record76 from './entities/jaea.json' with { type: 'json' };
-import record77 from './entities/japan-post-holdings.json' with { type: 'json' };
-import record78 from './entities/japan-post.json' with { type: 'json' };
-import record79 from './entities/jb-honshi.json' with { type: 'json' };
-import record80 from './entities/jcom.json' with { type: 'json' };
-import record81 from './entities/jgc-digital.json' with { type: 'json' };
-import record82 from './entities/jogmec.json' with { type: 'json' };
-import record83 from './entities/jtech-rokkasho.json' with { type: 'json' };
-import record84 from './entities/kadokawa.json' with { type: 'json' };
-import record85 from './entities/kanamoto.json' with { type: 'json' };
-import record86 from './entities/kantsu.json' with { type: 'json' };
-import record87 from './entities/kddi.json' with { type: 'json' };
-import record88 from './entities/keio.json' with { type: 'json' };
-import record89 from './entities/khobho.json' with { type: 'json' };
-import record90 from './entities/kindal.json' with { type: 'json' };
-import record91 from './entities/kingprinters.json' with { type: 'json' };
-import record92 from './entities/kinokuniya.json' with { type: 'json' };
-import record93 from './entities/kodansha-beck.json' with { type: 'json' };
-import record94 from './entities/kokuyo.json' with { type: 'json' };
-import record95 from './entities/kufu-company.json' with { type: 'json' };
-import record96 from './entities/kurashiki-hampu.json' with { type: 'json' };
-import record97 from './entities/kyusai.json' with { type: 'json' };
-import record98 from './entities/lashinbang.json' with { type: 'json' };
-import record99 from './entities/laurel.json' with { type: 'json' };
+import record77 from './entities/japan-football-association.json' with { type: 'json' };
+import record78 from './entities/japan-post-holdings.json' with { type: 'json' };
+import record79 from './entities/japan-post.json' with { type: 'json' };
+import record80 from './entities/jb-honshi.json' with { type: 'json' };
+import record81 from './entities/jcom.json' with { type: 'json' };
+import record82 from './entities/jgc-digital.json' with { type: 'json' };
+import record83 from './entities/jogmec.json' with { type: 'json' };
+import record84 from './entities/jtech-rokkasho.json' with { type: 'json' };
+import record85 from './entities/kadokawa.json' with { type: 'json' };
+import record86 from './entities/kanamoto.json' with { type: 'json' };
+import record87 from './entities/kantsu.json' with { type: 'json' };
+import record88 from './entities/kddi.json' with { type: 'json' };
+import record89 from './entities/keio.json' with { type: 'json' };
+import record90 from './entities/khobho.json' with { type: 'json' };
+import record91 from './entities/kindal.json' with { type: 'json' };
+import record92 from './entities/kingprinters.json' with { type: 'json' };
+import record93 from './entities/kinokuniya.json' with { type: 'json' };
+import record94 from './entities/kodansha-beck.json' with { type: 'json' };
+import record95 from './entities/kokuyo.json' with { type: 'json' };
+import record96 from './entities/kufu-company.json' with { type: 'json' };
+import record97 from './entities/kurashiki-hampu.json' with { type: 'json' };
+import record98 from './entities/kyusai.json' with { type: 'json' };
+import record99 from './entities/lashinbang.json' with { type: 'json' };
 
 export const ENTITIES_PART_1 = {
   "2rinkan-yellowhat": record0,
@@ -179,27 +179,27 @@ export const ENTITIES_PART_1 = {
   "ishikawa-computer-center": record74,
   "ites": record75,
   "jaea": record76,
-  "japan-post-holdings": record77,
-  "japan-post": record78,
-  "jb-honshi": record79,
-  "jcom": record80,
-  "jgc-digital": record81,
-  "jogmec": record82,
-  "jtech-rokkasho": record83,
-  "kadokawa": record84,
-  "kanamoto": record85,
-  "kantsu": record86,
-  "kddi": record87,
-  "keio": record88,
-  "khobho": record89,
-  "kindal": record90,
-  "kingprinters": record91,
-  "kinokuniya": record92,
-  "kodansha-beck": record93,
-  "kokuyo": record94,
-  "kufu-company": record95,
-  "kurashiki-hampu": record96,
-  "kyusai": record97,
-  "lashinbang": record98,
-  "laurel": record99,
+  "japan-football-association": record77,
+  "japan-post-holdings": record78,
+  "japan-post": record79,
+  "jb-honshi": record80,
+  "jcom": record81,
+  "jgc-digital": record82,
+  "jogmec": record83,
+  "jtech-rokkasho": record84,
+  "kadokawa": record85,
+  "kanamoto": record86,
+  "kantsu": record87,
+  "kddi": record88,
+  "keio": record89,
+  "khobho": record90,
+  "kindal": record91,
+  "kingprinters": record92,
+  "kinokuniya": record93,
+  "kodansha-beck": record94,
+  "kokuyo": record95,
+  "kufu-company": record96,
+  "kurashiki-hampu": record97,
+  "kyusai": record98,
+  "lashinbang": record99,
 } as Record<string, EntityClassification>;

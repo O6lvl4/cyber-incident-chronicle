@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-10-19T06:40:32.217807+09:00",
+  "checkedDateJst": "2026-10-19",
+  "scope": "限定した企業公式発表・訂正・続報の確認。全193事案の再取得・網羅的検索を意味しない。",
+  "preservationChecks": {
+    "seicomart-app-2026": {
+      "eventDatesIdentical": true,
+      "announcementDateUnchanged": true,
+      "oldSourcesRetained": true
+    },
+    "bookoff-members-2026": {
+      "eventDatesIdentical": true,
+      "announcementDateUnchanged": true,
+      "oldSourcesRetained": true
+    },
+    "ntt-solmare-cmoa-2026": {
+      "eventDatesIdentical": true,
+      "announcementDateUnchanged": true,
+      "oldSourcesRetained": true
+    }
+  },
+  "reviews": [
+    {
+      "id": "jfa-passport-2026",
+      "disposition": "new",
+      "sourcesOpened": [
+        "https://www.jfa.jp/about_jfa/news/00036934/"
+      ],
+      "sourcePublishedDate": "2026-10-18",
+      "statusAsOfDate": "2026-10-18",
+      "retrieval": "Official HTML retrieved successfully with curl after web reader failed; full article body inspected",
+      "findings": [
+        "Official attack window Oct17 03:25–19:00 retained",
+        "Member information impact and leakage presence remain under investigation",
+        "Detection and first confirmed damage dates are not explicitly published; not inferred",
+        "Partial service outage ongoing; no recovery completion assertion"
+      ]
+    },
+    {
+      "id": "icc-support-site-2026",
+      "disposition": "new",
+      "sourcesOpened": [
+        "https://www.icc.co.jp/news/2026/",
+        "https://www.icc.co.jp/news/2026/20261017.html",
+        "https://www.icc.co.jp/news/2026/20260629.html"
+      ],
+      "sourcePublishedDate": "2026-10-17",
+      "statusAsOfDate": "2026-10-17",
+      "confidence": "Official page full text opened; support-site scope and Oct16 confirmation explicit. Separate-record choice is editorial based on different named service/date; relation with May incident is not stated.",
+      "findings": [
+        "Oct16 is unauthorized-access confirmation, not attack/damage onset",
+        "Service and server isolated, cause/initial route/scope under investigation",
+        "No information leakage facts, data categories, counts or restart date disclosed"
+      ],
+      "entityReuse": "ishikawa-computer-center",
+      "entityMetadataChanged": false
+    },
+    {
+      "id": "seicomart-app-2026",
+      "disposition": "update",
+      "sourcesOpened": [
+        "https://online.seicomart.co.jp/delivery/cms/preview.php?pre_no=122",
+        "https://online.seicomart.co.jp/delivery/cms/preview.php?disp_flg=pc&pre_no=121"
+      ],
+      "sourcePublishedDate": "2026-10-05",
+      "statusAsOfDate": "2026-10-05",
+      "confidence": "Official third and fourth report full text opened. Fourth report uses 人分 for account scope; unit retained.",
+      "findings": [
+        "574647人分 replaces third-report 572022人分; do not add",
+        "Members withdrawn by Sep24 are excluded",
+        "App notification of affected/not-affected from Oct5 is announced, not completion",
+        "New signup/member viewing-change/card change feature termination announced; no comprehensive recovery claim"
+      ],
+      "sourcesAlreadyInRepository": true
+    },
+    {
+      "id": "bookoff-members-2026",
+      "disposition": "update",
+      "sourcesOpened": [
+        "https://www.bookoff.co.jp/info/news/2026/_2.html",
+        "https://www.bookoff.co.jp/info/f5024e992b59d8557a4df7385fe51c4e_1.png"
+      ],
+      "sourcePublishedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-16",
+      "confidence": "Official page date opened; linked official image downloaded and correction page visually inspected at readable resolution.",
+      "findings": [
+        "Occupation and nickname added as previously omitted affected fields",
+        "Correction expressly leaves record count, person count and other disclosure unchanged"
+      ],
+      "sourcesAlreadyInRepository": true
+    },
+    {
+      "id": "ntt-solmare-cmoa-2026",
+      "disposition": "update",
+      "sourcesOpened": [
+        "https://www.nttsolmare.com/press/2026/1016-1.html"
+      ],
+      "sourcePublishedDate": "2026-10-18",
+      "statusAsOfDate": "2026-10-18",
+      "confidence": "web.open internal retrieval error; official URL successfully downloaded by urllib and full body inspected. Page and text date Oct18 despite URL 1016-1.",
+      "findings": [
+        "Some system log files viewed/acquired, presence of member information still under review",
+        "Affected count still under review",
+        "Route and method identified/addressed internally but specifics undisclosed; unknown taxonomy retained",
+        "Preparing restart from web viewing of purchased books; exact restart date not determined"
+      ]
+    },
+    {
+      "id": "yamato-atobarai-2026",
+      "disposition": "reviewed-no-change",
+      "sourcesOpened": [
+        "https://www.yamato-hd.co.jp/important/info_260929_1.html"
+      ],
+      "sourcePublishedDate": "2026-10-16",
+      "statusAsOfDate": "2026-10-16",
+      "confidence": "Official current HTML full text opened; already fully represented in repository.",
+      "findings": [
+        "Approx5260000 customer records, approx50000 delivery records, approx4100 merchant records; approx490000 email-containing records are subset",
+        "Bill amount/receivable balance/employee names not confirmed exfiltrated",
+        "No newer substantive update on reopened page"
+      ],
+      "advanceRecordDateSuggested": false
+    }
+  ],
+  "result": {
+    "newIncidents": 2,
+    "updatedIncidents": 3,
+    "unchangedReviewedIncidents": 1,
+    "totalIncidents": 193,
+    "totalSources": 419
+  }
+}
