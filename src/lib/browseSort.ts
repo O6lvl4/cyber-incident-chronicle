@@ -105,13 +105,13 @@ function eventDateRank(value?: IncidentDateEvidence): number | null {
 /** Sort the complete filtered corpus before passing it to a virtual list. */
 export function sortIncidents<T extends SortableIncident>(items: readonly T[], sort: IncidentSort = 'published-desc'): T[] {
   const direction = sort.endsWith('-desc') ? -1 : 1;
-  const field = sort.startsWith('attack-') ? 'attack' : sort.startsWith('damage-') ? 'damageConfirmed' : null;
-  const compare: Comparator<T> = field
-    ? (left, right) => compareRank(eventDateRank(left.eventDates?.[field]), eventDateRank(right.eventDates?.[field]), direction)
-    : sort.startsWith('company-')
-      ? (left, right) => names.compare(left.company, right.company) * direction
-      : (left, right) => compareDate(left.announcementDate, right.announcementDate, direction);
-  return sorted(items, compare, item => item.id);
+  const comparators: Record<string, Comparator<T>> = {
+    attack: (left, right) => compareRank(eventDateRank(left.eventDates?.attack), eventDateRank(right.eventDates?.attack), direction),
+    damage: (left, right) => compareRank(eventDateRank(left.eventDates?.damageConfirmed), eventDateRank(right.eventDates?.damageConfirmed), direction),
+    company: (left, right) => names.compare(left.company, right.company) * direction,
+    published: (left, right) => compareDate(left.announcementDate, right.announcementDate, direction),
+  };
+  return sorted(items, comparators[sort.split('-')[0]], item => item.id);
 }
 
 /** Groups must come from the current filtered corpus; their advisories are unique by ID. */
