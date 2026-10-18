@@ -9,6 +9,9 @@ import { VirtualListLayout } from '../src/lib/virtualList.ts';
 const ids = items => items.map(item => item.id);
 const keys = items => items.map(item => item.key);
 const incident = (id, company, announcementDate = '2026-02-01') => ({ id, company, announcementDate });
+const evidence = (precision, label, startDate) => ({ precision, label, ...(startDate ? { startDate } : {}),
+  note: '公表資料の記載を維持', sourceUrl: 'https://example.com/disclosure', reviewedDate: '2026-02-01' });
+const eventSorts = [['attack', 'attack'], ['damage', 'damageConfirmed']];
 const pkg = (ecosystem, packageName) => ({ ecosystem, packageName });
 const advisory = (id, overrides = {}) => ({ id, aliases: [], title: id, publishedAt: '2026-02-01T00:00:00Z',
   withdrawnAt: null, severity: { label: 'high' }, affected: [pkg('npm', 'widget')],
@@ -29,6 +32,98 @@ test('company ordering uses Japanese names and deterministic ties in both direct
   assert.deepEqual(ids(sortIncidents(records, 'company-asc')), ['A', 'B', 'D', 'C']);
   assert.deepEqual(ids(sortIncidents(records, 'company-desc')), ['C', 'D', 'A', 'B']);
   assert.deepEqual(ids(sortIncidents([...records].reverse(), 'company-desc')), ['C', 'D', 'A', 'B']);
+});
+
+for (const [sortKey, field] of eventSorts) {
+  const withEvent = (id, date) => ({ ...incident(id, id), eventDates: { [field]: date } });
+
+  test(`${sortKey} dates use the specified evidence field and period/approximate start dates`, () => {
+    const records = [
+      withEvent('period', { ...evidence('period', '2024年1月〜2025年12月', '2024-01-10'), endDate: '2025-12-31' }),
+      withEvent('day', evidence('day', '2024年2月1日', '2024-02-01')),
+      withEvent('approximate', evidence('approximate', '2024年1月下旬頃', '2024-01-20')),
+    ];
+    const otherField = field === 'attack' ? 'damageConfirmed' : 'attack';
+    records.forEach((item, index) => {
+      item.announcementDate = `2026-0${3 - index}-01`;
+      item.eventDates[otherField] = evidence('day', '別の日付', `2025-0${3 - index}-01`);
+    });
+    assert.deepEqual(ids(sortIncidents(records, `${sortKey}-asc`)), ['period', 'approximate', 'day']);
+    assert.deepEqual(ids(sortIncidents(records, `${sortKey}-desc`)), ['day', 'approximate', 'period']);
+  });
+
+  test(`${sortKey} month/year evidence retains precision instead of inventing month or day values`, () => {
+    const records = [
+      withEvent('month-jp', evidence('month', '2023年2月（日不明）')),
+      withEvent('year-jp', evidence('year', '2023年')),
+      withEvent('day-feb', evidence('day', '2023年2月1日', '2023-02-01')),
+      withEvent('month-iso', evidence('month', '2023-02')),
+      withEvent('year-iso', evidence('year', '2023')),
+      withEvent('month-jan', evidence('month', '2023年1月')),
+      withEvent('day-jan', evidence('day', '2023年1月1日', '2023-01-01')),
+      withEvent('older', evidence('day', '2022年12月31日', '2022-12-31')),
+      withEvent('newer', evidence('year', '2024年')),
+    ];
+    const snapshot = structuredClone(records);
+    records.forEach(item => { Object.freeze(item.eventDates[field]); Object.freeze(item.eventDates); Object.freeze(item); });
+    Object.freeze(records);
+    assert.deepEqual(ids(sortIncidents(records, `${sortKey}-asc`)),
+      ['older', 'year-iso', 'year-jp', 'month-jan', 'day-jan', 'month-iso', 'month-jp', 'day-feb', 'newer']);
+    assert.deepEqual(ids(sortIncidents(records, `${sortKey}-desc`)),
+      ['newer', 'day-feb', 'month-iso', 'month-jp', 'day-jan', 'month-jan', 'year-iso', 'year-jp', 'older']);
+    assert.deepEqual(records, snapshot);
+    assert.ok(records.filter(item => ['month', 'year'].includes(item.eventDates[field].precision))
+      .every(item => !Object.hasOwn(item.eventDates[field], 'startDate')));
+    assert.ok(sortIncidents(records, `${sortKey}-asc`).every(item => records.includes(item)));
+  });
+
+  test(`${sortKey} missing, unknown, inapplicable and unparseable dates stay last without legacy fallbacks`, () => {
+    const records = [
+      withEvent('known-new', evidence('day', '2024年2月1日', '2024-02-01')),
+      withEvent('known-old', evidence('day', '2024年1月1日', '2024-01-01')),
+      incident('missing', 'ア社'),
+      { ...incident('missing-field', 'ア社'), eventDates: {} },
+      withEvent('unknown', evidence('unknown', '未公表', '2099-12-31')),
+      withEvent('not-applicable', evidence('notApplicable', '該当なし', '1900-01-01')),
+      withEvent('invalid-day', evidence('day', '日付不明', 'not-a-date')),
+      withEvent('day-no-start', evidence('day', '2023年2月1日')),
+      withEvent('period-no-start', evidence('period', '2023年2月〜3月')),
+      withEvent('approximate-no-start', evidence('approximate', '2023年2月頃')),
+      withEvent('invalid-month', evidence('month', '2023年13月')),
+      withEvent('inexact-month', evidence('month', '2023年2月頃')),
+      withEvent('invalid-year', evidence('year', '2023年頃')),
+    ];
+    records.forEach(item => {
+      item.occurredDate = '1900-01-01';
+      item.detectedDate = '2099-12-31';
+    });
+    const missing = records.filter(item => !item.id.startsWith('known-')).map(item => item.id).sort();
+    for (const direction of ['asc', 'desc']) {
+      const expected = [...(direction === 'asc' ? ['known-old', 'known-new'] : ['known-new', 'known-old']), ...missing];
+      assert.deepEqual(ids(sortIncidents(records, `${sortKey}-${direction}`)), expected);
+      assert.deepEqual(ids(sortIncidents([...records].reverse(), `${sortKey}-${direction}`)), expected);
+    }
+  });
+
+  test(`${sortKey} equal known dates use exact ID ties in either direction and input order`, () => {
+    const records = ['a', 'é', 'Z', 'e\u0301', 'A'].map(id => withEvent(id, evidence('day', '2023年2月1日', '2023-02-01')));
+    const expected = ['A', 'Z', 'a', 'e\u0301', 'é'];
+    for (const direction of ['asc', 'desc']) {
+      assert.deepEqual(ids(sortIncidents(records, `${sortKey}-${direction}`)), expected);
+      assert.deepEqual(ids(sortIncidents([...records].reverse(), `${sortKey}-${direction}`)), expected);
+    }
+  });
+}
+
+test('event-date options expose both directions without changing incident sort defaults', () => {
+  const options = INCIDENT_SORT_OPTIONS.map(option => option.value);
+  for (const key of ['attack-asc', 'attack-desc', 'damage-asc', 'damage-desc']) {
+    assert.ok(options.includes(key), `${key} is available`);
+    assert.equal(normalizeIncidentSort(key), key);
+  }
+  assert.equal(normalizeIncidentSort(), 'published-desc');
+  assert.equal(normalizeIncidentSort('detected-desc'), 'published-desc');
+  assert.equal(normalizeIncidentSort('occurred-asc'), 'published-desc');
 });
 
 test('all publication sorters compare instants, including offsets and differing precision', () => {
