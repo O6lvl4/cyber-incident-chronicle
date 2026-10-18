@@ -1,0 +1,104 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fprf-r6rv-xg99",
+  "aliases": [
+    "CVE-2026-111918"
+  ],
+  "title": "Vikunja: Saved filter creation with an empty filter string recalculates task positions across all tenants",
+  "summary": "Vikunja: Saved filter creation with an empty filter string recalculates task positions across all tenants",
+  "publishedAt": "2026-10-09T20:57:38Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-fprf-r6rv-xg99/GHSA-fprf-r6rv-xg99.json",
+  "modifiedAt": "2026-10-09T20:57:38Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-18T21:46:03.491088Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "code.vikunja.io/api",
+      "ranges": [
+        {
+          "affected": ">= 1.0.0-rc0, <= 2.6.0",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-fprf-r6rv-xg99/GHSA-fprf-r6rv-xg99.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.0-rc0"
+            },
+            {
+              "last_affected": "2.6.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-fprf-r6rv-xg99/GHSA-fprf-r6rv-xg99.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-fprf-r6rv-xg99/GHSA-fprf-r6rv-xg99.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-fprf-r6rv-xg99/GHSA-fprf-r6rv-xg99.json",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T20:57:38Z",
+      "modifiedAt": "2026-10-09T20:57:38Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Vikunja: Saved filter creation with an empty filter string recalculates task positions across all tenants",
+      "url": "https://github.com/advisories/GHSA-fprf-r6rv-xg99",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV公式API：CVE別名を全エクスポートと照合",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-fprf-r6rv-xg99",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T20:57:38Z",
+      "modifiedAt": "2026-10-18T10:56:07.090920964Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公開GitHub Advisory API：GHSA同一性と公開項目を個別照合",
+      "url": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-fprf-r6rv-xg99",
+      "publishedDate": "2026-10-03",
+      "publishedAt": "2026-10-03T06:31:22Z",
+      "modifiedAt": "2026-10-03T06:31:22Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026-10-19の更新は、OSV公式のGHSA記録に追加されたCVE別名の補完。開発元のGHSA同一性と公開項目を別途確認したが、CVE対応の根拠はOSVの明示的なaliasesであり、名称だけで統合していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "今回取得した開発元APIのcve_idは未設定。OSVのCVE別名を開発元が同じ時点で掲示したとはみなさず、開発元とOSVの公開日時・更新日時も別々に保存する。",
+    "公表・更新・撤回日時、影響範囲とCVSSは引き続き固定Reviewed JSONの出典に基づく。今回の別名確認日時で原公表・更新日を進めない。開発元の異なる版表記・評価・日時は別名照合監査に保存し、別名補完の際に推測で置換しない。"
+  ]
+}

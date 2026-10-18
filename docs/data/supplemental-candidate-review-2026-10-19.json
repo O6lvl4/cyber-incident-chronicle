@@ -1,0 +1,896 @@
+{
+  "reportDateJst": "2026-10-19",
+  "generatedAt": "2026-10-18T21:42:13.793266+00:00",
+  "osvCandidateReview": [
+    {
+      "id": "PYSEC-2026-4319",
+      "aliases": [
+        "CVE-2026-105922"
+      ],
+      "published": "2026-10-06T15:17:17.727Z",
+      "modified": "2026-10-18T13:45:02.439769873Z",
+      "withdrawn": null,
+      "summary": null,
+      "packages": [
+        {
+          "name": "vllm",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/vllm"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [],
+      "matchedCuratedIds": [],
+      "exclusionReason": null,
+      "decision": "pending-maintainer-range-and-fixed-version-confirmation",
+      "change": "added",
+      "changedFields": [
+        "affected",
+        "aliases",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity"
+      ],
+      "previousCanonicalSha256": null,
+      "currentCanonicalSha256": "b5cecc6a4733f23f24dfa2d8ad6717ffc216f64b72d0414f2db3acc5830bdd2c",
+      "rationale": "Current v0.32.0 tagged source lacks the linked MRV1 embedding-position mask and PR #57762 remains open. Maintainer excludes MRV2 from this crash; CNA affected-version enumeration and OSV introduced=0/fixed=0.32.0 remain unreconciled. Keep pending, not rejected or withdrawn.",
+      "priorCandidateReviewFile": "supplemental-candidate-review-2026-10-14.json",
+      "individualVerificationFile": "vllm-candidate-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-3rw9-wmc8-8948",
+      "aliases": [
+        "CVE-2025-71435",
+        "GO-2025-3921"
+      ],
+      "published": "2025-08-28T19:36:04Z",
+      "modified": "2026-10-18T10:55:50.653723823Z",
+      "withdrawn": null,
+      "summary": "Coder accepts an APIKey beyond the linked OIDC expiry if there is no refresh token",
+      "packages": [
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-3rw9-wmc8-8948"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-3rw9-wmc8-8948"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "db6268673106d7f7cf9bb97826df64b6d060d15f1e32201e3667ece5a3e81624",
+      "currentCanonicalSha256": "a204d0cba5d16460747ca51ddfdeadf4d9b53f6eb7e5665dcecfc55868c76de5",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": [
+            "GO-2025-3921"
+          ],
+          "current": [
+            "CVE-2025-71435",
+            "GO-2025-3921"
+          ]
+        },
+        "modified": {
+          "previous": "2025-09-08T14:59:38.092197Z",
+          "current": "2026-10-18T10:55:50.653723823Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-4hv6-xc92-j86g",
+      "aliases": [
+        "CVE-2026-111917"
+      ],
+      "published": "2026-10-09T20:57:34Z",
+      "modified": "2026-10-18T10:56:09.758077526Z",
+      "withdrawn": null,
+      "summary": "Vikunja: WebSocket authentication ignores server-side session state, so revoked sessions keep receiving live pushes",
+      "packages": [
+        {
+          "name": "code.vikunja.io/api",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/code.vikunja.io/api"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-4hv6-xc92-j86g"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-4hv6-xc92-j86g"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "a3b2e7707245ec2160db29a908547e1af04188f240cf69e831d51015be03f4c9",
+      "currentCanonicalSha256": "e04425945a559da147592bff0facef950705ce44dd47f1e8ab0619458b5e244f",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": null,
+          "current": [
+            "CVE-2026-111917"
+          ]
+        },
+        "modified": {
+          "previous": "2026-10-09T21:15:03.705569904Z",
+          "current": "2026-10-18T10:56:09.758077526Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-8fxq-53rx-ph5f",
+      "aliases": [
+        "CVE-2026-111933",
+        "GO-2026-6265"
+      ],
+      "published": "2026-08-20T18:34:21Z",
+      "modified": "2026-10-18T10:55:40.994398805Z",
+      "withdrawn": null,
+      "summary": "Coder: Login endpoint user enumeration via timing-defense placeholder in password comparison",
+      "packages": [
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-8fxq-53rx-ph5f"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-8fxq-53rx-ph5f"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "22e44000160d81a8703c69acb136706a2bee08ab280091a44c6c59f6e0a16737",
+      "currentCanonicalSha256": "e0c8b0a23efa3590ade4ab1cf03769d565c9f27f8f6de4ab2e0bcc6c53b44ace",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": [
+            "GO-2026-6265"
+          ],
+          "current": [
+            "CVE-2026-111933",
+            "GO-2026-6265"
+          ]
+        },
+        "modified": {
+          "previous": "2026-09-10T03:51:13.416224479Z",
+          "current": "2026-10-18T10:55:40.994398805Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-fmmf-xq98-g327",
+      "aliases": [
+        "CVE-2026-111921"
+      ],
+      "published": "2026-10-09T20:57:47Z",
+      "modified": "2026-10-18T10:56:06.896043067Z",
+      "withdrawn": null,
+      "summary": "Vikunja: Write-level project members can delete admin-tier link shares through an unloaded permission check",
+      "packages": [
+        {
+          "name": "code.vikunja.io/api",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/code.vikunja.io/api"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-fmmf-xq98-g327"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-fmmf-xq98-g327"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "9377f2c41f9c544206e7bd3674572287ba0e68a4284c67dfa5fb381eab5b0e44",
+      "currentCanonicalSha256": "79e412c6fd813483f3b884106d6a2eed53e36b46242a93d974218cfebf865cf3",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": null,
+          "current": [
+            "CVE-2026-111921"
+          ]
+        },
+        "modified": {
+          "previous": "2026-10-09T21:15:04.368146247Z",
+          "current": "2026-10-18T10:56:06.896043067Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-fprf-r6rv-xg99",
+      "aliases": [
+        "CVE-2026-111918"
+      ],
+      "published": "2026-10-09T20:57:38Z",
+      "modified": "2026-10-18T10:56:07.090920964Z",
+      "withdrawn": null,
+      "summary": "Vikunja: Saved filter creation with an empty filter string recalculates task positions across all tenants",
+      "packages": [
+        {
+          "name": "code.vikunja.io/api",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/code.vikunja.io/api"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-fprf-r6rv-xg99"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-fprf-r6rv-xg99"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "462eb6b05005af1ae2d9b619fb781eb182b31f2e701a21c4abcddc7618fffa65",
+      "currentCanonicalSha256": "b20e6cc5fab894240c6c7da4db388042bfecd2a88ed6f22de4bc0eefe5c2aed9",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": null,
+          "current": [
+            "CVE-2026-111918"
+          ]
+        },
+        "modified": {
+          "previous": "2026-10-09T21:15:04.455062561Z",
+          "current": "2026-10-18T10:56:07.090920964Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-h58c-xccx-75m3",
+      "aliases": [
+        "CVE-2026-111932",
+        "GO-2026-6267"
+      ],
+      "published": "2026-08-20T18:34:26Z",
+      "modified": "2026-10-18T10:55:43.815551258Z",
+      "withdrawn": null,
+      "summary": "Coder: Stored HTML injection via unescaped ApplicationName and LogoURL appearance settings",
+      "packages": [
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-h58c-xccx-75m3"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-h58c-xccx-75m3"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "d731a47bc3e2056ae44df3a2d8fc1e682168fb5e0e4137fafd95df981a8f806a",
+      "currentCanonicalSha256": "76221ac23ad1f2c66ba1e244545e05a53f1dbd8403e83e39fa056e04d94b0ad9",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": [
+            "GO-2026-6267"
+          ],
+          "current": [
+            "CVE-2026-111932",
+            "GO-2026-6267"
+          ]
+        },
+        "modified": {
+          "previous": "2026-08-26T01:20:31.341103657Z",
+          "current": "2026-10-18T10:55:43.815551258Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-hjx8-qv73-f7cm",
+      "aliases": [
+        "CVE-2026-111919"
+      ],
+      "published": "2026-10-09T20:57:41Z",
+      "modified": "2026-10-18T10:56:09.954756188Z",
+      "withdrawn": null,
+      "summary": "Vikunja: Webhooks and link shares survive every revocation path, so a removed collaborator keeps a live feed",
+      "packages": [
+        {
+          "name": "code.vikunja.io/api",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/code.vikunja.io/api"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-hjx8-qv73-f7cm"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-hjx8-qv73-f7cm"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "14c2536d86225f31e43f39a6f13e432212f656b6b721b0710d4a58e69aaacf8c",
+      "currentCanonicalSha256": "24b89ebeff2bad586b14e56c9d4b1f2f408a3422d487e73649072e3f9293376b",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": null,
+          "current": [
+            "CVE-2026-111919"
+          ]
+        },
+        "modified": {
+          "previous": "2026-10-09T21:15:04.763218614Z",
+          "current": "2026-10-18T10:56:09.954756188Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-m687-p538-r5hp",
+      "aliases": [
+        "CVE-2026-111922"
+      ],
+      "published": "2026-10-09T20:57:50Z",
+      "modified": "2026-10-18T10:56:07.386227546Z",
+      "withdrawn": null,
+      "summary": "Vikunja: Permissive Cross-domain Security Policy trusts every localhost origin which should not be trusted",
+      "packages": [
+        {
+          "name": "code.vikunja.io/api",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/code.vikunja.io/api"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-m687-p538-r5hp"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-m687-p538-r5hp"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "6a188a43c95a67103773ba154ad2f6e2a8b3818e6ea7c8acdbaa84ff3efe0b5b",
+      "currentCanonicalSha256": "2da8f356bf9f60174f4b166a8a246d18f3351c75186f270330aa57d3b4493589",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": null,
+          "current": [
+            "CVE-2026-111922"
+          ]
+        },
+        "modified": {
+          "previous": "2026-10-09T21:15:04.860854666Z",
+          "current": "2026-10-18T10:56:07.386227546Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-pjr3-86v4-5p7w",
+      "aliases": [
+        "CVE-2026-111920"
+      ],
+      "published": "2026-10-09T20:57:44Z",
+      "modified": "2026-10-18T10:56:09.512631783Z",
+      "withdrawn": null,
+      "summary": "Vikunja: Explicit lower-permission share on a sub-project is silently overridden by an inherited parent permission (broken access control / privilege-management regression in v2.6.0)",
+      "packages": [
+        {
+          "name": "code.vikunja.io/api",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/code.vikunja.io/api"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-pjr3-86v4-5p7w"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-pjr3-86v4-5p7w"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "fccb456e039c92b0e3c4fe1474b8822218c10cc66d935d4a8be9931aaeb75a39",
+      "currentCanonicalSha256": "158ad254c810c0885d8eb1246b2ac548aa99672365fe70066125f3659090a725",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": null,
+          "current": [
+            "CVE-2026-111920"
+          ]
+        },
+        "modified": {
+          "previous": "2026-10-09T21:15:04.861196263Z",
+          "current": "2026-10-18T10:56:09.512631783Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GHSA-wcx9-ccpj-hx3c",
+      "aliases": [
+        "CVE-2024-58398",
+        "GO-2024-3228"
+      ],
+      "published": "2024-10-28T18:31:57Z",
+      "modified": "2026-10-18T10:55:48.018610412Z",
+      "withdrawn": null,
+      "summary": "Coder vulnerable to post-auth URL redirection to untrusted site ('Open Redirect')",
+      "packages": [
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-wcx9-ccpj-hx3c"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-wcx9-ccpj-hx3c"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "e97dfaa8bcd82bb7460fa2128bf711561c5991aef1b6046c04fa1fb7356c3de0",
+      "currentCanonicalSha256": "039ac48759a8d74bd7d9569ab33d6f17f3d1e61384f7865eb775da56d902c998",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": [
+            "GO-2024-3228"
+          ],
+          "current": [
+            "CVE-2024-58398",
+            "GO-2024-3228"
+          ]
+        },
+        "modified": {
+          "previous": "2024-10-30T18:50:39Z",
+          "current": "2026-10-18T10:55:48.018610412Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GO-2024-3228",
+      "aliases": [
+        "CVE-2024-58398",
+        "GHSA-wcx9-ccpj-hx3c"
+      ],
+      "published": "2024-10-30T16:01:08Z",
+      "modified": "2026-10-18T10:55:48.018610412Z",
+      "withdrawn": null,
+      "summary": "Coder vulnerable to post-auth URL redirection to untrusted site ('Open Redirect') in github.com/coder/coder",
+      "packages": [
+        {
+          "name": "github.com/coder/coder",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-wcx9-ccpj-hx3c"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-wcx9-ccpj-hx3c"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "9db987e8f8e098da538508b4c29946830b7d4072d7ba3c6e3cf19a9859aa1718",
+      "currentCanonicalSha256": "a15b0c83f970298eff1a1b51c0f8b5eefa8872930bd04eff13165dd17625da0a",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": [
+            "GHSA-wcx9-ccpj-hx3c"
+          ],
+          "current": [
+            "CVE-2024-58398",
+            "GHSA-wcx9-ccpj-hx3c"
+          ]
+        },
+        "modified": {
+          "previous": "2026-03-03T04:55:57.274539Z",
+          "current": "2026-10-18T10:55:48.018610412Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GO-2025-3921",
+      "aliases": [
+        "CVE-2025-71435",
+        "GHSA-3rw9-wmc8-8948"
+      ],
+      "published": "2025-09-08T14:13:10Z",
+      "modified": "2026-10-18T10:55:50.653723823Z",
+      "withdrawn": null,
+      "summary": "Coder accepts an APIKey beyond the linked OIDC expiry if there is no refresh token in github.com/coder/coder",
+      "packages": [
+        {
+          "name": "github.com/coder/coder",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-3rw9-wmc8-8948"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-3rw9-wmc8-8948"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "80310a12490c85b19a06e5162dcf84d2f067282b35a3dd0661b8ded546d330df",
+      "currentCanonicalSha256": "f9e5c8c9d01c124425f28439c033b1c3c65b14714ce033663557485f206c871a",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": [
+            "GHSA-3rw9-wmc8-8948"
+          ],
+          "current": [
+            "CVE-2025-71435",
+            "GHSA-3rw9-wmc8-8948"
+          ]
+        },
+        "modified": {
+          "previous": "2026-03-03T04:56:52.896970Z",
+          "current": "2026-10-18T10:55:50.653723823Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GO-2026-6265",
+      "aliases": [
+        "CVE-2026-111933",
+        "GHSA-8fxq-53rx-ph5f"
+      ],
+      "published": "2026-08-25T19:43:10Z",
+      "modified": "2026-10-18T10:55:40.994398805Z",
+      "withdrawn": null,
+      "summary": "Coder: Login endpoint user enumeration via timing-defense placeholder in password comparison in github.com/coder/coder",
+      "packages": [
+        {
+          "name": "github.com/coder/coder",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-8fxq-53rx-ph5f"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-8fxq-53rx-ph5f"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "dbd0693fb8df735c16999789de75a5db02377b1626ab83d01739643953529dc5",
+      "currentCanonicalSha256": "e2e9ce3616ce72c6bf910e1df690267b027978519db36929ac33b62bc852d287",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": [
+            "GHSA-8fxq-53rx-ph5f"
+          ],
+          "current": [
+            "CVE-2026-111933",
+            "GHSA-8fxq-53rx-ph5f"
+          ]
+        },
+        "modified": {
+          "previous": "2026-08-26T01:13:02.633884659Z",
+          "current": "2026-10-18T10:55:40.994398805Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    },
+    {
+      "id": "GO-2026-6267",
+      "aliases": [
+        "CVE-2026-111932",
+        "GHSA-h58c-xccx-75m3"
+      ],
+      "published": "2026-08-25T19:43:10Z",
+      "modified": "2026-10-18T10:55:43.815551258Z",
+      "withdrawn": null,
+      "summary": "Coder: Stored HTML injection via unescaped ApplicationName and LogoURL appearance settings in github.com/coder/coder",
+      "packages": [
+        {
+          "name": "github.com/coder/coder",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder"
+        },
+        {
+          "name": "github.com/coder/coder/v2",
+          "ecosystem": "Go",
+          "purl": "pkg:golang/github.com/coder/coder/v2"
+        }
+      ],
+      "informational": [],
+      "matchedReviewedIds": [
+        "GHSA-h58c-xccx-75m3"
+      ],
+      "matchedCuratedIds": [
+        "GHSA-h58c-xccx-75m3"
+      ],
+      "exclusionReason": null,
+      "decision": "existing-advisory-alias-overlay",
+      "change": "modified",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "previousCanonicalSha256": "f484c9c09053b5b5699ec0277d87f8c7a6625ff9f34c00b4207f46afa874e674",
+      "currentCanonicalSha256": "156a40756598d71013cd56433f7c3a6e51636af0ae1fa43e8ac373e54cb8ad5e",
+      "rationale": "Explicit new OSV CVE aliases are reflected in ten existing advisory overlays. Maintainer GHSA identities were independently retrieved; all maintainer cve_id values remain null. Pinned Reviewed dates, affected ranges, CVSS and withdrawal evidence are retained unchanged and source-specific differences are recorded separately.",
+      "fieldChanges": {
+        "aliases": {
+          "previous": [
+            "GHSA-h58c-xccx-75m3"
+          ],
+          "current": [
+            "CVE-2026-111932",
+            "GHSA-h58c-xccx-75m3"
+          ]
+        },
+        "modified": {
+          "previous": "2026-08-26T01:21:40.335006552Z",
+          "current": "2026-10-18T10:55:43.815551258Z"
+        }
+      },
+      "individualVerificationFile": "osv-alias-overlay-review-2026-10-19.json"
+    }
+  ],
+  "jvnNewRows": [],
+  "newJvnCuratedIds": [],
+  "newOsvCandidateCuratedIds": [],
+  "feedNoticeReviews": [],
+  "limitations": [
+    "Seven independently updated full OSV exports, not synchronized global coverage. All immutable baseline/current ZIP members were CRC-read and canonical JSON compared, including retroactive changes outside overlap timestamps.",
+    "MAL, withdrawn and informational records remain distinct. Source additions and unmatched backlog are not independent active vulnerability counts.",
+    "Only source-provided id/aliases are used for transitive identity matching; related/upstream and package names do not establish identity.",
+    "Public evidence contains allowlisted structured fields and original-content digests only, not raw HTML/XML/API bodies, advisory descriptions, private-report references, code examples, credentials or tracking metadata.",
+    "MyJVN census covers all product/CPE rows in the selected modification-date window, not an exhaustive package mapping. No results returned in this window does not mean the outstanding library candidate backlog is empty.",
+    "MyJVN returned one empty-result RSS placeholder per response with totalRes=0 and totalResRet=0; this is excluded from vulnerability counts. The first page was re-read with the same returned query and empty count.",
+    "Prior raw MyJVN bodies are unavailable in this workspace. Baseline public structured snapshots and inventory were read; no baseline XML/description revalidation is claimed. There are zero current/overlap vulnerability rows, so no cross-day item-content comparison is possible or necessary for this empty window.",
+    "Rows leaving the rolling MyJVN date window are retained as history, not asserted to have been deleted from JVN.",
+    "CISA official KEV JSON and pending Eclipse Milo/dcm4che official advisory pages returned HTTP 403. Unknown KEV status, prior successful checkpoints and pending identity/range decisions are retained.",
+    "Public evidence contains allowlisted HTTP headers, public structured records, retrieval receipts and raw-body hashes only. Raw HTML/XML and unrelated metadata are not published."
+  ],
+  "retainedPriorCandidateDispositions": {
+    "sourceFile": "supplemental-candidate-review-2026-10-18.json",
+    "status": "Prior unresolved package identity, disputed TLS, informational and existing-backlog dispositions remain pending unless superseded by this audit. Only CISA Milo/dcm4che URLs were retried here; prior maintainer API checks were not newly reverified."
+  },
+  "jvnChangedComparedRows": [],
+  "icsPackageCandidateChecks": [
+    {
+      "receipt": {
+        "name": "milo-cisa",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01",
+        "lastAttemptAt": "2026-10-18T21:38:37.675387+00:00",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "checkedAt": "2026-10-18T21:38:43.300378+00:00",
+        "curlExit": 0,
+        "httpStatus": 403,
+        "error": null,
+        "responseHeaders": {
+          "content-type": "text/html",
+          "content-length": "433",
+          "cache-control": "max-age=0",
+          "date": "Sun, 18 Oct 2026 21:38:43 GMT"
+        },
+        "outcome": "failed",
+        "lastSuccessfulFetchAt": null,
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 433,
+        "originalFetchedResponseSha256": "1b7b0aa732f1048070afb611d0aae96b11cc732b52485a222065c4a034f5f91d",
+        "previousFetchedResponseSha256": "284c270c1981d2d89a6bfff3ee2fd9cb2b6e3760461e33b2420aa273aefeceaa",
+        "receiptContentNote": "Original response digest, not public minimized evidence digest.",
+        "contentStatus": "failed",
+        "lastSuccessfulFetchAtAdvanced": false,
+        "lastSuccessfulContentCheckAtAdvanced": false
+      },
+      "decision": "candidate-pending; no new identity/range inferred",
+      "rationale": "Official CISA advisory body is still inaccessible (HTTP 403). The prior notice does not establish package mapping, advisory identity, affected range or fixed version. No new package advisory added.",
+      "priorCandidateSource": "supplemental-candidate-review-2026-10-18.json"
+    },
+    {
+      "receipt": {
+        "name": "dcm-cisa",
+        "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02",
+        "lastAttemptAt": "2026-10-18T21:38:37.675992+00:00",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "checkedAt": "2026-10-18T21:38:43.315714+00:00",
+        "curlExit": 0,
+        "httpStatus": 403,
+        "error": null,
+        "responseHeaders": {
+          "content-type": "text/html",
+          "content-length": "446",
+          "cache-control": "max-age=0",
+          "date": "Sun, 18 Oct 2026 21:38:43 GMT"
+        },
+        "outcome": "failed",
+        "lastSuccessfulFetchAt": null,
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 446,
+        "originalFetchedResponseSha256": "57818ce0a9b5b5499408e25597b9fa7e9d5cd97e203757d484f7214f3a2cceac",
+        "previousFetchedResponseSha256": "dd1531dfd0d6b708c2c31942c2ba44ad97a193c6dfccf3281ef2c6b9d0032413",
+        "receiptContentNote": "Original response digest, not public minimized evidence digest.",
+        "contentStatus": "failed",
+        "lastSuccessfulFetchAtAdvanced": false,
+        "lastSuccessfulContentCheckAtAdvanced": false
+      },
+      "decision": "candidate-pending; no new identity/range inferred",
+      "rationale": "Official CISA advisory body is still inaccessible (HTTP 403). The prior notice does not establish package mapping, advisory identity, affected range or fixed version. No new package advisory added.",
+      "priorCandidateSource": "supplemental-candidate-review-2026-10-18.json"
+    }
+  ],
+  "newCuratedOverlayIds": [
+    "GHSA-3rw9-wmc8-8948",
+    "GHSA-4hv6-xc92-j86g",
+    "GHSA-8fxq-53rx-ph5f",
+    "GHSA-fmmf-xq98-g327",
+    "GHSA-fprf-r6rv-xg99",
+    "GHSA-h58c-xccx-75m3",
+    "GHSA-hjx8-qv73-f7cm",
+    "GHSA-m687-p538-r5hp",
+    "GHSA-pjr3-86v4-5p7w",
+    "GHSA-wcx9-ccpj-hx3c"
+  ],
+  "newDistinctDisplayedAdvisoryIds": [],
+  "aliasOverlayReviewFile": "osv-alias-overlay-review-2026-10-19.json"
+}

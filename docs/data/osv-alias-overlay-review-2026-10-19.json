@@ -1,0 +1,1740 @@
+{
+  "reportDateJst": "2026-10-19",
+  "generatedAt": "2026-10-18T21:46:47.902065+00:00",
+  "sourceType": "GitHub maintainer repository security-advisory REST API",
+  "scope": "Independent verification of ten OSV CVE-alias additions against fixed GitHub Reviewed sources. Only explicitly selected public fields and allowlisted response headers are retained. Raw response bodies and headers are held outside the repository.",
+  "fixedReviewedCommit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+  "advisories": [
+    {
+      "ghsa_id": "GHSA-3rw9-wmc8-8948",
+      "cve_id": null,
+      "published_at": "2025-08-28T17:31:38Z",
+      "updated_at": "2025-08-28T17:31:38Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-3rw9-wmc8-8948"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "https://github.com/coder/coder"
+          },
+          "vulnerable_version_range": "<= 2.19, <=2.20.3, <=2.21.3, <=2.22.0",
+          "patched_versions": "2.23.0"
+        }
+      ],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+          "score": 2.3
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/coder/coder/security-advisories/GHSA-3rw9-wmc8-8948",
+        "maintainerHtml": "https://github.com/coder/coder/security/advisories/GHSA-3rw9-wmc8-8948",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2025/08/GHSA-3rw9-wmc8-8948/GHSA-3rw9-wmc8-8948.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:48.092851+00:00",
+        "retrievedAt": "2026-10-18T21:45:51.871878+00:00",
+        "bodySha256": "260b4cdbc8ae3d60b844ed8f264b811a8b359294fbec9e458aa981652880bf28",
+        "bodyBytes": 5220,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:45:51 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"b15d720ce0d82a08eb997180fc20c75a8fe297c3ff27f1a0d07af2249b6d3386\"",
+          "last-modified": "Thu, 28 Aug 2025 17:31:38 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "2F1C:39075F:DBCBFA:EFD196:6AD53E0F"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-3rw9-wmc8-8948",
+        "aliases": [],
+        "published": "2025-08-28T19:36:04Z",
+        "modified": "2025-08-28T19:36:05Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.23.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "databaseSeverity": "LOW",
+        "bodySha256": "32c22e388d778280b7836f73644646f33fad9a022802ac538013d9ad3d95bc5b",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2025-71435",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": true,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V4"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": false,
+        "rangeAssessment": "different-not-safe-to-normalize-automatically",
+        "rangeNote": "Maintainer gives <= 2.19, <=2.20.3, <=2.21.3, <=2.22.0 with patch 2.23.0; fixed Reviewed gives introduced 0, fixed 2.23.0. The noncanonical maintainer notation is not asserted equivalent. Maintainer package is a repository URL, whereas Reviewed uses the Go module github.com/coder/coder/v2. Retain Reviewed fields without a range overwrite.",
+        "cvssNote": "All populated maintainer CVSS vectors match the fixed Reviewed vector set.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-4hv6-xc92-j86g",
+      "cve_id": null,
+      "published_at": "2026-10-03T06:31:13Z",
+      "updated_at": "2026-10-03T06:31:13Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-4hv6-xc92-j86g"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "code.vikunja.io/api"
+          },
+          "vulnerable_version_range": ">= 2.3.0, <= 2.6.0",
+          "patched_versions": ""
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+        "score": 6.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-4hv6-xc92-j86g",
+        "maintainerHtml": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-4hv6-xc92-j86g",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-4hv6-xc92-j86g/GHSA-4hv6-xc92-j86g.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:59.743483+00:00",
+        "retrievedAt": "2026-10-18T21:46:03.579132+00:00",
+        "bodySha256": "5a5f2c1bc1becd2a35ee1f13fe031747d966f38fa567d4f21ecebbeb401557e1",
+        "bodyBytes": 8671,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:46:03 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"bec4999ab89e31b1d6c36f36963431dafc584a5e0286b529d6bf4e509141041b\"",
+          "last-modified": "Sat, 03 Oct 2026 06:31:13 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "833C:3909C4:EE62C0:1026592:6AD53E1B"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-4hv6-xc92-j86g",
+        "aliases": [],
+        "published": "2026-10-09T20:57:34Z",
+        "modified": "2026-10-09T20:57:35Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "code.vikunja.io/api"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.3.0"
+                  },
+                  {
+                    "last_affected": "2.6.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ],
+        "databaseSeverity": "MODERATE",
+        "bodySha256": "c6dd041cef643f129ef668abcf716ad2665e14f64612ee299fd7d82b2f4f6522",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2026-111917",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": false,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V3"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "All populated maintainer CVSS vectors match the fixed Reviewed vector set.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-8fxq-53rx-ph5f",
+      "cve_id": null,
+      "published_at": "2026-06-12T15:00:21Z",
+      "updated_at": "2026-06-12T15:00:21Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-8fxq-53rx-ph5f"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": ">= 2.34.0, < 2.34.2",
+          "patched_versions": "2.34.2"
+        },
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": ">= 2.33.0, < 2.33.8",
+          "patched_versions": "2.33.8"
+        },
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": ">= 2.30.0, < 2.32.7",
+          "patched_versions": "2.32.7"
+        },
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": "< 2.29.17",
+          "patched_versions": "2.29.17"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "score": 3.7
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "score": 3.7
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/coder/coder/security-advisories/GHSA-8fxq-53rx-ph5f",
+        "maintainerHtml": "https://github.com/coder/coder/security/advisories/GHSA-8fxq-53rx-ph5f",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/08/GHSA-8fxq-53rx-ph5f/GHSA-8fxq-53rx-ph5f.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:59.885574+00:00",
+        "retrievedAt": "2026-10-18T21:46:03.538723+00:00",
+        "bodySha256": "61b8281c910cb69c1ee0c572e72e8e9366e2f52a5886d47cdb6cbf3f95f979c9",
+        "bodyBytes": 5176,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:46:03 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"2d7d5e10b686a372f95452835f0aa148b6bf302f15402447704a08baac9c8852\"",
+          "last-modified": "Fri, 12 Jun 2026 15:00:21 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "8335:7F28B:E40726:F80C51:6AD53E1B"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-8fxq-53rx-ph5f",
+        "aliases": [],
+        "published": "2026-08-20T18:34:21Z",
+        "modified": "2026-08-20T18:34:21Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.34.0"
+                  },
+                  {
+                    "fixed": "2.34.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.33.0"
+                  },
+                  {
+                    "fixed": "2.33.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.30.0"
+                  },
+                  {
+                    "fixed": "2.32.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.29.17"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "databaseSeverity": "LOW",
+        "bodySha256": "3ddb7d87d0e1bc9cde66f5d710d6b667eda618b720a4945bdd5ac3923573fe49",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2026-111933",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": true,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V3"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "All populated maintainer CVSS vectors match the fixed Reviewed vector set.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-fmmf-xq98-g327",
+      "cve_id": null,
+      "published_at": "2026-10-03T06:31:59Z",
+      "updated_at": "2026-10-03T06:31:59Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-fmmf-xq98-g327"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "code.vikunja.io/api"
+          },
+          "vulnerable_version_range": ">= 0.13.0, <= 2.6.0",
+          "patched_versions": ""
+        }
+      ],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-fmmf-xq98-g327",
+        "maintainerHtml": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-fmmf-xq98-g327",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-fmmf-xq98-g327/GHSA-fmmf-xq98-g327.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:59.720912+00:00",
+        "retrievedAt": "2026-10-18T21:46:03.515003+00:00",
+        "bodySha256": "a3f7b8a4f373883a5b870350a1ec3fe5007b74e0f4351990fb53f6508e0dbee1",
+        "bodyBytes": 9100,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:46:03 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"65fb272657d640dde6998730b6880103a60a205e47cd4d0df446df8d9077e997\"",
+          "last-modified": "Sat, 03 Oct 2026 06:31:59 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "832C:25894B:EF723D:1037338:6AD53E1A"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-fmmf-xq98-g327",
+        "aliases": [],
+        "published": "2026-10-09T20:57:47Z",
+        "modified": "2026-10-09T20:57:47Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "code.vikunja.io/api"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0.13.0"
+                  },
+                  {
+                    "last_affected": "2.6.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "databaseSeverity": "MODERATE",
+        "bodySha256": "1ce282fec8989b520dbfd3adf33d33b2a6d1e5166120c91d9927c970d40398b0",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2026-111921",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": false,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [
+          "CVSS_V4"
+        ],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "Maintainer exposes no populated CVSS vector, while fixed Reviewed includes a CVSS v4 vector. This is missing corroboration, not a conflicting vector; retain Reviewed.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-fprf-r6rv-xg99",
+      "cve_id": null,
+      "published_at": "2026-10-03T06:31:22Z",
+      "updated_at": "2026-10-03T06:31:22Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-fprf-r6rv-xg99"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "code.vikunja.io/api"
+          },
+          "vulnerable_version_range": ">= 1.0.0-rc0, <= 2.6.0",
+          "patched_versions": ""
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+        "score": 5.4
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+          "score": 5.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-fprf-r6rv-xg99",
+        "maintainerHtml": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-fprf-r6rv-xg99",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-fprf-r6rv-xg99/GHSA-fprf-r6rv-xg99.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:59.520684+00:00",
+        "retrievedAt": "2026-10-18T21:46:03.491088+00:00",
+        "bodySha256": "3cfce0e624a0f3737288e450569c5f420242c69b8f91f9c98f4622844a5c0b4c",
+        "bodyBytes": 9967,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:46:03 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"4f45693fd7fd1072aca3c93dd26e47c71e657112c0fceef916095e96901ffd67\"",
+          "last-modified": "Sat, 03 Oct 2026 06:31:22 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "8330:617E2:E47412:F875EB:6AD53E1A"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-fprf-r6rv-xg99",
+        "aliases": [],
+        "published": "2026-10-09T20:57:38Z",
+        "modified": "2026-10-09T20:57:38Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "code.vikunja.io/api"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.0.0-rc0"
+                  },
+                  {
+                    "last_affected": "2.6.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+          }
+        ],
+        "databaseSeverity": "MODERATE",
+        "bodySha256": "be0767b3085330c841a12c368ee4bd2fdc8c1853054710aa91a7a98fbc16995c",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2026-111918",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": false,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V3"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "All populated maintainer CVSS vectors match the fixed Reviewed vector set.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-h58c-xccx-75m3",
+      "cve_id": null,
+      "published_at": "2026-06-12T15:00:35Z",
+      "updated_at": "2026-06-12T15:00:35Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-h58c-xccx-75m3"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": ">= 2.34.0, < 2.34.2",
+          "patched_versions": "2.34.2"
+        },
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": ">= 2.33.0, < 2.33.8",
+          "patched_versions": "2.33.8"
+        },
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": ">= 2.30.0, < 2.32.7",
+          "patched_versions": "2.32.7"
+        },
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": "< 2.29.17",
+          "patched_versions": "2.29.17"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:N/I:L/A:N",
+        "score": 3.4
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:N/I:L/A:N",
+          "score": 3.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/coder/coder/security-advisories/GHSA-h58c-xccx-75m3",
+        "maintainerHtml": "https://github.com/coder/coder/security/advisories/GHSA-h58c-xccx-75m3",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/08/GHSA-h58c-xccx-75m3/GHSA-h58c-xccx-75m3.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:59.885070+00:00",
+        "retrievedAt": "2026-10-18T21:46:03.527379+00:00",
+        "bodySha256": "b03e287a83256866642bd5d09521fb3beca60fee3ed83b73c2d1e60ad297d8cc",
+        "bodyBytes": 4843,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:46:03 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"12488988ba68d02cf36366bebcbefbda61aee5e5fb0641a0e7f9062c275f5333\"",
+          "last-modified": "Fri, 12 Jun 2026 15:00:35 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "8348:2B45EA:E5A4FD:F9AF4C:6AD53E1B"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-h58c-xccx-75m3",
+        "aliases": [],
+        "published": "2026-08-20T18:34:26Z",
+        "modified": "2026-08-20T18:34:26Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.34.0"
+                  },
+                  {
+                    "fixed": "2.34.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.33.0"
+                  },
+                  {
+                    "fixed": "2.33.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.30.0"
+                  },
+                  {
+                    "fixed": "2.32.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.29.17"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:N/I:L/A:N"
+          }
+        ],
+        "databaseSeverity": "LOW",
+        "bodySha256": "0286809a8aa7e5d89b0c2cbe00323dea49ac5f600c5ccf5910a6b12854bd6805",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2026-111932",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": true,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V3"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "All populated maintainer CVSS vectors match the fixed Reviewed vector set.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-hjx8-qv73-f7cm",
+      "cve_id": null,
+      "published_at": "2026-10-03T06:31:35Z",
+      "updated_at": "2026-10-03T06:31:35Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-hjx8-qv73-f7cm"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "code.vikunja.io/api"
+          },
+          "vulnerable_version_range": ">= 0.22.0, <= 2.6.0",
+          "patched_versions": ""
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+        "score": 6.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-hjx8-qv73-f7cm",
+        "maintainerHtml": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-hjx8-qv73-f7cm",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-hjx8-qv73-f7cm/GHSA-hjx8-qv73-f7cm.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:59.550565+00:00",
+        "retrievedAt": "2026-10-18T21:46:03.687544+00:00",
+        "bodySha256": "5111a4b3440c9ee64040f912e9ed2da43797c37b7844114ebf035dbf56bd9d89",
+        "bodyBytes": 13300,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:46:03 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"0b14c887bd41be30c9f9426aab2be56f33eb4dc4dd315c4f07dc15e3d93e2d56\"",
+          "last-modified": "Sat, 03 Oct 2026 06:31:35 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "8354:31023F:E93995:FD37A2:6AD53E1B"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-hjx8-qv73-f7cm",
+        "aliases": [],
+        "published": "2026-10-09T20:57:41Z",
+        "modified": "2026-10-09T20:57:41Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "code.vikunja.io/api"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0.22.0"
+                  },
+                  {
+                    "last_affected": "2.6.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ],
+        "databaseSeverity": "MODERATE",
+        "bodySha256": "43473f9a0a6834096d2e8e5b0caa3391305cf79a4f2e7b915484a2bb9b8daf6c",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2026-111919",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": false,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V3"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "All populated maintainer CVSS vectors match the fixed Reviewed vector set.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-m687-p538-r5hp",
+      "cve_id": null,
+      "published_at": "2026-10-03T06:32:12Z",
+      "updated_at": "2026-10-03T06:32:12Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-m687-p538-r5hp"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "code.vikunja.io/api"
+          },
+          "vulnerable_version_range": ">= 2.2.0, <= 2.6.0",
+          "patched_versions": ""
+        }
+      ],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "score": 7.2
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-m687-p538-r5hp",
+        "maintainerHtml": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-m687-p538-r5hp",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-m687-p538-r5hp/GHSA-m687-p538-r5hp.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:59.610179+00:00",
+        "retrievedAt": "2026-10-18T21:46:03.475505+00:00",
+        "bodySha256": "79356a1cc4ba8c2ae65f5748b8565190b43288e14d3dd2fc15c4b5b9d7e8e732",
+        "bodyBytes": 11069,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:46:03 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"ed71d77e2fba84ca4097e341362bb56ac2657b13825805c2599b006cb98381b0\"",
+          "last-modified": "Sat, 03 Oct 2026 06:32:12 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "8344:7A01D:FBE42C:10FDE6F:6AD53E1B"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-m687-p538-r5hp",
+        "aliases": [],
+        "published": "2026-10-09T20:57:50Z",
+        "modified": "2026-10-09T20:57:50Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "code.vikunja.io/api"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2.0"
+                  },
+                  {
+                    "last_affected": "2.6.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "databaseSeverity": "HIGH",
+        "bodySha256": "759a8f1d80fbae0ff641e3a3b2a66adb2e46cabef2f4b77caa4470aa472c252f",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2026-111922",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": true,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V4"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "All populated maintainer CVSS vectors match the fixed Reviewed vector set.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-pjr3-86v4-5p7w",
+      "cve_id": null,
+      "published_at": "2026-10-03T06:31:49Z",
+      "updated_at": "2026-10-03T06:31:49Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-pjr3-86v4-5p7w"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "code.vikunja.io/api"
+          },
+          "vulnerable_version_range": "= 2.6.0",
+          "patched_versions": ""
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+        "score": 5.4
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "score": 5.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-pjr3-86v4-5p7w",
+        "maintainerHtml": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-pjr3-86v4-5p7w",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-pjr3-86v4-5p7w/GHSA-pjr3-86v4-5p7w.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:59.679737+00:00",
+        "retrievedAt": "2026-10-18T21:46:03.787760+00:00",
+        "bodySha256": "053ab5ed88c9e4a569415c651b8f763988bc10a7d9034db362ee0345f865b5ac",
+        "bodyBytes": 14693,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:46:03 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"03a4fdf4be7ba453c1ebec6a529820629bcfba20d9164455a53cc417b0662a48\"",
+          "last-modified": "Sat, 03 Oct 2026 06:31:49 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "834F:304F9A:E5DA51:F9F14F:6AD53E1B"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-pjr3-86v4-5p7w",
+        "aliases": [],
+        "published": "2026-10-09T20:57:44Z",
+        "modified": "2026-10-09T20:57:44Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "code.vikunja.io/api"
+            },
+            "versions": [
+              "2.6.0"
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+          }
+        ],
+        "databaseSeverity": "MODERATE",
+        "bodySha256": "6b06f1cb2f8a0cc090bcff73a9efc1282763862722ba62a72275378eb28a49d5",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2026-111920",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": false,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V3"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "All populated maintainer CVSS vectors match the fixed Reviewed vector set.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    },
+    {
+      "ghsa_id": "GHSA-wcx9-ccpj-hx3c",
+      "cve_id": null,
+      "published_at": "2024-10-28T15:04:34Z",
+      "updated_at": "2024-10-28T15:04:34Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-wcx9-ccpj-hx3c"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": "2.16.0",
+          "patched_versions": "2.16.1"
+        },
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": ">= 2.15.0, < 2.15.3",
+          "patched_versions": "2.15.3"
+        },
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/coder/coder/v2"
+          },
+          "vulnerable_version_range": ">= 2.3.1, < 2.14.4",
+          "patched_versions": "2.14.4"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+        "score": 4.3
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+          "score": 4.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "sourceUrls": {
+        "maintainerApi": "https://api.github.com/repos/coder/coder/security-advisories/GHSA-wcx9-ccpj-hx3c",
+        "maintainerHtml": "https://github.com/coder/coder/security/advisories/GHSA-wcx9-ccpj-hx3c",
+        "fixedReviewed": "https://github.com/github/advisory-database/blob/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2024/10/GHSA-wcx9-ccpj-hx3c/GHSA-wcx9-ccpj-hx3c.json"
+      },
+      "receipt": {
+        "httpStatus": 200,
+        "requestStartedAt": "2026-10-18T21:45:41.784762+00:00",
+        "retrievedAt": "2026-10-18T21:45:46.085820+00:00",
+        "bodySha256": "ad1fab3486be86454500d493396fae508058a2194ecb5c92acd74557395d8764",
+        "bodyBytes": 5638,
+        "headers": {
+          "date": "Sun, 18 Oct 2026 21:45:45 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "etag": "W/\"61797e9ed65fe49883834fae497004de561a1bb2af44946ec0b01544b6c186a1\"",
+          "last-modified": "Mon, 28 Oct 2024 15:04:34 GMT",
+          "x-github-api-version-selected": "2022-11-28",
+          "x-github-request-id": "2F14:2580BE:E6443D:FA420D:6AD53E09"
+        }
+      },
+      "fixedReviewed": {
+        "id": "GHSA-wcx9-ccpj-hx3c",
+        "aliases": [],
+        "published": "2024-10-28T18:31:57Z",
+        "modified": "2024-10-30T18:50:39Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.16.0"
+                  },
+                  {
+                    "fixed": "2.16.1"
+                  }
+                ]
+              }
+            ],
+            "versions": [
+              "2.16.0"
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.15.0"
+                  },
+                  {
+                    "fixed": "2.15.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/coder/coder/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.3.1"
+                  },
+                  {
+                    "fixed": "2.14.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "databaseSeverity": "MODERATE",
+        "bodySha256": "7a913b960088bb7f43354a17c41d45db3981d4adae0b0e2fba339a8995e10ea6",
+        "commit": "8e6fcc108ca6695dfcae73e70447aba37a3b5832",
+        "bytesMatchObservedHead": true,
+        "observedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db"
+      },
+      "intendedOsvCveAlias": "CVE-2024-58398",
+      "comparison": {
+        "ghsaIdentityMatches": true,
+        "intendedCveConfirmedByMaintainer": false,
+        "maintainerCveIsNull": true,
+        "withdrawalMatches": true,
+        "publishedDateMatches": false,
+        "updatedDateMatches": false,
+        "severityLabelMatchesLiterally": false,
+        "severityMatchesAfterNormalization": true,
+        "severityNormalization": "Maintainer medium is equivalent to Reviewed MODERATE; other labels are compared case-insensitively.",
+        "matchingCvssTypes": [
+          "CVSS_V3"
+        ],
+        "conflictingCvssTypes": [],
+        "reviewedCvssTypesAbsentFromMaintainer": [
+          "CVSS_V4"
+        ],
+        "maintainerCvssTypesAbsentFromReviewed": [],
+        "packageMatchesAfterEcosystemCaseNormalization": true,
+        "rangeAssessment": "equivalent-expressed-bounds",
+        "rangeNote": "Manual comparison confirms the same affected version bounds and patch values; Reviewed expresses the maintainer range as OSV events or explicit versions.",
+        "cvssNote": "Maintainer CVSS v3 vector matches Reviewed; fixed Reviewed additionally carries CVSS v4, absent from maintainer API. Retain both Reviewed vectors.",
+        "dateNote": "Maintainer published_at/updated_at are earlier than Reviewed published/modified. These are independent source publication histories; do not substitute maintainer dates for Reviewed dates."
+      },
+      "decision": "retain-reviewed-security-fields; CVE alias attribution remains OSV-only"
+    }
+  ],
+  "observedReviewedHead": "bd2141aaa8c93b3cecf03aba723011b7d709e5db",
+  "summary": {
+    "advisories": 10,
+    "http200": 10,
+    "identityMatches": 10,
+    "maintainerCveAliasesConfirmed": 0,
+    "maintainerCveIdNull": 10,
+    "withdrawn": 0,
+    "severityMatchesAfterNormalization": 10,
+    "matchingRangeBounds": 9,
+    "differentRangeNotationNeedsCaveat": [
+      "GHSA-3rw9-wmc8-8948"
+    ],
+    "conflictingCvssVectors": 0,
+    "reviewedCvssAbsentFromMaintainer": [
+      "GHSA-fmmf-xq98-g327: CVSS_V4",
+      "GHSA-wcx9-ccpj-hx3c: CVSS_V4"
+    ],
+    "publishedAndUpdatedDatesDiffer": 10,
+    "retainedSourceBytesMatchObservedHead": true
+  },
+  "handling": "The ten CVE additions are supported by OSV source aliases but remain unconfirmed by the maintainer API. This artifact makes no independent CVE identity assertion and authorizes no alteration of affected ranges, CVSS, severity, or withdrawal. Earlier maintainer dates and missing maintainer CVSS fields must remain explicitly source-qualified.",
+  "overlayUpdates": [
+    {
+      "id": "GHSA-3rw9-wmc8-8948",
+      "addedAliases": [
+        "CVE-2025-71435"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2025-08-28T19:36:04Z",
+      "retainedModifiedAt": "2025-08-28T19:36:05Z",
+      "lastVerifiedAt": "2026-10-18T21:45:51.871878Z"
+    },
+    {
+      "id": "GHSA-4hv6-xc92-j86g",
+      "addedAliases": [
+        "CVE-2026-111917"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2026-10-09T20:57:34Z",
+      "retainedModifiedAt": "2026-10-09T20:57:35Z",
+      "lastVerifiedAt": "2026-10-18T21:46:03.579132Z"
+    },
+    {
+      "id": "GHSA-8fxq-53rx-ph5f",
+      "addedAliases": [
+        "CVE-2026-111933"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2026-08-20T18:34:21Z",
+      "retainedModifiedAt": "2026-08-20T18:34:21Z",
+      "lastVerifiedAt": "2026-10-18T21:46:03.538723Z"
+    },
+    {
+      "id": "GHSA-fmmf-xq98-g327",
+      "addedAliases": [
+        "CVE-2026-111921"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2026-10-09T20:57:47Z",
+      "retainedModifiedAt": "2026-10-09T20:57:47Z",
+      "lastVerifiedAt": "2026-10-18T21:46:03.515003Z"
+    },
+    {
+      "id": "GHSA-fprf-r6rv-xg99",
+      "addedAliases": [
+        "CVE-2026-111918"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2026-10-09T20:57:38Z",
+      "retainedModifiedAt": "2026-10-09T20:57:38Z",
+      "lastVerifiedAt": "2026-10-18T21:46:03.491088Z"
+    },
+    {
+      "id": "GHSA-h58c-xccx-75m3",
+      "addedAliases": [
+        "CVE-2026-111932"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2026-08-20T18:34:26Z",
+      "retainedModifiedAt": "2026-08-20T18:34:26Z",
+      "lastVerifiedAt": "2026-10-18T21:46:03.527379Z"
+    },
+    {
+      "id": "GHSA-hjx8-qv73-f7cm",
+      "addedAliases": [
+        "CVE-2026-111919"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2026-10-09T20:57:41Z",
+      "retainedModifiedAt": "2026-10-09T20:57:41Z",
+      "lastVerifiedAt": "2026-10-18T21:46:03.687544Z"
+    },
+    {
+      "id": "GHSA-m687-p538-r5hp",
+      "addedAliases": [
+        "CVE-2026-111922"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2026-10-09T20:57:50Z",
+      "retainedModifiedAt": "2026-10-09T20:57:50Z",
+      "lastVerifiedAt": "2026-10-18T21:46:03.475505Z"
+    },
+    {
+      "id": "GHSA-pjr3-86v4-5p7w",
+      "addedAliases": [
+        "CVE-2026-111920"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2026-10-09T20:57:44Z",
+      "retainedModifiedAt": "2026-10-09T20:57:44Z",
+      "lastVerifiedAt": "2026-10-18T21:46:03.787760Z"
+    },
+    {
+      "id": "GHSA-wcx9-ccpj-hx3c",
+      "addedAliases": [
+        "CVE-2024-58398"
+      ],
+      "maintainerCveConfirmed": false,
+      "retainedPublishedAt": "2024-10-28T18:31:57Z",
+      "retainedModifiedAt": "2024-10-30T18:50:39Z",
+      "lastVerifiedAt": "2026-10-18T21:45:46.085820Z"
+    }
+  ],
+  "osvDirectApiReceipts": [
+    {
+      "id": "GHSA-3rw9-wmc8-8948",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-3rw9-wmc8-8948",
+      "checkedAt": "2026-10-18T21:45:17.995860+00:00",
+      "httpStatus": 200,
+      "rawBytes": 2566,
+      "rawSha256": "c58f4cfb92d643f6031090211e608f26b6ea889e25d98366db656636d02efc1d",
+      "canonicalSha256": "a204d0cba5d16460747ca51ddfdeadf4d9b53f6eb7e5665dcecfc55868c76de5",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2025-08-28T19:36:04Z",
+      "modified": "2026-10-18T10:55:50.653723823Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2025-71435",
+        "GO-2025-3921"
+      ]
+    },
+    {
+      "id": "GHSA-4hv6-xc92-j86g",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-4hv6-xc92-j86g",
+      "checkedAt": "2026-10-18T21:45:17.797384+00:00",
+      "httpStatus": 200,
+      "rawBytes": 5717,
+      "rawSha256": "5c2b581567a109cd561fd509e7008389cb4732906b5a6dd8625684d56c4208e2",
+      "canonicalSha256": "e04425945a559da147592bff0facef950705ce44dd47f1e8ab0619458b5e244f",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2026-10-09T20:57:34Z",
+      "modified": "2026-10-18T10:56:09.758077526Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2026-111917"
+      ]
+    },
+    {
+      "id": "GHSA-8fxq-53rx-ph5f",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-8fxq-53rx-ph5f",
+      "checkedAt": "2026-10-18T21:45:17.799110+00:00",
+      "httpStatus": 200,
+      "rawBytes": 4263,
+      "rawSha256": "8af825c0f9e93bfca5cfdafa3a56c0c6498530295dbebcedd3a0fcaec1b87ac3",
+      "canonicalSha256": "e0c8b0a23efa3590ade4ab1cf03769d565c9f27f8f6de4ab2e0bcc6c53b44ace",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2026-08-20T18:34:21Z",
+      "modified": "2026-10-18T10:55:40.994398805Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2026-111933",
+        "GO-2026-6265"
+      ]
+    },
+    {
+      "id": "GHSA-fmmf-xq98-g327",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-fmmf-xq98-g327",
+      "checkedAt": "2026-10-18T21:45:17.815356+00:00",
+      "httpStatus": 200,
+      "rawBytes": 7470,
+      "rawSha256": "64beac4ef89a7a03257b0583b344c6f6a5d6b9c7f5d6705a5ceb3afc7d79ceda",
+      "canonicalSha256": "79e412c6fd813483f3b884106d6a2eed53e36b46242a93d974218cfebf865cf3",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2026-10-09T20:57:47Z",
+      "modified": "2026-10-18T10:56:06.896043067Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2026-111921"
+      ]
+    },
+    {
+      "id": "GHSA-fprf-r6rv-xg99",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-fprf-r6rv-xg99",
+      "checkedAt": "2026-10-18T21:45:20.859427+00:00",
+      "httpStatus": 200,
+      "rawBytes": 7043,
+      "rawSha256": "1f37cfdbc3d53bfae4079555383c7d8d960268b00fd5d28f617ea7e9fb9a7c2f",
+      "canonicalSha256": "b20e6cc5fab894240c6c7da4db388042bfecd2a88ed6f22de4bc0eefe5c2aed9",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2026-10-09T20:57:38Z",
+      "modified": "2026-10-18T10:56:07.090920964Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2026-111918"
+      ]
+    },
+    {
+      "id": "GHSA-h58c-xccx-75m3",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-h58c-xccx-75m3",
+      "checkedAt": "2026-10-18T21:45:20.727575+00:00",
+      "httpStatus": 200,
+      "rawBytes": 4112,
+      "rawSha256": "914fcf466c046e843b4a819df891da04e04aa54ddd836ebee9fb3316ad691a8a",
+      "canonicalSha256": "76221ac23ad1f2c66ba1e244545e05a53f1dbd8403e83e39fa056e04d94b0ad9",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2026-08-20T18:34:26Z",
+      "modified": "2026-10-18T10:55:43.815551258Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2026-111932",
+        "GO-2026-6267"
+      ]
+    },
+    {
+      "id": "GHSA-hjx8-qv73-f7cm",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-hjx8-qv73-f7cm",
+      "checkedAt": "2026-10-18T21:45:20.775826+00:00",
+      "httpStatus": 200,
+      "rawBytes": 9040,
+      "rawSha256": "7a2528adddabe940fb7862fef34a6c3c1e844c97d7ae58dc8928aab27830674d",
+      "canonicalSha256": "24b89ebeff2bad586b14e56c9d4b1f2f408a3422d487e73649072e3f9293376b",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2026-10-09T20:57:41Z",
+      "modified": "2026-10-18T10:56:09.954756188Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2026-111919"
+      ]
+    },
+    {
+      "id": "GHSA-m687-p538-r5hp",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-m687-p538-r5hp",
+      "checkedAt": "2026-10-18T21:45:20.867251+00:00",
+      "httpStatus": 200,
+      "rawBytes": 6765,
+      "rawSha256": "b29375b3d2795bd4c3d376aeae8a563d7f52302a41e9ff760c6bc721b075dc3c",
+      "canonicalSha256": "2da8f356bf9f60174f4b166a8a246d18f3351c75186f270330aa57d3b4493589",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2026-10-09T20:57:50Z",
+      "modified": "2026-10-18T10:56:07.386227546Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2026-111922"
+      ]
+    },
+    {
+      "id": "GHSA-pjr3-86v4-5p7w",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-pjr3-86v4-5p7w",
+      "checkedAt": "2026-10-18T21:45:23.875531+00:00",
+      "httpStatus": 200,
+      "rawBytes": 11428,
+      "rawSha256": "6fffe6fd56d1b7ae07996f7d808e44c8e2bc48243808a2893e97c3e4a4bec706",
+      "canonicalSha256": "158ad254c810c0885d8eb1246b2ac548aa99672365fe70066125f3659090a725",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2026-10-09T20:57:44Z",
+      "modified": "2026-10-18T10:56:09.512631783Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2026-111920"
+      ]
+    },
+    {
+      "id": "GHSA-wcx9-ccpj-hx3c",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-wcx9-ccpj-hx3c",
+      "checkedAt": "2026-10-18T21:45:23.779267+00:00",
+      "httpStatus": 200,
+      "rawBytes": 3248,
+      "rawSha256": "7cc9d81aa9c51aab86f409209ebba8951bc3756a73d22b2dcc94696de238a024",
+      "canonicalSha256": "039ac48759a8d74bd7d9569ab33d6f17f3d1e61384f7865eb775da56d902c998",
+      "matchesCurrentArchiveRecord": true,
+      "published": "2024-10-28T18:31:57Z",
+      "modified": "2026-10-18T10:55:48.018610412Z",
+      "withdrawn": null,
+      "aliases": [
+        "CVE-2024-58398",
+        "GO-2024-3228"
+      ]
+    }
+  ],
+  "scopeNotes": [
+    "Alias-only data overlays, retaining immutable Reviewed evidence for dates, affected ranges, CVSS and withdrawals.",
+    "OSV explicit aliases establish the CVE correspondence; a maintainer source with null cve_id is not represented as confirming the new CVE.",
+    "Independent maintainer fields are preserved for comparison. Existing source differences are not silently normalized or treated as new source changes.",
+    "No new independent displayed advisories, no name-based merging, no vulnerability scanning, no exploitation or KEV inference."
+  ]
+}
