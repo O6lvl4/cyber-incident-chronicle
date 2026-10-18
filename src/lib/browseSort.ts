@@ -75,22 +75,26 @@ function sorted<T>(items: readonly T[], compare: Comparator<T>, key: (item: T) =
   return [...items].sort((left, right) => compare(left, right) || compareExact(key(left), key(right)));
 }
 
+function partialDateRank(value: IncidentDateEvidence): number | null {
+  const label = value.label.trim().replace(/（(?:日不明|月日不明)）$/, '');
+  if (value.precision === 'year') {
+    const year = /^(\d{4})(?:年)?$/.exec(label);
+    return year && Number(year[1]) > 0 ? Number(year[1]) * 10000 : null;
+  }
+  const parts = /^(\d{4})(?:年(\d{1,2})月|-(\d{2}))$/.exec(label);
+  if (!parts) return null;
+  const year = Number(parts[1]);
+  const month = Number(parts[2] ?? parts[3]);
+  return year > 0 && month >= 1 && month <= 12 ? year * 10000 + month * 100 : null;
+}
+
 /** A calendar tuple, not a fabricated date: absent month/day components are zero.
  * Only exact month/year labels are parsed; narrative estimates remain unknown
  * unless the evidence supplies a date boundary. Never use legacy detection dates.
  */
 function eventDateRank(value?: IncidentDateEvidence): number | null {
   if (!value || value.precision === 'unknown' || value.precision === 'notApplicable') return null;
-  if (value.precision === 'month' || value.precision === 'year') {
-    const label = value.label.trim().replace(/（(?:日不明|月日不明)）$/, '');
-    const parts = value.precision === 'month'
-      ? /^(\d{4})(?:年(\d{1,2})月|-(\d{2}))$/.exec(label)
-      : /^(\d{4})(?:年)?$/.exec(label);
-    if (!parts) return null;
-    const year = Number(parts[1]);
-    const month = value.precision === 'month' ? Number(parts[2] ?? parts[3]) : 0;
-    return year > 0 && (value.precision === 'year' || (month >= 1 && month <= 12)) ? year * 10000 + month * 100 : null;
-  }
+  if (value.precision === 'month' || value.precision === 'year') return partialDateRank(value);
   const date = value.startDate;
   if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
   const time = timestamp(date);
