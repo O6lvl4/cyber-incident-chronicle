@@ -5,7 +5,7 @@
   "announcementDate": "2026-08-18",
   "announcementDateLabel": "初報公表（9月に最終調査結果）",
   "occurredDate": null,
-  "occurredDateLabel": "侵入開始日非公表（2026-08-17に発覚後のBIツール停止）",
+  "occurredDateLabel": "2026-08-10に不正アクセス開始、08-16にデータ不正取得",
   "updatedDate": "2026-09-30",
   "statusAsOfDate": "2026-09-30",
   "impactTypes": [
@@ -36,9 +36,21 @@
       "title": "調査結果と再発防止策（第四報）",
       "url": "https://voising-official.com/news/1015",
       "publishedDate": "2026-09-30"
+    },
+    {
+      "title": "BIツールへの不正アクセス・個人情報漏えい（初報）",
+      "url": "https://voising-official.com/news/931",
+      "publishedDate": "2026-08-18"
     }
   ],
   "timeline": [
+    {
+      "date": "2026-08-16",
+      "label": "データ不正取得を確認",
+      "kind": "occurrence",
+      "summary": "8月16日18時47分〜20時21分のデータ不正取得を同日23時55分に把握。翌17日1時55分までに停止・遮断",
+      "sourceUrl": "https://voising-official.com/news/931"
+    },
     {
       "date": "2026-08-17",
       "label": "BIツールを停止",
@@ -68,5 +80,24 @@
   ],
   "geography": "日本",
   "lastVerifiedDate": "2026-10-09",
-  "detectedDate": "2026-08-17"
+  "detectedDate": "2026-08-16",
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026-08-10（アクセス開始）〜08-16（データ取得）",
+      "note": "初報は8月10日1時2分頃から不正アクセス開始、8月16日18時47分〜20時21分にデータ不正取得と記載。連続したアクセスを意味しない。",
+      "sourceUrl": "https://voising-official.com/news/931",
+      "reviewedDate": "2026-10-18",
+      "startDate": "2026-08-10",
+      "endDate": "2026-08-16"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026-08-16",
+      "note": "初報は8月16日のデータ不正取得を説明し、同日23時55分に事態を確認、8月17日1時55分までに停止・遮断したと記載。被害の種類はデータ不正取得。",
+      "sourceUrl": "https://voising-official.com/news/931",
+      "reviewedDate": "2026-10-18",
+      "startDate": "2026-08-16"
+    }
+  }
 }
