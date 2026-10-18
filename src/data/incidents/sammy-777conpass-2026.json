@@ -1,32 +1,46 @@
 {
   "id": "sammy-777conpass-2026",
   "company": "サミーネットワークス",
-  "title": "777CON-PASS管理サーバーへの不正アクセスで個人情報流出の可能性",
+  "title": "777CON-PASSの認証・アクセス制御不備でユーザー情報218万8,657件の漏えいを確認",
   "announcementDate": "2026-10-02",
   "announcementDateLabel": "収録した公表日",
   "occurredDate": null,
-  "occurredDateLabel": "発生・検知日は収録資料では未公表",
-  "updatedDate": "2026-10-02",
-  "statusAsOfDate": "2026-10-02",
-  "lastVerifiedDate": "2026-10-09",
+  "occurredDateLabel": "確認された情報取得は2026年9月25日・9月30日（初期侵入開始は未特定）",
+  "updatedDate": "2026-10-16",
+  "statusAsOfDate": "2026-10-16",
+  "lastVerifiedDate": "2026-10-18",
   "impactTypes": [
     "leak",
     "unauthorizedAccess"
   ],
-  "disclosureStatus": "possible",
+  "disclosureStatus": "confirmed",
   "attackMethod": {
-    "label": "具体的な侵入手法は未公表",
-    "status": "unknown"
+    "label": "一部機能の認証・アクセス制御不備を悪用した情報取得",
+    "status": "confirmed"
   },
-  "summary": "777CON-PASSの管理サーバーに第三者が不正アクセスし、個人情報が外部へ流出した可能性を公表。詳細と原因を調査し、監視・対策を強化するとした。",
+  "summary": "10月16日の最終報で、9月25日・30日にユーザー情報が外部から不正取得されたことを確認。ユーザーID218万8,657件（延べ件数）のほか、性別、生年月日、ニックネーム、任意のアイコン画像、行動エリア等が対象。認証用顔画像、氏名、カード情報、アプリログイン用メールアドレス・パスワードは漏えいしていない。",
   "affectedData": [
-    "個人情報（収録した公式公表では具体的な項目は未公表）"
+    "ユーザーID：2,188,657件（延べ件数）",
+    "性別：1,799,085件、生年月日：1,790,253件、ニックネーム：1,077,686件",
+    "任意のアイコン画像：86,386件（本人確認用の認証用顔画像とは別）",
+    "市区町村単位の行動エリア：36,534件",
+    "店頭予約利用者の電話番号：6,639件"
   ],
-  "counts": [],
+  "counts": [
+    {
+      "value": 2188657,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えいが確認されたユーザーID（延べ件数）",
+      "approximate": false
+    }
+  ],
   "caveats": [
-    "対象人数・件数および発生・検知日は収録した公式公表に記載されていない",
-    "クレジットカード情報は同社が保持していないため流出可能性はないと公表",
-    "報道のみの追加項目・人数は採用していない"
+    "218万8,657件は延べユーザーID件数であり、重複のない実人数とはしない。各情報項目の件数にも重複がある",
+    "任意のアイコン画像と、入場時本人確認用の認証用顔画像を区別。認証用顔画像は漏えいしていない",
+    "氏名、クレジットカード情報、アプリログイン用メールアドレス・パスワードは漏えいしていないと最終報が明記",
+    "電話番号6,639件はアプリをインストールせず店頭予約を利用した顧客が対象で、電話番号以外の情報は含まれない",
+    "調査完了日は10月15日だが、漏えいの最初の確認日は明記されていない"
   ],
   "geography": "日本国内の対象システム・利用者",
   "sources": [
@@ -34,31 +48,65 @@
       "title": "サミーネットワークス：777CON-PASSの不正アクセス",
       "url": "https://www.sammy-net.jp/news/2026/10/777con-pass-5.html",
       "publishedDate": "2026-10-02"
+    },
+    {
+      "title": "サミーネットワークス：777CON-PASS不正アクセスの最終調査結果",
+      "url": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "title": "サミーネットワークス：777CON-PASS不正アクセスの同日続報",
+      "url": "https://www.sammy-net.jp/news/2026/10/777con-pass-6.html",
+      "publishedDate": "2026-10-02"
     }
   ],
   "timeline": [
+    {
+      "date": "2026-09-25",
+      "label": "情報の不正取得",
+      "kind": "occurrence",
+      "summary": "最終報は9月25日・9月30日の不正取得を確認。連続した攻撃期間とはしない",
+      "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "不審アクセス検知・遮断",
+      "kind": "occurrence",
+      "summary": "調査を開始し、20時に攻撃元IPを遮断、22時頃にアクセス制御を修正",
+      "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html"
+    },
     {
       "date": "2026-10-02",
       "label": "流出の可能性を公表",
       "summary": "管理サーバーへの不正アクセスと調査継続を公表",
       "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-5.html",
       "kind": "disclosure"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "最終調査結果を公表",
+      "kind": "update",
+      "summary": "情報取得とユーザーID延べ218万8,657件の漏えいを確認、対象項目と非対象項目を整理",
+      "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html"
     }
   ],
   "eventDates": {
     "attack": {
-      "precision": "unknown",
-      "label": "未公表・不明",
-      "note": "確認した公表資料に記載なし。公式案内は第三者による不正アクセスの発生を記載するが、攻撃の実施時期を示さない。",
-      "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-5.html",
-      "reviewedDate": "2026-10-18"
+      "precision": "period",
+      "label": "2026年9月25日・9月30日",
+      "startDate": "2026-09-25",
+      "note": "10月16日最終報のアクセスログ解析結果に、9月25日および9月30日に顧客情報が外部から不正取得されたと明記。確認済みの攻撃日を示し、その間ずっと攻撃が続いたことや最初の侵入日時を意味しない。",
+      "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html",
+      "reviewedDate": "2026-10-18",
+      "endDate": "2026-09-30"
     },
     "damageConfirmed": {
       "precision": "unknown",
       "label": "未公表・不明",
-      "note": "確認した公表資料に記載なし。漏えいした可能性と調査継続を記載し、実際の流出等の初確認日は示されていない。",
-      "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-5.html",
+      "note": "10月16日最終報で情報の不正取得が確認されたが、最初に漏えいを確認した日は明記されていない。9月30日は不審アクセス検知、10月15日は調査完了日であり、漏えい初確認日へ転用しない。",
+      "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html",
       "reviewedDate": "2026-10-18"
     }
-  }
+  },
+  "scaleLabel": "ユーザーID2,188,657件（延べ件数）の漏えいを確認"
 }

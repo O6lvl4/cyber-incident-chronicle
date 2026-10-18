@@ -1,0 +1,3795 @@
+{
+  "auditDate": "2026-10-18",
+  "baselineCommit": "697d4757c273f1cd804a5b93a94a2ef213d0a2a5",
+  "scope": "初回監査後に公表日以外の2項目とも日付を登録できていなかった81事案を再点検。初報・続報・最終報・FAQに加え、公式の統合報告書・有価証券報告書等を探索した。",
+  "countingRule": "公表日の収録値を1項目とし、attack/damageConfirmedのday/month/year/period/approximateを加算。unknown/notApplicable/項目欠落は日付として数えない。公表日は収録資料の起点で、初報と同義ではない。",
+  "limits": [
+    "確認した資料の範囲での結果。各社の全公表資料を網羅した主張ではない。",
+    "過去の監査で取得済みの本文も再読に使用。取得失敗は本文に日付がないことを意味しない。",
+    "異常・侵入検知、単なる障害発生、漏えい可能性、通知受領、公表日を被害の初確認へ代入しない。確認した被害の種類・対象範囲を個別noteに保持する。",
+    "攻撃時期は公式資料が示す攻撃行為・発生の時期であり、初期侵入日や攻撃期間全体を特定するとは限らない。",
+    "2つの日付が揃うことを優先して推測で補完しない。登録不可の有望根拠はcandidateEvidenceへ分離する。"
+  ],
+  "before": {
+    "totalIncidents": 191,
+    "atLeastTwoDateCategories": 110,
+    "allThreeDateCategories": 33,
+    "exactlyTwoDateCategories": 77,
+    "publicationOnly": 81,
+    "knownAttackDates": 82,
+    "knownDamageConfirmationDates": 61
+  },
+  "after": {
+    "totalIncidents": 191,
+    "atLeastTwoDateCategories": 120,
+    "allThreeDateCategories": 34,
+    "exactlyTwoDateCategories": 86,
+    "publicationOnly": 71,
+    "knownAttackDates": 91,
+    "knownDamageConfirmationDates": 63
+  },
+  "newlyCoveredIncidentIds": [
+    "avant-disclosure-2023",
+    "seiko-2023",
+    "zeon-2023",
+    "kadokawa-2024",
+    "oiles-2024",
+    "moonstar-2026",
+    "sammy-777conpass-2026",
+    "daiichikosho-2026",
+    "arcadia-speecan-raiden-2026",
+    "gdo-system-2026"
+  ],
+  "unresolvedPublicationOnlyIds": [
+    "tci-us-2022",
+    "nikkei-smartclip-2022",
+    "adastria-2023",
+    "sourcenext-shop-2023",
+    "teikoku-databank-2023",
+    "toyota-connected-cloud-2023",
+    "kurashiki-hampu-2023",
+    "ites-2023",
+    "kinokuniya-fujisan-delivery-2023",
+    "toyota-mobility-bookingcar-2024",
+    "fujitsu-2024",
+    "wantedly-2024",
+    "morinaga-confectionery-2024",
+    "tokyo-gas-tges-2024",
+    "tomoe-shokai-2024",
+    "mitsubishi-home-2024",
+    "livable-insider-2024",
+    "nidec-precision-vietnam-2024",
+    "ctc-subcontractor-2024",
+    "sougyo-2024",
+    "kanamoto-2024",
+    "fujikura-2024",
+    "hulu-credential-stuffing-2025",
+    "ntt-com-order-2025",
+    "furuno-electric-2025",
+    "nssol-2025",
+    "shirohato-2025",
+    "mazda-2026-03-19",
+    "2rinkan-2026",
+    "moneyforward-2026-05-01",
+    "zojirushi-2026-05-15",
+    "icc-2026-05-19",
+    "murauchi-2026",
+    "chuden-2026",
+    "yellowhat-web-reservation-2026",
+    "mitsui-fudosan-credentials-2026",
+    "paperlogic-2026",
+    "digital-agency-gss-2026",
+    "kingprinters-system-2026",
+    "ikegami-cyberattack-2026",
+    "fines-reservation-2026",
+    "japanpost-international-inquiry-2026",
+    "legoland-hotel-booking-2026",
+    "park24-timescar-2026",
+    "tokyo-metro-metpo-2026",
+    "temairazu-2026",
+    "toppan-payments-portal-2026",
+    "aiphone-australia-2026",
+    "japanpost-app-2026",
+    "unirita-document-saas-2026",
+    "yamato-atobarai-2026",
+    "sagawa-tracking-2026",
+    "daiichi-life-hr-2026",
+    "jogmec-2026",
+    "recruit-studysapuri-enumeration-2026",
+    "daiki-suisan-app-2026",
+    "kufu-machitalk-2026",
+    "whiteessence-2026",
+    "asahi-kasei-pharma-digital-2026",
+    "ceres-pointincome-2026",
+    "his-2026",
+    "idc-frontier-2026",
+    "flex-gallery-2026",
+    "hi-ho-mypage-2026",
+    "uzabase-newspicks-2026",
+    "cct-koto-online-2026",
+    "enecom-2026",
+    "applabo-mail-server-2026",
+    "medley-atlink-2026",
+    "access-cros-taiwan-2026",
+    "recruit-studysapuri-permissions-2026"
+  ],
+  "records": [
+    {
+      "id": "tci-us-2022",
+      "company": "東京化成工業グループ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.tcichemicals.com/JP/ja/notice/20221101"
+      ],
+      "newSources": [],
+      "reviewSummary": "11月1日公式報を再確認。6月23日はアクセス確認、6月27日は流出可能性の把握。マルウェア駆除は報告するが初確認日はない。公式サイト検索で補足日付を取得できず。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "6月23日は不正アクセスを確認した日。実際の侵入時期は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.tcichemicals.com/JP/ja/notice/20221101",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "6月27日は漏えいの可能性を把握した日。マルウェア削除と7月11日の正常化は記載されるが、感染その他の被害の最初の確認日は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.tcichemicals.com/JP/ja/notice/20221101",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "6月23日は不正アクセスを確認した日。実際の侵入時期は 確認した公表資料に記載なし。",
+        "damageConfirmed": "6月27日は漏えいの可能性を把握した日。マルウェア削除と7月11日の正常化は記載されるが、感染その他の被害の最初の確認日は 確認した公表資料に記載なし。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2022-11-01",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "nikkei-smartclip-2022",
+      "company": "日本経済新聞社／日経メディアマーケティング",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.nikkei.co.jp/nikkeiinfo/news/information/1043.html",
+        "https://www.nikkei.co.jp/nikkeiinfo/news/information/1062.html"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1043.html",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "初報を公式2022年一覧から発見し、第2報と照合。12月14日はホスティングサーバー不正アクセスの判明日。初報の266人、第2報の949人はいずれも流出のおそれの範囲。実際のアクセス日時・被害初確認日は示されない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。12月14日は不正アクセスの判明日。実際のアクセス日時や期間は第2報に記載されていない。",
+          "sourceUrl": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1062.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。第2報は個人情報流出の可能性を否定できないとの調査結果で、外部への情報流出は未確認。被害を初めて確認した日は明示されていない。",
+          "sourceUrl": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1062.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。12月14日は不正アクセスの判明日。実際のアクセス日時や期間は第2報に記載されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。第2報は個人情報流出の可能性を否定できないとの調査結果で、外部への情報流出は未確認。被害を初めて確認した日は明示されていない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1062.html",
+          "error": "HTTP Error 403: Forbidden",
+          "resolvedBy": "公式初報・第2報をweb検索/本文取得で確認（直接HTTP403のまま）"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2022-12-23",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "adastria-2023",
+      "company": "アダストリア",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.adastria.co.jp/news/notice/entry-15641/",
+        "https://www.adastria.co.jp/news/notice/entry-15787/",
+        "https://www.adastria.co.jp/news/notice/entry-15640/"
+      ],
+      "newSources": [],
+      "reviewSummary": "初報・第二報・第三報を再読。1月18日早朝は不正アクセスの確認、続く社内ネットワーク・物流の予防的停止。第三報の1月20日〜2月17日調査、2月20日結果受領、3月20日委員会最終報告、3月31日公表はいずれも攻撃期間ではない。調査終了時にも外部流出未確認。実行時期・初の具体的被害確認日を新たに特定できない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。1月18日早朝は不正アクセスを受けたことの確認時点。初報・第二報・第三報とも攻撃の実行時期を示していない。",
+          "sourceUrl": "https://www.adastria.co.jp/news/notice/entry-15787/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。1月18日は侵害の確認後に物流・社内システムを予防的に停止した日。流出は調査終了時点でも未確認で、被害を初めて確認した日は特定されていない。",
+          "sourceUrl": "https://www.adastria.co.jp/news/notice/entry-15787/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。1月18日早朝は不正アクセスを受けたことの確認時点。初報・第二報・第三報とも攻撃の実行時期を示していない。",
+        "damageConfirmed": "確認した公表資料に記載なし。1月18日は侵害の確認後に物流・社内システムを予防的に停止した日。流出は調査終了時点でも未確認で、被害を初めて確認した日は特定されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2023-01-19",
+        "result": "初報ページの2023.01.19と第三報の経緯で一致。"
+      }
+    },
+    {
+      "id": "sourcenext-shop-2023",
+      "company": "ソースネクスト",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.sourcenext.com/support/i/2023/0214_info/",
+        "https://www.sourcenext.com/support/i/2023/0214_1",
+        "https://www.sourcenext.com/support/i/2023/0214_3"
+      ],
+      "newSources": [],
+      "reviewSummary": "初報とカード・個人情報FAQを確認。11月15日〜1月17日は利用顧客の対象期間。FAQは実際の漏えいか判断できないと説明し、改ざん初確認日もない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した2月14日公表とFAQでは、2022年11月15日〜2023年1月17日は対象顧客が注文・カード登録した期間であり、不正アクセス・改ざんを実行した日付・期間としては特定されていない。",
+          "sourceUrl": "https://www.sourcenext.com/support/i/2023/0214_info/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表とFAQでは、1月4日はカード会社から漏えい懸念の連絡を受けた日、1月23日は漏えい・不正利用の可能性を確認した調査完了日。改ざん等の確定被害を最初に確認した日は明記されていない。",
+          "sourceUrl": "https://www.sourcenext.com/support/i/2023/0214_info/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した2月14日公表とFAQでは、2022年11月15日〜2023年1月17日は対象顧客が注文・カード登録した期間であり、不正アクセス・改ざんを実行した日付・期間としては特定されていない。",
+        "damageConfirmed": "確認した公表とFAQでは、1月4日はカード会社から漏えい懸念の連絡を受けた日、1月23日は漏えい・不正利用の可能性を確認した調査完了日。改ざん等の確定被害を最初に確認した日は明記されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2023-02-14",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "teikoku-databank-2023",
+      "company": "帝国データバンク",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.tdb.co.jp/newsroom/news/rcvpts1mbhy/",
+        "https://www.tdb.co.jp/newsroom/news/zzewpgg_cu/",
+        "https://www.tdb.co.jp/newsroom/news/poq0c7a83/"
+      ],
+      "newSources": [],
+      "reviewSummary": "初報・第2報・第3報を再取得。2月21日未明は大量感染の検知。暗号化ファイルと脅迫文はその後の調査過程で確認、日時の個別記載なし。6月14日の170ファイルの遠隔閲覧・コピー記録も確認日を特定していない。別の公式事後資料は今回の検索で見つからなかった。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。2月21日未明は大量のウイルス感染検知日。3月31日第2報も侵入実施日や攻撃期間を特定していない。",
+          "sourceUrl": "https://www.tdb.co.jp/newsroom/news/rcvpts1mbhy/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。第2報では2月21日未明の感染検知後の調査過程で暗号化ファイルと脅迫文を確認したとするが、その確認日を個別には明記していない。第3報の不正閲覧・コピー記録の確認日も未記載。",
+          "sourceUrl": "https://www.tdb.co.jp/newsroom/news/zzewpgg_cu/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。2月21日未明は大量のウイルス感染検知日。3月31日第2報も侵入実施日や攻撃期間を特定していない。",
+        "damageConfirmed": "確認した公表資料に記載なし。第2報では2月21日未明の感染検知後の調査過程で暗号化ファイルと脅迫文を確認したとするが、その確認日を個別には明記していない。第3報の不正閲覧・コピー記録の確認日も未記載。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2023-02-24",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "toyota-connected-cloud-2023",
+      "company": "トヨタ自動車／トヨタコネクティッド",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://global.toyota/jp/newsroom/corporate/39174380.html",
+        "https://global.toyota/jp/newsroom/corporate/39241571.html",
+        "https://global.toyota/jp/newsroom/corporate/39529198.html",
+        "https://global.toyota/pages/global_toyota/sustainability/privacy/posts/publication/202307_1.pdf",
+        "https://company.toyotaconnected.co.jp/news/press/2023/0512/",
+        "https://company.toyotaconnected.co.jp/news/press/2023/0531/",
+        "https://www.ppc.go.jp/files/pdf/230712_01_houdou.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.ppc.go.jp/files/pdf/230712_01_houdou.pdf",
+          "finding": "個人情報保護委員会の行政指導資料。設定露出期間と流出のおそれのみ、確認日増分なし。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "5月12日初報、5月31日追加報、7月12日行政指導対応、前回取得のTC側公表を再照合。新たに個人情報保護委員会の7月12日資料3頁を確認したが、2013年11月頃〜2023年4月頃等は誤設定で閲覧可能だった期間で、実際の閲覧・取得期間ではない。委員会も「漏えいが発生したおそれ」とし、確定被害やその初確認日を示さない。設定不備事案としてattack:notApplicableを保持。",
+      "eventDates": {
+        "attack": {
+          "precision": "notApplicable",
+          "label": "該当なし",
+          "note": "公表された原因は担当者によるクラウドの公開設定・公開環境への情報格納の誤り。攻撃が起きたとする公表ではなく、外部アクセス可能期間を攻撃期間として扱わない。",
+          "sourceUrl": "https://global.toyota/jp/newsroom/corporate/39529198.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。初報・追加報・再発防止報告は誤設定による公開状態と漏えい可能性を記載し、実際の第三者取得等の初確認日は示していない。",
+          "sourceUrl": "https://global.toyota/jp/newsroom/corporate/39174380.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "公表された原因は担当者によるクラウドの公開設定・公開環境への情報格納の誤り。攻撃が起きたとする公表ではなく、外部アクセス可能期間を攻撃期間として扱わない。",
+        "damageConfirmed": "確認した公表資料に記載なし。初報・追加報・再発防止報告は誤設定による公開状態と漏えい可能性を記載し、実際の第三者取得等の初確認日は示していない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": "確認した公表資料の日付 2023-05-12 と収録公表日は一致。"
+    },
+    {
+      "id": "avant-disclosure-2023",
+      "company": "アバントグループ／インターネットディスクロージャー",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "attack"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://www.avantgroup.com/ja/news/news20230712090000/main/0/link/AVANTGROUP_news_20230712.pdf",
+        "https://www.avantgroup.com/ja/news/news20230808100000/main/0/link/AVANTGROUP_news_20230808.pdf"
+      ],
+      "newSources": [
+        {
+          "title": "アバントグループ：サービス復旧（第4報）",
+          "url": "https://www.avantgroup.com/ja/news/news20230712090000/main/0/link/AVANTGROUP_news_20230712.pdf",
+          "publishedDate": "2023-07-12"
+        }
+      ],
+      "reviewSummary": "未確認だった第4報を追加確認。5月30日未明を不正アクセスを受けた日として明記。感染確認日の記載は増えていない。",
+      "eventDates": {
+        "attack": {
+          "precision": "day",
+          "label": "2023年5月30日未明",
+          "startDate": "2023-05-30",
+          "note": "7月12日付第4報は「2023年5月30日未明」に子会社が「第三者からの不正アクセスを受け」と記載。公式続報が示す攻撃発生日を採用し、初期侵入開始やランサムウェア感染開始の特定とはしない。初報・第3報にある同日の確認とは区別する。",
+          "sourceUrl": "https://www.avantgroup.com/ja/news/news20230712090000/main/0/link/AVANTGROUP_news_20230712.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。5月30日の遮断・サービス停止は記載されているが、ランサムウェア感染が判明した具体的な日は記載されていない。最終報でも情報流出の痕跡は未確認。",
+          "sourceUrl": "https://www.avantgroup.com/ja/news/news20230808100000/main/0/link/AVANTGROUP_news_20230808.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "damageConfirmed": "確認した公表資料に記載なし。5月30日の遮断・サービス停止は記載されているが、ランサムウェア感染が判明した具体的な日は記載されていない。最終報でも情報流出の痕跡は未確認。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2023-05-31",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "seiko-2023",
+      "company": "セイコーグループ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "attack"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://www.seiko.co.jp/information/202310251000.html",
+        "https://www.seiko.co.jp/information/202308101100.html",
+        "https://www.seiko.co.jp/information/202308221300.html",
+        "https://www.seiko.co.jp/en/information/202308101100.html",
+        "https://www.seiko.co.jp/en/information/202310251000.html",
+        "https://www.seiko.co.jp/en/ir/assets/FY2023_Annual_Securities_Report.pdf",
+        "https://info.gbiz.go.jp/hojin/edinetDownload?docId=S100TUHU",
+        "https://info.gbiz.go.jp/hojin/edinetDownload?docId=S100W5ES"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.seiko.co.jp/en/information/202308101100.html",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        },
+        {
+          "url": "https://www.seiko.co.jp/en/information/202310251000.html",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        },
+        {
+          "url": "https://www.seiko.co.jp/en/ir/assets/FY2023_Annual_Securities_Report.pdf",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        },
+        {
+          "url": "https://info.gbiz.go.jp/hojin/edinetDownload?docId=S100TUHU",
+          "purpose": "日付追加の一次根拠"
+        },
+        {
+          "url": "https://info.gbiz.go.jp/hojin/edinetDownload?docId=S100W5ES",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "初報・第2報・第3報の日英版に加えて有価証券報告書を発見。日本語第163期有報の受取保険金と情報セキュリティ対策費の注記が不正アクセス発生を2023年7月と明記するため、月精度を採用。7月28日は第3報が検知日と明示するため日に細分化しない。第2報以降の漏えい確認には最初の確認日がない。\n会社公式英文有報でも同じ月。原本日本語を別途取得して照合。日本語有報提出日2024年6月27日を出典日付として採用。",
+      "eventDates": {
+        "attack": {
+          "precision": "month",
+          "label": "2023年7月",
+          "note": "第163期有価証券報告書の受取保険金・情報セキュリティ対策費の注記は、当社及び子会社サーバーへの第三者による不正アクセスを「2023年7月に発生」と明記。月単位の発生時期を採り、初期侵入日や期間全体は特定しない。10月25日の第3報にある7月28日は検知日であり、攻撃日として日単位には細分化しない。",
+          "sourceUrl": "https://info.gbiz.go.jp/hojin/edinetDownload?docId=S100TUHU",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。8月10日初報の調査は流出可能性、第2報以後は実際の流出確認を報告するが、流出・暗号化被害を最初に確認した日は示されていない。",
+          "sourceUrl": "https://www.seiko.co.jp/information/202310251000.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "damageConfirmed": "確認した公表資料に記載なし。8月10日初報の調査は流出可能性、第2報以後は実際の流出確認を報告するが、流出・暗号化被害を最初に確認した日は示されていない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www.seiko.co.jp/ir/library/securities/",
+          "error": "誤った末尾スラッシュURL; 正しいsecurities.htmlを公式リンクから取得済み",
+          "resolvedBy": "https://www.seiko.co.jp/ir/library/securities.html"
+        },
+        {
+          "url": "https://ssl4.eir-parts.net/Custom/public/v5parts/8050/jp/20250225/core/eir_common.js",
+          "error": "HTTP502 twice; IR embedded listing not obtained",
+          "resolvedBy": "政府gBizINFOのEDINET原本PDFを直接取得"
+        },
+        {
+          "url": "https://info.gbiz.go.jp/hojin/edinetDownload?docId=S100TUHU",
+          "error": "web本文取得不可、通常HTTP取得は200・PDF全文を検証済み",
+          "resolvedBy": "direct HTTP PDF + pdftotext"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2023-08-10",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "kurashiki-hampu-2023",
+      "company": "倉敷帆布",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.kurashikihampu.co.jp/news/brand/2023-08-17.html",
+        "https://www.kurashikihampu.co.jp/news/%E6%9C%AA%E5%88%86%E9%A1%9E/2023-08-17-faq.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "初報と公式FAQを再読。2021年3月24日〜2023年4月17日はカード入力顧客の対象期間。5月2日はカード会社による可能性の指摘、5月9日は新サイト決済停止、6月30日は調査完了。システム脆弱性悪用・決済アプリ改ざんは説明されるが、改ざん実行・最初の改ざん確認日は未記載。FAQは不正利用の有無を同社では判断できないと回答しており、6月30日を確定被害初確認日にしない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した8月17日のお知らせとFAQでは、ペイメントアプリケーション改ざんの実行日・期間は記載されていない。2021年3月24日〜2023年4月17日はカード決済をした対象顧客の利用期間として示されている。",
+          "sourceUrl": "https://www.kurashikihampu.co.jp/news/brand/2023-08-17.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認したお知らせとFAQでは、5月2日はカード会社からの漏えい懸念の連絡日、6月30日は漏えい・不正利用の可能性についての調査完了日。改ざんなど確定した被害を最初に確認した日は明記されていない。",
+          "sourceUrl": "https://www.kurashikihampu.co.jp/news/brand/2023-08-17.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した8月17日のお知らせとFAQでは、ペイメントアプリケーション改ざんの実行日・期間は記載されていない。2021年3月24日〜2023年4月17日はカード決済をした対象顧客の利用期間として示されている。",
+        "damageConfirmed": "確認したお知らせとFAQでは、5月2日はカード会社からの漏えい懸念の連絡日、6月30日は漏えい・不正利用の可能性についての調査完了日。改ざんなど確定した被害を最初に確認した日は明記されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2023-08-17",
+        "result": "verified in dated primary notice; retained"
+      }
+    },
+    {
+      "id": "zeon-2023",
+      "company": "日本ゼオン",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "attack"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://www.zeon.co.jp/ir/library/pdf/240930.pdf",
+        "https://www.zeon.co.jp/news/assets/pdf/241024.pdf"
+      ],
+      "newSources": [
+        {
+          "title": "日本ゼオン：統合報告書2024（2024年10月24日発行公表）",
+          "url": "https://www.zeon.co.jp/ir/library/pdf/240930.pdf",
+          "publishedDate": "2024-10-24"
+        },
+        {
+          "title": "日本ゼオン：統合報告書2024・サステナビリティレポート2024の発行公表",
+          "url": "https://www.zeon.co.jp/news/assets/pdf/241024.pdf",
+          "publishedDate": "2024-10-24"
+        }
+      ],
+      "reviewSummary": "統合報告書2024で8月16日の不正アクセス発生を明記。発行公表は10月24日で、PDFファイル名から公表日を推定しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "day",
+          "label": "2023年8月16日",
+          "startDate": "2023-08-16",
+          "note": "統合報告書2024の「不正アクセス事案への対応」は、2023年8月16日にサーバー機器への不正アクセスが発生したと明記。初報の検知日から代用せず、後の公式報告に記載された攻撃発生日を採用する。初期侵入の開始時刻・全期間は特定していない。報告書の発行公表は10月24日付公式発表で確認。",
+          "sourceUrl": "https://www.zeon.co.jp/ir/library/pdf/240930.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。初報・調査完了報告ともディレクトリサーバーのデータ流出は可能性のみ。実際の流出などの初確認日は示されていない。",
+          "sourceUrl": "https://www.zeon.co.jp/news/assets/pdf/231023.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "damageConfirmed": "確認した公表資料に記載なし。初報・調査完了報告ともディレクトリサーバーのデータ流出は可能性のみ。実際の流出などの初確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2023-08-23",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "ites-2023",
+      "company": "アイテス",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.ites.co.jp/news/20231205.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "12月5日最終報を再読し、削除された初報の公式リンクも探索。最終報の10月20日は発覚日、10月25日は詳細調査依頼、11月30日は調査報告書受領。暗号化の実行時期および最初の暗号化確認日時は別途記載されていない。初報は現在取得不能。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月20日は不正アクセス発覚日。調査結果はランサムウェア暗号化を確認したとするが侵入・実行時期は示していない。",
+          "sourceUrl": "https://www.ites.co.jp/news/20231205.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。暗号化被害は調査結果として確認されているが、その初確認日は特定されていない。10月20日の侵害発覚や11月30日の報告書受領日で代用しない。",
+          "sourceUrl": "https://www.ites.co.jp/news/20231205.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。10月20日は不正アクセス発覚日。調査結果はランサムウェア暗号化を確認したとするが侵入・実行時期は示していない。",
+        "damageConfirmed": "確認した公表資料に記載なし。暗号化被害は調査結果として確認されているが、その初確認日は特定されていない。10月20日の侵害発覚や11月30日の報告書受領日で代用しない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www.ites.co.jp/news/20231023.html",
+          "error": "HTTP404; initial report no longer available at identified official URL",
+          "resolvedBy": null
+        }
+      ],
+      "announcementCheck": {
+        "date": "2023-10-23",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "kinokuniya-fujisan-delivery-2023",
+      "company": "紀伊國屋書店／富士山マガジンサービス",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www2.jpx.co.jp/disc/31380/140120231221506480.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "JPXに掲載された富士山マガジンサービスの12月21日公式開示を再読。紀伊國屋サーバーでテーブル名称等の取得は判明したが、個別テーブル内容や顧客データの取得は未確認。攻撃・名称取得の実施時期も確認日も記載されない。消えた紀伊國屋ann-20231221ページの題名・URL・公式サイト内検索を再検索したが、本文を取得できる公式代替は見つからなかった。11月1日警察通知という二次報道は検知・通知であり、推定補完に使わない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認できた委託先の2023年12月21日付開示では、不正アクセスの実行日・期間は明記されていない。紀伊國屋書店の別告知本文は取得できていない。",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/31380/140120231221506480.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認できた委託先開示は、テーブル名一覧の取得は確認した一方、各テーブルのデータへのアクセスは確認されていないと説明する。最初の被害確認日は記載されていない。",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/31380/140120231221506480.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認できた委託先の2023年12月21日付開示では、不正アクセスの実行日・期間は明記されていない。紀伊國屋書店の別告知本文は取得できていない。",
+        "damageConfirmed": "確認できた委託先開示は、テーブル名一覧の取得は確認した一方、各テーブルのデータへのアクセスは確認されていないと説明する。最初の被害確認日は記載されていない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://corp.kinokuniya.co.jp/ann-20231221/",
+          "error": "HTTP404 / Web Internal Error; current official search yielded no working replacement",
+          "fallback": "JPX issuer disclosure successfully reviewed; original Kinokuniya notice remains unavailable"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2023-12-21",
+        "result": "verified in dated primary notice; retained"
+      }
+    },
+    {
+      "id": "toyota-mobility-bookingcar-2024",
+      "company": "トヨタモビリティサービス",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://news.t-mobility-s.co.jp/information/20240216-1/"
+      ],
+      "newSources": [],
+      "reviewSummary": "公式公表を再確認。2月2日は侵入事実の確認日、2020年10月からはアクセス可能状態の期間。実際のアクセス開始や削除被害の初確認日は増えていない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。2月2日は第三者による不正アクセスを確認した日。2020年10月～2024年2月2日は旧アクセスキーでサーバーにアクセス可能だった状態の期間で、実際の攻撃期間としては示されていない。",
+          "sourceUrl": "https://news.t-mobility-s.co.jp/information/20240216-1/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。調査で旧サービスの顧客情報が削除されていたことは確認したが、削除被害を最初に確認した日は明記されていない。2月2日の不正アクセス確認日を代用しない。",
+          "sourceUrl": "https://news.t-mobility-s.co.jp/information/20240216-1/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。2月2日は第三者による不正アクセスを確認した日。2020年10月～2024年2月2日は旧アクセスキーでサーバーにアクセス可能だった状態の期間で、実際の攻撃期間としては示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。調査で旧サービスの顧客情報が削除されていたことは確認したが、削除被害を最初に確認した日は明記されていない。2月2日の不正アクセス確認日を代用しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-02-16",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "fujitsu-2024",
+      "company": "富士通",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://info.archives.global.fujitsu/global/about/resources/news/notices/2024/0709-01.html",
+        "https://info.archives.global.fujitsu/jp/news/2024/07/9.html",
+        "https://info.archives.global.fujitsu/jp/news/2024/03/15-1.html",
+        "https://www.ipa.go.jp/security/10threats/eid2eo0000005231-att/setsumei_2025_soshiki.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.ipa.go.jp/security/10threats/eid2eo0000005231-att/setsumei_2025_soshiki.pdf",
+          "purpose": "IPA公的教材（会社一次調査ではなく二次要約）。月の推測補完には未採用。"
+        }
+      ],
+      "reviewSummary": "3月15日初報と7月9日調査結果の日本語・英語を照合。マルウェア蔵置、横展開、49台への複製コマンド実行を説明するが日時なし。IPAの2025年教材は3月発生と要約するものの、引用先の会社発表にその攻撃月は明示されず、会社調査の一次根拠として採用しなかった。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した7月9日の調査結果（日英）はマルウェアの設置・拡散を説明するが、その実行時期を明示していない。3月15日は初報公表日。",
+          "sourceUrl": "https://info.archives.global.fujitsu/jp/news/2024/07/9.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した7月9日の調査結果（日英）は49台への影響とファイル持ち出しのおそれを説明するが、被害を最初に確認した日は示さない。",
+          "sourceUrl": "https://info.archives.global.fujitsu/jp/news/2024/07/9.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した7月9日の調査結果（日英）はマルウェアの設置・拡散を説明するが、その実行時期を明示していない。3月15日は初報公表日。",
+        "damageConfirmed": "確認した7月9日の調査結果（日英）は49台への影響とファイル持ち出しのおそれを説明するが、被害を最初に確認した日は示さない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-03-15",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "wantedly-2024",
+      "company": "ウォンテッドリー",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://wantedlyinc.com/ja/news/entries/925",
+        "https://wantedlyinc.com/news/entries/yjqyzpwcn9l/?category=info",
+        "https://wantedlyinc.com/news/entries/e8ph37raei/?category=info",
+        "https://wantedlyinc.com/news/entries/bxl2ykxcd5/?category=info"
+      ],
+      "newSources": [
+        {
+          "url": "https://wantedlyinc.com/news/entries/yjqyzpwcn9l/?category=info",
+          "finding": "現行初報。前回監査でも確認済み、旧URL404の代替。",
+          "addedToRecord": false
+        },
+        {
+          "url": "https://wantedlyinc.com/news/entries/e8ph37raei/?category=info",
+          "finding": "現行第二報。検索Web取得失敗後、同じ公開URLを通常取得して全文確認。",
+          "addedToRecord": false
+        },
+        {
+          "url": "https://wantedlyinc.com/news/entries/bxl2ykxcd5/?category=info",
+          "finding": "現行第三報。旧URLの代替、内容に新しい確定被害日なし。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "旧URL404に対し現行公式ニュース一覧から初報・第二報・第三報の移転先を確認。初報4月10日は設定不具合発見、第二報5月10日は調査遅延・予定、第三報は追加10不具合と6月11日修正完了。漏えい可能期間2013年10月17日〜2024年6月10日は公開設定状態の期間であり、閲覧被害実行時期ではない。実際の第三者閲覧・最初の被害確認日はなく、attack:notApplicableを保持。",
+      "eventDates": {
+        "attack": {
+          "precision": "notApplicable",
+          "label": "該当なし",
+          "note": "第三報は一連の閲覧可能状態がすべてシステム設定ミスによるものと説明。設定不備・公開可能期間を攻撃実施期間へ変換しない。",
+          "sourceUrl": "https://wantedlyinc.com/ja/news/entries/925",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。第三報の4月10日は設定不備の発見日で、実際の権限外閲覧等の被害を最初に確認した日は示されていない。",
+          "sourceUrl": "https://wantedlyinc.com/ja/news/entries/925",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "第三報は一連の閲覧可能状態がすべてシステム設定ミスによるものと説明。設定不備・公開可能期間を攻撃実施期間へ変換しない。",
+        "damageConfirmed": "確認した公表資料に記載なし。第三報の4月10日は設定不備の発見日で、実際の権限外閲覧等の被害を最初に確認した日は示されていない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://wantedlyinc.com/ja/news/entries/920",
+          "error": "HTTP Error 404: Not Found",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        },
+        {
+          "url": "https://wantedlyinc.com/ja/news/entries/925",
+          "error": "HTTP Error 404: Not Found",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        },
+        {
+          "url": "https://wantedlyinc.com/news/entries/e8ph37raei/?category=info",
+          "error": "Web Cache miss",
+          "fallback": "Same public official URL successfully fetched directly and full second-report text read"
+        }
+      ],
+      "announcementCheck": "現行公式URLの初報掲載日Apr 24, 2024と第三報による参照を確認。収録公表日と一致。"
+    },
+    {
+      "id": "kadokawa-2024",
+      "company": "KADOKAWA・ドワンゴ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "attack"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://group.kadokawa.co.jp/information/media-download/1369/7062b6eb47fd83b7/",
+        "https://group.kadokawa.co.jp/global/system_failure/"
+      ],
+      "newSources": [
+        {
+          "title": "ドワンゴ：ニコニコ再開と6月8日のサイバー攻撃発生",
+          "url": "https://group.kadokawa.co.jp/information/media-download/1369/7062b6eb47fd83b7/",
+          "publishedDate": "2024-08-05"
+        }
+      ],
+      "reviewSummary": "復旧時の公式発表まで広げ、6月8日の攻撃発生を明記した資料を確認。",
+      "eventDates": {
+        "attack": {
+          "precision": "day",
+          "label": "2024年6月8日",
+          "startDate": "2024-06-08",
+          "note": "8月5日付ドワンゴのサービス再開資料は「6月8日に発生したサイバー攻撃」と明記。公表された攻撃発生日として採用し、障害発生日からの推測や最初の侵入日の特定とは区別する。",
+          "sourceUrl": "https://group.kadokawa.co.jp/information/media-download/1369/7062b6eb47fd83b7/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "6月8日未明からの障害は公表されているが、被害を最初に確認した日時として明示された記載は確認できない。障害発生日は従来の経過欄に保持。",
+          "sourceUrl": "https://group.kadokawa.co.jp/global/information/media-download/1334/3a6e77ab07342e3c/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "damageConfirmed": "6月8日未明からの障害は公表されているが、被害を最初に確認した日時として明示された記載は確認できない。障害発生日は従来の経過欄に保持。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-06-09",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "oiles-2024",
+      "company": "オイレス工業",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "attack"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://www.oiles.co.jp/files/20240808_company_information.pdf",
+        "https://www.oiles.co.jp/files/20240610_company_infomation.pdf",
+        "https://www.oiles.co.jp/files/20240621_company_information.pdf",
+        "https://www2.jpx.co.jp/disc/62820/140120241023501413.pdf",
+        "https://www2.jpx.co.jp/disc/62820/140120260511521369.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www2.jpx.co.jp/disc/62820/140120241023501413.pdf",
+          "purpose": "日付追加の一次根拠"
+        },
+        {
+          "url": "https://www2.jpx.co.jp/disc/62820/140120260511521369.pdf",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "初報・第2報・最終報のほかJPX掲載の会社決算短信を発見。2024年11月8日短信（PDF12頁、印刷10頁）の費用注記が6月7日の不正アクセス攻撃発生を明記。2026年5月11日短信の保険金・費用注記も同日を再確認。初期侵入開始日とは区別して攻撃発生日を追加。暗号化の初確認日時は依然不明。",
+      "eventDates": {
+        "attack": {
+          "precision": "day",
+          "label": "2024年6月7日",
+          "startDate": "2024-06-07",
+          "note": "2024年11月8日付決算短信の注記は「2024年6月7日に発生した不正アクセス攻撃」と明記。6月21日の第2報も同日に不正アクセスを受けたと説明している。公表資料が示す攻撃の発生日であり、初期侵入日や攻撃期間全体を特定するものではない。",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/62820/140120241023501413.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。最終報はサーバーファイルの暗号化を明記するが、暗号化を最初に確認した日は示していない。情報流出の事実も未確認。",
+          "sourceUrl": "https://www.oiles.co.jp/files/20240808_company_information.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "damageConfirmed": "確認した公表資料に記載なし。最終報はサーバーファイルの暗号化を明記するが、暗号化を最初に確認した日は示していない。情報流出の事実も未確認。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-06-10",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "morinaga-confectionery-2024",
+      "company": "森永製菓",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.morinaga.co.jp/info/detail/112"
+      ],
+      "newSources": [],
+      "reviewSummary": "6月18日公式通知と公式ニュース検索を再確認。4月9日は自社サーバーの不審な挙動検知。調査で情報流出の明確な証跡はなく、従業員等4,882人分の流出可能性を否定できないという内容。検知を攻撃・初被害確認に変換しない。2025年IIJ関連公表は別件として除外。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した6月18日公表の4月9日は不審な挙動を認識した日であり、侵入・攻撃の実行時期は記載されていない。",
+          "sourceUrl": "https://www.morinaga.co.jp/info/detail/112",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した6月18日公表ではアカウント情報が漏えいした可能性を説明しているが、漏えいの事実は確認されておらず、確定被害の初回確認日は明記されていない。",
+          "sourceUrl": "https://www.morinaga.co.jp/info/detail/112",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した6月18日公表の4月9日は不審な挙動を認識した日であり、侵入・攻撃の実行時期は記載されていない。",
+        "damageConfirmed": "確認した6月18日公表ではアカウント情報が漏えいした可能性を説明しているが、漏えいの事実は確認されておらず、確定被害の初回確認日は明記されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-06-18",
+        "result": "verified in dated primary notice; retained"
+      }
+    },
+    {
+      "id": "tokyo-gas-tges-2024",
+      "company": "東京ガス・東京ガスエンジニアリングソリューションズ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.tokyo-gas.co.jp/news/press/20240717-03.html",
+        "https://www.tokyogas-es.co.jp/information/newsletter/2024/20240920_01.html",
+        "https://www.tokyo-gas.co.jp/sustainability/download/pdf/sr2025.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "新たに9月20日通知と2025年Fact Bookを確認。9月20日でも流出痕跡なし、流出可能性は低いが完全否定できないとし、攻撃時期・被害初確認日は示さない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "7月9日は不正アクセスによる情報流出の可能性を把握した日。実際の攻撃時期は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.tokyo-gas.co.jp/news/press/20240717-03.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "7月9日に把握したのは情報流出の可能性。被害の最初の確認日は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.tokyo-gas.co.jp/news/press/20240717-03.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "7月9日は不正アクセスによる情報流出の可能性を把握した日。実際の攻撃時期は 確認した公表資料に記載なし。",
+        "damageConfirmed": "7月9日に把握したのは情報流出の可能性。被害の最初の確認日は 確認した公表資料に記載なし。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-07-17",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "tomoe-shokai-2024",
+      "company": "巴商会",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.tomoeshokai.co.jp/info/202408/index0802.php",
+        "https://www.tomoeshokai.co.jp/info/202408/index0803.php",
+        "https://www.tomoeshokai.co.jp/info/202405/index0516.php"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.tomoeshokai.co.jp/info/202405/index0516.php",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "8月2日調査結果・8月3日個人情報報告に加え5月16日初報を発見。5月10日はサーバー異常・システム障害を確認しランサムウェアの可能性を判断した日。後日調査でRDP侵入・ランサムウェア実行を確認したが、その実施日や暗号化初確認日時は記載なし。障害開始日を転用しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。5月10日はシステム障害発生日。調査で侵入とランサムウェア実行は確認されたが、その実行日・期間は示されていない。",
+          "sourceUrl": "https://www.tomoeshokai.co.jp/info/202408/index0802.php",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。5月10日の障害を調査で不正アクセスによるものと判断したが、初めて被害と確認した日は示されていない。情報漏えいは痕跡なし・可能性のみであり、初確認日として扱わない。",
+          "sourceUrl": "https://www.tomoeshokai.co.jp/info/202408/index0802.php",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。5月10日はシステム障害発生日。調査で侵入とランサムウェア実行は確認されたが、その実行日・期間は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。5月10日の障害を調査で不正アクセスによるものと判断したが、初めて被害と確認した日は示されていない。情報漏えいは痕跡なし・可能性のみであり、初確認日として扱わない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-08-02",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "mitsubishi-home-2024",
+      "company": "三菱電機ホーム機器",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.mhk.co.jp/pdf/info_oshirase_2408.pdf",
+        "https://www.mitsubishielectric.co.jp/ja/pr/2024/pdf/0805.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.mitsubishielectric.co.jp/ja/pr/2024/pdf/0805.pdf",
+          "finding": "親会社の同日補足。新しい日付なし。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "三菱電機ホーム機器の8月5日詳細PDFを再読し、親会社の同日補足PDFも発見・確認。4月17日は不正アクセス発覚、7月25日は閲覧可能性を否定できないとの判断。2回のアクセス時間13秒・12秒はあるが日付なし。親会社資料にも新しい実行・確認時点なし。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。4月17日は不正アクセス判明日。サーバへの2回のアクセスについても秒数のみで実行日は示されていない。",
+          "sourceUrl": "https://www.mhk.co.jp/pdf/info_oshirase_2408.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。4月17日の不正アクセス判明と7月25日の閲覧可能性判明を記載するが、漏えい・閲覧は可能性であり被害初確認日は示されていない。",
+          "sourceUrl": "https://www.mhk.co.jp/pdf/info_oshirase_2408.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。4月17日は不正アクセス判明日。サーバへの2回のアクセスについても秒数のみで実行日は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。4月17日の不正アクセス判明と7月25日の閲覧可能性判明を記載するが、漏えい・閲覧は可能性であり被害初確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-08-05",
+        "result": "公表PDFの日付2024年8月5日と一致。"
+      }
+    },
+    {
+      "id": "livable-insider-2024",
+      "company": "東急リバブル",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.livable.co.jp/assets/files/3972",
+        "https://www.livable.co.jp/corp/release/"
+      ],
+      "newSources": [],
+      "reviewSummary": "公式原文・公表一覧を再確認。退職に際した持ち出しとDM利用は記載されるが退職日・持ち出し日・発覚日はない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。元従業員による不正持ち出し・DM利用は確認されているが、持ち出しの具体日や期間は示されていない。",
+          "sourceUrl": "https://www.livable.co.jp/assets/files/3972",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。持ち出し・DM利用の発覚後の調査は説明されるが、被害を最初に確認した日は示されていない。",
+          "sourceUrl": "https://www.livable.co.jp/assets/files/3972",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。元従業員による不正持ち出し・DM利用は確認されているが、持ち出しの具体日や期間は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。持ち出し・DM利用の発覚後の調査は説明されるが、被害を最初に確認した日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-08-07",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "nidec-precision-vietnam-2024",
+      "company": "ニデックプレシジョン（ベトナム）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.nidec.com/files/topics/43944_ext_3_0.pdf",
+        "https://www.nidec.com/files/topics/43939_ext_3_0.pdf",
+        "https://www.nidec.com/files/topics/18131_ext_5_0.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.nidec.com/files/topics/43944_ext_3_0.pdf",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        },
+        {
+          "url": "https://www.nidec.com/files/topics/43939_ext_3_0.pdf",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "旧PDFのリンク切れを公式2024年ニュース一覧から追跡し、初報・第2報の現行PDFを回復。8月5日は犯行声明受領。8月9日は窃取したと思われる情報の公開確認で、初報には自社情報の一部公開を確認とあるが確認日を特定しない。9月9日は追加公開分の確認なので最初の被害確認日にはできない。実際の侵入日時も記載なし。\n8月12日初報は自社情報の実際の掲載を確認しているが、確認日を本文に記さない。第2報8月9日の「窃取したと思われる」記載と結び付けて同日を確定させない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "8月5日は第三者から窃取を主張するメールを受信した日。実際の侵入・情報取得時期は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.nidec.com/files/topics/18131_ext_5_0.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "8月9日は窃取したと思われる情報の公開を確認した日で、確定した漏えいの初確認日とは断定しない。8月15日の被害届と9月9日の追加情報の公開確認は記載されるが、漏えいを最初に確定確認した日は確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.nidec.com/files/topics/18131_ext_5_0.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "8月5日は第三者から窃取を主張するメールを受信した日。実際の侵入・情報取得時期は 確認した公表資料に記載なし。",
+        "damageConfirmed": "8月9日は窃取したと思われる情報の公開を確認した日で、確定した漏えいの初確認日とは断定しない。8月15日の被害届と9月9日の追加情報の公開確認は記載されるが、漏えいを最初に確定確認した日は確認した公表資料に記載なし。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www.nidec.com/files/topics/18131_ext_5_0.pdf",
+          "error": "HTTP Error 404: Not Found",
+          "resolvedBy": "current official canonical PDF"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2024-08-12",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "ctc-subcontractor-2024",
+      "company": "伊藤忠テクノソリューションズ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.ctc-g.co.jp/news/info/20241007-01799.html",
+        "https://www.ctc-g.co.jp/cms/contents/data/23/1779/PDF_FILE_1779.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月7日調査結果と前回取得8月13日初報を再照合。再委託先PCへのブルートフォース、管理権限乗っ取り、ランサムウェア実行・暗号化・クラウド共有フォルダアクセスは事実として説明されるが、それぞれの実行日・確認日がない。ファイル持ち出し痕跡なし、当該PCにCTC情報なし。初報PDFは現URL404、現行最終報の別PDFは内容同一で日付増分なし。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。最終調査報告はブルートフォース攻撃・乗っ取り・暗号化を説明するが、その実施日は示さない。",
+          "sourceUrl": "https://www.ctc-g.co.jp/news/info/20241007-01799.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。再委託先PCの暗号化は確認されたが、暗号化被害の初確認日は示されていない。CTCの業務ファイル持ち出しの痕跡は否定。",
+          "sourceUrl": "https://www.ctc-g.co.jp/news/info/20241007-01799.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。最終調査報告はブルートフォース攻撃・乗っ取り・暗号化を説明するが、その実施日は示さない。",
+        "damageConfirmed": "確認した公表資料に記載なし。再委託先PCの暗号化は確認されたが、暗号化被害の初確認日は示されていない。CTCの業務ファイル持ち出しの痕跡は否定。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www.ctc-g.co.jp/cms/contents/data/23/1779/PDF_FILE_1779.pdf",
+          "error": "HTTP Error 404: Not Found",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        }
+      ],
+      "announcementCheck": "8月13日初報PDFの日付と10月7日調査結果の初報参照により収録公表日を確認。"
+    },
+    {
+      "id": "sougyo-2024",
+      "company": "倉業サービス",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.sougyo.co.jp/notice/240919_1stReport.pdf",
+        "https://www.sougyo.co.jp/notice/241008_2stReport.pdf",
+        "https://www.sougyo.co.jp/notice/3stReport.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "初報・第2報・最終報の各本文を再確認。9月13日は攻撃があったことの発覚。データ破壊の確認が経緯にはあるが日付の対応がなく、障害日9月12日から自動補完しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。最終報は9月12日の障害発生後、調査で9月13日に不正アクセス・ランサムウェア攻撃が発覚したと記載。これらは障害発生・攻撃発覚の日で、実際の侵入・攻撃時期を明示していない。",
+          "sourceUrl": "https://www.sougyo.co.jp/3st-report/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。第2報の経緯はアクセス障害、データ破壊の確認、遮断、ランサムウェア確認の順を示すが各確認日を付していない。9月12日の障害発生日を初確認日に代用しない。最終報で情報漏えいの具体的事実は未確認。",
+          "sourceUrl": "https://www.sougyo.co.jp/3st-report/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。最終報は9月12日の障害発生後、調査で9月13日に不正アクセス・ランサムウェア攻撃が発覚したと記載。これらは障害発生・攻撃発覚の日で、実際の侵入・攻撃時期を明示していない。",
+        "damageConfirmed": "確認した公表資料に記載なし。第2報の経緯はアクセス障害、データ破壊の確認、遮断、ランサムウェア確認の順を示すが各確認日を付していない。9月12日の障害発生日を初確認日に代用しない。最終報で情報漏えいの具体的事実は未確認。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-09-19",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "kanamoto-2024",
+      "company": "カナモト",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.kanamoto.co.jp/news/news241218/",
+        "https://www.kanamoto.co.jp/news/news241108/"
+      ],
+      "newSources": [],
+      "reviewSummary": "11月8日初報・12月18日最終報を再読し公式追加資料も検索。11月6日に異常発生を検知した後、社内調査で攻撃による障害と判明。最終報でもその判明日時・実際の侵入時期を特定しない。業務影響の発生のみから被害の初確認日を置かない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。11月6日は情報システムの異常検知日。不正アクセスの開始・実施日時は示されていない。",
+          "sourceUrl": "https://www.kanamoto.co.jp/news/news241218/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。11月6日の異常検知とサイバー攻撃によるシステム障害を報告するが、被害を初めて確認した日との明確な対応付けはない。情報流出の具体的事実は未確認。",
+          "sourceUrl": "https://www.kanamoto.co.jp/news/news241218/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。11月6日は情報システムの異常検知日。不正アクセスの開始・実施日時は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。11月6日の異常検知とサイバー攻撃によるシステム障害を報告するが、被害を初めて確認した日との明確な対応付けはない。情報流出の具体的事実は未確認。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-12-18",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "fujikura-2024",
+      "company": "フジクラ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.fujikura.co.jp/news/information/images/361ce45b1f20ae15225a2df2d19ce12fc843708b.pdf",
+        "https://www.fujikura.co.jp/news/pressrelease/pdf/release20241225.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.fujikura.co.jp/news/pressrelease/pdf/release20241225.pdf",
+          "finding": "12月25日初報。検知後7月19日からの調査で流出形跡を確認したことを明確化。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "2025年5月7日最終報を再読し、新たに2024年12月25日初報PDFを発見して経緯を対照。7月2日は不正アクセスが判明した日。7月19日からの専門家調査の結果、電子ファイル流出形跡を確認したとあるが、形跡の確認日は未記載。最終報導入文だけを読んで7月2日に流出確認を重ねる解釈は採用しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。7月2日は不正アクセスの判明日。VPNを通じた侵入・データ流出の実行日や期間は最終報に示されていない。",
+          "sourceUrl": "https://www.fujikura.co.jp/news/information/images/361ce45b1f20ae15225a2df2d19ce12fc843708b.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。最終報の詳細経緯では7月19日開始の調査を進める中で流出痕跡を確認とするが、初確認日は示されていない。冒頭の7月2日は不正アクセス判明日として扱い、流出確認日に転用しない。",
+          "sourceUrl": "https://www.fujikura.co.jp/news/information/images/361ce45b1f20ae15225a2df2d19ce12fc843708b.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。7月2日は不正アクセスの判明日。VPNを通じた侵入・データ流出の実行日や期間は最終報に示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。最終報の詳細経緯では7月19日開始の調査を進める中で流出痕跡を確認とするが、初確認日は示されていない。冒頭の7月2日は不正アクセス判明日として扱い、流出確認日に転用しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2024-12-25",
+        "result": "最終報冒頭に2024年12月25日のホームページ公表を明記。"
+      }
+    },
+    {
+      "id": "hulu-credential-stuffing-2025",
+      "company": "HJホールディングス（Hulu）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.hjholdings.jp/release/20250120.html",
+        "https://help.hulu.jp/hc/ja/articles/37599884682905--%E9%87%8D%E8%A6%81-%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%A4%9C%E7%9F%A5%E3%81%AB%E3%82%88%E3%82%8B%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E5%BC%B7%E5%88%B6%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%E5%AE%9F%E6%96%BD%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B-1-26%E6%9B%B4%E6%96%B0"
+      ],
+      "newSources": [],
+      "reviewSummary": "1月26日更新のヘルプ案内も確認。1月17日〜19日は検知期間、849件のログイン確認時点の具体日は示さない。2022年の別件と混ぜない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。1月17日～19日は不正なアクセスを検知した期間。不正ログインの試行・成功が起きた期間を別途明記していないため、そのまま攻撃期間へ転用しない。",
+          "sourceUrl": "https://www.hjholdings.jp/release/20250120.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。検知後の調査で849アカウントの不正ログインを確認したが、その初確認日は示されていない。個人情報の閲覧は可能性として記載。",
+          "sourceUrl": "https://www.hjholdings.jp/release/20250120.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。1月17日～19日は不正なアクセスを検知した期間。不正ログインの試行・成功が起きた期間を別途明記していないため、そのまま攻撃期間へ転用しない。",
+        "damageConfirmed": "確認した公表資料に記載なし。検知後の調査で849アカウントの不正ログインを確認したが、その初確認日は示されていない。個人情報の閲覧は可能性として記載。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2025-01-20",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "ntt-com-order-2025",
+      "company": "NTTコミュニケーションズ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.ntt.com/about-us/press-releases/news/article/2025/0305_2.html",
+        "https://www.ntt.com/content/dam/nttcom/hq/jp/about-us/csr/report/pdf/nttcom_sr2025_web.pdf",
+        "https://www.ntt.com/content/dam/nttcom/hq/jp/about-us/csr/report/pdf/sr2025_management.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.ntt.com/content/dam/nttcom/hq/jp/about-us/csr/report/pdf/nttcom_sr2025_web.pdf",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        },
+        {
+          "url": "https://www.ntt.com/content/dam/nttcom/hq/jp/about-us/csr/report/pdf/sr2025_management.pdf",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "3月5日公表を再取得。2月5日は不審ログ検知、2月6日は情報流出可能性の確認、2月15日は別装置の不正アクセス特定。新たに公式サステナビリティ2025資料を確認し2024年度の不正アクセス発生と明記することを発見。ただし年度を暦年へ変換したり年度初日を攻撃開始日として保存しない。現行schemaでは年度精度を無理に表現せず監査に残す。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。2月5日は装置Aの不審ログ検知、2月15日は装置Bへの侵害特定日。実行日や期間は示されていない。",
+          "sourceUrl": "https://www.ntt.com/about-us/press-releases/news/article/2025/0305_2.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。2月6日は一部情報流出の可能性を確認した日で、流出被害の確定日ではない。",
+          "sourceUrl": "https://www.ntt.com/about-us/press-releases/news/article/2025/0305_2.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。2月5日は装置Aの不審ログ検知、2月15日は装置Bへの侵害特定日。実行日や期間は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。2月6日は一部情報流出の可能性を確認した日で、流出被害の確定日ではない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2025-03-05",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      },
+      "candidateEvidence": [
+        {
+          "meaning": "attack",
+          "label": "2024年度",
+          "sourceUrl": "https://www.ntt.com/content/dam/nttcom/hq/jp/about-us/csr/report/pdf/sr2025_management.pdf",
+          "limitation": "年度の発生記述は確認済み。現行の年精度は暦年形式のため、年度初日・末日を作らず監査に留める。"
+        }
+      ]
+    },
+    {
+      "id": "furuno-electric-2025",
+      "company": "古野電気",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1671",
+        "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1689",
+        "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1712",
+        "https://www.furuno.co.jp/en/news/notice/notice_category.html?dispmid=965&itemid=1681",
+        "https://www.furuno.co.jp/en/news/notice/notice_category.html?dispmid=965&itemid=1713",
+        "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1680",
+        "https://www.furuno.co.jp/Portals/0/images/ir/library/sec_report/yukashoken_75ki_2.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1680",
+          "finding": "日本語第二報。7月14日公表、15日訂正。",
+          "addedToRecord": false
+        },
+        {
+          "url": "https://www.furuno.co.jp/Portals/0/images/ir/library/sec_report/yukashoken_75ki_2.pdf",
+          "finding": "半期報告書の事案言及。検知6月16日と最終報9月30日を区別、新しい実行・初被害確認日なし。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "初報・第三報・最終報、英語版の前回証拠を再照合し、欠けていた日本語第二報7月14日（15日訂正）と半期報告書を追加閲覧。6月16日は不審な挙動の検知。個人情報・業務情報は漏洩のおそれ、通常業務影響なし。マルウェア設置は確認されるが、その実施時期・確認日なし。半期報告も検知後の調査で不正アクセス確認とするのみ。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "6月16日はサーバーの不審な挙動を検知した日。第1〜3報・最終報を確認したが、実際の不正アクセスやマルウェア設置の時期は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1712",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "第1〜3報・最終報では情報は漏洩のおそれとして記載され、業務システムは通常稼働。マルウェアの設置は確認されているが、被害の最初の確認日は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.furuno.co.jp/news/notice/notice_category.html?dispmid=1039&itemid=1712",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "6月16日はサーバーの不審な挙動を検知した日。第1〜3報・最終報を確認したが、実際の不正アクセスやマルウェア設置の時期は 確認した公表資料に記載なし。",
+        "damageConfirmed": "第1〜3報・最終報では情報は漏洩のおそれとして記載され、業務システムは通常稼働。マルウェアの設置は確認されているが、被害の最初の確認日は 確認した公表資料に記載なし。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2025-06-30",
+        "result": "verified",
+        "evidence": "第1報の日付は2025年6月30日。最終報でも同日公表を明記。"
+      }
+    },
+    {
+      "id": "nssol-2025",
+      "company": "日鉄ソリューションズ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.nssol.nipponsteel.com/press/2025/20250708_160000.html",
+        "https://www.nssol.nipponsteel.com/ir/integrated-report/pdf/integrated-report-2025.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "統合報告書2025にも2025年3月の侵入検知と7月公表のみ。侵入開始と確定流出確認日を追加特定できない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。3月7日はサーバーへの不審なアクセスの検知日。後の調査による侵入確認日は示されず、攻撃実施日とは区別。",
+          "sourceUrl": "https://www.nssol.nipponsteel.com/press/2025/20250708_160000.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。個人情報の流出は可能性として記載され、実際の流出等の初確認日は示されていない。",
+          "sourceUrl": "https://www.nssol.nipponsteel.com/press/2025/20250708_160000.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。3月7日はサーバーへの不審なアクセスの検知日。後の調査による侵入確認日は示されず、攻撃実施日とは区別。",
+        "damageConfirmed": "確認した公表資料に記載なし。個人情報の流出は可能性として記載され、実際の流出等の初確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2025-07-08",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "shirohato-2025",
+      "company": "白鳩",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.shirohato.co.jp/news/doc/news_202512_0603.html",
+        "https://www.shirohato.co.jp/news/doc/news_202511_0602.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "11月7日初報・12月1日最終報を再読。楽天ID連携のバグであり攻撃は非該当を維持。11月2日23:31は顧客問い合わせ、11月4日19:50は予防的機能停止。両者の間に再現性確認があったとは分かるが、被害を最初に確認した日を特定できない。8月20日～11月4日は影響可能期間で攻撃期間ではない。",
+      "eventDates": {
+        "attack": {
+          "precision": "notApplicable",
+          "label": "非該当",
+          "note": "最終調査は楽天ID連携の新規会員登録機能のシステム不具合により他人の情報が表示された事案と説明。公表された2025年8月20日〜11月4日は不具合の発生期間であり、攻撃期間ではない。",
+          "sourceUrl": "https://www.shirohato.co.jp/news/doc/news_202512_0603.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "初報は11月2日23時31分のお客様からの申告、その後の調査で不具合の再現性を確認、11月4日19時50分の遮断を記載するが、再現・閲覧可能状態を最初に確認した日そのものは 確認した公表資料に記載なし。",
+          "sourceUrl": "https://www.shirohato.co.jp/news/doc/news_202511_0602.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "最終調査は楽天ID連携の新規会員登録機能のシステム不具合により他人の情報が表示された事案と説明。公表された2025年8月20日〜11月4日は不具合の発生期間であり、攻撃期間ではない。",
+        "damageConfirmed": "初報は11月2日23時31分のお客様からの申告、その後の調査で不具合の再現性を確認、11月4日19時50分の遮断を記載するが、再現・閲覧可能状態を最初に確認した日そのものは 確認した公表資料に記載なし。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2025-11-07",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "mazda-2026-03-19",
+      "company": "マツダ株式会社",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://newsroom.mazda.com/ja/publicity/release/2026/202603/260319b.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "3月19日公式PDFを再読し公式ニュースを検索。2025年12月中旬は情報流出可能性の検知で、その後調査により脆弱性悪用・一部情報アクセスが判明。攻撃の実施日時や確定被害の最初の確認日なし。2026年10月のCLUB MAZDA COMMUNITYは別事案として除外。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "2025年12月中旬はシステムへの不正アクセスによる情報流出の可能性を検知した時期。実際の不正アクセス日時は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://newsroom.mazda.com/ja/publicity/release/2026/202603/260319b.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "2025年12月中旬は流出の可能性の検知であり、被害の最初の確認日は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://newsroom.mazda.com/ja/publicity/release/2026/202603/260319b.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "2025年12月中旬はシステムへの不正アクセスによる情報流出の可能性を検知した時期。実際の不正アクセス日時は 確認した公表資料に記載なし。",
+        "damageConfirmed": "2025年12月中旬は流出の可能性の検知であり、被害の最初の確認日は 確認した公表資料に記載なし。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-03-19",
+        "result": "verified",
+        "evidence": "当該公表資料の表題日付と既存announcementDateが一致。"
+      }
+    },
+    {
+      "id": "2rinkan-2026",
+      "company": "２りんかんイエローハット",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://2rinkan.jp/annai/20260423/"
+      ],
+      "newSources": [],
+      "reviewSummary": "子会社サイトの初報・第二報・最終報を再確認。親会社初報・第二報は検索抽出に表示されたが、直接本文取得は3本とも失敗。検索断片の4月20日検知を攻撃日へ転用しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "２りんかん公式サイトに併載の初報・第二報・最終報を確認した範囲では、API悪用の発生日・期間は明示されていない。イエローハット側の3資料は取得できず未確認。",
+          "sourceUrl": "https://2rinkan.jp/annai/20260423/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "同サイトの最終報は会員データの取得を特定したとするが、最初に被害を確認した日は示さない。4月23日・5月1日・6月19日の公表日を確認日に転用しない。",
+          "sourceUrl": "https://2rinkan.jp/annai/20260423/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "２りんかん公式サイトに併載の初報・第二報・最終報を確認した範囲では、API悪用の発生日・期間は明示されていない。イエローハット側の3資料は取得できず未確認。",
+        "damageConfirmed": "同サイトの最終報は会員データの取得を特定したとするが、最初に被害を確認した日は示さない。4月23日・5月1日・6月19日の公表日を確認日に転用しない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www.yellowhat.jp/information/2rinnkan/202604.html",
+          "reason": "Direct web retrieval failed; search extraction only available for first/second notices"
+        },
+        {
+          "url": "https://www.yellowhat.jp/information/2rinnkan/202605.html",
+          "reason": "Direct web retrieval failed; search extraction only available for first/second notices"
+        },
+        {
+          "url": "https://www.yellowhat.jp/information/2rinnkan/202606.html",
+          "reason": "Direct web retrieval failed; search extraction only available for first/second notices"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2026-04-23",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "moneyforward-2026-05-01",
+      "company": "株式会社マネーフォワード",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://corp.moneyforward.com/news/info/20260501-mf-press-1/",
+        "https://corp.moneyforward.com/news/info/20260623-mf-press-1/",
+        "https://support.me.moneyforward.com/hc/ja/articles/59240583832473",
+        "https://support.me.moneyforward.com/hc/ja/articles/57548547365145",
+        "https://corp.moneyforward.com/news/info/20260511-mf-press-1/",
+        "https://corp.moneyforward.com/news/info/20260512-mf-press-1/",
+        "https://mfkessai.co.jp/news/info-20260501"
+      ],
+      "newSources": [
+        {
+          "url": "https://corp.moneyforward.com/news/info/20260512-mf-press-1/",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        },
+        {
+          "url": "https://mfkessai.co.jp/news/info-20260501",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "初報・第2報・最終の第4報と新旧FAQを再読し、欠けていた5月12日第3報（銀行連携の再開）を発見。初報から最終報までGitHub不正アクセス、認証情報漏えい、リポジトリ流出について実行日時・最初の被害確認日時は記載なし。5月1日公表や予防的連携停止、6月23日確報提出を被害初確認に代用しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。初報、第2報、最終調査報告と関連FAQに攻撃の実施日・期間は示されていない。",
+          "sourceUrl": "https://corp.moneyforward.com/news/info/20260501-mf-press-1/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。リポジトリの複製と情報流出は確認されているが、その被害を最初に確認した日は示されていない。銀行口座連携の停止は予防措置。",
+          "sourceUrl": "https://corp.moneyforward.com/news/info/20260501-mf-press-1/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。初報、第2報、最終調査報告と関連FAQに攻撃の実施日・期間は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。リポジトリの複製と情報流出は確認されているが、その被害を最初に確認した日は示されていない。銀行口座連携の停止は予防措置。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-05-01",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "zojirushi-2026-05-15",
+      "company": "象印マホービン株式会社（台湾子会社・台象股份有限公司）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.zojirushi.co.jp/corp/news/2026/260515/information.html",
+        "https://www.zojirushi.co.jp/corp/news/2026/260727/information.html",
+        "https://www.zojirushi.co.jp/important/info/20260513.pdf",
+        "https://www.zojirushi.co.jp/sustainability/governance/risk-management.html",
+        "https://www.zojirushi.co.jp/sustainability/other/esg-data.html",
+        "https://www.zojirushi.co.jp/sustainability/other/pdf/esg-databook2026.pdf"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.zojirushi.co.jp/important/info/20260513.pdf",
+          "finding": "5月13日付の別初報PDF。収録起点5月15日より早いが収録公表日を保持。",
+          "addedToRecord": false
+        },
+        {
+          "url": "https://www.zojirushi.co.jp/sustainability/governance/risk-management.html",
+          "finding": "月単位の新しい攻撃・流出時期候補。ただし公表日不明のため現スキーマへ登録せず。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "5月15日初報・7月27日第二報を再読。4月13日は不正アクセス検知・障害発生、5月11日は流出の可能性判明であり、以前のロールバックを保持。新発見の5月13日PDFにも同じ区別。公式サステナビリティのリスクマネジメントページは2026年4月に不正アクセスによる情報漏洩が発生したと月を明記するが、ページ公表日が取得できない。source.publishedDateが必須の日付スキーマに合わせて日付を捏造せず、月単位の有望根拠として監査に留める。 公式リンク先のESGデータブック2026（3頁）も確認したが当該2026年事案の追記・発行日の明記はなく、月単位候補の根拠登録を解消できなかった。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した5月15日・7月27日公表は4月13日の不正アクセス検知とシステム障害を説明しているが、侵入・攻撃の実行日・期間は独立して明記していない。",
+          "sourceUrl": "https://www.zojirushi.co.jp/corp/news/2026/260515/information.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した5月15日・7月27日公表では、4月13日にシステム障害が発生し不正アクセスを検知したとあるが、被害を初めて確認した日として独立した記載はない。5月11日は情報流出の可能性の判明日であり、確定被害の確認日には転用しない。",
+          "sourceUrl": "https://www.zojirushi.co.jp/corp/news/2026/260515/information.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した5月15日・7月27日公表は4月13日の不正アクセス検知とシステム障害を説明しているが、侵入・攻撃の実行日・期間は独立して明記していない。",
+        "damageConfirmed": "確認した5月15日・7月27日公表では、4月13日にシステム障害が発生し不正アクセスを検知したとあるが、被害を初めて確認した日として独立した記載はない。5月11日は情報流出の可能性の判明日であり、確定被害の確認日には転用しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-05-15",
+        "result": "5月15日の収録公式HTMLと7月27日の初報参照は一致。別の公式PDFは5月13日付で、より早い公表資料として監査に記録。元の収録起点は変更しない。"
+      },
+      "candidateEvidence": [
+        {
+          "meaning": "attack",
+          "precision": "month",
+          "label": "2026年4月",
+          "sourceUrl": "https://www.zojirushi.co.jp/sustainability/governance/risk-management.html",
+          "limitation": "Source has no verified publication date. The current source schema requires YYYY-MM-DD publishedDate; no invented date or schema edit was made. Not a restoration of the rejected April13 detection-day inference."
+        }
+      ]
+    },
+    {
+      "id": "icc-2026-05-19",
+      "company": "株式会社石川コンピュータ・センター",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.icc.co.jp/news/2026/20260519.html",
+        "https://www.icc.co.jp/news/2026/20260527.html",
+        "https://www.icc.co.jp/news/2026/20260629.html",
+        "https://www.icc.co.jp/news/2026/"
+      ],
+      "newSources": [],
+      "reviewSummary": "初報・第二報・最終報を再確認。メール保存・ログ期間は攻撃期間ではなく、5月14日は原因判明日。10月17日の別サポートサイト事案は混ぜない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。5月8日は送信機能停止、5月14日はサイバー攻撃と認識した日。保管メール・ログの対象期間は攻撃期間ではない。",
+          "sourceUrl": "https://www.icc.co.jp/news/2026/20260629.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料では被害の初確認日を独立に特定できない。5月8日にメール送信機能が停止し構成を切り替えたと記載し、5月14日はその事象の原因をサイバー攻撃と認識した日。後者を被害初確認日に転用しない。漏えいは最終報でも未確認。",
+          "sourceUrl": "https://www.icc.co.jp/news/2026/20260527.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。5月8日は送信機能停止、5月14日はサイバー攻撃と認識した日。保管メール・ログの対象期間は攻撃期間ではない。",
+        "damageConfirmed": "確認した公表資料では被害の初確認日を独立に特定できない。5月8日にメール送信機能が停止し構成を切り替えたと記載し、5月14日はその事象の原因をサイバー攻撃と認識した日。後者を被害初確認日に転用しない。漏えいは最終報でも未確認。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-05-19",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "murauchi-2026",
+      "company": "ムラウチドットコム",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "source-not-retrieved",
+      "reviewedUrls": [],
+      "newSources": [],
+      "reviewSummary": "初報・第2報のリンクとFAQ/プレス案内を再探索したが公式サイトのPDF/HTMLは403等で本文を取得できなかった。二次記事は7月15日障害、16日痕跡発見、24日初報、9月15日調査結果を記すが、一次資料未確認のため日付を追加しない。eventDates欠落を未公表へ勝手に変換しない。",
+      "eventDates": {},
+      "remainingUnknownReasons": {
+        "attack": "本文を取得できず未確認。未公表・不明へ置き換えない。",
+        "damageConfirmed": "本文を取得できず未確認。未公表・不明へ置き換えない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://murauchi.com/static-pages/privacy/%E5%BC%8A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A0%B1%EF%BC%89.pdf",
+          "error": "HTTP Error 403: Forbidden",
+          "resolvedBy": null
+        },
+        {
+          "url": "https://murauchi.com/static-pages/privacy/pressrelease.html",
+          "error": "公式HTMLもweb/直接取得で本文を取得できず",
+          "resolvedBy": null
+        },
+        {
+          "url": "https://www.murauchi.com/static-pages/privacy/pressrelease.html",
+          "error": "公式HTMLもweb/直接取得で本文を取得できず",
+          "resolvedBy": null
+        }
+      ],
+      "announcementCheck": {
+        "date": "2026-07-24",
+        "result": "unverified",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "chuden-2026",
+      "company": "中部電力",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.chuden.co.jp/publicity/press/1218169_3273.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "8月4日公式発表を再読。7月29日は第三者機関からの情報提供日、その後調査で資格情報不正利用と約2,400件メール等の閲覧可能性。防止措置は同日だが、実際のアクセス日・実際の情報被害の初確認日はいずれも明示されない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。7月29日は第三者からの情報提供と調査・対処の日。資格情報が不正利用された日時は明記されていない。",
+          "sourceUrl": "https://www.chuden.co.jp/publicity/press/1218169_3273.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。7月29日に把握したのは不正閲覧・漏えいの可能性。システム障害や電力供給への影響はないとされ、被害の初確認日は示されていない。",
+          "sourceUrl": "https://www.chuden.co.jp/publicity/press/1218169_3273.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。7月29日は第三者からの情報提供と調査・対処の日。資格情報が不正利用された日時は明記されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。7月29日に把握したのは不正閲覧・漏えいの可能性。システム障害や電力供給への影響はないとされ、被害の初確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-08-04",
+        "result": "資料に記載された公表日と一致。既存値を保持。"
+      }
+    },
+    {
+      "id": "yellowhat-web-reservation-2026",
+      "company": "イエローハット（WEB作業予約システム）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.release.tdnet.info/inbs/140120261015551164.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "保存済み10月15日第2報全文を再確認し公式追加報を検索。8月19日は検知、フォレンジックで流出確認した日はなし。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。確認できた10月15日第2報は8月19日を不正アクセス検知日として記載するのみで、不正侵入やデータ流出が実行された日時は明示していない。",
+          "sourceUrl": "https://www.release.tdnet.info/inbs/140120261015551164.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月15日第2報は第三者のフォレンジック調査で顧客データの外部流出を確認したと説明するが、流出を最初に確認した日を記載していない。8月19日の検知・遮断・停止日を流出確認日に代用しない。",
+          "sourceUrl": "https://www.release.tdnet.info/inbs/140120261015551164.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。確認できた10月15日第2報は8月19日を不正アクセス検知日として記載するのみで、不正侵入やデータ流出が実行された日時は明示していない。",
+        "damageConfirmed": "確認した公表資料に記載なし。10月15日第2報は第三者のフォレンジック調査で顧客データの外部流出を確認したと説明するが、流出を最初に確認した日を記載していない。8月19日の検知・遮断・停止日を流出確認日に代用しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-08-28",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "mitsui-fudosan-credentials-2026",
+      "company": "三井不動産",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.mitsuifudosan.co.jp/letter/260901/download/260901.pdf",
+        "https://www.mitsuifudosan.co.jp/letter/260928/download/260928.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "9月1日初報と9月28日第2報を再読。8月28日はシステム不正アクセス確認・調査の日。資格情報の不正利用は判明したが実施日時はない。9月7～17日は対象者通知、9月28日は確報提出。情報流出・二次被害は未確認であり被害初確認日を設定できない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した9月1日・9月28日公表では、8月28日に不正アクセスを確認したとあるが、実行日・期間は明記されていない。",
+          "sourceUrl": "https://www.mitsuifudosan.co.jp/letter/260901/download/260901.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した第2報でも、閲覧された可能性のある個人情報の特定であり、実際に外部に漏洩した事実は確認されていない。8月28日の検知を被害確定日とはしない。",
+          "sourceUrl": "https://www.mitsuifudosan.co.jp/letter/260928/download/260928.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した9月1日・9月28日公表では、8月28日に不正アクセスを確認したとあるが、実行日・期間は明記されていない。",
+        "damageConfirmed": "確認した第2報でも、閲覧された可能性のある個人情報の特定であり、実際に外部に漏洩した事実は確認されていない。8月28日の検知を被害確定日とはしない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-01",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "paperlogic-2026",
+      "company": "ペーパーロジック",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://paperlogic.co.jp/post_17046/",
+        "https://paperlogic.co.jp/post_17055/"
+      ],
+      "newSources": [],
+      "reviewSummary": "9月1日初報と10月9日最終報をWeb掲載本文で再確認（直接取得は403）。8月27日は不正アクセスと不審挙動の検知。最終報で詳細調査の結果、顧客個人情報の漏えい・不正閲覧・取得の証拠はないと説明。検知日を攻撃実施日や被害確認日へ移さない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。8月27日は不正アクセスと通常と異なる動作の検知日。実際のアクセス開始・実行日時は両公表に明示されていない。",
+          "sourceUrl": "https://paperlogic.co.jp/post_17046/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。検知後の緊急停止は記載されているが、被害の初確認日は明示されていない。続報でも顧客文書・個人情報・認証情報の取得や外部送信を示す事実は認められないとしている。",
+          "sourceUrl": "https://paperlogic.co.jp/post_17055/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。8月27日は不正アクセスと通常と異なる動作の検知日。実際のアクセス開始・実行日時は両公表に明示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。検知後の緊急停止は記載されているが、被害の初確認日は明示されていない。続報でも顧客文書・個人情報・認証情報の取得や外部送信を示す事実は認められないとしている。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://paperlogic.co.jp/post_17046/",
+          "error": "HTTP Error 403: Forbidden",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        },
+        {
+          "url": "https://paperlogic.co.jp/post_17055/",
+          "error": "HTTP Error 403: Forbidden",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2026-09-01",
+        "result": "資料に記載された公表日と一致。既存値を保持。"
+      }
+    },
+    {
+      "id": "digital-agency-gss-2026",
+      "company": "デジタル庁",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.digital.go.jp/news/2026-0911-01",
+        "https://www.digital.go.jp/press/5fc99139-a4e2-4b7b-8b0c-d475e926143f"
+      ],
+      "newSources": [],
+      "reviewSummary": "公式発表と9月12日更新Q&Aを再確認。6月25日検知・7月9日侵入判明/漏えいのおそれ確認のみで、業務支障も否定している。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。6月25日は大量ファイルアクセスの検知日、7月9日は調査で不正侵入が判明した日。Q&Aを含め侵入の開始日・攻撃期間は示されていない。",
+          "sourceUrl": "https://www.digital.go.jp/press/5fc99139-a4e2-4b7b-8b0c-d475e926143f",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。Q&Aの7月9日は漏えいのおそれの確認であり、実際の流出確認とは区別。被害初確認日は示されていない。",
+          "sourceUrl": "https://www.digital.go.jp/press/5fc99139-a4e2-4b7b-8b0c-d475e926143f",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。6月25日は大量ファイルアクセスの検知日、7月9日は調査で不正侵入が判明した日。Q&Aを含め侵入の開始日・攻撃期間は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。Q&Aの7月9日は漏えいのおそれの確認であり、実際の流出確認とは区別。被害初確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-11",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "kingprinters-system-2026",
+      "company": "キングプリンターズ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://kingprinters.com/news/2026/oshirase_20260914-2",
+        "https://kingprinters.com/news/2026/oshirase_20260925"
+      ],
+      "newSources": [],
+      "reviewSummary": "9月14日初報・9月25日第2報を再読。9月10日は検知と予防的停止、14日は再開。生成AI利用目的の攻撃可能性を説明するが攻撃実行日を明記しない。10月初旬から約1か月を見込む詳細調査予定との記載で、今回検索では公式最終報を見つけられなかった。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月10日は不正アクセス検知日。侵入や生成AIサービス不正利用の実行時期は初報・第二報に示されていない。",
+          "sourceUrl": "https://kingprinters.com/news/2026/oshirase_20260925",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月10日18時からの停止は被害拡大防止・安全確認の措置。第二報もデータ漏えい未確認、生成AI不正利用は目的とみられるとの説明で、最初の被害確認日は示されていない。",
+          "sourceUrl": "https://kingprinters.com/news/2026/oshirase_20260925",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月10日は不正アクセス検知日。侵入や生成AIサービス不正利用の実行時期は初報・第二報に示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。9月10日18時からの停止は被害拡大防止・安全確認の措置。第二報もデータ漏えい未確認、生成AI不正利用は目的とみられるとの説明で、最初の被害確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-14",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "ikegami-cyberattack-2026",
+      "company": "池上通信機",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.ikegami.co.jp/news/detail/571/",
+        "https://www.ikegami.co.jp/news/detail/573/",
+        "https://www.ikegami.co.jp/news/detail/574/"
+      ],
+      "newSources": [],
+      "reviewSummary": "9月24日初報、9月30日第二報、10月2日第三報を再読し公式追加報告を検索。9月21日は外部から攻撃可能性情報の提供。第二報でファイル暗号化、第三報でダークウェブ上の自社保有と思われる情報公開を確認するが、実際の確認日は未記載。公表日を被害確認日にはしない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月21日は外部から可能性の情報提供を受けた日。第2報・第3報にも侵入・暗号化の実施日は示されていない。",
+          "sourceUrl": "https://www.ikegami.co.jp/news/detail/573/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月30日までにファイル暗号化、10月2日までに自社保有と思われる情報の公開を確認したとするが、それぞれの最初の確認日は明示していない。",
+          "sourceUrl": "https://www.ikegami.co.jp/news/detail/573/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月21日は外部から可能性の情報提供を受けた日。第2報・第3報にも侵入・暗号化の実施日は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。9月30日までにファイル暗号化、10月2日までに自社保有と思われる情報の公開を確認したとするが、それぞれの最初の確認日は明示していない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": "確認した公表資料の日付 2026-09-24 と収録公表日は一致。"
+    },
+    {
+      "id": "fines-reservation-2026",
+      "company": "ファインズ（予約システム）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://e-tenki.co.jp/news/",
+        "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/"
+      ],
+      "newSources": [],
+      "reviewSummary": "公式速報と新着一覧を確認。9月22日の異常検知後に不正アクセスを確認したが、情報取得の確認日・攻撃時期はない。追加続報を見つけられず。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月22日は異常検知と調査による不正アクセス確認の日であり、攻撃の実施時期は示されていない。",
+          "sourceUrl": "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。対象件数と情報項目を速報として示すが、個人情報漏えい等の被害を最初に確認した日は記載されていない。",
+          "sourceUrl": "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月22日は異常検知と調査による不正アクセス確認の日であり、攻撃の実施時期は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。対象件数と情報項目を速報として示すが、個人情報漏えい等の被害を最初に確認した日は記載されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-25",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "japanpost-international-inquiry-2026",
+      "company": "日本郵便（国際郵便物の調査請求Web受付サービス）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.post.japanpost.jp/newsrelease/pressrelease/6267689171.html",
+        "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/99a38c8fdea24951b26188d86b797684/20261016_04_01.pdf",
+        "https://www.post.japanpost.jp/newsrelease/pressrelease/383542224171.html"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.post.japanpost.jp/newsrelease/pressrelease/383542224171.html",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "9月25日初報・10月16日調査結果とその公表ページを確認。9月25日15時頃は不正アクセス可能性の発覚。後続でスパム送信被害は確認されたが送信日時・最初の確認日時は示されない。登録情報閲覧等も未確定のため初報公表時刻から推測しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月25日15時頃は不正アクセスの可能性が発覚した時点。初報・10月16日調査結果とも攻撃の実施日を示していない。",
+          "sourceUrl": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/99a38c8fdea24951b26188d86b797684/20261016_04_01.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月16日調査結果はスパムメール送信を確認し、情報閲覧の有無は未確認とするが、実際の被害を最初に確認した日は示していない。",
+          "sourceUrl": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/99a38c8fdea24951b26188d86b797684/20261016_04_01.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月25日15時頃は不正アクセスの可能性が発覚した時点。初報・10月16日調査結果とも攻撃の実施日を示していない。",
+        "damageConfirmed": "確認した公表資料に記載なし。10月16日調査結果はスパムメール送信を確認し、情報閲覧の有無は未確認とするが、実際の被害を最初に確認した日は示していない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-25",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "legoland-hotel-booking-2026",
+      "company": "LEGOLAND Japan（ホテル予約）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.legoland.jp/operation/news/news-release/news20260925/",
+        "https://legoland.jp/en/operation/latest-news/news-release/news20240925/"
+      ],
+      "newSources": [
+        {
+          "url": "https://legoland.jp/en/operation/latest-news/news-release/news20240925/",
+          "finding": "同日英語版。不正なアクセスをrecently identifiedとするのみ。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "9月25日日本語通知に加え英語版を発見・確認。第三者予約プラットフォームで連絡先が不正にアクセスされたことを最近認識したとのみ記載。Amadeus/iHotelierの公式追加資料も探索したが攻撃日・最初の具体的被害確認日を示す同一事案の資料は発見できず。別事業者HotelNetSolutionsの事案日時は転用しない。英語版のURLに20240925とあるが本文公表日は2026年9月25日。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。予約プラットフォーム運営会社から不正アクセス判明の報告を受けたとするが、攻撃の実施日・期間は記載されていない。",
+          "sourceUrl": "https://www.legoland.jp/operation/news/news-release/news20260925/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。影響を受けた可能性のある予約1,557件を確認したとするが、被害を最初に確認した日も委託先からの通知日も明示していない。",
+          "sourceUrl": "https://www.legoland.jp/operation/news/news-release/news20260925/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。予約プラットフォーム運営会社から不正アクセス判明の報告を受けたとするが、攻撃の実施日・期間は記載されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。影響を受けた可能性のある予約1,557件を確認したとするが、被害を最初に確認した日も委託先からの通知日も明示していない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": "確認した公表資料の日付 2026-09-25 と収録公表日は一致。"
+    },
+    {
+      "id": "park24-timescar-2026",
+      "company": "パーク２４（タイムズモビリティ）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.park24.co.jp/news/",
+        "https://www.park24.co.jp/news/2026/10/20261016-1.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "第4報と公式発表一覧を再確認。調査結果案内を10月23日に延期とあり、今回確認した資料に新しい攻撃・被害初確認日時はない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月25日9:07は不正アクセス検知、9月26日7:25は遮断完了の時刻。第1〜4報とFAQに攻撃の実行時期・期間は示されていない。",
+          "sourceUrl": "https://www.park24.co.jp/news/2026/09/20260928-1.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月25日は漏えいの可能性の判明。9月28日第2報で第三者の情報取得を確認したと公表するが、初確認日自体は示されていない。",
+          "sourceUrl": "https://www.park24.co.jp/news/2026/09/20260928-1.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月25日9:07は不正アクセス検知、9月26日7:25は遮断完了の時刻。第1〜4報とFAQに攻撃の実行時期・期間は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。9月25日は漏えいの可能性の判明。9月28日第2報で第三者の情報取得を確認したと公表するが、初確認日自体は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-25",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "tokyo-metro-metpo-2026",
+      "company": "東京地下鉄（東京メトロ）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.to-me-card.jp/important/202609-01/index.html",
+        "https://www.tokyometro.jp/info/files/9172e2efa7222d15f8d4f601b6385457.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "9月27日PDFと10月15日追記済みFAQを再読。9月20日はメールサービス不具合発生、9月25日は通常と異なる利用記録の発見。後続で不正取得が確認された範囲は配信停止アドレスのみとされたが、その最初の確認日時が明示されない。障害・ログ発見日を攻撃や被害確認日に置かない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月20日はメール配信不具合の発生日、9月25日は異常な利用記録と不正アクセスの確認日。攻撃実施時期は明示されていない。",
+          "sourceUrl": "https://www.to-me-card.jp/important/202609-01/index.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。メールアドレスは閲覧・取得の可能性として記載。9月20日の障害発生や9月25日の不正アクセス判明を、実際の流出等の初確認日へ転用しない。",
+          "sourceUrl": "https://www.to-me-card.jp/important/202609-01/index.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月20日はメール配信不具合の発生日、9月25日は異常な利用記録と不正アクセスの確認日。攻撃実施時期は明示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。メールアドレスは閲覧・取得の可能性として記載。9月20日の障害発生や9月25日の不正アクセス判明を、実際の流出等の初確認日へ転用しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-27",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "temairazu-2026",
+      "company": "手間いらず",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.temairazu.co.jp/pdf/1206/news-update",
+        "https://www.temairazu.co.jp/pdf/1210/news-update",
+        "https://www.temairazu.co.jp/pdf/1211/news-update",
+        "https://www.temairazu.co.jp/pdf/1212/ir-news"
+      ],
+      "newSources": [],
+      "reviewSummary": "9月28日初報、10月7日第二報、8日英語版、9日適時開示を再読。9月21日は宿泊施設から不審な予約メッセージ送信連絡を受けた日で、その後に不正アクセスを確認。メッセージと同社不正アクセスの関係も推定段階。9月24日10:58〜21:48は調査・被害拡大防止の一部機能停止。予約者情報445万人分は閲覧・取得可能性であり、攻撃期間や確定被害初確認日は明示されない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月21日は予約者への不審メッセージについて宿泊施設から連絡を受けた日。調査で不正アクセスを確認したが、実際のアクセス日時は各報に示されていない。",
+          "sourceUrl": "https://www.temairazu.co.jp/pdf/1206/news-update",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。不審メッセージと本件不正アクセスとの因果関係は調査中で、宿泊情報の取得は可能性として記載。9月24日は安全確保のための一部機能停止日であり、被害初確認日とは記載されていない。",
+          "sourceUrl": "https://www.temairazu.co.jp/pdf/1212/ir-news",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月21日は予約者への不審メッセージについて宿泊施設から連絡を受けた日。調査で不正アクセスを確認したが、実際のアクセス日時は各報に示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。不審メッセージと本件不正アクセスとの因果関係は調査中で、宿泊情報の取得は可能性として記載。9月24日は安全確保のための一部機能停止日であり、被害初確認日とは記載されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-28",
+        "result": "資料に記載された公表日と一致。既存値を保持。"
+      }
+    },
+    {
+      "id": "toppan-payments-portal-2026",
+      "company": "TOPPANペイメンツ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://thincacloud.toppan.com/newsrelease/20261014/",
+        "https://thincacloud.toppan.com/newsrelease/"
+      ],
+      "newSources": [],
+      "reviewSummary": "最終調査結果と公式一覧を再確認。テーブル名一覧参照のみの痕跡で、確認時期は示さず。個別情報の参照・取得等は否定。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した9月28日以降の障害案内と10月14日の調査結果では、不正アクセスの検知を報告しているが、実行日・期間は明記されていない。9月28日22時は予防的なサービス停止日時。",
+          "sourceUrl": "https://pfinfo.thincacloud.jp/kamepo",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した調査結果ではテーブル名一覧の参照痕跡を確認した一方、個別情報の参照・取得・流出・改ざんは否定されている。痕跡を最初に確認した日付は明記されず、予防的な停止日は被害確認日としない。",
+          "sourceUrl": "https://thincacloud.toppan.com/newsrelease/20261014/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した9月28日以降の障害案内と10月14日の調査結果では、不正アクセスの検知を報告しているが、実行日・期間は明記されていない。9月28日22時は予防的なサービス停止日時。",
+        "damageConfirmed": "確認した調査結果ではテーブル名一覧の参照痕跡を確認した一方、個別情報の参照・取得・流出・改ざんは否定されている。痕跡を最初に確認した日付は明記されず、予防的な停止日は被害確認日としない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-28",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "aiphone-australia-2026",
+      "company": "アイホン／AIPHONE PTY LTD",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.aiphone.co.jp/docs/news/202609291325.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "9月29日第1報を再読し日本語・英語で豪州法人の続報を検索。本文に侵入・検知日時がなく、拠点間ネットワーク遮断と調査のみを報告。漏えいや関係者に影響する被害は未確認。今回の検索で日付を特定する公式続報を見つけられなかった。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。第1報は不正アクセスの判明を報告するが、実際のアクセス日時は明記していない。",
+          "sourceUrl": "https://www.aiphone.co.jp/docs/news/202609291325.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。第1報では外部への情報漏洩や関係者に影響を及ぼす被害は未確認。発表日を被害初確認日として扱わない。",
+          "sourceUrl": "https://www.aiphone.co.jp/docs/news/202609291325.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。第1報は不正アクセスの判明を報告するが、実際のアクセス日時は明記していない。",
+        "damageConfirmed": "確認した公表資料に記載なし。第1報では外部への情報漏洩や関係者に影響を及ぼす被害は未確認。発表日を被害初確認日として扱わない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-29",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "japanpost-app-2026",
+      "company": "日本郵政・日本郵便（郵便局アプリ）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/c6b030844cf0412ab0d48f8bae7b3a75/20260929_01_01.pdf",
+        "https://www.post.japanpost.jp/newsrelease/pressrelease/3340166500.html"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.post.japanpost.jp/newsrelease/pressrelease/3340166500.html",
+          "finding": "既存PDFへの公式プレスリリース入口。日時増分なし。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "9月29日公式PDFと公式プレスリリース入口を確認。9月25日22:30は緊急メンテナンス開始時刻、26日は再開。69件19名の情報不正取得は判明したが、取得実行日と最初にそれを確認した日は記載されない。保守開始を代用しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "9月25日22時30分は不正アクセスに伴い緊急メンテナンスを開始した時刻。実際の不正アクセス日時は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/c6b030844cf0412ab0d48f8bae7b3a75/20260929_01_01.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "閲覧された情報69件・19名は確認済みとするが、最初に閲覧被害を確認した日は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/c6b030844cf0412ab0d48f8bae7b3a75/20260929_01_01.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "9月25日22時30分は不正アクセスに伴い緊急メンテナンスを開始した時刻。実際の不正アクセス日時は 確認した公表資料に記載なし。",
+        "damageConfirmed": "閲覧された情報69件・19名は確認済みとするが、最初に閲覧被害を確認した日は 確認した公表資料に記載なし。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-29",
+        "result": "verified",
+        "evidence": "当該公表資料の表題日付と既存announcementDateが一致。"
+      }
+    },
+    {
+      "id": "unirita-document-saas-2026",
+      "company": "ユニリタ（社内文書管理システム）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.unirita.co.jp/notice.html",
+        "https://www.unirita.co.jp/news/2026/media_20261014.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "情報漏えい案内一覧・第3報を再確認。10月14日は公開情報の照合であって第1報時点で確認済みの情報窃取の初確認ではない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月28日13:30頃は窃取を主張するWeb掲載の確認時刻。第1〜3報はSaaSからの情報取得の実行日を示していない。",
+          "sourceUrl": "https://www.unirita.co.jp/dcms_media/other/261009_kaiji001.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月28日は窃取主張の確認、その後の調査で窃取の事実を確認したと記載されるが初確認日はない。10月14日は公開情報中の自社情報確認であり、既に第1報で確認済みの窃取被害の初確認日に代用しない。",
+          "sourceUrl": "https://www.unirita.co.jp/dcms_media/other/261009_kaiji001.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月28日13:30頃は窃取を主張するWeb掲載の確認時刻。第1〜3報はSaaSからの情報取得の実行日を示していない。",
+        "damageConfirmed": "確認した公表資料に記載なし。9月28日は窃取主張の確認、その後の調査で窃取の事実を確認したと記載されるが初確認日はない。10月14日は公開情報中の自社情報確認であり、既に第1報で確認済みの窃取被害の初確認日に代用しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-29",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "yamato-atobarai-2026",
+      "company": "ヤマト運輸（クロネコ代金後払いサービス）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.yamato-hd.co.jp/important/img/info_260929_1_1.pdf",
+        "https://www.yamato-hd.co.jp/important/img/info_260929_1_6.pdf",
+        "https://www.yamato-hd.co.jp/important/img/info_260929_1_7.pdf",
+        "https://www.yamato-hd.co.jp/important/info_260929_1.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "9月29日初報・10月2日第2報の画像PDFを全頁目視、10月9日第3報と10月16日調査結果も再読。9月28日は不正アクセス確認、同日22:28は予防的停止。最終報で不正持ち出しが確定したが最初の確認日時はなし。2018年等からの期間は対象データの利用期間で攻撃期間ではない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月28日は不正アクセスを確認した日。初報から第4報までに攻撃の実施時期は示されていない。",
+          "sourceUrl": "https://www.yamato-hd.co.jp/important/info_260929_1.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。初報の9月28日22:28は対策による停止、第2報・第3報は流出可能性。第4報は情報の不正持ち出しを確認したとするが、最初に確認した日を示していない。",
+          "sourceUrl": "https://www.yamato-hd.co.jp/important/info_260929_1.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月28日は不正アクセスを確認した日。初報から第4報までに攻撃の実施時期は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。初報の9月28日22:28は対策による停止、第2報・第3報は流出可能性。第4報は情報の不正持ち出しを確認したとするが、最初に確認した日を示していない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-09-29",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "sagawa-tracking-2026",
+      "company": "佐川急便",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www2.sagawa-exp.co.jp/information/detail/419/",
+        "https://www2.sagawa-exp.co.jp/information/detail/420/",
+        "https://www2.sagawa-exp.co.jp/information/detail/426/",
+        "https://drciyaku.jp/news_261013.html",
+        "https://www2.sagawa-exp.co.jp/information/detail/421/",
+        "https://www2.sagawa-exp.co.jp/information/detail/425/"
+      ],
+      "newSources": [],
+      "reviewSummary": "初報〜第四報・FAQを公式Webと前回保存の公式公開XML本文で再照合。9月30日7:30は不正アクセス発覚、攻撃発生時期は調査中と明記。10月1日正午は予防的な一部制限であり、実行日ではない。10月9日第四報も可能性の範囲を示すのみ。DRC downstream通知にも独立した攻撃日時・確定被害初確認日なし。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した第1〜4報とFAQでは、9月30日7時30分は発覚日時であり、不正アクセスの発生日時は引き続き調査中と明記されている。約100日間は対象荷物の受付・データ蓄積期間。",
+          "sourceUrl": "https://www2.sagawa-exp.co.jp/information/detail/426/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した第1〜4報とFAQでは個人情報の流出は可能性として説明され、確定した漏えい等の最初の確認日は明記されていない。9月30日の不正アクセス検知や予防的なサービス制限・停止は代用しない。",
+          "sourceUrl": "https://www2.sagawa-exp.co.jp/information/detail/426/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した第1〜4報とFAQでは、9月30日7時30分は発覚日時であり、不正アクセスの発生日時は引き続き調査中と明記されている。約100日間は対象荷物の受付・データ蓄積期間。",
+        "damageConfirmed": "確認した第1〜4報とFAQでは個人情報の流出は可能性として説明され、確定した漏えい等の最初の確認日は明記されていない。9月30日の不正アクセス検知や予防的なサービス制限・停止は代用しない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www2.sagawa-exp.co.jp/information/detail/{419,420,421,425,426}/",
+          "error": "Direct HTML contains JavaScript shell rather than article text",
+          "fallback": "Official Web indexing plus previous successfully retrieved public article XML/text inspected"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2026-09-30",
+        "result": "verified in dated primary notice; retained"
+      }
+    },
+    {
+      "id": "daiichi-life-hr-2026",
+      "company": "第一ライフグループ・第一生命保険",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.dai-ichi-life.co.jp/",
+        "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "公式重要案内を再確認。9月24日は不正アクセス検知と流出可能性確認であり、確定した被害の日時はない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月24日は従業員向け人事システムへの不正アクセス検知日。アクセス自体の発生日時は記載されていない。",
+          "sourceUrl": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月24日は検知と情報閲覧・外部流出の可能性を確認した日であり、確定した被害の初確認日は示されていない。",
+          "sourceUrl": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月24日は従業員向け人事システムへの不正アクセス検知日。アクセス自体の発生日時は記載されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。9月24日は検知と情報閲覧・外部流出の可能性を確認した日であり、確定した被害の初確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-02",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "jogmec-2026",
+      "company": "エネルギー・金属鉱物資源機構（JOGMEC）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.jogmec.go.jp/news/information/information_00706.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月2日公式発表を再読し続報を検索。外部機関の情報提供後に調査し、9月9日に漏えい可能性が判明。侵入実行時期・実際の漏えい初確認日はなし。別件の2026年2月職員持ち出し報告と混同しなかった。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した10月2日の公式公表は9月9日に漏えいの可能性が判明とするが、不正アクセスの実行日・期間を示していない。",
+          "sourceUrl": "https://www.jogmec.go.jp/news/information/information_00706.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表は9月9日に個人情報漏えいの可能性が判明と記載し、確定した漏えい被害の初確認日は示さない。可能性の把握と被害確認を区別。",
+          "sourceUrl": "https://www.jogmec.go.jp/news/information/information_00706.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した10月2日の公式公表は9月9日に漏えいの可能性が判明とするが、不正アクセスの実行日・期間を示していない。",
+        "damageConfirmed": "確認した公表は9月9日に個人情報漏えいの可能性が判明と記載し、確定した漏えい被害の初確認日は示さない。可能性の把握と被害確認を区別。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-02",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "moonstar-2026",
+      "company": "株式会社ムーンスター",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "attack"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://www.moonstar.co.jp/corporate/news/archive/post-74.html",
+        "https://www.moonstar.co.jp/information/2026/10/post-4.html",
+        "https://www.moonstar.co.jp/information/2026/10/gg.html"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.moonstar.co.jp/information/2026/10/gg.html",
+          "finding": "10月15日第三報。推定流出期間、問い合わせから窃取判断に至った経緯、最大人数の新証拠。窃取判断自体の日付は明示されない。",
+          "addedToRecord": true
+        }
+      ],
+      "reviewSummary": "初報・第二報に加え、10月15日公式第三報を確認。5月14日〜19日の流出可能性が高いとの調査結論を推定攻撃時期として採用。9月20日前後は顧客問い合わせの受領時期であり、独立再確認により窃取判断の日付には転用しない。最大59万3千人全員の漏えい確定とは扱わない。",
+      "eventDates": {
+        "attack": {
+          "precision": "approximate",
+          "label": "2026年5月14日〜19日（漏えいの可能性が高い期間）",
+          "startDate": "2026-05-14",
+          "endDate": "2026-05-19",
+          "note": "10月15日第三報は、調査結果として5月14日から19日にかけてサーバー経由で個人情報が漏えいした可能性が高いと説明。推定される情報取得・流出の時期を原文の確度のまま採用し、初期侵入日や確定した攻撃期間とはしない。3月の不正アクセス認識からの転記ではない。",
+          "sourceUrl": "https://www.moonstar.co.jp/information/2026/10/gg.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "10月15日第三報は9月20日前後に顧客から問い合わせを受け、非公開の注文情報等を含むなりすましメールから情報窃取と判断した経緯を説明。ただし日付が明示されるのは問い合わせの受領時期であり、窃取を初めて確認・判断した日は特定されていない。3月の調査では漏えいを確認できなかったとされる。",
+          "sourceUrl": "https://www.moonstar.co.jp/information/2026/10/gg.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "damageConfirmed": "10月15日第三報は9月20日前後に顧客から問い合わせを受け、非公開の注文情報等を含むなりすましメールから情報窃取と判断した経緯を説明。ただし日付が明示されるのは問い合わせの受領時期であり、窃取を初めて確認・判断した日は特定されていない。3月の調査では漏えいを確認できなかったとされる。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-02",
+        "result": "10月2日第二報の日付と一致。最初の公表日は3月26日だが収録起点を保持。"
+      }
+    },
+    {
+      "id": "sammy-777conpass-2026",
+      "company": "サミーネットワークス",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "attack"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html",
+        "https://www.sammy-net.jp/news/2026/",
+        "https://www.sammy-net.jp/news/2026/10/777con-pass-6.html"
+      ],
+      "newSources": [
+        {
+          "title": "サミーネットワークス：777CON-PASS不正アクセスの最終調査結果",
+          "url": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html",
+          "publishedDate": "2026-10-16"
+        }
+      ],
+      "reviewSummary": "未収録の同日続報と10月16日最終報を発見。9月25日・30日の不正取得を確認し、漏えい状態と件数等も整合させた。",
+      "eventDates": {
+        "attack": {
+          "precision": "period",
+          "label": "2026年9月25日・9月30日",
+          "startDate": "2026-09-25",
+          "note": "10月16日最終報のアクセスログ解析結果に、9月25日および9月30日に顧客情報が外部から不正取得されたと明記。確認済みの攻撃日を示し、その間ずっと攻撃が続いたことや最初の侵入日時を意味しない。",
+          "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html",
+          "reviewedDate": "2026-10-18",
+          "endDate": "2026-09-30"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "10月16日最終報で情報の不正取得が確認されたが、最初に漏えいを確認した日は明記されていない。9月30日は不審アクセス検知、10月15日は調査完了日であり、漏えい初確認日へ転用しない。",
+          "sourceUrl": "https://www.sammy-net.jp/news/2026/10/777con-pass-7.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "damageConfirmed": "10月16日最終報で情報の不正取得が確認されたが、最初に漏えいを確認した日は明記されていない。9月30日は不審アクセス検知、10月15日は調査完了日であり、漏えい初確認日へ転用しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-02",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "recruit-studysapuri-enumeration-2026",
+      "company": "リクルート（スタディサプリ）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://studysapuri.jp/info/important/"
+      ],
+      "newSources": [],
+      "reviewSummary": "重要なお知らせ一覧の10月3日項目を再読。9月30日はメール登録有無を調べられた可能性の判明・修正日。操作の実施時期や実害確認は示されない。同ページ10月15日の添付ファイル権限不備は別事案であり、その期間を転用しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月30日は不正に登録有無を探られた可能性の把握日。攻撃実施日は示されていない。",
+          "sourceUrl": "https://studysapuri.jp/info/important/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。個人情報の漏えいは可能性として記載され、実際の被害を最初に確認した日は示されていない。",
+          "sourceUrl": "https://studysapuri.jp/info/important/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月30日は不正に登録有無を探られた可能性の把握日。攻撃実施日は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。個人情報の漏えいは可能性として記載され、実際の被害を最初に確認した日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-03",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "daiki-suisan-app-2026",
+      "company": "大起水産",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.daiki-suisan.co.jp/files/optionallink/00000164_file.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月5日通知（6日追記）を再読。9月15日は本件確認後に対策した日だが、全体として個人情報の漏えい・不正利用は確認していない。2024年11月1日〜2026年9月15日はアプリ登録対象者の期間。攻撃期間・実際の被害初確認日への転記はしない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した10月5日公表・6日更新資料は9月15日を本件の確認日とするが、アクセスの開始日・期間を示していない。2024年11月1日〜2026年9月15日は対象者の登録期間。",
+          "sourceUrl": "https://www.daiki-suisan.co.jp/files/optionallink/00000164_file.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表は個人情報の外部漏えい・不正利用の事実は未確認と明記。9月15日の本件確認を情報漏えいなどの被害の初確認に置き換えない。",
+          "sourceUrl": "https://www.daiki-suisan.co.jp/files/optionallink/00000164_file.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した10月5日公表・6日更新資料は9月15日を本件の確認日とするが、アクセスの開始日・期間を示していない。2024年11月1日〜2026年9月15日は対象者の登録期間。",
+        "damageConfirmed": "確認した公表は個人情報の外部漏えい・不正利用の事実は未確認と明記。9月15日の本件確認を情報漏えいなどの被害の初確認に置き換えない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-05",
+        "result": "verified in dated primary notice; retained"
+      }
+    },
+    {
+      "id": "kufu-machitalk-2026",
+      "company": "くふうカンパニー（くふう まちトークβ版）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://kufu.co.jp/2026/?category_name=news",
+        "https://kufu.co.jp/2026/10/05/kufu-announce/",
+        "https://kufu.co.jp/2026/10/13/kufu-announce-2/"
+      ],
+      "newSources": [],
+      "reviewSummary": "公式続報と発表一覧を再確認。10月2日は不審アクセス確認、最初の流出確認日なし。10月16日Studio別事案は混ぜない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月2日は不審なアクセスの確認・調査開始日。実際の不正アクセス・情報取得の時期は両公表に明記されていない。",
+          "sourceUrl": "https://kufu.co.jp/2026/10/05/kufu-announce/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。少なくとも1名のメールアドレスの流出は確認済みだが、その初確認日は両公表に示されていない。10月5日の予防的サービス停止日から補完しない。",
+          "sourceUrl": "https://kufu.co.jp/2026/10/13/kufu-announce-2/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。10月2日は不審なアクセスの確認・調査開始日。実際の不正アクセス・情報取得の時期は両公表に明記されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。少なくとも1名のメールアドレスの流出は確認済みだが、その初確認日は両公表に示されていない。10月5日の予防的サービス停止日から補完しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-05",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "whiteessence-2026",
+      "company": "ホワイトエッセンス株式会社",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.whiteessence.co.jp/news/?action=detail&id=53",
+        "https://www.whiteessence.com/news/news/20261005/",
+        "https://www.whiteessence.com/news/?p=3008"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.whiteessence.com/news/?p=3008",
+          "purpose": "追加探索・照合（新たな日付は必ずしも得られない）"
+        }
+      ],
+      "reviewSummary": "8月12日初報（8月19日・9月10日追記）を二つの公式ドメインで確認。10月5日の画像2枚も目視。8月5日はアクセス確認、その後調査で不正操作等が確認され8月12日予防停止。さらにその後の調査で流出判明とするが実行日・最初の流出確認日はない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。8月5日は不正アクセス確認日で、予約サイト脆弱性の悪用・情報持ち出しの実行時期は初報および10月5日公表画像に示されていない。",
+          "sourceUrl": "https://www.whiteessence.com/news/wp-content/uploads/2026/10/%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AE%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B_1-scaled.jpg",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月5日公表画像は、8月5日の不正アクセス確認後、8月12日の予防的停止後も調査を継続して情報持ち出しが判明したとするが、被害の初確認日は示していない。",
+          "sourceUrl": "https://www.whiteessence.com/news/wp-content/uploads/2026/10/%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AE%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B_1-scaled.jpg",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。8月5日は不正アクセス確認日で、予約サイト脆弱性の悪用・情報持ち出しの実行時期は初報および10月5日公表画像に示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。10月5日公表画像は、8月5日の不正アクセス確認後、8月12日の予防的停止後も調査を継続して情報持ち出しが判明したとするが、被害の初確認日は示していない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www.whiteessence.com/news/wp-content/uploads/2026/10/%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AE%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B_1-scaled.jpg",
+          "error": "Fetch failed",
+          "resolvedBy": null
+        },
+        {
+          "url": "https://www.whiteessence.com/news/wp-content/uploads/2026/10/%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AE%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B_2-1953x2048.jpg",
+          "error": "Fetch failed",
+          "resolvedBy": null
+        }
+      ],
+      "announcementCheck": {
+        "date": "2026-10-05",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "asahi-kasei-pharma-digital-2026",
+      "company": "旭化成セラピューティクス",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月6日公式通知を再読し委託先医薬情報ネットの公式追加資料も検索。10月2日は委託先から不正アクセスと閲覧・取得可能性の報告を受けた日。実際の攻撃実行時期も確定情報被害の初確認時期も示されない。委託先告知の同一事案の有効な詳細資料は見つからず。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月2日は委託先からの報告受領日で、攻撃実行日ではない。",
+          "sourceUrl": "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。報告は個人情報が閲覧・取得された可能性。サイトは予防的に即時停止し、10月6日時点で不正利用・被害未確認と記載。最初の被害確認日は示されていない。",
+          "sourceUrl": "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。10月2日は委託先からの報告受領日で、攻撃実行日ではない。",
+        "damageConfirmed": "確認した公表資料に記載なし。報告は個人情報が閲覧・取得された可能性。サイトは予防的に即時停止し、10月6日時点で不正利用・被害未確認と記載。最初の被害確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-06",
+        "result": "ページの2026年10月6日と一致。"
+      }
+    },
+    {
+      "id": "ceres-pointincome-2026",
+      "company": "セレス",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://ceres-inc.jp/news/",
+        "https://next.ceres-inc.jp/news/detail/20261007-2/"
+      ],
+      "newSources": [],
+      "reviewSummary": "公式本文と発表一覧を再確認。10月5日未明は断続的な不審挙動検知、情報閲覧は可能性。攻撃期間・被害初確認日の新記載なし。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "10月5日未明は不審な挙動を検知した時期。調査で不正アクセスを確認したが、アクセスが実際に行われた時期は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://ceres-inc.jp/news/detail/20261007-2/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "10月5日のサービス停止は拡大防止のための緊急メンテナンス。個人情報閲覧・漏えいは可能性として記載され、被害の最初の確認日は 確認した公表資料に記載なし。",
+          "sourceUrl": "https://ceres-inc.jp/news/detail/20261007-2/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "10月5日未明は不審な挙動を検知した時期。調査で不正アクセスを確認したが、アクセスが実際に行われた時期は 確認した公表資料に記載なし。",
+        "damageConfirmed": "10月5日のサービス停止は拡大防止のための緊急メンテナンス。個人情報閲覧・漏えいは可能性として記載され、被害の最初の確認日は 確認した公表資料に記載なし。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-07",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "his-2026",
+      "company": "エイチ・アイ・エス",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.his.co.jp/assets/20261007.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月7日19:30追記済み公式PDFを全体再読。2025年12月11日はIDSアラート、12月29日は日本取得の個人情報がサーバー内に含まれる確認、2026年2月24日はパスポート情報を含む範囲の特定。実際の窃取は可能性であり、これらを攻撃日・初被害確認日へ変換しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した10月7日公表は2025年12月11日に検知ソフトのアラートが発出したとするが、実際のアクセスの開始日・期間は示さない。",
+          "sourceUrl": "https://www.his.co.jp/assets/20261007.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表はデータが不正に引き出された可能性と記載。12月11日はアラート、12月29日と翌2月24日はサーバ内の個人情報の対象確認であり、漏えい被害の初確認とはしない。",
+          "sourceUrl": "https://www.his.co.jp/assets/20261007.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した10月7日公表は2025年12月11日に検知ソフトのアラートが発出したとするが、実際のアクセスの開始日・期間は示さない。",
+        "damageConfirmed": "確認した公表はデータが不正に引き出された可能性と記載。12月11日はアラート、12月29日と翌2月24日はサーバ内の個人情報の対象確認であり、漏えい被害の初確認とはしない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-07",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "idc-frontier-2026",
+      "company": "IDCフロンティア",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.idcf.jp/news/topics/20261007001",
+        "https://www.idcf.jp/news/topics/20261007002",
+        "https://www.idcf.jp/news/topics/20261008001",
+        "https://www.idcf.jp/news/topics/20261009001/",
+        "https://www.nissui.co.jp/news/2026100702.html",
+        "https://www.nissui.co.jp/news/20261009.html",
+        "https://www.idcf.jp/",
+        "https://www.idcf.jp/news/topics/20261014001",
+        "https://www.peachjohn.co.jp/information/detail/137",
+        "https://www.jreast.co.jp/press/2026/20261009_ho02.pdf",
+        "https://www.jreast.co.jp/card/news/pdf/20261009.pdf",
+        "https://www.jrkyushu.co.jp/common/inc/news/newtopics/__icsFiles/afieldfile/2026/10/09/202691009_mail_address_access_1.pdf",
+        "https://market.jr-central.co.jp/shop/pages/20261013.aspx",
+        "https://cas.softbank.jp/information/261007_01/",
+        "https://www.future-shop.jp/news/2026/10/15-2.html"
+      ],
+      "newSources": [
+        {
+          "url": "https://www.future-shop.jp/news/2026/10/15-2.html",
+          "finding": "10月15日futureshop第三報。対象メール配信サーバーの流出なしと判断、攻撃・初確認日増分なし。",
+          "addedToRecord": false
+        }
+      ],
+      "reviewSummary": "第一報〜第五報、収録下流各社公表の現行本文・前回保存資料を再照合。10月7日03:40は後続資料では一貫して障害開始時点。第二報の冒頭をもって初期侵入時刻とはしない。第五報で48社のポータル登録情報照会、194社スナップショットの可能性を記載するが実行時刻・初確認日なし。新たにfutureshop第三報10月15日も確認し、対象メールマガジンサーバーの外部流出なしとの結論を把握。これはIDC全体の48社管理情報照会を否定するものではなく、時期の増分なし。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した初報〜第5報・10月17日の状況更新・委託元資料は10月7日3時40分頃を障害の発生日時として記載するが、初期侵入や攻撃の実行期間を障害と切り分けて示していない。",
+          "sourceUrl": "https://www.idcf.jp/news/topics/20261014001",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した資料は10月7日以降の障害発生・ランサムウェア判明と、後日の登録情報の不正照会を記載するが、被害の最初の確認日として明確に区別した日付は示さない。障害発生日・公表日をそのまま転用しない。",
+          "sourceUrl": "https://www.idcf.jp/news/topics/20261014001",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した初報〜第5報・10月17日の状況更新・委託元資料は10月7日3時40分頃を障害の発生日時として記載するが、初期侵入や攻撃の実行期間を障害と切り分けて示していない。",
+        "damageConfirmed": "確認した資料は10月7日以降の障害発生・ランサムウェア判明と、後日の登録情報の不正照会を記載するが、被害の最初の確認日として明確に区別した日付は示さない。障害発生日・公表日をそのまま転用しない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://www.jreast.co.jp/press/2026/20261009_ho02.pdf",
+          "error": "HTTP Error 403: Forbidden",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        },
+        {
+          "url": "https://www.jreast.co.jp/card/news/pdf/20261009.pdf",
+          "error": "HTTP Error 403: Forbidden",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        },
+        {
+          "url": "https://www.jrkyushu.co.jp/common/inc/news/newtopics/__icsFiles/afieldfile/2026/10/09/202691009_mail_address_access_1.pdf",
+          "error": "HTTP Error 403: Forbidden",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        },
+        {
+          "url": "https://market.jr-central.co.jp/shop/pages/20261013.aspx",
+          "error": "HTTP Error 403: Forbidden",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        },
+        {
+          "url": "https://cas.softbank.jp/information/261007_01/",
+          "error": "HTTP Error 403: Forbidden",
+          "fallback": "Web本文または前回監査の取得済み公式資料・現行移転先を照合。取得失敗を日付不明の根拠にはしない。"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2026-10-07",
+        "result": "verified in dated primary notice; retained"
+      }
+    },
+    {
+      "id": "daiichikosho-2026",
+      "company": "第一興商（ビッグエコー等）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "damageConfirmed"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://www.dkkaraoke.co.jp/news/newsletter/261008_2.html"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月1〜2日に委託先PCのマルウェア感染が判明と明記。漏えい確定とは区別し、既存ニプロ等と同じ感染確認の意味で採用。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月1日〜2日は委託先PCのマルウェア感染の判明期間で、感染開始日は示されていない。",
+          "sourceUrl": "https://www.dkkaraoke.co.jp/news/newsletter/261008_2.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "period",
+          "label": "2026年10月1日〜10月2日",
+          "startDate": "2026-10-01",
+          "note": "公式発生経緯は「2026年10月1日から2026年10月2日にかけて」委託先である日本コロムビアグループ従業員のPC1台で「マルウェアの感染が判明」と明記。確認した被害は委託先PCの感染であり、第一興商のシステム侵害や個人情報漏えいの確認ではない。10月5日は第一興商の報告受領日として区別する。",
+          "sourceUrl": "https://www.dkkaraoke.co.jp/news/newsletter/261008_2.html",
+          "reviewedDate": "2026-10-18",
+          "endDate": "2026-10-02"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。10月1日〜2日は委託先PCのマルウェア感染の判明期間で、感染開始日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-08",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "flex-gallery-2026",
+      "company": "フレックス（FLEX GALLERY）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.flex-g.com/topics/?c=zoom&pk=648"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月8日報告の経緯・FAQ相当の説明を再読。3月26日は別顧客に渡したマニュアルへの認証情報誤記載発生、6月23日は発覚。第三者攻撃事案ではなく、対象情報閲覧・不正利用・被害のいずれも確認されていない。非該当/被害初確認不明を維持。",
+      "eventDates": {
+        "attack": {
+          "precision": "notApplicable",
+          "label": "該当なし",
+          "note": "管理者権限のアカウント情報を他社向け手順書に誤記した管理不備であり、確認した公表資料は攻撃の発生を示していない。3月26日は閲覧可能となった日で、攻撃日ではない。",
+          "sourceUrl": "https://www.flex-g.com/topics/?c=zoom&pk=648",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。6月23日は管理不備の発覚日。実際の閲覧・不正利用・被害は未確認とされ、被害の初確認日は示されていない。",
+          "sourceUrl": "https://www.flex-g.com/topics/?c=zoom&pk=648",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "管理者権限のアカウント情報を他社向け手順書に誤記した管理不備であり、確認した公表資料は攻撃の発生を示していない。3月26日は閲覧可能となった日で、攻撃日ではない。",
+        "damageConfirmed": "確認した公表資料に記載なし。6月23日は管理不備の発覚日。実際の閲覧・不正利用・被害は未確認とされ、被害の初確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-08",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "hi-ho-mypage-2026",
+      "company": "ハイホー",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://hi-ho.co.jp/%E3%80%90%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E3%81%B8%E3%81%AE%E7%AC%AC%E4%B8%89%E8%80%85%E3%81%AB%E3%82%88%E3%82%8B"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月8日公式全文と関連ブランド・サポート検索を再確認。電話でのなりすましにより会員情報が閲覧された又はその可能性があるとするが、攻撃や被害認識の日付は公表日以外ない。第三者記事の「10月に検知」等を公式根拠なしで採用しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。なりすましログインや情報閲覧の事実は記載されるが、その実行日・期間は示されていない。",
+          "sourceUrl": "https://hi-ho.co.jp/%E3%80%90%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E3%81%B8%E3%81%AE%E7%AC%AC%E4%B8%89%E8%80%85%E3%81%AB%E3%82%88%E3%82%8B",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。実際の情報閲覧と閲覧可能性の両方を公表しているが、最初に被害を確認した日は示されていない。",
+          "sourceUrl": "https://hi-ho.co.jp/%E3%80%90%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E3%81%B8%E3%81%AE%E7%AC%AC%E4%B8%89%E8%80%85%E3%81%AB%E3%82%88%E3%82%8B",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。なりすましログインや情報閲覧の事実は記載されるが、その実行日・期間は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。実際の情報閲覧と閲覧可能性の両方を公表しているが、最初に被害を確認した日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-08",
+        "result": "掲載日2026年10月8日と一致。"
+      }
+    },
+    {
+      "id": "uzabase-newspicks-2026",
+      "company": "ユーザベース（NewsPicks）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://corp.newspicks.com/info",
+        "https://corp.newspicks.com/info/20261009"
+      ],
+      "newSources": [],
+      "reviewSummary": "第二報の埋込JSON本文を再取得。最大想定の漏えい可能性とされ、検知以外の日付記載なし。公式一覧は動的描画のため静的取得では一覧本文を確認できず。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した10月8日初報・10月9日第2報では、10月8日12時48分に検知、14時1分に不正アクセスと判断したとあるが、実際の攻撃日・期間は記載されていない。",
+          "sourceUrl": "https://corp.newspicks.com/info/20261008",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した初報・第2報は個人情報漏洩の可能性と最大想定件数を報告しており、確定した情報漏洩などの被害を最初に確認した日は示されていない。",
+          "sourceUrl": "https://corp.newspicks.com/info/20261009",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した10月8日初報・10月9日第2報では、10月8日12時48分に検知、14時1分に不正アクセスと判断したとあるが、実際の攻撃日・期間は記載されていない。",
+        "damageConfirmed": "確認した初報・第2報は個人情報漏洩の可能性と最大想定件数を報告しており、確定した情報漏洩などの被害を最初に確認した日は示されていない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://corp.newspicks.com/info",
+          "reason": "Static HTML has no rendered listing; known first/second notices verified separately"
+        }
+      ],
+      "announcementCheck": {
+        "date": "2026-10-08",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "cct-koto-online-2026",
+      "company": "コアコンセプト・テクノロジー（Koto Online）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.cct-inc.co.jp/koto-online/contents/information-20261009",
+        "https://www.cct-inc.co.jp/news/company/info-20261009/"
+      ],
+      "newSources": [],
+      "reviewSummary": "サービス向け告知と詳細企業報告を再読。9月14日は委託先からの指摘で、その後に自社・開発委託先が調査。2023年3月31日～2026年9月18日はログ記録不具合の期間で攻撃期間ではない。限定権限者がログ参照可能だった状態の発見日時を特定せず、不正ログインは調査継続。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した2026年10月9日のお知らせでは、会員機能の不具合による解析ツールへの記録を説明している。不正ログインの有無は調査中で、攻撃の発生日・期間は確認できない。2023年3月31日〜2026年9月18日は不具合の対象期間であり、攻撃期間には転用しない。",
+          "sourceUrl": "https://www.cct-inc.co.jp/news/company/info-20261009/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "公式詳細は9月14日に委託先の指摘を受け調査したとするが、不適切な記録の被害を初めて確認した日は明示していない。指摘・修正・公表の日を転用しない。",
+          "sourceUrl": "https://www.cct-inc.co.jp/news/company/info-20261009/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した2026年10月9日のお知らせでは、会員機能の不具合による解析ツールへの記録を説明している。不正ログインの有無は調査中で、攻撃の発生日・期間は確認できない。2023年3月31日〜2026年9月18日は不具合の対象期間であり、攻撃期間には転用しない。",
+        "damageConfirmed": "公式詳細は9月14日に委託先の指摘を受け調査したとするが、不適切な記録の被害を初めて確認した日は明示していない。指摘・修正・公表の日を転用しない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-09",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "enecom-2026",
+      "company": "エネコム",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.enecom.co.jp/information/3920/"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月9日公式通知を再読し続報を検索。10月6日は第三者が不正アクセスを行っていたことを確認した日。複数電子ファイル流出形跡の確認自体は別の冒頭文で説明され、同日とは明示されない。障害・サービス影響なし。確認日を実行日や流出初確認日へ転記しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した10月9日の公式公表は10月6日を不正アクセスの確認日とし、実際のアクセスの開始日・期間を示していない。",
+          "sourceUrl": "https://www.enecom.co.jp/information/3920/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公式公表は電子ファイルが流出した形跡を確認したとするが、流出の形跡を最初に確認した日は明示していない。10月6日の不正アクセス確認日とは区別。",
+          "sourceUrl": "https://www.enecom.co.jp/information/3920/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した10月9日の公式公表は10月6日を不正アクセスの確認日とし、実際のアクセスの開始日・期間を示していない。",
+        "damageConfirmed": "確認した公式公表は電子ファイルが流出した形跡を確認したとするが、流出の形跡を最初に確認した日は明示していない。10月6日の不正アクセス確認日とは区別。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-09",
+        "result": "verified in dated primary notice; retained"
+      }
+    },
+    {
+      "id": "applabo-mail-server-2026",
+      "company": "あっぷらぼ",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.applabo.co.jp/news-blog/?m=202610",
+        "https://www.applabo.co.jp/"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月の公式公表とトップを再確認。10月11日に突破・不正アクセスされたことを確認という文であり、アクセス実行時期と明確に切り分けできない。参照も可能性。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した10月12日公表は10月11日に不正アクセスを確認したとするが、実際のアクセスの開始日・期間は示していない。",
+          "sourceUrl": "https://www.applabo.co.jp/news-blog/?p=954",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表はアドレス・暗号化パスワードの一部が参照された可能性と記載する。10月11日は不正アクセス確認日であり、情報流出などの被害の初確認日は明示していない。",
+          "sourceUrl": "https://www.applabo.co.jp/news-blog/?p=954",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した10月12日公表は10月11日に不正アクセスを確認したとするが、実際のアクセスの開始日・期間は示していない。",
+        "damageConfirmed": "確認した公表はアドレス・暗号化パスワードの一部が参照された可能性と記載する。10月11日は不正アクセス確認日であり、情報流出などの被害の初確認日は明示していない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-12",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "arcadia-speecan-raiden-2026",
+      "company": "アルカディア（SpeeCAN RAIDEN・NET119・119RAIDEN等）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 2,
+      "additionalKnownFields": [
+        "attack"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://www.arcadia.co.jp/info/4076",
+        "https://raiden.site.ktaiwork.jp/archives/4597"
+      ],
+      "newSources": [],
+      "reviewSummary": "会社告知と公式ブログの第1～11報を再読。第11報はSpeeCAN RAIDEN不正アクセスの発生を10月11日16:30と記載するため、同日を観測された攻撃の日として採用。初報の疑わしい挙動の確認と同時刻だが、後続の発生記載を根拠とし初期侵入時刻は確定しない。NET119等の10月14日は痕跡確認で別攻撃日時にしない。漏えいはなお可能性、13日停止は予防的対応。",
+      "eventDates": {
+        "attack": {
+          "precision": "day",
+          "label": "2026年10月11日",
+          "startDate": "2026-10-11",
+          "note": "10月16日第11報はSpeeCAN RAIDENの不正アクセスについて「2026年10月11日16時30分、発生した」と記載。初報では同時刻を不正アクセスが疑われる挙動の確認時点としていた。続報が発生したと示す攻撃の日を採り、初期侵入日や攻撃期間全体は特定しない。NET119・119RAIDENの10月14日は痕跡確認日であり別の攻撃実施日とはしない。",
+          "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。個人情報漏えいは可能性として調査中。10月13日の予防的サービス停止日を漏えい等の初確認日へ転用しない。",
+          "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "damageConfirmed": "確認した公表資料に記載なし。個人情報漏えいは可能性として調査中。10月13日の予防的サービス停止日を漏えい等の初確認日へ転用しない。"
+      },
+      "fetchFailures": [
+        {
+          "url": "https://raiden.site.ktaiwork.jp/archives/4601",
+          "error": "HTTP Error 404: Not Found",
+          "resolvedBy": null
+        }
+      ],
+      "announcementCheck": {
+        "date": "2026-10-13",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "gdo-system-2026",
+      "company": "ゴルフダイジェスト・オンライン（GDO）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 3,
+      "additionalKnownFields": [
+        "attack",
+        "damageConfirmed"
+      ],
+      "result": "additional-date-evidence",
+      "reviewedUrls": [
+        "https://company.golfdigest.co.jp/brand/news/2026101301.html",
+        "https://company.golfdigest.co.jp/corp/pr/2026101601.html"
+      ],
+      "newSources": [
+        {
+          "url": "https://company.golfdigest.co.jp/corp/pr/2026101601.html",
+          "finding": "10月16日続報。攻撃行為の日時と具体的情報被害の確認日時を追加。",
+          "addedToRecord": true
+        }
+      ],
+      "reviewSummary": "10月13日初報に加え10月16日公式続報を発見。10月13日7:09は兆候検知、7:41は遮断。ログで10月14日14時頃に不正ダウンロードと従業員等情報を含むファイルの流出を確認したと明記。10月15日の追加調査では、同一事案の別サーバーから10月13日10:16〜10:20頃に会員情報を照会したと明記。行為時刻と検知・確認時刻を区別して採用。",
+      "eventDates": {
+        "attack": {
+          "precision": "day",
+          "label": "2026年10月13日（会員情報照会）",
+          "startDate": "2026-10-13",
+          "note": "10月16日続報は、攻撃者が侵害した別サーバーを経由し、10月13日10時16分〜10時20分頃に会員情報を照会したことを10月15日に確認したと明記。同じ不正アクセス事案内の攻撃行為の時期であり、最初の侵入日や7時9分の兆候検知日からの推定ではない。",
+          "sourceUrl": "https://company.golfdigest.co.jp/corp/pr/2026101601.html",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "day",
+          "label": "2026年10月14日（14時頃）",
+          "startDate": "2026-10-14",
+          "note": "10月16日続報の経緯で、10月14日14時頃に操作ログから攻撃者によるファイルのダウンロードを確認し、従業員・退職者・委託先等の情報が含まれると判明したと明記。情報流出の確認日を採用し、10月13日の障害発生・兆候検知とは区別する。",
+          "sourceUrl": "https://company.golfdigest.co.jp/corp/pr/2026101601.html",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {},
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-13",
+        "result": "資料に記載された公表日と一致。既存値を保持。"
+      }
+    },
+    {
+      "id": "medley-atlink-2026",
+      "company": "メドレー（アットリンク）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.medley.jp/notice/2026/",
+        "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE/"
+      ],
+      "newSources": [],
+      "reviewSummary": "提供元10月16日19時更新を再確認。影響範囲精査は継続、10月19日に復旧見通し案内予定。攻撃時期・確定漏えいの初確認日は示さない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月11日は不正アクセスの可能性を確認した日。10月16日19時更新の提供元案内まで確認したが、攻撃実施時期は示されていない。",
+          "sourceUrl": "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。10月14日深夜からの予防的停止と情報漏えいの有無・範囲の調査を記載するのみで、実際の流出等の初確認日は示されていない。",
+          "sourceUrl": "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。10月11日は不正アクセスの可能性を確認した日。10月16日19時更新の提供元案内まで確認したが、攻撃実施時期は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。10月14日深夜からの予防的停止と情報漏えいの有無・範囲の調査を記載するのみで、実際の流出等の初確認日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-14",
+        "result": "収録公表日を保持。初報への一律置換は行わない。"
+      }
+    },
+    {
+      "id": "access-cros-taiwan-2026",
+      "company": "ACCESS AP TAIWAN（ACCESS子会社／CROS）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://www.access-company.com/files/2026/10/n261015.pdf"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月15日公式PDFを再取得。9月11日は徴候検知で対象切離し。その後調査で外部BIツール悪用、情報取得と送信鍵を利用した不正メールが判明したが、攻撃実行日・被害を最初に確認した日は明示しない。",
+      "eventDates": {
+        "attack": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月11日は不正アクセスの徴候の検知日。攻撃の実施時期は示されていない。",
+          "sourceUrl": "https://www.access-company.com/files/2026/10/n261015.pdf",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。9月11日の徴候検知後に情報取得と不正メール送信が判明したとするが、被害を最初に確認した日は示されていない。",
+          "sourceUrl": "https://www.access-company.com/files/2026/10/n261015.pdf",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "確認した公表資料に記載なし。9月11日は不正アクセスの徴候の検知日。攻撃の実施時期は示されていない。",
+        "damageConfirmed": "確認した公表資料に記載なし。9月11日の徴候検知後に情報取得と不正メール送信が判明したとするが、被害を最初に確認した日は示されていない。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-15",
+        "result": "retained",
+        "note": "既存の公表起点を維持。攻撃時期・被害確認日からの推定なし。"
+      }
+    },
+    {
+      "id": "recruit-studysapuri-permissions-2026",
+      "company": "リクルート（学校向けスタディサプリ）",
+      "reviewedDate": "2026-10-18",
+      "beforeKnownDateCategoryCount": 1,
+      "afterKnownDateCategoryCount": 1,
+      "additionalKnownFields": [],
+      "result": "no-additional-encodable-date",
+      "reviewedUrls": [
+        "https://studysapuri.jp/info/important/"
+      ],
+      "newSources": [],
+      "reviewSummary": "10月15日学校向け添付ファイル権限不備の通知を再読。2024年6月13日〜2026年9月30日は不備存在期間、9月30日は修正完了。数名の権限外閲覧が生じたと確認するが、閲覧実行日・最初の発覚日がない。攻撃でない設定不備としてattack:notApplicableを保持。同じページに掲載された別件の9月30日メールアドレス存在照会の判明日を混ぜない。",
+      "eventDates": {
+        "attack": {
+          "precision": "notApplicable",
+          "label": "該当なし",
+          "note": "2026年10月15日付公表は、閲覧権限制御の不備であり、外部からの攻撃や外部の第三者による不正アクセスではないと明記。不備発生期間を攻撃期間として扱わない。",
+          "sourceUrl": "https://studysapuri.jp/info/important/",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。権限のない利用者による483ファイルの閲覧は確認済みだが、その初確認日は示されていない。9月30日は修正完了日。",
+          "sourceUrl": "https://studysapuri.jp/info/important/",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "remainingUnknownReasons": {
+        "attack": "2026年10月15日付公表は、閲覧権限制御の不備であり、外部からの攻撃や外部の第三者による不正アクセスではないと明記。不備発生期間を攻撃期間として扱わない。",
+        "damageConfirmed": "確認した公表資料に記載なし。権限のない利用者による483ファイルの閲覧は確認済みだが、その初確認日は示されていない。9月30日は修正完了日。"
+      },
+      "fetchFailures": [],
+      "announcementCheck": {
+        "date": "2026-10-15",
+        "result": "資料に記載された公表日と一致。既存値を保持。"
+      }
+    }
+  ]
+}
