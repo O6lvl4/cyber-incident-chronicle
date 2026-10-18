@@ -16,16 +16,21 @@ try {
     assert.match(await row.innerText(), /2024.07.29/);
     assert.match(await row.ariaSnapshot(), /攻撃時期.*被害の初確認.*公表日/s);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
-    await page.screenshot({ path: `${output}/list-${width}.png` });
+    await page.screenshot({ animations: 'disabled', path: `${output}/list-${width}.png` });
     await row.click();
     const dates = page.locator('.event-date-grid');
     await dates.waitFor();
+    await page.locator('dialog.drawer.open').evaluate(async element => {
+      await Promise.all(element.getAnimations({ subtree: true }).map(animation => animation.finished.catch(() => {})));
+    });
+    const bounds = await page.locator('dialog.drawer.open').boundingBox();
+    assert.ok(bounds.x >= -1 && bounds.x + bounds.width <= width + 1);
     assert.equal(await dates.locator(':scope > div').count(), 3);
     assert.match(await dates.innerText(), /改ざん/);
     assert.match(await dates.innerText(), /翌23日/);
     assert.equal(await dates.getByRole('link', { name: '日付の根拠' }).count(), 2);
     assert.equal(await dates.evaluate(el => el.scrollWidth > el.clientWidth + 1), false);
-    await page.screenshot({ path: `${output}/detail-${width}.png` });
+    await page.screenshot({ animations: 'disabled', path: `${output}/detail-${width}.png` });
     await page.keyboard.press('Escape');
     await row.click();
     await dates.waitFor();
