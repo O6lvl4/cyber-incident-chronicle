@@ -1,0 +1,104 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4hv6-xc92-j86g",
+  "aliases": [
+    "CVE-2026-111917"
+  ],
+  "title": "Vikunja: WebSocket authentication ignores server-side session state, so revoked sessions keep receiving live pushes",
+  "summary": "Vikunja: WebSocket authentication ignores server-side session state, so revoked sessions keep receiving live pushes",
+  "publishedAt": "2026-10-09T20:57:34Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-4hv6-xc92-j86g/GHSA-4hv6-xc92-j86g.json",
+  "modifiedAt": "2026-10-09T20:57:35Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-18T21:46:03.579132Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "code.vikunja.io/api",
+      "ranges": [
+        {
+          "affected": ">= 2.3.0, <= 2.6.0",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-4hv6-xc92-j86g/GHSA-4hv6-xc92-j86g.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "last_affected": "2.6.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-4hv6-xc92-j86g/GHSA-4hv6-xc92-j86g.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-4hv6-xc92-j86g/GHSA-4hv6-xc92-j86g.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2026/10/GHSA-4hv6-xc92-j86g/GHSA-4hv6-xc92-j86g.json",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T20:57:34Z",
+      "modifiedAt": "2026-10-09T20:57:35Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Vikunja: WebSocket authentication ignores server-side session state, so revoked sessions keep receiving live pushes",
+      "url": "https://github.com/advisories/GHSA-4hv6-xc92-j86g",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV公式API：CVE別名を全エクスポートと照合",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-4hv6-xc92-j86g",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T20:57:34Z",
+      "modifiedAt": "2026-10-18T10:56:09.758077526Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公開GitHub Advisory API：GHSA同一性と公開項目を個別照合",
+      "url": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-4hv6-xc92-j86g",
+      "publishedDate": "2026-10-03",
+      "publishedAt": "2026-10-03T06:31:13Z",
+      "modifiedAt": "2026-10-03T06:31:13Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026-10-19の更新は、OSV公式のGHSA記録に追加されたCVE別名の補完。開発元のGHSA同一性と公開項目を別途確認したが、CVE対応の根拠はOSVの明示的なaliasesであり、名称だけで統合していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "今回取得した開発元APIのcve_idは未設定。OSVのCVE別名を開発元が同じ時点で掲示したとはみなさず、開発元とOSVの公開日時・更新日時も別々に保存する。",
+    "公表・更新・撤回日時、影響範囲とCVSSは引き続き固定Reviewed JSONの出典に基づく。今回の別名確認日時で原公表・更新日を進めない。開発元の異なる版表記・評価・日時は別名照合監査に保存し、別名補完の際に推測で置換しない。"
+  ]
+}

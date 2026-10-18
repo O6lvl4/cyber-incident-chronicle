@@ -1,0 +1,104 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3rw9-wmc8-8948",
+  "aliases": [
+    "CVE-2025-71435"
+  ],
+  "title": "Coder accepts an APIKey beyond the linked OIDC expiry if there is no refresh token",
+  "summary": "Coder accepts an APIKey beyond the linked OIDC expiry if there is no refresh token",
+  "publishedAt": "2025-08-28T19:36:04Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2025/08/GHSA-3rw9-wmc8-8948/GHSA-3rw9-wmc8-8948.json",
+  "modifiedAt": "2025-08-28T19:36:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-18T21:45:51.871878Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/coder/coder/v2",
+      "ranges": [
+        {
+          "affected": "< 2.23.0",
+          "fixed": "2.23.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2025/08/GHSA-3rw9-wmc8-8948/GHSA-3rw9-wmc8-8948.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.23.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2025/08/GHSA-3rw9-wmc8-8948/GHSA-3rw9-wmc8-8948.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2025/08/GHSA-3rw9-wmc8-8948/GHSA-3rw9-wmc8-8948.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/8e6fcc108ca6695dfcae73e70447aba37a3b5832/advisories/github-reviewed/2025/08/GHSA-3rw9-wmc8-8948/GHSA-3rw9-wmc8-8948.json",
+      "publishedDate": "2025-08-28",
+      "publishedAt": "2025-08-28T19:36:04Z",
+      "modifiedAt": "2025-08-28T19:36:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Coder accepts an APIKey beyond the linked OIDC expiry if there is no refresh token",
+      "url": "https://github.com/advisories/GHSA-3rw9-wmc8-8948",
+      "publishedDate": "2025-08-28"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV公式API：CVE別名を全エクスポートと照合",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-3rw9-wmc8-8948",
+      "publishedDate": "2025-08-28",
+      "publishedAt": "2025-08-28T19:36:04Z",
+      "modifiedAt": "2026-10-18T10:55:50.653723823Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元の公開GitHub Advisory API：GHSA同一性と公開項目を個別照合",
+      "url": "https://api.github.com/repos/coder/coder/security-advisories/GHSA-3rw9-wmc8-8948",
+      "publishedDate": "2025-08-28",
+      "publishedAt": "2025-08-28T17:31:38Z",
+      "modifiedAt": "2025-08-28T17:31:38Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "2026-10-19の更新は、OSV公式のGHSA記録に追加されたCVE別名の補完。開発元のGHSA同一性と公開項目を別途確認したが、CVE対応の根拠はOSVの明示的なaliasesであり、名称だけで統合していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "今回取得した開発元APIのcve_idは未設定。OSVのCVE別名を開発元が同じ時点で掲示したとはみなさず、開発元とOSVの公開日時・更新日時も別々に保存する。",
+    "公表・更新・撤回日時、影響範囲とCVSSは引き続き固定Reviewed JSONの出典に基づく。今回の別名確認日時で原公表・更新日を進めない。開発元の異なる版表記・評価・日時は別名照合監査に保存し、別名補完の際に推測で置換しない。"
+  ]
+}
