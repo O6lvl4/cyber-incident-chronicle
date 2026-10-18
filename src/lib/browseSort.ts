@@ -1,10 +1,14 @@
-import type { Incident } from '../types';
+import type { Incident, IncidentDateEvidence } from '../types';
 import type { PackageGroup } from './packageGroups';
 import type { VulnerabilitySummary } from './vulnerabilities';
 
 export const INCIDENT_SORT_OPTIONS = [
   { value: 'published-desc', label: '公表日（新しい順）', shortLabel: '公表日：新しい順' },
   { value: 'published-asc', label: '公表日（古い順）', shortLabel: '公表日：古い順' },
+  { value: 'attack-desc', label: '攻撃時期（新しい順・不明は末尾）', shortLabel: '攻撃時期：新しい順' },
+  { value: 'attack-asc', label: '攻撃時期（古い順・不明は末尾）', shortLabel: '攻撃時期：古い順' },
+  { value: 'damage-desc', label: '被害の初確認（新しい順・不明は末尾）', shortLabel: '被害初確認：新→古' },
+  { value: 'damage-asc', label: '被害の初確認（古い順・不明は末尾）', shortLabel: '被害初確認：古→新' },
   { value: 'company-asc', label: '企業名（昇順）', shortLabel: '企業名：昇順' },
   { value: 'company-desc', label: '企業名（降順）', shortLabel: '企業名：降順' },
 ] as const;
@@ -39,7 +43,7 @@ export function normalizeAdvisorySort(value?: string): AdvisorySort {
   return ADVISORY_SORT_OPTIONS.find(option => option.value === value)?.value ?? 'published-desc';
 }
 
-type SortableIncident = Pick<Incident, 'id' | 'company' | 'announcementDate'>;
+type SortableIncident = Pick<Incident, 'id' | 'company' | 'announcementDate' | 'eventDates'>;
 type SortablePackage = Pick<PackageGroup, 'key' | 'packageName' | 'latestPublishedAt' | 'advisories'>;
 type SortableAdvisory = Pick<VulnerabilitySummary, 'id' | 'publishedAt' | 'severity'>;
 type Comparator<T> = (left: T, right: T) => number;
@@ -71,12 +75,38 @@ function sorted<T>(items: readonly T[], compare: Comparator<T>, key: (item: T) =
   return [...items].sort((left, right) => compare(left, right) || compareExact(key(left), key(right)));
 }
 
+/** A calendar tuple, not a fabricated date: absent month/day components are zero.
+ * Only exact month/year labels are parsed; narrative estimates remain unknown
+ * unless the evidence supplies a date boundary. Never use legacy detection dates.
+ */
+function eventDateRank(value?: IncidentDateEvidence): number | null {
+  if (!value || value.precision === 'unknown' || value.precision === 'notApplicable') return null;
+  if (value.precision === 'month' || value.precision === 'year') {
+    const label = value.label.trim().replace(/（(?:日不明|月日不明)）$/, '');
+    const parts = value.precision === 'month'
+      ? /^(\d{4})(?:年(\d{1,2})月|-(\d{2}))$/.exec(label)
+      : /^(\d{4})(?:年)?$/.exec(label);
+    if (!parts) return null;
+    const year = Number(parts[1]);
+    const month = value.precision === 'month' ? Number(parts[2] ?? parts[3]) : 0;
+    return year > 0 && (value.precision === 'year' || (month >= 1 && month <= 12)) ? year * 10000 + month * 100 : null;
+  }
+  const date = value.startDate;
+  if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
+  const time = timestamp(date);
+  if (time === null || new Date(time).toISOString().slice(0, 10) !== date) return null;
+  return Number(date.replace(/-/g, ''));
+}
+
 /** Sort the complete filtered corpus before passing it to a virtual list. */
 export function sortIncidents<T extends SortableIncident>(items: readonly T[], sort: IncidentSort = 'published-desc'): T[] {
   const direction = sort.endsWith('-desc') ? -1 : 1;
-  const compare: Comparator<T> = sort.startsWith('company-')
-    ? (left, right) => names.compare(left.company, right.company) * direction
-    : (left, right) => compareDate(left.announcementDate, right.announcementDate, direction);
+  const field = sort.startsWith('attack-') ? 'attack' : sort.startsWith('damage-') ? 'damageConfirmed' : null;
+  const compare: Comparator<T> = field
+    ? (left, right) => compareRank(eventDateRank(left.eventDates?.[field]), eventDateRank(right.eventDates?.[field]), direction)
+    : sort.startsWith('company-')
+      ? (left, right) => names.compare(left.company, right.company) * direction
+      : (left, right) => compareDate(left.announcementDate, right.announcementDate, direction);
   return sorted(items, compare, item => item.id);
 }
 

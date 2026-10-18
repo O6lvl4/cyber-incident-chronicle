@@ -75,7 +75,7 @@ function IncidentApp(props: CategoryRouteProps) {
     <div className="summary-strip"><span><i className="live-dot"/>一次資料からたどる、企業のインシデント</span><span>資料確認 {META.lastVerifiedDate} · 選定事例</span></div>
     <ClassificationSummary incidents={visible}/>
     <main className={`workspace view-${st.displayView}`}>
-      <IncidentList hidden={st.displayView !== 'list'} incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>
+      <IncidentList dateSort={sort.startsWith('attack-') || sort.startsWith('damage-')} hidden={st.displayView !== 'list'} incidents={visible} total={INCIDENTS.length} selectedId={selectedIncidentId} onSelect={selectIncident} onReset={st.resetFilters}/>
       <IncidentTimeline state={st} events={shownEvents} hasResults={visible.length > 0} board={board}/>
       <Drawer mode={st.drawerMode} onClose={st.closeDrawer}><DrawerContent state={st} db={db} eventsById={eventsById} onSelect={id => { st.resetFilters(); const event = eventsById.get(id) ?? EVENTS.find(item => item.incidentId === id); if (event) selectAndCenter(event.id); }}/></Drawer>
     </main>

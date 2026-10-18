@@ -2,8 +2,8 @@ import { useEffect, useRef, type ReactNode } from 'react';
 import { incidentDateText } from '../lib/incidentDates';
 import type { Incident } from '../types';
 import { STATUS_LABELS, companyCount } from '../lib/incidents';
-interface Props { hidden?: boolean; incidents: Incident[]; total: number; selectedId?: string; onSelect: (id: string) => void; onReset: () => void; viewTabs?: ReactNode }
-export default function IncidentList({ hidden, incidents, total, selectedId, onSelect, onReset, viewTabs }: Props) {
+interface Props { dateSort?: boolean; hidden?: boolean; incidents: Incident[]; total: number; selectedId?: string; onSelect: (id: string) => void; onReset: () => void; viewTabs?: ReactNode }
+export default function IncidentList({ dateSort, hidden, incidents, total, selectedId, onSelect, onReset, viewTabs }: Props) {
   const scroll = useRef<HTMLDivElement>(null);
   useEffect(() => { scroll.current?.scrollTo({ top: 0 }); }, [incidents]);
   return <section id="incident-list-panel" role="tabpanel" aria-labelledby="incident-list-panel-tab" hidden={hidden} className="incident-list research-list research-incidents" aria-label="企業別の事案一覧">
@@ -11,6 +11,7 @@ export default function IncidentList({ hidden, incidents, total, selectedId, onS
       <span className="count-badge" aria-live="polite">{incidents.length}<small className={incidents.length === total ? 'sr-only' : undefined}> / {total}</small><span className="sr-only"> 事案</span></span>{viewTabs}
     <p className="list-note">{companyCount(incidents)}社 · 公表日は収録資料の起点（初報とは限りません）</p></div>
     <div className="incident-scroll" ref={scroll}>
+      {dateSort && <p className="incident-sort-note" role="note">期間は開始日で比較。月・年のみはその精度のまま比較し、同じ月・年の詳細な日付より古い側に置きます。不明・非該当は末尾です</p>}
       <div className="research-columns incident-columns" aria-hidden="true"><span>攻撃時期</span><span>被害の初確認</span><span>公表日 ※</span><span>企業・組織 / 事案</span><span>公表状況</span><span/></div>
       {incidents.length === 0 && <div className="empty-state"><p>条件に合う事案がありません</p><button className="n-btn" onClick={onReset}>絞り込みを解除</button></div>}
       {(hidden ? [] : incidents).map(item => <button key={item.id} data-incident-id={item.id} className={`incident-card${selectedId === item.id ? ' selected' : ''}`} onClick={() => onSelect(item.id)} aria-pressed={selectedId === item.id}>

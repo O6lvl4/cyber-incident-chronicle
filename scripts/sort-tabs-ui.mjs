@@ -18,7 +18,7 @@ const advisories = loadVulnerabilities();
 const groups = sourcePackageGroups(advisories);
 const abundant = [...groups].sort((a, b) => b.advisories.length - a.advisories.length)[0];
 assert.ok(advisories.length >= 18_000 && groups.length > 5_000 && abundant.advisories.length > 100, 'sorting gate uses the full production corpus');
-const incidentSorts = ['published-desc', 'published-asc', 'company-asc', 'company-desc'];
+const incidentSorts = ['published-desc', 'published-asc', 'attack-desc', 'attack-asc', 'damage-desc', 'damage-asc', 'company-asc', 'company-desc'];
 const packageSorts = ['latest-desc', 'latest-asc', 'name-asc', 'name-desc', 'count-desc', 'count-asc'];
 const advisorySorts = ['published-desc', 'published-asc', 'severity-desc', 'severity-asc'];
 const rank = { low: 1, medium: 2, high: 3, critical: 4 };
@@ -26,8 +26,26 @@ const text = (a, b) => a === b ? 0 : a < b ? -1 : 1;
 const company = new Intl.Collator('ja');
 const direction = key => key.endsWith('-asc') ? 1 : -1;
 // These oracles deliberately do not import production sorting utilities.
-const orderedIncidents = key => [...incidents].sort((a, b) => direction(key) * (key.startsWith('company')
-  ? company.compare(a.company, b.company) : text(a.announcementDate, b.announcementDate)) || text(a.id, b.id));
+const eventKey = value => {
+  if (!value || ['unknown', 'notApplicable'].includes(value.precision)) return null;
+  if (value.precision === 'month') {
+    const label = value.label.replace(/（日不明）$/, '');
+    const match = label.match(/^(\d{4})年(\d{1,2})月$/) ?? label.match(/^(\d{4})-(\d{2})$/);
+    return match ? `${match[1]}-${match[2].padStart(2, '0')}-00` : null;
+  }
+  if (value.precision === 'year') return /^\d{4}年?$/.test(value.label) ? `${value.label.slice(0, 4)}-00-00` : null;
+  return value.startDate ?? null;
+};
+const orderedIncidents = (key, records = incidents) => [...records].sort((a, b) => {
+  const field = key.startsWith('attack-') ? 'attack' : key.startsWith('damage-') ? 'damageConfirmed' : null;
+  if (field) {
+    const av = eventKey(a.eventDates?.[field]), bv = eventKey(b.eventDates?.[field]);
+    if (av === null || bv === null) return av === bv ? text(a.id, b.id) : av === null ? 1 : -1;
+    return direction(key) * text(av, bv) || text(a.id, b.id);
+  }
+  return direction(key) * (key.startsWith('company') ? company.compare(a.company, b.company)
+    : text(a.announcementDate, b.announcementDate)) || text(a.id, b.id);
+});
 const orderedGroups = (records, key) => [...records].sort((a, b) => direction(key) * (key.startsWith('name')
   ? text(a.packageName, b.packageName) : key.startsWith('count') ? a.advisories.length - b.advisories.length
     : Date.parse(a.advisories[0].publishedAt) - Date.parse(b.advisories[0].publishedAt)) || text(a.key, b.key));
@@ -94,8 +112,8 @@ async function sampleVirtual(page, selector, records, cardSelector, attribute, l
   }
   checks.push(`${label}: full result count, deterministic neighboring ties, and bounded virtual windows`);
 }
-async function incidentOrder(page, sort, label) {
-  const expected = orderedIncidents(sort).map(item => item.id);
+async function incidentOrder(page, sort, label, records = incidents) {
+  const expected = orderedIncidents(sort, records).map(item => item.id);
   await page.waitForFunction(count => document.querySelectorAll('.research-incidents .incident-card').length === count, expected.length);
   assert.deepEqual(await page.locator('.research-incidents .incident-card').evaluateAll(nodes => nodes.map(node => node.dataset.incidentId)), expected, `${label}: every source incident appears in the chosen order`);
   checks.push(`${label}: every source incident appears in the chosen order, including equal-key ties`);
@@ -112,7 +130,7 @@ async function sourceSortCase(browser, engine) {
     await page.goto(route({})); await page.locator('.research-incidents .incident-card').first().waitFor();
     check(`${engine}: old incident link defaults to publication descending`, await sortControl(page).inputValue() === 'published-desc');
     await options(page, incidentSorts, `${engine} incidents`);
-    for (const sort of engine === 'chromium' ? incidentSorts : ['company-asc', 'published-asc']) {
+    for (const sort of engine === 'chromium' ? incidentSorts : ['company-asc', 'published-asc', 'attack-asc', 'damage-desc']) {
       await selectSort(page, sort, 'sort', '.research-incidents .incident-scroll', `${engine} incidents ${sort}`);
       await incidentOrder(page, sort, `${engine} incidents ${sort}`);
     }
@@ -267,8 +285,20 @@ async function geometryCase(browser, engine, viewport) {
   const page = await browser.newPage({ viewport, hasTouch: viewport.width <= 640, colorScheme: 'light', reducedMotion: 'reduce' });
   try {
     await prepare(page, label);
-    await page.goto(route({ sort: 'company-desc' })); await page.locator('.research-incidents .incident-card').first().waitFor();
+    await page.goto(route({ sort: 'attack-asc' })); await page.locator('.research-incidents .incident-card').first().waitFor();
     const initial = await geometry(page, `${label} incident list`);
+    for (const sort of ['attack-asc', 'attack-desc', 'damage-asc', 'damage-desc']) {
+      await selectSort(page, sort, 'sort', '.research-incidents .incident-scroll', `${label} ${sort}`);
+      await incidentOrder(page, sort, `${label} ${sort}`);
+      check(`${label} ${sort}: sort convention is visible on screen`, await page.locator('.incident-sort-note').isVisible());
+      await screenshot(page, `${engine}-${viewport.width}x${viewport.height}-${sort}`);
+    }
+    await page.reload(); await page.locator('.research-incidents .incident-card').first().waitFor();
+    await incidentOrder(page, 'damage-desc', `${label} date sort reload`);
+    await page.goto(route({ sort: 'attack-asc', q: 'シャープ' }));
+    await page.locator('.research-incidents .incident-card').first().waitFor();
+    await incidentOrder(page, 'attack-asc', `${label} filtered attack dates`, incidents.filter(item => item.company.includes('シャープ')));
+    await page.goto(route({ sort: 'attack-asc' })); await page.locator('.research-incidents .incident-card').first().waitFor();
     for (const category of ['incidents', 'packages', 'advisories']) {
       if (category === 'packages') {
         await page.getByRole('button', { name: 'ライブラリの脆弱性', exact: true }).click(); await page.locator('.package-card').first().waitFor();
