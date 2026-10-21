@@ -1,0 +1,72 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8429-xpcj-3cg5",
+  "aliases": [
+    "CVE-2026-106497"
+  ],
+  "title": "Backstage：カタログの値ベース権限判定の不整合",
+  "summary": "値ベースのカタログ権限条件を機密性の境界とする配備で、認証済み利用者が意図せず制限対象のエンティティ情報を受け取り得る。",
+  "publishedAt": "2026-10-06T21:18:31.150Z",
+  "modifiedAt": "2026-10-07T16:19:32.903Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/106xxx/CVE-2026-106497.json",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@backstage/plugin-catalog-backend",
+      "ranges": [
+        {
+          "affected": "< 3.9.1",
+          "fixed": "3.9.1",
+          "sourceUrl": "https://github.com/backstage/backstage/security/advisories/GHSA-8429-xpcj-3cg5"
+        }
+      ],
+      "packageUrl": "pkg:npm/%40backstage/plugin-catalog-backend"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/backstage/backstage/security/advisories/GHSA-8429-xpcj-3cg5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://github.com/backstage/backstage/security/advisories/GHSA-8429-xpcj-3cg5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE CNA原文：CVE-2026-106497",
+      "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/106xxx/CVE-2026-106497.json",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T21:18:31.150Z",
+      "modifiedAt": "2026-10-07T16:19:32.903Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Backstage公式セキュリティアドバイザリ",
+      "url": "https://github.com/backstage/backstage/security/advisories/GHSA-8429-xpcj-3cg5",
+      "publishedDate": "2026-08-28",
+      "publishedAt": "2026-08-28T14:42:29Z"
+    }
+  ],
+  "caveats": [
+    "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
+    "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
+    "開発元が指定するnpmパッケージは@backstage/plugin-catalog-backendで修正3.9.1。CNAのBackstage全体の製品版1.54.6をパッケージ版へ置き換えない。",
+    "影響する値ベース条件を単独の機密性境界として利用する構成に依存する。"
+  ]
+}

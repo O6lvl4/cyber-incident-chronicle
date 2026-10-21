@@ -1,0 +1,154 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-58r4-6rv3-gfh8",
+  "aliases": [
+    "CVE-2026-112397"
+  ],
+  "title": "Pillow: Out-of-bounds access in _imagingmorph on a zero-width image",
+  "summary": "Pillow: Out-of-bounds access in _imagingmorph on a zero-width image",
+  "publishedAt": "2026-10-20T20:56:22Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-58r4-6rv3-gfh8/GHSA-58r4-6rv3-gfh8.json",
+  "modifiedAt": "2026-10-20T20:56:22Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:30:40.673210Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Pillow",
+      "ranges": [
+        {
+          "affected": "< 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-58r4-6rv3-gfh8/GHSA-58r4-6rv3-gfh8.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-58r4-6rv3-gfh8/GHSA-58r4-6rv3-gfh8.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-58r4-6rv3-gfh8/GHSA-58r4-6rv3-gfh8.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:56:22Z",
+      "modifiedAt": "2026-10-20T20:56:22Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Out-of-bounds access in _imagingmorph on a zero-width image",
+      "url": "https://github.com/advisories/GHSA-58r4-6rv3-gfh8",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:38:24Z"
+    }
+  ],
+  "caveats": [
+    "Primary Low with no displayed CVSS differs from Reviewed High and v4 vector. Maintainer <=12.3.0 and fixed 13.0.0 are separate literal claims.",
+    "Trigger requires morphology operations on an untrusted zero-width image; basic image loading alone is not the described sink.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:30:40.673210Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-58r4-6rv3-gfh8",
+        "aliases": [
+          "CVE-2026-112397"
+        ],
+        "publishedAt": "2026-10-20T20:56:22Z",
+        "modifiedAt": "2026-10-20T20:56:22Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-58r4-6rv3-gfh8/GHSA-58r4-6rv3-gfh8.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "Pillow",
+        "ranges": [
+          {
+            "affected": "< 13.0.0",
+            "fixed": "13.0.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-58r4-6rv3-gfh8/GHSA-58r4-6rv3-gfh8.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "13.0.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-58r4-6rv3-gfh8"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity low differs from Reviewed HIGH; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Primary Low with no displayed CVSS differs from Reviewed High and v4 vector. Maintainer <=12.3.0 and fixed 13.0.0 are separate literal claims.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

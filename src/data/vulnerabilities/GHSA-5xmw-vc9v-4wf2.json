@@ -1,0 +1,100 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5xmw-vc9v-4wf2",
+  "aliases": [
+    "CVE-2026-42309"
+  ],
+  "title": "Pillow has a heap buffer overflow with nested list coordinates",
+  "summary": "Pillow has a heap buffer overflow with nested list coordinates",
+  "publishedAt": "2026-05-04T20:18:27Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/05/GHSA-5xmw-vc9v-4wf2/GHSA-5xmw-vc9v-4wf2.json",
+  "modifiedAt": "2026-10-19T19:52:25Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pillow",
+      "ranges": [
+        {
+          "affected": ">= 11.2.1, < 12.2.0",
+          "fixed": "12.2.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/05/GHSA-5xmw-vc9v-4wf2/GHSA-5xmw-vc9v-4wf2.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "11.2.1"
+            },
+            {
+              "fixed": "12.2.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xmw-vc9v-4wf2",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/05/GHSA-5xmw-vc9v-4wf2/GHSA-5xmw-vc9v-4wf2.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/05/GHSA-5xmw-vc9v-4wf2/GHSA-5xmw-vc9v-4wf2.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/05/GHSA-5xmw-vc9v-4wf2/GHSA-5xmw-vc9v-4wf2.json",
+      "publishedDate": "2026-05-04",
+      "publishedAt": "2026-05-04T20:18:27Z",
+      "modifiedAt": "2026-10-19T19:52:25Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow has a heap buffer overflow with nested list coordinates",
+      "url": "https://github.com/advisories/GHSA-5xmw-vc9v-4wf2",
+      "publishedDate": "2026-05-04"
+    },
+    {
+      "type": "maintainer",
+      "title": "Heap buffer overflow with nested list coordinates",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xmw-vc9v-4wf2",
+      "publishedDate": "2026-04-23",
+      "publishedAt": "2026-04-23T15:11:02Z",
+      "modifiedAt": "2026-04-27T13:35:31Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "開発元はHighと評価するがCVSS数値・ベクトルは未提示。DBのMedium、CVSS3.1/4.0の評価はDB出典として別に保持する。",
+    "入れ子リストの座標を渡す場合のヒープ境界外書込み。開発元は導入11.2.1、修正版12.2.0を明示。"
+  ]
+}

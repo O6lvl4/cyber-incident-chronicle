@@ -1,0 +1,155 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6cjc-53gc-5rqm",
+  "aliases": [
+    "CVE-2026-111065"
+  ],
+  "title": "AIOHTTP: Connector pool exhaustion via Max-Age overflow",
+  "summary": "AIOHTTP: Connector pool exhaustion via Max-Age overflow",
+  "publishedAt": "2026-10-20T19:57:24Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6cjc-53gc-5rqm/GHSA-6cjc-53gc-5rqm.json",
+  "modifiedAt": "2026-10-20T19:57:24Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:55.283217Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "aiohttp",
+      "ranges": [
+        {
+          "affected": "< 3.14.4",
+          "fixed": "3.14.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6cjc-53gc-5rqm/GHSA-6cjc-53gc-5rqm.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-6cjc-53gc-5rqm",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6cjc-53gc-5rqm/GHSA-6cjc-53gc-5rqm.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6cjc-53gc-5rqm/GHSA-6cjc-53gc-5rqm.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T19:57:24Z",
+      "modifiedAt": "2026-10-20T19:57:24Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "AIOHTTP: Connector pool exhaustion via Max-Age overflow",
+      "url": "https://github.com/advisories/GHSA-6cjc-53gc-5rqm",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-6cjc-53gc-5rqm",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T01:23:37Z",
+      "modifiedAt": "2026-10-19T16:48:23Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Primary Low differs from Reviewed Moderate; primary CVSS is absent and Reviewed v4 remains separately attributed. Maintainer <=3.14.3/fixed 3.14.4 differs textually from <3.14.4.",
+    "Max-Age overflow may temporarily exhaust the connection pool until garbage collection; this caveat limits the availability claim.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:55.283217Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-6cjc-53gc-5rqm",
+        "aliases": [
+          "CVE-2026-111065"
+        ],
+        "publishedAt": "2026-10-20T19:57:24Z",
+        "modifiedAt": "2026-10-20T19:57:24Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6cjc-53gc-5rqm/GHSA-6cjc-53gc-5rqm.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "aiohttp",
+        "ranges": [
+          {
+            "affected": "< 3.14.4",
+            "fixed": "3.14.4",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6cjc-53gc-5rqm/GHSA-6cjc-53gc-5rqm.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.14.4"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-6cjc-53gc-5rqm"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity low differs from Reviewed MODERATE; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Primary Low differs from Reviewed Moderate; primary CVSS is absent and Reviewed v4 remains separately attributed. Maintainer <=3.14.3/fixed 3.14.4 differs textually from <3.14.4.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

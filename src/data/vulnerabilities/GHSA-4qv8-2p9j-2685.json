@@ -1,0 +1,82 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4qv8-2p9j-2685",
+  "aliases": [
+    "CVE-2026-109924"
+  ],
+  "title": "undici：EventSourceパーサーの無制限メモリ消費",
+  "summary": "SSE相手が大量のdata行や未完了行を送ると、byte上限とは別の保持状態が増大し、メモリを使い尽くし得る。",
+  "publishedAt": "2026-10-15T18:16:48.452Z",
+  "modifiedAt": "2026-10-16T20:05:22.386Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109924.json",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "undici",
+      "ranges": [
+        {
+          "affected": ">= 6.5.0, < 6.29.1",
+          "fixed": "6.29.1",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685"
+        },
+        {
+          "affected": ">= 7.0.0, < 7.30.1",
+          "fixed": "7.30.1",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685"
+        },
+        {
+          "affected": ">= 8.0.0, < 8.12.2",
+          "fixed": "8.12.2",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685"
+        }
+      ],
+      "packageUrl": "pkg:npm/undici"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE CNA原文（OpenJS）：CVE-2026-109924",
+      "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109924.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T18:16:48.452Z",
+      "modifiedAt": "2026-10-16T20:05:22.386Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Node.js / undici公式アドバイザリ",
+      "url": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T16:01:04Z"
+    }
+  ],
+  "caveats": [
+    "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
+    "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
+    "信頼できない相手へのEventSource接続が前提。圧縮後のサイズ上限だけでは展開後の保持状態を抑えられない。",
+    "記録の日時はCNA公開・更新日時。開発元GHSAの先行公表日時は出典に別記し、今回の収録日やJVN掲載日で置き換えない。"
+  ]
+}

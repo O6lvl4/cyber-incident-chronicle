@@ -1,0 +1,149 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2658-85cv-9wwq",
+  "aliases": [
+    "CVE-2026-111059"
+  ],
+  "title": "Mercury: Stored / DOM Cross-Site Scripting (XSS): mr.Markdown renders untrusted content as raw, unsanitized HTML",
+  "summary": "Mercury: Stored / DOM Cross-Site Scripting (XSS): mr.Markdown renders untrusted content as raw, unsanitized HTML",
+  "publishedAt": "2026-10-19T17:01:20Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2658-85cv-9wwq/GHSA-2658-85cv-9wwq.json",
+  "modifiedAt": "2026-10-19T17:01:20Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:30:37.308826Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "mercury",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 3.2.11",
+          "fixed": "3.2.11",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2658-85cv-9wwq/GHSA-2658-85cv-9wwq.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.2.11"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/mljar/mercury/security/advisories/GHSA-2658-85cv-9wwq",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "sourceUrl": "https://github.com/mljar/mercury/security/advisories/GHSA-2658-85cv-9wwq"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2658-85cv-9wwq/GHSA-2658-85cv-9wwq.json",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T17:01:20Z",
+      "modifiedAt": "2026-10-19T17:01:20Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Mercury: Stored / DOM Cross-Site Scripting (XSS): mr.Markdown renders untrusted content as raw, unsanitized HTML",
+      "url": "https://github.com/advisories/GHSA-2658-85cv-9wwq",
+      "publishedDate": "2026-10-19"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/mljar/mercury/security/advisories/GHSA-2658-85cv-9wwq",
+      "publishedDate": "2026-09-11",
+      "publishedAt": "2026-09-11T07:29:26Z"
+    }
+  ],
+  "caveats": [
+    "Maintainer affected field is open-ended >=3.0.0 despite fixed 3.2.11; Reviewed bounds the interval below 3.2.11. Preserve this internal source mismatch rather than treating the literal open bound as proof the fixed release is vulnerable.",
+    "Medium/CVSS 3.1 6.1 agree. Requires untrusted data rendered via mr.Markdown to another viewer; optional shared sessions amplify but are not necessary. Reporter distinguishes sink-level browser execution from the full served-app path not tested end-to-end.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:30:37.308826Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-2658-85cv-9wwq",
+        "aliases": [
+          "CVE-2026-111059"
+        ],
+        "publishedAt": "2026-10-19T17:01:20Z",
+        "modifiedAt": "2026-10-19T17:01:20Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2658-85cv-9wwq/GHSA-2658-85cv-9wwq.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "mercury",
+        "ranges": [
+          {
+            "affected": ">= 3.0.0, < 3.2.11",
+            "fixed": "3.2.11",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2658-85cv-9wwq/GHSA-2658-85cv-9wwq.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0"
+              },
+              {
+                "fixed": "3.2.11"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-2658-85cv-9wwq"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Maintainer affected field is open-ended >=3.0.0 despite fixed 3.2.11; Reviewed bounds the interval below 3.2.11. Preserve this internal source mismatch rather than treating the literal open bound as proof the fixed release is vulnerable.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

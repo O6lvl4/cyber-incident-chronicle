@@ -1,0 +1,149 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cv27-6wvh-8x7j",
+  "aliases": [
+    "CVE-2026-113661"
+  ],
+  "title": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs",
+  "summary": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs",
+  "publishedAt": "2026-10-20T18:15:33Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-cv27-6wvh-8x7j/GHSA-cv27-6wvh-8x7j.json",
+  "modifiedAt": "2026-10-20T18:15:33Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:48.580704Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "sanitize-html",
+      "ranges": [
+        {
+          "affected": "< 2.18.0",
+          "fixed": "2.18.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-cv27-6wvh-8x7j/GHSA-cv27-6wvh-8x7j.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.18.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-cv27-6wvh-8x7j",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.4,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+        "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-cv27-6wvh-8x7j"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-cv27-6wvh-8x7j/GHSA-cv27-6wvh-8x7j.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:15:33Z",
+      "modifiedAt": "2026-10-20T18:15:33Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs",
+      "url": "https://github.com/advisories/GHSA-cv27-6wvh-8x7j",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-cv27-6wvh-8x7j",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:24:05Z",
+      "modifiedAt": "2026-10-20T17:08:28Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Range, fix 2.18.0 and CVSS 3.1 agree. The refresh-content URL bypass requires non-default allowance of meta plus http-equiv/content; default sanitize-html configuration is unaffected.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:48.580704Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-cv27-6wvh-8x7j",
+        "aliases": [
+          "CVE-2026-113661"
+        ],
+        "publishedAt": "2026-10-20T18:15:33Z",
+        "modifiedAt": "2026-10-20T18:15:33Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-cv27-6wvh-8x7j/GHSA-cv27-6wvh-8x7j.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "sanitize-html",
+        "ranges": [
+          {
+            "affected": "< 2.18.0",
+            "fixed": "2.18.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-cv27-6wvh-8x7j/GHSA-cv27-6wvh-8x7j.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.18.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-cv27-6wvh-8x7j"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Range, fix 2.18.0 and CVSS 3.1 agree. The refresh-content URL bypass requires non-default allowance of meta plus http-equiv/content; default sanitize-html configuration is unaffected.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

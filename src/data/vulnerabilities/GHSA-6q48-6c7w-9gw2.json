@@ -1,0 +1,146 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6q48-6c7w-9gw2",
+  "aliases": [],
+  "title": "certifi bundles emSign root CAs with compromised intermediate CA keys",
+  "summary": "certifi bundles emSign root CAs with compromised intermediate CA keys",
+  "publishedAt": "2026-10-20T19:35:05Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6q48-6c7w-9gw2/GHSA-6q48-6c7w-9gw2.json",
+  "modifiedAt": "2026-10-20T19:35:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:38:07.409665Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "certifi",
+      "ranges": [
+        {
+          "affected": ">= 2019.03.09, < 2026.10.18",
+          "fixed": "2026.10.18",
+          "sourceUrl": "https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6q48-6c7w-9gw2/GHSA-6q48-6c7w-9gw2.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6q48-6c7w-9gw2/GHSA-6q48-6c7w-9gw2.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T19:35:05Z",
+      "modifiedAt": "2026-10-20T19:35:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "certifi bundles emSign root CAs with compromised intermediate CA keys",
+      "url": "https://github.com/advisories/GHSA-6q48-6c7w-9gw2",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T11:31:16Z"
+    },
+    {
+      "type": "release",
+      "title": "Official PyPI certifi 2026.10.18 release metadata and distribution checksum",
+      "url": "https://pypi.org/pypi/certifi/2026.10.18/json",
+      "publishedDate": "2026-10-18",
+      "publishedAt": "2026-10-18T16:21:06.276884Z"
+    },
+    {
+      "type": "release",
+      "title": "Official PyPI certifi 2026.10.19 release metadata and distribution checksum",
+      "url": "https://pypi.org/pypi/certifi/2026.10.19/json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T02:24:15.072385Z"
+    }
+  ],
+  "caveats": [
+    "Maintainer fields and prose identify 2026.10.18 as the fix, while Reviewed structured fixed is 2026.10.19. Reviewed prose itself says .18 removed all emSign roots and .19 restored only unaffected roots. Both PyPI releases exist; checksum-verified wheel bundles confirm .18 has no emSign root labels and .19 has G1/C1/C3 but not the implicated ECC G3. Use .18 as the issue-specific first fix boundary, preserve Reviewed .19 raw, and do not mistake .19 restoration for reintroduction of the implicated root.",
+    "The Reviewed narrative recommends 2026.10.19 or later. An issue-specific first fix boundary is not a claim that .18 is the preferred current upgrade target. Root-label checks are corroboration, not an independent cryptographic audit of the CA incident.",
+    "The source says emSign roots were removed because intermediate keys were compromised; do not infer a specific company incident or observed MITM from that library advisory alone.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:38:07.409665Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-6q48-6c7w-9gw2",
+        "aliases": [],
+        "publishedAt": "2026-10-20T19:35:05Z",
+        "modifiedAt": "2026-10-20T19:35:05Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6q48-6c7w-9gw2/GHSA-6q48-6c7w-9gw2.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "certifi",
+        "ranges": [
+          {
+            "affected": ">= 2019.03.09, < 2026.10.19",
+            "fixed": "2026.10.19",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6q48-6c7w-9gw2/GHSA-6q48-6c7w-9gw2.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2019.03.09"
+              },
+              {
+                "fixed": "2026.10.19"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-6q48-6c7w-9gw2"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "Maintainer fields and prose identify 2026.10.18 as the fix, while Reviewed structured fixed is 2026.10.19. Reviewed prose itself says .18 removed all emSign roots and .19 restored only unaffected roots. Both PyPI releases exist; checksum-verified wheel bundles confirm .18 has no emSign root labels and .19 has G1/C1/C3 but not the implicated ECC G3. Use .18 as the issue-specific first fix boundary, preserve Reviewed .19 raw, and do not mistake .19 restoration for reintroduction of the implicated root.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

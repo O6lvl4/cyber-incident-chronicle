@@ -1,0 +1,149 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-hhph-8536-gfq5",
+  "aliases": [
+    "CVE-2026-113652"
+  ],
+  "title": "ApostropheCMS uploadfs Azure backend leaks account-level SAS token into every public attachment URL (sas: true)",
+  "summary": "ApostropheCMS uploadfs Azure backend leaks account-level SAS token into every public attachment URL (sas: true)",
+  "publishedAt": "2026-10-20T18:20:35Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hhph-8536-gfq5/GHSA-hhph-8536-gfq5.json",
+  "modifiedAt": "2026-10-20T18:20:35Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:52.233853Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "uploadfs",
+      "ranges": [
+        {
+          "affected": ">= 1.25.0, < 1.28.0",
+          "fixed": "1.28.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hhph-8536-gfq5/GHSA-hhph-8536-gfq5.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.25.0"
+            },
+            {
+              "fixed": "1.28.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-hhph-8536-gfq5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.6,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-hhph-8536-gfq5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hhph-8536-gfq5/GHSA-hhph-8536-gfq5.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:20:35Z",
+      "modifiedAt": "2026-10-20T18:20:35Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS uploadfs Azure backend leaks account-level SAS token into every public attachment URL (sas: true)",
+      "url": "https://github.com/advisories/GHSA-hhph-8536-gfq5",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-hhph-8536-gfq5",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:24:36Z",
+      "modifiedAt": "2026-10-20T16:24:10Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Range >=1.25.0,<1.28.0, fix 1.28.0 and CVSS 3.1 agree. Exposure applies to Azure SAS mode; default shared-key mode and other backends are not affected. Resulting capabilities depend on SAS permissions and lifetime, not a guaranteed universal account takeover.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:52.233853Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-hhph-8536-gfq5",
+        "aliases": [
+          "CVE-2026-113652"
+        ],
+        "publishedAt": "2026-10-20T18:20:35Z",
+        "modifiedAt": "2026-10-20T18:20:35Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hhph-8536-gfq5/GHSA-hhph-8536-gfq5.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "uploadfs",
+        "ranges": [
+          {
+            "affected": ">= 1.25.0, < 1.28.0",
+            "fixed": "1.28.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hhph-8536-gfq5/GHSA-hhph-8536-gfq5.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.25.0"
+              },
+              {
+                "fixed": "1.28.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-hhph-8536-gfq5"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Range >=1.25.0,<1.28.0, fix 1.28.0 and CVSS 3.1 agree. Exposure applies to Azure SAS mode; default shared-key mode and other backends are not affected. Resulting capabilities depend on SAS permissions and lifetime, not a guaranteed universal account takeover.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

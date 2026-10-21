@@ -1,0 +1,117 @@
+{
+  "id": "iwaicosmo-tradeworks-2026",
+  "company": "岩井コスモ証券（委託先トレードワークス）",
+  "title": "委託先システムへの不正アクセスで4,975名の情報流出、別の売買管理攻撃で7口座に注文",
+  "announcementDate": "2026-10-16",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-14",
+  "occurredDateLabel": "第2報が不正アクセスと売買管理システムへの攻撃が行われた日と記載",
+  "updatedDate": "2026-10-20",
+  "statusAsOfDate": "2026-10-20",
+  "lastVerifiedDate": "2026-10-21",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "運用・保守委託先システムの不正アクセスと売買管理システムへの攻撃（具体的手口は未公表）",
+    "status": "confirmed"
+  },
+  "summary": "10月14日の委託先システムへの不正アクセスで顧客情報が流出。再調査で対象は4,611名から4,975名に増えた。同日の売買管理システム攻撃では7口座に意図しない注文、うち5口座で約定があり、取引前の状態へ戻す措置を完了した。",
+  "affectedData": [
+    "顧客の氏名、メールアドレス他（詳細は未公表）。取引暗証番号は含まれない"
+  ],
+  "counts": [
+    {
+      "value": 4975,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "漏えい確認済みの顧客総数（10月20日更新）",
+      "approximate": false
+    },
+    {
+      "value": 364,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "総数4,975名のうち再調査で追加判明した対象者",
+      "approximate": false
+    },
+    {
+      "value": 7,
+      "unit": "口座",
+      "status": "confirmed",
+      "label": "意図しない売買注文が発注された口座",
+      "approximate": false
+    },
+    {
+      "value": 5,
+      "unit": "口座",
+      "status": "confirmed",
+      "label": "上記7口座のうち注文が約定した口座",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "4,975名は初報4,611名に追加364名を含む更新後の総数。追加分は同じ10月14日の事案の再調査によるもので、新たな攻撃・漏えいではない。",
+    "7口座と内数5口座は漏えい人数とは別指標で合算しない。不正取引は流出した個人情報を利用したものではないと明記。",
+    "対象顧客に10月14日に連絡し、取引前へ戻す措置を完了。完了日は未公表で、10月14日完了とはしない。顧客負担は生じていないと説明。",
+    "10月20日時点で通常稼働し、原因箇所の特定・修正と追加対策を完了。強化後の新たな漏えい、他金融機関提供システムでの同様アクセスは確認されていないという範囲付き説明。",
+    "対象は岩井コスモ証券の公表範囲。トレードワークス全顧客の被害総数へ拡張しない。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "岩井コスモ証券：外部委託先への不正アクセスに伴うお客様情報の漏洩について",
+      "url": "https://www.iwaicosmo.co.jp/news/2026/10161410.html",
+      "publishedDate": "2026-10-16"
+    },
+    {
+      "title": "岩井コスモ証券：外部委託先への不正アクセスに伴うお客様情報の漏洩について（第2報）",
+      "url": "https://www.iwaicosmo.co.jp/info/2026/10201710.html",
+      "publishedDate": "2026-10-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-14",
+      "label": "不正アクセス検知・不正注文",
+      "kind": "occurrence",
+      "summary": "不正アクセスを検知し委託先と緊急措置。同日の売買管理攻撃で7口座に注文、うち5口座に約定があり、対象者には同日連絡。",
+      "sourceUrl": "https://www.iwaicosmo.co.jp/info/2026/10201710.html"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "初報で4,611名の漏えいを公表",
+      "kind": "disclosure",
+      "summary": "委託先への不正アクセスと対象者への個別報告、脆弱箇所の特定・修正完了を公表。",
+      "sourceUrl": "https://www.iwaicosmo.co.jp/news/2026/10161410.html"
+    },
+    {
+      "date": "2026-10-20",
+      "label": "総数更新と売買管理攻撃の公表",
+      "kind": "update",
+      "summary": "通信記録等の再精査で364名を追加。7口座の不正注文は漏えい情報の悪用ではなく、原状回復済みと説明。",
+      "sourceUrl": "https://www.iwaicosmo.co.jp/info/2026/10201710.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年10月14日",
+      "note": "第2報は不正アクセスが行われた同日に売買管理システム攻撃も発生したと明記。",
+      "sourceUrl": "https://www.iwaicosmo.co.jp/info/2026/10201710.html",
+      "reviewedDate": "2026-10-21",
+      "startDate": "2026-10-14"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "第2報は10月14日の不正注文と対象顧客への同日連絡を示すが、被害を最初に確認した日とは明示していない。情報漏えいの初確認日も未公表のため、通知日・検知日から推定しない。",
+      "sourceUrl": "https://www.iwaicosmo.co.jp/info/2026/10201710.html",
+      "reviewedDate": "2026-10-21"
+    }
+  },
+  "detectedDate": "2026-10-14",
+  "scaleLabel": "4,975名／不正注文7口座（約定5口座は内数）"
+}

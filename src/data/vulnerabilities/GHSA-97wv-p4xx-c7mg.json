@@ -1,0 +1,156 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-97wv-p4xx-c7mg",
+  "aliases": [
+    "CVE-2026-113664"
+  ],
+  "title": "ApostropheCMS import-export tar guard misses './..' because it is a literal '../' substring test",
+  "summary": "ApostropheCMS import-export tar guard misses './..' because it is a literal '../' substring test",
+  "publishedAt": "2026-10-20T18:23:42Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-97wv-p4xx-c7mg/GHSA-97wv-p4xx-c7mg.json",
+  "modifiedAt": "2026-10-20T18:23:42Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:48.580392Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@apostrophecms/import-export",
+      "ranges": [
+        {
+          "affected": "< 3.7.0",
+          "fixed": "3.7.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-97wv-p4xx-c7mg/GHSA-97wv-p4xx-c7mg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.7.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-97wv-p4xx-c7mg",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-97wv-p4xx-c7mg/GHSA-97wv-p4xx-c7mg.json"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-97wv-p4xx-c7mg"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-97wv-p4xx-c7mg/GHSA-97wv-p4xx-c7mg.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:23:42Z",
+      "modifiedAt": "2026-10-20T18:23:42Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS import-export tar guard misses './..' because it is a literal '../' substring test",
+      "url": "https://github.com/advisories/GHSA-97wv-p4xx-c7mg",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-97wv-p4xx-c7mg",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:24:39Z",
+      "modifiedAt": "2026-10-20T17:14:07Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Current fields agree on <3.7.0, fixed 3.7.0 and Medium. Maintainer structured CVSS fields are null, but its prose explicitly publishes CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H; Reviewed instead supplies a CVSS 4.0 vector. Keep both source/version attributions and do not compute a missing numeric v3 score.",
+    "The reported effect is process termination from a missing stream-error handler; the reporter explicitly does not demonstrate controlled file read/write and did not run the full route end-to-end.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:48.580392Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-97wv-p4xx-c7mg",
+        "aliases": [
+          "CVE-2026-113664"
+        ],
+        "publishedAt": "2026-10-20T18:23:42Z",
+        "modifiedAt": "2026-10-20T18:23:42Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-97wv-p4xx-c7mg/GHSA-97wv-p4xx-c7mg.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "@apostrophecms/import-export",
+        "ranges": [
+          {
+            "affected": "< 3.7.0",
+            "fixed": "3.7.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-97wv-p4xx-c7mg/GHSA-97wv-p4xx-c7mg.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.7.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-97wv-p4xx-c7mg"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Current fields agree on <3.7.0, fixed 3.7.0 and Medium. Maintainer structured CVSS fields are null, but its prose explicitly publishes CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H; Reviewed instead supplies a CVSS 4.0 vector. Keep both source/version attributions and do not compute a missing numeric v3 score.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

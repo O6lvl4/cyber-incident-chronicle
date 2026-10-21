@@ -1,0 +1,155 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5wr8-gcqf-gqf3",
+  "aliases": [
+    "CVE-2026-111064"
+  ],
+  "title": "aiohttp server lacks an initial request/header timeout",
+  "summary": "aiohttp server lacks an initial request/header timeout",
+  "publishedAt": "2026-10-19T17:08:04Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-5wr8-gcqf-gqf3/GHSA-5wr8-gcqf-gqf3.json",
+  "modifiedAt": "2026-10-19T17:08:04Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:50.812036Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "aiohttp",
+      "ranges": [
+        {
+          "affected": "< 3.14.4",
+          "fixed": "3.14.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-5wr8-gcqf-gqf3/GHSA-5wr8-gcqf-gqf3.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-5wr8-gcqf-gqf3",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-5wr8-gcqf-gqf3/GHSA-5wr8-gcqf-gqf3.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-5wr8-gcqf-gqf3/GHSA-5wr8-gcqf-gqf3.json",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T17:08:04Z",
+      "modifiedAt": "2026-10-19T17:08:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "aiohttp server lacks an initial request/header timeout",
+      "url": "https://github.com/advisories/GHSA-5wr8-gcqf-gqf3",
+      "publishedDate": "2026-10-19"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-5wr8-gcqf-gqf3",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T01:23:47Z",
+      "modifiedAt": "2026-10-19T16:45:29Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Primary Low differs from Reviewed High; primary has no CVSS vector while Reviewed supplies v4. Range <=3.14.3 and fixed 3.14.4 remain source-specific.",
+    "Initial idle requests evade keepalive timeout; the documented reverse-proxy timeout workaround is separate from the fixed package release.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:50.812036Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-5wr8-gcqf-gqf3",
+        "aliases": [
+          "CVE-2026-111064"
+        ],
+        "publishedAt": "2026-10-19T17:08:04Z",
+        "modifiedAt": "2026-10-19T17:08:04Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-5wr8-gcqf-gqf3/GHSA-5wr8-gcqf-gqf3.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "aiohttp",
+        "ranges": [
+          {
+            "affected": "< 3.14.4",
+            "fixed": "3.14.4",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-5wr8-gcqf-gqf3/GHSA-5wr8-gcqf-gqf3.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.14.4"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-5wr8-gcqf-gqf3"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity low differs from Reviewed HIGH; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Primary Low differs from Reviewed High; primary has no CVSS vector while Reviewed supplies v4. Range <=3.14.3 and fixed 3.14.4 remain source-specific.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

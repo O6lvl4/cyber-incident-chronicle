@@ -1,0 +1,136 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-953h-535j-jg2v",
+  "aliases": [],
+  "title": "agent-router: MCP session resume does not verify the embedded anti-hijacking subject; default Helm seed makes session IDs forgeable",
+  "summary": "agent-router: MCP session resume does not verify the embedded anti-hijacking subject; default Helm seed makes session IDs forgeable",
+  "publishedAt": "2026-10-19T16:53:26Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-953h-535j-jg2v/GHSA-953h-535j-jg2v.json",
+  "modifiedAt": "2026-10-19T16:53:26Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:31:36.076915Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/envoyproxy/ai-gateway",
+      "ranges": [
+        {
+          "affected": "<= 1.1.0",
+          "fixed": "1.2.0",
+          "sourceUrl": "https://github.com/theagentrouter/agent-router/security/advisories/GHSA-953h-535j-jg2v"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/theagentrouter/agent-router/security/advisories/GHSA-953h-535j-jg2v",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-953h-535j-jg2v/GHSA-953h-535j-jg2v.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-953h-535j-jg2v/GHSA-953h-535j-jg2v.json",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T16:53:26Z",
+      "modifiedAt": "2026-10-19T16:53:26Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "agent-router: MCP session resume does not verify the embedded anti-hijacking subject; default Helm seed makes session IDs forgeable",
+      "url": "https://github.com/advisories/GHSA-953h-535j-jg2v",
+      "publishedDate": "2026-10-19"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/theagentrouter/agent-router/security/advisories/GHSA-953h-535j-jg2v",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T12:38:00Z"
+    }
+  ],
+  "caveats": [
+    "Maintainer High, affected <=1.1.0 and fixed 1.2.0 differ from Reviewed Moderate and >=0.4.0-rc1,<1.2.0-rc1. No primary CVSS vector is displayed. Do not silently equate release candidates with stable releases.",
+    "Repository branding is agent-router but both sources identify the Go module github.com/envoyproxy/ai-gateway. Session ownership is not checked on resume; the default Helm seed aggravates the issue. Reporter states code-level analysis, not a live-cluster reproduction.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:31:36.076915Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-953h-535j-jg2v",
+        "aliases": [],
+        "publishedAt": "2026-10-19T16:53:26Z",
+        "modifiedAt": "2026-10-19T16:53:26Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-953h-535j-jg2v/GHSA-953h-535j-jg2v.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/envoyproxy/ai-gateway",
+        "ranges": [
+          {
+            "affected": ">= 0.4.0-rc1, < 1.2.0-rc1",
+            "fixed": "1.2.0-rc1",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-953h-535j-jg2v/GHSA-953h-535j-jg2v.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.4.0-rc1"
+              },
+              {
+                "fixed": "1.2.0-rc1"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-953h-535j-jg2v"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "Maintainer High, affected <=1.1.0 and fixed 1.2.0 differ from Reviewed Moderate and >=0.4.0-rc1,<1.2.0-rc1. No primary CVSS vector is displayed. Do not silently equate release candidates with stable releases.",
+        "newerDatabase": false
+      },
+      {
+        "field": "severity",
+        "reason": "Maintainer severity high differs from Reviewed MODERATE; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

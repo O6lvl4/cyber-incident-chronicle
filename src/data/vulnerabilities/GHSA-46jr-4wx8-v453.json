@@ -1,0 +1,199 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-46jr-4wx8-v453",
+  "aliases": [
+    "CVE-2026-111768"
+  ],
+  "title": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation",
+  "summary": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation",
+  "publishedAt": "2026-10-20T20:06:35Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json",
+  "modifiedAt": "2026-10-20T20:06:35Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:30:37.428657Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@modelcontextprotocol/sdk",
+      "ranges": [
+        {
+          "affected": ">= 1.3.0, < 1.32.0",
+          "fixed": "1.32.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.3.0"
+            },
+            {
+              "fixed": "1.32.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@modelcontextprotocol/server",
+      "ranges": [
+        {
+          "affected": ">= 2.0.0, < 2.3.0",
+          "fixed": "2.3.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.3.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-46jr-4wx8-v453",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-46jr-4wx8-v453"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:06:35Z",
+      "modifiedAt": "2026-10-20T20:06:35Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation",
+      "url": "https://github.com/advisories/GHSA-46jr-4wx8-v453",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-46jr-4wx8-v453",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T13:10:32Z"
+    }
+  ],
+  "caveats": [
+    "Both package ranges/fixes and High/CVSS 3.1 7.5 agree, but the prose explicitly warns that upgrading alone does not mitigate the problem.",
+    "Fixed releases add maxToolInputElements disabled by default. Operators must configure that tool-argument limit and lower transport/body-parser limits; stdio-only servers are unaffected.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:30:37.428657Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-46jr-4wx8-v453",
+        "aliases": [
+          "CVE-2026-111768"
+        ],
+        "publishedAt": "2026-10-20T20:06:35Z",
+        "modifiedAt": "2026-10-20T20:06:35Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "@modelcontextprotocol/sdk",
+        "ranges": [
+          {
+            "affected": ">= 1.3.0, < 1.32.0",
+            "fixed": "1.32.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.3.0"
+              },
+              {
+                "fixed": "1.32.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      },
+      {
+        "ecosystem": "npm",
+        "packageName": "@modelcontextprotocol/server",
+        "ranges": [
+          {
+            "affected": ">= 2.0.0, < 2.3.0",
+            "fixed": "2.3.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.0.0"
+              },
+              {
+                "fixed": "2.3.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-46jr-4wx8-v453"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Both package ranges/fixes and High/CVSS 3.1 7.5 agree, but the prose explicitly warns that upgrading alone does not mitigate the problem.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

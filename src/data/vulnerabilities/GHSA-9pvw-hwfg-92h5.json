@@ -1,0 +1,103 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9pvw-hwfg-92h5",
+  "aliases": [
+    "RUSTSEC-2026-0378"
+  ],
+  "title": "Wasmtime：型の異なるstream・future受け渡しでホストがpanic",
+  "summary": "ホストで作成したcomponent-modelのstreamやfutureをゲスト経由で型消去して受け取り、別のpayload型を期待するゲストへ渡すとpanicし得る。悪意あるゲストが型の不一致を誘発するとサービス拒否につながる。",
+  "publishedAt": "2026-10-19T12:00:00Z",
+  "modifiedAt": "2026-10-20T11:15:37.066435437Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0378",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 46.0.0, < 48.0.7",
+          "fixed": "48.0.7",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.4",
+          "fixed": "49.0.4",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "46.0.0"
+            },
+            {
+              "fixed": "48.0.7"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 5.7,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0378",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0378",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T12:00:00Z",
+      "modifiedAt": "2026-10-20T11:15:37.066435437Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0378",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime/RUSTSEC-2026-0378.md",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T19:21:51Z"
+    }
+  ],
+  "caveats": [
+    "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
+    "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
+    "具体型のStreamReader<T>/FutureReader<T>だけで一貫して扱う場合や、ホスト作成値をゲスト経由で戻さない場合は対象外。関連GHSA-63h4-6cx9-pjfjは別件であり別名として結合しない。",
+    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。"
+  ]
+}

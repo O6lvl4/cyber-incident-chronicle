@@ -1,0 +1,149 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-259r-337f-4rfw",
+  "aliases": [
+    "CVE-2026-63209"
+  ],
+  "title": "Compress/s2: Integer Overflow or Wraparound and Out-of-bounds Write in compress",
+  "summary": "Compress/s2: Integer Overflow or Wraparound and Out-of-bounds Write in compress",
+  "publishedAt": "2026-10-20T14:33:33Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-259r-337f-4rfw/GHSA-259r-337f-4rfw.json",
+  "modifiedAt": "2026-10-20T14:33:33Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:30:33.212358Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/klauspost/compress",
+      "ranges": [
+        {
+          "affected": "< 1.18.7",
+          "fixed": "1.18.7",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-259r-337f-4rfw/GHSA-259r-337f-4rfw.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.18.7"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/klauspost/compress/security/advisories/GHSA-259r-337f-4rfw",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/klauspost/compress/security/advisories/GHSA-259r-337f-4rfw"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-259r-337f-4rfw/GHSA-259r-337f-4rfw.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T14:33:33Z",
+      "modifiedAt": "2026-10-20T14:33:33Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Compress/s2: Integer Overflow or Wraparound and Out-of-bounds Write in compress",
+      "url": "https://github.com/advisories/GHSA-259r-337f-4rfw",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/klauspost/compress/security/advisories/GHSA-259r-337f-4rfw",
+      "publishedDate": "2026-06-30",
+      "publishedAt": "2026-06-30T11:23:20Z"
+    }
+  ],
+  "caveats": [
+    "Maintainer UI labels the coordinate compress/s2 with custom ecosystem klauspost; prose identifies Go github.com/klauspost/compress/s2, while Reviewed correctly uses the containing module github.com/klauspost/compress. Preserve all raw identities rather than importing the UI vendor label as a Go ecosystem.",
+    "Maintainer <=v1.18.6 and patched v1.18.7 correspond to the explicit release claims; Reviewed uses <1.18.7 without the v prefix. High/CVSS 3.1 7.5 agree. Trigger requires attacker-supplied dictionary data reaching NewDict and subsequent encoding.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:30:33.212358Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-259r-337f-4rfw",
+        "aliases": [
+          "CVE-2026-63209"
+        ],
+        "publishedAt": "2026-10-20T14:33:33Z",
+        "modifiedAt": "2026-10-20T14:33:33Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-259r-337f-4rfw/GHSA-259r-337f-4rfw.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "go",
+        "packageName": "github.com/klauspost/compress",
+        "ranges": [
+          {
+            "affected": "< 1.18.7",
+            "fixed": "1.18.7",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-259r-337f-4rfw/GHSA-259r-337f-4rfw.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.18.7"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-259r-337f-4rfw"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Maintainer UI labels the coordinate compress/s2 with custom ecosystem klauspost; prose identifies Go github.com/klauspost/compress/s2, while Reviewed correctly uses the containing module github.com/klauspost/compress. Preserve all raw identities rather than importing the UI vendor label as a Go ecosystem.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

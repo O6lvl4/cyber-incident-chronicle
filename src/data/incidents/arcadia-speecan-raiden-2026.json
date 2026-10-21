@@ -6,9 +6,9 @@
   "announcementDateLabel": "収録した公表日",
   "occurredDate": null,
   "occurredDateLabel": "侵入開始日は未公表",
-  "updatedDate": "2026-10-16",
-  "statusAsOfDate": "2026-10-16",
-  "lastVerifiedDate": "2026-10-17",
+  "updatedDate": "2026-10-20",
+  "statusAsOfDate": "2026-10-20",
+  "lastVerifiedDate": "2026-10-21",
   "impactTypes": [
     "leak",
     "outage",
@@ -16,10 +16,10 @@
   ],
   "disclosureStatus": "possible",
   "attackMethod": {
-    "label": "具体的な侵入手法は未公表",
-    "status": "unknown"
+    "label": "メディアサーバーのディレクトリパストラバーサルを悪用し認証情報を取得、内部情報取得・バックドア設置・不正メール配信",
+    "status": "confirmed"
   },
-  "summary": "10月11日に不審な挙動を確認し、13日に一部配信サービスを停止。15日に全サービス復旧を公表したが漏えい調査は継続。16日の第11報ではNET119の可能性範囲を9,020件のメールアドレスに紐づく個人情報とし、要配慮個人情報の漏えいはないと説明した。",
+  "summary": "10月19日の詳細報告で脆弱性悪用と認証情報取得、バックドアからの不正メール配信、DB改ざんを公表。不正メール配信総数は1,423,428で、漏えい人数ではない。15日15時10分の全サービス復旧を報告したが、個人情報漏えいの有無・範囲の調査は継続。20日に代行報告の同意案内送信を公表した。",
   "affectedData": [
     "登録された連絡先・担当者・契約者情報（名前、メールアドレス、電話・FAX番号）",
     "配信履歴として保存された本文の内容",
@@ -75,6 +75,13 @@
       "status": "possible",
       "label": "119RAIDENのFAX番号の最大件数",
       "approximate": true
+    },
+    {
+      "value": 1423428,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "不正プログラムによる外部メール配信の総数（第12報。原文は数値のみで、漏えい人数ではない）",
+      "approximate": false
     }
   ],
   "scaleLabel": "サービス別件数：NET119は9,020メールアドレスに紐づく情報（可能性）",
@@ -90,7 +97,13 @@
     "NET119は10月14日の最大約13,000件から、16日第11報の9,020件のメールアドレスに紐づく個人情報へ公表範囲を更新。旧最大値を別被害として加算しない。要配慮個人情報は漏えいしていないと会社が確認",
     "10月15日17時50分の第9報で、停止していたraiden3.ktaiwork.jp・s2.ktaiwork.jpを15時頃に復旧し全サービスが復旧したと会社が報告。独立した稼働監視による確認ではない",
     "侵入経路の遮断・不正プログラムなしの確認およびサービス復旧は、情報漏えいの否定や調査完了を意味しない。第9報でも漏えい範囲は調査中",
-    "10月16日第10報の契約者に代わる個人情報保護委員会への報告は、同意取得と準備を進める予定。代行報告完了とはしない"
+    "10月16日第10報の契約者に代わる個人情報保護委員会への報告は、同意取得と準備を進める予定。代行報告完了とはしない",
+    "10月19日の詳細報告は10月11日6時26分のアクセス開始、16時39分の設定ファイル取得、23時40分の異常負荷・不正アクセス検知を記載。従前ブログの16時30分の不審挙動確認とは記載時点・表現が異なるため、両方の経過を残す",
+    "1,423,428は不正プログラムによる外部メール配信総数。漏えいが確認された個人情報の件数・実人数・受信者数ではなく、サービス別の漏えい可能性件数に加算しない",
+    "10月12日の電話発信・外部連携の一部障害は、会社が対処時のDBパスワード変更の影響と説明。攻撃による直接停止と区別する。10月14日にはDB改ざんを発見し15日に修正したと報告",
+    "第12報の復旧完了は10月15日15時10分と記載。社内での安全性確認と第三者機関による詳細調査・対策の予定を区別し、調査完了とはしない",
+    "10月20日第13報は19日15時58分に代行報告の案内メールを送信したとの報告。契約者の同意入力を求める段階であり、全契約者の同意や代行報告の完了ではない",
+    "第12報に記載されたLLMの活用は事案後の社内脆弱性診断・コードレビューに関する説明であり、攻撃の原因や攻撃者のAI利用の証拠としない"
   ],
   "geography": "日本",
   "sources": [
@@ -100,7 +113,7 @@
       "publishedDate": "2026-10-13"
     },
     {
-      "title": "SpeeCAN RAIDEN公式：復旧、NET119の対象件数更新と要配慮個人情報の否定（10月16日18時10分・第11報）",
+      "title": "SpeeCAN RAIDEN公式：対象範囲・復旧と代行報告の案内（10月20日・第13報まで）",
       "url": "https://raiden.site.ktaiwork.jp/archives/4597",
       "publishedDate": "2026-10-13"
     },
@@ -108,6 +121,11 @@
       "title": "SpeeCAN RAIDEN公式：一部サービス緊急停止（15時50分更新）",
       "url": "https://raiden.site.ktaiwork.jp/archives/4601",
       "publishedDate": "2026-10-13"
+    },
+    {
+      "title": "アルカディア：不正アクセスの経過と対処（第12報添付・10月19日）",
+      "url": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf",
+      "publishedDate": "2026-10-19"
     }
   ],
   "timeline": [
@@ -117,6 +135,13 @@
       "kind": "occurrence",
       "summary": "16時30分に不正アクセスが疑われる挙動を確認",
       "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597"
+    },
+    {
+      "date": "2026-10-11",
+      "label": "詳細報告によるアクセス・検知時刻",
+      "kind": "occurrence",
+      "summary": "6時26分にアクセス開始、16時39分に設定ファイル取得、23時40分に異常負荷と不正アクセスを検知したと第12報で説明",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf"
     },
     {
       "date": "2026-10-12",
@@ -140,11 +165,25 @@
       "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4601"
     },
     {
+      "date": "2026-10-13",
+      "label": "バックドアと不正メール配信を確認",
+      "kind": "occurrence",
+      "summary": "4時10分に大量配信からバックドア設置が発覚、4時25分に不正メールを検知、7時16分に配信停止。11時に対象2サービスを緊急停止",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf"
+    },
+    {
       "date": "2026-10-14",
       "label": "NET119・119RAIDENの範囲を追加",
       "kind": "update",
       "summary": "15時に追加サービスの侵入形跡と漏えい可能性を公表。16時に2つのURLを除外、17時12分に映像通報を対象外と明記",
       "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "DB改ざんを発見",
+      "kind": "occurrence",
+      "summary": "22時50分にraiden3のDB書き換えを複数発見。翌15日9時30分に手作業の修正を完了したと報告",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf"
     },
     {
       "date": "2026-10-15",
@@ -159,24 +198,39 @@
       "kind": "update",
       "summary": "18時10分、9,020件のメールアドレスに紐づく個人情報へ更新。要配慮個人情報の漏えいは否定。通常利用可能だが影響範囲の調査継続",
       "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "侵入手法と不正メール配信総数を公表（第12報）",
+      "kind": "update",
+      "summary": "パストラバーサルから認証情報を取得し内部情報へアクセス。配信総数1,423,428と15日15時10分の全サービス復旧を説明。個人情報漏えいの可能性の調査は継続",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf"
+    },
+    {
+      "date": "2026-10-20",
+      "label": "代行報告の案内送信を公表（第13報）",
+      "kind": "update",
+      "summary": "19日15時58分に対象契約者へ個人情報保護委員会への代行報告の同意案内をメール送信。代行報告完了の公表ではない",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597"
     }
   ],
   "detectedDate": "2026-10-11",
   "eventDates": {
     "attack": {
-      "precision": "day",
-      "label": "2026年10月11日",
+      "precision": "period",
+      "label": "2026年10月11日〜10月13日（公表された攻撃活動）",
       "startDate": "2026-10-11",
-      "note": "10月16日第11報はSpeeCAN RAIDENの不正アクセスについて「2026年10月11日16時30分、発生した」と記載。初報では同時刻を不正アクセスが疑われる挙動の確認時点としていた。続報が発生したと示す攻撃の日を採り、初期侵入日や攻撃期間全体は特定しない。NET119・119RAIDENの10月14日は痕跡確認日であり別の攻撃実施日とはしない。",
-      "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597",
-      "reviewedDate": "2026-10-18"
+      "endDate": "2026-10-13",
+      "note": "第12報は10月11日6:26のアクセス開始と同日16:39の設定ファイル取得、10月13日のバックドアによる不正メール配信・7:16の停止を記載。公表された活動の期間であり、全期間にわたる連続侵入や未公表の活動の不存在を意味しない。従前第11報の10月11日16:30を発生とした記載は経過・留保に保持。",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf",
+      "reviewedDate": "2026-10-21"
     },
     "damageConfirmed": {
       "precision": "unknown",
       "label": "未公表・不明",
-      "note": "確認した公表資料に記載なし。個人情報漏えいは可能性として調査中。10月13日の予防的サービス停止日を漏えい等の初確認日へ転用しない。",
-      "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597",
-      "reviewedDate": "2026-10-18"
+      "note": "個人情報漏えいは引き続き可能性として調査中。第12報は10月12日の対処に伴う一部機能障害、13日のバックドア・不正メール配信の検知、14日のDB改ざん発見をそれぞれ記載するが、種類を横断した被害の最初の確認日を特定していない。検知や予防的停止の時刻から一本化しない。",
+      "sourceUrl": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf",
+      "reviewedDate": "2026-10-21"
     }
   }
 }

@@ -1,0 +1,135 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-462x-pgg6-55fp",
+  "aliases": [
+    "CVE-2026-112395"
+  ],
+  "title": "Pillow tiled-TIFF decoder reads past tile buffer in copy4 (Unpack.c:1290)",
+  "summary": "Pillow tiled-TIFF decoder reads past tile buffer in copy4 (Unpack.c:1290)",
+  "publishedAt": "2026-10-20T20:49:26Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-462x-pgg6-55fp/GHSA-462x-pgg6-55fp.json",
+  "modifiedAt": "2026-10-20T20:49:27Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:30:37.368427Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pillow",
+      "ranges": [
+        {
+          "affected": "8.2.0 - 12.3.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+        "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-462x-pgg6-55fp/GHSA-462x-pgg6-55fp.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:49:26Z",
+      "modifiedAt": "2026-10-20T20:49:27Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow tiled-TIFF decoder reads past tile buffer in copy4 (Unpack.c:1290)",
+      "url": "https://github.com/advisories/GHSA-462x-pgg6-55fp",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:35:44Z"
+    }
+  ],
+  "caveats": [
+    "Maintainer range is 8.2.0 - 12.3.0, fixed 13.0.0; Reviewed expands the upper interval to <13.0.0. Medium/CVSS 3.1 6.5 agree.",
+    "Crafted tiled TIFF decoding can over-read the tile buffer, causing a crash and possible adjacent heap content in pixel output; no production compromise is claimed.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:30:37.368427Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-462x-pgg6-55fp",
+        "aliases": [
+          "CVE-2026-112395"
+        ],
+        "publishedAt": "2026-10-20T20:49:26Z",
+        "modifiedAt": "2026-10-20T20:49:27Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-462x-pgg6-55fp/GHSA-462x-pgg6-55fp.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "pillow",
+        "ranges": [
+          {
+            "affected": ">= 8.2.0, < 13.0.0",
+            "fixed": "13.0.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-462x-pgg6-55fp/GHSA-462x-pgg6-55fp.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.2.0"
+              },
+              {
+                "fixed": "13.0.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-462x-pgg6-55fp"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "Maintainer range is 8.2.0 - 12.3.0, fixed 13.0.0; Reviewed expands the upper interval to <13.0.0. Medium/CVSS 3.1 6.5 agree.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

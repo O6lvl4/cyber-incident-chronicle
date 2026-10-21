@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pqxq-w44r-73xw",
+  "aliases": [
+    "CVE-2026-111750"
+  ],
+  "title": "AIOHTTP: Pure-Python parser request smuggling",
+  "summary": "AIOHTTP: Pure-Python parser request smuggling",
+  "publishedAt": "2026-10-20T19:52:21Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-pqxq-w44r-73xw/GHSA-pqxq-w44r-73xw.json",
+  "modifiedAt": "2026-10-20T19:52:22Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "aiohttp",
+      "ranges": [
+        {
+          "affected": "< 3.14.4",
+          "fixed": "3.14.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-pqxq-w44r-73xw/GHSA-pqxq-w44r-73xw.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-pqxq-w44r-73xw",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-pqxq-w44r-73xw/GHSA-pqxq-w44r-73xw.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-pqxq-w44r-73xw/GHSA-pqxq-w44r-73xw.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T19:52:21Z",
+      "modifiedAt": "2026-10-20T19:52:22Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "AIOHTTP: Pure-Python parser request smuggling",
+      "url": "https://github.com/advisories/GHSA-pqxq-w44r-73xw",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Pure-Python parser request smuggling",
+      "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-pqxq-w44r-73xw",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T01:23:12Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "Pure-Pythonパーサーに限定。AIOHTTP_NO_EXTENSIONSや標準wheelを使わない構成が対象で、開発元は既定のCパーサーへの切替を回避策として挙げる。"
+  ]
+}

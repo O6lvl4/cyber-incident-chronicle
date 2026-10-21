@@ -1,0 +1,108 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vfgh-jcmw-g37q",
+  "aliases": [
+    "CVE-2026-111766"
+  ],
+  "title": "markdown-it: Quadratic-time denial of service in inline HTML parsing with html enabled",
+  "summary": "markdown-it: Quadratic-time denial of service in inline HTML parsing with html enabled",
+  "publishedAt": "2026-10-20T20:08:19Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-vfgh-jcmw-g37q/GHSA-vfgh-jcmw-g37q.json",
+  "modifiedAt": "2026-10-20T20:08:20Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "markdown-it",
+      "ranges": [
+        {
+          "affected": "< 14.3.3",
+          "fixed": "14.3.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-vfgh-jcmw-g37q/GHSA-vfgh-jcmw-g37q.json"
+        },
+        {
+          "affected": ">= 15.0.0, < 15.0.3",
+          "fixed": "15.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-vfgh-jcmw-g37q/GHSA-vfgh-jcmw-g37q.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.3.3"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/markdown-it/markdown-it/security/advisories/GHSA-vfgh-jcmw-g37q",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-vfgh-jcmw-g37q/GHSA-vfgh-jcmw-g37q.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-vfgh-jcmw-g37q/GHSA-vfgh-jcmw-g37q.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:08:19Z",
+      "modifiedAt": "2026-10-20T20:08:20Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "markdown-it: Quadratic-time denial of service in inline HTML parsing with html enabled",
+      "url": "https://github.com/advisories/GHSA-vfgh-jcmw-g37q",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Quadratic-time denial of service in inline HTML parsing with html enabled",
+      "url": "https://github.com/markdown-it/markdown-it/security/advisories/GHSA-vfgh-jcmw-g37q",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T02:24:46Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "html:trueまたはcommonmark presetでのインラインHTML処理が条件。既定のHTML無効設定は対象外で、出力後のサニタイズでは処理時DoSを防げない。",
+    "本文は確認版15.0.2のみで全影響範囲未確定とする旧記述を含む。構造化欄の系列別範囲・修正版と区別する。"
+  ]
+}

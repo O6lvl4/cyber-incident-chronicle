@@ -1,0 +1,112 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5gvw-p9qm-jgwh",
+  "aliases": [
+    "CVE-2026-59889"
+  ],
+  "title": "jackson-databind: @JsonView bypassed for @JsonUnwrapped container properties on deserialization",
+  "summary": "jackson-databind: @JsonView bypassed for @JsonUnwrapped container properties on deserialization",
+  "publishedAt": "2026-07-21T22:00:43Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/07/GHSA-5gvw-p9qm-jgwh/GHSA-5gvw-p9qm-jgwh.json",
+  "modifiedAt": "2026-10-19T19:31:34Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "com.fasterxml.jackson.core:jackson-databind",
+      "ranges": [
+        {
+          "affected": ">= 2.21.0, <= 2.22.0",
+          "fixed": "2.21.5",
+          "sourceUrl": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh"
+        },
+        {
+          "affected": ">= 2.18.0, <= 2.18.8",
+          "fixed": "2.18.9",
+          "sourceUrl": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh"
+        },
+        {
+          "affected": ">= 2.22.0, < 2.22.1",
+          "fixed": "2.22.1",
+          "sourceUrl": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh"
+        }
+      ]
+    },
+    {
+      "ecosystem": "maven",
+      "packageName": "tools.jackson.core:jackson-databind",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, <= 3.1.4",
+          "fixed": "3.1.5",
+          "sourceUrl": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh"
+        },
+        {
+          "affected": ">=3.2.0, <3.2.1",
+          "fixed": "3.2.1",
+          "sourceUrl": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/07/GHSA-5gvw-p9qm-jgwh/GHSA-5gvw-p9qm-jgwh.json"
+      },
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/07/GHSA-5gvw-p9qm-jgwh/GHSA-5gvw-p9qm-jgwh.json",
+      "publishedDate": "2026-07-21",
+      "publishedAt": "2026-07-21T22:00:43Z",
+      "modifiedAt": "2026-10-19T19:31:34Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "jackson-databind: @JsonView bypassed for @JsonUnwrapped container properties on deserialization",
+      "url": "https://github.com/advisories/GHSA-5gvw-p9qm-jgwh",
+      "publishedDate": "2026-07-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "@JsonView bypassed for @JsonUnwrapped container properties on deserialization: a Setter/Field-backed property annotated @JsonView(PrivilegedView)+@JsonUnwrapped is populated from JSON under a less-privileged active view (mass-assignment / privilege escalation). Incomplete fix of #5971 (creator path)",
+      "url": "https://github.com/FasterXML/jackson-databind/security/advisories/GHSA-5gvw-p9qm-jgwh",
+      "publishedDate": "2026-07-10",
+      "publishedAt": "2026-07-10T23:46:20Z",
+      "modifiedAt": "2026-07-11T08:19:58Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "DBは2.x系列の導入境界を2.19.0および2.0.0-RC1へ変更したが、開発元は2.21.0および2.18.0を表示する。開発元の含む上限2.22.0と修正版2.21.5も同じ行に存在し、単一の安全版範囲へ推測変換しない。",
+    "対象はJsonUnwrappedコンテナーの書込み側ビュー制御。読み出し時の情報漏えいや、内側各フィールドのビュー処理の問題と混同しない。"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "nec-contractor-2026",
+  "company": "日本電気（NEC）",
+  "title": "委託先から窃取された正規アカウントの悪用で顧客システム暗号化・情報流出",
+  "announcementDate": "2026-10-20",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "委託先への攻撃は2026年9月下旬。日付・顧客環境への侵入開始日は未公表",
+  "updatedDate": "2026-10-20",
+  "statusAsOfDate": "2026-10-20",
+  "lastVerifiedDate": "2026-10-21",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "委託先から窃取された正規アカウント認証情報を使い、委託先端末から顧客システムへ不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "9月下旬に委託先が攻撃され、盗まれた認証情報を使って顧客システムへ不正アクセスが行われた。サーバーファイル暗号化によるシステム利用不能と、関係者間で共有していたクラウドストレージ内の個人情報等の漏えいを確認。対象者数は未公表。",
+  "affectedData": [
+    "共有クラウドストレージのファイルに含まれた顧客保有の個人情報、システム関連情報等"
+  ],
+  "counts": [],
+  "caveats": [
+    "対象の複数顧客へ連絡済みだが、企業名・人数・件数・詳細項目は未公表。",
+    "9月下旬は委託先への攻撃時期で、顧客システムへの侵入・漏えい・暗号化の各発生日を特定したものではない。",
+    "正規アカウント悪用は確認済みだが、委託先から認証情報が盗まれた最初の経路は未公表。暗号化だけからランサムウェアを断定しない。",
+    "匿名の委託先・顧客を他の公表事案と推測で結び付けない。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "NEC：委託先への不正アクセスに起因するお客さまのシステム障害、情報漏えいに関するお詫び",
+      "url": "https://jpn.nec.com/news/info/20261020.html",
+      "publishedDate": "2026-10-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-20",
+      "label": "顧客のシステム被害と漏えいを公表",
+      "kind": "disclosure",
+      "summary": "9月下旬の委託先への攻撃に起因する被害を公表。対象顧客へ連絡し、NEC管理端末の貸与等の対策を進めている。",
+      "sourceUrl": "https://jpn.nec.com/news/info/20261020.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "month",
+      "label": "2026年9月下旬（委託先への攻撃）",
+      "note": "公式が委託先への攻撃を9月下旬と記載。月精度を保持し、顧客環境への攻撃日や便宜的な日付を作らない。",
+      "sourceUrl": "https://jpn.nec.com/news/info/20261020.html",
+      "reviewedDate": "2026-10-21"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害を最初に確認した日として結び付けられた日付は確認資料に記載なし。",
+      "sourceUrl": "https://jpn.nec.com/news/info/20261020.html",
+      "reviewedDate": "2026-10-21"
+    }
+  }
+}

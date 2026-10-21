@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-10-21T06:29:50+09:00",
+  "checkedDateJst": "2026-10-21",
+  "scope": "既存4事案の限定した公式続報の確認。全収録事案・全利用企業を網羅した再確認ではない。",
+  "reviews": [
+    {
+      "id": "arcadia-speecan-raiden-2026",
+      "disposition": "update",
+      "sourcesOpened": [
+        "https://raiden.site.ktaiwork.jp/archives/4597",
+        "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf"
+      ],
+      "sourcePublishedDate": "2026-10-19",
+      "statusAsOfDate": "2026-10-20",
+      "retrieval": "Official HTML and PDF retrieved; PDF extracted and pages 1–4 visually checked.",
+      "findings": [
+        "Path traversal initial access and malicious backdoor confirmed, classification updated.",
+        "1,423,428 counts malicious email deliveries, not leaked persons or unique recipients.",
+        "Attack evidence extended to observed Oct11–13 activity; detection time discrepancy retained.",
+        "DB tampering and response-induced service failures distinguished.",
+        "Oct20 notice concerns consent request sent, not completed delegated reporting."
+      ],
+      "priorEventDates": {
+        "attack": {
+          "precision": "day",
+          "label": "2026年10月11日",
+          "startDate": "2026-10-11",
+          "note": "10月16日第11報はSpeeCAN RAIDENの不正アクセスについて「2026年10月11日16時30分、発生した」と記載。初報では同時刻を不正アクセスが疑われる挙動の確認時点としていた。続報が発生したと示す攻撃の日を採り、初期侵入日や攻撃期間全体は特定しない。NET119・119RAIDENの10月14日は痕跡確認日であり別の攻撃実施日とはしない。",
+          "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597",
+          "reviewedDate": "2026-10-18"
+        },
+        "damageConfirmed": {
+          "precision": "unknown",
+          "label": "未公表・不明",
+          "note": "確認した公表資料に記載なし。個人情報漏えいは可能性として調査中。10月13日の予防的サービス停止日を漏えい等の初確認日へ転用しない。",
+          "sourceUrl": "https://raiden.site.ktaiwork.jp/archives/4597",
+          "reviewedDate": "2026-10-18"
+        }
+      },
+      "preserved": {
+        "announcementDate": true,
+        "allPriorSourceUrls": true,
+        "legacyOccurredDate": true
+      }
+    },
+    {
+      "id": "medley-atlink-2026",
+      "disposition": "update",
+      "sourcesOpened": [
+        "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE/"
+      ],
+      "sourcePublishedDate": "2026-10-15",
+      "sourceUpdatedAtJst": "2026-10-20T23:00:00+09:00",
+      "statusAsOfDate": "2026-10-20",
+      "retrieval": "Official current HTML retrieved by web reader and urllib; relevant full body inspected.",
+      "findings": [
+        "Investigation-results report postponed to Oct21 or later.",
+        "Oct22 07:00 staged restart is planned, not completed.",
+        "New cloud beta environment distinct from old system; patient app and Web reservations remain stopped.",
+        "787 medical institutions retained from Oct15 disclosure, no new patient count inferred.",
+        "Source initial-publication date corrected from snapshot update date Oct16 to page date Oct15."
+      ],
+      "preserved": {
+        "eventDates": true,
+        "announcementDate": true,
+        "counts": true
+      }
+    },
+    {
+      "id": "idc-frontier-2026",
+      "disposition": "update",
+      "sourcesOpened": [
+        "https://www.idcf.jp/",
+        "https://www.idcf.jp/news/topics/20261018001/"
+      ],
+      "sourcePublishedDate": "2026-10-18",
+      "sourceUpdatedAtJst": "2026-10-20T18:00:00+09:00",
+      "statusAsOfDate": "2026-10-20",
+      "retrieval": "Homepage current notice retrieved by urllib (web reader omitted notice); official sixth-report body retrieved by web and urllib.",
+      "findings": [
+        "Backup-service restart applies to running regions/zones, not recovery of all damaged zones.",
+        "Snapshot function still suspended.",
+        "Oct20 notice reports no further important facts, response ongoing."
+      ],
+      "preserved": {
+        "eventDates": true,
+        "announcementDate": true,
+        "counts": true
+      },
+      "failedRechecks": [
+        {
+          "url": "https://www.jreast.co.jp/press/2026/20261009_ho02.pdf",
+          "status": "retrieval-failed",
+          "reason": "urllib HTTP 403",
+          "dataAction": "Prior good record and source retained; not represented as newly reverified."
+        }
+      ]
+    },
+    {
+      "id": "studio-cloud-2026",
+      "disposition": "update",
+      "sourcesOpened": [
+        "https://studio.design/ja/whats-new/unauthorized-access-2026-10",
+        "https://studio.design/ja/security/notice/2026-10-incident",
+        "https://studio.design/ja/whats-new/unauthorized-access-2026-10-form",
+        "https://www.pref.chiba.lg.jp/dejisui/press/2026/20261020incident.html",
+        "https://lifull.com/news/50746/"
+      ],
+      "sourceUpdatedDate": "2026-10-20",
+      "statusAsOfDate": "2026-10-20",
+      "retrieval": "Studio/Chiba full official text opened with web reader. Studio urllib returned403 but web reader succeeded. LIFULL web reader failed but official HTML succeeded by urllib and full article body inspected.",
+      "findings": [
+        "Actual customer-data acquisition remains unconfirmed; write privilege does not establish tampering.",
+        "Encryption-key rotation Oct17 distinct from ongoing re-encryption and old-key retirement.",
+        "Form attachments: names only, not file contents.",
+        "Chiba 4 projects and LIFULL partial scopes merged without new incident or cross-unit summation.",
+        "Form reporting choice supersedes Oct17 hold, joint reporting not completed."
+      ],
+      "preserved": {
+        "eventDates": true,
+        "announcementDate": true,
+        "allPriorSourceUrls": true
+      }
+    }
+  ],
+  "result": {
+    "updatedIncidents": 4,
+    "newIncidents": 0,
+    "newSourceUrls": 6,
+    "classificationUpdates": 1
+  }
+}

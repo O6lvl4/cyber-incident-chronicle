@@ -1,0 +1,92 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-q3jh-wrc6-jgq8",
+  "aliases": [
+    "CVE-2026-111756"
+  ],
+  "title": "follow-redirects array-form headers bypass cross-origin credential stripping",
+  "summary": "follow-redirects array-form headers bypass cross-origin credential stripping",
+  "publishedAt": "2026-10-20T17:58:04Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q3jh-wrc6-jgq8/GHSA-q3jh-wrc6-jgq8.json",
+  "modifiedAt": "2026-10-20T17:58:04Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "follow-redirects",
+      "ranges": [
+        {
+          "affected": "1.16.0",
+          "fixed": "1.16.1",
+          "sourceUrl": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-q3jh-wrc6-jgq8"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.16.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-q3jh-wrc6-jgq8",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q3jh-wrc6-jgq8/GHSA-q3jh-wrc6-jgq8.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q3jh-wrc6-jgq8/GHSA-q3jh-wrc6-jgq8.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T17:58:04Z",
+      "modifiedAt": "2026-10-20T17:58:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "follow-redirects array-form headers bypass cross-origin credential stripping",
+      "url": "https://github.com/advisories/GHSA-q3jh-wrc6-jgq8",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Array-form request headers bypass cross-origin sensitive-header stripping in follow-redirects (Authorization, Cookie, Proxy-Authorization, and sensitiveHeaders forwarded to the redirect target)",
+      "url": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-q3jh-wrc6-jgq8",
+      "publishedDate": "2026-10-01",
+      "publishedAt": "2026-10-01T13:52:16Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "開発元の構造化欄は1.16.0のみ、本文は1.15.11でも確認し根本処理は1.11.0から存在すると説明する。DBの広い範囲とこの内部差を残し、未検証版の安全性を推測しない。",
+    "配列形式のHTTPヘッダーとクロスオリジン/プロトコル降格リダイレクトが条件。通常のオブジェクト形式ヘッダーとの違いを保持する。"
+  ]
+}

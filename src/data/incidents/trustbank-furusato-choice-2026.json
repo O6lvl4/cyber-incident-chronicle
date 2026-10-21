@@ -1,0 +1,92 @@
+{
+  "id": "trustbank-furusato-choice-2026",
+  "company": "トラストバンク（ふるさとチョイス）",
+  "title": "ふるさとチョイス会員情報4,454,097件の流出を確認、関連サービス停止",
+  "announcementDate": "2026-10-20",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-17",
+  "occurredDateLabel": "公式が示す不正アクセス発生日",
+  "updatedDate": "2026-10-20",
+  "statusAsOfDate": "2026-10-20",
+  "lastVerifiedDate": "2026-10-21",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月19日に異常なアクセス傾向を調査し、17日の不正アクセスと会員情報の流出を確認。19日15時50分に関連サービスを停止した。公表時点で4,454,097件の流出を確認し、件数・範囲は引き続き調査中。",
+  "affectedData": [
+    "氏名、メールアドレス、住所、電話番号、ハッシュ化されたパスワード、寄附控除試算額"
+  ],
+  "counts": [
+    {
+      "value": 4454097,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "公表時点で外部流出を確認した会員情報の件数（調査により変動し得る）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "公表された単位は件であり、人数・寄附者総数へ換算しない。",
+    "パスワードはハッシュ化された状態と公表しており、平文パスワード流出とは扱わない。",
+    "脆弱性への対応調査の記載はあるが、具体的な悪用手法・初期侵入経路は未公表。",
+    "10月20日の個人情報保護委員会への報告は完了、21日の警察への被害申告は予定と区別。再開時期は未定。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "トラストバンク：不正アクセスによる寄附者様情報の外部流出に関するお詫びとお知らせ",
+      "url": "https://www.trustbank.co.jp/newsroom/newsrelease/news261020/",
+      "publishedDate": "2026-10-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-17",
+      "label": "不正アクセス発生",
+      "kind": "occurrence",
+      "summary": "後日の調査でこの日の不正アクセスを確認。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news261020/"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "異常検知・流出判明・関連サービス停止",
+      "kind": "occurrence",
+      "summary": "異常なアクセス傾向を把握して調査し流出が判明。15時50分にふるさとチョイス関連サービスを停止。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news261020/"
+    },
+    {
+      "date": "2026-10-20",
+      "label": "確認済み流出件数を公表",
+      "kind": "disclosure",
+      "summary": "4,454,097件と対象項目を公表。原因・範囲の調査を続け、再開時期は未定。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news261020/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年10月17日",
+      "note": "公式が調査で確認した不正アクセス発生日として記載。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news261020/",
+      "reviewedDate": "2026-10-21",
+      "startDate": "2026-10-17"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月19日",
+      "note": "公式の経緯が、同日の異常傾向の把握後の調査により会員個人情報の外部流出が判明したと結び付けている。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news261020/",
+      "reviewedDate": "2026-10-21",
+      "startDate": "2026-10-19"
+    }
+  },
+  "detectedDate": "2026-10-19",
+  "scaleLabel": "4,454,097件の流出確認"
+}

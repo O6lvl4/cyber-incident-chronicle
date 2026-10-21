@@ -1,0 +1,114 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mghf-wjfp-p5xm",
+  "aliases": [
+    "RUSTSEC-2026-0379"
+  ],
+  "title": "Wasmtime：aarch64の大規模br_tableでサンドボックス脱出",
+  "summary": "aarch64向けCraneliftが非常に多数の分岐先を持つWasm br_tableを誤ってコンパイルし、攻撃者が制御する位置へジャンプし得る。開発元は既定設定のエンジンでサンドボックス脱出につながると評価する。",
+  "publishedAt": "2026-10-19T12:00:00Z",
+  "modifiedAt": "2026-10-20T11:15:37.074125982Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0379",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 36.0.19",
+          "fixed": "36.0.19",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm"
+        },
+        {
+          "affected": ">= 37.0.0, < 48.0.7",
+          "fixed": "48.0.7",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.4",
+          "fixed": "49.0.4",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "36.0.19"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "48.0.7"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0379",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0379",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T12:00:00Z",
+      "modifiedAt": "2026-10-20T11:15:37.074125982Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0379",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime/RUSTSEC-2026-0379.md",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T19:21:02Z"
+    }
+  ],
+  "caveats": [
+    "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
+    "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
+    "aarch64とCraneliftに依存する。開発元は約256k超のbr_table分岐先を条件として説明しており、他アーキテクチャ全般の問題へ広げない。",
+    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。"
+  ]
+}

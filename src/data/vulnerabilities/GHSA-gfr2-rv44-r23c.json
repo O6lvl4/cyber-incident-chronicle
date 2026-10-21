@@ -1,0 +1,107 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-gfr2-rv44-r23c",
+  "aliases": [
+    "CVE-2026-111758"
+  ],
+  "title": "markdown-it: Quadratic-time rendering of a single multi-line link reference definition with default options (regression since 14.0)",
+  "summary": "markdown-it: Quadratic-time rendering of a single multi-line link reference definition with default options (regression since 14.0)",
+  "publishedAt": "2026-10-20T20:28:44Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-gfr2-rv44-r23c/GHSA-gfr2-rv44-r23c.json",
+  "modifiedAt": "2026-10-20T20:28:44Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "markdown-it",
+      "ranges": [
+        {
+          "affected": ">= 14.1.0, < 14.3.3",
+          "fixed": "14.3.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-gfr2-rv44-r23c/GHSA-gfr2-rv44-r23c.json"
+        },
+        {
+          "affected": ">= 15.0.0, < 15.0.3",
+          "fixed": "15.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-gfr2-rv44-r23c/GHSA-gfr2-rv44-r23c.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "14.1.0"
+            },
+            {
+              "fixed": "14.3.3"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/markdown-it/markdown-it/security/advisories/GHSA-gfr2-rv44-r23c",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-gfr2-rv44-r23c/GHSA-gfr2-rv44-r23c.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-gfr2-rv44-r23c/GHSA-gfr2-rv44-r23c.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:28:44Z",
+      "modifiedAt": "2026-10-20T20:28:44Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "markdown-it: Quadratic-time rendering of a single multi-line link reference definition with default options (regression since 14.0)",
+      "url": "https://github.com/advisories/GHSA-gfr2-rv44-r23c",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Quadratic-time rendering of a single multi-line link reference definition with default options (regression since 14.0)",
+      "url": "https://github.com/markdown-it/markdown-it/security/advisories/GHSA-gfr2-rv44-r23c",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T02:29:02Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "構造化欄は14.1.0以降を対象にするが本文は14.0.0での回帰と記載する。本文の導入説明と表示範囲を区別する。既定設定でも未終端の複数行リンク定義により処理量が増大する。"
+  ]
+}
