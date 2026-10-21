@@ -1,0 +1,134 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-qxg6-89mg-rqv8",
+  "aliases": [
+    "CVE-2026-112949"
+  ],
+  "title": "Vitest: Code injection via unauthenticated manual mock registration",
+  "summary": "Vitest: Code injection via unauthenticated manual mock registration",
+  "publishedAt": "2026-10-21T19:54:26Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-qxg6-89mg-rqv8/GHSA-qxg6-89mg-rqv8.json",
+  "modifiedAt": "2026-10-21T19:54:26Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:31.019487Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@vitest/mocker",
+      "ranges": [
+        {
+          "affected": ">= 2.1.0-beta.7, < 4.1.12",
+          "fixed": "4.1.12",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-qxg6-89mg-rqv8/GHSA-qxg6-89mg-rqv8.json"
+        },
+        {
+          "affected": ">= 5.0.0-beta.1, < 5.0.3",
+          "fixed": "5.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-qxg6-89mg-rqv8/GHSA-qxg6-89mg-rqv8.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.1.0-beta.7"
+            },
+            {
+              "fixed": "4.1.12"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.0.0-beta.1"
+            },
+            {
+              "fixed": "5.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-qxg6-89mg-rqv8/GHSA-qxg6-89mg-rqv8.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-qxg6-89mg-rqv8/GHSA-qxg6-89mg-rqv8.json"
+      },
+      {
+        "version": "3.1",
+        "score": 4.7,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "sourceUrl": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-qxg6-89mg-rqv8"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-qxg6-89mg-rqv8/GHSA-qxg6-89mg-rqv8.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:54:26Z",
+      "modifiedAt": "2026-10-21T19:54:26Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Vitest: Code injection via unauthenticated manual mock registration",
+      "url": "https://github.com/advisories/GHSA-qxg6-89mg-rqv8",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-qxg6-89mg-rqv8",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T07:59:50Z",
+      "modifiedAt": "2026-10-20T15:17:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Primary structured fields list only >=2.1.0-beta.7,<4.1.12 and fix 4.1.12; primary narrative also specifies 5.0.3. Reviewed additionally supplies >=5.0.0-beta.1,<5.0.3, retained with its database attribution. The 5.x introduction is not present in the primary structured fields and was not independently inferred.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:31.019487Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-qxg6-89mg-rqv8",
+        "aliases": [
+          "CVE-2026-112949"
+        ],
+        "publishedAt": "2026-10-21T19:54:26Z",
+        "modifiedAt": "2026-10-21T19:54:26Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-qxg6-89mg-rqv8/GHSA-qxg6-89mg-rqv8.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "checkedAt": "2026-10-21T21:16:28Z",
+  "scope": "Next.js October14 official post linked five public repository GHSA advisories only.",
+  "added": 5,
+  "duplicateCheck": {
+    "importedRecords": 19223,
+    "curatedRecords": 357,
+    "identifiersAndAliasesChecked": true,
+    "matches": 0
+  },
+  "relatedNotAliases": true,
+  "reviews": [
+    {
+      "id": "GHSA-2464-fhr4-w9xw",
+      "aliases": [
+        "CVE-2026-96889"
+      ],
+      "status": "confirmed",
+      "disposition": "added",
+      "sourceUrl": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-2464-fhr4-w9xw",
+      "sha256": "cc822c1516a74d981440898f1cd6020f3fadd3eb94e7f146a48e361cd1d54b20",
+      "officialPage": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
+      "checkedAt": "2026-10-21T21:16:28Z",
+      "publishedAt": "2026-10-14T17:46:48Z",
+      "modifiedAt": "2026-10-14T17:46:48Z",
+      "withdrawnAt": null,
+      "rawVulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "next"
+          },
+          "vulnerable_version_range": ">= 10.0.0  <= 15.5.27",
+          "patched_versions": "15.5.28",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "next"
+          },
+          "vulnerable_version_range": "> 16.0.0 <= 16.4.0",
+          "patched_versions": "16.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "rawCvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+          "score": 9.5
+        }
+      },
+      "sourceFailures": [
+        {
+          "url": "https://api.osv.dev/v1/vulns/GHSA-2464-fhr4-w9xw",
+          "status": 404
+        },
+        {
+          "url": "https://api.github.com/advisories/GHSA-2464-fhr4-w9xw",
+          "status": 404
+        }
+      ],
+      "caveats": [
+        "公開repository GHSAの構造化APIと開発元本文を確認。OSV APIとglobal GHSA APIは確認時点で404。独立DB掲載成功として扱わない。",
+        "公表日時・変更日時・撤回はrepository GHSA API由来。関連する上流・下流アドバイザリは同一性を示す別名とはしない。",
+        "実悪用・CISA KEV掲載は今回確認しておらずunknown。修正境界は現在の全脆弱性に対する安全版の保証ではない。",
+        "16系の公式affected欄は >16.0.0（下限を含まない）。>=へ補正しない。Next.jsが利用するsharpを0.35.5以上にする回避策を開発元が案内。"
+      ]
+    },
+    {
+      "id": "GHSA-673q-mjm6-r5xr",
+      "aliases": [],
+      "status": "confirmed",
+      "disposition": "added",
+      "sourceUrl": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-673q-mjm6-r5xr",
+      "sha256": "bc479fe628867ffb950d3edc413ed3955253446e8657c9d8b6fe9b7c61769b79",
+      "officialPage": "https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr",
+      "checkedAt": "2026-10-21T21:16:28Z",
+      "publishedAt": "2026-10-14T17:47:07Z",
+      "modifiedAt": "2026-10-14T17:47:07Z",
+      "withdrawnAt": null,
+      "rawVulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "next"
+          },
+          "vulnerable_version_range": ">=16.0.0 <= 16.4.0",
+          "patched_versions": "16.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "rawCvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N",
+          "score": 9.5
+        }
+      },
+      "sourceFailures": [
+        {
+          "url": "https://api.osv.dev/v1/vulns/GHSA-673q-mjm6-r5xr",
+          "status": 404
+        },
+        {
+          "url": "https://api.github.com/advisories/GHSA-673q-mjm6-r5xr",
+          "status": 404
+        }
+      ],
+      "caveats": [
+        "公開repository GHSAの構造化APIと開発元本文を確認。OSV APIとglobal GHSA APIは確認時点で404。独立DB掲載成功として扱わない。",
+        "公表日時・変更日時・撤回はrepository GHSA API由来。関連する上流・下流アドバイザリは同一性を示す別名とはしない。",
+        "実悪用・CISA KEV掲載は今回確認しておらずunknown。修正境界は現在の全脆弱性に対する安全版の保証ではない。"
+      ]
+    },
+    {
+      "id": "GHSA-h3gv-c5rc-p453",
+      "aliases": [],
+      "status": "confirmed",
+      "disposition": "added",
+      "sourceUrl": "https://api.github.com/repos/react/react/security-advisories/GHSA-h3gv-c5rc-p453",
+      "sha256": "163f8cd69a926bfd9015c49dd04e967f390c1787e633ba81e09bdb29bb9ea4f6",
+      "officialPage": "https://github.com/react/react/security/advisories/GHSA-h3gv-c5rc-p453",
+      "checkedAt": "2026-10-21T21:16:28Z",
+      "publishedAt": "2026-10-14T17:08:23Z",
+      "modifiedAt": "2026-10-14T17:08:23Z",
+      "withdrawnAt": null,
+      "rawVulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "react-server-dom-parcel"
+          },
+          "vulnerable_version_range": "19.0.0, 19.0.1, 19.0.2, 19.0.3, 19.0.4, 19.0.5, 19.0.6, 19.0.7, 19.0.8, 19.1.0, 19.1.1, 19.1.2, 19.1.3, 19.1.4, 19.1.5, 19.1.6, 19.1.7, 19.1.8, 19.1.9, 19.2.0, 19.2.1, 19.2.2, 19.2.3, 19.2.4, 19.2.5, 19.2.6, 19.2.7, 19.2.8, 19.3.0",
+          "patched_versions": "19.0.9, 19.1.10, 19.2.9, 19.3.1",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "react-server-dom-turbopack"
+          },
+          "vulnerable_version_range": "19.0.0, 19.0.1, 19.0.2, 19.0.3, 19.0.4, 19.0.5, 19.0.6, 19.0.7, 19.0.8, 19.1.0, 19.1.1, 19.1.2, 19.1.3, 19.1.4, 19.1.5, 19.1.6, 19.1.7, 19.1.8, 19.1.9, 19.2.0, 19.2.1, 19.2.2, 19.2.3, 19.2.4, 19.2.5, 19.2.6, 19.2.7, 19.2.8, 19.3.0",
+          "patched_versions": "19.0.9, 19.1.10, 19.2.9, 19.3.1",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "react-server-dom-webpack"
+          },
+          "vulnerable_version_range": "19.0.0, 19.0.1, 19.0.2, 19.0.3, 19.0.4, 19.0.5, 19.0.6, 19.0.7, 19.0.8, 19.1.0, 19.1.1, 19.1.2, 19.1.3, 19.1.4, 19.1.5, 19.1.6, 19.1.7, 19.1.8, 19.1.9, 19.2.0, 19.2.1, 19.2.2, 19.2.3, 19.2.4, 19.2.5, 19.2.6, 19.2.7, 19.2.8, 19.3.0",
+          "patched_versions": "19.0.9, 19.1.10, 19.2.9, 19.3.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "rawCvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "score": 8.2
+        }
+      },
+      "sourceFailures": [
+        {
+          "url": "https://api.osv.dev/v1/vulns/GHSA-h3gv-c5rc-p453",
+          "status": 404
+        },
+        {
+          "url": "https://api.github.com/advisories/GHSA-h3gv-c5rc-p453",
+          "status": 404
+        }
+      ],
+      "caveats": [
+        "公開repository GHSAの構造化APIと開発元本文を確認。OSV APIとglobal GHSA APIは確認時点で404。独立DB掲載成功として扱わない。",
+        "公表日時・変更日時・撤回はrepository GHSA API由来。関連する上流・下流アドバイザリは同一性を示す別名とはしない。",
+        "実悪用・CISA KEV掲載は今回確認しておらずunknown。修正境界は現在の全脆弱性に対する安全版の保証ではない。",
+        "公式本文の影響版の文章は19.0.7/19.1.8/19.2.7までと記載する一方、同じ公式の構造化affected欄は19.0.8/19.1.9/19.2.8/19.3.0も列挙。ここでは構造化欄の列挙を保持し、不一致を解消済みとはしない。"
+      ]
+    },
+    {
+      "id": "GHSA-p3m5-59mp-jv5r",
+      "aliases": [],
+      "status": "confirmed",
+      "disposition": "added",
+      "sourceUrl": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-p3m5-59mp-jv5r",
+      "sha256": "534ee6e3daf4c1e98d5a5c7dfde780e0f787ef56e731f8da50acc5debc5bebc6",
+      "officialPage": "https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r",
+      "checkedAt": "2026-10-21T21:16:28Z",
+      "publishedAt": "2026-10-14T17:47:43Z",
+      "modifiedAt": "2026-10-14T17:47:43Z",
+      "withdrawnAt": null,
+      "rawVulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "next"
+          },
+          "vulnerable_version_range": ">=13.0.0 <= 15.5.27",
+          "patched_versions": "15.5.28",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "next"
+          },
+          "vulnerable_version_range": ">= 16.0.0 <= 16.4.0",
+          "patched_versions": "16.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "rawCvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "score": 8.2
+        }
+      },
+      "sourceFailures": [
+        {
+          "url": "https://api.osv.dev/v1/vulns/GHSA-p3m5-59mp-jv5r",
+          "status": 404
+        },
+        {
+          "url": "https://api.github.com/advisories/GHSA-p3m5-59mp-jv5r",
+          "status": 404
+        }
+      ],
+      "caveats": [
+        "公開repository GHSAの構造化APIと開発元本文を確認。OSV APIとglobal GHSA APIは確認時点で404。独立DB掲載成功として扱わない。",
+        "公表日時・変更日時・撤回はrepository GHSA API由来。関連する上流・下流アドバイザリは同一性を示す別名とはしない。",
+        "実悪用・CISA KEV掲載は今回確認しておらずunknown。修正境界は現在の全脆弱性に対する安全版の保証ではない。"
+      ]
+    },
+    {
+      "id": "GHSA-xqc2-xf4c-x3h3",
+      "aliases": [],
+      "status": "confirmed",
+      "disposition": "added",
+      "sourceUrl": "https://api.github.com/repos/react/react/security-advisories/GHSA-xqc2-xf4c-x3h3",
+      "sha256": "6435147652bc795e9af9b019c8f59a243b7c174e4ff3e55de29e23f5e2655aaa",
+      "officialPage": "https://github.com/react/react/security/advisories/GHSA-xqc2-xf4c-x3h3",
+      "checkedAt": "2026-10-21T21:16:28Z",
+      "publishedAt": "2026-10-14T17:08:26Z",
+      "modifiedAt": "2026-10-14T17:08:26Z",
+      "withdrawnAt": null,
+      "rawVulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "react-server-dom-parcel"
+          },
+          "vulnerable_version_range": "19.0.0, 19.0.1, 19.0.2, 19.0.3, 19.0.4, 19.0.5, 19.0.6, 19.0.7, 19.0.8, 19.1.0, 19.1.1, 19.1.2, 19.1.3, 19.1.4, 19.1.5, 19.1.6, 19.1.7, 19.1.8, 19.1.9, 19.2.0, 19.2.1, 19.2.2, 19.2.3, 19.2.4, 19.2.5, 19.2.6, 19.2.7, 19.2.8, 19.3.0",
+          "patched_versions": "19.0.9, 19.1.10, 19.2.9, 19.3.1",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "react-server-dom-turbopack"
+          },
+          "vulnerable_version_range": "19.0.0, 19.0.1, 19.0.2, 19.0.3, 19.0.4, 19.0.5, 19.0.6, 19.0.7, 19.0.8, 19.1.0, 19.1.1, 19.1.2, 19.1.3, 19.1.4, 19.1.5, 19.1.6, 19.1.7, 19.1.8, 19.1.9, 19.2.0, 19.2.1, 19.2.2, 19.2.3, 19.2.4, 19.2.5, 19.2.6, 19.2.7, 19.2.8, 19.3.0",
+          "patched_versions": "19.0.9, 19.1.10, 19.2.9, 19.3.1",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "react-server-dom-webpack"
+          },
+          "vulnerable_version_range": "19.0.0, 19.0.1, 19.0.2, 19.0.3, 19.0.4, 19.0.5, 19.0.6, 19.0.7, 19.0.8, 19.1.0, 19.1.1, 19.1.2, 19.1.3, 19.1.4, 19.1.5, 19.1.6, 19.1.7, 19.1.8, 19.1.9, 19.2.0, 19.2.1, 19.2.2, 19.2.3, 19.2.4, 19.2.5, 19.2.6, 19.2.7, 19.2.8, 19.3.0",
+          "patched_versions": "19.0.9, 19.1.10, 19.2.9, 19.3.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "rawCvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N",
+          "score": 9.5
+        }
+      },
+      "sourceFailures": [
+        {
+          "url": "https://api.osv.dev/v1/vulns/GHSA-xqc2-xf4c-x3h3",
+          "status": 404
+        },
+        {
+          "url": "https://api.github.com/advisories/GHSA-xqc2-xf4c-x3h3",
+          "status": 404
+        }
+      ],
+      "caveats": [
+        "公開repository GHSAの構造化APIと開発元本文を確認。OSV APIとglobal GHSA APIは確認時点で404。独立DB掲載成功として扱わない。",
+        "公表日時・変更日時・撤回はrepository GHSA API由来。関連する上流・下流アドバイザリは同一性を示す別名とはしない。",
+        "実悪用・CISA KEV掲載は今回確認しておらずunknown。修正境界は現在の全脆弱性に対する安全版の保証ではない。",
+        "本文の修正版19.0.09という表記に対し構造化patched欄と画面の修正版欄は19.0.9。構造化欄の19.0.9を採用。"
+      ]
+    }
+  ]
+}

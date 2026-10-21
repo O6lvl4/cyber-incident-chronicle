@@ -2,8 +2,10 @@
 import type { AttackClassification } from '../classificationTypes';
 import { ATTACKS_PART_1 } from './attack-classifications-index-part-1.ts';
 import { ATTACKS_PART_2 } from './attack-classifications-index-part-2.ts';
+import { ATTACKS_PART_3 } from './attack-classifications-index-part-3.ts';
 
 export const ATTACKS = {
   ...ATTACKS_PART_1,
   ...ATTACKS_PART_2,
+  ...ATTACKS_PART_3,
 } as Record<string, AttackClassification>;

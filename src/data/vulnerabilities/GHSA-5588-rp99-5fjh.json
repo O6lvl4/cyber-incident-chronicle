@@ -1,0 +1,118 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5588-rp99-5fjh",
+  "aliases": [
+    "CVE-2026-113729"
+  ],
+  "title": "Moov signedxml: Unauthenticated denial of service in exclusive XML canonicalization",
+  "summary": "Moov signedxml: Unauthenticated denial of service in exclusive XML canonicalization",
+  "publishedAt": "2026-10-21T16:27:55Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5588-rp99-5fjh/GHSA-5588-rp99-5fjh.json",
+  "modifiedAt": "2026-10-21T16:27:55Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:16.842028Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/moov-io/signedxml",
+      "ranges": [
+        {
+          "affected": "< 1.4.1",
+          "fixed": "1.4.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5588-rp99-5fjh/GHSA-5588-rp99-5fjh.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5588-rp99-5fjh/GHSA-5588-rp99-5fjh.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5588-rp99-5fjh/GHSA-5588-rp99-5fjh.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/moov-io/signedxml/security/advisories/GHSA-5588-rp99-5fjh"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5588-rp99-5fjh/GHSA-5588-rp99-5fjh.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T16:27:55Z",
+      "modifiedAt": "2026-10-21T16:27:55Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Moov signedxml: Unauthenticated denial of service in exclusive XML canonicalization",
+      "url": "https://github.com/advisories/GHSA-5588-rp99-5fjh",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/moov-io/signedxml/security/advisories/GHSA-5588-rp99-5fjh",
+      "publishedDate": "2026-08-26",
+      "publishedAt": "2026-08-26T14:10:10Z",
+      "modifiedAt": "2026-10-20T21:15:33Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "XML canonicalization occurs before digest/signature checks; a valid signature is unnecessary. Reported impact is availability only, not a signature-verification bypass.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:16.842028Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-5588-rp99-5fjh",
+        "aliases": [
+          "CVE-2026-113729"
+        ],
+        "publishedAt": "2026-10-21T16:27:55Z",
+        "modifiedAt": "2026-10-21T16:27:55Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5588-rp99-5fjh/GHSA-5588-rp99-5fjh.json"
+      }
+    ]
+  }
+}

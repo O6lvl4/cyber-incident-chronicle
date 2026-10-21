@@ -1,0 +1,112 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rfgq-q3w2-pmv2",
+  "aliases": [
+    "CVE-2026-112898"
+  ],
+  "title": "Pillow: Image.quantize() with empty palette leaks uninitialized stack memory",
+  "summary": "Pillow: Image.quantize() with empty palette leaks uninitialized stack memory",
+  "publishedAt": "2026-10-21T20:44:07Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-rfgq-q3w2-pmv2/GHSA-rfgq-q3w2-pmv2.json",
+  "modifiedAt": "2026-10-21T20:44:08Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:34.086564Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Pillow",
+      "ranges": [
+        {
+          "affected": ">= 9.1.0, < 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-rfgq-q3w2-pmv2/GHSA-rfgq-q3w2-pmv2.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-rfgq-q3w2-pmv2/GHSA-rfgq-q3w2-pmv2.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-rfgq-q3w2-pmv2/GHSA-rfgq-q3w2-pmv2.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-rfgq-q3w2-pmv2/GHSA-rfgq-q3w2-pmv2.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T20:44:07Z",
+      "modifiedAt": "2026-10-21T20:44:08Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Image.quantize() with empty palette leaks uninitialized stack memory",
+      "url": "https://github.com/advisories/GHSA-rfgq-q3w2-pmv2",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-rfgq-q3w2-pmv2",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:41:39Z",
+      "modifiedAt": "2026-10-19T22:03:06Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Requires attacker control of the palette image passed to quantize, not merely the source image. Reported 512-byte disclosure is output pixel data, not a general arbitrary-memory read.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:34.086564Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-rfgq-q3w2-pmv2",
+        "aliases": [
+          "CVE-2026-112898"
+        ],
+        "publishedAt": "2026-10-21T20:44:07Z",
+        "modifiedAt": "2026-10-21T20:44:08Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-rfgq-q3w2-pmv2/GHSA-rfgq-q3w2-pmv2.json"
+      }
+    ]
+  }
+}

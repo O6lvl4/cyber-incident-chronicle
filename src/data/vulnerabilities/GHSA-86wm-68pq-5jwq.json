@@ -1,0 +1,143 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-86wm-68pq-5jwq",
+  "aliases": [
+    "CVE-2026-113711"
+  ],
+  "title": "ApostropheCMS: Unauthenticated resource exhaustion via pre-auth aposBigUpload processing in @apostrophecms/import-export",
+  "summary": "ApostropheCMS: Unauthenticated resource exhaustion via pre-auth aposBigUpload processing in @apostrophecms/import-export",
+  "publishedAt": "2026-10-21T13:51:21Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-86wm-68pq-5jwq/GHSA-86wm-68pq-5jwq.json",
+  "modifiedAt": "2026-10-21T13:51:21Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:22.443030Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@apostrophecms/import-export",
+      "ranges": [
+        {
+          "affected": "< 3.7.0",
+          "fixed": "3.7.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-86wm-68pq-5jwq/GHSA-86wm-68pq-5jwq.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.7.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "apostrophe",
+      "ranges": [
+        {
+          "affected": "< 4.33.0",
+          "fixed": "4.33.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-86wm-68pq-5jwq/GHSA-86wm-68pq-5jwq.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.33.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-86wm-68pq-5jwq/GHSA-86wm-68pq-5jwq.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-86wm-68pq-5jwq/GHSA-86wm-68pq-5jwq.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-86wm-68pq-5jwq"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-86wm-68pq-5jwq/GHSA-86wm-68pq-5jwq.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T13:51:21Z",
+      "modifiedAt": "2026-10-21T13:51:21Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS: Unauthenticated resource exhaustion via pre-auth aposBigUpload processing in @apostrophecms/import-export",
+      "url": "https://github.com/advisories/GHSA-86wm-68pq-5jwq",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-86wm-68pq-5jwq",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:24:13Z",
+      "modifiedAt": "2026-10-20T17:48:00Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Primary narrative confirms import-export 3.6.2 and leaves exact introduction unverified; structured fields use <3.7.0 and apostrophe <4.33.0. Do not turn the reported test version into a proven introduction boundary.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:22.443030Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-86wm-68pq-5jwq",
+        "aliases": [
+          "CVE-2026-113711"
+        ],
+        "publishedAt": "2026-10-21T13:51:21Z",
+        "modifiedAt": "2026-10-21T13:51:21Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-86wm-68pq-5jwq/GHSA-86wm-68pq-5jwq.json"
+      }
+    ]
+  }
+}

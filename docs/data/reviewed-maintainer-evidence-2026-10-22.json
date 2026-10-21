@@ -1,0 +1,5543 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-21T21:11:48.128Z",
+  "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+  "records": [
+    {
+      "id": "GHSA-jw7v-5mp7-ghgm",
+      "primaryId": "GHSA-3x84-qq85-fj65",
+      "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65",
+      "fetchedAt": "2026-10-21T21:08:12.093180Z",
+      "responseSha256": "d10a5641ab7a534910f59fca5d5b5d487c825eba3277821933456c02990de536",
+      "responseBytes": 4594,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-3x84-qq85-fj65",
+          "status": 200
+        }
+      ],
+      "summary": "Browser CDP discovery could accept blocked WebSocket URLs",
+      "publishedAt": "2026-06-30T00:38:15Z",
+      "modifiedAt": "2026-06-30T00:38:15Z",
+      "withdrawnAt": null,
+      "cveId": null,
+      "identifiers": [
+        {
+          "value": "GHSA-3x84-qq85-fj65",
+          "type": "GHSA"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+        "score": 8.5
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+          "score": 8.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "openclaw"
+          },
+          "vulnerable_version_range": "< 2026.6.6",
+          "patched_versions": "2026.6.6",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "67b0b538689000493dddcb4e2f82c97a1828d065062cb131d482613c0ace0d5c",
+      "database": {
+        "aliases": [],
+        "publishedAt": "2026-07-14T00:31:04Z",
+        "modifiedAt": "2026-10-21T19:34:50Z",
+        "withdrawnAt": "2026-10-21T19:34:50Z",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "openclaw"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2026.6.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Reviewed withdraws this duplicate on 2026-10-21 and names GHSA-3x84-qq85-fj65 in its narrative, but has no alias linking them. The primary URL is the canonical advisory, not a primary withdrawal record for this identifier. Keep withdrawal and identity separate; do not infer an alias.",
+        "Severity label differs: developer advisory high, Reviewed database medium. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-22hg-r758-rrw9",
+      "primaryId": "GHSA-22hg-r758-rrw9",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9",
+      "fetchedAt": "2026-10-21T21:08:12.094051Z",
+      "responseSha256": "cfe0fd0bcdb7ed69f53ce44f2a50f755ca7d0676961453e6687250dd732cab01",
+      "responseBytes": 18043,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-22hg-r758-rrw9",
+          "status": 200
+        }
+      ],
+      "summary": "Infinite loop in MIC n_frames when the embedded TIFF has 3+ IFDs",
+      "publishedAt": "2026-10-17T10:41:17Z",
+      "modifiedAt": "2026-10-19T20:29:18Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112390",
+      "identifiers": [
+        {
+          "value": "GHSA-22hg-r758-rrw9",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112390",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Pillow"
+          },
+          "vulnerable_version_range": "7.2.0 - 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c5de4d9b6c4533b07ce22fd49d5fc3f2b04aaf796547f43cc01f08293705e930",
+      "database": {
+        "aliases": [
+          "CVE-2026-112390"
+        ],
+        "publishedAt": "2026-10-21T20:39:49Z",
+        "modifiedAt": "2026-10-21T20:39:49Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.2.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Requires optional olefile and MIC n_frames access. Image.open/load/thumbnail/convert/is_animated and ImageSequence alone are not the reported hanging path. Maintainer maximum 12.3.0 is retained in audit separately from Reviewed fixed boundary <13.0.0.",
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-26w4-8w32-4x3v",
+      "primaryId": "GHSA-26w4-8w32-4x3v",
+      "url": "https://github.com/abdolence/slack-morphism-rust/security/advisories/GHSA-26w4-8w32-4x3v",
+      "fetchedAt": "2026-10-21T21:08:12.141427Z",
+      "responseSha256": "8b9eb1534a1172e7ea230c9385e4191119559c33ba85b6c2e53f8363f7a60814",
+      "responseBytes": 13189,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/abdolence/slack-morphism-rust/security-advisories/GHSA-26w4-8w32-4x3v",
+          "status": 200
+        }
+      ],
+      "summary": "Slack Morphism verifier errors disclose valid HMACs in the logs",
+      "publishedAt": "2026-09-19T23:18:57Z",
+      "modifiedAt": "2026-10-21T16:12:32Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113799",
+      "identifiers": [
+        {
+          "value": "GHSA-26w4-8w32-4x3v",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113799",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "score": 5.3
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "score": 5.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "slack-morphism"
+          },
+          "vulnerable_version_range": ">= 1.0.0, <= 2.27.0",
+          "patched_versions": "2.28.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "f2e5d9ef8f0975320108bf463b74070b141bb1590ac40e9d688437f73af166bc",
+      "database": {
+        "aliases": [
+          "CVE-2026-113799"
+        ],
+        "publishedAt": "2026-10-21T16:38:47Z",
+        "modifiedAt": "2026-10-21T16:38:47Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "crates.io",
+              "name": "slack-morphism"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.0.0"
+                  },
+                  {
+                    "fixed": "2.28.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 2.27.0"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "Structured primary fields specify patched 2.28.0, whereas the earlier report narrative says no patched release. Preserve this temporal inconsistency rather than treating the historical prose as current fix status. Requires callback access and application-log access; exposure is a computed valid HMAC, not disclosure of the Slack signing secret."
+      ]
+    },
+    {
+      "id": "GHSA-27h8-gf7j-v5hc",
+      "primaryId": "GHSA-27h8-gf7j-v5hc",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-27h8-gf7j-v5hc",
+      "fetchedAt": "2026-10-21T21:08:12.184237Z",
+      "responseSha256": "b8467111731050959129af9e4aff72ec4ec1d16cc6018a7d2f6a867907b13193",
+      "responseBytes": 19078,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-27h8-gf7j-v5hc",
+          "status": 200
+        }
+      ],
+      "summary": "NULL dereference in ImagingExpand via rank filters on zero-size images",
+      "publishedAt": "2026-10-17T10:40:55Z",
+      "modifiedAt": "2026-10-19T20:42:21Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112392",
+      "identifiers": [
+        {
+          "value": "GHSA-27h8-gf7j-v5hc",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112392",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Pillow"
+          },
+          "vulnerable_version_range": "<= 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "9b8bce9c3dd99f56c83583ad7732b99e2a0c93ddd4186d9891571e70cb2c4f5a",
+      "database": {
+        "aliases": [
+          "CVE-2026-112392"
+        ],
+        "publishedAt": "2026-10-21T20:32:37Z",
+        "modifiedAt": "2026-10-21T20:32:37Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 12.3.0"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "Zero-dimension input reaching rank/median/min/max filters crashes the process. The primary report explicitly describes crash only, not memory disclosure or corruption.",
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-39mj-jf6j-2qj3",
+      "primaryId": "GHSA-39mj-jf6j-2qj3",
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-39mj-jf6j-2qj3",
+      "fetchedAt": "2026-10-21T21:08:12.016451Z",
+      "responseSha256": "4baf4452a22819e6a7ceb08df3ba3d10da432365cc9f38237e8e5e1efae8604d",
+      "responseBytes": 3853,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-39mj-jf6j-2qj3",
+          "status": 200
+        }
+      ],
+      "summary": "Possible infinite loop when hitting EOF in standard xref table",
+      "publishedAt": "2026-10-12T14:49:06Z",
+      "modifiedAt": "2026-10-21T15:58:48Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113794",
+      "identifiers": [
+        {
+          "value": "GHSA-39mj-jf6j-2qj3",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113794",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.20.0",
+          "patched_versions": ">= 6.20.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "96afa2a47e16a6b19e61820a05b07a37aa77fb86a0c2bf977c560a8caef28708",
+      "database": {
+        "aliases": [
+          "CVE-2026-113794"
+        ],
+        "publishedAt": "2026-10-21T16:54:44Z",
+        "modifiedAt": "2026-10-21T16:54:44Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pypdf"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.20.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-3x84-qq85-fj65",
+      "primaryId": "GHSA-3x84-qq85-fj65",
+      "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65",
+      "fetchedAt": "2026-10-21T21:08:16.623158Z",
+      "responseSha256": "d10a5641ab7a534910f59fca5d5b5d487c825eba3277821933456c02990de536",
+      "responseBytes": 4594,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-3x84-qq85-fj65",
+          "status": 200
+        }
+      ],
+      "summary": "Browser CDP discovery could accept blocked WebSocket URLs",
+      "publishedAt": "2026-06-30T00:38:15Z",
+      "modifiedAt": "2026-06-30T00:38:15Z",
+      "withdrawnAt": null,
+      "cveId": null,
+      "identifiers": [
+        {
+          "value": "GHSA-3x84-qq85-fj65",
+          "type": "GHSA"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+        "score": 8.5
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+          "score": 8.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "openclaw"
+          },
+          "vulnerable_version_range": "< 2026.6.6",
+          "patched_versions": "2026.6.6",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "67b0b538689000493dddcb4e2f82c97a1828d065062cb131d482613c0ace0d5c",
+      "database": {
+        "aliases": [
+          "CVE-2026-62197"
+        ],
+        "publishedAt": "2026-10-21T19:37:42Z",
+        "modifiedAt": "2026-10-21T19:37:42Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "openclaw"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2026.6.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Maintainer labels this High with CVSS 3.1 8.5; Reviewed labels Moderate and also supplies a CVSS 4.0 vector. Both assessments are source-attributed. Maintainer cve_id is null while Reviewed identifies CVE-2026-62197; null does not negate that identifier. Impact requires the named CDP feature enabled and reachable by lower-trust input, not every trusted-operator operation.",
+        "Severity label differs: developer advisory high, Reviewed database medium. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-4558-3h8r-v8xp",
+      "primaryId": "GHSA-4558-3h8r-v8xp",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4558-3h8r-v8xp",
+      "fetchedAt": "2026-10-21T21:08:16.882114Z",
+      "responseSha256": "e2afd77815df70bb914a1c8b8f209963dff37fbf92555a0acbffbf53bf9e9ae2",
+      "responseBytes": 13808,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-4558-3h8r-v8xp",
+          "status": 200
+        }
+      ],
+      "summary": "P;2L and P;4L decoders may read 1 to 3 bytes past the passed buffer size",
+      "publishedAt": "2026-10-17T10:39:41Z",
+      "modifiedAt": "2026-10-19T20:47:53Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112394",
+      "identifiers": [
+        {
+          "value": "GHSA-4558-3h8r-v8xp",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112394",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "score": 6.3
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Pillow"
+          },
+          "vulnerable_version_range": "<= 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "636c71fdeee9ef001901ae41b7e59cb63fd87aef7e4125563deedcc3ab04f424",
+      "database": {
+        "aliases": [
+          "CVE-2026-112394"
+        ],
+        "publishedAt": "2026-10-21T20:00:32Z",
+        "modifiedAt": "2026-10-21T20:00:32Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 12.3.0"
+            }
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-46r4-q7wv-32fc",
+      "primaryId": "GHSA-46r4-q7wv-32fc",
+      "url": "https://github.com/openchoreo/openchoreo/security/advisories/GHSA-46r4-q7wv-32fc",
+      "fetchedAt": "2026-10-21T21:08:16.806194Z",
+      "responseSha256": "3aca66b521c79144e1f6be5b911f2cce91b2bbdcbe893926aa50f62e18de329c",
+      "responseBytes": 6857,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/openchoreo/openchoreo/security-advisories/GHSA-46r4-q7wv-32fc",
+          "status": 200
+        }
+      ],
+      "summary": "Authorization bypass on WorkflowRun update allows cross-project takeover of workflow runs",
+      "publishedAt": "2026-09-09T05:30:51Z",
+      "modifiedAt": "2026-10-20T21:07:03Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113727",
+      "identifiers": [
+        {
+          "value": "GHSA-46r4-q7wv-32fc",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113727",
+          "type": "CVE"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+        "score": 7.4
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+          "score": 7.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": ""
+          },
+          "vulnerable_version_range": "<= 1.2.4",
+          "patched_versions": "1.0.6, 1.1.7, 1.2.5",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "276e84f6c828af454730701f68e7b85339919e6e292e65af84f27963a1c7ef2f",
+      "database": {
+        "aliases": [
+          "CVE-2026-113727"
+        ],
+        "publishedAt": "2026-10-21T16:29:53Z",
+        "modifiedAt": "2026-10-21T16:29:53Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/openchoreo/openchoreo"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.0.0"
+                  },
+                  {
+                    "fixed": "1.0.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/openchoreo/openchoreo"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.1.0"
+                  },
+                  {
+                    "fixed": "1.1.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/openchoreo/openchoreo"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.2.0"
+                  },
+                  {
+                    "fixed": "1.2.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Maintainer structured package name is blank and range <=1.2.4 is broad; patched branches are 1.0.6, 1.1.7 and 1.2.5. Reviewed supplies the Go module identity and separate branch ranges, retained here. This is authenticated cross-project/component access within one namespace, not cross-tenant escalation."
+      ]
+    },
+    {
+      "id": "GHSA-5588-rp99-5fjh",
+      "primaryId": "GHSA-5588-rp99-5fjh",
+      "url": "https://github.com/moov-io/signedxml/security/advisories/GHSA-5588-rp99-5fjh",
+      "fetchedAt": "2026-10-21T21:08:16.842028Z",
+      "responseSha256": "c18380daa11a41d7bc703a68635c3f9b2bbd5cfa21d5c22e68dbb98d07b3d484",
+      "responseBytes": 6156,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/moov-io/signedxml/security-advisories/GHSA-5588-rp99-5fjh",
+          "status": 200
+        }
+      ],
+      "summary": "Unauthenticated denial of service in exclusive XML canonicalization",
+      "publishedAt": "2026-08-26T14:10:10Z",
+      "modifiedAt": "2026-10-20T21:15:33Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113729",
+      "identifiers": [
+        {
+          "value": "GHSA-5588-rp99-5fjh",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113729",
+          "type": "CVE"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/moov-io/signedxml"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": ">= 1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "454b26b62727cf310f75159bffd266592cc2cb2f506c6e619a6fbc6b649d438e",
+      "database": {
+        "aliases": [
+          "CVE-2026-113729"
+        ],
+        "publishedAt": "2026-10-21T16:27:55Z",
+        "modifiedAt": "2026-10-21T16:27:55Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/moov-io/signedxml"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.4.1"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.4.0"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "XML canonicalization occurs before digest/signature checks; a valid signature is unnecessary. Reported impact is availability only, not a signature-verification bypass."
+      ]
+    },
+    {
+      "id": "GHSA-5gc8-frw3-3vqm",
+      "primaryId": "GHSA-5gc8-frw3-3vqm",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-5gc8-frw3-3vqm",
+      "fetchedAt": "2026-10-21T21:08:16.794167Z",
+      "responseSha256": "46f5c9f2085461bf14cdc55af300551519179e8e404a1aa65f2edf6a74f0e9c2",
+      "responseBytes": 11729,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-5gc8-frw3-3vqm",
+          "status": 200
+        }
+      ],
+      "summary": "Exposure of Sensitive Information via predictable export filenames",
+      "publishedAt": "2026-10-14T18:26:25Z",
+      "modifiedAt": "2026-10-20T15:45:56Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112953",
+      "identifiers": [
+        {
+          "value": "GHSA-5gc8-frw3-3vqm",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112953",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "score": 6
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@apostrophecms/import-export"
+          },
+          "vulnerable_version_range": "< 3.7.1",
+          "patched_versions": "3.7.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "45a853ea7fa3c8a06204122e31ddb837050447b8b2af4bedab4f3db4e1c3ee92",
+      "database": {
+        "aliases": [
+          "CVE-2026-112953"
+        ],
+        "publishedAt": "2026-10-21T19:45:03Z",
+        "modifiedAt": "2026-10-21T19:45:03Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.7.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Anonymous export download requires exports enabled and files delivered through public upload storage; disabled export or authenticated/private delivery excludes the network download path."
+      ]
+    },
+    {
+      "id": "GHSA-5hx5-vpf9-5wcv",
+      "primaryId": "GHSA-5hx5-vpf9-5wcv",
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5hx5-vpf9-5wcv",
+      "fetchedAt": "2026-10-21T21:08:19.544918Z",
+      "responseSha256": "4225e12bd499976be121c17ed4a09fbf3d263fdd586b757e79bb6465aac797c0",
+      "responseBytes": 2719,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-5hx5-vpf9-5wcv",
+          "status": 200
+        }
+      ],
+      "summary": "Unvalidated JPEG image data loading",
+      "publishedAt": "2026-10-17T10:31:29Z",
+      "modifiedAt": "2026-10-21T14:35:30Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113786",
+      "identifiers": [
+        {
+          "value": "GHSA-5hx5-vpf9-5wcv",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113786",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.21.1",
+          "patched_versions": ">= 6.21.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "74f671cecc81abef4163d377739404fb638713c7cc42da28f447651021098edd",
+      "database": {
+        "aliases": [
+          "CVE-2026-113786"
+        ],
+        "publishedAt": "2026-10-21T19:58:10Z",
+        "modifiedAt": "2026-10-21T19:58:10Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "LOW",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pypdf"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.21.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Requires the optional Pillow dependency and loading image data labelled DCTDecode. Arbitrary image-parser invocation is not itself evidence of code execution.",
+        "Severity label differs: developer advisory medium, Reviewed database low. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-5m22-7pfq-vp65",
+      "primaryId": "GHSA-5m22-7pfq-vp65",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-5m22-7pfq-vp65",
+      "fetchedAt": "2026-10-21T21:08:19.574425Z",
+      "responseSha256": "38692a43398fb6cdef9ccf0fb7727c148601bb3ae52e6816762c929c39c020ca",
+      "responseBytes": 9239,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-5m22-7pfq-vp65",
+          "status": 200
+        }
+      ],
+      "summary": "Import API bypasses publication roles for protected content",
+      "publishedAt": "2026-10-14T18:26:21Z",
+      "modifiedAt": "2026-10-20T16:10:21Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113649",
+      "identifiers": [
+        {
+          "value": "GHSA-5m22-7pfq-vp65",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113649",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "score": 6.5
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@apostrophecms/import-export"
+          },
+          "vulnerable_version_range": "< 3.7.1",
+          "patched_versions": "3.7.1",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "apostrophe"
+          },
+          "vulnerable_version_range": "< 4.34.0",
+          "patched_versions": "4.34.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b6fe96173f4712f03e52996dbd2e2ca3cfe48cbaa2ebcb0c8f599b811f121e02",
+      "database": {
+        "aliases": [
+          "CVE-2026-113649"
+        ],
+        "publishedAt": "2026-10-21T17:03:03Z",
+        "modifiedAt": "2026-10-21T17:03:04Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.7.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.34.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Historical narrative is a static remediation review of 3.7.0 and explicitly says end-to-end reproduction on that release was not repeated. Structured current fields specify import-export 3.7.1 and apostrophe 4.34.0 fixes. No private attachment was accessed or used."
+      ]
+    },
+    {
+      "id": "GHSA-5vjq-rrrf-7h2q",
+      "primaryId": "GHSA-5vjq-rrrf-7h2q",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-5vjq-rrrf-7h2q",
+      "fetchedAt": "2026-10-21T21:08:19.730665Z",
+      "responseSha256": "596e79e7581c61c4d9e10a706121e400c7819d45b49a8b8a72433a9edf2a0af0",
+      "responseBytes": 7132,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/pypa/virtualenv/security-advisories/GHSA-5vjq-rrrf-7h2q",
+          "status": 200
+        }
+      ],
+      "summary": "virtualenv activate runs commands from the environment name in zsh with PROMPT_SUBST",
+      "publishedAt": "2026-10-02T13:56:33Z",
+      "modifiedAt": "2026-10-20T19:58:33Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113726",
+      "identifiers": [
+        {
+          "value": "GHSA-5vjq-rrrf-7h2q",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113726",
+          "type": "CVE"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "score": 7.8
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "score": 7.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "virtualenv"
+          },
+          "vulnerable_version_range": "<= 21.14.3",
+          "patched_versions": "21.14.4",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b6ed81d04c8adb2d8a4f9a2c5b3f138103fc080141514d91a55f6e67acd640c6",
+      "database": {
+        "aliases": [
+          "CVE-2026-113726"
+        ],
+        "publishedAt": "2026-10-21T16:46:23Z",
+        "modifiedAt": "2026-10-21T16:46:23Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "virtualenv"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "21.14.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 21.14.3"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "Requires attacker-influenced path/prompt and zsh PROMPT_SUBST enabled; plain zsh defaults off and the described payload does not run in bash."
+      ]
+    },
+    {
+      "id": "GHSA-74r2-7ff9-mjj2",
+      "primaryId": "GHSA-74r2-7ff9-mjj2",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2",
+      "fetchedAt": "2026-10-21T21:08:19.730589Z",
+      "responseSha256": "be6db453bb9f8ee7be557271cb42a4d605fe9b2ecdff47e1d8c91da8f6b80c01",
+      "responseBytes": 19583,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-74r2-7ff9-mjj2",
+          "status": 200
+        }
+      ],
+      "summary": "Quadratic GIF comment concatenation allows DoS in Image.open()",
+      "publishedAt": "2026-10-17T10:41:12Z",
+      "modifiedAt": "2026-10-19T21:14:18Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112401",
+      "identifiers": [
+        {
+          "value": "GHSA-74r2-7ff9-mjj2",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112401",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Pillow"
+          },
+          "vulnerable_version_range": "5.4.0 - 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "37820f0f3d8929a529941f5fdbc10d76dcade5b96da9dd7dd09eba07dacadcfc",
+      "database": {
+        "aliases": [
+          "CVE-2026-112401"
+        ],
+        "publishedAt": "2026-10-21T20:42:11Z",
+        "modifiedAt": "2026-10-21T20:42:11Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.4.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-7jg5-frgc-c67w",
+      "primaryId": "GHSA-7jg5-frgc-c67w",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-7jg5-frgc-c67w",
+      "fetchedAt": "2026-10-21T21:08:19.731885Z",
+      "responseSha256": "b4547d38a16964fd3a395bd58b63d7eae55414091e51baa108d4b4f91ff03bad",
+      "responseBytes": 14702,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-7jg5-frgc-c67w",
+          "status": 200
+        }
+      ],
+      "summary": "Stored XSS via Unescaped Widget Style Attribute Serialization",
+      "publishedAt": "2026-10-14T18:26:41Z",
+      "modifiedAt": "2026-10-20T16:03:14Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112958",
+      "identifiers": [
+        {
+          "value": "GHSA-7jg5-frgc-c67w",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112958",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+        "score": 5.4
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+          "score": 5.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "apostrophe"
+          },
+          "vulnerable_version_range": "< 4.34.0",
+          "patched_versions": "4.34.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "d8185295935642fcf2ed8ff9982a49b7a5ec074d0f51a006a9249b00be610272",
+      "database": {
+        "aliases": [
+          "CVE-2026-112958"
+        ],
+        "publishedAt": "2026-10-21T17:15:07Z",
+        "modifiedAt": "2026-10-21T17:15:07Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.34.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-7mh2-4gg2-979f",
+      "primaryId": "GHSA-7mh2-4gg2-979f",
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-7mh2-4gg2-979f",
+      "fetchedAt": "2026-10-21T21:08:22.393127Z",
+      "responseSha256": "12614f002d8e146d5b964a713bec5754ef035bbff5eec469cbc0b325de0e9563",
+      "responseBytes": 4758,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-7mh2-4gg2-979f",
+          "status": 200
+        }
+      ],
+      "summary": "Possible large memory usage for streams with multiple filters",
+      "publishedAt": "2026-10-09T10:50:24Z",
+      "modifiedAt": "2026-10-21T16:00:38Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113795",
+      "identifiers": [
+        {
+          "value": "GHSA-7mh2-4gg2-979f",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113795",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.20.0",
+          "patched_versions": ">= 6.20.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "dcd408a2204bb6c8303e0df339180a234570ae02d88095dd9940ac913343f6b8",
+      "database": {
+        "aliases": [
+          "CVE-2026-113795"
+        ],
+        "publishedAt": "2026-10-21T16:48:30Z",
+        "modifiedAt": "2026-10-21T16:48:30Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pypdf"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.20.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-7mwm-ghpf-9vrm",
+      "primaryId": "GHSA-7mwm-ghpf-9vrm",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm",
+      "fetchedAt": "2026-10-21T21:08:22.443002Z",
+      "responseSha256": "3b660031977f82fed308de09fccfd7916b0c37a33911fc7957b09e3221380160",
+      "responseBytes": 19428,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-7mwm-ghpf-9vrm",
+          "status": 200
+        }
+      ],
+      "summary": "Double free in ImagingScaleAffine on calloc failure via Image.transform",
+      "publishedAt": "2026-10-17T10:39:50Z",
+      "modifiedAt": "2026-10-19T21:16:26Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112402",
+      "identifiers": [
+        {
+          "value": "GHSA-7mwm-ghpf-9vrm",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112402",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Pillow"
+          },
+          "vulnerable_version_range": "<= 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b1e4c4da4096c9db8b95d3ba9d48457435b5ca017b5b8c8ead9a0d8c99bf6292",
+      "database": {
+        "aliases": [
+          "CVE-2026-112402"
+        ],
+        "publishedAt": "2026-10-21T20:03:56Z",
+        "modifiedAt": "2026-10-21T20:03:56Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 12.3.0"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "Requires oversized transform output and allocation failure, typically a memory-limited worker or 32-bit process. Heap corruption has not been shown controllable; do not assert proven RCE.",
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-86wm-68pq-5jwq",
+      "primaryId": "GHSA-86wm-68pq-5jwq",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-86wm-68pq-5jwq",
+      "fetchedAt": "2026-10-21T21:08:22.443030Z",
+      "responseSha256": "5427bfd7995740d72f0c5b89146c9c51537984d1495a17dcba036a91e4e659bc",
+      "responseBytes": 13382,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-86wm-68pq-5jwq",
+          "status": 200
+        }
+      ],
+      "summary": "Unauthenticated resource exhaustion via pre-auth aposBigUpload processing in @apostrophecms/import-export",
+      "publishedAt": "2026-10-02T13:24:13Z",
+      "modifiedAt": "2026-10-20T17:48:00Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113711",
+      "identifiers": [
+        {
+          "value": "GHSA-86wm-68pq-5jwq",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113711",
+          "type": "CVE"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "apostrophe"
+          },
+          "vulnerable_version_range": "< 4.33.0",
+          "patched_versions": "4.33.0",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@apostrophecms/import-export"
+          },
+          "vulnerable_version_range": "< 3.7.0",
+          "patched_versions": "3.7.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b063af60329da4ad50af0de567cdb8e04e0904b01b7d1f3cab0e2e5d74f825e8",
+      "database": {
+        "aliases": [
+          "CVE-2026-113711"
+        ],
+        "publishedAt": "2026-10-21T13:51:21Z",
+        "modifiedAt": "2026-10-21T13:51:21Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.7.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Primary narrative confirms import-export 3.6.2 and leaves exact introduction unverified; structured fields use <3.7.0 and apostrophe <4.33.0. Do not turn the reported test version into a proven introduction boundary."
+      ]
+    },
+    {
+      "id": "GHSA-8rjx-v5ww-45pp",
+      "primaryId": "GHSA-8rjx-v5ww-45pp",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-8rjx-v5ww-45pp",
+      "fetchedAt": "2026-10-21T21:08:22.486274Z",
+      "responseSha256": "78a1e320de5a0cd7b4ba231d3a36c644776ee45d8ac3af737b937d6fb3a8a487",
+      "responseBytes": 6807,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/pypa/virtualenv/security-advisories/GHSA-8rjx-v5ww-45pp",
+          "status": 200
+        }
+      ],
+      "summary": "virtualenv activation scripts run code from a path that contains a placeholder name",
+      "publishedAt": "2026-10-01T06:33:04Z",
+      "modifiedAt": "2026-10-20T22:02:30Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113776",
+      "identifiers": [
+        {
+          "value": "GHSA-8rjx-v5ww-45pp",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113776",
+          "type": "CVE"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "score": 7.8
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "score": 7.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "virtualenv"
+          },
+          "vulnerable_version_range": ">= 20.26.6, <= 21.14.1",
+          "patched_versions": "21.14.2",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "0b580ccec35cd12f46e143747017e2f8542fa7e0600cda8d9961d34f9269d9e3",
+      "database": {
+        "aliases": [
+          "CVE-2026-113776"
+        ],
+        "publishedAt": "2026-10-21T16:39:38Z",
+        "modifiedAt": "2026-10-21T16:39:38Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "virtualenv"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "20.26.6"
+                  },
+                  {
+                    "fixed": "21.14.2"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 21.14.1"
+            }
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-9g7p-m758-rp72",
+      "primaryId": "GHSA-9g7p-m758-rp72",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-9g7p-m758-rp72",
+      "fetchedAt": "2026-10-21T21:08:22.482429Z",
+      "responseSha256": "1e52ae0ddecfe150dfe8f7dbf8e6da342b6c4a2ee5d3cdb962f379fdc7e0492d",
+      "responseBytes": 8888,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-9g7p-m758-rp72",
+          "status": 200
+        }
+      ],
+      "summary": "Import archives can exhaust server storage and deny service",
+      "publishedAt": "2026-10-14T18:26:12Z",
+      "modifiedAt": "2026-10-20T15:52:00Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112955",
+      "identifiers": [
+        {
+          "value": "GHSA-9g7p-m758-rp72",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112955",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "score": 6.5
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@apostrophecms/import-export"
+          },
+          "vulnerable_version_range": "< 3.7.1",
+          "patched_versions": "3.7.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "e0d7a333abef756a34324b0b6d4005ba20e88dcb60a5044c2adb2a6faba6123e",
+      "database": {
+        "aliases": [
+          "CVE-2026-112955"
+        ],
+        "publishedAt": "2026-10-21T16:57:36Z",
+        "modifiedAt": "2026-10-21T16:57:36Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.7.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Historical narrative is a static review of 3.7.0, not a new deployed-site reproduction. Structured current fields identify 3.7.1 as patched; no private emailed attachment was used."
+      ]
+    },
+    {
+      "id": "GHSA-9jrq-w75r-8gcw",
+      "primaryId": "GHSA-9jrq-w75r-8gcw",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-9jrq-w75r-8gcw",
+      "fetchedAt": "2026-10-21T21:08:25.330752Z",
+      "responseSha256": "f19d2a93c70dcb998c49c15f07333fd67949b057bbb73df53a39f429780b7981",
+      "responseBytes": 11123,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/vitejs/vite/security-advisories/GHSA-9jrq-w75r-8gcw",
+          "status": 200
+        }
+      ],
+      "summary": "Cross origin script execution through Vite custom middleware",
+      "publishedAt": "2026-10-06T14:15:37Z",
+      "modifiedAt": "2026-10-20T14:59:07Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112945",
+      "identifiers": [
+        {
+          "value": "GHSA-9jrq-w75r-8gcw",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112945",
+          "type": "CVE"
+        }
+      ],
+      "severity": "low",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+          "score": 2.1
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=8.3.0,<=8.3.2",
+          "patched_versions": "8.3.3",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=8.2.0,<=8.2.3",
+          "patched_versions": "8.2.4",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=8.0.0,<=8.1.5",
+          "patched_versions": "8.1.6",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=7.0.0,<=7.3.6",
+          "patched_versions": "7.3.7",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": "<=6.4.3",
+          "patched_versions": "6.4.4",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite-plus"
+          },
+          "vulnerable_version_range": "<=1.0.0",
+          "patched_versions": "1.1.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "e3ca6eae799c60f344ca06df702ff32725f3b63bffc2339b6ab702f98b7fb8f5",
+      "database": {
+        "aliases": [
+          "CVE-2026-112945"
+        ],
+        "publishedAt": "2026-10-21T16:48:14Z",
+        "modifiedAt": "2026-10-21T16:48:14Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "LOW",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.3.0"
+                  },
+                  {
+                    "fixed": "8.3.3"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.3.2"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.2.0"
+                  },
+                  {
+                    "fixed": "8.2.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.2.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.1.6"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.1.5"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "fixed": "7.3.7"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 7.3.6"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.4.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 6.4.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite-plus"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.1.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.0.0"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "Custom/middleware transformIndexHtml setup, inline module script and sensitive values/actions in the served origin are prerequisite conditions. Standard internal spa/mpa handling is excluded by the advisory."
+      ]
+    },
+    {
+      "id": "GHSA-9mx8-4j7g-633p",
+      "primaryId": "GHSA-9mx8-4j7g-633p",
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-9mx8-4j7g-633p",
+      "fetchedAt": "2026-10-21T21:08:25.381647Z",
+      "responseSha256": "14755baac79493de4ae50223c6aa4180b80c576b6748a7b8df413cace5e4952f",
+      "responseBytes": 4701,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-9mx8-4j7g-633p",
+          "status": 200
+        }
+      ],
+      "summary": "Possible infinite loop when removing tree items",
+      "publishedAt": "2026-10-12T16:15:00Z",
+      "modifiedAt": "2026-10-21T15:57:17Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113793",
+      "identifiers": [
+        {
+          "value": "GHSA-9mx8-4j7g-633p",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113793",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.20.1",
+          "patched_versions": ">= 6.20.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "95553011283ef0a5f47ef042cc9c3784c0c710af984b0a00e1eab26ad88547c0",
+      "database": {
+        "aliases": [
+          "CVE-2026-113793"
+        ],
+        "publishedAt": "2026-10-21T16:55:10Z",
+        "modifiedAt": "2026-10-21T16:55:11Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pypdf"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.20.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-c947-3pg5-gm8q",
+      "primaryId": "GHSA-c947-3pg5-gm8q",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-c947-3pg5-gm8q",
+      "fetchedAt": "2026-10-21T21:08:25.366965Z",
+      "responseSha256": "4abf814810b79d39618f89714f5d830e8b6f92a0bc2f14a66194a9464db38308",
+      "responseBytes": 6616,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/pypa/virtualenv/security-advisories/GHSA-c947-3pg5-gm8q",
+          "status": 200
+        }
+      ],
+      "summary": "virtualenv activate.fish runs commands from a path or prompt with a backslash before a quote",
+      "publishedAt": "2026-10-01T06:33:05Z",
+      "modifiedAt": "2026-10-20T21:53:59Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113732",
+      "identifiers": [
+        {
+          "value": "GHSA-c947-3pg5-gm8q",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113732",
+          "type": "CVE"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "score": 7.8
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "score": 7.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "virtualenv"
+          },
+          "vulnerable_version_range": "<= 21.14.1",
+          "patched_versions": "21.14.2",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "a592888caf70d2510d0cae839a2aebc6b34d2dab5f44aee35d1b5657fee72952",
+      "database": {
+        "aliases": [
+          "CVE-2026-113732"
+        ],
+        "publishedAt": "2026-10-21T16:39:58Z",
+        "modifiedAt": "2026-10-21T16:39:58Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "virtualenv"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "21.14.2"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 21.14.1"
+            }
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-c9rx-x947-fp3h",
+      "primaryId": "GHSA-c9rx-x947-fp3h",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-c9rx-x947-fp3h",
+      "fetchedAt": "2026-10-21T21:08:25.446340Z",
+      "responseSha256": "7dad3787a0ec08e41b9f9471fb64be84f7665461ab577ca8675792a57d528b52",
+      "responseBytes": 7959,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-c9rx-x947-fp3h",
+          "status": 200
+        }
+      ],
+      "summary": "sanitize-html 2.18.0: unbounded recursion when re-sanitizing the fallback of a discarded iframe (stack overflow, nestingLimit not enforced)",
+      "publishedAt": "2026-10-14T18:26:29Z",
+      "modifiedAt": "2026-10-20T16:14:07Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113650",
+      "identifiers": [
+        {
+          "value": "GHSA-c9rx-x947-fp3h",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113650",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "score": 5.3
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 5.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "sanitize-html"
+          },
+          "vulnerable_version_range": ">= 2.18.0, < 2.18.1",
+          "patched_versions": "2.18.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "07e8e236503b2f79a7bfb278deba11cc42941301be6d54461c7e1587a96d8973",
+      "database": {
+        "aliases": [
+          "CVE-2026-113650"
+        ],
+        "publishedAt": "2026-10-21T17:05:01Z",
+        "modifiedAt": "2026-10-21T17:05:01Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "sanitize-html"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.18.0"
+                  },
+                  {
+                    "fixed": "2.18.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Regression is 2.18.0 with discarded iframe fallback recursion; structured fix 2.18.1. Do not use historical narrative wording current latest as a present release claim."
+      ]
+    },
+    {
+      "id": "GHSA-cp9v-662q-vvx9",
+      "primaryId": "GHSA-cp9v-662q-vvx9",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9",
+      "fetchedAt": "2026-10-21T21:08:25.354248Z",
+      "responseSha256": "ed1ed70025482cb04c726487d104c6b31fac6c7c315555eeb82f2d600465b5be",
+      "responseBytes": 7345,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-cp9v-662q-vvx9",
+          "status": 200
+        }
+      ],
+      "summary": "NULL pointer dereference in Image.merge via an unvalidated band 0",
+      "publishedAt": "2026-10-17T10:40:24Z",
+      "modifiedAt": "2026-10-19T21:28:44Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112405",
+      "identifiers": [
+        {
+          "value": "GHSA-cp9v-662q-vvx9",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112405",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pillow"
+          },
+          "vulnerable_version_range": "12.0.0 - 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "ef6a004a55a98a608ddd0d424f9b77cd8867e620c5d98786b4ea6bea7f53d546",
+      "database": {
+        "aliases": [
+          "CVE-2026-112405"
+        ],
+        "publishedAt": "2026-10-21T20:30:25Z",
+        "modifiedAt": "2026-10-21T20:30:25Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "12.0.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-crwc-vw2r-qr6m",
+      "primaryId": "GHSA-crwc-vw2r-qr6m",
+      "url": "https://github.com/orphan-oss/ognl/security/advisories/GHSA-crwc-vw2r-qr6m",
+      "fetchedAt": "2026-10-21T21:08:28.062957Z",
+      "responseSha256": "b847cdfebbff479905646e02451c0144b76bb4975f9086ef12e7e0d2fe85cf52",
+      "responseBytes": 6753,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/orphan-oss/ognl/security-advisories/GHSA-crwc-vw2r-qr6m",
+          "status": 200
+        }
+      ],
+      "summary": "OGNL stricter-invocation block list bypass via java.lang.reflect reflection proxies",
+      "publishedAt": "2026-09-11T03:33:01Z",
+      "modifiedAt": "2026-10-20T21:23:42Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113730",
+      "identifiers": [
+        {
+          "value": "GHSA-crwc-vw2r-qr6m",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113730",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "score": 5.6
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "score": 5.6
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "ognl:ognl"
+          },
+          "vulnerable_version_range": "<= 3.4.12",
+          "patched_versions": "3.4.13",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "4d40ce39d966e72767af8b2beb8e04c57bd5be1e00cb3155bda7e456ecba6f81",
+      "database": {
+        "aliases": [
+          "CVE-2026-113730"
+        ],
+        "publishedAt": "2026-10-21T16:31:04Z",
+        "modifiedAt": "2026-10-21T16:31:04Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "ognl:ognl"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.4.13"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.4.12"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "OGNL describes secondary stricter-invocation defense-in-depth hardening, not a bypass of a correctly restrictive MemberAccess primary boundary. Do not label all integrating frameworks remotely exploitable."
+      ]
+    },
+    {
+      "id": "GHSA-f2ph-cmg5-wxc8",
+      "primaryId": "GHSA-f2ph-cmg5-wxc8",
+      "url": "https://github.com/storybookjs/storybook/security/advisories/GHSA-f2ph-cmg5-wxc8",
+      "fetchedAt": "2026-10-21T21:08:28.030597Z",
+      "responseSha256": "9d6e7dafb9293eca17129f8bcc6f95646a6117b08a7cc61fab5ad1f4ad8a88b7",
+      "responseBytes": 13140,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/storybookjs/storybook/security-advisories/GHSA-f2ph-cmg5-wxc8",
+          "status": 200
+        }
+      ],
+      "summary": "Storybook dev server preview allows code injection from malicious websites",
+      "publishedAt": "2026-10-12T19:13:09Z",
+      "modifiedAt": "2026-10-21T17:06:15Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-114125",
+      "identifiers": [
+        {
+          "value": "GHSA-f2ph-cmg5-wxc8",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-114125",
+          "type": "CVE"
+        }
+      ],
+      "severity": "critical",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+          "score": 9.4
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "storybook"
+          },
+          "vulnerable_version_range": ">= 8.0.0, < 8.6.19",
+          "patched_versions": "8.6.19",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "storybook"
+          },
+          "vulnerable_version_range": ">= 9.0.0, < 9.1.21",
+          "patched_versions": "9.1.21",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "storybook"
+          },
+          "vulnerable_version_range": ">= 10.0.0, < 10.6.2",
+          "patched_versions": "10.6.2",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "storybook"
+          },
+          "vulnerable_version_range": ">= 11.0.0-alpha.0, < 11.0.0-alpha.6",
+          "patched_versions": "11.0.0-alpha.6",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@storybook/core"
+          },
+          "vulnerable_version_range": ">= 8.0.0, < 8.6.19",
+          "patched_versions": "8.6.19",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@storybook/core-server"
+          },
+          "vulnerable_version_range": ">= 8.0.0, < 8.6.19",
+          "patched_versions": "8.6.19",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@storybook/experimental-addon-test"
+          },
+          "vulnerable_version_range": ">= 8.0.0, < 8.6.19",
+          "patched_versions": "8.6.19",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@storybook/addon-vitest"
+          },
+          "vulnerable_version_range": ">= 9.0.0, < 9.1.21",
+          "patched_versions": "9.1.21",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@storybook/addon-vitest"
+          },
+          "vulnerable_version_range": ">= 10.0.0, < 10.6.2",
+          "patched_versions": "10.6.2",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@storybook/addon-vitest"
+          },
+          "vulnerable_version_range": ">= 11.0.0-alpha.0, < 11.0.0-alpha.6",
+          "patched_versions": "11.0.0-alpha.6",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@storybook/addon-mcp"
+          },
+          "vulnerable_version_range": ">= 10.6.0, < 10.6.2",
+          "patched_versions": "10.6.2",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@storybook/addon-mcp"
+          },
+          "vulnerable_version_range": ">= 11.0.0-alpha.0, < 11.0.0-alpha.6",
+          "patched_versions": "11.0.0-alpha.6",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "4e0b7d1d14d5abb91634961e58abad64ce4e0bb487e7b627f841e8c52e18053e",
+      "database": {
+        "aliases": [
+          "CVE-2026-114125"
+        ],
+        "publishedAt": "2026-10-21T17:23:29Z",
+        "modifiedAt": "2026-10-21T17:23:29Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+          }
+        ],
+        "severityLabel": "CRITICAL",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "storybook"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.6.19"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "storybook"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0"
+                  },
+                  {
+                    "fixed": "9.1.21"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "storybook"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.0.0"
+                  },
+                  {
+                    "fixed": "10.6.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "storybook"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-alpha.0"
+                  },
+                  {
+                    "fixed": "11.0.0-alpha.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@storybook/core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.6.19"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@storybook/core-server"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.6.19"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@storybook/experimental-addon-test"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.6.19"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@storybook/addon-vitest"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0"
+                  },
+                  {
+                    "fixed": "9.1.21"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@storybook/addon-vitest"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.0.0"
+                  },
+                  {
+                    "fixed": "10.6.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@storybook/addon-vitest"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-alpha.0"
+                  },
+                  {
+                    "fixed": "11.0.0-alpha.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@storybook/addon-mcp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.6.0"
+                  },
+                  {
+                    "fixed": "10.6.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@storybook/addon-mcp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-alpha.0"
+                  },
+                  {
+                    "fixed": "11.0.0-alpha.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Affected Storybook development preview can permit project-file changes from a malicious website; subsequent local execution needs additional conditions. Built static Storybook and unopened headless dev servers are excluded. Maintainer says no known exploitation, which is not proof of absence."
+      ]
+    },
+    {
+      "id": "GHSA-f66c-mpj2-3r8h",
+      "primaryId": "GHSA-f66c-mpj2-3r8h",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-f66c-mpj2-3r8h",
+      "fetchedAt": "2026-10-21T21:08:27.981648Z",
+      "responseSha256": "379dc7e813f581312eb44a9d1f9ade120acdc94844715c0fb7839e2fa560290e",
+      "responseBytes": 4925,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-f66c-mpj2-3r8h",
+          "status": 200
+        }
+      ],
+      "summary": "POST /api/v1/@apostrophecms/doc/slugTaken discloses existence of private/admin-only content to any authenticated user",
+      "publishedAt": "2026-10-14T18:26:54Z",
+      "modifiedAt": "2026-10-20T15:40:52Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112952",
+      "identifiers": [
+        {
+          "value": "GHSA-f66c-mpj2-3r8h",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112952",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "score": 4.3
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "score": 4.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "apostrophe"
+          },
+          "vulnerable_version_range": "< 4.34.0",
+          "patched_versions": "4.34.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "de02046c4397dbe2c227ff8ac4f52a7796681bd9925ae9c7e8bca222fbae9ab6",
+      "database": {
+        "aliases": [
+          "CVE-2026-112952"
+        ],
+        "publishedAt": "2026-10-21T17:17:00Z",
+        "modifiedAt": "2026-10-21T17:17:00Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.34.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-fc9g-5qg7-mf45",
+      "primaryId": "GHSA-fc9g-5qg7-mf45",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fc9g-5qg7-mf45",
+      "fetchedAt": "2026-10-21T21:08:28.108796Z",
+      "responseSha256": "1a9027d425e703dcee4e2b169f09548b7a0b02f5779c20f465a8a4eea5e1ae7f",
+      "responseBytes": 3683,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-fc9g-5qg7-mf45",
+          "status": 200
+        }
+      ],
+      "summary": "Quadratic GIF comment copying during save",
+      "publishedAt": "2026-10-17T10:41:01Z",
+      "modifiedAt": "2026-10-19T21:32:53Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112891",
+      "identifiers": [
+        {
+          "value": "GHSA-fc9g-5qg7-mf45",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112891",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "score": 6.9
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pillow"
+          },
+          "vulnerable_version_range": "9.2.0 - 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "8dc25fe93efbe330fd5d870d14498f95d2b7b544c88e3da2531f6bfd23d089b6",
+      "database": {
+        "aliases": [
+          "CVE-2026-112891"
+        ],
+        "publishedAt": "2026-10-21T20:38:43Z",
+        "modifiedAt": "2026-10-21T20:38:43Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.2.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Narrative CVSS-B 6.9 is provisional and conditional on an automated unauthenticated upload-to-GIF service. Keep authoritative structured scores/vectors source-attributed, not an independently measured risk."
+      ]
+    },
+    {
+      "id": "GHSA-fw47-9c62-h3vw",
+      "primaryId": "GHSA-fw47-9c62-h3vw",
+      "url": "https://github.com/electron/electron/security/advisories/GHSA-fw47-9c62-h3vw",
+      "fetchedAt": "2026-10-21T21:08:27.996884Z",
+      "responseSha256": "4ad85996f7c5f14a7e0f37c3e34cc57a2d25a522780d036243b10d835d45b9d6",
+      "responseBytes": 4916,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/electron/electron/security-advisories/GHSA-fw47-9c62-h3vw",
+          "status": 200
+        }
+      ],
+      "summary": "HID and USB permission checks can be attributed to the wrong origin",
+      "publishedAt": "2026-10-15T21:22:47Z",
+      "modifiedAt": "2026-10-21T16:15:07Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113800",
+      "identifiers": [
+        {
+          "value": "GHSA-fw47-9c62-h3vw",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113800",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N",
+        "score": 5.4
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N",
+          "score": 5.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "electron"
+          },
+          "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-alpha.5",
+          "patched_versions": "45.0.0-alpha.5",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "electron"
+          },
+          "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.3.0",
+          "patched_versions": "44.3.0",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "electron"
+          },
+          "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.7.0",
+          "patched_versions": "43.7.0",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "electron"
+          },
+          "vulnerable_version_range": "< 42.11.3",
+          "patched_versions": "42.11.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "93b6e09e1c0c744abe707fc152fb6047a83df0aa99e12330cee46cf03a2ea1a7",
+      "database": {
+        "aliases": [
+          "CVE-2026-113800"
+        ],
+        "publishedAt": "2026-10-21T17:21:51Z",
+        "modifiedAt": "2026-10-21T17:21:51Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "electron"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "45.0.0-alpha.1"
+                  },
+                  {
+                    "fixed": "45.0.0-alpha.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "electron"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "44.0.0-alpha.1"
+                  },
+                  {
+                    "fixed": "44.3.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "electron"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "43.0.0-alpha.1"
+                  },
+                  {
+                    "fixed": "43.7.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "electron"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "42.11.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Requires origin-based hid/usb permission decisions plus delegation to cross-origin iframes. Applications not delegating these features to untrusted iframes are excluded."
+      ]
+    },
+    {
+      "id": "GHSA-j4m9-6w36-pw47",
+      "primaryId": "GHSA-j4m9-6w36-pw47",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-j4m9-6w36-pw47",
+      "fetchedAt": "2026-10-21T21:08:30.998142Z",
+      "responseSha256": "57a27fa1c461a3a200da877b1bd4f3ae9cb439084355c448ff55345b93a6a251",
+      "responseBytes": 8262,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-j4m9-6w36-pw47",
+          "status": 200
+        }
+      ],
+      "summary": "Invalid free in FreeType glyph rendering when a stroker is active",
+      "publishedAt": "2026-10-17T10:40:17Z",
+      "modifiedAt": "2026-10-19T21:50:48Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112893",
+      "identifiers": [
+        {
+          "value": "GHSA-j4m9-6w36-pw47",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112893",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pillow"
+          },
+          "vulnerable_version_range": "10.0.0 - 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "6d6e005129217df0d27cc275d4654504bdc4382a9dad74d2f7ffc2742241530b",
+      "database": {
+        "aliases": [
+          "CVE-2026-112893"
+        ],
+        "publishedAt": "2026-10-21T20:06:34Z",
+        "modifiedAt": "2026-10-21T20:06:34Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.0.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Untrusted malformed font, nonzero stroke width and glyph-load failure reach a latent invalid-free path; the report does not establish reliable exploitation or RCE.",
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-jf5h-36mg-rp6x",
+      "primaryId": "GHSA-jf5h-36mg-rp6x",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-jf5h-36mg-rp6x",
+      "fetchedAt": "2026-10-21T21:08:31.021113Z",
+      "responseSha256": "f9421444d5185d63d8323233f220c05873f583f453500860f9c40bea024a269e",
+      "responseBytes": 8468,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-jf5h-36mg-rp6x",
+          "status": 200
+        }
+      ],
+      "summary": "Archive duplicate continuation lets contributors overwrite published content",
+      "publishedAt": "2026-10-14T18:26:17Z",
+      "modifiedAt": "2026-10-20T15:56:19Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112956",
+      "identifiers": [
+        {
+          "value": "GHSA-jf5h-36mg-rp6x",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112956",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "score": 6.5
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@apostrophecms/import-export"
+          },
+          "vulnerable_version_range": "< 3.7.1",
+          "patched_versions": "3.7.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b288989b3ee0fd4bd6288a6a58b88caa68a7dcbb64df478cc1308a0fbadadeac",
+      "database": {
+        "aliases": [
+          "CVE-2026-112956"
+        ],
+        "publishedAt": "2026-10-21T16:59:19Z",
+        "modifiedAt": "2026-10-21T16:59:19Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.7.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Historical narrative is a static review of 3.7.0, explicitly not a repeated end-to-end reproduction. Structured current fields identify 3.7.1 as patched. No private attachment was used."
+      ]
+    },
+    {
+      "id": "GHSA-p458-7748-mcp3",
+      "primaryId": "GHSA-p458-7748-mcp3",
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-p458-7748-mcp3",
+      "fetchedAt": "2026-10-21T21:08:30.990127Z",
+      "responseSha256": "55f87a8e1a28383f2831cd97e34284cd5a378686105ee24f691b49e451d92547",
+      "responseBytes": 11599,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/vitest-dev/vitest/security-advisories/GHSA-p458-7748-mcp3",
+          "status": 200
+        }
+      ],
+      "summary": "Servers misapply `server.fs.deny`, serving `.env`, private keys, `.git`, and the API token file",
+      "publishedAt": "2026-10-16T07:59:59Z",
+      "modifiedAt": "2026-10-20T15:12:28Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112948",
+      "identifiers": [
+        {
+          "value": "GHSA-p458-7748-mcp3",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112948",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "score": 6.5
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@vitest/ui"
+          },
+          "vulnerable_version_range": ">=5.0.0-beta.6, <5.0.5",
+          "patched_versions": "5.0.5",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@vitest/browser"
+          },
+          "vulnerable_version_range": ">=5.0.0-beta.6, <5.0.5",
+          "patched_versions": "5.0.5",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite-plus"
+          },
+          "vulnerable_version_range": ">= 1.0.0-rc.0, < 1.3.0",
+          "patched_versions": "1.3.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b08580eaef9f5f484f8be907cb8d5a03e30e5713a29448e4227bb51511f6caf6",
+      "database": {
+        "aliases": [
+          "CVE-2026-112948"
+        ],
+        "publishedAt": "2026-10-21T19:57:00Z",
+        "modifiedAt": "2026-10-21T19:57:00Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@vitest/ui"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0.0-beta.6"
+                  },
+                  {
+                    "fixed": "5.0.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@vitest/browser"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0.0-beta.6"
+                  },
+                  {
+                    "fixed": "5.0.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite-plus"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.0.0-rc.0"
+                  },
+                  {
+                    "fixed": "1.3.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Primary package list names @vitest/ui, @vitest/browser and vite-plus, while narrative also warns direct vitest api users and says the fix ships in vitest. Do not imply plain vitest or vitest run starts a server. The unlisted vitest coordinate is retained as a scope caveat rather than assigned an inferred version range."
+      ]
+    },
+    {
+      "id": "GHSA-qfv9-64jg-mh7p",
+      "primaryId": "GHSA-qfv9-64jg-mh7p",
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-qfv9-64jg-mh7p",
+      "fetchedAt": "2026-10-21T21:08:30.958617Z",
+      "responseSha256": "295518c1403f91136f8952ca604ba67152b9b4bbd56434c6967898ffc7ca7bdd",
+      "responseBytes": 3679,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-qfv9-64jg-mh7p",
+          "status": 200
+        }
+      ],
+      "summary": "Possible infinite loop in PdfWriter.find_outline_item",
+      "publishedAt": "2026-10-12T16:16:51Z",
+      "modifiedAt": "2026-10-21T15:55:14Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113792",
+      "identifiers": [
+        {
+          "value": "GHSA-qfv9-64jg-mh7p",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113792",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.20.1",
+          "patched_versions": ">= 6.20.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "732c1eb8750c0525730a2cb054183e60d166e05caa4e29c75ffb49addda0b908",
+      "database": {
+        "aliases": [
+          "CVE-2026-113792"
+        ],
+        "publishedAt": "2026-10-21T16:55:35Z",
+        "modifiedAt": "2026-10-21T16:55:35Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pypdf"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.20.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-qxg6-89mg-rqv8",
+      "primaryId": "GHSA-qxg6-89mg-rqv8",
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-qxg6-89mg-rqv8",
+      "fetchedAt": "2026-10-21T21:08:31.019487Z",
+      "responseSha256": "def8bf416f5879950fcca391a5ccd325ddfe4f824a86d4c8762075f3d7a196aa",
+      "responseBytes": 11732,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/vitest-dev/vitest/security-advisories/GHSA-qxg6-89mg-rqv8",
+          "status": 200
+        }
+      ],
+      "summary": "Code injection via unauthenticated manual mock registration",
+      "publishedAt": "2026-10-16T07:59:50Z",
+      "modifiedAt": "2026-10-20T15:17:11Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112949",
+      "identifiers": [
+        {
+          "value": "GHSA-qxg6-89mg-rqv8",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112949",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 4.7
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "score": 4.7
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@vitest/mocker"
+          },
+          "vulnerable_version_range": ">= 2.1.0-beta.7, < 4.1.12",
+          "patched_versions": "4.1.12",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "96f9e698ad0c89275b749626151e948eb08337dd1804b1fa9110c1e0124fe76c",
+      "database": {
+        "aliases": [
+          "CVE-2026-112949"
+        ],
+        "publishedAt": "2026-10-21T19:54:26Z",
+        "modifiedAt": "2026-10-21T19:54:26Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@vitest/mocker"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.1.0-beta.7"
+                  },
+                  {
+                    "fixed": "4.1.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@vitest/mocker"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0.0-beta.1"
+                  },
+                  {
+                    "fixed": "5.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Primary structured fields list only >=2.1.0-beta.7,<4.1.12 and fix 4.1.12; primary narrative also specifies 5.0.3. Reviewed additionally supplies >=5.0.0-beta.1,<5.0.3, retained with its database attribution. The 5.x introduction is not present in the primary structured fields and was not independently inferred."
+      ]
+    },
+    {
+      "id": "GHSA-r57g-mc79-8hj2",
+      "primaryId": "GHSA-r57g-mc79-8hj2",
+      "url": "https://github.com/djust-org/djust/security/advisories/GHSA-r57g-mc79-8hj2",
+      "fetchedAt": "2026-10-21T21:08:34.151272Z",
+      "responseSha256": "25fb1dbdec9940e3a76d93efb80d0dce45859adc61ac3f2cd6bf49166b91ba90",
+      "responseBytes": 13122,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/djust-org/djust/security-advisories/GHSA-r57g-mc79-8hj2",
+          "status": 200
+        }
+      ],
+      "summary": "Arbitrary absolute-path file read in the find_handlers_for_template MCP tool",
+      "publishedAt": "2026-10-15T04:13:28Z",
+      "modifiedAt": "2026-10-20T21:27:45Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113731",
+      "identifiers": [
+        {
+          "value": "GHSA-r57g-mc79-8hj2",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113731",
+          "type": "CVE"
+        }
+      ],
+      "severity": "low",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "score": 3.3
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "score": 3.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "djust"
+          },
+          "vulnerable_version_range": ">= 0.9.0, <= 1.0.9",
+          "patched_versions": "1.0.10",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "djust"
+          },
+          "vulnerable_version_range": ">= 1.1.0, <= 1.1.6",
+          "patched_versions": "1.1.7",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "djust"
+          },
+          "vulnerable_version_range": ">= 1.2.0.dev0, <= 1.2.3",
+          "patched_versions": "1.2.4",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "djust"
+          },
+          "vulnerable_version_range": ">= 1.3.0.dev0, <= 1.3.0rc7",
+          "patched_versions": "1.3.0rc8",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "a2ec4513a2b49959700638b331ea3c059c8e42926313cc2fd25215491ca69350",
+      "database": {
+        "aliases": [
+          "CVE-2026-113731"
+        ],
+        "publishedAt": "2026-10-21T17:21:15Z",
+        "modifiedAt": "2026-10-21T17:21:15Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "severityLabel": "LOW",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "djust"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0.9.0"
+                  },
+                  {
+                    "fixed": "1.0.10"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.0.9"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "djust"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.1.0"
+                  },
+                  {
+                    "fixed": "1.1.7"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.1.6"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "djust"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.2.0.dev0"
+                  },
+                  {
+                    "fixed": "1.2.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.2.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "djust"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.3.0.dev0"
+                  },
+                  {
+                    "fixed": "1.3.0rc8"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.3.0rc7"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "MCP tool can read an arbitrary absolute path, but only regex-matched substrings are returned, not the complete raw file. Approximate narrative CVSS is not independently calculated.",
+        "Narrative suggests Medium/~5.3 with a network vector, but structured primary assessment is Low/CVSS 3.1 3.3 with AV:L and PR:L. Preserve both instead of treating approximate prose as the current structured assessment."
+      ]
+    },
+    {
+      "id": "GHSA-rfgq-q3w2-pmv2",
+      "primaryId": "GHSA-rfgq-q3w2-pmv2",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-rfgq-q3w2-pmv2",
+      "fetchedAt": "2026-10-21T21:08:34.086564Z",
+      "responseSha256": "1091dd3228f1030d82df123ee0582b855590f41fb6205b0ae531da42a8c11a81",
+      "responseBytes": 21854,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-rfgq-q3w2-pmv2",
+          "status": 200
+        }
+      ],
+      "summary": "Image.quantize() with empty palette leaks uninitialized stack memory",
+      "publishedAt": "2026-10-17T10:41:39Z",
+      "modifiedAt": "2026-10-19T22:03:06Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112898",
+      "identifiers": [
+        {
+          "value": "GHSA-rfgq-q3w2-pmv2",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112898",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Pillow"
+          },
+          "vulnerable_version_range": "9.1.0 - 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "56b85b7d21899db20a34b9e164bd916562d0ee5724301eaefdfab7d0c97eeb08",
+      "database": {
+        "aliases": [
+          "CVE-2026-112898"
+        ],
+        "publishedAt": "2026-10-21T20:44:07Z",
+        "modifiedAt": "2026-10-21T20:44:08Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.1.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Requires attacker control of the palette image passed to quantize, not merely the source image. Reported 512-byte disclosure is output pixel data, not a general arbitrary-memory read."
+      ]
+    },
+    {
+      "id": "GHSA-rq7h-c2jc-7f22",
+      "primaryId": "GHSA-rq7h-c2jc-7f22",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-rq7h-c2jc-7f22",
+      "fetchedAt": "2026-10-21T21:08:34.142292Z",
+      "responseSha256": "bc6b67937c33f8566c71a87af257349fefdd5b9d6f29583822b9592f96796523",
+      "responseBytes": 11092,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/vitejs/vite/security-advisories/GHSA-rq7h-c2jc-7f22",
+          "status": 200
+        }
+      ],
+      "summary": "Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine",
+      "publishedAt": "2026-10-06T14:15:31Z",
+      "modifiedAt": "2026-10-20T15:02:33Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112946",
+      "identifiers": [
+        {
+          "value": "GHSA-rq7h-c2jc-7f22",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112946",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "score": 6.3
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=8.3.0,<=8.3.2",
+          "patched_versions": "8.3.3",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=8.2.0,<=8.2.3",
+          "patched_versions": "8.2.4",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=8.0.0,<=8.1.5",
+          "patched_versions": "8.1.6",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=7.0.0,<=7.3.6",
+          "patched_versions": "7.3.7",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": "<=6.4.3",
+          "patched_versions": "6.4.4",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite-plus"
+          },
+          "vulnerable_version_range": "<=1.0.0",
+          "patched_versions": "1.1.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "58c600004d6f798815696104045bca83f19555824da545b0cc4735e84ba52db4",
+      "database": {
+        "aliases": [
+          "CVE-2026-112946"
+        ],
+        "publishedAt": "2026-10-21T16:47:42Z",
+        "modifiedAt": "2026-10-21T16:47:42Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.3.0"
+                  },
+                  {
+                    "fixed": "8.3.3"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.3.2"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.2.0"
+                  },
+                  {
+                    "fixed": "8.2.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.2.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.1.6"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.1.5"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "fixed": "7.3.7"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 7.3.6"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.4.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 6.4.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite-plus"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.1.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.0.0"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "Requires exposed dev server, root-relative import matching a readable absolute host path, file not denied by server.fs.deny, and non-Windows host."
+      ]
+    },
+    {
+      "id": "GHSA-rqgm-cfrp-4hx8",
+      "primaryId": "GHSA-rqgm-cfrp-4hx8",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-rqgm-cfrp-4hx8",
+      "fetchedAt": "2026-10-21T21:08:34.151221Z",
+      "responseSha256": "9daedc06bd09849387f422938b9e0cb23b4a3c0c45068ebea69065bae1994f9f",
+      "responseBytes": 10707,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-rqgm-cfrp-4hx8",
+          "status": 200
+        }
+      ],
+      "summary": "Unauthenticated publicApiProjection bypass via search and sort query builders in the public REST API",
+      "publishedAt": "2026-10-14T18:26:37Z",
+      "modifiedAt": "2026-10-20T15:50:10Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112954",
+      "identifiers": [
+        {
+          "value": "GHSA-rqgm-cfrp-4hx8",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112954",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "score": 5.3
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "score": 5.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "apostrophe"
+          },
+          "vulnerable_version_range": "< 4.34.0",
+          "patched_versions": "4.34.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "47ad910e1d207f8fd1f5149462d3fb2f98923a283c24f2d23d6777ad842d2488",
+      "database": {
+        "aliases": [
+          "CVE-2026-112954"
+        ],
+        "publishedAt": "2026-10-21T17:12:15Z",
+        "modifiedAt": "2026-10-21T17:12:15Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.34.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-rw26-wwfc-9wvm",
+      "primaryId": "GHSA-rw26-wwfc-9wvm",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-rw26-wwfc-9wvm",
+      "fetchedAt": "2026-10-21T21:08:34.094161Z",
+      "responseSha256": "2a94ca0c3fc6eac98bfe65fa1fcc42297c1fd76fb35ea98f31c27ceffc60a141",
+      "responseBytes": 6826,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-rw26-wwfc-9wvm",
+          "status": 200
+        }
+      ],
+      "summary": "Missing Authentication in `cleanExport` Route",
+      "publishedAt": "2026-10-14T18:26:34Z",
+      "modifiedAt": "2026-10-20T16:05:51Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113648",
+      "identifiers": [
+        {
+          "value": "GHSA-rw26-wwfc-9wvm",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113648",
+          "type": "CVE"
+        }
+      ],
+      "severity": "low",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+        "score": 3.1
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "score": 3.1
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@apostrophecms/import-export"
+          },
+          "vulnerable_version_range": "< 3.7.1",
+          "patched_versions": "3.7.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "54aa6854f6cc80a97f1b1ed0b26ea54185699348e1facf0ecece7daa24115d43",
+      "database": {
+        "aliases": [
+          "CVE-2026-113648"
+        ],
+        "publishedAt": "2026-10-21T17:13:28Z",
+        "modifiedAt": "2026-10-21T17:13:28Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+          }
+        ],
+        "severityLabel": "LOW",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.7.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Primary narrative says anonymous clients with a normal CSRF cookie can reach cleanExport; structured CVSS 3.1 uses PR:L. Preserve this discrepancy and do not silently replace either assessment."
+      ]
+    },
+    {
+      "id": "GHSA-vfpm-58rq-9qcg",
+      "primaryId": "GHSA-vfpm-58rq-9qcg",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-vfpm-58rq-9qcg",
+      "fetchedAt": "2026-10-21T21:08:36.987767Z",
+      "responseSha256": "6c9ce0c6b7695e48430597517f43076defb16ab407d22ad8562bc04a90271a20",
+      "responseBytes": 6140,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/vitejs/vite/security-advisories/GHSA-vfpm-58rq-9qcg",
+          "status": 200
+        }
+      ],
+      "summary": "First 4 bytes of files outside of `server.fs` setting is exposed by `?vite-wasm-instance`",
+      "publishedAt": "2026-10-06T14:15:34Z",
+      "modifiedAt": "2026-10-20T15:07:15Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112947",
+      "identifiers": [
+        {
+          "value": "GHSA-vfpm-58rq-9qcg",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112947",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "score": 6.3
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">=8.3.0,<=8.3.2",
+          "patched_versions": "8.3.3",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite"
+          },
+          "vulnerable_version_range": ">= 8.2.0, <= 8.2.3",
+          "patched_versions": "8.2.4",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vite-plus"
+          },
+          "vulnerable_version_range": ">=0.2.8, <=1.0.0",
+          "patched_versions": "1.1.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "83d14febf40a0b3b6f3bdf59f3676e66765a5e6a7bcf37a7c5e62bb84102de8a",
+      "database": {
+        "aliases": [
+          "CVE-2026-112947"
+        ],
+        "publishedAt": "2026-10-21T16:47:15Z",
+        "modifiedAt": "2026-10-21T16:47:15Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.3.0"
+                  },
+                  {
+                    "fixed": "8.3.3"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.3.2"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.2.0"
+                  },
+                  {
+                    "fixed": "8.2.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.2.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite-plus"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0.2.8"
+                  },
+                  {
+                    "fixed": "1.1.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.0.0"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "Disclosure described is only the first four bytes, not the whole file. The primary impact section says one of its listed conditions, while describing exposed server, sensitive first four bytes and Node/Deno runtime; preserve that wording ambiguity rather than assert a corrected conjunction. Bun is explicitly excluded."
+      ]
+    },
+    {
+      "id": "GHSA-vh56-5m88-39rq",
+      "primaryId": "GHSA-vh56-5m88-39rq",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-vh56-5m88-39rq",
+      "fetchedAt": "2026-10-21T21:08:37.034575Z",
+      "responseSha256": "d6c5e69a5c5700a31da4f941318e60897f377911dd0d3938fb2f786668df0b90",
+      "responseBytes": 5504,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-vh56-5m88-39rq",
+          "status": 200
+        }
+      ],
+      "summary": "GET /api/v1/@apostrophecms/page/:id bypasses viewRole restriction and exposes viewPermission-gated fields to lower-privileged users",
+      "publishedAt": "2026-10-14T18:26:49Z",
+      "modifiedAt": "2026-10-20T16:00:06Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112957",
+      "identifiers": [
+        {
+          "value": "GHSA-vh56-5m88-39rq",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112957",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "score": 4.3
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "score": 4.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "apostrophe"
+          },
+          "vulnerable_version_range": "< 4.34.0",
+          "patched_versions": "4.34.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "1bd29749d5333991bb6c6064809dfe991fbdedd0810bb3c356bccf9dc3078c4a",
+      "database": {
+        "aliases": [
+          "CVE-2026-112957"
+        ],
+        "publishedAt": "2026-10-21T17:15:21Z",
+        "modifiedAt": "2026-10-21T17:15:21Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.34.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-vmgj-9cwm-cf3h",
+      "primaryId": "GHSA-vmgj-9cwm-cf3h",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-vmgj-9cwm-cf3h",
+      "fetchedAt": "2026-10-21T21:08:37.026377Z",
+      "responseSha256": "16268125b4001f5b6a90cfb6de9a265a625a72a7e4faca1f2609ed4bbc96ab52",
+      "responseBytes": 6315,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-vmgj-9cwm-cf3h",
+          "status": 200
+        }
+      ],
+      "summary": "Color field validation bypass allows stored XSS via HTML appended after rgb()/hsl() prefix",
+      "publishedAt": "2026-10-14T18:26:45Z",
+      "modifiedAt": "2026-10-20T15:32:09Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112951",
+      "identifiers": [
+        {
+          "value": "GHSA-vmgj-9cwm-cf3h",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112951",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+        "score": 5.4
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+          "score": 5.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "apostrophe"
+          },
+          "vulnerable_version_range": "< 4.34.0",
+          "patched_versions": "4.34.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "65ebf8b5029758cffa6a60adbb0db44bb76bedc67ab97161b6ef68acd5ab4804",
+      "database": {
+        "aliases": [
+          "CVE-2026-112951"
+        ],
+        "publishedAt": "2026-10-21T17:05:44Z",
+        "modifiedAt": "2026-10-21T17:05:44Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.34.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Primary public narrative still contains FILL IN placeholders for sink, source location, version and stored value. Treat exact sink/details as unresolved and do not invent missing evidence; structured fix is 4.34.0. Related GHSA-97v6-998m-fp4g is not an alias."
+      ]
+    },
+    {
+      "id": "GHSA-vxj4-q4g9-crj7",
+      "primaryId": "GHSA-vxj4-q4g9-crj7",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-vxj4-q4g9-crj7",
+      "fetchedAt": "2026-10-21T21:08:37.076357Z",
+      "responseSha256": "69970e7f25e9625143708a92e4a6cdec130f66842dcb02760132b3b93e1195cf",
+      "responseBytes": 6278,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/pypa/virtualenv/security-advisories/GHSA-vxj4-q4g9-crj7",
+          "status": 200
+        }
+      ],
+      "summary": "virtualenv bash activate runs commands from an environment name with a backslash before $",
+      "publishedAt": "2026-10-12T01:57:05Z",
+      "modifiedAt": "2026-10-20T19:54:21Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-113725",
+      "identifiers": [
+        {
+          "value": "GHSA-vxj4-q4g9-crj7",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-113725",
+          "type": "CVE"
+        }
+      ],
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "score": 7.8
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "score": 7.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "virtualenv"
+          },
+          "vulnerable_version_range": "<= 21.14.6",
+          "patched_versions": "21.14.7",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "e62b0f4ada6117e168e2540d0786bcf0dca349edfd39e414e29ded9e67eefea4",
+      "database": {
+        "aliases": [
+          "CVE-2026-113725"
+        ],
+        "publishedAt": "2026-10-21T16:49:01Z",
+        "modifiedAt": "2026-10-21T16:49:01Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+          }
+        ],
+        "severityLabel": "HIGH",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "virtualenv"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "21.14.7"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 21.14.6"
+            }
+          }
+        ]
+      },
+      "observations": [
+        "Requires attacker-controlled environment path/prompt and activation in bash; root bash and zsh do not execute the described payload in this particular mechanism."
+      ]
+    },
+    {
+      "id": "GHSA-w889-685w-c8fh",
+      "primaryId": "GHSA-w889-685w-c8fh",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-w889-685w-c8fh",
+      "fetchedAt": "2026-10-21T21:08:37.138763Z",
+      "responseSha256": "e4052643fe9597c95c033c2b47667f762a7b5f9807f929cfb2ac55adc5de2352",
+      "responseBytes": 14728,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-w889-685w-c8fh",
+          "status": 200
+        }
+      ],
+      "summary": "Argument Injection in Ghostscript call, potentially leading into RCE",
+      "publishedAt": "2026-10-17T10:39:33Z",
+      "modifiedAt": "2026-10-19T22:06:57Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112900",
+      "identifiers": [
+        {
+          "value": "GHSA-w889-685w-c8fh",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112900",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Pillow"
+          },
+          "vulnerable_version_range": "2.6.0 - 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "63d09dc6b8ffce3b8010f9b28c7b4add3e6467530d2981f72317de8baf5f41ab",
+      "database": {
+        "aliases": [
+          "CVE-2026-112900"
+        ],
+        "publishedAt": "2026-10-21T19:58:44Z",
+        "modifiedAt": "2026-10-21T19:58:44Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "CRITICAL",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.6.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Ghostscript filename argument injection is conditional on attacker-influenced filename. RCE requires additional attacker-controlled file/content conditions; not every EPS upload implies RCE.",
+        "Severity label differs: developer advisory medium, Reviewed database critical. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-xgh8-jp6q-p5x8",
+      "primaryId": "GHSA-xgh8-jp6q-p5x8",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xgh8-jp6q-p5x8",
+      "fetchedAt": "2026-10-21T21:08:40.750504Z",
+      "responseSha256": "22a58ef920f2ec3d7448e4f1faf7fc72d1b77d0e385468b8e070644eb0777899",
+      "responseBytes": 21064,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-xgh8-jp6q-p5x8",
+          "status": 200
+        }
+      ],
+      "summary": "ReDoS in XbmImagePlugin: 512-byte file stalls Image.open() for minutes",
+      "publishedAt": "2026-10-17T10:41:32Z",
+      "modifiedAt": "2026-10-19T22:08:51Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112901",
+      "identifiers": [
+        {
+          "value": "GHSA-xgh8-jp6q-p5x8",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112901",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Pillow"
+          },
+          "vulnerable_version_range": "<= 12.3.0",
+          "patched_versions": "13.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "22a2c3d81cb9d36b85b2c4e407f503342d3eb6edc22b19f06351c865b49575d4",
+      "database": {
+        "aliases": [
+          "CVE-2026-112901"
+        ],
+        "publishedAt": "2026-10-21T20:45:06Z",
+        "modifiedAt": "2026-10-21T20:45:06Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 12.3.0"
+            }
+          }
+        ]
+      },
+      "observations": []
+    },
+    {
+      "id": "GHSA-xp26-3454-mjgp",
+      "primaryId": "GHSA-xp26-3454-mjgp",
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-xp26-3454-mjgp",
+      "fetchedAt": "2026-10-21T21:08:40.762141Z",
+      "responseSha256": "13879124669f37f2e6fa17d89863973a2e47c3114e404c5c4ebaf88d0d64e182",
+      "responseBytes": 12009,
+      "attempts": [
+        {
+          "url": "https://api.github.com/repos/vitest-dev/vitest/security-advisories/GHSA-xp26-3454-mjgp",
+          "status": 200
+        }
+      ],
+      "summary": "Windows backslash traversal bypasses the @vitest/mocker redirect allowlist fix",
+      "publishedAt": "2026-10-16T07:59:32Z",
+      "modifiedAt": "2026-10-20T15:19:57Z",
+      "withdrawnAt": null,
+      "cveId": "CVE-2026-112950",
+      "identifiers": [
+        {
+          "value": "GHSA-xp26-3454-mjgp",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-112950",
+          "type": "CVE"
+        }
+      ],
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 5.9
+      },
+      "cvssSeverities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@vitest/mocker"
+          },
+          "vulnerable_version_range": ">= 4.1.11, < 4.1.12",
+          "patched_versions": "4.1.12",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "3f69709e900a72727650a2799a8a19f15b9140e6eb66a7ea1c4d228a35d46e28",
+      "database": {
+        "aliases": [
+          "CVE-2026-112950"
+        ],
+        "publishedAt": "2026-10-21T19:48:38Z",
+        "modifiedAt": "2026-10-21T19:48:38Z",
+        "withdrawnAt": null,
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ],
+        "severityLabel": "MODERATE",
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@vitest/mocker"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.1.11"
+                  },
+                  {
+                    "fixed": "4.1.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@vitest/mocker"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0.0-rc.2"
+                  },
+                  {
+                    "fixed": "5.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "observations": [
+        "Primary structured fields list >=4.1.11,<4.1.12; narrative also reproduces 5.0.0 and specifies 5.0.3 patched. Reviewed additionally supplies >=5.0.0-rc.2,<5.0.3, retained with database attribution. Do not treat the primary structured 5.x omission as unaffected. Requires Windows path semantics."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5hx5-vpf9-5wcv",
+  "aliases": [
+    "CVE-2026-113786"
+  ],
+  "title": "pypdf: Unvalidated JPEG image data loading",
+  "summary": "pypdf: Unvalidated JPEG image data loading",
+  "publishedAt": "2026-10-21T19:58:10Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5hx5-vpf9-5wcv/GHSA-5hx5-vpf9-5wcv.json",
+  "modifiedAt": "2026-10-21T19:58:10Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:19.544918Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pypdf",
+      "ranges": [
+        {
+          "affected": "< 6.21.1",
+          "fixed": "6.21.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5hx5-vpf9-5wcv/GHSA-5hx5-vpf9-5wcv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.21.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5hx5-vpf9-5wcv/GHSA-5hx5-vpf9-5wcv.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5hx5-vpf9-5wcv/GHSA-5hx5-vpf9-5wcv.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5hx5-vpf9-5wcv/GHSA-5hx5-vpf9-5wcv.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:58:10Z",
+      "modifiedAt": "2026-10-21T19:58:10Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "pypdf: Unvalidated JPEG image data loading",
+      "url": "https://github.com/advisories/GHSA-5hx5-vpf9-5wcv",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5hx5-vpf9-5wcv",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:31:29Z",
+      "modifiedAt": "2026-10-21T14:35:30Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Severity label differs: developer advisory medium, Reviewed database low. Neither assessment is silently overwritten; the displayed label retains the database source.",
+    "Requires the optional Pillow dependency and loading image data labelled DCTDecode. Arbitrary image-parser invocation is not itself evidence of code execution.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:19.544918Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-5hx5-vpf9-5wcv",
+        "aliases": [
+          "CVE-2026-113786"
+        ],
+        "publishedAt": "2026-10-21T19:58:10Z",
+        "modifiedAt": "2026-10-21T19:58:10Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5hx5-vpf9-5wcv/GHSA-5hx5-vpf9-5wcv.json"
+      }
+    ]
+  }
+}

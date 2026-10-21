@@ -1,0 +1,113 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7mwm-ghpf-9vrm",
+  "aliases": [
+    "CVE-2026-112402"
+  ],
+  "title": "Pillow: Double free in ImagingScaleAffine on calloc failure via Image.transform",
+  "summary": "Pillow: Double free in ImagingScaleAffine on calloc failure via Image.transform",
+  "publishedAt": "2026-10-21T20:03:56Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-7mwm-ghpf-9vrm/GHSA-7mwm-ghpf-9vrm.json",
+  "modifiedAt": "2026-10-21T20:03:56Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:22.443002Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Pillow",
+      "ranges": [
+        {
+          "affected": "< 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-7mwm-ghpf-9vrm/GHSA-7mwm-ghpf-9vrm.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-7mwm-ghpf-9vrm/GHSA-7mwm-ghpf-9vrm.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-7mwm-ghpf-9vrm/GHSA-7mwm-ghpf-9vrm.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-7mwm-ghpf-9vrm/GHSA-7mwm-ghpf-9vrm.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T20:03:56Z",
+      "modifiedAt": "2026-10-21T20:03:56Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Double free in ImagingScaleAffine on calloc failure via Image.transform",
+      "url": "https://github.com/advisories/GHSA-7mwm-ghpf-9vrm",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:39:50Z",
+      "modifiedAt": "2026-10-19T21:16:26Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source.",
+    "Requires oversized transform output and allocation failure, typically a memory-limited worker or 32-bit process. Heap corruption has not been shown controllable; do not assert proven RCE.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:22.443002Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-7mwm-ghpf-9vrm",
+        "aliases": [
+          "CVE-2026-112402"
+        ],
+        "publishedAt": "2026-10-21T20:03:56Z",
+        "modifiedAt": "2026-10-21T20:03:56Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-7mwm-ghpf-9vrm/GHSA-7mwm-ghpf-9vrm.json"
+      }
+    ]
+  }
+}
