@@ -1,0 +1,1379 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-21T21:15:40.387557Z",
+  "scope": "Eight Tomcat CVEs identified by JVN; Apache 9/10/11 security pages, public Apache CNA records, official patches and Maven/build metadata verified. No tests or exploits executed.",
+  "counts": {
+    "candidates": 8,
+    "verifiedAdded": 8,
+    "held": 0,
+    "fetchFailures": 0,
+    "requestsSucceeded": 49
+  },
+  "records": [
+    {
+      "id": "CVE-2026-101356",
+      "status": "verified-added",
+      "cnaUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-101356",
+      "cnaResponseSha256": "82bb11ed1a5ebcf94600b509eb22126711b3b2aa9cf8f7d78a7cc39c288667c7",
+      "metadata": {
+        "cveId": "CVE-2026-101356",
+        "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+        "state": "PUBLISHED",
+        "assignerShortName": "apache",
+        "dateReserved": "2026-09-28T15:30:32.593Z",
+        "datePublished": "2026-10-20T13:46:50.842Z",
+        "dateUpdated": "2026-10-20T18:17:42.030Z"
+      },
+      "affected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache Tomcat",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "11.0.22",
+              "lessThanOrEqual": "11.0.26",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "10.1.55",
+              "lessThanOrEqual": "10.1.60",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.118",
+              "lessThanOrEqual": "9.0.122",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "severity": "important",
+      "metrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "important"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "fixCommit": "https://github.com/apache/tomcat/commit/1dc6aa151b3b99b32ac9ae7c60e41c326063321b",
+      "patchSha256": "3d15ad705cdbbe5033499979df4765d662d9a544d3a396e7ed7697958ed5f5b6",
+      "changedJavaPaths": [
+        "java/org/apache/coyote/AsyncStateMachine.java"
+      ],
+      "packageMapping": [
+        {
+          "releaseTag": "11.0.27",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/build.xml",
+          "buildSha256": "429b094f6cbb85a6468c393722ef89f6396b316e3b1d3cae220862db50a8d865",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "10.1.61",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/build.xml",
+          "buildSha256": "32c90c6444a7108ee13b7d9c9cd2d9e2fff4395af4466db4a05c43b5ba90c291",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "9.0.123",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/build.xml",
+          "buildSha256": "d943841f98b3e9eedae56f331142aca4032512f9276719409a5eb2bf64b6204a",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        }
+      ],
+      "notes": [
+        "HTTP/2 asynchronous-servlet processing is required; this is not a claim that all requests mix responses.",
+        "Package coordinates are a source-backed mapping from the official fix class paths to official release build inclusion rules and Maven POM coordinates, not package names supplied by the CNA. This is a bounded mapping; other repackaged or programmatic artifacts have not been evaluated.",
+        "Affected lower and inclusive upper versions are retained exactly from Apache CNA. Fixes for supported branches are confirmed by Apache security pages. Publication is the CVE public timestamp, not the earlier fixed-release date.",
+        "No numeric CVSS is supplied by Apache CNA. Exploitation and KEV remain unknown, not evidence of absence.",
+        "Apache severity is important, which is retained in the audit and not converted to an invented high label or CVSS score."
+      ]
+    },
+    {
+      "id": "CVE-2026-101296",
+      "status": "verified-added",
+      "cnaUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-101296",
+      "cnaResponseSha256": "d06354384df9f371bc2a77d236d8fe87cd9f1935f15c882d73158a2cc8e23850",
+      "metadata": {
+        "cveId": "CVE-2026-101296",
+        "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+        "state": "PUBLISHED",
+        "assignerShortName": "apache",
+        "dateReserved": "2026-09-28T13:07:28.598Z",
+        "datePublished": "2026-10-20T13:45:39.959Z",
+        "dateUpdated": "2026-10-21T06:31:55.233Z"
+      },
+      "affected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache Tomcat",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "11.0.0-M1",
+              "lessThanOrEqual": "11.0.26",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "10.1.0-M1",
+              "lessThanOrEqual": "10.1.60",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.0.M1",
+              "lessThanOrEqual": "9.0.122",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "8.5.0",
+              "lessThanOrEqual": "8.5.100",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "7.0.0",
+              "lessThanOrEqual": "7.0.109",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "severity": "important",
+      "metrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "important"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "fixCommit": "https://github.com/apache/tomcat/commit/e43453fc04abb44f64faf571ca98af71aa3c20a1",
+      "patchSha256": "628e3188d75e792039bfba393f120ec9eb174787cf8db6c15a636641c396a70b",
+      "changedJavaPaths": [
+        "java/org/apache/catalina/realm/JNDIRealm.java"
+      ],
+      "packageMapping": [
+        {
+          "releaseTag": "11.0.27",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/build.xml",
+          "buildSha256": "429b094f6cbb85a6468c393722ef89f6396b316e3b1d3cae220862db50a8d865",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "10.1.61",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/build.xml",
+          "buildSha256": "32c90c6444a7108ee13b7d9c9cd2d9e2fff4395af4466db4a05c43b5ba90c291",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "9.0.123",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/build.xml",
+          "buildSha256": "d943841f98b3e9eedae56f331142aca4032512f9276719409a5eb2bf64b6204a",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "8.5.100",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/8.5.100/build.xml",
+          "buildSha256": "3817a16faf7e6ffc0c3c29981b0bf0bb6f03925651905fb51fcd6b7aef92da9d",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/naming/factory/webservices/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "7.0.109",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/7.0.109/build.xml",
+          "buildSha256": "7abfd40e59d2fa85ffcb1553d8817a07030fc23a0fa50c5dd07fdfdacc1c7408",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/mbeans/JmxRemote*\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/naming/factory/webservices/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/jk/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    \n    <exclude name=\"org/apache/tomcat/util/compat/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/**\" />\n    <exclude name=\"org/apache/tomcat/util/file/**\" />\n    <exclude name=\"org/apache/tomcat/util/res/**\" />\n    <exclude name=\"org/apache/tomcat/util/scan/**\" />\n    <exclude name=\"org/apache/tomcat/util/security/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.bootstrap\" />\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/jk/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n  </patternset>\n\n  "
+          }
+        }
+      ],
+      "notes": [
+        "Requires JNDIRealm configured with a non-GSSAPI SASL authentication mechanism.",
+        "Package coordinates are a source-backed mapping from the official fix class paths to official release build inclusion rules and Maven POM coordinates, not package names supplied by the CNA. This is a bounded mapping; other repackaged or programmatic artifacts have not been evaluated.",
+        "Affected lower and inclusive upper versions are retained exactly from Apache CNA. Fixes for supported branches are confirmed by Apache security pages. Publication is the CVE public timestamp, not the earlier fixed-release date.",
+        "No numeric CVSS is supplied by Apache CNA. Exploitation and KEV remain unknown, not evidence of absence.",
+        "Apache severity is important, which is retained in the audit and not converted to an invented high label or CVSS score.",
+        "Apache lists affected EOL 7.x and 8.5.x ranges but supplies no fixed release in those branches; fixed remains null. Other unsupported versions may also be affected, without a verified range."
+      ]
+    },
+    {
+      "id": "CVE-2026-93446",
+      "status": "verified-added",
+      "cnaUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-93446",
+      "cnaResponseSha256": "925b4114ba9800503021ada0e8c64d3fb85efaafc25975e0ba3bd1b92f27a93a",
+      "metadata": {
+        "cveId": "CVE-2026-93446",
+        "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+        "state": "PUBLISHED",
+        "assignerShortName": "apache",
+        "dateReserved": "2026-09-17T22:18:31.729Z",
+        "datePublished": "2026-10-20T13:44:35.673Z",
+        "dateUpdated": "2026-10-20T18:10:09.969Z"
+      },
+      "affected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache Tomcat",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "11.0.0-M21",
+              "lessThanOrEqual": "11.0.26",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "10.1.25",
+              "lessThanOrEqual": "10.1.60",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.90",
+              "lessThanOrEqual": "9.0.122",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "severity": "low",
+      "metrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "low"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "fixCommit": "https://github.com/apache/tomcat/commit/e49e0c47ea925ad9442ba933a144ea62433d6a06",
+      "patchSha256": "ed65a3e34c8d4d42ae6207060f00970eb5c3e5f924076f5243e319232ad21ef2",
+      "changedJavaPaths": [
+        "java/org/apache/tomcat/util/net/SecureNioChannel.java"
+      ],
+      "packageMapping": [
+        {
+          "releaseTag": "11.0.27",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/build.xml",
+          "buildSha256": "429b094f6cbb85a6468c393722ef89f6396b316e3b1d3cae220862db50a8d865",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "10.1.61",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/build.xml",
+          "buildSha256": "32c90c6444a7108ee13b7d9c9cd2d9e2fff4395af4466db4a05c43b5ba90c291",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "9.0.123",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/build.xml",
+          "buildSha256": "d943841f98b3e9eedae56f331142aca4032512f9276719409a5eb2bf64b6204a",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        }
+      ],
+      "notes": [
+        "TLS 1.3 connection cleanup can cause intermittent failures.",
+        "Package coordinates are a source-backed mapping from the official fix class paths to official release build inclusion rules and Maven POM coordinates, not package names supplied by the CNA. This is a bounded mapping; other repackaged or programmatic artifacts have not been evaluated.",
+        "Affected lower and inclusive upper versions are retained exactly from Apache CNA. Fixes for supported branches are confirmed by Apache security pages. Publication is the CVE public timestamp, not the earlier fixed-release date.",
+        "No numeric CVSS is supplied by Apache CNA. Exploitation and KEV remain unknown, not evidence of absence."
+      ]
+    },
+    {
+      "id": "CVE-2026-88041",
+      "status": "verified-added",
+      "cnaUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-88041",
+      "cnaResponseSha256": "99b2351a62c1a8844cc00c499ad4d894b488ac746d883479134dea71aa48fa79",
+      "metadata": {
+        "cveId": "CVE-2026-88041",
+        "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+        "state": "PUBLISHED",
+        "assignerShortName": "apache",
+        "dateReserved": "2026-09-09T20:29:03.987Z",
+        "datePublished": "2026-10-20T13:43:28.681Z",
+        "dateUpdated": "2026-10-20T18:10:05.285Z"
+      },
+      "affected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache Tomcat",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "11.0.0-M23",
+              "lessThanOrEqual": "11.0.26",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "10.1.27",
+              "lessThanOrEqual": "10.1.60",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.92",
+              "lessThanOrEqual": "9.0.122",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "severity": "low",
+      "metrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "low"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "fixCommit": "https://github.com/apache/tomcat/commit/a276dea827437090498678e09df0539ec397a7b5",
+      "patchSha256": "0f29424525bf6d9c13ba159bb3ee418944ed928d05dff08f9b63f23eaa1b53ed",
+      "changedJavaPaths": [
+        "java/org/apache/coyote/http2/HpackDecoder.java",
+        "java/org/apache/coyote/http2/Http2Parser.java",
+        "java/org/apache/coyote/http2/Http2UpgradeHandler.java"
+      ],
+      "packageMapping": [
+        {
+          "releaseTag": "11.0.27",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/build.xml",
+          "buildSha256": "429b094f6cbb85a6468c393722ef89f6396b316e3b1d3cae220862db50a8d865",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "10.1.61",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/build.xml",
+          "buildSha256": "32c90c6444a7108ee13b7d9c9cd2d9e2fff4395af4466db4a05c43b5ba90c291",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "9.0.123",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/build.xml",
+          "buildSha256": "d943841f98b3e9eedae56f331142aca4032512f9276719409a5eb2bf64b6204a",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        }
+      ],
+      "notes": [
+        "HTTP/2 trailer information can survive into another request.",
+        "Package coordinates are a source-backed mapping from the official fix class paths to official release build inclusion rules and Maven POM coordinates, not package names supplied by the CNA. This is a bounded mapping; other repackaged or programmatic artifacts have not been evaluated.",
+        "Affected lower and inclusive upper versions are retained exactly from Apache CNA. Fixes for supported branches are confirmed by Apache security pages. Publication is the CVE public timestamp, not the earlier fixed-release date.",
+        "No numeric CVSS is supplied by Apache CNA. Exploitation and KEV remain unknown, not evidence of absence."
+      ]
+    },
+    {
+      "id": "CVE-2026-74049",
+      "status": "verified-added",
+      "cnaUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-74049",
+      "cnaResponseSha256": "f212e5270b8ceae97cb4b2bba85660286b9bbf2ce4a7ca034f023f77bad49d2e",
+      "metadata": {
+        "cveId": "CVE-2026-74049",
+        "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+        "state": "PUBLISHED",
+        "assignerShortName": "apache",
+        "dateReserved": "2026-08-14T15:33:51.545Z",
+        "datePublished": "2026-10-20T13:37:43.471Z",
+        "dateUpdated": "2026-10-20T18:10:03.349Z"
+      },
+      "affected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache Tomcat",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "11.0.0-M1",
+              "lessThanOrEqual": "11.0.26",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "10.1.0-M1",
+              "lessThanOrEqual": "10.1.60",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.0.M1",
+              "lessThanOrEqual": "9.0.122",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "8.5.0",
+              "lessThanOrEqual": "8.5.100",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "7.0.0",
+              "lessThanOrEqual": "7.0.109",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "severity": "low",
+      "metrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "low"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "fixCommit": "https://github.com/apache/tomcat/commit/d7948a090ad3f803d9669c8b8401c39e2f532bb7",
+      "patchSha256": "21c857dc2901d38b3d6f1df481f5a0fff706dbdce93f7b5071bc01f1418bcc0a",
+      "changedJavaPaths": [
+        "java/org/apache/jasper/compiler/Generator.java",
+        "java/org/apache/jasper/compiler/Node.java",
+        "java/org/apache/jasper/compiler/TagPluginManager.java",
+        "java/org/apache/jasper/compiler/tagplugin/TagPluginContext.java",
+        "java/org/apache/jasper/tagplugins/jstl/core/Redirect.java"
+      ],
+      "packageMapping": [
+        {
+          "releaseTag": "11.0.27",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/build.xml",
+          "buildSha256": "429b094f6cbb85a6468c393722ef89f6396b316e3b1d3cae220862db50a8d865",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-jasper",
+            "org.apache.tomcat.embed:tomcat-embed-jasper"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "10.1.61",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/build.xml",
+          "buildSha256": "32c90c6444a7108ee13b7d9c9cd2d9e2fff4395af4466db4a05c43b5ba90c291",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-jasper",
+            "org.apache.tomcat.embed:tomcat-embed-jasper"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "9.0.123",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/build.xml",
+          "buildSha256": "d943841f98b3e9eedae56f331142aca4032512f9276719409a5eb2bf64b6204a",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-jasper",
+            "org.apache.tomcat.embed:tomcat-embed-jasper"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "8.5.100",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/8.5.100/build.xml",
+          "buildSha256": "3817a16faf7e6ffc0c3c29981b0bf0bb6f03925651905fb51fcd6b7aef92da9d",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-jasper",
+            "org.apache.tomcat.embed:tomcat-embed-jasper"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/naming/factory/webservices/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "7.0.109",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/7.0.109/build.xml",
+          "buildSha256": "7abfd40e59d2fa85ffcb1553d8817a07030fc23a0fa50c5dd07fdfdacc1c7408",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-jasper",
+            "org.apache.tomcat.embed:tomcat-embed-jasper"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/mbeans/JmxRemote*\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/naming/factory/webservices/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/jk/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    \n    <exclude name=\"org/apache/tomcat/util/compat/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/**\" />\n    <exclude name=\"org/apache/tomcat/util/file/**\" />\n    <exclude name=\"org/apache/tomcat/util/res/**\" />\n    <exclude name=\"org/apache/tomcat/util/scan/**\" />\n    <exclude name=\"org/apache/tomcat/util/security/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.bootstrap\" />\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/jk/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n  </patternset>\n\n  "
+          }
+        }
+      ],
+      "notes": [
+        "Requires the Jasper JSTL c:redirect tag-plugin path; continuing page execution after redirect is not equivalent to arbitrary remote code execution.",
+        "Package coordinates are a source-backed mapping from the official fix class paths to official release build inclusion rules and Maven POM coordinates, not package names supplied by the CNA. This is a bounded mapping; other repackaged or programmatic artifacts have not been evaluated.",
+        "Affected lower and inclusive upper versions are retained exactly from Apache CNA. Fixes for supported branches are confirmed by Apache security pages. Publication is the CVE public timestamp, not the earlier fixed-release date.",
+        "No numeric CVSS is supplied by Apache CNA. Exploitation and KEV remain unknown, not evidence of absence.",
+        "Apache lists affected EOL 7.x and 8.5.x ranges but supplies no fixed release in those branches; fixed remains null. Other unsupported versions may also be affected, without a verified range."
+      ]
+    },
+    {
+      "id": "CVE-2026-74048",
+      "status": "verified-added",
+      "cnaUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-74048",
+      "cnaResponseSha256": "79c63180df2958421d2c7a990fa5e02deef9fbd58cdd221f3ea01fe0ea953afe",
+      "metadata": {
+        "cveId": "CVE-2026-74048",
+        "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+        "state": "PUBLISHED",
+        "assignerShortName": "apache",
+        "dateReserved": "2026-08-14T15:20:38.763Z",
+        "datePublished": "2026-10-20T13:36:36.859Z",
+        "dateUpdated": "2026-10-20T18:10:02.410Z"
+      },
+      "affected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache Tomcat",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "11.0.0-M14",
+              "lessThanOrEqual": "11.0.26",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "10.1.22",
+              "lessThanOrEqual": "10.1.60",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.92",
+              "lessThanOrEqual": "9.0.122",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "severity": "low",
+      "metrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "low"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "fixCommit": "https://github.com/apache/tomcat/commit/db6d674b40ac572f3b2205a4c4f06836516fd3f5",
+      "patchSha256": "95ea3eecce3759aeec5258c55aa3a6f0c68542f7960abe332c35e1d8ed7ea496",
+      "changedJavaPaths": [
+        "java/org/apache/catalina/core/OpenSSLLifecycleListener.java"
+      ],
+      "packageMapping": [
+        {
+          "releaseTag": "11.0.27",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/build.xml",
+          "buildSha256": "429b094f6cbb85a6468c393722ef89f6396b316e3b1d3cae220862db50a8d865",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "10.1.61",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/build.xml",
+          "buildSha256": "32c90c6444a7108ee13b7d9c9cd2d9e2fff4395af4466db4a05c43b5ba90c291",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        },
+        {
+          "releaseTag": "9.0.123",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/build.xml",
+          "buildSha256": "d943841f98b3e9eedae56f331142aca4032512f9276719409a5eb2bf64b6204a",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        }
+      ],
+      "notes": [
+        "Requires OpenSSLLifecycleListener configured for FIPS and FIPS activation failure. Non-FIPS fallback is the reported issue, not proof of exploitation.",
+        "Package coordinates are a source-backed mapping from the official fix class paths to official release build inclusion rules and Maven POM coordinates, not package names supplied by the CNA. This is a bounded mapping; other repackaged or programmatic artifacts have not been evaluated.",
+        "Affected lower and inclusive upper versions are retained exactly from Apache CNA. Fixes for supported branches are confirmed by Apache security pages. Publication is the CVE public timestamp, not the earlier fixed-release date.",
+        "No numeric CVSS is supplied by Apache CNA. Exploitation and KEV remain unknown, not evidence of absence."
+      ]
+    },
+    {
+      "id": "CVE-2026-103119",
+      "status": "verified-added",
+      "cnaUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-103119",
+      "cnaResponseSha256": "1bb9d7bb1fc94374a0477b431bea6d0d1b10e60faade0220b8bd385cf6519359",
+      "metadata": {
+        "cveId": "CVE-2026-103119",
+        "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+        "state": "PUBLISHED",
+        "assignerShortName": "apache",
+        "dateReserved": "2026-09-30T06:39:52.124Z",
+        "datePublished": "2026-10-20T13:54:13.558Z",
+        "dateUpdated": "2026-10-20T18:09:52.183Z"
+      },
+      "affected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache Tomcat",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "11.0.0-M25",
+              "lessThanOrEqual": "11.0.26",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "severity": "important",
+      "metrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "important"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "fixCommit": "https://github.com/apache/tomcat/commit/f13748baa17a5e28925be455e0e2832e2032f58c",
+      "patchSha256": "406f3a85421ace49363f569f834234946a9bca9b3ee75527c7512b8226b37cb0",
+      "changedJavaPaths": [
+        "java/org/apache/catalina/connector/OutputBuffer.java"
+      ],
+      "packageMapping": [
+        {
+          "releaseTag": "11.0.27",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/build.xml",
+          "buildSha256": "429b094f6cbb85a6468c393722ef89f6396b316e3b1d3cae220862db50a8d865",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-catalina",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        }
+      ],
+      "notes": [
+        "Only the 11.x range is identified. The AJP large non-blocking write path can split response data across requests.",
+        "Package coordinates are a source-backed mapping from the official fix class paths to official release build inclusion rules and Maven POM coordinates, not package names supplied by the CNA. This is a bounded mapping; other repackaged or programmatic artifacts have not been evaluated.",
+        "Affected lower and inclusive upper versions are retained exactly from Apache CNA. Fixes for supported branches are confirmed by Apache security pages. Publication is the CVE public timestamp, not the earlier fixed-release date.",
+        "No numeric CVSS is supplied by Apache CNA. Exploitation and KEV remain unknown, not evidence of absence.",
+        "Apache severity is important, which is retained in the audit and not converted to an invented high label or CVSS score."
+      ]
+    },
+    {
+      "id": "CVE-2026-80353",
+      "status": "verified-added",
+      "cnaUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-80353",
+      "cnaResponseSha256": "6f688fb613eab15bf5b1b265742ba93ab3e7a9da63a3c41d9ce6435d9b73616d",
+      "metadata": {
+        "cveId": "CVE-2026-80353",
+        "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+        "state": "PUBLISHED",
+        "assignerShortName": "apache",
+        "dateReserved": "2026-08-26T10:00:39.931Z",
+        "datePublished": "2026-10-20T13:42:05.844Z",
+        "dateUpdated": "2026-10-20T13:42:05.844Z"
+      },
+      "affected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache Tomcat",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "9.0.47",
+              "lessThanOrEqual": "9.0.122",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "severity": "low",
+      "metrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "low"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "fixCommit": "https://github.com/apache/tomcat/commit/894158fd49679a6bd48d9689905829e1fdc45cb2",
+      "patchSha256": "d9825c860769a738ed0753a0569f813cef288718f2772d4f6cb087a3bb1e5198",
+      "changedJavaPaths": [
+        "java/org/apache/tomcat/util/net/AprEndpoint.java"
+      ],
+      "packageMapping": [
+        {
+          "releaseTag": "9.0.123",
+          "buildUrl": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/build.xml",
+          "buildSha256": "d943841f98b3e9eedae56f331142aca4032512f9276719409a5eb2bf64b6204a",
+          "coordinates": [
+            "org.apache.tomcat:tomcat-coyote",
+            "org.apache.tomcat.embed:tomcat-embed-core"
+          ],
+          "patternSets": {
+            "files.catalina": "<patternset id=\"files.catalina\">\n    <include name=\"org/apache/catalina/**\" />\n    <include name=\"org/apache/naming/**\" />\n    \n    <exclude name=\"org/apache/catalina/ant/**\" />\n    <exclude name=\"org/apache/catalina/ha/**\" />\n    <exclude name=\"org/apache/catalina/tribes/**\" />\n    <exclude name=\"org/apache/catalina/storeconfig/**\" />\n    <exclude name=\"org/apache/catalina/ssi/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-coyote": "<patternset id=\"files.tomcat-coyote\">\n    <include name=\"org/apache/coyote/**\" />\n    \n    <include name=\"org/apache/tomcat/util/bcel/**\" />\n    <include name=\"org/apache/tomcat/util/http/**\" />\n    <include name=\"org/apache/tomcat/util/log/**\" />\n    <include name=\"org/apache/tomcat/util/modeler/**\" />\n    <include name=\"org/apache/tomcat/util/net/**\" />\n    <exclude name=\"org/apache/tomcat/util/net/openssl/panama/**\" />\n  </patternset>\n\n  ",
+            "files.jasper": "<patternset id=\"files.jasper\">\n    <include name=\"org/apache/jasper/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-core": "<patternset id=\"files.tomcat-embed-core\">\n    <patternset refid=\"files.catalina\" />\n    <patternset refid=\"files.servlet-api\" />\n    <patternset refid=\"files.jaspic-api\" />\n    <patternset refid=\"files.tomcat-api\" />\n    <patternset refid=\"files.tomcat-juli\" />\n    \n    <include name=\"org/apache/coyote/**\" />\n    <include name=\"org/apache/tomcat/jni/**\" />\n    <include name=\"org/apache/tomcat/util/**\" />\n    <exclude name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  ",
+            "files.tomcat-embed-jasper": "<patternset id=\"files.tomcat-embed-jasper\">\n    <patternset refid=\"files.jasper\" />\n    <patternset refid=\"files.jsp-api\" />\n    <include name=\"org/apache/tomcat/util/descriptor/tld/**\" />\n  </patternset>\n\n  "
+          }
+        }
+      ],
+      "notes": [
+        "Only the 9.x APR/Native connector Unix-domain-socket path is identified. Requires a local attacker; the earlier NIO fix is a related CVE, not an alias.",
+        "Package coordinates are a source-backed mapping from the official fix class paths to official release build inclusion rules and Maven POM coordinates, not package names supplied by the CNA. This is a bounded mapping; other repackaged or programmatic artifacts have not been evaluated.",
+        "Affected lower and inclusive upper versions are retained exactly from Apache CNA. Fixes for supported branches are confirmed by Apache security pages. Publication is the CVE public timestamp, not the earlier fixed-release date.",
+        "No numeric CVSS is supplied by Apache CNA. Exploitation and KEV remain unknown, not evidence of absence."
+      ]
+    }
+  ],
+  "sourceReceipts": [
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/res/maven/tomcat-embed-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2123,
+      "sha256": "644244f0d5418e08beed8d8f9c78115bd7829fd0890a52048f47deea1a3ebe67"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/7.0.109/res/maven/tomcat-embed-core.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2268,
+      "sha256": "425bdfca38c89181cfe71b24dd15777b895337f56dd341bae44fbbc04972e5a7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/res/maven/tomcat-coyote.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2353,
+      "sha256": "c187b759e4182fa79e1c9451b68b67b2f6fa2c8a8af846acd2f2aea69ec74a83"
+    },
+    {
+      "url": "https://github.com/apache/tomcat/commit/e43453fc04abb44f64faf571ca98af71aa3c20a1.patch",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2932,
+      "sha256": "628e3188d75e792039bfba393f120ec9eb174787cf8db6c15a636641c396a70b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/8.5.100/res/maven/tomcat-embed-core.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 1767,
+      "sha256": "d4ed312344b924c05b04c2e801a7a92abe66f91744488786747487ee89b5a7fc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/res/maven/tomcat-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3092,
+      "sha256": "bb319882997904689c9894072a9c55b4835665e50702018582d0b447049712db"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/7.0.109/res/maven/tomcat-coyote.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2156,
+      "sha256": "9cd8556fc236ff95bdc456723574989cc7ff86a2d3c0bc1d365756ae81702e61"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/res/maven/tomcat-embed-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2121,
+      "sha256": "f859cd29988e0c5f911d0da7aae7f5160b1ca75ca308c0325a5b82573586d438"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/7.0.109/res/maven/tomcat-catalina.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2594,
+      "sha256": "e9be48c6130b662d4bdf22830305a3f69a2e880cf36bde858b6a6f5b59dcc3dc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/res/maven/tomcat-coyote.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2353,
+      "sha256": "c187b759e4182fa79e1c9451b68b67b2f6fa2c8a8af846acd2f2aea69ec74a83"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/7.0.109/build.xml",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 142352,
+      "sha256": "7abfd40e59d2fa85ffcb1553d8817a07030fc23a0fa50c5dd07fdfdacc1c7408"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-93446",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2520,
+      "sha256": "925b4114ba9800503021ada0e8c64d3fb85efaafc25975e0ba3bd1b92f27a93a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/8.5.100/res/maven/tomcat-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3090,
+      "sha256": "da192b457d11aa8160007092448a452118f1b7d4b2edc43d1a569776b8cbbdf6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/res/maven/tomcat-embed-core.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 1767,
+      "sha256": "d4ed312344b924c05b04c2e801a7a92abe66f91744488786747487ee89b5a7fc"
+    },
+    {
+      "url": "https://github.com/apache/tomcat/commit/a276dea827437090498678e09df0539ec397a7b5.patch",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 13167,
+      "sha256": "0f29424525bf6d9c13ba159bb3ee418944ed928d05dff08f9b63f23eaa1b53ed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/8.5.100/res/maven/tomcat-coyote.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2353,
+      "sha256": "c187b759e4182fa79e1c9451b68b67b2f6fa2c8a8af846acd2f2aea69ec74a83"
+    },
+    {
+      "url": "https://github.com/apache/tomcat/commit/894158fd49679a6bd48d9689905829e1fdc45cb2.patch",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 15141,
+      "sha256": "d9825c860769a738ed0753a0569f813cef288718f2772d4f6cb087a3bb1e5198"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/res/maven/tomcat-coyote.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2353,
+      "sha256": "c187b759e4182fa79e1c9451b68b67b2f6fa2c8a8af846acd2f2aea69ec74a83"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/res/maven/tomcat-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3090,
+      "sha256": "526cb05bf1182d8674b304fcc341459a13c663fcfccd81d425cd1dba70578146"
+    },
+    {
+      "url": "https://github.com/apache/tomcat/commit/e49e0c47ea925ad9442ba933a144ea62433d6a06.patch",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2092,
+      "sha256": "ed65a3e34c8d4d42ae6207060f00970eb5c3e5f924076f5243e319232ad21ef2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/res/maven/tomcat-embed-core.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 1767,
+      "sha256": "d4ed312344b924c05b04c2e801a7a92abe66f91744488786747487ee89b5a7fc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/7.0.109/res/maven/tomcat-embed-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2134,
+      "sha256": "1be2386e763b69083e2b4162cef7f348673884124a8b6d7a550343ca578de57f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/res/maven/tomcat-catalina.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3599,
+      "sha256": "6cb15dd3abf768b180648212014d9417c31f057cd2a78fefe79b8ecf85e392e1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/build.xml",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 214382,
+      "sha256": "32c90c6444a7108ee13b7d9c9cd2d9e2fff4395af4466db4a05c43b5ba90c291"
+    },
+    {
+      "url": "https://tomcat.apache.org/security-10.html",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 126215,
+      "sha256": "275d796c5a1ccf618a467e90bf6a1e754cc67fb1e1a4f4b3d0240c9507da1321"
+    },
+    {
+      "url": "https://tomcat.apache.org/security-9.html",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 176733,
+      "sha256": "aa7fef0b2fa7702baf6092c9821d890ba2157b163b0c15db937627cf5cdce5fc"
+    },
+    {
+      "url": "https://github.com/apache/tomcat/commit/d7948a090ad3f803d9669c8b8401c39e2f532bb7.patch",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 7802,
+      "sha256": "21c857dc2901d38b3d6f1df481f5a0fff706dbdce93f7b5071bc01f1418bcc0a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/8.5.100/res/maven/tomcat-embed-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2121,
+      "sha256": "b98e25c37337d13d094cef44e82a85748b580264f36bc726ddd142026e58e7bd"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-74048",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2841,
+      "sha256": "79c63180df2958421d2c7a990fa5e02deef9fbd58cdd221f3ea01fe0ea953afe"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/res/maven/tomcat-embed-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2121,
+      "sha256": "287b7f1db36f4d98a6f0f8a679f47cdbceca437b7835fb45f52e4e2b87050c79"
+    },
+    {
+      "url": "https://github.com/apache/tomcat/commit/1dc6aa151b3b99b32ac9ae7c60e41c326063321b.patch",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 1411,
+      "sha256": "3d15ad705cdbbe5033499979df4765d662d9a544d3a396e7ed7697958ed5f5b6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/8.5.100/build.xml",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 163049,
+      "sha256": "3817a16faf7e6ffc0c3c29981b0bf0bb6f03925651905fb51fcd6b7aef92da9d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/res/maven/tomcat-embed-core.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 1767,
+      "sha256": "d4ed312344b924c05b04c2e801a7a92abe66f91744488786747487ee89b5a7fc"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-80353",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2484,
+      "sha256": "6f688fb613eab15bf5b1b265742ba93ab3e7a9da63a3c41d9ce6435d9b73616d"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-101356",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3551,
+      "sha256": "82bb11ed1a5ebcf94600b509eb22126711b3b2aa9cf8f7d78a7cc39c288667c7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/build.xml",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 213248,
+      "sha256": "d943841f98b3e9eedae56f331142aca4032512f9276719409a5eb2bf64b6204a"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-88041",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2570,
+      "sha256": "99b2351a62c1a8844cc00c499ad4d894b488ac746d883479134dea71aa48fa79"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-103119",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3359,
+      "sha256": "1bb9d7bb1fc94374a0477b431bea6d0d1b10e60faade0220b8bd385cf6519359"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-74049",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3076,
+      "sha256": "f212e5270b8ceae97cb4b2bba85660286b9bbf2ce4a7ca034f023f77bad49d2e"
+    },
+    {
+      "url": "https://github.com/apache/tomcat/commit/db6d674b40ac572f3b2205a4c4f06836516fd3f5.patch",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 6363,
+      "sha256": "95ea3eecce3759aeec5258c55aa3a6f0c68542f7960abe332c35e1d8ed7ea496"
+    },
+    {
+      "url": "https://github.com/apache/tomcat/commit/f13748baa17a5e28925be455e0e2832e2032f58c.patch",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 2726,
+      "sha256": "406f3a85421ace49363f569f834234946a9bca9b3ee75527c7512b8226b37cb0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/res/maven/tomcat-catalina.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3599,
+      "sha256": "6cb15dd3abf768b180648212014d9417c31f057cd2a78fefe79b8ecf85e392e1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/11.0.27/build.xml",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 209931,
+      "sha256": "429b094f6cbb85a6468c393722ef89f6396b316e3b1d3cae220862db50a8d865"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/9.0.123/res/maven/tomcat-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3090,
+      "sha256": "ea05a6df9ab06f171ec409d4b0837fa73ae19351680ddb31a4b9a89e82f5f710"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/10.1.61/res/maven/tomcat-catalina.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3599,
+      "sha256": "6cb15dd3abf768b180648212014d9417c31f057cd2a78fefe79b8ecf85e392e1"
+    },
+    {
+      "url": "https://tomcat.apache.org/security-11.html",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 90253,
+      "sha256": "f5f03b4e37cb90b23a8870d08ed0d4c4c0bf4fa0e8fbe70d4d63dd8438e26b5c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/8.5.100/res/maven/tomcat-catalina.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3599,
+      "sha256": "6cb15dd3abf768b180648212014d9417c31f057cd2a78fefe79b8ecf85e392e1"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-101296",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 4461,
+      "sha256": "d06354384df9f371bc2a77d236d8fe87cd9f1935f15c882d73158a2cc8e23850"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apache/tomcat/7.0.109/res/maven/tomcat-jasper.pom",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-21T21:15:40.387557Z",
+      "bytes": 3098,
+      "sha256": "0e8563ad2f3a6d7da5705f12c8ff6ffcd2dac1d8aca6a70a3dd1f7bed478cab2"
+    }
+  ]
+}

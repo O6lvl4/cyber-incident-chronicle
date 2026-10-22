@@ -1,0 +1,140 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8r9p-f939-6h3c",
+  "aliases": [
+    "CVE-2026-111755"
+  ],
+  "title": "follow-redirects sensitiveHeaders regex escaping can expose credential headers",
+  "summary": "follow-redirects sensitiveHeaders regex escaping can expose credential headers",
+  "publishedAt": "2026-10-20T17:53:05Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8r9p-f939-6h3c/GHSA-8r9p-f939-6h3c.json",
+  "modifiedAt": "2026-10-20T17:53:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:31:36.057501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "follow-redirects",
+      "ranges": [
+        {
+          "affected": "1.16.0",
+          "fixed": "1.16.1",
+          "sourceUrl": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-8r9p-f939-6h3c"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-8r9p-f939-6h3c",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8r9p-f939-6h3c/GHSA-8r9p-f939-6h3c.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8r9p-f939-6h3c/GHSA-8r9p-f939-6h3c.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T17:53:05Z",
+      "modifiedAt": "2026-10-20T17:53:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "follow-redirects sensitiveHeaders regex escaping can expose credential headers",
+      "url": "https://github.com/advisories/GHSA-8r9p-f939-6h3c",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-8r9p-f939-6h3c",
+      "publishedDate": "2026-10-01",
+      "publishedAt": "2026-10-01T13:51:44Z"
+    }
+  ],
+  "caveats": [
+    "Primary Moderate with no displayed CVSS differs from Reviewed High and v4. Maintainer affected version is exactly 1.16.0 with fixed 1.16.1; Reviewed uses >=1.16.0,<1.16.1.",
+    "Custom sensitive header names containing regex metacharacters can evade stripping; built-in Authorization/Proxy-Authorization/Cookie filtering is unaffected. Late mutation of sensitiveHeaders is described as a lower-severity hardening issue rather than a separate advisory.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:31:36.057501Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-8r9p-f939-6h3c",
+        "aliases": [
+          "CVE-2026-111755"
+        ],
+        "publishedAt": "2026-10-20T17:53:05Z",
+        "modifiedAt": "2026-10-20T17:53:05Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8r9p-f939-6h3c/GHSA-8r9p-f939-6h3c.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "follow-redirects",
+        "ranges": [
+          {
+            "affected": ">= 1.16.0, < 1.16.1",
+            "fixed": "1.16.1",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8r9p-f939-6h3c/GHSA-8r9p-f939-6h3c.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.16.0"
+              },
+              {
+                "fixed": "1.16.1"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-8r9p-f939-6h3c"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "Primary Moderate with no displayed CVSS differs from Reviewed High and v4. Maintainer affected version is exactly 1.16.0 with fixed 1.16.1; Reviewed uses >=1.16.0,<1.16.1.",
+        "newerDatabase": false
+      },
+      {
+        "field": "severity",
+        "reason": "Maintainer severity moderate differs from Reviewed HIGH; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

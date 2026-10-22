@@ -1,0 +1,72 @@
+{
+  "id": "digital-arts-cloud-2026",
+  "company": "デジタルアーツ",
+  "title": "クラウド運用環境・社内環境への侵入を公表、顧客情報の閲覧可能性",
+  "announcementDate": "2026-10-21",
+  "announcementDateLabel": "初報公表",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表",
+  "updatedDate": "2026-10-21",
+  "statusAsOfDate": "2026-10-21",
+  "lastVerifiedDate": "2026-10-22",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "不正取得されたサービス運用用認証情報による侵入",
+    "status": "confirmed"
+  },
+  "summary": "10月9日の総点検で不正アクセスの痕跡を発見。運用用の認証情報を使った侵入が判明し、一部顧客情報に閲覧の可能性がある。21日正午時点で外部持ち出しは未確認。認証情報・鍵の交換等を実施し監視を継続。",
+  "affectedData": [
+    "対象クラウドサービスを利用する一部顧客の情報（項目・人数は未公表）"
+  ],
+  "counts": [],
+  "caveats": [
+    "対象はi-FILTER@Cloud、m-FILTER@Cloud（Modern Edition）、m-FILTER MailAdviser Microsoft 365対応版、FINAL CODE@Cloud、z-FILTER、Desk。顧客環境のソフトウェア版は対象外。",
+    "2025年7月頃までさかのぼる痕跡があるとの説明で、正確な侵入開始日・期間は未確定。",
+    "AIの利用は点検・発見の手段としての記述。AIが攻撃原因だったとの根拠ではない。",
+    "顧客情報の閲覧可能性と、外部持ち出し・悪用・二次被害の未確認を区別。"
+  ],
+  "sources": [
+    {
+      "title": "クラウド運用環境・社内環境への侵入を公表、顧客情報の閲覧可能性",
+      "url": "https://pages.daj.jp/webtopics/1354/",
+      "publishedDate": "2026-10-21"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-09",
+      "label": "不正アクセスの痕跡を確認",
+      "kind": "occurrence",
+      "summary": "不正アクセスの痕跡を確認。実際の侵入開始日とは区別。",
+      "sourceUrl": "https://pages.daj.jp/webtopics/1354/"
+    },
+    {
+      "date": "2026-10-21",
+      "label": "不正アクセスを公表",
+      "kind": "disclosure",
+      "summary": "10月9日の総点検で不正アクセスの痕跡を発見。運用用の認証情報を使った侵入が判明し、一部顧客情報に閲覧の可能性がある。21日正午時点で外部持ち出しは未確認。認証情報・鍵の交換等を実施し監視を継続。",
+      "sourceUrl": "https://pages.daj.jp/webtopics/1354/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "approximate",
+      "label": "2025年7月頃にさかのぼる痕跡",
+      "note": "発見された痕跡に2025年7月頃までさかのぼるものを含む。初期侵入日と期間全体は特定されていない。",
+      "sourceUrl": "https://pages.daj.jp/webtopics/1354/",
+      "reviewedDate": "2026-10-22"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "情報漏えいの確定日は未公表。侵入の発見と区別する。",
+      "sourceUrl": "https://pages.daj.jp/webtopics/1354/",
+      "reviewedDate": "2026-10-22"
+    }
+  },
+  "geography": "日本"
+}

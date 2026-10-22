@@ -1,0 +1,125 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3x84-qq85-fj65",
+  "aliases": [
+    "CVE-2026-62197"
+  ],
+  "title": "OpenClaw: Browser CDP discovery could accept blocked WebSocket URLs",
+  "summary": "OpenClaw: Browser CDP discovery could accept blocked WebSocket URLs",
+  "publishedAt": "2026-10-21T19:37:42Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-3x84-qq85-fj65/GHSA-3x84-qq85-fj65.json",
+  "modifiedAt": "2026-10-21T19:37:42Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:16.623158Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "openclaw",
+      "ranges": [
+        {
+          "affected": "< 2026.6.6",
+          "fixed": "2026.6.6",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-3x84-qq85-fj65/GHSA-3x84-qq85-fj65.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.6.6"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-3x84-qq85-fj65/GHSA-3x84-qq85-fj65.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-3x84-qq85-fj65/GHSA-3x84-qq85-fj65.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-3x84-qq85-fj65/GHSA-3x84-qq85-fj65.json"
+      },
+      {
+        "version": "3.1",
+        "score": 8.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+        "sourceUrl": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-3x84-qq85-fj65/GHSA-3x84-qq85-fj65.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:37:42Z",
+      "modifiedAt": "2026-10-21T19:37:42Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OpenClaw: Browser CDP discovery could accept blocked WebSocket URLs",
+      "url": "https://github.com/advisories/GHSA-3x84-qq85-fj65",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65",
+      "publishedDate": "2026-06-30",
+      "publishedAt": "2026-06-30T00:38:15Z",
+      "modifiedAt": "2026-06-30T00:38:15Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Severity label differs: developer advisory high, Reviewed database medium. Neither assessment is silently overwritten; the displayed label retains the database source.",
+    "Maintainer labels this High with CVSS 3.1 8.5; Reviewed labels Moderate and also supplies a CVSS 4.0 vector. Both assessments are source-attributed. Maintainer cve_id is null while Reviewed identifies CVE-2026-62197; null does not negate that identifier. Impact requires the named CDP feature enabled and reachable by lower-trust input, not every trusted-operator operation.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:16.623158Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-3x84-qq85-fj65",
+        "aliases": [
+          "CVE-2026-62197"
+        ],
+        "publishedAt": "2026-10-21T19:37:42Z",
+        "modifiedAt": "2026-10-21T19:37:42Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-3x84-qq85-fj65/GHSA-3x84-qq85-fj65.json"
+      }
+    ]
+  }
+}

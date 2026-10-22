@@ -1,0 +1,134 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xp26-3454-mjgp",
+  "aliases": [
+    "CVE-2026-112950"
+  ],
+  "title": "Vitest: Windows backslash traversal bypasses the @vitest/mocker redirect allowlist fix",
+  "summary": "Vitest: Windows backslash traversal bypasses the @vitest/mocker redirect allowlist fix",
+  "publishedAt": "2026-10-21T19:48:38Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-xp26-3454-mjgp/GHSA-xp26-3454-mjgp.json",
+  "modifiedAt": "2026-10-21T19:48:38Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:40.762141Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@vitest/mocker",
+      "ranges": [
+        {
+          "affected": ">= 4.1.11, < 4.1.12",
+          "fixed": "4.1.12",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-xp26-3454-mjgp/GHSA-xp26-3454-mjgp.json"
+        },
+        {
+          "affected": ">= 5.0.0-rc.2, < 5.0.3",
+          "fixed": "5.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-xp26-3454-mjgp/GHSA-xp26-3454-mjgp.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.1.11"
+            },
+            {
+              "fixed": "4.1.12"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.0.0-rc.2"
+            },
+            {
+              "fixed": "5.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-xp26-3454-mjgp/GHSA-xp26-3454-mjgp.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-xp26-3454-mjgp/GHSA-xp26-3454-mjgp.json"
+      },
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-xp26-3454-mjgp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-xp26-3454-mjgp/GHSA-xp26-3454-mjgp.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:48:38Z",
+      "modifiedAt": "2026-10-21T19:48:38Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Vitest: Windows backslash traversal bypasses the @vitest/mocker redirect allowlist fix",
+      "url": "https://github.com/advisories/GHSA-xp26-3454-mjgp",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-xp26-3454-mjgp",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T07:59:32Z",
+      "modifiedAt": "2026-10-20T15:19:57Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Primary structured fields list >=4.1.11,<4.1.12; narrative also reproduces 5.0.0 and specifies 5.0.3 patched. Reviewed additionally supplies >=5.0.0-rc.2,<5.0.3, retained with database attribution. Do not treat the primary structured 5.x omission as unaffected. Requires Windows path semantics.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:40.762141Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-xp26-3454-mjgp",
+        "aliases": [
+          "CVE-2026-112950"
+        ],
+        "publishedAt": "2026-10-21T19:48:38Z",
+        "modifiedAt": "2026-10-21T19:48:38Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-xp26-3454-mjgp/GHSA-xp26-3454-mjgp.json"
+      }
+    ]
+  }
+}

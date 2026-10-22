@@ -1,0 +1,91 @@
+{
+  "id": "second-retailing-systems-2026",
+  "company": "セカンドリテイリング（ゲオ・セカンドストリート等）",
+  "title": "社内システムへの不正アクセスでアプリ等停止、調査で情報漏えいは確認されず",
+  "announcementDate": "2026-10-17",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-15",
+  "occurredDateLabel": "第2報が示す不正アクセス発生日（第1報では確認日として記載）",
+  "updatedDate": "2026-10-19",
+  "statusAsOfDate": "2026-10-19",
+  "lastVerifiedDate": "2026-10-21",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月15日に社内システムへの不正アクセスを確認し、17日21時からゲオ・セカンドストリート等のアプリやウェブサービスを停止。19日の調査結果では個人情報・機密情報の漏えいは確認されず、セキュリティ強化と停止は継続した。",
+  "affectedData": [
+    "個人情報・機密情報の外部漏えいは調査で確認されず"
+  ],
+  "counts": [],
+  "caveats": [
+    "データベースサーバーへの不審な外部接続・直接アクセスの形跡がなく、漏えいは確認されなかったという調査結果。全システムの無被害や完全復旧を意味しない。",
+    "停止はアプリ、通販、宅配買取等が対象。店舗営業時間は変更せず、アプリを用いない店頭買取等は継続。",
+    "同一のグループシステム事案をブランドや利用サービスごとの別事案に分割しない。",
+    "第1報の10月15日は不正アクセス確認日。攻撃日としての採用根拠は発生と明記した第2報であり、検知日から自動転記したものではない。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "セカンドリテイリング：社内システムへの不正アクセスの発生について",
+      "url": "https://2nd-rtl.com/news/82023/",
+      "publishedDate": "2026-10-17"
+    },
+    {
+      "title": "セカンドリテイリング：【第2報】社内システムへの不正アクセスに関する調査結果のご報告",
+      "url": "https://2nd-rtl.com/news/82032/",
+      "publishedDate": "2026-10-19"
+    },
+    {
+      "title": "ゲオ：サーバメンテナンスに伴うサービスご提供停止のご案内",
+      "url": "https://geo-online.co.jp/maintenance/index.html?id=04115",
+      "publishedDate": "2026-10-19"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-15",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "社内システムへの不正アクセスを確認し必要な対策を実施。第2報はこの日の発生と記載。",
+      "sourceUrl": "https://2nd-rtl.com/news/82032/"
+    },
+    {
+      "date": "2026-10-17",
+      "label": "初報公表・アプリ等を停止",
+      "kind": "disclosure",
+      "summary": "21時からグループのアプリ・ウェブサービスを停止しメンテナンス。店舗営業時間は変更なし。",
+      "sourceUrl": "https://2nd-rtl.com/news/82023/"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "漏えい未確認の調査結果",
+      "kind": "update",
+      "summary": "個人情報・機密情報の漏えいは確認されず。停止継続中で再開時期は未定。",
+      "sourceUrl": "https://2nd-rtl.com/news/82032/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年10月15日",
+      "note": "第2報がこの日に発生した不正アクセスと明記。第1報の確認日記載だけからは推定していない。",
+      "sourceUrl": "https://2nd-rtl.com/news/82032/",
+      "reviewedDate": "2026-10-21",
+      "startDate": "2026-10-15"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "確認資料は不正アクセス検知日と予防的なサービス停止日を示すが、被害を最初に確認した日とは明示しない。漏えいも未確認。",
+      "sourceUrl": "https://2nd-rtl.com/news/82032/",
+      "reviewedDate": "2026-10-21"
+    }
+  },
+  "detectedDate": "2026-10-15"
+}

@@ -1,0 +1,74 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-673q-mjm6-r5xr",
+  "aliases": [],
+  "title": "Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays",
+  "summary": "Next.jsのApp RouterとCache Componentsを使い、use cache関数が複数のtyped arrayを返す構成で、認証なしのコード実行につながる脆弱性。修正は16.4.1。",
+  "publishedAt": "2026-10-14T17:47:07Z",
+  "modifiedAt": "2026-10-14T17:47:07Z",
+  "withdrawnAt": null,
+  "dateSourceUrl": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-673q-mjm6-r5xr",
+  "lastVerifiedAt": "2026-10-21T21:16:28Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "next",
+      "ranges": [
+        {
+          "affected": ">=16.0.0 <= 16.4.0",
+          "fixed": "16.4.1",
+          "sourceUrl": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-673q-mjm6-r5xr"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-673q-mjm6-r5xr",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 9.5,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N",
+        "sourceUrl": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-673q-mjm6-r5xr"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "開発元の公開GHSAアドバイザリ",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub公開repository advisory API（global DBとは別）",
+      "url": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-673q-mjm6-r5xr",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T17:47:07Z",
+      "modifiedAt": "2026-10-14T17:47:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Next.js公式セキュリティ更新案内",
+      "url": "https://nextjs.org/blog/nextjs-security-update-october-14-2026",
+      "publishedDate": "2026-10-14"
+    }
+  ],
+  "caveats": [
+    "公開repository GHSAの構造化APIと開発元本文を確認。OSV APIとglobal GHSA APIは確認時点で404。独立DB掲載成功として扱わない。",
+    "公表日時・変更日時・撤回はrepository GHSA API由来。関連する上流・下流アドバイザリは同一性を示す別名とはしない。",
+    "実悪用・CISA KEV掲載は今回確認しておらずunknown。修正境界は現在の全脆弱性に対する安全版の保証ではない。"
+  ]
+}

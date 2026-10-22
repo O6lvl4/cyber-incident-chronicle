@@ -1,0 +1,118 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-crwc-vw2r-qr6m",
+  "aliases": [
+    "CVE-2026-113730"
+  ],
+  "title": "OGNL stricter-invocation block list bypass via java.lang.reflect reflection proxies",
+  "summary": "OGNL stricter-invocation block list bypass via java.lang.reflect reflection proxies",
+  "publishedAt": "2026-10-21T16:31:04Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-crwc-vw2r-qr6m/GHSA-crwc-vw2r-qr6m.json",
+  "modifiedAt": "2026-10-21T16:31:04Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:28.062957Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "ognl:ognl",
+      "ranges": [
+        {
+          "affected": "< 3.4.13",
+          "fixed": "3.4.13",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-crwc-vw2r-qr6m/GHSA-crwc-vw2r-qr6m.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.13"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-crwc-vw2r-qr6m/GHSA-crwc-vw2r-qr6m.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-crwc-vw2r-qr6m/GHSA-crwc-vw2r-qr6m.json"
+      },
+      {
+        "version": "3.1",
+        "score": 5.6,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "sourceUrl": "https://github.com/orphan-oss/ognl/security/advisories/GHSA-crwc-vw2r-qr6m"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-crwc-vw2r-qr6m/GHSA-crwc-vw2r-qr6m.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T16:31:04Z",
+      "modifiedAt": "2026-10-21T16:31:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OGNL stricter-invocation block list bypass via java.lang.reflect reflection proxies",
+      "url": "https://github.com/advisories/GHSA-crwc-vw2r-qr6m",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/orphan-oss/ognl/security/advisories/GHSA-crwc-vw2r-qr6m",
+      "publishedDate": "2026-09-11",
+      "publishedAt": "2026-09-11T03:33:01Z",
+      "modifiedAt": "2026-10-20T21:23:42Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "OGNL describes secondary stricter-invocation defense-in-depth hardening, not a bypass of a correctly restrictive MemberAccess primary boundary. Do not label all integrating frameworks remotely exploitable.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:28.062957Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-crwc-vw2r-qr6m",
+        "aliases": [
+          "CVE-2026-113730"
+        ],
+        "publishedAt": "2026-10-21T16:31:04Z",
+        "modifiedAt": "2026-10-21T16:31:04Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-crwc-vw2r-qr6m/GHSA-crwc-vw2r-qr6m.json"
+      }
+    ]
+  }
+}

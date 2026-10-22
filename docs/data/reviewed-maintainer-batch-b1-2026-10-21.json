@@ -1,0 +1,3736 @@
+{
+  "schemaVersion": 1,
+  "reportDate": "2026-10-21",
+  "checkedAt": "2026-10-20T21:39:58.771218Z",
+  "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+  "scope": "All 24 eligible Reviewed additions assigned to bounded batch b1.",
+  "counts": {
+    "newRecords": 24,
+    "primaryRequestsAttempted": 40,
+    "primaryRequestsSucceeded": 24,
+    "failedFetches": 16,
+    "reviewedMaintainerAdvisoryDescriptions": 24,
+    "apiAdvisoriesReviewed": 8,
+    "htmlAdvisoriesReviewed": 16,
+    "severityBandDisagreements": 9,
+    "sameVersionVectorDisagreements": 0,
+    "sameIdentifierWithdrawalDisagreements": 0,
+    "newCuratedOverlays": 15,
+    "supplementalReleaseRequestsAttempted": 4,
+    "supplementalReleaseRequestsSucceeded": 4
+  },
+  "methodology": [
+    "Every assigned record was compared to the actual public maintainer advisory structured fields and description prose; no proof of concept or source code was executed.",
+    "API and HTML response originals remain local only. Public artifacts contain allowlisted fields, independently written observations, response hashes and selected public headers, never full descriptions, code, credits, private-report links or tracking metadata.",
+    "Literal package coordinates, affected and fixed strings and source timestamps are preserved independently. CVSS numeric scores are copied only when published, never computed. HTML missing timestamps are marked unobservable, not asserted null source values."
+  ],
+  "limitations": [
+    "This is a delta review, not a fresh primary-source review of the full corpus.",
+    "GitHub unauthenticated API rate limits required HTML fallback; individual failed attempts and successful HTML evidence are separate.",
+    "No independent KEV or real-world exploitation verification was performed.",
+    "Source-level range conflicts do not imply a local dependency applicability verdict."
+  ],
+  "newCuratedOverlayIds": [
+    "GHSA-259r-337f-4rfw",
+    "GHSA-2658-85cv-9wwq",
+    "GHSA-2g87-pp6c-29x5",
+    "GHSA-462x-pgg6-55fp",
+    "GHSA-46jr-4wx8-v453",
+    "GHSA-58r4-6rv3-gfh8",
+    "GHSA-5wr8-gcqf-gqf3",
+    "GHSA-62vg-58rm-qff7",
+    "GHSA-65qm-jvmh-6pqg",
+    "GHSA-6cjc-53gc-5rqm",
+    "GHSA-6q48-6c7w-9gw2",
+    "GHSA-8g5g-8vmr-9782",
+    "GHSA-8r9p-f939-6h3c",
+    "GHSA-953h-535j-jg2v",
+    "GHSA-9xw5-w5jj-pvcg"
+  ],
+  "records": [
+    {
+      "id": "GHSA-22jm-h49p-29qw",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-22jm-h49p-29qw/GHSA-22jm-h49p-29qw.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-22jm-h49p-29qw/GHSA-22jm-h49p-29qw.json",
+        "sha256": "79608b74c93e93245348f4539545d9dda2a4b338f867e2d9cc345990eb842d96",
+        "bytes": 2508,
+        "summary": "MCP TypeScript SDK: Experimental tasks were not tied to the session that created them",
+        "publishedAt": "2026-10-20T18:26:54Z",
+        "modifiedAt": "2026-10-20T18:26:54Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111767"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/sdk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.24.0"
+                  },
+                  {
+                    "fixed": "1.32.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-22jm-h49p-29qw",
+        "summary": "Experimental tasks were not tied to the session that created them",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/sdk"
+            },
+            "vulnerable_version_range": ">= 1.24.0, < 1.32.0",
+            "patched_versions": "1.32.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+          "score": 8.6
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
+            "score": 8.6
+          }
+        },
+        "published_at": "2026-10-02T20:54:41Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Primary range, fix 1.32.0 and High/CVSS 3.1 8.6 agree. Only servers enabling experimental taskStore with shared stores are affected; 2.x packages are explicitly unaffected. Fixing session ownership changes whether a new session can resume earlier tasks.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/modelcontextprotocol/typescript-sdk/security-advisories/GHSA-22jm-h49p-29qw",
+          "checkedAt": "2026-10-20T21:30:03.571014Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-22jm-h49p-29qw",
+          "checkedAt": "2026-10-20T21:30:33.211631Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "856cd060bd6c4a3bc7c149426cf8ff2111f6a9fd0048a497ebbaf57b03c40390",
+          "originalFetchedResponseBytes": 192378,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-22jm-h49p-29qw.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "8ffa8497a2a4ffc073e8514e37d44a11504bdb175d43d2ababe8631dbf7032b3",
+          "bytes": 1048,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-22jm-h49p-29qw.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "1bb729c13dfb7efa33ec4bba78fd12fcb7bfe0b86e553e5fc7b0b88b81b3eaff",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-259r-337f-4rfw",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-259r-337f-4rfw/GHSA-259r-337f-4rfw.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-259r-337f-4rfw/GHSA-259r-337f-4rfw.json",
+        "sha256": "dbfd6490d130db20a48b0f59554c60611e2cccf3ffd25438febe5f6dea7f9ba0",
+        "bytes": 5224,
+        "summary": "Compress/s2: Integer Overflow or Wraparound and Out-of-bounds Write in compress",
+        "publishedAt": "2026-10-20T14:33:33Z",
+        "modifiedAt": "2026-10-20T14:33:33Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-63209"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/klauspost/compress"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.18.7"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.18.6"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-259r-337f-4rfw",
+        "summary": "Integer Overflow or Wraparound and Out-of-bounds Write in compress",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "klauspost",
+              "name": "compress/s2"
+            },
+            "vulnerable_version_range": "<= v1.18.6",
+            "patched_versions": "v1.18.7",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          }
+        },
+        "published_at": "2026-06-30T11:23:20Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Maintainer UI labels the coordinate compress/s2 with custom ecosystem klauspost; prose identifies Go github.com/klauspost/compress/s2, while Reviewed correctly uses the containing module github.com/klauspost/compress. Preserve all raw identities rather than importing the UI vendor label as a Go ecosystem.",
+        "Maintainer <=v1.18.6 and patched v1.18.7 correspond to the explicit release claims; Reviewed uses <1.18.7 without the v prefix. High/CVSS 3.1 7.5 agree. Trigger requires attacker-supplied dictionary data reaching NewDict and subsequent encoding.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/klauspost/compress/security-advisories/GHSA-259r-337f-4rfw",
+          "checkedAt": "2026-10-20T21:29:59.121354Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/klauspost/compress/security/advisories/GHSA-259r-337f-4rfw",
+          "checkedAt": "2026-10-20T21:30:33.212358Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "ae8a3f7039fb564652a8897d9551baa4c8b874af572839b659e7d3ab117e9638",
+          "originalFetchedResponseBytes": 200669,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-259r-337f-4rfw.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "b55d89d308c1902a3132f338f9708834eb9a25afb683edba05ac9f75dfabbce2",
+          "bytes": 1033,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-259r-337f-4rfw.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "00c418a27378f8950a11db76675085f5baa76e4fa8d88f0cfcc0a26e1a1f8441",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-259r-337f-4rfw.json"
+    },
+    {
+      "id": "GHSA-2658-85cv-9wwq",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-2658-85cv-9wwq/GHSA-2658-85cv-9wwq.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2658-85cv-9wwq/GHSA-2658-85cv-9wwq.json",
+        "sha256": "93e5dbbf441f9eded3fd72209d83e11b78236f5caae3f51e694e05250eae4db5",
+        "bytes": 11882,
+        "summary": "Mercury: Stored / DOM Cross-Site Scripting (XSS): mr.Markdown renders untrusted content as raw, unsanitized HTML",
+        "publishedAt": "2026-10-19T17:01:20Z",
+        "modifiedAt": "2026-10-19T17:01:20Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111059"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "mercury"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "3.2.11"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-2658-85cv-9wwq",
+        "summary": "Stored / DOM Cross-Site Scripting (XSS): mr.Markdown renders untrusted content as raw, unsanitized HTML",
+        "severity": "moderate",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "mercury"
+            },
+            "vulnerable_version_range": ">= 3.0.0",
+            "patched_versions": "3.2.11",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "score": 6.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "score": 6.1
+          }
+        },
+        "published_at": "2026-09-11T07:29:26Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Maintainer affected field is open-ended >=3.0.0 despite fixed 3.2.11; Reviewed bounds the interval below 3.2.11. Preserve this internal source mismatch rather than treating the literal open bound as proof the fixed release is vulnerable.",
+        "Medium/CVSS 3.1 6.1 agree. Requires untrusted data rendered via mr.Markdown to another viewer; optional shared sessions amplify but are not necessary. Reporter distinguishes sink-level browser execution from the full served-app path not tested end-to-end.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/mljar/mercury/security-advisories/GHSA-2658-85cv-9wwq",
+          "checkedAt": "2026-10-20T21:30:03.569103Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/mljar/mercury/security/advisories/GHSA-2658-85cv-9wwq",
+          "checkedAt": "2026-10-20T21:30:37.308826Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "4cb78d8abd9d6395d16756790882d7acca0c7fbc360aae133819273644820216",
+          "originalFetchedResponseBytes": 212264,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-2658-85cv-9wwq.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "6b5f03d400122ca157a1e4723c2b97066265994cd952554dbf7e87fb1d688688",
+          "bytes": 1061,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-2658-85cv-9wwq.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "8a39159f19227c5049549be8303780e50adb6821be2c444d96fe4318dd01b1df",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-2658-85cv-9wwq.json"
+    },
+    {
+      "id": "GHSA-2g87-pp6c-29x5",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-2g87-pp6c-29x5/GHSA-2g87-pp6c-29x5.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2g87-pp6c-29x5/GHSA-2g87-pp6c-29x5.json",
+        "sha256": "d06f2238171f4a85f6cede0c42a525517359072752a4cd5ca1366860456aa180",
+        "bytes": 3101,
+        "summary": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+        "publishedAt": "2026-10-19T17:07:23Z",
+        "modifiedAt": "2026-10-19T17:07:23Z",
+        "withdrawnAt": null,
+        "aliases": [],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "aiohttp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.14.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.14.3"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-2g87-pp6c-29x5",
+        "cve_id": null,
+        "summary": "Multiple instances of excessive or unbounded memory/CPU use",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "aiohttp"
+            },
+            "vulnerable_version_range": "<=3.14.3",
+            "patched_versions": "3.14.4",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-07T01:22:06Z",
+        "updated_at": "2026-10-07T01:22:06Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer Medium differs from Reviewed High. Maintainer has no CVSS vector; Reviewed CVSS 4.0 stays database-attributed.",
+        "Maintainer <=3.14.3 with fixed 3.14.4 is kept distinct from Reviewed <3.14.4. Multiple resource-exhaustion paths are described, not actual exploitation.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-2g87-pp6c-29x5",
+          "checkedAt": "2026-10-20T21:29:50.810547Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "1d2fc013e5836904ec60e0eb27975ec6269131aafee056979f2d433d5cfea66b",
+          "originalFetchedResponseBytes": 11888,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-2g87-pp6c-29x5.2026-10-21.batch-b1.api.public-advisory.json",
+          "sha256": "2cc9663270ec7a12e29d97abe14093ea8ba5f75c845cc83e9b4a046b3acc284b",
+          "bytes": 941,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-2g87-pp6c-29x5.2026-10-21.batch-b1.api.public-headers.txt",
+          "headersSha256": "684343503085205ce3d4a8db97429d6f2d2148d28a6f3ae9a79e8831e8c4612e",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-2g87-pp6c-29x5.json"
+    },
+    {
+      "id": "GHSA-462x-pgg6-55fp",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-462x-pgg6-55fp/GHSA-462x-pgg6-55fp.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-462x-pgg6-55fp/GHSA-462x-pgg6-55fp.json",
+        "sha256": "2b5c979a545eb0ee5db2557ad1e2d458ba11ded44b22ef752d29e8ce422f10d6",
+        "bytes": 6163,
+        "summary": "Pillow tiled-TIFF decoder reads past tile buffer in copy4 (Unpack.c:1290)",
+        "publishedAt": "2026-10-20T20:49:26Z",
+        "modifiedAt": "2026-10-20T20:49:27Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-112395"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.2.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-462x-pgg6-55fp",
+        "summary": "Pillow tiled-TIFF decoder reads past tile buffer in copy4 (Unpack.c:1290)",
+        "severity": "moderate",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "pillow"
+            },
+            "vulnerable_version_range": "8.2.0 - 12.3.0",
+            "patched_versions": "13.0.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+            "score": 6.5
+          }
+        },
+        "published_at": "2026-10-17T10:35:44Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Maintainer range is 8.2.0 - 12.3.0, fixed 13.0.0; Reviewed expands the upper interval to <13.0.0. Medium/CVSS 3.1 6.5 agree.",
+        "Crafted tiled TIFF decoding can over-read the tile buffer, causing a crash and possible adjacent heap content in pixel output; no production compromise is claimed.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-462x-pgg6-55fp",
+          "checkedAt": "2026-10-20T21:30:10.563394Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp",
+          "checkedAt": "2026-10-20T21:30:37.368427Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "776225403c8fc2f65e58d52c9846ab7843e94a5fa43af852f2fa33add4e50925",
+          "originalFetchedResponseBytes": 327249,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-462x-pgg6-55fp.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "7b1a070ae24fde5b6a3c0f236a6f851858949e887d85b74e238e27e5dc2bd6a7",
+          "bytes": 1036,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-462x-pgg6-55fp.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "9abeb0306b3e872a02af6a149756e27ba5bf2708d24548550510ef3f49324aa0",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-462x-pgg6-55fp.json"
+    },
+    {
+      "id": "GHSA-46jr-4wx8-v453",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-46jr-4wx8-v453/GHSA-46jr-4wx8-v453.json",
+        "sha256": "0568a78425861563a7ca0fdc368cba51e54294b3685283012aefb269ca56bf82",
+        "bytes": 3953,
+        "summary": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation",
+        "publishedAt": "2026-10-20T20:06:35Z",
+        "modifiedAt": "2026-10-20T20:06:35Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111768"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/sdk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.3.0"
+                  },
+                  {
+                    "fixed": "1.32.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/server"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.3.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-46jr-4wx8-v453",
+        "summary": "One HTTP request within the default size limit could exhaust server memory during validation",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/sdk"
+            },
+            "vulnerable_version_range": ">= 1.3.0, < 1.32.0",
+            "patched_versions": "1.32.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/server"
+            },
+            "vulnerable_version_range": ">= 2.0.0, < 2.3.0",
+            "patched_versions": "2.3.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          }
+        },
+        "published_at": "2026-10-15T13:10:32Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Both package ranges/fixes and High/CVSS 3.1 7.5 agree, but the prose explicitly warns that upgrading alone does not mitigate the problem.",
+        "Fixed releases add maxToolInputElements disabled by default. Operators must configure that tool-argument limit and lower transport/body-parser limits; stdio-only servers are unaffected.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/modelcontextprotocol/typescript-sdk/security-advisories/GHSA-46jr-4wx8-v453",
+          "checkedAt": "2026-10-20T21:30:03.607039Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-46jr-4wx8-v453",
+          "checkedAt": "2026-10-20T21:30:37.428657Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "c4014e45f593e3bd98ee93229c6dd5e1ff09f88ee9007deca5794353f94d4ce6",
+          "originalFetchedResponseBytes": 193108,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-46jr-4wx8-v453.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "7891b41f541823b2fa536abacdef32806c3a8ab5868cd5f4de27b3f9a5f3f286",
+          "bytes": 1313,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-46jr-4wx8-v453.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "af9107daaffcd04f7ba304444ea6fd9bf284463d146766dde7331578a03eeef0",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-46jr-4wx8-v453.json"
+    },
+    {
+      "id": "GHSA-494j-54xm-rwp3",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-494j-54xm-rwp3/GHSA-494j-54xm-rwp3.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-494j-54xm-rwp3/GHSA-494j-54xm-rwp3.json",
+        "sha256": "e87e69c513f8e67ba0228e3949d83be8c95289d053f384e50020123c8bfb1281",
+        "bytes": 1613,
+        "summary": "AIOHTTP: Secure attribute not enforced for shared cookie",
+        "publishedAt": "2026-10-19T17:07:47Z",
+        "modifiedAt": "2026-10-19T17:07:47Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111063"
+        ],
+        "severityLabel": "LOW",
+        "severity": [],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "aiohttp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.14.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.14.3"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-494j-54xm-rwp3",
+        "cve_id": "CVE-2026-111063",
+        "summary": "Secure attribute not enforced for shared cookie",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "aiohttp"
+            },
+            "vulnerable_version_range": "<=3.14.3",
+            "patched_versions": "3.14.4",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-07T01:23:58Z",
+        "updated_at": "2026-10-19T16:43:49Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Low/no CVSS agrees; primary affected <=3.14.3 and fixed 3.14.4 are retained as written instead of silently treating them as identical to <3.14.4. Shared Secure cookies may be sent over unencrypted requests.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-494j-54xm-rwp3",
+          "checkedAt": "2026-10-20T21:29:50.811122Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "5e78fc2012d09fa363cc0d7fe10208ae077a90ffe44be4772609bde725ea5ae0",
+          "originalFetchedResponseBytes": 4740,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-494j-54xm-rwp3.2026-10-21.batch-b1.api.public-advisory.json",
+          "sha256": "d8149152359a853776f261684b20442990661850ca9066644e77900a479c68f6",
+          "bytes": 939,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-494j-54xm-rwp3.2026-10-21.batch-b1.api.public-headers.txt",
+          "headersSha256": "813ed3ea2f8cd64e82a76dd6c1dc8d501bc77eec0f1454ecaf6be470ba20101a",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4wc5-f2rc-q74m",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-4wc5-f2rc-q74m/GHSA-4wc5-f2rc-q74m.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-4wc5-f2rc-q74m/GHSA-4wc5-f2rc-q74m.json",
+        "sha256": "37d651600d57201cb5aa5c7825b8fd078ac637adde7279b62731d0974c6e5e64",
+        "bytes": 6537,
+        "summary": "russh: Unbounded memory allocation in agent protocol server via crafted constraint records",
+        "publishedAt": "2026-10-19T17:06:46Z",
+        "modifiedAt": "2026-10-19T17:06:46Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111061"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "crates.io",
+              "name": "russh"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.64.1"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 0.64.0"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-4wc5-f2rc-q74m",
+        "cve_id": "CVE-2026-111061",
+        "summary": "Unbounded memory allocation in agent protocol server via crafted constraint records",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "russh"
+            },
+            "vulnerable_version_range": "<=0.64.0",
+            "patched_versions": "0.64.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 4.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "score": 4.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-05T06:55:27Z",
+        "updated_at": "2026-10-19T16:29:27Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer <=0.64.0 and fixed 0.64.1 correspond to explicit source boundaries; Reviewed uses <0.64.1. Medium/CVSS 3.1 4.3 agree.",
+        "An attacker must reach the SSH agent protocol socket, including an agent-forwarding peer; this is agent-process memory/task exhaustion, not a generic remotely reachable SSH-server flaw.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/Eugeny/russh/security-advisories/GHSA-4wc5-f2rc-q74m",
+          "checkedAt": "2026-10-20T21:29:50.810221Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "c18f075e305477280bbecae94728e66521319538833a3a6a61abc5f40365ed92",
+          "originalFetchedResponseBytes": 8379,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-4wc5-f2rc-q74m.2026-10-21.batch-b1.api.public-advisory.json",
+          "sha256": "f95885494ee9fb2c64bc910161eaa014ffc3d809c0226d023c39ed926b8c6fd6",
+          "bytes": 1059,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-4wc5-f2rc-q74m.2026-10-21.batch-b1.api.public-headers.txt",
+          "headersSha256": "c2e9dd481ac19c653860405c2f79edeb5e31586cfaad8a26a2772613ecca1c44",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-57xq-rjx2-v5xh",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-57xq-rjx2-v5xh/GHSA-57xq-rjx2-v5xh.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-57xq-rjx2-v5xh/GHSA-57xq-rjx2-v5xh.json",
+        "sha256": "01a69e906c5a4dc8a6bf84c2026aacebad0b10aca2c26b7397e2a991c5516a8f",
+        "bytes": 8048,
+        "summary": "@angular/router: Denial of Service via RouterLink Query Parameter Retention in Server-Side Rendering (SSR)",
+        "publishedAt": "2026-10-20T17:52:32Z",
+        "modifiedAt": "2026-10-20T17:52:32Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111751"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "22.0.0"
+                  },
+                  {
+                    "fixed": "22.2.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "21.2.0"
+                  },
+                  {
+                    "fixed": "21.2.25"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-57xq-rjx2-v5xh",
+        "cve_id": "CVE-2026-111751",
+        "summary": "Denial of Service via RouterLink Query Parameter Retention in Server-Side Rendering (SSR)",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "vulnerable_version_range": ">= 22.0.0, < 22.2.1",
+            "patched_versions": "22.2.1",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "vulnerable_version_range": ">= 21.2.0, < 21.2.25",
+            "patched_versions": "21.2.25",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "score": 8.2
+          }
+        },
+        "published_at": "2026-10-01T05:33:15Z",
+        "updated_at": "2026-10-19T17:07:54Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Both release lines and CVSS 4.0 8.2 agree. Node/V8 SSR with merged/preserved RouterLink query parameters and overlapping renders is required; client-only SPAs, Angular 20.x and 21.1.x are explicitly unaffected.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/angular/angular/security-advisories/GHSA-57xq-rjx2-v5xh",
+          "checkedAt": "2026-10-20T21:29:55.466712Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "827c0eff95fd69507156993f5056a09047994b3f21e3960f5e3c87123684a655",
+          "originalFetchedResponseBytes": 12035,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-57xq-rjx2-v5xh.2026-10-21.batch-b1.api.public-advisory.json",
+          "sha256": "d03468714a13ec0baa68f2e522f9f8e921316b242e64b892a14b49beedc93a88",
+          "bytes": 1292,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-57xq-rjx2-v5xh.2026-10-21.batch-b1.api.public-headers.txt",
+          "headersSha256": "3c2ac86b06e995b2260b08cd2d192c4adb2d569d9eab6985b420692b30908275",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-587h-7wmj-h5pm",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-587h-7wmj-h5pm/GHSA-587h-7wmj-h5pm.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-587h-7wmj-h5pm/GHSA-587h-7wmj-h5pm.json",
+        "sha256": "1aa0cf1e9a473df0e771c7a4c1cb7f94d7cf755b5b9867fd1956a886996a6c3c",
+        "bytes": 5665,
+        "summary": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+        "publishedAt": "2026-10-20T19:48:25Z",
+        "modifiedAt": "2026-10-20T19:48:25Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-112942"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "launch-editor"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.14.2"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 2.14.1"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.3.0"
+                  },
+                  {
+                    "fixed": "8.3.3"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.3.2"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.2.0"
+                  },
+                  {
+                    "fixed": "8.2.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.2.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.1.6"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.1.5"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "fixed": "7.3.7"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 7.3.6"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.4.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 6.4.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite-plus"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.1.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.0.0"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-587h-7wmj-h5pm",
+        "summary": "`fs.existsSync()` existence check can be bypassed on Windows",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "launch-editor"
+            },
+            "vulnerable_version_range": "<= 2.14.1",
+            "patched_versions": "2.14.2",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": ">=8.3.0,<=8.3.2",
+            "patched_versions": "8.3.3",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": ">=8.2.0,<=8.2.3",
+            "patched_versions": "8.2.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": ">=8.0.0,<=8.1.5",
+            "patched_versions": "8.1.6",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": ">=7.0.0,<=7.3.6",
+            "patched_versions": "7.3.7",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": "<=6.4.3",
+            "patched_versions": "6.4.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite-plus"
+            },
+            "vulnerable_version_range": "<=1.0.0",
+            "patched_versions": "1.1.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "score": 7.5
+          }
+        },
+        "published_at": "2026-10-06T14:15:17Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "All seven package/branch range and fixed-version pairs are visible on the primary HTML and agree on named patched releases. Source <=last-affected bounds remain distinct from Reviewed <fixed bounds.",
+        "Windows only. Existence-check bypass removes the file-placement prerequisite when chained with the separate GHSA-698v command-escaping issue; narrative relatedness does not authorize alias merging.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/vitejs/launch-editor/security-advisories/GHSA-587h-7wmj-h5pm",
+          "checkedAt": "2026-10-20T21:30:17.291161Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/vitejs/launch-editor/security/advisories/GHSA-587h-7wmj-h5pm",
+          "checkedAt": "2026-10-20T21:30:37.460509Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "b12af773699ef28b0fa96f6f2d6f6010eca3fd069e50fe6608398dd4518c228a",
+          "originalFetchedResponseBytes": 199497,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-587h-7wmj-h5pm.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "d920144ba81db993d02e3fa7b1925a1d4a13116fe7c8c0ecd94cd7e03dae7f1e",
+          "bytes": 2326,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-587h-7wmj-h5pm.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "9bf48efe2abbb069aa8331e2eba521dce7f25bf658a33325db72b8257efeed77",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-58r4-6rv3-gfh8",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-58r4-6rv3-gfh8/GHSA-58r4-6rv3-gfh8.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-58r4-6rv3-gfh8/GHSA-58r4-6rv3-gfh8.json",
+        "sha256": "957902f9dd2411da04edc2f3838044005a1bb88ef2c509e02b245ce10ae8b4a8",
+        "bytes": 3305,
+        "summary": "Pillow: Out-of-bounds access in _imagingmorph on a zero-width image",
+        "publishedAt": "2026-10-20T20:56:22Z",
+        "modifiedAt": "2026-10-20T20:56:22Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-112397"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 12.3.0"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-58r4-6rv3-gfh8",
+        "summary": "Out-of-bounds access in _imagingmorph on a zero-width image",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "Pillow"
+            },
+            "vulnerable_version_range": "<= 12.3.0",
+            "patched_versions": "13.0.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {},
+        "published_at": "2026-10-17T10:38:24Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Primary Low with no displayed CVSS differs from Reviewed High and v4 vector. Maintainer <=12.3.0 and fixed 13.0.0 are separate literal claims.",
+        "Trigger requires morphology operations on an untrusted zero-width image; basic image loading alone is not the described sink.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-58r4-6rv3-gfh8",
+          "checkedAt": "2026-10-20T21:30:10.832888Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8",
+          "checkedAt": "2026-10-20T21:30:40.673210Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "65a7a10309c8f67ec802604223b509343cfb210b2d78b82f181f10ef00c9074d",
+          "originalFetchedResponseBytes": 185804,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-58r4-6rv3-gfh8.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "eef2bb2c8efcf9979ac40bf656b17a055052a631a4e80a86d42ddcb59ba15d5a",
+          "bytes": 855,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-58r4-6rv3-gfh8.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "aaf354f01d35f288340d288e7a345ff7bc3cb95d406c5eb18b4fd78ba676b52f",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-58r4-6rv3-gfh8.json"
+    },
+    {
+      "id": "GHSA-5r4p-p66f-jhc7",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-5r4p-p66f-jhc7/GHSA-5r4p-p66f-jhc7.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-5r4p-p66f-jhc7/GHSA-5r4p-p66f-jhc7.json",
+        "sha256": "e6750c4cd7ad28dc2109cac059841d97f4c6174e322f831d7cfdb4557d971539",
+        "bytes": 2550,
+        "summary": "Hono: `serveStatic` decodes the request path a second time, leading to bypass of middleware on static paths",
+        "publishedAt": "2026-10-20T14:36:11Z",
+        "modifiedAt": "2026-10-20T14:36:11Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111757"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "hono"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.12.4"
+                  },
+                  {
+                    "fixed": "4.13.11"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-5r4p-p66f-jhc7",
+        "summary": "`serveStatic` decodes the request path a second time, leading to bypass of middleware on static paths",
+        "severity": "moderate",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "hono"
+            },
+            "vulnerable_version_range": ">= 4.12.4, < 4.13.11",
+            "patched_versions": "4.13.11",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "score": 5.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "score": 5.3
+          }
+        },
+        "published_at": "2026-09-29T06:18:42Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Range, fix 4.13.11 and Medium/CVSS 3.1 5.3 agree. This bypasses middleware on static prefixes through double decoding, not traversal outside the configured root; applications serving only public files are unaffected.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/honojs/hono/security-advisories/GHSA-5r4p-p66f-jhc7",
+          "checkedAt": "2026-10-20T21:29:59.107894Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/honojs/hono/security/advisories/GHSA-5r4p-p66f-jhc7",
+          "checkedAt": "2026-10-20T21:30:40.709162Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "c1d9229bfdc520ff339aa1b2f993fe3fc8f7e0830c535f62f5f0bef6dbacf28b",
+          "originalFetchedResponseBytes": 190478,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-5r4p-p66f-jhc7.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "ebb8b0464e4ded6a147b1e0af802813d9b90ba4d8cb50b9ef9c82dbc2a57af34",
+          "bytes": 1069,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-5r4p-p66f-jhc7.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "fd7e7510d1590506a269fdaed0c0229e7c0785a7d696b58fb3999d9c03f10df4",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5wr8-gcqf-gqf3",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-5wr8-gcqf-gqf3/GHSA-5wr8-gcqf-gqf3.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-5wr8-gcqf-gqf3/GHSA-5wr8-gcqf-gqf3.json",
+        "sha256": "8a2805072864a9629bf9a58bbd981b1af4407299ceab31e40bc76aa086e058ca",
+        "bytes": 1841,
+        "summary": "aiohttp server lacks an initial request/header timeout",
+        "publishedAt": "2026-10-19T17:08:04Z",
+        "modifiedAt": "2026-10-19T17:08:04Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111064"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "aiohttp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.14.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.14.3"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-5wr8-gcqf-gqf3",
+        "cve_id": "CVE-2026-111064",
+        "summary": "aiohttp server lacks an initial request/header timeout",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "aiohttp"
+            },
+            "vulnerable_version_range": "<=3.14.3",
+            "patched_versions": "3.14.4",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-07T01:23:47Z",
+        "updated_at": "2026-10-19T16:45:29Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Primary Low differs from Reviewed High; primary has no CVSS vector while Reviewed supplies v4. Range <=3.14.3 and fixed 3.14.4 remain source-specific.",
+        "Initial idle requests evade keepalive timeout; the documented reverse-proxy timeout workaround is separate from the fixed package release.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-5wr8-gcqf-gqf3",
+          "checkedAt": "2026-10-20T21:29:50.812036Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "706cd4359ce1b24657afbb85925861b2cf15755b27d1937a6f57559d5bf0ca34",
+          "originalFetchedResponseBytes": 4647,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-5wr8-gcqf-gqf3.2026-10-21.batch-b1.api.public-advisory.json",
+          "sha256": "70a5c2e53fa288bab0f462d293dc690621e10ec921b56c9a2f60c507663e6a91",
+          "bytes": 946,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-5wr8-gcqf-gqf3.2026-10-21.batch-b1.api.public-headers.txt",
+          "headersSha256": "30b177c94d5e491593504f557b9a54db05571a95895728a46d24f38811ea7eda",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-5wr8-gcqf-gqf3.json"
+    },
+    {
+      "id": "GHSA-62vg-58rm-qff7",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json",
+        "sha256": "fd09a2472eb3c5c13d87281af3a8c35adb85d16aab12b6bebb565ddf784e391d",
+        "bytes": 9221,
+        "summary": "@angular/router: Denial of Service via Unmatched Empty-Path Outlet Route Matching in Server-Side Rendering (SSR)",
+        "publishedAt": "2026-10-20T14:36:39Z",
+        "modifiedAt": "2026-10-20T14:36:39Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111752"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "22.0.0"
+                  },
+                  {
+                    "fixed": "22.2.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "21.0.0"
+                  },
+                  {
+                    "fixed": "21.2.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "20.0.0"
+                  },
+                  {
+                    "fixed": "20.3.33"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "19.2.25"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-62vg-58rm-qff7",
+        "cve_id": "CVE-2026-111752",
+        "summary": "Denial of Service via Unmatched Empty-Path Outlet Route Matching in Server-Side Rendering (SSR)",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "vulnerable_version_range": ">= 22.0.0, < 22.2.1",
+            "patched_versions": "22.2.1",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "vulnerable_version_range": ">= 21.0.0, < 21.2.25",
+            "patched_versions": "21.2.25",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "vulnerable_version_range": ">= 20.0.0, < 20.3.33",
+            "patched_versions": "20.3.33",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@angular/router"
+            },
+            "vulnerable_version_range": "<= 19.2.25",
+            "patched_versions": "End of Support / LTS expired; will not be patched",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "score": 8.2
+          }
+        },
+        "published_at": "2026-09-30T19:32:57Z",
+        "updated_at": "2026-10-19T17:11:19Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "All three patched branches and CVSS 4.0 8.2 agree. The <=19.2.25 branch is end-of-support and explicitly will not be patched; retain fixed=null rather than storing that sentence as a version.",
+        "Requires Node/V8 on-demand SSR and susceptible routes; client SPAs and build-time SSG are unaffected. Short-URL guard/resolver amplification may remain despite URL-length limits.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/angular/angular/security-advisories/GHSA-62vg-58rm-qff7",
+          "checkedAt": "2026-10-20T21:29:55.485932Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "5b48f17045491f66c6959036f367684e0d61d34ce00794f24d5901d87027a400",
+          "originalFetchedResponseBytes": 12666,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-62vg-58rm-qff7.2026-10-21.batch-b1.api.public-advisory.json",
+          "sha256": "c437decddea2a678ccb738bf29591551ecb4a1c093f112967353ab7eed146b2f",
+          "bytes": 1792,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-62vg-58rm-qff7.2026-10-21.batch-b1.api.public-headers.txt",
+          "headersSha256": "f16f963d8e4b6e33f03c6dec6ba075eae955a4c3f5f1fe225a5f3ee53c58c944",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-62vg-58rm-qff7.json"
+    },
+    {
+      "id": "GHSA-65qm-jvmh-6pqg",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json",
+        "sha256": "6b06fd1486da36a7d97f00b18c8bcfd16d80c9b757e3ddb98322d90ec7369a02",
+        "bytes": 17667,
+        "summary": "Pillow: GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
+        "publishedAt": "2026-10-20T20:53:36Z",
+        "modifiedAt": "2026-10-20T20:53:36Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-112400"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.2.0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-65qm-jvmh-6pqg",
+        "summary": "GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "Pillow"
+            },
+            "vulnerable_version_range": "<= 12.3.0",
+            "patched_versions": "13.0.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {},
+        "published_at": "2026-10-17T10:38:15Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Primary Low with no CVSS differs from Reviewed High and v4. Primary affected field says <=12.3.0, while prose explicitly places the late-check introduction in 9.2.0, supporting the Reviewed lower boundary. Fixed 13.0.0 agrees.",
+        "Only applications catching the frame-seek decompression-bomb exception and continuing to use the same image reach this amplification. Default open/load, normal iteration, and n_frames/is_animated paths are excluded; no memory corruption is claimed.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-65qm-jvmh-6pqg",
+          "checkedAt": "2026-10-20T21:30:11.020185Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg",
+          "checkedAt": "2026-10-20T21:30:40.725087Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "bb539c4c35ba18ac1b007c9e8e7f79567df1fad6af61ca1d30cbf87c1f1020aa",
+          "originalFetchedResponseBytes": 220574,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-65qm-jvmh-6pqg.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "a7225c185ab9541741f69ecc7eb560f28974f980168266a586220f41c5c8e733",
+          "bytes": 867,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-65qm-jvmh-6pqg.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "d47b977c0e971a83fc387d680bd3a52a7d9a91350dea1eed9d9cfc6ab6182aa5",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-65qm-jvmh-6pqg.json"
+    },
+    {
+      "id": "GHSA-698v-4r3x-3vcv",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-698v-4r3x-3vcv/GHSA-698v-4r3x-3vcv.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-698v-4r3x-3vcv/GHSA-698v-4r3x-3vcv.json",
+        "sha256": "430eb62376eac70d005756857b26d463ebb7fe09dff79be5783847ca2d47549d",
+        "bytes": 5973,
+        "summary": "launch-editor: escapeCmdArgs() omits % escaping on Windows",
+        "publishedAt": "2026-10-20T18:30:24Z",
+        "modifiedAt": "2026-10-20T18:30:24Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-112943"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "launch-editor"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.14.2"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 2.14.1"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.3.0"
+                  },
+                  {
+                    "fixed": "8.3.3"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.3.2"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.2.0"
+                  },
+                  {
+                    "fixed": "8.2.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.2.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.1.6"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 8.1.5"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "fixed": "7.3.7"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 7.3.6"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.4.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 6.4.3"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite-plus"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.1.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.0.0"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-698v-4r3x-3vcv",
+        "summary": "escapeCmdArgs() omits % escaping on Windows",
+        "severity": "moderate",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "launch-editor"
+            },
+            "vulnerable_version_range": "<= 2.14.1",
+            "patched_versions": "2.14.2",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": ">=8.3.0,<=8.3.2",
+            "patched_versions": "8.3.3",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": ">=8.2.0,<=8.2.3",
+            "patched_versions": "8.2.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": ">=8.0.0,<=8.1.5",
+            "patched_versions": "8.1.6",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": ">=7.0.0,<=7.3.6",
+            "patched_versions": "7.3.7",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite"
+            },
+            "vulnerable_version_range": "<=6.4.3",
+            "patched_versions": "6.4.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vite-plus"
+            },
+            "vulnerable_version_range": "<=1.0.0",
+            "patched_versions": "1.1.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+          "score": 6.3
+        },
+        "cvss_severities": {
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "score": 6.3
+          }
+        },
+        "published_at": "2026-10-06T14:15:27Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "All seven package/branch fix pairs and Medium/CVSS 4.0 6.3 agree. Preserve the literal <= bounds alongside database intervals.",
+        "Windows shell expansion is the issue; this original description assumes file placement and certain environment/NTFS conditions. GHSA-587h separately removes the file-existence prerequisite; it is not an alias.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/vitejs/launch-editor/security-advisories/GHSA-698v-4r3x-3vcv",
+          "checkedAt": "2026-10-20T21:30:17.295941Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/vitejs/launch-editor/security/advisories/GHSA-698v-4r3x-3vcv",
+          "checkedAt": "2026-10-20T21:30:40.740771Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "34c6e29ce1f477bc6de6050af9362612c7e18d9c1e6ee7ecdfbd875821d1a7a4",
+          "originalFetchedResponseBytes": 199724,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-698v-4r3x-3vcv.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "8ded4240bd67dafbdf6335fc77153c732f30c3d8c3f204a87fc3fd65ad9d4c41",
+          "bytes": 2313,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-698v-4r3x-3vcv.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "4abacb5129d7bf93255767fcf747c81cefad4b8a6192abb74b8ac263f8cfe20a",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6cjc-53gc-5rqm",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-6cjc-53gc-5rqm/GHSA-6cjc-53gc-5rqm.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6cjc-53gc-5rqm/GHSA-6cjc-53gc-5rqm.json",
+        "sha256": "4820ee828c35aa087f71df6a86f89edd0fbfc5fc78bdea0cde11bada63bdd28b",
+        "bytes": 1869,
+        "summary": "AIOHTTP: Connector pool exhaustion via Max-Age overflow",
+        "publishedAt": "2026-10-20T19:57:24Z",
+        "modifiedAt": "2026-10-20T19:57:24Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111065"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "aiohttp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.14.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.14.3"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-6cjc-53gc-5rqm",
+        "cve_id": "CVE-2026-111065",
+        "summary": "Connector pool exhaustion via Max-Age overflow",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "aiohttp"
+            },
+            "vulnerable_version_range": "<=3.14.3",
+            "patched_versions": "3.14.4",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-07T01:23:37Z",
+        "updated_at": "2026-10-19T16:48:23Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Primary Low differs from Reviewed Moderate; primary CVSS is absent and Reviewed v4 remains separately attributed. Maintainer <=3.14.3/fixed 3.14.4 differs textually from <3.14.4.",
+        "Max-Age overflow may temporarily exhaust the connection pool until garbage collection; this caveat limits the availability claim.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-6cjc-53gc-5rqm",
+          "checkedAt": "2026-10-20T21:29:55.283217Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "f82bc4c5160b96ba767d19af849b81defc5d884219eb449f141968c61e1db0cf",
+          "originalFetchedResponseBytes": 4631,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-6cjc-53gc-5rqm.2026-10-21.batch-b1.api.public-advisory.json",
+          "sha256": "d66178bb2a169d1770a20578b7b5fdfd38fd74dc1be1d742070ae13b09ab3c75",
+          "bytes": 938,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-6cjc-53gc-5rqm.2026-10-21.batch-b1.api.public-headers.txt",
+          "headersSha256": "6bddd861cb868436e5cb8a9db4ddf42d530950e54dc433d14a5d60d137f4f938",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-6cjc-53gc-5rqm.json"
+    },
+    {
+      "id": "GHSA-6prh-2h8m-c8cw",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-6prh-2h8m-c8cw/GHSA-6prh-2h8m-c8cw.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6prh-2h8m-c8cw/GHSA-6prh-2h8m-c8cw.json",
+        "sha256": "99e17fd07392b5968e66b294ccb80fa0c84385774fe9a5d333fc62f3f37f9b86",
+        "bytes": 3815,
+        "summary": "MCP TypeScript client SDK: HTTP client transports and OAuth requests followed cross-origin redirects and re-sent custom headers and request bodies",
+        "publishedAt": "2026-10-20T18:26:30Z",
+        "modifiedAt": "2026-10-20T18:26:31Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111769"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/sdk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.32.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/client"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.3.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-6prh-2h8m-c8cw",
+        "summary": "HTTP client transports and OAuth requests followed cross-origin redirects and re-sent custom headers and request bodies",
+        "severity": "moderate",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/client"
+            },
+            "vulnerable_version_range": ">= 2.0.0, < 2.3.0",
+            "patched_versions": "2.3.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@modelcontextprotocol/sdk"
+            },
+            "vulnerable_version_range": "< 1.32.0",
+            "patched_versions": "1.32.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+            "score": 6.5
+          }
+        },
+        "published_at": "2026-10-02T20:42:34Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Both package ranges/fixes and CVSS 3.1 6.5 agree. HTTP transports/OAuth redirects can resend custom headers and 307/308 bodies; stdio is unaffected and current runtimes already drop the standard Authorization header.",
+        "The fix restricts redirect policy; explicitly restoring follow behavior restores exposure. Credential rotation is a conditional maintainer recommendation, not proof that this user or any company was compromised.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/modelcontextprotocol/typescript-sdk/security-advisories/GHSA-6prh-2h8m-c8cw",
+          "checkedAt": "2026-10-20T21:30:03.617026Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-6prh-2h8m-c8cw",
+          "checkedAt": "2026-10-20T21:31:05.292431Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "a9c17f91b0d9a173fa0f416b52be7bdee4689f8ac3e91cd2c616557a00f45773",
+          "originalFetchedResponseBytes": 193032,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-6prh-2h8m-c8cw.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "3ada30f63bca62eb2daaa6cc4785d0c0ac709adba647229504d2e0364b25d477",
+          "bytes": 1334,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-6prh-2h8m-c8cw.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "04d16dadf7734828f7fcdc23cb96ee7a4a90d6eba96f53e4c0c99be535a2d8f1",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6q48-6c7w-9gw2",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-6q48-6c7w-9gw2/GHSA-6q48-6c7w-9gw2.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6q48-6c7w-9gw2/GHSA-6q48-6c7w-9gw2.json",
+        "sha256": "1b9308c276ce86cf1aa8cf8b1dc2a6c6db747158ecf951b5b4065d8f14a3065d",
+        "bytes": 2236,
+        "summary": "certifi bundles emSign root CAs with compromised intermediate CA keys",
+        "publishedAt": "2026-10-20T19:35:05Z",
+        "modifiedAt": "2026-10-20T19:35:05Z",
+        "withdrawnAt": null,
+        "aliases": [],
+        "severityLabel": "CRITICAL",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "certifi"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2019.03.09"
+                  },
+                  {
+                    "fixed": "2026.10.19"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-6q48-6c7w-9gw2",
+        "summary": "Removal of emSign root cerificate",
+        "severity": "critical",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "certifi"
+            },
+            "vulnerable_version_range": ">=2019.03.09",
+            "patched_versions": "2026.10.18",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {},
+        "published_at": "2026-10-20T11:31:16Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Maintainer fields and prose identify 2026.10.18 as the fix, while Reviewed structured fixed is 2026.10.19. Reviewed prose itself says .18 removed all emSign roots and .19 restored only unaffected roots. Both PyPI releases exist; checksum-verified wheel bundles confirm .18 has no emSign root labels and .19 has G1/C1/C3 but not the implicated ECC G3. Use .18 as the issue-specific first fix boundary, preserve Reviewed .19 raw, and do not mistake .19 restoration for reintroduction of the implicated root.",
+        "The Reviewed narrative recommends 2026.10.19 or later. An issue-specific first fix boundary is not a claim that .18 is the preferred current upgrade target. Root-label checks are corroboration, not an independent cryptographic audit of the CA incident.",
+        "The source says emSign roots were removed because intermediate keys were compromised; do not infer a specific company incident or observed MITM from that library advisory alone.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/certifi/python-certifi/security-advisories/GHSA-6q48-6c7w-9gw2",
+          "checkedAt": "2026-10-20T21:29:58.960773Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2",
+          "checkedAt": "2026-10-20T21:31:05.304654Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "0080b5d46b0c8fd8c4623613a631ff0eb2f4cbfd072047b964e0f3aafa49ceb8",
+          "originalFetchedResponseBytes": 178225,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-6q48-6c7w-9gw2.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "6271051a2e404cb8344d0985f494aedc4aa88c85a32d1148eafd74fb783ab9ac",
+          "bytes": 842,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-6q48-6c7w-9gw2.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "27d5303388455dfe4decf1734d1ceb72a3fa638f4bc6cbed5ab42a25648f7c12",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        },
+        {
+          "url": "https://pypi.org/pypi/certifi/2026.10.18/json",
+          "checkedAt": "2026-10-20T21:35:31.901398Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "5e4fb8e0be10f75dae348421effe1d8f62125b070b68133208873b932dcf2ddf",
+          "originalFetchedResponseBytes": 5581,
+          "artifactRepresentation": "allowlisted-public-release-metadata",
+          "path": "docs/advisory-source-snapshots/GHSA-6q48-6c7w-9gw2.2026-10-21.certifi-2026.10.18.public-release.json",
+          "sha256": "7be0304509271d3f86af3b7729e18e1c09a246c0ba53259af18dcbf6c1153071",
+          "bytes": 519
+        },
+        {
+          "url": "https://files.pythonhosted.org/packages/08/ba/95dd616042484f7c83a06974388b37b837732740ee70bc5dc715b5fcd55a/certifi-2026.10.18-py3-none-any.whl",
+          "checkedAt": "2026-10-20T21:38:02.376658Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "73191c47aaa79da394e8fee2dbc2ec827432cab56311122c9e47abf79e390f62",
+          "originalFetchedResponseBytes": 134093,
+          "artifactRepresentation": "allowlisted-public-distribution-inspection",
+          "path": "docs/advisory-source-snapshots/GHSA-6q48-6c7w-9gw2.2026-10-21.certifi-2026.10.18.public-wheel-review.json",
+          "sha256": "99e8e5124b6d22686c16eec4cad5d6a4a6dbbb7eeb9e0807aaf5b09d01a74023",
+          "bytes": 980
+        },
+        {
+          "url": "https://pypi.org/pypi/certifi/2026.10.19/json",
+          "checkedAt": "2026-10-20T21:35:31.902032Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "5b6ba21c20c09f5e4ca52bf8251de25fafbdb56909c60e3ba44d4f2b6ef5d319",
+          "originalFetchedResponseBytes": 4631,
+          "artifactRepresentation": "allowlisted-public-release-metadata",
+          "path": "docs/advisory-source-snapshots/GHSA-6q48-6c7w-9gw2.2026-10-21.certifi-2026.10.19.public-release.json",
+          "sha256": "4e90f23e8abc69b6a33a928ca541d8adfb1a02f442a98684e0f27858b4489c3a",
+          "bytes": 519
+        },
+        {
+          "url": "https://files.pythonhosted.org/packages/c4/51/29046e48f693c54e5b7412216d447a1d8362c9653148d98c02cdf65fa733/certifi-2026.10.19-py3-none-any.whl",
+          "checkedAt": "2026-10-20T21:38:07.409665Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b",
+          "originalFetchedResponseBytes": 136464,
+          "artifactRepresentation": "allowlisted-public-distribution-inspection",
+          "path": "docs/advisory-source-snapshots/GHSA-6q48-6c7w-9gw2.2026-10-21.certifi-2026.10.19.public-wheel-review.json",
+          "sha256": "62b366aa4c1391fc00caa8bbcbd2d52814101135dc6d160e054cca3cf4659e61",
+          "bytes": 1067
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-6q48-6c7w-9gw2.json"
+    },
+    {
+      "id": "GHSA-6wmf-3r64-vcwv",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-6wmf-3r64-vcwv/GHSA-6wmf-3r64-vcwv.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-6wmf-3r64-vcwv/GHSA-6wmf-3r64-vcwv.json",
+        "sha256": "d6fa95d697a064d5673c4886095046bca926974a444f9fafc7f636d306233f3c",
+        "bytes": 2016,
+        "summary": "Crass : Large numeric exponents cause CPU and memory denial of service",
+        "publishedAt": "2026-10-20T14:32:39Z",
+        "modifiedAt": "2026-10-20T14:32:39Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-61845"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "RubyGems",
+              "name": "crass"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.0.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-6wmf-3r64-vcwv",
+        "summary": "Large numeric exponents cause CPU and memory denial of service",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "RubyGems",
+              "name": "crass"
+            },
+            "vulnerable_version_range": "< 1.0.7",
+            "patched_versions": "1.0.7",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+          "score": 8.9
+        },
+        "cvss_severities": {
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+            "score": 8.9
+          }
+        },
+        "published_at": "2026-06-25T17:11:23Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Range, fixed 1.0.7 and High/CVSS 4.0 8.9 agree. Crass CSS number exponentiation can consume CPU/memory before clamping; attacker-controlled CSS is required.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/rgrove/crass/security-advisories/GHSA-6wmf-3r64-vcwv",
+          "checkedAt": "2026-10-20T21:30:17.279566Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/rgrove/crass/security/advisories/GHSA-6wmf-3r64-vcwv",
+          "checkedAt": "2026-10-20T21:31:05.312381Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "fc6a995728e354384093890c92df7d4ffb8fc529dd3d48db1070b87f67100cf8",
+          "originalFetchedResponseBytes": 194259,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-6wmf-3r64-vcwv.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "e91db64cc4e657bd2ca4a6e8f269a6bd0c7f97d5c449aa9024e44c8512417455",
+          "bytes": 1055,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-6wmf-3r64-vcwv.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "7211b817a771e03291d41ba06a4b625029986b94626cf4d8ae81a7695aaed7f4",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8g5g-8vmr-9782",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-8g5g-8vmr-9782/GHSA-8g5g-8vmr-9782.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8g5g-8vmr-9782/GHSA-8g5g-8vmr-9782.json",
+        "sha256": "e90fa9801e330195a3b76ba2c97dc0830f31e8e4869fc20449a8c7ef40201650",
+        "bytes": 15760,
+        "summary": "Pillow: Heap buffer overflow in ImagingJpegDecode",
+        "publishedAt": "2026-10-20T20:40:07Z",
+        "modifiedAt": "2026-10-20T20:40:07Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-112403"
+        ],
+        "severityLabel": "CRITICAL",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "Pillow"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "13.0.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 12.3.0"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-8g5g-8vmr-9782",
+        "summary": "Heap buffer overflow in `ImagingJpegDecode`: libjpeg's actual output geometry is never checked after `draft()` requests scaling, so a lossless (SOF3) JPEG writes full-width scanlines into a scaled-width row buffer",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "Pillow"
+            },
+            "vulnerable_version_range": "<= 12.3.0",
+            "patched_versions": "13.0.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {},
+        "published_at": "2026-10-17T10:34:28Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Primary High with no displayed CVSS differs from Reviewed Critical and v4. Maintainer <=12.3.0 and fixed 13.0.0 remain distinct from the database <13.0.0 interval.",
+        "Requires libjpeg-turbo >=3 with lossless JPEG support and a draft/thumbnail scaled decode. Full-scale load/resize and older JPEG decoders are explicitly unaffected; source describes a heap overwrite, not a confirmed real-world code execution incident.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/python-pillow/Pillow/security-advisories/GHSA-8g5g-8vmr-9782",
+          "checkedAt": "2026-10-20T21:30:11.021321Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8g5g-8vmr-9782",
+          "checkedAt": "2026-10-20T21:31:05.371898Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "67dde9ac01870a4cd6af66d59fcb43761d74a087929c33bd7cf4e8d5f5ee5cda",
+          "originalFetchedResponseBytes": 227403,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-8g5g-8vmr-9782.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "e00d4a87ede7a1d34eeadadcf828c6b5aa3c42a3692a874b800a73a95172bc02",
+          "bytes": 1010,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-8g5g-8vmr-9782.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "7ca65a3ef3c9194b23225eba079791c1ac4a6efc54f3bc25bc73a229f029b687",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-8g5g-8vmr-9782.json"
+    },
+    {
+      "id": "GHSA-8r9p-f939-6h3c",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-8r9p-f939-6h3c/GHSA-8r9p-f939-6h3c.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8r9p-f939-6h3c/GHSA-8r9p-f939-6h3c.json",
+        "sha256": "91c9a0ba084f46464043b1b84d5757b962ae6b45fb7fe4478f8ae15c363b3bc2",
+        "bytes": 14067,
+        "summary": "follow-redirects sensitiveHeaders regex escaping can expose credential headers",
+        "publishedAt": "2026-10-20T17:53:05Z",
+        "modifiedAt": "2026-10-20T17:53:05Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111755"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "follow-redirects"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.16.0"
+                  },
+                  {
+                    "fixed": "1.16.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-8r9p-f939-6h3c",
+        "summary": "Incomplete regular-expression escaping in the sensitiveHeaders option lets metacharacter-named credential headers silently bypass cross-origin stripping in follow-redirects",
+        "severity": "moderate",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "follow-redirects"
+            },
+            "vulnerable_version_range": "1.16.0",
+            "patched_versions": "1.16.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {},
+        "published_at": "2026-10-01T13:51:44Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Primary Moderate with no displayed CVSS differs from Reviewed High and v4. Maintainer affected version is exactly 1.16.0 with fixed 1.16.1; Reviewed uses >=1.16.0,<1.16.1.",
+        "Custom sensitive header names containing regex metacharacters can evade stripping; built-in Authorization/Proxy-Authorization/Cookie filtering is unaffected. Late mutation of sensitiveHeaders is described as a lower-severity hardening issue rather than a separate advisory.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/follow-redirects/follow-redirects/security-advisories/GHSA-8r9p-f939-6h3c",
+          "checkedAt": "2026-10-20T21:29:59.101001Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-8r9p-f939-6h3c",
+          "checkedAt": "2026-10-20T21:31:36.057501Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "afe508eb48257e21dc8ffb98a0e7789cd7251bc5b68b0ebac76c42761a6bacd2",
+          "originalFetchedResponseBytes": 231693,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-8r9p-f939-6h3c.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "ef3c84c1aad92c92139daf73a1516f2872ae06614d8ef01218901442afdc618b",
+          "bytes": 980,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-8r9p-f939-6h3c.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "7ebd7418f7d2a5e7ff05772dd7cafca654d61ac155bad1692a7c6f196f376a1b",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-8r9p-f939-6h3c.json"
+    },
+    {
+      "id": "GHSA-953h-535j-jg2v",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-953h-535j-jg2v/GHSA-953h-535j-jg2v.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-953h-535j-jg2v/GHSA-953h-535j-jg2v.json",
+        "sha256": "b9b3a4ffd2e3f5530507fdc6f1fd9f4adaad4aa58cf9ad80b5662d86e4cc5c69",
+        "bytes": 8224,
+        "summary": "agent-router: MCP session resume does not verify the embedded anti-hijacking subject; default Helm seed makes session IDs forgeable",
+        "publishedAt": "2026-10-19T16:53:26Z",
+        "modifiedAt": "2026-10-19T16:53:26Z",
+        "withdrawnAt": null,
+        "aliases": [],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/envoyproxy/ai-gateway"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0.4.0-rc1"
+                  },
+                  {
+                    "fixed": "1.2.0-rc1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-953h-535j-jg2v",
+        "summary": "MCP session resume does not verify the embedded anti-hijacking subject; default Helm seed makes session IDs forgeable",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/envoyproxy/ai-gateway"
+            },
+            "vulnerable_version_range": "<= 1.1.0",
+            "patched_versions": "1.2.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {},
+        "published_at": "2026-10-07T12:38:00Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Maintainer High, affected <=1.1.0 and fixed 1.2.0 differ from Reviewed Moderate and >=0.4.0-rc1,<1.2.0-rc1. No primary CVSS vector is displayed. Do not silently equate release candidates with stable releases.",
+        "Repository branding is agent-router but both sources identify the Go module github.com/envoyproxy/ai-gateway. Session ownership is not checked on resume; the default Helm seed aggravates the issue. Reporter states code-level analysis, not a live-cluster reproduction.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/theagentrouter/agent-router/security-advisories/GHSA-953h-535j-jg2v",
+          "checkedAt": "2026-10-20T21:30:17.290419Z",
+          "httpStatus": 429,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "81f520b618012a0475df0e95fa57329e6cb5625ab65f3f2323e2ea893375295a",
+          "originalFetchedResponseBytes": 193,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/theagentrouter/agent-router/security/advisories/GHSA-953h-535j-jg2v",
+          "checkedAt": "2026-10-20T21:31:36.076915Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "a2433548251634a436ef94c857fe381e930cdde7d18f1cbf22a4be1d14e54215",
+          "originalFetchedResponseBytes": 198729,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-953h-535j-jg2v.2026-10-21.batch-b1.html.public-advisory.json",
+          "sha256": "9ea3e5ec8d9f4a71bd2e740b8b23572d932eaa187de1b6477f5e7f321e033101",
+          "bytes": 937,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-953h-535j-jg2v.2026-10-21.batch-b1.html.public-headers.txt",
+          "headersSha256": "097b38256391696deec090e08e04397756ddbb8a7c4571b766c63f8c5451edb5",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-953h-535j-jg2v.json"
+    },
+    {
+      "id": "GHSA-9xw5-w5jj-pvcg",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-9xw5-w5jj-pvcg/GHSA-9xw5-w5jj-pvcg.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9xw5-w5jj-pvcg/GHSA-9xw5-w5jj-pvcg.json",
+        "sha256": "c3898d6d7e9f7301f55135c7654e71c30a5dd405b6f0ebf8fe75c25a67ab7058",
+        "bytes": 1858,
+        "summary": "AIOHTTP: File descriptor exhaustion in multipart requests",
+        "publishedAt": "2026-10-20T19:52:09Z",
+        "modifiedAt": "2026-10-20T19:52:09Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111066"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "aiohttp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "3.14.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-9xw5-w5jj-pvcg",
+        "cve_id": "CVE-2026-111066",
+        "summary": "File descriptor exhaustion in multipart requests",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "aiohttp"
+            },
+            "vulnerable_version_range": ">=2,<=3.14.4",
+            "patched_versions": "3.14.4",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-07T01:22:56Z",
+        "updated_at": "2026-10-19T16:58:52Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer Medium differs from Reviewed High; primary CVSS absent while Reviewed supplies v4. Primary affected field >=2,<=3.14.4 includes the same 3.14.4 marked patched, an unresolved internal contradiction; Reviewed uses >=2.0.0,<3.14.4.",
+        "Retain database affected/fixed interpretation provisionally with an explicit conflict rather than declaring patched 3.14.4 both vulnerable and safe. Trigger requires a handler using Request.post() on multipart requests.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-9xw5-w5jj-pvcg",
+          "checkedAt": "2026-10-20T21:29:55.356316Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "ea56c951ec7b3b8a3c5db97bf27a7289cb71af66a8ab2b7f01b5d2e0a060a13f",
+          "originalFetchedResponseBytes": 4766,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-9xw5-w5jj-pvcg.2026-10-21.batch-b1.api.public-advisory.json",
+          "sha256": "4e9f05bdc395ca38a7c9165d29bbf1b855943da9beda326303ff80fea801cadf",
+          "bytes": 947,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-9xw5-w5jj-pvcg.2026-10-21.batch-b1.api.public-headers.txt",
+          "headersSha256": "ded5fdb185ad63f04b455ddf3e9e7a673f74290dd99cf130d8d96f40ab8582a8",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-9xw5-w5jj-pvcg.json"
+    }
+  ]
+}

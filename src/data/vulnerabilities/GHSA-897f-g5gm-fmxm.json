@@ -1,0 +1,103 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-897f-g5gm-fmxm",
+  "aliases": [
+    "RUSTSEC-2026-0380"
+  ],
+  "title": "Wasmtime：SSAインデックスの桁あふれで誤コンパイル",
+  "summary": "CraneliftのSSA値インデックスのビット圧縮で、releaseビルド時に桁あふれが黙認される。巨大または細工されたWasm関数から型混同や誤コンパイルを起こし、サンドボックスを脱出し得る。",
+  "publishedAt": "2026-10-19T12:00:00Z",
+  "modifiedAt": "2026-10-20T11:15:37.073985819Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0380",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 36.0.19",
+          "fixed": "36.0.19",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm"
+        },
+        {
+          "affected": ">= 37.0.0, < 43.0.0",
+          "fixed": "43.0.0",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "36.0.19"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "43.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0380",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0380",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T12:00:00Z",
+      "modifiedAt": "2026-10-20T11:15:37.073985819Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0380",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime/RUSTSEC-2026-0380.md",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T19:21:24Z"
+    }
+  ],
+  "caveats": [
+    "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
+    "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
+    "36系の修正は36.0.19。37以上43未満の系列では43.0.0がOSV/RustSecの除外境界で、開発元は43での実装変更により影響を受けなくなったと説明する。43を今回新しく出た修正リリースとは表現しない。",
+    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。"
+  ]
+}

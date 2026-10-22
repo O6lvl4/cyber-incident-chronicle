@@ -1,0 +1,150 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m2m5-rw3w-cwmj",
+  "aliases": [
+    "CVE-2026-113659"
+  ],
+  "title": "ApostropheCMS: Client-side Prototype Pollution in apos.http.parseQuery leading to DOM-based XSS against authenticated users",
+  "summary": "ApostropheCMS: Client-side Prototype Pollution in apos.http.parseQuery leading to DOM-based XSS against authenticated users",
+  "publishedAt": "2026-10-20T18:18:49Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-m2m5-rw3w-cwmj/GHSA-m2m5-rw3w-cwmj.json",
+  "modifiedAt": "2026-10-20T18:18:49Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:56.676596Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "apostrophe",
+      "ranges": [
+        {
+          "affected": "< 4.33.0",
+          "fixed": "4.33.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-m2m5-rw3w-cwmj/GHSA-m2m5-rw3w-cwmj.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.33.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-m2m5-rw3w-cwmj",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-m2m5-rw3w-cwmj"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-m2m5-rw3w-cwmj/GHSA-m2m5-rw3w-cwmj.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:18:49Z",
+      "modifiedAt": "2026-10-20T18:18:49Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS: Client-side Prototype Pollution in apos.http.parseQuery leading to DOM-based XSS against authenticated users",
+      "url": "https://github.com/advisories/GHSA-m2m5-rw3w-cwmj",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-m2m5-rw3w-cwmj",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:24:17Z",
+      "modifiedAt": "2026-10-20T17:00:00Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Current <4.33.0/fixed 4.33.0 and CVSS 3.1 6.1 agree. Earlier prose says no patched version and discusses tested 4.0.0-4.32.2 plus affected 3.x; do not replace current structured fix with that stale statement.",
+    "A crafted URL must be opened by an authenticated victim. This client-side defect is distinct from the referenced server-side prototype-pollution advisory.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:56.676596Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-m2m5-rw3w-cwmj",
+        "aliases": [
+          "CVE-2026-113659"
+        ],
+        "publishedAt": "2026-10-20T18:18:49Z",
+        "modifiedAt": "2026-10-20T18:18:49Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-m2m5-rw3w-cwmj/GHSA-m2m5-rw3w-cwmj.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "apostrophe",
+        "ranges": [
+          {
+            "affected": "< 4.33.0",
+            "fixed": "4.33.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-m2m5-rw3w-cwmj/GHSA-m2m5-rw3w-cwmj.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "4.33.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-m2m5-rw3w-cwmj"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Current <4.33.0/fixed 4.33.0 and CVSS 3.1 6.1 agree. Earlier prose says no patched version and discusses tested 4.0.0-4.32.2 plus affected 3.x; do not replace current structured fix with that stale statement.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

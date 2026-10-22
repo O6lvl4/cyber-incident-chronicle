@@ -1,0 +1,4901 @@
+{
+  "schemaVersion": 1,
+  "reviewDateJst": "2026-10-21",
+  "checkedAt": "2026-10-20T21:42:43.691791+00:00",
+  "newCuratedIds": [
+    "GHSA-9prg-84vf-g5fc",
+    "GHSA-r8xh-cgf7-392j",
+    "GHSA-jxcf-8qw5-5c33",
+    "GHSA-9pvw-hwfg-92h5",
+    "GHSA-mghf-wjfp-p5xm",
+    "GHSA-897f-g5gm-fmxm",
+    "CVE-2026-111943",
+    "GHSA-2m5v-pch6-74hx",
+    "GHSA-4w7w-5xrc-9h26",
+    "GHSA-f72v-6w45-q472",
+    "GHSA-qq8j-7v2v-3rwp",
+    "GHSA-xjj6-f33q-929c",
+    "GHSA-4qv8-2p9j-2685",
+    "GHSA-9fm3-97px-rjf6",
+    "GHSA-qrxm-fqhp-jwvm",
+    "GHSA-55wc-3pg8-jfw6",
+    "GHSA-8429-xpcj-3cg5",
+    "CVE-2026-100227",
+    "CVE-2026-107937",
+    "CVE-2026-107938",
+    "CVE-2026-108039",
+    "CVE-2026-71575"
+  ],
+  "verifiedGroups": [
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0375"
+      ],
+      "maintainer": {
+        "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc",
+        "publishedAt": "2026-10-19T19:20:41Z",
+        "severity": {
+          "label": "medium",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 5.3,
+              "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc"
+            }
+          ]
+        },
+        "affectedText": ">= 46.0.0, < 48.0.7, >= 49.0.0, < 49.0.4",
+        "patchedText": "48.0.7, 49.0.4",
+        "receipt": {
+          "name": "GHSA-9prg-84vf-g5fc-html",
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc",
+          "lastAttemptAt": "2026-10-20T21:34:25.215035+00:00",
+          "checkedAt": "2026-10-20T21:34:30.919228+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"9491386352ecf4a4bbe102ea19923e0e\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:30.919228+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 192731,
+          "originalFetchedResponseSha256": "1781286e6acd0bc971a1e28bcb6753d22c79be7daa674036e054fcf363903826",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "osvSelectedFields": {
+        "id": "RUSTSEC-2026-0375",
+        "aliases": [
+          "GHSA-9prg-84vf-g5fc"
+        ],
+        "published": "2026-10-19T12:00:00Z",
+        "modified": "2026-10-20T11:15:37.071259108Z",
+        "affected": [
+          {
+            "package": {
+              "name": "wasmtime-wasi-http",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/wasmtime-wasi-http"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "46.0.0"
+                  },
+                  {
+                    "fixed": "48.0.7"
+                  },
+                  {
+                    "introduced": "49.0.0"
+                  },
+                  {
+                    "fixed": "49.0.4"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "os": [],
+                "functions": [],
+                "arch": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "categories": [],
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0375.json"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "name": "RUSTSEC-2026-0375-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0375",
+          "lastAttemptAt": "2026-10-20T21:34:35.063112+00:00",
+          "checkedAt": "2026-10-20T21:34:38.798126+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-length": "1424"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.798126+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1424,
+          "originalFetchedResponseSha256": "eb4f41935ac8f6b90b9e8d03f6f2604c2efce27bb1b24a7a61fc59dba4bf6c99",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0375-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime-wasi-http/RUSTSEC-2026-0375.md",
+          "lastAttemptAt": "2026-10-20T21:34:35.071835+00:00",
+          "checkedAt": "2026-10-20T21:34:38.587415+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"8501defef7acf8734bc42b1f54199e70e6c7bcb6ecec75a0897d99027c1e8c8c\"",
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-length": "719"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.587415+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 719,
+          "originalFetchedResponseSha256": "1125386347e6b396090d315ad566852ef02a8430b31d5cf1754ecf48d3b8798b",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-9prg-84vf-g5fc",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-9prg-84vf-g5fc.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0376"
+      ],
+      "maintainer": {
+        "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-r8xh-cgf7-392j",
+        "publishedAt": "2026-10-19T19:20:02Z",
+        "severity": {
+          "label": "low",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-r8xh-cgf7-392j",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 3.7,
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-r8xh-cgf7-392j"
+            }
+          ]
+        },
+        "affectedText": "< 36.0.19, >= 37.0.0, < 48.0.7, >= 49.0.0, < 49.0.4",
+        "patchedText": "36.0.19, 48.0.7, 49.0.4",
+        "receipt": {
+          "name": "GHSA-r8xh-cgf7-392j-html",
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-r8xh-cgf7-392j",
+          "lastAttemptAt": "2026-10-20T21:34:25.216748+00:00",
+          "checkedAt": "2026-10-20T21:34:30.902382+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"0afe0a24d3d756a31e09af06c664a557\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:30.902382+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 192788,
+          "originalFetchedResponseSha256": "992faa3f4f1100970b99fff35391fb4507575e871543bea013784b9fa6ed307c",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "osvSelectedFields": {
+        "id": "RUSTSEC-2026-0376",
+        "aliases": [
+          "GHSA-r8xh-cgf7-392j"
+        ],
+        "published": "2026-10-19T12:00:00Z",
+        "modified": "2026-10-20T11:15:37.074781119Z",
+        "affected": [
+          {
+            "package": {
+              "name": "wasmtime-wasi-http",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/wasmtime-wasi-http"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "36.0.19"
+                  },
+                  {
+                    "introduced": "37.0.0"
+                  },
+                  {
+                    "fixed": "48.0.7"
+                  },
+                  {
+                    "introduced": "49.0.0"
+                  },
+                  {
+                    "fixed": "49.0.4"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "functions": [],
+                "arch": [],
+                "os": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "cvss": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0376.json",
+              "categories": []
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "name": "RUSTSEC-2026-0376-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0376",
+          "lastAttemptAt": "2026-10-20T21:34:35.122706+00:00",
+          "checkedAt": "2026-10-20T21:34:38.934152+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-length": "1453"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.934152+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1453,
+          "originalFetchedResponseSha256": "8e48199b1dce3509e7ac566f0592f821700db16c18af52a10df7366d7ed94321",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0376-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime-wasi-http/RUSTSEC-2026-0376.md",
+          "lastAttemptAt": "2026-10-20T21:34:35.125381+00:00",
+          "checkedAt": "2026-10-20T21:34:38.677632+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"567e1307afbe4fdc4d287c5bbb8aa83fa1f587bd3204468957d5eb1f3fc454f6\"",
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-length": "721"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.677632+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 721,
+          "originalFetchedResponseSha256": "1237c8d44f1582709a122610bc490c77996ec211fa18cde6eb77ced5bd1f72c1",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-r8xh-cgf7-392j",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-r8xh-cgf7-392j.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0377"
+      ],
+      "maintainer": {
+        "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jxcf-8qw5-5c33",
+        "publishedAt": "2026-10-19T19:20:21Z",
+        "severity": {
+          "label": "low",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jxcf-8qw5-5c33",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 3.7,
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jxcf-8qw5-5c33"
+            }
+          ]
+        },
+        "affectedText": ">= 46.0.0, < 48.0.7, >= 49.0.0, < 49.0.4",
+        "patchedText": "48.0.7, 49.0.4",
+        "receipt": {
+          "name": "GHSA-jxcf-8qw5-5c33-html",
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jxcf-8qw5-5c33",
+          "lastAttemptAt": "2026-10-20T21:34:25.217592+00:00",
+          "checkedAt": "2026-10-20T21:34:31.063040+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"55918aa51c0f3bfd8efd447eebcbafe0\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:31.063040+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 191875,
+          "originalFetchedResponseSha256": "9c2930bb2215de97a4d07c9f4a9c0d265ba68b3e2e117998d242b76d0a3f20c0",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "osvSelectedFields": {
+        "id": "RUSTSEC-2026-0377",
+        "aliases": [
+          "GHSA-jxcf-8qw5-5c33"
+        ],
+        "published": "2026-10-19T12:00:00Z",
+        "modified": "2026-10-20T11:15:37.076182282Z",
+        "affected": [
+          {
+            "package": {
+              "name": "wasmtime-wasi-http",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/wasmtime-wasi-http"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "46.0.0"
+                  },
+                  {
+                    "fixed": "48.0.7"
+                  },
+                  {
+                    "introduced": "49.0.0"
+                  },
+                  {
+                    "fixed": "49.0.4"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "functions": [],
+                "arch": [],
+                "os": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0377.json",
+              "categories": [],
+              "cvss": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "informational": null
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "name": "RUSTSEC-2026-0377-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0377",
+          "lastAttemptAt": "2026-10-20T21:34:35.127151+00:00",
+          "checkedAt": "2026-10-20T21:34:38.817997+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-length": "1425"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.817997+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1425,
+          "originalFetchedResponseSha256": "158042bd5c700e98fb499ac41698f5c26a0758a01c571f0e9d36d5e75ae35d41",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0377-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime-wasi-http/RUSTSEC-2026-0377.md",
+          "lastAttemptAt": "2026-10-20T21:34:35.130505+00:00",
+          "checkedAt": "2026-10-20T21:34:38.688115+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"cf41d75dcc77097fba63acb9990a826cfb815788ba6118f8c4c2abdcf76b538a\"",
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-length": "720"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.688115+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 720,
+          "originalFetchedResponseSha256": "c621cee637bea8f16a986de40ecd24626dd2d11e44d584da473b8675282afbc8",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-jxcf-8qw5-5c33",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-jxcf-8qw5-5c33.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0378"
+      ],
+      "maintainer": {
+        "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5",
+        "publishedAt": "2026-10-19T19:21:51Z",
+        "severity": {
+          "label": "medium",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5",
+          "cvss": [
+            {
+              "version": "4.0",
+              "score": 5.7,
+              "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5"
+            }
+          ]
+        },
+        "affectedText": ">= 46.0.0, < 48.0.7, >= 49.0.0, < 49.0.4",
+        "patchedText": "48.0.7, 49.0.4",
+        "receipt": {
+          "name": "GHSA-9pvw-hwfg-92h5-html",
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5",
+          "lastAttemptAt": "2026-10-20T21:34:25.223511+00:00",
+          "checkedAt": "2026-10-20T21:34:30.987034+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"aa8c72455258cafc27fec50aff9f98bf\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:30.987034+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 198948,
+          "originalFetchedResponseSha256": "436248573fb56edd404dac8cf5387438a6c6c34c8190509282cfb10d8c8e8354",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "osvSelectedFields": {
+        "id": "RUSTSEC-2026-0378",
+        "aliases": [
+          "GHSA-9pvw-hwfg-92h5"
+        ],
+        "published": "2026-10-19T12:00:00Z",
+        "modified": "2026-10-20T11:15:37.066435437Z",
+        "affected": [
+          {
+            "package": {
+              "name": "wasmtime",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/wasmtime"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "46.0.0"
+                  },
+                  {
+                    "fixed": "48.0.7"
+                  },
+                  {
+                    "introduced": "49.0.0"
+                  },
+                  {
+                    "fixed": "49.0.4"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "functions": [],
+                "arch": [],
+                "os": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0378.json",
+              "informational": null,
+              "categories": [],
+              "cvss": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "name": "RUSTSEC-2026-0378-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0378",
+          "lastAttemptAt": "2026-10-20T21:34:35.139595+00:00",
+          "checkedAt": "2026-10-20T21:34:38.726266+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-length": "1452"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.726266+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1452,
+          "originalFetchedResponseSha256": "7b0ef82899b1984b84b0461a3664e73b5ae5bad5ee4eed018544784dcc4417eb",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0378-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime/RUSTSEC-2026-0378.md",
+          "lastAttemptAt": "2026-10-20T21:34:38.171701+00:00",
+          "checkedAt": "2026-10-20T21:34:38.597437+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"50409fd81cc1fa1c68bc274715027fd4f93e1475e2106eb11b00ee43213beed1\"",
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-length": "748"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.597437+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 748,
+          "originalFetchedResponseSha256": "907bb884a5fa613e7f358d657e7434ae4c059ad6f225fe4a490679ca92ff93be",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-9pvw-hwfg-92h5",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-9pvw-hwfg-92h5.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0379"
+      ],
+      "maintainer": {
+        "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm",
+        "publishedAt": "2026-10-19T19:21:02Z",
+        "severity": {
+          "label": "critical",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 9.9,
+              "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm"
+            }
+          ]
+        },
+        "affectedText": "<36.0.19, >=37.0.0, <48.0.7, >=49.0.0, <49.0.4",
+        "patchedText": "36.0.19, 48.0.7, 49.0.4",
+        "receipt": {
+          "name": "GHSA-mghf-wjfp-p5xm-html",
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm",
+          "lastAttemptAt": "2026-10-20T21:34:25.225613+00:00",
+          "checkedAt": "2026-10-20T21:34:30.978662+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"b762c5e997cb4cf7d57b2c29420c2da6\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:30.978662+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 194071,
+          "originalFetchedResponseSha256": "8300c77d8bd140db8efced33321610c8c2779bb35215fca8a3b73b09b0c4e81f",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "osvSelectedFields": {
+        "id": "RUSTSEC-2026-0379",
+        "aliases": [
+          "GHSA-mghf-wjfp-p5xm"
+        ],
+        "published": "2026-10-19T12:00:00Z",
+        "modified": "2026-10-20T11:15:37.074125982Z",
+        "affected": [
+          {
+            "package": {
+              "name": "wasmtime",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/wasmtime"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "36.0.19"
+                  },
+                  {
+                    "introduced": "37.0.0"
+                  },
+                  {
+                    "fixed": "48.0.7"
+                  },
+                  {
+                    "introduced": "49.0.0"
+                  },
+                  {
+                    "fixed": "49.0.4"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "arch": [],
+                "os": [],
+                "functions": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0379.json",
+              "categories": [],
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "name": "RUSTSEC-2026-0379-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0379",
+          "lastAttemptAt": "2026-10-20T21:34:38.587912+00:00",
+          "checkedAt": "2026-10-20T21:34:41.480976+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:41 GMT",
+            "content-length": "1450"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:41.480976+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1450,
+          "originalFetchedResponseSha256": "382c517a5a44e93ff3707d6012dd67b5c4e81fee1bfedd1d256460932cd51d1a",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0379-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime/RUSTSEC-2026-0379.md",
+          "lastAttemptAt": "2026-10-20T21:34:38.598234+00:00",
+          "checkedAt": "2026-10-20T21:34:42.769199+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"f36b63c2f3055953605c27ba7f0ecd35507cf873bc13645f0e0098023f2b5003\"",
+            "date": "Tue, 20 Oct 2026 21:34:42 GMT",
+            "content-length": "738"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:42.769199+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 738,
+          "originalFetchedResponseSha256": "b532428c29e27bb4eb0b9ae9a8acb1a9bb6ccdd0bcdb83bda393f8567b9afa78",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-mghf-wjfp-p5xm",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-mghf-wjfp-p5xm.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0380"
+      ],
+      "maintainer": {
+        "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm",
+        "publishedAt": "2026-10-19T19:21:24Z",
+        "severity": {
+          "label": "critical",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 9.9,
+              "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm"
+            }
+          ]
+        },
+        "affectedText": "<36.0.19, >= 37.0.0, <43.0.0",
+        "patchedText": "36.0.19",
+        "receipt": {
+          "name": "GHSA-897f-g5gm-fmxm-html",
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm",
+          "lastAttemptAt": "2026-10-20T21:34:25.226691+00:00",
+          "checkedAt": "2026-10-20T21:34:30.989353+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"22df486966a82134ddd54e8ec67dd0b2\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:30.989353+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 196504,
+          "originalFetchedResponseSha256": "949752e99c42e0a49d267eac2e601938ca3075cd787e5f59431a8e664ec16688",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "osvSelectedFields": {
+        "id": "RUSTSEC-2026-0380",
+        "aliases": [
+          "GHSA-897f-g5gm-fmxm"
+        ],
+        "published": "2026-10-19T12:00:00Z",
+        "modified": "2026-10-20T11:15:37.073985819Z",
+        "affected": [
+          {
+            "package": {
+              "name": "wasmtime",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/wasmtime"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "36.0.19"
+                  },
+                  {
+                    "introduced": "37.0.0"
+                  },
+                  {
+                    "fixed": "43.0.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "arch": [],
+                "os": [],
+                "functions": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "categories": [],
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0380.json",
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "informational": null
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "name": "RUSTSEC-2026-0380-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0380",
+          "lastAttemptAt": "2026-10-20T21:34:38.678438+00:00",
+          "checkedAt": "2026-10-20T21:34:41.565979+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:41 GMT",
+            "content-length": "1388"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:41.565979+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1388,
+          "originalFetchedResponseSha256": "8d8db1738674e1ad79d123e83c1c6c4ebb11bf5c2f11efe2fc91f633ac63d560",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0380-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime/RUSTSEC-2026-0380.md",
+          "lastAttemptAt": "2026-10-20T21:34:38.688589+00:00",
+          "checkedAt": "2026-10-20T21:34:42.688363+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"0f4add7795f87440208bc543ed103ccdbd126b52197b1ad0ec8a5e935556d78e\"",
+            "date": "Tue, 20 Oct 2026 21:34:42 GMT",
+            "content-length": "692"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:42.688363+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 692,
+          "originalFetchedResponseSha256": "e619cec58cc184741f34571409b5c7c6b89329d65cda963b8f8e885a49524520",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-897f-g5gm-fmxm",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-897f-g5gm-fmxm.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0381",
+        "RUSTSEC-2026-0382",
+        "RUSTSEC-2026-0383"
+      ],
+      "identityBasis": "All three fixed RustSec sources explicitly alias CVE-2026-111943. CNA JSON unavailable (404).",
+      "receipts": [
+        {
+          "name": "RUSTSEC-2026-0381-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0381",
+          "lastAttemptAt": "2026-10-20T21:34:38.726602+00:00",
+          "checkedAt": "2026-10-20T21:34:41.546071+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:41 GMT",
+            "content-length": "1517"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:41.546071+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1517,
+          "originalFetchedResponseSha256": "72369aa119c4922c9ed1c7086d7f732f78b4b79000eb90f42c5aaa9a5f810a08",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0381-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/webpki-roots/RUSTSEC-2026-0381.md",
+          "lastAttemptAt": "2026-10-20T21:34:38.798483+00:00",
+          "checkedAt": "2026-10-20T21:34:42.847327+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"9bd0393935b4787738433d21676ecbd5c64ff6f1193fb9fd6f780fa745545171\"",
+            "date": "Tue, 20 Oct 2026 21:34:42 GMT",
+            "content-length": "835"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:42.847327+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 835,
+          "originalFetchedResponseSha256": "71e69321b86b520406ff2bb529bc3abfaed7493a12712b0eb38dc2c360878d81",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0382-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0382",
+          "lastAttemptAt": "2026-10-20T21:34:38.818381+00:00",
+          "checkedAt": "2026-10-20T21:34:41.534135+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:41 GMT",
+            "content-length": "1530"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:41.534135+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1530,
+          "originalFetchedResponseSha256": "21c0e95de78912ed2b9afdfa45fa49bfc23681da9b66fc7dc4aa89596ac62591",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0382-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/rustls-webpki/RUSTSEC-2026-0382.md",
+          "lastAttemptAt": "2026-10-20T21:34:38.934638+00:00",
+          "checkedAt": "2026-10-20T21:34:42.813614+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"cd1cf66b07bfa6ce5402e4640000ca0dfb25e79fb48c1f9b211e5e60978ff70c\"",
+            "date": "Tue, 20 Oct 2026 21:34:42 GMT",
+            "content-length": "829"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:42.813614+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 829,
+          "originalFetchedResponseSha256": "525ad607d24f67fd22a20e70b28b3962a9039962340e3ad1f351c9611772e671",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0383-api",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0383",
+          "lastAttemptAt": "2026-10-20T21:34:41.481462+00:00",
+          "checkedAt": "2026-10-20T21:34:44.986103+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:34:44 GMT",
+            "content-length": "1532"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:44.986103+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1532,
+          "originalFetchedResponseSha256": "cc636b65627a3ec138d0417ccd7e55fc50da2aab90ad2f6c909f1433deebe4c1",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "RUSTSEC-2026-0383-pinned",
+          "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/webpki-root-certs/RUSTSEC-2026-0383.md",
+          "lastAttemptAt": "2026-10-20T21:34:41.534538+00:00",
+          "checkedAt": "2026-10-20T21:34:42.871682+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"f0afd9027f98cea901323f19e24af03f9c655b2f0931dba1efcc41bfb0d48b24\"",
+            "date": "Tue, 20 Oct 2026 21:34:42 GMT",
+            "content-length": "840"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:42.871682+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 840,
+          "originalFetchedResponseSha256": "af2d2e9bf768767b647eb192c50099f9d78e4a8330d5e7d6c7c3cd8e894f3682",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "webpki-roots-pr",
+          "url": "https://github.com/rustls/webpki-roots/pull/133",
+          "lastAttemptAt": "2026-10-20T21:34:51.547806+00:00",
+          "checkedAt": "2026-10-20T21:34:55.618850+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:55 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:55.618850+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 483444,
+          "originalFetchedResponseSha256": "48b190ce0ba1a3ab8cf9ae73d201925ad1ca8538942efa61031efca48dafe0db",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "webpki-pr",
+          "url": "https://github.com/rustls/webpki/pull/546",
+          "lastAttemptAt": "2026-10-20T21:34:51.555062+00:00",
+          "checkedAt": "2026-10-20T21:34:55.906699+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:55 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:55.906699+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 492970,
+          "originalFetchedResponseSha256": "30e448d9fe3a7e1d00cfb6bae3e6f8198f7c1ef3cbb021fc17507f685570f064",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "webpki-roots-registry",
+          "url": "https://crates.io/api/v1/crates/webpki-roots/1.0.10",
+          "lastAttemptAt": "2026-10-20T21:35:58.113176+00:00",
+          "checkedAt": "2026-10-20T21:36:02.911507+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:36:02 GMT",
+            "content-length": "1620"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:02.911507+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1620,
+          "originalFetchedResponseSha256": "b03e2b2ee45f053a1ee42a7787f0f1da5a0b19f7ad975f47fb790f7a044a99ef",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "webpki-root-certs-registry",
+          "url": "https://crates.io/api/v1/crates/webpki-root-certs/1.0.10",
+          "lastAttemptAt": "2026-10-20T21:36:01.773834+00:00",
+          "checkedAt": "2026-10-20T21:36:03.162648+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:36:03 GMT",
+            "content-length": "1702"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:03.162648+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1702,
+          "originalFetchedResponseSha256": "53654fa351c375a2b873fc72dc5caadcb6d1dccb305c738f3ecf30bc931158cc",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "webpki-stable-registry",
+          "url": "https://crates.io/api/v1/crates/rustls-webpki/0.103.16",
+          "lastAttemptAt": "2026-10-20T21:36:01.815250+00:00",
+          "checkedAt": "2026-10-20T21:36:03.155467+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:36:03 GMT",
+            "content-length": "1844"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:03.155467+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1844,
+          "originalFetchedResponseSha256": "2f799b7e23abe8c04b47044d86905e25217992c5d6f3929bd0d55d24e0b100e9",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "webpki-alpha-registry",
+          "url": "https://crates.io/api/v1/crates/rustls-webpki/0.104.0-alpha.8",
+          "lastAttemptAt": "2026-10-20T21:36:01.837297+00:00",
+          "checkedAt": "2026-10-20T21:36:03.111020+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "content-type": "application/json",
+            "date": "Tue, 20 Oct 2026 21:36:03 GMT",
+            "content-length": "1682"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:03.111020+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1682,
+          "originalFetchedResponseSha256": "09bb324cc53b524a02ab4d97f1e1315ecb77ea02a66a849f7580055a7e123cee",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "CVE-2026-111943-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/111xxx/CVE-2026-111943.json",
+          "lastAttemptAt": "2026-10-20T21:34:49.030706+00:00",
+          "checkedAt": "2026-10-20T21:34:51.712084+00:00",
+          "httpStatus": 404,
+          "error": "HTTP Error 404: Not Found",
+          "responseHeaders": {
+            "content-type": "text/plain; charset=utf-8",
+            "date": "Tue, 20 Oct 2026 21:34:51 GMT",
+            "content-length": "14"
+          },
+          "outcome": "failed",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": null,
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 14,
+          "originalFetchedResponseSha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "CVE-2026-111943",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/CVE-2026-111943.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-109383"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-2m5v-pch6-74hx",
+        "publishedAt": "2026-10-15T15:59:05Z",
+        "severity": {
+          "label": "high",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-2m5v-pch6-74hx",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 7.4,
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-2m5v-pch6-74hx"
+            }
+          ]
+        },
+        "affectedText": ">= 4.0.0, < 6.29.1 >= 7.0.0, < 7.30.1 >= 8.0.0, < 8.12.2",
+        "patchedText": "6.29.1 7.30.1 8.12.2",
+        "receipt": {
+          "name": "GHSA-2m5v-pch6-74hx-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-2m5v-pch6-74hx",
+          "lastAttemptAt": "2026-10-20T21:34:25.227366+00:00",
+          "checkedAt": "2026-10-20T21:34:31.070218+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"67c15412b19fda1b0075bdab44a72d24\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:31.070218+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 195805,
+          "originalFetchedResponseSha256": "2701f9a24c2fd0bf0e47a708888e3613e91ee013acabc4495c25512b5c039885",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "4.0.0",
+              "lessThan": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "7.0.0",
+              "lessThan": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.0.0",
+              "lessThan": "8.12.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.12.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-109383-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109383.json",
+          "lastAttemptAt": "2026-10-20T21:34:41.546619+00:00",
+          "checkedAt": "2026-10-20T21:34:42.826284+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"84604c252ef3062e638181f27fc7159dd3427ff7c23ef663df6be98e84945efa\"",
+            "date": "Tue, 20 Oct 2026 21:34:42 GMT",
+            "content-length": "9078"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:42.826284+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 9078,
+          "originalFetchedResponseSha256": "ccf01e166d6bf0e9c2ba99ec8640e5b73223270c048c17fb0c10268d70dbf0b2",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-2m5v-pch6-74hx",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-2m5v-pch6-74hx.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-109829"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-4w7w-5xrc-9h26",
+        "publishedAt": "2026-10-15T15:59:22Z",
+        "severity": {
+          "label": "high",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4w7w-5xrc-9h26",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 7.4,
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4w7w-5xrc-9h26"
+            }
+          ]
+        },
+        "affectedText": ">= 7.0.0, < 7.30.1 >= 8.0.0, < 8.12.2",
+        "patchedText": "7.30.1 8.12.2",
+        "receipt": {
+          "name": "GHSA-4w7w-5xrc-9h26-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-4w7w-5xrc-9h26",
+          "lastAttemptAt": "2026-10-20T21:34:25.227770+00:00",
+          "checkedAt": "2026-10-20T21:34:31.098130+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"608a1a839a2ceffc4f8ad1734fdac1de\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:31.098130+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 199060,
+          "originalFetchedResponseSha256": "911b1f599f33a9d4952b8ada51be4f015fdd6c9a3521036daa3b045403d6663e",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "7.0.0",
+              "lessThan": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.0.0",
+              "lessThan": "8.12.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.12.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-109829-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109829.json",
+          "lastAttemptAt": "2026-10-20T21:34:41.566343+00:00",
+          "checkedAt": "2026-10-20T21:34:42.873978+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"7a55e5a6a32b0788a8c9531f544300d94ed9a29de452187d107978dfebd8943f\"",
+            "date": "Tue, 20 Oct 2026 21:34:42 GMT",
+            "content-length": "9375"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:42.873978+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 9375,
+          "originalFetchedResponseSha256": "a14a3cf8b17466eb5c9b4a48a60f9296092e8adea4ec66c8613902b747a3abd1",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-4w7w-5xrc-9h26",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-4w7w-5xrc-9h26.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-109841"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-f72v-6w45-q472",
+        "publishedAt": "2026-10-15T15:59:40Z",
+        "severity": {
+          "label": "medium",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-f72v-6w45-q472",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 5.9,
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-f72v-6w45-q472"
+            }
+          ]
+        },
+        "affectedText": ">= 7.15.0, < 7.30.1 >= 8.0.0, < 8.12.2",
+        "patchedText": "7.30.1 8.12.2",
+        "receipt": {
+          "name": "GHSA-f72v-6w45-q472-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-f72v-6w45-q472",
+          "lastAttemptAt": "2026-10-20T21:34:30.903374+00:00",
+          "checkedAt": "2026-10-20T21:34:35.062278+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:34 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"0d37002e9bca7a5298d339e482ffde93\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:35.062278+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 195647,
+          "originalFetchedResponseSha256": "be1d93948f8e822ed4dcf439a3466df359b7754feb47652848dec203bb7d928b",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "7.15.0",
+              "lessThan": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.0.0",
+              "lessThan": "8.12.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.12.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-109841-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109841.json",
+          "lastAttemptAt": "2026-10-20T21:34:42.689336+00:00",
+          "checkedAt": "2026-10-20T21:34:46.106463+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"ce23624ce62a6115fda2526cd1cac9566304bbd1d4dbb636ad1045efabf5c91b\"",
+            "date": "Tue, 20 Oct 2026 21:34:46 GMT",
+            "content-length": "8583"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:46.106463+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 8583,
+          "originalFetchedResponseSha256": "94d728f44b7aa18c9e84d4c59ee071eae80f11411b845aa10dae17a7c283bcc9",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-f72v-6w45-q472",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-f72v-6w45-q472.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-109855"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-qq8j-7v2v-3rwp",
+        "publishedAt": "2026-10-14T15:48:14Z",
+        "severity": {
+          "label": "high",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-qq8j-7v2v-3rwp",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 7.5,
+              "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-qq8j-7v2v-3rwp"
+            }
+          ]
+        },
+        "affectedText": ">= 8.11.0 < 8.11.2",
+        "patchedText": "8.11.2",
+        "receipt": {
+          "name": "GHSA-qq8j-7v2v-3rwp-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-qq8j-7v2v-3rwp",
+          "lastAttemptAt": "2026-10-20T21:34:30.919769+00:00",
+          "checkedAt": "2026-10-20T21:34:35.122139+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:34 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"1d7a3ff4acd1eff62932039cfa81a68c\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:35.122139+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 195937,
+          "originalFetchedResponseSha256": "08c9c28d299c22c455173a1c07e3fb7213d325e148d32e7b7c53dda74c3b4e47",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.11.0",
+              "lessThan": "8.11.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.11.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-109855-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109855.json",
+          "lastAttemptAt": "2026-10-20T21:34:42.769879+00:00",
+          "checkedAt": "2026-10-20T21:34:46.010575+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"8b3c8b3b8bd3f3719795e831834dd5a2a3c511597519e4c7053267b5685328cd\"",
+            "date": "Tue, 20 Oct 2026 21:34:45 GMT",
+            "content-length": "7779"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:46.010575+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 7779,
+          "originalFetchedResponseSha256": "05049aef80f8ee0779413c3a1270dd64f643e561fe54adbf681a439ef8941fc3",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-qq8j-7v2v-3rwp",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-qq8j-7v2v-3rwp.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-109869"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-xjj6-f33q-929c",
+        "publishedAt": "2026-10-15T16:01:26Z",
+        "severity": {
+          "label": "high",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-xjj6-f33q-929c",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 7.5,
+              "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-xjj6-f33q-929c"
+            }
+          ]
+        },
+        "affectedText": ">= 6.23.0, < 6.29.1 >= 7.18.0, < 7.30.1 >= 8.0.0, < 8.12.2",
+        "patchedText": "6.29.1 7.30.1 8.12.2",
+        "receipt": {
+          "name": "GHSA-xjj6-f33q-929c-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-xjj6-f33q-929c",
+          "lastAttemptAt": "2026-10-20T21:34:30.979736+00:00",
+          "checkedAt": "2026-10-20T21:34:35.126331+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:34 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"5a3e26af8a1620057665ec2f62539a75\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:35.126331+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 194642,
+          "originalFetchedResponseSha256": "9ae8d0896b97922648e9a66d1ca7f0389cad73d103c8e71d582c054fc7276e8e",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "6.23.0",
+              "lessThan": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "7.18.0",
+              "lessThan": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.0.0",
+              "lessThan": "8.12.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.12.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-109869-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109869.json",
+          "lastAttemptAt": "2026-10-20T21:34:42.814655+00:00",
+          "checkedAt": "2026-10-20T21:34:46.166134+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"a65295573416ebc2faebd96510c80894383864695508dc5f8ec09774ffbf3f3e\"",
+            "date": "Tue, 20 Oct 2026 21:34:46 GMT",
+            "content-length": "8443"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:46.166134+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 8443,
+          "originalFetchedResponseSha256": "ca3d143e2e7ccf93dd394ae7e878d4b72438e360d9faf78a3f8c5c93aea9fb75",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-xjj6-f33q-929c",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-xjj6-f33q-929c.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-109924"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685",
+        "publishedAt": "2026-10-15T16:01:04Z",
+        "severity": {
+          "label": "medium",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 5.9,
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685"
+            }
+          ]
+        },
+        "affectedText": ">= 6.5.0, < 6.29.1 >= 7.0.0, < 7.30.1 >= 8.0.0, < 8.12.2",
+        "patchedText": "6.29.1 7.30.1 8.12.2",
+        "receipt": {
+          "name": "GHSA-4qv8-2p9j-2685-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685",
+          "lastAttemptAt": "2026-10-20T21:34:30.987663+00:00",
+          "checkedAt": "2026-10-20T21:34:35.124871+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:34 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"de5ec8a7e4320216d0ebc8381d1542c2\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:35.124871+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 193141,
+          "originalFetchedResponseSha256": "ae599cac4d137a3c9581b206b15db52a980e673e5718de402a2932e6b484c5d4",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "6.5.0",
+              "lessThan": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "7.0.0",
+              "lessThan": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.0.0",
+              "lessThan": "8.12.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.12.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-109924-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109924.json",
+          "lastAttemptAt": "2026-10-20T21:34:42.826622+00:00",
+          "checkedAt": "2026-10-20T21:34:46.012082+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"92245649e0f5b8f53128965f132f83cab1f212cebaea984372a914e4c34d04fa\"",
+            "date": "Tue, 20 Oct 2026 21:34:45 GMT",
+            "content-length": "8444"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:46.012082+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 8444,
+          "originalFetchedResponseSha256": "393539d645437365deb7361bfec0c7b1b16836fa8ecfdf2bbb4840fc9b758ba3",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-4qv8-2p9j-2685",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-4qv8-2p9j-2685.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-109932"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-9fm3-97px-rjf6",
+        "publishedAt": "2026-10-15T15:57:55Z",
+        "severity": {
+          "label": "medium",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-9fm3-97px-rjf6",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 5.9,
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-9fm3-97px-rjf6"
+            }
+          ]
+        },
+        "affectedText": ">= 5.15.0, < 6.29.1 >= 7.0.0, < 7.30.1 >= 8.0.0, < 8.12.2",
+        "patchedText": "6.29.1 7.30.1 8.12.2",
+        "receipt": {
+          "name": "GHSA-9fm3-97px-rjf6-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-9fm3-97px-rjf6",
+          "lastAttemptAt": "2026-10-20T21:34:30.990246+00:00",
+          "checkedAt": "2026-10-20T21:34:35.071306+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:34 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"6d00e1f49a3bf2c7133e78b9a8e57707\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:35.071306+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 196966,
+          "originalFetchedResponseSha256": "e66493bd5a06463c1831ec019f680dfe3b5a18963dcd9ce1415aa619487dab8c",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "5.15.0",
+              "lessThan": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "7.0.0",
+              "lessThan": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.0.0",
+              "lessThan": "8.12.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.12.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-109932-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/109xxx/CVE-2026-109932.json",
+          "lastAttemptAt": "2026-10-20T21:34:42.847748+00:00",
+          "checkedAt": "2026-10-20T21:34:46.142149+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"b8c885a20c499f77760517b7575386766b1f73bc5b2677a35426b9ab64ae5584\"",
+            "date": "Tue, 20 Oct 2026 21:34:46 GMT",
+            "content-length": "9170"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:46.142149+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 9170,
+          "originalFetchedResponseSha256": "33426677b259ffa067cc56b2d452047cad907c4a1b115c73f70355e538e46de5",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-9fm3-97px-rjf6",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-9fm3-97px-rjf6.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-87018"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-qrxm-fqhp-jwvm",
+        "publishedAt": "2026-10-15T15:58:49Z",
+        "severity": {
+          "label": "high",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-qrxm-fqhp-jwvm",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 7.5,
+              "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-qrxm-fqhp-jwvm"
+            }
+          ]
+        },
+        "affectedText": ">= 4.2.1, < 6.29.1 >= 7.0.0, < 7.30.1 >= 8.0.0, < 8.12.2",
+        "patchedText": "6.29.1 7.30.1 8.12.2",
+        "receipt": {
+          "name": "GHSA-qrxm-fqhp-jwvm-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-qrxm-fqhp-jwvm",
+          "lastAttemptAt": "2026-10-20T21:34:31.064222+00:00",
+          "checkedAt": "2026-10-20T21:34:34.988349+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:34 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"bd78a752e095381968c090c867f87743\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:34.988349+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 195417,
+          "originalFetchedResponseSha256": "a7966687b29deac61d8393fa80c9809e591776b4f64804db7711a1c407f8418e",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "4.2.1",
+              "lessThan": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "6.29.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "7.0.0",
+              "lessThan": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.0.0",
+              "lessThan": "8.12.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.12.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-87018-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/87xxx/CVE-2026-87018.json",
+          "lastAttemptAt": "2026-10-20T21:34:42.872056+00:00",
+          "checkedAt": "2026-10-20T21:34:46.114283+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"78e93e6cf0ef91e8d3bf24e554aebfe8e897f0b4957bfdf615e088054391dfc2\"",
+            "date": "Tue, 20 Oct 2026 21:34:46 GMT",
+            "content-length": "9192"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:46.114283+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 9192,
+          "originalFetchedResponseSha256": "bb5aa48f73cb77d3a87217ab5c2dcf95ec95af530af06c990ec47d7d778bfcf8",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-qrxm-fqhp-jwvm",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-qrxm-fqhp-jwvm.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-87029"
+      ],
+      "maintainer": {
+        "url": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6",
+        "publishedAt": "2026-10-15T15:57:36Z",
+        "severity": {
+          "label": "medium",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 5.9,
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6"
+            }
+          ]
+        },
+        "affectedText": ">= 7.15.0, < 7.30.1 >= 8.0.0, < 8.12.2",
+        "patchedText": "7.30.1 8.12.2",
+        "receipt": {
+          "name": "GHSA-55wc-3pg8-jfw6-html",
+          "url": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6",
+          "lastAttemptAt": "2026-10-20T21:34:31.070744+00:00",
+          "checkedAt": "2026-10-20T21:34:35.130012+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:34 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"eb66938dd9349379725a1331602de71a\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:35.130012+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 193319,
+          "originalFetchedResponseSha256": "ee832ad3e9e59466b3fe87ebfe8ecadbe7645e08937250ce2f173c3be3bfa2a5",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "undici",
+          "product": "undici",
+          "defaultStatus": "unaffected",
+          "versions": [
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "7.15.0",
+              "lessThan": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "7.30.1"
+            },
+            {
+              "versionType": "semver",
+              "status": "affected",
+              "version": "8.0.0",
+              "lessThan": "8.12.2"
+            },
+            {
+              "versionType": "semver",
+              "status": "unaffected",
+              "version": "8.12.2"
+            }
+          ],
+          "packageURL": "pkg:npm/undici"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-87029-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/87xxx/CVE-2026-87029.json",
+          "lastAttemptAt": "2026-10-20T21:34:42.874532+00:00",
+          "checkedAt": "2026-10-20T21:34:46.134404+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"d9730e5a26be3b603a5fc5974cae7bd52654c2c0889cf8b992b3a5077de621e0\"",
+            "date": "Tue, 20 Oct 2026 21:34:46 GMT",
+            "content-length": "8152"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:46.134404+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 8152,
+          "originalFetchedResponseSha256": "b1d2624cb7cb4665e1a4b0bbb0d3f4e1df3ddbb526a40590b446cdcc8b1f38db",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-55wc-3pg8-jfw6",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-55wc-3pg8-jfw6.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-106497"
+      ],
+      "maintainer": {
+        "url": "https://github.com/backstage/backstage/security/advisories/GHSA-8429-xpcj-3cg5",
+        "publishedAt": "2026-08-28T14:42:29Z",
+        "severity": {
+          "label": "medium",
+          "sourceUrl": "https://github.com/backstage/backstage/security/advisories/GHSA-8429-xpcj-3cg5",
+          "cvss": [
+            {
+              "version": "3.1",
+              "score": 4.3,
+              "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "sourceUrl": "https://github.com/backstage/backstage/security/advisories/GHSA-8429-xpcj-3cg5"
+            }
+          ]
+        },
+        "affectedText": "< 3.9.1",
+        "patchedText": "3.9.1",
+        "receipt": {
+          "name": "GHSA-8429-xpcj-3cg5-html",
+          "url": "https://github.com/backstage/backstage/security/advisories/GHSA-8429-xpcj-3cg5",
+          "lastAttemptAt": "2026-10-20T21:34:34.988897+00:00",
+          "checkedAt": "2026-10-20T21:34:38.170588+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "date": "Tue, 20 Oct 2026 21:34:38 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "etag": "W/\"3a3ca0fae9edc8f49a8c2ea95e01b222\"",
+            "cache-control": "max-age=0, private, must-revalidate"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:38.170588+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 190161,
+          "originalFetchedResponseSha256": "ae16f12da79cb4fe2b98993962537dd9b8e30f8727708be35453d6162aec237c",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      },
+      "cnaAffected": [
+        {
+          "vendor": "backstage",
+          "product": "backstage",
+          "versions": [
+            {
+              "version": "< 1.54.6",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "@backstage",
+          "product": "plugin-catalog-backend",
+          "versions": [
+            {
+              "version": "< 3.9.1",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "receipts": [
+        {
+          "name": "CVE-2026-106497-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/106xxx/CVE-2026-106497.json",
+          "lastAttemptAt": "2026-10-20T21:34:46.175256+00:00",
+          "checkedAt": "2026-10-20T21:34:48.838771+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"c7c3b149d025ef196ea5808063ad835d65a0ab52b018803c62156e77ec34678f\"",
+            "date": "Tue, 20 Oct 2026 21:34:48 GMT",
+            "content-length": "6166"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:48.838771+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 6166,
+          "originalFetchedResponseSha256": "673923d188c9a0c738bc72d57005b5ecc39bdceebf9c4edc7fc0ec75d282b3f2",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "GHSA-8429-xpcj-3cg5",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/GHSA-8429-xpcj-3cg5.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-100227"
+      ],
+      "cnaAffected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache CXF",
+          "packageURL": "pkg:maven/org.apache.cxf/cxf-rt-rs-security-xml",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "4.2.0",
+              "lessThan": "4.2.4",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "4.0.0",
+              "lessThan": "4.1.9",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "0",
+              "lessThan": "3.6.13",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected",
+          "collectionURL": "https://repo.maven.apache.org/maven2",
+          "packageName": "org.apache.cxf:cxf-rt-rs-security-xml"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "moderate"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "maintainerSeverity": "moderate",
+      "receipts": [
+        {
+          "name": "CVE-2026-100227-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/100xxx/CVE-2026-100227.json",
+          "lastAttemptAt": "2026-10-20T21:34:44.986490+00:00",
+          "checkedAt": "2026-10-20T21:34:46.174603+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"07760c43a103acfa984f8a679e82162b6bcf3ad76dd7393040b3fc49e0703a2c\"",
+            "date": "Tue, 20 Oct 2026 21:34:46 GMT",
+            "content-length": "7912"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:46.174603+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 7912,
+          "originalFetchedResponseSha256": "4d123fb39e6bc8b1ac9a8f5b6354a8885fa001a42c696677e9d22e63f4788858",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "CVE-2026-100227-apache",
+          "url": "https://cxf.apache.org/security-advisories.data/CVE-2026-100227.txt?version=1&modificationDate=1791535675000&api=v2",
+          "lastAttemptAt": "2026-10-20T21:35:58.108987+00:00",
+          "checkedAt": "2026-10-20T21:36:01.839915+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "last-modified": "Fri, 09 Oct 2026 09:43:20 GMT",
+            "etag": "\"3df-65d652dbf24ba\"",
+            "content-type": "text/plain",
+            "date": "Tue, 20 Oct 2026 21:36:01 GMT",
+            "content-length": "991"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:01.839915+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 991,
+          "originalFetchedResponseSha256": "da2bc39c39b3aa9f2efabc3fce962b4cbfe8dfbba2e6fda1d3c6c24ab8e147ad",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "CVE-2026-100227",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/CVE-2026-100227.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-107937"
+      ],
+      "cnaAffected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache CXF",
+          "packageURL": "pkg:maven/org.apache.cxf/cxf-core",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "4.2.0",
+              "lessThan": "4.2.4",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "4.0.0",
+              "lessThan": "4.1.9",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "0",
+              "lessThan": "3.6.13",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected",
+          "collectionURL": "https://repo.maven.apache.org/maven2",
+          "packageName": "org.apache.cxf:cxf-core"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "low"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "maintainerSeverity": "low",
+      "receipts": [
+        {
+          "name": "CVE-2026-107937-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/107xxx/CVE-2026-107937.json",
+          "lastAttemptAt": "2026-10-20T21:34:46.011304+00:00",
+          "checkedAt": "2026-10-20T21:34:49.030385+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"a5d72e45b65606632c63c77c6a7c4064d2f42657a470886c87b9741843e2948d\"",
+            "date": "Tue, 20 Oct 2026 21:34:48 GMT",
+            "content-length": "8431"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:49.030385+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 8431,
+          "originalFetchedResponseSha256": "e765b5291fcb1563a9b3b0fea9974c9a4cac8403293ea85e9dddf5520935644d",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "CVE-2026-107937-apache",
+          "url": "https://cxf.apache.org/security-advisories.data/CVE-2026-107937.txt?version=1&modificationDate=1791537347073&api=v2",
+          "lastAttemptAt": "2026-10-20T21:35:58.109681+00:00",
+          "checkedAt": "2026-10-20T21:36:01.838413+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "last-modified": "Fri, 09 Oct 2026 09:43:20 GMT",
+            "etag": "\"521-65d652dbf24ba\"",
+            "content-type": "text/plain",
+            "date": "Tue, 20 Oct 2026 21:36:01 GMT",
+            "content-length": "1313"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:01.838413+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1313,
+          "originalFetchedResponseSha256": "c75e5356de94a30d037aee415326446d8dab7e96d3ddaa7b61282c10484ea906",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "CVE-2026-107937",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/CVE-2026-107937.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-107938"
+      ],
+      "cnaAffected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache CXF",
+          "packageURL": "pkg:maven/org.apache.cxf/cxf-rt-transports-http-netty-client",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "4.2.0",
+              "lessThan": "4.2.4",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "4.0.0",
+              "lessThan": "4.1.9",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "0",
+              "lessThan": "3.6.13",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected",
+          "collectionURL": "https://repo.maven.apache.org/maven2",
+          "packageName": "org.apache.cxf:cxf-rt-transports-http-netty-client"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "important"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "maintainerSeverity": "important",
+      "receipts": [
+        {
+          "name": "CVE-2026-107938-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/107xxx/CVE-2026-107938.json",
+          "lastAttemptAt": "2026-10-20T21:34:46.012575+00:00",
+          "checkedAt": "2026-10-20T21:34:48.882312+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"f308407c603daa2b3c7d0aa5d67c3cb63718f1657e69c4ac4dfdb32ec183f631\"",
+            "date": "Tue, 20 Oct 2026 21:34:48 GMT",
+            "content-length": "8426"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:48.882312+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 8426,
+          "originalFetchedResponseSha256": "74f8948a626ef95b5b56c355341de329fb1d37f24da1e3be1eadcd81c7bf9960",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "CVE-2026-107938-apache",
+          "url": "https://cxf.apache.org/security-advisories.data/CVE-2026-107938.txt?version=1&modificationDate=1791537720451&api=v2",
+          "lastAttemptAt": "2026-10-20T21:35:58.110607+00:00",
+          "checkedAt": "2026-10-20T21:36:01.773228+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "last-modified": "Fri, 09 Oct 2026 09:43:20 GMT",
+            "etag": "\"4cc-65d652dbf24ba\"",
+            "content-type": "text/plain",
+            "date": "Tue, 20 Oct 2026 21:36:01 GMT",
+            "content-length": "1228"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:01.773228+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1228,
+          "originalFetchedResponseSha256": "7c4d7c17ee3b7adee5811999adf9a37589ef1e044e88a3837bff9c58b6dba694",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "CVE-2026-107938",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/CVE-2026-107938.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-108039"
+      ],
+      "cnaAffected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache CXF",
+          "packageURL": "pkg:maven/org.apache.cxf/cxf-core",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "4.2.0",
+              "lessThan": "4.2.4",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "4.0.0",
+              "lessThan": "4.1.9",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "0",
+              "lessThan": "3.6.13",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected",
+          "collectionURL": "https://repo.maven.apache.org/maven2",
+          "packageName": "org.apache.cxf:cxf-core"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "low"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "maintainerSeverity": "low",
+      "receipts": [
+        {
+          "name": "CVE-2026-108039-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/108xxx/CVE-2026-108039.json",
+          "lastAttemptAt": "2026-10-20T21:34:46.107072+00:00",
+          "checkedAt": "2026-10-20T21:34:48.918194+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"c0cad5ea13628a07060b0db62ede342c78b56f34b5119946cc26a3801ef29a96\"",
+            "date": "Tue, 20 Oct 2026 21:34:48 GMT",
+            "content-length": "8335"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:48.918194+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 8335,
+          "originalFetchedResponseSha256": "938b97545aa4e7a1e217a4ec8a107188f9a0c4da2045a2cfed971fbda5987df4",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "CVE-2026-108039-apache",
+          "url": "https://cxf.apache.org/security-advisories.data/CVE-2026-108039.txt?version=1&modificationDate=1791538183000&api=v2",
+          "lastAttemptAt": "2026-10-20T21:35:58.112227+00:00",
+          "checkedAt": "2026-10-20T21:36:01.814731+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "last-modified": "Fri, 09 Oct 2026 09:43:20 GMT",
+            "etag": "\"4b6-65d652dbf24ba\"",
+            "content-type": "text/plain",
+            "date": "Tue, 20 Oct 2026 21:36:01 GMT",
+            "content-length": "1206"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:01.814731+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 1206,
+          "originalFetchedResponseSha256": "75546c31af9948aae69c6639c623f55509bf5c0956c6c341af69f3958c4be1b5",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "CVE-2026-108039",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/CVE-2026-108039.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    },
+    {
+      "sourceIds": [
+        "CVE-2026-71575"
+      ],
+      "cnaAffected": [
+        {
+          "vendor": "Apache Software Foundation",
+          "product": "Apache CXF",
+          "collectionURL": "https://repo.maven.apache.org/maven2",
+          "packageName": "org.apache.cxf:cxf-rt-rs-security-sso-oidc",
+          "packageURL": "pkg:maven/org.apache.cxf/cxf-rt-rs-security-sso-oidc",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "4.2.0",
+              "lessThan": "4.2.4",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "4.0.0",
+              "lessThan": "4.1.9",
+              "versionType": "semver"
+            },
+            {
+              "status": "affected",
+              "version": "0",
+              "lessThan": "3.6.13",
+              "versionType": "semver"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "cnaMetrics": [
+        {
+          "other": {
+            "type": "Textual description of severity",
+            "content": {
+              "text": "low"
+            }
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "maintainerSeverity": "low",
+      "receipts": [
+        {
+          "name": "CVE-2026-71575-cna",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/71xxx/CVE-2026-71575.json",
+          "lastAttemptAt": "2026-10-20T21:34:46.115082+00:00",
+          "checkedAt": "2026-10-20T21:34:49.022657+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "cache-control": "max-age=300",
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"0a5bd3d98151be21dc3bc53852fa18c2b6b21a39cc778e4af7a90bbb2d1f0627\"",
+            "date": "Tue, 20 Oct 2026 21:34:48 GMT",
+            "content-length": "7517"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:34:49.022657+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 7517,
+          "originalFetchedResponseSha256": "5738a9bd3795f425766971a6cf3df1ac8023d006b994631d8ec1dea7cff239de",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        },
+        {
+          "name": "CVE-2026-71575-apache",
+          "url": "https://cxf.apache.org/security-advisories.data/CVE-2026-71575.txt?version=1&modificationDate=1791535059000&api=v2",
+          "lastAttemptAt": "2026-10-20T21:35:58.107473+00:00",
+          "checkedAt": "2026-10-20T21:36:01.836783+00:00",
+          "httpStatus": 200,
+          "error": null,
+          "responseHeaders": {
+            "last-modified": "Fri, 09 Oct 2026 08:43:12 GMT",
+            "etag": "\"3bc-65d6456a5fec8\"",
+            "content-type": "text/plain",
+            "date": "Tue, 20 Oct 2026 21:36:01 GMT",
+            "content-length": "956"
+          },
+          "outcome": "success",
+          "previousLastSuccessfulFetchAt": null,
+          "previousLastSuccessfulContentCheckAt": null,
+          "lastSuccessfulFetchAt": "2026-10-20T21:36:01.836783+00:00",
+          "lastSuccessfulContentCheckAt": null,
+          "originalFetchedResponseBytes": 956,
+          "originalFetchedResponseSha256": "f550fec8d64b53e1604691f9f24f5221762f061b35d271ecf5ec03b8e90cf28b",
+          "previousFetchedResponseSha256": null,
+          "receiptContentNote": "Original response digest, not public minimized evidence digest."
+        }
+      ],
+      "id": "CVE-2026-71575",
+      "decision": "verified-and-curated",
+      "curatedFile": "src/data/vulnerabilities/CVE-2026-71575.json",
+      "checkedAt": "2026-10-20T21:38:45.948346+00:00"
+    }
+  ],
+  "pendingCandidates": [
+    {
+      "id": "CVE-2026-85922",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA includes zero-width affected intervals (version equals lessThan) for Python/Rust Azure Key Vault packages; cannot infer corrected bounds.",
+      "publishedAt": "2026-10-13T19:01:09.179Z",
+      "modifiedAt": "2026-10-20T18:42:14.363Z",
+      "cnaAffected": [
+        {
+          "vendor": "Microsoft",
+          "product": "azure_security_keyvault_certificates",
+          "versions": [
+            {
+              "version": "1.0.1",
+              "lessThan": "1.0.1",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure_security_keyvault_keys",
+          "versions": [
+            {
+              "version": "1.0.1",
+              "lessThan": "1.0.1",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure_security_keyvault_secrets",
+          "versions": [
+            {
+              "version": "1.0.1",
+              "lessThan": "1.0.1",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-administration",
+          "versions": [
+            {
+              "version": "4.7.1",
+              "lessThan": "4.7.1",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-certificates",
+          "versions": [
+            {
+              "version": "4.11.2",
+              "lessThan": "4.11.2",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-keys",
+          "versions": [
+            {
+              "version": "4.11.2",
+              "lessThan": "4.11.2",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-secrets",
+          "versions": [
+            {
+              "version": "4.11.2",
+              "lessThan": "4.11.2",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-securitydomain",
+          "versions": [
+            {
+              "version": "1.0.0b3",
+              "lessThan": "1.0.0b3",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-85922-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/85xxx/CVE-2026-85922.json",
+        "lastAttemptAt": "2026-10-20T21:34:46.134715+00:00",
+        "checkedAt": "2026-10-20T21:34:48.882942+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"3dad61c562e38014fd4ca14289a18011067f6047c18f90e556527841d1eb473b\"",
+          "date": "Tue, 20 Oct 2026 21:34:48 GMT",
+          "content-length": "10855"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:48.882942+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 10855,
+        "originalFetchedResponseSha256": "58feafa4624df483c77fd7ad877a3625945ab873450c180fc8e880ab7cc6ef01",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-85925",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA includes reversed bounds for three Key Vault packages and a conflicting administration range; do not normalize or infer corrected bounds.",
+      "publishedAt": "2026-10-13T19:01:09.254Z",
+      "modifiedAt": "2026-10-20T18:42:14.792Z",
+      "cnaAffected": [
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-administration",
+          "versions": [
+            {
+              "version": "4.7.1",
+              "lessThan": "4.8.1",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-certificates",
+          "versions": [
+            {
+              "version": "4.11.2",
+              "lessThan": "4.9.1",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-keys",
+          "versions": [
+            {
+              "version": "4.11.2",
+              "lessThan": "4.10.1",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "azure-keyvault-secrets",
+          "versions": [
+            {
+              "version": "4.11.2",
+              "lessThan": "4.11.1",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-85925-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/85xxx/CVE-2026-85925.json",
+        "lastAttemptAt": "2026-10-20T21:34:46.142430+00:00",
+        "checkedAt": "2026-10-20T21:34:48.910170+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"a2dddaea06aa4064cbb2116165227d5ef97d3a77691956d1c49ecf2b02f58676\"",
+          "date": "Tue, 20 Oct 2026 21:34:48 GMT",
+          "content-length": "7616"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:48.910170+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 7616,
+        "originalFetchedResponseSha256": "aedd8a46f9131ef28adca80f40086779d6db469ccf0fa6ab9e21ac914aa731c9",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-105759",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "Maintainer confirms Rust frontend-only defect and release0.30.0, but lists no package. No independently verified PyPI/crates.io package mapping, so do not assign a package by name.",
+      "publishedAt": "2026-10-05T22:58:01.362Z",
+      "modifiedAt": "2026-10-06T17:56:44.425Z",
+      "cnaAffected": [
+        {
+          "vendor": "vllm-project",
+          "product": "vllm",
+          "versions": [
+            {
+              "version": "< 0.30.0",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-105759-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/105xxx/CVE-2026-105759.json",
+        "lastAttemptAt": "2026-10-20T21:34:46.166525+00:00",
+        "checkedAt": "2026-10-20T21:34:48.937428+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"446cfe3e7cdc40312b4e34ba021341b78c0034526a77ea13f2dbb96766d0d9e7\"",
+          "date": "Tue, 20 Oct 2026 21:34:48 GMT",
+          "content-length": "6327"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:48.937428+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 6327,
+        "originalFetchedResponseSha256": "8feed57b992a57d8305dae714337643a01f9a5990652b4d5147773c9942daa53",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      },
+      "maintainerReceipt": {
+        "name": "GHSA-5fj9-pfhr-6j48-html",
+        "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-5fj9-pfhr-6j48",
+        "lastAttemptAt": "2026-10-20T21:34:31.098619+00:00",
+        "checkedAt": "2026-10-20T21:34:35.138407+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "date": "Tue, 20 Oct 2026 21:34:34 GMT",
+          "content-type": "text/html; charset=utf-8",
+          "etag": "W/\"a88f28e1a96af5d49c0cdcb0134f4291\"",
+          "cache-control": "max-age=0, private, must-revalidate"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:35.138407+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 212342,
+        "originalFetchedResponseSha256": "eaa792eeb96de656699a6c36734857a00756399404bed1d0b402997888bceab7",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-96251",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA confirms PowerShell product release ranges, not an identified NuGet library package. Do not infer package mapping.",
+      "publishedAt": "2026-10-13T19:01:17.505Z",
+      "modifiedAt": "2026-10-20T18:43:11.472Z",
+      "cnaAffected": [
+        {
+          "vendor": "Microsoft",
+          "product": "PowerShell 7.4",
+          "versions": [
+            {
+              "version": "7.4.0",
+              "lessThan": "7.4.21",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "PowerShell 7.5",
+          "versions": [
+            {
+              "version": "7.5.0",
+              "lessThan": "7.5.12",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "PowerShell 7.6",
+          "versions": [
+            {
+              "version": "7.6.0",
+              "lessThan": "7.6.7",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-96251-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96251.json",
+        "lastAttemptAt": "2026-10-20T21:34:48.839460+00:00",
+        "checkedAt": "2026-10-20T21:34:51.554517+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"c6089cc45b4ce307caf6b616806ceb63e641d1b4a537711b11ace9090c618336\"",
+          "date": "Tue, 20 Oct 2026 21:34:51 GMT",
+          "content-length": "6671"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:51.554517+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 6671,
+        "originalFetchedResponseSha256": "a0a096c7285aba08d61eed8d4aeb962bf1c0dda3b324e0e6dff47d9de43eb147",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-96303",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA confirms PowerShell product release ranges, not an identified NuGet library package. Do not infer package mapping.",
+      "publishedAt": "2026-10-13T19:01:17.743Z",
+      "modifiedAt": "2026-10-20T18:43:13.008Z",
+      "cnaAffected": [
+        {
+          "vendor": "Microsoft",
+          "product": "PowerShell 7.4",
+          "versions": [
+            {
+              "version": "7.4.0",
+              "lessThan": "7.4.21",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "PowerShell 7.5",
+          "versions": [
+            {
+              "version": "7.5.0",
+              "lessThan": "7.5.12",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "PowerShell 7.6",
+          "versions": [
+            {
+              "version": "7.6.0",
+              "lessThan": "7.6.7",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-96303-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96303.json",
+        "lastAttemptAt": "2026-10-20T21:34:48.883593+00:00",
+        "checkedAt": "2026-10-20T21:34:51.635606+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"49d3e4dc2e6007b607df17bba390faa4ff49fe8019cc3936a4cbf27f2057a969\"",
+          "date": "Tue, 20 Oct 2026 21:34:51 GMT",
+          "content-length": "6690"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:51.635606+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 6690,
+        "originalFetchedResponseSha256": "46ddda7ac850562bd5c16b3f58ade86093654aa7af22cb9d54e8afdba4f2b81c",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-96957",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA identifies .NET SDK and Visual Studio product versions, not a library NuGet package mapping.",
+      "publishedAt": "2026-10-13T19:01:27.149Z",
+      "modifiedAt": "2026-10-20T18:43:44.869Z",
+      "cnaAffected": [
+        {
+          "vendor": "Microsoft",
+          "product": ".NET 10.0",
+          "versions": [
+            {
+              "version": "10.0.0",
+              "lessThan": "10.0.402",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": ".NET 11.0",
+          "versions": [
+            {
+              "version": "11.0.0",
+              "lessThan": "11.0.100-rc.2",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft Visual Studio 2022 version 17.14",
+          "versions": [
+            {
+              "version": "17.14.0",
+              "lessThan": "17.14.42",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft Visual Studio 2026 version 18.10",
+          "versions": [
+            {
+              "version": "18.10.0",
+              "lessThan": "18.10.4",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-96957-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96957.json",
+        "lastAttemptAt": "2026-10-20T21:34:48.884356+00:00",
+        "checkedAt": "2026-10-20T21:34:51.710795+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"383809a2d67aa056919e4790fcb544db1b9539eaaaa0d09110e84f47f435b5c4\"",
+          "date": "Tue, 20 Oct 2026 21:34:51 GMT",
+          "content-length": "7542"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:51.710795+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 7542,
+        "originalFetchedResponseSha256": "104b18c9ccc5eaf9a8f41298eb6ab89bf8eada4764cfc97aecdeb418ff81dd22",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-97788",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA concerns AD FS / .NET Framework and Windows product build combinations, not supported package coordinates.",
+      "publishedAt": "2026-10-13T19:01:29.503Z",
+      "modifiedAt": "2026-10-20T18:44:00.501Z",
+      "cnaAffected": [
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft .NET Framework 3.5",
+          "platforms": [
+            "Windows 11 version 26H1",
+            "Windows Server 2012",
+            "Windows Server 2012 R2"
+          ],
+          "versions": [
+            {
+              "version": "3.5.0",
+              "lessThan": "2.0.50727.9188 AND 3.0.30729.9171",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft .NET Framework 3.5 AND 4.6.2/4.7/4.7.1/4.7.2",
+          "platforms": [
+            "Windows 10 version 1607",
+            "Windows Server 2016",
+            "Windows Server 2019"
+          ],
+          "versions": [
+            {
+              "version": "3.0.0.0",
+              "lessThan": "2.0.50727.8987 AND 3.0.30729.8982 AND 4.7.4150.0",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft .NET Framework 3.5 AND 4.7.2",
+          "platforms": [
+            "Windows 10 version 1809"
+          ],
+          "versions": [
+            {
+              "version": "4.7.0",
+              "lessThan": "2.0.50727.9073 AND 3.0.30729.9070 AND 4.7.4150.0",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft .NET Framework 3.5 AND 4.8",
+          "platforms": [
+            "Windows 10 version 1809",
+            "Windows 10 version 21H2",
+            "Windows 10 version 22H2",
+            "Windows Server 2019",
+            "Windows Server 2022"
+          ],
+          "versions": [
+            {
+              "version": "4.8.0",
+              "lessThan": "2.0.50727.9073 AND 3.0.30729.9070 AND 4.8.4811.0",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft .NET Framework 3.5 AND 4.8.1",
+          "platforms": [
+            "Windows 10 version 21H2",
+            "Windows 10 version 22H2",
+            "Windows 11 version 23H2",
+            "Windows 11 version 24H2",
+            "Windows 11 version 25H2",
+            "Windows 11 version 26H2",
+            "Windows Server 2022",
+            "Windows Server 2025"
+          ],
+          "versions": [
+            {
+              "version": "4.8.1",
+              "lessThan": "2.0.50727.9188 AND 3.0.30729.9171 AND 4.8.9363.0",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft .NET Framework 4.6.2/4.7/4.7.1/4.7.2",
+          "platforms": [
+            "Windows Server 2012",
+            "Windows Server 2012 R2"
+          ],
+          "versions": [
+            {
+              "version": "4.7.0",
+              "lessThan": "4.7.4150.0",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft .NET Framework 4.8",
+          "platforms": [
+            "Windows 10 version 1607",
+            "Windows Server 2012",
+            "Windows Server 2012 R2",
+            "Windows Server 2016"
+          ],
+          "versions": [
+            {
+              "version": "4.8.0",
+              "lessThan": "4.8.4811.0",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Microsoft .NET Framework 4.8.1",
+          "platforms": [
+            "Windows 11 version 26H1"
+          ],
+          "versions": [
+            {
+              "version": "4.8.0.0",
+              "lessThan": "4.8.9363.0",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 10 Version 1607",
+          "platforms": [
+            "32-bit Systems",
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.14393.0",
+              "lessThan": "10.0.14393.9612",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 10 Version 1809",
+          "platforms": [
+            "32-bit Systems",
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.17763.0",
+              "lessThan": "10.0.17763.9376",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 10 Version 21H2",
+          "platforms": [
+            "32-bit Systems",
+            "ARM64-based Systems",
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.19044.0",
+              "lessThan": "10.0.19044.7807",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 10 Version 22H2",
+          "platforms": [
+            "32-bit Systems",
+            "ARM64-based Systems",
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.19045.0",
+              "lessThan": "10.0.19045.7807",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 11 version 23H2",
+          "platforms": [
+            "ARM64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.22631.0",
+              "lessThan": "10.0.22631.7652",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 11 Version 23H2",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.22631.0",
+              "lessThan": "10.0.22631.7652",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 11 Version 24H2",
+          "platforms": [
+            "ARM64-based Systems",
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.26100.0",
+              "lessThan": "10.0.26100.9711",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 11 Version 25H2",
+          "platforms": [
+            "ARM64-based Systems",
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.26200.0",
+              "lessThan": "10.0.26200.9711",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 11 version 26H1",
+          "platforms": [
+            "ARM64-based Systems",
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.28000.0",
+              "lessThan": "10.0.28000.3231",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows 11 Version 26H2",
+          "platforms": [
+            "ARM64-based Systems",
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.26300.0",
+              "lessThan": "10.0.26300.9711",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2012",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "6.2.9200.0",
+              "lessThan": "6.2.9200.26434",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2012 (Server Core installation)",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "6.2.9200.0",
+              "lessThan": "6.2.9200.26434",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2012 R2",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "6.3.9600.0",
+              "lessThan": "6.3.9600.23470",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2012 R2 (Server Core installation)",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "6.3.9600.0",
+              "lessThan": "6.3.9600.23470",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2016",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.14393.0",
+              "lessThan": "10.0.14393.9612",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2016 (Server Core installation)",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.14393.0",
+              "lessThan": "10.0.14393.9612",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2019",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.17763.0",
+              "lessThan": "10.0.17763.9376",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2019 (Server Core installation)",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.17763.0",
+              "lessThan": "10.0.17763.9376",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2022",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.20348.0",
+              "lessThan": "10.0.20348.5761",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2025",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.26100.0",
+              "lessThan": "10.0.26100.33650",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows Server 2025 (Server Core installation)",
+          "platforms": [
+            "x64-based Systems"
+          ],
+          "versions": [
+            {
+              "version": "10.0.26100.0",
+              "lessThan": "10.0.26100.33650",
+              "versionType": "custom",
+              "status": "affected"
+            }
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-97788-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/97xxx/CVE-2026-97788.json",
+        "lastAttemptAt": "2026-10-20T21:34:48.910451+00:00",
+        "checkedAt": "2026-10-20T21:34:51.711725+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"4607077f8a890afb63efb1c6cdc6fdc528da1f74e78273126aba7a10effe57bd\"",
+          "date": "Tue, 20 Oct 2026 21:34:51 GMT",
+          "content-length": "33571"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:51.711725+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 33571,
+        "originalFetchedResponseSha256": "0c78acdab0650e2953d7546d46a3120464bff660b634fca0111409e12438bdff",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-12542",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA lists Foreman/Satellite RPM packages; no supported RubyGems package mapping established.",
+      "publishedAt": "2026-10-01T17:14:49.985Z",
+      "modifiedAt": "2026-10-07T06:12:06.548Z",
+      "cnaAffected": [
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.16 for RHEL 8",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.12.0.23-1.el8sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.16::el8",
+            "cpe:/a:redhat:satellite:6.16::el9",
+            "cpe:/a:redhat:satellite_capsule:6.16::el8",
+            "cpe:/a:redhat:satellite_capsule:6.16::el9",
+            "cpe:/a:redhat:satellite_utils:6.16::el8",
+            "cpe:/a:redhat:satellite_utils:6.16::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.16 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.12.0.23-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.16::el8",
+            "cpe:/a:redhat:satellite:6.16::el9",
+            "cpe:/a:redhat:satellite_capsule:6.16::el8",
+            "cpe:/a:redhat:satellite_capsule:6.16::el9",
+            "cpe:/a:redhat:satellite_utils:6.16::el8",
+            "cpe:/a:redhat:satellite_utils:6.16::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.14.0.22-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.18 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.16.0.25-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.18::el9",
+            "cpe:/a:redhat:satellite_capsule:6.18::el9",
+            "cpe:/a:redhat:satellite_utils:6.18::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.19 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.18.0.14-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.19::el9",
+            "cpe:/a:redhat:satellite_capsule:6.19::el9",
+            "cpe:/a:redhat:satellite_utils:6.19::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "satellite:el8/foreman",
+          "defaultStatus": "affected",
+          "cpes": [
+            "cpe:/a:redhat:satellite:6"
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-12542-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/12xxx/CVE-2026-12542.json",
+        "lastAttemptAt": "2026-10-20T21:34:48.918459+00:00",
+        "checkedAt": "2026-10-20T21:34:51.758566+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"a6116617ced29669280414cb1de8fef48c97fb6eda0391e133171b7b616b8a45\"",
+          "date": "Tue, 20 Oct 2026 21:34:51 GMT",
+          "content-length": "11898"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:51.758566+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 11898,
+        "originalFetchedResponseSha256": "0057109a01a6912da79d65e8251fd1d8ec6ed3836feb74f0a0afc1b8809a999c",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-96658",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA lists Foreman/Satellite RPM bundle entries, which are not evidence that every listed dependency has this defect.",
+      "publishedAt": "2026-10-01T16:23:23.688Z",
+      "modifiedAt": "2026-10-18T06:33:54.643Z",
+      "cnaAffected": [
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.16 for RHEL 8",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-safemode",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:1.5.0-2.el8sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.16::el8",
+            "cpe:/a:redhat:satellite:6.16::el9",
+            "cpe:/a:redhat:satellite_capsule:6.16::el8",
+            "cpe:/a:redhat:satellite_capsule:6.16::el9",
+            "cpe:/a:redhat:satellite_utils:6.16::el8",
+            "cpe:/a:redhat:satellite_utils:6.16::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.16 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-safemode",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:1.5.0-2.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.16::el8",
+            "cpe:/a:redhat:satellite:6.16::el9",
+            "cpe:/a:redhat:satellite_capsule:6.16::el8",
+            "cpe:/a:redhat:satellite_capsule:6.16::el9",
+            "cpe:/a:redhat:satellite_utils:6.16::el8",
+            "cpe:/a:redhat:satellite_utils:6.16::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.14.0.22-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "python-dynaconf",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.2.13-1.el9pc",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "python-gitpython",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.1.62-1.el9pc",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "python-lxml",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:5.3.1-2.el9pc",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "python-sqlparse",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:0.6.0-1.el9pc",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-foreman_remote_execution",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:15.0.2-2.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-hammer_cli",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.14.0-2.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-katello",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:4.16.0.20-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-safemode",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:1.5.0-2.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "satellite",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:6.17.12-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "yggdrasil-worker-forwarder",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:0.1.0-2.1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.18 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-safemode",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:1.5.0-2.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.18::el9",
+            "cpe:/a:redhat:satellite_capsule:6.18::el9",
+            "cpe:/a:redhat:satellite_utils:6.18::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.19 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.18.0.14-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.19::el9",
+            "cpe:/a:redhat:satellite_capsule:6.19::el9",
+            "cpe:/a:redhat:satellite_utils:6.19::el9"
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-96658-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96658.json",
+        "lastAttemptAt": "2026-10-20T21:34:48.937680+00:00",
+        "checkedAt": "2026-10-20T21:34:51.686442+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"196e557cdf31ff008a19b0635d2e1a8b9ded016d03e32e7de0f069defe4eb3f5\"",
+          "date": "Tue, 20 Oct 2026 21:34:51 GMT",
+          "content-length": "22172"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:51.686442+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 22172,
+        "originalFetchedResponseSha256": "5c6547259edc69149d82ecc87d665dbccd4742a8d5ea51a88129bb39a388e079",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    },
+    {
+      "id": "CVE-2026-96659",
+      "decision": "pending-package-or-range-confirmation",
+      "rationale": "CNA lists Foreman/Satellite RPM bundle entries, which are not evidence that every listed dependency has this defect.",
+      "publishedAt": "2026-10-01T16:23:23.666Z",
+      "modifiedAt": "2026-10-16T12:18:17.723Z",
+      "cnaAffected": [
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.16 for RHEL 8",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.12.0.23-1.el8sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.16::el8",
+            "cpe:/a:redhat:satellite:6.16::el9",
+            "cpe:/a:redhat:satellite_capsule:6.16::el8",
+            "cpe:/a:redhat:satellite_capsule:6.16::el9",
+            "cpe:/a:redhat:satellite_utils:6.16::el8",
+            "cpe:/a:redhat:satellite_utils:6.16::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.16 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.12.0.23-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.16::el8",
+            "cpe:/a:redhat:satellite:6.16::el9",
+            "cpe:/a:redhat:satellite_capsule:6.16::el8",
+            "cpe:/a:redhat:satellite_capsule:6.16::el9",
+            "cpe:/a:redhat:satellite_utils:6.16::el8",
+            "cpe:/a:redhat:satellite_utils:6.16::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.14.0.22-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "python-dynaconf",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.2.13-1.el9pc",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "python-gitpython",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.1.62-1.el9pc",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "python-lxml",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:5.3.1-2.el9pc",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "python-sqlparse",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:0.6.0-1.el9pc",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-foreman_remote_execution",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:15.0.2-2.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-hammer_cli",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.14.0-2.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-katello",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:4.16.0.20-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "rubygem-safemode",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:1.5.0-2.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "satellite",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:6.17.12-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.17 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "yggdrasil-worker-forwarder",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:0.1.0-2.1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.17::el9",
+            "cpe:/a:redhat:satellite_capsule:6.17::el9",
+            "cpe:/a:redhat:satellite_utils:6.17::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.18 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.16.0.25-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.18::el9",
+            "cpe:/a:redhat:satellite_capsule:6.18::el9",
+            "cpe:/a:redhat:satellite_utils:6.18::el9"
+          ]
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Red Hat Satellite 6.19 for RHEL 9",
+          "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+          "packageName": "foreman",
+          "defaultStatus": "affected",
+          "versions": [
+            {
+              "version": "0:3.18.0.14-1.el9sat",
+              "lessThan": "*",
+              "versionType": "rpm",
+              "status": "unaffected"
+            }
+          ],
+          "cpes": [
+            "cpe:/a:redhat:satellite:6.19::el9",
+            "cpe:/a:redhat:satellite_capsule:6.19::el9",
+            "cpe:/a:redhat:satellite_utils:6.19::el9"
+          ]
+        }
+      ],
+      "receipt": {
+        "name": "CVE-2026-96659-cna",
+        "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96659.json",
+        "lastAttemptAt": "2026-10-20T21:34:49.024028+00:00",
+        "checkedAt": "2026-10-20T21:34:51.547273+00:00",
+        "httpStatus": 200,
+        "error": null,
+        "responseHeaders": {
+          "cache-control": "max-age=300",
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"1f3a581a79e237e8304b86c16c0e6c720cc850d8b018bd827c7e5ca3c908430d\"",
+          "date": "Tue, 20 Oct 2026 21:34:51 GMT",
+          "content-length": "22066"
+        },
+        "outcome": "success",
+        "previousLastSuccessfulFetchAt": null,
+        "previousLastSuccessfulContentCheckAt": null,
+        "lastSuccessfulFetchAt": "2026-10-20T21:34:51.547273+00:00",
+        "lastSuccessfulContentCheckAt": null,
+        "originalFetchedResponseBytes": 22066,
+        "originalFetchedResponseSha256": "5e1f9928da46e817ee70513114a7c3dcb96d063cf3b98dbb965e71646cea13eb",
+        "previousFetchedResponseSha256": null,
+        "receiptContentNote": "Original response digest, not public minimized evidence digest."
+      }
+    }
+  ],
+  "limitations": [
+    "Seven independently updated OSV exports, not a synchronized global database snapshot. All baseline/current ZIP records CRC-read and canonical JSON compared, including changes outside the 24-hour overlap.",
+    "MAL, other explicitly malicious-dependency notices, informational records and withdrawal histories are distinct; neither new source records nor unmatched backlog are independent active vulnerability counts.",
+    "Only source id/aliases establish transitive identity. Related/upstream, names and product-level CPEs do not.",
+    "Public artifacts contain allowlisted structured evidence, public source metadata and content digests, not raw HTML/XML, advisory descriptions, exploit examples or unrelated response fields.",
+    "MyJVN is a full all-product census within the requested JST modified-date window, not exhaustive package eligibility verification. Raw baseline XML is unavailable; comparisons of prior rows use saved structured fields.",
+    "CISA KEV and pending Milo/dcm4che pages failed HTTP403. Previous successful checkpoints and unknown KEV states are preserved.",
+    "GitHub REST rate limiting affected candidate API attempts; the new22 curated advisories use successfully fetched primary HTML/text and public databases, not unavailable API payloads.",
+    "Prior unresolved dispositions are retained unless this audit explicitly supersedes them. No blanket maintainer recheck of the full unmatched backlog is claimed."
+  ]
+}

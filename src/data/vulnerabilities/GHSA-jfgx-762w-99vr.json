@@ -1,0 +1,124 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-jfgx-762w-99vr",
+  "aliases": [
+    "CVE-2026-111753"
+  ],
+  "title": "@angular/common: XSRF Token Leakage via URL Parsing Discrepancy in Angular HTTP Client (Incomplete fix for CVE-2025-66035)",
+  "summary": "@angular/common: XSRF Token Leakage via URL Parsing Discrepancy in Angular HTTP Client (Incomplete fix for CVE-2025-66035)",
+  "publishedAt": "2026-10-20T20:37:57Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-jfgx-762w-99vr/GHSA-jfgx-762w-99vr.json",
+  "modifiedAt": "2026-10-20T20:37:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@angular/common",
+      "ranges": [
+        {
+          "affected": ">= 21.0.0, < 21.0.3",
+          "fixed": "21.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-jfgx-762w-99vr/GHSA-jfgx-762w-99vr.json"
+        },
+        {
+          "affected": ">= 20.0.0, < 20.3.34",
+          "fixed": "20.3.34",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-jfgx-762w-99vr/GHSA-jfgx-762w-99vr.json"
+        },
+        {
+          "affected": "<= 19.2.25",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-jfgx-762w-99vr/GHSA-jfgx-762w-99vr.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "21.0.3"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "fixed": "20.3.34"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "19.2.25"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/angular/angular/security/advisories/GHSA-jfgx-762w-99vr",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-jfgx-762w-99vr/GHSA-jfgx-762w-99vr.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-jfgx-762w-99vr/GHSA-jfgx-762w-99vr.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:37:57Z",
+      "modifiedAt": "2026-10-20T20:37:57Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "@angular/common: XSRF Token Leakage via URL Parsing Discrepancy in Angular HTTP Client (Incomplete fix for CVE-2025-66035)",
+      "url": "https://github.com/advisories/GHSA-jfgx-762w-99vr",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "XSRF Token Leakage via URL Parsing Discrepancy in Angular HTTP Client (Incomplete fix for CVE-2025-66035)",
+      "url": "https://github.com/angular/angular/security/advisories/GHSA-jfgx-762w-99vr",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T07:43:16Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "開発元HighとDB Mediumを別評価として保持。Angular21.0.3以降と22.xは既に影響なし、20.xは20.3.34で修正。19.x以前は保守終了のため修正版なしをnullで保持する。",
+    "利用者入力のURLで状態変更HTTP要求を送信し、相手側がCORSの要求・カスタムヘッダーを許す状況が前提。"
+  ]
+}

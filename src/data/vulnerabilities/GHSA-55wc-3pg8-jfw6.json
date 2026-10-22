@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-55wc-3pg8-jfw6",
+  "aliases": [
+    "CVE-2026-87029"
+  ],
+  "title": "undici：展開インターセプターの例外処理不備",
+  "summary": "decompressがzlibの非同期callbackから下流handlerを呼ぶ際、例外を捕捉しない。展開後サイズ上限等でhandlerがthrowするとNode.jsプロセスが終了し得る。",
+  "publishedAt": "2026-10-15T18:48:36.902Z",
+  "modifiedAt": "2026-10-16T19:58:52.997Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/87xxx/CVE-2026-87029.json",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "undici",
+      "ranges": [
+        {
+          "affected": ">= 7.15.0, < 7.30.1",
+          "fixed": "7.30.1",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6"
+        },
+        {
+          "affected": ">= 8.0.0, < 8.12.2",
+          "fixed": "8.12.2",
+          "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6"
+        }
+      ],
+      "packageUrl": "pkg:npm/undici"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE CNA原文（OpenJS）：CVE-2026-87029",
+      "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/87xxx/CVE-2026-87029.json",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T18:48:36.902Z",
+      "modifiedAt": "2026-10-16T19:58:52.997Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Node.js / undici公式アドバイザリ",
+      "url": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T15:57:36Z"
+    }
+  ],
+  "caveats": [
+    "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
+    "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
+    "decompressとdump等の例外を投げるhandlerの合成に依存。グローバル例外handlerで生存させても要求がbody timeoutまで停止する場合がある。",
+    "記録の日時はCNA公開・更新日時。開発元GHSAの先行公表日時は出典に別記し、今回の収録日やJVN掲載日で置き換えない。"
+  ]
+}

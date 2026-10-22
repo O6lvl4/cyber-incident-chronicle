@@ -1,0 +1,154 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8g5g-8vmr-9782",
+  "aliases": [
+    "CVE-2026-112403"
+  ],
+  "title": "Pillow: Heap buffer overflow in ImagingJpegDecode",
+  "summary": "Pillow: Heap buffer overflow in ImagingJpegDecode",
+  "publishedAt": "2026-10-20T20:40:07Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8g5g-8vmr-9782/GHSA-8g5g-8vmr-9782.json",
+  "modifiedAt": "2026-10-20T20:40:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:31:05.371898Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Pillow",
+      "ranges": [
+        {
+          "affected": "< 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8g5g-8vmr-9782/GHSA-8g5g-8vmr-9782.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8g5g-8vmr-9782",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8g5g-8vmr-9782/GHSA-8g5g-8vmr-9782.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8g5g-8vmr-9782/GHSA-8g5g-8vmr-9782.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:40:07Z",
+      "modifiedAt": "2026-10-20T20:40:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Heap buffer overflow in ImagingJpegDecode",
+      "url": "https://github.com/advisories/GHSA-8g5g-8vmr-9782",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8g5g-8vmr-9782",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:34:28Z"
+    }
+  ],
+  "caveats": [
+    "Primary High with no displayed CVSS differs from Reviewed Critical and v4. Maintainer <=12.3.0 and fixed 13.0.0 remain distinct from the database <13.0.0 interval.",
+    "Requires libjpeg-turbo >=3 with lossless JPEG support and a draft/thumbnail scaled decode. Full-scale load/resize and older JPEG decoders are explicitly unaffected; source describes a heap overwrite, not a confirmed real-world code execution incident.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:31:05.371898Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-8g5g-8vmr-9782",
+        "aliases": [
+          "CVE-2026-112403"
+        ],
+        "publishedAt": "2026-10-20T20:40:07Z",
+        "modifiedAt": "2026-10-20T20:40:07Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8g5g-8vmr-9782/GHSA-8g5g-8vmr-9782.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "Pillow",
+        "ranges": [
+          {
+            "affected": "< 13.0.0",
+            "fixed": "13.0.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8g5g-8vmr-9782/GHSA-8g5g-8vmr-9782.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "13.0.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-8g5g-8vmr-9782"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity high differs from Reviewed CRITICAL; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Primary High with no displayed CVSS differs from Reviewed Critical and v4. Maintainer <=12.3.0 and fixed 13.0.0 remain distinct from the database <13.0.0 interval.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

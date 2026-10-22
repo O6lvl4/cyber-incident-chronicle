@@ -1,0 +1,136 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9rhm-2h4x-jwmx",
+  "aliases": [
+    "CVE-2026-111763"
+  ],
+  "title": "A2A Java SDK send client credentials under server-controlled HTTP header name, enabling leakage via redirect",
+  "summary": "A2A Java SDK send client credentials under server-controlled HTTP header name, enabling leakage via redirect",
+  "publishedAt": "2026-10-20T21:04:16Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9rhm-2h4x-jwmx/GHSA-9rhm-2h4x-jwmx.json",
+  "modifiedAt": "2026-10-20T21:04:16Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:35.126376Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.a2aproject.sdk:a2a-java-sdk-parent",
+      "ranges": [
+        {
+          "affected": "1.2.0.Final",
+          "fixed": "1.3.0.Final",
+          "sourceUrl": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-9rhm-2h4x-jwmx"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-9rhm-2h4x-jwmx",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9rhm-2h4x-jwmx/GHSA-9rhm-2h4x-jwmx.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9rhm-2h4x-jwmx/GHSA-9rhm-2h4x-jwmx.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T21:04:16Z",
+      "modifiedAt": "2026-10-20T21:04:16Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "A2A Java SDK send client credentials under server-controlled HTTP header name, enabling leakage via redirect",
+      "url": "https://github.com/advisories/GHSA-9rhm-2h4x-jwmx",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-9rhm-2h4x-jwmx",
+      "publishedDate": "2026-08-28",
+      "publishedAt": "2026-08-28T07:46:13Z",
+      "modifiedAt": "2026-10-19T18:18:36Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Maintainer structured affected version is exactly 1.2.0.Final, fixed 1.3.0.Final; Reviewed broadens this to <1.3.0.Final. Keep the maintainer exact-version claim and database interval separate.",
+    "API-key credentials must already be configured; server-controlled header selection and redirects permit disclosure. Maintainer has no CVSS vector, so Reviewed CVSS 4.0 remains separately attributed. GHSA-4fpj is a distinct Android follow-up, not an alias.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:35.126376Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-9rhm-2h4x-jwmx",
+        "aliases": [
+          "CVE-2026-111763"
+        ],
+        "publishedAt": "2026-10-20T21:04:16Z",
+        "modifiedAt": "2026-10-20T21:04:16Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9rhm-2h4x-jwmx/GHSA-9rhm-2h4x-jwmx.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "maven",
+        "packageName": "org.a2aproject.sdk:a2a-java-sdk-parent",
+        "ranges": [
+          {
+            "affected": "< 1.3.0.Final",
+            "fixed": "1.3.0.Final",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9rhm-2h4x-jwmx/GHSA-9rhm-2h4x-jwmx.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.3.0.Final"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-9rhm-2h4x-jwmx"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "Maintainer structured affected version is exactly 1.2.0.Final, fixed 1.3.0.Final; Reviewed broadens this to <1.3.0.Final. Keep the maintainer exact-version claim and database interval separate.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

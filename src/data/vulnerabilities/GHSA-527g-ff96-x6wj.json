@@ -1,0 +1,150 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-527g-ff96-x6wj",
+  "aliases": [
+    "CVE-2026-113671"
+  ],
+  "title": "ApostropheCMS: Host header controls server-side image fetch origin in @apostrophecms/ai-helper, enabling authenticated SSRF",
+  "summary": "ApostropheCMS: Host header controls server-side image fetch origin in @apostrophecms/ai-helper, enabling authenticated SSRF",
+  "publishedAt": "2026-10-20T18:11:01Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-527g-ff96-x6wj/GHSA-527g-ff96-x6wj.json",
+  "modifiedAt": "2026-10-20T18:11:01Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:42.835961Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@apostrophecms/ai-helper",
+      "ranges": [
+        {
+          "affected": ">= 1.0.0-beta.10, < 1.0.0-beta.13",
+          "fixed": "1.0.0-beta.13",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-527g-ff96-x6wj/GHSA-527g-ff96-x6wj.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.0-beta.10"
+            },
+            {
+              "fixed": "1.0.0-beta.13"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-527g-ff96-x6wj",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-527g-ff96-x6wj"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-527g-ff96-x6wj/GHSA-527g-ff96-x6wj.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:11:01Z",
+      "modifiedAt": "2026-10-20T18:11:01Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS: Host header controls server-side image fetch origin in @apostrophecms/ai-helper, enabling authenticated SSRF",
+      "url": "https://github.com/advisories/GHSA-527g-ff96-x6wj",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-527g-ff96-x6wj",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:23:29Z",
+      "modifiedAt": "2026-10-20T17:39:16Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Current fields and Reviewed agree on >=1.0.0-beta.10,<1.0.0-beta.13, fixed beta.13, while the prose still says beta.12 is latest and no fix.",
+    "Requires editor capability, a base64-returning image provider, local storage and no configured global base URL. The attacker controls fetch origin only, not the fixed image path; generic arbitrary-path metadata retrieval is not demonstrated.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:42.835961Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-527g-ff96-x6wj",
+        "aliases": [
+          "CVE-2026-113671"
+        ],
+        "publishedAt": "2026-10-20T18:11:01Z",
+        "modifiedAt": "2026-10-20T18:11:01Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-527g-ff96-x6wj/GHSA-527g-ff96-x6wj.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "@apostrophecms/ai-helper",
+        "ranges": [
+          {
+            "affected": ">= 1.0.0-beta.10, < 1.0.0-beta.13",
+            "fixed": "1.0.0-beta.13",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-527g-ff96-x6wj/GHSA-527g-ff96-x6wj.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.0.0-beta.10"
+              },
+              {
+                "fixed": "1.0.0-beta.13"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-527g-ff96-x6wj"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Current fields and Reviewed agree on >=1.0.0-beta.10,<1.0.0-beta.13, fixed beta.13, while the prose still says beta.12 is latest and no fix.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

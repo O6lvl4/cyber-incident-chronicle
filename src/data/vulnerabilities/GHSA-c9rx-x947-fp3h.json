@@ -1,0 +1,118 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c9rx-x947-fp3h",
+  "aliases": [
+    "CVE-2026-113650"
+  ],
+  "title": "ApostropheCMS sanitize-html: unbounded recursion when re-sanitizing the fallback of a discarded iframe (stack overflow, nestingLimit not enforced)",
+  "summary": "ApostropheCMS sanitize-html: unbounded recursion when re-sanitizing the fallback of a discarded iframe (stack overflow, nestingLimit not enforced)",
+  "publishedAt": "2026-10-21T17:05:01Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-c9rx-x947-fp3h/GHSA-c9rx-x947-fp3h.json",
+  "modifiedAt": "2026-10-21T17:05:01Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:25.446340Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "sanitize-html",
+      "ranges": [
+        {
+          "affected": ">= 2.18.0, < 2.18.1",
+          "fixed": "2.18.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-c9rx-x947-fp3h/GHSA-c9rx-x947-fp3h.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.18.0"
+            },
+            {
+              "fixed": "2.18.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-c9rx-x947-fp3h/GHSA-c9rx-x947-fp3h.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-c9rx-x947-fp3h/GHSA-c9rx-x947-fp3h.json"
+      },
+      {
+        "version": "3.1",
+        "score": 5.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-c9rx-x947-fp3h"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-c9rx-x947-fp3h/GHSA-c9rx-x947-fp3h.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T17:05:01Z",
+      "modifiedAt": "2026-10-21T17:05:01Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS sanitize-html: unbounded recursion when re-sanitizing the fallback of a discarded iframe (stack overflow, nestingLimit not enforced)",
+      "url": "https://github.com/advisories/GHSA-c9rx-x947-fp3h",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-c9rx-x947-fp3h",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T18:26:29Z",
+      "modifiedAt": "2026-10-20T16:14:07Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Regression is 2.18.0 with discarded iframe fallback recursion; structured fix 2.18.1. Do not use historical narrative wording current latest as a present release claim.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:25.446340Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-c9rx-x947-fp3h",
+        "aliases": [
+          "CVE-2026-113650"
+        ],
+        "publishedAt": "2026-10-21T17:05:01Z",
+        "modifiedAt": "2026-10-21T17:05:01Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-c9rx-x947-fp3h/GHSA-c9rx-x947-fp3h.json"
+      }
+    ]
+  }
+}

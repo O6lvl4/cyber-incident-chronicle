@@ -1,0 +1,200 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-j5rq-xfvr-p969",
+  "aliases": [
+    "CVE-2026-113666"
+  ],
+  "title": "ApostropheCMS: Authenticated projection-exclusion prototype-member deletion in @apostrophecms/db-connect causes process-wide denial of service",
+  "summary": "ApostropheCMS: Authenticated projection-exclusion prototype-member deletion in @apostrophecms/db-connect causes process-wide denial of service",
+  "publishedAt": "2026-10-20T18:03:50Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json",
+  "modifiedAt": "2026-10-20T18:03:50Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:52.311735Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@apostrophecms/db-connect",
+      "ranges": [
+        {
+          "affected": "< 1.1.0",
+          "fixed": "1.1.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.1.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "apostrophe",
+      "ranges": [
+        {
+          "affected": "< 4.33.0",
+          "fixed": "4.33.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.33.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-j5rq-xfvr-p969",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+        "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-j5rq-xfvr-p969"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:03:50Z",
+      "modifiedAt": "2026-10-20T18:03:50Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS: Authenticated projection-exclusion prototype-member deletion in @apostrophecms/db-connect causes process-wide denial of service",
+      "url": "https://github.com/advisories/GHSA-j5rq-xfvr-p969",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-j5rq-xfvr-p969",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:23:33Z",
+      "modifiedAt": "2026-10-20T17:23:43Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Current fields include both db-connect <1.1.0/fixed 1.1.0 and apostrophe <4.33.0/fixed 4.33.0; prose still limits its tested db-connect releases to 1.0.0-1.0.2 and says no fix.",
+    "Requires authenticated view-draft access and SQLite/PostgreSQL/multipostgres adapters; the default real MongoDB adapter is unaffected. The shared-runtime method deletion causes persistent process-wide denial of service.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:52.311735Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-j5rq-xfvr-p969",
+        "aliases": [
+          "CVE-2026-113666"
+        ],
+        "publishedAt": "2026-10-20T18:03:50Z",
+        "modifiedAt": "2026-10-20T18:03:50Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "@apostrophecms/db-connect",
+        "ranges": [
+          {
+            "affected": "< 1.1.0",
+            "fixed": "1.1.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.1.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      },
+      {
+        "ecosystem": "npm",
+        "packageName": "apostrophe",
+        "ranges": [
+          {
+            "affected": "< 4.33.0",
+            "fixed": "4.33.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "4.33.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-j5rq-xfvr-p969"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "Current fields include both db-connect <1.1.0/fixed 1.1.0 and apostrophe <4.33.0/fixed 4.33.0; prose still limits its tested db-connect releases to 1.0.0-1.0.2 and says no fix.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2g87-pp6c-29x5",
+  "aliases": [],
+  "title": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+  "summary": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+  "publishedAt": "2026-10-19T17:07:23Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2g87-pp6c-29x5/GHSA-2g87-pp6c-29x5.json",
+  "modifiedAt": "2026-10-19T17:07:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:50.810547Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "aiohttp",
+      "ranges": [
+        {
+          "affected": "< 3.14.4",
+          "fixed": "3.14.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2g87-pp6c-29x5/GHSA-2g87-pp6c-29x5.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-2g87-pp6c-29x5",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2g87-pp6c-29x5/GHSA-2g87-pp6c-29x5.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2g87-pp6c-29x5/GHSA-2g87-pp6c-29x5.json",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T17:07:23Z",
+      "modifiedAt": "2026-10-19T17:07:23Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "aiohttp: Multiple instances of excessive or unbounded memory/CPU use",
+      "url": "https://github.com/advisories/GHSA-2g87-pp6c-29x5",
+      "publishedDate": "2026-10-19"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-2g87-pp6c-29x5",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T01:22:06Z",
+      "modifiedAt": "2026-10-07T01:22:06Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Maintainer Medium differs from Reviewed High. Maintainer has no CVSS vector; Reviewed CVSS 4.0 stays database-attributed.",
+    "Maintainer <=3.14.3 with fixed 3.14.4 is kept distinct from Reviewed <3.14.4. Multiple resource-exhaustion paths are described, not actual exploitation.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:50.810547Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-2g87-pp6c-29x5",
+        "aliases": [],
+        "publishedAt": "2026-10-19T17:07:23Z",
+        "modifiedAt": "2026-10-19T17:07:23Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2g87-pp6c-29x5/GHSA-2g87-pp6c-29x5.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "aiohttp",
+        "ranges": [
+          {
+            "affected": "< 3.14.4",
+            "fixed": "3.14.4",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2g87-pp6c-29x5/GHSA-2g87-pp6c-29x5.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.14.4"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-2g87-pp6c-29x5"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity medium differs from Reviewed HIGH; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Maintainer Medium differs from Reviewed High. Maintainer has no CVSS vector; Reviewed CVSS 4.0 stays database-attributed.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

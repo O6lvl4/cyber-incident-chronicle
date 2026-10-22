@@ -1,0 +1,90 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-hq85-5cpj-mr62",
+  "aliases": [],
+  "title": "uv's bundled CA store trusts an emSign root whose intermediate CA keys are compromised",
+  "summary": "uv's bundled CA store trusts an emSign root whose intermediate CA keys are compromised",
+  "publishedAt": "2026-10-20T19:37:52Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hq85-5cpj-mr62/GHSA-hq85-5cpj-mr62.json",
+  "modifiedAt": "2026-10-20T19:37:53Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "uv",
+      "ranges": [
+        {
+          "affected": "< 0.13.4",
+          "fixed": "0.13.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hq85-5cpj-mr62/GHSA-hq85-5cpj-mr62.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.13.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/astral-sh/uv/security/advisories/GHSA-hq85-5cpj-mr62",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hq85-5cpj-mr62/GHSA-hq85-5cpj-mr62.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hq85-5cpj-mr62/GHSA-hq85-5cpj-mr62.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T19:37:52Z",
+      "modifiedAt": "2026-10-20T19:37:53Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "uv's bundled CA store trusts an emSign root whose intermediate CA keys are compromised",
+      "url": "https://github.com/advisories/GHSA-hq85-5cpj-mr62",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Removal of emSign root certificate",
+      "url": "https://github.com/astral-sh/uv/security/advisories/GHSA-hq85-5cpj-mr62",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T16:48:48Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "開発元はHigh、DBはCritical。開発元にCVSS数値・ベクトルはなく、DB評価を別出典として保持する。",
+    "uvの既定の同梱CAバンドルが対象。0.13.4でemSignルートを除去する。システムCAや独自CA設定の利用者は別の信頼ストアの状態に依存し、uv更新だけでそれらのCAを除去するものではない。"
+  ]
+}

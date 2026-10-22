@@ -1,0 +1,103 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9prg-84vf-g5fc",
+  "aliases": [
+    "RUSTSEC-2026-0375"
+  ],
+  "title": "Wasmtime：WASIp3のContent-Length不整合でレスポンス分割",
+  "summary": "WASIp3ゲストが既存bodyを新しい応答へ転送する際、不正なContent-Lengthが検証されず応答の分割・注入につながる。",
+  "publishedAt": "2026-10-19T12:00:00Z",
+  "modifiedAt": "2026-10-20T11:15:37.071259108Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0375",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime-wasi-http",
+      "ranges": [
+        {
+          "affected": ">= 46.0.0, < 48.0.7",
+          "fixed": "48.0.7",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.4",
+          "fixed": "49.0.4",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "46.0.0"
+            },
+            {
+              "fixed": "48.0.7"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/wasmtime-wasi-http"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0375",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0375",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T12:00:00Z",
+      "modifiedAt": "2026-10-20T11:15:37.071259108Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec公式固定ソース：RUSTSEC-2026-0375",
+      "url": "https://raw.githubusercontent.com/RustSec/advisory-db/e6f94f3760d5e6c54c1b05f204002263bc025524/crates/wasmtime-wasi-http/RUSTSEC-2026-0375.md",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T19:20:41Z"
+    }
+  ],
+  "caveats": [
+    "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
+    "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
+    "WASIp3でbodyを転送する条件に依存する。",
+    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。"
+  ]
+}

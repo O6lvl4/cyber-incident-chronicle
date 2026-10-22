@@ -1,0 +1,92 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8f34-f56x-9xph",
+  "aliases": [
+    "CVE-2026-107302"
+  ],
+  "title": "msgpack5: Truncated map32 headers throw an unexpected error",
+  "summary": "msgpack5: Truncated map32 headers throw an unexpected error",
+  "publishedAt": "2026-10-08T17:40:10Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8f34-f56x-9xph/GHSA-8f34-f56x-9xph.json",
+  "modifiedAt": "2026-10-19T19:28:58Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "msgpack5",
+      "ranges": [
+        {
+          "affected": "< 6.1.0",
+          "fixed": ">= 6.1.0",
+          "sourceUrl": "https://github.com/mcollina/msgpack5/security/advisories/GHSA-8f34-f56x-9xph"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "6.1.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/mcollina/msgpack5/security/advisories/GHSA-8f34-f56x-9xph",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8f34-f56x-9xph/GHSA-8f34-f56x-9xph.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-8f34-f56x-9xph/GHSA-8f34-f56x-9xph.json",
+      "publishedDate": "2026-10-08",
+      "publishedAt": "2026-10-08T17:40:10Z",
+      "modifiedAt": "2026-10-19T19:28:58Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "msgpack5: Truncated map32 headers throw an unexpected error",
+      "url": "https://github.com/advisories/GHSA-8f34-f56x-9xph",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "type": "maintainer",
+      "title": "Truncated map32 headers throw an unexpected error",
+      "url": "https://github.com/mcollina/msgpack5/security/advisories/GHSA-8f34-f56x-9xph",
+      "publishedDate": "2026-09-26",
+      "publishedAt": "2026-09-26T11:10:39Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "開発元の構造化影響範囲は<6.1.0で下限なし、DBは今回4.1.0の下限を追加。両者を区別して保持する。",
+    "不完全なmap32ヘッダーで想定外のRangeErrorとなる問題。バッファの境界チェックがあるため隣接メモリーの漏えいを示すものではない。"
+  ]
+}

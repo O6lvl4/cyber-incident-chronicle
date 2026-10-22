@@ -1,0 +1,3365 @@
+{
+  "schemaVersion": 1,
+  "reportDate": "2026-10-21",
+  "checkedAt": "2026-10-20T21:39:58.750345Z",
+  "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+  "scope": "All 26 eligible Reviewed additions assigned to bounded batch a.",
+  "counts": {
+    "newRecords": 26,
+    "primaryRequestsAttempted": 28,
+    "primaryRequestsSucceeded": 26,
+    "failedFetches": 2,
+    "reviewedMaintainerAdvisoryDescriptions": 26,
+    "apiAdvisoriesReviewed": 24,
+    "htmlAdvisoriesReviewed": 2,
+    "severityBandDisagreements": 2,
+    "sameVersionVectorDisagreements": 0,
+    "sameIdentifierWithdrawalDisagreements": 0,
+    "newCuratedOverlays": 16
+  },
+  "methodology": [
+    "Every assigned record was compared to the actual public maintainer advisory structured fields and description prose; no proof of concept or source code was executed.",
+    "API and HTML response originals remain local only. Public artifacts contain allowlisted fields, independently written observations, response hashes and selected public headers, never full descriptions, code, credits, private-report links or tracking metadata.",
+    "Literal package coordinates, affected and fixed strings and source timestamps are preserved independently. CVSS numeric scores are copied only when published, never computed. HTML missing timestamps are marked unobservable, not asserted null source values."
+  ],
+  "limitations": [
+    "This is a delta review, not a fresh primary-source review of the full corpus.",
+    "GitHub unauthenticated API rate limits required HTML fallback; individual failed attempts and successful HTML evidence are separate.",
+    "No independent KEV or real-world exploitation verification was performed.",
+    "Source-level range conflicts do not imply a local dependency applicability verdict."
+  ],
+  "newCuratedOverlayIds": [
+    "GHSA-2jrp-qc93-h2j8",
+    "GHSA-44qr-rrjg-2cqq",
+    "GHSA-4fpj-g9jf-9rgg",
+    "GHSA-527g-ff96-x6wj",
+    "GHSA-97wv-p4xx-c7mg",
+    "GHSA-9rhm-2h4x-jwmx",
+    "GHSA-cv27-6wvh-8x7j",
+    "GHSA-gqh3-7856-rjjg",
+    "GHSA-hhph-8536-gfq5",
+    "GHSA-j5rq-xfvr-p969",
+    "GHSA-m2m5-rw3w-cwmj",
+    "GHSA-q78c-5jjq-57g8",
+    "GHSA-qw47-mcm5-934w",
+    "GHSA-x32g-jvvm-4725",
+    "GHSA-x3q4-9hxx-gx8m",
+    "GHSA-xf6w-q65w-4f2w"
+  ],
+  "records": [
+    {
+      "id": "GHSA-2j32-q6rx-h844",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-2j32-q6rx-h844/GHSA-2j32-q6rx-h844.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2j32-q6rx-h844/GHSA-2j32-q6rx-h844.json",
+        "sha256": "f31ecc21913de8d44e0c9a3db5590bd6d2a1a0ff1d4b0cd9fabe011967de5bee",
+        "bytes": 4300,
+        "summary": "ApostropheCMS: Page REST API authorization bypass",
+        "publishedAt": "2026-10-20T18:13:08Z",
+        "modifiedAt": "2026-10-20T18:13:08Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113670"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-2j32-q6rx-h844",
+        "cve_id": "CVE-2026-113670",
+        "summary": "Page REST API authorization bypass",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "score": 5.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "score": 5.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:23:52Z",
+        "updated_at": "2026-10-20T17:36:41Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Page read and tree-dump routes expose private/login-required page content through missing authorization. Structured package, range, fix 4.33.0, Medium and CVSS 3.1 agree.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-2j32-q6rx-h844",
+          "checkedAt": "2026-10-20T21:29:40.036609Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "ca06ed330515cf8dafca07311cf9dc6c09a8f7eac6a77ca4d82ea4a5f76e84c6",
+          "originalFetchedResponseBytes": 6039,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-2j32-q6rx-h844.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "6ae882d652a2e3a85566c12bbadf6a2afaaa9368ba094953e390c58df0047e8a",
+          "bytes": 1014,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-2j32-q6rx-h844.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "bf16964ca7d6706c8681a0a9b8b5c0fce251dd4bc9ad9fd36a682ff655ea4a23",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2jrp-qc93-h2j8",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-2jrp-qc93-h2j8/GHSA-2jrp-qc93-h2j8.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-2jrp-qc93-h2j8/GHSA-2jrp-qc93-h2j8.json",
+        "sha256": "2bfba1f101f7d710da6f9baefbfe92d3412aab99e760e9823965a70d5fa4fe0c",
+        "bytes": 15381,
+        "summary": "ApostropheCMS: Same-parent page reorder in @apostrophecms/page move() re-ranks a restricted parent's children without create authorization",
+        "publishedAt": "2026-10-20T18:04:11Z",
+        "modifiedAt": "2026-10-20T18:04:11Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113655"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-2jrp-qc93-h2j8",
+        "cve_id": "CVE-2026-113655",
+        "summary": "Same-parent page reorder in @apostrophecms/page move() re-ranks a restricted parent's children without create authorization",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "score": 4.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+            "score": 4.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:23:37Z",
+        "updated_at": "2026-10-20T16:37:39Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Current structured range <4.33.0 and fixed 4.33.0 agree with Reviewed; narrative still says <=4.32.2 and no release fixes the issue. Treat the no-fix sentence as earlier report text, not current structured release metadata.",
+        "An authenticated editor must already control a child under a restricted parent; demonstrated impact is sibling ordering integrity, not content disclosure or availability. Lower introduction boundary was not independently pinned in the prose.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-2jrp-qc93-h2j8",
+          "checkedAt": "2026-10-20T21:29:40.056313Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "fe1baa7818fb881afd350ae0edb46747731c6df775e443c003f7b88213a37e4b",
+          "originalFetchedResponseBytes": 18051,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-2jrp-qc93-h2j8.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "4a9b713d1a646207aad441ffb70cfea144fb159a1b362fc54b58047b48d22043",
+          "bytes": 1103,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-2jrp-qc93-h2j8.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "0ef11a762066317821c2f7d8f22d8933d2e817b2827397fb249a014d3b5e5510",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-2jrp-qc93-h2j8.json"
+    },
+    {
+      "id": "GHSA-374f-7chj-9948",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-374f-7chj-9948/GHSA-374f-7chj-9948.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-374f-7chj-9948/GHSA-374f-7chj-9948.json",
+        "sha256": "9c2a9d4c340692712d6a4f211dadf5960ef5bb1f2a88f31e05a087061fe03ddc",
+        "bytes": 4958,
+        "summary": "ApostropheCMS sanitize-html: SMIL animation namespace-prefix bypass allows javascript: URI injection (XSS)",
+        "publishedAt": "2026-10-20T18:21:19Z",
+        "modifiedAt": "2026-10-20T18:21:19Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113657"
+        ],
+        "severityLabel": "LOW",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "sanitize-html"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.17.7"
+                  },
+                  {
+                    "fixed": "2.18.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-374f-7chj-9948",
+        "cve_id": "CVE-2026-113657",
+        "summary": "sanitize-html: SMIL animation namespace-prefix bypass allows javascript: URI injection (XSS)",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "sanitize-html"
+            },
+            "vulnerable_version_range": ">= 2.17.7, < 2.18.0",
+            "patched_versions": "2.18.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N",
+          "score": 3.7
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N",
+            "score": 3.7
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:30Z",
+        "updated_at": "2026-10-20T16:54:43Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Structured >=2.17.7,<2.18.0 and fixed 2.18.0 agree. The described bypass concerns namespace-prefixed SMIL elements with permissive SVG/tag configuration; earlier versions lacking the mitigation are a separate scope claim, not a new inferred lower bound.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-374f-7chj-9948",
+          "checkedAt": "2026-10-20T21:29:40.173030Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "3ab70902c1eca94782ffa492c7a8938da9a106678d33057efadedea790b0c82c",
+          "originalFetchedResponseBytes": 6633,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-374f-7chj-9948.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "eec70c609252f0863404b87a8f68d79847957b99bbb2698be2c12405911492b1",
+          "bytes": 1083,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-374f-7chj-9948.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "ec504089534c60a173c7207114e639ffd22464893f7d8dd7da4ecac7c2304424",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-44qr-rrjg-2cqq",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json",
+        "sha256": "14aa2136f567df8c842b4535c5d14e8d217f5c5e8559b6d7b6c76a4246492225",
+        "bytes": 3693,
+        "summary": "ApostropheCMS: CAPTCHA response token not URL-encoded",
+        "publishedAt": "2026-10-20T18:05:35Z",
+        "modifiedAt": "2026-10-20T18:05:36Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113667"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/form"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.5.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/login-recaptcha"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.2.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/login-hcaptcha"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.3.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-44qr-rrjg-2cqq",
+        "cve_id": "CVE-2026-113667",
+        "summary": "CAPTCHA response token not URL-encoded",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/form"
+            },
+            "vulnerable_version_range": "< 1.5.5",
+            "patched_versions": "1.5.5",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/login-recaptcha"
+            },
+            "vulnerable_version_range": "< 1.2.1",
+            "patched_versions": "1.2.1",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/login-hcaptcha"
+            },
+            "vulnerable_version_range": "< 1.3.0",
+            "patched_versions": "1.3.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:23:40Z",
+        "updated_at": "2026-10-20T17:26:44Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "All three package ranges and fixes agree. Maintainer structured severity is Medium but prose labels impact Low; maintainer publishes no structured CVSS, so the Reviewed CVSS 4.0 vector remains database-attributed.",
+        "Unencoded CAPTCHA verification parameters can cause failures and support bypass probing; the narrative does not demonstrate secret exfiltration.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-44qr-rrjg-2cqq",
+          "checkedAt": "2026-10-20T21:29:42.809004Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "0058f8ba2e0c498d9a79c128521d20baa985058547a316cad708cf30f5303403",
+          "originalFetchedResponseBytes": 4924,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-44qr-rrjg-2cqq.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "4285b8bc8e8241a216f3b5ae63eb4b07b4c720c44e38cfadf66cf4807e167f08",
+          "bytes": 1404,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-44qr-rrjg-2cqq.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "bc446fc4f86a19fef91c49ca0b9e85ef5fbcd9c42045cfea45cd7d0dca89152e",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-44qr-rrjg-2cqq.json"
+    },
+    {
+      "id": "GHSA-4fpj-g9jf-9rgg",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-4fpj-g9jf-9rgg/GHSA-4fpj-g9jf-9rgg.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-4fpj-g9jf-9rgg/GHSA-4fpj-g9jf-9rgg.json",
+        "sha256": "fd43daaa87ce7bb4a5ba7e4933f5c971915962298c7183de88b7ce510821dd88",
+        "bytes": 10272,
+        "summary": "A2A Java SDK: Android synchronous POST forwards credentials across authorities after incomplete redirect fix",
+        "publishedAt": "2026-10-20T21:08:06Z",
+        "modifiedAt": "2026-10-20T21:08:06Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111765"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-http-client-android"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.3.0.Final"
+                  },
+                  {
+                    "fixed": "1.3.2.Final"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.3.1.Final"
+            }
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-4fpj-g9jf-9rgg",
+        "cve_id": "CVE-2026-111765",
+        "summary": "Android synchronous POST overrides the GHSA-9rhm redirect fix and forwards credentials across authorities",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-http-client-android"
+            },
+            "vulnerable_version_range": ">= 1.3.0.Final, <= 1.3.1.Final",
+            "patched_versions": "1.3.2.Final",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-09T07:59:03Z",
+        "updated_at": "2026-10-19T18:19:00Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer range is >=1.3.0.Final,<=1.3.1.Final with fixed 1.3.2.Final; Reviewed uses <1.3.2.Final and separately retains last-known affected <=1.3.1.Final. Preserve literal bounds without assuming release-version equivalence.",
+        "This is an incomplete-fix Android synchronous POST path distinct from GHSA-9rhm. CVSS 3.1 7.5 agrees; prose discusses a deployment-dependent 6.5 alternative but does not supply a complete second vector. No credential reuse or real-world compromise is demonstrated.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-4fpj-g9jf-9rgg",
+          "checkedAt": "2026-10-20T21:29:35.125822Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "f9633e27ba8b662f4ec1aca00400dde8e3d5f0548e65ccb215c54d1602eee801",
+          "originalFetchedResponseBytes": 11672,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-4fpj-g9jf-9rgg.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "2b7f50112ddbff8f944e4903c37e02c215569229e0e3e55fa6dc4ddbf66ed55c",
+          "bytes": 1153,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-4fpj-g9jf-9rgg.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "aa17ca15d1887965053beabec2dfaf6e1b0528ffd893057d543725232d00e075",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-4fpj-g9jf-9rgg.json"
+    },
+    {
+      "id": "GHSA-527g-ff96-x6wj",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-527g-ff96-x6wj/GHSA-527g-ff96-x6wj.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-527g-ff96-x6wj/GHSA-527g-ff96-x6wj.json",
+        "sha256": "75e88ef22987eb45094a631d1e804fb968173c2c9c9a289f39d1309d10015fef",
+        "bytes": 11395,
+        "summary": "ApostropheCMS: Host header controls server-side image fetch origin in @apostrophecms/ai-helper, enabling authenticated SSRF",
+        "publishedAt": "2026-10-20T18:11:01Z",
+        "modifiedAt": "2026-10-20T18:11:01Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113671"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/ai-helper"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.0.0-beta.10"
+                  },
+                  {
+                    "fixed": "1.0.0-beta.13"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-527g-ff96-x6wj",
+        "cve_id": "CVE-2026-113671",
+        "summary": "Host header controls server-side image fetch origin in @apostrophecms/ai-helper, enabling authenticated SSRF",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/ai-helper"
+            },
+            "vulnerable_version_range": ">= 1.0.0-beta.10, < 1.0.0-beta.13",
+            "patched_versions": "1.0.0-beta.13",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "score": 4.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "score": 4.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:23:29Z",
+        "updated_at": "2026-10-20T17:39:16Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Current fields and Reviewed agree on >=1.0.0-beta.10,<1.0.0-beta.13, fixed beta.13, while the prose still says beta.12 is latest and no fix.",
+        "Requires editor capability, a base64-returning image provider, local storage and no configured global base URL. The attacker controls fetch origin only, not the fixed image path; generic arbitrary-path metadata retrieval is not demonstrated.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-527g-ff96-x6wj",
+          "checkedAt": "2026-10-20T21:29:42.835961Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "77e491311087f8d389ca9413ac8f1be1bb7a6b52d22effff6287f4114d5c057a",
+          "originalFetchedResponseBytes": 13996,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-527g-ff96-x6wj.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "ab5ab752ac770612d06c27e7f4a60d43bd2f787772e3299d5324b66b9a0b9584",
+          "bytes": 1134,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-527g-ff96-x6wj.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "ab2f7c46b4fb07bbdafbc0a5fefdb1e00999476652d2f1935ab3ce7e64180cdd",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-527g-ff96-x6wj.json"
+    },
+    {
+      "id": "GHSA-653j-g8j7-gh54",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-653j-g8j7-gh54/GHSA-653j-g8j7-gh54.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-653j-g8j7-gh54/GHSA-653j-g8j7-gh54.json",
+        "sha256": "485c96865739b5d6ce267753e988e53ddd784caadd3031b3758d7a78e89d92bf",
+        "bytes": 6070,
+        "summary": "ApostropheCMS: No Attempt Throttling on Authenticated Password-Change Endpoint Enables Unlimited Current-Password Guessing",
+        "publishedAt": "2026-10-20T18:17:50Z",
+        "modifiedAt": "2026-10-20T18:17:50Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113710"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-653j-g8j7-gh54",
+        "cve_id": "CVE-2026-113710",
+        "summary": "No Attempt Throttling on Authenticated Password-Change Endpoint Enables Unlimited Current-Password Guessing",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N",
+          "score": 5.9
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N",
+            "score": 5.9
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:21Z",
+        "updated_at": "2026-10-20T17:44:26Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Current range, fix 4.33.0 and Medium/CVSS 3.1 5.9 agree. Password guessing requires an already valid authenticated session; this is not anonymous password guessing.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-653j-g8j7-gh54",
+          "checkedAt": "2026-10-20T21:29:42.919266Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "efea04e3dabe76a1648710dd2560e698e278c1a9d1a0db3cb3cbb98ae63f9323",
+          "originalFetchedResponseBytes": 7845,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-653j-g8j7-gh54.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "47f4d732c66b7d255e87ee54538245f613f28b0450d8894290e15b6581ac533e",
+          "bytes": 1087,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-653j-g8j7-gh54.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "4a03b11574222742fc39c6098d190bd5d7a4ac0e03f386e460156b9ef9c55e5e",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-89mh-mm8c-mv7f",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-89mh-mm8c-mv7f/GHSA-89mh-mm8c-mv7f.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-89mh-mm8c-mv7f/GHSA-89mh-mm8c-mv7f.json",
+        "sha256": "b3c264a4a9ca771c5729db8830e320cf6358ecc320aa60a39d79435e1f8d2d65",
+        "bytes": 3590,
+        "summary": "ApostropheCMS: Unauthenticated unbounded multipart upload → disk-exhaustion DoS",
+        "publishedAt": "2026-10-20T18:08:31Z",
+        "modifiedAt": "2026-10-20T18:08:31Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113656"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/form"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.5.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-89mh-mm8c-mv7f",
+        "cve_id": "CVE-2026-113656",
+        "summary": "Unauthenticated unbounded multipart upload → disk-exhaustion DoS",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/form"
+            },
+            "vulnerable_version_range": "< 1.5.5",
+            "patched_versions": "1.5.5",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 5.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "score": 5.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:23:48Z",
+        "updated_at": "2026-10-20T16:48:14Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Range, fix 1.5.5 and Medium/CVSS 3.1 5.3 agree. Unauthenticated multipart staging occurs before validation, with unbounded resource use and potential orphaned files.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-89mh-mm8c-mv7f",
+          "checkedAt": "2026-10-20T21:29:42.920281Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "1972a35cfdc9ea761adc6e3dce4875c6a1e100398ecfaaea6312db429ba33153",
+          "originalFetchedResponseBytes": 5302,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-89mh-mm8c-mv7f.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "1f6b24b5801ce25ae9f1b7626f9d495d9cd85f35fae433ed2af5b46225dc2cc8",
+          "bytes": 1053,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-89mh-mm8c-mv7f.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "a12e61b9f6d9023d2c0fb3f5e05ef23501bc2a00325c06d3cfeac0c68a7c28a1",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-97wv-p4xx-c7mg",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-97wv-p4xx-c7mg/GHSA-97wv-p4xx-c7mg.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-97wv-p4xx-c7mg/GHSA-97wv-p4xx-c7mg.json",
+        "sha256": "57a6339578275fa7c4c0af3b170cc0d225589e3851792b5d5b3ce1233fc501f6",
+        "bytes": 6660,
+        "summary": "ApostropheCMS import-export tar guard misses './..' because it is a literal '../' substring test",
+        "publishedAt": "2026-10-20T18:23:42Z",
+        "modifiedAt": "2026-10-20T18:23:42Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113664"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.7.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-97wv-p4xx-c7mg",
+        "cve_id": "CVE-2026-113664",
+        "summary": "import-export tar guard misses './..' because it is a literal '../' substring test",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "vulnerable_version_range": "< 3.7.0",
+            "patched_versions": "3.7.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:39Z",
+        "updated_at": "2026-10-20T17:14:07Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Current fields agree on <3.7.0, fixed 3.7.0 and Medium. Maintainer structured CVSS fields are null, but its prose explicitly publishes CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H; Reviewed instead supplies a CVSS 4.0 vector. Keep both source/version attributions and do not compute a missing numeric v3 score.",
+        "The reported effect is process termination from a missing stream-error handler; the reporter explicitly does not demonstrate controlled file read/write and did not run the full route end-to-end.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-97wv-p4xx-c7mg",
+          "checkedAt": "2026-10-20T21:29:48.580392Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "a285727f1824b4b10ff6028e0f1fb36cb05db49395cea86ec418b769a78ead82",
+          "originalFetchedResponseBytes": 8717,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-97wv-p4xx-c7mg.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "f326e8badeb36970655fd069f7802bbc60aeae3373a2ff30eb2ac2aebafc5fcb",
+          "bytes": 996,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-97wv-p4xx-c7mg.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "00aacff952303297ec71e6811bc34b3002738ab04ba26e091165d7c9cc6daf72",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-97wv-p4xx-c7mg.json"
+    },
+    {
+      "id": "GHSA-9rhm-2h4x-jwmx",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-9rhm-2h4x-jwmx/GHSA-9rhm-2h4x-jwmx.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9rhm-2h4x-jwmx/GHSA-9rhm-2h4x-jwmx.json",
+        "sha256": "0ac58e8925087e370dd64799f2192d8ed103d26de40f1a82526538a04c2b1eb2",
+        "bytes": 4444,
+        "summary": "A2A Java SDK send client credentials under server-controlled HTTP header name, enabling leakage via redirect",
+        "publishedAt": "2026-10-20T21:04:16Z",
+        "modifiedAt": "2026-10-20T21:04:16Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111763"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-parent"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.3.0.Final"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-9rhm-2h4x-jwmx",
+        "cve_id": "CVE-2026-111763",
+        "summary": "Client credentials sent under server-controlled HTTP header name, enabling leakage via redirect",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-parent"
+            },
+            "vulnerable_version_range": "1.2.0.Final",
+            "patched_versions": "1.3.0.Final",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-08-28T07:46:13Z",
+        "updated_at": "2026-10-19T18:18:36Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer structured affected version is exactly 1.2.0.Final, fixed 1.3.0.Final; Reviewed broadens this to <1.3.0.Final. Keep the maintainer exact-version claim and database interval separate.",
+        "API-key credentials must already be configured; server-controlled header selection and redirects permit disclosure. Maintainer has no CVSS vector, so Reviewed CVSS 4.0 remains separately attributed. GHSA-4fpj is a distinct Android follow-up, not an alias.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-9rhm-2h4x-jwmx",
+          "checkedAt": "2026-10-20T21:29:35.126376Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "3ca376352e02546550bc1d66573c119d070fcd455de496ae5fbfcb8f419466ab",
+          "originalFetchedResponseBytes": 5782,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-9rhm-2h4x-jwmx.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "423ce63689aec6a708f821a3b0155f6b0149705d9e9e071de37ad23972bc9b01",
+          "bytes": 1031,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-9rhm-2h4x-jwmx.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "fe024dec123f2456449e30f4d6c36d9509bfb19ef963159e7347686756c78c45",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-9rhm-2h4x-jwmx.json"
+    },
+    {
+      "id": "GHSA-cv27-6wvh-8x7j",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-cv27-6wvh-8x7j/GHSA-cv27-6wvh-8x7j.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-cv27-6wvh-8x7j/GHSA-cv27-6wvh-8x7j.json",
+        "sha256": "c16a59020d1e386ace164b0c9f0da0e5c1e123a4f039b0f0daa156ac66861e17",
+        "bytes": 4324,
+        "summary": "ApostropheCMS: Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs",
+        "publishedAt": "2026-10-20T18:15:33Z",
+        "modifiedAt": "2026-10-20T18:15:33Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113661"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "sanitize-html"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.18.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-cv27-6wvh-8x7j",
+        "cve_id": "CVE-2026-113661",
+        "summary": "Incomplete CVE-2026-53606: `meta http-equiv=refresh` `content` still ships `javascript:` / `data:` URLs ",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "sanitize-html"
+            },
+            "vulnerable_version_range": "< 2.18.0",
+            "patched_versions": "2.18.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+          "score": 5.4
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+            "score": 5.4
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:05Z",
+        "updated_at": "2026-10-20T17:08:28Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Range, fix 2.18.0 and CVSS 3.1 agree. The refresh-content URL bypass requires non-default allowance of meta plus http-equiv/content; default sanitize-html configuration is unaffected.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-cv27-6wvh-8x7j",
+          "checkedAt": "2026-10-20T21:29:48.580704Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "1e051b971c2b7f458893697b1f13c581f721eb5eb64d53accda39ea0ceea2a77",
+          "originalFetchedResponseBytes": 6071,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-cv27-6wvh-8x7j.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "6ae60add3646f7a7ed05dae534731d87174a1a82d414ce1224eff3d6663d79b5",
+          "bytes": 1087,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-cv27-6wvh-8x7j.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "68fc51e16ed81606018a4bd901886ff91f9969ce59b312a8d3a661afa3197990",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-cv27-6wvh-8x7j.json"
+    },
+    {
+      "id": "GHSA-gmfx-5g6x-rr72",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-gmfx-5g6x-rr72/GHSA-gmfx-5g6x-rr72.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-gmfx-5g6x-rr72/GHSA-gmfx-5g6x-rr72.json",
+        "sha256": "dd695105e95f7cb74a168d779f05c11667de3a12f3a4230c9f7ff7aae08913a6",
+        "bytes": 5477,
+        "summary": "ApostropheCMS: Path traversal in uploadfs",
+        "publishedAt": "2026-10-20T18:21:59Z",
+        "modifiedAt": "2026-10-20T18:21:59Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113651"
+        ],
+        "severityLabel": "LOW",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "uploadfs"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.28.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-gmfx-5g6x-rr72",
+        "cve_id": "CVE-2026-113651",
+        "summary": "Path traversal in uploadfs (Library-Level Vulnerability)",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "uploadfs"
+            },
+            "vulnerable_version_range": "< 1.28.0",
+            "patched_versions": "1.28.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:L/A:N",
+          "score": 3.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:L/A:N",
+            "score": 3.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:43Z",
+        "updated_at": "2026-10-20T16:20:33Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Range, fix 1.28.0, Low and CVSS 3.1 3.3 agree. The narrative describes potential filesystem effects but these depend on attacker-controlled paths reaching the local storage backend and host permissions; severity does not establish observed remote compromise.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-gmfx-5g6x-rr72",
+          "checkedAt": "2026-10-20T21:29:48.664542Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "7caa1adc6a9d4a39be2087a9c3d8348b17f5dc693f35acc703a302073337ff01",
+          "originalFetchedResponseBytes": 7242,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-gmfx-5g6x-rr72.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "f82d8c42fabb86afbebc1f80baa17c6b95c5eaec749aefdc1cf3c0b9e8a7754f",
+          "bytes": 1031,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-gmfx-5g6x-rr72.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "7767a9118937f70e96787f29a0b2f096ea3ab509e90b178d527486fc25f57ac7",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gqh3-7856-rjjg",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-gqh3-7856-rjjg/GHSA-gqh3-7856-rjjg.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-gqh3-7856-rjjg/GHSA-gqh3-7856-rjjg.json",
+        "sha256": "b177980fff1bf27adb6991d1e08499bb4c4dd09375b0b3a18f09ff522f0fb435",
+        "bytes": 4549,
+        "summary": "ApostropheCMS: :_id/locales REST route omits the public-API authorization gate its sibling read routes enforce (unauthenticated doc-existence + locale metadata disclosure)",
+        "publishedAt": "2026-10-20T18:14:32Z",
+        "modifiedAt": "2026-10-20T18:14:33Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113668"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-gqh3-7856-rjjg",
+        "cve_id": "CVE-2026-113668",
+        "summary": ":_id/locales REST route omits the public-API authorization gate its sibling read routes enforce (unauthenticated doc-existence + locale metadata disclosure)",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "score": 5.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "score": 5.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:23:57Z",
+        "updated_at": "2026-10-20T17:31:04Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Current <4.33.0/fixed 4.33.0 agrees; prose records no fix at the time of reporting against 4.32.2.",
+        "The route leaks document existence and locale metadata for a known identifier, not necessarily the full document. Main CVSS 3.1 5.3 agrees; prose mentions a conditional 4.3 alternative without a complete second vector.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-gqh3-7856-rjjg",
+          "checkedAt": "2026-10-20T21:29:48.668104Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "797c963f9e04dfc27c4db43f0ef495b7fc16d04088ca45eecab15354511235b8",
+          "originalFetchedResponseBytes": 7773,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-gqh3-7856-rjjg.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "cd3970914b753c7327db20c2ea5080a56cb3ab48a3124177e7a420aa0e2282a3",
+          "bytes": 1136,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-gqh3-7856-rjjg.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "43ba2b718565f7a2bf8654eb66ed103751368dc8e9cf169a6ad649e58844dc19",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-gqh3-7856-rjjg.json"
+    },
+    {
+      "id": "GHSA-hhph-8536-gfq5",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-hhph-8536-gfq5/GHSA-hhph-8536-gfq5.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hhph-8536-gfq5/GHSA-hhph-8536-gfq5.json",
+        "sha256": "99b8ace7eed474d066aa1242e6eee96b97501537253d2794dafb205e8863729b",
+        "bytes": 7245,
+        "summary": "ApostropheCMS uploadfs Azure backend leaks account-level SAS token into every public attachment URL (sas: true)",
+        "publishedAt": "2026-10-20T18:20:35Z",
+        "modifiedAt": "2026-10-20T18:20:35Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113652"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "uploadfs"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.25.0"
+                  },
+                  {
+                    "fixed": "1.28.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-hhph-8536-gfq5",
+        "cve_id": "CVE-2026-113652",
+        "summary": "uploadfs Azure backend leaks account-level SAS token into every public attachment URL (sas: true)",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "uploadfs"
+            },
+            "vulnerable_version_range": ">= 1.25.0, < 1.28.0",
+            "patched_versions": "1.28.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "score": 5.6
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "score": 5.6
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:36Z",
+        "updated_at": "2026-10-20T16:24:10Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Range >=1.25.0,<1.28.0, fix 1.28.0 and CVSS 3.1 agree. Exposure applies to Azure SAS mode; default shared-key mode and other backends are not affected. Resulting capabilities depend on SAS permissions and lifetime, not a guaranteed universal account takeover.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-hhph-8536-gfq5",
+          "checkedAt": "2026-10-20T21:29:52.233853Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "5bb21fdf9b82106a52dd394b2d587bda08b901b7975f5456c177849be8243e8f",
+          "originalFetchedResponseBytes": 9207,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-hhph-8536-gfq5.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "80c65c1668b7114611ae131bbbce843b2d40f9c9ea7f86948fefb89b079b5c1d",
+          "bytes": 1086,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-hhph-8536-gfq5.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "c9709eba64e7b91cc67718d86d06845ccb1d4ed2548b439128fe3fef94c7b135",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-hhph-8536-gfq5.json"
+    },
+    {
+      "id": "GHSA-hhvr-8m24-qqr3",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-hhvr-8m24-qqr3/GHSA-hhvr-8m24-qqr3.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-hhvr-8m24-qqr3/GHSA-hhvr-8m24-qqr3.json",
+        "sha256": "f9fba805229faf3b50c6a7f5f00247ec021cdefd05b4dec9bd1cb8de0d51753a",
+        "bytes": 4042,
+        "summary": "ApostropheCMS: Cross-domain session token in URL confers session takeover",
+        "publishedAt": "2026-10-20T18:09:01Z",
+        "modifiedAt": "2026-10-20T18:09:01Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113669"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/passport-bridge"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.6.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-hhvr-8m24-qqr3",
+        "cve_id": "CVE-2026-113669",
+        "summary": "Cross-domain session token in URL confers session takeover",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/passport-bridge"
+            },
+            "vulnerable_version_range": "< 1.6.1",
+            "patched_versions": "1.6.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:23:44Z",
+        "updated_at": "2026-10-20T17:33:51Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Both package/fix relations agree: apostrophe 4.33.0 and passport-bridge 1.6.1. Maintainer does not publish a CVSS vector; Reviewed v4 remains database-attributed.",
+        "Taking over the migrated session requires obtaining its single-use URL token before consumption. The disclosure describes a vulnerability, not an observed incident.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-hhvr-8m24-qqr3",
+          "checkedAt": "2026-10-20T21:29:52.305160Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "faa0095aa5cab96d681c689814b2a9202c74032ae8903eb810e7097e4bc907f5",
+          "originalFetchedResponseBytes": 5893,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-hhvr-8m24-qqr3.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "aac4be644c9743fc63512764b4542417261b3a7f1be4dcb3a6fa5afa1042d427",
+          "bytes": 1187,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-hhvr-8m24-qqr3.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "e9e4c465842954b95a9e4dda1d493f02b189c72ceafcce2beee945ce4ba947a3",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j5rq-xfvr-p969",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-j5rq-xfvr-p969/GHSA-j5rq-xfvr-p969.json",
+        "sha256": "aca1a953b5d226d38baf23783b8ed747211d2d73c86e94cd552d9c95ffa05eaf",
+        "bytes": 11602,
+        "summary": "ApostropheCMS: Authenticated projection-exclusion prototype-member deletion in @apostrophecms/db-connect causes process-wide denial of service",
+        "publishedAt": "2026-10-20T18:03:50Z",
+        "modifiedAt": "2026-10-20T18:03:50Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113666"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/db-connect"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.1.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-j5rq-xfvr-p969",
+        "cve_id": "CVE-2026-113666",
+        "summary": "Authenticated projection-exclusion prototype-member deletion in @apostrophecms/db-connect causes process-wide denial of service",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/db-connect"
+            },
+            "vulnerable_version_range": "< 1.1.0",
+            "patched_versions": "1.1.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+          "score": 7.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+            "score": 7.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:23:33Z",
+        "updated_at": "2026-10-20T17:23:43Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Current fields include both db-connect <1.1.0/fixed 1.1.0 and apostrophe <4.33.0/fixed 4.33.0; prose still limits its tested db-connect releases to 1.0.0-1.0.2 and says no fix.",
+        "Requires authenticated view-draft access and SQLite/PostgreSQL/multipostgres adapters; the default real MongoDB adapter is unaffected. The shared-runtime method deletion causes persistent process-wide denial of service.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-j5rq-xfvr-p969",
+          "checkedAt": "2026-10-20T21:29:52.311735Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "0edf552209c2bd27d215c08c715a66e8220d22fd96e288bcb9d9270745ee18f7",
+          "originalFetchedResponseBytes": 14001,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-j5rq-xfvr-p969.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "4fb43d5def10b337941cb7af92eaeea98f1b93fcbbb432a07d41358082a19d45",
+          "bytes": 1331,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-j5rq-xfvr-p969.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "0140e67795409de94f16a6e85a5a9b90f482cfd2cb8c167aa4f02b64fe99bbd3",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-j5rq-xfvr-p969.json"
+    },
+    {
+      "id": "GHSA-jqw5-w6h3-44g6",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-jqw5-w6h3-44g6/GHSA-jqw5-w6h3-44g6.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-jqw5-w6h3-44g6/GHSA-jqw5-w6h3-44g6.json",
+        "sha256": "22fedbdbbc8dbf2220b04546146277e9cda8e725de0eab060713f0b1afa0747a",
+        "bytes": 4328,
+        "summary": "ApostropheCMS import-export: NoSQL injection via update-key value lets a crafted import match and overwrite an unidentified document",
+        "publishedAt": "2026-10-20T18:19:19Z",
+        "modifiedAt": "2026-10-20T18:19:19Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113662"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.7.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-jqw5-w6h3-44g6",
+        "cve_id": "CVE-2026-113662",
+        "summary": "ApostropheCMS import-export: NoSQL injection via update-key value lets a crafted import match and overwrite an unidentified document",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@apostrophecms/import-export"
+            },
+            "vulnerable_version_range": "< 3.7.0",
+            "patched_versions": "3.7.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+          "score": 5.4
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+            "score": 5.4
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:09Z",
+        "updated_at": "2026-10-20T17:12:07Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Range, fix 3.7.0 and CVSS 3.1 agree. Update-key query injection requires import access and remains constrained by generic document edit permissions; it is not an unrestricted overwrite of any document.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-jqw5-w6h3-44g6",
+          "checkedAt": "2026-10-20T21:29:52.416384Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "50e701800351fd02520abb9b7f6292937c53313199e29d4c8a79c292cecda436",
+          "originalFetchedResponseBytes": 7204,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-jqw5-w6h3-44g6.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "f6af1118e18dd93d092baaeeee0de4e6612f0388124510c3af636ef5620bc475",
+          "bytes": 1128,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-jqw5-w6h3-44g6.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "68d87a0840837d4f684d4b665268789f0b8d45c53b8152b781b4102ca75fc80a",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m2m5-rw3w-cwmj",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-m2m5-rw3w-cwmj/GHSA-m2m5-rw3w-cwmj.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-m2m5-rw3w-cwmj/GHSA-m2m5-rw3w-cwmj.json",
+        "sha256": "42cce73ed6c124ba7cf1b006c0292bb781e8e6005fa58a26d881e6450cf599c5",
+        "bytes": 13815,
+        "summary": "ApostropheCMS: Client-side Prototype Pollution in apos.http.parseQuery leading to DOM-based XSS against authenticated users",
+        "publishedAt": "2026-10-20T18:18:49Z",
+        "modifiedAt": "2026-10-20T18:18:49Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113659"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-m2m5-rw3w-cwmj",
+        "cve_id": "CVE-2026-113659",
+        "summary": "Client-side Prototype Pollution in apos.http.parseQuery leading to DOM-based XSS against authenticated users",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "score": 6.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "score": 6.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:17Z",
+        "updated_at": "2026-10-20T17:00:00Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Current <4.33.0/fixed 4.33.0 and CVSS 3.1 6.1 agree. Earlier prose says no patched version and discusses tested 4.0.0-4.32.2 plus affected 3.x; do not replace current structured fix with that stale statement.",
+        "A crafted URL must be opened by an authenticated victim. This client-side defect is distinct from the referenced server-side prototype-pollution advisory.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-m2m5-rw3w-cwmj",
+          "checkedAt": "2026-10-20T21:29:56.676596Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "42a652aae03e2a537e5d534fdd966de4b655a547ee10382560eecfc4b6ddcf97",
+          "originalFetchedResponseBytes": 17069,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-m2m5-rw3w-cwmj.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "b35ea7242350af4df2480e01f4daf84bf53f1c111c374a5337d4659900f4e234",
+          "bytes": 1088,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-m2m5-rw3w-cwmj.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "7e06b9614ac43415016799e9936537aa872f5320043289f24477306d9fdd8ef7",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-m2m5-rw3w-cwmj.json"
+    },
+    {
+      "id": "GHSA-q78c-5jjq-57g8",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-q78c-5jjq-57g8/GHSA-q78c-5jjq-57g8.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q78c-5jjq-57g8/GHSA-q78c-5jjq-57g8.json",
+        "sha256": "cbc5158d7a66978bcee13b03494c92737c95a4fc346cdbfb2ac73fd64d7f2159",
+        "bytes": 7290,
+        "summary": "A2A Java SDK has Server-Side Request Forgery (SSRF) in push-notification delivery",
+        "publishedAt": "2026-10-20T21:06:22Z",
+        "modifiedAt": "2026-10-20T21:06:22Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111761"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-server-common"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.3.0.Final"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-q78c-5jjq-57g8",
+        "cve_id": "CVE-2026-111761",
+        "summary": "Server-Side Request Forgery(SSRF) in a2a-java push-notification delivery",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-server-common"
+            },
+            "vulnerable_version_range": "1.2.0.Final",
+            "patched_versions": "1.3.0.Final",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N",
+          "score": 5.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N",
+            "score": 5.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-08-28T07:47:11Z",
+        "updated_at": "2026-10-19T18:18:17Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer structured affected field is 1.2.0.Final, while prose says <=1.2.0.Final and a pre-fix snapshot; Reviewed uses <1.3.0.Final. Fixed 1.3.0.Final comes from current structured fields, not the placeholder in the prose.",
+        "Structured Medium/CVSS 3.1 5.8 agree with Reviewed, while the prose separately labels severity High. The base scenario discards responses, so confidentiality read-back is not demonstrated.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-q78c-5jjq-57g8",
+          "checkedAt": "2026-10-20T21:29:35.127730Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "9e7e16f6c0feedb7eecadb918496e20c440b2d1bf4413d9d34cb62358ef69c02",
+          "originalFetchedResponseBytes": 9077,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-q78c-5jjq-57g8.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "1afea285be6ee6826ccc7ede101008dfae1552ec14002eae1b2ae4044ac9ce45",
+          "bytes": 1097,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-q78c-5jjq-57g8.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "8c216ee559be19d48f2f9530352fe344fea7bb0981edf494c8d1cca3ba9265da",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-q78c-5jjq-57g8.json"
+    },
+    {
+      "id": "GHSA-qhcq-9pm2-c9w9",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-qhcq-9pm2-c9w9/GHSA-qhcq-9pm2-c9w9.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-qhcq-9pm2-c9w9/GHSA-qhcq-9pm2-c9w9.json",
+        "sha256": "4fa42fc653c0d476d8591ae3b070e65e646b56aa56ffa7daa579aba7e385db0a",
+        "bytes": 4290,
+        "summary": "ApostropheCMS: Unauthenticated CSV import requests leave rejected uploads in the system temporary directory",
+        "publishedAt": "2026-10-20T18:10:32Z",
+        "modifiedAt": "2026-10-20T18:10:32Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113658"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-qhcq-9pm2-c9w9",
+        "cve_id": "CVE-2026-113658",
+        "summary": "Unauthenticated CSV import requests leave rejected uploads in the system temporary directory",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:00Z",
+        "updated_at": "2026-10-20T16:55:19Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Range, fix 4.33.0 and High/CVSS 3.1 7.5 agree. Rejected unauthenticated rich-text CSV uploads remain in the temporary directory and can accumulate; ordinary CSRF cookies are not authentication.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-qhcq-9pm2-c9w9",
+          "checkedAt": "2026-10-20T21:29:56.774087Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "2af59cc7976cda70fd611b18926f74174316d9e02fa5620ae87e85f432e55480",
+          "originalFetchedResponseBytes": 6012,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-qhcq-9pm2-c9w9.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "468d8f6ca5e709f103ec39af0fd6e21fbb7b12023e4947a01619fdac3d1bc61c",
+          "bytes": 1070,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-qhcq-9pm2-c9w9.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "34df2ecb68bb893b45b1a2373e90778edfe7a07ea479b690a97eb3b9a7d0f4b7",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qw47-mcm5-934w",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-qw47-mcm5-934w/GHSA-qw47-mcm5-934w.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-qw47-mcm5-934w/GHSA-qw47-mcm5-934w.json",
+        "sha256": "3b83a709f83ed46e104f79040a98042d62f7c2926ed8aecdd609cf46be56ae2e",
+        "bytes": 6183,
+        "summary": "A2A Java SDK has a fail-open default task authorization",
+        "publishedAt": "2026-10-20T21:05:09Z",
+        "modifiedAt": "2026-10-20T21:05:09Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111764"
+        ],
+        "severityLabel": "HIGH",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-server-common"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.3.0.Final"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-qw47-mcm5-934w",
+        "cve_id": "CVE-2026-111764",
+        "summary": "Fail-open default task authorization in a2a-java",
+        "severity": "high",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-server-common"
+            },
+            "vulnerable_version_range": "1.2.0.Final",
+            "patched_versions": "1.3.0.Final",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-08-28T07:46:58Z",
+        "updated_at": "2026-10-19T18:18:50Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer structured affected field is 1.2.0.Final, prose says <=1.2.0.Final and a pre-fix snapshot, while Reviewed uses <1.3.0.Final. Current fixed field is 1.3.0.Final; the prose example 1.2.1.Final is only a release placeholder, not a verified fix.",
+        "High/CVSS 3.1 7.5 agrees. Default/no-provider or non-CDI task-store wiring lacks ownership checks; authorized-provider plus decorator wiring differs.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-qw47-mcm5-934w",
+          "checkedAt": "2026-10-20T21:29:35.128240Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "21c2d4fc68b3c66df372816398de0c4c16535f9a1d66087729f102041212ab7a",
+          "originalFetchedResponseBytes": 8031,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-qw47-mcm5-934w.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "3fc29771edce7fa9f09c8dd3187c781faac4072f52d628fcc4c4931513de0179",
+          "bytes": 1071,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-qw47-mcm5-934w.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "45d1dcabf42a916c313976d58f739a12725cae632b7d22fc8dd955ac966535da",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-qw47-mcm5-934w.json"
+    },
+    {
+      "id": "GHSA-vmxh-77cw-65j7",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-vmxh-77cw-65j7/GHSA-vmxh-77cw-65j7.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-vmxh-77cw-65j7/GHSA-vmxh-77cw-65j7.json",
+        "sha256": "1ed52a2e4b3d477dbe0f19f95bd5d2edef147e18c9bb98c28fe32168cc2ad537",
+        "bytes": 8107,
+        "summary": "ApostropheCMS: Authenticated Object-Level Authorization Bypass in exist-in-locale Reveals Restricted Localized Draft Identifiers",
+        "publishedAt": "2026-10-20T18:19:34Z",
+        "modifiedAt": "2026-10-20T18:19:34Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113660"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-vmxh-77cw-65j7",
+        "cve_id": "CVE-2026-113660",
+        "summary": "Authenticated Object-Level Authorization Bypass in exist-in-locale Reveals Restricted Localized Draft Identifiers",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "score": 4.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+            "score": 4.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:26Z",
+        "updated_at": "2026-10-20T17:02:29Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Range, fix 4.33.0 and Medium/CVSS 3.1 4.3 agree. Authenticated low-privilege callers can infer restricted localized draft identifiers, but the source explicitly excludes document-body disclosure or write/publish/delete privileges.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-vmxh-77cw-65j7",
+          "checkedAt": "2026-10-20T21:29:56.787131Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "e9321efcf72af8e94778bd8579576c230d819bff7eb816b9eb0fb9c02b2ade23",
+          "originalFetchedResponseBytes": 9984,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-vmxh-77cw-65j7.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "fe220a44a43debbe09544b13adabce64fa0d495b81d999419aeeeb898f3e074a",
+          "bytes": 1093,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-vmxh-77cw-65j7.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "5b785d1803a1aca9e9dd3d285aeef77ba98feddaebc43e712fcaaa50757f4df0",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vwwx-px9w-crrc",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-vwwx-px9w-crrc/GHSA-vwwx-px9w-crrc.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-vwwx-px9w-crrc/GHSA-vwwx-px9w-crrc.json",
+        "sha256": "64c8ffcaaa045bbecff350e6b49f3f5ebff1f1ba8a08c65d28c4fd3d5c194b4c",
+        "bytes": 7904,
+        "summary": "ApostropheCMS: Missing Authorization on Notification PATCH/DELETE Endpoints",
+        "publishedAt": "2026-10-20T18:25:38Z",
+        "modifiedAt": "2026-10-20T18:25:38Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113665"
+        ],
+        "severityLabel": "LOW",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-vwwx-px9w-crrc",
+        "cve_id": "CVE-2026-113665",
+        "summary": "Missing Authorization on Notification PATCH/DELETE Endpoints",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "score": 3.7
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "score": 3.7
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-02T13:24:48Z",
+        "updated_at": "2026-10-20T17:18:57Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Range, fix 4.33.0 and Low/CVSS 3.1 3.7 agree. Unauthenticated notification modification requires a valid, not practically guessable identifier obtained through another route.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-vwwx-px9w-crrc",
+          "checkedAt": "2026-10-20T21:29:56.840104Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "e28f6eed66bc87a27aed826a9c29ad4e2db858f9f3b984417e39296650fb39d4",
+          "originalFetchedResponseBytes": 10066,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-vwwx-px9w-crrc.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "8c61ce37f880684adf849b4621d8465487122e124579f1ec529c1686d7d1d126",
+          "bytes": 1037,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-vwwx-px9w-crrc.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "d4fa22f1139dcc742e8aafdda29a06a450e71fd1b360a70b6ce80f9d56fb91c2",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x32g-jvvm-4725",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "api",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-x32g-jvvm-4725/GHSA-x32g-jvvm-4725.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-x32g-jvvm-4725/GHSA-x32g-jvvm-4725.json",
+        "sha256": "62ea7dbc8844b472ce76e06b7936762bf19bb5d99db10bb8cf9ff631aacd0859",
+        "bytes": 4009,
+        "summary": "A2A Java SDK: Push notification credentials logged in cleartext on protobuf parse failure",
+        "publishedAt": "2026-10-20T21:08:33Z",
+        "modifiedAt": "2026-10-20T21:08:33Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-111762"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-transport-rest"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.3.0.Final"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-x32g-jvvm-4725",
+        "cve_id": "CVE-2026-111762",
+        "summary": "Push notification credentials logged in cleartext on protobuf parse failure",
+        "severity": "medium",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.a2aproject.sdk:a2a-java-sdk-transport-rest"
+            },
+            "vulnerable_version_range": "1.2.0.Final",
+            "patched_versions": "1.3.0.Final",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-08-28T07:45:56Z",
+        "updated_at": "2026-10-19T18:18:27Z",
+        "withdrawn_at": null,
+        "state": "published",
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": true,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": true,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": true
+      },
+      "observations": [
+        "Maintainer explicitly lists 1.2.0.Final affected and 1.3.0.Final fixed, while Reviewed uses <1.3.0.Final. Keep those claims distinct.",
+        "The source requires push notifications, valid JSON that fails protobuf parsing, and attacker access to resulting logs. Maintainer has no CVSS vector; Reviewed CVSS 4.0 remains database-attributed.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-x32g-jvvm-4725",
+          "checkedAt": "2026-10-20T21:29:39.950544Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "a48926a83ad9166b4c854564de3f4d12a18e9ca6b72895f8c213e07e3229af8b",
+          "originalFetchedResponseBytes": 5471,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-x32g-jvvm-4725.2026-10-21.batch-a.api.public-advisory.json",
+          "sha256": "c2484a8ad565da242a84038d87be2f9f1e4eb00cdfc3abaf157f1dcb9eb9052f",
+          "bytes": 1019,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-x32g-jvvm-4725.2026-10-21.batch-a.api.public-headers.txt",
+          "headersSha256": "bebb6b0e91aeea5c10bd27323a1b57585c8b00c923bfa11a3f689e78f9c34974",
+          "headersBytes": 285,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-x32g-jvvm-4725.json"
+    },
+    {
+      "id": "GHSA-x3q4-9hxx-gx8m",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-x3q4-9hxx-gx8m/GHSA-x3q4-9hxx-gx8m.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-x3q4-9hxx-gx8m/GHSA-x3q4-9hxx-gx8m.json",
+        "sha256": "98c19e4719c8e517f5f2e9301dbbdf3e4c1cdc33e78f769c56280ed48a78a968",
+        "bytes": 4004,
+        "summary": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render",
+        "publishedAt": "2026-10-20T18:03:22Z",
+        "modifiedAt": "2026-10-20T18:03:22Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113654"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "sanitize-html"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.18.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-x3q4-9hxx-gx8m",
+        "summary": "nonTextTags discard region ends early on an implied close, letting <noscript> content render",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "sanitize-html"
+            },
+            "vulnerable_version_range": "< 2.18.0",
+            "patched_versions": "2.18.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {},
+        "published_at": "2026-10-02T13:23:25Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Public maintainer HTML says Low with no displayed CVSS, versus Reviewed Moderate and CVSS 4.0. Package range/fix <2.18.0/2.18.0 agree.",
+        "The prose distinguishes noscript parser/browser discard-region disagreement from option elements, whose ordinary closing behavior must not be treated as the same defect.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-x3q4-9hxx-gx8m",
+          "checkedAt": "2026-10-20T21:29:59.569790Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-x3q4-9hxx-gx8m",
+          "checkedAt": "2026-10-20T21:30:33.210556Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "cd4f4a34265f09679204f0804ff66ec0c541552a7bfabca5ac0c5f1761a21610",
+          "originalFetchedResponseBytes": 188249,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-x3q4-9hxx-gx8m.2026-10-21.batch-a.html.public-advisory.json",
+          "sha256": "e1283f92a1cbf27649d8ef4ee3e383f14a1212af09b8da23e0f418975c26c7ef",
+          "bytes": 894,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-x3q4-9hxx-gx8m.2026-10-21.batch-a.html.public-headers.txt",
+          "headersSha256": "f2b5ca401cd04e3c1aa15de066925d3a55fd08c89392d75169c243f59f2329f4",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-x3q4-9hxx-gx8m.json"
+    },
+    {
+      "id": "GHSA-xf6w-q65w-4f2w",
+      "change": "A",
+      "reviewStatus": "primary-advisory-retrieved-and-reviewed",
+      "primaryRepresentation": "html",
+      "database": {
+        "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+        "path": "advisories/github-reviewed/2026/10/GHSA-xf6w-q65w-4f2w/GHSA-xf6w-q65w-4f2w.json",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-xf6w-q65w-4f2w/GHSA-xf6w-q65w-4f2w.json",
+        "sha256": "0ff5c10320b049706ce0a874a7cc5768cf28017191e6275176ed7275919fd21a",
+        "bytes": 2821,
+        "summary": "ApostropheCMS: The general public can access @apostrophecms/user objects via a relationship (viewRole is not applied to the general public)",
+        "publishedAt": "2026-10-20T18:26:02Z",
+        "modifiedAt": "2026-10-20T18:26:02Z",
+        "withdrawnAt": null,
+        "aliases": [
+          "CVE-2026-113653"
+        ],
+        "severityLabel": "MODERATE",
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.33.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "maintainer": {
+        "ghsa_id": "GHSA-xf6w-q65w-4f2w",
+        "summary": "The general public can access @apostrophecms/user objects via a relationship (viewRole is not applied to the general public)",
+        "severity": "low",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "apostrophe"
+            },
+            "vulnerable_version_range": "< 4.33.0",
+            "patched_versions": "4.33.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {},
+        "published_at": "2026-10-02T13:24:52Z",
+        "state": "published",
+        "htmlObservability": {
+          "updatedAtExposed": false,
+          "withdrawalFieldExposed": false,
+          "publicationAndStateFromVisibleHeader": true
+        },
+        "descriptionReview": {
+          "reviewed": true,
+          "representation": "locally-fetched-description-read-without-executing-code",
+          "descriptionIncludedInPublicArtifact": false
+        }
+      },
+      "comparison": {
+        "sameAdvisoryIdentifier": true,
+        "severityBandAgrees": false,
+        "sameCvssVersionVectorDisagreements": {},
+        "databaseOnlyCvssVersions": [
+          "4.0"
+        ],
+        "maintainerOnlyCvssVersions": [],
+        "withdrawalAgrees": null,
+        "publicationTimestampDiffers": true,
+        "modificationTimestampDiffers": null
+      },
+      "observations": [
+        "Public maintainer HTML says Low with no displayed CVSS, versus Reviewed Moderate and CVSS 4.0. Current fixed field 4.33.0 conflicts with the prose Patches section saying none yet.",
+        "Public exposure depends on explicitly configured relationships/public access and unsafe templates; password hashes are explicitly excluded because they reside separately.",
+        "Database publication and modification timestamps remain database-attributed; the earlier maintainer publication timestamp is retained independently.",
+        "API retrieval was rate-limited; the public maintainer HTML and all rendered description prose were reviewed instead. HTML exposes publication/state but no reliable exact updated_at or withdrawn_at field; those are not independently asserted."
+      ],
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-xf6w-q65w-4f2w",
+          "checkedAt": "2026-10-20T21:29:59.583997Z",
+          "httpStatus": 403,
+          "curlExitCode": 0,
+          "status": "failed",
+          "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+          "originalFetchedResponseBytes": 278,
+          "failureReason": "GitHub public API rate limit; failed response not treated as advisory evidence."
+        },
+        {
+          "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-xf6w-q65w-4f2w",
+          "checkedAt": "2026-10-20T21:30:33.211002Z",
+          "httpStatus": 200,
+          "curlExitCode": 0,
+          "status": "success",
+          "originalFetchedResponseSha256": "3fc1ad8072a1bbdeac74dbc48637e49e17552010d154b522ac71e806dded9a71",
+          "originalFetchedResponseBytes": 178478,
+          "artifactRepresentation": "allowlisted-public-structured-source-projection",
+          "path": "docs/advisory-source-snapshots/GHSA-xf6w-q65w-4f2w.2026-10-21.batch-a.html.public-advisory.json",
+          "sha256": "4f0b6237fb32e0f4d44042cfe23c0c20a67fc28f467cf9febc892990bcaf80b3",
+          "bytes": 923,
+          "headersPath": "docs/advisory-source-snapshots/GHSA-xf6w-q65w-4f2w.2026-10-21.batch-a.html.public-headers.txt",
+          "headersSha256": "bdd3541b6841b9e872e7cac51f132f4d666d4119affbb7d981d5a31a88b57b41",
+          "headersBytes": 205,
+          "headersRepresentation": "allowlisted-public-response-headers"
+        }
+      ],
+      "curatedOverlayPath": "src/data/vulnerabilities/GHSA-xf6w-q65w-4f2w.json"
+    }
+  ]
+}

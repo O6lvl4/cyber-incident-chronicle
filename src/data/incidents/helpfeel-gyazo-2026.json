@@ -1,12 +1,12 @@
 {
   "id": "helpfeel-gyazo-2026",
   "company": "Helpfeel（Gyazo）",
-  "title": "Gyazoのユーザーデータと画像メタデータ流出、対策後にサービス再開",
+  "title": "Gyazoの情報流出、最終報告で133ユーザーの画像432件の閲覧・取得を確認",
   "announcementDate": "2026-09-16",
   "announcementDateLabel": "初報公表",
   "occurredDate": "2026-09-11",
   "occurredDateLabel": "不正アクセス発生・検知日",
-  "updatedDate": "2026-09-29",
+  "updatedDate": "2026-10-21",
   "impactTypes": [
     "leak",
     "outage",
@@ -17,10 +17,11 @@
     "label": "画像アップロードサーバーの脆弱性悪用による任意コマンド実行とデータベースへの不正アクセス",
     "status": "confirmed"
   },
-  "summary": "Gyazoへの侵入でユーザー情報と画像メタデータの流出を確認。9月25日の続報でユーザーデータの内訳と削除済み画像のメタデータ流出が判明し、サービスは9月27日に再開した。",
+  "summary": "10月21日の最終報告で自社アップロード処理の脆弱性と調査結果を説明。ユーザーデータ・画像メタデータの公表規模を保持し、別途133ユーザーの画像432件の不正閲覧・取得を確認。サービスは再開済みだが、追加通知・監視等は継続する。",
   "affectedData": [
     "ユーザー情報（メールアドレス、パスワードのハッシュ値、利用者・端末・セッションID等。項目はユーザーごとに異なる）",
-    "画像メタデータ（画像ID、IPアドレス、OCRテキスト、EXIF位置情報等。画像ファイルの流出件数ではない）"
+    "画像メタデータ（画像ID、IPアドレス、OCRテキスト、EXIF位置情報等。画像ファイルの流出件数ではない）",
+    "133ユーザーの画像ファイル432件について不正閲覧・取得を確認"
   ],
   "counts": [
     {
@@ -64,6 +65,20 @@
       "status": "confirmed",
       "label": "削除済み画像のメタデータ（主に2023年2月以前の削除）",
       "approximate": true
+    },
+    {
+      "value": 133,
+      "unit": "ユーザー",
+      "status": "confirmed",
+      "label": "画像ファイルの不正閲覧・取得が確認された対象ユーザー",
+      "approximate": false
+    },
+    {
+      "value": 432,
+      "unit": "画像ファイル",
+      "status": "confirmed",
+      "label": "133ユーザーに属する不正閲覧・取得確認画像。メタデータ件数とは別単位",
+      "approximate": false
     }
   ],
   "scaleLabel": "ユーザーデータ約2,362万件（メール登録あり約562万件を含む）と画像メタデータ",
@@ -73,7 +88,11 @@
     "メタデータ流出と画像自体の流出・不正閲覧の可能性を区別。削除済み画像のファイル自体は今回追加確認した流出に含まない",
     "Helpfeel・Cosense自身のシステムへの侵害・流出は確認されていない。決済情報は流出対象外",
     "再開通知のページ表示日は9月26日、本文の再開日は9月27日。9月29日の追記も収録",
-    "再開後も過去画像の公開範囲は自動復元されず、所有者が配信を再開する方式。9月29日からTeams内の閲覧に一部例外を適用"
+    "再開後も過去画像の公開範囲は自動復元されず、所有者が配信を再開する方式。9月29日からTeams内の閲覧に一部例外を適用",
+    "第三報は画像ファイル432件とメタデータ流出を区別。画像の大量取得を示す痕跡は未確認だが、追加の閲覧可能性を完全には否定していない。",
+    "外部調査は大量DB読み出し・大量外部送信等から流出の可能性を高いと評価。通信内容を保存していないため全送信データの直接確認ではない。",
+    "約5.7万アカウントへの追加連絡予定は通知対象範囲で、新たな漏えい人数として加算しない。",
+    "原因は自社の動画変換処理における任意コマンド実行の脆弱性。外部製品由来のサプライチェーン事案とは説明されていない。"
   ],
   "geography": "日本企業が運営するGyazo（海外利用者を含む）",
   "sources": [
@@ -91,6 +110,11 @@
       "title": "Gyazoサービス再開（ページ表示9月26日、本文は9月27日再開）",
       "url": "https://corp.helpfeel.com/news/news-20260927-01",
       "publishedDate": "2026-09-26"
+    },
+    {
+      "title": "Gyazo不正アクセス・情報漏えい第三報（最終報告）",
+      "url": "https://corp.helpfeel.com/news/news-20261021",
+      "publishedDate": "2026-10-21"
     }
   ],
   "timeline": [
@@ -128,25 +152,34 @@
       "kind": "update",
       "summary": "過去画像の配信停止は継続し、Teams内の閲覧仕様を一部変更",
       "sourceUrl": "https://corp.helpfeel.com/news/news-20260927-01"
+    },
+    {
+      "date": "2026-10-21",
+      "label": "最終調査報告と画像の追加確認",
+      "kind": "update",
+      "summary": "133ユーザー・画像432件の不正閲覧または取得を確認。追加通知・監視等は継続。",
+      "sourceUrl": "https://corp.helpfeel.com/news/news-20261021"
     }
   ],
-  "lastVerifiedDate": "2026-10-08",
-  "statusAsOfDate": "2026-09-29",
+  "lastVerifiedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-21",
   "eventDates": {
     "attack": {
-      "precision": "day",
-      "label": "2026年9月11日",
-      "note": "画像アップロードサーバーの脆弱性を悪用し、任意コマンド実行の不正アクセスが発生した日。夜の異常検知とは区別する。",
-      "sourceUrl": "https://corp.helpfeel.com/news/news-20260916-1",
-      "reviewedDate": "2026-10-18",
-      "startDate": "2026-09-11"
+      "precision": "period",
+      "label": "2026年9月11日午後〜12日未明",
+      "note": "第三報の経過に記載された不正アクセス活動の期間。",
+      "sourceUrl": "https://corp.helpfeel.com/news/news-20261021",
+      "reviewedDate": "2026-10-22",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-12"
     },
     "damageConfirmed": {
-      "precision": "unknown",
-      "label": "未公表・不明",
-      "note": "確認した公表資料に記載なし。9月11日夜は不正な挙動の検知日。その後の調査で情報流出を確認したとされるが、流出被害を初めて確認した具体的な日は示されていない。",
-      "sourceUrl": "https://corp.helpfeel.com/news/news-20260916-1",
-      "reviewedDate": "2026-10-18"
+      "precision": "day",
+      "label": "2026年9月14日",
+      "note": "第三報の経過がDB保存情報の外部流出確認を9月14日と記載。侵入検知日とは区別。",
+      "sourceUrl": "https://corp.helpfeel.com/news/news-20261021",
+      "reviewedDate": "2026-10-22",
+      "startDate": "2026-09-14"
     }
   }
 }

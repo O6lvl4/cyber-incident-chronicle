@@ -1,0 +1,82 @@
+{
+  "id": "nifty-line-application-2026",
+  "company": "ニフティ",
+  "title": "回線申込・受付管理システムに不正アクセス、最大542,513件に漏えいの可能性",
+  "announcementDate": "2026-10-19",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日は確認資料に記載なし",
+  "updatedDate": "2026-10-19",
+  "statusAsOfDate": "2026-10-19",
+  "lastVerifiedDate": "2026-10-21",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月19日10時20分頃、社内で回線申込情報を登録する管理システムへの不正アクセスを確認し遮断した。2019年以降にウェブサイト以外で対象3サービスへ申し込んだ顧客情報、最大542,513件に漏えいの可能性があり、調査中。",
+  "affectedData": [
+    "会員ID、氏名、性別、生年月日、住所、電話番号、メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 542513,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいした可能性がある最大対象件数",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "最大件数であり、漏えい確定件数や人数ではない。",
+    "対象は＠nifty光・＠nifty MAX光・＠nifty auひかりプラス。2019年以降の申込情報という範囲は攻撃期間ではない。",
+    "利用者が直接入力するウェブ申込フォームとは異なる管理用システムで、当社ウェブサイトからの申込は対象範囲から除かれている。",
+    "口座情報・クレジットカード情報は当該システムに保有せず対象外と説明。10月19日は不正アクセス確認日であり、攻撃開始日や被害初確認日に転用しない。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "ニフティ：【第一報】回線申込・受付管理システムへの不正アクセスの発生について",
+      "url": "https://www.nifty.co.jp/newsrelease/nifty202610195434.htm",
+      "publishedDate": "2026-10-19"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-19",
+      "label": "不正アクセスを確認・遮断",
+      "kind": "occurrence",
+      "summary": "10時20分頃に不正アクセスを確認後、通信元を遮断し暫定対策を実施。",
+      "sourceUrl": "https://www.nifty.co.jp/newsrelease/nifty202610195434.htm"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "最大可能性範囲を公表",
+      "kind": "disclosure",
+      "summary": "最大542,513件の対象範囲を示し、外部専門機関と詳細調査・個人情報保護委員会への報告手続きを継続中と説明。",
+      "sourceUrl": "https://www.nifty.co.jp/newsrelease/nifty202610195434.htm"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "確認した公式資料に攻撃開始時期の記載なし。検知日・公表日から推定しない。",
+      "sourceUrl": "https://www.nifty.co.jp/newsrelease/nifty202610195434.htm",
+      "reviewedDate": "2026-10-21"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害を最初に確認した日として結び付けられた日付は確認資料に記載なし。",
+      "sourceUrl": "https://www.nifty.co.jp/newsrelease/nifty202610195434.htm",
+      "reviewedDate": "2026-10-21"
+    }
+  },
+  "detectedDate": "2026-10-19",
+  "scaleLabel": "最大542,513件の可能性"
+}

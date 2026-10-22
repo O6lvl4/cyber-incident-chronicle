@@ -1,0 +1,246 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-62vg-58rm-qff7",
+  "aliases": [
+    "CVE-2026-111752"
+  ],
+  "title": "@angular/router: Denial of Service via Unmatched Empty-Path Outlet Route Matching in Server-Side Rendering (SSR)",
+  "summary": "@angular/router: Denial of Service via Unmatched Empty-Path Outlet Route Matching in Server-Side Rendering (SSR)",
+  "publishedAt": "2026-10-20T14:36:39Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json",
+  "modifiedAt": "2026-10-20T14:36:39Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:55.485932Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@angular/router",
+      "ranges": [
+        {
+          "affected": ">= 22.0.0, < 22.2.1",
+          "fixed": "22.2.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+        },
+        {
+          "affected": ">= 21.0.0, < 21.2.25",
+          "fixed": "21.2.25",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+        },
+        {
+          "affected": ">= 20.0.0, < 20.3.33",
+          "fixed": "20.3.33",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+        },
+        {
+          "affected": "<= 19.2.25",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "22.0.0"
+            },
+            {
+              "fixed": "22.2.1"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "21.2.25"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "fixed": "20.3.33"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "19.2.25"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/angular/angular/security-advisories/GHSA-62vg-58rm-qff7",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/repos/angular/angular/security-advisories/GHSA-62vg-58rm-qff7"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T14:36:39Z",
+      "modifiedAt": "2026-10-20T14:36:39Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "@angular/router: Denial of Service via Unmatched Empty-Path Outlet Route Matching in Server-Side Rendering (SSR)",
+      "url": "https://github.com/advisories/GHSA-62vg-58rm-qff7",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/angular/angular/security-advisories/GHSA-62vg-58rm-qff7",
+      "publishedDate": "2026-09-30",
+      "publishedAt": "2026-09-30T19:32:57Z",
+      "modifiedAt": "2026-10-19T17:11:19Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "All three patched branches and CVSS 4.0 8.2 agree. The <=19.2.25 branch is end-of-support and explicitly will not be patched; retain fixed=null rather than storing that sentence as a version.",
+    "Requires Node/V8 on-demand SSR and susceptible routes; client SPAs and build-time SSG are unaffected. Short-URL guard/resolver amplification may remain despite URL-length limits.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:55.485932Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-62vg-58rm-qff7",
+        "aliases": [
+          "CVE-2026-111752"
+        ],
+        "publishedAt": "2026-10-20T14:36:39Z",
+        "modifiedAt": "2026-10-20T14:36:39Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "@angular/router",
+        "ranges": [
+          {
+            "affected": ">= 22.0.0, < 22.2.1",
+            "fixed": "22.2.1",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+          },
+          {
+            "affected": ">= 21.0.0, < 21.2.25",
+            "fixed": "21.2.25",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+          },
+          {
+            "affected": ">= 20.0.0, < 20.3.33",
+            "fixed": "20.3.33",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+          },
+          {
+            "affected": "<= 19.2.25",
+            "fixed": null,
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-62vg-58rm-qff7/GHSA-62vg-58rm-qff7.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "22.0.0"
+              },
+              {
+                "fixed": "22.2.1"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "21.0.0"
+              },
+              {
+                "fixed": "21.2.25"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "20.0.0"
+              },
+              {
+                "fixed": "20.3.33"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "19.2.25"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-62vg-58rm-qff7"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "All three patched branches and CVSS 4.0 8.2 agree. The <=19.2.25 branch is end-of-support and explicitly will not be patched; retain fixed=null rather than storing that sentence as a version.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

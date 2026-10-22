@@ -1,0 +1,136 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-q78c-5jjq-57g8",
+  "aliases": [
+    "CVE-2026-111761"
+  ],
+  "title": "A2A Java SDK has Server-Side Request Forgery (SSRF) in push-notification delivery",
+  "summary": "A2A Java SDK has Server-Side Request Forgery (SSRF) in push-notification delivery",
+  "publishedAt": "2026-10-20T21:06:22Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q78c-5jjq-57g8/GHSA-q78c-5jjq-57g8.json",
+  "modifiedAt": "2026-10-20T21:06:22Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:35.127730Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.a2aproject.sdk:a2a-java-sdk-server-common",
+      "ranges": [
+        {
+          "affected": "<= 1.2.0.Final",
+          "fixed": "1.3.0.Final",
+          "sourceUrl": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-q78c-5jjq-57g8"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-q78c-5jjq-57g8",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N",
+        "sourceUrl": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-q78c-5jjq-57g8"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q78c-5jjq-57g8/GHSA-q78c-5jjq-57g8.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T21:06:22Z",
+      "modifiedAt": "2026-10-20T21:06:22Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "A2A Java SDK has Server-Side Request Forgery (SSRF) in push-notification delivery",
+      "url": "https://github.com/advisories/GHSA-q78c-5jjq-57g8",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/a2aproject/a2a-java/security-advisories/GHSA-q78c-5jjq-57g8",
+      "publishedDate": "2026-08-28",
+      "publishedAt": "2026-08-28T07:47:11Z",
+      "modifiedAt": "2026-10-19T18:18:17Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Maintainer structured affected field is 1.2.0.Final, while prose says <=1.2.0.Final and a pre-fix snapshot; Reviewed uses <1.3.0.Final. Fixed 1.3.0.Final comes from current structured fields, not the placeholder in the prose.",
+    "Structured Medium/CVSS 3.1 5.8 agree with Reviewed, while the prose separately labels severity High. The base scenario discards responses, so confidentiality read-back is not demonstrated.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:35.127730Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-q78c-5jjq-57g8",
+        "aliases": [
+          "CVE-2026-111761"
+        ],
+        "publishedAt": "2026-10-20T21:06:22Z",
+        "modifiedAt": "2026-10-20T21:06:22Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q78c-5jjq-57g8/GHSA-q78c-5jjq-57g8.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "maven",
+        "packageName": "org.a2aproject.sdk:a2a-java-sdk-server-common",
+        "ranges": [
+          {
+            "affected": "< 1.3.0.Final",
+            "fixed": "1.3.0.Final",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q78c-5jjq-57g8/GHSA-q78c-5jjq-57g8.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.3.0.Final"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-q78c-5jjq-57g8"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "Maintainer structured affected field is 1.2.0.Final, while prose says <=1.2.0.Final and a pre-fix snapshot; Reviewed uses <1.3.0.Final. Fixed 1.3.0.Final comes from current structured fields, not the placeholder in the prose.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

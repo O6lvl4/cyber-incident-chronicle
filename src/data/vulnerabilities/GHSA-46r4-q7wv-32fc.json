@@ -1,0 +1,150 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-46r4-q7wv-32fc",
+  "aliases": [
+    "CVE-2026-113727"
+  ],
+  "title": "OpenChoreo: Authorization bypass on WorkflowRun update allows cross-project takeover of workflow runs",
+  "summary": "OpenChoreo: Authorization bypass on WorkflowRun update allows cross-project takeover of workflow runs",
+  "publishedAt": "2026-10-21T16:29:53Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-46r4-q7wv-32fc/GHSA-46r4-q7wv-32fc.json",
+  "modifiedAt": "2026-10-21T16:29:53Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:16.806194Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/openchoreo/openchoreo",
+      "ranges": [
+        {
+          "affected": ">= 1.0.0, < 1.0.6",
+          "fixed": "1.0.6",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-46r4-q7wv-32fc/GHSA-46r4-q7wv-32fc.json"
+        },
+        {
+          "affected": ">= 1.1.0, < 1.1.7",
+          "fixed": "1.1.7",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-46r4-q7wv-32fc/GHSA-46r4-q7wv-32fc.json"
+        },
+        {
+          "affected": ">= 1.2.0, < 1.2.5",
+          "fixed": "1.2.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-46r4-q7wv-32fc/GHSA-46r4-q7wv-32fc.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "1.0.6"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.1.0"
+            },
+            {
+              "fixed": "1.1.7"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.2.0"
+            },
+            {
+              "fixed": "1.2.5"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-46r4-q7wv-32fc/GHSA-46r4-q7wv-32fc.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-46r4-q7wv-32fc/GHSA-46r4-q7wv-32fc.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.4,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+        "sourceUrl": "https://github.com/openchoreo/openchoreo/security/advisories/GHSA-46r4-q7wv-32fc"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-46r4-q7wv-32fc/GHSA-46r4-q7wv-32fc.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T16:29:53Z",
+      "modifiedAt": "2026-10-21T16:29:53Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OpenChoreo: Authorization bypass on WorkflowRun update allows cross-project takeover of workflow runs",
+      "url": "https://github.com/advisories/GHSA-46r4-q7wv-32fc",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/openchoreo/openchoreo/security/advisories/GHSA-46r4-q7wv-32fc",
+      "publishedDate": "2026-09-09",
+      "publishedAt": "2026-09-09T05:30:51Z",
+      "modifiedAt": "2026-10-20T21:07:03Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Maintainer structured package name is blank and range <=1.2.4 is broad; patched branches are 1.0.6, 1.1.7 and 1.2.5. Reviewed supplies the Go module identity and separate branch ranges, retained here. This is authenticated cross-project/component access within one namespace, not cross-tenant escalation.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:16.806194Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-46r4-q7wv-32fc",
+        "aliases": [
+          "CVE-2026-113727"
+        ],
+        "publishedAt": "2026-10-21T16:29:53Z",
+        "modifiedAt": "2026-10-21T16:29:53Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-46r4-q7wv-32fc/GHSA-46r4-q7wv-32fc.json"
+      }
+    ]
+  }
+}

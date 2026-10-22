@@ -1,0 +1,154 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-x3q4-9hxx-gx8m",
+  "aliases": [
+    "CVE-2026-113654"
+  ],
+  "title": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render",
+  "summary": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render",
+  "publishedAt": "2026-10-20T18:03:22Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-x3q4-9hxx-gx8m/GHSA-x3q4-9hxx-gx8m.json",
+  "modifiedAt": "2026-10-20T18:03:22Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:30:33.210556Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "sanitize-html",
+      "ranges": [
+        {
+          "affected": "< 2.18.0",
+          "fixed": "2.18.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-x3q4-9hxx-gx8m/GHSA-x3q4-9hxx-gx8m.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.18.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-x3q4-9hxx-gx8m",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-x3q4-9hxx-gx8m/GHSA-x3q4-9hxx-gx8m.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-x3q4-9hxx-gx8m/GHSA-x3q4-9hxx-gx8m.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:03:22Z",
+      "modifiedAt": "2026-10-20T18:03:22Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS sanitize-html: nonTextTags discard region ends early on an implied close, letting <noscript> content render",
+      "url": "https://github.com/advisories/GHSA-x3q4-9hxx-gx8m",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-x3q4-9hxx-gx8m",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:23:25Z"
+    }
+  ],
+  "caveats": [
+    "Public maintainer HTML says Low with no displayed CVSS, versus Reviewed Moderate and CVSS 4.0. Package range/fix <2.18.0/2.18.0 agree.",
+    "The prose distinguishes noscript parser/browser discard-region disagreement from option elements, whose ordinary closing behavior must not be treated as the same defect.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:30:33.210556Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-x3q4-9hxx-gx8m",
+        "aliases": [
+          "CVE-2026-113654"
+        ],
+        "publishedAt": "2026-10-20T18:03:22Z",
+        "modifiedAt": "2026-10-20T18:03:22Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-x3q4-9hxx-gx8m/GHSA-x3q4-9hxx-gx8m.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "sanitize-html",
+        "ranges": [
+          {
+            "affected": "< 2.18.0",
+            "fixed": "2.18.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-x3q4-9hxx-gx8m/GHSA-x3q4-9hxx-gx8m.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.18.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-x3q4-9hxx-gx8m"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity low differs from Reviewed MODERATE; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Public maintainer HTML says Low with no displayed CVSS, versus Reviewed Moderate and CVSS 4.0. Package range/fix <2.18.0/2.18.0 agree.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

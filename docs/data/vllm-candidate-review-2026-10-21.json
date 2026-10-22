@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "reviewDateJst": "2026-10-21",
+  "checkedAt": "2026-10-20T21:42:43.691791+00:00",
+  "ids": [
+    "PYSEC-2026-4319",
+    "CVE-2026-105922"
+  ],
+  "priorReviewFile": "vllm-candidate-review-2026-10-19.json",
+  "disposition": "pending-maintainer-range-and-fixed-version-confirmation",
+  "importRecommended": false,
+  "conclusion": "Public PR57762 remains open/unmerged. Current v0.32.0 tagged gpu_input_batch.py and layers/utils.py bytes match prior verified digests, and CNA/YAML are unchanged. MRV1 crash versus MRV2 behavior distinction remains. The claimed OSV fixed0.32.0 boundary is not reconciled with released source.",
+  "changesObserved": [
+    "PR HTML contains Oct19 report of MRV1 reproduction and author rebase; neither is released-fix evidence.",
+    "Github REST metadata re-fetches were rate-limited403; prior API dates are retained in prior audit and not claimed newly verified."
+  ],
+  "unchangedRawSources": [
+    {
+      "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/105xxx/CVE-2026-105922.json",
+      "sha256": "2c7f379ae867975a258d8c7647d132bdc3f5f30e4df4269363ba152177253f2d",
+      "priorSha256": "2c7f379ae867975a258d8c7647d132bdc3f5f30e4df4269363ba152177253f2d",
+      "unchanged": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.32.0/vllm/v1/worker/gpu_input_batch.py",
+      "sha256": "79f1dad9d093f404ad84d8e94906227d69620d356175654e4e8dd1377b55f388",
+      "priorSha256": "79f1dad9d093f404ad84d8e94906227d69620d356175654e4e8dd1377b55f388",
+      "unchanged": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.32.0/vllm/model_executor/layers/utils.py",
+      "sha256": "f36f9bcae56b78dac817058b2a2bb0b0609f4c5de10cfe93db8c76e49bdaf03e",
+      "priorSha256": "f36f9bcae56b78dac817058b2a2bb0b0609f4c5de10cfe93db8c76e49bdaf03e",
+      "unchanged": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pypa/advisory-database/main/vulns/vllm/PYSEC-2026-4319.yaml",
+      "sha256": "28b5067cf620a6eacb4598ec76c7299dd75696d9a59a26ff449271808a9ab848",
+      "priorSha256": "28b5067cf620a6eacb4598ec76c7299dd75696d9a59a26ff449271808a9ab848",
+      "unchanged": true
+    }
+  ],
+  "receipts": [
+    {
+      "name": "vllm-0",
+      "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/105xxx/CVE-2026-105922.json",
+      "lastAttemptAt": "2026-10-20T21:34:51.686865+00:00",
+      "checkedAt": "2026-10-20T21:34:55.614322+00:00",
+      "httpStatus": 200,
+      "error": null,
+      "responseHeaders": {
+        "cache-control": "max-age=300",
+        "content-type": "text/plain; charset=utf-8",
+        "etag": "\"cfdca721135bbf58e45116696b552fe5330eb9a57c9f1e32431bd6659f1f6389\"",
+        "date": "Tue, 20 Oct 2026 21:34:55 GMT",
+        "content-length": "12467"
+      },
+      "outcome": "success",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": "2026-10-20T21:34:55.614322+00:00",
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 12467,
+      "originalFetchedResponseSha256": "2c7f379ae867975a258d8c7647d132bdc3f5f30e4df4269363ba152177253f2d",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-1",
+      "url": "https://api.github.com/repos/vllm-project/vllm/pulls/57762",
+      "lastAttemptAt": "2026-10-20T21:34:51.712897+00:00",
+      "checkedAt": "2026-10-20T21:34:55.836877+00:00",
+      "httpStatus": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "responseHeaders": {
+        "date": "Tue, 20 Oct 2026 21:34:55 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "278"
+      },
+      "outcome": "failed",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": null,
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 278,
+      "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-2",
+      "url": "https://api.github.com/repos/vllm-project/vllm/releases/tags/v0.32.0",
+      "lastAttemptAt": "2026-10-20T21:34:51.713381+00:00",
+      "checkedAt": "2026-10-20T21:34:55.839342+00:00",
+      "httpStatus": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "responseHeaders": {
+        "date": "Tue, 20 Oct 2026 21:34:55 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "278"
+      },
+      "outcome": "failed",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": null,
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 278,
+      "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-3",
+      "url": "https://api.github.com/repos/vllm-project/vllm/issues/57719/comments",
+      "lastAttemptAt": "2026-10-20T21:34:51.714296+00:00",
+      "checkedAt": "2026-10-20T21:34:55.837167+00:00",
+      "httpStatus": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "responseHeaders": {
+        "date": "Tue, 20 Oct 2026 21:34:55 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "278"
+      },
+      "outcome": "failed",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": null,
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 278,
+      "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-4",
+      "url": "https://api.github.com/repos/vllm-project/vllm/issues/57719",
+      "lastAttemptAt": "2026-10-20T21:34:51.758916+00:00",
+      "checkedAt": "2026-10-20T21:34:55.873160+00:00",
+      "httpStatus": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "responseHeaders": {
+        "date": "Tue, 20 Oct 2026 21:34:55 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "278"
+      },
+      "outcome": "failed",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": null,
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 278,
+      "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-5",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.32.0/vllm/v1/worker/gpu_input_batch.py",
+      "lastAttemptAt": "2026-10-20T21:34:55.614717+00:00",
+      "checkedAt": "2026-10-20T21:34:58.675609+00:00",
+      "httpStatus": 200,
+      "error": null,
+      "responseHeaders": {
+        "cache-control": "max-age=300",
+        "content-type": "text/plain; charset=utf-8",
+        "etag": "\"d32618eb65dc00d991ec7292304d96351fd8365878e17ff8490ce029e8ddeeba\"",
+        "date": "Tue, 20 Oct 2026 21:34:58 GMT",
+        "content-length": "48601"
+      },
+      "outcome": "success",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": "2026-10-20T21:34:58.675609+00:00",
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 48601,
+      "originalFetchedResponseSha256": "79f1dad9d093f404ad84d8e94906227d69620d356175654e4e8dd1377b55f388",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-6",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.32.0/vllm/model_executor/layers/utils.py",
+      "lastAttemptAt": "2026-10-20T21:34:55.620882+00:00",
+      "checkedAt": "2026-10-20T21:34:58.718238+00:00",
+      "httpStatus": 200,
+      "error": null,
+      "responseHeaders": {
+        "cache-control": "max-age=300",
+        "content-type": "text/plain; charset=utf-8",
+        "etag": "\"5e84fc6317b50a8b80011364d40501ff4b3f70348e32a6c3555ea16a569c0827\"",
+        "date": "Tue, 20 Oct 2026 21:34:58 GMT",
+        "content-length": "22898"
+      },
+      "outcome": "success",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": "2026-10-20T21:34:58.718238+00:00",
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 22898,
+      "originalFetchedResponseSha256": "f36f9bcae56b78dac817058b2a2bb0b0609f4c5de10cfe93db8c76e49bdaf03e",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-7",
+      "url": "https://raw.githubusercontent.com/pypa/advisory-database/main/vulns/vllm/PYSEC-2026-4319.yaml",
+      "lastAttemptAt": "2026-10-20T21:34:55.838078+00:00",
+      "checkedAt": "2026-10-20T21:34:58.713942+00:00",
+      "httpStatus": 200,
+      "error": null,
+      "responseHeaders": {
+        "cache-control": "max-age=300",
+        "content-type": "text/plain; charset=utf-8",
+        "etag": "\"057ebcaa3a285b09a62297a0e4c457525151e1fdc01703210cf1d890f57dce8f\"",
+        "date": "Tue, 20 Oct 2026 21:34:58 GMT",
+        "content-length": "2628"
+      },
+      "outcome": "success",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": "2026-10-20T21:34:58.713942+00:00",
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 2628,
+      "originalFetchedResponseSha256": "28b5067cf620a6eacb4598ec76c7299dd75696d9a59a26ff449271808a9ab848",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-8",
+      "url": "https://api.github.com/repos/vllm-project/vllm/issues/57762/comments",
+      "lastAttemptAt": "2026-10-20T21:34:55.838525+00:00",
+      "checkedAt": "2026-10-20T21:34:59.308645+00:00",
+      "httpStatus": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "responseHeaders": {
+        "date": "Tue, 20 Oct 2026 21:34:59 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "278"
+      },
+      "outcome": "failed",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": null,
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 278,
+      "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-9",
+      "url": "https://api.github.com/repos/vllm-project/vllm/git/ref/tags/v0.32.0",
+      "lastAttemptAt": "2026-10-20T21:34:55.840544+00:00",
+      "checkedAt": "2026-10-20T21:34:59.276095+00:00",
+      "httpStatus": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "responseHeaders": {
+        "date": "Tue, 20 Oct 2026 21:34:59 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "278"
+      },
+      "outcome": "failed",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": null,
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 278,
+      "originalFetchedResponseSha256": "7de4fb96f430774fafc327095c8108345a1fa886b6276aa99c876eff832ca328",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-pr-html",
+      "url": "https://github.com/vllm-project/vllm/pull/57762",
+      "lastAttemptAt": "2026-10-20T21:36:01.838751+00:00",
+      "checkedAt": "2026-10-20T21:36:06.326585+00:00",
+      "httpStatus": 200,
+      "error": null,
+      "responseHeaders": {
+        "date": "Tue, 20 Oct 2026 21:36:06 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-cache"
+      },
+      "outcome": "success",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": "2026-10-20T21:36:06.326585+00:00",
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 427009,
+      "originalFetchedResponseSha256": "e35294b67503e9d1034f4107aea247791c8541eb25a4c46d385fb544694bc089",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    },
+    {
+      "name": "vllm-issue-html",
+      "url": "https://github.com/vllm-project/vllm/issues/57719",
+      "lastAttemptAt": "2026-10-20T21:36:01.840305+00:00",
+      "checkedAt": "2026-10-20T21:36:06.010548+00:00",
+      "httpStatus": 200,
+      "error": null,
+      "responseHeaders": {
+        "date": "Tue, 20 Oct 2026 21:36:05 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "max-age=0, private, must-revalidate"
+      },
+      "outcome": "success",
+      "previousLastSuccessfulFetchAt": null,
+      "previousLastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAt": "2026-10-20T21:36:06.010548+00:00",
+      "lastSuccessfulContentCheckAt": null,
+      "originalFetchedResponseBytes": 544803,
+      "originalFetchedResponseSha256": "9e4b8d6d31a20dbed9c99d530a68f1e5ac581adce8244e498fdfdd228c1e150c",
+      "previousFetchedResponseSha256": null,
+      "receiptContentNote": "Original response digest, not public minimized evidence digest."
+    }
+  ]
+}

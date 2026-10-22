@@ -1,0 +1,155 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9xw5-w5jj-pvcg",
+  "aliases": [
+    "CVE-2026-111066"
+  ],
+  "title": "AIOHTTP: File descriptor exhaustion in multipart requests",
+  "summary": "AIOHTTP: File descriptor exhaustion in multipart requests",
+  "publishedAt": "2026-10-20T19:52:09Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9xw5-w5jj-pvcg/GHSA-9xw5-w5jj-pvcg.json",
+  "modifiedAt": "2026-10-20T19:52:09Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:55.356316Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "aiohttp",
+      "ranges": [
+        {
+          "affected": ">= 2.0.0, < 3.14.4",
+          "fixed": "3.14.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9xw5-w5jj-pvcg/GHSA-9xw5-w5jj-pvcg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "3.14.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-9xw5-w5jj-pvcg",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9xw5-w5jj-pvcg/GHSA-9xw5-w5jj-pvcg.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9xw5-w5jj-pvcg/GHSA-9xw5-w5jj-pvcg.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T19:52:09Z",
+      "modifiedAt": "2026-10-20T19:52:09Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "AIOHTTP: File descriptor exhaustion in multipart requests",
+      "url": "https://github.com/advisories/GHSA-9xw5-w5jj-pvcg",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-9xw5-w5jj-pvcg",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T01:22:56Z",
+      "modifiedAt": "2026-10-19T16:58:52Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Maintainer Medium differs from Reviewed High; primary CVSS absent while Reviewed supplies v4. Primary affected field >=2,<=3.14.4 includes the same 3.14.4 marked patched, an unresolved internal contradiction; Reviewed uses >=2.0.0,<3.14.4.",
+    "Retain database affected/fixed interpretation provisionally with an explicit conflict rather than declaring patched 3.14.4 both vulnerable and safe. Trigger requires a handler using Request.post() on multipart requests.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:55.356316Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-9xw5-w5jj-pvcg",
+        "aliases": [
+          "CVE-2026-111066"
+        ],
+        "publishedAt": "2026-10-20T19:52:09Z",
+        "modifiedAt": "2026-10-20T19:52:09Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9xw5-w5jj-pvcg/GHSA-9xw5-w5jj-pvcg.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "aiohttp",
+        "ranges": [
+          {
+            "affected": ">= 2.0.0, < 3.14.4",
+            "fixed": "3.14.4",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-9xw5-w5jj-pvcg/GHSA-9xw5-w5jj-pvcg.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.0.0"
+              },
+              {
+                "fixed": "3.14.4"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-9xw5-w5jj-pvcg"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity medium differs from Reviewed HIGH; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Maintainer Medium differs from Reviewed High; primary CVSS absent while Reviewed supplies v4. Primary affected field >=2,<=3.14.4 includes the same 3.14.4 marked patched, an unresolved internal contradiction; Reviewed uses >=2.0.0,<3.14.4.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

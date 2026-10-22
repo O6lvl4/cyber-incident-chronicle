@@ -1,0 +1,154 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-65qm-jvmh-6pqg",
+  "aliases": [
+    "CVE-2026-112400"
+  ],
+  "title": "Pillow: GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
+  "summary": "Pillow: GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
+  "publishedAt": "2026-10-20T20:53:36Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json",
+  "modifiedAt": "2026-10-20T20:53:36Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:30:40.725087Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Pillow",
+      "ranges": [
+        {
+          "affected": ">= 9.2.0, < 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:53:36Z",
+      "modifiedAt": "2026-10-20T20:53:36Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
+      "url": "https://github.com/advisories/GHSA-65qm-jvmh-6pqg",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:38:15Z"
+    }
+  ],
+  "caveats": [
+    "Primary Low with no CVSS differs from Reviewed High and v4. Primary affected field says <=12.3.0, while prose explicitly places the late-check introduction in 9.2.0, supporting the Reviewed lower boundary. Fixed 13.0.0 agrees.",
+    "Only applications catching the frame-seek decompression-bomb exception and continuing to use the same image reach this amplification. Default open/load, normal iteration, and n_frames/is_animated paths are excluded; no memory corruption is claimed.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:30:40.725087Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-65qm-jvmh-6pqg",
+        "aliases": [
+          "CVE-2026-112400"
+        ],
+        "publishedAt": "2026-10-20T20:53:36Z",
+        "modifiedAt": "2026-10-20T20:53:36Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "Pillow",
+        "ranges": [
+          {
+            "affected": ">= 9.2.0, < 13.0.0",
+            "fixed": "13.0.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "9.2.0"
+              },
+              {
+                "fixed": "13.0.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-65qm-jvmh-6pqg"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity low differs from Reviewed HIGH; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Primary Low with no CVSS differs from Reviewed High and v4. Primary affected field says <=12.3.0, while prose explicitly places the late-check introduction in 9.2.0, supporting the Reviewed lower boundary. Fixed 13.0.0 agrees.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

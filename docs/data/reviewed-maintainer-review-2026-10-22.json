@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 2,
+  "reportDateJst": "2026-10-22",
+  "checkedAt": "2026-10-21T21:11:48.128Z",
+  "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+  "scope": "All 47 eligible newly added Reviewed records in the complete source-tree delta. 46 distinct developer advisories; the withdrawn duplicate references its canonical primary advisory.",
+  "counts": {
+    "eligibleAdded": 47,
+    "eligibleModified": 0,
+    "primaryAdvisoriesRetrievedAndReviewed": 46,
+    "recordsCompared": 47,
+    "apiRequestsSucceeded": 47,
+    "failedRequests": 0,
+    "newCuratedOverlays": 46,
+    "newlyObservedWithdrawnRecords": 1,
+    "sourceSeverityLabelDifferences": 9
+  },
+  "methodology": [
+    "Opened public developer API response bodies and compared structured fields and relevant narrative to fixed Reviewed JSON. No PoC or source code executed.",
+    "Allowlisted public projections retain exact primary package/range/fix, severity, alias and timestamp fields plus response hashes. Full descriptions, PoCs, reporter contact details and unrelated API metadata are omitted.",
+    "Primary inclusive upper bounds are not equated to all possible versions below the next fixed release. Narrative-only extra fixed branches are caveated rather than assigned inferred ranges."
+  ],
+  "newCuratedOverlayIds": [
+    "GHSA-22hg-r758-rrw9",
+    "GHSA-26w4-8w32-4x3v",
+    "GHSA-27h8-gf7j-v5hc",
+    "GHSA-39mj-jf6j-2qj3",
+    "GHSA-3x84-qq85-fj65",
+    "GHSA-4558-3h8r-v8xp",
+    "GHSA-46r4-q7wv-32fc",
+    "GHSA-5588-rp99-5fjh",
+    "GHSA-5gc8-frw3-3vqm",
+    "GHSA-5hx5-vpf9-5wcv",
+    "GHSA-5m22-7pfq-vp65",
+    "GHSA-5vjq-rrrf-7h2q",
+    "GHSA-74r2-7ff9-mjj2",
+    "GHSA-7jg5-frgc-c67w",
+    "GHSA-7mh2-4gg2-979f",
+    "GHSA-7mwm-ghpf-9vrm",
+    "GHSA-86wm-68pq-5jwq",
+    "GHSA-8rjx-v5ww-45pp",
+    "GHSA-9g7p-m758-rp72",
+    "GHSA-9jrq-w75r-8gcw",
+    "GHSA-9mx8-4j7g-633p",
+    "GHSA-c947-3pg5-gm8q",
+    "GHSA-c9rx-x947-fp3h",
+    "GHSA-cp9v-662q-vvx9",
+    "GHSA-crwc-vw2r-qr6m",
+    "GHSA-f2ph-cmg5-wxc8",
+    "GHSA-f66c-mpj2-3r8h",
+    "GHSA-fc9g-5qg7-mf45",
+    "GHSA-fw47-9c62-h3vw",
+    "GHSA-j4m9-6w36-pw47",
+    "GHSA-jf5h-36mg-rp6x",
+    "GHSA-p458-7748-mcp3",
+    "GHSA-qfv9-64jg-mh7p",
+    "GHSA-qxg6-89mg-rqv8",
+    "GHSA-r57g-mc79-8hj2",
+    "GHSA-rfgq-q3w2-pmv2",
+    "GHSA-rq7h-c2jc-7f22",
+    "GHSA-rqgm-cfrp-4hx8",
+    "GHSA-rw26-wwfc-9wvm",
+    "GHSA-vfpm-58rq-9qcg",
+    "GHSA-vh56-5m88-39rq",
+    "GHSA-vmgj-9cwm-cf3h",
+    "GHSA-vxj4-q4g9-crj7",
+    "GHSA-w889-685w-c8fh",
+    "GHSA-xgh8-jp6q-p5x8",
+    "GHSA-xp26-3454-mjgp"
+  ],
+  "updatedCuratedIds": [],
+  "batchArtifacts": [
+    {
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "sha256": "3223610bb1373b12e31d339919902ae6805d4fb5d571015556183c1ddf6e2b0e",
+      "bytes": 163709
+    }
+  ],
+  "records": [
+    {
+      "id": "GHSA-jw7v-5mp7-ghgm",
+      "status": "withdrawn-duplicate-canonical-primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 0,
+      "observations": [
+        "Reviewed withdraws this duplicate on 2026-10-21 and names GHSA-3x84-qq85-fj65 in its narrative, but has no alias linking them. The primary URL is the canonical advisory, not a primary withdrawal record for this identifier. Keep withdrawal and identity separate; do not infer an alias.",
+        "Severity label differs: developer advisory high, Reviewed database medium. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-22hg-r758-rrw9",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 1,
+      "observations": [
+        "Requires optional olefile and MIC n_frames access. Image.open/load/thumbnail/convert/is_animated and ImageSequence alone are not the reported hanging path. Maintainer maximum 12.3.0 is retained in audit separately from Reviewed fixed boundary <13.0.0.",
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-26w4-8w32-4x3v",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 2,
+      "observations": [
+        "Structured primary fields specify patched 2.28.0, whereas the earlier report narrative says no patched release. Preserve this temporal inconsistency rather than treating the historical prose as current fix status. Requires callback access and application-log access; exposure is a computed valid HMAC, not disclosure of the Slack signing secret."
+      ]
+    },
+    {
+      "id": "GHSA-27h8-gf7j-v5hc",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 3,
+      "observations": [
+        "Zero-dimension input reaching rank/median/min/max filters crashes the process. The primary report explicitly describes crash only, not memory disclosure or corruption.",
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-39mj-jf6j-2qj3",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 4,
+      "observations": []
+    },
+    {
+      "id": "GHSA-3x84-qq85-fj65",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 5,
+      "observations": [
+        "Maintainer labels this High with CVSS 3.1 8.5; Reviewed labels Moderate and also supplies a CVSS 4.0 vector. Both assessments are source-attributed. Maintainer cve_id is null while Reviewed identifies CVE-2026-62197; null does not negate that identifier. Impact requires the named CDP feature enabled and reachable by lower-trust input, not every trusted-operator operation.",
+        "Severity label differs: developer advisory high, Reviewed database medium. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-4558-3h8r-v8xp",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 6,
+      "observations": []
+    },
+    {
+      "id": "GHSA-46r4-q7wv-32fc",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 7,
+      "observations": [
+        "Maintainer structured package name is blank and range <=1.2.4 is broad; patched branches are 1.0.6, 1.1.7 and 1.2.5. Reviewed supplies the Go module identity and separate branch ranges, retained here. This is authenticated cross-project/component access within one namespace, not cross-tenant escalation."
+      ]
+    },
+    {
+      "id": "GHSA-5588-rp99-5fjh",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 8,
+      "observations": [
+        "XML canonicalization occurs before digest/signature checks; a valid signature is unnecessary. Reported impact is availability only, not a signature-verification bypass."
+      ]
+    },
+    {
+      "id": "GHSA-5gc8-frw3-3vqm",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 9,
+      "observations": [
+        "Anonymous export download requires exports enabled and files delivered through public upload storage; disabled export or authenticated/private delivery excludes the network download path."
+      ]
+    },
+    {
+      "id": "GHSA-5hx5-vpf9-5wcv",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 10,
+      "observations": [
+        "Requires the optional Pillow dependency and loading image data labelled DCTDecode. Arbitrary image-parser invocation is not itself evidence of code execution.",
+        "Severity label differs: developer advisory medium, Reviewed database low. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-5m22-7pfq-vp65",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 11,
+      "observations": [
+        "Historical narrative is a static remediation review of 3.7.0 and explicitly says end-to-end reproduction on that release was not repeated. Structured current fields specify import-export 3.7.1 and apostrophe 4.34.0 fixes. No private attachment was accessed or used."
+      ]
+    },
+    {
+      "id": "GHSA-5vjq-rrrf-7h2q",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 12,
+      "observations": [
+        "Requires attacker-influenced path/prompt and zsh PROMPT_SUBST enabled; plain zsh defaults off and the described payload does not run in bash."
+      ]
+    },
+    {
+      "id": "GHSA-74r2-7ff9-mjj2",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 13,
+      "observations": []
+    },
+    {
+      "id": "GHSA-7jg5-frgc-c67w",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 14,
+      "observations": []
+    },
+    {
+      "id": "GHSA-7mh2-4gg2-979f",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 15,
+      "observations": []
+    },
+    {
+      "id": "GHSA-7mwm-ghpf-9vrm",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 16,
+      "observations": [
+        "Requires oversized transform output and allocation failure, typically a memory-limited worker or 32-bit process. Heap corruption has not been shown controllable; do not assert proven RCE.",
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-86wm-68pq-5jwq",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 17,
+      "observations": [
+        "Primary narrative confirms import-export 3.6.2 and leaves exact introduction unverified; structured fields use <3.7.0 and apostrophe <4.33.0. Do not turn the reported test version into a proven introduction boundary."
+      ]
+    },
+    {
+      "id": "GHSA-8rjx-v5ww-45pp",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 18,
+      "observations": []
+    },
+    {
+      "id": "GHSA-9g7p-m758-rp72",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 19,
+      "observations": [
+        "Historical narrative is a static review of 3.7.0, not a new deployed-site reproduction. Structured current fields identify 3.7.1 as patched; no private emailed attachment was used."
+      ]
+    },
+    {
+      "id": "GHSA-9jrq-w75r-8gcw",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 20,
+      "observations": [
+        "Custom/middleware transformIndexHtml setup, inline module script and sensitive values/actions in the served origin are prerequisite conditions. Standard internal spa/mpa handling is excluded by the advisory."
+      ]
+    },
+    {
+      "id": "GHSA-9mx8-4j7g-633p",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 21,
+      "observations": []
+    },
+    {
+      "id": "GHSA-c947-3pg5-gm8q",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 22,
+      "observations": []
+    },
+    {
+      "id": "GHSA-c9rx-x947-fp3h",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 23,
+      "observations": [
+        "Regression is 2.18.0 with discarded iframe fallback recursion; structured fix 2.18.1. Do not use historical narrative wording current latest as a present release claim."
+      ]
+    },
+    {
+      "id": "GHSA-cp9v-662q-vvx9",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 24,
+      "observations": [
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-crwc-vw2r-qr6m",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 25,
+      "observations": [
+        "OGNL describes secondary stricter-invocation defense-in-depth hardening, not a bypass of a correctly restrictive MemberAccess primary boundary. Do not label all integrating frameworks remotely exploitable."
+      ]
+    },
+    {
+      "id": "GHSA-f2ph-cmg5-wxc8",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 26,
+      "observations": [
+        "Affected Storybook development preview can permit project-file changes from a malicious website; subsequent local execution needs additional conditions. Built static Storybook and unopened headless dev servers are excluded. Maintainer says no known exploitation, which is not proof of absence."
+      ]
+    },
+    {
+      "id": "GHSA-f66c-mpj2-3r8h",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 27,
+      "observations": []
+    },
+    {
+      "id": "GHSA-fc9g-5qg7-mf45",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 28,
+      "observations": [
+        "Narrative CVSS-B 6.9 is provisional and conditional on an automated unauthenticated upload-to-GIF service. Keep authoritative structured scores/vectors source-attributed, not an independently measured risk."
+      ]
+    },
+    {
+      "id": "GHSA-fw47-9c62-h3vw",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 29,
+      "observations": [
+        "Requires origin-based hid/usb permission decisions plus delegation to cross-origin iframes. Applications not delegating these features to untrusted iframes are excluded."
+      ]
+    },
+    {
+      "id": "GHSA-j4m9-6w36-pw47",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 30,
+      "observations": [
+        "Untrusted malformed font, nonzero stroke width and glyph-load failure reach a latent invalid-free path; the report does not establish reliable exploitation or RCE.",
+        "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-jf5h-36mg-rp6x",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 31,
+      "observations": [
+        "Historical narrative is a static review of 3.7.0, explicitly not a repeated end-to-end reproduction. Structured current fields identify 3.7.1 as patched. No private attachment was used."
+      ]
+    },
+    {
+      "id": "GHSA-p458-7748-mcp3",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 32,
+      "observations": [
+        "Primary package list names @vitest/ui, @vitest/browser and vite-plus, while narrative also warns direct vitest api users and says the fix ships in vitest. Do not imply plain vitest or vitest run starts a server. The unlisted vitest coordinate is retained as a scope caveat rather than assigned an inferred version range."
+      ]
+    },
+    {
+      "id": "GHSA-qfv9-64jg-mh7p",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 33,
+      "observations": []
+    },
+    {
+      "id": "GHSA-qxg6-89mg-rqv8",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 34,
+      "observations": [
+        "Primary structured fields list only >=2.1.0-beta.7,<4.1.12 and fix 4.1.12; primary narrative also specifies 5.0.3. Reviewed additionally supplies >=5.0.0-beta.1,<5.0.3, retained with its database attribution. The 5.x introduction is not present in the primary structured fields and was not independently inferred."
+      ]
+    },
+    {
+      "id": "GHSA-r57g-mc79-8hj2",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 35,
+      "observations": [
+        "MCP tool can read an arbitrary absolute path, but only regex-matched substrings are returned, not the complete raw file. Approximate narrative CVSS is not independently calculated.",
+        "Narrative suggests Medium/~5.3 with a network vector, but structured primary assessment is Low/CVSS 3.1 3.3 with AV:L and PR:L. Preserve both instead of treating approximate prose as the current structured assessment."
+      ]
+    },
+    {
+      "id": "GHSA-rfgq-q3w2-pmv2",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 36,
+      "observations": [
+        "Requires attacker control of the palette image passed to quantize, not merely the source image. Reported 512-byte disclosure is output pixel data, not a general arbitrary-memory read."
+      ]
+    },
+    {
+      "id": "GHSA-rq7h-c2jc-7f22",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 37,
+      "observations": [
+        "Requires exposed dev server, root-relative import matching a readable absolute host path, file not denied by server.fs.deny, and non-Windows host."
+      ]
+    },
+    {
+      "id": "GHSA-rqgm-cfrp-4hx8",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 38,
+      "observations": []
+    },
+    {
+      "id": "GHSA-rw26-wwfc-9wvm",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 39,
+      "observations": [
+        "Primary narrative says anonymous clients with a normal CSRF cookie can reach cleanExport; structured CVSS 3.1 uses PR:L. Preserve this discrepancy and do not silently replace either assessment."
+      ]
+    },
+    {
+      "id": "GHSA-vfpm-58rq-9qcg",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 40,
+      "observations": [
+        "Disclosure described is only the first four bytes, not the whole file. The primary impact section says one of its listed conditions, while describing exposed server, sensitive first four bytes and Node/Deno runtime; preserve that wording ambiguity rather than assert a corrected conjunction. Bun is explicitly excluded."
+      ]
+    },
+    {
+      "id": "GHSA-vh56-5m88-39rq",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 41,
+      "observations": []
+    },
+    {
+      "id": "GHSA-vmgj-9cwm-cf3h",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 42,
+      "observations": [
+        "Primary public narrative still contains FILL IN placeholders for sink, source location, version and stored value. Treat exact sink/details as unresolved and do not invent missing evidence; structured fix is 4.34.0. Related GHSA-97v6-998m-fp4g is not an alias."
+      ]
+    },
+    {
+      "id": "GHSA-vxj4-q4g9-crj7",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 43,
+      "observations": [
+        "Requires attacker-controlled environment path/prompt and activation in bash; root bash and zsh do not execute the described payload in this particular mechanism."
+      ]
+    },
+    {
+      "id": "GHSA-w889-685w-c8fh",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 44,
+      "observations": [
+        "Ghostscript filename argument injection is conditional on attacker-influenced filename. RCE requires additional attacker-controlled file/content conditions; not every EPS upload implies RCE.",
+        "Severity label differs: developer advisory medium, Reviewed database critical. Neither assessment is silently overwritten; the displayed label retains the database source."
+      ]
+    },
+    {
+      "id": "GHSA-xgh8-jp6q-p5x8",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 45,
+      "observations": []
+    },
+    {
+      "id": "GHSA-xp26-3454-mjgp",
+      "status": "primary-reviewed",
+      "representation": "api",
+      "file": "docs/data/reviewed-maintainer-evidence-2026-10-22.json",
+      "index": 46,
+      "observations": [
+        "Primary structured fields list >=4.1.11,<4.1.12; narrative also reproduces 5.0.0 and specifies 5.0.3 patched. Reviewed additionally supplies >=5.0.0-rc.2,<5.0.3, retained with database attribution. Do not treat the primary structured 5.x omission as unaffected. Requires Windows path semantics."
+      ]
+    }
+  ]
+}

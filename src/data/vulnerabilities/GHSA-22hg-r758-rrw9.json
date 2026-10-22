@@ -1,0 +1,113 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-22hg-r758-rrw9",
+  "aliases": [
+    "CVE-2026-112390"
+  ],
+  "title": "Pillow: Infinite loop in MIC n_frames when the embedded TIFF",
+  "summary": "Pillow: Infinite loop in MIC n_frames when the embedded TIFF",
+  "publishedAt": "2026-10-21T20:39:49Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-22hg-r758-rrw9/GHSA-22hg-r758-rrw9.json",
+  "modifiedAt": "2026-10-21T20:39:49Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:12.094051Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Pillow",
+      "ranges": [
+        {
+          "affected": ">= 7.2.0, < 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-22hg-r758-rrw9/GHSA-22hg-r758-rrw9.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-22hg-r758-rrw9/GHSA-22hg-r758-rrw9.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-22hg-r758-rrw9/GHSA-22hg-r758-rrw9.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-22hg-r758-rrw9/GHSA-22hg-r758-rrw9.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T20:39:49Z",
+      "modifiedAt": "2026-10-21T20:39:49Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Infinite loop in MIC n_frames when the embedded TIFF",
+      "url": "https://github.com/advisories/GHSA-22hg-r758-rrw9",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:41:17Z",
+      "modifiedAt": "2026-10-19T20:29:18Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Severity label differs: developer advisory medium, Reviewed database high. Neither assessment is silently overwritten; the displayed label retains the database source.",
+    "Requires optional olefile and MIC n_frames access. Image.open/load/thumbnail/convert/is_animated and ImageSequence alone are not the reported hanging path. Maintainer maximum 12.3.0 is retained in audit separately from Reviewed fixed boundary <13.0.0.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:12.094051Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-22hg-r758-rrw9",
+        "aliases": [
+          "CVE-2026-112390"
+        ],
+        "publishedAt": "2026-10-21T20:39:49Z",
+        "modifiedAt": "2026-10-21T20:39:49Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-22hg-r758-rrw9/GHSA-22hg-r758-rrw9.json"
+      }
+    ]
+  }
+}

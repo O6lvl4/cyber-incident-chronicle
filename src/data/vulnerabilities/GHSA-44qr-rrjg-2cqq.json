@@ -1,0 +1,250 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-44qr-rrjg-2cqq",
+  "aliases": [
+    "CVE-2026-113667"
+  ],
+  "title": "ApostropheCMS: CAPTCHA response token not URL-encoded",
+  "summary": "ApostropheCMS: CAPTCHA response token not URL-encoded",
+  "publishedAt": "2026-10-20T18:05:35Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json",
+  "modifiedAt": "2026-10-20T18:05:36Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:29:42.809004Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@apostrophecms/form",
+      "ranges": [
+        {
+          "affected": "< 1.5.5",
+          "fixed": "1.5.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.5.5"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@apostrophecms/login-hcaptcha",
+      "ranges": [
+        {
+          "affected": "< 1.3.0",
+          "fixed": "1.3.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.3.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@apostrophecms/login-recaptcha",
+      "ranges": [
+        {
+          "affected": "< 1.2.1",
+          "fixed": "1.2.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.2.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-44qr-rrjg-2cqq",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:05:35Z",
+      "modifiedAt": "2026-10-20T18:05:36Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS: CAPTCHA response token not URL-encoded",
+      "url": "https://github.com/advisories/GHSA-44qr-rrjg-2cqq",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://api.github.com/repos/apostrophecms/apostrophe/security-advisories/GHSA-44qr-rrjg-2cqq",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:23:40Z",
+      "modifiedAt": "2026-10-20T17:26:44Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "All three package ranges and fixes agree. Maintainer structured severity is Medium but prose labels impact Low; maintainer publishes no structured CVSS, so the Reviewed CVSS 4.0 vector remains database-attributed.",
+    "Unencoded CAPTCHA verification parameters can cause failures and support bypass probing; the narrative does not demonstrate secret exfiltration.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:29:42.809004Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-44qr-rrjg-2cqq",
+        "aliases": [
+          "CVE-2026-113667"
+        ],
+        "publishedAt": "2026-10-20T18:05:35Z",
+        "modifiedAt": "2026-10-20T18:05:36Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "@apostrophecms/form",
+        "ranges": [
+          {
+            "affected": "< 1.5.5",
+            "fixed": "1.5.5",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.5.5"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      },
+      {
+        "ecosystem": "npm",
+        "packageName": "@apostrophecms/login-hcaptcha",
+        "ranges": [
+          {
+            "affected": "< 1.3.0",
+            "fixed": "1.3.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.3.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      },
+      {
+        "ecosystem": "npm",
+        "packageName": "@apostrophecms/login-recaptcha",
+        "ranges": [
+          {
+            "affected": "< 1.2.1",
+            "fixed": "1.2.1",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-44qr-rrjg-2cqq/GHSA-44qr-rrjg-2cqq.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.2.1"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-44qr-rrjg-2cqq"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "All three package ranges and fixes agree. Maintainer structured severity is Medium but prose labels impact Low; maintainer publishes no structured CVSS, so the Reviewed CVSS 4.0 vector remains database-attributed.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

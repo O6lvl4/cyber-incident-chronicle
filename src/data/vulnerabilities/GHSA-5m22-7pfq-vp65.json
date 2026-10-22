@@ -1,0 +1,143 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5m22-7pfq-vp65",
+  "aliases": [
+    "CVE-2026-113649"
+  ],
+  "title": "ApostropheCMS: Import API bypasses publication roles for protected content",
+  "summary": "ApostropheCMS: Import API bypasses publication roles for protected content",
+  "publishedAt": "2026-10-21T17:03:03Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5m22-7pfq-vp65/GHSA-5m22-7pfq-vp65.json",
+  "modifiedAt": "2026-10-21T17:03:04Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-21T21:08:19.574425Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@apostrophecms/import-export",
+      "ranges": [
+        {
+          "affected": "< 3.7.1",
+          "fixed": "3.7.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5m22-7pfq-vp65/GHSA-5m22-7pfq-vp65.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.7.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "apostrophe",
+      "ranges": [
+        {
+          "affected": "< 4.34.0",
+          "fixed": "4.34.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5m22-7pfq-vp65/GHSA-5m22-7pfq-vp65.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.34.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5m22-7pfq-vp65/GHSA-5m22-7pfq-vp65.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5m22-7pfq-vp65/GHSA-5m22-7pfq-vp65.json"
+      },
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-5m22-7pfq-vp65"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5m22-7pfq-vp65/GHSA-5m22-7pfq-vp65.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T17:03:03Z",
+      "modifiedAt": "2026-10-21T17:03:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS: Import API bypasses publication roles for protected content",
+      "url": "https://github.com/advisories/GHSA-5m22-7pfq-vp65",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and narrative reviewed",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-5m22-7pfq-vp65",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T18:26:21Z",
+      "modifiedAt": "2026-10-20T16:10:21Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "Historical narrative is a static remediation review of 3.7.0 and explicitly says end-to-end reproduction on that release was not repeated. Structured current fields specify import-export 3.7.1 and apostrophe 4.34.0 fixes. No private attachment was accessed or used.",
+    "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b",
+    "checkedAt": "2026-10-21T21:08:19.574425Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-5m22-7pfq-vp65",
+        "aliases": [
+          "CVE-2026-113649"
+        ],
+        "publishedAt": "2026-10-21T17:03:03Z",
+        "modifiedAt": "2026-10-21T17:03:04Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-5m22-7pfq-vp65/GHSA-5m22-7pfq-vp65.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-p4wg-p73j-c528",
+  "aliases": [
+    "CVE-2026-112895"
+  ],
+  "title": "Pillow: Unbounded recursion parsing a PDF page tree or trailer chain (incomplete fix for CVE-2026-42310)",
+  "summary": "Pillow: Unbounded recursion parsing a PDF page tree or trailer chain (incomplete fix for CVE-2026-42310)",
+  "publishedAt": "2026-10-20T20:50:49Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-p4wg-p73j-c528/GHSA-p4wg-p73j-c528.json",
+  "modifiedAt": "2026-10-20T20:50:49Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pillow",
+      "ranges": [
+        {
+          "affected": ">= 5.1.0, < 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-p4wg-p73j-c528/GHSA-p4wg-p73j-c528.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-p4wg-p73j-c528/GHSA-p4wg-p73j-c528.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-p4wg-p73j-c528/GHSA-p4wg-p73j-c528.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:50:49Z",
+      "modifiedAt": "2026-10-20T20:50:49Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Unbounded recursion parsing a PDF page tree or trailer chain (incomplete fix for CVE-2026-42310)",
+      "url": "https://github.com/advisories/GHSA-p4wg-p73j-c528",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Unbounded recursion parsing a PDF page tree or trailer chain (incomplete fix for CVE-2026-42310)",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:36:08Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
+    "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
+    "既存PDFへappend=Trueで書き込む際のPdfParserが対象。単に通常の画像を開くすべての処理が対象という意味ではない。CVE-2026-42310のトレーラーループ対策ではページ木と一意オフセットの深い連鎖を防げなかった。"
+  ]
+}

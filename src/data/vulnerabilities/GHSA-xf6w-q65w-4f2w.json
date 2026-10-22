@@ -1,0 +1,154 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xf6w-q65w-4f2w",
+  "aliases": [
+    "CVE-2026-113653"
+  ],
+  "title": "ApostropheCMS: The general public can access @apostrophecms/user objects via a relationship (viewRole is not applied to the general public)",
+  "summary": "ApostropheCMS: The general public can access @apostrophecms/user objects via a relationship (viewRole is not applied to the general public)",
+  "publishedAt": "2026-10-20T18:26:02Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-xf6w-q65w-4f2w/GHSA-xf6w-q65w-4f2w.json",
+  "modifiedAt": "2026-10-20T18:26:02Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-20T21:30:33.211002Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "apostrophe",
+      "ranges": [
+        {
+          "affected": "< 4.33.0",
+          "fixed": "4.33.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-xf6w-q65w-4f2w/GHSA-xf6w-q65w-4f2w.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.33.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-xf6w-q65w-4f2w",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-xf6w-q65w-4f2w/GHSA-xf6w-q65w-4f2w.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-xf6w-q65w-4f2w/GHSA-xf6w-q65w-4f2w.json",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:26:02Z",
+      "modifiedAt": "2026-10-20T18:26:02Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ApostropheCMS: The general public can access @apostrophecms/user objects via a relationship (viewRole is not applied to the general public)",
+      "url": "https://github.com/advisories/GHSA-xf6w-q65w-4f2w",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and description individually reviewed",
+      "url": "https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-xf6w-q65w-4f2w",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T13:24:52Z"
+    }
+  ],
+  "caveats": [
+    "Public maintainer HTML says Low with no displayed CVSS, versus Reviewed Moderate and CVSS 4.0. Current fixed field 4.33.0 conflicts with the prose Patches section saying none yet.",
+    "Public exposure depends on explicitly configured relationships/public access and unsafe templates; password hashes are explicitly excluded because they reside separately.",
+    "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
+    "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "e411ff2b84c425b1b0349aa88916713bebe7786a",
+    "checkedAt": "2026-10-20T21:30:33.211002Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-xf6w-q65w-4f2w",
+        "aliases": [
+          "CVE-2026-113653"
+        ],
+        "publishedAt": "2026-10-20T18:26:02Z",
+        "modifiedAt": "2026-10-20T18:26:02Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-xf6w-q65w-4f2w/GHSA-xf6w-q65w-4f2w.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "apostrophe",
+        "ranges": [
+          {
+            "affected": "< 4.33.0",
+            "fixed": "4.33.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-xf6w-q65w-4f2w/GHSA-xf6w-q65w-4f2w.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "4.33.0"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-xf6w-q65w-4f2w"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Maintainer severity low differs from Reviewed MODERATE; maintainer label is displayed and the database vector retains its own source.",
+        "newerDatabase": false
+      },
+      {
+        "field": "content",
+        "reason": "Public maintainer HTML says Low with no displayed CVSS, versus Reviewed Moderate and CVSS 4.0. Current fixed field 4.33.0 conflicts with the prose Patches section saying none yet.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}
