@@ -33,13 +33,16 @@ function readClassification(p: URLSearchParams, out: UrlState) {
   }
   if (Object.keys(classification).length) out.classification = classification;
 }
-function readAdvisory(p: URLSearchParams, out: UrlState) {
+// Focus and product values are validated by each view against its own option list.
+function readFocus(p: URLSearchParams, out: UrlState) {
   const kind = p.get('kind');
   if (kind === 'vulnerability' || kind === 'product') out.kind = kind;
-  if (p.has('ecosystem')) out.ecosystem = p.get('ecosystem')!.slice(0, 80);
-  // Focus and product values are validated by each view against its own option list.
   if (/^[a-z]{1,20}$/.test(p.get('focus') ?? '')) out.focus = p.get('focus')!;
   if (/^[a-z0-9][a-z0-9-]{0,79}$/.test(p.get('product') ?? '')) out.product = p.get('product')!;
+}
+function readAdvisory(p: URLSearchParams, out: UrlState) {
+  readFocus(p, out);
+  if (p.has('ecosystem')) out.ecosystem = p.get('ecosystem')!.slice(0, 80);
   const lifecycle = p.get('lifecycle');
   if (lifecycle === 'active' || lifecycle === 'all' || lifecycle === 'withdrawn') out.lifecycle = lifecycle;
   if (/^\d{4}$/.test(p.get('year') ?? '')) out.year = p.get('year')!;
@@ -90,11 +93,14 @@ function writeClassification(p: URLSearchParams, classification?: Partial<Classi
     if (value && Object.prototype.hasOwnProperty.call(CLASSIFICATION_OPTIONS[key], value)) p.set(key, value);
   }
 }
-function writeAdvisory(p: URLSearchParams, state: UrlState) {
+function writeFocus(p: URLSearchParams, state: UrlState) {
   if (state.kind === 'vulnerability' || state.kind === 'product') p.set('kind', state.kind);
-  if (state.ecosystem && state.ecosystem !== 'all') p.set('ecosystem', state.ecosystem);
   if (state.focus && state.focus !== 'all') p.set('focus', state.focus);
   if (state.product && state.product !== 'all') p.set('product', state.product);
+}
+function writeAdvisory(p: URLSearchParams, state: UrlState) {
+  writeFocus(p, state);
+  if (state.ecosystem && state.ecosystem !== 'all') p.set('ecosystem', state.ecosystem);
   if (state.lifecycle && state.lifecycle !== 'active') p.set('lifecycle', state.lifecycle);
   if (state.year && state.year !== 'all') p.set('year', state.year);
   if (state.page !== undefined && state.page > 0) p.set('page', String(state.page));

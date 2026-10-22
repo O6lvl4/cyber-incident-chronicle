@@ -21,6 +21,29 @@ function Alerts({ item }: { item: ProductAdvisory }) {
     <p className="fine-print">注意喚起がないことは、重要性が低いことや安全であることを意味しません。</p>
   </>;
 }
+function Assessment({ item }: { item: ProductAdvisory }) {
+  return <>
+    <h3>公表元の評価</h3>
+    <p>{SEVERITY_LABELS[item.severity.label]} {item.severity.sourceUrl && <a href={item.severity.sourceUrl} target="_blank" rel="noopener noreferrer">評価の出典 ↗</a>}</p>
+    {item.severity.cvss.length ? <ul>{item.severity.cvss.map((score, index) => <li key={index}>CVSS {score.version}：{score.score ?? '数値未記載'}<br/>{score.vector && <span className="cvss-vector">{score.vector}<br/></span>}<a href={score.sourceUrl} target="_blank" rel="noopener noreferrer">出典 ↗</a></li>)}</ul> : <p className="fine-print">CVSSは未収録です。スコアを推計・再計算しません。</p>}
+    <h3>悪用情報と CISA KEV</h3>
+    <p>実際の悪用：{item.exploitation.status === 'reported' ? '出典に報告あり' : '未確認'} {item.exploitation.sourceUrl && <a href={item.exploitation.sourceUrl} target="_blank" rel="noopener noreferrer">根拠 ↗</a>}</p>
+    <p>CISA KEV：{KEV_LABELS[item.kev.status]}{item.kev.addedDate && <> （追加日 {item.kev.addedDate}）</>} {item.kev.sourceUrl && <a href={item.kev.sourceUrl} target="_blank" rel="noopener noreferrer">照合先 ↗</a>}{item.kev.checkedAt && <span className="muted"> ({utc(item.kev.checkedAt)})</span>}</p>
+    <p className="fine-print">脆弱性の公開、実際の悪用、企業の被害は別の事実です。未確認・KEV未掲載は、悪用がないことを意味しません。</p>
+  </>;
+}
+function Dates({ item }: { item: ProductAdvisory }) {
+  return <>
+    <dl className="date-grid">
+      <div><dt>収録契機日</dt><dd>{item.listedDate}<br/><span className="muted">{item.listedNote}</span></dd></div>
+      <div><dt>開発元の公表日</dt><dd>{item.publishedDate}{item.publishedAt && <><br/><span className="muted">{utc(item.publishedAt)}</span></>}</dd></div>
+      <div><dt>資料の最終更新</dt><dd>{item.modifiedAt ? utc(item.modifiedAt) : '未確認'}</dd></div>
+      <div><dt>資料の最終確認</dt><dd>{utc(item.lastVerifiedAt)}</dd></div>
+      <div><dt>撤回</dt><dd>{item.withdrawnAt ? utc(item.withdrawnAt) : '記載なし'}</dd></div>
+    </dl>
+    <p className="fine-print"><a href={item.dateSourceUrl} target="_blank" rel="noopener noreferrer">日付の出典 ↗</a>。{item.dateNote}</p>
+  </>;
+}
 export default function ProductDetail({ item }: { item: ProductAdvisory }) {
   return <article className="panel-body incident-detail vulnerability-detail product-detail">
     <span className="eyebrow">PRODUCT ADVISORY / 製品・ランタイムの注意喚起</span>
@@ -32,22 +55,9 @@ export default function ProductDetail({ item }: { item: ProductAdvisory }) {
     {item.withdrawnAt && <p className="withdrawn-note">この記録は撤回されています。履歴として表示し、現在の判断には使用しません。</p>}
     <p className="verification-note">開発元と公的機関の一次資料を確認した選定記録です。確認日時点の資料に基づき、利用環境に対する診断ではありません。</p>
     <p className="detail-summary">{item.summary}</p>
-    <dl className="date-grid">
-      <div><dt>収録契機日</dt><dd>{item.listedDate}<br/><span className="muted">{item.listedNote}</span></dd></div>
-      <div><dt>開発元の公表日</dt><dd>{item.publishedDate}{item.publishedAt && <><br/><span className="muted">{utc(item.publishedAt)}</span></>}</dd></div>
-      <div><dt>資料の最終更新</dt><dd>{utc(item.modifiedAt)}</dd></div>
-      <div><dt>資料の最終確認</dt><dd>{utc(item.lastVerifiedAt)}</dd></div>
-      <div><dt>撤回</dt><dd>{item.withdrawnAt ? utc(item.withdrawnAt) : '記載なし'}</dd></div>
-    </dl>
-    <p className="fine-print"><a href={item.dateSourceUrl} target="_blank" rel="noopener noreferrer">日付の出典 ↗</a>。{item.dateNote}</p>
+    <Dates item={item}/>
     <AffectedTable item={item}/>
-    <h3>公表元の評価</h3>
-    <p>{SEVERITY_LABELS[item.severity.label]} {item.severity.sourceUrl && <a href={item.severity.sourceUrl} target="_blank" rel="noopener noreferrer">評価の出典 ↗</a>}</p>
-    {item.severity.cvss.length ? <ul>{item.severity.cvss.map((score, index) => <li key={index}>CVSS {score.version}：{score.score ?? '数値未記載'}<br/>{score.vector && <span className="cvss-vector">{score.vector}<br/></span>}<a href={score.sourceUrl} target="_blank" rel="noopener noreferrer">出典 ↗</a></li>)}</ul> : <p className="fine-print">CVSSは未収録です。スコアを推計・再計算しません。</p>}
-    <h3>悪用情報と CISA KEV</h3>
-    <p>実際の悪用：{item.exploitation.status === 'reported' ? '出典に報告あり' : '未確認'} {item.exploitation.sourceUrl && <a href={item.exploitation.sourceUrl} target="_blank" rel="noopener noreferrer">根拠 ↗</a>}</p>
-    <p>CISA KEV：{KEV_LABELS[item.kev.status]}{item.kev.addedDate && <> （追加日 {item.kev.addedDate}）</>} {item.kev.sourceUrl && <a href={item.kev.sourceUrl} target="_blank" rel="noopener noreferrer">照合先 ↗</a>}{item.kev.checkedAt && <span className="muted"> ({utc(item.kev.checkedAt)})</span>}</p>
-    <p className="fine-print">脆弱性の公開、実際の悪用、企業の被害は別の事実です。未確認・KEV未掲載は、悪用がないことを意味しません。</p>
+    <Assessment item={item}/>
     <Alerts item={item}/>
     {item.mitigations.length > 0 && <><h3>開発元が示す緩和策（更新の代替ではない）</h3><ul>{item.mitigations.map(entry => <li key={entry.text}>{entry.text} <a href={entry.sourceUrl} target="_blank" rel="noopener noreferrer">出典 ↗</a></li>)}</ul></>}
     <h3>解釈上の注意</h3><ul>{item.caveats.map(note => <li key={note}>{note}</li>)}</ul>

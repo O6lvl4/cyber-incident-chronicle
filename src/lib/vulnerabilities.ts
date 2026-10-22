@@ -32,11 +32,11 @@ export function matchesFocus(item: Focusable, focus: Focus): boolean {
   const exploited = item.exploitation?.status === 'reported';
   const kev = item.kev?.status === 'listed';
   switch (focus) {
-    case 'all': return true;
     case 'priority': return critical || exploited || kev;
     case 'critical': return critical;
     case 'exploited': return exploited;
     case 'kev': return kev;
+    default: return true;
   }
 }
 const searchText = new WeakMap<SearchableAdvisory, string>();

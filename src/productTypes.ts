@@ -27,7 +27,7 @@ export interface ProductAdvisory {
   /** The day an inclusion reason was first met (vendor disclosure, alert, KEV addition or exploitation report). The timeline axis. */
   listedDate: string;
   listedNote: string;
-  modifiedAt: string;
+  modifiedAt: string | null;
   withdrawnAt: string | null;
   lastVerifiedAt: string;
   affected: ProductAffectedRange[];

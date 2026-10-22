@@ -1,4 +1,4 @@
-import type { DrawerMode, AppState } from '../hooks/useAppState';
+import type { DrawerMode } from '../hooks/useAppState';
 import type { DuckDBHandle } from '../hooks/useDuckDB';
 import type { UrlState } from '../lib/urlState';
 import type { ProductAdvisory } from '../productTypes';
