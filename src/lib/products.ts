@@ -2,16 +2,17 @@ import type { TimelineEvent } from '../types';
 import type { ProductAdvisory, ProductInclusion } from '../productTypes';
 import { matchesFocus, type Focus } from './vulnerabilities.ts';
 export const INCLUSION_LABELS: Record<ProductInclusion, string> = {
-  critical: '開発元評価 Critical', exploited: '実悪用の報告', kev: 'CISA KEV 掲載', alert: '公的機関の注意喚起',
+  critical: '公表元評価 Critical', exploited: '実悪用の報告', kev: 'CISA KEV 掲載', alert: '公的機関の注意喚起', poc: '攻撃コード公開',
 };
-export const INCLUSION_ORDER: ProductInclusion[] = ['alert', 'kev', 'exploited', 'critical'];
+export const INCLUSION_ORDER: ProductInclusion[] = ['alert', 'kev', 'exploited', 'poc', 'critical'];
 /** Product focus adds the alert reason; the four library focus values keep the same meaning. */
 export const PRODUCT_FOCUS_OPTIONS = [
   { value: 'all', label: '収録理由：すべて' },
   { value: 'alert', label: '公的機関の注意喚起あり' },
-  { value: 'critical', label: '開発元評価 Critical' },
+  { value: 'critical', label: '公表元評価 Critical' },
   { value: 'exploited', label: '実悪用の報告あり' },
   { value: 'kev', label: 'CISA KEV 掲載' },
+  { value: 'poc', label: '攻撃コードの公開あり' },
 ] as const;
 export type ProductFocus = typeof PRODUCT_FOCUS_OPTIONS[number]['value'];
 export function normalizeProductFocus(value?: string): ProductFocus {
@@ -26,10 +27,14 @@ function searchable(item: ProductAdvisory): string {
   }
   return text;
 }
+function matchesProductFocus(item: ProductAdvisory, focus: ProductFocus): boolean {
+  if (focus === 'alert' || focus === 'poc') return item.inclusion.includes(focus);
+  return focus === 'all' || matchesFocus(item, focus as Focus);
+}
 export function filterProducts(items: ProductAdvisory[], { productKey = 'all', focus = 'all', year = 'all', query = '' }: { productKey?: string; focus?: ProductFocus; year?: string; query?: string } = {}): ProductAdvisory[] {
   const needle = query.trim().toLocaleLowerCase();
   return items.filter(item => (productKey === 'all' || item.productKey === productKey)
-    && (focus === 'all' || (focus === 'alert' ? item.inclusion.includes('alert') : matchesFocus(item, focus as Focus)))
+    && matchesProductFocus(item, focus)
     && (year === 'all' || item.listedDate.startsWith(`${year}-`))
     && (!needle || searchable(item).includes(needle)))
     .sort((a, b) => b.listedDate.localeCompare(a.listedDate) || a.id.localeCompare(b.id));

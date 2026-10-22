@@ -1,10 +1,10 @@
 import type { Vulnerability } from './vulnerabilityTypes';
 /** Why a product advisory is retained; each reason must be backed by its own evidence field. */
-export type ProductInclusion = 'critical' | 'exploited' | 'kev' | 'alert';
+export type ProductInclusion = 'critical' | 'exploited' | 'kev' | 'alert' | 'poc';
 export interface ProductAffectedRange { name: string; affected: string; fixed: string | null; sourceUrl: string; note?: string }
 export interface ProductAlert { issuer: string; title: string; url: string; publishedDate: string }
 export interface ProductAlertCheck { issuer: string; url: string; checkedAt: string; result: 'found' | 'notFound' | 'failed' }
-export interface ProductSource { type: 'maintainer' | 'advisoryDatabase' | 'release' | 'kev' | 'exploitation' | 'alert'; title: string; url: string; publishedDate: string | null; publishedAt?: string; modifiedAt?: string }
+export interface ProductSource { type: 'maintainer' | 'advisoryDatabase' | 'release' | 'kev' | 'exploitation' | 'alert' | 'poc'; title: string; url: string; publishedDate: string | null; publishedAt?: string; modifiedAt?: string }
 /**
  * A vendor-disclosed vulnerability in a runtime, platform or product that is not a
  * package in the library ecosystems. Retained only when a stated inclusion reason holds.
@@ -34,6 +34,8 @@ export interface ProductAdvisory {
   severity: Vulnerability['severity'];
   exploitation: Vulnerability['exploitation'];
   kev: Vulnerability['kev'] & { addedDate?: string | null };
+  /** Attack code published by the discloser or vendor; third-party write-ups and hash-only releases do not count. */
+  poc: { status: 'unknown' | 'public'; sourceUrl: string | null };
   alerts: ProductAlert[];
   alertChecks: ProductAlertCheck[];
   inclusion: ProductInclusion[];

@@ -13,7 +13,7 @@ const check = (label, value) => { assert.ok(value, label); checks.push(label); }
 // Independent oracles from source records; production filters are never reused here.
 const libraryFocus = { critical: item => item.severity.label === 'critical', exploited: item => item.exploitation.status === 'reported', kev: item => item.kev.status === 'listed' };
 libraryFocus.priority = item => libraryFocus.critical(item) || libraryFocus.exploited(item) || libraryFocus.kev(item);
-const productFocus = { ...libraryFocus, alert: item => item.alerts.length > 0 };
+const productFocus = { ...libraryFocus, alert: item => item.alerts.length > 0, poc: item => item.poc.status === 'public' };
 const sortedProducts = [...products].sort((a, b) => b.listedDate.localeCompare(a.listedDate) || a.id.localeCompare(b.id));
 async function waitFiltered(page, selector, count) {
   await page.waitForFunction(({ selector, count }) => Number(document.querySelector(selector)?.dataset.filtered) === count, { selector, count });
@@ -51,7 +51,7 @@ for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
         check(`${name}/${width}/products/${item.id}: retention reasons match evidence`, reasons.join(',') === [...item.inclusion].sort().join(','));
         if (item.publishedDate !== item.listedDate) check(`${name}/${width}/products/${item.id}: vendor day shown when it differs`, text.includes(item.publishedDate.replace(/-/g, '.')));
       }
-      for (const focus of ['alert', 'critical', 'exploited', 'kev']) {
+      for (const focus of ['alert', 'critical', 'exploited', 'kev', 'poc']) {
         const expected = products.filter(productFocus[focus]);
         await page.getByRole('combobox', { name: '収録理由', exact: true }).selectOption(focus);
         await waitFiltered(page, '.product-app', expected.length);

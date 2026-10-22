@@ -99,7 +99,7 @@ export function draftFromKev(entry, cve, checkedAt) {
     listedDate: entry.dateAdded, listedNote: 'CISA KEVに追加された日（TODO: 他の理由が先なら差し替え）', modifiedAt: meta.dateUpdated ?? null, withdrawnAt: null, lastVerifiedAt: checkedAt,
     affected: affected.length ? affected : [{ name: `${entry.vendorProject} ${entry.product}`, affected: 'TODO', fixed: null, sourceUrl: SOURCES.cve(entry.cveID) }],
     severity: { label: critical ? 'critical' : cvss.length ? 'TODO' : 'unknown', sourceUrl: cvss.length ? SOURCES.cve(entry.cveID) : null, cvss },
-    exploitation: { status: 'reported', sourceUrl: SOURCES.kev }, kev: { status: 'listed', checkedAt, sourceUrl: SOURCES.kev, addedDate: entry.dateAdded },
+    exploitation: { status: 'reported', sourceUrl: SOURCES.kev }, kev: { status: 'listed', checkedAt, sourceUrl: SOURCES.kev, addedDate: entry.dateAdded }, poc: { status: 'unknown', sourceUrl: null },
     alerts: [], alertChecks: [], inclusion: [...(critical ? ['critical'] : []), 'exploited', 'kev'], mitigations: [],
     sources: [{ type: 'maintainer', title: `TODO: 開発元告知（KEV備考: ${vendorUrl}）`, url: vendorUrl.startsWith('https://') ? vendorUrl : 'https://TODO', publishedDate: null }, { type: 'advisoryDatabase', title: `公開CVEレコード（CNA: ${cna.providerMetadata?.shortName ?? 'TODO'}）`, url: SOURCES.cve(entry.cveID), publishedDate: (meta.datePublished ?? '').slice(0, 10) || null, publishedAt: meta.datePublished, modifiedAt: meta.dateUpdated }, { type: 'kev', title: 'CISA Known Exploited Vulnerabilities catalog', url: SOURCES.kev, publishedDate: entry.dateAdded }],
     caveats: ['TODO: 開発元資料を読んで注意書きを書く。この下書きはCISA KEVとCNAレコードだけから生成した。'],
