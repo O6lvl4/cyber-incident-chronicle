@@ -54,7 +54,7 @@
 
 2026年10月1日〜22日の `listedDate` を対象に31件を収録した。内訳は CISA KEV 10月追加分 24件、IPA注意喚起だけが契機の Movable Type 2件と Oracle Java SE 1件（54 CVE を1記録に集約）、開発元 Critical が契機の PHP 2件（IPA注意喚起も確認）と GitLab 2件。候補と判定は [確認記録](data/product-advisory-review-2026-10-22.json) を参照。
 
-- JPCERT/CC の10月注意喚起3件のうち、SiteGuard Server Edition と Microsoft 10月更新は収録、国内組織の不正アクセスは製品を特定しないため対象外
+- JPCERT/CC の10月注意喚起4件のうち、SiteGuard Server Edition、Microsoft 10月更新、PHP（10月22日、初回確認後に追加）は収録、国内組織の不正アクセスは製品を特定しないため対象外
 - IPA の10月分7件のうち、不正アクセス事案対策は製品を特定しないため対象外。NetScaler（9月28日）は対象期間前
 - Oracle Java SE は当初、Critical なし・JPCERT注意喚起なしで除外としていたが、IPAの10月21日注意喚起を確認して `alert` 理由で収録した
 - KEV 10月追加分のうち、ProFTPD・BIND・Struts・ONLYOFFICE・Strapi の5件は2015〜2023年公表の古い脆弱性で、`publishedDate` と `listedDate` が離れる。Struts と Strapi はライブラリとしても配布されるが、ライブラリ収録期間（2022年11月以降）より前のため、ライブラリ側には存在しない
