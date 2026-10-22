@@ -29,7 +29,8 @@ function Assessment({ item }: { item: ProductAdvisory }) {
     <h3>悪用情報と CISA KEV</h3>
     <p>実際の悪用：{item.exploitation.status === 'reported' ? '出典に報告あり' : '未確認'} {item.exploitation.sourceUrl && <a href={item.exploitation.sourceUrl} target="_blank" rel="noopener noreferrer">根拠 ↗</a>}</p>
     <p>CISA KEV：{KEV_LABELS[item.kev.status]}{item.kev.addedDate && <> （追加日 {item.kev.addedDate}）</>} {item.kev.sourceUrl && <a href={item.kev.sourceUrl} target="_blank" rel="noopener noreferrer">照合先 ↗</a>}{item.kev.checkedAt && <span className="muted"> ({utc(item.kev.checkedAt)})</span>}</p>
-    <p className="fine-print">脆弱性の公開、実際の悪用、企業の被害は別の事実です。未確認・KEV未掲載は、悪用がないことを意味しません。</p>
+    <p>攻撃コードの公開：{item.poc.status === 'public' ? '公表者・開発元による公開あり' : '未確認'} {item.poc.sourceUrl && <a href={item.poc.sourceUrl} target="_blank" rel="noopener noreferrer">根拠 ↗</a>}</p>
+    <p className="fine-print">脆弱性の公開、攻撃コードの公開、実際の悪用、企業の被害は別の事実です。未確認・KEV未掲載は、悪用がないことを意味しません。</p>
   </>;
 }
 function Dates({ item }: { item: ProductAdvisory }) {

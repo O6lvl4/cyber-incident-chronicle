@@ -12,17 +12,18 @@
 | `critical` 公表元の評価 Critical | `severity.label === 'critical'` と出典URL |
 | `exploited` 実悪用の報告 | `exploitation.status === 'reported'` と出典URL |
 | `kev` CISA KEV 掲載 | `kev.status === 'listed'`、`addedDate`、照合日時、CISAのURL |
+| `poc` 攻撃コードの公開 | `poc.status === 'public'` と、公表者本人または開発元が公開した一次資料（`sources` で `type: 'poc'`）のURL |
 
 検証スクリプト `scripts/product-status.mjs` は、理由と根拠の双方向の整合（根拠があるのに理由を省く、理由があるのに根拠がない）を失敗にする。深刻度・悪用・KEV の各値は出典URLが `sources` に含まれていなければならない。
 
-**収録しないもの**：第三者の観測記事だけが根拠の悪用報告、開発元の実証（PoC）だけの悪用、製品を特定しない一般的な注意喚起（例：JPCERT-AT-2026-0030）。
+**収録しないもの**：第三者の観測記事だけが根拠の悪用報告、第三者の記事やハッシュだけで本体が非公開の攻撃コード、製品を特定しない一般的な注意喚起（例：JPCERT-AT-2026-0030）。開発元や公表者が「実証した」と述べるだけでコードを公開していない場合は `poc` に当たらず、`caveats` に記す。
 
 **開発元 Critical の範囲**：すべての開発元のCritical公表を網羅的に探索しているわけではない。注意喚起・KEV・確認依頼を通じて確認した製品に限る。この境界は各確認記録に明記する。
 
 ## 2つの日付
 
 - `publishedDate`：開発元の公表日。CVEレコードやデータベースの公開日時とは区別し、時刻が資料にある場合だけ `publishedAt` に保持する
-- `listedDate`：収録契機日。注意喚起の公開日、CISA KEVへの追加日、開発元のCritical公表日、実悪用報告の公表日のうち、収録基準を最初に満たした日。タイムラインと対象期間の判定に使う。検証スクリプトは、この日が根拠項目の日付のいずれかと一致することを要求する
+- `listedDate`：収録契機日。注意喚起の公開日、CISA KEVへの追加日、開発元のCritical公表日、実悪用報告の公表日、攻撃コードの公開日のうち、収録基準を最初に満たした日。タイムラインと対象期間の判定に使う。検証スクリプトは、この日が根拠項目の日付のいずれかと一致することを要求する
 
 2015年公表の脆弱性が2026年10月にKEVへ追加された場合、`publishedDate` は2015年、`listedDate` は追加日になる。両方を一覧と詳細に表示し、どちらかで代用しない。
 
@@ -49,7 +50,7 @@
 
 報告は `.cache/product-candidates/<日付>.json` に書き、`--summary` で Markdown も出力する。`--draft` を付けると KEV 由来の候補について CNA レコードから下書きを `.cache/product-drafts/` に生成するが、下書きには `TODO` が残るため、検証スクリプトは `src/data/products` に置かれた下書きを失敗にする。公開は常に人が一次資料を読んで判定する。
 
-取得失敗は終了コード 2 で区別し、「候補なし」とは扱わない。GitHub Actions の `product-candidates` ワークフローが毎週月曜に同じ検出を実行し、結果をジョブの要約とアーティファクトに残す（Issue や PR は自動作成しない）。
+`poc`（攻撃コードの公開）には自動検出の発見源がなく、oss-security などを人が確認して手動で追加する。取得失敗は終了コード 2 で区別し、「候補なし」とは扱わない。GitHub Actions の `product-candidates` ワークフローが毎週月曜に同じ検出を実行し、結果をジョブの要約とアーティファクトに残す（Issue や PR は自動作成しない）。
 
 ## 更新手順
 
@@ -63,7 +64,7 @@
 
 ## 2026-10-22 の初回収録
 
-2026年10月1日〜22日の `listedDate` を対象に31件を収録した。内訳は CISA KEV 10月追加分 24件、IPA注意喚起だけが契機の Movable Type 2件と Oracle Java SE 1件（54 CVE を1記録に集約）、開発元 Critical が契機の PHP 2件（IPA注意喚起も確認）と GitLab 2件。候補と判定は [確認記録](data/product-advisory-review-2026-10-22.json) を参照。
+2026年10月1日〜22日の `listedDate` を対象に31件を収録し、同日中に `poc` 理由を追加して Linux カーネルの Infinity Core 6件（CVE-2026-98260、98256、89754、80775、98385、97941。公表者が10月16日に攻撃コードを公開、kernel CNA の CVSS は 7.8 High または未記載、注意喚起・KEV・実悪用なし）を加え、計37件とした。内訳は CISA KEV 10月追加分 24件、IPA注意喚起だけが契機の Movable Type 2件と Oracle Java SE 1件（54 CVE を1記録に集約）、開発元 Critical が契機の PHP 2件（IPA注意喚起も確認）と GitLab 2件。候補と判定は [確認記録](data/product-advisory-review-2026-10-22.json) を参照。
 
 - JPCERT/CC の10月注意喚起4件のうち、SiteGuard Server Edition、Microsoft 10月更新、PHP（10月22日、初回確認後に追加）は収録、国内組織の不正アクセスは製品を特定しないため対象外
 - IPA の10月分7件のうち、不正アクセス事案対策は製品を特定しないため対象外。NetScaler（9月28日）は対象期間前

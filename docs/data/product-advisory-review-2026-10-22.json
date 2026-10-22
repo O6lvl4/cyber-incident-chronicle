@@ -8,9 +8,11 @@
       "alert",
       "critical",
       "exploited",
-      "kev"
+      "kev",
+      "poc"
     ],
-    "vendorCriticalBoundary": "開発元Criticalの探索は、注意喚起・KEV・確認依頼（PHP、Java、GitLab）で確認した製品に限る。全開発元の網羅ではない。"
+    "vendorCriticalBoundary": "開発元Criticalの探索は、注意喚起・KEV・確認依頼（PHP、Java、GitLab）で確認した製品に限る。全開発元の網羅ではない。",
+    "pocBoundary": "攻撃コード公開（poc）は、公表者本人または開発元が公開した一次資料に限る。第三者の記事やハッシュのみの非公開コードは根拠にしない。自動検出の発見源はなく、手動で追加する。"
   },
   "sources": [
     {
@@ -43,6 +45,12 @@
     {
       "name": "CVE Services (cveawg.mitre.org)",
       "note": "各CVEのレコードJSONを個別取得し、影響範囲・CVSS・公開/更新日時を転記"
+    },
+    {
+      "name": "oss-security（Infinity Core 投稿）",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/16/36",
+      "fetchedAt": "2026-10-22T13:30:00Z",
+      "note": "公表者 Hyunwoo Kim 氏の投稿。GitHub V4bel/InfinityCore に技術詳細と攻撃コード。第三者記事（rocket-boys.co.jp）を契機に確認したが根拠には使っていない"
     }
   ],
   "candidates": [
@@ -490,6 +498,78 @@
       "decision": "excluded",
       "reason": "NetScaler ADC / Gateway（CVE-2026-88771、CVE-2026-88772等）の注意喚起は9月に公開され、10月2日の行は更新。収録契機日は注意喚起の初回公開日であり対象期間前。期間を9月まで広げる際の候補。10月のKEV追加 CVE-2026-88779 とは別の脆弱性",
       "url": "https://www.jpcert.or.jp/at/2026/at260029.html"
+    },
+    {
+      "id": "CVE-2026-98260",
+      "origin": "poc-disclosure",
+      "decision": "included",
+      "inclusion": [
+        "poc"
+      ],
+      "product": "Linux カーネル",
+      "listedDate": "2026-10-16",
+      "publishedDate": "2026-10-06",
+      "note": "kernel CNA の CVSS 7.8 High（Futex・Scheduler は CVSS なし）、JPCERT/IPA 注意喚起なし、KEV 未掲載、実悪用未確認。公表者公開の攻撃コードを根拠に poc 理由で収録"
+    },
+    {
+      "id": "CVE-2026-98256",
+      "origin": "poc-disclosure",
+      "decision": "included",
+      "inclusion": [
+        "poc"
+      ],
+      "product": "Linux カーネル",
+      "listedDate": "2026-10-16",
+      "publishedDate": "2026-10-06",
+      "note": "kernel CNA の CVSS 7.8 High（Futex・Scheduler は CVSS なし）、JPCERT/IPA 注意喚起なし、KEV 未掲載、実悪用未確認。公表者公開の攻撃コードを根拠に poc 理由で収録"
+    },
+    {
+      "id": "CVE-2026-89754",
+      "origin": "poc-disclosure",
+      "decision": "included",
+      "inclusion": [
+        "poc"
+      ],
+      "product": "Linux カーネル",
+      "listedDate": "2026-10-16",
+      "publishedDate": "2026-09-11",
+      "note": "kernel CNA の CVSS 7.8 High（Futex・Scheduler は CVSS なし）、JPCERT/IPA 注意喚起なし、KEV 未掲載、実悪用未確認。公表者公開の攻撃コードを根拠に poc 理由で収録"
+    },
+    {
+      "id": "CVE-2026-80775",
+      "origin": "poc-disclosure",
+      "decision": "included",
+      "inclusion": [
+        "poc"
+      ],
+      "product": "Linux カーネル",
+      "listedDate": "2026-10-16",
+      "publishedDate": "2026-09-04",
+      "note": "kernel CNA の CVSS 7.8 High（Futex・Scheduler は CVSS なし）、JPCERT/IPA 注意喚起なし、KEV 未掲載、実悪用未確認。公表者公開の攻撃コードを根拠に poc 理由で収録"
+    },
+    {
+      "id": "CVE-2026-98385",
+      "origin": "poc-disclosure",
+      "decision": "included",
+      "inclusion": [
+        "poc"
+      ],
+      "product": "Linux カーネル",
+      "listedDate": "2026-10-16",
+      "publishedDate": "2026-10-12",
+      "note": "kernel CNA の CVSS 7.8 High（Futex・Scheduler は CVSS なし）、JPCERT/IPA 注意喚起なし、KEV 未掲載、実悪用未確認。公表者公開の攻撃コードを根拠に poc 理由で収録"
+    },
+    {
+      "id": "CVE-2026-97941",
+      "origin": "poc-disclosure",
+      "decision": "included",
+      "inclusion": [
+        "poc"
+      ],
+      "product": "Linux カーネル",
+      "listedDate": "2026-10-16",
+      "publishedDate": "2026-09-25",
+      "note": "kernel CNA の CVSS 7.8 High（Futex・Scheduler は CVSS なし）、JPCERT/IPA 注意喚起なし、KEV 未掲載、実悪用未確認。公表者公開の攻撃コードを根拠に poc 理由で収録"
     }
   ],
   "fetchFailures": [
@@ -525,12 +605,13 @@
     }
   ],
   "counts": {
-    "included": 31,
+    "included": 37,
     "byInclusion": {
       "alert": 7,
       "critical": 14,
       "exploited": 24,
-      "kev": 24
+      "kev": 24,
+      "poc": 6
     },
     "kevOctoberAdditions": 24,
     "excluded": 6

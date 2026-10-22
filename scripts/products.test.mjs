@@ -72,6 +72,8 @@ test('filters narrow by product, retention reason, year and search without inven
   assert.ok(filterProducts(records, { focus: 'critical' }).every(item => item.severity.label === 'critical'));
   assert.ok(filterProducts(records, { focus: 'exploited' }).every(item => item.exploitation.status === 'reported'));
   assert.ok(filterProducts(records, { focus: 'alert' }).every(item => item.alerts.length > 0));
+  assert.ok(filterProducts(records, { focus: 'poc' }).every(item => item.poc.status === 'public' && item.inclusion.includes('poc')));
+  assert.equal(filterProducts(records, { focus: 'poc' }).length, records.filter(item => item.poc.status === 'public').length);
   assert.equal(filterProducts(records, { focus: 'alert' }).length, records.filter(item => item.inclusion.includes('alert')).length);
   assert.equal(filterProducts(records, { query: critical.id.toLowerCase() }).length, 1);
   assert.equal(filterProducts(records, { query: 'no-such-product-zzz' }).length, 0);
@@ -135,4 +137,17 @@ test('clicking a column toggles direction on the same key and starts a new key f
   assert.equal(toggleProductSort('product-asc', 'id'), 'id-asc');
   assert.equal(toggleProductSort('id-asc', 'fix'), 'fix-desc');
   assert.equal(toggleProductSort('fix-desc', 'kev'), 'kev-desc');
+});
+
+test('public attack code needs a discloser/vendor poc source, and is declared as a reason', () => {
+  const poc = records.find(item => item.poc.status === 'public');
+  assert.ok(poc, 'a poc-backed record exists');
+  const a = structuredClone(poc); a.inclusion = a.inclusion.filter(reason => reason !== 'poc');
+  assert.match(validateProducts([a], meta).join(' '), /public attack code must be declared/);
+  const b = structuredClone(poc); b.poc.sourceUrl = b.sources.find(source => source.type === 'maintainer').url;
+  assert.match(validateProducts([b], meta).join(' '), /public poc requires a cited poc-typed source/);
+  const c = structuredClone(critical); c.inclusion.push('poc');
+  assert.match(validateProducts([c], meta).join(' '), /poc inclusion without public attack code/);
+  const d = structuredClone(critical); d.poc = { status: 'unknown', sourceUrl: 'https://example.com' };
+  assert.match(validateProducts([d], meta).join(' '), /unknown poc must have null source/);
 });

@@ -18,8 +18,8 @@ const text = value => typeof value === 'string' && value.trim().length > 0;
 const timestamp = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 19) === value.slice(0, 19);
 const day = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
 const https = value => { try { return new URL(value).protocol === 'https:'; } catch { return false; } };
-const INCLUSIONS = ['critical', 'exploited', 'kev', 'alert'];
-const SOURCE_TYPES = ['maintainer', 'advisoryDatabase', 'release', 'kev', 'exploitation', 'alert'];
+const INCLUSIONS = ['critical', 'exploited', 'kev', 'alert', 'poc'];
+const SOURCE_TYPES = ['maintainer', 'advisoryDatabase', 'release', 'kev', 'exploitation', 'alert', 'poc'];
 function validateSources(item, fail) {
   const sources = Array.isArray(item?.sources) ? item.sources : [];
   if (!sources.some(source => source?.type === 'maintainer')) fail('missing maintainer source');
@@ -61,6 +61,9 @@ function validateAssessment(item, cited, fail) {
     if (source?.type !== 'kev' || !https(source?.url) || !/(^|\.)cisa\.gov$/.test(new URL(source.url).hostname)) fail('KEV requires CISA evidence');
     if (timestamp(item?.kev?.checkedAt) && Date.parse(item.kev.checkedAt) > Date.parse(item.lastVerifiedAt)) fail('KEV check after verification');
   } else if (item?.kev?.sourceUrl !== null || item?.kev?.checkedAt !== null) fail('unknown KEV must have null evidence');
+  if (!['unknown', 'public'].includes(item?.poc?.status)) fail('invalid poc status');
+  if (item?.poc?.status === 'public' && (!cited(item.poc.sourceUrl) || (item?.sources ?? []).find(source => source?.url === item.poc.sourceUrl)?.type !== 'poc')) fail('public poc requires a cited poc-typed source');
+  if (item?.poc?.status === 'unknown' && item?.poc?.sourceUrl !== null) fail('unknown poc must have null source');
   if (item?.kev?.status === 'listed' && !day(item.kev.addedDate)) fail('KEV listing requires addedDate');
   if (item?.kev?.status !== 'listed' && item?.kev?.addedDate !== undefined && item.kev.addedDate !== null) fail('addedDate requires KEV listing');
 }
@@ -90,17 +93,20 @@ function validateInclusion(item, fail) {
     if (reason === 'exploited' && item?.exploitation?.status !== 'reported') fail('exploited inclusion without exploitation evidence');
     if (reason === 'kev' && item?.kev?.status !== 'listed') fail('kev inclusion without KEV listing');
     if (reason === 'alert' && !(Array.isArray(item?.alerts) && item.alerts.length)) fail('alert inclusion without an alert');
+    if (reason === 'poc' && item?.poc?.status !== 'public') fail('poc inclusion without public attack code');
   }
   if (item?.severity?.label === 'critical' && !inclusion.includes('critical')) fail('critical severity must be declared as an inclusion reason');
   if (item?.exploitation?.status === 'reported' && !inclusion.includes('exploited')) fail('reported exploitation must be declared as an inclusion reason');
   if (item?.kev?.status === 'listed' && !inclusion.includes('kev')) fail('KEV listing must be declared as an inclusion reason');
   if (Array.isArray(item?.alerts) && item.alerts.length && !inclusion.includes('alert')) fail('alerts must be declared as an inclusion reason');
+  if (item?.poc?.status === 'public' && !inclusion.includes('poc')) fail('public attack code must be declared as an inclusion reason');
   // The listed day must be one of the evidence dates, never a chosen date.
   const evidenceDates = new Set();
   if (inclusion.includes('critical')) evidenceDates.add(item?.publishedDate);
   if (inclusion.includes('alert')) for (const alert of item?.alerts ?? []) evidenceDates.add(alert?.publishedDate);
   if (inclusion.includes('kev')) evidenceDates.add(item?.kev?.addedDate);
   if (inclusion.includes('exploited')) evidenceDates.add((item?.sources ?? []).find(source => source?.url === item?.exploitation?.sourceUrl)?.publishedDate);
+  if (inclusion.includes('poc')) evidenceDates.add((item?.sources ?? []).find(source => source?.url === item?.poc?.sourceUrl)?.publishedDate);
   if (day(item?.listedDate) && !evidenceDates.has(item.listedDate)) fail('listedDate is not an evidence date of an inclusion reason');
 }
 export function validateProducts(records, meta = loadProductMeta()) {
