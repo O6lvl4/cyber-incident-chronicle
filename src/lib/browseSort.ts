@@ -37,7 +37,22 @@ export const PRODUCT_SORT_OPTIONS = [
   { value: 'severity-asc', label: '深刻度（低い順・未確認は末尾）', shortLabel: '深刻度：低い順' },
   { value: 'product-asc', label: '製品名（昇順）', shortLabel: '製品名：昇順' },
   { value: 'product-desc', label: '製品名（降順）', shortLabel: '製品名：降順' },
+  { value: 'id-asc', label: 'CVE / ID（昇順）', shortLabel: 'ID：昇順' },
+  { value: 'id-desc', label: 'CVE / ID（降順）', shortLabel: 'ID：降順' },
+  { value: 'fix-desc', label: '修正版の状態（あり → 一部 → 未確認）', shortLabel: '修正版：あり→未確認' },
+  { value: 'fix-asc', label: '修正版の状態（未確認 → 一部 → あり）', shortLabel: '修正版：未確認→あり' },
+  { value: 'kev-desc', label: 'CISA KEV 追加日（新しい順・未掲載は末尾）', shortLabel: 'KEV追加：新しい順' },
+  { value: 'kev-asc', label: 'CISA KEV 追加日（古い順・未掲載は末尾）', shortLabel: 'KEV追加：古い順' },
 ] as const;
+/** Each product list column maps to one sort key; the header toggles direction. */
+export const PRODUCT_COLUMN_SORTS = [
+  { key: 'listed', label: '収録契機 / 開発元公表', description: '収録契機日で並べ替え' },
+  { key: 'product', label: '製品 / 脆弱性', description: '製品名で並べ替え' },
+  { key: 'id', label: 'CVE / アドバイザリ', description: 'CVE・IDで並べ替え' },
+  { key: 'severity', label: '深刻度・収録理由', description: '深刻度で並べ替え（未確認は末尾）' },
+  { key: 'fix', label: '修正版', description: '修正版の状態で並べ替え' },
+] as const;
+export type ProductSortKey = typeof PRODUCT_COLUMN_SORTS[number]['key'] | 'published' | 'kev';
 
 export type IncidentSort = typeof INCIDENT_SORT_OPTIONS[number]['value'];
 export type ProductSort = typeof PRODUCT_SORT_OPTIONS[number]['value'];
@@ -63,7 +78,7 @@ export function normalizeProductSort(value?: string): ProductSort {
 type SortableIncident = Pick<Incident, 'id' | 'company' | 'announcementDate' | 'eventDates'>;
 type SortablePackage = Pick<PackageGroup, 'key' | 'packageName' | 'latestPublishedAt' | 'advisories'>;
 type SortableAdvisory = Pick<VulnerabilitySummary, 'id' | 'publishedAt' | 'severity'>;
-type SortableProduct = Pick<ProductAdvisory, 'id' | 'publishedDate' | 'listedDate' | 'severity' | 'product'>;
+type SortableProduct = Pick<ProductAdvisory, 'id' | 'publishedDate' | 'listedDate' | 'severity' | 'product' | 'affected' | 'withdrawnAt' | 'kev'>;
 type Comparator<T> = (left: T, right: T) => number;
 const names = new Intl.Collator('ja');
 const severityRank = { critical: 4, high: 3, medium: 2, low: 1, unknown: null } as const;
@@ -158,6 +173,23 @@ export function sortProducts<T extends SortableProduct>(items: readonly T[], sor
     product: (left, right) => names.compare(left.product, right.product) * direction,
     published: (left, right) => compareDate(left.publishedDate, right.publishedDate, direction),
     listed: (left, right) => compareDate(left.listedDate, right.listedDate, direction),
+    id: (left, right) => compareExact(left.id, right.id) * direction,
+    fix: (left, right) => (fixRank(left) - fixRank(right)) * direction,
+    kev: (left, right) => compareRank(left.kev.status === 'listed' ? timestamp(left.kev.addedDate ?? '') : null, right.kev.status === 'listed' ? timestamp(right.kev.addedDate ?? '') : null, direction),
   };
   return sorted(items, comparators[sort.split('-')[0]], item => item.id);
+}
+/** A fix state is a fact about retained ranges: every range fixed, some, or none; withdrawn records sort with none. */
+function fixRank(item: SortableProduct): number {
+  if (item.withdrawnAt) return 0;
+  const fixed = item.affected.filter(range => range.fixed !== null).length;
+  if (fixed === 0) return 0;
+  return fixed === item.affected.length ? 2 : 1;
+}
+/** Toggle a column: same key flips direction; a new key starts from its natural order. */
+export function toggleProductSort(current: ProductSort, key: ProductSortKey): ProductSort {
+  const [currentKey, currentDirection] = current.split('-');
+  const natural = key === 'product' || key === 'id' ? 'asc' : 'desc';
+  const flipped = currentDirection === 'desc' ? 'asc' : 'desc';
+  return normalizeProductSort(`${key}-${currentKey === key ? flipped : natural}`);
 }

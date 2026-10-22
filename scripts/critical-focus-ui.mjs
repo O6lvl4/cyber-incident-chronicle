@@ -58,6 +58,19 @@ for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
         check(`${name}/${width}/products/${focus}: exact count and URL`, Number(await page.locator('.product-app').getAttribute('data-filtered')) === expected.length && new URL(page.url()).hash.includes(`focus=${focus}`));
       }
       await page.getByRole('combobox', { name: '収録理由', exact: true }).selectOption('all');
+      if (width >= 768) {
+        await page.getByRole('button', { name: '深刻度・収録理由で並べ替え', exact: true }).click();
+        await page.waitForFunction(() => new URL(location.href).hash.includes('productSort=severity-desc'));
+        const rank = { critical: 4, high: 3, medium: 2, low: 1, unknown: 0 };
+        const shown = await page.locator('.product-card .status-badge[data-severity]').evaluateAll(nodes => nodes.map(node => node.dataset.severity));
+        check(`${name}/${width}/products: severity column sorts the full list and lands in the URL`, shown.length === products.length && shown.every((level, index) => index === 0 || rank[shown[index - 1]] >= rank[level]));
+        check(`${name}/${width}/products: active column exposes aria-sort`, await page.locator('[role="columnheader"][aria-sort="descending"] [data-sort-key="severity"]').count() === 1);
+        await page.getByRole('button', { name: '深刻度・収録理由で並べ替え', exact: true }).click();
+        await page.waitForFunction(() => new URL(location.href).hash.includes('productSort=severity-asc'));
+        check(`${name}/${width}/products: second click flips direction and the select follows`, await page.getByRole('combobox', { name: '一覧の並び順', exact: true }).inputValue() === 'severity-asc');
+        await page.getByRole('button', { name: '収録契機 / 開発元公表で並べ替え', exact: true }).click();
+        await page.waitForFunction(() => !new URL(location.href).hash.includes('productSort='));
+      }
       const productKey = sortedProducts[0].productKey;
       await page.getByRole('combobox', { name: '製品', exact: true }).selectOption(productKey);
       await waitFiltered(page, '.product-app', products.filter(item => item.productKey === productKey).length);

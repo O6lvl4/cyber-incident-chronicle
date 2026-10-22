@@ -1,4 +1,11 @@
 /* Product advisories share the research row rhythm; reasons for inclusion stay visible per row. */
+.research-list .sortable-columns { padding-top: 0; padding-bottom: 0; }
+.research-list .column-sort { display: inline-flex; align-items: center; gap: 4px; min-height: 30px; padding: 0; border: 0; background: transparent; color: var(--text-sub); font: inherit; font-size: 12px; line-height: 1.5; text-align: left; cursor: pointer; }
+.research-list .column-sort:hover, .research-list .column-sort:focus-visible { color: var(--accent); }
+.research-list .column-sort:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.research-list .column-sort[data-active="true"] { color: var(--text); font-weight: 600; }
+.research-list .column-sort-arrow { font-size: 11px; color: var(--text-sub); }
+.research-list .column-sort[data-active="true"] .column-sort-arrow { color: var(--accent); }
 .research-list { --research-product-columns: 104px minmax(0, 1fr) 176px 190px 92px 20px; }
 .research-list .product-columns { grid-template-columns: var(--research-product-columns); }
 .workspace.view-list .research-list .product-card { grid-template-columns: var(--research-product-columns); }
