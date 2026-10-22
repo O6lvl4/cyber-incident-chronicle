@@ -75,7 +75,7 @@ for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
       await verifyRows(page, [yearRecord], `${name}/${width}/year`);
       // The pinned corpus has no unknown ratings; exercise that supported state
       // through an isolated browse-index response fixture, never production data.
-      await page.route('**/advisories/**/index.json?schema=2', async route => {
+      await page.route('**/advisories/**/index.json?schema=3', async route => {
         const response = await route.fetch();
         const index = await response.json();
         index.records[0] = { ...index.records[0], id: unknown.id, aliases: [], severity: { label: 'unknown' }, withdrawnAt: null, affected: unknown.affected.map(({ ecosystem, packageName }) => ({ ecosystem, packageName })), publishedAt: unknown.publishedAt, modifiedAt: unknown.modifiedAt };
@@ -85,7 +85,7 @@ for (const [name, engine] of [['chromium', chromium], ['webkit', webkit]]) {
       await page.reload();
       await verifyRows(page, [unknown], `${name}/${width}/unknown`);
       check('unknown is visibly unverified', (await page.locator('.package-card').first().innerText()).includes('評価未確認'));
-      await page.unroute('**/advisories/**/index.json?schema=2');
+      await page.unroute('**/advisories/**/index.json?schema=3');
       await page.goto(route({ q: withdrawn.id, lifecycle: 'withdrawn' }));
       await page.reload();
       await verifyRows(page, [withdrawn], `${name}/${width}/withdrawn`);

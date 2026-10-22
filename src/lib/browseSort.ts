@@ -1,6 +1,7 @@
 import type { Incident, IncidentDateEvidence } from '../types';
 import type { PackageGroup } from './packageGroups';
 import type { VulnerabilitySummary } from './vulnerabilities';
+import type { ProductAdvisory } from '../productTypes';
 
 export const INCIDENT_SORT_OPTIONS = [
   { value: 'published-desc', label: '公表日（新しい順）', shortLabel: '公表日：新しい順' },
@@ -27,7 +28,19 @@ export const ADVISORY_SORT_OPTIONS = [
   { value: 'severity-asc', label: '深刻度（低い順・未確認は末尾）', shortLabel: '深刻度：低い順' },
 ] as const;
 
+export const PRODUCT_SORT_OPTIONS = [
+  { value: 'listed-desc', label: '収録契機日（新しい順）', shortLabel: '収録契機：新しい順' },
+  { value: 'listed-asc', label: '収録契機日（古い順）', shortLabel: '収録契機：古い順' },
+  { value: 'published-desc', label: '開発元の公表日（新しい順）', shortLabel: '公表日：新しい順' },
+  { value: 'published-asc', label: '開発元の公表日（古い順）', shortLabel: '公表日：古い順' },
+  { value: 'severity-desc', label: '深刻度（高い順・未確認は末尾）', shortLabel: '深刻度：高い順' },
+  { value: 'severity-asc', label: '深刻度（低い順・未確認は末尾）', shortLabel: '深刻度：低い順' },
+  { value: 'product-asc', label: '製品名（昇順）', shortLabel: '製品名：昇順' },
+  { value: 'product-desc', label: '製品名（降順）', shortLabel: '製品名：降順' },
+] as const;
+
 export type IncidentSort = typeof INCIDENT_SORT_OPTIONS[number]['value'];
+export type ProductSort = typeof PRODUCT_SORT_OPTIONS[number]['value'];
 export type PackageSort = typeof PACKAGE_SORT_OPTIONS[number]['value'];
 export type AdvisorySort = typeof ADVISORY_SORT_OPTIONS[number]['value'];
 
@@ -43,9 +56,14 @@ export function normalizeAdvisorySort(value?: string): AdvisorySort {
   return ADVISORY_SORT_OPTIONS.find(option => option.value === value)?.value ?? 'published-desc';
 }
 
+export function normalizeProductSort(value?: string): ProductSort {
+  return PRODUCT_SORT_OPTIONS.find(option => option.value === value)?.value ?? 'listed-desc';
+}
+
 type SortableIncident = Pick<Incident, 'id' | 'company' | 'announcementDate' | 'eventDates'>;
 type SortablePackage = Pick<PackageGroup, 'key' | 'packageName' | 'latestPublishedAt' | 'advisories'>;
 type SortableAdvisory = Pick<VulnerabilitySummary, 'id' | 'publishedAt' | 'severity'>;
+type SortableProduct = Pick<ProductAdvisory, 'id' | 'publishedDate' | 'listedDate' | 'severity' | 'product'>;
 type Comparator<T> = (left: T, right: T) => number;
 const names = new Intl.Collator('ja');
 const severityRank = { critical: 4, high: 3, medium: 2, low: 1, unknown: null } as const;
@@ -131,4 +149,15 @@ export function sortAdvisories<T extends SortableAdvisory>(items: readonly T[], 
     ? (left, right) => compareRank(severityRank[left.severity.label], severityRank[right.severity.label], direction)
     : (left, right) => compareDate(left.publishedAt, right.publishedAt, direction);
   return sorted(items, compare, item => item.id);
+}
+
+export function sortProducts<T extends SortableProduct>(items: readonly T[], sort: ProductSort = 'listed-desc'): T[] {
+  const direction = sort.endsWith('-desc') ? -1 : 1;
+  const comparators: Record<string, Comparator<T>> = {
+    severity: (left, right) => compareRank(severityRank[left.severity.label], severityRank[right.severity.label], direction),
+    product: (left, right) => names.compare(left.product, right.product) * direction,
+    published: (left, right) => compareDate(left.publishedDate, right.publishedDate, direction),
+    listed: (left, right) => compareDate(left.listedDate, right.listedDate, direction),
+  };
+  return sorted(items, comparators[sort.split('-')[0]], item => item.id);
 }

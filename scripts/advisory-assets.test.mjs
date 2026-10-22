@@ -29,7 +29,10 @@ test('compact browse index retains every searchable identity, package, lifecycle
     assert.deepEqual(item.affected, source.affected.map(({ ecosystem, packageName }) => ({ ecosystem, packageName })));
     assert.equal(fixLabel(item), fixLabel(source));
     assert.equal(item.severity.label, source.severity.label);
+    assert.deepEqual(item.exploitation, source.exploitation.status === 'unknown' ? undefined : { status: source.exploitation.status });
+    assert.deepEqual(item.kev, source.kev.status === 'unknown' ? undefined : { status: source.kev.status });
   }
+  assert.ok(index.records.some(item => item.exploitation?.status === 'reported') === records.some(item => item.exploitation.status === 'reported'));
   const oldest = [...records].sort((a, b) => a.publishedAt.localeCompare(b.publishedAt))[0];
   assert.ok(filterVulnerabilities(index.records, 'all', oldest.id).some(item => item.id === oldest.id));
 });

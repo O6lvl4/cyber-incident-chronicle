@@ -1,10 +1,11 @@
-import { normalizeIncidentSort, normalizePackageSort, normalizeAdvisorySort, type IncidentSort, type PackageSort, type AdvisorySort } from './browseSort.ts';
+import { normalizeIncidentSort, normalizePackageSort, normalizeAdvisorySort, normalizeProductSort, type IncidentSort, type PackageSort, type AdvisorySort, type ProductSort } from './browseSort.ts';
 import { parsePackageKey, packageKey } from './packageGroups.ts';
 import type { ClassificationFilters } from '../classificationTypes';
 import { CLASSIFICATION_OPTIONS } from './classification.ts';
 import { LEGACY_LEVEL_OFFSET, MAX_LEVEL, ZOOM_VERSION } from '../engine/zoom.ts';
 /** Shareable timeline view, filter, selection and theme state. */
-export interface UrlState { sort?: IncidentSort; packageSort?: PackageSort; advisorySort?: AdvisorySort; view?: 'list' | 'timeline'; packageKey?: string; packagePage?: number; classification?: Partial<ClassificationFilters>; kind?: 'incident' | 'vulnerability'; ecosystem?: string; year?: string; lifecycle?: 'active' | 'all' | 'withdrawn'; page?: number; level?: number; center?: number; sel?: string; lanes?: string[]; dark?: boolean; query?: string; status?: string }
+export type UrlKind = 'incident' | 'vulnerability' | 'product';
+export interface UrlState { sort?: IncidentSort; packageSort?: PackageSort; advisorySort?: AdvisorySort; productSort?: ProductSort; view?: 'list' | 'timeline'; packageKey?: string; packagePage?: number; classification?: Partial<ClassificationFilters>; kind?: UrlKind; ecosystem?: string; year?: string; lifecycle?: 'active' | 'all' | 'withdrawn'; focus?: string; product?: string; page?: number; level?: number; center?: number; sel?: string; lanes?: string[]; dark?: boolean; query?: string; status?: string }
 function readView(p: URLSearchParams): UrlState {
   const view: UrlState = {};
   const level = p.get('l');
@@ -32,8 +33,15 @@ function readClassification(p: URLSearchParams, out: UrlState) {
   }
   if (Object.keys(classification).length) out.classification = classification;
 }
+// Focus and product values are validated by each view against its own option list.
+function readFocus(p: URLSearchParams, out: UrlState) {
+  const kind = p.get('kind');
+  if (kind === 'vulnerability' || kind === 'product') out.kind = kind;
+  if (/^[a-z]{1,20}$/.test(p.get('focus') ?? '')) out.focus = p.get('focus')!;
+  if (/^[a-z0-9][a-z0-9-]{0,79}$/.test(p.get('product') ?? '')) out.product = p.get('product')!;
+}
 function readAdvisory(p: URLSearchParams, out: UrlState) {
-  if (p.get('kind') === 'vulnerability') out.kind = 'vulnerability';
+  readFocus(p, out);
   if (p.has('ecosystem')) out.ecosystem = p.get('ecosystem')!.slice(0, 80);
   const lifecycle = p.get('lifecycle');
   if (lifecycle === 'active' || lifecycle === 'all' || lifecycle === 'withdrawn') out.lifecycle = lifecycle;
@@ -44,14 +52,17 @@ function readSort(p: URLSearchParams, out: UrlState) {
   if (p.has('sort')) out.sort = normalizeIncidentSort(p.get('sort')!);
   if (p.has('packageSort')) out.packageSort = normalizePackageSort(p.get('packageSort')!);
   if (p.has('advisorySort')) out.advisorySort = normalizeAdvisorySort(p.get('advisorySort')!);
+  if (p.has('productSort')) out.productSort = normalizeProductSort(p.get('productSort')!);
 }
 function writeSort(p: URLSearchParams, state: UrlState) {
   const sort = normalizeIncidentSort(state.sort);
   const packages = normalizePackageSort(state.packageSort);
   const advisories = normalizeAdvisorySort(state.advisorySort);
+  const products = normalizeProductSort(state.productSort);
   if (sort !== 'published-desc') p.set('sort', sort);
   if (packages !== 'latest-desc') p.set('packageSort', packages);
   if (advisories !== 'published-desc') p.set('advisorySort', advisories);
+  if (products !== 'listed-desc') p.set('productSort', products);
 }
 export function readUrl(): UrlState {
   const p = new URLSearchParams(location.hash.replace(/^#/, ''));
@@ -82,8 +93,13 @@ function writeClassification(p: URLSearchParams, classification?: Partial<Classi
     if (value && Object.prototype.hasOwnProperty.call(CLASSIFICATION_OPTIONS[key], value)) p.set(key, value);
   }
 }
+function writeFocus(p: URLSearchParams, state: UrlState) {
+  if (state.kind === 'vulnerability' || state.kind === 'product') p.set('kind', state.kind);
+  if (state.focus && state.focus !== 'all') p.set('focus', state.focus);
+  if (state.product && state.product !== 'all') p.set('product', state.product);
+}
 function writeAdvisory(p: URLSearchParams, state: UrlState) {
-  if (state.kind === 'vulnerability') p.set('kind', state.kind);
+  writeFocus(p, state);
   if (state.ecosystem && state.ecosystem !== 'all') p.set('ecosystem', state.ecosystem);
   if (state.lifecycle && state.lifecycle !== 'active') p.set('lifecycle', state.lifecycle);
   if (state.year && state.year !== 'all') p.set('year', state.year);
