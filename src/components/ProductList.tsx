@@ -2,8 +2,25 @@ import { useEffect, useRef } from 'react';
 import type { ProductAdvisory } from '../productTypes';
 import { SEVERITY_LABELS } from '../lib/vulnerabilities';
 import { INCLUSION_LABELS, INCLUSION_ORDER, productFixLabel } from '../lib/products';
-interface Props { hidden?: boolean; items: ProductAdvisory[]; total: number; selectedId?: string; onSelect: (id: string) => void; onReset: () => void }
-export default function ProductList({ hidden, items, total, selectedId, onSelect, onReset }: Props) {
+import { PRODUCT_COLUMN_SORTS, toggleProductSort, type ProductSort } from '../lib/browseSort';
+interface Props { hidden?: boolean; items: ProductAdvisory[]; total: number; selectedId?: string; sort: ProductSort; onSortChange: (sort: ProductSort) => void; onSelect: (id: string) => void; onReset: () => void }
+const SORT_MARKS = { ascending: '↑', descending: '↓', none: '↕' } as const;
+function SortableColumns({ sort, onSortChange }: Pick<Props, 'sort' | 'onSortChange'>) {
+  const [activeKey, direction] = sort.split('-');
+  const activeState = direction === 'asc' ? 'ascending' : 'descending';
+  return <div className="research-columns product-columns sortable-columns" role="row">
+    {PRODUCT_COLUMN_SORTS.map(column => {
+      const state = column.key === activeKey ? activeState : 'none';
+      return <span key={column.key} role="columnheader" aria-sort={state}>
+        <button type="button" className="column-sort" data-sort-key={column.key} data-active={state !== 'none'} title={column.description} aria-label={`${column.label}で並べ替え`} onClick={() => onSortChange(toggleProductSort(sort, column.key))}>
+          {column.label}<span className="column-sort-arrow" aria-hidden="true">{SORT_MARKS[state]}</span>
+        </button>
+      </span>;
+    })}
+    <span role="columnheader"/>
+  </div>;
+}
+export default function ProductList({ hidden, items, total, selectedId, sort, onSortChange, onSelect, onReset }: Props) {
   const scroll = useRef<HTMLDivElement>(null);
   useEffect(() => { scroll.current?.scrollTo({ top: 0 }); }, [items]);
   return <section id="product-list-panel" role="tabpanel" aria-labelledby="product-list-panel-tab" hidden={hidden} className="incident-list research-list research-products" aria-label="製品・ランタイムの注意喚起一覧" data-filtered={items.length}>
@@ -11,7 +28,7 @@ export default function ProductList({ hidden, items, total, selectedId, onSelect
       <span className="count-badge" aria-live="polite">{items.length}<small className={items.length === total ? 'sr-only' : undefined}> / {total}</small><span className="sr-only"> 件</span></span>
     <p className="list-note">収録契機日は注意喚起・KEV追加・Critical公表・実悪用報告のいずれかが確認できた日。開発元の公表日はそれより前のことがあります</p></div>
     <div className="incident-scroll" ref={scroll}>
-      <div className="research-columns product-columns" aria-hidden="true"><span>収録契機 / 開発元公表</span><span>製品 / 脆弱性</span><span>CVE / アドバイザリ</span><span>深刻度・収録理由</span><span>修正版</span><span/></div>
+      <SortableColumns sort={sort} onSortChange={onSortChange}/>
       {items.length === 0 && <div className="empty-state"><p>条件に合う注意喚起がありません</p><button className="n-btn" onClick={onReset}>絞り込みを解除</button></div>}
       {(hidden ? [] : items).map(item => <button key={item.id} data-product-id={item.id} data-product-key={item.productKey} className={`incident-card product-card${selectedId === item.id ? ' selected' : ''}`} onClick={() => onSelect(item.id)} aria-pressed={selectedId === item.id}>
         <span className="incident-card-top product-dates"><span><span className="date-mobile-label">収録契機 </span><time dateTime={item.listedDate}>{item.listedDate.replace(/-/g, '.')}</time></span>{item.publishedDate !== item.listedDate && <span className="product-published"><span className="date-mobile-label">開発元公表 </span><time dateTime={item.publishedDate}>{item.publishedDate.replace(/-/g, '.')}</time></span>}</span>

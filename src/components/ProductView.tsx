@@ -64,7 +64,7 @@ export default function ProductView(props: CategoryRouteProps) {
       threads={[]} state={st} onFitAll={() => board.current?.fitAll()} filters={<ProductFilters browse={browse} query={st.query} onQueryChange={st.setQuery}/>}/>
     <div className="summary-strip"><span><i className="live-dot"/>開発元と公的機関の一次資料からたどる、製品・ランタイムの注意喚起</span><span>資料確認 {PRODUCT_META.lastVerifiedDate} · 収録基準を満たす選定記録</span></div>
     <main className={`workspace view-${st.displayView}`}>
-      <ProductList hidden={st.displayView !== 'list'} items={visible} total={PRODUCTS.length} selectedId={st.selectedId ?? undefined} onSelect={select} onReset={reset}/>
+      <ProductList hidden={st.displayView !== 'list'} items={visible} total={PRODUCTS.length} selectedId={st.selectedId ?? undefined} sort={sort} onSortChange={setSort} onSelect={select} onReset={reset}/>
       <ProductTimeline state={st} events={events} theme={theme} board={board} onReset={reset}/>
       <Drawer mode={st.drawerMode} title={st.drawerMode === 'event' ? 'PRODUCT ADVISORY / 注意喚起の詳細' : undefined} onClose={st.closeDrawer}>
         <ProductPanel mode={st.drawerMode} selected={selected} db={db} onSelect={id => props.onNavigate({ ...urlState, product: 'all', focus: 'all', year: 'all', query: '', sel: id })}/>

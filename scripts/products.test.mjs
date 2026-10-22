@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { loadProducts, loadProductMeta, validateProducts } from './product-status.mjs';
 import { filterProducts, projectProducts, productFixLabel, normalizeProductFocus } from '../src/lib/products.ts';
-import { sortProducts, normalizeProductSort } from '../src/lib/browseSort.ts';
+import { sortProducts, normalizeProductSort, toggleProductSort, PRODUCT_SORT_OPTIONS, PRODUCT_COLUMN_SORTS } from '../src/lib/browseSort.ts';
 import { readUrl, writeUrl } from '../src/lib/urlState.ts';
 const records = loadProducts();
 const meta = loadProductMeta();
@@ -109,4 +109,30 @@ test('product category, product filter, focus and sort round-trip through the UR
   assert.equal(location.hash, '#view=list&kind=product');
   location.hash = '#kind=product&product=Bad%20Key&focus=NOPE&productSort=count-desc';
   assert.equal(readUrl().product, undefined); assert.equal(readUrl().focus, undefined); assert.equal(readUrl().productSort, 'listed-desc');
+});
+
+test('every column sort key and option is a real comparator, and fix/KEV orders keep unknowns last', () => {
+  for (const option of PRODUCT_SORT_OPTIONS) assert.equal(normalizeProductSort(option.value), option.value);
+  for (const column of PRODUCT_COLUMN_SORTS) assert.ok(PRODUCT_SORT_OPTIONS.some(option => option.value.startsWith(`${column.key}-`)), column.key);
+  const byId = sortProducts(records, 'id-asc').map(item => item.id);
+  assert.deepEqual(byId, [...byId].sort((a, b) => a === b ? 0 : a < b ? -1 : 1));
+  const fixState = item => item.withdrawnAt ? 0 : item.affected.every(range => range.fixed !== null) ? 2 : item.affected.some(range => range.fixed !== null) ? 1 : 0;
+  const byFix = sortProducts(records, 'fix-desc').map(fixState);
+  assert.deepEqual(byFix, [...byFix].sort((a, b) => b - a));
+  const byKev = sortProducts(records, 'kev-desc');
+  const listed = byKev.filter(item => item.kev.status === 'listed').map(item => item.kev.addedDate);
+  assert.deepEqual(listed, [...listed].sort().reverse());
+  const firstUnlisted = byKev.findIndex(item => item.kev.status !== 'listed');
+  assert.ok(firstUnlisted === -1 || byKev.slice(firstUnlisted).every(item => item.kev.status !== 'listed'), 'not-listed records stay last');
+  const byProduct = sortProducts(records, 'product-asc').map(item => item.product);
+  assert.deepEqual(byProduct, [...byProduct].sort(new Intl.Collator('ja').compare));
+});
+test('clicking a column toggles direction on the same key and starts a new key from its natural order', () => {
+  assert.equal(toggleProductSort('listed-desc', 'listed'), 'listed-asc');
+  assert.equal(toggleProductSort('listed-asc', 'listed'), 'listed-desc');
+  assert.equal(toggleProductSort('listed-desc', 'severity'), 'severity-desc');
+  assert.equal(toggleProductSort('severity-desc', 'product'), 'product-asc');
+  assert.equal(toggleProductSort('product-asc', 'id'), 'id-asc');
+  assert.equal(toggleProductSort('id-asc', 'fix'), 'fix-desc');
+  assert.equal(toggleProductSort('fix-desc', 'kev'), 'kev-desc');
 });
