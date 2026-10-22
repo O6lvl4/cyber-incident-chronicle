@@ -1,6 +1,7 @@
 import { validateIncidentDates } from './incident-dates-status.mjs';
 import { loadClassifications, validateClassifications } from './classification-status.mjs';
 import { loadVulnerabilities, validateVulnerabilities } from './vulnerability-status.mjs';
+import { loadProducts, validateProducts } from './product-status.mjs';
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 const dataRoot = new URL('../src/data/', import.meta.url);
@@ -54,8 +55,9 @@ export function validateData({ meta, incidents }) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const data = loadData();
   const vulnerabilities = loadVulnerabilities();
-  const errors = [...validateData(data), ...validateVulnerabilities(vulnerabilities), ...validateClassifications(loadClassifications(), data.incidents)];
+  const products = loadProducts();
+  const errors = [...validateData(data), ...validateVulnerabilities(vulnerabilities), ...validateProducts(products), ...validateClassifications(loadClassifications(), data.incidents)];
   if (errors.length) { console.error(errors.join('\n')); process.exitCode = 1; }
-  else console.log(JSON.stringify({ ok: true, vulnerabilities: vulnerabilities.length, incidents: data.incidents.length, companies: new Set(data.incidents.map(i => i.company)).size,
+  else console.log(JSON.stringify({ ok: true, vulnerabilities: vulnerabilities.length, products: products.length, incidents: data.incidents.length, companies: new Set(data.incidents.map(i => i.company)).size,
     sources: data.incidents.reduce((sum, i) => sum + i.sources.length, 0), verified: data.meta.lastVerifiedDate }, null, 2));
 }

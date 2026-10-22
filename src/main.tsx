@@ -25,3 +25,4 @@ import './research-rows.css'
 import './incident-dates.css'
 
 import './browse-controls.css'
+import './products.css'

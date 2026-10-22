@@ -1,0 +1,43 @@
+/* Product advisories share the research row rhythm; reasons for inclusion stay visible per row. */
+.research-list { --research-product-columns: 104px minmax(0, 1fr) 176px 190px 92px 20px; }
+.research-list .product-columns { grid-template-columns: var(--research-product-columns); }
+.workspace.view-list .research-list .product-card { grid-template-columns: var(--research-product-columns); }
+.research-list .product-card .product-subject { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.research-list .product-card .product-subject strong { color: var(--text); font: 600 14px/1.55 var(--font-jp); overflow-wrap: anywhere; }
+.research-list .product-card .product-subject .incident-card-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; color: var(--text-sub); font-size: 13px; line-height: 1.6; }
+.research-list .product-card .package-advisory-identifiers { display: flex; flex-direction: column; gap: 3px; }
+.research-list .product-card .advisory-id { color: var(--text-sub); font: 400 12px/1.55 var(--font-mono); overflow-wrap: anywhere; }
+.research-list .product-card .advisory-cves { color: var(--text); }
+.research-list .product-card .product-badges { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 4px; margin: 0; }
+.research-list .product-card .product-dates { display: flex; flex-direction: column; gap: 2px; }
+.research-list .product-card .product-published { font-size: 11px; }
+.research-list .product-card .product-fix { color: var(--text-sub); font-size: 12px; line-height: 1.5; }
+.status-badge[data-inclusion] { border-style: dashed; }
+.status-badge[data-inclusion="alert"], .status-badge[data-inclusion="kev"], .status-badge[data-inclusion="exploited"] { border-color: color-mix(in srgb, #a9531c 35%, var(--border-light)); color: #8a4214; }
+.dark .status-badge[data-inclusion="alert"], .dark .status-badge[data-inclusion="kev"], .dark .status-badge[data-inclusion="exploited"] { color: #f2b079; }
+.product-detail .package-detail-context { margin: 0 0 6px; color: var(--text-sub); font-size: 12px; }
+.product-detail .vulnerability-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+@media (min-width: 768px) and (max-width: 1100px) {
+  .research-list { --research-product-columns: 92px minmax(0, 1fr) 150px 160px 80px 18px; }
+}
+@media (max-width: 767px) {
+  .product-app .header-filters { display: flex; }
+  .product-app .header-filters .search-wrap { flex-basis: 100%; }
+  .product-app .status-filter { order: 1; min-width: 0; flex: 1; }
+  .product-app .status-filter select { width: 100%; font-size: 12px; padding-inline: 7px; }
+  .product-app .filter-label { display: none; }
+  .product-app > .summary-strip { display: none; }
+  .product-app .category-tabs { padding: 0; }
+  .product-app .category-tabs button { min-height: 44px; }
+  .workspace.view-list .research-list .product-card {
+    grid-template-columns: minmax(0, 1fr) auto 18px;
+    grid-template-areas: 'date fix fix' 'subject subject arrow' 'ids ids ids' 'badges badges badges';
+    min-height: 120px;
+  }
+  .research-list .product-card > .incident-card-top { grid-area: date; }
+  .research-list .product-card > .product-subject { grid-area: subject; }
+  .research-list .product-card > .package-advisory-identifiers { grid-area: ids; }
+  .research-list .product-card > .product-badges { grid-area: badges; }
+  .research-list .product-card > .product-fix { grid-area: fix; justify-self: end; }
+  .research-list .product-card > .card-arrow { grid-area: arrow; align-self: center; }
+}

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { loadVulnerabilities, validateVulnerabilities } from './vulnerability-status.mjs';
-import { filterVulnerabilities, projectVulnerabilities, fixLabel } from '../src/lib/vulnerabilities.ts';
+import { filterVulnerabilities, projectVulnerabilities, fixLabel, matchesFocus, normalizeFocus } from '../src/lib/vulnerabilities.ts';
 import { readUrl, writeUrl } from '../src/lib/urlState.ts';
 const records = loadVulnerabilities();
 const fixture = records.find(item => item.id === 'GHSA-fx2h-pf6j-xcff');
@@ -96,4 +96,35 @@ test('pagination, year and lifecycle URL state round-trip without unsafe numeric
   assert.equal(readUrl().page, 370); assert.equal(readUrl().year, '2024'); assert.equal(readUrl().lifecycle, 'withdrawn');
   location.hash = '#page=NaN&year=bad&lifecycle=unknown';
   assert.equal(readUrl().page, undefined); assert.equal(readUrl().year, undefined); assert.equal(readUrl().lifecycle, undefined);
+});
+
+test('focus narrows to source-backed states only; unknown is excluded but never treated as safe', () => {
+  const critical = filterVulnerabilities(records, 'all', '', { focus: 'critical' });
+  assert.ok(critical.length > 0 && critical.every(item => item.severity.label === 'critical'));
+  assert.equal(critical.length, records.filter(item => item.severity.label === 'critical').length);
+  const exploited = filterVulnerabilities(records, 'all', '', { focus: 'exploited' });
+  assert.ok(exploited.every(item => item.exploitation.status === 'reported'));
+  assert.equal(exploited.length, records.filter(item => item.exploitation.status === 'reported').length);
+  const kev = filterVulnerabilities(records, 'all', '', { focus: 'kev' });
+  assert.equal(kev.length, records.filter(item => item.kev.status === 'listed').length);
+  const priority = new Set(filterVulnerabilities(records, 'all', '', { focus: 'priority' }).map(item => item.id));
+  for (const item of [...critical, ...exploited, ...kev]) assert.ok(priority.has(item.id));
+  assert.equal(priority.size, new Set([...critical, ...exploited, ...kev].map(item => item.id)).size);
+  assert.equal(filterVulnerabilities(records, 'all', '', { focus: 'all' }).length, records.length);
+  // Compact summaries omit unknown states entirely; absence must read as unknown, not as evidence.
+  const summary = { severity: { label: 'high' } };
+  assert.equal(matchesFocus(summary, 'exploited'), false);
+  assert.equal(matchesFocus(summary, 'kev'), false);
+  assert.equal(matchesFocus({ severity: { label: 'low' }, exploitation: { status: 'reported' } }, 'priority'), true);
+  assert.equal(matchesFocus({ severity: { label: 'low' }, kev: { status: 'notListed' } }, 'kev'), false);
+  assert.equal(normalizeFocus('bogus'), 'all');
+});
+test('focus round-trips through the URL and defaults drop out of the hash', () => {
+  globalThis.location = { hash: '' }; globalThis.history = { replaceState: (_a, _b, value) => { location.hash = value; } };
+  writeUrl({ kind: 'vulnerability', focus: 'priority', ecosystem: 'npm' });
+  assert.equal(readUrl().focus, 'priority');
+  writeUrl({ kind: 'vulnerability', focus: 'all' });
+  assert.equal(location.hash, '#kind=vulnerability');
+  location.hash = '#kind=vulnerability&focus=Critical!';
+  assert.equal(readUrl().focus, undefined);
 });

@@ -28,7 +28,7 @@ test('failed full-corpus loading releases the worker and retries the complete SQ
     fetches++;
     if (fetches === 1) throw new Error('Full advisory fetch failed');
     return [{ id: 'GHSA-fixture' }];
-  } };
+  }, loadProducts: async () => [{ id: 'CVE-fixture' }] };
   try {
     const failed = getDb(data);
     assert.equal(getDb(data), failed, 'concurrent first requests share the same boot');
@@ -41,8 +41,9 @@ test('failed full-corpus loading releases the worker and retries the complete SQ
     assert.equal(await getDb(data), db);
     assert.equal(workers, 2);
     assert.equal(fetches, 2);
-    assert.deepEqual(registered, ['threads.json', 'events.json', 'incidents.json', 'vulnerabilities.json']);
+    assert.deepEqual(registered, ['threads.json', 'events.json', 'incidents.json', 'vulnerabilities.json', 'products.json']);
     assert.ok(queries.some(sql => sql.startsWith('CREATE TABLE vulnerabilities')));
+    assert.ok(queries.some(sql => sql.startsWith('CREATE TABLE products')));
     assert.ok(queries.some(sql => sql.startsWith('CREATE TABLE incidents')));
   } finally {
     globalThis.Worker = oldWorker;

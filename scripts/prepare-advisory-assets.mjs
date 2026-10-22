@@ -13,9 +13,12 @@ export function buildBrowseAssets(records, sourceHash) {
     groups.get(shard).push(item);
     const ranges = item.affected.flatMap(pkg => pkg.ranges);
     const fixStatus = ranges.every(range => range.fixed !== null) ? 'fixed' : ranges.some(range => range.fixed !== null) ? 'partial' : 'unknown';
+    // Unknown exploitation/KEV states are the default and are omitted to keep the index compact.
     return { id: item.id, aliases: item.aliases, title: item.title, ...(item.summary !== item.title ? { summary: item.summary } : {}),
       publishedAt: item.publishedAt, modifiedAt: item.modifiedAt, withdrawnAt: item.withdrawnAt, affected: item.affected.map(({ ecosystem, packageName }) => ({ ecosystem, packageName })),
-      severity: { label: item.severity.label }, fixStatus, shard };
+      severity: { label: item.severity.label }, fixStatus, shard,
+      ...(item.exploitation.status !== 'unknown' ? { exploitation: { status: item.exploitation.status } } : {}),
+      ...(item.kev.status !== 'unknown' ? { kev: { status: item.kev.status } } : {}) };
   });
   const files = new Map(), shards = {};
   for (const [key, group] of [...groups].sort(([a], [b]) => a.localeCompare(b))) {

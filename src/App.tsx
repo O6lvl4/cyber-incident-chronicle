@@ -19,6 +19,7 @@ import DrawerContent from './components/DrawerContent';
 import IncidentList from './components/IncidentList';
 import PerfHud from './components/PerfHud';
 const VulnerabilityView = lazy(() => import('./components/VulnerabilityView'));
+const ProductView = lazy(() => import('./components/ProductView'));
 import CategoryNav, { type Category, type CategoryProps, type CategoryRouteProps } from './components/CategoryNav';
 class AdvisoryLoadBoundary extends Component<CategoryProps & { children: React.ReactNode }, { failed: boolean }> {
   state = { failed: false };
@@ -97,7 +98,7 @@ export default function App() {
   const changeCategory = (nextCategory: Category) => {
     if (nextCategory === category) return;
     const p = new URLSearchParams();
-    if (nextCategory === 'vulnerability') p.set('kind', nextCategory);
+    if (nextCategory !== 'incident') p.set('kind', nextCategory);
     const dark = readUrl().dark;
     if (dark !== undefined) p.set('theme', dark ? 'dark' : 'light');
     history.pushState(null, '', `#${p.toString()}`);
@@ -105,7 +106,7 @@ export default function App() {
   };
   const onNavigate = (state: UrlState) => setRoute(navigation.navigate(state, route.revision));
   const props = { onNavigate, category, onCategoryChange: changeCategory, initialUrl: route.initialUrl, onUrlChange: route.onUrlChange };
-  return category === 'vulnerability'
-    ? <AdvisoryLoadBoundary key={route.revision} {...props}><Suspense fallback={<div className="app"><CategoryNav {...props}/><p role="status">ライブラリの全記録を読み込み中…</p></div>}><VulnerabilityView {...props}/></Suspense></AdvisoryLoadBoundary>
-    : <IncidentApp key={route.revision} {...props}/>;
+  if (category === 'vulnerability') return <AdvisoryLoadBoundary key={route.revision} {...props}><Suspense fallback={<div className="app"><CategoryNav {...props}/><p role="status">ライブラリの全記録を読み込み中…</p></div>}><VulnerabilityView {...props}/></Suspense></AdvisoryLoadBoundary>;
+  if (category === 'product') return <AdvisoryLoadBoundary key={route.revision} {...props}><Suspense fallback={<div className="app"><CategoryNav {...props}/><p role="status">製品の注意喚起を読み込み中…</p></div>}><ProductView {...props}/></Suspense></AdvisoryLoadBoundary>;
+  return <IncidentApp key={route.revision} {...props}/>;
 }
