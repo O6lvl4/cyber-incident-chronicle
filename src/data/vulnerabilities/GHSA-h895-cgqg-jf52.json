@@ -1,0 +1,123 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-h895-cgqg-jf52",
+  "aliases": [
+    "CVE-2026-114142"
+  ],
+  "title": "toml-node: Prototype pollution: parsing a TOML document can write to Object.prototype",
+  "summary": "toml-node: Prototype pollution: parsing a TOML document can write to Object.prototype",
+  "publishedAt": "2026-10-22T16:39:55Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-h895-cgqg-jf52/GHSA-h895-cgqg-jf52.json",
+  "modifiedAt": "2026-10-22T16:39:55Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-22T21:32:59.161594Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "toml",
+      "ranges": [
+        {
+          "affected": "< 5.0.1",
+          "fixed": "5.0.1",
+          "sourceUrl": "https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-h895-cgqg-jf52"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.0.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-h895-cgqg-jf52/GHSA-h895-cgqg-jf52.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-h895-cgqg-jf52/GHSA-h895-cgqg-jf52.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-h895-cgqg-jf52/GHSA-h895-cgqg-jf52.json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T16:39:55Z",
+      "modifiedAt": "2026-10-22T16:39:55Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "toml-node: Prototype pollution: parsing a TOML document can write to Object.prototype",
+      "url": "https://github.com/advisories/GHSA-h895-cgqg-jf52",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant impact conditions reviewed",
+      "url": "https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-h895-cgqg-jf52",
+      "publishedDate": "2026-10-12",
+      "publishedAt": "2026-10-12T23:01:02Z",
+      "modifiedAt": "2026-10-21T20:27:50Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Fixed-release repository package identity (npm-published git commit)",
+      "url": "https://raw.githubusercontent.com/BinaryMuse/toml-node/9ebfa698682500bbd30ce28e612ecc0208d9f70e/package.json",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "npm toml 5.0.1 publisher metadata and repository identity",
+      "url": "https://registry.npmjs.org/toml/5.0.1",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "Curated package identity corrected to npm toml: the developer advisory narrative names toml@5.0.0 and require('toml'), and both the fixed-release repository package.json and npm version metadata identify toml 5.0.1 at BinaryMuse/toml-node. Both the developer structured package field and pinned Reviewed record say tome; that conflicting original spelling is retained in database provenance and the audit, not treated as a second affected package.",
+    "Developer public advisory and fixed Reviewed record compared. Exact maintainer package/range/fix fields or complete HTML version panel are preserved separately in the linked audit; inclusive maxima are not silently equated to exclusive fixed boundaries.",
+    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "42c7a08c808d82cb0b5c6bd03f078c1fd2905f69",
+    "checkedAt": "2026-10-22T21:32:59.161594Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-h895-cgqg-jf52",
+        "aliases": [
+          "CVE-2026-114142"
+        ],
+        "publishedAt": "2026-10-22T16:39:55Z",
+        "modifiedAt": "2026-10-22T16:39:55Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-h895-cgqg-jf52/GHSA-h895-cgqg-jf52.json"
+      }
+    ]
+  }
+}

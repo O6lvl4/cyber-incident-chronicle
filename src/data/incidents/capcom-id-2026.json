@@ -1,0 +1,114 @@
+{
+  "id": "capcom-id-2026",
+  "company": "カプコン（CAPCOM ID）",
+  "geography": "日本企業の全世界サービス（国別件数は未公表）",
+  "title": "CAPCOM IDの情報1,177万件超が漏えい、一部アカウントのパスワード不正変更も確認",
+  "announcementDate": "2026-10-22",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセスの実施時期は未公表",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "lastVerifiedDate": "2026-10-23",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入経路・手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月19日に不正アクセスを確認し、20日に登録情報の一部漏えいとパスワード不正変更を確認。メールアドレス等の全世界合計11,774,247件、その内数43件に生年月日等が含まれる。内数196件のパスワードは不正変更後リセット済み。緊急対策は完了し、ゲームやCAPCOM ID利用サービスは継続。詳細調査は継続中。",
+  "affectedData": [
+    "メールアドレス、アカウント作成日時、最終ログイン日時、ログイン回数、最終ログイン時のクライアントIP",
+    "上記の内数43件：生年月日、性別、国・地域、ニックネーム",
+    "上記の内数196件：ログインパスワードの不正変更（利用者が設定したパスワードの漏えいは未確認）"
+  ],
+  "counts": [
+    {
+      "value": 11774247,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "メールアドレス・システム固有の識別情報の漏えい（全世界合計）",
+      "approximate": false
+    },
+    {
+      "value": 43,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "11,774,247件の内数：生年月日・性別・国地域・ニックネームの漏えい",
+      "approximate": false
+    },
+    {
+      "value": 196,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "11,774,247件の内数：パスワードが不正変更されたアカウント（漏えいパスワード数ではない）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "43件と196件は総数11,774,247件の内数であり、合算しない。2つの内数相互の重複は不明。",
+    "196件はパスワード不正変更の件数。利用者自身が設定したパスワードの漏えいは確認されていない。",
+    "クレジットカード情報は漏えい対象に含まれないと公表。ゲームのプレイへの影響はなく、サービス停止を付与しない。",
+    "10月19日は検知と不正アクセス確認、20日は情報漏えい・不正変更の確認。実際の攻撃開始日とは区別する。",
+    "攻撃手段の特定と対応は完了と公表したが、具体的手法や脆弱性は非公表。PHPなどの製品・CVEとの関係を推測しない。"
+  ],
+  "sources": [
+    {
+      "title": "カプコン：不正アクセスによるお客様情報漏えいのお詫びとお知らせ",
+      "url": "https://www.capcom.co.jp/ir/news/html/261022.html",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-19",
+      "label": "不正アクセスを検知・確認",
+      "kind": "occurrence",
+      "summary": "不審な痕跡を発見し遮断・調査。同日に不正アクセスを確認。",
+      "sourceUrl": "https://www.capcom.co.jp/ir/news/html/261022.html"
+    },
+    {
+      "date": "2026-10-20",
+      "label": "漏えいとパスワード不正変更を確認",
+      "kind": "occurrence",
+      "summary": "調査で登録情報の一部漏えいと一部アカウントの不正変更を確認。対策本部を設置。",
+      "sourceUrl": "https://www.capcom.co.jp/ir/news/html/261022.html"
+    },
+    {
+      "date": "2026-10-21",
+      "label": "警察・個人情報保護委員会へ報告",
+      "kind": "update",
+      "summary": "監視と影響範囲の精査を継続。",
+      "sourceUrl": "https://www.capcom.co.jp/ir/news/html/261022.html"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "漏えい件数と対応を公表",
+      "kind": "disclosure",
+      "summary": "全世界11,774,247件と内数43件・196件を公表。緊急対策済みでサービスは継続。",
+      "sourceUrl": "https://www.capcom.co.jp/ir/news/html/261022.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表資料に攻撃の実施日・期間の記載なし。公表日や停止日を転用しない。",
+      "sourceUrl": "https://www.capcom.co.jp/ir/news/html/261022.html",
+      "reviewedDate": "2026-10-23"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月20日",
+      "startDate": "2026-10-20",
+      "note": "経緯欄が10月20日に情報漏えいとパスワード不正変更を確認したと明記。19日の侵入検知・不正アクセス確認から被害日を推測しない。確認した被害の種類は情報流出とパスワード改変。",
+      "sourceUrl": "https://www.capcom.co.jp/ir/news/html/261022.html",
+      "reviewedDate": "2026-10-23"
+    }
+  },
+  "detectedDate": "2026-10-19",
+  "scaleLabel": "全世界11,774,247件（43件・196件は内数、人数へ換算しない）"
+}

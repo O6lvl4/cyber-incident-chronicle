@@ -1,0 +1,108 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cg2g-xh64-v4q7",
+  "aliases": [],
+  "title": "DOMPurify SAFE_FOR_TEMPLATES bypass: split template expressions survive in attached shadow root content on DOM output modes",
+  "summary": "DOMPurify SAFE_FOR_TEMPLATES bypass: split template expressions survive in attached shadow root content on DOM output modes",
+  "publishedAt": "2026-10-22T16:25:31Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cg2g-xh64-v4q7/GHSA-cg2g-xh64-v4q7.json",
+  "modifiedAt": "2026-10-22T16:25:31Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-22T21:20:36.270Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "dompurify",
+      "ranges": [
+        {
+          "affected": ">= 3.4.4, < 3.4.17",
+          "fixed": "3.4.17",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cg2g-xh64-v4q7/GHSA-cg2g-xh64-v4q7.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.4.4"
+            },
+            {
+              "fixed": "3.4.17"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cg2g-xh64-v4q7/GHSA-cg2g-xh64-v4q7.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cg2g-xh64-v4q7/GHSA-cg2g-xh64-v4q7.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cg2g-xh64-v4q7/GHSA-cg2g-xh64-v4q7.json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T16:25:31Z",
+      "modifiedAt": "2026-10-22T16:25:31Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "DOMPurify SAFE_FOR_TEMPLATES bypass: split template expressions survive in attached shadow root content on DOM output modes",
+      "url": "https://github.com/advisories/GHSA-cg2g-xh64-v4q7",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant impact conditions reviewed",
+      "url": "https://github.com/cure53/DOMPurify/security/advisories/GHSA-cg2g-xh64-v4q7",
+      "publishedDate": "2026-10-12",
+      "publishedAt": "2026-10-12T12:40:50Z",
+      "modifiedAt": "2026-10-14T10:38:40Z"
+    }
+  ],
+  "caveats": [
+    "Severity label differs: developer low, Reviewed critical. Displayed assessment retains its database source; primary assessment is separately retained in the audit.",
+    "Requires SAFE_FOR_TEMPLATES with a DOM-returning mode and attached shadow-root content; a default string-only sanitization path is not the described condition.",
+    "Developer public advisory and fixed Reviewed record compared. Exact maintainer package/range/fix fields or complete HTML version panel are preserved separately in the linked audit; inclusive maxima are not silently equated to exclusive fixed boundaries.",
+    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "42c7a08c808d82cb0b5c6bd03f078c1fd2905f69",
+    "checkedAt": "2026-10-22T21:20:36.270Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-cg2g-xh64-v4q7",
+        "aliases": [],
+        "publishedAt": "2026-10-22T16:25:31Z",
+        "modifiedAt": "2026-10-22T16:25:31Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cg2g-xh64-v4q7/GHSA-cg2g-xh64-v4q7.json"
+      }
+    ]
+  }
+}

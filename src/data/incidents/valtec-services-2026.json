@@ -1,0 +1,69 @@
+{
+  "id": "valtec-services-2026",
+  "company": "バルテック（VALTEC）",
+  "geography": "日本",
+  "title": "自社サービスの脆弱性を突かれ情報流出の可能性、一部サービス停止",
+  "announcementDate": "2026-10-22",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセスの実施時期は未公表",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "lastVerifiedDate": "2026-10-23",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "自社サービス自体の脆弱性を悪用した不正アクセス（PHP脆弱性との初報説明を訂正）",
+    "status": "confirmed"
+  },
+  "summary": "第三者の不正アクセスにより顧客情報の「流出とみなされる事実」を確認したとして一部サービスを停止、影響範囲を調査中。初報のPHP脆弱性という原因説明を誤報と訂正し、自社サービスの脆弱性を突かれたと公表。復旧は最短10月26日中の予定で、遅延の可能性がある。",
+  "affectedData": [
+    "保有する顧客情報（具体的情報項目・件数・影響範囲は調査中で未公表）"
+  ],
+  "counts": [],
+  "caveats": [
+    "表題は流出の可能性、本文は「流出とみなされる事実」を確認との表現。具体的取得範囲が確定したとはせず、可能性として収録する。",
+    "ページ冒頭の訂正が初報のPHP脆弱性という説明を撤回。別途実施しているPHP対策との混同であり、本件をPHPや特定CVEに結び付けない。",
+    "MOT/Cloud、勤怠・経費・文書管理、予約、POS等の停止を公表。停止対象機能の列挙はその全データの漏えい確認を意味しない。",
+    "最短10月26日中の復旧は予定であり、実施済み・確約ではない。",
+    "検知日、攻撃実施日、被害の初確認日は未公表。10月22日の公表日を転用しない。",
+    "ページ表示日は10月22日だが、冒頭の原因訂正には独立した掲載日時がない。訂正を確認したのは10月23日であり、訂正実施日を10月22日と断定しない。updatedDateは表示された資料日を保持し、確認日はlastVerifiedDateで区別する。"
+  ],
+  "sources": [
+    {
+      "title": "バルテック：不正アクセスによるお客様情報流出の可能性および一部サービス停止のお知らせ",
+      "url": "https://www.webjapan.co.jp/maintenance/serviceteishi261022/",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-22",
+      "label": "顧客情報流出の可能性と一部停止を公表",
+      "kind": "disclosure",
+      "summary": "影響範囲を調査中。最短10月26日中の復旧予定だが遅延の可能性を案内。",
+      "sourceUrl": "https://www.webjapan.co.jp/maintenance/serviceteishi261022/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表資料に攻撃の実施日・期間の記載なし。公表日や停止日を転用しない。",
+      "sourceUrl": "https://www.webjapan.co.jp/maintenance/serviceteishi261022/",
+      "reviewedDate": "2026-10-23"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害を最初に確認した日付は公表資料から確定できない。",
+      "sourceUrl": "https://www.webjapan.co.jp/maintenance/serviceteishi261022/",
+      "reviewedDate": "2026-10-23"
+    }
+  },
+  "scaleLabel": "件数・人数は未公表"
+}

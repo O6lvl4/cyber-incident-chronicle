@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-22T21:24:20Z",
+  "publicationStatus": "prepared-for-validated-data-update",
+  "mainAtStart": "c9f240951ced802f3304bc97a57cae150db4e001",
+  "previousPublication": {
+    "commit": "c0536e6985584eb0a6ef837356f0a470049aecc3",
+    "pullRequest": "https://github.com/O6lvl4/cyber-incident-chronicle/pull/32",
+    "workflow": "https://github.com/O6lvl4/cyber-incident-chronicle/actions/runs/39700297130",
+    "status": "published-successfully",
+    "note": "Supersedes the blocked publication status recorded in publication-update-2026-10-22.json. Subsequent main UI/product changes through PR36 preserved."
+  },
+  "corporate": {
+    "added": 3,
+    "updated": 3,
+    "total": 206,
+    "sources": 449,
+    "review": "corporate-review-2026-10-23.json"
+  },
+  "vulnerabilities": {
+    "sourceAddedAdvisories": 71,
+    "sourceModifiedAdvisories": 1,
+    "newDistinctDisplayRecordsFromReviewed": 67,
+    "supplementalAdded": 2,
+    "netDisplayIncrease": 69,
+    "total": 19305,
+    "active": 18451,
+    "withdrawn": 854,
+    "newWithdrawnDuplicateRecords": 2,
+    "existingNewlyWithdrawn": 1,
+    "sourceSnapshot": "42c7a08c808d82cb0b5c6bd03f078c1fd2905f69"
+  },
+  "sourceOutcomes": {
+    "githubReviewed": "checked-changed: full37091 files;19156eligible",
+    "maintainerDelta": "checked72records;68distinctGHSApages plusGNOME/CNA/RustSec;11failedAPIrequests separatelyretained",
+    "osv": "7full exportschecked:284566records/284160IDs;72nonMALadds2changes0deletions",
+    "jvnJpcert": "checked91feeditems and7newuniqueURLbodies",
+    "myJvn": "failedHTTP503;previoussuccessfulpointand1271historyrowsretained",
+    "cisaKev": "failedHTTP403;previousgooddataretained",
+    "corporate": "3additions3followups;AeonPDF403excluded;DigitalHollywoodlectureexcluded"
+  },
+  "localValidation": {
+    "check": "161tests,typecheck,datachecks,productionbuild; final validation rerun after final metadata",
+    "browserAndPerformance": "Attempted but Chromium cannot launch: socket Operation not permitted; WebKit absent. Unmodified required CI gates must pass before merge/publication.",
+    "quality": "No local codopsy executable; required pinned codopsy CI gate must pass."
+  },
+  "limitations": [
+    "Source acquisition success is not publication success; this committed preparation record does not preclaim future CI/deployment. Target PR/main workflow and live data are independently verified after push.",
+    "No UI/schema/workflow/auth/secret/billing changes. Existing product/runtime category preserved but not expanded by this corporate/library collection task.",
+    "Failed sources are not no-change or no-vulnerability findings."
+  ]
+}
