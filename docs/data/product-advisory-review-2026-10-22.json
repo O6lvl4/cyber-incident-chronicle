@@ -483,6 +483,13 @@
       "decision": "excluded",
       "reason": "GitLab 19.4.2 / 19.5.1 の同時修正（計36件）は High 以下で、基準に該当しない",
       "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+    },
+    {
+      "id": "JPCERT-AT-2026-0029",
+      "origin": "jpcert-alert",
+      "decision": "excluded",
+      "reason": "NetScaler ADC / Gateway（CVE-2026-88771、CVE-2026-88772等）の注意喚起は9月に公開され、10月2日の行は更新。収録契機日は注意喚起の初回公開日であり対象期間前。期間を9月まで広げる際の候補。10月のKEV追加 CVE-2026-88779 とは別の脆弱性",
+      "url": "https://www.jpcert.or.jp/at/2026/at260029.html"
     }
   ],
   "fetchFailures": [
@@ -526,6 +533,12 @@
       "kev": 24
     },
     "kevOctoberAdditions": 24,
-    "excluded": 5
+    "excluded": 6
+  },
+  "candidateDiscovery": {
+    "script": "scripts/product-candidates.mjs",
+    "ranAt": "2026-10-22T05:05:00Z",
+    "since": "2026-10-01",
+    "result": "未収録の候補0件・差分0件（JPCERT-AT-2026-0029 を除外判定に追加後）"
   }
 }

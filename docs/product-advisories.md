@@ -40,9 +40,20 @@
 - 開発元とCNAの影響範囲が一致しない場合は、表示に使った側を明記し、もう一方を `caveats` に残す
 - 注意喚起の有無は、一覧を確認した日時と結果（`alertChecks`）を記録する。注意喚起がないことは重要性が低いことを意味しない
 
+## 候補の自動検出
+
+`pnpm product:candidates --since YYYY-MM-DD` は、CISA KEV の全件JSON、JPCERT/CC の注意喚起一覧、IPA の重要なセキュリティ情報一覧を取得し、収録済み記録と確認記録の除外判定に照らして、次を報告する（既定は直近14日）。
+
+- **未収録の候補**：KEV の新規追加で記録にないもの、記録にも除外判定にもない注意喚起
+- **差分**：記録があるのに KEV 掲載や注意喚起が反映されていないもの（`kev-not-recorded`、`alert-not-recorded`）
+
+報告は `.cache/product-candidates/<日付>.json` に書き、`--summary` で Markdown も出力する。`--draft` を付けると KEV 由来の候補について CNA レコードから下書きを `.cache/product-drafts/` に生成するが、下書きには `TODO` が残るため、検証スクリプトは `src/data/products` に置かれた下書きを失敗にする。公開は常に人が一次資料を読んで判定する。
+
+取得失敗は終了コード 2 で区別し、「候補なし」とは扱わない。GitHub Actions の `product-candidates` ワークフローが毎週月曜に同じ検出を実行し、結果をジョブの要約とアーティファクトに残す（Issue や PR は自動作成しない）。
+
 ## 更新手順
 
-1. 候補を集める：JPCERT/CC 注意喚起一覧、IPA 重要なセキュリティ情報、CISA KEV の `dateAdded`、確認依頼のあった製品の開発元告知
+1. 候補を集める：`pnpm product:candidates --since <前回確認日>` の報告（JPCERT/CC 注意喚起一覧、IPA 重要なセキュリティ情報、CISA KEV の `dateAdded`）に、確認依頼のあった製品の開発元告知を加える
 2. 各候補について開発元告知とCVEレコードを読み、影響範囲・修正版・CVSS・悪用の記述を転記する。推測で補わない
 3. 収録基準に該当するかを判定し、`inclusion` と根拠項目を埋める。該当しない候補も確認記録に残す
 4. `listedDate` を根拠項目の日付から決め、`product-meta.json` の期間に収まることを確認する

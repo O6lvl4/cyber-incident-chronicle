@@ -110,6 +110,8 @@ export function validateProducts(records, meta = loadProductMeta()) {
   for (const item of records) {
     const fail = message => errors.push(`${item?.id ?? 'unknown'}: ${message}`);
     if (!item || typeof item !== 'object') { fail('invalid record'); continue; }
+    // Generated drafts carry TODO markers; they must never reach the published dataset.
+    if (JSON.stringify(item).includes('TODO')) fail('draft placeholder present');
     if (item.kind !== 'product') fail('invalid kind');
     if (!identifier.test(item?.id)) fail('invalid advisory ID');
     if (!Array.isArray(item?.aliases)) fail('aliases must be an array');

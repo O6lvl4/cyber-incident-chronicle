@@ -1,0 +1,40 @@
+name: Product advisory candidates
+
+# Weekly read-only discovery of KEV additions and JPCERT/IPA alerts that are not
+# yet recorded. Writes a summary and an artifact; never edits data or opens PRs.
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+    inputs:
+      since:
+        description: 'Report additions and alerts on or after this day (YYYY-MM-DD)'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.34.6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Discover candidates
+        run: |
+          since="${{ github.event.inputs.since }}"
+          args=(--output artifacts/product-candidates.json --summary "$GITHUB_STEP_SUMMARY")
+          if [ -n "$since" ]; then args+=(--since "$since"); fi
+          node scripts/product-candidates.mjs "${args[@]}"
+      - uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: product-candidates
+          path: artifacts/product-candidates.json
