@@ -1,0 +1,126 @@
+{
+  "id": "rakus-blastmail-2026",
+  "company": "ラクスライトクラウド（ブラストメール）",
+  "geography": "日本",
+  "title": "ブラストメールで契約者情報と一部配信先データが流出、サービス停止",
+  "announcementDate": "2026-10-21",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセスの実施時期は未公表",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "lastVerifiedDate": "2026-10-23",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入経路・手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "API用サーバー2台への侵入とコマンド実行を経て、販売管理・サービスDBからデータを持ち出されたと提供元が公表。全契約者の販売管理情報と一部顧客の配信先情報が漏えい。21日0時30分から停止し再開日時は未定。22日に横浜市等が利用事業の部分範囲に漏えい可能性を公表した。",
+  "affectedData": [
+    "全契約者の会社名、担当者名、電話番号、メールアドレス、請求先メールアドレス、契約・支払い履歴等",
+    "一部顧客の配信先リスト等のメール配信関連情報（詳細は精査中）",
+    "横浜市出展エリアのボランティア応募者：氏名・メールアドレス（可能性）",
+    "横浜市男女共同参画推進協会の各メールマガジン登録アドレス（可能性）",
+    "GREEN×EXPO協会のボランティア受付番号・活動番号・メールアドレス（可能性、件数未公表）"
+  ],
+  "counts": [
+    {
+      "value": 6334,
+      "unit": "人",
+      "status": "possible",
+      "label": "横浜市出展エリアのボランティア応募者（提供元総数の一部、確定流出人数ではない）",
+      "approximate": false
+    },
+    {
+      "value": 3932,
+      "unit": "件",
+      "status": "possible",
+      "label": "横浜市男女共同参画推進協会の登録メールアドレス延べ件数（2026年3月末、重複を含む可能性）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "提供元は全契約者の販売管理情報と一部配信先情報の持ち出しを確認。利用組織ごとの漏えい確定を意味しない。",
+    "APIサーバー2台は侵入対象の設備数であり、被害人数・件数ではない。具体的侵入経路は調査中。",
+    "横浜市の6,334人は市出展エリアの応募者の可能性範囲。別のGREEN×EXPO協会ボランティアの件数は未公表。",
+    "男女共同参画推進協会の3,932件は2026年3月末の延べ登録数で、重複の可能性があり実人数未確認。内訳688・1,094・1,037・1,113件を再加算しない。",
+    "利用組織の2つの部分範囲は単位と対象が異なり、提供元の確定漏えい総数として合算しない。独立した攻撃事案として重複登録しない。",
+    "クレジットカード番号は提供元が保持していないと公表。",
+    "10月21日0時30分はサービス停止時刻。攻撃開始日・被害の初確認日には転用しない。",
+    "10月22日のラクスの別告知は、楽楽販売等7サービスと企業・製品・サポートサイトの予防的停止からの再開を説明し、不正アクセス・漏えいは未確認としている。ブラストメールは対象一覧に含まれず、本件の復旧やPHP起因の証明には用いない。"
+  ],
+  "sources": [
+    {
+      "title": "ラクス：【第2報】当社子会社が提供する「ブラストメール」における不正アクセスによる情報漏えいおよびサービス停止について",
+      "url": "https://www.rakus.co.jp/news/2026/1021-3.html",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "title": "横浜市：市出展エリアボランティア応募者の漏えい可能性（協会公表を添付）",
+      "url": "https://www.city.yokohama.lg.jp/city-info/koho-kocho/press/kankyo/2026/1022expovolunteer.files/0004_20261022.pdf",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "title": "横浜市：男女共同参画推進協会の登録メールアドレスに漏えい可能性",
+      "url": "https://www.city.yokohama.lg.jp/city-info/koho-kocho/press/shimin/2026/20261022.files/20261022v2.pdf",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "title": "ラクス：別の7サービス等の予防的メンテナンス終了（ブラストメールと区別）",
+      "url": "https://www.rakus.co.jp/news/2026/1022-1.html",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-21",
+      "label": "サービス停止",
+      "kind": "update",
+      "summary": "0時30分から停止を継続。再開日時は未定。",
+      "sourceUrl": "https://www.rakus.co.jp/news/2026/1021-3.html"
+    },
+    {
+      "date": "2026-10-21",
+      "label": "提供元が持ち出しを確認したと公表",
+      "kind": "disclosure",
+      "summary": "販売管理情報と一部配信先情報の漏えいを確認。侵入経路と詳細範囲は調査中。",
+      "sourceUrl": "https://www.rakus.co.jp/news/2026/1021-3.html"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "横浜市がボランティアの部分範囲を公表",
+      "kind": "update",
+      "summary": "市出展エリア6,334人の氏名・メールアドレスに漏えい可能性。協会の別ボランティアの件数は未公表。",
+      "sourceUrl": "https://www.city.yokohama.lg.jp/city-info/koho-kocho/press/kankyo/2026/1022expovolunteer.files/0004_20261022.pdf"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "横浜市が協会メールマガジンの可能性範囲を公表",
+      "kind": "update",
+      "summary": "延べ3,932件のメールアドレス。3月末の登録数で重複の可能性があり、実人数と実際の流出は未確認。",
+      "sourceUrl": "https://www.city.yokohama.lg.jp/city-info/koho-kocho/press/shimin/2026/20261022.files/20261022v2.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表資料に攻撃の実施日・期間の記載なし。公表日や停止日を転用しない。",
+      "sourceUrl": "https://www.rakus.co.jp/news/2026/1021-3.html",
+      "reviewedDate": "2026-10-23"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害を最初に確認した日付は公表資料から確定できない。",
+      "sourceUrl": "https://www.rakus.co.jp/news/2026/1021-3.html",
+      "reviewedDate": "2026-10-23"
+    }
+  },
+  "scaleLabel": "提供元総件数は未公表／利用者別の人数と延べ登録件数は合算しない"
+}

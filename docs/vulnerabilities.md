@@ -74,6 +74,20 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 
 2026-10-08の個別50件拡充ではCISA公式カタログがHTTP403で取得できなかったためKEV未確認を維持した。React Server Componentsの実悪用試行はAWSの独立した一次観測報告を引用している。
 
+## 2026-10-23の確認結果
+
+固定コミットを `42c7a08c808d82cb0b5c6bd03f078c1fd2905f69`（2026-10-22T19:24:27Z）へ更新。前回成功固定ソースとの差分72件（追加71・変更1）とReviewed全37,091ファイルを確認。対象19,156アドバイザリ、期間前13,864・対象外4,071・変換失敗0。更新時刻の24時間重複窓に加えて全文差分を使用する。
+
+表示は19,305件（未撤回18,451・撤回履歴854）、前回から69件増加。Reviewedの新規71ソースは既存の個別収録・別名重複を集約し表示67件増、補助ソースLIFF SDK・Tokioの2件を追加した。新規の撤回重複2件と既存sprintf-jsの撤回1件を区別し、履歴を削除しない。
+
+- 変更72件は開発元の68公開GHSA（API57・HTML代替11）とGNOME/CNA/RustSec、sprintf-jsの公開根拠を確認。API失敗11件を成功取得と混同せず、HTMLによる確認を別記。toml-nodeの開発元とReviewedの構造化パッケージ名tomeは、固定コミットのpackage.jsonとnpm公式メタデータでtomlと確認して表示を訂正し、原表記を証跡に保持。pypdfの修正版6.2.10対本文/DB6.21.0、10件の深刻度ラベル差は推測で解消しない。
+- CVE-2026-96889のNext.jsと上流Librsvgは、開発元が共有するCVE・依存関係を根拠に集約。Librsvgの5系列の範囲・修正版とNext.js側の条件を両方保持し、上流とラッパーの影響条件・深刻度を一律化しない。
+- OSV全7エクスポート284,566記録・284,160 IDsを前回固定generationのSHA256と全ZIP CRC、正規化全文で比較。非MAL72追加・2変更、MAL73追加・9変更、削除0。Go・Maven・NuGetは変更なし、RubyGemsはMALのみ変更。悪性パッケージ報告は通常の脆弱性へ混ぜない。
+- LIFF SDKはnpm `@line/liff` 2.20.0以上2.31.1未満、修正版2.31.1。開発元とJVNの表記差、CVSS4.0 5.1と3.1 6.1を出典別に保存。Tokioは1.54.0のマルチスレッドruntimeのInterval、修正版1.54.1。Sleep・Timeoutへ影響を拡張せず、CVSSを補わない。
+- JVN/JPCERTの91項目・新規7URL本文を確認。LIFF以外のPHP/BINDは製品カテゴリで今回のライブラリ収録対象外。MyJVNは503、CISA KEVは403で、以前の成功点・良好な履歴を保持。失敗は未掲載・悪用なし・変更なしを意味しない。
+
+[Reviewed全件差分](data/github-reviewed-delta-2026-10-23.json)、[開発元確認](data/reviewed-maintainer-review-2026-10-23.json)、[補助ソース](data/supplemental-source-status-2026-10-23.json)、[補助候補差分](data/supplemental-candidate-delta-2026-10-23.json)、[個別追加](data/supplemental-individual-review-2026-10-23.json)、[フィード本文判定](data/supplemental-feed-review-2026-10-23.json)を参照。
+
 ## 2026-10-21の確認結果
 
 2026-10-21（JST）の確認では、固定コミットを `e411ff2b84c425b1b0349aa88916713bebe7786a`（2026-10-20T21:13:35Z）へ更新した。前回成功確認したHEADから全1,760変更ファイル、前回収録スナップショットから全2,504変更ファイルを比較し、Reviewed全36,973ファイルを読込・解析した。Reviewedの追加74件・変更46件のうち対象は追加73件・変更45件。対象19,038件を全件再収録し、期間前13,864件・対象エコシステム外4,071件・変換失敗0件を分離する。

@@ -1,0 +1,111 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mrfp-p49p-3hf2",
+  "aliases": [
+    "CVE-2026-96640"
+  ],
+  "title": "Pillow PDF append accepts malformed shared page-tree DAG causing resource exhaustion",
+  "summary": "Pillow PDF append accepts malformed shared page-tree DAG causing resource exhaustion",
+  "publishedAt": "2026-10-22T16:00:47Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-mrfp-p49p-3hf2/GHSA-mrfp-p49p-3hf2.json",
+  "modifiedAt": "2026-10-22T16:00:47Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-22T21:20:36.270Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Pillow",
+      "ranges": [
+        {
+          "affected": ">= 5.1.0, < 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-mrfp-p49p-3hf2/GHSA-mrfp-p49p-3hf2.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-mrfp-p49p-3hf2/GHSA-mrfp-p49p-3hf2.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-mrfp-p49p-3hf2/GHSA-mrfp-p49p-3hf2.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-mrfp-p49p-3hf2/GHSA-mrfp-p49p-3hf2.json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T16:00:47Z",
+      "modifiedAt": "2026-10-22T16:00:47Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow PDF append accepts malformed shared page-tree DAG causing resource exhaustion",
+      "url": "https://github.com/advisories/GHSA-mrfp-p49p-3hf2",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant impact conditions reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-mrfp-p49p-3hf2",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:36:14Z",
+      "modifiedAt": "2026-10-17T10:36:14Z"
+    }
+  ],
+  "caveats": [
+    "Requires appending to an attacker-controlled PDF. Primary structured patch is 13.0.0 while older report narrative says no known fix; do not read the older report section as current release status.",
+    "Developer public advisory and fixed Reviewed record compared. Exact maintainer package/range/fix fields or complete HTML version panel are preserved separately in the linked audit; inclusive maxima are not silently equated to exclusive fixed boundaries.",
+    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "42c7a08c808d82cb0b5c6bd03f078c1fd2905f69",
+    "checkedAt": "2026-10-22T21:20:36.270Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-mrfp-p49p-3hf2",
+        "aliases": [
+          "CVE-2026-96640"
+        ],
+        "publishedAt": "2026-10-22T16:00:47Z",
+        "modifiedAt": "2026-10-22T16:00:47Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-mrfp-p49p-3hf2/GHSA-mrfp-p49p-3hf2.json"
+      }
+    ]
+  }
+}

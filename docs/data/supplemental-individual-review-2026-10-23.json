@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "reportDateJst": "2026-10-23",
+  "checkedAt": "2026-10-22T21:21:00Z",
+  "addedIds": [
+    "CVE-2026-112148",
+    "GHSA-5wjr-9356-4wc8"
+  ],
+  "identityCheck": "Both primary IDs and explicit aliases checked against current full import before insertion; no existing match. Librsvg merged with the existing CVE-2026-96889 group; no additional vulnerability count for its wrapper/upstream records.",
+  "sources": [
+    "https://line.github.io/security-advisory-blog/CVE-2026-112148/",
+    "https://github.com/line/liff/security/advisories/GHSA-wppr-qmp4-w627",
+    "https://cveawg.mitre.org/api/cve/CVE-2026-112148",
+    "https://jvn.jp/vu/JVNVU91023667/",
+    "https://github.com/tokio-rs/tokio/security/advisories/GHSA-5wjr-9356-4wc8",
+    "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0384"
+  ],
+  "limitations": [
+    "LIFF repository API403 and OSV API404 do not negate successfully retrieved developer HTML, official blog, CNA and JVN.",
+    "Tokio maintainer exact=1.54.0 and RustSec SEMVER interval remain source-attributed. CVSS not published; not inferred.",
+    "MyJVN503 and CISA403 preserve prior good data/checkpoints."
+  ],
+  "withdrawal": {
+    "id": "GHSA-hp3w-g68c-fv3c",
+    "alias": "CVE-2026-97058",
+    "withdrawnAt": "2026-10-22T19:21:04Z",
+    "reason": "The application is responsible for appropriate exception handling; retained as withdrawn history, not active vulnerability."
+  }
+}

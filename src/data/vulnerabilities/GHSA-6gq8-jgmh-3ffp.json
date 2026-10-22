@@ -1,0 +1,126 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6gq8-jgmh-3ffp",
+  "aliases": [
+    "CVE-2026-114131"
+  ],
+  "title": "Nuxt: Route rules are matched against the raw request path, so a percent-encoded segment can bypass `appMiddleware` on dynamic and catch-all routes",
+  "summary": "Nuxt: Route rules are matched against the raw request path, so a percent-encoded segment can bypass `appMiddleware` on dynamic and catch-all routes",
+  "publishedAt": "2026-10-22T16:50:53Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-6gq8-jgmh-3ffp/GHSA-6gq8-jgmh-3ffp.json",
+  "modifiedAt": "2026-10-22T16:50:53Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-22T21:20:36.270Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "nuxt",
+      "ranges": [
+        {
+          "affected": ">= 4.0.0, < 4.4.4",
+          "fixed": "4.4.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-6gq8-jgmh-3ffp/GHSA-6gq8-jgmh-3ffp.json"
+        },
+        {
+          "affected": ">= 3.11.0, < 3.21.4",
+          "fixed": "3.21.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-6gq8-jgmh-3ffp/GHSA-6gq8-jgmh-3ffp.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.4.4"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.21.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-6gq8-jgmh-3ffp/GHSA-6gq8-jgmh-3ffp.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-6gq8-jgmh-3ffp/GHSA-6gq8-jgmh-3ffp.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-6gq8-jgmh-3ffp/GHSA-6gq8-jgmh-3ffp.json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T16:50:53Z",
+      "modifiedAt": "2026-10-22T16:50:53Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Nuxt: Route rules are matched against the raw request path, so a percent-encoded segment can bypass `appMiddleware` on dynamic and catch-all routes",
+      "url": "https://github.com/advisories/GHSA-6gq8-jgmh-3ffp",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant impact conditions reviewed",
+      "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-6gq8-jgmh-3ffp",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T16:58:28Z",
+      "modifiedAt": "2026-10-21T17:39:15Z"
+    }
+  ],
+  "caveats": [
+    "Developer public advisory and fixed Reviewed record compared. Exact maintainer package/range/fix fields or complete HTML version panel are preserved separately in the linked audit; inclusive maxima are not silently equated to exclusive fixed boundaries.",
+    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "42c7a08c808d82cb0b5c6bd03f078c1fd2905f69",
+    "checkedAt": "2026-10-22T21:20:36.270Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-6gq8-jgmh-3ffp",
+        "aliases": [
+          "CVE-2026-114131"
+        ],
+        "publishedAt": "2026-10-22T16:50:53Z",
+        "modifiedAt": "2026-10-22T16:50:53Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-6gq8-jgmh-3ffp/GHSA-6gq8-jgmh-3ffp.json"
+      }
+    ]
+  }
+}

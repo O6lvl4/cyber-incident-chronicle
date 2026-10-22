@@ -1,0 +1,224 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cpvr-w4j5-2mpg",
+  "aliases": [
+    "CVE-2026-96889",
+    "RUSTSEC-2026-0305"
+  ],
+  "title": "Librsvg: Use-after-free when XML includes have duplicated entities",
+  "summary": "Librsvg: Use-after-free when XML includes have duplicated entities",
+  "publishedAt": "2026-10-22T15:52:48Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json",
+  "modifiedAt": "2026-10-22T15:52:48Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-22T21:21:44.640Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "librsvg",
+      "ranges": [
+        {
+          "affected": "< 2.57.5",
+          "fixed": "2.57.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json"
+        },
+        {
+          "affected": ">= 2.60.0-beta.0, < 2.60.3",
+          "fixed": "2.60.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json"
+        },
+        {
+          "affected": ">= 2.61.0, < 2.61.5",
+          "fixed": "2.61.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json"
+        },
+        {
+          "affected": ">= 2.62.0-beta.0, < 2.62.4",
+          "fixed": "2.62.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json"
+        },
+        {
+          "affected": ">= 2.63.0-beta.0, < 2.63.2",
+          "fixed": "2.63.2",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.57.5"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.60.0-beta.0"
+            },
+            {
+              "fixed": "2.60.3"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.61.0"
+            },
+            {
+              "fixed": "2.61.5"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.62.0-beta.0"
+            },
+            {
+              "fixed": "2.62.4"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.63.0-beta.0"
+            },
+            {
+              "fixed": "2.63.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.8,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-96889"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T15:52:48Z",
+      "modifiedAt": "2026-10-22T15:52:48Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Librsvg: Use-after-free when XML includes have duplicated entities",
+      "url": "https://github.com/advisories/GHSA-cpvr-w4j5-2mpg",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec RUSTSEC-2026-0305: librsvg nested-XInclude use-after-free",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0305.html",
+      "publishedDate": "2026-09-23"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CNA record for CVE-2026-96889",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-96889",
+      "publishedDate": "2026-09-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "GNOME librsvg 2.57.5 NEWS: nested XML entity use-after-free fix",
+      "url": "https://raw.githubusercontent.com/GNOME/librsvg/2.57.5/NEWS",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "GNOME librsvg 2.60.3 NEWS: nested XML entity use-after-free fix",
+      "url": "https://raw.githubusercontent.com/GNOME/librsvg/2.60.3/NEWS",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "GNOME librsvg 2.61.5 NEWS: nested XML entity use-after-free fix",
+      "url": "https://raw.githubusercontent.com/GNOME/librsvg/2.61.5/NEWS",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "GNOME librsvg 2.62.4 NEWS: nested XML entity use-after-free fix",
+      "url": "https://raw.githubusercontent.com/GNOME/librsvg/2.62.4/NEWS",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "GNOME librsvg 2.63.2 NEWS: nested XML entity use-after-free fix",
+      "url": "https://raw.githubusercontent.com/GNOME/librsvg/2.63.2/NEWS",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Next.js wrapper advisory for the same assigned CVE",
+      "url": "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
+      "publishedDate": "2026-10-14"
+    }
+  ],
+  "caveats": [
+    "CVE-2026-96889 is also assigned by the Next.js developer to its upstream image-optimization advisory. Preserve Librsvg and Next.js as distinct affected packages within this same-CVE record; neither package version range substitutes for the other.",
+    "Librsvg CNA assesses High/CVSS 3.1 7.8 for its upstream context, while the Next.js wrapper developer assesses Critical with its own CVSS 4.0 vector. These are source- and deployment-specific assessments, not interchangeable scores.",
+    "GNOME release NEWS confirms fixes in 2.57.5, 2.60.3, 2.61.5, 2.62.4 and 2.63.2. Affected branch boundaries retain Reviewed/RustSec attribution. Release-page publication dates were not independently established and remain null.",
+    "Next.js requires the affected image-optimization path on glibc Linux and recommends sharp>=0.35.5 or its corresponding Next.js patches. An upstream CVE is not evidence of exploitation in the wild."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "42c7a08c808d82cb0b5c6bd03f078c1fd2905f69",
+    "checkedAt": "2026-10-22T21:21:44.640Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-cpvr-w4j5-2mpg",
+        "aliases": [
+          "CVE-2026-96889",
+          "RUSTSEC-2026-0305"
+        ],
+        "publishedAt": "2026-10-22T15:52:48Z",
+        "modifiedAt": "2026-10-22T15:52:48Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-cpvr-w4j5-2mpg/GHSA-cpvr-w4j5-2mpg.json"
+      }
+    ]
+  }
+}

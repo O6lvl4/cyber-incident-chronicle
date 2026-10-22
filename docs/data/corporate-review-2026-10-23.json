@@ -1,0 +1,84 @@
+{
+  "checkedDate": "2026-10-23",
+  "window": "Incremental Oct21–22 announcements, with earlier provider timelines retained",
+  "sources": [
+    {
+      "name": "capcom",
+      "url": "https://www.capcom.co.jp/ir/news/html/261022.html",
+      "status": "checked_changed",
+      "retrieval": "HTTP200, actual body read (PDFs extracted with pdftotext)"
+    },
+    {
+      "name": "blastmail",
+      "url": "https://www.rakus.co.jp/news/2026/1021-3.html",
+      "status": "checked_changed",
+      "retrieval": "HTTP200, actual body read (PDFs extracted with pdftotext)"
+    },
+    {
+      "name": "valtec",
+      "url": "https://www.webjapan.co.jp/maintenance/serviceteishi261022/",
+      "status": "checked_changed",
+      "retrieval": "HTTP200, actual body read (PDFs extracted with pdftotext)"
+    },
+    {
+      "name": "ntt-solmare",
+      "url": "https://www.nttsolmare.com/press/2026/1021.html",
+      "status": "checked_changed",
+      "retrieval": "HTTP200, actual body read (PDFs extracted with pdftotext)"
+    },
+    {
+      "name": "skydisc",
+      "url": "https://skydisc.jp/information/4968/",
+      "status": "checked_changed",
+      "retrieval": "HTTP200, actual body read (PDFs extracted with pdftotext)"
+    },
+    {
+      "name": "yokohama-expo",
+      "url": "https://www.city.yokohama.lg.jp/city-info/koho-kocho/press/kankyo/2026/1022expovolunteer.files/0004_20261022.pdf",
+      "status": "checked_changed",
+      "retrieval": "HTTP200, actual body read (PDFs extracted with pdftotext)"
+    },
+    {
+      "name": "yokohama-gender",
+      "url": "https://www.city.yokohama.lg.jp/city-info/koho-kocho/press/shimin/2026/20261022.files/20261022v2.pdf",
+      "status": "checked_changed",
+      "retrieval": "HTTP200, actual body read (PDFs extracted with pdftotext)"
+    },
+    {
+      "name": "atlink",
+      "url": "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE/",
+      "status": "checked_changed",
+      "retrieval": "Opened official page via web tool; latest Oct22 10:00"
+    },
+    {
+      "name": "rakus-preventive-maintenance",
+      "url": "https://www.rakus.co.jp/news/2026/1022-1.html",
+      "status": "checked_excluded",
+      "reason": "Other seven services preventive maintenance, no intrusion/leak confirmed, does not establish Blastmail restoration"
+    },
+    {
+      "name": "rakus-php-response",
+      "url": "https://www.rakus.co.jp/news/2026/1022-2.html",
+      "status": "checked_excluded",
+      "reason": "Preventive advisory, list does not include Blastmail; not corporate breach evidence"
+    },
+    {
+      "name": "Digital Hollywood",
+      "url": "https://www.dhw.ac.jp/news/20260625-cyberattack/",
+      "status": "checked_excluded",
+      "reason": "Cyberattack lecture/event report, not organization incident"
+    },
+    {
+      "name": "Aeon",
+      "url": "https://www.aeon.info/wp-content/uploads/news/important/pdf/2026/10/261021R_2.pdf",
+      "status": "fetch_failed",
+      "reason": "HTTP403, no new success checkpoint or body verified"
+    }
+  ],
+  "limitations": [
+    "Bounded incremental discovery; not an exhaustive rescan of every event since2022-11.",
+    "Other Blastmail downstream secondary leads not individually opened: NJPW, Lapsys, Nagano Action, KMRI, Kagoshima sports, Daytona. Do not mark verified or unchanged.",
+    "Prior 幼児活動研究会 gap not retried in this child pass; retain prior status, not a new failure.",
+    "No repository edits or full repo test execution by this read-only worker."
+  ]
+}

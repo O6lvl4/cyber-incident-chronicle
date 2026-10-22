@@ -1,0 +1,107 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-78g4-xqwv-q3g8",
+  "aliases": [],
+  "title": "Pillow: Bundled libopenjp2 2.5.4 in all wheels since 11.1.0 carries OSV-2025-219 heap-buffer-overflow write reachable from Image.open().load()",
+  "summary": "Pillow: Bundled libopenjp2 2.5.4 in all wheels since 11.1.0 carries OSV-2025-219 heap-buffer-overflow write reachable from Image.open().load()",
+  "publishedAt": "2026-10-22T17:01:08Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-78g4-xqwv-q3g8/GHSA-78g4-xqwv-q3g8.json",
+  "modifiedAt": "2026-10-22T17:01:08Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-22T21:20:36.270Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pillow",
+      "ranges": [
+        {
+          "affected": ">= 11.1.0, < 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-78g4-xqwv-q3g8/GHSA-78g4-xqwv-q3g8.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "11.1.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-78g4-xqwv-q3g8/GHSA-78g4-xqwv-q3g8.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-78g4-xqwv-q3g8/GHSA-78g4-xqwv-q3g8.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-78g4-xqwv-q3g8/GHSA-78g4-xqwv-q3g8.json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T17:01:08Z",
+      "modifiedAt": "2026-10-22T17:01:08Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Bundled libopenjp2 2.5.4 in all wheels since 11.1.0 carries OSV-2025-219 heap-buffer-overflow write reachable from Image.open().load()",
+      "url": "https://github.com/advisories/GHSA-78g4-xqwv-q3g8",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant impact conditions reviewed",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-78g4-xqwv-q3g8",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T10:33:53Z",
+      "modifiedAt": "2026-10-17T10:33:53Z"
+    }
+  ],
+  "caveats": [
+    "Pillow wheels bundle libopenjp2; updating the host OS alone does not necessarily update that bundled dependency. Primary relates OSV-2025-219 but related IDs are not automatically aliases.",
+    "Developer public advisory and fixed Reviewed record compared. Exact maintainer package/range/fix fields or complete HTML version panel are preserved separately in the linked audit; inclusive maxima are not silently equated to exclusive fixed boundaries.",
+    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "42c7a08c808d82cb0b5c6bd03f078c1fd2905f69",
+    "checkedAt": "2026-10-22T21:20:36.270Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-78g4-xqwv-q3g8",
+        "aliases": [],
+        "publishedAt": "2026-10-22T17:01:08Z",
+        "modifiedAt": "2026-10-22T17:01:08Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-78g4-xqwv-q3g8/GHSA-78g4-xqwv-q3g8.json"
+      }
+    ]
+  }
+}

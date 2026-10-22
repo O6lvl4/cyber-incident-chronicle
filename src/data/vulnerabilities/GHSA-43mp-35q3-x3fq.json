@@ -1,0 +1,111 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-43mp-35q3-x3fq",
+  "aliases": [
+    "CVE-2026-113724"
+  ],
+  "title": "virtualenv: Deletion recovery can change a symlink target's mode",
+  "summary": "virtualenv: Deletion recovery can change a symlink target's mode",
+  "publishedAt": "2026-10-21T21:31:34Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-43mp-35q3-x3fq/GHSA-43mp-35q3-x3fq.json",
+  "modifiedAt": "2026-10-21T21:31:34Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-22T21:20:36.270Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "virtualenv",
+      "ranges": [
+        {
+          "affected": "< 21.14.9",
+          "fixed": "21.14.9",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-43mp-35q3-x3fq/GHSA-43mp-35q3-x3fq.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "21.14.9"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-43mp-35q3-x3fq/GHSA-43mp-35q3-x3fq.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-43mp-35q3-x3fq/GHSA-43mp-35q3-x3fq.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-43mp-35q3-x3fq/GHSA-43mp-35q3-x3fq.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T21:31:34Z",
+      "modifiedAt": "2026-10-21T21:31:34Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "virtualenv: Deletion recovery can change a symlink target's mode",
+      "url": "https://github.com/advisories/GHSA-43mp-35q3-x3fq",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant impact conditions reviewed",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-43mp-35q3-x3fq",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T16:10:24Z",
+      "modifiedAt": "2026-10-22T15:51:27Z"
+    }
+  ],
+  "caveats": [
+    "Requires a failed symlink deletion entering permission recovery and target chmod permissions; not the successful unlink path.",
+    "Developer public advisory and fixed Reviewed record compared. Exact maintainer package/range/fix fields or complete HTML version panel are preserved separately in the linked audit; inclusive maxima are not silently equated to exclusive fixed boundaries.",
+    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "42c7a08c808d82cb0b5c6bd03f078c1fd2905f69",
+    "checkedAt": "2026-10-22T21:20:36.270Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-43mp-35q3-x3fq",
+        "aliases": [
+          "CVE-2026-113724"
+        ],
+        "publishedAt": "2026-10-21T21:31:34Z",
+        "modifiedAt": "2026-10-21T21:31:34Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/42c7a08c808d82cb0b5c6bd03f078c1fd2905f69/advisories/github-reviewed/2026/10/GHSA-43mp-35q3-x3fq/GHSA-43mp-35q3-x3fq.json"
+      }
+    ]
+  }
+}
