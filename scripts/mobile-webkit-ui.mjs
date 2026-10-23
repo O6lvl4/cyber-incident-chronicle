@@ -1,8 +1,14 @@
 import { webkit, devices } from 'playwright';
 import { loadData } from './data-status.mjs';
+import { loadClassifications } from './classification-status.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
-const incidentCount = loadData().incidents.length;
+const { incidents } = loadData();
+const incidentCount = incidents.length;
+const { entities, links } = loadClassifications();
+// Derive the oracle from source records, independently of the UI filter implementation.
+const foodIds = incidents.filter(item => links[item.id].some(id => entities[id].industry === 'manufacturing' && entities[id].manufacturingType === 'food')).map(item => item.id).sort();
+assert.ok(foodIds.length > 0 && foodIds.length < incidentCount, 'food filter must exercise a nonempty proper subset');
 const output = `${process.env.UI_OUTPUT ?? 'artifacts/ui'}/mobile-webkit`;
 mkdirSync(output, { recursive: true });
 const browser = await webkit.launch();
@@ -23,7 +29,7 @@ try {
     await page.locator('.classification-toggle').tap();
     await page.locator('.classification-dialog[open]').waitFor();
     await page.getByLabel('製造業の細分類', { exact: true }).selectOption('food');
-    const results = page.getByRole('button', { name: '4件の結果を見る', exact: true });
+    const results = page.getByRole('button', { name: `${foodIds.length}件の結果を見る`, exact: true });
     await results.waitFor();
     const box = await results.boundingBox();
     check(`${width}: result CTA remains inside viewport`, box && box.y >= 0 && box.y + box.height <= height + 1);
@@ -34,6 +40,7 @@ try {
     check(`${width}: result action preserves timeline choice`, await page.getByRole('tab', { name: 'タイムライン', exact: true }).getAttribute('aria-selected') === 'true');
     await page.getByRole('tab', { name: '一覧', exact: true }).tap();
     await page.locator('.incident-card').first().waitFor({ state: 'visible' });
+    assert.deepEqual(await page.locator('.incident-card').evaluateAll(cards => cards.map(card => card.dataset.incidentId).sort()), foodIds, `${width}: food filter returns exactly the source-derived incidents`);
     await page.screenshot({ path: `${output}/${width}x${height}-results.png`, fullPage: true });
     await page.getByRole('button', { name: '製造業の細分類：食品・飲料の条件を解除', exact: true }).tap();
     await page.waitForFunction(expected => document.querySelectorAll('.incident-card').length === expected, incidentCount);
