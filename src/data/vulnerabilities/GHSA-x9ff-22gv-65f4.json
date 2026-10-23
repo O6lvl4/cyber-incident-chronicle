@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-x9ff-22gv-65f4",
+  "aliases": [],
+  "title": "Echo: BodyDump can discard BodyLimit overflow errors for unknown-length requests",
+  "summary": "Echo: BodyDump can discard BodyLimit overflow errors for unknown-length requests",
+  "publishedAt": "2026-10-23T20:49:11Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-x9ff-22gv-65f4/GHSA-x9ff-22gv-65f4.json",
+  "modifiedAt": "2026-10-23T20:49:11Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/labstack/echo/v5",
+      "ranges": [
+        {
+          "affected": ">= 5.0.0, < 5.4.1",
+          "fixed": "5.4.1",
+          "sourceUrl": "https://github.com/labstack/echo/security/advisories/GHSA-x9ff-22gv-65f4"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/labstack/echo/security/advisories/GHSA-x9ff-22gv-65f4",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-x9ff-22gv-65f4/GHSA-x9ff-22gv-65f4.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-x9ff-22gv-65f4/GHSA-x9ff-22gv-65f4.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:49:11Z",
+      "modifiedAt": "2026-10-23T20:49:11Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Echo: BodyDump can discard BodyLimit overflow errors for unknown-length requests",
+      "url": "https://github.com/advisories/GHSA-x9ff-22gv-65f4",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "BodyDump can discard BodyLimit overflow errors for unknown-length requests",
+      "url": "https://github.com/labstack/echo/security/advisories/GHSA-x9ff-22gv-65f4",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T16:33:09Z",
+      "modifiedAt": "2026-10-22T16:33:09Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "BodyLimitの内側に小さいcapture上限のBodyDumpを置く、長さ不明のリクエスト等の条件がある。一般的な認証回避・データ改変・DoSを主張しない。"
+  ]
+}

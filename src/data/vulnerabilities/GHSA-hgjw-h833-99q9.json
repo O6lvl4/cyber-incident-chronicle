@@ -2,14 +2,15 @@
   "kind": "vulnerability",
   "id": "GHSA-hgjw-h833-99q9",
   "aliases": [
+    "CVE-2026-115393",
     "RUSTSEC-2026-0222"
   ],
   "title": "Wasmtime：異なるEngineの混在で型の取り違え・スタック破損",
   "summary": "ホスト側の一部公開APIが、異なるEngineに属するModule・型などをStoreへ渡すことを検証せず、誤った型索引や呼び出し用コードを使用する。スタックへの範囲外書込み、GCヒープ破損、型混同やパニックにつながる。ゲストWebAssemblyだけでは誘発できず、wasmtime CLIは対象外。",
   "publishedAt": "2026-07-31T12:00:00Z",
-  "modifiedAt": "2026-10-12T18:00:14.395534562Z",
+  "modifiedAt": "2026-10-23T10:55:50.021855429Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-14T00:28:04.712070Z",
+  "lastVerifiedAt": "2026-10-23T21:57:45.914151Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0222",
   "affected": [
     {
@@ -100,7 +101,7 @@
       "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0222",
       "publishedDate": "2026-07-31",
       "publishedAt": "2026-07-31T12:00:00Z",
-      "modifiedAt": "2026-10-12T18:00:14.395534562Z",
+      "modifiedAt": "2026-10-23T10:55:50.021855429Z",
       "withdrawnAt": null
     },
     {
@@ -115,7 +116,7 @@
       "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hgjw-h833-99q9",
       "publishedDate": "2026-07-31",
       "publishedAt": "2026-07-31T16:23:22Z",
-      "modifiedAt": "2026-07-31T16:23:22Z",
+      "modifiedAt": "2026-10-23T18:59:51Z",
       "withdrawnAt": null
     }
   ],

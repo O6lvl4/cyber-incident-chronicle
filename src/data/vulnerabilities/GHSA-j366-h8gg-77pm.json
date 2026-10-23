@@ -1,0 +1,111 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-j366-h8gg-77pm",
+  "aliases": [
+    "CVE-2026-115380",
+    "RUSTSEC-2026-0321"
+  ],
+  "title": "Wasmtime：WASI preview 0のpoll_oneoffがfuel制限を迂回",
+  "summary": "WASI preview 0のpoll_oneoffが入力数に比例するホスト処理をfuel消費・枯渇確認なしに実行し、ゲストがサービス拒否を起こし得る。",
+  "publishedAt": "2026-10-02T19:39:05Z",
+  "modifiedAt": "2026-10-23T18:39:41Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T21:56:55.272228Z",
+  "dateSourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j366-h8gg-77pm",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime-wasi",
+      "ranges": [
+        {
+          "affected": "< 36.0.17",
+          "fixed": "36.0.17",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j366-h8gg-77pm"
+        },
+        {
+          "affected": ">= 37.0.0, < 48.0.4",
+          "fixed": "48.0.4",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j366-h8gg-77pm"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.2",
+          "fixed": "49.0.2",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j366-h8gg-77pm"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "36.0.17"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "48.0.4"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.2"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/wasmtime-wasi"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j366-h8gg-77pm",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.0,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j366-h8gg-77pm"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "WASI preview 0 implementation of `poll_oneoff` circumvents fuel consumption",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j366-h8gg-77pm",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T19:39:05Z",
+      "modifiedAt": "2026-10-23T18:39:41Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RUSTSEC-2026-0321 / OSV",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0321",
+      "publishedDate": "2026-10-02",
+      "publishedAt": "2026-10-02T12:00:00Z",
+      "modifiedAt": "2026-10-23T10:55:50.168447586Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "CLIではWASI preview 0が既定で有効。ライブラリとしての埋込みではpreview 0を明示的に有効化した場合のみ対象。",
+    "WASIp1・WASIp2・WASIp3は本件の影響を受けない。開発元はCLIでpreview 0を無効化する回避策を案内している。",
+    "開発元GHSAの公表・更新日時を採用。RustSecの公表・更新日時とSEMVER範囲は別の出典として保持する。",
+    "今回の追加は過去公表の公開記録を確認したものであり、確認日の新規公表や実悪用を意味しない。"
+  ]
+}

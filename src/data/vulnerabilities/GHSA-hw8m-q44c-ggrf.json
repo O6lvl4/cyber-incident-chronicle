@@ -2,14 +2,15 @@
   "kind": "vulnerability",
   "id": "GHSA-hw8m-q44c-ggrf",
   "aliases": [
+    "CVE-2026-115379",
     "RUSTSEC-2026-0326"
   ],
   "title": "Wasmtime：try_callをまたぐGC参照の保持漏れ",
   "summary": "try_callをまたいで生存するGC参照が一部条件で保持されず、呼び出し先のGC後に古い参照を利用し、GCヒープ破損や誤動作につながる。GCと例外機能を併用する環境が対象。 修正版は48.0.4と49.0.2。",
   "publishedAt": "2026-10-02T12:00:00Z",
-  "modifiedAt": "2026-10-02T20:30:03.006892282Z",
+  "modifiedAt": "2026-10-23T10:55:52.129915890Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-14T00:23:46.068107Z",
+  "lastVerifiedAt": "2026-10-23T21:57:45.914842Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0326",
   "affected": [
     {
@@ -78,7 +79,7 @@
       "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0326",
       "publishedDate": "2026-10-02",
       "publishedAt": "2026-10-02T12:00:00Z",
-      "modifiedAt": "2026-10-02T20:30:03.006892282Z",
+      "modifiedAt": "2026-10-23T10:55:52.129915890Z",
       "withdrawnAt": null
     },
     {
@@ -93,7 +94,7 @@
       "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-hw8m-q44c-ggrf",
       "publishedDate": "2026-10-02",
       "publishedAt": "2026-10-02T19:38:57Z",
-      "modifiedAt": "2026-10-02T19:38:58Z",
+      "modifiedAt": "2026-10-23T18:43:47Z",
       "withdrawnAt": null
     }
   ],

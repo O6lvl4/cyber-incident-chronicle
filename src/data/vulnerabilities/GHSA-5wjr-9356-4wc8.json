@@ -2,24 +2,16 @@
   "kind": "vulnerability",
   "id": "GHSA-5wjr-9356-4wc8",
   "aliases": [
+    "CVE-2026-115567",
     "RUSTSEC-2026-0384"
   ],
   "title": "Tokio 1.54.0：Intervalの競合による解放済みメモリ参照",
   "summary": "マルチスレッドruntimeでIntervalとtime driverの同期が欠け、データ競合・use-after-free・panicやメモリ破壊が起こり得る。SleepとTimeoutは影響を受けない。",
-  "publishedAt": "2026-10-21T12:00:00Z",
-  "modifiedAt": "2026-10-22T11:00:02.571101820Z",
+  "publishedAt": "2026-10-23T20:54:00Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-5wjr-9356-4wc8/GHSA-5wjr-9356-4wc8.json",
+  "modifiedAt": "2026-10-23T20:54:00Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-22T21:20:18.225102Z",
-  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0384",
-  "exploitation": {
-    "status": "unknown",
-    "sourceUrl": null
-  },
-  "kev": {
-    "status": "unknown",
-    "checkedAt": null,
-    "sourceUrl": null
-  },
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
   "affected": [
     {
       "ecosystem": "rust",
@@ -30,27 +22,29 @@
           "fixed": "1.54.1",
           "sourceUrl": "https://github.com/tokio-rs/tokio/security/advisories/GHSA-5wjr-9356-4wc8"
         }
-      ],
-      "rawRanges": [
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.54.0"
-            },
-            {
-              "fixed": "1.54.1"
-            }
-          ]
-        }
-      ],
-      "packageUrl": "pkg:cargo/tokio"
+      ]
     }
   ],
   "severity": {
     "label": "high",
     "sourceUrl": "https://github.com/tokio-rs/tokio/security/advisories/GHSA-5wjr-9356-4wc8",
-    "cvss": []
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:N/VI:L/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-5wjr-9356-4wc8/GHSA-5wjr-9356-4wc8.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
   },
   "sources": [
     {
@@ -59,7 +53,7 @@
       "url": "https://github.com/tokio-rs/tokio/security/advisories/GHSA-5wjr-9356-4wc8",
       "publishedDate": "2026-10-21",
       "publishedAt": "2026-10-21T21:16:31Z",
-      "modifiedAt": "2026-10-21T21:38:06Z",
+      "modifiedAt": "2026-10-23T17:10:56Z",
       "withdrawnAt": null
     },
     {
@@ -69,12 +63,29 @@
       "publishedDate": "2026-10-21",
       "publishedAt": "2026-10-21T12:00:00Z",
       "modifiedAt": "2026-10-22T11:00:02.571101820Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-5wjr-9356-4wc8/GHSA-5wjr-9356-4wc8.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:54:00Z",
+      "modifiedAt": "2026-10-23T20:54:00Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Tokio: Race condition in `tokio::time::Interval`",
+      "url": "https://github.com/advisories/GHSA-5wjr-9356-4wc8",
+      "publishedDate": "2026-10-23"
     }
   ],
   "caveats": [
     "対象はTokio 1.54.0のマルチスレッドruntime上のInterval。Sleep・Timeoutや他の版へ影響を拡張しない。",
     "開発元は本番環境のクラッシュを受けて1.54.0をyank済みと説明しているが、悪用や特定企業への攻撃の確認ではない。",
     "開発元はHighと評価。CVSSベクトル・数値は未公表のため補わない。",
-    "公表・更新日時はRustSecのOSVレコード。開発元の公表・更新日時は出典別に保持する。"
+    "公表・更新日時はRustSecのOSVレコード。開発元の公表・更新日時は出典別に保持する。",
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。"
   ]
 }

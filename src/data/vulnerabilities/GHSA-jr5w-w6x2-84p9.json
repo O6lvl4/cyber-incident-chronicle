@@ -1,0 +1,100 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-jr5w-w6x2-84p9",
+  "aliases": [
+    "CVE-2026-115570"
+  ],
+  "title": "Electron: Mitigation for compromised eMudhra intermediate certificates",
+  "summary": "Electron: Mitigation for compromised eMudhra intermediate certificates",
+  "publishedAt": "2026-10-23T20:53:41Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-jr5w-w6x2-84p9/GHSA-jr5w-w6x2-84p9.json",
+  "modifiedAt": "2026-10-23T20:53:41Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "electron",
+      "ranges": [
+        {
+          "affected": ">= 45.0.0-alpha.1, < 45.0.0-beta.6",
+          "fixed": "45.0.0-beta.6",
+          "sourceUrl": "https://github.com/electron/electron/security/advisories/GHSA-jr5w-w6x2-84p9"
+        },
+        {
+          "affected": ">= 44.0.0-alpha.1, < 44.9.1",
+          "fixed": "44.9.1",
+          "sourceUrl": "https://github.com/electron/electron/security/advisories/GHSA-jr5w-w6x2-84p9"
+        },
+        {
+          "affected": ">= 43.0.0-alpha.1, < 43.8.1",
+          "fixed": "43.8.1",
+          "sourceUrl": "https://github.com/electron/electron/security/advisories/GHSA-jr5w-w6x2-84p9"
+        },
+        {
+          "affected": "< 42.11.16",
+          "fixed": "42.11.16",
+          "sourceUrl": "https://github.com/electron/electron/security/advisories/GHSA-jr5w-w6x2-84p9"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/electron/electron/security/advisories/GHSA-jr5w-w6x2-84p9",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.4,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://github.com/electron/electron/security/advisories/GHSA-jr5w-w6x2-84p9"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-jr5w-w6x2-84p9/GHSA-jr5w-w6x2-84p9.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-jr5w-w6x2-84p9/GHSA-jr5w-w6x2-84p9.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:53:41Z",
+      "modifiedAt": "2026-10-23T20:53:41Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Electron: Mitigation for compromised eMudhra intermediate certificates",
+      "url": "https://github.com/advisories/GHSA-jr5w-w6x2-84p9",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Mitigation for compromised eMudhra intermediate certificates",
+      "url": "https://github.com/electron/electron/security/advisories/GHSA-jr5w-w6x2-84p9",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T04:37:15Z",
+      "modifiedAt": "2026-10-23T18:12:16Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "攻撃者が傍受できるネットワークでTLS接続を行うアプリが対象。ネットワーク接続を行わないアプリは影響外。Go/Firefoxの関連CVEを本レコードの別名にはしない。"
+  ]
+}

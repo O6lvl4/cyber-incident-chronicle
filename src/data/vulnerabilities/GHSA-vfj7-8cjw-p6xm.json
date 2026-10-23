@@ -1,0 +1,119 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vfj7-8cjw-p6xm",
+  "aliases": [
+    "CVE-2026-93687"
+  ],
+  "title": "Withdrawn Advisory: braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+  "summary": "Withdrawn Advisory: braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+  "publishedAt": "2026-09-18T18:31:41Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/09/GHSA-vfj7-8cjw-p6xm/GHSA-vfj7-8cjw-p6xm.json",
+  "modifiedAt": "2026-10-23T12:53:02Z",
+  "withdrawnAt": "2026-10-23T12:53:02Z",
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "braces",
+      "ranges": [
+        {
+          "affected": "<= 3.0.3",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/09/GHSA-vfj7-8cjw-p6xm/GHSA-vfj7-8cjw-p6xm.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "3.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-93687",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-93687"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-93687"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/09/GHSA-vfj7-8cjw-p6xm/GHSA-vfj7-8cjw-p6xm.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/09/GHSA-vfj7-8cjw-p6xm/GHSA-vfj7-8cjw-p6xm.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/09/GHSA-vfj7-8cjw-p6xm/GHSA-vfj7-8cjw-p6xm.json",
+      "publishedDate": "2026-09-18",
+      "publishedAt": "2026-09-18T18:31:41Z",
+      "modifiedAt": "2026-10-23T12:53:02Z",
+      "withdrawnAt": "2026-10-23T12:53:02Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Withdrawn Advisory: braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+      "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+      "publishedDate": "2026-09-18"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "VulnCheck: braces through 3.0.3 Stack Overflow via Deeply Nested Patterns",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-93687",
+      "publishedDate": "2026-09-18",
+      "publishedAt": "2026-09-18T15:06:02.880Z",
+      "modifiedAt": "2026-10-14T23:03:56.063Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "braces project member assessment of claimed vulnerability",
+      "url": "https://github.com/micromatch/braces/issues/70#issuecomment-5995348316",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T13:23:03Z",
+      "modifiedAt": "2026-10-05T13:47:05Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "Reviewedは2026-10-23T12:53:02Zに実用上悪用できる脆弱性ではないとして撤回。履歴は削除しない。",
+    "開発リポジトリのMEMBERによる公開説明を取得。別の第三者commentを開発元発言と偽らない。CNAは確認時点でPUBLISHEDのままで、Reviewed撤回とCVE撤回を同一視しない。"
+  ]
+}

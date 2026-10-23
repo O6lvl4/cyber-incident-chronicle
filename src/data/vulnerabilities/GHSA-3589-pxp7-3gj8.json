@@ -1,0 +1,108 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3589-pxp7-3gj8",
+  "aliases": [
+    "CVE-2026-114386"
+  ],
+  "title": "Pydantic AI Harness tool-call limit bypass in nested CodeMode calls",
+  "summary": "Pydantic AI Harness tool-call limit bypass in nested CodeMode calls",
+  "publishedAt": "2026-10-21T15:42:26Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-3589-pxp7-3gj8/GHSA-3589-pxp7-3gj8.json",
+  "modifiedAt": "2026-10-23T20:55:50Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pydantic-ai-harness",
+      "ranges": [
+        {
+          "affected": "< 0.59.0",
+          "fixed": "0.59.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-3589-pxp7-3gj8/GHSA-3589-pxp7-3gj8.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.59.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-3589-pxp7-3gj8/GHSA-3589-pxp7-3gj8.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-3589-pxp7-3gj8/GHSA-3589-pxp7-3gj8.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-3589-pxp7-3gj8/GHSA-3589-pxp7-3gj8.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-3589-pxp7-3gj8/GHSA-3589-pxp7-3gj8.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T15:42:26Z",
+      "modifiedAt": "2026-10-23T20:55:50Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pydantic AI Harness tool-call limit bypass in nested CodeMode calls",
+      "url": "https://github.com/advisories/GHSA-3589-pxp7-3gj8",
+      "publishedDate": "2026-10-21"
+    },
+    {
+      "type": "maintainer",
+      "title": "Pydantic AI Harness tool-call limit bypass in nested CodeMode calls (pull)",
+      "url": "https://api.github.com/repos/pydantic/pydantic-ai/pulls/10362",
+      "publishedDate": null
+    },
+    {
+      "type": "release",
+      "title": "Pydantic AI Harness tool-call limit bypass in nested CodeMode calls (release)",
+      "url": "https://github.com/pydantic/pydantic-ai/releases/tag/v2.59.0",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Pydantic AI Harness tool-call limit bypass in nested CodeMode calls (pypi)",
+      "url": "https://pypi.org/pypi/pydantic-ai-harness/0.59.0/json",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "CodeModeのrun_codeからのnested tool callにtool_calls_limitを適用する修正。外側のrun_codeとnested callの両方を予算に数える。pydantic-ai本体のv2.59.0とpydantic-ai-harness 0.59.0の版を混同しない。"
+  ]
+}

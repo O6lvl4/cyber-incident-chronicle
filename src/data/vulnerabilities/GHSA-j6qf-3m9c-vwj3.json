@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-j6qf-3m9c-vwj3",
+  "aliases": [
+    "CVE-2026-114437"
+  ],
+  "title": "chi: Client IP spoofing in ClientIPFromXFF via X-Forwarded-For",
+  "summary": "chi: Client IP spoofing in ClientIPFromXFF via X-Forwarded-For",
+  "publishedAt": "2026-10-23T20:56:46Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-j6qf-3m9c-vwj3/GHSA-j6qf-3m9c-vwj3.json",
+  "modifiedAt": "2026-10-23T20:56:46Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/go-chi/chi/v5",
+      "ranges": [
+        {
+          "affected": "<= 5.3.2",
+          "fixed": "5.4.0",
+          "sourceUrl": "https://github.com/go-chi/chi/security/advisories/GHSA-j6qf-3m9c-vwj3"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/go-chi/chi/security/advisories/GHSA-j6qf-3m9c-vwj3",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.8,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://github.com/go-chi/chi/security/advisories/GHSA-j6qf-3m9c-vwj3"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-j6qf-3m9c-vwj3/GHSA-j6qf-3m9c-vwj3.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-j6qf-3m9c-vwj3/GHSA-j6qf-3m9c-vwj3.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:56:46Z",
+      "modifiedAt": "2026-10-23T20:56:46Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "chi: Client IP spoofing in ClientIPFromXFF via X-Forwarded-For",
+      "url": "https://github.com/advisories/GHSA-j6qf-3m9c-vwj3",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Client IP spoofing in ClientIPFromXFF via X-Forwarded-For",
+      "url": "https://github.com/go-chi/chi/security/advisories/GHSA-j6qf-3m9c-vwj3",
+      "publishedDate": "2026-10-12",
+      "publishedAt": "2026-10-12T11:26:04Z",
+      "modifiedAt": "2026-10-12T11:26:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "chi v5.4.0 go.mod module declaration",
+      "url": "https://raw.githubusercontent.com/go-chi/chi/v5.4.0/go.mod",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元GHSAのpackage欄はURL形式で末尾空白を含む。v5.4.0のgo.modでgithub.com/go-chi/chi/v5を確認して表示し、原表記は監査に保持する。"
+  ]
+}

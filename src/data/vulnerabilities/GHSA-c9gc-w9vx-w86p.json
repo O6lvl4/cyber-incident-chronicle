@@ -1,0 +1,110 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c9gc-w9vx-w86p",
+  "aliases": [
+    "CVE-2026-115388",
+    "RUSTSEC-2026-0313"
+  ],
+  "title": "Wasmtime：HTTP送信本文の書込み制限未適用によるホストメモリ枯渇",
+  "summary": "WASIp2のHTTP送信本文でcheck-writeが返す許容量をwriteが強制せず、ゲストが大きなホスト側バッファを保持してサービス拒否を起こし得る。",
+  "publishedAt": "2026-09-24T19:24:54Z",
+  "modifiedAt": "2026-10-23T18:32:33Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T21:56:48.961853Z",
+  "dateSourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-c9gc-w9vx-w86p",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime-wasi-http",
+      "ranges": [
+        {
+          "affected": "< 36.0.16",
+          "fixed": "36.0.16",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-c9gc-w9vx-w86p"
+        },
+        {
+          "affected": ">= 37.0.0, < 48.0.3",
+          "fixed": "48.0.3",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-c9gc-w9vx-w86p"
+        },
+        {
+          "affected": "49.0.0",
+          "fixed": "49.0.1",
+          "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-c9gc-w9vx-w86p"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "36.0.16"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "48.0.3"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.1"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/wasmtime-wasi-http"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-c9gc-w9vx-w86p",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.2,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-c9gc-w9vx-w86p"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "wasmtime-wasi-http: outgoing HTTP body write allows guest-driven host memory exhaustion (DoS)",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-c9gc-w9vx-w86p",
+      "publishedDate": "2026-09-24",
+      "publishedAt": "2026-09-24T19:24:54Z",
+      "modifiedAt": "2026-10-23T18:32:33Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RUSTSEC-2026-0313 / OSV",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0313",
+      "publishedDate": "2026-09-24",
+      "publishedAt": "2026-09-24T12:00:00Z",
+      "modifiedAt": "2026-10-23T10:55:50.282824395Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "対象はwasmtime-wasi-httpのWASIp2送信本文。設定された書込み上限を超える保持が問題であり、すべてのWasmtime利用形態へ拡張しない。",
+    "開発元GHSAの公表・更新日時を採用。RustSecの公表・更新日時とSEMVER範囲は別の出典として保持する。",
+    "今回の追加は過去公表の公開記録を確認したものであり、確認日の新規公表や実悪用を意味しない。"
+  ]
+}

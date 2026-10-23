@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v897-pv23-r8cw",
+  "aliases": [
+    "CVE-2026-0976"
+  ],
+  "title": "Keycloak has an improper input validation vulnerability",
+  "summary": "Keycloak has an improper input validation vulnerability",
+  "publishedAt": "2026-01-15T15:31:17Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/01/GHSA-v897-pv23-r8cw/GHSA-v897-pv23-r8cw.json",
+  "modifiedAt": "2026-10-23T00:32:49Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.keycloak:keycloak-quarkus-server",
+      "ranges": [
+        {
+          "affected": "<= 26.2.5",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/01/GHSA-v897-pv23-r8cw/GHSA-v897-pv23-r8cw.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "26.2.5"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-0976",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.7,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-0976"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/01/GHSA-v897-pv23-r8cw/GHSA-v897-pv23-r8cw.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/01/GHSA-v897-pv23-r8cw/GHSA-v897-pv23-r8cw.json",
+      "publishedDate": "2026-01-15",
+      "publishedAt": "2026-01-15T15:31:17Z",
+      "modifiedAt": "2026-10-23T00:32:49Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Keycloak has an improper input validation vulnerability",
+      "url": "https://github.com/advisories/GHSA-v897-pv23-r8cw",
+      "publishedDate": "2026-01-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "redhat: Org.keycloak/keycloak-quarkus-server: keycloak: proxy bypass due to improper handling of matrix parameters in url paths",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-0976",
+      "publishedDate": "2026-01-15",
+      "publishedAt": "2026-01-15T12:06:21.251Z",
+      "modifiedAt": "2026-10-22T21:17:19.726Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "Red HatのCNA原データを取得。Red Hat buildのunaffected製品版を、上流Maven packageの修正境界へ読み替えない。Mavenの影響範囲はReviewed出典を維持する。Red Hat直接サイトはHTTP200のSite Unavailableで本文取得に失敗。"
+  ]
+}

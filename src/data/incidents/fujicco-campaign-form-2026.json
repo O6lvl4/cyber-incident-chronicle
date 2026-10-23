@@ -1,0 +1,83 @@
+{
+  "id": "fujicco-campaign-form-2026",
+  "company": "フジッコ",
+  "geography": "日本",
+  "title": "委託先のキャンペーン応募サーバーで個人情報漏えいの可能性",
+  "announcementDate": "2026-10-22",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃の実施時期は未公表",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "lastVerifiedDate": "2026-10-24",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "キャンペーンの非会員向け応募フォームを受託する会社のサーバーが不正アクセスを受け、10月21日に漏えいの可能性が判明。対象は延べ約15,500件で、該当応募受付を停止した。",
+  "affectedData": [
+    "氏名、年齢、性別、職業、婚姻状況、家族構成、電話番号、メールアドレス、住所、アンケート情報"
+  ],
+  "counts": [
+    {
+      "value": 15500,
+      "unit": "件",
+      "status": "possible",
+      "label": "2つのキャンペーンの非会員向け応募フォームの延べ件数。複数応募を含む",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "対象は2026年5月以降の「もっと！とろぉ～もっちキャンペーン 第2弾」と「フジッコ大感謝祭キャンペーン」。5月は応募対象期間の起点で、攻撃開始日ではない。",
+    "延べ約15,500件には同一顧客の複数応募が含まれ、実人数や確定流出数ではない。",
+    "フジッコイン会員向けフォーム、応募はがき、X経由の応募は対象外。免許証・カード・口座番号は含まれない。",
+    "情報を取得されたものとみなす対応方針と、取得確認済みの事実を区別する。公開・不正利用は未確認。",
+    "委託先名は非公表。他の委託先侵害事案と同一とは断定しない。"
+  ],
+  "sources": [
+    {
+      "title": "委託先のキャンペーン応募サーバーで個人情報漏えいの可能性",
+      "url": "https://www.fujicco.co.jp/upload/pr_261022.pdf",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-21",
+      "label": "漏えい可能性が判明",
+      "kind": "occurrence",
+      "summary": "非会員向け応募フォームの情報に漏えい可能性を把握し、対象サーバーを停止。",
+      "sourceUrl": "https://www.fujicco.co.jp/upload/pr_261022.pdf"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "キャンペーンの非会員向け応募フォームを受託する会社のサーバーが不正アクセスを受け、10月21日に漏えいの可能性が判明。対象は延べ約15,500件で、該当応募受付を停止した。",
+      "sourceUrl": "https://www.fujicco.co.jp/upload/pr_261022.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃の実施日・期間は公表されていない。検知・公表日から推定しない。",
+      "sourceUrl": "https://www.fujicco.co.jp/upload/pr_261022.pdf",
+      "reviewedDate": "2026-10-24"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害を最初に確認した日付は公表されていない。",
+      "sourceUrl": "https://www.fujicco.co.jp/upload/pr_261022.pdf",
+      "reviewedDate": "2026-10-24"
+    }
+  },
+  "detectedDate": "2026-10-21"
+}

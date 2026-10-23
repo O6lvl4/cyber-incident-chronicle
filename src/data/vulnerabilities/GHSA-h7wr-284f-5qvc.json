@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-h7wr-284f-5qvc",
+  "aliases": [],
+  "title": "Echo: Decompress permits unbounded gzip expansion in v4",
+  "summary": "Echo: Decompress permits unbounded gzip expansion in v4",
+  "publishedAt": "2026-10-23T20:49:49Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-h7wr-284f-5qvc/GHSA-h7wr-284f-5qvc.json",
+  "modifiedAt": "2026-10-23T20:49:49Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/labstack/echo/v4",
+      "ranges": [
+        {
+          "affected": ">= 4.0.0, < 4.16.1",
+          "fixed": "4.16.1",
+          "sourceUrl": "https://github.com/labstack/echo/security/advisories/GHSA-h7wr-284f-5qvc"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/labstack/echo/security/advisories/GHSA-h7wr-284f-5qvc",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-h7wr-284f-5qvc/GHSA-h7wr-284f-5qvc.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-h7wr-284f-5qvc/GHSA-h7wr-284f-5qvc.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:49:49Z",
+      "modifiedAt": "2026-10-23T20:49:49Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Echo: Decompress permits unbounded gzip expansion in v4",
+      "url": "https://github.com/advisories/GHSA-h7wr-284f-5qvc",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Decompress permits unbounded gzip expansion in v4",
+      "url": "https://github.com/labstack/echo/security/advisories/GHSA-h7wr-284f-5qvc",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T16:33:11Z",
+      "modifiedAt": "2026-10-22T16:33:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "任意有効化のDecompressが対象。圧縮前サイズの制限だけでは展開後のサイズを制限しない。修正後の上限は既定100 MiB、-1は無制限。読み込みエラーの処理が必要。"
+  ]
+}

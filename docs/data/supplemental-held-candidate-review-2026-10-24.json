@@ -1,0 +1,148 @@
+[
+  {
+    "sourceId": "PYSEC-2026-4324",
+    "decision": "hold-conflicting-fixed-boundary",
+    "findings": "PyPI vllmへの対応は明示。OSVは0.22.1以上0.28.0未満、開発元構造化欄は0.28.0を影響範囲と修正版の双方に含める。本文は既存修正で取りこぼしたFunAudioChat/Tarsier2のartifact pin伝播を扱い、確定下限にも留保。修正版の矛盾は推測解消せず候補保持。認証なしRCEやtrust_remote_code=False迂回とはしない。",
+    "sourceReceipt": {
+      "url": "https://api.github.com/repos/vllm-project/vllm/security-advisories/GHSA-hhv2-872h-628q",
+      "checkedAt": "2026-10-23T21:56:48.959630Z",
+      "httpStatus": 200,
+      "bytes": 10072,
+      "sha256": "ce05c4c99f71436e71b837b38079c695822eacefc9f674d927537f252c3cda4e",
+      "status": "success"
+    },
+    "maintainerFields": {
+      "ghsa_id": "GHSA-hhv2-872h-628q",
+      "cve_id": null,
+      "published_at": "2026-09-12T14:47:49Z",
+      "updated_at": "2026-09-12T14:47:49Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "vllm"
+          },
+          "vulnerable_version_range": ">= 0.22.1, <= 0.28.0",
+          "patched_versions": ">= 0.28.0",
+          "vulnerable_functions": []
+        }
+      ]
+    }
+  },
+  {
+    "sourceId": "PYSEC-2026-4325",
+    "decision": "hold-package-mapping-and-assessment-conflict",
+    "findings": "OSVはPyPI vllmへ対応するが、開発元のpackage/ecosystemは空欄で対象は任意有効化されるRust frontend。PyPI配布との対応を確定せず候補保持。OSV CVSS3.1はAC:L、開発元はAC:H 5.9/Medium。CVSSや実行条件を一律化しない。",
+    "sourceReceipt": {
+      "url": "https://api.github.com/repos/vllm-project/vllm/security-advisories/GHSA-5fj9-pfhr-6j48",
+      "checkedAt": "2026-10-23T21:56:48.961126Z",
+      "httpStatus": 200,
+      "bytes": 11288,
+      "sha256": "93f537fcc0c8fd43fb38a5229478f8c88c2ab400d8d8333a1bc5b9ddde049b68",
+      "status": "success"
+    },
+    "maintainerFields": {
+      "ghsa_id": "GHSA-5fj9-pfhr-6j48",
+      "cve_id": "CVE-2026-105759",
+      "published_at": "2026-09-23T10:23:16Z",
+      "updated_at": "2026-10-05T22:56:50Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": ""
+          },
+          "vulnerable_version_range": "< v0.30.0",
+          "patched_versions": ">= 0.30.0",
+          "vulnerable_functions": []
+        }
+      ]
+    }
+  },
+  {
+    "sourceId": "RUSTSEC-2026-0385",
+    "decision": "hold-no-stable-ghsa-cve",
+    "findings": "開発元の0.4.4セキュリティ修正とRustSecを確認。現時点の公開開発元アドバイザリ一覧とOSVに本件のGHSA/CVEなし。安定したGHSA/CVEを主IDとする現行契約に従い候補保持。relatedのRUSTSEC-2026-0003とは統合しない。",
+    "sourceReceipts": [
+      {
+        "url": "https://rustsec.org/advisories/RUSTSEC-2026-0385.html",
+        "checkedAt": "2026-10-23T21:55:28.150285Z",
+        "httpStatus": 200,
+        "bytes": 9985,
+        "sha256": "91d5c5e884e3e855ac3c10484f0970ec3045e337b2715382c71f481428e25e1e",
+        "status": "success"
+      },
+      {
+        "url": "https://api.github.com/repos/RustCrypto/utils/pulls/1569",
+        "checkedAt": "2026-10-23T21:55:33.905182Z",
+        "httpStatus": 200,
+        "bytes": 16495,
+        "sha256": "a53283c04177a8f665943efd011c4d6b09b5a896253f03824eceebcfdbe47f04",
+        "status": "success"
+      },
+      {
+        "url": "https://api.github.com/repos/RustCrypto/utils/security-advisories?per_page=100",
+        "checkedAt": "2026-10-23T21:55:28.152481Z",
+        "httpStatus": 200,
+        "bytes": 25851,
+        "sha256": "dd2b2a7c5238b7841a3be2be520ba78b4f4ba62bf813ca16151022862a6d6f33",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "sourceId": "RUSTSEC-2026-0386",
+    "decision": "hold-no-stable-ghsa-cve",
+    "findings": "Tokioの公開修正PRとRustSecのunsound分類・範囲を確認。現時点の公開開発元一覧とOSVに本件のGHSA/CVEなし。既存Intervalの問題とは異なり、推測で統合・採番しない。修正はsafe constructorsの廃止予定化とunsafe register APIへの移行で、単純アップデートのみで全利用が安全とは断定しない。",
+    "sourceReceipts": [
+      {
+        "url": "https://rustsec.org/advisories/RUSTSEC-2026-0386.html",
+        "checkedAt": "2026-10-23T21:55:28.151629Z",
+        "httpStatus": 200,
+        "bytes": 11751,
+        "sha256": "44b6549eccb75af0f6e682d5de5712c7695e41f4dbdeb87b37b727c60a86346b",
+        "status": "success"
+      },
+      {
+        "url": "https://api.github.com/repos/tokio-rs/tokio/pulls/8587",
+        "checkedAt": "2026-10-23T21:55:34.025511Z",
+        "httpStatus": 200,
+        "bytes": 19075,
+        "sha256": "f2f3d89ca0c517ff49b930b2fb198dd75ae7b9bf3ebf882c881733469e97828f",
+        "status": "success"
+      },
+      {
+        "url": "https://api.github.com/repos/tokio-rs/tokio/security-advisories?per_page=100",
+        "checkedAt": "2026-10-23T21:55:33.770493Z",
+        "httpStatus": 200,
+        "bytes": 9915,
+        "sha256": "79c37bec6880f8ffd9686532b29956f9d97f51f6ef464f6fdcc02bbeb7dfc0d6",
+        "status": "success"
+      }
+    ]
+  }
+]

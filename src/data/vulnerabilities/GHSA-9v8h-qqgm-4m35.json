@@ -1,0 +1,151 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9v8h-qqgm-4m35",
+  "aliases": [
+    "BIT-node-2026-111497",
+    "BIT-node-min-2026-111497",
+    "CVE-2026-111497",
+    "PYSEC-2026-4322",
+    "PYSEC-2026-4323"
+  ],
+  "title": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
+  "summary": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
+  "publishedAt": "2026-10-22T15:32:49Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-9v8h-qqgm-4m35/GHSA-9v8h-qqgm-4m35.json",
+  "modifiedAt": "2026-10-23T19:08:09Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:03:26.429533Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "brotli",
+      "ranges": [
+        {
+          "affected": ">= 1.0.3, < 1.2.1",
+          "fixed": "1.2.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-9v8h-qqgm-4m35/GHSA-9v8h-qqgm-4m35.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.3"
+            },
+            {
+              "fixed": "1.2.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "pip",
+      "packageName": "brotlicffi",
+      "ranges": [
+        {
+          "affected": ">= 1.0.3, < 1.2.1.0",
+          "fixed": "1.2.1.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-9v8h-qqgm-4m35/GHSA-9v8h-qqgm-4m35.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.3"
+            },
+            {
+              "fixed": "1.2.1.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-111497",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-111497"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-9v8h-qqgm-4m35/GHSA-9v8h-qqgm-4m35.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-9v8h-qqgm-4m35/GHSA-9v8h-qqgm-4m35.json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T15:32:49Z",
+      "modifiedAt": "2026-10-23T19:08:09Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
+      "url": "https://github.com/advisories/GHSA-9v8h-qqgm-4m35",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "type": "maintainer",
+      "title": "Google: Out-of-Bounds Write in Google Brotli Decoder",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-111497",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T13:35:41.975Z",
+      "modifiedAt": "2026-10-23T21:40:13.477Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "PYSEC-2026-4322: PyPI wrapper advisory",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4322",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T00:00:00Z",
+      "modifiedAt": "2026-10-23T13:40:35.253748907Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "PYSEC-2026-4323: PyPI wrapper advisory",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4323",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T00:00:00Z",
+      "modifiedAt": "2026-10-23T13:40:35.253748907Z"
+    },
+    {
+      "type": "release",
+      "title": "Google Brotli v1.2.1 security release",
+      "url": "https://github.com/google/brotli/releases/tag/v1.2.1",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "Google CNAは上流Brotliを1.0.3〜1.0.10未満、1.1.0〜1.1.1未満、1.2.0〜1.2.1未満の3系列として明示。PyPI wrapperの配布版範囲へ機械的に移し替えない。",
+    "ReviewedのPyPI下限は1.0.3、PYSECの下限0は全過去版を表す。上流C実装、Brotli Python package、brotlicffi wrapperの範囲差を推測で解消しない。",
+    "CVE-2026-111497はGoogle CNA、PYSEC-2026-4322/4323とBIT-nodeの同一性はOSVの明示aliasesで確認。これらをReviewed自身のalias配列に存在した情報とは扱わない。"
+  ]
+}

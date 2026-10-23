@@ -1,26 +1,26 @@
 {
   "id": "futureshop-platform-2026",
   "company": "フューチャーショップ（futureshop）",
-  "title": "一部サーバーへの不正アクセスでECサイト・管理画面等を停止",
+  "title": "4サーバーへの不正アクセス、再構築後にサービス再開・個人情報流出は未確認",
   "announcementDate": "2026-10-21",
   "announcementDateLabel": "初報公表",
   "occurredDate": null,
   "occurredDateLabel": "侵入開始日は未公表",
-  "updatedDate": "2026-10-21",
-  "statusAsOfDate": "2026-10-21",
-  "lastVerifiedDate": "2026-10-22",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "lastVerifiedDate": "2026-10-24",
   "impactTypes": [
     "outage",
     "unauthorizedAccess"
   ],
-  "disclosureStatus": "investigating",
+  "disclosureStatus": "noConfirmedLeak",
   "attackMethod": {
     "label": "不正アクセスの具体的な侵入手法は未公表",
     "status": "unknown"
   },
-  "summary": "10月21日10時14分頃に一部サーバーへの不正アクセスを確認し、11時30分から対象をメンテナンス状態に変更。対象はc02・c05・c12・g06で、ECサイト・管理画面・FTP・APIが利用できず、影響範囲を調査中。",
+  "summary": "10月21日に検知したc02・c05・c12・g06への不正アクセスについて、22日23時35分に対策・再構築後のサービス再開を公表。購入者個人情報の流出は未確認とし、外部専門機関調査を予定している。全店舗向けPHP予防対応と、4サーバーへの侵入との因果関係は公表されていない。",
   "affectedData": [
-    "影響範囲・情報漏えいの有無や対象項目は調査中"
+    "4サーバーの購入者個人情報は参照・外部持ち出し痕跡がなく、流出未確認（10月22日公表時点）"
   ],
   "counts": [
     {
@@ -32,15 +32,27 @@
     }
   ],
   "caveats": [
-    "4は公表されたサーバー名の数。店舗数・顧客人数や漏えい件数ではない。",
-    "対象外サーバーでは発表時点で影響未確認。全サービス・全店舗の停止とはしない。",
-    "既存IDCFクラウド事案に伴うfuture Scenario Cast等の停止とは別の公表対象。同一原因との公式説明はない。"
+    "4は公表されたサーバー数で、店舗数・人数・漏えい件数ではない。c02はトライアル環境。",
+    "4サーバーの侵害対応と全店舗向けPHP脆弱性の予防的停止は区別。侵害原因をPHPと断定しない。",
+    "22日23時35分の再開対象はECサイト・管理画面・APIと明記。その他の機能や調査の完了を推定しない。",
+    "23日の別題の第一報は17～18日の侵入・1店舗3,147,469件の漏えいを公表。21日検知の4サーバー事象との関係は公表されていないため、同一原因・同一対象とは断定しない。",
+    "IDCF起因のメール配信オプション停止も別の環境・公表対象である。"
   ],
   "sources": [
     {
       "title": "一部サーバーへの不正アクセスでECサイト・管理画面等を停止",
       "url": "https://www.future-shop.jp/news/2026/10/21.html",
       "publishedDate": "2026-10-21"
+    },
+    {
+      "title": "フューチャーショップ：4サーバー事象の第二報",
+      "url": "https://www.future-shop.jp/news/2026/10/22.html",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "title": "フューチャーショップ：4サーバーを含むサービス再開",
+      "url": "https://www.future-shop.jp/news/2026/10/22-3.html",
+      "publishedDate": "2026-10-22"
     }
   ],
   "timeline": [
@@ -57,6 +69,20 @@
       "kind": "disclosure",
       "summary": "10月21日10時14分頃に一部サーバーへの不正アクセスを確認し、11時30分から対象をメンテナンス状態に変更。対象はc02・c05・c12・g06で、ECサイト・管理画面・FTP・APIが利用できず、影響範囲を調査中。",
       "sourceUrl": "https://www.future-shop.jp/news/2026/10/21.html"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "個人情報の参照・持ち出し痕跡なし",
+      "kind": "update",
+      "summary": "7時時点、流出痕跡は未確認。予防的PHP対応を含めメンテナンスは継続。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/22.html"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "23時35分にサービス再開",
+      "kind": "update",
+      "summary": "侵入経路対策・再構築と安全確認後に再開。購入者個人情報の流出は未確認。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/22-3.html"
     }
   ],
   "eventDates": {

@@ -1,0 +1,92 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rpx2-p6hp-x5gj",
+  "aliases": [
+    "CVE-2026-62204"
+  ],
+  "title": "SiYuan: Missing consistency check between packageName and repoURL/repoHash in bazaar package install allows overwriting an existing, trusted plugin",
+  "summary": "SiYuan: Missing consistency check between packageName and repoURL/repoHash in bazaar package install allows overwriting an existing, trusted plugin",
+  "publishedAt": "2026-10-23T18:38:25Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-rpx2-p6hp-x5gj/GHSA-rpx2-p6hp-x5gj.json",
+  "modifiedAt": "2026-10-23T18:38:25Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/siyuan-note/siyuan/kernel",
+      "ranges": [
+        {
+          "affected": "3.7.3",
+          "fixed": "v3.7.4",
+          "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rpx2-p6hp-x5gj"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rpx2-p6hp-x5gj",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.6,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L",
+        "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rpx2-p6hp-x5gj"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-rpx2-p6hp-x5gj/GHSA-rpx2-p6hp-x5gj.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-rpx2-p6hp-x5gj/GHSA-rpx2-p6hp-x5gj.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T18:38:25Z",
+      "modifiedAt": "2026-10-23T18:38:25Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "SiYuan: Missing consistency check between packageName and repoURL/repoHash in bazaar package install allows overwriting an existing, trusted plugin",
+      "url": "https://github.com/advisories/GHSA-rpx2-p6hp-x5gj",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Missing consistency check between packageName and repoURL/repoHash in bazaar package install allows overwriting an existing, trusted plugin",
+      "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rpx2-p6hp-x5gj",
+      "publishedDate": "2026-08-08",
+      "publishedAt": "2026-08-08T01:05:15Z",
+      "modifiedAt": "2026-08-08T01:05:15Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "SiYuan Reviewed fix commit kernel/go.mod",
+      "url": "https://raw.githubusercontent.com/siyuan-note/siyuan/26ccb40d390e/kernel/go.mod",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元はSiYuanのrelease/commit表記とv3.7.4を提示。ReviewedはGo moduleのpseudo-versionで修正境界を表現するため、開発元の原表記とDBのpackage/rangeを分離して保存する。",
+    "開発元GHSAはrepository名のみをpackage欄に示すが、Reviewed修正commitのkernel/go.modではgithub.com/siyuan-note/siyuan/kernelを確認。元のrepository表記は監査に保持する。"
+  ]
+}

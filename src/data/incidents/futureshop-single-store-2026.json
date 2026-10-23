@@ -1,0 +1,106 @@
+{
+  "id": "futureshop-single-store-2026",
+  "company": "フューチャーショップ（futureshop・1店舗の会員情報）",
+  "geography": "日本",
+  "title": "1店舗の会員情報3,147,469件の流出を確認",
+  "announcementDate": "2026-10-23",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-17",
+  "occurredDateLabel": "2026年10月17日23時02分に侵入、18日0時16分に情報取得",
+  "updatedDate": "2026-10-23",
+  "statusAsOfDate": "2026-10-23",
+  "lastVerifiedDate": "2026-10-24",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "サーバーで使用するソフトウェアの脆弱性悪用による侵入",
+    "status": "confirmed"
+  },
+  "summary": "10月17日23時02分の脆弱性悪用による侵入後、18日0時16分に1店舗の会員情報が取得された。19日15時30分頃に監視で判明し、23日に3,147,469件の流出を公表。侵入経路を遮断し、全管理画面サーバーに対策済み。",
+  "affectedData": [
+    "会員ID、氏名、メールアドレス、住所、生年月日、電話番号、性別、メール配信設定、登録店舗情報、ハッシュ化パスワード等"
+  ],
+  "counts": [
+    {
+      "value": 3147469,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "1店舗の会員情報の流出確認数。実人数への換算はしない",
+      "approximate": false
+    },
+    {
+      "value": 1,
+      "unit": "店舗",
+      "status": "confirmed",
+      "label": "本公表で対象とされた店舗数。別の4サーバー事象とは区別",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "21日検知・22日再開を公表した4サーバー事象とは発生・判明日時および公表系列が異なる。両者の関係は公式に明示されておらず、同一事案・同一原因と推定しない。",
+    "対象店舗名は未公表。当該店舗以外に同様の手法による不正アクセスの痕跡は未確認。",
+    "カード情報は当社サーバーを経由・保存しない仕組みで流出情報に含まれない。",
+    "悪用したソフトウェア名・CVEは非公表。別告知のPHP予防対応から原因を特定しない。",
+    "19日は監視で本件を把握した日。18日のデータ取得日時や23日の公表日と区別。"
+  ],
+  "sources": [
+    {
+      "title": "1店舗の会員情報3,147,469件の流出を確認",
+      "url": "https://www.future-shop.jp/news/2026/10/23.html",
+      "publishedDate": "2026-10-23"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-17",
+      "label": "脆弱性悪用で侵入",
+      "kind": "occurrence",
+      "summary": "23時02分、サーバーへの不正アクセスが発生。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/23.html"
+    },
+    {
+      "date": "2026-10-18",
+      "label": "1店舗の会員情報を取得",
+      "kind": "occurrence",
+      "summary": "0時16分、対象店舗の情報が第三者に取得された。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/23.html"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "監視で本件を把握",
+      "kind": "occurrence",
+      "summary": "15時30分頃に判明し、同日中に対象店舗へ報告。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/23.html"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月17日23時02分の脆弱性悪用による侵入後、18日0時16分に1店舗の会員情報が取得された。19日15時30分頃に監視で判明し、23日に3,147,469件の流出を公表。侵入経路を遮断し、全管理画面サーバーに対策済み。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/23.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026年10月17日23時02分～18日0時16分",
+      "note": "侵入とデータ取得の日時を公式が明記。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/23.html",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-18"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月19日15時30分頃",
+      "note": "監視で不審アクセスを確認し本件が判明したと明記。19日時点で対象店舗へ報告済み。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/23.html",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-19"
+    }
+  },
+  "detectedDate": "2026-10-19"
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pfhg-q3qv-9q6r",
+  "aliases": [
+    "CVE-2026-114060"
+  ],
+  "title": "SvelteKit: URL redirection to untrusted site via enhanced form submission",
+  "summary": "SvelteKit: URL redirection to untrusted site via enhanced form submission",
+  "publishedAt": "2026-10-23T20:58:24Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-pfhg-q3qv-9q6r/GHSA-pfhg-q3qv-9q6r.json",
+  "modifiedAt": "2026-10-23T20:58:24Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@sveltejs/kit",
+      "ranges": [
+        {
+          "affected": "< 3.0.0",
+          "fixed": "3.0.0",
+          "sourceUrl": "https://github.com/sveltejs/kit/security/advisories/GHSA-pfhg-q3qv-9q6r"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/sveltejs/kit/security/advisories/GHSA-pfhg-q3qv-9q6r",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-pfhg-q3qv-9q6r/GHSA-pfhg-q3qv-9q6r.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-pfhg-q3qv-9q6r/GHSA-pfhg-q3qv-9q6r.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-pfhg-q3qv-9q6r/GHSA-pfhg-q3qv-9q6r.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:58:24Z",
+      "modifiedAt": "2026-10-23T20:58:24Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "SvelteKit: URL redirection to untrusted site via enhanced form submission",
+      "url": "https://github.com/advisories/GHSA-pfhg-q3qv-9q6r",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "URL redirection to untrusted site via enhanced form submission",
+      "url": "https://github.com/sveltejs/kit/security/advisories/GHSA-pfhg-q3qv-9q6r",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T19:35:34Z",
+      "modifiedAt": "2026-10-05T19:35:34Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "use:enhanceを使い、先頭が二重スラッシュの経路を受け入れるcatch-all等の構成が対象。"
+  ]
+}

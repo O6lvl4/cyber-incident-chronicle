@@ -1,0 +1,111 @@
+{
+  "id": "komoju-payment-crm-2026",
+  "company": "KOMOJU",
+  "geography": "日本",
+  "title": "非本番環境から社内管理画面・決済関連システムへ不正アクセス",
+  "announcementDate": "2026-10-22",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-13",
+  "occurredDateLabel": "2026年10月13日夕刻以降",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "lastVerifiedDate": "2026-10-24",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "非本番環境のセキュリティ上の脆弱性を悪用して社内管理画面・一部システムに不正ログイン",
+    "status": "confirmed"
+  },
+  "summary": "10月13日夕刻以降、非本番環境の脆弱性を悪用した侵入で管理画面等へ不正ログイン。決済システムの個人データ約4,100件と一部加盟店API認証情報の漏えいを確認した。CRMの影響範囲は調査中。認証情報更新作業に伴い一部決済に障害が発生した。",
+  "affectedData": [
+    "KOMOJU決済システム：メールアドレスを含む顧客役職員・消費者等の個人データ",
+    "一部加盟店のAPI認証情報",
+    "CRMシステム：個人データへの影響範囲を調査中"
+  ],
+  "counts": [
+    {
+      "value": 4100,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "決済システムからの漏えい確認個人データ。CRMの未確定範囲を含む総人数ではない",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "CRMの詳細・件数は調査中であり、約4,100件へ加算しない。",
+    "カード情報を保管するシステムは分離され、不正アクセスは未確認。カード情報漏えいは発生していないと公表。",
+    "10月16日のShopify一部決済と18日のセブン-イレブンのバーコード表示障害は、対応作業の影響。決済処理全体の停止ではない。",
+    "侵入実施は13日夕刻以降、検知は14日早朝、初期対策は14日午前。公表日と分ける。"
+  ],
+  "sources": [
+    {
+      "title": "非本番環境から社内管理画面・決済関連システムへ不正アクセス",
+      "url": "https://ja.komoju.com/news/1022-notice/",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "title": "KOMOJU：不正アクセスと決済サービス影響の詳細報告書",
+      "url": "https://23804948.fs1.hubspotusercontent-na1.net/hubfs/23804948/KOMOJU%20%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E6%B1%BA%E6%B8%88%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-13",
+      "label": "非本番環境へ侵入",
+      "kind": "occurrence",
+      "summary": "夕刻以降、脆弱性を悪用した不正アクセスが発生。",
+      "sourceUrl": "https://23804948.fs1.hubspotusercontent-na1.net/hubfs/23804948/KOMOJU%20%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E6%B1%BA%E6%B8%88%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "検知・初期対策",
+      "kind": "occurrence",
+      "summary": "早朝に不審アクセス増加を検知。午前中に経路遮断・アカウント等無効化・脆弱性修正。",
+      "sourceUrl": "https://23804948.fs1.hubspotusercontent-na1.net/hubfs/23804948/KOMOJU%20%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E6%B1%BA%E6%B8%88%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "対策作業に伴う決済障害",
+      "kind": "update",
+      "summary": "Shopify連携の認証情報更新で一部決済手段が一時利用不能。",
+      "sourceUrl": "https://23804948.fs1.hubspotusercontent-na1.net/hubfs/23804948/KOMOJU%20%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E6%B1%BA%E6%B8%88%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf"
+    },
+    {
+      "date": "2026-10-18",
+      "label": "バーコード表示への影響",
+      "kind": "update",
+      "summary": "セブン-イレブン決済認証情報の更新に伴い表示障害が発生。",
+      "sourceUrl": "https://23804948.fs1.hubspotusercontent-na1.net/hubfs/23804948/KOMOJU%20%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E6%B1%BA%E6%B8%88%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月13日夕刻以降、非本番環境の脆弱性を悪用した侵入で管理画面等へ不正ログイン。決済システムの個人データ約4,100件と一部加盟店API認証情報の漏えいを確認した。CRMの影響範囲は調査中。認証情報更新作業に伴い一部決済に障害が発生した。",
+      "sourceUrl": "https://ja.komoju.com/news/1022-notice/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年10月13日夕刻以降",
+      "note": "10月13日夕刻以降の非本番環境への不正アクセスと明記。終了日時は非公表。",
+      "sourceUrl": "https://23804948.fs1.hubspotusercontent-na1.net/hubfs/23804948/KOMOJU%20%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E6%B1%BA%E6%B8%88%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-13"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害を最初に確認した日付は公表されていない。",
+      "sourceUrl": "https://ja.komoju.com/news/1022-notice/",
+      "reviewedDate": "2026-10-24"
+    }
+  },
+  "detectedDate": "2026-10-14"
+}

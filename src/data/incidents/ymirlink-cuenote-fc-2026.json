@@ -1,0 +1,99 @@
+{
+  "id": "ymirlink-cuenote-fc-2026",
+  "company": "ユミルリンク（Cuenote FC）",
+  "geography": "日本企業・国内サービス",
+  "title": "Cuenote FCの5システムから情報持出し、出力規模は延べ約900万件の試算",
+  "announcementDate": "2026-10-19",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日は未公表（10月16日未明に検知）",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "プログラムの脆弱性、サポート・品質管理担当者の認証情報取得、不正プログラム設置とDB出力",
+    "status": "confirmed"
+  },
+  "summary": "10月16日未明に一部システムの不正アクセスを検知。専用ASPプランの5システムで不正アクセスとデータ出力を確認し、メールアドレス等の出力規模を延べ約900万件と試算。個人情報の外部持出しは確認済みだが詳細は調査中。脆弱性修正・担当者認証情報削除等を実施した。",
+  "affectedData": [
+    "メールアドレスを含む情報。出力データの詳細項目・対象範囲は調査中"
+  ],
+  "counts": [
+    {
+      "value": 9000000,
+      "unit": "件",
+      "status": "investigating",
+      "label": "5システムから出力された情報の延べ件数の試算。確定人数ではない",
+      "approximate": true
+    },
+    {
+      "value": 5,
+      "unit": "システム",
+      "status": "confirmed",
+      "label": "不正アクセスとデータ出力を確認したCuenote FC専用ASPプランのシステム",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "外部への持出し確認と、延べ約900万件という出力試算の確度を区別する。900万人または900万件の確定漏えいとはしない。",
+    "影響対象は専用ASPプランの5システム。Cuenote全利用者・全システムが対象とはしない。",
+    "10月22日にCVE-2026-109618・CVE-2026-109619のCuenoteサービスへの影響はないと公表。本件原因としてこれらPHP脆弱性を結び付けない。",
+    "10月19日は第一報の同日19:05補足更新版。10月22日のPHP影響説明は新規侵害ではない。"
+  ],
+  "sources": [
+    {
+      "title": "ユミルリンク：不正アクセス第一報（10月19日19:05更新版）",
+      "url": "https://www.cuenote.jp/information/news/unauthorizedaccess.html",
+      "publishedDate": "2026-10-19"
+    },
+    {
+      "title": "ユミルリンク：PHPの脆弱性はCuenoteサービスに影響なし",
+      "url": "https://www.cuenote.jp/information/news/phpcuenote_20261022.html",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-16",
+      "label": "不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "未明に担当者が不正アクセスを確認。サーバー隔離等の拡大防止策を実施。",
+      "sourceUrl": "https://www.cuenote.jp/information/news/unauthorizedaccess.html"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "外部持出しと出力試算を公表",
+      "kind": "disclosure",
+      "summary": "第一報と同日19:05更新で、対象5システム・延べ約900万件という試算を説明。",
+      "sourceUrl": "https://www.cuenote.jp/information/news/unauthorizedaccess.html"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "PHPの特定脆弱性の影響なしと説明",
+      "kind": "update",
+      "summary": "CVE-2026-109618・CVE-2026-109619はCuenoteサービスに影響なし。漏えい件数更新ではない。",
+      "sourceUrl": "https://www.cuenote.jp/information/news/phpcuenote_20261022.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-24",
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃開始日未公表",
+      "note": "10月16日は不正アクセスを担当者が確認した日。実際の攻撃開始・期間を転用して定めない。",
+      "sourceUrl": "https://www.cuenote.jp/information/news/unauthorizedaccess.html",
+      "reviewedDate": "2026-10-24"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "持出し確認日未公表",
+      "note": "10月19日公表時点で外部持出しを確認済み。持出しそのものを確定した日付は明示されていない。",
+      "sourceUrl": "https://www.cuenote.jp/information/news/unauthorizedaccess.html",
+      "reviewedDate": "2026-10-24"
+    }
+  }
+}

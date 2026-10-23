@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4pgc-gfrr-wcmg",
+  "aliases": [
+    "CVE-2026-4628"
+  ],
+  "title": "Keycloak has Improper Access Control that allows attackers with valid credentials to bypass the allowRemoteResourceManagement=false",
+  "summary": "Keycloak has Improper Access Control that allows attackers with valid credentials to bypass the allowRemoteResourceManagement=false",
+  "publishedAt": "2026-03-23T09:30:30Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/03/GHSA-4pgc-gfrr-wcmg/GHSA-4pgc-gfrr-wcmg.json",
+  "modifiedAt": "2026-10-22T21:31:59Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.keycloak:keycloak-services",
+      "ranges": [
+        {
+          "affected": "<= 26.6.0",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/03/GHSA-4pgc-gfrr-wcmg/GHSA-4pgc-gfrr-wcmg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "26.6.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-4628",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-4628"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/03/GHSA-4pgc-gfrr-wcmg/GHSA-4pgc-gfrr-wcmg.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/03/GHSA-4pgc-gfrr-wcmg/GHSA-4pgc-gfrr-wcmg.json",
+      "publishedDate": "2026-03-23",
+      "publishedAt": "2026-03-23T09:30:30Z",
+      "modifiedAt": "2026-10-22T21:31:59Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Keycloak has Improper Access Control that allows attackers with valid credentials to bypass the allowRemoteResourceManagement=false",
+      "url": "https://github.com/advisories/GHSA-4pgc-gfrr-wcmg",
+      "publishedDate": "2026-03-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "redhat: Keycloak: org.keycloak.authorization: keycloak: unauthorized resource modification due to improper access control",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-4628",
+      "publishedDate": "2026-03-23",
+      "publishedAt": "2026-03-23T08:09:22.123Z",
+      "modifiedAt": "2026-10-22T20:38:05.995Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "Red HatのCNA原データを取得。Red Hat buildのunaffected製品版を、上流Maven packageの修正境界へ読み替えない。Mavenの影響範囲はReviewed出典を維持する。Red Hat直接サイトはHTTP200のSite Unavailableで本文取得に失敗。"
+  ]
+}

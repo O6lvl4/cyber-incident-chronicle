@@ -1,0 +1,97 @@
+{
+  "id": "andst-business-server-2026",
+  "company": "アンドエスティHD",
+  "geography": "日本企業・国内サービス",
+  "title": "業務サーバー侵害で顧客約250万件など流出のおそれ、会員ポイントが利用停止",
+  "announcementDate": "2026-10-23",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-22",
+  "occurredDateLabel": "2026年10月22日7:30頃から侵入・データ抽出（10:00頃検知）",
+  "updatedDate": "2026-10-23",
+  "statusAsOfDate": "2026-10-23",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "複数業務サーバーへのログイン試行・侵入・データ抽出。手段は特定・対策済みとするが詳細非公表",
+    "status": "unknown"
+  },
+  "summary": "10月22日7:30頃から複数サーバーに侵入・データ抽出が行われ、10:00頃に検知して隔離、17:00までに経路を遮断。顧客約250万件、取引先約1万件、調査中の従業員情報に流出の可能性。店舗・WEBストアは営業継続する一方、会員ポイントは利用できない。",
+  "affectedData": [
+    "顧客：氏名・生年月日・性別・住所・電話番号・メールアドレス・会員ID",
+    "取引先：会社名・発注先／返品先住所・担当者氏名・電話番号・メールアドレス",
+    "従業員情報：対象範囲を確認中"
+  ],
+  "counts": [
+    {
+      "value": 2500000,
+      "unit": "件",
+      "status": "possible",
+      "label": "流出可能性のある顧客情報。実人数・確定漏えい件数とはしない",
+      "approximate": true
+    },
+    {
+      "value": 10000,
+      "unit": "件",
+      "status": "possible",
+      "label": "流出可能性のある取引先情報",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "公式値は顧客「約250万件」・取引先「約1万件」。非公式まとめの「最大」を追加しない。",
+    "カード等の決済情報、顧客が設定したパスワードは対象に含まれない。従業員情報の件数は未公表。",
+    "WEBストア自体は不正アクセスの影響なしと公表。店舗・WEBストアの全面停止ではなく会員ポイントの利用停止と社内業務システム停止を区別する。",
+    "既存adastria-2023（2023年の侵害）や2026年3月公表のゼットン事案とは時期・対象が異なる別事案。"
+  ],
+  "sources": [
+    {
+      "title": "アンドエスティHD：業務サーバーの不正アクセスと個人情報等流出可能性",
+      "url": "https://www.andst-hd.co.jp/news/notice/entry-17234/",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "title": "アンドエスティHD：同件適時開示PDF",
+      "url": "https://www.release.tdnet.info/inbs/140120261023555489.pdf",
+      "publishedDate": "2026-10-23"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-22",
+      "label": "侵入・抽出、検知と遮断",
+      "kind": "occurrence",
+      "summary": "7:30頃から侵入・データ抽出。10:00頃検知・隔離、17:00までに経路遮断と社内システム停止等。",
+      "sourceUrl": "https://www.andst-hd.co.jp/news/notice/entry-17234/"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "対象情報とサービス影響を公表",
+      "kind": "disclosure",
+      "summary": "警察への相談・個人情報保護委員会への報告を実施。対象者への連絡を順次開始。",
+      "sourceUrl": "https://www.andst-hd.co.jp/news/notice/entry-17234/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-24",
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年10月22日7:30頃",
+      "note": "公式にログイン試行・侵入・データ抽出の実施時刻を明記。10:00頃の検知時刻と区別。",
+      "sourceUrl": "https://www.andst-hd.co.jp/news/notice/entry-17234/",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-22"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月22日（不正操作検知・業務システム停止）",
+      "note": "10:00頃に不正操作を検知し、当日中に社内業務システム停止等を実施。漏えいは可能性であり確定した日ではない。",
+      "sourceUrl": "https://www.andst-hd.co.jp/news/notice/entry-17234/",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-22"
+    }
+  }
+}

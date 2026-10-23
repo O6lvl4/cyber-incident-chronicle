@@ -1,0 +1,79 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pjjw-68hj-v9mw",
+  "aliases": [
+    "CVE-2026-114110"
+  ],
+  "title": "uv vulnerable to arbitrary file deletion through RECORD entries",
+  "summary": "uv vulnerable to arbitrary file deletion through RECORD entries",
+  "publishedAt": "2026-04-10T19:39:15Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/04/GHSA-pjjw-68hj-v9mw/GHSA-pjjw-68hj-v9mw.json",
+  "modifiedAt": "2026-10-23T20:58:14Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "uv",
+      "ranges": [
+        {
+          "affected": "<= 0.11.5",
+          "fixed": "0.11.6",
+          "sourceUrl": "https://github.com/astral-sh/uv/security/advisories/GHSA-pjjw-68hj-v9mw"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/astral-sh/uv/security/advisories/GHSA-pjjw-68hj-v9mw",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/04/GHSA-pjjw-68hj-v9mw/GHSA-pjjw-68hj-v9mw.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/04/GHSA-pjjw-68hj-v9mw/GHSA-pjjw-68hj-v9mw.json",
+      "publishedDate": "2026-04-10",
+      "publishedAt": "2026-04-10T19:39:15Z",
+      "modifiedAt": "2026-10-23T20:58:14Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "uv vulnerable to arbitrary file deletion through RECORD entries",
+      "url": "https://github.com/advisories/GHSA-pjjw-68hj-v9mw",
+      "publishedDate": "2026-04-10"
+    },
+    {
+      "type": "maintainer",
+      "title": "Abitrary file deletion through RECORD entries",
+      "url": "https://github.com/astral-sh/uv/security/advisories/GHSA-pjjw-68hj-v9mw",
+      "publishedDate": "2026-04-09",
+      "publishedAt": "2026-04-09T13:42:21Z",
+      "modifiedAt": "2026-04-09T13:52:08Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "対象は悪意ある／不正なwheelをインストール後にアンインストールする場合。RECORDを用いた任意ファイルの作成・変更やディレクトリ削除とは区別する。"
+  ]
+}

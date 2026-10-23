@@ -1,0 +1,85 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3rp5-jjmw-4wv2",
+  "aliases": [
+    "CVE-2026-69097"
+  ],
+  "title": "GitPython: git-config section-name injection enables arbitrary config directives (core.sshCommand RCE)",
+  "summary": "GitPython: git-config section-name injection enables arbitrary config directives (core.sshCommand RCE)",
+  "publishedAt": "2026-07-24T16:22:02Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/07/GHSA-3rp5-jjmw-4wv2/GHSA-3rp5-jjmw-4wv2.json",
+  "modifiedAt": "2026-10-23T21:47:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "gitpython",
+      "ranges": [
+        {
+          "affected": "<= 3.1.52",
+          "fixed": ">= 3.1.53",
+          "sourceUrl": "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-3rp5-jjmw-4wv2"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-3rp5-jjmw-4wv2",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.0,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-3rp5-jjmw-4wv2"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/07/GHSA-3rp5-jjmw-4wv2/GHSA-3rp5-jjmw-4wv2.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/07/GHSA-3rp5-jjmw-4wv2/GHSA-3rp5-jjmw-4wv2.json",
+      "publishedDate": "2026-07-24",
+      "publishedAt": "2026-07-24T16:22:02Z",
+      "modifiedAt": "2026-10-23T21:47:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitPython: git-config section-name injection enables arbitrary config directives (core.sshCommand RCE)",
+      "url": "https://github.com/advisories/GHSA-3rp5-jjmw-4wv2",
+      "publishedDate": "2026-07-24"
+    },
+    {
+      "type": "maintainer",
+      "title": "GitPython: git-config section-name injection enables arbitrary config directives (core.sshCommand RCE)",
+      "url": "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-3rp5-jjmw-4wv2",
+      "publishedDate": "2026-07-20",
+      "publishedAt": "2026-07-20T13:44:28Z",
+      "modifiedAt": "2026-07-20T13:44:28Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "以前の改行注入の修正とは異なり、section名による設定注入。開発元のpatched_versionsは「>= 3.1.53」と明示されており、原表記を保持する。"
+  ]
+}
