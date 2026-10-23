@@ -64,7 +64,7 @@
 
 ## 2026-10-22 の初回収録
 
-2026年10月1日〜22日の `listedDate` を対象に31件を収録し、同日中に `poc` 理由を追加して Linux カーネルの Infinity Core 6件（CVE-2026-98260、98256、89754、80775、98385、97941。公表者が10月16日に攻撃コードを公開、kernel CNA の CVSS は 7.8 High または未記載、注意喚起・KEV・実悪用なし）を加え、計37件とした。内訳は CISA KEV 10月追加分 24件、IPA注意喚起だけが契機の Movable Type 2件と Oracle Java SE 1件（54 CVE を1記録に集約）、開発元 Critical が契機の PHP 2件（IPA注意喚起も確認）と GitLab 2件。候補と判定は [確認記録](data/product-advisory-review-2026-10-22.json) を参照。
+2026年10月1日〜22日の `listedDate` を対象に31件を収録し、同日中に `poc` 理由を追加して Linux カーネルの Infinity Core 6件（CVE-2026-98260、98256、89754、80775、98385、97941。公表者が10月16日に攻撃コードを公開、kernel CNA の CVSS は 7.8 High または未記載、注意喚起・KEV・実悪用なし）を加え、計37件とした。10月23日には、公表者 FoxIO が実装ごとの攻撃コードを公開した HTTP/3 QPACK 増幅攻撃（Header Accordions。quic-go / quiche / lsquic / Wireshark は修正済み、Bun / h3 / aioquic は未修正）を告知単位の1記録として `poc` 理由で加え、計38件とした。ライブラリとして配布される実装はライブラリの脆弱性カテゴリーの対象でもあり、記録の注意書きで両者の関係を示す。内訳は CISA KEV 10月追加分 24件、IPA注意喚起だけが契機の Movable Type 2件と Oracle Java SE 1件（54 CVE を1記録に集約）、開発元 Critical が契機の PHP 2件（IPA注意喚起も確認）と GitLab 2件。候補と判定は [確認記録](data/product-advisory-review-2026-10-22.json) を参照。
 
 - JPCERT/CC の10月注意喚起4件のうち、SiteGuard Server Edition、Microsoft 10月更新、PHP（10月22日、初回確認後に追加）は収録、国内組織の不正アクセスは製品を特定しないため対象外
 - IPA の10月分7件のうち、不正アクセス事案対策は製品を特定しないため対象外。NetScaler（9月28日）は対象期間前
