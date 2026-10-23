@@ -1,0 +1,219 @@
+{
+  "kind": "product",
+  "id": "FOXIO-HEADER-ACCORDIONS-2026",
+  "aliases": [
+    "CVE-2025-64702",
+    "CVE-2026-12523",
+    "CVE-2025-13945"
+  ],
+  "vendor": "FoxIO（公表者）と各実装の開発元",
+  "product": "HTTP/3 サーバー実装（QPACK ヘッダー展開）",
+  "productKey": "http3-qpack",
+  "title": "Header Accordions: QPACK のヘッダー展開を使った HTTP/3 サーバーへのメモリ増幅攻撃",
+  "summary": "FoxIO の Sébastien Féry 氏が公開した、HTTP/3 の QPACK ヘッダー圧縮を悪用するメモリ増幅攻撃。認証不要のリモートクライアントが、送信量の数十〜数千倍のメモリをサーバーに確保させ、1接続で既定設定のサーバーをメモリ枯渇や停止に追い込める。復号後ヘッダーの上限が欠落・不完全・適用が遅い実装が対象で、調査した10実装のうち7実装が脆弱とされた。公表時点で quic-go 0.57.0、Cloudflare quiche 0.29.3、lsquic 4.9.0、Wireshark 4.6.2 / 4.4.12 は修正済み、Bun 1.4.3、h3（hyperium）、aioquic / mitmproxy は未修正。公表者は実装ごとの再現コードを GitHub で公開している。",
+  "publishedDate": "2025-12-03",
+  "publishedAt": null,
+  "dateSourceUrl": "https://www.wireshark.org/security/wnpa-sec-2025-07.html",
+  "dateNote": "開発元の公表日は、最初に公開された開発元アドバイザリ（Wireshark wnpa-sec-2025-07、2025-12-03）。quic-go の GHSA は 2025-12-11、quiche は 2026-07-14。公表者のブログは本文に 2026-10-20、メタデータに 2026-10-21 と記載",
+  "listedDate": "2026-10-20",
+  "listedNote": "公表者が GitHub に実装ごとの攻撃コード（headeraccordions）を push し、ブログを公開した日",
+  "modifiedAt": "2026-03-27T13:56:58.495Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T02:06:57Z",
+  "affected": [
+    {
+      "name": "quic-go（Go）",
+      "affected": "0.57.0 未満",
+      "fixed": "0.57.0",
+      "sourceUrl": "https://github.com/quic-go/quic-go/security/advisories/GHSA-g754-hx8w-x2g6",
+      "note": "ライブラリの脆弱性カテゴリーにも GHSA-g754-hx8w-x2g6 / CVE-2025-64702 として収録"
+    },
+    {
+      "name": "Cloudflare quiche（Rust）",
+      "affected": "0.1.0 以上 0.29.3 未満",
+      "fixed": "0.29.3",
+      "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-12523",
+      "note": "CVE-2026-12523。確認時点で GitHub Reviewed には未掲載"
+    },
+    {
+      "name": "lsquic",
+      "affected": "4.9.0 未満（公表者の表）",
+      "fixed": "4.9.0",
+      "sourceUrl": "https://github.com/litespeedtech/lsquic/releases/tag/v4.9.0",
+      "note": "CVE は割り当てられていない"
+    },
+    {
+      "name": "Wireshark",
+      "affected": "4.6.0 〜 4.6.1（CNA）。公表者は 4.4 系も修正対象としている",
+      "fixed": "4.6.2 / 4.4.12",
+      "sourceUrl": "https://www.wireshark.org/security/wnpa-sec-2025-07.html",
+      "note": "CVE-2025-13945"
+    },
+    {
+      "name": "Bun",
+      "affected": "1.4.3（公表時点で未修正）",
+      "fixed": null,
+      "sourceUrl": "https://foxio.io/blog/header-accordions-qpack-amplification-attacks-against-http-3-servers",
+      "note": "公表者は HTTP/3 サーバーを公開しないことを緩和策としている"
+    },
+    {
+      "name": "h3（hyperium）",
+      "affected": "公表時点で未修正",
+      "fixed": null,
+      "sourceUrl": "https://foxio.io/blog/header-accordions-qpack-amplification-attacks-against-http-3-servers",
+      "note": "メンテナーは alpha ライブラリであり既定値を変更予定と回答（公表者のタイムライン）"
+    },
+    {
+      "name": "aioquic / mitmproxy",
+      "affected": "公表時点で未修正",
+      "fixed": null,
+      "sourceUrl": "https://foxio.io/blog/header-accordions-qpack-amplification-attacks-against-http-3-servers",
+      "note": "mitmproxy は HTTP/3 の無効化が緩和策"
+    }
+  ],
+  "severity": {
+    "label": "unknown",
+    "sourceUrl": null,
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2025-64702"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-12523"
+      },
+      {
+        "version": "3.1",
+        "score": 5.5,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2025-13945"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "notListed",
+    "checkedAt": "2026-10-23T02:06:57Z",
+    "sourceUrl": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  },
+  "poc": {
+    "status": "public",
+    "sourceUrl": "https://github.com/FoxIO-LLC/blog_poc/tree/main/headeraccordions"
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-10-23T02:06:57Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-10-23T02:06:57Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "poc"
+  ],
+  "mitigations": [
+    {
+      "text": "Bun: HTTP/3 サーバーを公開しない。",
+      "sourceUrl": "https://foxio.io/blog/header-accordions-qpack-amplification-attacks-against-http-3-servers"
+    },
+    {
+      "text": "mitmproxy: HTTP/3 を無効化する（--set http3=false）。",
+      "sourceUrl": "https://foxio.io/blog/header-accordions-qpack-amplification-attacks-against-http-3-servers"
+    },
+    {
+      "text": "h3 crate: 妥当な max_field_section_size を設定する。",
+      "sourceUrl": "https://foxio.io/blog/header-accordions-qpack-amplification-attacks-against-http-3-servers"
+    }
+  ],
+  "sources": [
+    {
+      "type": "poc",
+      "title": "GitHub FoxIO-LLC/blog_poc headeraccordions（実装ごとの再現コード、2026-10-20 push）",
+      "url": "https://github.com/FoxIO-LLC/blog_poc/tree/main/headeraccordions",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "poc",
+      "title": "FoxIO: Header Accordions: QPACK amplification attacks against HTTP/3 servers",
+      "url": "https://foxio.io/blog/header-accordions-qpack-amplification-attacks-against-http-3-servers",
+      "publishedDate": "2026-10-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Wireshark wnpa-sec-2025-07",
+      "url": "https://www.wireshark.org/security/wnpa-sec-2025-07.html",
+      "publishedDate": "2025-12-03"
+    },
+    {
+      "type": "maintainer",
+      "title": "quic-go GHSA-g754-hx8w-x2g6: HTTP/3 QPACK Header Expansion DoS",
+      "url": "https://github.com/quic-go/quic-go/security/advisories/GHSA-g754-hx8w-x2g6",
+      "publishedDate": "2025-12-11"
+    },
+    {
+      "type": "maintainer",
+      "title": "Cloudflare quiche GHSA-4fgf-9xrr-88gf: Resource exhaustion in quiche HTTP/3 and QPACK layers",
+      "url": "https://github.com/cloudflare/quiche/security/advisories/GHSA-4fgf-9xrr-88gf",
+      "publishedDate": "2026-07-14"
+    },
+    {
+      "type": "release",
+      "title": "lsquic v4.9.0",
+      "url": "https://github.com/litespeedtech/lsquic/releases/tag/v4.9.0",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub（CNA）の公開CVEレコード（quic-go）",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2025-64702",
+      "publishedDate": "2025-12-11",
+      "publishedAt": "2025-12-11T20:58:10.517Z",
+      "modifiedAt": "2025-12-12T20:45:30.439Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Cloudflare（CNA）の公開CVEレコード（quiche）",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-12523",
+      "publishedDate": "2026-07-14",
+      "publishedAt": "2026-07-14T15:51:28.886Z",
+      "modifiedAt": "2026-07-15T17:47:52.441Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitLab（CNA）の公開CVEレコード（Wireshark）",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2025-13945",
+      "publishedDate": "2025-12-03",
+      "publishedAt": "2025-12-03T08:04:49.403Z",
+      "modifiedAt": "2026-03-27T13:56:58.495Z"
+    },
+    {
+      "type": "kev",
+      "title": "CISA Known Exploited Vulnerabilities catalog（catalogVersion 2026.10.21）",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "publishedDate": "2026-10-21"
+    }
+  ],
+  "caveats": [
+    "1つの公表が複数の実装にまたがるため、告知単位の1記録にまとめた。quic-go、quiche、h3、aioquic はパッケージとして配布されるライブラリであり、ライブラリの脆弱性カテゴリーの対象でもある（quic-go は収録済み）。Wireshark、Bun、lsquic は製品・ランタイムとしてこの記録で扱う。",
+    "収録理由は公表者が公開した攻撃コードで、実際の攻撃の観測ではない。公表者も実環境での攻撃には言及していない。影響はメモリ枯渇によるサービス停止であり、コード実行や情報漏えいではない。",
+    "公表者は CVSS や深刻度を示していない。CNA の評価は quic-go 5.3 Medium、quiche 7.5 High、Wireshark 5.5 Medium と実装ごとに異なるため、記録全体のラベルは未確認とし、各 CVSS を出典つきで保持する。",
+    "公表者は IIS、Envoy、ngtcp2 / nghttp3 を影響なしとしている。未修正の実装は公表時点（2026-10-20）の状態で、その後の修正は反映していない。",
+    "JPCERT/CC・IPA の注意喚起は確認時点でない。CISA KEV は全件 JSON を照合して3件とも未掲載。",
+    "未収録の脆弱性がないことを意味しない。収録基準（注意喚起・Critical・実悪用・KEV・攻撃コード公開）を満たした記録だけを扱う。"
+  ]
+}

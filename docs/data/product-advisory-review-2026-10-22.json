@@ -570,6 +570,18 @@
       "listedDate": "2026-10-16",
       "publishedDate": "2026-09-25",
       "note": "kernel CNA の CVSS 7.8 High（Futex・Scheduler は CVSS なし）、JPCERT/IPA 注意喚起なし、KEV 未掲載、実悪用未確認。公表者公開の攻撃コードを根拠に poc 理由で収録"
+    },
+    {
+      "id": "FOXIO-HEADER-ACCORDIONS-2026",
+      "origin": "poc-disclosure",
+      "decision": "included",
+      "inclusion": [
+        "poc"
+      ],
+      "product": "HTTP/3 サーバー実装（QPACK ヘッダー展開）",
+      "listedDate": "2026-10-20",
+      "publishedDate": "2025-12-03",
+      "note": "2026-10-23 に oss-security 経由で確認。公表者 FoxIO の攻撃コード公開を根拠に poc 理由で収録。CVSS は実装ごと（5.3〜7.5）、注意喚起・KEV・実悪用なし。quic-go はライブラリ側にも収録済み"
     }
   ],
   "fetchFailures": [
@@ -605,13 +617,13 @@
     }
   ],
   "counts": {
-    "included": 37,
+    "included": 38,
     "byInclusion": {
       "alert": 7,
       "critical": 14,
       "exploited": 24,
       "kev": 24,
-      "poc": 6
+      "poc": 7
     },
     "kevOctoberAdditions": 24,
     "excluded": 6
