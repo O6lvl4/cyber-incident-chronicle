@@ -1,0 +1,83 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-q54r-jf2p-rfr2",
+  "aliases": [],
+  "title": "gitoxide gix: untrusted .git/config disables filesystem .git-protection path checks via unfiltered protect_options()",
+  "summary": "gitoxide gix: untrusted .git/config disables filesystem .git-protection path checks via unfiltered protect_options()",
+  "publishedAt": "2026-10-23T20:52:28Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-q54r-jf2p-rfr2/GHSA-q54r-jf2p-rfr2.json",
+  "modifiedAt": "2026-10-23T20:52:28Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "gix",
+      "ranges": [
+        {
+          "affected": ">= 0.88.0, <= 0.89.0",
+          "fixed": ">= 0.90.0",
+          "sourceUrl": "https://github.com/GitoxideLabs/gitoxide/security/advisories/GHSA-q54r-jf2p-rfr2"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/GitoxideLabs/gitoxide/security/advisories/GHSA-q54r-jf2p-rfr2",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/GitoxideLabs/gitoxide/security/advisories/GHSA-q54r-jf2p-rfr2"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-q54r-jf2p-rfr2/GHSA-q54r-jf2p-rfr2.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-q54r-jf2p-rfr2/GHSA-q54r-jf2p-rfr2.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:52:28Z",
+      "modifiedAt": "2026-10-23T20:52:28Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "gitoxide gix: untrusted .git/config disables filesystem .git-protection path checks via unfiltered protect_options()",
+      "url": "https://github.com/advisories/GHSA-q54r-jf2p-rfr2",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "gitoxide gix: untrusted .git/config disables filesystem .git-protection path checks via unfiltered protect_options()",
+      "url": "https://github.com/GitoxideLabs/gitoxide/security/advisories/GHSA-q54r-jf2p-rfr2",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T14:01:32Z",
+      "modifiedAt": "2026-10-22T14:01:32Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "共有ファイルシステム等で攻撃者のリポジトリ設定がreduced trustとして開かれ、ケース非区別ファイルシステムで保護設定が無視される条件を保持する。"
+  ]
+}

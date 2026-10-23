@@ -1,0 +1,102 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7587-9684-52r6",
+  "aliases": [
+    "CVE-2026-115324"
+  ],
+  "title": "mem0ai Databricks vector store vulnerable to SQL injection",
+  "summary": "mem0ai Databricks vector store vulnerable to SQL injection",
+  "publishedAt": "2026-10-22T12:31:17Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-7587-9684-52r6/GHSA-7587-9684-52r6.json",
+  "modifiedAt": "2026-10-23T20:52:52Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "mem0ai",
+      "ranges": [
+        {
+          "affected": ">= 0.1.117, < 1.0.8",
+          "fixed": "1.0.8",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-7587-9684-52r6/GHSA-7587-9684-52r6.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.1.117"
+            },
+            {
+              "fixed": "1.0.8"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-7587-9684-52r6/GHSA-7587-9684-52r6.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-7587-9684-52r6/GHSA-7587-9684-52r6.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-7587-9684-52r6/GHSA-7587-9684-52r6.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-7587-9684-52r6/GHSA-7587-9684-52r6.json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T12:31:17Z",
+      "modifiedAt": "2026-10-23T20:52:52Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "mem0ai Databricks vector store vulnerable to SQL injection",
+      "url": "https://github.com/advisories/GHSA-7587-9684-52r6",
+      "publishedDate": "2026-10-22"
+    },
+    {
+      "type": "maintainer",
+      "title": "mem0ai Databricks vector store vulnerable to SQL injection (pull)",
+      "url": "https://github.com/mem0ai/mem0/pull/4558",
+      "publishedDate": null
+    },
+    {
+      "type": "release",
+      "title": "mem0ai Databricks vector store vulnerable to SQL injection (release)",
+      "url": "https://github.com/mem0ai/mem0/releases/tag/v1.0.8",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "Databricks vector storeのinsert/update/deleteでparameter bindingを用いる開発元修正を確認。すべてのvector storeへ影響を拡張しない。"
+  ]
+}

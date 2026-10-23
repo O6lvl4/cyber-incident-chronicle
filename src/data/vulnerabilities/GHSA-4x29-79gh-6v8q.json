@@ -1,0 +1,130 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4x29-79gh-6v8q",
+  "aliases": [
+    "CVE-2026-53434"
+  ],
+  "title": "Apache Tomcat util accepted misconfigured CRLs",
+  "summary": "Apache Tomcat util accepted misconfigured CRLs",
+  "publishedAt": "2026-06-29T21:32:15Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-4x29-79gh-6v8q/GHSA-4x29-79gh-6v8q.json",
+  "modifiedAt": "2026-10-23T21:42:39Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.apache.tomcat:tomcat-util",
+      "ranges": [
+        {
+          "affected": ">= 11.0.0-M1, < 11.0.23",
+          "fixed": "11.0.23",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-4x29-79gh-6v8q/GHSA-4x29-79gh-6v8q.json"
+        },
+        {
+          "affected": ">= 10.1.0-M7, < 10.1.56",
+          "fixed": "10.1.56",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-4x29-79gh-6v8q/GHSA-4x29-79gh-6v8q.json"
+        },
+        {
+          "affected": ">= 9.0.83, < 9.0.119",
+          "fixed": "9.0.119",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-4x29-79gh-6v8q/GHSA-4x29-79gh-6v8q.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "11.0.0-M1"
+            },
+            {
+              "fixed": "11.0.23"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "10.1.0-M7"
+            },
+            {
+              "fixed": "10.1.56"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "9.0.83"
+            },
+            {
+              "fixed": "9.0.119"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-53434",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-53434"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-4x29-79gh-6v8q/GHSA-4x29-79gh-6v8q.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-4x29-79gh-6v8q/GHSA-4x29-79gh-6v8q.json",
+      "publishedDate": "2026-06-29",
+      "publishedAt": "2026-06-29T21:32:15Z",
+      "modifiedAt": "2026-10-23T21:42:39Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Apache Tomcat util accepted misconfigured CRLs",
+      "url": "https://github.com/advisories/GHSA-4x29-79gh-6v8q",
+      "publishedDate": "2026-06-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "apache: Apache Tomcat: Invalid CRL configuration doesn't trigger failure for FFM Connector",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-53434",
+      "publishedDate": "2026-06-29",
+      "publishedAt": "2026-06-29T20:41:06.948Z",
+      "modifiedAt": "2026-06-30T12:28:36.391Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "FFM connectorでCRLを誤設定した場合に無効なCRLを無視する問題。ApacheはLow、ReviewedはCritical。CISA ADPのCVSS3.1 9.1とApache独自のLowを出典別に保持する。"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "treasurefactory-case-management-2026",
+  "company": "トレジャー・ファクトリー",
+  "geography": "日本企業・国内サービス",
+  "title": "出張買取・トレファク引越の案件管理システムから顧客746,277件など流出",
+  "announcementDate": "2026-10-23",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-20",
+  "occurredDateLabel": "2026年10月20日未明〜朝（同日確認）",
+  "updatedDate": "2026-10-23",
+  "statusAsOfDate": "2026-10-23",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "データベースへのアクセスに関する脆弱性の悪用とみて調査中。直近公表のPHP脆弱性との関連は否定",
+    "status": "possible"
+  },
+  "summary": "10月20日未明から朝に案件管理システムを不正アクセスされ、同日のログ調査で情報取得を確認。顧客メール746,277件（うち11件は氏名・住所も）、取引先・従業員等750件、端末関連情報1,000件が対象。システムと申込受付を停止し、対策・安全性確認を前提に10月28日頃の再開を予定。",
+  "affectedData": [
+    "顧客：メールアドレス。うち11件は氏名・住所を含む",
+    "取引先業者・従業員等：氏名・メールアドレス",
+    "取引先業者・従業員等の端末：氏名・端末識別情報"
+  ],
+  "counts": [
+    {
+      "value": 746277,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "不正取得された顧客メールアドレス情報",
+      "approximate": false
+    },
+    {
+      "value": 11,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "746,277件の内数：氏名・住所を含む顧客情報",
+      "approximate": false
+    },
+    {
+      "value": 750,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "取引先業者・従業員等の氏名・メールアドレス",
+      "approximate": false
+    },
+    {
+      "value": 1000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "取引先業者・従業員等の端末に関する氏名・端末識別情報",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "11件は顧客746,277件の内数。取引先・従業員等750件と端末関連1,000件の重複は不明で、実人数として単純合算しない。",
+    "店舗と公式アプリの顧客情報は別システムで今回の不正取得対象外。カード番号・セキュリティコード等の決済情報も対象外。",
+    "同社は直近公表のPHP脆弱性との関連を否定している。",
+    "2026年8月の子会社カインドオル事案とは原因・経路が異なると会社が明示。既存kindal-customer-export-2026の続報として統合しない。",
+    "10月28日は安全性確認を前提とする再開目標。再開実績ではない。"
+  ],
+  "sources": [
+    {
+      "title": "トレジャー・ファクトリー：案件管理システムの不正アクセスと漏えい（適時開示）",
+      "url": "https://www.release.tdnet.info/inbs/140120261023555328.pdf",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "title": "トレジャー・ファクトリー：不正アクセスによる個人情報漏えいのお詫び",
+      "url": "https://www.treasure-f.com/info/detail/st825/",
+      "publishedDate": "2026-10-23"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-20",
+      "label": "不正取得確認・システムと受付を停止",
+      "kind": "occurrence",
+      "summary": "未明〜朝の不正アクセスを同日確認。10:30に外部アクセス、11:05に申込フォーム受付を停止。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261023555328.pdf"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "漏えい範囲と再開目標を公表",
+      "kind": "disclosure",
+      "summary": "対象情報・件数、別事案との相違、PHPとの無関係、10月28日頃の条件付き再開目標を説明。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261023555328.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-24",
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年10月20日未明〜朝",
+      "note": "公表本文が実際の不正アクセス時期を明示。同日の確認・停止時刻とは区別。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261023555328.pdf",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-20"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月20日",
+      "note": "同日のアクセスログ調査で不正取得を確認し、システムと申込受付を停止。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261023555328.pdf",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-20"
+    }
+  }
+}

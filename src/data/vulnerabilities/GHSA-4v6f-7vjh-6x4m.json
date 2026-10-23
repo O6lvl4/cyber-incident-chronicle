@@ -1,0 +1,102 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4v6f-7vjh-6x4m",
+  "aliases": [
+    "CVE-2026-115419"
+  ],
+  "title": "Strands Agents SDK: Exposure of data element to wrong session in the A2A Server",
+  "summary": "Strands Agents SDK: Exposure of data element to wrong session in the A2A Server",
+  "publishedAt": "2026-10-23T20:48:29Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-4v6f-7vjh-6x4m/GHSA-4v6f-7vjh-6x4m.json",
+  "modifiedAt": "2026-10-23T20:48:29Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "strands-agents",
+      "ranges": [
+        {
+          "affected": "< 1.43.0",
+          "fixed": "1.43.0",
+          "sourceUrl": "https://github.com/strands-agents/harness-sdk/security/advisories/GHSA-4v6f-7vjh-6x4m"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@strands-agents/sdk",
+      "ranges": [
+        {
+          "affected": "< 1.5.0",
+          "fixed": "1.5.0",
+          "sourceUrl": "https://github.com/strands-agents/harness-sdk/security/advisories/GHSA-4v6f-7vjh-6x4m"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/strands-agents/harness-sdk/security/advisories/GHSA-4v6f-7vjh-6x4m",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://github.com/strands-agents/harness-sdk/security/advisories/GHSA-4v6f-7vjh-6x4m"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-4v6f-7vjh-6x4m/GHSA-4v6f-7vjh-6x4m.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-4v6f-7vjh-6x4m/GHSA-4v6f-7vjh-6x4m.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-4v6f-7vjh-6x4m/GHSA-4v6f-7vjh-6x4m.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:48:29Z",
+      "modifiedAt": "2026-10-23T20:48:29Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Strands Agents SDK: Exposure of data element to wrong session in the A2A Server",
+      "url": "https://github.com/advisories/GHSA-4v6f-7vjh-6x4m",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Exposure of data element to wrong session in Strands Agents SDK A2A Server",
+      "url": "https://github.com/strands-agents/harness-sdk/security/advisories/GHSA-4v6f-7vjh-6x4m",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T20:04:44Z",
+      "modifiedAt": "2026-10-22T20:04:44Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "A2Aサーバーが複数ユーザー／テナントから利用される場合の会話状態の分離不備。PythonとTypeScriptの両パッケージ・修正版を保持する。"
+  ]
+}

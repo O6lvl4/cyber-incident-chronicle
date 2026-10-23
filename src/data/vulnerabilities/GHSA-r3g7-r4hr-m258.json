@@ -1,0 +1,79 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-r3g7-r4hr-m258",
+  "aliases": [
+    "CVE-2026-115478"
+  ],
+  "title": "obsidian-tc: Memory-lifecycle tools overwrite unowned notes or partially commit lifecycle changes",
+  "summary": "obsidian-tc: Memory-lifecycle tools overwrite unowned notes or partially commit lifecycle changes",
+  "publishedAt": "2026-10-23T18:47:25Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-r3g7-r4hr-m258/GHSA-r3g7-r4hr-m258.json",
+  "modifiedAt": "2026-10-23T18:47:39Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "obsidian-tc",
+      "ranges": [
+        {
+          "affected": ">= 1.0.1, <= 1.31.3",
+          "fixed": "1.31.4",
+          "sourceUrl": "https://github.com/The-40-Thieves/obsidian-tc/security/advisories/GHSA-r3g7-r4hr-m258"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/The-40-Thieves/obsidian-tc/security/advisories/GHSA-r3g7-r4hr-m258",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-r3g7-r4hr-m258/GHSA-r3g7-r4hr-m258.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-r3g7-r4hr-m258/GHSA-r3g7-r4hr-m258.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T18:47:25Z",
+      "modifiedAt": "2026-10-23T18:47:39Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "obsidian-tc: Memory-lifecycle tools overwrite unowned notes or partially commit lifecycle changes",
+      "url": "https://github.com/advisories/GHSA-r3g7-r4hr-m258",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Memory-lifecycle tools could overwrite a note they did not own, or half-commit a lifecycle change",
+      "url": "https://github.com/The-40-Thieves/obsidian-tc/security/advisories/GHSA-r3g7-r4hr-m258",
+      "publishedDate": "2026-09-26",
+      "publishedAt": "2026-09-26T12:25:20Z",
+      "modifiedAt": "2026-10-23T12:54:42Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "memory lifecycleの書き込み対象に既存の非所有noteがある場合の上書き、およびfilesystem失敗前にSQLite変更が確定する部分更新を区別する。"
+  ]
+}

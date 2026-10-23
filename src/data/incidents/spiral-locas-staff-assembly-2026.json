@@ -1,0 +1,88 @@
+{
+  "id": "spiral-locas-staff-assembly-2026",
+  "company": "スパイラルローキャス（職員参集システム）",
+  "geography": "日本",
+  "title": "自治体向け職員参集システムの2顧客環境に不正ログイン",
+  "announcementDate": "2026-10-22",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-20",
+  "occurredDateLabel": "2026年10月20日夜間～21日早朝",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "lastVerifiedDate": "2026-10-24",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による顧客管理画面への不正ログイン。認証情報の入手手法は未公表",
+    "status": "confirmed"
+  },
+  "summary": "10月20日夜間から21日早朝に2つの顧客管理画面環境へ不正ログインがあり、登録者情報約3,000件に漏えいの可能性。対象顧客への連絡を完了し、管理画面のIP制限を必須化した。",
+  "affectedData": [
+    "登録者の氏名・所属情報等"
+  ],
+  "counts": [
+    {
+      "value": 2,
+      "unit": "顧客環境",
+      "status": "confirmed",
+      "label": "不正ログインを確認した対象環境",
+      "approximate": false
+    },
+    {
+      "value": 3000,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいの可能性がある個人情報件数",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "2件は顧客環境の数であり、約3,000件とは単位が異なる。人数・自治体数として合算しない。",
+    "不正ログイン確認と個人情報の漏えい可能性を区別する。具体的な認証情報入手経路は未公表。",
+    "公式ページの本文を埋め込み公開CMSデータから確認。初回公表日は同ページの公開日時2026年10月22日を採用し、内部更新時刻を別の続報日として扱わない。"
+  ],
+  "sources": [
+    {
+      "title": "自治体向け職員参集システムの2顧客環境に不正ログイン",
+      "url": "https://spiral-locas.co.jp/news/hFSe1IFH",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-20",
+      "label": "不正ログイン発生",
+      "kind": "occurrence",
+      "summary": "20日夜間から21日早朝に顧客管理画面2環境へ不正ログイン。",
+      "sourceUrl": "https://spiral-locas.co.jp/news/hFSe1IFH"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月20日夜間から21日早朝に2つの顧客管理画面環境へ不正ログインがあり、登録者情報約3,000件に漏えいの可能性。対象顧客への連絡を完了し、管理画面のIP制限を必須化した。",
+      "sourceUrl": "https://spiral-locas.co.jp/news/hFSe1IFH"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026年10月20日夜間～21日早朝",
+      "note": "公式本文が不正ログインの発生日時を明記。検知日時ではない。",
+      "sourceUrl": "https://spiral-locas.co.jp/news/hFSe1IFH",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-20",
+      "endDate": "2026-10-21"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害を最初に確認した日付は公表されていない。",
+      "sourceUrl": "https://spiral-locas.co.jp/news/hFSe1IFH",
+      "reviewedDate": "2026-10-24"
+    }
+  }
+}

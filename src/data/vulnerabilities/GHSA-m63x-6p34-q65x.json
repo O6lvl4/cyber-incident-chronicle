@@ -2,14 +2,15 @@
   "kind": "vulnerability",
   "id": "GHSA-m63x-6p34-q65x",
   "aliases": [
+    "CVE-2026-115390",
     "RUSTSEC-2026-0315"
   ],
   "title": "Wasmtime：call_ref・例外処理でfuel計測を回避するDoS",
   "summary": "Craneliftのコンパイル処理でcall_refやtry_tableの例外経路を通ると、呼出し先で消費したfuelが失われ、ゲストが割当量を大きく超えて実行できる。タイムアウトや定期的な実行中断を回避するサービス拒否につながる。修正版は48.0.3と49.0.1。",
   "publishedAt": "2026-09-24T12:00:00Z",
-  "modifiedAt": "2026-09-29T07:45:02.389858040Z",
+  "modifiedAt": "2026-10-23T10:55:46.529590464Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-14T00:28:04.712070Z",
+  "lastVerifiedAt": "2026-10-23T21:57:49.521530Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0315",
   "affected": [
     {
@@ -78,7 +79,7 @@
       "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0315",
       "publishedDate": "2026-09-24",
       "publishedAt": "2026-09-24T12:00:00Z",
-      "modifiedAt": "2026-09-29T07:45:02.389858040Z",
+      "modifiedAt": "2026-10-23T10:55:46.529590464Z",
       "withdrawnAt": null
     },
     {
@@ -93,7 +94,7 @@
       "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m63x-6p34-q65x",
       "publishedDate": "2026-09-24",
       "publishedAt": "2026-09-24T19:25:31Z",
-      "modifiedAt": "2026-09-24T19:25:31Z",
+      "modifiedAt": "2026-10-23T18:32:07Z",
       "withdrawnAt": null
     }
   ],

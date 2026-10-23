@@ -1,0 +1,84 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-p92p-rxj5-7p2x",
+  "aliases": [
+    "CVE-2026-114050"
+  ],
+  "title": "vLLM: Forged multimodal UUID + P0/P1 processor-cache eviction drift: unauthenticated remote crash of the whole vLLM engine",
+  "summary": "vLLM: Forged multimodal UUID + P0/P1 processor-cache eviction drift: unauthenticated remote crash of the whole vLLM engine",
+  "publishedAt": "2026-10-23T20:43:44Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-p92p-rxj5-7p2x/GHSA-p92p-rxj5-7p2x.json",
+  "modifiedAt": "2026-10-23T20:43:45Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "vllm",
+      "ranges": [
+        {
+          "affected": "< 0.31.0",
+          "fixed": ">= 0.31.0",
+          "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-p92p-rxj5-7p2x"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-p92p-rxj5-7p2x",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-p92p-rxj5-7p2x"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-p92p-rxj5-7p2x/GHSA-p92p-rxj5-7p2x.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-p92p-rxj5-7p2x/GHSA-p92p-rxj5-7p2x.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:43:44Z",
+      "modifiedAt": "2026-10-23T20:43:45Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "vLLM: Forged multimodal UUID + P0/P1 processor-cache eviction drift: unauthenticated remote crash of the whole vLLM engine",
+      "url": "https://github.com/advisories/GHSA-p92p-rxj5-7p2x",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Forged multimodal UUID + P0/P1 processor-cache eviction drift: unauthenticated remote crash of the whole vLLM engine",
+      "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-p92p-rxj5-7p2x",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T07:10:22Z",
+      "modifiedAt": "2026-10-21T15:52:19Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。"
+  ]
+}

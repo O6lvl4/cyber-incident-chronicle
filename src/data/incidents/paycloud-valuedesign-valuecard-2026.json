@@ -1,0 +1,100 @@
+{
+  "id": "paycloud-valuedesign-valuecard-2026",
+  "company": "ペイクラウドHD／バリューデザイン（Value Card）",
+  "geography": "日本企業・国内サービス",
+  "title": "Value CardのID・PIN・残高情報1,424,748件が流出、個人情報は該当なし",
+  "announcementDate": "2026-10-23",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃実施日未公表",
+  "updatedDate": "2026-10-23",
+  "statusAsOfDate": "2026-10-23",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "一部環境のWebサーバー脆弱性の悪用。製品・脆弱性識別番号は本公表で明示なし",
+    "status": "confirmed"
+  },
+  "summary": "10月19日にValue CardのID番号・PIN番号・残高情報の流出を確認。総数1,424,748件は発行済569,224件と未発行855,524件の合計。経路を遮断し対策済みで、不正利用による実被害はないと公表した。",
+  "affectedData": [
+    "ハウス電子マネーのID番号・PIN番号・残高情報"
+  ],
+  "counts": [
+    {
+      "value": 1424748,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "流出したID・PIN・残高情報の総数",
+      "approximate": false
+    },
+    {
+      "value": 569224,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "総数の内数：発行済ID",
+      "approximate": false
+    },
+    {
+      "value": 855524,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "総数の内数：最終ユーザー購入前の未発行ID",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "総数は発行済・未発行IDの和。内訳を総数に追加しない。件数を利用者数に換算しない。",
+    "会社は個人情報について「該当なし」と公表。個人情報漏えい人数として扱わない。",
+    "発行済IDの不正利用のおそれには対処済みで、実被害はないと公表。対処に伴う一部利用の不便と全面停止は同義ではない。",
+    "10月22日のPHP対応によるアララ等の予防停止は別の説明。Value Card事案の原因を特定PHP CVEと断定せず、この侵害による停止として合算しない。"
+  ],
+  "sources": [
+    {
+      "title": "ペイクラウドHD：子会社のValue Cardへの不正アクセス（適時開示）",
+      "url": "https://www.release.tdnet.info/inbs/140120261023555340.pdf",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "title": "ペイクラウドHD：PHP対応による一部サービスの予防的一時停止（別の説明）",
+      "url": "https://www.paycloud.inc/news/info/20261022_paycloud",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-19",
+      "label": "ID・PIN・残高情報の流出を確認",
+      "kind": "occurrence",
+      "summary": "確認日として公表された日。実際の攻撃開始日は示されていない。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261023555340.pdf"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "流出件数・対処結果を公表",
+      "kind": "disclosure",
+      "summary": "発行済・未発行の内訳、個人情報該当なし、実被害なしと説明。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261023555340.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-24",
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃実施時期未公表",
+      "note": "10月19日は流出を確認した日であって、攻撃実施日としない。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261023555340.pdf",
+      "reviewedDate": "2026-10-24"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月19日",
+      "note": "公式表の確認日。ID番号・PIN番号・残高情報の流出についての被害確認日。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261023555340.pdf",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-19"
+    }
+  }
+}

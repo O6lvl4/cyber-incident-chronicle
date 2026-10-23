@@ -1,0 +1,141 @@
+{
+  "id": "greenmonster-fxnavi-2026",
+  "company": "グリーンモンスター（FXなび）",
+  "geography": "日本企業・国内サービス",
+  "title": "FXなびのAPI機能を経由した情報取得のおそれ、約619万件を調査",
+  "announcementDate": "2026-10-23",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-04-27",
+  "occurredDateLabel": "2026年4月27日20:26頃〜30日14:26頃（情報取得のおそれ。10月17日確認のアクセスとは別IP）",
+  "updatedDate": "2026-10-23",
+  "statusAsOfDate": "2026-10-23",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "API機能により第三者がユーザー情報を取得可能となっていた。原因機能は修正済み",
+    "status": "confirmed"
+  },
+  "summary": "10月17日の不正アクセス確認を端緒とする調査で、別IPから4月27〜30日に情報が継続取得された疑いが判明。約619万件は個人情報に当たらない情報も含む。API機能・認証情報の修正と旧認証情報の無効化を実施し、詳細調査を継続している。",
+  "affectedData": [
+    "メールアドレス、ニックネーム、性別、年代、職業分類、XのID、自己紹介、アイコン画像URL",
+    "初回アンケート回答",
+    "端末固有ID、ログイン用認証情報、アプリ引き継ぎコード、プッシュ通知識別子、広告ID（公式表の判読できた項目）"
+  ],
+  "counts": [
+    {
+      "value": 6190000,
+      "unit": "件",
+      "status": "possible",
+      "label": "取得されたおそれのあるユーザー情報等。個人情報以外も含む総数",
+      "approximate": true
+    },
+    {
+      "value": 66003,
+      "unit": "件",
+      "status": "possible",
+      "label": "総数の対象項目：メールアドレス",
+      "approximate": false
+    },
+    {
+      "value": 142578,
+      "unit": "件",
+      "status": "possible",
+      "label": "総数の対象項目：性別",
+      "approximate": false
+    },
+    {
+      "value": 139293,
+      "unit": "件",
+      "status": "possible",
+      "label": "総数の対象項目：年代",
+      "approximate": false
+    },
+    {
+      "value": 149137,
+      "unit": "件",
+      "status": "possible",
+      "label": "総数の対象項目：職業分類",
+      "approximate": false
+    },
+    {
+      "value": 6434,
+      "unit": "件",
+      "status": "possible",
+      "label": "総数の対象項目：XのID",
+      "approximate": false
+    },
+    {
+      "value": 4809631,
+      "unit": "件",
+      "status": "possible",
+      "label": "総数の対象項目：初回アンケート回答",
+      "approximate": false
+    },
+    {
+      "value": 5120,
+      "unit": "件",
+      "status": "possible",
+      "label": "総数の対象項目：アプリ引き継ぎコード",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "約619万件を619万人と読み替えない。項目別件数は対象情報の内訳であり、総数への加算や実人数への換算をしない。",
+    "10月17日に確認した不正アクセスによる漏えいは未確認。4月の取得疑いは異なるIPによるもので、同一攻撃者とは断定しない。",
+    "氏名・住所・電話番号・生年月日・カード情報・銀行口座情報・マイナンバーは登録項目にない。",
+    "確認時点で公開・なりすまし等の二次被害は未確認。他サービス「株たす」「トウシカ」の不正取得も未確認。",
+    "公式HTML中の表は画像。最下段の末尾が画像内で欠けており、判読できない項目を推測して補わない。"
+  ],
+  "sources": [
+    {
+      "title": "グリーンモンスター：FXなびのユーザー情報等漏えいのおそれ",
+      "url": "https://greenmonster.co.jp/topics/2356/",
+      "publishedDate": "2026-10-23"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-27",
+      "label": "情報取得のおそれがある期間の開始",
+      "kind": "occurrence",
+      "summary": "4月30日14:26頃まで継続的に情報取得された疑い。実際の取得は確定していない。",
+      "sourceUrl": "https://greenmonster.co.jp/topics/2356/"
+    },
+    {
+      "date": "2026-10-17",
+      "label": "別の不正アクセスを確認・調査開始",
+      "kind": "occurrence",
+      "summary": "このアクセスによる漏えいは未確認。調査から4月の取得疑いを発見。",
+      "sourceUrl": "https://greenmonster.co.jp/topics/2356/"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "漏えいのおそれと対策を公表",
+      "kind": "disclosure",
+      "summary": "対象規模・項目、API修正・認証情報の無効化、調査継続を説明。",
+      "sourceUrl": "https://greenmonster.co.jp/topics/2356/"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-24",
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026年4月27日20:26頃〜4月30日14:26頃（取得疑い）",
+      "note": "会社が示す取得のおそれのある期間。10月17日は別IPによるアクセスの確認日であり、4月の攻撃発生日とは区別。",
+      "sourceUrl": "https://greenmonster.co.jp/topics/2356/",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-04-27",
+      "endDate": "2026-04-30"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "漏えい被害は未確定",
+      "note": "4月の取得はおそれとして調査中。10月17日確認のアクセスによる漏えいも未確認で、被害確定日を付与しない。",
+      "sourceUrl": "https://greenmonster.co.jp/topics/2356/",
+      "reviewedDate": "2026-10-24"
+    }
+  }
+}

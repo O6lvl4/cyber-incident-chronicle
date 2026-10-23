@@ -1,0 +1,105 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v798-mcc6-2m3m",
+  "aliases": [
+    "CVE-2026-7873"
+  ],
+  "title": "Langflow: Code Injection Vulnerability in Code Validation Endpoint",
+  "summary": "Langflow: Code Injection Vulnerability in Code Validation Endpoint",
+  "publishedAt": "2026-06-30T21:31:44Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-v798-mcc6-2m3m/GHSA-v798-mcc6-2m3m.json",
+  "modifiedAt": "2026-10-23T20:51:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "langflow",
+      "ranges": [
+        {
+          "affected": ">= 1.0.0, < 1.10.1.rc0",
+          "fixed": "1.10.1.rc0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-v798-mcc6-2m3m/GHSA-v798-mcc6-2m3m.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "1.10.1.rc0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-7873",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-7873"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-v798-mcc6-2m3m/GHSA-v798-mcc6-2m3m.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/06/GHSA-v798-mcc6-2m3m/GHSA-v798-mcc6-2m3m.json",
+      "publishedDate": "2026-06-30",
+      "publishedAt": "2026-06-30T21:31:44Z",
+      "modifiedAt": "2026-10-23T20:51:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Langflow: Code Injection Vulnerability in Code Validation Endpoint",
+      "url": "https://github.com/advisories/GHSA-v798-mcc6-2m3m",
+      "publishedDate": "2026-06-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "ibm: Code Injection Vulnerability in Code Validation Endpoint",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-7873",
+      "publishedDate": "2026-06-30",
+      "publishedAt": "2026-06-30T19:13:16.331Z",
+      "modifiedAt": "2026-07-01T17:27:51.362Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Langflow compile-only validation fix",
+      "url": "https://github.com/langflow-ai/langflow/pull/13696",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "IBM CNAは1.0.0〜1.10.0の影響とCVSS3.1 9.9を確認できる。1.10.1.rc0の修正境界はReviewedによる情報として保持し、release tagの存在だけでCNAが修正版を明示したとは扱わない。",
+    "開発元PRではvalidate/codeの関数定義をexecせずcompileだけで検証する修正を確認。既定のAUTO_LOGIN構成との組合せは別の脆弱性IDを本件のaliasへ無条件に統合しない。"
+  ]
+}

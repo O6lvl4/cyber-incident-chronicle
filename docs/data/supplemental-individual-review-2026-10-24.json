@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "reportDateJst": "2026-10-24",
+  "checkedAt": "2026-10-23T22:00:01.415019Z",
+  "addedIds": [
+    "GHSA-c9gc-w9vx-w86p",
+    "GHSA-j2g9-4prp-pf6h",
+    "GHSA-w4qr-p94g-mjhv",
+    "GHSA-j366-h8gg-77pm",
+    "GHSA-gqmc-89g8-p25r",
+    "GHSA-96f6-r43r-8c24",
+    "GHSA-mr2v-56j5-cmfc"
+  ],
+  "identityCheck": "New primary IDs and explicit OSV/maintainer CVE and GHSA aliases checked against current imported Reviewed + curated records before proposed insertion; no existing match. Brotli/PYSEC two source records are one existing Reviewed advisory overlay, not additional display records.",
+  "newAdvisoryEvidence": [
+    {
+      "sourceId": "RUSTSEC-2026-0313",
+      "displayId": "GHSA-c9gc-w9vx-w86p",
+      "primaryUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-c9gc-w9vx-w86p",
+      "apiReceipt": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-c9gc-w9vx-w86p",
+        "checkedAt": "2026-10-23T21:56:48.961853Z",
+        "httpStatus": 200,
+        "bytes": 4794,
+        "sha256": "019bb9ecca56c6396e2189ef70b6e6968d3728b1770b4659b70ce0f8ffbe496b",
+        "status": "success"
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-c9gc-w9vx-w86p",
+        "cve_id": "CVE-2026-115388",
+        "summary": "wasmtime-wasi-http: outgoing HTTP body write allows guest-driven host memory exhaustion (DoS)",
+        "published_at": "2026-09-24T19:24:54Z",
+        "updated_at": "2026-10-23T18:32:33Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 6.2
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi-http"
+            },
+            "vulnerable_version_range": "< 36.0.16",
+            "patched_versions": "36.0.16",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi-http"
+            },
+            "vulnerable_version_range": " >= 37.0.0, < 48.0.3",
+            "patched_versions": "48.0.3",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi-http"
+            },
+            "vulnerable_version_range": "49.0.0",
+            "patched_versions": "49.0.1",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "decision": "add",
+      "findings": [
+        "対象はwasmtime-wasi-httpのWASIp2送信本文。設定された書込み上限を超える保持が問題であり、すべてのWasmtime利用形態へ拡張しない。"
+      ]
+    },
+    {
+      "sourceId": "RUSTSEC-2026-0314",
+      "displayId": "GHSA-j2g9-4prp-pf6h",
+      "primaryUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j2g9-4prp-pf6h",
+      "apiReceipt": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-j2g9-4prp-pf6h",
+        "checkedAt": "2026-10-23T21:56:48.962602Z",
+        "httpStatus": 200,
+        "bytes": 5451,
+        "sha256": "666c52594d3809b008b0cf1e8e2daa9d02ea9c8a15ef451bf54003da10b9615d",
+        "status": "success"
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-j2g9-4prp-pf6h",
+        "cve_id": "CVE-2026-115387",
+        "summary": "wasmtime-wasi: guest can panic host through filesystem datetime overflow (wasip1, 2, 3)",
+        "published_at": "2026-09-24T19:24:34Z",
+        "updated_at": "2026-10-23T18:32:55Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 6.2
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": "< 36.0.16",
+            "patched_versions": "36.0.16",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": " >= 37.0.0,  < 48.0.3",
+            "patched_versions": "48.0.3",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": " 49.0.0",
+            "patched_versions": "49.0.1",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "decision": "add",
+      "findings": [
+        "開発元が記載したAPI別の日時表現・条件は一律化しない。ゲストが対象のファイルシステム操作を利用できる構成が対象。"
+      ]
+    },
+    {
+      "sourceId": "RUSTSEC-2026-0320",
+      "displayId": "GHSA-w4qr-p94g-mjhv",
+      "primaryUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-w4qr-p94g-mjhv",
+      "apiReceipt": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-w4qr-p94g-mjhv",
+        "checkedAt": "2026-10-23T21:56:48.963652Z",
+        "httpStatus": 200,
+        "bytes": 5634,
+        "sha256": "afc251eed98750461d5101118f8ef6a7985d03d971204137abece1a2024dab93",
+        "status": "success"
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-w4qr-p94g-mjhv",
+        "cve_id": "CVE-2026-115382",
+        "summary": "Wasmtime wasi:http implementation panics with a zero timeout supplied",
+        "published_at": "2026-10-02T19:39:15Z",
+        "updated_at": "2026-10-23T18:37:36Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "score": 5.9
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi-http"
+            },
+            "vulnerable_version_range": ">= 46.0.0, < 48.0.4",
+            "patched_versions": "48.0.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi-http"
+            },
+            "vulnerable_version_range": " >= 49.0.0, < 49.0.2",
+            "patched_versions": "49.0.2",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "decision": "add",
+      "findings": [
+        "default-send-request Cargo featureが有効なwasmtime-wasi-httpが対象。この機能は既定で有効だが、wasi:httpの実装を提供しない埋込みは影響しない。",
+        "修正はゼロを1ナノ秒へ制限する。開発元はアップデート、またはwasi:http APIを提供しない構成への変更を案内している。"
+      ]
+    },
+    {
+      "sourceId": "RUSTSEC-2026-0321",
+      "displayId": "GHSA-j366-h8gg-77pm",
+      "primaryUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-j366-h8gg-77pm",
+      "apiReceipt": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-j366-h8gg-77pm",
+        "checkedAt": "2026-10-23T21:56:55.272228Z",
+        "httpStatus": 200,
+        "bytes": 6039,
+        "sha256": "1e3e9f09b7b9b1e6535f39cc799742c75dc98356a81e7ec84207659bf68f13c1",
+        "status": "success"
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-j366-h8gg-77pm",
+        "cve_id": "CVE-2026-115380",
+        "summary": "WASI preview 0 implementation of `poll_oneoff` circumvents fuel consumption",
+        "published_at": "2026-10-02T19:39:05Z",
+        "updated_at": "2026-10-23T18:39:41Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "score": 4.0
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": "< 36.0.17",
+            "patched_versions": "36.0.17",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": ">= 37.0.0, < 48.0.4",
+            "patched_versions": "48.0.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": ">= 49.0.0, < 49.0.2",
+            "patched_versions": "49.0.2",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "decision": "add",
+      "findings": [
+        "CLIではWASI preview 0が既定で有効。ライブラリとしての埋込みではpreview 0を明示的に有効化した場合のみ対象。",
+        "WASIp1・WASIp2・WASIp3は本件の影響を受けない。開発元はCLIでpreview 0を無効化する回避策を案内している。"
+      ]
+    },
+    {
+      "sourceId": "RUSTSEC-2026-0322",
+      "displayId": "GHSA-gqmc-89g8-p25r",
+      "primaryUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-gqmc-89g8-p25r",
+      "apiReceipt": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-gqmc-89g8-p25r",
+        "checkedAt": "2026-10-23T21:56:55.329768Z",
+        "httpStatus": 200,
+        "bytes": 6328,
+        "sha256": "fbe45c3c8413d3330f27fa3169022b35697492c2870055fab1a5af6c2cb88dbc",
+        "status": "success"
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-gqmc-89g8-p25r",
+        "cve_id": "CVE-2026-115381",
+        "summary": "Excessive allocated memory on the host when guests don't have stdio",
+        "published_at": "2026-10-02T19:39:11Z",
+        "updated_at": "2026-10-23T18:38:09Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "score": 5.9
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": "< 36.0.17",
+            "patched_versions": "36.0.17",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": " >= 37.0.0, < 48.0.4",
+            "patched_versions": " 48.0.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": ">= 49.0.0, < 49.0.2",
+            "patched_versions": "49.0.2",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "decision": "add",
+      "findings": [
+        "stdout/stderrを設定しない埋込みが対象。設定済みストリームへ一律に影響を拡張しない。",
+        "既知の別問題GHSA-852m-cvvp-9p4wの不完全な修正に関連するが、relatedであり同一aliasとしては統合しない。",
+        "有限のcheck_write値を返す独自OutputStreamの設定が回避策として示されている。"
+      ]
+    },
+    {
+      "sourceId": "RUSTSEC-2026-0323",
+      "displayId": "GHSA-96f6-r43r-8c24",
+      "primaryUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-96f6-r43r-8c24",
+      "apiReceipt": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-96f6-r43r-8c24",
+        "checkedAt": "2026-10-23T21:56:55.331066Z",
+        "httpStatus": 200,
+        "bytes": 4844,
+        "sha256": "c5e4dacef796e7dbf375fe74c01857871ae999857d03475d18c120504d30d665",
+        "status": "success"
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-96f6-r43r-8c24",
+        "cve_id": "CVE-2026-115386",
+        "summary": "fd_readdir copies uninitialized struct padding into guest memory",
+        "published_at": "2026-10-02T19:38:47Z",
+        "updated_at": "2026-10-23T18:37:01Z",
+        "withdrawn_at": null,
+        "severity": "low",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+            "score": 2.1
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": "< 36.0.17",
+            "patched_versions": "36.0.17",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": ">= 37.0.0, < 48.0.4",
+            "patched_versions": "48.0.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": ">= 49.0.0, < 49.0.2",
+            "patched_versions": "49.0.2",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "decision": "add",
+      "findings": [
+        "対象はWASIp1で事前オープンしたディレクトリを利用できるゲスト。WASIp2以降やファイルシステムなしのゲストは対象外。",
+        "ゲストが漏えいする3バイトを任意に選べるという意味ではない。開発元は利用条件を維持したままの回避策はないとして更新を案内している。"
+      ]
+    },
+    {
+      "sourceId": "RUSTSEC-2026-0324",
+      "displayId": "GHSA-mr2v-56j5-cmfc",
+      "primaryUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mr2v-56j5-cmfc",
+      "apiReceipt": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-mr2v-56j5-cmfc",
+        "checkedAt": "2026-10-23T21:56:55.348152Z",
+        "httpStatus": 200,
+        "bytes": 4817,
+        "sha256": "5af9a906d2806a1f72e11cb7d320e60fc28cf188b1693dc667b3063fd8d20250",
+        "status": "success"
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-mr2v-56j5-cmfc",
+        "cve_id": "CVE-2026-115385",
+        "summary": "Guest can panic host through filesystem timestamp before the epoch on wasip3",
+        "published_at": "2026-10-02T19:39:28Z",
+        "updated_at": "2026-10-23T18:40:10Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 6.2
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": ">= 46.0.0, < 48.0.4",
+            "patched_versions": "48.0.4",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime-wasi"
+            },
+            "vulnerable_version_range": ">= 49.0.0, < 49.0.2",
+            "patched_versions": "49.0.2",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "decision": "add",
+      "findings": [
+        "対象は変更可能な事前オープン済みファイル記述子をゲストへ渡す構成。読取り専用のファイルシステムは対象外。",
+        "WASIp1・WASIp2およびWindowsホストは本件の影響を受けない。WASIp3の既定サポート開始は46.0.0。"
+      ]
+    }
+  ],
+  "heldCandidates": [
+    {
+      "sourceId": "RUSTSEC-2026-0385",
+      "disposition": "hold-no-stable-ghsa-cve",
+      "reason": "開発元の0.4.4セキュリティ修正とRustSecを確認。現時点の公開開発元アドバイザリ一覧とOSVに本件のGHSA/CVEなし。安定したGHSA/CVEを主IDとする現行契約に従い候補保持。relatedのRUSTSEC-2026-0003とは統合しない。"
+    },
+    {
+      "sourceId": "RUSTSEC-2026-0386",
+      "disposition": "hold-no-stable-ghsa-cve",
+      "reason": "Tokioの公開修正PRとRustSecのunsound分類・範囲を確認。現時点の公開開発元一覧とOSVに本件のGHSA/CVEなし。既存Intervalの問題とは異なり、推測で統合・採番しない。修正はsafe constructorsの廃止予定化とunsafe register APIへの移行で、単純アップデートのみで全利用が安全とは断定しない。"
+    },
+    {
+      "sourceId": "PYSEC-2026-4324",
+      "disposition": "hold-conflicting-fixed-boundary",
+      "reason": "PyPI vllmへの対応は明示。OSVは0.22.1以上0.28.0未満、開発元構造化欄は0.28.0を影響範囲と修正版の双方に含める。本文は既存修正で取りこぼしたFunAudioChat/Tarsier2のartifact pin伝播を扱い、確定下限にも留保。修正版の矛盾は推測解消せず候補保持。認証なしRCEやtrust_remote_code=False迂回とはしない。"
+    },
+    {
+      "sourceId": "PYSEC-2026-4325",
+      "disposition": "hold-package-mapping-and-assessment-conflict",
+      "reason": "OSVはPyPI vllmへ対応するが、開発元のpackage/ecosystemは空欄で対象は任意有効化されるRust frontend。PyPI配布との対応を確定せず候補保持。OSV CVSS3.1はAC:L、開発元はAC:H 5.9/Medium。CVSSや実行条件を一律化しない。"
+    }
+  ],
+  "limitations": [
+    "No raw descriptions, PoCs, unrelated API fields, or fetched HTML/XML are published.",
+    "MyJVN HTTP503 and CISA KEV HTTP403 retain successful checkpoints and unknown status.",
+    "The seven Wasmtime additions were published in September/October; they are not seven new vulnerabilities first disclosed today."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c8w8-3pqp-wr83",
+  "aliases": [
+    "CVE-2026-73054"
+  ],
+  "title": "SiYuan: A parser differential between the WebSocket keepalive exemption and the session quarantine allows unauthenticated access to the broadcast event stream",
+  "summary": "SiYuan: A parser differential between the WebSocket keepalive exemption and the session quarantine allows unauthenticated access to the broadcast event stream",
+  "publishedAt": "2026-10-23T18:34:09Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-c8w8-3pqp-wr83/GHSA-c8w8-3pqp-wr83.json",
+  "modifiedAt": "2026-10-23T18:34:09Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/siyuan-note/siyuan/kernel",
+      "ranges": [
+        {
+          "affected": "eef105683 (master HEAD, v3.7.3) and dev HEAD 401d2928c",
+          "fixed": "v3.7.4",
+          "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-c8w8-3pqp-wr83"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-c8w8-3pqp-wr83",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-c8w8-3pqp-wr83"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-c8w8-3pqp-wr83/GHSA-c8w8-3pqp-wr83.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-c8w8-3pqp-wr83/GHSA-c8w8-3pqp-wr83.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T18:34:09Z",
+      "modifiedAt": "2026-10-23T18:34:09Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "SiYuan: A parser differential between the WebSocket keepalive exemption and the session quarantine allows unauthenticated access to the broadcast event stream",
+      "url": "https://github.com/advisories/GHSA-c8w8-3pqp-wr83",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "A parser differential between the WebSocket keepalive exemption and the session quarantine allows unauthenticated access to the broadcast event stream, defeating the fix for GHSA-xp2m-98x8-rpj6",
+      "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-c8w8-3pqp-wr83",
+      "publishedDate": "2026-07-31",
+      "publishedAt": "2026-07-31T13:10:33Z",
+      "modifiedAt": "2026-08-20T20:57:07Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元はSiYuanのrelease/commit表記とv3.7.4を提示。ReviewedはGo moduleのpseudo-versionで修正境界を表現するため、開発元の原表記とDBのpackage/rangeを分離して保存する。"
+  ]
+}

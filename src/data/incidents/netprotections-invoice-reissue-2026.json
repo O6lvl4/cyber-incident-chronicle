@@ -1,0 +1,84 @@
+{
+  "id": "netprotections-invoice-reissue-2026",
+  "company": "ネットプロテクションズ（NP後払い）",
+  "geography": "日本",
+  "title": "請求書再発行システムへの不正な連続リクエストで顧客情報を参照",
+  "announcementDate": "2026-10-22",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃の実施時期は未公表",
+  "updatedDate": "2026-10-22",
+  "statusAsOfDate": "2026-10-22",
+  "lastVerifiedDate": "2026-10-24",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "請求書再発行システムへの通常想定されない機械的・連続的なリクエスト",
+    "status": "confirmed"
+  },
+  "summary": "10月14日、請求書再発行システムへの機械的・連続的なリクエストにより、一部取引の個人情報に第三者がアクセスしたと判明。対象28,884件を公表した。再発行システムは安全確認後に再開予定だが、NP後払いサービス自体は通常提供している。",
+  "affectedData": [
+    "氏名、購入時登録住所",
+    "法人利用時は会社名・部署名、請求書返送時は未着であったこと"
+  ],
+  "counts": [
+    {
+      "value": 28884,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "不正アクセスが確認された取引関連情報。実人数ではない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "情報への不正アクセス確認と外部持ち出しの確認は区別する。公表はアクセスされた範囲を示し、抽出・転送の有無は明記していない。",
+    "28,884件は対象件数で、顧客人数とは記載されていない。",
+    "停止は請求書再発行システムの範囲。後払い決済全体の停止ではない。",
+    "公表時点で情報の不正利用は未確認。"
+  ],
+  "sources": [
+    {
+      "title": "請求書再発行システムへの不正な連続リクエストで顧客情報を参照",
+      "url": "https://corp.netprotections.com/news/info/corporate/20261022/",
+      "publishedDate": "2026-10-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-14",
+      "label": "個人情報への不正アクセスが判明",
+      "kind": "occurrence",
+      "summary": "請求書再発行システムへの連続リクエストと情報参照を把握。",
+      "sourceUrl": "https://corp.netprotections.com/news/info/corporate/20261022/"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月14日、請求書再発行システムへの機械的・連続的なリクエストにより、一部取引の個人情報に第三者がアクセスしたと判明。対象28,884件を公表した。再発行システムは安全確認後に再開予定だが、NP後払いサービス自体は通常提供している。",
+      "sourceUrl": "https://corp.netprotections.com/news/info/corporate/20261022/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃の実施日・期間は公表されていない。検知・公表日から推定しない。",
+      "sourceUrl": "https://corp.netprotections.com/news/info/corporate/20261022/",
+      "reviewedDate": "2026-10-24"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月14日",
+      "note": "第三者による個人情報へのアクセスが10月14日に判明と明記。実際のアクセス実施日とは分ける。",
+      "sourceUrl": "https://corp.netprotections.com/news/info/corporate/20261022/",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-14"
+    }
+  },
+  "detectedDate": "2026-10-14"
+}

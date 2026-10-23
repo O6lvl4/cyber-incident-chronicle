@@ -1,0 +1,127 @@
+{
+  "id": "xebio-gallery2-commerble-2026",
+  "company": "ゼビオホールディングス／GALLERY・2",
+  "geography": "日本企業・国内サービス",
+  "title": "EC基盤Commerbleへの侵害で顧客情報漏えいのおそれ、GALLERY・2がEC停止",
+  "announcementDate": "2026-10-23",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-16",
+  "occurredDateLabel": "10月16日：EC基盤側認証情報の不正取得、17日：顧客DBへのアクセス",
+  "updatedDate": "2026-10-23",
+  "statusAsOfDate": "2026-10-23",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "委託先Commerbleの管理認証情報の不正取得・管理クラウド経由のDBアクセス。アクセス制限の設定不備等を悪用したとの報告",
+    "status": "confirmed"
+  },
+  "summary": "10月16日にEC基盤側の管理認証情報が不正取得され、翌17日に子会社の顧客DBで情報表示操作を実行。18日に支払い画面改ざんを確認しECを停止。購入者・住所・メール履歴の3区分に漏えいのおそれがあるが、外部持出しは未確認で調査中。",
+  "affectedData": [
+    "購入者名・メールアドレス",
+    "購入者住所・配送先住所・電話番号",
+    "注文確認メール本文・送信先メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 128000,
+      "unit": "件",
+      "status": "possible",
+      "label": "最大約12.8万件：重複を除いた購入者情報",
+      "approximate": true
+    },
+    {
+      "value": 122000,
+      "unit": "件",
+      "status": "possible",
+      "label": "最大約12.2万件：重複を除いた住所情報",
+      "approximate": true
+    },
+    {
+      "value": 158000,
+      "unit": "件",
+      "status": "possible",
+      "label": "最大約15.8万件：メール送信履歴",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "3区分は重複するため単純合計しない。各値は漏えいのおそれがある最大概数であり、漏えい確認人数ではない。",
+    "顧客DB内の表示操作は確認済みだが、外部持出しは未確認。DB対象情報にカード番号・ログインパスワードは含まない。",
+    "支払い画面改ざんとDB対象情報の区分を混同しない。カード情報流出や金銭被害は本公表から推測しない。",
+    "10月18日は改ざんを確認してEC停止した日。攻撃開始日は基盤の認証情報不正取得があった16日として別記する。",
+    "安全性確認後に段階的再開を検討。10月23日時点で再開済みとはされていない。"
+  ],
+  "sources": [
+    {
+      "title": "ゼビオHD：連結子会社GALLERY・2のEC基盤経由の漏えい可能性（適時開示）",
+      "url": "https://www.release.tdnet.info/inbs/140120261022554661.pdf",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "title": "GALLERY・2：ECプラットフォーム不正アクセスのお知らせ",
+      "url": "https://www.gallery2.co.jp/?CategoryId=122",
+      "publishedDate": "2026-10-23"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-16",
+      "label": "EC基盤の管理認証情報が不正取得",
+      "kind": "occurrence",
+      "summary": "基盤運営側の報告書に基づく。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261022554661.pdf"
+    },
+    {
+      "date": "2026-10-17",
+      "label": "顧客DBの情報表示操作",
+      "kind": "occurrence",
+      "summary": "管理用クラウド経由で顧客DBに不正アクセス。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261022554661.pdf"
+    },
+    {
+      "date": "2026-10-18",
+      "label": "支払い画面改ざん確認・EC停止",
+      "kind": "occurrence",
+      "summary": "改ざんを確認し同日にECサイトを停止。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261022554661.pdf"
+    },
+    {
+      "date": "2026-10-21",
+      "label": "個人情報保護委員会に報告",
+      "kind": "update",
+      "summary": "子会社が報告を実施。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261022554661.pdf"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "漏えい可能性・対象区分を公表",
+      "kind": "disclosure",
+      "summary": "親会社と子会社が対象範囲、未確定事項、今後の再開方針を公表。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261022554661.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-10-24",
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026年10月16〜17日（確認された認証情報取得とDBアクセス）",
+      "note": "16日は基盤管理認証情報の不正取得、17日は子会社DBへの不正アクセス。全攻撃期間や改ざんの実行日は未確定。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261022554661.pdf",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-17"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月18日（画面改ざん確認・EC停止）",
+      "note": "確認された被害は支払い入力画面の改ざんとEC停止。情報漏えい確定日ではない。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261022554661.pdf",
+      "reviewedDate": "2026-10-24",
+      "startDate": "2026-10-18"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-p4qw-vx5p-g984",
+  "aliases": [
+    "CVE-2026-73049"
+  ],
+  "title": "SiYuan: The publish filter for database backlinks consults the forbidden list instead of the visibility list, disclosing hidden-tier documents to anonymous readers",
+  "summary": "SiYuan: The publish filter for database backlinks consults the forbidden list instead of the visibility list, disclosing hidden-tier documents to anonymous readers",
+  "publishedAt": "2026-10-23T18:30:42Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-p4qw-vx5p-g984/GHSA-p4qw-vx5p-g984.json",
+  "modifiedAt": "2026-10-23T18:30:42Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/siyuan-note/siyuan/kernel",
+      "ranges": [
+        {
+          "affected": "eef10568 (master HEAD, v3.7.3) and dev HEAD dfc71589",
+          "fixed": "v3.7.4",
+          "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-p4qw-vx5p-g984"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-p4qw-vx5p-g984",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N",
+        "sourceUrl": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-p4qw-vx5p-g984"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-p4qw-vx5p-g984/GHSA-p4qw-vx5p-g984.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-p4qw-vx5p-g984/GHSA-p4qw-vx5p-g984.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T18:30:42Z",
+      "modifiedAt": "2026-10-23T18:30:42Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "SiYuan: The publish filter for database backlinks consults the forbidden list instead of the visibility list, disclosing hidden-tier documents to anonymous readers",
+      "url": "https://github.com/advisories/GHSA-p4qw-vx5p-g984",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "The publish filter for database backlinks consults the forbidden list instead of the visibility list, disclosing hidden-tier documents to anonymous readers",
+      "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-p4qw-vx5p-g984",
+      "publishedDate": "2026-07-30",
+      "publishedAt": "2026-07-30T15:04:13Z",
+      "modifiedAt": "2026-08-20T20:53:50Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元はSiYuanのrelease/commit表記とv3.7.4を提示。ReviewedはGo moduleのpseudo-versionで修正境界を表現するため、開発元の原表記とDBのpackage/rangeを分離して保存する。"
+  ]
+}

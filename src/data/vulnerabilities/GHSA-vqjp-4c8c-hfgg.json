@@ -2,14 +2,15 @@
   "kind": "vulnerability",
   "id": "GHSA-vqjp-4c8c-hfgg",
   "aliases": [
+    "CVE-2026-115392",
     "RUSTSEC-2026-0269"
   ],
   "title": "Wasmtime：末尾スラッシュを用いたファイルシステム隔離の脱出",
   "summary": "wasmtime-wasiのファイルシステム実装が利用するcap-stdで、パスやシンボリックリンクの末尾スラッシュを特定条件で処理すると、ゲストが隔離先の外にあるホストのファイルへアクセスできる。書込み可能なディレクトリを渡されたゲストはホストの権限内で読書きでき、読取り専用でも既存リンクの条件により外部ファイルを読める可能性がある。",
   "publishedAt": "2026-08-20T12:00:00Z",
-  "modifiedAt": "2026-10-12T18:00:10.942612968Z",
+  "modifiedAt": "2026-10-23T10:55:41.227544448Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-14T00:28:04.712070Z",
+  "lastVerifiedAt": "2026-10-23T21:57:49.531341Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0269",
   "affected": [
     {
@@ -100,7 +101,7 @@
       "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0269",
       "publishedDate": "2026-08-20",
       "publishedAt": "2026-08-20T12:00:00Z",
-      "modifiedAt": "2026-10-12T18:00:10.942612968Z",
+      "modifiedAt": "2026-10-23T10:55:41.227544448Z",
       "withdrawnAt": null
     },
     {
@@ -115,7 +116,7 @@
       "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-vqjp-4c8c-hfgg",
       "publishedDate": "2026-08-20",
       "publishedAt": "2026-08-20T17:59:17Z",
-      "modifiedAt": "2026-08-20T17:59:17Z",
+      "modifiedAt": "2026-10-23T18:27:02Z",
       "withdrawnAt": null
     }
   ],

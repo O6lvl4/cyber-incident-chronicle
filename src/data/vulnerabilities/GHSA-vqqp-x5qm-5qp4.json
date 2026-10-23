@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vqqp-x5qm-5qp4",
+  "aliases": [],
+  "title": "FastMCP MCP client wrappers construct M2M OAuth providers without issuer binding — client secret redirectable to attacker-advertised authorization server",
+  "summary": "FastMCP MCP client wrappers construct M2M OAuth providers without issuer binding — client secret redirectable to attacker-advertised authorization server",
+  "publishedAt": "2026-10-23T21:31:30Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-vqqp-x5qm-5qp4/GHSA-vqqp-x5qm-5qp4.json",
+  "modifiedAt": "2026-10-23T21:31:30Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-23T22:01:40.014511Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "fastmcp",
+      "ranges": [
+        {
+          "affected": ">= 4.0.0a1, < 4.1.2",
+          "fixed": "4.1.2",
+          "sourceUrl": "https://github.com/PrefectHQ/fastmcp/security/advisories/GHSA-vqqp-x5qm-5qp4"
+        }
+      ]
+    },
+    {
+      "ecosystem": "pip",
+      "packageName": "fastmcp-slim",
+      "ranges": [
+        {
+          "affected": ">= 4.0.0a1, < 4.1.2",
+          "fixed": "4.1.2",
+          "sourceUrl": "https://github.com/PrefectHQ/fastmcp/security/advisories/GHSA-vqqp-x5qm-5qp4"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/PrefectHQ/fastmcp/security/advisories/GHSA-vqqp-x5qm-5qp4",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://github.com/PrefectHQ/fastmcp/security/advisories/GHSA-vqqp-x5qm-5qp4"
+      },
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-vqqp-x5qm-5qp4/GHSA-vqqp-x5qm-5qp4.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-vqqp-x5qm-5qp4/GHSA-vqqp-x5qm-5qp4.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:31:30Z",
+      "modifiedAt": "2026-10-23T21:31:30Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "FastMCP MCP client wrappers construct M2M OAuth providers without issuer binding — client secret redirectable to attacker-advertised authorization server",
+      "url": "https://github.com/advisories/GHSA-vqqp-x5qm-5qp4",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "fastmcp MCP client wrappers construct M2M OAuth providers without issuer binding — client secret redirectable to attacker-advertised authorization server",
+      "url": "https://github.com/PrefectHQ/fastmcp/security/advisories/GHSA-vqqp-x5qm-5qp4",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T14:51:35Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "4.1.2へ更新するだけでは不十分。認証情報を発行した認可サーバーのissuerを設定する必要がある。issuer省略は互換性のため許容され警告のみとなる。既に漏えいした可能性のある再利用可能な認証情報は開発元の案内に従い交換する。",
+    "3.xは当該wrapperを含まない。構造化範囲の4.0.0a1からの開始と、本文の安定版4.0.0〜4.1.1を区別する。"
+  ]
+}

@@ -24,7 +24,7 @@
 
 ## 保存先・再現性
 
-- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認165件と、固定ソース外で個別確認した138件を含む計303件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
+- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認341件と、固定ソース外で個別確認した156件を含む計497件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
 - `src/data/vulnerability-imported.json`: 固定ソース全件を変換・別名統合し、個別確認済み記録を重ねた表示用正本。上記の個別編集記録を追加連結して二重計上しない
 - `src/data/vulnerability-coverage.json`: 簡潔な公開カバレッジ・再実行コマンド・出力ハッシュ
 - `docs/data/vulnerability-import-audit.json`: ファイル単位の収録/除外/失敗監査。ブラウザーに全量を同梱しない
@@ -73,6 +73,20 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - 未訪問の参照先を確認済み資料として扱わない。機械収録は固定JSONへの直接リンクが必須
 
 2026-10-08の個別50件拡充ではCISA公式カタログがHTTP403で取得できなかったためKEV未確認を維持した。React Server Componentsの実悪用試行はAWSの独立した一次観測報告を引用している。
+
+## 2026-10-24の確認結果
+
+固定コミットを `073abc5bb4bf1211995d8cec3f32de47ce5195ee`（2026-10-23T21:51:41Z）へ更新。前回成功固定ソースとの差分74ファイル（追加67・変更7）とReviewed全37,158ファイルを解析した。対象19,221アドバイザリ、期間前13,864・対象外4,073・変換失敗0。前回成功確認時刻から24時間重複する窓に加え、全文差分で遅延追加・訂正を確認する。
+
+表示は19,376件（未撤回18,509・撤回履歴867）、前回から71件増加。Reviewedの対象追加65件は既存個別収録1件と集約し表示64件増、補助ソースWasmtimeの過去公表7件を追加した。空のalias配列を持つ新規の撤回重複12件は別履歴として保持し、既存bracesの撤回1件と区別する。当日の新規公表数ではない。
+
+- 全74差分を開発元GHSA・CNA・リリース・修正資料で確認。50の異なる開発元GHSAはAPI46件、API失敗後の公開HTML4件で確認し、取得失敗を別記した。Red Hat・IBMのHTTP200エラー本文は取得成功とせず、CNA代替の確認範囲を明示する。既存日本語編集を保ち、60の個別確認を重ねる。撤回重複履歴を除く深刻度差13件は出典別に保持。
+- Apache TomcatのApache LowとReviewed Critical/CISA ADP CVSS3.1 9.1を区別。MLflowはDBが3.17.2を修正境界とする一方、開発元tagの対象処理と修正PRが整合しないため個別表示の修正版を未確認(null)とし、元のDB範囲を保持する。別の修正版が存在しないという主張ではない。Zodは上限付きcollectionへの修正、FastMCPは更新に加えてissuer設定が必要という条件を保持。
+- BrotliのCNA/OSVで明示されたCVE・PYSEC別名を追補するが、上流C実装の3系列とPython wrapperの範囲を同一化しない。既存Wasmtime8件とBytebaseの別名も出典付きで追補。GoployのOSV新CVEはCNAで別の範囲・related参照と確認され、既存GHSAへ統合せず保留する。
+- OSV全7エクスポート284,680記録・284,273 IDsを前回固定generationのSHA256、全ZIP CRC、正規化全文で比較。非MAL68追加・28変更、MAL45追加・13変更、削除0、同一IDのエクスポート間内容差0。API21件も対応exportと全文一致。悪性パッケージ報告を通常の脆弱性へ混ぜない。
+- JVN/JPCERTの3フィード91項目と変更6URLの本文を確認。MyJVNは503、CISA KEVは403で、以前の成功点・良好な履歴1,271行を保持。ctutils/Tokio AsyncFdは安定主IDが未確認、vLLMは範囲・修正またはパッケージ対応が未確定のため候補として保持。未確認や取得失敗を変更なし・悪用なしと扱わない。
+
+[Reviewed差分](data/github-reviewed-delta-2026-10-24.json)、[開発元確認](data/reviewed-maintainer-review-2026-10-24.json)、[補助ソース](data/supplemental-source-status-2026-10-24.json)、[補助候補](data/supplemental-candidate-delta-2026-10-24.json)、[個別追加](data/supplemental-individual-review-2026-10-24.json)、[別名追補](data/supplemental-alias-update-review-2026-10-24.json)、[保留候補](data/supplemental-held-candidate-review-2026-10-24.json)、[取得失敗](data/supplemental-fetch-failures-2026-10-24.json)を参照。
 
 ## 2026-10-23の確認結果
 
