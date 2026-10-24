@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-24T01:00:40Z",
+  "scope": "依頼のあったAristaとOracleの2件を個別照合。全製品網羅の探索ではない。",
+  "decisions": [
+    {
+      "id": "CVE-2026-114625",
+      "decision": "include",
+      "inclusion": [
+        "critical",
+        "exploited"
+      ],
+      "listedDate": "2026-10-22",
+      "sources": [
+        "https://www.arista.com/en/support/advisories-notices/security-advisory/24838-security-advisory-0199",
+        "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/114xxx/CVE-2026-114625.json"
+      ],
+      "note": "CISA ADPに10月23日KEV追加の記載あり。ただしCISA直接取得が失敗しKEVはunknown。"
+    },
+    {
+      "id": "CVE-2026-91403",
+      "decision": "include",
+      "inclusion": [
+        "critical"
+      ],
+      "listedDate": "2026-10-21",
+      "sources": [
+        "https://www.oracle.com/security-alerts/alert-cve-2026-91403.html",
+        "https://ops.java/emudhra/",
+        "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/91xxx/CVE-2026-91403.json"
+      ],
+      "note": "10月23日運用案内の追加緩和策を優先。影響版を修正版へ転記しない。"
+    }
+  ],
+  "alertChecks": [
+    {
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "result": "対象2件の個別注意喚起なし"
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "result": "対象2件の個別注意喚起なし"
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/1021-jre.html",
+      "result": "定例CPU参照。本CVEへの注意喚起として採用しない"
+    }
+  ],
+  "failedFetches": [
+    {
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-114625",
+      "reason": "Initial HTTPS retrieval failed"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114625",
+      "reason": "Initial HTTPS retrieval failed; official CVEProject mirror succeeded"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-91403",
+      "reason": "Initial HTTPS retrieval failed; official CVEProject mirror succeeded"
+    }
+  ]
+}

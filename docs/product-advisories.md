@@ -71,3 +71,13 @@
 - Oracle Java SE は当初、Critical なし・JPCERT注意喚起なしで除外としていたが、IPAの10月21日注意喚起を確認して `alert` 理由で収録した
 - KEV 10月追加分のうち、ProFTPD・BIND・Struts・ONLYOFFICE・Strapi の5件は2015〜2023年公表の古い脆弱性で、`publishedDate` と `listedDate` が離れる。Struts と Strapi はライブラリとしても配布されるが、ライブラリ収録期間（2022年11月以降）より前のため、ライブラリ側には存在しない
 - 取得できなかった開発元資料：Citrix CTX697174、Ivanti（スクリプト描画）、BeyondTrust BT26-05（HTTP 403）、EGセキュアソリューションズ（サイトがPHP脆弱性対応でメンテナンス中）。いずれもCNAのCVEレコードとJVN等で補い、`caveats` に明記
+
+
+## 2026-10-24 の対象限定ギャップ補完
+
+確認依頼のあったNode.js・BINDと話題の一次資料で確認したArista・Oracleを既存基準で4記録追加し、合計42件とした。全製品の網羅調査ではなく、企業事案やライブラリの件数とは合算しない。
+
+- Node.jsは10 CVEを1告知へ集約。CERT.LV等が全10件を列挙しており、High以外もalert基準を満たす。各系列の影響と22.23.4 / 24.22.1 / 26.12.1の修正版を区別し、BrotliのCNA評価をNode.jsの評価へ上書きしない。[確認記録](data/node-release-gap-review-2026-10-24.json)
+- BIND CVE-2026-94300はISC High 8.1。CERT-FRの10月22日注意喚起を契機とし、Criticalや実悪用を推定しない。併せて、既存ライブラリWasmtimeのGHSA-897f-g5gm-fmxmへ、開発元・CNA・OSVで確認したCVE-2026-115889を別名として追加。新規脆弱性件数は増やさない。[確認記録](data/bind-wasmtime-gap-review-2026-10-24.json)
+- Arista CVE-2026-114625はCriticalと開発元が確認した実悪用を根拠に収録。Oracle CVE-2026-91403は定例CPU集合とは別のCritical告知で、更新済みランタイムにもルート証明書除去や失効確認等の追加対策が必要。単一修正版で解決したと表現しない。[確認記録](data/product-advisory-review-2026-10-24-arista-oracle.json)
+- CISA全件JSONはHTTP403で取得できず、新規記録のKEV状態は不明。AristaのCNA内CISA ADPに10月23日KEV追加の記載があることは留保・監査に残すが、直接取得に成功したと扱わない。既存の良好なデータと収集成功点は保持した。
