@@ -415,3 +415,8 @@ node scripts/advisory-supplemental-coverage.mjs \
 - 小さいHTTP応答でも書き込み完了後のサイズ・ハッシュ・generationが保存されることを確認
 - 追加2件のAPI応答ハッシュ、日時、撤回、影響範囲、修正版、severity、CVSSが個別確認JSONと一致
 - 個別確認データ52件のバリデーションに成功。アプリ全体のビルド・UI検証は統合後の検証結果を参照
+
+
+### 2026-10-24 の識別子追補
+
+Wasmtime GHSA-897f-g5gm-fmxmにCVE-2026-115889を明示された別名として追加した。開発元GHSA・CNA・公開OSVで同一性を確認し、既存の公表日・影響範囲は保持。固定Reviewed snapshotと成功取得点は変更せず、件数は19,376件のまま。[確認記録](data/bind-wasmtime-gap-review-2026-10-24.json)

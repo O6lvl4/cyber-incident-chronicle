@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-24T00:55:35Z",
+  "decisions": [
+    {
+      "id": "CVE-2026-94300",
+      "decision": "include",
+      "inclusion": [
+        "alert"
+      ],
+      "basis": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1365/",
+      "publishedDate": "2026-10-21",
+      "listedDate": "2026-10-22",
+      "sources": [
+        {
+          "type": "maintainer",
+          "title": "ISC: CVE-2026-94300: Concurrent GSS-TSIG messages corrupt memory",
+          "url": "https://kb.isc.org/docs/cve-2026-94300",
+          "publishedDate": "2026-10-21"
+        },
+        {
+          "type": "advisoryDatabase",
+          "title": "公開CVEレコード（CNA: ISC）",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-94300",
+          "publishedDate": "2026-10-21",
+          "publishedAt": "2026-10-21T12:45:26.540Z",
+          "modifiedAt": "2026-10-22T23:04:30.599Z"
+        },
+        {
+          "type": "alert",
+          "title": "CERT-FR: Multiples vulnérabilités dans ISC BIND（CERTFR-2026-AVI-1365）",
+          "url": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1365/",
+          "publishedDate": "2026-10-22"
+        }
+      ],
+      "findings": [
+        "ISCとCNAの影響範囲は一致する。影響・修正範囲はISC告知を使用し、9.18系および旧Supported Preview Edition系列の修正版は告知に記載がないため推定しない。",
+        "ISCは公表時点で実悪用を把握していないとしているが、悪用がないことを保証する記述ではない。確認した一次資料から公表者による攻撃コード公開は確認できなかった。",
+        "CISA KEVの全件JSONは2026-10-24の確認時にHTTP 403で取得できず、KEVは不明としている。未掲載や悪用なしとは扱わない。",
+        "JPCERT/CCとIPAの2026年注意喚起一覧では本件の注意喚起を確認できなかった。CERT-FRの製品別注意喚起を収録根拠とする。",
+        "開発元Criticalの全件探索ではなく、確認依頼のあったBINDの個別確認。深刻度はISC/CNAのHighであり、リモートコード実行の可能性をCriticalや実悪用と読み替えない。"
+      ]
+    },
+    {
+      "id": "GHSA-897f-g5gm-fmxm",
+      "decision": "add_verified_alias",
+      "alias": "CVE-2026-115889",
+      "identitySources": [
+        "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-897f-g5gm-fmxm",
+        "https://cveawg.mitre.org/api/cve/CVE-2026-115889",
+        "https://api.osv.dev/v1/vulns/GHSA-897f-g5gm-fmxm"
+      ],
+      "preserved": [
+        "publishedAt",
+        "modifiedAt",
+        "dateSourceUrl",
+        "affected",
+        "severity",
+        "exploitation",
+        "kev"
+      ],
+      "changed": [
+        "aliases",
+        "lastVerifiedAt",
+        "sources",
+        "caveats"
+      ],
+      "notes": [
+        "Existing Wasmtime impact, 36.0.19 fix, 43.0.0 unaffected boundary, and Critical 9.9 vector remain supported.",
+        "New GHSA OSV publication is Oct 23, not the underlying maintainer/RustSec first-publication day.",
+        "No source reviewed establishes exploitation; existing unknown retained."
+      ]
+    }
+  ],
+  "retrievalFailures": [
+    {
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "result": "HTTP 403 with default and Mozilla User-Agent; unknown, not notListed."
+    },
+    {
+      "url": "https://kb.isc.org/docs/cve-2026-94300",
+      "result": "Initial retrieval failed; subsequent official-page retrieval succeeded."
+    }
+  ],
+  "sourceReceipts": [
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-94300",
+      "sha256": "83300834028f2d9c0fee1fa30e706d72dce139b5509c7bc1747677aabcfa0533"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-115889",
+      "sha256": "7ae114edcdecb13943ef9681273af917e1d99133013d8e94fb904efbbc887673"
+    },
+    {
+      "url": "https://api.osv.dev/v1/vulns/GHSA-897f-g5gm-fmxm",
+      "sha256": "e8b046ca4e423059a8a41838383eefe54a1cfc8d1e670b6d641217f93572b52e"
+    }
+  ]
+}
