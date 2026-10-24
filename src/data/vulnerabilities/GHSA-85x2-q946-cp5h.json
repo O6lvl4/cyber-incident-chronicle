@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-85x2-q946-cp5h",
+  "aliases": [],
+  "title": "Nodemailer：引用内の閉じ括弧で宛先domainを誤認",
+  "summary": "addressparserが引用されたlocal partなどの閉じ山括弧をアドレス終端と誤認し、検証側が許可したdomainとは異なる宛先へメールを送信し得る。",
+  "publishedAt": "2026-10-23T21:51:18Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-85x2-q946-cp5h/GHSA-85x2-q946-cp5h.json",
+  "modifiedAt": "2026-10-23T21:51:18Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "nodemailer",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 10.1.4",
+          "fixed": "10.1.4",
+          "sourceUrl": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-85x2-q946-cp5h"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-85x2-q946-cp5h",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-85x2-q946-cp5h"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-85x2-q946-cp5h/GHSA-85x2-q946-cp5h.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:51:18Z",
+      "modifiedAt": "2026-10-23T21:51:18Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Nodemailer: A \">\" inside a quoted local part ends an angle-addr early in addressparser, delivering to a domain the header does not name",
+      "url": "https://github.com/advisories/GHSA-85x2-q946-cp5h",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "A \">\" inside a quoted local part ends an angle-addr early in addressparser, delivering to a domain the header does not name",
+      "url": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-85x2-q946-cp5h",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T12:06:05Z",
+      "modifiedAt": "2026-10-19T12:06:05Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "アプリケーションがユーザーの影響するアドレスを渡すこと、検証側と送信側の解釈差が前提。通常のアドレスすべてが外部へ送信されるという意味ではない。"
+  ]
+}

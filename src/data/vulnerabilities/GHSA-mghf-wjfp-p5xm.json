@@ -2,14 +2,15 @@
   "kind": "vulnerability",
   "id": "GHSA-mghf-wjfp-p5xm",
   "aliases": [
+    "CVE-2026-115893",
     "RUSTSEC-2026-0379"
   ],
   "title": "Wasmtime：aarch64の大規模br_tableでサンドボックス脱出",
   "summary": "aarch64向けCraneliftが非常に多数の分岐先を持つWasm br_tableを誤ってコンパイルし、攻撃者が制御する位置へジャンプし得る。開発元は既定設定のエンジンでサンドボックス脱出につながると評価する。",
   "publishedAt": "2026-10-19T12:00:00Z",
-  "modifiedAt": "2026-10-20T11:15:37.074125982Z",
+  "modifiedAt": "2026-10-24T06:40:59.944006014Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "lastVerifiedAt": "2026-10-24T21:29:54.453536Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0379",
   "affected": [
     {
@@ -89,7 +90,7 @@
       "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0379",
       "publishedDate": "2026-10-19",
       "publishedAt": "2026-10-19T12:00:00Z",
-      "modifiedAt": "2026-10-20T11:15:37.074125982Z"
+      "modifiedAt": "2026-10-24T06:40:59.944006014Z"
     },
     {
       "type": "advisoryDatabase",
@@ -103,12 +104,29 @@
       "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm",
       "publishedDate": "2026-10-19",
       "publishedAt": "2026-10-19T19:21:02Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Cranelift backend on aarch64 can jump to incorrect target on large Wasm `br_table` instruction",
+      "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-mghf-wjfp-p5xm",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T19:21:02Z",
+      "modifiedAt": "2026-10-23T21:28:23Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Wasmtime CVE-2026-115893 CNA record",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-115893",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:29:33.917Z",
+      "modifiedAt": "2026-10-23T21:29:33.917Z"
     }
   ],
   "caveats": [
     "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
     "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
     "aarch64とCraneliftに依存する。開発元は約256k超のbr_table分岐先を条件として説明しており、他アーキテクチャ全般の問題へ広げない。",
-    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。"
+    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。",
+    "2026-10-25 JST再確認で、開発元GHSAとGitHub CNAが明示するCVE-2026-115893を別名に追加。別の脆弱性として件数を増やさない。"
   ]
 }

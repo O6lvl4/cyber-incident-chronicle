@@ -1,0 +1,251 @@
+{
+  "reportDateJst": "2026-10-25",
+  "checkedAt": "2026-10-24T21:31:22.593420Z",
+  "addedExistingIdentityOverlays": [
+    "GHSA-2h46-9x5w-4wf7",
+    "GHSA-v3f4-w7r7-v3hm",
+    "GHSA-2r3x-4mrv-mcxf",
+    "GHSA-4v7v-gqf9-ww2g",
+    "GHSA-vg88-3v92-rjx2"
+  ],
+  "updatedExistingOverlays": [
+    "GHSA-9v8h-qqgm-4m35",
+    "GHSA-mghf-wjfp-p5xm"
+  ],
+  "records": [
+    {
+      "recordId": "GHSA-2h46-9x5w-4wf7",
+      "addedAliases": [
+        "CVE-2026-57208",
+        "GO-2026-5063"
+      ],
+      "decision": "explicit-cna-maintainer-and-osv-identity",
+      "findings": "開発元の通常版v0.7.7とnightly v0.7.8-nightly.*を別境界として反映。攻撃者にチェックポイントへのpush権限と被害者のresume/rewind操作が必要。",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-2h46-9x5w-4wf7",
+        "cve_id": "CVE-2026-57208",
+        "summary": "Path traversal in checkpoint session metadata allows arbitrary file write during resume/rewind",
+        "published_at": "2026-06-18T12:55:09Z",
+        "updated_at": "2026-06-24T02:26:47Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:H/SA:H",
+            "score": 6.2
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/entireio/cli"
+            },
+            "vulnerable_version_range": "<= v0.7.6",
+            "patched_versions": "v0.7.7",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/entireio/cli"
+            },
+            "vulnerable_version_range": "<= v0.7.7-nightly.*",
+            "patched_versions": "v0.7.8-nightly.*",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "sourceReceipts": [
+        {
+          "key": "entire-ghsa",
+          "url": "https://api.github.com/repos/entireio/cli/security-advisories/GHSA-2h46-9x5w-4wf7",
+          "attemptAt": "2026-10-24T21:25:57.609085Z",
+          "checkedAt": "2026-10-24T21:26:05.609555Z",
+          "httpStatus": 200,
+          "bytes": 5265,
+          "sha256": "b50c7cd345d89ede2005a5df052f219bb2c8925aa7da89520d740e64d6b4f1a6",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "entire-cve",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-57208",
+          "attemptAt": "2026-10-24T21:25:57.609678Z",
+          "checkedAt": "2026-10-24T21:26:04.757821Z",
+          "httpStatus": 200,
+          "bytes": 3275,
+          "sha256": "4f70cf304e7ac9175b53bd80d0c391d7242c21123fa9dc30e0628844eca92311",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "entire-osv",
+          "url": "https://api.osv.dev/v1/vulns/GO-2026-5063",
+          "attemptAt": "2026-10-24T21:29:23.557515Z",
+          "checkedAt": "2026-10-24T21:29:27.056104Z",
+          "httpStatus": 200,
+          "bytes": 1105,
+          "sha256": "f3d9b41d584bc304e724b38b6735789c22b6284ed8e42858b4ae8f1cfbfe7dd1",
+          "status": "success",
+          "headers": {}
+        }
+      ]
+    },
+    {
+      "recordId": "GHSA-v3f4-w7r7-v3hm",
+      "addedAliases": [
+        "CVE-2026-58497"
+      ],
+      "decision": "explicit-cna-maintainer-identity",
+      "findings": "旧HTTP MCPだけのOrigin検証不備。開発元HighとCNA CVSS4.0 8.6を出典別に保持。既存Streamable HTTPを同じ影響対象へ拡張しない。",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-v3f4-w7r7-v3hm",
+        "cve_id": "CVE-2026-58497",
+        "summary": "Legacy HTTP MCP transport accepted browser-originated localhost requests",
+        "published_at": "2026-06-19T04:27:20Z",
+        "updated_at": "2026-07-02T19:31:55Z",
+        "withdrawn_at": null,
+        "severity": "high",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@zenalexa/unicli"
+            },
+            "vulnerable_version_range": "< 0.225.2",
+            "patched_versions": "0.225.2",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "sourceReceipts": [
+        {
+          "key": "unicli-ghsa",
+          "url": "https://api.github.com/repos/olo-dot-io/Uni-CLI/security-advisories/GHSA-v3f4-w7r7-v3hm",
+          "attemptAt": "2026-10-24T21:26:38.249322Z",
+          "checkedAt": "2026-10-24T21:26:41.729533Z",
+          "httpStatus": 200,
+          "bytes": 4618,
+          "sha256": "50139762e0683be822a53d0352e047e8d8a038957c75a093b8691f867fa6f714",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "unicli-cve",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-58497",
+          "attemptAt": "2026-10-24T21:26:38.250078Z",
+          "checkedAt": "2026-10-24T21:26:43.206033Z",
+          "httpStatus": 200,
+          "bytes": 3238,
+          "sha256": "436ea268b9490baf7063cc6132aa1bc96e560b64884cf08e39c2651e2118d46a",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "unicli-osv",
+          "url": "https://api.osv.dev/v1/vulns/GHSA-v3f4-w7r7-v3hm",
+          "attemptAt": "2026-10-24T21:29:23.561031Z",
+          "checkedAt": "2026-10-24T21:29:27.058356Z",
+          "httpStatus": 200,
+          "bytes": 2472,
+          "sha256": "73afa8a1c860dd9d96029a16c1b5a7782a89869f1569a9226231bd68add3c51a",
+          "status": "success",
+          "headers": {}
+        }
+      ]
+    },
+    {
+      "recordId": "GHSA-mghf-wjfp-p5xm",
+      "addedAliases": [
+        "CVE-2026-115893"
+      ],
+      "decision": "explicit-cna-maintainer-identity",
+      "findings": "既存Wasmtimeのaarch64/Cranelift問題へCVEを追補。新規脆弱性とは数えない。",
+      "maintainerFields": {
+        "ghsa_id": "GHSA-mghf-wjfp-p5xm",
+        "cve_id": "CVE-2026-115893",
+        "summary": "Cranelift backend on aarch64 can jump to incorrect target on large Wasm `br_table` instruction",
+        "published_at": "2026-10-19T19:21:02Z",
+        "updated_at": "2026-10-23T21:28:23Z",
+        "withdrawn_at": null,
+        "severity": "critical",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+            "score": 9.9
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "wasmtime"
+            },
+            "vulnerable_version_range": "<36.0.19, >=37.0.0, <48.0.7, >=49.0.0, <49.0.4",
+            "patched_versions": "36.0.19, 48.0.7, 49.0.4",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "sourceReceipts": [
+        {
+          "key": "wasmtimemghf",
+          "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-mghf-wjfp-p5xm",
+          "attemptAt": "2026-10-24T21:25:57.613827Z",
+          "checkedAt": "2026-10-24T21:26:05.668900Z",
+          "httpStatus": 200,
+          "bytes": 4163,
+          "sha256": "6b62f06e6105f031f8929f3feb0ba51b0a7ded064513646126c196f65c6a988d",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "wasmtime115893",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-115893",
+          "attemptAt": "2026-10-24T21:25:57.611199Z",
+          "checkedAt": "2026-10-24T21:26:04.757653Z",
+          "httpStatus": 200,
+          "bytes": 4276,
+          "sha256": "5f19732b0102dc4a2ae410138eb87028b142995f631daa941ccb70122edd3d78",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "wasmtime-osv",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0379",
+          "attemptAt": "2026-10-24T21:29:23.558536Z",
+          "checkedAt": "2026-10-24T21:29:27.112294Z",
+          "httpStatus": 200,
+          "bytes": 1468,
+          "sha256": "d9e2ab89c8a588d87920ab68bc1e7ae930d52eb399272166204aac5b3c3365b3",
+          "status": "success",
+          "headers": {}
+        }
+      ]
+    }
+  ],
+  "vyperReview": "supplemental-candidate-delta-2026-10-25.json の対象3件に、開発元/CNAの構造化項目と取得証跡を保存。元のDB公表日で期間判定し、CVE番号の年を代用しない。",
+  "separateReviewedWorkerAliases": [
+    "GHSA-9pvw-hwfg-92h5: CVE-2026-115892",
+    "GHSA-897f-g5gm-fmxm: CVE-2026-115889 was already present before this run"
+  ]
+}

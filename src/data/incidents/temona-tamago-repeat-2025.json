@@ -1,0 +1,85 @@
+{
+  "id": "temona-tamago-repeat-2025",
+  "company": "テモナ（たまごリピート）",
+  "title": "ECカートの脆弱性を悪用した侵入で障害、調査後も個人情報の外部送信痕跡なし",
+  "announcementDate": "2025-10-26",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表（2025年10月24日は異常アクセス検知日）",
+  "updatedDate": "2025-12-05",
+  "statusAsOfDate": "2025-12-05",
+  "lastVerifiedDate": "2026-10-25",
+  "impactTypes": [
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "noConfirmedLeak",
+  "attackMethod": {
+    "label": "当時存在した脆弱性を悪用した一部サーバーへの侵入（製品名・CVEは未公表）",
+    "status": "confirmed"
+  },
+  "summary": "2025年10月24日のログ監視で異常を検知し、一部サーバーを隔離。12月5日の続報で脆弱性悪用による侵入を確認したが、個人情報の外部送信痕跡はなかったと説明。新環境を再構築しマイアカウントを順次再開、カートは限定決済で12月15日以降の段階再開予定とした。",
+  "affectedData": [
+    "個人情報の漏えいリスクはあったが、通信記録の調査で外部送信痕跡は未確認。カード情報は非保持・非通過"
+  ],
+  "counts": [],
+  "caveats": [
+    "2025年公表事案の過去分追加。2026年10月の新規発生や新たな被害ではない。",
+    "12月5日時点の段階再開と12月15日以降の予定を保持し、完全復旧済みとは記録しない。現在の全サービス稼働状況を検証したものではない。",
+    "個人情報の外部送信痕跡がないとの調査結果と、確認済みの侵入・業務障害を分ける。件数・人数は未公表。",
+    "その他のたまごリピートサーバーでは侵入痕跡未確認。対象範囲を全サーバーや別製品へ拡張しない。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "テモナ：たまごリピートのシステム障害（初報）",
+      "url": "https://temona.co.jp/news/4710/",
+      "publishedDate": "2025-10-26"
+    },
+    {
+      "title": "テモナ：外部調査結果と段階再開（続報）",
+      "url": "https://temona.co.jp/news/4716/",
+      "publishedDate": "2025-12-05"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-10-24",
+      "label": "ログ監視で異常アクセスを検知",
+      "kind": "occurrence",
+      "summary": "調査で痕跡を把握しサーバーをネットワークから隔離。",
+      "sourceUrl": "https://temona.co.jp/news/4710/"
+    },
+    {
+      "date": "2025-10-26",
+      "label": "システム障害を公表",
+      "kind": "disclosure",
+      "summary": "不正アクセスと考えられる障害を公表し影響を調査。",
+      "sourceUrl": "https://temona.co.jp/news/4710/"
+    },
+    {
+      "date": "2025-12-05",
+      "label": "調査結果と段階再開を公表",
+      "kind": "update",
+      "summary": "脆弱性悪用の侵入は確認、個人情報の送信痕跡なし。新環境再構築・一部再開とカート再開予定を案内。",
+      "sourceUrl": "https://temona.co.jp/news/4716/"
+    }
+  ],
+  "detectedDate": "2025-10-24",
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃の実施日・期間は資料に明記されていない。検知・公表日を代用しない。",
+      "sourceUrl": "https://temona.co.jp/news/4716/",
+      "reviewedDate": "2026-10-25"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "10月24日は異常アクセスと侵入痕跡の検知日。確認した資料から業務被害を最初に確認した日時を特定せず、漏えいも未確認。",
+      "sourceUrl": "https://temona.co.jp/news/4716/",
+      "reviewedDate": "2026-10-25"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-hhxq-47xx-j5xx",
+  "aliases": [
+    "CVE-2026-113719"
+  ],
+  "title": "virtualenv：seed削除のmetadata pathで環境外を削除",
+  "summary": "既存distributionのmetadataにあるpathを環境内に限定せず削除へ使い、呼出しユーザーが削除権限を持つ環境外のファイルや環境rootを削除し得る。",
+  "publishedAt": "2026-10-23T22:19:15Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-hhxq-47xx-j5xx/GHSA-hhxq-47xx-j5xx.json",
+  "modifiedAt": "2026-10-23T22:19:15Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "virtualenv",
+      "ranges": [
+        {
+          "affected": "= 21.14.8",
+          "fixed": "21.14.9",
+          "sourceUrl": "https://github.com/pypa/virtualenv/security/advisories/GHSA-hhxq-47xx-j5xx"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/pypa/virtualenv/security/advisories/GHSA-hhxq-47xx-j5xx",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.5,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+        "sourceUrl": "https://github.com/pypa/virtualenv/security/advisories/GHSA-hhxq-47xx-j5xx"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-hhxq-47xx-j5xx/GHSA-hhxq-47xx-j5xx.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:19:15Z",
+      "modifiedAt": "2026-10-23T22:19:15Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "virtualenv: Seed replacement does not contain metadata deletion paths",
+      "url": "https://github.com/advisories/GHSA-hhxq-47xx-j5xx",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Seed replacement does not contain metadata deletion paths",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-hhxq-47xx-j5xx",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T16:10:26Z",
+      "modifiedAt": "2026-10-22T15:51:35Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "開発元の確認範囲は21.14.8で最初の影響版は未確定。信頼できないinstalled metadataのある既存環境へ再seedingする条件を区別する。",
+    "修正版は解決済み環境root外とroot自体の削除を警告付きで省略する。最終linkはtargetを追わず除去するが、親linkは範囲確認の対象となる。"
+  ]
+}

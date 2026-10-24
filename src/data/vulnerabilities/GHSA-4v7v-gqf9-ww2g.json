@@ -1,0 +1,96 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4v7v-gqf9-ww2g",
+  "aliases": [
+    "CVE-2020-37287"
+  ],
+  "title": "Vyper: Call stack corruption when passing complex type containing non-base type members as argument",
+  "summary": "Vyperで、多次元配列など非基本型メンバーを含む複合型を内部・外部関数の引数に渡すと、配列や構造体のサブタイプのサイズを常に32バイトとみなす誤りにより、スタックが破損して誤った出力になる可能性がある。修正版は0.2.6。",
+  "publishedAt": "2026-10-06T15:22:23Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-4v7v-gqf9-ww2g/GHSA-4v7v-gqf9-ww2g.json",
+  "modifiedAt": "2026-10-06T15:22:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:27:04.970681Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "vyper",
+      "ranges": [
+        {
+          "affected": "< 0.2.6",
+          "fixed": "0.2.6",
+          "sourceUrl": "https://api.github.com/repos/vyperlang/vyper/security-advisories/GHSA-4v7v-gqf9-ww2g"
+        }
+      ],
+      "packageUrl": "pkg:pypi/vyper"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/vyperlang/vyper/security-advisories/GHSA-4v7v-gqf9-ww2g",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-4v7v-gqf9-ww2g/GHSA-4v7v-gqf9-ww2g.json"
+      },
+      {
+        "version": "4.0",
+        "score": 8.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2020/37xxx/CVE-2020-37287.json"
+      },
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2020/37xxx/CVE-2020-37287.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-4v7v-gqf9-ww2g/GHSA-4v7v-gqf9-ww2g.json",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T15:22:23Z",
+      "modifiedAt": "2026-10-06T15:22:23Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Vyper開発元セキュリティアドバイザリ（公開API）",
+      "url": "https://api.github.com/repos/vyperlang/vyper/security-advisories/GHSA-4v7v-gqf9-ww2g",
+      "publishedDate": "2020-10-10",
+      "publishedAt": "2020-10-10T20:33:09Z",
+      "modifiedAt": "2026-10-05T16:25:14Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2020-37287：CNA原文（VulnCheck）",
+      "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2020/37xxx/CVE-2020-37287.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T00:36:16.257Z",
+      "modifiedAt": "2026-10-21T00:36:16.257Z"
+    }
+  ],
+  "caveats": [
+    "公表日・更新日は固定Reviewedデータベースの日時を保持している。開発元の初回公表は2020年で、CNAのCVE公表は2026年10月。ソース固有の日時を別々に保存し、確認日で公表日を進めない。",
+    "CVE別名はCNAが本GHSAをvendor-advisoryとして明示することを確認して追補。開発元APIのcve_idはnullのままで、開発元自身によるCVE記載とは扱わない。",
+    "深刻度ラベルは開発元の評価。CNAのCVSS 3.1・4.0と固定Reviewedのベクトルは、出典と評価の差を保って併記し、独自のスコア計算や統一はしない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元はMedium。CNAのCVSS 4.0はHighで、CVSS 3.1はMedium。この差は出典別の評価として保持する。"
+  ]
+}

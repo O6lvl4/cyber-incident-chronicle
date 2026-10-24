@@ -1,0 +1,95 @@
+{
+  "id": "nikkei-development-cloud-2026",
+  "company": "日本経済新聞社／日経BP",
+  "title": "クラウドへの認証情報を窃取され情報流出、日経BP利用者分約80万件を確認",
+  "announcementDate": "2026-10-21",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-07",
+  "occurredDateLabel": "2026年10月7日未明から朝（公式日経BP公表に明記）",
+  "updatedDate": "2026-10-21",
+  "statusAsOfDate": "2026-10-21",
+  "lastVerifiedDate": "2026-10-25",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "窃取されたクラウドアクセス用認証情報を用いた不正アクセス。窃取手段は不明",
+    "status": "confirmed"
+  },
+  "summary": "日本経済新聞社のクラウドで10月7日未明～朝に不正アクセスと情報流出が発生。10月21日の日経BP公表は、自社利用者の約80万件が含まれ、うち約5万件に氏名等の項目、約75万件は識別子のみと説明した。これはグループ事案全体の総数ではなく、認証情報は無効化済み。",
+  "affectedData": [
+    "日経BP利用者：約80万件。約5万件に識別子と氏名・メールアドレス・住所・電話番号・生年月日のいずれか、約75万件は単体で個人を特定できない識別子のみ"
+  ],
+  "counts": [
+    {
+      "value": 800000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "日経BP利用者情報の部分範囲。日本経済新聞社の事案全体総数ではない",
+      "approximate": true
+    },
+    {
+      "value": 50000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "約80万件の内数：識別子に加えて氏名等のいずれかを含む",
+      "approximate": true
+    },
+    {
+      "value": 750000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "約80万件の内数：単体で個人を特定できない識別子のみ",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "80万件は日経BPの部分範囲。内数5万件・75万件を再加算しない。件を人数へ換算せず、全グループの総数を推定しない。",
+    "今回、日本経済新聞社の10月16日公表本文は取得不可。日経BPが直接公表する項目・日時・部分範囲のみ採用し、取得できない資料や二次資料から全体値を補完しない。",
+    "カード情報は含まれない。二次被害、日経のシステム停止・データ改ざんは公表時点で未確認。",
+    "10月上旬の日経BPメールへのフィッシング事案とは対象システム・手法が異なる別事案。今回の収録起点は10月21日資料で、事案の初報日とは断定しない。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "日経BP：日本経済新聞社への不正アクセスに伴う利用者情報漏えい",
+      "url": "https://www.nikkeibp.co.jp/atcl/newsrelease/corp/20261021_2/",
+      "publishedDate": "2026-10-21"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-07",
+      "label": "クラウドへの不正アクセスと情報流出",
+      "kind": "occurrence",
+      "summary": "未明から朝に窃取認証情報を使ってアクセス。",
+      "sourceUrl": "https://www.nikkeibp.co.jp/atcl/newsrelease/corp/20261021_2/"
+    },
+    {
+      "date": "2026-10-21",
+      "label": "日経BPが利用者約80万件の範囲を公表",
+      "kind": "disclosure",
+      "summary": "約5万件と約75万件の内訳を明示。提供元は侵害範囲と個人情報の精査を継続。",
+      "sourceUrl": "https://www.nikkeibp.co.jp/atcl/newsrelease/corp/20261021_2/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年10月7日未明～朝",
+      "note": "日経BP公式が日本経済新聞社クラウドへの不正アクセス時期を明記。",
+      "sourceUrl": "https://www.nikkeibp.co.jp/atcl/newsrelease/corp/20261021_2/",
+      "reviewedDate": "2026-10-25",
+      "startDate": "2026-10-07"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害を最初に確認した日は資料に明記されていない。検知・可能性把握・公表日から推定しない。",
+      "sourceUrl": "https://www.nikkeibp.co.jp/atcl/newsrelease/corp/20261021_2/",
+      "reviewedDate": "2026-10-25"
+    }
+  }
+}

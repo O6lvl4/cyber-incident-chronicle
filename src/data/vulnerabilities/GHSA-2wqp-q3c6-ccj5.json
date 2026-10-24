@@ -1,0 +1,79 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2wqp-q3c6-ccj5",
+  "aliases": [
+    "CVE-2026-115886"
+  ],
+  "title": "MLflow：外部scorerの引数からSSRF",
+  "summary": "認証なしで到達できるscorer処理で、外部scorerの任意引数を通じてサーバーから任意の宛先へHTTPリクエストを送信させ得る。",
+  "publishedAt": "2026-10-23T22:07:26Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-2wqp-q3c6-ccj5/GHSA-2wqp-q3c6-ccj5.json",
+  "modifiedAt": "2026-10-23T22:07:26Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "mlflow",
+      "ranges": [
+        {
+          "affected": ">= 3.12.0rc0, < 3.17.0",
+          "fixed": "3.17.0",
+          "sourceUrl": "https://github.com/mlflow/mlflow/security/advisories/GHSA-2wqp-q3c6-ccj5"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/mlflow/mlflow/security/advisories/GHSA-2wqp-q3c6-ccj5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://github.com/mlflow/mlflow/security/advisories/GHSA-2wqp-q3c6-ccj5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-2wqp-q3c6-ccj5/GHSA-2wqp-q3c6-ccj5.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:07:26Z",
+      "modifiedAt": "2026-10-23T22:07:26Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "MLflow: SSRF on unauthenticated MLflow servers via third-party scorer kwargs in the scorer invoke, register, and GenAI evaluate endpoints",
+      "url": "https://github.com/advisories/GHSA-2wqp-q3c6-ccj5",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "SSRF on unauthenticated MLflow servers via third-party scorer kwargs in the scorer invoke, register, and GenAI evaluate endpoints",
+      "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-2wqp-q3c6-ccj5",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T05:12:18Z",
+      "modifiedAt": "2026-10-23T21:16:37Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "任意追加のtrulensとtrulens-providers-litellmが同じ環境に導入されていることが前提。MLflowの全導入に一律に影響するとしない。"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-f2hq-32vh-53cc",
+  "aliases": [],
+  "title": "postal-mime：多数のencoded wordを含むheaderでCPU消費",
+  "summary": "RFC 2047の連結可能なbase64 encoded wordを大量に含むメールheaderを処理すると、入力に対して二次的にCPU時間が増えevent loopを長時間占有し得る。",
+  "publishedAt": "2026-10-23T21:54:36Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-f2hq-32vh-53cc/GHSA-f2hq-32vh-53cc.json",
+  "modifiedAt": "2026-10-23T21:54:36Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "postal-mime",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 4.0.8",
+          "fixed": "4.0.8",
+          "sourceUrl": "https://github.com/postalsys/postal-mime/security/advisories/GHSA-f2hq-32vh-53cc"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/postalsys/postal-mime/security/advisories/GHSA-f2hq-32vh-53cc",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/postalsys/postal-mime/security/advisories/GHSA-f2hq-32vh-53cc"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-f2hq-32vh-53cc/GHSA-f2hq-32vh-53cc.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:54:36Z",
+      "modifiedAt": "2026-10-23T21:54:36Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "postal-mime: Quadratic CPU consumption when decoding a header of many joinable RFC 2047 base64 encoded words",
+      "url": "https://github.com/advisories/GHSA-f2hq-32vh-53cc",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Quadratic CPU consumption when decoding a header of many joinable RFC 2047 base64 encoded words",
+      "url": "https://github.com/postalsys/postal-mime/security/advisories/GHSA-f2hq-32vh-53cc",
+      "publishedDate": "2026-10-18",
+      "publishedAt": "2026-10-18T10:08:36Z",
+      "modifiedAt": "2026-10-18T10:08:36Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "信頼できないメールを解析する処理やdecodeWordsが対象。開発元は機密性・完全性への影響を示していない。",
+    "修正版4.0.8は復号を線形化し、内包message/rfc822のheaderやpartも全体の上限へ含める。"
+  ]
+}

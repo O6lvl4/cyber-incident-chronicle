@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6hmw-9432-67qq",
+  "aliases": [
+    "CVE-2026-115883"
+  ],
+  "title": "LangGraph：点を含むnamespace labelで別namespaceへアクセス",
+  "summary": "Postgres・SQLite storeでnamespaceを点区切りに変換する際、一部APIがlabel内の点を拒否せず、他tenantの項目の読込・上書き・削除に至り得る。",
+  "publishedAt": "2026-10-23T22:06:44Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-6hmw-9432-67qq/GHSA-6hmw-9432-67qq.json",
+  "modifiedAt": "2026-10-23T22:06:44Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "langgraph-checkpoint-postgres",
+      "ranges": [
+        {
+          "affected": "< 3.1.3",
+          "fixed": "3.1.3",
+          "sourceUrl": "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-6hmw-9432-67qq"
+        }
+      ]
+    },
+    {
+      "ecosystem": "pip",
+      "packageName": "langgraph-checkpoint-sqlite",
+      "ranges": [
+        {
+          "affected": "< 3.1.2",
+          "fixed": "3.1.2",
+          "sourceUrl": "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-6hmw-9432-67qq"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-6hmw-9432-67qq",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 6.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-6hmw-9432-67qq"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-6hmw-9432-67qq/GHSA-6hmw-9432-67qq.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:06:44Z",
+      "modifiedAt": "2026-10-23T22:06:44Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "LangGraph: Namespace labels containing `.` reach other namespaces in Postgres and SQLite stores",
+      "url": "https://github.com/advisories/GHSA-6hmw-9432-67qq",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Namespace labels containing `.` reach other namespaces in Postgres and SQLite stores",
+      "url": "https://github.com/langchain-ai/langgraph/security/advisories/GHSA-6hmw-9432-67qq",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T13:34:00Z",
+      "modifiedAt": "2026-10-23T21:09:45Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "namespaceで利用者を分離し、信頼できない入力がread・delete・batch等へ届く構成が対象。InMemoryStoreは対象外。",
+    "Postgres 3.1.3とSQLite 3.1.2はlanggraph-checkpoint 4.3.0を要求する。LangSmith HTTP store API、graph内のstore呼出し、Agent Serverの修正版を同一のpackage版として扱わない。"
+  ]
+}

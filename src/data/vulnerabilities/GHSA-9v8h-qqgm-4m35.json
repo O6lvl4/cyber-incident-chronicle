@@ -5,16 +5,17 @@
     "BIT-node-2026-111497",
     "BIT-node-min-2026-111497",
     "CVE-2026-111497",
+    "GHSA-3wvj-j6qm-62mr",
     "PYSEC-2026-4322",
     "PYSEC-2026-4323"
   ],
-  "title": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
-  "summary": "Brotli: Out-of-bounds write in the Brotli decoder (\"Node2Shell\") also affects the PyPI Brotli package",
+  "title": "Brotli：細工した圧縮データの展開による境界外書き込み",
+  "summary": "Google Brotliのデコーダーで細工した入力を展開すると、メモリ破壊、情報漏えい、サービス停止や任意コード実行につながり得る。PyPIのbrotli・brotlicffiも対象。Node.jsだけの問題ではなく、影響は利用製品の同梱版と展開機能の設定による。",
   "publishedAt": "2026-10-22T15:32:49Z",
   "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/073abc5bb4bf1211995d8cec3f32de47ce5195ee/advisories/github-reviewed/2026/10/GHSA-9v8h-qqgm-4m35/GHSA-9v8h-qqgm-4m35.json",
   "modifiedAt": "2026-10-23T19:08:09Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-23T22:03:26.429533Z",
+  "lastVerifiedAt": "2026-10-24T21:29:54.453536Z",
   "affected": [
     {
       "ecosystem": "pip",
@@ -112,32 +113,99 @@
     },
     {
       "type": "maintainer",
-      "title": "Google: Out-of-Bounds Write in Google Brotli Decoder",
+      "title": "Out-of-Bounds Write in Google Brotli Decoder",
       "url": "https://cveawg.mitre.org/api/cve/CVE-2026-111497",
       "publishedDate": "2026-10-22",
       "publishedAt": "2026-10-22T13:35:41.975Z",
-      "modifiedAt": "2026-10-23T21:40:13.477Z"
-    },
-    {
-      "type": "advisoryDatabase",
-      "title": "PYSEC-2026-4322: PyPI wrapper advisory",
-      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4322",
-      "publishedDate": "2026-10-23",
-      "publishedAt": "2026-10-23T00:00:00Z",
-      "modifiedAt": "2026-10-23T13:40:35.253748907Z"
-    },
-    {
-      "type": "advisoryDatabase",
-      "title": "PYSEC-2026-4323: PyPI wrapper advisory",
-      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4323",
-      "publishedDate": "2026-10-23",
-      "publishedAt": "2026-10-23T00:00:00Z",
-      "modifiedAt": "2026-10-23T13:40:35.253748907Z"
+      "modifiedAt": "2026-10-24T18:07:52.504Z"
     },
     {
       "type": "release",
       "title": "Google Brotli v1.2.1 security release",
       "url": "https://github.com/google/brotli/releases/tag/v1.2.1",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:27:34Z"
+    },
+    {
+      "type": "release",
+      "title": "Google Brotli v1.1.1 security release",
+      "url": "https://github.com/google/brotli/releases/tag/v1.1.1",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:27:20Z"
+    },
+    {
+      "type": "release",
+      "title": "Google Brotli v1.0.10 security release",
+      "url": "https://github.com/google/brotli/releases/tag/v1.0.10",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:26:58Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "PYSEC-2026-4322: Python wrapper advisory",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4322",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T00:00:00Z",
+      "modifiedAt": "2026-10-24T10:55:42.890666980Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "PYSEC-2026-4323: Python wrapper advisory",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4323",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T00:00:00Z",
+      "modifiedAt": "2026-10-24T10:55:42.890666980Z"
+    },
+    {
+      "type": "release",
+      "title": "PyPI brotli 1.2.1 metadata and maintainer description",
+      "url": "https://pypi.org/pypi/brotli/json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T13:57:11.170043Z"
+    },
+    {
+      "type": "release",
+      "title": "PyPI brotlicffi 1.2.1.0 metadata and maintainer description",
+      "url": "https://pypi.org/pypi/brotlicffi/json",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T16:19:00.566448Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Out-of-Bounds Write in Brotli Decompressor",
+      "url": "https://api.github.com/repos/envoyproxy/envoy/security-advisories/GHSA-3wvj-j6qm-62mr",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T16:03:27Z",
+      "modifiedAt": "2026-10-23T16:03:27Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Istio security bulletin ISTIO-SECURITY-2026-007",
+      "url": "https://istio.io/latest/news/security/istio-security-2026-007/",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "release",
+      "title": "Istio 1.29.9 release",
+      "url": "https://istio.io/latest/news/releases/1.29.x/announcing-1.29.9/",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "release",
+      "title": "Istio 1.30.6 release",
+      "url": "https://istio.io/latest/news/releases/1.30.x/announcing-1.30.6/",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "release",
+      "title": "Istio 1.31.2 release",
+      "url": "https://istio.io/latest/news/releases/1.31.x/announcing-1.31.2/",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "Istio website content change log",
+      "url": "https://istio.io/latest/docs/releases/log/",
       "publishedDate": null
     }
   ],
@@ -146,6 +214,10 @@
     "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
     "Google CNAは上流Brotliを1.0.3〜1.0.10未満、1.1.0〜1.1.1未満、1.2.0〜1.2.1未満の3系列として明示。PyPI wrapperの配布版範囲へ機械的に移し替えない。",
     "ReviewedのPyPI下限は1.0.3、PYSECの下限0は全過去版を表す。上流C実装、Brotli Python package、brotlicffi wrapperの範囲差を推測で解消しない。",
-    "CVE-2026-111497はGoogle CNA、PYSEC-2026-4322/4323とBIT-nodeの同一性はOSVの明示aliasesで確認。これらをReviewed自身のalias配列に存在した情報とは扱わない。"
+    "CVE-2026-111497はGoogle CNA、PYSEC-2026-4322/4323とBIT-nodeの同一性はOSVの明示aliasesで確認。これらをReviewed自身のalias配列に存在した情報とは扱わない。",
+    "Googleの3リリース1.0.10 / 1.1.1 / 1.2.1はいずれも本CVEの修正を明記。PyPIのbrotli 1.2.1とbrotlicffi 1.2.1.0の配布を別々に確認し、brotlicffiの開発元変更履歴は同梱libbrotli 1.2.1への更新を明記する。",
+    "以下のEnvoy・Istioは同じ上流不具合を利用する下流製品の情報であり、この記録のPyPIパッケージ影響範囲ではない。",
+    "Envoyの開発元GHSA-3wvj-j6qm-62mrは本文で同じCVEを明示するため別名として保持。影響版は1.39.2、1.38.5、1.37.7、1.36.11の列挙、修正版は1.40.0、1.39.3、1.38.6、1.37.8、1.36.12。Brotli decompressorを構成した配備が対象で、列挙より古い版へ影響を推定拡張しない。",
+    "Istioの対象は1.31.0〜1.31.1、1.30.0〜1.30.5、1.29.0〜1.29.8で、Brotli展開を有効にした場合。修正は1.31.2、1.30.6、1.29.9。告知・各リリースの日付は10月15日、サイト変更履歴はBrotli CVE追記を10月20日としており、当初からCVEが掲載されたとは断定しない。告知全体のCVSS3.1 7.7をBrotli個別の点数へ流用しない。"
   ]
 }

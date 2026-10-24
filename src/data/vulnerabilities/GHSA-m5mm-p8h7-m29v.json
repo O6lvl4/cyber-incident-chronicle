@@ -1,0 +1,72 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m5mm-p8h7-m29v",
+  "aliases": [
+    "CVE-2026-115897"
+  ],
+  "title": "serialize-javascript：関数source末尾のscript終端によるXSS",
+  "summary": "直列化する関数のsourceがscript終端文字列で終わる場合にescapeされず、周囲の出力と結合してscript要素を終了し、後続markupを有効にし得る。",
+  "publishedAt": "2026-10-23T22:09:52Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-m5mm-p8h7-m29v/GHSA-m5mm-p8h7-m29v.json",
+  "modifiedAt": "2026-10-23T22:09:52Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "serialize-javascript",
+      "ranges": [
+        {
+          "affected": "< 7.1.3",
+          "fixed": "7.1.3",
+          "sourceUrl": "https://github.com/yahoo/serialize-javascript/security/advisories/GHSA-m5mm-p8h7-m29v"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/yahoo/serialize-javascript/security/advisories/GHSA-m5mm-p8h7-m29v",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-m5mm-p8h7-m29v/GHSA-m5mm-p8h7-m29v.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:09:52Z",
+      "modifiedAt": "2026-10-23T22:09:52Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+      "url": "https://github.com/advisories/GHSA-m5mm-p8h7-m29v",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+      "url": "https://github.com/yahoo/serialize-javascript/security/advisories/GHSA-m5mm-p8h7-m29v",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T21:28:21Z",
+      "modifiedAt": "2026-10-23T21:36:34Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "攻撃者が関数のsource textや偽装したtoStringを制御することが条件。通常の関数や関数でない文字列などはこの問題の対象外。"
+  ]
+}

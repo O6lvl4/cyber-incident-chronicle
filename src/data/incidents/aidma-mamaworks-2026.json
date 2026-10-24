@@ -1,0 +1,72 @@
+{
+  "id": "aidma-mamaworks-2026",
+  "company": "アイドマ・ホールディングス（ママワークス）",
+  "title": "求人サイトの設定上の脆弱性を悪用され会員情報漏えいの可能性",
+  "announcementDate": "2026-10-20",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日は未公表",
+  "updatedDate": "2026-10-20",
+  "statusAsOfDate": "2026-10-20",
+  "lastVerifiedDate": "2026-10-25",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "システム設定に存在する脆弱性を悪用した第三者の不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "ママワークスの会員名簿とされるデータに関する警察からの報告を受け、外部調査を実施。10月1日の調査結果でシステム設定の脆弱性と会員情報の漏えい可能性を確認し、20日に公表した。脆弱性への対応は完了し、会員へパスワード変更を要請。件数は未公表。",
+  "affectedData": [
+    "会員が登録した氏名・フリガナ、生年月日、性別、電話番号、住所、メールアドレス、職務経歴等、パスワードのハッシュ値（漏えいの可能性）"
+  ],
+  "counts": [],
+  "caveats": [
+    "公式は漏えいの可能性として公表している。警察からの報告や名簿とされるデータの存在を理由に確定流出へ引き上げず、生データを収録しない。",
+    "会員ごとに登録項目が異なり、全項目が全会員から流出したという意味ではない。ハッシュ値は平文パスワードではない。",
+    "10月1日は調査結果による可能性確認日。初期侵入日・警察からの最初の連絡日・確定被害初確認日へ転用しない。",
+    "公表時点で把握する範囲で不正利用等の二次被害は未確認。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "ママワークス：個人情報漏えいの可能性に関する報告",
+      "url": "https://mamaworks.jp/files/notice_20261020.pdf",
+      "publishedDate": "2026-10-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-01",
+      "label": "調査で漏えいの可能性を確認",
+      "kind": "occurrence",
+      "summary": "外部調査結果から設定上の脆弱性と会員名簿である可能性を確認。",
+      "sourceUrl": "https://mamaworks.jp/files/notice_20261020.pdf"
+    },
+    {
+      "date": "2026-10-20",
+      "label": "調査結果と対応を公表",
+      "kind": "disclosure",
+      "summary": "ママワークスの会員名簿とされるデータに関する警察からの報告を受け、外部調査を実施。10月1日の調査結果でシステム設定の脆弱性と会員情報の漏えい可能性を確認し、20日に公表した。脆弱性への対応は完了し、会員へパスワード変更を要請。件数は未公表。",
+      "sourceUrl": "https://mamaworks.jp/files/notice_20261020.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃の実施日・期間は資料に明記されていない。検知・公表日を代用しない。",
+      "sourceUrl": "https://mamaworks.jp/files/notice_20261020.pdf",
+      "reviewedDate": "2026-10-25"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公式は漏えいの可能性として報告しており、確定被害を初確認した日は示していない。10月1日は可能性確認であって確定流出日ではない。",
+      "sourceUrl": "https://mamaworks.jp/files/notice_20261020.pdf",
+      "reviewedDate": "2026-10-25"
+    }
+  }
+}

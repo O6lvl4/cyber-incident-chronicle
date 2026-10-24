@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-h4fr-cmh5-qr62",
+  "aliases": [],
+  "title": "Fallow：globでproject外のパス存在を調べる",
+  "summary": "解析対象repositoryのglobに含まれるwildcardが親ディレクトリを指し、Fallowの解析結果を通じてproject root外のファイルやディレクトリの存在を推測され得る。",
+  "publishedAt": "2026-10-23T21:58:16Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-h4fr-cmh5-qr62/GHSA-h4fr-cmh5-qr62.json",
+  "modifiedAt": "2026-10-23T21:58:16Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "fallow",
+      "ranges": [
+        {
+          "affected": "< 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-h4fr-cmh5-qr62"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@fallow-cli/fallow-node",
+      "ranges": [
+        {
+          "affected": "< 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-h4fr-cmh5-qr62"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "fallow-cli",
+      "ranges": [
+        {
+          "affected": "< 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-h4fr-cmh5-qr62"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "fallow-core",
+      "ranges": [
+        {
+          "affected": "< 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-h4fr-cmh5-qr62"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "fallow-config",
+      "ranges": [
+        {
+          "affected": "< 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-h4fr-cmh5-qr62"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-h4fr-cmh5-qr62",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-h4fr-cmh5-qr62"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-h4fr-cmh5-qr62/GHSA-h4fr-cmh5-qr62.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:58:16Z",
+      "modifiedAt": "2026-10-23T21:58:16Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Fallow: A `.*` glob segment let an analyzed repository make Fallow test paths in the parent of the project root",
+      "url": "https://github.com/advisories/GHSA-h4fr-cmh5-qr62",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "A `.*` glob segment let an analyzed repository make Fallow test paths in the parent of the project root",
+      "url": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-h4fr-cmh5-qr62",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T20:03:29Z",
+      "modifiedAt": "2026-10-19T07:06:09Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "攻撃者がrepository内容を制御し、CI logなど解析結果も読めることが前提。この経路は存在確認であり、外部ファイルの本文読出しや表示を確認したものではない。",
+    "Jest・Vitestのprojectsを通じる別の本文読込問題GHSA-jfwm-3p3c-6hx5とは分けて保持する。"
+  ]
+}

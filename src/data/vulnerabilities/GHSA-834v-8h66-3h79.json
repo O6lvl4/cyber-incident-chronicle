@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-834v-8h66-3h79",
+  "aliases": [
+    "CVE-2026-115895"
+  ],
+  "title": "Happy DOM：import aliasの不十分な検証でホストコード実行",
+  "summary": "ESM compilerがimportのlocal aliasを十分に検証せず生成コードへ挿入し、不正なmodule構文が実行可能な式に変換され、ホストのNode.js機能へ到達し得る。",
+  "publishedAt": "2026-10-23T22:06:13Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-834v-8h66-3h79/GHSA-834v-8h66-3h79.json",
+  "modifiedAt": "2026-10-23T22:06:13Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "happy-dom",
+      "ranges": [
+        {
+          "affected": ">= 17.0.0, <= 21.0.3",
+          "fixed": "21.0.4",
+          "sourceUrl": "https://github.com/capricorn86/happy-dom/releases/tag/v21.0.4"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/capricorn86/happy-dom/security/advisories/GHSA-834v-8h66-3h79",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/capricorn86/happy-dom/security/advisories/GHSA-834v-8h66-3h79"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-834v-8h66-3h79/GHSA-834v-8h66-3h79.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:06:13Z",
+      "modifiedAt": "2026-10-23T22:06:13Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution",
+      "url": "https://github.com/advisories/GHSA-834v-8h66-3h79",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution",
+      "url": "https://github.com/capricorn86/happy-dom/security/advisories/GHSA-834v-8h66-3h79",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T18:13:05Z",
+      "modifiedAt": "2026-10-23T21:31:41Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "v21.0.4",
+      "url": "https://github.com/capricorn86/happy-dom/releases/tag/v21.0.4",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T17:57:16Z"
+    },
+    {
+      "type": "release",
+      "title": "開発元の修正commitとrelease tagの包含関係",
+      "url": "https://github.com/capricorn86/happy-dom/compare/fd163520b74d9fa146be91f7b4e4f46d6cccbe13...v21.0.4",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "enableJavaScriptEvaluation: trueで信頼できないHTMLやmoduleを評価する構成が対象。関連CVE-2026-33943の別経路の不完全修正であり、同一別名として統合しない。",
+    "本文には修正版未公開という古い記述がある一方、構造化欄は21.0.4以降を示す。v21.0.4公開リリースと修正commitとの一致を確認し修正版21.0.4とする。元のpatched_versions表記=>21.0.4は監査に残す。"
+  ]
+}
