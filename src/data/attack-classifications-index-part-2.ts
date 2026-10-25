@@ -90,16 +90,16 @@ import record86 from './attack-classifications/spiral-locas-staff-assembly-2026.
 import record87 from './attack-classifications/starts-ozmall-2026.json' with { type: 'json' };
 import record88 from './attack-classifications/studio-cloud-2026.json' with { type: 'json' };
 import record89 from './attack-classifications/surugaya-payment-2025.json' with { type: 'json' };
-import record90 from './attack-classifications/takamiya-2022.json' with { type: 'json' };
-import record91 from './attack-classifications/takara-belmont-2024.json' with { type: 'json' };
-import record92 from './attack-classifications/tci-us-2022.json' with { type: 'json' };
-import record93 from './attack-classifications/teikoku-databank-2023.json' with { type: 'json' };
-import record94 from './attack-classifications/temairazu-2026.json' with { type: 'json' };
-import record95 from './attack-classifications/temona-tamago-repeat-2025.json' with { type: 'json' };
-import record96 from './attack-classifications/thinca-marketing-sites-2026.json' with { type: 'json' };
-import record97 from './attack-classifications/toda-payment-system-2026.json' with { type: 'json' };
-import record98 from './attack-classifications/tokyo-gas-tges-2024.json' with { type: 'json' };
-import record99 from './attack-classifications/tokyo-metro-metpo-2026.json' with { type: 'json' };
+import record90 from './attack-classifications/system5-online-shop-2026.json' with { type: 'json' };
+import record91 from './attack-classifications/takamiya-2022.json' with { type: 'json' };
+import record92 from './attack-classifications/takara-belmont-2024.json' with { type: 'json' };
+import record93 from './attack-classifications/tci-us-2022.json' with { type: 'json' };
+import record94 from './attack-classifications/teikoku-databank-2023.json' with { type: 'json' };
+import record95 from './attack-classifications/temairazu-2026.json' with { type: 'json' };
+import record96 from './attack-classifications/temona-tamago-repeat-2025.json' with { type: 'json' };
+import record97 from './attack-classifications/thinca-marketing-sites-2026.json' with { type: 'json' };
+import record98 from './attack-classifications/toda-payment-system-2026.json' with { type: 'json' };
+import record99 from './attack-classifications/tokyo-gas-tges-2024.json' with { type: 'json' };
 
 export const ATTACKS_PART_2 = {
   "kingprinters-system-2026": record0,
@@ -192,14 +192,14 @@ export const ATTACKS_PART_2 = {
   "starts-ozmall-2026": record87,
   "studio-cloud-2026": record88,
   "surugaya-payment-2025": record89,
-  "takamiya-2022": record90,
-  "takara-belmont-2024": record91,
-  "tci-us-2022": record92,
-  "teikoku-databank-2023": record93,
-  "temairazu-2026": record94,
-  "temona-tamago-repeat-2025": record95,
-  "thinca-marketing-sites-2026": record96,
-  "toda-payment-system-2026": record97,
-  "tokyo-gas-tges-2024": record98,
-  "tokyo-metro-metpo-2026": record99,
+  "system5-online-shop-2026": record90,
+  "takamiya-2022": record91,
+  "takara-belmont-2024": record92,
+  "tci-us-2022": record93,
+  "teikoku-databank-2023": record94,
+  "temairazu-2026": record95,
+  "temona-tamago-repeat-2025": record96,
+  "thinca-marketing-sites-2026": record97,
+  "toda-payment-system-2026": record98,
+  "tokyo-gas-tges-2024": record99,
 } as Record<string, AttackClassification>;

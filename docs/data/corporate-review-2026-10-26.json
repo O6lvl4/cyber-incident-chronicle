@@ -1,0 +1,185 @@
+{
+  "checkedDate": "2026-10-26",
+  "timezone": "Asia/Tokyo",
+  "window": "前回10月25日JSTの公式確認から、重なりを設け10月23日以降の更新・遅延把握を中心に確認。10月22日先行告知への言及を含むSYSTEM5の24日続報も補完。2022年11月以降の対象の限定選定で、全期間・全事案の再監査ではない。",
+  "overlapPolicy": {
+    "previousAudit": "docs/data/corporate-review-2026-10-25.json",
+    "overlapFromUTC": "2026-10-23T21:00:00Z",
+    "note": "前回の各情報源の成功確認時刻より約24時間以上を重ねる。失敗情報源は前回の成功点を保持し一律に進めない。"
+  },
+  "baselineIncidentCount": 223,
+  "addedIncidentCount": 1,
+  "updatedIncidentCount": 2,
+  "resultIncidentCount": 224,
+  "resultSourceCount": 496,
+  "statusDefinitions": {
+    "checked_changed": "公式本文に基づき追加・更新。対応継続のみの更新と実質的被害範囲の追加はfindingで区別。",
+    "checked_limited_no_change": "今回取得した本文の範囲で追加変更なし。全資料・全事案の確認ではない。",
+    "fetch_failed": "対象本文未取得。HTTP成功でも別ページ遷移の場合は対象本文失敗。不存在・変更なしとしない。"
+  },
+  "records": [
+    {
+      "incidentId": "system5-online-shop-2026",
+      "action": "add",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-26",
+      "record": "src/data/incidents/system5-online-shop-2026.json",
+      "sourcesUsedForChanges": [
+        "https://info.system5.jp/whatsnew/apology-20261024"
+      ]
+    },
+    {
+      "incidentId": "rakus-blastmail-2026",
+      "action": "update",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-26",
+      "record": "src/data/incidents/rakus-blastmail-2026.json",
+      "sourcesUsedForChanges": [
+        "https://info.blastmail.jp/information_20261021.html",
+        "https://jp.piccoma.com/web/notice_detail/7503",
+        "https://ejudo.info/articles/34272"
+      ]
+    },
+    {
+      "incidentId": "idc-frontier-2026",
+      "action": "update",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-26",
+      "record": "src/data/incidents/idc-frontier-2026.json",
+      "sourcesUsedForChanges": [
+        "https://www.idcf.jp/"
+      ]
+    }
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://info.blastmail.jp/information_20261021.html",
+      "status": "checked_changed",
+      "accessedAtUTC": "2026-10-25T21:16:07.713901+00:00",
+      "finding": "10月25日10時更新。344契約は変化なし、外部調査と停止継続。次回報告26日10時頃は予定。",
+      "httpStatus": 200,
+      "bodySha256": "8fa49d8674002ce6379f93cc946e87a25dcec2a97178ff5c8ad1962710bb087a",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:07.713901+00:00"
+    },
+    {
+      "url": "https://www.timesmobi.co.jp/news/2026/10/bca8b21d0fc52c552c3ac8e04a631177ef4cd31c.html",
+      "status": "checked_limited_no_change",
+      "accessedAtUTC": "2026-10-25T21:16:07.714447+00:00",
+      "finding": "10月23日第5報。既存パーク24事案の確認済み数・内訳・訂正と一致し追加変更なし。",
+      "httpStatus": 200,
+      "bodySha256": "1d0e423b263c13219db1dc3fa9301506c4801ee917b6e1cc3103b76936af0a1e",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:07.714447+00:00"
+    },
+    {
+      "url": "https://www.idcf.jp/",
+      "status": "checked_changed",
+      "accessedAtUTC": "2026-10-25T21:16:07.714885+00:00",
+      "finding": "10月25日18時更新。重要な新事実なし、調査・復旧継続。最新番号付き公表は18日第6報。",
+      "httpStatus": 200,
+      "bodySha256": "c05fd7be73cbcbacfeed13a52cfa7f2f0fe59fc6530eadfdf42691661d5c2cfd",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:07.714885+00:00"
+    },
+    {
+      "url": "https://www.onamae.com/news/article/11598/",
+      "status": "checked_limited_no_change",
+      "accessedAtUTC": "2026-10-25T21:16:07.715371+00:00",
+      "finding": "10月24日第4報。前回取得本文SHA256と一致、変更なし。",
+      "httpStatus": 200,
+      "bodySha256": "5fcd0ee3ebb071afaed29f0cc29df5201c201394c26605b14692cdeeada0700b",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:07.715371+00:00"
+    },
+    {
+      "url": "https://www.onamae.com/news/article/11599/",
+      "status": "checked_limited_no_change",
+      "accessedAtUTC": "2026-10-25T21:16:07.716100+00:00",
+      "finding": "10月24日第5報。前回取得本文SHA256と一致、変更なし。",
+      "httpStatus": 200,
+      "bodySha256": "104eb3005574ad34b7ee979baf5ff6a392bdb084d1d1264359d644bd314f6605",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:07.716100+00:00"
+    },
+    {
+      "url": "https://www.medley.jp/notice/20261015.html",
+      "status": "checked_limited_no_change",
+      "accessedAtUTC": "2026-10-25T21:16:07.716832+00:00",
+      "finding": "親会社告知本文の最新表示は10月23日16時。採用済み範囲から追加変更なし。サービス側全資料の再取得ではない。",
+      "httpStatus": 200,
+      "bodySha256": "4bbdfcfa32c0a56aa33146abeed2f6d8925057c5fec0bec97356bc499ea9b014",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:07.716832+00:00"
+    },
+    {
+      "url": "https://www.recruit.co.jp/newsroom/pressrelease/2026/1021_149447.html",
+      "status": "fetch_failed",
+      "accessedAtUTC": "2026-10-25T21:16:07.717421+00:00",
+      "finding": "HTTP403で本文未取得。前回の良好な記録・成功取得点を維持し、変更なしとは扱わない。",
+      "successCheckpointPolicy": "未取得の本文について成功取得点・事案確認日を進めない。既存の成功記録を保持。"
+    },
+    {
+      "url": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1561.html",
+      "status": "fetch_failed",
+      "accessedAtUTC": "2026-10-25T21:16:07.718249+00:00",
+      "finding": "HTTP403で本文未取得。前回の良好な記録・成功取得点を維持し、変更なしとは扱わない。",
+      "successCheckpointPolicy": "未取得の本文について成功取得点・事案確認日を進めない。既存の成功記録を保持。"
+    },
+    {
+      "url": "https://ejudo.info/articles/34272",
+      "status": "checked_changed",
+      "accessedAtUTC": "2026-10-25T21:16:54.923176+00:00",
+      "finding": "全配信先メールアドレスの漏えい確認、件数未公表。公開表示10月25日と文末署名24日を区別。",
+      "httpStatus": 200,
+      "bodySha256": "0973048b66832bb6cfef07bbb9a3645f561e6673a0f67026002079a0f5baf186",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:54.923176+00:00"
+    },
+    {
+      "url": "https://jp.piccoma.com/web/notice_detail/7503",
+      "status": "checked_changed",
+      "accessedAtUTC": "2026-10-25T21:16:54.923853+00:00",
+      "finding": "10月24日、1回分の配信先メール1,002,404件の漏えい確認。ブラストメール既存事案の利用企業別部分範囲。",
+      "httpStatus": 200,
+      "bodySha256": "45af150928071349801951cccc4b2928d8899088f5ac38396a1621ebeb287d97",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:54.923853+00:00"
+    },
+    {
+      "url": "https://www.yamada-shoten.com/onlinestore/blog/?p=28370",
+      "status": "checked_limited_no_change",
+      "accessedAtUTC": "2026-10-25T21:16:54.924319+00:00",
+      "finding": "10月24日告知本文を確認。ブラストメールに由来する自社配信先情報の可能性を案内、対象リストに含まれるか未確定。数値なし。今回は監査記録のみとし別事案を作らない。",
+      "httpStatus": 200,
+      "bodySha256": "026713e62369bd55518051eee4e156d9c3ccba102afa5f06c905fcabc1b01727",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:54.924319+00:00"
+    },
+    {
+      "url": "https://info.system5.jp/whatsnew/apology-20261024",
+      "status": "checked_changed",
+      "accessedAtUTC": "2026-10-25T21:16:54.924714+00:00",
+      "finding": "10月24日続報。一部顧客情報の取得確認と最大約15,000名の可能性範囲を区別。19時頃ショップ再開、一部機能は停止。",
+      "httpStatus": 200,
+      "bodySha256": "5f761f8bf8a94b3d1d08bc5f2c8831206d1692b769445a78b370d7bce1f6ed4a",
+      "verifiedDate": "2026-10-26",
+      "lastSuccessfulFetchAtUTC": "2026-10-25T21:16:54.924714+00:00"
+    },
+    {
+      "url": "https://www.system5.jp/password",
+      "status": "fetch_failed",
+      "accessedAtUTC": "2026-10-25T21:18:54.030404+00:00",
+      "finding": "HTTP200だがショップへ遷移し、10月22日先行告知の本文は今回取得できない。続報の先行告知への言及のみ使用。初報本文の成功取得点として扱わない。",
+      "httpStatus": 200,
+      "bodySha256": "a0ce438fefdb8c57ff7f7251bfd3b2eb0196b77d788248ee22b40ddfd468f962",
+      "successCheckpointPolicy": "未取得の本文について成功取得点・事案確認日を進めない。既存の成功記録を保持。"
+    }
+  ],
+  "countingNotes": [
+    "SYSTEM5の氏名・ポイント・レビュー情報と連携システム侵害はブラストメールのメール配信委託先事象と同一とする公式根拠がない。既存223事案を名称・URLで照合し独立事案として追加。",
+    "ピッコマとeJudoは公式がブラストメール起因と明記するため、既存事案へ集約。344契約・100万2,404件・人数を合算しない。",
+    "SYSTEM5の最大約15,000名は可能性範囲で、確定流出人数ではない。カード・パスワードは自社管理外との説明を保持。",
+    "今回確認していない過去資料・取得失敗資料の個別確認日を進めない。攻撃者の主張や流出データ、二次情報だけで追加しない。"
+  ]
+}

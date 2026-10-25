@@ -1,0 +1,43 @@
+{
+  "reportDateJst": "2026-10-26",
+  "checkedAt": "2026-10-25T21:18:30.756847Z",
+  "previousReview": "supplemental-held-candidate-review-2026-10-25.json",
+  "candidates": [
+    {
+      "sourceId": "RUSTSEC-2026-0387",
+      "package": "crypto-bigint",
+      "decision": "hold-no-stable-ghsa-cve",
+      "findings": "最新OSV APIにGHSA/CVE別名はなく、開発元の公開security-advisories APIも空配列。修正境界0.7.6は維持するが、主IDのGHSA/CVEを推測せず保留。今回、以前の修正PR本文を再確認したとは扱わない。",
+      "publishedAt": "2026-10-23T12:00:00Z",
+      "modifiedAt": "2026-10-24T03:45:02.365137418Z",
+      "sourceReceipts": [
+        {
+          "key": "crypto-bigint-osv",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0387",
+          "attemptAt": "2026-10-25T21:16:47.963756+00:00",
+          "status": "success",
+          "httpStatus": 200,
+          "sha256": "1700009d6bceed263992383ac9866472e412d0d35fa6a9a0ce008cb84565569c"
+        },
+        {
+          "key": "crypto-bigint-advisories",
+          "url": "https://api.github.com/repos/RustCrypto/crypto-bigint/security-advisories?per_page=100",
+          "attemptAt": "2026-10-25T21:16:53.916250+00:00",
+          "status": "success",
+          "httpStatus": 200,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0385",
+        "RUSTSEC-2026-0386",
+        "PYSEC-2026-4324",
+        "PYSEC-2026-4325"
+      ],
+      "decision": "retain-prior-holds",
+      "findings": "7全OSVエクスポートの非MAL内容に追加・変更・削除なし。以前の保留理由を維持し、開発元本文の新規再検証とは扱わない。"
+    }
+  ]
+}
