@@ -1,0 +1,113 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-jfwm-3p3c-6hx5",
+  "aliases": [
+    "CVE-2026-115569"
+  ],
+  "title": "Fallow：test project設定からproject外のファイルを読む",
+  "summary": "解析対象repositoryのJest・Vitest projectsや関連設定からproject root外のconfigを読み、依存関係や未使用ファイルなどの解析結果に反映し得る。",
+  "publishedAt": "2026-10-23T21:57:37Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-jfwm-3p3c-6hx5/GHSA-jfwm-3p3c-6hx5.json",
+  "modifiedAt": "2026-10-23T21:57:37Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "fallow",
+      "ranges": [
+        {
+          "affected": ">= 2.68.0, < 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-jfwm-3p3c-6hx5"
+        }
+      ]
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "@fallow-cli/fallow-node",
+      "ranges": [
+        {
+          "affected": ">= 2.68.0, < 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-jfwm-3p3c-6hx5"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "fallow-cli",
+      "ranges": [
+        {
+          "affected": ">= 2.68.0, < 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-jfwm-3p3c-6hx5"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "fallow-core",
+      "ranges": [
+        {
+          "affected": ">= 2.68.0, < 3.34.0",
+          "fixed": "3.34.0",
+          "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-jfwm-3p3c-6hx5"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-jfwm-3p3c-6hx5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-jfwm-3p3c-6hx5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-jfwm-3p3c-6hx5/GHSA-jfwm-3p3c-6hx5.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:57:37Z",
+      "modifiedAt": "2026-10-23T21:57:37Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Fallow: Jest and Vitest `projects` entries let an analyzed repository make Fallow read files outside the project root",
+      "url": "https://github.com/advisories/GHSA-jfwm-3p3c-6hx5",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Jest and Vitest `projects` entries let an analyzed repository make Fallow read files outside the project root",
+      "url": "https://github.com/fallow-rs/fallow/security/advisories/GHSA-jfwm-3p3c-6hx5",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T20:03:28Z",
+      "modifiedAt": "2026-10-23T18:07:25Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "開発元はファイル内容を画面へ表示したりnetwork送信したりする問題ではないと説明。攻撃者が得るのは変化した解析結果であり、本文の直接流出へ拡張しない。",
+    "Jestの経路は2.68.0以降、Vitest経路の確認は3.33.1。修正版3.34.0ではsymlinkや親参照を解決してproject root内に限定する。"
+  ]
+}

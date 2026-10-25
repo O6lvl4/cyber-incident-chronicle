@@ -1,0 +1,80 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xcx6-jx8p-x3h5",
+  "aliases": [
+    "CVE-2026-109461"
+  ],
+  "title": "MSAL Node：認可コードflowのorigin確認不足で情報開示",
+  "summary": "MSAL Nodeのauthorization-code flowでorigin検証が不十分なため、攻撃者が制御するendpointへパラメーターなどの情報が送られ得る。",
+  "publishedAt": "2026-10-23T22:16:44Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-xcx6-jx8p-x3h5/GHSA-xcx6-jx8p-x3h5.json",
+  "modifiedAt": "2026-10-23T22:16:44Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@azure/msal-node",
+      "ranges": [
+        {
+          "affected": ">=5.0.0-beta.0 <7.1.0",
+          "fixed": "7.1.0",
+          "sourceUrl": "https://github.com/AzureAD/microsoft-authentication-library-for-js/security/advisories/GHSA-xcx6-jx8p-x3h5"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/AzureAD/microsoft-authentication-library-for-js/security/advisories/GHSA-xcx6-jx8p-x3h5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://github.com/AzureAD/microsoft-authentication-library-for-js/security/advisories/GHSA-xcx6-jx8p-x3h5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-xcx6-jx8p-x3h5/GHSA-xcx6-jx8p-x3h5.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:16:44Z",
+      "modifiedAt": "2026-10-23T22:16:44Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "MSAL Node authorization code flow may disclose parameters to an attacker-controlled endpoint",
+      "url": "https://github.com/advisories/GHSA-xcx6-jx8p-x3h5",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "MSAL Node authorization code flow may disclose parameters to an attacker-controlled endpoint",
+      "url": "https://github.com/AzureAD/microsoft-authentication-library-for-js/security/advisories/GHSA-xcx6-jx8p-x3h5",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T17:21:56Z",
+      "modifiedAt": "2026-10-16T17:32:08Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "開発元は7.1.0以降を修正版とし、acquireTokenByCodeへauth_codeだけを渡す回避策を示す。すべての認証flowへ影響を拡張しない。",
+    "開発元Medium/CVSS3.1 5.9とReviewed Highを出典別に保持し、独自の評価で一本化しない。"
+  ]
+}

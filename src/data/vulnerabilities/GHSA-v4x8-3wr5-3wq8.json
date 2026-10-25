@@ -1,0 +1,80 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v4x8-3wr5-3wq8",
+  "aliases": [
+    "CVE-2026-112940"
+  ],
+  "title": "filelock：SQLiteの再openと補助ファイルで別ファイルへ作用",
+  "summary": "ReadWriteLockがSQLiteへ渡すpathや補助ファイルを別のローカルアカウントが差し替えると、ロック利用者の権限でファイルを書き換え・削除したりロック取得を妨げたりし得る。",
+  "publishedAt": "2026-10-23T21:59:08Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-v4x8-3wr5-3wq8/GHSA-v4x8-3wr5-3wq8.json",
+  "modifiedAt": "2026-10-23T21:59:08Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "filelock",
+      "ranges": [
+        {
+          "affected": ">= 3.20.4, <= 4.2.0",
+          "fixed": "4.2.1",
+          "sourceUrl": "https://github.com/tox-dev/filelock/security/advisories/GHSA-v4x8-3wr5-3wq8"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/tox-dev/filelock/security/advisories/GHSA-v4x8-3wr5-3wq8",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.1,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+        "sourceUrl": "https://github.com/tox-dev/filelock/security/advisories/GHSA-v4x8-3wr5-3wq8"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-v4x8-3wr5-3wq8/GHSA-v4x8-3wr5-3wq8.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:59:08Z",
+      "modifiedAt": "2026-10-23T21:59:08Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "filelock ReadWriteLock: SQLite reopens the lock database by name, so a planted symlink or journal file makes the lock user's process overwrite or unlink its own files",
+      "url": "https://github.com/advisories/GHSA-v4x8-3wr5-3wq8",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "ReadWriteLock: SQLite reopens the lock database by name, so a planted symlink or journal file makes the lock user's process overwrite or unlink its own files",
+      "url": "https://github.com/tox-dev/filelock/security/advisories/GHSA-v4x8-3wr5-3wq8",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T16:49:47Z",
+      "modifiedAt": "2026-10-20T14:40:40Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "共有ディレクトリの作成・rename権限、POSIXのSQLite経路などが条件。sticky directoryでも残る可用性variantと、非sticky領域の書込・削除variantを区別する。",
+    "filelock 3.20.4からの補助ファイル経路と4.0.9からの/proc/self/fd再open経路を混同しない。Windowsの別問題はGHSA-9vhv-jxww-xfm5として保持する。"
+  ]
+}

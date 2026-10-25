@@ -2,14 +2,15 @@
   "kind": "vulnerability",
   "id": "GHSA-9pvw-hwfg-92h5",
   "aliases": [
-    "RUSTSEC-2026-0378"
+    "RUSTSEC-2026-0378",
+    "CVE-2026-115892"
   ],
   "title": "Wasmtime：型の異なるstream・future受け渡しでホストがpanic",
   "summary": "ホストで作成したcomponent-modelのstreamやfutureをゲスト経由で型消去して受け取り、別のpayload型を期待するゲストへ渡すとpanicし得る。悪意あるゲストが型の不一致を誘発するとサービス拒否につながる。",
   "publishedAt": "2026-10-19T12:00:00Z",
   "modifiedAt": "2026-10-20T11:15:37.066435437Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0378",
   "affected": [
     {
@@ -91,13 +92,17 @@
       "title": "Bytecode Alliance / Wasmtime公式セキュリティアドバイザリ",
       "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9pvw-hwfg-92h5",
       "publishedDate": "2026-10-19",
-      "publishedAt": "2026-10-19T19:21:51Z"
+      "publishedAt": "2026-10-19T19:21:51Z",
+      "modifiedAt": "2026-10-24T05:20:00Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
     "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
     "具体型のStreamReader<T>/FutureReader<T>だけで一貫して扱う場合や、ホスト作成値をゲスト経由で戻さない場合は対象外。関連GHSA-63h4-6cx9-pjfjは別件であり別名として結合しない。",
-    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。"
+    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。",
+    "CVE-2026-115892は今回取得した開発元GHSAのcve_idと固定Reviewedソースで同一性を確認。RustSecの元の公表日や関連GHSAとは区別する。",
+    "今回取得した開発元GHSA APIの更新日時を出典へ追記。従来HTMLだけでは確認できなかった日時を推定せず、APIの値として区別する。"
   ]
 }

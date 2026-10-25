@@ -1,0 +1,53 @@
+{
+  "reportDateJst": "2026-10-25",
+  "checkedAt": "2026-10-24T21:31:22.593420Z",
+  "feeds": 3,
+  "itemsCompared": 91,
+  "changedItems": 0,
+  "changedItemBodyFetches": 0,
+  "findings": "3公式フィード91項目のtitle/link/date/issued/modifiedを前回と全件比較し、変更0。今回は変更本文の再取得対象なし。これを全JVNレコードの変更なしとは扱わない。",
+  "productCandidateScan": {
+    "generatedAt": "2026-10-24T21:24:03.237Z",
+    "since": "2026-10-23",
+    "records": 42,
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+        "status": "failed",
+        "fetchedAt": "2026-10-24T21:24:03.235Z",
+        "error": "HTTP 403"
+      },
+      {
+        "name": "JPCERT/CC 注意喚起",
+        "url": "https://www.jpcert.or.jp/at/2026.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-24T21:23:59.689Z",
+        "items": 34
+      },
+      {
+        "name": "IPA 重要なセキュリティ情報",
+        "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-24T21:24:01.909Z",
+        "items": 28
+      }
+    ],
+    "candidates": [],
+    "drift": [],
+    "note": "取得失敗は候補なしを意味しない。候補は一次資料を読んで判定し、除外も確認記録に残す。"
+  },
+  "blockedSources": [
+    {
+      "source": "MyJVN",
+      "httpStatus": 503,
+      "lastSuccessfulContentCheckAt": "2026-10-20T21:35:52.516599Z",
+      "retainedHistoricalRows": 1271
+    },
+    {
+      "source": "CISA KEV",
+      "httpStatus": 403,
+      "lastSuccessfulContentCheckAt": null
+    }
+  ]
+}

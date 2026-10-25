@@ -1,0 +1,867 @@
+{
+  "reportDateJst": "2026-10-25",
+  "generatedAt": "2026-10-24T21:27:08.305943Z",
+  "previousAudit": "supplemental-source-status-2026-10-24.json",
+  "sources": [
+    {
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip",
+      "attemptAt": "2026-10-24T21:24:24.324697Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "application/zip",
+        "date": "Sat, 24 Oct 2026 21:24:28 GMT",
+        "last-modified": "Sat, 24 Oct 2026 04:48:23 GMT",
+        "etag": "\"82357063428a6abdb203d96e8078d276\"",
+        "x-goog-generation": "1792817303730587",
+        "x-goog-metageneration": "1",
+        "x-goog-stored-content-length": "219026863",
+        "x-goog-hash": "md5=gjVwY0KKar2yA9lugHjSdg==",
+        "content-length": "219026863"
+      },
+      "checkedAt": "2026-10-24T21:24:33.488733Z",
+      "bytes": 219026863,
+      "sha256": "98509a62109a7c1e204399432a2d92c381e793a6abeec2b9c8533b5ee076109c",
+      "status": "success",
+      "ecosystem": "npm",
+      "previousSuccess": "2026-10-23T21:55:15.237307Z",
+      "previousSuccessfulFetchAt": "2026-10-23T21:54:33.505128Z",
+      "overlapFromInclusive": "2026-10-22T21:55:15.237307Z",
+      "overlapBasis": "previous lastSuccessfulContentCheckAt minus 24 hours; full canonical-content diff also covers timestamp-preserving changes",
+      "lastSuccessfulContentCheckAt": "2026-10-24T21:25:32.893305Z",
+      "lastSuccessfulFetchAt": "2026-10-24T21:24:33.488733Z",
+      "generation": "1792817303730587",
+      "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip?generation=1792817303730587",
+      "archiveBytes": 219026863,
+      "archiveSha256": "98509a62109a7c1e204399432a2d92c381e793a6abeec2b9c8533b5ee076109c",
+      "baselineFetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip?generation=1792792077228754",
+        "attemptAt": "2026-10-24T21:24:33.488807Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "date": "Sat, 24 Oct 2026 21:24:36 GMT",
+          "last-modified": "Fri, 23 Oct 2026 21:47:57 GMT",
+          "etag": "\"677452376db569e6297c71544822023e\"",
+          "x-goog-generation": "1792792077228754",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-length": "218997348",
+          "x-goog-hash": "md5=Z3RSN221aeYpfHFUSCICPg==",
+          "content-length": "218997348"
+        },
+        "checkedAt": "2026-10-24T21:24:40.829606Z",
+        "bytes": 218997348,
+        "sha256": "312436d75c59f6e18e00de7419d10c5d0496e6c0d5fba50800a8f43c0dab70fb",
+        "status": "success"
+      },
+      "baselineDigestVerified": true,
+      "baselineCrcReadCompleted": true,
+      "crcReadCompleted": true,
+      "records": 230735,
+      "prefixCounts": {
+        "EEF": 1,
+        "GHSA": 7970,
+        "GSD": 1,
+        "MAL": 222763
+      },
+      "membersRead": 230735,
+      "baselineMembersRead": 230716,
+      "duplicateIdsWithinArchive": [],
+      "baselineDuplicateIdsWithinArchive": [],
+      "diff": {
+        "added": {
+          "nonMal": [
+            "GHSA-4qv8-2p9j-2685",
+            "GHSA-834v-8h66-3h79",
+            "GHSA-85x2-q946-cp5h",
+            "GHSA-8c8m-p3m8-cjg8",
+            "GHSA-f2hq-32vh-53cc",
+            "GHSA-f72v-6w45-q472",
+            "GHSA-h4fr-cmh5-qr62",
+            "GHSA-jfwm-3p3c-6hx5",
+            "GHSA-m5mm-p8h7-m29v",
+            "GHSA-m943-m63m-w62w",
+            "GHSA-q7qp-rjg7-q26m",
+            "GHSA-xcx6-jx8p-x3h5",
+            "GHSA-xjj6-f33q-929c"
+          ],
+          "mal": [
+            "MAL-2026-18243",
+            "MAL-2026-18244",
+            "MAL-2026-18245",
+            "MAL-2026-18246",
+            "MAL-2026-18247",
+            "MAL-2026-18248"
+          ]
+        },
+        "modified": {
+          "nonMal": [
+            "GHSA-jg4p-7fhp-p32p",
+            "GHSA-pgx6-7jcq-2qff",
+            "GHSA-v3f4-w7r7-v3hm",
+            "GHSA-xvq9-wjp8-hwqf"
+          ],
+          "mal": []
+        },
+        "removed": {
+          "nonMal": [],
+          "mal": []
+        }
+      },
+      "contentStatus": "checked-changed",
+      "overlapWindowNonMalIds": [
+        "GHSA-27mw-82g8-phjj",
+        "GHSA-27r3-jxmh-p828",
+        "GHSA-2rqm-h6hv-g79v",
+        "GHSA-333x-w4r6-6crp",
+        "GHSA-43r2-c7g8-prc8",
+        "GHSA-4qv8-2p9j-2685",
+        "GHSA-4v6f-7vjh-6x4m",
+        "GHSA-737x-cwfr-5vvc",
+        "GHSA-834v-8h66-3h79",
+        "GHSA-84c9-qqpq-2pq5",
+        "GHSA-85pr-xr59-r75h",
+        "GHSA-85x2-q946-cp5h",
+        "GHSA-8c8m-p3m8-cjg8",
+        "GHSA-c5xx-h28h-f682",
+        "GHSA-cvp8-vvgf-69q4",
+        "GHSA-f2hq-32vh-53cc",
+        "GHSA-f72v-6w45-q472",
+        "GHSA-h4fr-cmh5-qr62",
+        "GHSA-jfwm-3p3c-6hx5",
+        "GHSA-jg4p-7fhp-p32p",
+        "GHSA-jr5w-w6x2-84p9",
+        "GHSA-m5mm-p8h7-m29v",
+        "GHSA-m943-m63m-w62w",
+        "GHSA-mrhx-c7xc-m3w5",
+        "GHSA-pfhg-q3qv-9q6r",
+        "GHSA-pgx6-7jcq-2qff",
+        "GHSA-pqh8-4pj7-32xx",
+        "GHSA-pvhg-7v4p-f5q9",
+        "GHSA-q7qp-rjg7-q26m",
+        "GHSA-r3g7-r4hr-m258",
+        "GHSA-v3f4-w7r7-v3hm",
+        "GHSA-vfj7-8cjw-p6xm",
+        "GHSA-w74x-v6f9-j3xg",
+        "GHSA-wjr9-j795-jxcr",
+        "GHSA-xcx6-jx8p-x3h5",
+        "GHSA-xhq7-xmqj-769h",
+        "GHSA-xjj6-f33q-929c",
+        "GHSA-xvq9-wjp8-hwqf"
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip",
+      "attemptAt": "2026-10-24T21:24:24.325907Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "application/zip",
+        "date": "Sat, 24 Oct 2026 21:24:28 GMT",
+        "last-modified": "Sat, 24 Oct 2026 11:03:17 GMT",
+        "etag": "\"69dd99013bc4332b58e4bb3d6f0d9ffe\"",
+        "x-goog-generation": "1792839797362039",
+        "x-goog-metageneration": "1",
+        "x-goog-stored-content-length": "37064024",
+        "x-goog-hash": "md5=ad2ZATvEMytY5Ls9bw2f/g==",
+        "content-length": "37064024"
+      },
+      "checkedAt": "2026-10-24T21:24:30.541381Z",
+      "bytes": 37064024,
+      "sha256": "95b325be6311d4d9ee90adf4207e73194e92480c2a72a71bbc3ac39fc74e0be5",
+      "status": "success",
+      "ecosystem": "PyPI",
+      "previousSuccess": "2026-10-23T21:55:21.431252Z",
+      "previousSuccessfulFetchAt": "2026-10-23T21:54:30.221280Z",
+      "overlapFromInclusive": "2026-10-22T21:55:21.431252Z",
+      "overlapBasis": "previous lastSuccessfulContentCheckAt minus 24 hours; full canonical-content diff also covers timestamp-preserving changes",
+      "lastSuccessfulContentCheckAt": "2026-10-24T21:25:07.086206Z",
+      "lastSuccessfulFetchAt": "2026-10-24T21:24:30.541381Z",
+      "generation": "1792839797362039",
+      "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1792839797362039",
+      "archiveBytes": 37064024,
+      "archiveSha256": "95b325be6311d4d9ee90adf4207e73194e92480c2a72a71bbc3ac39fc74e0be5",
+      "baselineFetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1792792074503611",
+        "attemptAt": "2026-10-24T21:24:30.541444Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "date": "Sat, 24 Oct 2026 21:24:33 GMT",
+          "last-modified": "Fri, 23 Oct 2026 21:47:54 GMT",
+          "etag": "\"784e989eeb96755e20ba8a145421d63e\"",
+          "x-goog-generation": "1792792074503611",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-length": "36948186",
+          "x-goog-hash": "md5=eE6YnuuWdV4guooUVCHWPg==",
+          "content-length": "36948186"
+        },
+        "checkedAt": "2026-10-24T21:24:34.692253Z",
+        "bytes": 36948186,
+        "sha256": "388105aabf14a328cdf6ce0c53968167801c57d717ae673d20c20388c16e8e3a",
+        "status": "success"
+      },
+      "baselineDigestVerified": true,
+      "baselineCrcReadCompleted": true,
+      "crcReadCompleted": true,
+      "records": 26612,
+      "prefixCounts": {
+        "GHSA": 6705,
+        "MAL": 11947,
+        "OSV": 12,
+        "PYSEC": 7948
+      },
+      "membersRead": 26612,
+      "baselineMembersRead": 26592,
+      "duplicateIdsWithinArchive": [],
+      "baselineDuplicateIdsWithinArchive": [],
+      "diff": {
+        "added": {
+          "nonMal": [
+            "GHSA-2g95-wg33-c5x2",
+            "GHSA-2wqp-q3c6-ccj5",
+            "GHSA-394h-qwmc-48pf",
+            "GHSA-494p-63j8-28p3",
+            "GHSA-4f8h-vr72-p32c",
+            "GHSA-567q-5qvw-pf92",
+            "GHSA-5x8w-8jj5-q52h",
+            "GHSA-654x-cwwv-5j9c",
+            "GHSA-6hmw-9432-67qq",
+            "GHSA-6w3r-xr62-4xcp",
+            "GHSA-9vhv-jxww-xfm5",
+            "GHSA-9xx9-hw38-h2w9",
+            "GHSA-crv4-6mhj-j5jh",
+            "GHSA-cx28-75q4-x26q",
+            "GHSA-fc2g-4w5p-6whm",
+            "GHSA-hhxq-47xx-j5xx",
+            "GHSA-jqc4-5cvw-7w85",
+            "GHSA-qmx5-4p3x-wvqf",
+            "GHSA-v4x8-3wr5-3wq8",
+            "GHSA-xmj3-9gf7-h52w"
+          ],
+          "mal": []
+        },
+        "modified": {
+          "nonMal": [
+            "GHSA-22wc-c9wj-6q2v",
+            "GHSA-2r3x-4mrv-mcxf",
+            "GHSA-375m-5fvv-xq23",
+            "GHSA-3rp5-jjmw-4wv2",
+            "GHSA-4v7v-gqf9-ww2g",
+            "GHSA-7f92-rr6w-cq64",
+            "GHSA-9v8h-qqgm-4m35",
+            "GHSA-mr6r-mvw4-736g",
+            "GHSA-vg88-3v92-rjx2",
+            "PYSEC-2026-4322",
+            "PYSEC-2026-4323"
+          ],
+          "mal": []
+        },
+        "removed": {
+          "nonMal": [],
+          "mal": []
+        }
+      },
+      "contentStatus": "checked-changed",
+      "overlapWindowNonMalIds": [
+        "GHSA-22wc-c9wj-6q2v",
+        "GHSA-2g95-wg33-c5x2",
+        "GHSA-2qrf-pqgx-qh9v",
+        "GHSA-2r3x-4mrv-mcxf",
+        "GHSA-2wqp-q3c6-ccj5",
+        "GHSA-3476-c5c2-fr73",
+        "GHSA-3589-pxp7-3gj8",
+        "GHSA-375m-5fvv-xq23",
+        "GHSA-394h-qwmc-48pf",
+        "GHSA-3cgq-c484-rx5j",
+        "GHSA-3rp5-jjmw-4wv2",
+        "GHSA-494p-63j8-28p3",
+        "GHSA-4f8h-vr72-p32c",
+        "GHSA-4v6f-7vjh-6x4m",
+        "GHSA-4v7v-gqf9-ww2g",
+        "GHSA-53xc-49m8-p798",
+        "GHSA-567q-5qvw-pf92",
+        "GHSA-5x8w-8jj5-q52h",
+        "GHSA-654x-cwwv-5j9c",
+        "GHSA-6c7f-9265-g8fw",
+        "GHSA-6hmw-9432-67qq",
+        "GHSA-6w3r-xr62-4xcp",
+        "GHSA-7587-9684-52r6",
+        "GHSA-7f92-rr6w-cq64",
+        "GHSA-7xgj-8392-5q4r",
+        "GHSA-8cqv-vvq2-6p8c",
+        "GHSA-9v8h-qqgm-4m35",
+        "GHSA-9vhv-jxww-xfm5",
+        "GHSA-9xx9-hw38-h2w9",
+        "GHSA-crv4-6mhj-j5jh",
+        "GHSA-cwm5-jh59-mwxr",
+        "GHSA-cx28-75q4-x26q",
+        "GHSA-cx6f-vjhg-g3cc",
+        "GHSA-fc2g-4w5p-6whm",
+        "GHSA-gmh7-3g9r-mjh5",
+        "GHSA-gx7p-2j49-hfq4",
+        "GHSA-h7ww-273w-6cm8",
+        "GHSA-hfwf-hgvp-4rr8",
+        "GHSA-hhxq-47xx-j5xx",
+        "GHSA-jqc4-5cvw-7w85",
+        "GHSA-jr96-gvgh-j3r4",
+        "GHSA-m3wx-qqmx-qxvf",
+        "GHSA-mr6r-mvw4-736g",
+        "GHSA-p92p-rxj5-7p2x",
+        "GHSA-pjjw-68hj-v9mw",
+        "GHSA-q7qq-6mhp-9rc4",
+        "GHSA-qmx5-4p3x-wvqf",
+        "GHSA-v4x8-3wr5-3wq8",
+        "GHSA-v798-mcc6-2m3m",
+        "GHSA-vg88-3v92-rjx2",
+        "GHSA-vqqp-x5qm-5qp4",
+        "GHSA-wqmh-qccw-pqwf",
+        "GHSA-xmj3-9gf7-h52w",
+        "PYSEC-2026-2946",
+        "PYSEC-2026-4322",
+        "PYSEC-2026-4323",
+        "PYSEC-2026-4324",
+        "PYSEC-2026-4325"
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip",
+      "attemptAt": "2026-10-24T21:26:34.667789Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "application/zip",
+        "date": "Sat, 24 Oct 2026 21:26:38 GMT",
+        "last-modified": "Thu, 22 Oct 2026 09:17:58 GMT",
+        "etag": "\"a8d41885956d59c355288fd7c03cf8c6\"",
+        "x-goog-generation": "1792660678434432",
+        "x-goog-metageneration": "1",
+        "x-goog-stored-content-length": "5195856",
+        "x-goog-hash": "crc32c=Bfph9w==",
+        "content-length": "5195856"
+      },
+      "checkedAt": "2026-10-24T21:26:38.432103Z",
+      "bytes": 5195856,
+      "sha256": "085e7b1e7ee4e4c742a210da5086dd93e8ff3ccf83462e1da3d97b41f3ae2807",
+      "status": "success",
+      "ecosystem": "RubyGems",
+      "previousSuccess": "2026-10-23T21:55:22.207234Z",
+      "previousSuccessfulFetchAt": "2026-10-23T21:54:29.062766Z",
+      "overlapFromInclusive": "2026-10-22T21:55:22.207234Z",
+      "overlapBasis": "previous lastSuccessfulContentCheckAt minus 24 hours; full canonical-content diff also covers timestamp-preserving changes",
+      "lastSuccessfulContentCheckAt": "2026-10-24T21:27:08.305922Z",
+      "lastSuccessfulFetchAt": "2026-10-24T21:26:38.432103Z",
+      "generation": "1792660678434432",
+      "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip?generation=1792660678434432",
+      "archiveBytes": 5195856,
+      "archiveSha256": "085e7b1e7ee4e4c742a210da5086dd93e8ff3ccf83462e1da3d97b41f3ae2807",
+      "baselineFetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip?generation=1792660678434432",
+        "attemptAt": "2026-10-24T21:24:29.104477Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "date": "Sat, 24 Oct 2026 21:24:33 GMT",
+          "last-modified": "Thu, 22 Oct 2026 09:17:58 GMT",
+          "etag": "\"a8d41885956d59c355288fd7c03cf8c6\"",
+          "x-goog-generation": "1792660678434432",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-length": "5195856",
+          "x-goog-hash": "md5=qNQYhZVtWcNVKI/XwDz4xg==",
+          "content-length": "5195856"
+        },
+        "checkedAt": "2026-10-24T21:24:33.878353Z",
+        "bytes": 5195856,
+        "sha256": "085e7b1e7ee4e4c742a210da5086dd93e8ff3ccf83462e1da3d97b41f3ae2807",
+        "status": "success"
+      },
+      "baselineDigestVerified": true,
+      "baselineCrcReadCompleted": true,
+      "crcReadCompleted": true,
+      "records": 5466,
+      "prefixCounts": {
+        "GHSA": 1161,
+        "MAL": 4305
+      },
+      "membersRead": 5466,
+      "baselineMembersRead": 5466,
+      "duplicateIdsWithinArchive": [],
+      "baselineDuplicateIdsWithinArchive": [],
+      "diff": {
+        "added": {
+          "nonMal": [],
+          "mal": []
+        },
+        "modified": {
+          "nonMal": [],
+          "mal": []
+        },
+        "removed": {
+          "nonMal": [],
+          "mal": []
+        }
+      },
+      "contentStatus": "checked-unchanged",
+      "overlapWindowNonMalIds": [],
+      "initialFetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip",
+        "attemptAt": "2026-10-24T21:24:24.326497Z",
+        "httpStatus": 200,
+        "headers": {
+          "x-goog-generation": "1792622000405388",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-length": "5195856",
+          "x-goog-hash": "md5=qNQYhZVtWcNVKI/XwDz4xg==",
+          "content-length": "5195856",
+          "date": "Sat, 24 Oct 2026 20:27:58 GMT",
+          "last-modified": "Thu, 22 Oct 2026 09:17:58 GMT",
+          "etag": "\"a8d41885956d59c355288fd7c03cf8c6\"",
+          "content-type": "application/zip"
+        },
+        "checkedAt": "2026-10-24T21:24:29.104409Z",
+        "bytes": 5195856,
+        "sha256": "085e7b1e7ee4e4c742a210da5086dd93e8ff3ccf83462e1da3d97b41f3ae2807"
+      },
+      "requestUrl": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip?audit=2026-10-25T2126Z",
+      "generationObservationNote": "Initial response advertised an older generation despite bytes and Last-Modified matching the prior successful archive. A cache-bypassed official request returned the expected generation; its SHA256 and all ZIP entries were checked again. Initial response receipt is retained.",
+      "cacheBypassRecheckCrcReadCompleted": true
+    },
+    {
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip",
+      "attemptAt": "2026-10-24T21:24:24.327179Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "application/zip",
+        "date": "Sat, 24 Oct 2026 21:24:28 GMT",
+        "last-modified": "Sat, 24 Oct 2026 03:03:12 GMT",
+        "etag": "\"69b63efa22566d7be471ed03c621bfca\"",
+        "x-goog-generation": "1792810992640945",
+        "x-goog-metageneration": "1",
+        "x-goog-stored-content-length": "12594328",
+        "x-goog-hash": "md5=abY++iJWbXvkce0DxiG/yg==",
+        "content-length": "12594328"
+      },
+      "checkedAt": "2026-10-24T21:24:29.852344Z",
+      "bytes": 12594328,
+      "sha256": "aeb7314796b4b412c888173d9955876457058e9342ada0464659cf26055d70ce",
+      "status": "success",
+      "ecosystem": "Go",
+      "previousSuccess": "2026-10-23T21:55:24.613089Z",
+      "previousSuccessfulFetchAt": "2026-10-23T21:54:28.949090Z",
+      "overlapFromInclusive": "2026-10-22T21:55:24.613089Z",
+      "overlapBasis": "previous lastSuccessfulContentCheckAt minus 24 hours; full canonical-content diff also covers timestamp-preserving changes",
+      "lastSuccessfulContentCheckAt": "2026-10-24T21:24:49.198690Z",
+      "lastSuccessfulFetchAt": "2026-10-24T21:24:29.852344Z",
+      "generation": "1792810992640945",
+      "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip?generation=1792810992640945",
+      "archiveBytes": 12594328,
+      "archiveSha256": "aeb7314796b4b412c888173d9955876457058e9342ada0464659cf26055d70ce",
+      "baselineFetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip?generation=1792790289791971",
+        "attemptAt": "2026-10-24T21:24:29.852404Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "date": "Sat, 24 Oct 2026 21:24:33 GMT",
+          "last-modified": "Fri, 23 Oct 2026 21:18:09 GMT",
+          "etag": "\"29958f965355d7c2457b8b2feb5a9314\"",
+          "x-goog-generation": "1792790289791971",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-length": "12594303",
+          "x-goog-hash": "md5=KZWPllNV18JFe4sv61qTFA==",
+          "content-length": "12594303"
+        },
+        "checkedAt": "2026-10-24T21:24:34.313259Z",
+        "bytes": 12594303,
+        "sha256": "1ffc60b5a911b2482c11d8e544fd463ad5f7d1cd239d9b7abef89a4e6167b826",
+        "status": "success"
+      },
+      "baselineDigestVerified": true,
+      "baselineCrcReadCompleted": true,
+      "crcReadCompleted": true,
+      "records": 9779,
+      "prefixCounts": {
+        "GHSA": 5029,
+        "GO": 4729,
+        "MAL": 20,
+        "OSV": 1
+      },
+      "membersRead": 9779,
+      "baselineMembersRead": 9779,
+      "duplicateIdsWithinArchive": [],
+      "baselineDuplicateIdsWithinArchive": [],
+      "diff": {
+        "added": {
+          "nonMal": [],
+          "mal": []
+        },
+        "modified": {
+          "nonMal": [
+            "GHSA-2h46-9x5w-4wf7",
+            "GO-2026-5063"
+          ],
+          "mal": []
+        },
+        "removed": {
+          "nonMal": [],
+          "mal": []
+        }
+      },
+      "contentStatus": "checked-changed",
+      "overlapWindowNonMalIds": [
+        "GHSA-2h46-9x5w-4wf7",
+        "GHSA-4g5x-hcwm-82jw",
+        "GHSA-4pjg-x8qj-33j5",
+        "GHSA-5r3p-6rj5-7937",
+        "GHSA-6xvp-3rfv-g2g2",
+        "GHSA-7cgw-qmxx-7fc2",
+        "GHSA-989h-w3q9-3m2f",
+        "GHSA-9969-6676-49h5",
+        "GHSA-c8w8-3pqp-wr83",
+        "GHSA-cxf3-9h37-7rr8",
+        "GHSA-f48p-c9v4-h7xv",
+        "GHSA-h53f-rm2w-w7rg",
+        "GHSA-h7wr-284f-5qvc",
+        "GHSA-hg5w-8ppq-wpjq",
+        "GHSA-j6qf-3m9c-vwj3",
+        "GHSA-p4qw-vx5p-g984",
+        "GHSA-rpx2-p6hp-x5gj",
+        "GHSA-vg9q-fc8f-43f3",
+        "GHSA-x9ff-22gv-65f4",
+        "GHSA-xp3q-r38w-vgqm",
+        "GO-2026-5063",
+        "GO-2026-5938"
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip",
+      "attemptAt": "2026-10-24T21:24:38.587256Z",
+      "httpStatus": 200,
+      "headers": {
+        "x-goog-generation": "1792831671683904",
+        "x-goog-metageneration": "1",
+        "x-goog-stored-content-length": "3654719",
+        "x-goog-hash": "md5=yWQge/kQ54b8Ri57Er2KRg==",
+        "content-length": "3654719",
+        "date": "Sat, 24 Oct 2026 20:42:37 GMT",
+        "last-modified": "Sat, 24 Oct 2026 08:47:51 GMT",
+        "etag": "\"c964207bf910e786fc462e7b12bd8a46\"",
+        "content-type": "application/zip"
+      },
+      "checkedAt": "2026-10-24T21:24:42.146484Z",
+      "bytes": 3654719,
+      "sha256": "4ea1d249e9074935bda06611809a01a3fa05c58142e2f4efd8c701c4ed75f9b5",
+      "status": "success",
+      "ecosystem": "crates.io",
+      "previousSuccess": "2026-10-23T21:55:25.501875Z",
+      "previousSuccessfulFetchAt": "2026-10-23T21:54:34.601588Z",
+      "overlapFromInclusive": "2026-10-22T21:55:25.501875Z",
+      "overlapBasis": "previous lastSuccessfulContentCheckAt minus 24 hours; full canonical-content diff also covers timestamp-preserving changes",
+      "lastSuccessfulContentCheckAt": "2026-10-24T21:24:50.195726Z",
+      "lastSuccessfulFetchAt": "2026-10-24T21:24:42.146484Z",
+      "generation": "1792831671683904",
+      "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip?generation=1792831671683904",
+      "archiveBytes": 3654719,
+      "archiveSha256": "4ea1d249e9074935bda06611809a01a3fa05c58142e2f4efd8c701c4ed75f9b5",
+      "baselineFetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip?generation=1792790289721253",
+        "attemptAt": "2026-10-24T21:24:42.146537Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "date": "Sat, 24 Oct 2026 21:24:46 GMT",
+          "last-modified": "Fri, 23 Oct 2026 21:18:09 GMT",
+          "etag": "\"49b98722f26cda1d6080c0ec22753f21\"",
+          "x-goog-generation": "1792790289721253",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-length": "3647414",
+          "x-goog-hash": "md5=SbmHIvJs2h1ggMDsInU/IQ==",
+          "content-length": "3647414"
+        },
+        "checkedAt": "2026-10-24T21:24:46.373600Z",
+        "bytes": 3647414,
+        "sha256": "db76144269e967869b4723258d062219bb71b74f6c63c80d655734cd0beb2de3",
+        "status": "success"
+      },
+      "baselineDigestVerified": true,
+      "baselineCrcReadCompleted": true,
+      "crcReadCompleted": true,
+      "records": 2969,
+      "prefixCounts": {
+        "GHSA": 1615,
+        "MAL": 21,
+        "RUSTSEC": 1333
+      },
+      "membersRead": 2969,
+      "baselineMembersRead": 2964,
+      "duplicateIdsWithinArchive": [],
+      "baselineDuplicateIdsWithinArchive": [],
+      "diff": {
+        "added": {
+          "nonMal": [
+            "GHSA-897f-g5gm-fmxm",
+            "GHSA-9pvw-hwfg-92h5",
+            "GHSA-h4fr-cmh5-qr62",
+            "GHSA-jfwm-3p3c-6hx5",
+            "RUSTSEC-2026-0387"
+          ],
+          "mal": []
+        },
+        "modified": {
+          "nonMal": [
+            "RUSTSEC-2026-0222",
+            "RUSTSEC-2026-0268",
+            "RUSTSEC-2026-0269",
+            "RUSTSEC-2026-0313",
+            "RUSTSEC-2026-0314",
+            "RUSTSEC-2026-0315",
+            "RUSTSEC-2026-0316",
+            "RUSTSEC-2026-0320",
+            "RUSTSEC-2026-0321",
+            "RUSTSEC-2026-0322",
+            "RUSTSEC-2026-0323",
+            "RUSTSEC-2026-0324",
+            "RUSTSEC-2026-0325",
+            "RUSTSEC-2026-0326",
+            "RUSTSEC-2026-0327",
+            "RUSTSEC-2026-0378",
+            "RUSTSEC-2026-0379",
+            "RUSTSEC-2026-0380",
+            "RUSTSEC-2026-0384"
+          ],
+          "mal": []
+        },
+        "removed": {
+          "nonMal": [],
+          "mal": []
+        }
+      },
+      "contentStatus": "checked-changed",
+      "overlapWindowNonMalIds": [
+        "GHSA-5wjr-9356-4wc8",
+        "GHSA-897f-g5gm-fmxm",
+        "GHSA-9pvw-hwfg-92h5",
+        "GHSA-h4fr-cmh5-qr62",
+        "GHSA-jfwm-3p3c-6hx5",
+        "GHSA-q54r-jf2p-rfr2",
+        "RUSTSEC-2026-0003",
+        "RUSTSEC-2026-0222",
+        "RUSTSEC-2026-0268",
+        "RUSTSEC-2026-0269",
+        "RUSTSEC-2026-0305",
+        "RUSTSEC-2026-0313",
+        "RUSTSEC-2026-0314",
+        "RUSTSEC-2026-0315",
+        "RUSTSEC-2026-0316",
+        "RUSTSEC-2026-0320",
+        "RUSTSEC-2026-0321",
+        "RUSTSEC-2026-0322",
+        "RUSTSEC-2026-0323",
+        "RUSTSEC-2026-0324",
+        "RUSTSEC-2026-0325",
+        "RUSTSEC-2026-0326",
+        "RUSTSEC-2026-0327",
+        "RUSTSEC-2026-0378",
+        "RUSTSEC-2026-0379",
+        "RUSTSEC-2026-0380",
+        "RUSTSEC-2026-0384",
+        "RUSTSEC-2026-0385",
+        "RUSTSEC-2026-0386",
+        "RUSTSEC-2026-0387"
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip",
+      "attemptAt": "2026-10-24T21:24:49.247666Z",
+      "httpStatus": 200,
+      "headers": {
+        "x-goog-generation": "1792793871955691",
+        "x-goog-metageneration": "1",
+        "x-goog-stored-content-length": "10429395",
+        "x-goog-hash": "md5=xaqvFKyncQRjqGeEdfs3aA==",
+        "content-length": "10429395",
+        "date": "Sat, 24 Oct 2026 20:47:31 GMT",
+        "last-modified": "Fri, 23 Oct 2026 22:17:52 GMT",
+        "etag": "\"c5aaaf14aca7710463a8678475fb3768\"",
+        "content-type": "application/zip"
+      },
+      "checkedAt": "2026-10-24T21:24:52.822131Z",
+      "bytes": 10429395,
+      "sha256": "885a2d3833b80e74db4c1c652338b3f6b75d0f19faf4a446940ced1ca7cb05d2",
+      "status": "success",
+      "ecosystem": "Maven",
+      "previousSuccess": "2026-10-23T21:55:27.677412Z",
+      "previousSuccessfulFetchAt": "2026-10-23T21:54:34.795325Z",
+      "overlapFromInclusive": "2026-10-22T21:55:27.677412Z",
+      "overlapBasis": "previous lastSuccessfulContentCheckAt minus 24 hours; full canonical-content diff also covers timestamp-preserving changes",
+      "lastSuccessfulContentCheckAt": "2026-10-24T21:25:05.974822Z",
+      "lastSuccessfulFetchAt": "2026-10-24T21:24:52.822131Z",
+      "generation": "1792793871955691",
+      "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip?generation=1792793871955691",
+      "archiveBytes": 10429395,
+      "archiveSha256": "885a2d3833b80e74db4c1c652338b3f6b75d0f19faf4a446940ced1ca7cb05d2",
+      "baselineFetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip?generation=1792716493792831",
+        "attemptAt": "2026-10-24T21:24:52.822188Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "date": "Sat, 24 Oct 2026 21:24:56 GMT",
+          "last-modified": "Fri, 23 Oct 2026 00:48:13 GMT",
+          "etag": "\"58eeafb9a37c3c9fe12540b6cafa76d1\"",
+          "x-goog-generation": "1792716493792831",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-length": "10427839",
+          "x-goog-hash": "md5=WO6vuaN8PJ/hJUC2yvp20Q==",
+          "content-length": "10427839"
+        },
+        "checkedAt": "2026-10-24T21:24:56.590024Z",
+        "bytes": 10427839,
+        "sha256": "8edd5749b195a4c5ebdd15f24c792ae76b88932ddc11b835e7ddfa9ddefc6662",
+        "status": "success"
+      },
+      "baselineDigestVerified": true,
+      "baselineCrcReadCompleted": true,
+      "crcReadCompleted": true,
+      "records": 7199,
+      "prefixCounts": {
+        "GHSA": 7197,
+        "MAL": 2
+      },
+      "membersRead": 7199,
+      "baselineMembersRead": 7198,
+      "duplicateIdsWithinArchive": [],
+      "baselineDuplicateIdsWithinArchive": [],
+      "diff": {
+        "added": {
+          "nonMal": [
+            "GHSA-4x29-79gh-6v8q"
+          ],
+          "mal": []
+        },
+        "modified": {
+          "nonMal": [],
+          "mal": []
+        },
+        "removed": {
+          "nonMal": [],
+          "mal": []
+        }
+      },
+      "contentStatus": "checked-changed",
+      "overlapWindowNonMalIds": [
+        "GHSA-4x29-79gh-6v8q",
+        "GHSA-rhgq-f8x5-j2jc",
+        "GHSA-v897-pv23-r8cw"
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip",
+      "attemptAt": "2026-10-24T21:24:50.215944Z",
+      "httpStatus": 200,
+      "headers": {
+        "x-goog-generation": "1792585087442087",
+        "x-goog-metageneration": "1",
+        "x-goog-stored-content-length": "2676989",
+        "x-goog-hash": "md5=c+Q2jBPzqC3dFqL0LYDysQ==",
+        "content-length": "2676989",
+        "date": "Sat, 24 Oct 2026 21:23:53 GMT",
+        "last-modified": "Wed, 21 Oct 2026 12:18:07 GMT",
+        "etag": "\"73e4368c13f3a82ddd16a2f42d80f2b1\"",
+        "content-type": "application/zip"
+      },
+      "checkedAt": "2026-10-24T21:24:52.698071Z",
+      "bytes": 2676989,
+      "sha256": "3ee198b4ca72eaf3bf4ef039f5e6e55f195fd385bb82bf2ccb3b6dbc53955e62",
+      "status": "success",
+      "ecosystem": "NuGet",
+      "previousSuccess": "2026-10-23T21:55:28.826238Z",
+      "previousSuccessfulFetchAt": "2026-10-23T21:54:34.589160Z",
+      "overlapFromInclusive": "2026-10-22T21:55:28.826238Z",
+      "overlapBasis": "previous lastSuccessfulContentCheckAt minus 24 hours; full canonical-content diff also covers timestamp-preserving changes",
+      "lastSuccessfulContentCheckAt": "2026-10-24T21:24:59.865748Z",
+      "lastSuccessfulFetchAt": "2026-10-24T21:24:52.698071Z",
+      "generation": "1792585087442087",
+      "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip?generation=1792585087442087",
+      "archiveBytes": 2676989,
+      "archiveSha256": "3ee198b4ca72eaf3bf4ef039f5e6e55f195fd385bb82bf2ccb3b6dbc53955e62",
+      "baselineFetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip?generation=1792585087442087",
+        "attemptAt": "2026-10-24T21:24:52.698125Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "date": "Sat, 24 Oct 2026 21:24:56 GMT",
+          "last-modified": "Wed, 21 Oct 2026 12:18:07 GMT",
+          "etag": "\"73e4368c13f3a82ddd16a2f42d80f2b1\"",
+          "x-goog-generation": "1792585087442087",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-length": "2676989",
+          "x-goog-hash": "md5=c+Q2jBPzqC3dFqL0LYDysQ==",
+          "content-length": "2676989"
+        },
+        "checkedAt": "2026-10-24T21:24:56.290441Z",
+        "bytes": 2676989,
+        "sha256": "3ee198b4ca72eaf3bf4ef039f5e6e55f195fd385bb82bf2ccb3b6dbc53955e62",
+        "status": "success"
+      },
+      "baselineDigestVerified": true,
+      "baselineCrcReadCompleted": true,
+      "crcReadCompleted": true,
+      "records": 1965,
+      "prefixCounts": {
+        "GHSA": 1183,
+        "MAL": 782
+      },
+      "membersRead": 1965,
+      "baselineMembersRead": 1965,
+      "duplicateIdsWithinArchive": [],
+      "baselineDuplicateIdsWithinArchive": [],
+      "diff": {
+        "added": {
+          "nonMal": [],
+          "mal": []
+        },
+        "modified": {
+          "nonMal": [],
+          "mal": []
+        },
+        "removed": {
+          "nonMal": [],
+          "mal": []
+        }
+      },
+      "contentStatus": "checked-unchanged",
+      "overlapWindowNonMalIds": []
+    }
+  ],
+  "archiveRecords": 284725,
+  "uniqueSourceIds": 284316,
+  "duplicateIdsAcrossArchives": 409,
+  "crossArchiveVariants": [],
+  "canonicalDiffCountsUniqueIds": {
+    "added": 37,
+    "modified": 36,
+    "removed": 0
+  },
+  "maliciousDiffCountsUniqueIds": {
+    "added": 6,
+    "modified": 0,
+    "removed": 0
+  },
+  "comparisonScope": "All seven current and previous immutable-generation archives fully CRC-read and JSON-parsed; baselines verified by stored SHA256, byte size and generation. JSON object keys canonicalized recursively; array order and all values retained. Full-content SHA256 compared, not modification timestamps alone.",
+  "apiVerification": {
+    "attempted": false,
+    "status": "not-attempted",
+    "note": "This audit fetched official ecosystem full exports only; no individual OSV API response is claimed as read.",
+    "source": "OSV individual-record API"
+  },
+  "limitations": [
+    "Seven independently updated exports, not one synchronized global snapshot.",
+    "MAL records counted separately and not library-vulnerability candidates.",
+    "Only id and aliases form identity links. related and upstream fields never identify an equal advisory.",
+    "Export references are retained, not claimed as independently visited primary sources."
+  ],
+  "overallStatus": "success-changed",
+  "overlapWindow": {
+    "basis": "Each source lastSuccessfulContentCheckAt in the previous successful audit, minus exactly 24 hours; the full archive content comparison is authoritative for additions/corrections outside the timestamp window.",
+    "allCurrentNonMalIdsInUnion": 148
+  }
+}

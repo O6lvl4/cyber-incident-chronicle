@@ -1,0 +1,257 @@
+{
+  "reportDateJst": "2026-10-25",
+  "checkedAt": "2026-10-24T21:31:22.593420Z",
+  "recordId": "GHSA-9v8h-qqgm-4m35",
+  "decision": "update-existing-record-no-new-incident-or-vulnerability-count",
+  "findings": [
+    "上流C実装の3系列修正1.0.10 / 1.1.1 / 1.2.1をGoogle CNAと各公式リリースで確認。",
+    "PyPIのbrotli1.2.1とbrotlicffi1.2.1.0の配布を公式メタデータで別確認。brotlicffi開発元説明の変更履歴にlibbrotli1.2.1とCVE修正の対応がある。下限のReviewed1.0.3とPYSEC0は推測統一しない。",
+    "Envoy GHSAの本文がCVE-2026-111497との同一性を明示。列挙された影響版と5修正版、Brotli decompressor構成条件を保持し、Pythonのaffected配列へ混在させない。",
+    "Istioの3系列修正版とBrotli有効化条件を公式告知・全3リリースで確認。ページ表示日10月15日とCVE追記履歴10月20日を区別。告知全体7.7をBrotli個別CVSSへ流用しない。",
+    "oss-securityの10月24日続報は発見の手がかりとして取得したが、範囲・修正版は開発元で検証。Patch the PlanetはHTTP200のJavaScript起動ページのみで本文未取得のため根拠として採用しない。"
+  ],
+  "sources": [
+    {
+      "key": "cve-brotli",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-111497",
+      "httpStatus": 200,
+      "bytes": 4912,
+      "sha256": "1d56bff0adfabffc32fd16b67f04447869d22483d3f192471b1e979372eb7777",
+      "checkedAt": "2026-10-24T21:23:34.794590+00:00"
+    },
+    {
+      "key": "brotli121",
+      "url": "https://api.github.com/repos/google/brotli/releases/tags/v1.2.1",
+      "httpStatus": 200,
+      "bytes": 13459,
+      "sha256": "3443f737ca46b56a688764cb6e87129ba7dfbdea57abfea38798705f7bdc4661",
+      "checkedAt": "2026-10-24T21:23:34.795710+00:00"
+    },
+    {
+      "key": "brotli111",
+      "url": "https://api.github.com/repos/google/brotli/releases/tags/v1.1.1",
+      "httpStatus": 200,
+      "bytes": 1762,
+      "sha256": "6926aaee1813925df97be73978c487cd4bb0dc81c76f253159abf54ed5b9c355",
+      "checkedAt": "2026-10-24T21:23:34.798560+00:00"
+    },
+    {
+      "key": "brotli1010",
+      "url": "https://api.github.com/repos/google/brotli/releases/tags/v1.0.10",
+      "httpStatus": 200,
+      "bytes": 1955,
+      "sha256": "bcdfe7e35b4f5c57691ae26ebb96b304b64febebce3b717ace8c88e4552692f3",
+      "checkedAt": "2026-10-24T21:23:34.801695+00:00"
+    },
+    {
+      "key": "brotli-pypi",
+      "url": "https://pypi.org/pypi/brotli/json",
+      "httpStatus": 200,
+      "bytes": 660460,
+      "sha256": "5e6ba73f6e7ccdc331de8780a253a0352605966f7a947f6e1d1c923162b8cc7c",
+      "checkedAt": "2026-10-24T21:23:34.802603+00:00"
+    },
+    {
+      "key": "brotlicffi-pypi",
+      "url": "https://pypi.org/pypi/brotlicffi/json",
+      "httpStatus": 200,
+      "bytes": 206822,
+      "sha256": "38b0e36bcbdb265c1338d65ce87d5cf1b09fa940636be7ea91817f9f008a6698",
+      "checkedAt": "2026-10-24T21:23:34.804356+00:00"
+    },
+    {
+      "key": "brotli-pysec",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4322",
+      "attemptAt": "2026-10-24T21:25:18.032604Z",
+      "checkedAt": "2026-10-24T21:25:20.987600Z",
+      "httpStatus": 200,
+      "bytes": 2592,
+      "sha256": "23b692022ec46808e2143ad16058ed23eb323378c54c2135b107fab0abb28185",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "brotlicffi-pysec",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4323",
+      "attemptAt": "2026-10-24T21:25:18.052286Z",
+      "checkedAt": "2026-10-24T21:25:21.027749Z",
+      "httpStatus": 200,
+      "bytes": 2618,
+      "sha256": "3c5e8d59f6c05b85495d248e2cd1580d2e443319a7fb80753a4740795666363a",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "envoy-brotli",
+      "url": "https://api.github.com/repos/envoyproxy/envoy/security-advisories/GHSA-3wvj-j6qm-62mr",
+      "attemptAt": "2026-10-24T21:25:17.904348Z",
+      "checkedAt": "2026-10-24T21:25:22.233696Z",
+      "httpStatus": 200,
+      "bytes": 3145,
+      "sha256": "5fe6a782eeea350ff6b6c146ff91b20058a072da26d6a768dbdd93afbcebac6d",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "istio-security",
+      "url": "https://istio.io/latest/news/security/istio-security-2026-007/",
+      "attemptAt": "2026-10-24T21:25:11.898283Z",
+      "checkedAt": "2026-10-24T21:25:17.856407Z",
+      "httpStatus": 200,
+      "bytes": 27937,
+      "sha256": "89e6addde0468b3568f3b293ed2c13feedff717aedf82c770be2f2cc8fcb7fe1",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "istio1299",
+      "url": "https://istio.io/latest/news/releases/1.29.x/announcing-1.29.9/",
+      "attemptAt": "2026-10-24T21:25:11.900582Z",
+      "checkedAt": "2026-10-24T21:25:18.051992Z",
+      "httpStatus": 200,
+      "bytes": 33329,
+      "sha256": "dac1faa9e836706fb529ea106bd3b72986f88e43b0cb5abe60b3806fa1450a99",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "istio1306",
+      "url": "https://istio.io/latest/news/releases/1.30.x/announcing-1.30.6/",
+      "attemptAt": "2026-10-24T21:25:11.902011Z",
+      "checkedAt": "2026-10-24T21:25:18.032380Z",
+      "httpStatus": 200,
+      "bytes": 33528,
+      "sha256": "7eefd9b4c2ecd7e27bcc8c274afc23ca5716eec2f0267f71920bf9ebb46a7dd3",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "istio1312",
+      "url": "https://istio.io/latest/news/releases/1.31.x/announcing-1.31.2/",
+      "attemptAt": "2026-10-24T21:25:16.249301Z",
+      "checkedAt": "2026-10-24T21:25:17.904122Z",
+      "httpStatus": 200,
+      "bytes": 34627,
+      "sha256": "427ad60bd2c59e892630c5cf3aa5e4c83114f2da036bf623e5285bb4291806a8",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "istio-log",
+      "url": "https://istio.io/latest/docs/releases/log/",
+      "attemptAt": "2026-10-24T21:25:16.250793Z",
+      "checkedAt": "2026-10-24T21:25:18.103829Z",
+      "httpStatus": 200,
+      "bytes": 354923,
+      "sha256": "cb128538d5c2ab2991fc166ad0282d00915e502adc6ec249e52d79ce84f1e35c",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "brotli-correction",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/24/6",
+      "attemptAt": "2026-10-24T21:25:16.564353Z",
+      "checkedAt": "2026-10-24T21:25:23.254467Z",
+      "httpStatus": 200,
+      "bytes": 6946,
+      "sha256": "d1a7054e11e23b38ddd21e397735f80b097c1dbc5f27ca7b1a7e4f915ad9d4c6",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "brotli-disclosure",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/23/25",
+      "attemptAt": "2026-10-24T21:25:16.909279Z",
+      "checkedAt": "2026-10-24T21:25:23.558380Z",
+      "httpStatus": 200,
+      "bytes": 6999,
+      "sha256": "403bcfac8fc411e16f789cff11b3276e6681bf487365c944602a6d40b484983c",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "patchtheplanet",
+      "url": "https://patchtheplanet.org/brotli",
+      "attemptAt": "2026-10-24T21:25:17.615292Z",
+      "checkedAt": "2026-10-24T21:25:21.713436Z",
+      "httpStatus": 200,
+      "bytes": 2409,
+      "sha256": "39fc95fa2e9cd8036bc29cfbca08c7b92592258d1381f2e3a609d5ba27e160d1",
+      "status": "success",
+      "headers": {}
+    },
+    {
+      "key": "brotlicffi-changelog",
+      "url": "https://raw.githubusercontent.com/python-hyper/brotlicffi/v1.2.1.0/CHANGELOG.rst",
+      "attemptAt": "2026-10-24T21:25:17.856703Z",
+      "checkedAt": "2026-10-24T21:25:21.327357Z",
+      "httpStatus": 404,
+      "bytes": 14,
+      "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+      "status": "failed",
+      "headers": {}
+    },
+    {
+      "key": "brotlicffi-tag",
+      "url": "https://api.github.com/repos/python-hyper/brotlicffi/git/ref/tags/v1.2.1.0",
+      "attemptAt": "2026-10-24T21:27:18.990293Z",
+      "checkedAt": "2026-10-24T21:27:24.630961Z",
+      "httpStatus": 200,
+      "bytes": 353,
+      "sha256": "aebc104018620ba961127e220caa3534375cacd10e973c67fb71eada707985e8",
+      "status": "success",
+      "headers": {}
+    }
+  ],
+  "envoyFields": {
+    "ghsa_id": "GHSA-3wvj-j6qm-62mr",
+    "cve_id": null,
+    "summary": "Out-of-Bounds Write in Brotli Decompressor",
+    "published_at": "2026-10-23T16:03:27Z",
+    "updated_at": "2026-10-23T16:03:27Z",
+    "withdrawn_at": null,
+    "severity": "critical",
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "score": 9.2
+      }
+    },
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "envoy proxy",
+          "name": "Envoy"
+        },
+        "vulnerable_version_range": "v1.39.2, v1.38.5, v1.37.7, v1.36.11",
+        "patched_versions": "v1.40.0, v1.39.3, v1.38.6, v1.37.8, v1.36.12",
+        "vulnerable_functions": []
+      }
+    ]
+  },
+  "pythonReleases": [
+    {
+      "package": "brotli",
+      "release": "1.2.1",
+      "fileCount": 143,
+      "firstUpload": "2026-10-22T13:57:11.170043Z",
+      "officialProjectUrls": {
+        "Homepage": "https://github.com/google/brotli"
+      }
+    },
+    {
+      "package": "brotlicffi",
+      "release": "1.2.1.0",
+      "fileCount": 19,
+      "firstUpload": "2026-10-22T16:19:00.566448Z",
+      "officialProjectUrls": {
+        "Homepage": "https://github.com/python-hyper/brotlicffi"
+      }
+    }
+  ],
+  "productCoverageDisposition": "下流製品情報はライブラリ記録の注意書き・監査に保持。製品カテゴリ42件には新規追加せず、Envoy/Istioが独立収録済みと主張しない。"
+}

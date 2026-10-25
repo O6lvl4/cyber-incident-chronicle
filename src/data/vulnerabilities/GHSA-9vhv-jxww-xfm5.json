@@ -1,0 +1,86 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9vhv-jxww-xfm5",
+  "aliases": [
+    "CVE-2026-112913"
+  ],
+  "title": "filelock：WindowsのSQLite補助ファイルでロック取得を妨害",
+  "summary": "他のローカルアカウントが共有ディレクトリに置いたSQLiteのWALやjournalをReadWriteLockが処理し、取得時のI/Oエラーや条件付きのファイル削除に至り得る。",
+  "publishedAt": "2026-10-23T22:28:19Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-9vhv-jxww-xfm5/GHSA-9vhv-jxww-xfm5.json",
+  "modifiedAt": "2026-10-23T22:28:19Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "filelock",
+      "ranges": [
+        {
+          "affected": ">= 3.20.4, <= 4.2.0",
+          "fixed": "4.2.1",
+          "sourceUrl": "https://github.com/tox-dev/filelock/security/advisories/GHSA-9vhv-jxww-xfm5"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/tox-dev/filelock/security/advisories/GHSA-9vhv-jxww-xfm5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 3.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://github.com/tox-dev/filelock/security/advisories/GHSA-9vhv-jxww-xfm5"
+      },
+      {
+        "version": "3.1",
+        "score": 3.6,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L",
+        "sourceUrl": "https://github.com/tox-dev/filelock/security/advisories/GHSA-9vhv-jxww-xfm5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-9vhv-jxww-xfm5/GHSA-9vhv-jxww-xfm5.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:28:19Z",
+      "modifiedAt": "2026-10-23T22:28:19Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "filelock: ReadWriteLock on Windows acts on SQLite side files another local user places beside its database",
+      "url": "https://github.com/advisories/GHSA-9vhv-jxww-xfm5",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "ReadWriteLock on Windows acts on SQLite side files another local user places beside its database",
+      "url": "https://github.com/tox-dev/filelock/security/advisories/GHSA-9vhv-jxww-xfm5",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T16:49:31Z",
+      "modifiedAt": "2026-10-20T14:24:14Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "Windowsと他アカウントがファイルを作成できるディレクトリが前提。利用者専用の領域はこの経路の対象外。",
+    "構造化CVSS3.1 3.3はWALによる可用性影響の評価。開発元本文は追加条件の必要な削除variantに3.6と別vectorを記すため、両者を混同しない。"
+  ]
+}

@@ -1,5 +1,21 @@
 # 脆弱性データのソース別カバレッジ検証
 
+## 2026-10-25の更新記録
+
+固定コミットを `636c67b12b53b8156458e7fd63072a89a388e634`（2026-10-24T18:39:41Z）へ更新。前回成功固定ソースからの全267変更ファイルを比較し、Reviewedの追加34件・変更0件・削除0件とunreviewed233件を区別した。Reviewed全37,192ファイルを読込・解析し、対象19,254アドバイザリを全件収録。期間前13,864・対象エコシステム外4,074・変換失敗0。前回成功確認時刻から24時間重複する窓に加え、全文比較で遅延追加や訂正を確認する。
+
+表示は19,405件（未撤回18,538・撤回履歴867）、前回から29件増加。Reviewedの対象追加33件のうち5件は既存の個別収録と集約するため表示28件増、補助ソースから別の脆弱性1件を追加した。対象外の新規1件はPackagistのみのLaravel。新しい撤回・再有効化・削除はなく、履歴を維持する。当日の新規公表数ではない。個別編集531件は重ね合わせ379件と固定ソース外152件からなる。
+
+- 新規Reviewed34件すべての開発元GHSA APIを取得・照合し、28新規個別編集と既存5件の再確認へ反映。既存の日本語要約・元の日時根拠・系列別範囲を保持する。全19,405件の開発元を今回再確認した意味ではない。公開監査は必要な構造化項目・ハッシュ・確認内容に限定し、原API本文・PoC・無関係な個人情報を含めない。
+- virtualenv7件は開発元が確認した21.14.8と、Reviewedのより広い範囲を区別し、以前の版が安全とは断定しない。一時app-dataの別件は開発元の導入境界20.0.6とReviewedの21.14.8を保持。virtualenv2件のLow対Moderate、MSAL NodeのMedium/CVSS3.1 5.9対Highという評価差も出典別に残す。
+- Pillow ArrowのGHSAは13.0.0を含むように見える範囲と空の修正版欄を持つが、マージ済みPR・修正commitのtagへの包含・公式リリースから13.0.0の修正を確認。virtualenv一時app-dataの21.14.10、Happy DOMの21.0.4も計8取得のリリース・修正資料で確認し、本文に残る「修正版未公開」等の記述との差を保存する。Pillowのolefileやalignment、MLflowの任意scorer依存、multerの非同期filterなどの適用条件を一律化しない。
+- OSV7エクスポート284,725記録・284,316 IDsを前回固定generationのSHA256・サイズ、全ZIP CRC、正規化全文で比較。非MAL37追加・36変更、MAL6追加・変更0、削除0、同一IDのエクスポート間内容差0。API7件も対応exportと全文一致。成功内容確認時刻−24時間の重複窓に加え全文比較を維持する。MALを通常のライブラリ脆弱性へ混ぜない。
+- @hapi/contentのCVE-2026-115728は6.0.1以上6.0.3未満の不完全修正。CNAは旧GHSA/CVEをrelatedと明示し、修正PR・tag・npmを確認して別記録1件を追加。OSVの旧GHSAへの追加aliasを採用せず、旧問題の修正版6.0.1と混同しない。Vyper3件のCVE別名を追補し、nested-callの開発元/CNAの完全修正0.3.0とDBの部分修正0.2.6の差を保存。Entire CLIの通常版v0.7.7とnightly v0.7.8-nightly.*の境界、Uni-CLI・Wasmtimeの別名も出典付きで保持する。
+- Brotliの上流3系列1.0.10／1.1.1／1.2.1、Pythonの2パッケージの1.2.1／1.2.1.0、Envoy・Istioの下流版と有効化条件を公式資料で確認。下流製品をPyPI範囲へ混在させず、Envoyが列挙した版より古い版へ推定拡張しない。Istioの告知日10月15日とBrotli追記履歴10月20日を区別し、告知全体のCVSSをBrotli個別の評価に流用しない。
+- JVN/JPCERTの3フィード91項目は変更0。MyJVNは503、CISA KEVは403で、以前の成功点と良好な履歴1,271行を保持。crypto-bigintは開発元の0.7.6修正を確認したが安定GHSA/CVEがないため候補として保持する。以前からの未確定候補も推測で解消しない。製品カテゴリーは42件を維持し、Envoyの同一CVE重複に関するスキーマ上の制約など未収録の理由も別記する。取得失敗を変更なし・未掲載・悪用なしと扱わない。
+
+[Reviewed差分](data/github-reviewed-delta-2026-10-25.json)、[開発元確認](data/reviewed-maintainer-review-2026-10-25.json)、[補助ソース](data/supplemental-source-status-2026-10-25.json)、[補助候補](data/supplemental-candidate-delta-2026-10-25.json)、[個別追加](data/supplemental-individual-review-2026-10-25.json)、[別名追補](data/supplemental-alias-update-review-2026-10-25.json)、[Brotli下流確認](data/brotli-downstream-review-2026-10-25.json)、[保留候補](data/supplemental-held-candidate-review-2026-10-25.json)、[取得失敗](data/supplemental-fetch-failures-2026-10-25.json)、[製品候補確認](data/product-advisory-review-2026-10-25.json)を参照。以降は当時の確認履歴として保持する。
+
 ## 2026-10-24の更新記録
 
 固定コミットを `073abc5bb4bf1211995d8cec3f32de47ce5195ee`（2026-10-23T21:51:41Z）へ更新。前回成功固定ソースとの差分74ファイル（追加67・変更7）とReviewed全37,158ファイルを解析した。対象19,221アドバイザリ、期間前13,864・対象外4,073・変換失敗0。前回成功確認時刻から24時間重複する窓に加え、全文差分で遅延追加・訂正を確認する。

@@ -1,0 +1,272 @@
+{
+  "reportDateJst": "2026-10-25",
+  "checkedAt": "2026-10-24T21:31:22.593420Z",
+  "newDistinctVulnerabilityCount": 1,
+  "records": [
+    {
+      "reportDateJst": "2026-10-25",
+      "checkedAt": "2026-10-24T21:31:22.593420Z",
+      "id": "CVE-2026-115728",
+      "decision": "add-separate-incomplete-fix-vulnerability",
+      "affected": {
+        "ecosystem": "npm",
+        "package": "@hapi/content",
+        "range": ">=6.0.1,<6.0.3",
+        "fixed": "6.0.3"
+      },
+      "identityConflict": {
+        "osvSource": "GHSA-jg4p-7fhp-p32p",
+        "osvAddsAlias": "CVE-2026-115728",
+        "accepted": false,
+        "reason": "CNA115728 explicitly describes an incomplete fix of35213 and labels oldGHSA as related. Old developer advisory retains35213 with <=6.0.0 fixed6.0.1. These are not asserted to be the same vulnerability.",
+        "oldMaintainerFields": {
+          "ghsa_id": "GHSA-jg4p-7fhp-p32p",
+          "cve_id": "CVE-2026-35213",
+          "summary": "Regular Expression Denial of Service (ReDoS) in @hapi/content HTTP header parsing",
+          "published_at": "2026-04-02T08:54:11Z",
+          "updated_at": "2026-04-02T18:43:52Z",
+          "withdrawn_at": null,
+          "severity": "high",
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "score": 8.7
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "@hapi/content"
+              },
+              "vulnerable_version_range": "<= 6.0.0",
+              "patched_versions": "6.0.1",
+              "vulnerable_functions": []
+            }
+          ]
+        },
+        "newCnaFields": {
+          "metadata": {
+            "cveId": "CVE-2026-115728",
+            "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+            "state": "PUBLISHED",
+            "assignerShortName": "VulnCheck",
+            "dateReserved": "2026-10-23T11:40:38.070Z",
+            "datePublished": "2026-10-23T12:55:08.425Z",
+            "dateUpdated": "2026-10-23T12:55:08.425Z"
+          },
+          "title": "@hapi/content 6.0.1 before 6.0.3 ReDoS via Content.disposition() Parameter Parsing",
+          "affected": [
+            {
+              "vendor": "hapijs",
+              "product": "@hapi/content",
+              "defaultStatus": "unaffected",
+              "versions": [
+                {
+                  "version": "6.0.1",
+                  "lessThan": "6.0.3",
+                  "status": "affected",
+                  "versionType": "semver"
+                }
+              ],
+              "packageURL": "pkg:npm/%40hapi/content",
+              "repo": "https://github.com/hapijs/content"
+            }
+          ],
+          "metrics": [
+            {
+              "format": "CVSS",
+              "cvssV4_0": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "attackRequirements": "NONE",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "vulnConfidentialityImpact": "NONE",
+                "vulnIntegrityImpact": "NONE",
+                "vulnAvailabilityImpact": "HIGH",
+                "subConfidentialityImpact": "NONE",
+                "subIntegrityImpact": "NONE",
+                "subAvailabilityImpact": "NONE",
+                "baseScore": 8.7,
+                "baseSeverity": "HIGH"
+              }
+            },
+            {
+              "format": "CVSS",
+              "cvssV3_1": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              }
+            }
+          ],
+          "references": [
+            {
+              "url": "https://github.com/hapijs/content/pull/42",
+              "tags": [
+                "issue-tracking",
+                "patch"
+              ]
+            },
+            {
+              "url": "https://github.com/hapijs/content/commit/0993851dc7234976a3fce3a7c31662b213c940fd",
+              "tags": [
+                "patch"
+              ]
+            },
+            {
+              "url": "https://github.com/hapijs/content/tree/v6.0.3",
+              "tags": [
+                "release-notes"
+              ]
+            },
+            {
+              "url": "https://github.com/hapijs/content/blob/v6.0.2/lib/index.js#L96",
+              "tags": [
+                "technical-description"
+              ]
+            },
+            {
+              "url": "https://github.com/hapijs/content/security/advisories/GHSA-jg4p-7fhp-p32p",
+              "tags": [
+                "related",
+                "vendor-advisory"
+              ],
+              "name": "GitHub Security Advisory (GHSA-jg4p-7fhp-p32p)"
+            },
+            {
+              "name": "VulnCheck Advisory: @hapi/content 6.0.1 before 6.0.3 ReDoS via Content.disposition() Parameter Parsing",
+              "tags": [
+                "third-party-advisory"
+              ],
+              "url": "https://www.vulncheck.com/advisories/hapi-content-6.0.1-before-6.0.3-redos-via-content-disposition-parameter-parsing"
+            }
+          ]
+        }
+      },
+      "verified": [
+        "PR42 is merged; fix commit0993851 eliminates quadratic disposition parsing.",
+        "Official v6.0.3 package.json and npm version metadata both name @hapi/content6.0.3.",
+        "Official v6.0.3 lib/index.js contains the corrected parser and undefined-capture guard.",
+        "CNA publication2026-10-23 is kept distinct from upstream patch2026-10-21."
+      ],
+      "sourceReceipts": [
+        {
+          "key": "hapi-osv",
+          "url": "https://api.osv.dev/v1/vulns/GHSA-jg4p-7fhp-p32p",
+          "attemptAt": "2026-10-24T21:29:23.560031Z",
+          "checkedAt": "2026-10-24T21:29:27.113057Z",
+          "httpStatus": 200,
+          "bytes": 2046,
+          "sha256": "fa69974668328baee89c93802e1bcb5f94dc4a35f01141eff4973ee1397a4023",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "hapi-ghsa",
+          "url": "https://api.github.com/repos/hapijs/content/security-advisories/GHSA-jg4p-7fhp-p32p",
+          "attemptAt": "2026-10-24T21:26:38.247245Z",
+          "checkedAt": "2026-10-24T21:26:42.107637Z",
+          "httpStatus": 200,
+          "bytes": 2940,
+          "sha256": "29d34b72ddf503c691df244c97fc57cb4d039520e71419b2efb39d4bc0009415",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "hapi-original-cve",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-35213",
+          "attemptAt": "2026-10-24T21:26:38.248763Z",
+          "checkedAt": "2026-10-24T21:26:43.208589Z",
+          "httpStatus": 200,
+          "bytes": 2553,
+          "sha256": "677c2e6559e011b2090233c935f7ebd25474d4125788cccd1c0d2bc4a6f814fe",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "hapi-new-cve",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-115728",
+          "attemptAt": "2026-10-24T21:26:38.248180Z",
+          "checkedAt": "2026-10-24T21:26:43.135894Z",
+          "httpStatus": 200,
+          "bytes": 3238,
+          "sha256": "a253c1eb4ce575c7dcbce5c674e276a4ab881e67efd046b73783fcaa2eb6cbb1",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "hapi-pr42",
+          "url": "https://api.github.com/repos/hapijs/content/pulls/42",
+          "attemptAt": "2026-10-24T21:27:18.986947Z",
+          "checkedAt": "2026-10-24T21:27:24.766460Z",
+          "httpStatus": 200,
+          "bytes": 19392,
+          "sha256": "4d59dde8bd3544d6c7f64ac3ceb4f7143c3bcb888be9ebc147ff3f30dfb28330",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "hapi-fix",
+          "url": "https://api.github.com/repos/hapijs/content/commits/0993851dc7234976a3fce3a7c31662b213c940fd",
+          "attemptAt": "2026-10-24T21:27:18.987830Z",
+          "checkedAt": "2026-10-24T21:27:24.570236Z",
+          "httpStatus": 200,
+          "bytes": 6640,
+          "sha256": "b621aa38295760780c6eee2be9dafb35f1d0965131009a2100692c65e0c8340d",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "hapi-package603",
+          "url": "https://raw.githubusercontent.com/hapijs/content/v6.0.3/package.json",
+          "attemptAt": "2026-10-24T21:27:18.988584Z",
+          "checkedAt": "2026-10-24T21:27:23.219768Z",
+          "httpStatus": 200,
+          "bytes": 723,
+          "sha256": "418251eca28b557ae072bc59a4187f4102f678e5d7a0b0f56bf485620380c6d8",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "hapi-registry603",
+          "url": "https://registry.npmjs.org/@hapi/content/6.0.3",
+          "attemptAt": "2026-10-24T21:27:18.989351Z",
+          "checkedAt": "2026-10-24T21:27:22.617200Z",
+          "httpStatus": 200,
+          "bytes": 1985,
+          "sha256": "d9463135bc25968353dbf0639cc93efe5173ca4daf57fad9ed459ac9900a82f3",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "hapi-lib603",
+          "url": "https://raw.githubusercontent.com/hapijs/content/v6.0.3/lib/index.js",
+          "attemptAt": "2026-10-24T21:28:02.557460Z",
+          "checkedAt": "2026-10-24T21:28:05.848791Z",
+          "httpStatus": 200,
+          "bytes": 5951,
+          "sha256": "e7106ee566fed58774a9d53d04cab416652fb46f84abcbea0df4f43253ecb0e5",
+          "status": "success",
+          "headers": {}
+        }
+      ]
+    }
+  ]
+}

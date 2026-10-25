@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v3f4-w7r7-v3hm",
+  "aliases": [
+    "CVE-2026-58497"
+  ],
+  "title": "Uni-CLI：旧HTTP MCPのOrigin検証不備",
+  "summary": "旧JSON-RPC-over-HTTP MCPを起動した環境で、悪意あるWebページからlocalhostのツール呼び出しが届き得る。Streamable HTTPは既にOrigin境界を検証しており、本件の対象とは区別する。",
+  "publishedAt": "2026-06-19T21:43:09Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/06/GHSA-v3f4-w7r7-v3hm/GHSA-v3f4-w7r7-v3hm.json",
+  "modifiedAt": "2026-06-19T21:43:09Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:29:54.453536Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@zenalexa/unicli",
+      "ranges": [
+        {
+          "affected": "< 0.225.2",
+          "fixed": "0.225.2",
+          "sourceUrl": "https://api.github.com/repos/olo-dot-io/Uni-CLI/security-advisories/GHSA-v3f4-w7r7-v3hm"
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/olo-dot-io/Uni-CLI/security-advisories/GHSA-v3f4-w7r7-v3hm",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/06/GHSA-v3f4-w7r7-v3hm/GHSA-v3f4-w7r7-v3hm.json"
+      },
+      {
+        "version": "4.0",
+        "score": 8.6,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-58497"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/06/GHSA-v3f4-w7r7-v3hm/GHSA-v3f4-w7r7-v3hm.json",
+      "publishedDate": "2026-06-19",
+      "publishedAt": "2026-06-19T21:43:09Z",
+      "modifiedAt": "2026-06-19T21:43:09Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Uni-CLI: Legacy HTTP MCP transport accepted browser-originated localhost requests",
+      "url": "https://github.com/advisories/GHSA-v3f4-w7r7-v3hm",
+      "publishedDate": "2026-06-19"
+    },
+    {
+      "type": "maintainer",
+      "title": "Legacy HTTP MCP transport accepted browser-originated localhost requests",
+      "url": "https://api.github.com/repos/olo-dot-io/Uni-CLI/security-advisories/GHSA-v3f4-w7r7-v3hm",
+      "publishedDate": "2026-06-19",
+      "publishedAt": "2026-06-19T04:27:20Z",
+      "modifiedAt": "2026-07-02T19:31:55Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Uni-CLI: Legacy HTTP MCP transport accepted browser-originated localhost requests",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-58497",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T14:49:42.619Z",
+      "modifiedAt": "2026-10-23T20:57:14.612Z"
+    }
+  ],
+  "caveats": [
+    "開発元GHSAとCNAを取得して確認。DBの公表・更新日時は開発元日時と区別する。",
+    "実悪用・KEVは未確認であり、悪用なし・未掲載を意味しない。",
+    "開発元GHSAはHighとするが数値CVSSは未記載。8.6/CVSS4.0はGitHub CNAの別出典評価として保持する。"
+  ]
+}

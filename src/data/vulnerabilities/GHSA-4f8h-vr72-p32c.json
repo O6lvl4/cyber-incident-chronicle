@@ -1,0 +1,94 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4f8h-vr72-p32c",
+  "aliases": [
+    "CVE-2026-113713"
+  ],
+  "title": "virtualenv：削除された一時app-dataへのseedリンクが残る",
+  "summary": "設定ファイルや環境変数でsymlink seedingを有効にした環境が一時app-dataへフォールバックすると、削除済みキャッシュへのリンクが残り、共有一時領域では他アカウントが取得したパスを後で読み込み得る。",
+  "publishedAt": "2026-10-23T22:26:57Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-4f8h-vr72-p32c/GHSA-4f8h-vr72-p32c.json",
+  "modifiedAt": "2026-10-23T22:26:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "virtualenv",
+      "ranges": [
+        {
+          "affected": ">= 20.0.6, < 21.14.10",
+          "fixed": "21.14.10",
+          "sourceUrl": "https://github.com/pypa/virtualenv/security/advisories/GHSA-4f8h-vr72-p32c"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/pypa/virtualenv/security/advisories/GHSA-4f8h-vr72-p32c",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-4f8h-vr72-p32c/GHSA-4f8h-vr72-p32c.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:26:57Z",
+      "modifiedAt": "2026-10-23T22:26:57Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "virtualenv: Temporary app-data can leave dangling seed package links",
+      "url": "https://github.com/advisories/GHSA-4f8h-vr72-p32c",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Temporary app-data can leave dangling seed package links",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-4f8h-vr72-p32c",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T16:21:55Z",
+      "modifiedAt": "2026-10-22T15:51:29Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "開発元の修正PR",
+      "url": "https://github.com/pypa/virtualenv/pull/3437",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T17:09:56Z"
+    },
+    {
+      "type": "release",
+      "title": "21.14.10",
+      "url": "https://github.com/pypa/virtualenv/releases/tag/21.14.10",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T17:32:00Z"
+    },
+    {
+      "type": "release",
+      "title": "開発元の修正commitとrelease tagの包含関係",
+      "url": "https://github.com/pypa/virtualenv/compare/b81995c3feab9e1edb453c75ffc6616e1a77335e...21.14.10",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "開発元の構造化範囲は20.0.6以上21.14.10未満、Reviewedは21.14.8以上21.14.10未満。本文では21.14.8の確認と歴史的境界の未検証を区別している。",
+    "本文の修正版未公開という記述は構造化欄と相違する。PR #3437のマージ、修正commitが21.14.10 tagに含まれること、同版の公開リリースで確認し、修正版は21.14.10とする。",
+    "共有一時領域と後続の利用が条件。通常のcopy seedingや利用者専用の一時領域へ影響を広げない。開発元LowとReviewed Moderateを別々に保持する。"
+  ]
+}

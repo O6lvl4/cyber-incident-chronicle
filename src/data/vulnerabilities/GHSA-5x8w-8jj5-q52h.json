@@ -1,0 +1,73 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5x8w-8jj5-q52h",
+  "aliases": [
+    "CVE-2026-112398"
+  ],
+  "title": "Pillow：FlashPixのJPEG復号でヒープバッファオーバーフロー",
+  "summary": "細工されたFlashPix画像のJPEG tileを復号する際に、出力バッファの範囲外へ書き込み、画像処理プロセスの権限でコードを実行され得る。",
+  "publishedAt": "2026-10-23T21:55:21Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-5x8w-8jj5-q52h/GHSA-5x8w-8jj5-q52h.json",
+  "modifiedAt": "2026-10-23T21:55:21Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pillow",
+      "ranges": [
+        {
+          "affected": "<= 12.3.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x8w-8jj5-q52h"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x8w-8jj5-q52h",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-5x8w-8jj5-q52h/GHSA-5x8w-8jj5-q52h.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:55:21Z",
+      "modifiedAt": "2026-10-23T21:55:21Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Heap buffer overflow in FlashPix (FPX) JPEG decoding leads to code execution",
+      "url": "https://github.com/advisories/GHSA-5x8w-8jj5-q52h",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Heap buffer overflow in FlashPix (FPX) JPEG decoding leads to code execution",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x8w-8jj5-q52h",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T20:36:23Z",
+      "modifiedAt": "2026-10-19T21:05:59Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "信頼できない画像を開き、任意追加のolefileが導入されていることが前提。拡張子でなく内容からFPXを検出する。",
+    "開発元の含む上限12.3.0と修正版13.0.0を保持し、Reviewedの13.0.0未満という範囲とは区別する。Criticalの公開評価はあるが構造化CVSSは未提示。PoCの環境条件を一般的な成功率や実悪用へ読み替えない。"
+  ]
+}

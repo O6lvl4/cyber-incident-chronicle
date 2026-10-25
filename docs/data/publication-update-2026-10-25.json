@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-24T21:33:06.514359+00:00",
+  "publicationStatus": "prepared-for-validated-data-update",
+  "mainAtStart": "5cd5f7877d5d76cc76a337186440e2fb239c52d4",
+  "corporate": {
+    "added": 6,
+    "updated": 7,
+    "total": 223,
+    "sources": 493,
+    "review": "corporate-review-2026-10-25.json"
+  },
+  "vulnerabilities": {
+    "reviewedFiles": 37192,
+    "sourceAdded": 34,
+    "eligibleSourceAdded": 33,
+    "eligibleTotal": 19254,
+    "reviewedDisplayIncrease": 28,
+    "supplementalDisplayIncrease": 1,
+    "netDisplayIncrease": 29,
+    "total": 19405,
+    "active": 18538,
+    "withdrawn": 867,
+    "sourceSnapshot": "636c67b12b53b8156458e7fd63072a89a388e634"
+  },
+  "products": {
+    "total": 42,
+    "added": 0,
+    "heldDownstream": [
+      "Envoy",
+      "Istio"
+    ],
+    "review": "product-advisory-review-2026-10-25.json"
+  },
+  "sourceOutcomes": {
+    "maintainerDelta": "34 developer GHSA APIs and eight release/fix checks succeeded. Source-specific severity and scope differences retained.",
+    "osv": "Seven full exports:284725 records/284316 IDs, nonMAL37 added/36 changed, MAL6 added, no removals. Previous fixed-generation hashes, size, CRC and canonical content compared.",
+    "jvnJpcert": "91 feed items unchanged in checked scope.",
+    "myJvn": "HTTP503; previous success and1271 historical rows preserved.",
+    "cisaKev": "HTTP403; last-good checkpoint preserved; not treated as unlisted."
+  },
+  "localValidation": {
+    "check": "Passed pnpm10.34.6 check:161 tests, full data and coverage checks, TypeScript, production build.",
+    "quality": "Passed pinned codopsy fabfbdc:100/100, zero errors/warnings.",
+    "browserAndPerformance": "Attempted all13 UI suites and performance. Chromium cannot create socket (Operation not permitted); WebKit downloaded but host libraries missing. Local browser/performance pass not claimed. Unchanged required PR and main CI gates must pass before publication."
+  },
+  "limitations": [
+    "No application/schema/workflow/authentication/permission/billing changes. Data and required metadata only.",
+    "Envoy/Istio verified downstream facts retained as Brotli caveats and product candidates because current product schema cannot represent another product sharing the Node.js aggregate CVE.",
+    "This record does not preclaim exact target commit CI, merge, or Pages publication. Verify independently after push.",
+    "Acquisition failures and held candidates are not no-change or no-vulnerability findings."
+  ]
+}

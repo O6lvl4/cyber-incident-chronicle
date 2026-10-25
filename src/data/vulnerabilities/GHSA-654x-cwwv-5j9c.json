@@ -1,0 +1,100 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-654x-cwwv-5j9c",
+  "aliases": [
+    "CVE-2026-114501"
+  ],
+  "title": "Pillow：非標準alignmentのArrow出力に古いヒープ内容が混入",
+  "summary": "PILLOW_ALIGNMENTが1より大きい構成で画像をArrowへ出力すると、行paddingや古いヒープ内容が画素データに混ざり、以前の画像の情報などを漏らし得る。",
+  "publishedAt": "2026-10-23T21:53:21Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-654x-cwwv-5j9c/GHSA-654x-cwwv-5j9c.json",
+  "modifiedAt": "2026-10-23T21:53:21Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Pillow",
+      "ranges": [
+        {
+          "affected": ">= 11.2.1, < 13.0.0",
+          "fixed": "13.0.0",
+          "sourceUrl": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-654x-cwwv-5j9c",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 6.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-654x-cwwv-5j9c"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-654x-cwwv-5j9c/GHSA-654x-cwwv-5j9c.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:53:21Z",
+      "modifiedAt": "2026-10-23T21:53:21Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pillow: Arrow export leaks stale heap memory when PILLOW_ALIGNMENT > 1",
+      "url": "https://github.com/advisories/GHSA-654x-cwwv-5j9c",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "Arrow export leaks stale heap memory when PILLOW_ALIGNMENT > 1",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-654x-cwwv-5j9c",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T09:47:19Z",
+      "modifiedAt": "2026-10-21T21:16:21Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "開発元の修正PR",
+      "url": "https://github.com/python-pillow/Pillow/pull/10172",
+      "publishedDate": "2026-10-12",
+      "publishedAt": "2026-10-12T09:38:29Z"
+    },
+    {
+      "type": "release",
+      "title": "13.0.0",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+      "publishedDate": "2026-10-16",
+      "publishedAt": "2026-10-16T22:37:44Z"
+    },
+    {
+      "type": "release",
+      "title": "開発元の修正commitとrelease tagの包含関係",
+      "url": "https://github.com/python-pillow/Pillow/compare/19f64946eb247b973dd4560be7dea3bf979d2e6a...13.0.0",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "PILLOW_ALIGNMENTを変更しArrow exportを使うアプリケーションが対象。単なる画像読込すべてへ影響を広げない。",
+    "開発元GHSAの構造化範囲は11.2.1 - 13.0.0、patched_versionsは空欄で、Reviewedの修正境界13.0.0と相違する。PR #10172のマージ、修正commitの13.0.0 tagへの包含、公開リリースの記載を確認し、表示は11.2.1以上13.0.0未満・修正版13.0.0とする。元の表記は監査に保持する。"
+  ]
+}

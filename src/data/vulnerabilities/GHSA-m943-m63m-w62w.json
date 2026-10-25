@@ -1,0 +1,77 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m943-m63m-w62w",
+  "aliases": [],
+  "title": "Nodemailer：引用内のsemicolonでaddress groupを誤認",
+  "summary": "addressparserが引用文字列やcomment内のsemicolonをgroup終端として扱い、表示用の文字列を送信先と誤認して、許可された宛先とは異なる相手へ送信し得る。",
+  "publishedAt": "2026-10-23T21:51:52Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-m943-m63m-w62w/GHSA-m943-m63m-w62w.json",
+  "modifiedAt": "2026-10-23T21:51:52Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:28:36.059501Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "nodemailer",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0, < 10.1.4",
+          "fixed": "10.1.4",
+          "sourceUrl": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-m943-m63m-w62w"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-m943-m63m-w62w",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-m943-m63m-w62w"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/10/GHSA-m943-m63m-w62w/GHSA-m943-m63m-w62w.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:51:52Z",
+      "modifiedAt": "2026-10-23T21:51:52Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Nodemailer: A \";\" inside a quoted string or comment ends an address group early in addressparser, turning display text into a recipient",
+      "url": "https://github.com/advisories/GHSA-m943-m63m-w62w",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "maintainer",
+      "title": "A \";\" inside a quoted string or comment ends an address group early in addressparser, turning display text into a recipient",
+      "url": "https://github.com/nodemailer/nodemailer/security/advisories/GHSA-m943-m63m-w62w",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T12:05:55Z",
+      "modifiedAt": "2026-10-19T12:05:55Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
+    "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
+    "アドレス一覧にユーザー入力が影響する構成と、検証側との解釈差が前提。Nodemailerやmailparserの利用だけで実被害を確認した意味ではない。"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2h46-9x5w-4wf7",
+  "aliases": [
+    "CVE-2026-57208",
+    "GO-2026-5063"
+  ],
+  "title": "Entire CLI：チェックポイント復元のパストラバーサル",
+  "summary": "共有チェックポイントのリポジトリへpushできる攻撃者がSessionIDを細工すると、resume/rewind時にセッション領域外へデータを書き込める。通常版とnightly版の修正境界を分けて保持する。",
+  "publishedAt": "2026-06-19T15:00:01Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/06/GHSA-2h46-9x5w-4wf7/GHSA-2h46-9x5w-4wf7.json",
+  "modifiedAt": "2026-06-19T15:00:01Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-24T21:29:54.453536Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/entireio/cli",
+      "ranges": [
+        {
+          "affected": "<= v0.7.6",
+          "fixed": "v0.7.7",
+          "sourceUrl": "https://api.github.com/repos/entireio/cli/security-advisories/GHSA-2h46-9x5w-4wf7"
+        },
+        {
+          "affected": "<= v0.7.7-nightly.*",
+          "fixed": "v0.7.8-nightly.*",
+          "sourceUrl": "https://api.github.com/repos/entireio/cli/security-advisories/GHSA-2h46-9x5w-4wf7"
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/entireio/cli/security-advisories/GHSA-2h46-9x5w-4wf7",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:H/SA:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/06/GHSA-2h46-9x5w-4wf7/GHSA-2h46-9x5w-4wf7.json"
+      },
+      {
+        "version": "4.0",
+        "score": 6.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:H/SA:H",
+        "sourceUrl": "https://api.github.com/repos/entireio/cli/security-advisories/GHSA-2h46-9x5w-4wf7"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/636c67b12b53b8156458e7fd63072a89a388e634/advisories/github-reviewed/2026/06/GHSA-2h46-9x5w-4wf7/GHSA-2h46-9x5w-4wf7.json",
+      "publishedDate": "2026-06-19",
+      "publishedAt": "2026-06-19T15:00:01Z",
+      "modifiedAt": "2026-06-19T15:00:01Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Entire CLI: Path traversal in checkpoint session metadata allows arbitrary file write during resume/rewind",
+      "url": "https://github.com/advisories/GHSA-2h46-9x5w-4wf7",
+      "publishedDate": "2026-06-19"
+    },
+    {
+      "type": "maintainer",
+      "title": "Path traversal in checkpoint session metadata allows arbitrary file write during resume/rewind",
+      "url": "https://api.github.com/repos/entireio/cli/security-advisories/GHSA-2h46-9x5w-4wf7",
+      "publishedDate": "2026-06-18",
+      "publishedAt": "2026-06-18T12:55:09Z",
+      "modifiedAt": "2026-06-24T02:26:47Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Entire CLI: Path traversal in checkpoint session metadata allows arbitrary file write during resume/rewind",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-57208",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T13:37:40.983Z",
+      "modifiedAt": "2026-10-23T14:57:55.652Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV GO-2026-5063 explicit aliases",
+      "url": "https://api.osv.dev/v1/vulns/GO-2026-5063",
+      "publishedDate": "2026-06-22",
+      "publishedAt": "2026-06-22T19:28:57Z",
+      "modifiedAt": "2026-10-24T02:55:48.586760863Z"
+    }
+  ],
+  "caveats": [
+    "開発元GHSAとCNAを取得して確認。DBの公表・更新日時は開発元日時と区別する。",
+    "実悪用・KEVは未確認であり、悪用なし・未掲載を意味しない。",
+    "開発元は通常版<=v0.7.6をv0.7.7で修正し、nightly版<=v0.7.7-nightly.*をv0.7.8-nightly.*で修正すると別記。DBが保持する通常版<0.7.7だけに平坦化しない。"
+  ]
+}

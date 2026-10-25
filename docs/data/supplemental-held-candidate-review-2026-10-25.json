@@ -1,0 +1,108 @@
+{
+  "reportDateJst": "2026-10-25",
+  "checkedAt": "2026-10-24T21:31:22.593420Z",
+  "candidates": [
+    {
+      "sourceId": "RUSTSEC-2026-0387",
+      "package": "crypto-bigint",
+      "decision": "hold-no-stable-ghsa-cve",
+      "findings": "RustSecと開発元v0.7.6リリースPRで定数時間性の修正を確認。最新OSVにaliasesがなく、開発元公開security-advisories APIは空配列。安定主IDをGHSA/CVEとする現行契約により候補保持。RUSTSEC番号からCVE/GHSAを生成しない。",
+      "publishedAt": "2026-10-23T12:00:00Z",
+      "affected": [
+        {
+          "package": {
+            "name": "crypto-bigint",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/crypto-bigint"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "0.7.6"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "os": [],
+              "functions": [],
+              "arch": []
+            }
+          },
+          "database_specific": {
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0387.json",
+            "categories": [
+              "crypto-failure"
+            ],
+            "cvss": null
+          }
+        }
+      ],
+      "sourceReceipts": [
+        {
+          "key": "crypto-bigint-osv",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0387",
+          "attemptAt": "2026-10-24T21:29:23.559226Z",
+          "checkedAt": "2026-10-24T21:29:27.064550Z",
+          "httpStatus": 200,
+          "bytes": 2051,
+          "sha256": "a45ab2143abd612fa5d0bd45fcc4054d2814f61ff75b91f4643637760f1ad608",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "rustsec0387",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0387.html",
+          "attemptAt": "2026-10-24T21:25:57.607438Z",
+          "checkedAt": "2026-10-24T21:26:06.544085Z",
+          "httpStatus": 200,
+          "bytes": 9485,
+          "sha256": "eb58765d6e8f5b3c486d92b2a3e86d9946a496ff995f712b9c3071c0b6e9e3c8",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "crypto-bigint-advisories",
+          "url": "https://api.github.com/repos/RustCrypto/crypto-bigint/security-advisories?per_page=100",
+          "attemptAt": "2026-10-24T21:25:57.608479Z",
+          "checkedAt": "2026-10-24T21:26:05.471649Z",
+          "httpStatus": 200,
+          "bytes": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "status": "success",
+          "headers": {}
+        },
+        {
+          "key": "crypto-bigint-fix",
+          "url": "https://api.github.com/repos/RustCrypto/crypto-bigint/pulls/1365",
+          "attemptAt": "2026-10-24T21:26:38.251138Z",
+          "checkedAt": "2026-10-24T21:26:41.652048Z",
+          "httpStatus": 200,
+          "bytes": 19471,
+          "sha256": "9d770335e9f68930157642a5f0992c6b3439405795207273bb761d6dcd9882ac",
+          "status": "success",
+          "headers": {}
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "RUSTSEC-2026-0385",
+        "RUSTSEC-2026-0386",
+        "PYSEC-2026-4324",
+        "PYSEC-2026-4325"
+      ],
+      "decision": "retain-prior-holds",
+      "findings": "今回の全OSVエクスポート比較で解消する新しい同一性・範囲・パッケージ対応を確認できない。以前の保留理由を維持し、開発元本文の新規再検証を行ったとは扱わない。",
+      "priorReview": "supplemental-held-candidate-review-2026-10-24.json"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "reportDateJst": "2026-10-25",
+  "checkedAt": "2026-10-24T21:31:22.593420Z",
+  "recordsBefore": 42,
+  "recordsAfter": 42,
+  "addedRecords": 0,
+  "scope": "既存選定基準でJPCERT/CCとIPAの一覧差分、KEV取得、Brotli下流製品を確認。全製品・全42本文の再検証ではない。",
+  "candidateScan": {
+    "generatedAt": "2026-10-24T21:24:03.237Z",
+    "since": "2026-10-23",
+    "records": 42,
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+        "status": "failed",
+        "fetchedAt": "2026-10-24T21:24:03.235Z",
+        "error": "HTTP 403"
+      },
+      {
+        "name": "JPCERT/CC 注意喚起",
+        "url": "https://www.jpcert.or.jp/at/2026.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-24T21:23:59.689Z",
+        "items": 34
+      },
+      {
+        "name": "IPA 重要なセキュリティ情報",
+        "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-24T21:24:01.909Z",
+        "items": 28
+      }
+    ],
+    "candidates": [],
+    "drift": [],
+    "note": "取得失敗は候補なしを意味しない。候補は一次資料を読んで判定し、除外も確認記録に残す。"
+  },
+  "candidates": [
+    {
+      "id": "GHSA-3wvj-j6qm-62mr",
+      "url": "https://api.github.com/repos/envoyproxy/envoy/security-advisories/GHSA-3wvj-j6qm-62mr",
+      "product": "Envoy Proxy",
+      "decision": "held-schema-duplicate-cve-identity",
+      "qualifiesBy": "critical",
+      "reason": "開発元Criticalを確認したが、同じCVE-2026-111497は既存Node.js多CVE告知のaliasesに含まれる。現行スキーマはカテゴリ内の重複同一性を禁止するため、偽のIDやCVE除外による見かけの別件化はせず、独立製品記録の追加を保留。Node.js告知へ別製品範囲を混在させない。検証済み内容はBrotliライブラリの下流注記に保持。",
+      "sourceFields": {
+        "ghsa_id": "GHSA-3wvj-j6qm-62mr",
+        "cve_id": null,
+        "summary": "Out-of-Bounds Write in Brotli Decompressor",
+        "published_at": "2026-10-23T16:03:27Z",
+        "updated_at": "2026-10-23T16:03:27Z",
+        "withdrawn_at": null,
+        "severity": "critical",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "score": 9.2
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "envoy proxy",
+              "name": "Envoy"
+            },
+            "vulnerable_version_range": "v1.39.2, v1.38.5, v1.37.7, v1.36.11",
+            "patched_versions": "v1.40.0, v1.39.3, v1.38.6, v1.37.8, v1.36.12",
+            "vulnerable_functions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "ISTIO-SECURITY-2026-007",
+      "url": "https://istio.io/latest/news/security/istio-security-2026-007/",
+      "product": "Istio",
+      "decision": "excluded",
+      "reason": "取得した告知の最高スコアは7.7でCritical表記なし。今回確認したJPCERT/IPA対象一覧に新規注意喚起なし、実悪用・公開攻撃コード・直接KEV掲載は未確認。Envoy側CriticalをIstio評価へ流用せず、この既存選定基準だけでは独立製品追加しない。"
+    }
+  ],
+  "limitations": [
+    "KEV403を未掲載と扱わない。",
+    "EnvoyとIstioが製品42記録に独立収録されたとは表現しない。"
+  ],
+  "detailReview": "brotli-downstream-review-2026-10-25.json"
+}

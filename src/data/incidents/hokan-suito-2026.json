@@ -1,0 +1,81 @@
+{
+  "id": "hokan-suito-2026",
+  "company": "hokan（hokan出納）",
+  "title": "認証基盤のアカウント登録機能を通じた侵入で情報漏えい、利用企業2社に影響",
+  "announcementDate": "2026-10-19",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日は未公表",
+  "updatedDate": "2026-10-19",
+  "statusAsOfDate": "2026-10-19",
+  "lastVerifiedDate": "2026-10-25",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "認証基盤のアカウント登録機能を通じた不正アクセス。攻撃元遮断と不正作成アカウント停止・削除を実施",
+    "status": "confirmed"
+  },
+  "summary": "認証基盤のアカウント登録機能を通じてhokan出納へ不正アクセスされ、保険代理店から預かった情報の一部が流出。10月14日22時28分頃に詳細調査で漏えいを確認した。影響のある利用企業2社へ報告済みで、対象項目・件数の調査を継続している。",
+  "affectedData": [
+    "保険代理店から預かる情報の一部。具体的な漏えい項目・データ件数は調査中"
+  ],
+  "counts": [
+    {
+      "value": 2,
+      "unit": "社",
+      "status": "confirmed",
+      "label": "影響を確認したhokan出納の利用企業。人数・漏えいレコード数ではない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "契約者のカード番号、銀行口座番号、病歴等を格納する項目からの漏えいは現時点で未確認。情報全体の漏えい否定ではない。",
+    "他のhokan出納利用企業の漏えい、hokan CRM・hokan Peopleへの不正アクセス、二次被害はいずれも未確認。",
+    "海外IPの利用から攻撃者の所在・国籍を推定しない。アカウント登録機能の停止をサービス全面停止としない。",
+    "10月23日の別のWebサイト再開・Studioフォーム影響のお知らせとは区別し、出納の復旧完了やPHP脆弱性起因とは扱わない。"
+  ],
+  "geography": "日本",
+  "sources": [
+    {
+      "title": "hokan：出納への不正アクセスと情報漏えい（第一報）",
+      "url": "https://www.corp.hkn.jp/news/category/press/261019",
+      "publishedDate": "2026-10-19"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-14",
+      "label": "情報漏えいを確認",
+      "kind": "occurrence",
+      "summary": "22時28分頃、記録への詳細追加調査で漏えいの事実が判明。攻撃日時ではない。",
+      "sourceUrl": "https://www.corp.hkn.jp/news/category/press/261019"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "利用企業2社への影響を公表",
+      "kind": "disclosure",
+      "summary": "認証基盤のアカウント登録機能を通じてhokan出納へ不正アクセスされ、保険代理店から預かった情報の一部が流出。10月14日22時28分頃に詳細調査で漏えいを確認した。影響のある利用企業2社へ報告済みで、対象項目・件数の調査を継続している。",
+      "sourceUrl": "https://www.corp.hkn.jp/news/category/press/261019"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃の実施日・期間は資料に明記されていない。検知・公表日を代用しない。",
+      "sourceUrl": "https://www.corp.hkn.jp/news/category/press/261019",
+      "reviewedDate": "2026-10-25"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月14日22時28分頃",
+      "note": "詳細なログの追加調査で情報漏えいの事実が判明した日時。侵入開始日・最初のアクセス検知日は別に未公表。",
+      "sourceUrl": "https://www.corp.hkn.jp/news/category/press/261019",
+      "reviewedDate": "2026-10-25",
+      "startDate": "2026-10-14"
+    }
+  }
+}
