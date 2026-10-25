@@ -1,0 +1,83 @@
+{
+  "id": "system5-online-shop-2026",
+  "company": "システムファイブ（SYSTEM5）",
+  "geography": "日本",
+  "title": "オンラインショップ連携システムで情報流出、最大約1万5千名は可能性範囲",
+  "announcementDate": "2026-10-24",
+  "announcementDateLabel": "本文確認できた続報公表日（同資料が10月22日の先行告知に言及）",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセスの実施時期は未公表",
+  "updatedDate": "2026-10-24",
+  "statusAsOfDate": "2026-10-24",
+  "lastVerifiedDate": "2026-10-26",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "オンラインショップと連携する一部システムへの第三者による不正アクセス。具体的手法・侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "オンラインショップ連携システムへの不正アクセスで一部顧客情報の不正取得を確認。最大約15,000名の氏名・メールアドレス・ポイント・レビュー情報が可能性範囲。10月24日19時頃にショップを再開したが、ポイント等の機能は停止継続。",
+  "affectedData": [
+    "オンラインショップ登録者の氏名、メールアドレス、ポイント情報、商品レビュー関連情報（最大範囲は調査中）"
+  ],
+  "counts": [
+    {
+      "value": 15000,
+      "unit": "名",
+      "status": "possible",
+      "label": "オンラインショップ登録者の最大影響可能性範囲。確定流出人数ではない",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "流出発生は確認／最大約15,000名は可能性範囲",
+  "caveats": [
+    "一部情報の不正取得を確認したことと、最大約15,000名全員の流出が確認されたことは異なる。対象者の特定と個別連絡は進行・予定段階。",
+    "クレジットカード情報とパスワードは自社システムで保有・管理しておらず、流出のおそれはないと説明。認証コード方式への変更をパスワード流出の根拠にしない。",
+    "社内ネットワークやショッピングカート自体の脆弱性に起因する不正アクセスは未確認。具体的な侵入手法・脆弱性を推定しない。",
+    "10月24日19時頃のオンラインショップ再開と、ポイント・商品レビュー・オンライン帳票発行などの停止継続を区別。各機能の再開時期は未定。",
+    "10月22日の先行告知は続報中の言及で確認。旧/password URLは今回ショップへ遷移し初報本文を取得できず、初報の詳細や侵入・検知・被害初確認日を推定しない。"
+  ],
+  "sources": [
+    {
+      "title": "システムファイブ：情報流出に関するお詫びと一部サービス再開",
+      "url": "https://info.system5.jp/whatsnew/apology-20261024",
+      "publishedDate": "2026-10-24"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-24",
+      "label": "情報流出確認と可能性範囲を公表",
+      "kind": "disclosure",
+      "summary": "一部顧客情報の不正取得を確認し、最大約15,000名を可能性範囲として案内。個人情報保護委員会への報告と警察相談は実施済み。",
+      "sourceUrl": "https://info.system5.jp/whatsnew/apology-20261024"
+    },
+    {
+      "date": "2026-10-24",
+      "label": "ショップを再開、一部機能は停止継続",
+      "kind": "update",
+      "summary": "19時頃にオンラインショップを再開。ポイント・レビュー・帳票発行等は停止し、機能ごとの再開時期は未定。",
+      "sourceUrl": "https://info.system5.jp/whatsnew/apology-20261024"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "続報は不正アクセスの実施日・期間を示さない。先行告知日や再開日を転用しない。",
+      "sourceUrl": "https://info.system5.jp/whatsnew/apology-20261024",
+      "reviewedDate": "2026-10-26"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "続報は調査で不正取得が判明したとするが、最初の被害確認日は示さない。公表日から推定しない。",
+      "sourceUrl": "https://info.system5.jp/whatsnew/apology-20261024",
+      "reviewedDate": "2026-10-26"
+    }
+  }
+}
