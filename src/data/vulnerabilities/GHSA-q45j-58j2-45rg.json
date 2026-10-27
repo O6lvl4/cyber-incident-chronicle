@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-q45j-58j2-45rg",
   "aliases": [
+    "BIT-pillow-2026-112897",
     "CVE-2026-112897"
   ],
   "title": "Pillow: TiffDecode returns uninitialized memory as pixels for short JPEG strips",
@@ -10,7 +11,7 @@
   "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-q45j-58j2-45rg/GHSA-q45j-58j2-45rg.json",
   "modifiedAt": "2026-10-20T20:52:43Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "lastVerifiedAt": "2026-10-26T21:17:23.007254Z",
   "affected": [
     {
       "ecosystem": "pip",
@@ -81,12 +82,22 @@
       "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-q45j-58j2-45rg",
       "publishedDate": "2026-10-17",
       "publishedAt": "2026-10-17T10:37:25Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV：GHSA-q45j-58j2-45rg（Bitnami別名の照合）",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-q45j-58j2-45rg",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:52:43Z",
+      "modifiedAt": "2026-10-26T08:56:08.265781051Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
     "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
     "TIFF strip経路は6.0.0、tile経路は5.3.0からと開発元本文に記載。構造化欄は<=12.3.0、修正版13.0.0。経路別導入日とDBの共通下限を区別する。",
-    "初期化されていないメモリーが画像のピクセルに出る問題で、メモリー書込み破壊とは異なる。露出内容はプロセス・アロケーターの状態に依存する。"
+    "初期化されていないメモリーが画像のピクセルに出る問題で、メモリー書込み破壊とは異なる。露出内容はプロセス・アロケーターの状態に依存する。",
+    "2026-10-27 JSTにOSV APIと固定generationのPyPI全件エクスポートの正規化JSON一致を確認し、明示されたBitnami識別子を別名へ追補。元の公表・更新日時、影響範囲、開発元確認内容は保持し、今回すべての開発元本文を再確認したとは扱わない。"
   ]
 }

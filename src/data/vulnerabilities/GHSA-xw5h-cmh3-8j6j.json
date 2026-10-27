@@ -1,0 +1,213 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xw5h-cmh3-8j6j",
+  "aliases": [
+    "CVE-2026-49875"
+  ],
+  "title": "Apache CXF has Improper Restriction of XML External Entity Reference",
+  "summary": "Apache CXF has Improper Restriction of XML External Entity Reference",
+  "publishedAt": "2026-06-12T12:31:33Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json",
+  "modifiedAt": "2026-10-26T16:16:20Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:18:17.586793Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.apache.cxf:cxf-core",
+      "ranges": [
+        {
+          "affected": ">= 4.2.0, < 4.2.2",
+          "fixed": "4.2.2",
+          "sourceUrl": "https://cxf.apache.org/security-advisories.data/CVE-2026-49875.txt"
+        },
+        {
+          "affected": ">= 4.0.0, < 4.1.7",
+          "fixed": "4.1.7",
+          "sourceUrl": "https://cxf.apache.org/security-advisories.data/CVE-2026-49875.txt"
+        },
+        {
+          "affected": "< 3.6.12",
+          "fixed": "3.6.12",
+          "sourceUrl": "https://cxf.apache.org/security-advisories.data/CVE-2026-49875.txt"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.2"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.1.7"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.6.12"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json",
+      "publishedDate": "2026-06-12",
+      "publishedAt": "2026-06-12T12:31:33Z",
+      "modifiedAt": "2026-10-26T16:16:20Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Apache CXF has Improper Restriction of XML External Entity Reference",
+      "url": "https://github.com/advisories/GHSA-xw5h-cmh3-8j6j",
+      "publishedDate": "2026-06-12"
+    },
+    {
+      "type": "maintainer",
+      "title": "Official Apache security advisory",
+      "url": "https://cxf.apache.org/security-advisories.data/CVE-2026-49875.txt",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "DBと開発元の根拠・日時・範囲は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "Official advisory explicitly confirms all three series and fixed versions, including the new 3.6.12 backport boundary.",
+    "Official severity is literal important; it supplies no CVSS score or vector. Reviewed says CRITICAL and publishes CVSS3.1 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H. Keep these assessments attributed separately; do not derive a numeric score or map important silently.",
+    "EndpointReferenceUtils and W3CMultiSchemaFactory create a SAXParserFactory without the required JAXP hardening, enabling out-of-band external entity resolution.",
+    "The fetched text does not state advisory publication/update timestamps; HTTP Last-Modified is a file header, not an advisory date."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:18:17.586793Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-xw5h-cmh3-8j6j",
+        "aliases": [
+          "CVE-2026-49875"
+        ],
+        "publishedAt": "2026-06-12T12:31:33Z",
+        "modifiedAt": "2026-10-26T16:16:20Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "maven",
+        "packageName": "org.apache.cxf:cxf-core",
+        "ranges": [
+          {
+            "affected": ">= 4.2.0, < 4.2.2",
+            "fixed": "4.2.2",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json"
+          },
+          {
+            "affected": ">= 4.0.0, < 4.1.7",
+            "fixed": "4.1.7",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json"
+          },
+          {
+            "affected": "< 3.6.12",
+            "fixed": "3.6.12",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.2.0"
+              },
+              {
+                "fixed": "4.2.2"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.0.0"
+              },
+              {
+                "fixed": "4.1.7"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.6.12"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-xw5h-cmh3-8j6j"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "Official severity is literal important; it supplies no CVSS score or vector. Reviewed says CRITICAL and publishes CVSS3.1 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H. Keep these assessments attributed separately; do not derive a numeric score or map important silently.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

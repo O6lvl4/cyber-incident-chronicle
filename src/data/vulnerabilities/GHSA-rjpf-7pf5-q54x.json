@@ -1,0 +1,135 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rjpf-7pf5-q54x",
+  "aliases": [
+    "CVE-2026-46438"
+  ],
+  "title": "wger: Cross-User Data Corruption via Missing Ownership Check on WorkoutLog.slot_entry",
+  "summary": "wger: Cross-User Data Corruption via Missing Ownership Check on WorkoutLog.slot_entry",
+  "publishedAt": "2026-10-07T13:59:17Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rjpf-7pf5-q54x/GHSA-rjpf-7pf5-q54x.json",
+  "modifiedAt": "2026-10-26T15:51:03Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "wger",
+      "ranges": [
+        {
+          "affected": "<2.5",
+          "fixed": ">= 2.6",
+          "sourceUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-rjpf-7pf5-q54x"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-rjpf-7pf5-q54x",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-rjpf-7pf5-q54x"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rjpf-7pf5-q54x/GHSA-rjpf-7pf5-q54x.json",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T13:59:17Z",
+      "modifiedAt": "2026-10-26T15:51:03Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "wger: Cross-User Data Corruption via Missing Ownership Check on WorkoutLog.slot_entry",
+      "url": "https://github.com/advisories/GHSA-rjpf-7pf5-q54x",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/wger-project/wger/security/advisories/GHSA-rjpf-7pf5-q54x",
+      "publishedDate": "2026-10-04",
+      "publishedAt": "2026-10-04T17:21:13Z",
+      "modifiedAt": "2026-10-04T17:21:13Z"
+    }
+  ],
+  "caveats": [
+    "開発元は影響欄<2.5、修正欄>=2.6。Reviewedの<=2.1／修正版不明とは異なるため、開発元の原表記を表示する。2.5以上2.6未満の評価や最初の単一修正版を推測しない。",
+    "他利用者のWorkoutLog.slot_entryの所有者確認漏れによるワークアウトデータの整合性侵害。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-rjpf-7pf5-q54x",
+        "aliases": [
+          "CVE-2026-46438"
+        ],
+        "publishedAt": "2026-10-07T13:59:17Z",
+        "modifiedAt": "2026-10-26T15:51:03Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rjpf-7pf5-q54x/GHSA-rjpf-7pf5-q54x.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "wger",
+        "ranges": [
+          {
+            "affected": "<= 2.1",
+            "fixed": null,
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rjpf-7pf5-q54x/GHSA-rjpf-7pf5-q54x.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "2.1"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-rjpf-7pf5-q54x"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元は影響欄<2.5、修正欄>=2.6。Reviewedの<=2.1／修正版不明とは異なるため、開発元の原表記を表示する。2.5以上2.6未満の評価や最初の単一修正版を推測しない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

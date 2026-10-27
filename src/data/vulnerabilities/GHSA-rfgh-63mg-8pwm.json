@@ -1,0 +1,149 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rfgh-63mg-8pwm",
+  "aliases": [
+    "CVE-2026-40071"
+  ],
+  "title": "pyload-ng has a WebUI JSON permission mismatch that lets ADD/DELETE users invoke MODIFY-only actions",
+  "summary": "pyload-ng has a WebUI JSON permission mismatch that lets ADD/DELETE users invoke MODIFY-only actions",
+  "publishedAt": "2026-04-08T00:18:20Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-rfgh-63mg-8pwm/GHSA-rfgh-63mg-8pwm.json",
+  "modifiedAt": "2026-10-26T15:57:06Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pyload-ng",
+      "ranges": [
+        {
+          "affected": "< 0.5.0b3.dev97",
+          "fixed": "0.5.0b3.dev97",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-rfgh-63mg-8pwm/GHSA-rfgh-63mg-8pwm.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.5.0b3.dev97"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/pyload/pyload/security/advisories/GHSA-rfgh-63mg-8pwm",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.4,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+        "sourceUrl": "https://github.com/pyload/pyload/security/advisories/GHSA-rfgh-63mg-8pwm"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-rfgh-63mg-8pwm/GHSA-rfgh-63mg-8pwm.json",
+      "publishedDate": "2026-04-08",
+      "publishedAt": "2026-04-08T00:18:20Z",
+      "modifiedAt": "2026-10-26T15:57:06Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "pyload-ng has a WebUI JSON permission mismatch that lets ADD/DELETE users invoke MODIFY-only actions",
+      "url": "https://github.com/advisories/GHSA-rfgh-63mg-8pwm",
+      "publishedDate": "2026-04-08"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/pyload/pyload/security/advisories/GHSA-rfgh-63mg-8pwm",
+      "publishedDate": "2026-04-07",
+      "publishedAt": "2026-04-07T06:38:07Z",
+      "modifiedAt": "2026-04-09T01:46:24Z"
+    }
+  ],
+  "caveats": [
+    "開発元は影響欄を<= 0.5.0b3、修正欄をpyload-ng 0.5.0b3.dev97と記載する。正式版と開発版の上下関係を推測せず、表示はReviewedの<0.5.0b3.dev97を採用し、開発元の原表記を監査へ保持する。",
+    "ADD/DELETE権限の利用者がMODIFYに限るべきキュー変更・停止を実行できる問題で、管理者権限奪取とは区別する。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-rfgh-63mg-8pwm",
+        "aliases": [
+          "CVE-2026-40071"
+        ],
+        "publishedAt": "2026-04-08T00:18:20Z",
+        "modifiedAt": "2026-10-26T15:57:06Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-rfgh-63mg-8pwm/GHSA-rfgh-63mg-8pwm.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "pyload-ng",
+        "ranges": [
+          {
+            "affected": "< 0.5.0b3.dev97",
+            "fixed": "0.5.0b3.dev97",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-rfgh-63mg-8pwm/GHSA-rfgh-63mg-8pwm.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.5.0b3.dev97"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-rfgh-63mg-8pwm"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元は影響欄を<= 0.5.0b3、修正欄をpyload-ng 0.5.0b3.dev97と記載する。正式版と開発版の上下関係を推測せず、表示はReviewedの<0.5.0b3.dev97を採用し、開発元の原表記を監査へ保持する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

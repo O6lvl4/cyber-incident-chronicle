@@ -1,0 +1,135 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-494j-54xm-rwp3",
+  "aliases": [
+    "CVE-2026-111063"
+  ],
+  "title": "AIOHTTP: Secure attribute not enforced for shared cookie",
+  "summary": "AIOHTTP: Secure attribute not enforced for shared cookie",
+  "publishedAt": "2026-10-19T17:07:47Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-494j-54xm-rwp3/GHSA-494j-54xm-rwp3.json",
+  "modifiedAt": "2026-10-26T14:53:54Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "aiohttp",
+      "ranges": [
+        {
+          "affected": "<=3.14.3",
+          "fixed": "3.14.4",
+          "sourceUrl": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-494j-54xm-rwp3"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-494j-54xm-rwp3",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-494j-54xm-rwp3/GHSA-494j-54xm-rwp3.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-494j-54xm-rwp3/GHSA-494j-54xm-rwp3.json",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T17:07:47Z",
+      "modifiedAt": "2026-10-26T14:53:54Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "AIOHTTP: Secure attribute not enforced for shared cookie",
+      "url": "https://github.com/advisories/GHSA-494j-54xm-rwp3",
+      "publishedDate": "2026-10-19"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-494j-54xm-rwp3",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T01:23:58Z",
+      "modifiedAt": "2026-10-19T16:43:49Z"
+    }
+  ],
+  "caveats": [
+    "開発元の深刻度はLowで数値CVSSは未提示。Reviewedは今回ModerateとCVSS4.0ベクトルを追加した。表示ラベルは開発元Low、DBベクトルはDB出典として分離し、数値を独自計算しない。",
+    "共有CookieのSecure属性が非暗号化リクエストで守られない問題。開発元の含む影響上限3.14.3と修正版3.14.4を保持する。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-494j-54xm-rwp3",
+        "aliases": [
+          "CVE-2026-111063"
+        ],
+        "publishedAt": "2026-10-19T17:07:47Z",
+        "modifiedAt": "2026-10-26T14:53:54Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-494j-54xm-rwp3/GHSA-494j-54xm-rwp3.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "aiohttp",
+        "ranges": [
+          {
+            "affected": "< 3.14.4",
+            "fixed": "3.14.4",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-494j-54xm-rwp3/GHSA-494j-54xm-rwp3.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.14.4"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-494j-54xm-rwp3"
+    ],
+    "conflicts": [
+      {
+        "field": "severity",
+        "reason": "開発元の深刻度はLowで数値CVSSは未提示。Reviewedは今回ModerateとCVSS4.0ベクトルを追加した。表示ラベルは開発元Low、DBベクトルはDB出典として分離し、数値を独自計算しない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

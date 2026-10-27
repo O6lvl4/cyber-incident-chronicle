@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cc53-p78w-23w9",
+  "aliases": [
+    "RUSTSEC-2026-0409"
+  ],
+  "title": "skiplist：比較結果が変化する比較関数による解放後使用",
+  "summary": "OrderedSkipList、SkipSet、SkipMapで、同じ変更操作の中に同じ値の組合せへの比較結果が変わるOrdやComparatorを使うと、連結中のノードを解放し後続操作が解放済みメモリへアクセスし得る。safe Rustから到達でき、1.3.0で構造を壊す前に矛盾を検出してpanicするよう修正。",
+  "publishedAt": "2026-10-24T12:00:00Z",
+  "modifiedAt": "2026-10-26T14:00:04.241377560Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:15:03.162049Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0409",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "skiplist",
+      "ranges": [
+        {
+          "affected": "< 1.3.0",
+          "fixed": "1.3.0",
+          "sourceUrl": "https://api.github.com/repos/JP-Ellis/rust-skiplist/security-advisories/GHSA-cc53-p78w-23w9"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "1.3.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/skiplist"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/JP-Ellis/rust-skiplist/security-advisories/GHSA-cc53-p78w-23w9",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 6.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/repos/JP-Ellis/rust-skiplist/security-advisories/GHSA-cc53-p78w-23w9"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0409",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0409",
+      "publishedDate": "2026-10-24",
+      "publishedAt": "2026-10-24T12:00:00Z",
+      "modifiedAt": "2026-10-26T14:00:04.241377560Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Use-after-free from a comparator that answers inconsistently",
+      "url": "https://api.github.com/repos/JP-Ellis/rust-skiplist/security-advisories/GHSA-cc53-p78w-23w9",
+      "publishedDate": "2026-10-24",
+      "publishedAt": "2026-10-24T00:33:12Z",
+      "modifiedAt": "2026-10-24T00:33:12Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "OSV/RustSecの公開日時・更新日時を表示し、開発元GHSAの公表・更新日時とは出典別に保持する。収録日を新規公表日へ置き換えない。",
+    "OSV API本文が固定generationの全件エクスポートと正規化JSONで一致することを確認し、明示されたGHSA/CVE別名だけを採用した。relatedや類似タイトルによる統合はしない。",
+    "影響範囲・修正境界と深刻度は実際に取得した開発元GHSA APIを根拠とする。rawRangesはOSV原文であり、導入下限0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・CISA KEVは未確認。KEV公式取得のHTTP403を未掲載や悪用なしと扱わない。",
+    "対象は状態・時刻・乱数などにより1操作中に答えが変化する比較関数。単に非推移的などの不整合があっても、2値から常に同じ結果を返す比較関数では発火しないと開発元は説明する。",
+    "1.3.0では検出した矛盾で変更前にpanicし、コレクションを破棄可能な状態に保つ。複数段階の操作では先行する変更が既に適用されている場合があり、比較関数の論理誤り自体を正す保証ではない。"
+  ]
+}

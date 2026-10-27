@@ -1,0 +1,797 @@
+{
+  "reportDateJst": "2026-10-27",
+  "generatedAt": "2026-10-26T21:15:03.162852Z",
+  "records": [
+    {
+      "id": "GHSA-mgg9-6xw2-jfgp",
+      "sourceId": "RUSTSEC-2026-0388",
+      "decision": "add-individually-verified-supplemental",
+      "checkedAt": "2026-10-26T21:15:03.148485Z",
+      "sourceReceipts": [
+        {
+          "sourceId": "RUSTSEC-2026-0388",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0388",
+          "attemptAt": "2026-10-26T21:13:27.158282Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json",
+            "content-length": "3113"
+          },
+          "checkedAt": "2026-10-26T21:13:32.123245Z",
+          "bytes": 3113,
+          "sha256": "a5a7f71b450b7ea6547089d94f8fdbdbaa5ec26abbbc097fcaa883aa8407f386",
+          "status": "success",
+          "canonicalMatchesExport": true
+        },
+        {
+          "key": "pingora-authority",
+          "url": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-mgg9-6xw2-jfgp",
+          "attemptAt": "2026-10-26T21:12:02.156287Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"879417256b0be1086d49df66abd69fff1ff5068126155af08ea5c34f70daa85c\"",
+            "last-modified": "Tue, 20 Oct 2026 16:25:35 GMT",
+            "content-length": "6143"
+          },
+          "checkedAt": "2026-10-26T21:12:05.685782Z",
+          "bytes": 6143,
+          "sha256": "673c6c6496aef82b874473b8a677b8ba76e51e02f4093a36356bdf67bda5d68a",
+          "status": "success"
+        }
+      ],
+      "sourceMetadata": {
+        "id": "RUSTSEC-2026-0388",
+        "aliases": [
+          "CVE-2026-105298",
+          "GHSA-mgg9-6xw2-jfgp"
+        ],
+        "published": "2026-10-20T12:00:00Z",
+        "modified": "2026-10-26T11:15:11.364389641Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "name": "pingora-core",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/pingora-core"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "0.9.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "arch": [],
+                "os": [],
+                "functions": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0388.json",
+              "categories": [],
+              "cvss": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+              "informational": null
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+          }
+        ]
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-mgg9-6xw2-jfgp",
+        "cve_id": "CVE-2026-105298",
+        "summary": "Pingora HTTP/2 :authority and Host header mismatch enables cache poisoning and host-based access control bypass",
+        "published_at": "2026-10-20T16:25:35Z",
+        "updated_at": "2026-10-20T16:25:35Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+            "score": 6.3
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "pingora-proxy"
+            },
+            "vulnerable_version_range": "< 0.9.0",
+            "patched_versions": "0.9.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "pingora-core"
+            },
+            "vulnerable_version_range": "< 0.9.0",
+            "patched_versions": "0.9.0",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "findings": [
+        "開発元GHSAはpingora-coreとpingora-proxyの両方を列挙するため両パッケージを保持。RustSec/OSVはpingora-coreのみを列挙し、その原文範囲も保持する。",
+        "HTTP/2をクライアントから受け付けない構成や、authorityをセキュリティ・キャッシュ判断に使用しない構成は開発元が対象外と説明。Cloudflare CDN顧客は内部PingoraがHTTP/2クライアントを持たないため影響しないとしている。",
+        "修正はHostとauthorityの不一致、複数Host、userinfoを含むauthorityの拒否と、上流のHost/authorityの整合。回避策はrequest_filterで不一致等を拒否すること。"
+      ]
+    },
+    {
+      "id": "GHSA-7gpj-mj4q-x62x",
+      "sourceId": "RUSTSEC-2026-0389",
+      "decision": "add-individually-verified-supplemental",
+      "checkedAt": "2026-10-26T21:15:03.150657Z",
+      "sourceReceipts": [
+        {
+          "sourceId": "RUSTSEC-2026-0389",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0389",
+          "attemptAt": "2026-10-26T21:13:27.165246Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json",
+            "content-length": "2751"
+          },
+          "checkedAt": "2026-10-26T21:13:32.143564Z",
+          "bytes": 2751,
+          "sha256": "429973f271c89f3060b13cd98ec0903df0a350dfc7999cb628a3d17f27c13f4a",
+          "status": "success",
+          "canonicalMatchesExport": true
+        },
+        {
+          "key": "pingora-memory",
+          "url": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-7gpj-mj4q-x62x",
+          "attemptAt": "2026-10-26T21:12:02.158685Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"22c94b827b995fb2be4662a6d6d00210999ffac7689b5c0999f96f6260dbc489\"",
+            "last-modified": "Tue, 20 Oct 2026 16:25:43 GMT",
+            "content-length": "5224"
+          },
+          "checkedAt": "2026-10-26T21:12:05.750761Z",
+          "bytes": 5224,
+          "sha256": "50ac83f37c71e9068838758a0e8dbc20a2331aefb6bf2211834ed311d7a206d6",
+          "status": "success"
+        }
+      ],
+      "sourceMetadata": {
+        "id": "RUSTSEC-2026-0389",
+        "aliases": [
+          "CVE-2026-105297",
+          "GHSA-7gpj-mj4q-x62x"
+        ],
+        "published": "2026-10-20T12:00:00Z",
+        "modified": "2026-10-26T11:15:11.357540777Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "name": "pingora-core",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/pingora-core"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "0.8.1"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "os": [],
+                "functions": [],
+                "arch": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "denial-of-service"
+              ],
+              "cvss": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0389.json"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-7gpj-mj4q-x62x",
+        "cve_id": "CVE-2026-105297",
+        "summary": "Pingora HTTP/2 server memory exhaustion through unbounded default header-list and concurrent-stream limits",
+        "published_at": "2026-10-20T16:25:43Z",
+        "updated_at": "2026-10-20T16:25:43Z",
+        "withdrawn_at": null,
+        "severity": "high",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "score": 8.7
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "pingora-core"
+            },
+            "vulnerable_version_range": "< 0.8.1",
+            "patched_versions": "0.8.1",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "findings": [
+        "h2/h2cを終端しmax_header_list_sizeとmax_concurrent_streamsを明示していない構成が対象。Cloudflare CDN顧客は内部PingoraがHTTP/2クライアントを持たないため影響しないと開発元は説明する。",
+        "0.8.1以降でH2Optionsを指定しない場合、展開後ヘッダーリスト64 KiB、接続当たり同時ストリーム100の既定値を適用する。独自H2OptionsやH2Options::default()にはこの安全側の既定値が適用されないため、更新だけで全構成が解消したとはしない。"
+      ]
+    },
+    {
+      "id": "GHSA-vx4q-2c55-cvmg",
+      "sourceId": "RUSTSEC-2026-0390",
+      "decision": "add-individually-verified-supplemental",
+      "checkedAt": "2026-10-26T21:15:03.152301Z",
+      "sourceReceipts": [
+        {
+          "sourceId": "RUSTSEC-2026-0390",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0390",
+          "attemptAt": "2026-10-26T21:13:27.167315Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json",
+            "content-length": "3378"
+          },
+          "checkedAt": "2026-10-26T21:13:32.147817Z",
+          "bytes": 3378,
+          "sha256": "3b9f003f3ad182d1f91e133517287ace876ea0b83d73aeb41b253c65978975e2",
+          "status": "success",
+          "canonicalMatchesExport": true
+        },
+        {
+          "key": "pingora-connection",
+          "url": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-vx4q-2c55-cvmg",
+          "attemptAt": "2026-10-26T21:12:02.159996Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"7b13ddf9ac38996acb4e9eb0a2cc2101e99c94d7d837f1bfbdef00566d0de330\"",
+            "last-modified": "Tue, 20 Oct 2026 16:25:08 GMT",
+            "content-length": "6082"
+          },
+          "checkedAt": "2026-10-26T21:12:05.732490Z",
+          "bytes": 6082,
+          "sha256": "580341c718976774e33ccc9a205e2756a9b2933ebd61bcae3c3f67c799cf0f9e",
+          "status": "success"
+        }
+      ],
+      "sourceMetadata": {
+        "id": "RUSTSEC-2026-0390",
+        "aliases": [
+          "CVE-2026-105299",
+          "GHSA-vx4q-2c55-cvmg"
+        ],
+        "published": "2026-10-20T12:00:00Z",
+        "modified": "2026-10-26T11:15:11.361865763Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "name": "pingora-proxy",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/pingora-proxy"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "0.9.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "arch": [],
+                "os": [],
+                "functions": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0390.json",
+              "categories": [],
+              "cvss": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N"
+          }
+        ]
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-vx4q-2c55-cvmg",
+        "cve_id": "CVE-2026-105299",
+        "summary": "Pingora forwards client-nominated Connection headers to HTTP/1 upstreams, allowing ACL bypass in specific chained deployments",
+        "published_at": "2026-10-20T16:25:08Z",
+        "updated_at": "2026-10-20T16:25:08Z",
+        "withdrawn_at": null,
+        "severity": "high",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N",
+            "score": 7.0
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "pingora-proxy"
+            },
+            "vulnerable_version_range": "< 0.9.0",
+            "patched_versions": "0.9.0",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "findings": [
+        "HTTP/2上流経路では既にConnection等を除去していた。HTTP/1中継がConnection指名を処理し、オリジンが付加されたヘッダーを認可に利用する連鎖構成の条件を、一律の全Pingora利用へ拡張しない。",
+        "0.9.0以降でもHttpUpstreamRequestPolicy::preserve()は旧転送挙動を復元するため、付加ヘッダーを信頼する構成では使わないよう開発元は注意する。Cloudflare CDN顧客は該当する連鎖構成がなく事前のヘッダー除去もあるため影響しないとしている。"
+      ]
+    },
+    {
+      "id": "GHSA-23hp-j76v-pcwj",
+      "sourceId": "RUSTSEC-2026-0407",
+      "decision": "add-individually-verified-supplemental",
+      "checkedAt": "2026-10-26T21:15:03.152821Z",
+      "sourceReceipts": [
+        {
+          "sourceId": "RUSTSEC-2026-0407",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0407",
+          "attemptAt": "2026-10-26T21:13:27.169043Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json",
+            "content-length": "2310"
+          },
+          "checkedAt": "2026-10-26T21:13:32.143978Z",
+          "bytes": 2310,
+          "sha256": "8df35e22e6946b63e3302472d440b5fc4c670ae879ffb035dfe9132255b1282c",
+          "status": "success",
+          "canonicalMatchesExport": true
+        },
+        {
+          "key": "webpage",
+          "url": "https://api.github.com/repos/orottier/webpage-rs/security-advisories/GHSA-23hp-j76v-pcwj",
+          "attemptAt": "2026-10-26T21:12:02.161653Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"85866934b13b5e345b8f4e169baa5f6d1913dda38d71d2d00ad4f9761bfae2c7\"",
+            "last-modified": "Fri, 23 Oct 2026 08:28:11 GMT",
+            "content-length": "4258"
+          },
+          "checkedAt": "2026-10-26T21:12:05.721077Z",
+          "bytes": 4258,
+          "sha256": "9d286b7829374f97e4bdb9cdb5e773943ac51bd589f96ed39a7d6b2612eebdb2",
+          "status": "success"
+        }
+      ],
+      "sourceMetadata": {
+        "id": "RUSTSEC-2026-0407",
+        "aliases": [
+          "GHSA-23hp-j76v-pcwj"
+        ],
+        "published": "2026-10-22T12:00:00Z",
+        "modified": "2026-10-26T14:00:04.244031092Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "name": "webpage",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/webpage"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "2.1.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "arch": [],
+                "os": [],
+                "functions": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "categories": [
+                "file-disclosure"
+              ],
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0407.json"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ]
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-23hp-j76v-pcwj",
+        "cve_id": null,
+        "summary": "SSRF and Local File Disclosure via unvalidated URLs",
+        "published_at": "2026-10-21T19:39:23Z",
+        "updated_at": "2026-10-23T08:28:11Z",
+        "withdrawn_at": null,
+        "severity": "high",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "webpage"
+            },
+            "vulnerable_version_range": "<= 2.0.1",
+            "patched_versions": "2.1.0",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "findings": [
+        "開発元の構造化影響範囲は2.0.1以下、本文とRustSec/OSVは2.1.0未満を示す。主表示では開発元の構造化範囲を保持し、OSVの原文イベントも併記する。",
+        "2.1.0の制限はリダイレクト後も適用。HTTP::fetch_unrestrictedおよびWebpage::from_url_unrestrictedは明示的に従来挙動へ戻すAPIであり、信頼できないURLに対する保護を保証しない。"
+      ]
+    },
+    {
+      "id": "GHSA-924w-mwc9-86m8",
+      "sourceId": "RUSTSEC-2026-0408",
+      "decision": "add-individually-verified-supplemental",
+      "checkedAt": "2026-10-26T21:15:03.157917Z",
+      "sourceReceipts": [
+        {
+          "sourceId": "RUSTSEC-2026-0408",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0408",
+          "attemptAt": "2026-10-26T21:13:32.123605Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json",
+            "content-length": "4023"
+          },
+          "checkedAt": "2026-10-26T21:13:35.142379Z",
+          "bytes": 4023,
+          "sha256": "4b9ca58d67979847a93cc17ac2d580404f1d0ec918dc18de372fd218de9de1a7",
+          "status": "success",
+          "canonicalMatchesExport": true
+        },
+        {
+          "key": "skiplist-aliasing",
+          "url": "https://api.github.com/repos/JP-Ellis/rust-skiplist/security-advisories/GHSA-924w-mwc9-86m8",
+          "attemptAt": "2026-10-26T21:12:02.163021Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"79b3a324b52456bbc2954385dbec1530477faf89b894e7b9eff027bb170b1d5a\"",
+            "last-modified": "Sat, 24 Oct 2026 00:33:10 GMT",
+            "content-length": "8580"
+          },
+          "checkedAt": "2026-10-26T21:12:05.747193Z",
+          "bytes": 8580,
+          "sha256": "4b7ee98b56e3c2454ea3c84817d6837a6602ac05611c716b8d813799c6eee520",
+          "status": "success"
+        }
+      ],
+      "sourceMetadata": {
+        "id": "RUSTSEC-2026-0408",
+        "aliases": [
+          "GHSA-924w-mwc9-86m8"
+        ],
+        "published": "2026-10-24T12:00:00Z",
+        "modified": "2026-10-26T14:00:05.788796703Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "name": "skiplist",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/skiplist"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "1.3.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affects": {
+                "os": [],
+                "functions": [
+                  "skiplist::ordered_skip_list::OrderedSkipList::append",
+                  "skiplist::ordered_skip_list::OrderedSkipList::lower_bound_mut",
+                  "skiplist::ordered_skip_list::OrderedSkipList::split_off",
+                  "skiplist::ordered_skip_list::OrderedSkipList::split_off_index",
+                  "skiplist::ordered_skip_list::OrderedSkipList::upper_bound_mut",
+                  "skiplist::skip_list::SkipList::append",
+                  "skiplist::skip_list::SkipList::iter_mut",
+                  "skiplist::skip_list::SkipList::range_mut",
+                  "skiplist::skip_list::SkipList::split_off",
+                  "skiplist::skip_map::SkipMap::append",
+                  "skiplist::skip_map::SkipMap::iter_mut",
+                  "skiplist::skip_map::SkipMap::range_mut",
+                  "skiplist::skip_map::SkipMap::split_off",
+                  "skiplist::skip_map::SkipMap::values_mut",
+                  "skiplist::skip_set::SkipSet::append",
+                  "skiplist::skip_set::SkipSet::lower_bound_mut",
+                  "skiplist::skip_set::SkipSet::split_off",
+                  "skiplist::skip_set::SkipSet::split_off_index",
+                  "skiplist::skip_set::SkipSet::upper_bound_mut"
+                ],
+                "arch": []
+              },
+              "affected_functions": null
+            },
+            "database_specific": {
+              "cvss": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+              "informational": "unsound",
+              "categories": [
+                "memory-corruption"
+              ],
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0408.json"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-924w-mwc9-86m8",
+        "cve_id": null,
+        "summary": "Aliasing violations in splice, mutable iteration and cursors",
+        "published_at": "2026-10-24T00:33:10Z",
+        "updated_at": "2026-10-24T00:33:10Z",
+        "withdrawn_at": null,
+        "severity": "low",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "score": 2.1
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "skiplist"
+            },
+            "vulnerable_version_range": "< 1.3.0",
+            "patched_versions": "1.3.0",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "findings": [
+        "RustSecはunsoundに分類。開発元が公表するLow/CVSS4.0 2.1をそのまま保持し、独自に深刻度を引き上げたり実悪用とみなしたりしない。",
+        "開発元本文はsplice・range_mut・両端からのiter_mutの経路を1.0.0から、cursor機能を使う一部経路を1.2.0からとする。構造化欄とOSVは一括して1.3.0未満を示すため、詳細な成立条件と原文範囲を保持し、すべての経路が全旧版に存在したとはしない。",
+        "GHSA-cc53-p78w-23w9とは別件で、比較関数が契約違反の結果を返すことを必要としない。"
+      ]
+    },
+    {
+      "id": "GHSA-cc53-p78w-23w9",
+      "sourceId": "RUSTSEC-2026-0409",
+      "decision": "add-individually-verified-supplemental",
+      "checkedAt": "2026-10-26T21:15:03.162049Z",
+      "sourceReceipts": [
+        {
+          "sourceId": "RUSTSEC-2026-0409",
+          "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0409",
+          "attemptAt": "2026-10-26T21:13:32.144626Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json",
+            "content-length": "2801"
+          },
+          "checkedAt": "2026-10-26T21:13:35.086196Z",
+          "bytes": 2801,
+          "sha256": "0c2b51007421798f64aa16ce08e5296798e71654df5f947c8360b16ce4b563b5",
+          "status": "success",
+          "canonicalMatchesExport": true
+        },
+        {
+          "key": "skiplist-comparator",
+          "url": "https://api.github.com/repos/JP-Ellis/rust-skiplist/security-advisories/GHSA-cc53-p78w-23w9",
+          "attemptAt": "2026-10-26T21:12:05.686756Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"65ffb017e2b866900a6e2a8d24212bc66923fd7f991b86440f9b2919c11ff9f3\"",
+            "last-modified": "Sat, 24 Oct 2026 00:33:12 GMT",
+            "content-length": "8387"
+          },
+          "checkedAt": "2026-10-26T21:12:09.977049Z",
+          "bytes": 8387,
+          "sha256": "3a9c04fc74c7464ea81da992b09e3b912cd8e844d36b7cb0cd66efde58d57e75",
+          "status": "success"
+        }
+      ],
+      "sourceMetadata": {
+        "id": "RUSTSEC-2026-0409",
+        "aliases": [
+          "GHSA-cc53-p78w-23w9"
+        ],
+        "published": "2026-10-24T12:00:00Z",
+        "modified": "2026-10-26T14:00:04.241377560Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "name": "skiplist",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/skiplist"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "1.3.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "os": [],
+                "functions": []
+              }
+            },
+            "database_specific": {
+              "informational": null,
+              "categories": [
+                "memory-corruption"
+              ],
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0409.json",
+              "cvss": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "maintainerFields": {
+        "ghsa_id": "GHSA-cc53-p78w-23w9",
+        "cve_id": null,
+        "summary": "Use-after-free from a comparator that answers inconsistently",
+        "published_at": "2026-10-24T00:33:12Z",
+        "updated_at": "2026-10-24T00:33:12Z",
+        "withdrawn_at": null,
+        "severity": "medium",
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "score": 6.3
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "skiplist"
+            },
+            "vulnerable_version_range": "< 1.3.0",
+            "patched_versions": "1.3.0",
+            "vulnerable_functions": []
+          }
+        ]
+      },
+      "findings": [
+        "対象は状態・時刻・乱数などにより1操作中に答えが変化する比較関数。単に非推移的などの不整合があっても、2値から常に同じ結果を返す比較関数では発火しないと開発元は説明する。",
+        "1.3.0では検出した矛盾で変更前にpanicし、コレクションを破棄可能な状態に保つ。複数段階の操作では先行する変更が既に適用されている場合があり、比較関数の論理誤り自体を正す保証ではない。"
+      ]
+    }
+  ],
+  "newIndividualRecords": 6,
+  "limitations": [
+    "Original API payloads and ZIP files were read locally. Public evidence retains structured fields, hashes and findings, not raw descriptions or PoCs.",
+    "These six sources were individually checked; this does not imply a new maintainer review of every imported record."
+  ]
+}

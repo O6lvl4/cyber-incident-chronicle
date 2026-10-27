@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-w889-685w-c8fh",
   "aliases": [
+    "BIT-pillow-2026-112900",
     "CVE-2026-112900"
   ],
   "title": "Pillow: Argument Injection in Ghostscript call, potentially leading into RCE",
@@ -10,7 +11,7 @@
   "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e603ab7fcde7887f5cc8c30b06e4e5ea3e32784b/advisories/github-reviewed/2026/10/GHSA-w889-685w-c8fh/GHSA-w889-685w-c8fh.json",
   "modifiedAt": "2026-10-21T19:58:44Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-21T21:08:37.138763Z",
+  "lastVerifiedAt": "2026-10-26T21:17:21.351921Z",
   "affected": [
     {
       "ecosystem": "pip",
@@ -83,13 +84,23 @@
       "publishedAt": "2026-10-17T10:39:33Z",
       "modifiedAt": "2026-10-19T22:06:57Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV：GHSA-w889-685w-c8fh（Bitnami別名の照合）",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-w889-685w-c8fh",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:58:44Z",
+      "modifiedAt": "2026-10-26T08:55:37.091976147Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "Severity label differs: developer advisory medium, Reviewed database critical. Neither assessment is silently overwritten; the displayed label retains the database source.",
     "Ghostscript filename argument injection is conditional on attacker-influenced filename. RCE requires additional attacker-controlled file/content conditions; not every EPS upload implies RCE.",
     "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
-    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed.",
+    "2026-10-27 JSTにOSV APIと固定generationのPyPI全件エクスポートの正規化JSON一致を確認し、明示されたBitnami識別子を別名へ追補。元の公表・更新日時、影響範囲、開発元確認内容は保持し、今回すべての開発元本文を再確認したとは扱わない。"
   ],
   "verification": {
     "level": "mixed",

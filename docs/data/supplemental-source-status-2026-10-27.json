@@ -1,0 +1,1541 @@
+{
+  "reportDateJst": "2026-10-27",
+  "generatedAt": "2026-10-26T21:19:29.348680Z",
+  "previousAudit": "supplemental-source-status-2026-10-26.json",
+  "osv": {
+    "sources": [
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip",
+        "attemptAt": "2026-10-26T21:09:28.265738Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "last-modified": "Mon, 26 Oct 2026 19:03:32 GMT",
+          "etag": "\"e5681775243927c98a7d5760b097717f\"",
+          "x-goog-generation": "1793041411918119",
+          "x-goog-hash": "md5=5WgXdSQ5J8mKfVdgsJdxfw==",
+          "content-length": "219180381"
+        },
+        "checkedAt": "2026-10-26T21:09:46.649593Z",
+        "bytes": 219180381,
+        "sha256": "a2c7a3e23b11cc6837b56748f9fb5bbe1bec28ff56b62c0a646fb5f585af263e",
+        "status": "success",
+        "ecosystem": "npm",
+        "previousSuccess": "2026-10-25T21:17:43.925999Z",
+        "overlapFromInclusive": "2026-10-24T21:17:43.925999Z",
+        "lastSuccessfulContentCheckAt": "2026-10-26T21:13:49.686031Z",
+        "lastSuccessfulFetchAt": "2026-10-26T21:09:46.649593Z",
+        "generation": "1793041411918119",
+        "archiveBytes": 219180381,
+        "archiveSha256": "a2c7a3e23b11cc6837b56748f9fb5bbe1bec28ff56b62c0a646fb5f585af263e",
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip?generation=1793041411918119",
+        "baselineFetch": {
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip?generation=1792956783118803",
+          "attemptAt": "2026-10-26T21:09:46.650793Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/zip",
+            "last-modified": "Sun, 25 Oct 2026 19:33:03 GMT",
+            "etag": "\"f74be24a5cf7a0b4b443f3590ba97531\"",
+            "x-goog-generation": "1792956783118803",
+            "x-goog-hash": "md5=90viSlz3oLS0Q/NZC6l1MQ==",
+            "content-length": "219097338"
+          },
+          "checkedAt": "2026-10-26T21:10:00.225455Z",
+          "bytes": 219097338,
+          "sha256": "7408343e5548e7cb9b49eeec7938edd13b7f07c6543236f32e7286914e91ca6c",
+          "status": "success",
+          "contentLengthVerified": true,
+          "googleMd5Verified": true
+        },
+        "baselineDigestVerified": true,
+        "baselineCrcReadCompleted": true,
+        "baselineDuplicateIdsWithinArchive": [],
+        "baselineMembersRead": 230781,
+        "crcReadCompleted": true,
+        "duplicateIdsWithinArchive": [],
+        "membersRead": 230811,
+        "records": 230811,
+        "diff": {
+          "added": {
+            "nonMal": [],
+            "mal": [
+              "MAL-2026-18302",
+              "MAL-2026-18303",
+              "MAL-2026-18304",
+              "MAL-2026-18305",
+              "MAL-2026-18306",
+              "MAL-2026-18307",
+              "MAL-2026-18308",
+              "MAL-2026-18309",
+              "MAL-2026-18310",
+              "MAL-2026-18311",
+              "MAL-2026-18312",
+              "MAL-2026-18313",
+              "MAL-2026-18314",
+              "MAL-2026-18315",
+              "MAL-2026-18316",
+              "MAL-2026-18317",
+              "MAL-2026-18318",
+              "MAL-2026-18319",
+              "MAL-2026-18320",
+              "MAL-2026-18321",
+              "MAL-2026-18322",
+              "MAL-2026-18323",
+              "MAL-2026-18324",
+              "MAL-2026-18325",
+              "MAL-2026-18329",
+              "MAL-2026-18330",
+              "MAL-2026-18331",
+              "MAL-2026-18332",
+              "MAL-2026-18333",
+              "MAL-2026-18334"
+            ]
+          },
+          "modified": {
+            "nonMal": [
+              "GHSA-h895-cgqg-jf52",
+              "GHSA-rj75-hqrm-r3gf"
+            ],
+            "mal": [
+              "MAL-2026-17515",
+              "MAL-2026-17705",
+              "MAL-2026-17758",
+              "MAL-2026-17766",
+              "MAL-2026-17806",
+              "MAL-2026-17808",
+              "MAL-2026-17848",
+              "MAL-2026-17849",
+              "MAL-2026-17878",
+              "MAL-2026-17895",
+              "MAL-2026-17924",
+              "MAL-2026-18099",
+              "MAL-2026-18178",
+              "MAL-2026-18204",
+              "MAL-2026-18212",
+              "MAL-2026-18213",
+              "MAL-2026-18214",
+              "MAL-2026-18216",
+              "MAL-2026-18249",
+              "MAL-2026-18252",
+              "MAL-2026-18257",
+              "MAL-2026-18272",
+              "MAL-2026-18273",
+              "MAL-2026-18274",
+              "MAL-2026-18275",
+              "MAL-2026-18276",
+              "MAL-2026-18277",
+              "MAL-2026-18282",
+              "MAL-2026-18283",
+              "MAL-2026-18286",
+              "MAL-2026-18287",
+              "MAL-2026-18288",
+              "MAL-2026-18290",
+              "MAL-2026-18294",
+              "MAL-2026-18295",
+              "MAL-2026-4588"
+            ]
+          },
+          "deleted": {
+            "nonMal": [],
+            "mal": []
+          }
+        },
+        "contentStatus": "checked-changed",
+        "contentLengthVerified": true,
+        "googleMd5Verified": true
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip",
+        "attemptAt": "2026-10-26T21:09:28.267510Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "last-modified": "Mon, 26 Oct 2026 19:03:28 GMT",
+          "etag": "\"1852ef00d33108a95b1ccdc4ea3670ce\"",
+          "x-goog-generation": "1793041408179728",
+          "x-goog-hash": "md5=GFLvANMxCKlbHM3E6jZwzg==",
+          "content-length": "37088707"
+        },
+        "checkedAt": "2026-10-26T21:09:38.898634Z",
+        "bytes": 37088707,
+        "sha256": "6cf5c25aae881d3ad32d81e609eac7d1a64417b82f0d58a098fdc54af3f1a3c1",
+        "status": "success",
+        "ecosystem": "PyPI",
+        "previousSuccess": "2026-10-25T21:16:58.442856Z",
+        "overlapFromInclusive": "2026-10-24T21:16:58.442856Z",
+        "lastSuccessfulContentCheckAt": "2026-10-26T21:11:48.864402Z",
+        "lastSuccessfulFetchAt": "2026-10-26T21:09:38.898634Z",
+        "generation": "1793041408179728",
+        "archiveBytes": 37088707,
+        "archiveSha256": "6cf5c25aae881d3ad32d81e609eac7d1a64417b82f0d58a098fdc54af3f1a3c1",
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793041408179728",
+        "baselineFetch": {
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1792961285872813",
+          "attemptAt": "2026-10-26T21:09:38.900252Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/zip",
+            "last-modified": "Sun, 25 Oct 2026 20:48:06 GMT",
+            "etag": "\"ef17daa16c6dc82c957ad8511d0e1448\"",
+            "x-goog-generation": "1792961285872813",
+            "x-goog-hash": "md5=7xfaoWxtyCyVethRHQ4USA==",
+            "content-length": "37067326"
+          },
+          "checkedAt": "2026-10-26T21:09:45.879775Z",
+          "bytes": 37067326,
+          "sha256": "1c015d91fb18017f5c862118f8a28c0cd89bcf9d90195fef0ba9ba41394b9084",
+          "status": "success",
+          "contentLengthVerified": true,
+          "googleMd5Verified": true
+        },
+        "baselineDigestVerified": true,
+        "baselineCrcReadCompleted": true,
+        "baselineDuplicateIdsWithinArchive": [],
+        "baselineMembersRead": 26615,
+        "crcReadCompleted": true,
+        "duplicateIdsWithinArchive": [],
+        "membersRead": 26622,
+        "records": 26622,
+        "diff": {
+          "added": {
+            "nonMal": [],
+            "mal": [
+              "MAL-2026-18298",
+              "MAL-2026-18299",
+              "MAL-2026-18300",
+              "MAL-2026-18301",
+              "MAL-2026-18326",
+              "MAL-2026-18327",
+              "MAL-2026-18328"
+            ]
+          },
+          "modified": {
+            "nonMal": [
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-494j-54xm-rwp3",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5jp3-wp5v-5363",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-6q48-6c7w-9gw2",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-c72h-82w6-rqfp",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-jm5p-837g-rv8g",
+              "GHSA-p3pr-8f3m-4qp8",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgh-63mg-8pwm",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-rjpf-7pf5-q54x",
+              "GHSA-w466-2wfc-8g58",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-wqmh-qccw-pqwf",
+              "GHSA-x249-cx55-2h87",
+              "GHSA-xcvc-5hgv-phqg",
+              "GHSA-xgh8-jp6q-p5x8",
+              "PYSEC-2025-102",
+              "PYSEC-2026-2946"
+            ],
+            "mal": [
+              "MAL-2026-17192",
+              "MAL-2026-17195",
+              "MAL-2026-17196",
+              "MAL-2026-17197",
+              "MAL-2026-17200",
+              "MAL-2026-17240",
+              "MAL-2026-17884",
+              "MAL-2026-17889",
+              "MAL-2026-17919",
+              "MAL-2026-18218",
+              "MAL-2026-18219",
+              "MAL-2026-18297"
+            ]
+          },
+          "deleted": {
+            "nonMal": [],
+            "mal": []
+          }
+        },
+        "contentStatus": "checked-changed",
+        "contentLengthVerified": true,
+        "googleMd5Verified": true
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip",
+        "attemptAt": "2026-10-26T21:09:28.270393Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "last-modified": "Mon, 26 Oct 2026 15:09:50 GMT",
+          "etag": "\"b7fc60642c017c95dbf3b3ffca1eb4ad\"",
+          "x-goog-generation": "1793027390354967",
+          "x-goog-hash": "md5=t/xgZCwBfJXb87P/yh60rQ==",
+          "content-length": "5195955"
+        },
+        "checkedAt": "2026-10-26T21:09:35.991742Z",
+        "bytes": 5195955,
+        "sha256": "28eda30af80892f43d777c940e729d2d1e5df1bec91e8fbd326eaacf3e66e8cf",
+        "status": "success",
+        "ecosystem": "RubyGems",
+        "previousSuccess": "2026-10-25T21:16:41.634659Z",
+        "overlapFromInclusive": "2026-10-24T21:16:41.634659Z",
+        "lastSuccessfulContentCheckAt": "2026-10-26T21:09:44.516217Z",
+        "lastSuccessfulFetchAt": "2026-10-26T21:09:35.991742Z",
+        "generation": "1793027390354967",
+        "archiveBytes": 5195955,
+        "archiveSha256": "28eda30af80892f43d777c940e729d2d1e5df1bec91e8fbd326eaacf3e66e8cf",
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip?generation=1793027390354967",
+        "baselineFetch": {
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip?generation=1792660678434432",
+          "attemptAt": "2026-10-26T21:09:35.993756Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/zip",
+            "last-modified": "Thu, 22 Oct 2026 09:17:58 GMT",
+            "etag": "\"a8d41885956d59c355288fd7c03cf8c6\"",
+            "x-goog-generation": "1792660678434432",
+            "x-goog-hash": "md5=qNQYhZVtWcNVKI/XwDz4xg==",
+            "content-length": "5195856"
+          },
+          "checkedAt": "2026-10-26T21:09:39.844574Z",
+          "bytes": 5195856,
+          "sha256": "085e7b1e7ee4e4c742a210da5086dd93e8ff3ccf83462e1da3d97b41f3ae2807",
+          "status": "success",
+          "contentLengthVerified": true,
+          "googleMd5Verified": true
+        },
+        "baselineDigestVerified": true,
+        "baselineCrcReadCompleted": true,
+        "baselineDuplicateIdsWithinArchive": [],
+        "baselineMembersRead": 5466,
+        "crcReadCompleted": true,
+        "duplicateIdsWithinArchive": [],
+        "membersRead": 5466,
+        "records": 5466,
+        "diff": {
+          "added": {
+            "nonMal": [],
+            "mal": []
+          },
+          "modified": {
+            "nonMal": [
+              "GHSA-7pwq-q9jf-539h"
+            ],
+            "mal": []
+          },
+          "deleted": {
+            "nonMal": [],
+            "mal": []
+          }
+        },
+        "contentStatus": "checked-changed",
+        "contentLengthVerified": true,
+        "googleMd5Verified": true
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip",
+        "attemptAt": "2026-10-26T21:09:44.542162Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "last-modified": "Mon, 26 Oct 2026 14:48:41 GMT",
+          "etag": "\"cdc6df8b185b14f4ac6037c444450287\"",
+          "x-goog-generation": "1793026121533162",
+          "x-goog-hash": "md5=zcbfixhbFPSsYDfEREUChw==",
+          "content-length": "12594330"
+        },
+        "checkedAt": "2026-10-26T21:09:48.167186Z",
+        "bytes": 12594330,
+        "sha256": "97a4f403a0c97176ada1809f4b80d5ca6b2348403f711f6cdeb0853c1b1a6ef8",
+        "status": "success",
+        "ecosystem": "Go",
+        "previousSuccess": "2026-10-25T21:16:47.439567Z",
+        "overlapFromInclusive": "2026-10-24T21:16:47.439567Z",
+        "lastSuccessfulContentCheckAt": "2026-10-26T21:10:52.012115Z",
+        "lastSuccessfulFetchAt": "2026-10-26T21:09:48.167186Z",
+        "generation": "1793026121533162",
+        "archiveBytes": 12594330,
+        "archiveSha256": "97a4f403a0c97176ada1809f4b80d5ca6b2348403f711f6cdeb0853c1b1a6ef8",
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip?generation=1793026121533162",
+        "baselineFetch": {
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip?generation=1792810992640945",
+          "attemptAt": "2026-10-26T21:09:48.167888Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/zip",
+            "last-modified": "Sat, 24 Oct 2026 03:03:12 GMT",
+            "etag": "\"69b63efa22566d7be471ed03c621bfca\"",
+            "x-goog-generation": "1792810992640945",
+            "x-goog-hash": "md5=abY++iJWbXvkce0DxiG/yg==",
+            "content-length": "12594328"
+          },
+          "checkedAt": "2026-10-26T21:09:53.032438Z",
+          "bytes": 12594328,
+          "sha256": "aeb7314796b4b412c888173d9955876457058e9342ada0464659cf26055d70ce",
+          "status": "success",
+          "contentLengthVerified": true,
+          "googleMd5Verified": true
+        },
+        "baselineDigestVerified": true,
+        "baselineCrcReadCompleted": true,
+        "baselineDuplicateIdsWithinArchive": [],
+        "baselineMembersRead": 9779,
+        "crcReadCompleted": true,
+        "duplicateIdsWithinArchive": [],
+        "membersRead": 9779,
+        "records": 9779,
+        "diff": {
+          "added": {
+            "nonMal": [],
+            "mal": []
+          },
+          "modified": {
+            "nonMal": [
+              "GHSA-7cxh-94cf-mfp6"
+            ],
+            "mal": []
+          },
+          "deleted": {
+            "nonMal": [],
+            "mal": []
+          }
+        },
+        "contentStatus": "checked-changed",
+        "contentLengthVerified": true,
+        "googleMd5Verified": true
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip",
+        "attemptAt": "2026-10-26T21:10:52.665532Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "last-modified": "Mon, 26 Oct 2026 14:18:55 GMT",
+          "etag": "\"9ead33fc7d1cf2f924141c328a6b7031\"",
+          "x-goog-generation": "1793024335721036",
+          "x-goog-hash": "md5=nq0z/H0c8vkkFBwyimtwMQ==",
+          "content-length": "3685772"
+        },
+        "checkedAt": "2026-10-26T21:10:57.050480Z",
+        "bytes": 3685772,
+        "sha256": "8982b1b0a8c21e8be9fe9e0f5f7d34cda56f5f46856eaf1afb1af20a15073308",
+        "status": "success",
+        "ecosystem": "crates.io",
+        "previousSuccess": "2026-10-25T21:16:55.395924Z",
+        "overlapFromInclusive": "2026-10-24T21:16:55.395924Z",
+        "lastSuccessfulContentCheckAt": "2026-10-26T21:11:14.484464Z",
+        "lastSuccessfulFetchAt": "2026-10-26T21:10:57.050480Z",
+        "generation": "1793024335721036",
+        "archiveBytes": 3685772,
+        "archiveSha256": "8982b1b0a8c21e8be9fe9e0f5f7d34cda56f5f46856eaf1afb1af20a15073308",
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip?generation=1793024335721036",
+        "baselineFetch": {
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip?generation=1792831671683904",
+          "attemptAt": "2026-10-26T21:10:57.053154Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/zip",
+            "last-modified": "Sat, 24 Oct 2026 08:47:51 GMT",
+            "etag": "\"c964207bf910e786fc462e7b12bd8a46\"",
+            "x-goog-generation": "1792831671683904",
+            "x-goog-hash": "md5=yWQge/kQ54b8Ri57Er2KRg==",
+            "content-length": "3654719"
+          },
+          "checkedAt": "2026-10-26T21:11:00.477327Z",
+          "bytes": 3654719,
+          "sha256": "4ea1d249e9074935bda06611809a01a3fa05c58142e2f4efd8c701c4ed75f9b5",
+          "status": "success",
+          "contentLengthVerified": true,
+          "googleMd5Verified": true
+        },
+        "baselineDigestVerified": true,
+        "baselineCrcReadCompleted": true,
+        "baselineDuplicateIdsWithinArchive": [],
+        "baselineMembersRead": 2969,
+        "crcReadCompleted": true,
+        "duplicateIdsWithinArchive": [],
+        "membersRead": 2995,
+        "records": 2995,
+        "diff": {
+          "added": {
+            "nonMal": [
+              "RUSTSEC-2016-0007",
+              "RUSTSEC-2025-0173",
+              "RUSTSEC-2026-0388",
+              "RUSTSEC-2026-0389",
+              "RUSTSEC-2026-0390",
+              "RUSTSEC-2026-0391",
+              "RUSTSEC-2026-0392",
+              "RUSTSEC-2026-0393",
+              "RUSTSEC-2026-0394",
+              "RUSTSEC-2026-0395",
+              "RUSTSEC-2026-0396",
+              "RUSTSEC-2026-0397",
+              "RUSTSEC-2026-0398",
+              "RUSTSEC-2026-0399",
+              "RUSTSEC-2026-0400",
+              "RUSTSEC-2026-0401",
+              "RUSTSEC-2026-0402",
+              "RUSTSEC-2026-0403",
+              "RUSTSEC-2026-0404",
+              "RUSTSEC-2026-0405",
+              "RUSTSEC-2026-0406",
+              "RUSTSEC-2026-0407",
+              "RUSTSEC-2026-0408",
+              "RUSTSEC-2026-0409",
+              "RUSTSEC-2026-0410",
+              "RUSTSEC-2026-0411"
+            ],
+            "mal": []
+          },
+          "modified": {
+            "nonMal": [],
+            "mal": []
+          },
+          "deleted": {
+            "nonMal": [],
+            "mal": []
+          }
+        },
+        "contentStatus": "checked-changed",
+        "contentLengthVerified": true,
+        "googleMd5Verified": true
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip",
+        "attemptAt": "2026-10-26T21:11:14.536115Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "last-modified": "Mon, 26 Oct 2026 16:33:35 GMT",
+          "etag": "\"6a4dc35e5ca137fb9804b5d1ffe64b10\"",
+          "x-goog-generation": "1793032415685656",
+          "x-goog-hash": "md5=ak3DXlyhN/uYBLXR/+ZLEA==",
+          "content-length": "10429354"
+        },
+        "checkedAt": "2026-10-26T21:11:21.368600Z",
+        "bytes": 10429354,
+        "sha256": "333b282f68c23c6fe423aa762ac5b5d6e2c21ad846ee76d66c5588566852c722",
+        "status": "success",
+        "ecosystem": "Maven",
+        "previousSuccess": "2026-10-25T21:17:06.688430Z",
+        "overlapFromInclusive": "2026-10-24T21:17:06.688430Z",
+        "lastSuccessfulContentCheckAt": "2026-10-26T21:12:04.685502Z",
+        "lastSuccessfulFetchAt": "2026-10-26T21:11:21.368600Z",
+        "generation": "1793032415685656",
+        "archiveBytes": 10429354,
+        "archiveSha256": "333b282f68c23c6fe423aa762ac5b5d6e2c21ad846ee76d66c5588566852c722",
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip?generation=1793032415685656",
+        "baselineFetch": {
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip?generation=1792793871955691",
+          "attemptAt": "2026-10-26T21:11:21.370197Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/zip",
+            "last-modified": "Fri, 23 Oct 2026 22:17:52 GMT",
+            "etag": "\"c5aaaf14aca7710463a8678475fb3768\"",
+            "x-goog-generation": "1792793871955691",
+            "x-goog-hash": "md5=xaqvFKyncQRjqGeEdfs3aA==",
+            "content-length": "10429395"
+          },
+          "checkedAt": "2026-10-26T21:11:25.353042Z",
+          "bytes": 10429395,
+          "sha256": "885a2d3833b80e74db4c1c652338b3f6b75d0f19faf4a446940ced1ca7cb05d2",
+          "status": "success",
+          "contentLengthVerified": true,
+          "googleMd5Verified": true
+        },
+        "baselineDigestVerified": true,
+        "baselineCrcReadCompleted": true,
+        "baselineDuplicateIdsWithinArchive": [],
+        "baselineMembersRead": 7199,
+        "crcReadCompleted": true,
+        "duplicateIdsWithinArchive": [],
+        "membersRead": 7199,
+        "records": 7199,
+        "diff": {
+          "added": {
+            "nonMal": [],
+            "mal": []
+          },
+          "modified": {
+            "nonMal": [
+              "GHSA-794g-x443-36f7",
+              "GHSA-h383-gmxw-35v2",
+              "GHSA-xw5h-cmh3-8j6j"
+            ],
+            "mal": []
+          },
+          "deleted": {
+            "nonMal": [],
+            "mal": []
+          }
+        },
+        "contentStatus": "checked-changed",
+        "contentLengthVerified": true,
+        "googleMd5Verified": true
+      },
+      {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip",
+        "attemptAt": "2026-10-26T21:11:49.253495Z",
+        "httpStatus": 200,
+        "headers": {
+          "content-type": "application/zip",
+          "last-modified": "Mon, 26 Oct 2026 16:18:29 GMT",
+          "etag": "\"afc7f27551d6149d826d351ed826724d\"",
+          "x-goog-generation": "1793031509639045",
+          "x-goog-hash": "md5=r8fydVHWFJ2CbTUe2CZyTQ==",
+          "content-length": "2677367"
+        },
+        "checkedAt": "2026-10-26T21:11:53.386780Z",
+        "bytes": 2677367,
+        "sha256": "e936bab3d4a6d145314336ff5ef683597bad70c319a7847d48ac615d0e3ae8db",
+        "status": "success",
+        "ecosystem": "NuGet",
+        "previousSuccess": "2026-10-25T21:17:06.914017Z",
+        "overlapFromInclusive": "2026-10-24T21:17:06.914017Z",
+        "lastSuccessfulContentCheckAt": "2026-10-26T21:12:09.760038Z",
+        "lastSuccessfulFetchAt": "2026-10-26T21:11:53.386780Z",
+        "generation": "1793031509639045",
+        "archiveBytes": 2677367,
+        "archiveSha256": "e936bab3d4a6d145314336ff5ef683597bad70c319a7847d48ac615d0e3ae8db",
+        "immutableGenerationUrl": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip?generation=1793031509639045",
+        "baselineFetch": {
+          "url": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip?generation=1792585087442087",
+          "attemptAt": "2026-10-26T21:11:53.389374Z",
+          "httpStatus": 200,
+          "headers": {
+            "content-type": "application/zip",
+            "last-modified": "Wed, 21 Oct 2026 12:18:07 GMT",
+            "etag": "\"73e4368c13f3a82ddd16a2f42d80f2b1\"",
+            "x-goog-generation": "1792585087442087",
+            "x-goog-hash": "md5=c+Q2jBPzqC3dFqL0LYDysQ==",
+            "content-length": "2676989"
+          },
+          "checkedAt": "2026-10-26T21:11:57.033384Z",
+          "bytes": 2676989,
+          "sha256": "3ee198b4ca72eaf3bf4ef039f5e6e55f195fd385bb82bf2ccb3b6dbc53955e62",
+          "status": "success",
+          "contentLengthVerified": true,
+          "googleMd5Verified": true
+        },
+        "baselineDigestVerified": true,
+        "baselineCrcReadCompleted": true,
+        "baselineDuplicateIdsWithinArchive": [],
+        "baselineMembersRead": 1965,
+        "crcReadCompleted": true,
+        "duplicateIdsWithinArchive": [],
+        "membersRead": 1965,
+        "records": 1965,
+        "diff": {
+          "added": {
+            "nonMal": [],
+            "mal": []
+          },
+          "modified": {
+            "nonMal": [
+              "GHSA-gwg2-r3hj-4w44",
+              "GHSA-j3p4-wp97-rph4",
+              "GHSA-j9gm-c75j-xc9q",
+              "GHSA-jjfr-hcj7-qf5w",
+              "GHSA-v76p-62qx-wwq2",
+              "GHSA-wmxv-xphr-5c9g"
+            ],
+            "mal": []
+          },
+          "deleted": {
+            "nonMal": [],
+            "mal": []
+          }
+        },
+        "contentStatus": "checked-changed",
+        "contentLengthVerified": true,
+        "googleMd5Verified": true
+      }
+    ],
+    "archiveRecords": 284837,
+    "uniqueSourceIds": 284428,
+    "duplicateIdsAcrossArchives": 409,
+    "crossArchiveVariants": [],
+    "overallStatus": "success",
+    "comparisonScope": "All seven current exports versus previous immutable generations; prior size, SHA256 and generation verified; complete ZIP member reads verify CRC; all canonical JSON fields compared. Original metadata retained in source archives.",
+    "changedNonMalIds": [
+      "GHSA-22hg-r758-rrw9",
+      "GHSA-254f-3936-288h",
+      "GHSA-27h8-gf7j-v5hc",
+      "GHSA-332p-7hrc-92wf",
+      "GHSA-4558-3h8r-v8xp",
+      "GHSA-462x-pgg6-55fp",
+      "GHSA-494j-54xm-rwp3",
+      "GHSA-4rr5-89j8-mwwm",
+      "GHSA-58r4-6rv3-gfh8",
+      "GHSA-5jp3-wp5v-5363",
+      "GHSA-5x8w-8jj5-q52h",
+      "GHSA-5xm2-6676-qcp9",
+      "GHSA-65qm-jvmh-6pqg",
+      "GHSA-6q48-6c7w-9gw2",
+      "GHSA-74r2-7ff9-mjj2",
+      "GHSA-794g-x443-36f7",
+      "GHSA-7cxh-94cf-mfp6",
+      "GHSA-7mwm-ghpf-9vrm",
+      "GHSA-7pwq-q9jf-539h",
+      "GHSA-8g5g-8vmr-9782",
+      "GHSA-c6hw-5grf-ff96",
+      "GHSA-c72h-82w6-rqfp",
+      "GHSA-cp9v-662q-vvx9",
+      "GHSA-f2g6-542v-9j58",
+      "GHSA-fc9g-5qg7-mf45",
+      "GHSA-gg2r-wvfm-q9rx",
+      "GHSA-gwg2-r3hj-4w44",
+      "GHSA-h383-gmxw-35v2",
+      "GHSA-h895-cgqg-jf52",
+      "GHSA-j3p4-wp97-rph4",
+      "GHSA-j4m9-6w36-pw47",
+      "GHSA-j9gm-c75j-xc9q",
+      "GHSA-jg86-v3jv-hrpm",
+      "GHSA-jjfr-hcj7-qf5w",
+      "GHSA-jm5p-837g-rv8g",
+      "GHSA-p3pr-8f3m-4qp8",
+      "GHSA-p4wg-p73j-c528",
+      "GHSA-pchr-8j38-3x4p",
+      "GHSA-q45j-58j2-45rg",
+      "GHSA-rfgh-63mg-8pwm",
+      "GHSA-rfgq-q3w2-pmv2",
+      "GHSA-rj75-hqrm-r3gf",
+      "GHSA-rjpf-7pf5-q54x",
+      "GHSA-v76p-62qx-wwq2",
+      "GHSA-w466-2wfc-8g58",
+      "GHSA-w889-685w-c8fh",
+      "GHSA-wmxv-xphr-5c9g",
+      "GHSA-wqmh-qccw-pqwf",
+      "GHSA-x249-cx55-2h87",
+      "GHSA-xcvc-5hgv-phqg",
+      "GHSA-xgh8-jp6q-p5x8",
+      "GHSA-xw5h-cmh3-8j6j",
+      "PYSEC-2025-102",
+      "PYSEC-2026-2946",
+      "RUSTSEC-2016-0007",
+      "RUSTSEC-2025-0173",
+      "RUSTSEC-2026-0388",
+      "RUSTSEC-2026-0389",
+      "RUSTSEC-2026-0390",
+      "RUSTSEC-2026-0391",
+      "RUSTSEC-2026-0392",
+      "RUSTSEC-2026-0393",
+      "RUSTSEC-2026-0394",
+      "RUSTSEC-2026-0395",
+      "RUSTSEC-2026-0396",
+      "RUSTSEC-2026-0397",
+      "RUSTSEC-2026-0398",
+      "RUSTSEC-2026-0399",
+      "RUSTSEC-2026-0400",
+      "RUSTSEC-2026-0401",
+      "RUSTSEC-2026-0402",
+      "RUSTSEC-2026-0403",
+      "RUSTSEC-2026-0404",
+      "RUSTSEC-2026-0405",
+      "RUSTSEC-2026-0406",
+      "RUSTSEC-2026-0407",
+      "RUSTSEC-2026-0408",
+      "RUSTSEC-2026-0409",
+      "RUSTSEC-2026-0410",
+      "RUSTSEC-2026-0411"
+    ],
+    "canonicalDiffCountsUniqueIds": {
+      "added": 26,
+      "modified": 54,
+      "deleted": 0
+    },
+    "maliciousDiffCountsUniqueIds": {
+      "added": 37,
+      "modified": 48,
+      "deleted": 0
+    },
+    "overlapWindow": "Each source retains previous successful content check minus 24 hours; full canonical JSON comparison also catches timestamp-preserving corrections."
+  },
+  "jvnJpcertFeeds": [
+    {
+      "url": "https://jvn.jp/rss/jvn.rdf",
+      "attemptAt": "2026-10-26T21:10:13.367016Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "application/rdf+xml",
+        "content-length": "16944",
+        "last-modified": "Mon, 26 Oct 2026 09:00:18 GMT",
+        "etag": "\"ba09aacdd2893d0423048926252a28a7570faf2c\""
+      },
+      "checkedAt": "2026-10-26T21:10:23.104467Z",
+      "bytes": 16944,
+      "sha256": "f1e574592950e9e46e25b860a9f927c20aa932480cb02cebdfb04d79d4b67b0f",
+      "status": "success",
+      "previousSuccess": "2026-10-25T21:17:51.583929Z",
+      "overlapFromInclusive": "2026-10-24T21:17:51.583929Z",
+      "lastSuccessfulContentCheckAt": "2026-10-26T21:10:23.110439Z",
+      "lastSuccessfulFetchAt": "2026-10-26T21:10:23.104467Z",
+      "records": [
+        {
+          "title": "BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）",
+          "link": "https://jvn.jp/vu/JVNVU97400824/",
+          "date": "2026-10-26T18:00:00+09:00",
+          "issued": "2026-10-26T15:00:00+09:00",
+          "modified": "2026-10-26T18:00:00+09:00"
+        },
+        {
+          "title": "富士電機製V-SFTにおける複数の脆弱性（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU96549652/",
+          "date": "2026-10-26T13:00:00+09:00",
+          "issued": "2026-10-26T13:00:00+09:00",
+          "modified": "2026-10-26T13:00:00+09:00"
+        },
+        {
+          "title": "電子納品物検査支援システムにおけるインストール時の不適切なファイルアクセス権設定の脆弱性",
+          "link": "https://jvn.jp/jp/JVN75668103/",
+          "date": "2026-10-26T12:00:00+09:00",
+          "issued": "2026-10-26T12:00:00+09:00",
+          "modified": "2026-10-26T12:00:00+09:00"
+        },
+        {
+          "title": "Siemens製品に対するアップデート（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU90141693/",
+          "date": "2026-10-26T09:00:00+09:00",
+          "issued": "2026-10-14T13:30:50+09:00",
+          "modified": "2026-10-26T09:00:00+09:00"
+        },
+        {
+          "title": "PHPにおける複数の任意のコードが実行可能な脆弱性（CVE-2026-109618、CVE-2026-109619）",
+          "link": "https://jvn.jp/vu/JVNVU99905564/",
+          "date": "2026-10-23T17:10:00+09:00",
+          "issued": "2026-10-22T10:30:00+09:00",
+          "modified": "2026-10-23T17:10:00+09:00"
+        },
+        {
+          "title": "プリザンターのLDAP認証における認証不備の脆弱性",
+          "link": "https://jvn.jp/jp/JVN82312317/",
+          "date": "2026-10-23T15:00:00+09:00",
+          "issued": "2026-10-23T15:00:00+09:00",
+          "modified": "2026-10-23T15:00:00+09:00"
+        },
+        {
+          "title": "三菱電機製の複数製品における複数の脆弱性（2026-006）",
+          "link": "https://jvn.jp/vu/JVNVU93251594/",
+          "date": "2026-10-23T11:00:15+09:00",
+          "issued": "2026-10-23T11:00:15+09:00",
+          "modified": "2026-10-23T11:00:15+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月22日）",
+          "link": "https://jvn.jp/vu/JVNVU98747108/",
+          "date": "2026-10-23T11:00:00+09:00",
+          "issued": "2026-10-23T11:00:00+09:00",
+          "modified": "2026-10-23T11:00:00+09:00"
+        },
+        {
+          "title": "LIFF SDKにおけるクロスサイトスクリプティングの脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU91023667/",
+          "date": "2026-10-22T10:00:00+09:00",
+          "issued": "2026-10-22T10:00:00+09:00",
+          "modified": "2026-10-22T10:00:00+09:00"
+        },
+        {
+          "title": "ISC BINDにおける複数の脆弱性（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU91196958/",
+          "date": "2026-10-22T09:00:00+09:00",
+          "issued": "2026-10-22T09:00:00+09:00",
+          "modified": "2026-10-22T09:00:00+09:00"
+        },
+        {
+          "title": "Apache Tomcatにおける複数の脆弱性（2026年10月20日）",
+          "link": "https://jvn.jp/vu/JVNVU93110597/",
+          "date": "2026-10-21T09:30:30+09:00",
+          "issued": "2026-10-21T09:30:30+09:00",
+          "modified": "2026-10-21T09:30:30+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月20日）",
+          "link": "https://jvn.jp/vu/JVNVU90998702/",
+          "date": "2026-10-21T09:30:15+09:00",
+          "issued": "2026-10-21T09:30:15+09:00",
+          "modified": "2026-10-21T09:30:15+09:00"
+        },
+        {
+          "title": "Xerj Console APIにおける認証回避の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU92078426/",
+          "date": "2026-10-21T09:30:00+09:00",
+          "issued": "2026-10-21T09:30:00+09:00",
+          "modified": "2026-10-21T09:30:00+09:00"
+        },
+        {
+          "title": "アツミ電氣製DVRに利用可能な非公開機能を悪用される問題",
+          "link": "https://jvn.jp/jp/JVN88864366/",
+          "date": "2026-10-20T14:00:00+09:00",
+          "issued": "2026-10-20T14:00:00+09:00",
+          "modified": "2026-10-20T14:00:00+09:00"
+        },
+        {
+          "title": "複数のLenovo製タブレットのAndroid Verified Boot機能において既知のテスト用鍵がそのまま使用されている問題",
+          "link": "https://jvn.jp/jp/JVN33436631/",
+          "date": "2026-10-20T12:00:15+09:00",
+          "issued": "2026-10-20T12:00:15+09:00",
+          "modified": "2026-10-20T12:00:15+09:00"
+        },
+        {
+          "title": "UnRTFにおける境界外書き込みの脆弱性",
+          "link": "https://jvn.jp/jp/JVN29783594/",
+          "date": "2026-10-20T12:00:00+09:00",
+          "issued": "2026-10-20T12:00:00+09:00",
+          "modified": "2026-10-20T12:00:00+09:00"
+        },
+        {
+          "title": "ヤマハ製VOCALOID6 Editorにおける外部エンティティ参照の不適切な制限の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU93520490/",
+          "date": "2026-10-19T10:00:00+09:00",
+          "issued": "2026-10-19T10:00:00+09:00",
+          "modified": "2026-10-19T10:00:00+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月15日）",
+          "link": "https://jvn.jp/vu/JVNVU96928590/",
+          "date": "2026-10-16T09:15:00+09:00",
+          "issued": "2026-10-16T09:15:00+09:00",
+          "modified": "2026-10-16T09:15:00+09:00"
+        },
+        {
+          "title": "「車検証閲覧アプリ」における送信データへの機微な情報の挿入の脆弱性",
+          "link": "https://jvn.jp/jp/JVN94004488/",
+          "date": "2026-10-15T14:00:00+09:00",
+          "issued": "2026-10-15T12:00:15+09:00",
+          "modified": "2026-10-15T14:00:00+09:00"
+        },
+        {
+          "title": "スマートフォンアプリ「ハンドメイドマーケットアプリ - Creema（クリーマ）」におけるオープンリダイレクトの脆弱性",
+          "link": "https://jvn.jp/jp/JVN48627289/",
+          "date": "2026-10-15T12:00:30+09:00",
+          "issued": "2026-10-15T12:00:30+09:00",
+          "modified": "2026-10-15T12:00:30+09:00"
+        }
+      ],
+      "changed": [
+        {
+          "title": "BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）",
+          "link": "https://jvn.jp/vu/JVNVU97400824/",
+          "date": "2026-10-26T18:00:00+09:00",
+          "issued": "2026-10-26T15:00:00+09:00",
+          "modified": "2026-10-26T18:00:00+09:00"
+        },
+        {
+          "title": "富士電機製V-SFTにおける複数の脆弱性（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU96549652/",
+          "date": "2026-10-26T13:00:00+09:00",
+          "issued": "2026-10-26T13:00:00+09:00",
+          "modified": "2026-10-26T13:00:00+09:00"
+        },
+        {
+          "title": "電子納品物検査支援システムにおけるインストール時の不適切なファイルアクセス権設定の脆弱性",
+          "link": "https://jvn.jp/jp/JVN75668103/",
+          "date": "2026-10-26T12:00:00+09:00",
+          "issued": "2026-10-26T12:00:00+09:00",
+          "modified": "2026-10-26T12:00:00+09:00"
+        },
+        {
+          "title": "Siemens製品に対するアップデート（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU90141693/",
+          "date": "2026-10-26T09:00:00+09:00",
+          "issued": "2026-10-14T13:30:50+09:00",
+          "modified": "2026-10-26T09:00:00+09:00"
+        }
+      ],
+      "removedFeedItems": [
+        {
+          "title": "スマートフォンアプリ「ゲオアプリ」における複数の脆弱性",
+          "link": "https://jvn.jp/jp/JVN40460777/",
+          "date": "2026-10-15T12:00:00+09:00",
+          "issued": "2026-10-15T12:00:00+09:00",
+          "modified": "2026-10-15T12:00:00+09:00"
+        },
+        {
+          "title": "Google BoringSSL証明書検証における複数の名前制約回避の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU95613365/",
+          "date": "2026-10-15T10:30:30+09:00",
+          "issued": "2026-10-15T10:30:30+09:00",
+          "modified": "2026-10-15T10:30:30+09:00"
+        },
+        {
+          "title": "複数のTLSライブラリにおける名前制約回避の問題",
+          "link": "https://jvn.jp/vu/JVNVU95474776/",
+          "date": "2026-10-15T10:30:15+09:00",
+          "issued": "2026-10-15T10:30:15+09:00",
+          "modified": "2026-10-15T10:30:15+09:00"
+        }
+      ],
+      "contentStatus": "checked-changed"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/rss/jpcert.rdf",
+      "attemptAt": "2026-10-26T21:10:13.368276Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "application/rdf+xml",
+        "content-length": "20494",
+        "last-modified": "Mon, 26 Oct 2026 07:49:52 GMT",
+        "etag": "\"500e-65eb99335c800\""
+      },
+      "checkedAt": "2026-10-26T21:10:18.939675Z",
+      "bytes": 20494,
+      "sha256": "134d78ac255cdb104ff4595e061b6e39bbbfc505ab2adb7b781df72398947d0e",
+      "status": "success",
+      "previousSuccess": "2026-10-25T21:17:54.331925Z",
+      "overlapFromInclusive": "2026-10-24T21:17:54.331925Z",
+      "lastSuccessfulContentCheckAt": "2026-10-26T21:10:18.942340Z",
+      "lastSuccessfulFetchAt": "2026-10-26T21:10:18.939675Z",
+      "records": [
+        {
+          "title": "注意喚起: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260034.html",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260033.html",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "注意喚起: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260030.html",
+          "date": "2026-10-23T11:37+09:00"
+        },
+        {
+          "title": "注意喚起: SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性（CVE-2026-106931）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260032.html",
+          "date": "2026-10-14T14:18+09:00"
+        },
+        {
+          "title": "注意喚起: 2026年10月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260031.html",
+          "date": "2026-10-14T11:25+09:00"
+        },
+        {
+          "title": "注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260029.html",
+          "date": "2026-10-02T14:15+09:00"
+        },
+        {
+          "title": "Weekly Report: Microsoft Edgeに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#1",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のJuniper Networks製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#2",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: BeyondTrust Remote Supportになりすましによる認証回避の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#3",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のNGINX製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#4",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Drupal coreおよび複数のモジュールに脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#5",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のAdobe製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#6",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Google Chromeに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#7",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Next.jsに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#8",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: EC-CUBE4系用プラグイン「AmazonPayプラグイン」に不変と想定しているWebパラメータの外部制御の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#9",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: NextcloudのCollabora Online - Built-in CODE Serverに脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#10",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のPalo Alto Networks製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#11",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Cisco Secure Email Gatewayに任意のファイル書き込みの脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#12",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のZoom製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#13",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のMozilla製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#14",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のSAP製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#15",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のFortinet製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#16",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Ivanti Connect Secureに認証回避の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#17",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: AssetViewに重要なリソースに対する不適切なアクセス権の割り当ての脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#18",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: ((OTRS)) Community Editionに認証回避の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#19",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: ProgressのMarkLogic Serverに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#20",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: GitLabに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#21",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: JPCERT/CCが「連続不正アクセス事案の攻撃手法に関する調査」を公開",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#22",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: SiteGuard Server EditionにOSコマンドインジェクションの脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#23",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のマイクロソフト製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#24",
+          "date": "2026-10-21T09:12+09:00"
+        }
+      ],
+      "changed": [
+        {
+          "title": "注意喚起: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260034.html",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260033.html",
+          "date": "2026-10-26T16:25+09:00"
+        }
+      ],
+      "removedFeedItems": [
+        {
+          "title": "注意喚起: F5 BIG-IP Access Policy Managerにおけるヒープベースのバッファオーバーフローの脆弱性（CVE-2026-94127）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260028.html",
+          "date": "2026-09-24T16:14+09:00"
+        }
+      ],
+      "contentStatus": "checked-changed"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/rss/jpcert-all.rdf",
+      "attemptAt": "2026-10-26T21:10:13.371157Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "application/rdf+xml",
+        "content-length": "41393",
+        "last-modified": "Mon, 26 Oct 2026 07:49:52 GMT",
+        "etag": "\"a1b1-65eb99335c800\""
+      },
+      "checkedAt": "2026-10-26T21:10:19.175483Z",
+      "bytes": 41393,
+      "sha256": "f7b097ee21344f1cf562fc70a987385cbe408a0e36b9d9b11deca44923afe661",
+      "status": "success",
+      "previousSuccess": "2026-10-25T21:17:57.412712Z",
+      "overlapFromInclusive": "2026-10-24T21:17:57.412712Z",
+      "lastSuccessfulContentCheckAt": "2026-10-26T21:10:19.351247Z",
+      "lastSuccessfulFetchAt": "2026-10-26T21:10:19.175483Z",
+      "records": [
+        {
+          "title": "お知らせ：インシデント報告Webフォーム緊急メンテナンス終了のお知らせ",
+          "link": "https://www.jpcert.or.jp/maintenance20261023.html",
+          "date": "2026-10-23T13:06+09:00"
+        },
+        {
+          "title": "お知らせ：インシデント報告Webフォーム緊急メンテナンスのお知らせ",
+          "link": "https://www.jpcert.or.jp/maintenance20261022.html",
+          "date": "2026-10-22T15:06+09:00"
+        },
+        {
+          "title": "お知らせ：ソフトウェア等の脆弱性関連情報に関する届出状況［2026年第3四半期（7月～9月）］",
+          "link": "https://www.jpcert.or.jp/report/press.html",
+          "date": "2026-10-22T11:52+09:00"
+        },
+        {
+          "title": "お知らせ：JPCERT/CC 四半期レポート［2026年7月1日～2026年9月30日］",
+          "link": "https://www.jpcert.or.jp/qr/index.html",
+          "date": "2026-10-22T11:03+09:00"
+        },
+        {
+          "title": "お知らせ：JPCERT/CC Eyes「連続不正アクセス事案の攻撃手法に関する調査」",
+          "link": "https://blogs.jpcert.or.jp/ja/2026/10/web_api_attacks.html",
+          "date": "2026-10-15T16:17+09:00"
+        },
+        {
+          "title": "注意喚起: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260034.html",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260033.html",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "注意喚起: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260030.html",
+          "date": "2026-10-23T11:37+09:00"
+        },
+        {
+          "title": "注意喚起: SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性（CVE-2026-106931）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260032.html",
+          "date": "2026-10-14T14:18+09:00"
+        },
+        {
+          "title": "注意喚起: 2026年10月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260031.html",
+          "date": "2026-10-14T11:25+09:00"
+        },
+        {
+          "title": "注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260029.html",
+          "date": "2026-10-02T14:15+09:00"
+        },
+        {
+          "title": "Weekly Report: Microsoft Edgeに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#1",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のJuniper Networks製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#2",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: BeyondTrust Remote Supportになりすましによる認証回避の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#3",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のNGINX製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#4",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Drupal coreおよび複数のモジュールに脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#5",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のAdobe製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#6",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Google Chromeに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#7",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Next.jsに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#8",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: EC-CUBE4系用プラグイン「AmazonPayプラグイン」に不変と想定しているWebパラメータの外部制御の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#9",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: NextcloudのCollabora Online - Built-in CODE Serverに脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#10",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のPalo Alto Networks製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#11",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Cisco Secure Email Gatewayに任意のファイル書き込みの脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#12",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のZoom製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#13",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のMozilla製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#14",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のSAP製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#15",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のFortinet製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#16",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: Ivanti Connect Secureに認証回避の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#17",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: AssetViewに重要なリソースに対する不適切なアクセス権の割り当ての脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#18",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: ((OTRS)) Community Editionに認証回避の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#19",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: ProgressのMarkLogic Serverに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#20",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: GitLabに複数の脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#21",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: JPCERT/CCが「連続不正アクセス事案の攻撃手法に関する調査」を公開",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#22",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: SiteGuard Server EditionにOSコマンドインジェクションの脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#23",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のマイクロソフト製品に脆弱性",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261021.html#24",
+          "date": "2026-10-21T09:12+09:00"
+        },
+        {
+          "title": "JVN: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）",
+          "link": "https://jvn.jp/vu/JVNVU97400824/",
+          "date": "2026-10-26T15:00:00+09:00"
+        },
+        {
+          "title": "JVN: 富士電機製V-SFTにおける複数の脆弱性（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU96549652/",
+          "date": "2026-10-26T13:00:00+09:00"
+        },
+        {
+          "title": "JVN: 電子納品物検査支援システムにおけるインストール時の不適切なファイルアクセス権設定の脆弱性",
+          "link": "https://jvn.jp/jp/JVN75668103/",
+          "date": "2026-10-26T12:00:00+09:00"
+        },
+        {
+          "title": "JVN: Siemens製品に対するアップデート（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU90141693/",
+          "date": "2026-10-26T09:00:00+09:00"
+        },
+        {
+          "title": "JVN: PHPにおける複数の任意のコードが実行可能な脆弱性（CVE-2026-109618、CVE-2026-109619）",
+          "link": "https://jvn.jp/vu/JVNVU99905564/",
+          "date": "2026-10-23T17:10:00+09:00"
+        },
+        {
+          "title": "JVN: プリザンターのLDAP認証における認証不備の脆弱性",
+          "link": "https://jvn.jp/jp/JVN82312317/",
+          "date": "2026-10-23T15:00:00+09:00"
+        }
+      ],
+      "changed": [
+        {
+          "title": "注意喚起: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260034.html",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260033.html",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "JVN: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）",
+          "link": "https://jvn.jp/vu/JVNVU97400824/",
+          "date": "2026-10-26T15:00:00+09:00"
+        },
+        {
+          "title": "JVN: 富士電機製V-SFTにおける複数の脆弱性（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU96549652/",
+          "date": "2026-10-26T13:00:00+09:00"
+        },
+        {
+          "title": "JVN: 電子納品物検査支援システムにおけるインストール時の不適切なファイルアクセス権設定の脆弱性",
+          "link": "https://jvn.jp/jp/JVN75668103/",
+          "date": "2026-10-26T12:00:00+09:00"
+        },
+        {
+          "title": "JVN: Siemens製品に対するアップデート（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU90141693/",
+          "date": "2026-10-26T09:00:00+09:00"
+        }
+      ],
+      "removedFeedItems": [
+        {
+          "title": "注意喚起: F5 BIG-IP Access Policy Managerにおけるヒープベースのバッファオーバーフローの脆弱性（CVE-2026-94127）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260028.html",
+          "date": "2026-09-24T16:14+09:00"
+        },
+        {
+          "title": "JVN: 三菱電機製の複数製品における複数の脆弱性（2026-006）",
+          "link": "https://jvn.jp/vu/JVNVU93251594/",
+          "date": "2026-10-23T11:00:15+09:00"
+        },
+        {
+          "title": "JVN: CISA ICS Advisory / ICS Medical Advisory（2026年10月22日）",
+          "link": "https://jvn.jp/vu/JVNVU98747108/",
+          "date": "2026-10-23T11:00:00+09:00"
+        },
+        {
+          "title": "JVN: LIFF SDKにおけるクロスサイトスクリプティングの脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU91023667/",
+          "date": "2026-10-22T10:00:00+09:00"
+        },
+        {
+          "title": "JVN: ISC BINDにおける複数の脆弱性（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU91196958/",
+          "date": "2026-10-22T09:00:00+09:00"
+        }
+      ],
+      "contentStatus": "checked-changed"
+    }
+  ],
+  "cisaKev": {
+    "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "attemptAt": "2026-10-26T21:10:13.378494Z",
+    "httpStatus": 403,
+    "headers": {
+      "content-type": "text/html",
+      "content-length": "454"
+    },
+    "checkedAt": "2026-10-26T21:10:25.163478Z",
+    "bytes": 454,
+    "sha256": "ad32fd9b0064aa2fe337ffe7ba55e387d444c4af5f3815b65ebca8d51632aacc",
+    "status": "failed",
+    "error": "HTTP 403",
+    "previousSuccess": null,
+    "lastSuccessfulContentCheckAt": null,
+    "contentStatus": "failed"
+  },
+  "jvnIpedia": {
+    "previousSuccess": "2026-10-20T21:35:52.516599Z",
+    "overlapFromInclusive": "2026-10-19T21:35:52.516599Z",
+    "overlapBasis": "previous lastSuccessfulContentCheckAt minus 24 hours, rounded down to the containing JST calendar day for date-only API parameters",
+    "lastSuccessfulContentCheckAt": "2026-10-20T21:35:52.516599Z",
+    "lastSuccessfulWindowFetchAt": "2026-10-20T21:35:52.504140Z",
+    "retainedHistoricalRows": 1271,
+    "pages": [
+      {
+        "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=1&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=20&datePublishedEndY=2026&datePublishedEndM=10&datePublishedEndD=27",
+        "attemptAt": "2026-10-26T21:10:13.396456Z",
+        "httpStatus": 503,
+        "headers": {
+          "content-type": "text/html; charset=UTF-8",
+          "content-length": "673"
+        },
+        "checkedAt": "2026-10-26T21:10:23.921083Z",
+        "bytes": 673,
+        "sha256": "b61f1e9c043df9804c036bd11f52f0829d3b8bad960ac6fdd1be2b417e0f0a37",
+        "status": "failed",
+        "error": "HTTP 503"
+      }
+    ],
+    "window": "2026-10-20 through 2026-10-27 JST modification dates",
+    "lastSuccessfulFetchAtAdvanced": false,
+    "lastSuccessfulContentCheckAtAdvanced": false,
+    "pagesSuccessfullyParsed": 0,
+    "status": "failed",
+    "contentStatus": "failed",
+    "error": "HTTP 503",
+    "httpStatus": 503
+  },
+  "limitations": [
+    "Public primary sources only; MAL packages remain separate from ordinary vulnerabilities.",
+    "Failed sources retain previous successful checkpoints and good existing data; failure is not unchanged, not-listed or absence of exploitation.",
+    "Full archive comparison does not mean every upstream maintainer document was manually re-reviewed.",
+    "JVN/JPCERT feeds are rolling publication/update windows, not complete vulnerability inventories. Removed feed items are not advisory withdrawals/deletions.",
+    "MyJVN HTTP503 and CISA KEV HTTP403 persisted. The previously declared good MyJVN history of 1,271 rows and successful 2026-10-20 checkpoint are retained without alteration; this run could not obtain a fresh MyJVN window."
+  ],
+  "feedSummary": {
+    "records": 91,
+    "changedFeedEntries": 12,
+    "uniqueChangedLinks": [
+      "https://jvn.jp/jp/JVN75668103/",
+      "https://jvn.jp/vu/JVNVU90141693/",
+      "https://jvn.jp/vu/JVNVU96549652/",
+      "https://jvn.jp/vu/JVNVU97400824/",
+      "https://www.jpcert.or.jp/at/2026/at260033.html",
+      "https://www.jpcert.or.jp/at/2026/at260034.html"
+    ],
+    "scopeNote": "Six unique changed notice links: Brotli, PHP, V-SFT, electronic-delivery inspection system, and Siemens. Feed entries are not added library-vulnerability counts."
+  },
+  "individualReviewFile": "supplemental-individual-review-2026-10-27.json",
+  "candidateReviewFile": "supplemental-candidate-delta-2026-10-27.json",
+  "heldCandidateReviewFile": "supplemental-held-candidate-review-2026-10-27.json",
+  "aliasUpdateReviewFile": "supplemental-alias-update-review-2026-10-27.json"
+}

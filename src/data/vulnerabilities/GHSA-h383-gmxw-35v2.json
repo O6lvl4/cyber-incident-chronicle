@@ -1,0 +1,212 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-h383-gmxw-35v2",
+  "aliases": [
+    "CVE-2026-34479"
+  ],
+  "title": "Apache Log4j 1 to Log4j 2 bridge: silent log event loss in Log4j1XmlLayout due to unescaped XML 1.0 forbidden characters",
+  "summary": "Apache Log4j 1 to Log4j 2 bridge: silent log event loss in Log4j1XmlLayout due to unescaped XML 1.0 forbidden characters",
+  "publishedAt": "2026-04-10T18:31:18Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json",
+  "modifiedAt": "2026-10-26T15:16:49Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:18:17.586793Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.apache.logging.log4j:log4j-core",
+      "ranges": [
+        {
+          "affected": ">= 2.7, < 2.25.4",
+          "fixed": "2.25.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json"
+        },
+        {
+          "affected": ">= 3.0.0-beta1, <= 3.0.0-beta2",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.7"
+            },
+            {
+              "fixed": "2.25.4"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0-beta1"
+            },
+            {
+              "last_affected": "3.0.0-beta2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "maven",
+      "packageName": "org.apache.logging.log4j:log4j-1.2-api",
+      "ranges": [
+        {
+          "affected": ">= 2.7, < 2.25.4",
+          "fixed": "2.25.4",
+          "sourceUrl": "https://logging.apache.org/security.html#CVE-2026-34479"
+        },
+        {
+          "affected": ">= 3.0.0-alpha1, <= 3.0.0-beta2",
+          "fixed": null,
+          "sourceUrl": "https://logging.apache.org/security.html#CVE-2026-34479"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://logging.apache.org/security.html#CVE-2026-34479",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 6.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N",
+        "sourceUrl": "https://logging.apache.org/security.html#CVE-2026-34479"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json",
+      "publishedDate": "2026-04-10",
+      "publishedAt": "2026-04-10T18:31:18Z",
+      "modifiedAt": "2026-10-26T15:16:49Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Apache Log4j 1 to Log4j 2 bridge: silent log event loss in Log4j1XmlLayout due to unescaped XML 1.0 forbidden characters",
+      "url": "https://github.com/advisories/GHSA-h383-gmxw-35v2",
+      "publishedDate": "2026-04-10"
+    },
+    {
+      "type": "maintainer",
+      "title": "Official Apache security advisory",
+      "url": "https://logging.apache.org/security.html#CVE-2026-34479",
+      "publishedDate": "2026-04-10",
+      "publishedAt": "2026-04-10T11:53:17Z",
+      "modifiedAt": "2026-04-10T11:53:17Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Official Apache CycloneDX vulnerability disclosure report",
+      "url": "https://logging.apache.org/cyclonedx/vdr.xml",
+      "publishedDate": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Official merged fix: core implementation and bridge tests",
+      "url": "https://github.com/apache/logging-log4j2/pull/4078",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "DBと開発元の根拠・日時・範囲は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "The official security page and CycloneDX VDR agree on the bridge artifact and alpha1 lower bound. The new Reviewed record names log4j-core and starts its 3.x range at beta1. Preserve both source-specific values rather than asserting their equivalence.",
+    "The bridge class delegates sanitization to Transform in log4j-core. Merged official fix PR 4078 changes the core implementation and tests in both core and bridge, so the DB package change is not proven to be a typo. Do not discard core solely because the security page names bridge.",
+    "Only users configuring Log4j1XmlLayout directly or selecting the compatibility XMLLayout route are described by this advisory. Do not generalize to every logging path.",
+    "The 3.x maximum is inclusive beta2; the official advisory supplies no 3.x fixed version. Do not invent a fix from a subsequent beta.",
+    "Official CVSS4.0 6.9/medium has the same vector as Reviewed. Vendor exact timestamps are distinct from database publication/update timestamps."
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:18:17.586793Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-h383-gmxw-35v2",
+        "aliases": [
+          "CVE-2026-34479"
+        ],
+        "publishedAt": "2026-04-10T18:31:18Z",
+        "modifiedAt": "2026-10-26T15:16:49Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "maven",
+        "packageName": "org.apache.logging.log4j:log4j-core",
+        "ranges": [
+          {
+            "affected": ">= 2.7, < 2.25.4",
+            "fixed": "2.25.4",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json"
+          },
+          {
+            "affected": ">= 3.0.0-beta1, <= 3.0.0-beta2",
+            "fixed": null,
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.7"
+              },
+              {
+                "fixed": "2.25.4"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0-beta1"
+              },
+              {
+                "last_affected": "3.0.0-beta2"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-h383-gmxw-35v2"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "The official security page and CycloneDX VDR agree on the bridge artifact and alpha1 lower bound. The new Reviewed record names log4j-core and starts its 3.x range at beta1. Preserve both source-specific values rather than asserting their equivalence. The bridge class delegates sanitization to Transform in log4j-core. Merged official fix PR 4078 changes the core implementation and tests in both core and bridge, so the DB package change is not proven to be a typo. Do not discard core solely because the security page names bridge.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

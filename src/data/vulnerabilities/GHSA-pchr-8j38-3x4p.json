@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-pchr-8j38-3x4p",
   "aliases": [
+    "BIT-pillow-2026-112896",
     "CVE-2026-112896"
   ],
   "title": "Pillow: TIFF encoder ColorMap plane-size mismatch causes a heap out-of-bounds read",
@@ -10,7 +11,7 @@
   "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-pchr-8j38-3x4p/GHSA-pchr-8j38-3x4p.json",
   "modifiedAt": "2026-10-20T20:51:40Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "lastVerifiedAt": "2026-10-26T21:17:18.427400Z",
   "affected": [
     {
       "ecosystem": "pip",
@@ -81,12 +82,22 @@
       "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pchr-8j38-3x4p",
       "publishedDate": "2026-10-17",
       "publishedAt": "2026-10-17T10:36:25Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV：GHSA-pchr-8j38-3x4p（Bitnami別名の照合）",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-pchr-8j38-3x4p",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:51:40Z",
+      "modifiedAt": "2026-10-26T08:55:51.729363383Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
     "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
     "開発元の構造化欄はHigh、<=12.3.0、修正版13.0.0。一方、本文は確認環境を12.3.0に限定し、全影響範囲・修正版・CVSSを主張しない旧記述が残る。この相違を保持する。",
-    "読込みだけでなく、TIFFメタデータを保持してlibtiff経由で再保存する経路が必要。131072バイトは試行された読出し量であり、証明された漏えい量ではない。コード実行や任意読出しの成立は示されない。"
+    "読込みだけでなく、TIFFメタデータを保持してlibtiff経由で再保存する経路が必要。131072バイトは試行された読出し量であり、証明された漏えい量ではない。コード実行や任意読出しの成立は示されない。",
+    "2026-10-27 JSTにOSV APIと固定generationのPyPI全件エクスポートの正規化JSON一致を確認し、明示されたBitnami識別子を別名へ追補。元の公表・更新日時、影響範囲、開発元確認内容は保持し、今回すべての開発元本文を再確認したとは扱わない。"
   ]
 }

@@ -1,0 +1,4861 @@
+{
+  "schemaVersion": 2,
+  "reportDateJst": "2026-10-27",
+  "checkedAt": "2026-10-26T21:18:17.586793Z",
+  "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+  "scope": "All 34 modified Reviewed records semantically compared: 29 eligible and 5 exclusions. Nineteen same-ID developer GHSA APIs were fetched and assessed; 10 eligible records have no same-ID developer GHSA reference and were investigated through appropriate official/reporter sources, without inventing repository GHSA URLs. Twenty-three curated overlays were added/refreshed; six eligible records remain database-only. Only structured fields, source receipts, hashes and necessary factual notes are published; raw HTML/API descriptions, PoCs and unrelated personal metadata are excluded. This is not a rereview of all stored advisories.",
+  "records": [
+    {
+      "id": "GHSA-r8gm-v65f-c973",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2022/10/GHSA-r8gm-v65f-c973/GHSA-r8gm-v65f-c973.json",
+      "eligible": false,
+      "scopeOutcome": "excluded-publication-window",
+      "changedFields": [
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-r8gm-v65f-c973",
+        "aliases": [
+          "CVE-2022-39366"
+        ],
+        "published": "2022-10-31T22:42:57Z",
+        "modified": "2026-10-26T20:54:07Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "acryl-datahub"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.8.45"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:L"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": "https://github.com/datahub-project/datahub/security/advisories/GHSA-r8gm-v65f-c973",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/datahub-project/datahub/security-advisories/GHSA-r8gm-v65f-c973",
+      "curatedOutcome": "excluded-from-library-scope",
+      "verificationOutcome": "not-individually-reviewed-out-of-scope"
+    },
+    {
+      "id": "GHSA-5jp3-wp5v-5363",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2024/08/GHSA-5jp3-wp5v-5363/GHSA-5jp3-wp5v-5363.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-5jp3-wp5v-5363",
+        "aliases": [
+          "CVE-2024-6706"
+        ],
+        "published": "2024-08-08T00:31:44Z",
+        "modified": "2026-10-26T15:10:14Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "open-webui"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.3.14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": null,
+      "method": "developer-code-and-release-review",
+      "notes": [
+        "Reviewed now projects <0.3.14 with fixed 0.3.14, replacing the previous inclusive tested maximum 0.1.105. PyPA repeats fixed 0.3.14 but is another database, not independent maintainer confirmation.",
+        "The developer release exists and mentions generic security improvements but does not identify CVE-2024-6706 or its specific fix. The reporter publication predates the 0.3.14 release. This is a provenance limitation, not proof the DB boundary is wrong.",
+        "Keep the DB boundary attributed to the pinned DB. Do not present it as an independently verified maintainer first-fix boundary or infer all later versions universally safe."
+      ],
+      "primaryEvidence": {
+        "id": "GHSA-5jp3-wp5v-5363",
+        "verificationOutcome": "database-fixed-boundary-not-independently-corroborated",
+        "database": {
+          "id": "GHSA-5jp3-wp5v-5363",
+          "aliases": [
+            "CVE-2024-6706"
+          ],
+          "published": "2024-08-08T00:31:44Z",
+          "modified": "2026-10-26T15:10:14Z",
+          "withdrawn": null,
+          "affected": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "open-webui"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.3.14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+            }
+          ]
+        },
+        "primarySourceKeys": [
+          "korelogic",
+          "release0314"
+        ],
+        "databaseCorroborationKeys": [
+          "pysec"
+        ],
+        "primary": {
+          "reporterPublicationDate": "2024-08-07",
+          "reporterTestedVersion": "0.1.105",
+          "reporterRemediation": "Reporter says the issue appeared silently remediated as of publication; no exact first fixed version supplied.",
+          "release": {
+            "tag_name": "v0.3.14",
+            "html_url": "https://github.com/open-webui/open-webui/releases/tag/v0.3.14",
+            "published_at": "2024-08-21T15:37:11Z",
+            "updated_at": "2024-08-21T15:39:51Z",
+            "draft": false,
+            "prerelease": false,
+            "bodySha256": "2ff1e0831aae354ace20dda515ef6529962179fd3ca1ce7f5f175435bdb67b71"
+          }
+        },
+        "assessment": [
+          "Reviewed now projects <0.3.14 with fixed 0.3.14, replacing the previous inclusive tested maximum 0.1.105. PyPA repeats fixed 0.3.14 but is another database, not independent maintainer confirmation.",
+          "The developer release exists and mentions generic security improvements but does not identify CVE-2024-6706 or its specific fix. The reporter publication predates the 0.3.14 release. This is a provenance limitation, not proof the DB boundary is wrong.",
+          "Keep the DB boundary attributed to the pinned DB. Do not present it as an independently verified maintainer first-fix boundary or infer all later versions universally safe."
+        ]
+      },
+      "curatedOutcome": "database-only-retained",
+      "verificationOutcome": "database-fixed-boundary-not-independently-corroborated"
+    },
+    {
+      "id": "GHSA-g84q-54hf-36rg",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2024/09/GHSA-g84q-54hf-36rg/GHSA-g84q-54hf-36rg.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-g84q-54hf-36rg",
+        "aliases": [
+          "CVE-2024-6091"
+        ],
+        "published": "2024-09-11T15:31:12Z",
+        "modified": "2026-10-26T20:56:16Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "agpt"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "0.5.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": null,
+      "method": "referenced-reporter-page-attempt-no-same-id-maintainer-advisory",
+      "notes": [
+        "Only references, modification metadata, and (Aim) title whitespace changed. No range, CVSS, alias or withdrawal change.",
+        "Referenced reporter page returned HTTP 200 but only the same application loading shell, with no advisory content or matching identity. It is not counted as successful content verification or maintainer review."
+      ],
+      "receipt": {
+        "url": "https://huntr.com/bounties/8a742c13-bb5e-4bc9-8b86-049d8a386050",
+        "attemptAt": "2026-10-26T21:14:50.810147Z",
+        "status": 200,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 21:14:55 GMT"
+        },
+        "finalUrl": "https://huntr.com/bounties/8a742c13-bb5e-4bc9-8b86-049d8a386050",
+        "bytes": 75276,
+        "sha256": "bd67b7c322588517885d9ab669e9aea13cd389b0db80493f8e447df42fd3bec5",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:14:56.224847Z",
+        "contentOutcome": "unavailable-loading-shell"
+      },
+      "curatedOutcome": "database-only-retained",
+      "verificationOutcome": "reporter-content-unavailable"
+    },
+    {
+      "id": "GHSA-xcvc-5hgv-phqg",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2024/10/GHSA-xcvc-5hgv-phqg/GHSA-xcvc-5hgv-phqg.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-xcvc-5hgv-phqg",
+        "aliases": [
+          "CVE-2024-7041"
+        ],
+        "published": "2024-10-09T21:31:08Z",
+        "modified": "2026-10-26T15:08:54Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "open-webui"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.6.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": null,
+      "method": "developer-code-and-release-review",
+      "notes": [
+        "The new 0.6.3 boundary is supported by a developer code change present in the release tag and absent in the preceding 0.6.2 tag.",
+        "The checked scope is prevention of the cross-user memory edit described by this advisory; do not turn it into an assertion that every memory endpoint or all other privacy issues were repaired.",
+        "The Huntr URL returns HTTP 200 with an application loading shell, not a readable report. It is not counted as successful content verification."
+      ],
+      "primaryEvidence": {
+        "id": "GHSA-xcvc-5hgv-phqg",
+        "verificationOutcome": "fixed-boundary-corroborated-by-developer-code-and-release",
+        "database": {
+          "id": "GHSA-xcvc-5hgv-phqg",
+          "aliases": [
+            "CVE-2024-7041"
+          ],
+          "published": "2024-10-09T21:31:08Z",
+          "modified": "2026-10-26T15:08:54Z",
+          "withdrawn": null,
+          "affected": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "open-webui"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.6.3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+            },
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P"
+            }
+          ]
+        },
+        "primarySourceKeys": [
+          "release063",
+          "memories062",
+          "memories063",
+          "model063",
+          "memorieshistory",
+          "idorcommit",
+          "idorancestry"
+        ],
+        "unavailableContentKeys": [
+          "idorhuntr"
+        ],
+        "primary": {
+          "release": {
+            "tag_name": "v0.6.3",
+            "html_url": "https://github.com/open-webui/open-webui/releases/tag/v0.6.3",
+            "published_at": "2025-04-13T05:44:37Z",
+            "updated_at": "2025-04-13T05:44:37Z",
+            "draft": false,
+            "prerelease": false,
+            "bodySha256": "c94d6dfd632bf08bdf7c27ba63b3281809f8e21a5b7527eae3537da87bc7fddc"
+          },
+          "fixCommit": "bdef1001ac0ff4003dc7e1fdfce4ccf4b16a80ab",
+          "fixCommittedAt": "2025-04-12T22:10:43Z",
+          "tagAncestry": {
+            "status": "ahead",
+            "ahead_by": 38,
+            "behind_by": 0,
+            "mergeBaseSha": "bdef1001ac0ff4003dc7e1fdfce4ccf4b16a80ab",
+            "headSha": "c3497da5dd5a61f0e75e2a0bfdcc70e9e0cdaa8a",
+            "note": "per_page=1 returned commit is not necessarily tag tip; only merge-base/behind-by ancestry used."
+          },
+          "previousTag": "v0.6.2",
+          "fixedTag": "v0.6.3",
+          "observedCodeDifference": "The memory-update handler passes the authenticated user ID in v0.6.3, and its database update filters on both memory ID and user ID; v0.6.2 updates by memory ID alone."
+        },
+        "assessment": [
+          "The new 0.6.3 boundary is supported by a developer code change present in the release tag and absent in the preceding 0.6.2 tag.",
+          "The checked scope is prevention of the cross-user memory edit described by this advisory; do not turn it into an assertion that every memory endpoint or all other privacy issues were repaired.",
+          "The Huntr URL returns HTTP 200 with an application loading shell, not a readable report. It is not counted as successful content verification."
+        ]
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-xcvc-5hgv-phqg"
+    },
+    {
+      "id": "GHSA-4qcx-jx49-6qrh",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2025/03/GHSA-4qcx-jx49-6qrh/GHSA-4qcx-jx49-6qrh.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "modified",
+        "references",
+        "summary"
+      ],
+      "database": {
+        "id": "GHSA-4qcx-jx49-6qrh",
+        "aliases": [
+          "CVE-2024-8769"
+        ],
+        "published": "2025-03-20T12:32:48Z",
+        "modified": "2026-10-26T20:54:52Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "aim"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.15.0"
+                  },
+                  {
+                    "last_affected": "3.27.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": null,
+      "method": "referenced-reporter-page-attempt-no-same-id-maintainer-advisory",
+      "notes": [
+        "Only references, modification metadata, and (Aim) title whitespace changed. No range, CVSS, alias or withdrawal change.",
+        "Referenced reporter page returned HTTP 200 but only the same application loading shell, with no advisory content or matching identity. It is not counted as successful content verification or maintainer review."
+      ],
+      "receipt": {
+        "url": "https://huntr.com/bounties/59d3472f-f581-4beb-a090-afd36a00ecf7",
+        "attemptAt": "2026-10-26T21:14:50.825917Z",
+        "status": 200,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 21:14:55 GMT"
+        },
+        "finalUrl": "https://huntr.com/bounties/59d3472f-f581-4beb-a090-afd36a00ecf7",
+        "bytes": 75276,
+        "sha256": "a24d10c526207094920cf1378350d5379abe3eee77533a50ade450d3fa1fdb60",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:14:56.152333Z",
+        "contentOutcome": "unavailable-loading-shell"
+      },
+      "curatedOutcome": "database-only-retained",
+      "verificationOutcome": "reporter-content-unavailable"
+    },
+    {
+      "id": "GHSA-9w5h-67gf-xvv8",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2025/03/GHSA-9w5h-67gf-xvv8/GHSA-9w5h-67gf-xvv8.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-9w5h-67gf-xvv8",
+        "aliases": [
+          "CVE-2024-8502"
+        ],
+        "published": "2025-03-20T12:32:48Z",
+        "modified": "2026-10-26T20:55:27Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "agentscope"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "0.0.6a3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": null,
+      "method": "referenced-reporter-page-attempt-no-same-id-maintainer-advisory",
+      "notes": [
+        "Only references, modification metadata, and (Aim) title whitespace changed. No range, CVSS, alias or withdrawal change.",
+        "Referenced reporter page returned HTTP 200 but only the same application loading shell, with no advisory content or matching identity. It is not counted as successful content verification or maintainer review."
+      ],
+      "receipt": {
+        "url": "https://huntr.com/bounties/7a42da2a-2ae5-442d-aff9-c9a3b47870eb",
+        "attemptAt": "2026-10-26T21:14:50.839764Z",
+        "status": 200,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 21:14:55 GMT"
+        },
+        "finalUrl": "https://huntr.com/bounties/7a42da2a-2ae5-442d-aff9-c9a3b47870eb",
+        "bytes": 75276,
+        "sha256": "afd607b28b69c2acacfa532bc3391060e1ef2a312b6d016d8b711abe6e3676d3",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:14:56.162253Z",
+        "contentOutcome": "unavailable-loading-shell"
+      },
+      "curatedOutcome": "database-only-retained",
+      "verificationOutcome": "reporter-content-unavailable"
+    },
+    {
+      "id": "GHSA-c4cc-w454-4634",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2025/03/GHSA-c4cc-w454-4634/GHSA-c4cc-w454-4634.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-c4cc-w454-4634",
+        "aliases": [
+          "CVE-2024-8537"
+        ],
+        "published": "2025-03-20T12:32:48Z",
+        "modified": "2026-10-26T20:55:10Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "agentscope"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "0.1.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": null,
+      "method": "referenced-reporter-page-attempt-no-same-id-maintainer-advisory",
+      "notes": [
+        "Only references, modification metadata, and (Aim) title whitespace changed. No range, CVSS, alias or withdrawal change.",
+        "Referenced reporter page returned HTTP 200 but only the same application loading shell, with no advisory content or matching identity. It is not counted as successful content verification or maintainer review."
+      ],
+      "receipt": {
+        "url": "https://huntr.com/bounties/eeb8aa4b-e6e5-465c-b0dd-aa97e3b7dc09",
+        "attemptAt": "2026-10-26T21:14:50.850441Z",
+        "status": 200,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 21:14:55 GMT"
+        },
+        "finalUrl": "https://huntr.com/bounties/eeb8aa4b-e6e5-465c-b0dd-aa97e3b7dc09",
+        "bytes": 75276,
+        "sha256": "b01bb0e20c569e7c641ea3dd62085ab24f79f1653cbeca3512da60886b346ba2",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:14:55.986735Z",
+        "contentOutcome": "unavailable-loading-shell"
+      },
+      "curatedOutcome": "database-only-retained",
+      "verificationOutcome": "reporter-content-unavailable"
+    },
+    {
+      "id": "GHSA-j9rw-qm5f-r8xm",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2025/03/GHSA-j9rw-qm5f-r8xm/GHSA-j9rw-qm5f-r8xm.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-j9rw-qm5f-r8xm",
+        "aliases": [
+          "CVE-2024-8551"
+        ],
+        "published": "2025-03-20T12:32:48Z",
+        "modified": "2026-10-26T20:55:45Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "agentscope"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "0.1.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": null,
+      "method": "referenced-reporter-page-attempt-no-same-id-maintainer-advisory",
+      "notes": [
+        "Only references, modification metadata, and (Aim) title whitespace changed. No range, CVSS, alias or withdrawal change.",
+        "Referenced reporter page returned HTTP 200 but only the same application loading shell, with no advisory content or matching identity. It is not counted as successful content verification or maintainer review."
+      ],
+      "receipt": {
+        "url": "https://huntr.com/bounties/e0c0c294-f1e2-4f2c-a632-a9be9fd06989",
+        "attemptAt": "2026-10-26T21:14:55.989077Z",
+        "status": 200,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "date": "Mon, 26 Oct 2026 21:15:00 GMT"
+        },
+        "finalUrl": "https://huntr.com/bounties/e0c0c294-f1e2-4f2c-a632-a9be9fd06989",
+        "bytes": 75276,
+        "sha256": "b4cb42a62dbf49aee3643376dc5ae02f35f0ef3f32ae5d15da82cb8cad7df36a",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:15:00.352581Z",
+        "contentOutcome": "unavailable-loading-shell"
+      },
+      "curatedOutcome": "database-only-retained",
+      "verificationOutcome": "reporter-content-unavailable"
+    },
+    {
+      "id": "GHSA-w466-2wfc-8g58",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2025/03/GHSA-w466-2wfc-8g58/GHSA-w466-2wfc-8g58.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-w466-2wfc-8g58",
+        "aliases": [],
+        "published": "2025-03-20T12:32:44Z",
+        "modified": "2026-10-26T15:12:30Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "open-webui"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.5.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": null,
+      "method": "developer-code-and-release-review",
+      "notes": [
+        "Open WebUI 0.5.8 contains the developer FastAPI dependency bump. FastAPI 0.115.7 requires Starlette >=0.40.0,<0.46.0, consistent with the upstream issue-specific patched version 0.40.0.",
+        "The pinned DB narrative says Starlette <=0.49 is vulnerable. The developer Starlette advisory instead has affected <0.39.2 and patched 0.40.0. Preserve both published strings; do not silently equate its affected upper bound to its patch version or broaden it to <=0.49.",
+        "Upstream Starlette CVE-2024-47874 and GHSA-f96h-pmfr-66vw are dependency evidence, not alias proof for this Open WebUI record whose DB aliases are empty. Do not transplant the upstream CVSS4.0 8.7 into the Open WebUI issue as its own rating.",
+        "This is an issue-specific first-fix validation, not a statement that 0.5.8 is currently safe against every vulnerability."
+      ],
+      "primaryEvidence": {
+        "id": "GHSA-w466-2wfc-8g58",
+        "verificationOutcome": "fixed-boundary-corroborated-and-database-narrative-conflict",
+        "database": {
+          "id": "GHSA-w466-2wfc-8g58",
+          "aliases": [],
+          "published": "2025-03-20T12:32:44Z",
+          "modified": "2026-10-26T15:12:30Z",
+          "withdrawn": null,
+          "affected": [
+            {
+              "package": {
+                "ecosystem": "PyPI",
+                "name": "open-webui"
+              },
+              "ranges": [
+                {
+                  "type": "ECOSYSTEM",
+                  "events": [
+                    {
+                      "introduced": "0"
+                    },
+                    {
+                      "fixed": "0.5.8"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ]
+        },
+        "primarySourceKeys": [
+          "release058",
+          "pyproject057",
+          "pyproject058",
+          "fastapi01157",
+          "fastapibump",
+          "fastapiancestry",
+          "starlette"
+        ],
+        "primary": {
+          "release": {
+            "tag_name": "v0.5.8",
+            "html_url": "https://github.com/open-webui/open-webui/releases/tag/v0.5.8",
+            "published_at": "2025-02-05T09:22:39Z",
+            "updated_at": "2025-02-05T09:38:31Z",
+            "draft": false,
+            "prerelease": false,
+            "bodySha256": "faded50e1a3c30eb4f68151ea04f7fbae1e833b5fb500eeae1ef045e954e8b2d"
+          },
+          "fixCommit": "941836406219f51dc5f807ea426795b42884b688",
+          "fixCommittedAt": "2025-01-29T02:36:23Z",
+          "tagAncestry": {
+            "status": "ahead",
+            "ahead_by": 181,
+            "behind_by": 0,
+            "mergeBaseSha": "941836406219f51dc5f807ea426795b42884b688",
+            "headSha": "1ad9be9c07ddc91ffb1c5a40b9a044fd3fa305e9",
+            "note": "per_page=1 returned commit is not necessarily tag tip; only merge-base/behind-by ancestry used."
+          },
+          "previousTagFastapiDependency": "v0.5.7: fastapi==0.111.0",
+          "fixedTagFastapiDependency": "v0.5.8: fastapi==0.115.7",
+          "fastapi01157StarletteDependency": "starlette>=0.40.0,<0.46.0",
+          "upstreamStarletteAdvisory": {
+            "ghsa_id": "GHSA-f96h-pmfr-66vw",
+            "cve_id": "CVE-2024-47874",
+            "published_at": "2024-10-15T06:56:14Z",
+            "updated_at": "2024-10-15T06:56:15Z",
+            "withdrawn_at": null,
+            "severity": "high",
+            "cvss": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_severities": {
+              "cvss_v3": {
+                "vector_string": null,
+                "score": null
+              },
+              "cvss_v4": {
+                "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                "score": 8.7
+              }
+            },
+            "vulnerabilities": [
+              {
+                "package": {
+                  "ecosystem": "pip",
+                  "name": "starlette"
+                },
+                "vulnerable_version_range": "<0.39.2",
+                "patched_versions": "0.40.0",
+                "vulnerable_functions": []
+              }
+            ]
+          }
+        },
+        "assessment": [
+          "Open WebUI 0.5.8 contains the developer FastAPI dependency bump. FastAPI 0.115.7 requires Starlette >=0.40.0,<0.46.0, consistent with the upstream issue-specific patched version 0.40.0.",
+          "The pinned DB narrative says Starlette <=0.49 is vulnerable. The developer Starlette advisory instead has affected <0.39.2 and patched 0.40.0. Preserve both published strings; do not silently equate its affected upper bound to its patch version or broaden it to <=0.49.",
+          "Upstream Starlette CVE-2024-47874 and GHSA-f96h-pmfr-66vw are dependency evidence, not alias proof for this Open WebUI record whose DB aliases are empty. Do not transplant the upstream CVSS4.0 8.7 into the Open WebUI issue as its own rating.",
+          "This is an issue-specific first-fix validation, not a statement that 0.5.8 is currently safe against every vulnerability."
+        ]
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-w466-2wfc-8g58"
+    },
+    {
+      "id": "GHSA-2mfj-r695-5h9r",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/03/GHSA-2mfj-r695-5h9r/GHSA-2mfj-r695-5h9r.json",
+      "eligible": false,
+      "scopeOutcome": "excluded-ecosystem",
+      "changedFields": [
+        "affected",
+        "modified"
+      ],
+      "database": {
+        "id": "GHSA-2mfj-r695-5h9r",
+        "aliases": [
+          "CVE-2026-34036"
+        ],
+        "published": "2026-03-27T18:04:19Z",
+        "modified": "2026-10-26T14:26:49Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Packagist",
+              "name": "dolibarr/dolibarr"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "23.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/Dolibarr/dolibarr/security/advisories/GHSA-2mfj-r695-5h9r",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/Dolibarr/dolibarr/security-advisories/GHSA-2mfj-r695-5h9r",
+      "curatedOutcome": "excluded-from-library-scope",
+      "verificationOutcome": "not-individually-reviewed-out-of-scope"
+    },
+    {
+      "id": "GHSA-84wq-86v6-x5j6",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/04/GHSA-84wq-86v6-x5j6/GHSA-84wq-86v6-x5j6.json",
+      "eligible": false,
+      "scopeOutcome": "excluded-ecosystem",
+      "changedFields": [
+        "affected",
+        "modified"
+      ],
+      "database": {
+        "id": "GHSA-84wq-86v6-x5j6",
+        "aliases": [
+          "CVE-2026-40863"
+        ],
+        "published": "2026-04-29T20:23:27Z",
+        "modified": "2026-10-26T20:53:07Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Packagist",
+              "name": "phpoffice/phpspreadsheet"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "5.7.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 5.6.0"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "Packagist",
+              "name": "phpoffice/phpspreadsheet"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.3.0"
+                  },
+                  {
+                    "fixed": "3.10.5"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.10.4"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "Packagist",
+              "name": "phpoffice/phpspreadsheet"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2.0"
+                  },
+                  {
+                    "fixed": "2.4.5"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 2.4.4"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "Packagist",
+              "name": "phpoffice/phpspreadsheet"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.1.16"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 2.1.15"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "Packagist",
+              "name": "phpoffice/phpspreadsheet"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.30.6"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.30.5"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/PHPOffice/PhpSpreadsheet/security/advisories/GHSA-84wq-86v6-x5j6",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/security-advisories/GHSA-84wq-86v6-x5j6",
+      "curatedOutcome": "excluded-from-library-scope",
+      "verificationOutcome": "not-individually-reviewed-out-of-scope"
+    },
+    {
+      "id": "GHSA-h383-gmxw-35v2",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/04/GHSA-h383-gmxw-35v2/GHSA-h383-gmxw-35v2.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified"
+      ],
+      "database": {
+        "id": "GHSA-h383-gmxw-35v2",
+        "aliases": [
+          "CVE-2026-34479"
+        ],
+        "published": "2026-04-10T18:31:18Z",
+        "modified": "2026-10-26T15:16:49Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.apache.logging.log4j:log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7"
+                  },
+                  {
+                    "fixed": "2.25.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.apache.logging.log4j:log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0-beta1"
+                  },
+                  {
+                    "last_affected": "3.0.0-beta2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://logging.apache.org/security.html#CVE-2026-34479",
+      "method": "official-advisory-and-CycloneDX-vdr-plus-fix-source-review",
+      "notes": [
+        "The official security page and CycloneDX VDR agree on the bridge artifact and alpha1 lower bound. The new Reviewed record names log4j-core and starts its 3.x range at beta1. Preserve both source-specific values rather than asserting their equivalence.",
+        "The bridge class delegates sanitization to Transform in log4j-core. Merged official fix PR 4078 changes the core implementation and tests in both core and bridge, so the DB package change is not proven to be a typo. Do not discard core solely because the security page names bridge.",
+        "Only users configuring Log4j1XmlLayout directly or selecting the compatibility XMLLayout route are described by this advisory. Do not generalize to every logging path.",
+        "The 3.x maximum is inclusive beta2; the official advisory supplies no 3.x fixed version. Do not invent a fix from a subsequent beta.",
+        "Official CVSS4.0 6.9/medium has the same vector as Reviewed. Vendor exact timestamps are distinct from database publication/update timestamps."
+      ],
+      "primaryEvidence": {
+        "id": "GHSA-h383-gmxw-35v2",
+        "cve": "CVE-2026-34479",
+        "primaryUrl": "https://logging.apache.org/security.html#CVE-2026-34479",
+        "method": "official-advisory-and-CycloneDX-vdr-plus-fix-source-review",
+        "officialStructured": {
+          "component": "log4j-1.2-api",
+          "package": "org.apache.logging.log4j:log4j-1.2-api",
+          "ecosystem": "Maven",
+          "ranges": [
+            {
+              "affected": ">= 2.7, < 2.25.4",
+              "fixed": "2.25.4"
+            },
+            {
+              "affected": ">= 3.0.0-alpha1, <= 3.0.0-beta2",
+              "fixed": null
+            }
+          ],
+          "publishedAt": "2026-04-10T11:53:17Z",
+          "modifiedAt": "2026-04-10T11:53:17Z",
+          "severity": {
+            "label": "medium",
+            "version": "4.0",
+            "score": 6.9,
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+          }
+        },
+        "implementationEvidence": {
+          "pullRequestUrl": "https://github.com/apache/logging-log4j2/pull/4078",
+          "merged": true,
+          "mergedAt": "2026-03-24T22:57:28Z",
+          "mergeCommitSha": "25043cfad1bac2e43ebc4638450cbb73c51451c4",
+          "changedFilenames": [
+            "log4j-1.2-api/src/test/java/org/apache/log4j/layout/Log4j1XmlLayoutTest.java",
+            "log4j-core-test/src/test/java/org/apache/logging/log4j/core/util/TransformTest.java",
+            "log4j-core/src/main/java/org/apache/logging/log4j/core/util/Transform.java",
+            "src/changelog/.2.x.x/4078_log4j1-xml-control-characters.xml"
+          ],
+          "classArtifact": "log4j-1.2-api",
+          "classFqcn": "org.apache.log4j.layout.Log4j1XmlLayout",
+          "implementationCalls": [
+            "org.apache.logging.log4j.core.util.Transform.escapeHtmlTags",
+            "org.apache.logging.log4j.core.util.Transform.appendEscapingCData"
+          ],
+          "pomArtifactId": "log4j-1.2-api",
+          "bridgeCoreDependency": {
+            "groupId": "org.apache.logging.log4j",
+            "artifactId": "log4j-core",
+            "optional": true
+          }
+        },
+        "assessment": [
+          "The official security page and CycloneDX VDR agree on the bridge artifact and alpha1 lower bound. The new Reviewed record names log4j-core and starts its 3.x range at beta1. Preserve both source-specific values rather than asserting their equivalence.",
+          "The bridge class delegates sanitization to Transform in log4j-core. Merged official fix PR 4078 changes the core implementation and tests in both core and bridge, so the DB package change is not proven to be a typo. Do not discard core solely because the security page names bridge.",
+          "Only users configuring Log4j1XmlLayout directly or selecting the compatibility XMLLayout route are described by this advisory. Do not generalize to every logging path.",
+          "The 3.x maximum is inclusive beta2; the official advisory supplies no 3.x fixed version. Do not invent a fix from a subsequent beta.",
+          "Official CVSS4.0 6.9/medium has the same vector as Reviewed. Vendor exact timestamps are distinct from database publication/update timestamps."
+        ]
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-h383-gmxw-35v2"
+    },
+    {
+      "id": "GHSA-rfgh-63mg-8pwm",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/04/GHSA-rfgh-63mg-8pwm/GHSA-rfgh-63mg-8pwm.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-rfgh-63mg-8pwm",
+        "aliases": [
+          "CVE-2026-40071"
+        ],
+        "published": "2026-04-08T00:18:20Z",
+        "modified": "2026-10-26T15:57:06Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pyload-ng"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.5.0b3.dev97"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/pyload/pyload/security/advisories/GHSA-rfgh-63mg-8pwm",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/pyload/pyload/security-advisories/GHSA-rfgh-63mg-8pwm",
+      "primary": {
+        "ghsa_id": "GHSA-rfgh-63mg-8pwm",
+        "cve_id": "CVE-2026-40071",
+        "summary": "WebUI JSON permission mismatch lets ADD/DELETE users invoke MODIFY-only actions",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+          "score": 5.4
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+            "score": 5.4
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-04-07T06:38:07Z",
+        "updated_at": "2026-04-09T01:46:24Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "pyload-ng"
+            },
+            "vulnerable_version_range": "<= 0.5.0b3",
+            "patched_versions": "pyload-ng 0.5.0b3.dev97",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "66e298d96d78967376319b0d7245df0b7afbbbeca523e599a22009b0146913a2",
+        "descriptionCharacters": 5793
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/pyload/pyload/security-advisories/GHSA-rfgh-63mg-8pwm",
+        "attemptAt": "2026-10-26T21:13:32.385659Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:37 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"3ea9d76e5ade8bd90956389f0e920b1a91ea9538f9b42eb07fb3a58f0eee575d\"",
+          "last-modified": "Thu, 09 Apr 2026 01:46:24 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/pyload/pyload/security-advisories/GHSA-rfgh-63mg-8pwm",
+        "bytes": 9403,
+        "sha256": "be7c778c18636e626c920d86289a12f4c63fe60b67a837bdd11037dc56f62fca",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:37.356863Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-rfgh-63mg-8pwm",
+      "notes": [
+        "開発元は影響欄を<= 0.5.0b3、修正欄をpyload-ng 0.5.0b3.dev97と記載する。正式版と開発版の上下関係を推測せず、表示はReviewedの<0.5.0b3.dev97を採用し、開発元の原表記を監査へ保持する。",
+        "ADD/DELETE権限の利用者がMODIFYに限るべきキュー変更・停止を実行できる問題で、管理者権限奪取とは区別する。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-xw5h-cmh3-8j6j",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/06/GHSA-xw5h-cmh3-8j6j/GHSA-xw5h-cmh3-8j6j.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "details",
+        "modified"
+      ],
+      "database": {
+        "id": "GHSA-xw5h-cmh3-8j6j",
+        "aliases": [
+          "CVE-2026-49875"
+        ],
+        "published": "2026-06-12T12:31:33Z",
+        "modified": "2026-10-26T16:16:20Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.apache.cxf:cxf-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2.0"
+                  },
+                  {
+                    "fixed": "4.2.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.apache.cxf:cxf-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.1.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.apache.cxf:cxf-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.6.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": "https://cxf.apache.org/security-advisories.data/CVE-2026-49875.txt",
+      "method": "official-maintainer-text-advisory",
+      "notes": [
+        "Official advisory explicitly confirms all three series and fixed versions, including the new 3.6.12 backport boundary.",
+        "Official severity is literal important; it supplies no CVSS score or vector. Reviewed says CRITICAL and publishes CVSS3.1 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H. Keep these assessments attributed separately; do not derive a numeric score or map important silently.",
+        "EndpointReferenceUtils and W3CMultiSchemaFactory create a SAXParserFactory without the required JAXP hardening, enabling out-of-band external entity resolution.",
+        "The fetched text does not state advisory publication/update timestamps; HTTP Last-Modified is a file header, not an advisory date."
+      ],
+      "primaryEvidence": {
+        "id": "GHSA-xw5h-cmh3-8j6j",
+        "cve": "CVE-2026-49875",
+        "primaryUrl": "https://cxf.apache.org/security-advisories.data/CVE-2026-49875.txt",
+        "method": "official-maintainer-text-advisory",
+        "officialStructured": {
+          "package": "org.apache.cxf:cxf-core",
+          "ecosystem": "Maven",
+          "ranges": [
+            {
+              "affected": ">= 4.2.0, < 4.2.2",
+              "fixed": "4.2.2"
+            },
+            {
+              "affected": ">= 4.0.0, < 4.1.7",
+              "fixed": "4.1.7"
+            },
+            {
+              "affected": "< 3.6.12",
+              "fixed": "3.6.12"
+            }
+          ],
+          "severityLabelLiteral": "important",
+          "cvss": [],
+          "publishedAt": null,
+          "modifiedAt": null
+        },
+        "assessment": [
+          "Official advisory explicitly confirms all three series and fixed versions, including the new 3.6.12 backport boundary.",
+          "Official severity is literal important; it supplies no CVSS score or vector. Reviewed says CRITICAL and publishes CVSS3.1 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H. Keep these assessments attributed separately; do not derive a numeric score or map important silently.",
+          "EndpointReferenceUtils and W3CMultiSchemaFactory create a SAXParserFactory without the required JAXP hardening, enabling out-of-band external entity resolution.",
+          "The fetched text does not state advisory publication/update timestamps; HTTP Last-Modified is a file header, not an advisory date."
+        ]
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-xw5h-cmh3-8j6j"
+    },
+    {
+      "id": "GHSA-794g-x443-36f7",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/07/GHSA-794g-x443-36f7/GHSA-794g-x443-36f7.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified"
+      ],
+      "database": {
+        "id": "GHSA-794g-x443-36f7",
+        "aliases": [
+          "CVE-2026-2092"
+        ],
+        "published": "2026-07-02T20:42:23Z",
+        "modified": "2026-10-26T14:50:03Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.keycloak:keycloak-services"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "26.2.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.keycloak:keycloak-services"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "26.3.0"
+                  },
+                  {
+                    "last_affected": "26.4.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "Maven",
+              "name": "org.keycloak:keycloak-services"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "26.5.0"
+                  },
+                  {
+                    "fixed": "26.5.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/keycloak/keycloak/security/advisories/GHSA-794g-x443-36f7",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/keycloak/keycloak/security-advisories/GHSA-794g-x443-36f7",
+      "primary": {
+        "ghsa_id": "GHSA-794g-x443-36f7",
+        "cve_id": "CVE-2026-2092",
+        "summary": "Keycloak: Unauthorized access via improper validation of encrypted SAML assertions",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L",
+          "score": 7.7
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L",
+            "score": 7.7
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-05-29T15:20:22Z",
+        "updated_at": "2026-05-29T15:20:22Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "maven",
+              "name": "org.keycloak:keycloak-services"
+            },
+            "vulnerable_version_range": "< 26.2.14, >= 26.3.0, < 26.4.10, >= 26.5.0, < 26.5.5",
+            "patched_versions": "26.2.14, 26.4.10, 26.5.5, 26.6.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "909b599940bb912643da4e9bd786cfd0bd96d037a4a41a293c30441283d677be",
+        "descriptionCharacters": 358
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/keycloak/keycloak/security-advisories/GHSA-794g-x443-36f7",
+        "attemptAt": "2026-10-26T21:13:32.389161Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:37 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"2a9b3d748922f32146bc55bb9f223eb83cce8bc50f8a78bc77f343ef5a83e549\"",
+          "last-modified": "Fri, 29 May 2026 15:20:22 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/keycloak/keycloak/security-advisories/GHSA-794g-x443-36f7",
+        "bytes": 3658,
+        "sha256": "b4edd65c368d5bf08ea5935e9553dafae52d8d440ab22dd4a73fa5aadd9bed06",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:37.334379Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-794g-x443-36f7",
+      "notes": [
+        "開発元は系列別の修正版26.2.14、26.4.10、26.5.5を記載し、追加の修正版欄に26.6.0も列挙する。Reviewedの含む上限26.2.5／26.4.7とは異なるため、開発元の各系列の除外境界を表示する。",
+        "署名付きの有効なSAML assertionが必要で、全体のSAML応答が未署名の場合の暗号化assertion検証が対象。一般的な無認証アクセスと同一視しない。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-7pwq-q9jf-539h",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/08/GHSA-7pwq-q9jf-539h/GHSA-7pwq-q9jf-539h.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-7pwq-q9jf-539h",
+        "aliases": [
+          "CVE-2026-55107"
+        ],
+        "published": "2026-08-18T20:09:59Z",
+        "modified": "2026-10-26T14:45:07Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "RubyGems",
+              "name": "kobako"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0.1.0"
+                  },
+                  {
+                    "fixed": "0.9.1"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 0.9.0"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": "https://github.com/elct9620/kobako/security/advisories/GHSA-7pwq-q9jf-539h",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/elct9620/kobako/security-advisories/GHSA-7pwq-q9jf-539h",
+      "primary": {
+        "ghsa_id": "GHSA-7pwq-q9jf-539h",
+        "cve_id": "CVE-2026-55107",
+        "summary": "Sandbox escape: guest eval reaches host RCE via method_missing → public_send (any bound Service)",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+          "score": 10.0
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "score": 10.0
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-06-11T02:26:21Z",
+        "updated_at": "2026-06-16T15:20:33Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rubygems",
+              "name": "kobako"
+            },
+            "vulnerable_version_range": ">= 0.1.0, <= 0.9.0",
+            "patched_versions": "0.9.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "2b066ee8739b9147e713c262902402a065641be38b13d3349c3d8bbbbd74d784",
+        "descriptionCharacters": 2359
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/elct9620/kobako/security-advisories/GHSA-7pwq-q9jf-539h",
+        "attemptAt": "2026-10-26T21:13:32.390837Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:37 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"fd7653c59b9a0f85785f2b7118f22618ffce8f1065676b41d95840f312ae46ac\"",
+          "last-modified": "Tue, 16 Jun 2026 15:20:33 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/elct9620/kobako/security-advisories/GHSA-7pwq-q9jf-539h",
+        "bytes": 5901,
+        "sha256": "0ef6a3f2c4f23b0db8b811e84c26368d41a297bc2a0a5c7f07f1c962948f774e",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:37.241514Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-7pwq-q9jf-539h",
+      "notes": [
+        "開発元の影響欄>=0.1.0,<=0.9.0と修正版0.9.1を保持する。信頼できないmrubyスクリプトにhost Serviceを公開する環境が対象。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-jm5p-837g-rv8g",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/08/GHSA-jm5p-837g-rv8g/GHSA-jm5p-837g-rv8g.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-jm5p-837g-rv8g",
+        "aliases": [],
+        "published": "2026-08-20T18:45:27Z",
+        "modified": "2026-10-26T14:47:40Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "wagtail"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "7.0.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "wagtail"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.1rc1"
+                  },
+                  {
+                    "fixed": "7.3.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "wagtail"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.4rc1"
+                  },
+                  {
+                    "fixed": "7.4.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "wagtail"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0rc1"
+                  },
+                  {
+                    "fixed": "8.0rc2"
+                  }
+                ]
+              }
+            ],
+            "versions": [
+              "8.0rc1"
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/wagtail/wagtail/security/advisories/GHSA-jm5p-837g-rv8g",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/wagtail/wagtail/security-advisories/GHSA-jm5p-837g-rv8g",
+      "primary": {
+        "ghsa_id": "GHSA-jm5p-837g-rv8g",
+        "cve_id": null,
+        "summary": " Improper restriction handling on Page translation API endpoint",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-08-20T15:29:49Z",
+        "updated_at": "2026-08-20T15:29:49Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "wagtail"
+            },
+            "vulnerable_version_range": "<7.0.9, 7.1-7.3.3, 7.4-7.4.2, 8.0rc1",
+            "patched_versions": "7.0.9, 7.3.4, 7.4.3, 8.0rc2",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "66d357ccd8dd3da5cb382644595a2815b6a9ba0c13c06cf92e03ef6063d5a83b",
+        "descriptionCharacters": 762
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/wagtail/wagtail/security-advisories/GHSA-jm5p-837g-rv8g",
+        "attemptAt": "2026-10-26T21:13:32.392510Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:37 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"0d9bd0e07a913671d11df7b20da44467a07b8312460ca4e17d43a9babae26a35\"",
+          "last-modified": "Thu, 20 Aug 2026 15:29:49 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/wagtail/wagtail/security-advisories/GHSA-jm5p-837g-rv8g",
+        "bytes": 4998,
+        "sha256": "ce996a9d0bc8458bfa5f907a04adf3517a50e6789583e34be6d3a0c26ead84a5",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:37.393065Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-jm5p-837g-rv8g",
+      "notes": [
+        "開発元の影響欄は<7.0.9, 7.1-7.3.3, 7.4-7.4.2, 8.0rc1、修正版は7.0.9／7.3.4／7.4.3／8.0rc2。今回Reviewedが追加した7.1rc1／7.4rc1の下限は開発元の構造化欄では明示されていない。広いDB範囲と列挙版8.0rc1を保持するが、これらのrc下限を開発元確認済みとはしない。",
+        "submit translations権限を持つCMS利用者による、編集権限のないページの翻訳コピーと内容閲覧が対象。"
+      ],
+      "verificationOutcome": "developer-ghsa-reviewed-db-prerelease-lower-bounds-not-corroborated"
+    },
+    {
+      "id": "GHSA-38p6-h87p-r4cg",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/09/GHSA-38p6-h87p-r4cg/GHSA-38p6-h87p-r4cg.json",
+      "eligible": false,
+      "scopeOutcome": "excluded-ecosystem",
+      "changedFields": [
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-38p6-h87p-r4cg",
+        "aliases": [
+          "CVE-2026-72701"
+        ],
+        "published": "2026-09-17T20:25:05Z",
+        "modified": "2026-10-26T14:42:33Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Packagist",
+              "name": "getgrav/grav"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.0.16"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 2.0.15"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "LOW",
+      "primaryUrl": "https://github.com/getgrav/grav/security/advisories/GHSA-38p6-h87p-r4cg",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/getgrav/grav/security-advisories/GHSA-38p6-h87p-r4cg",
+      "curatedOutcome": "excluded-from-library-scope",
+      "verificationOutcome": "not-individually-reviewed-out-of-scope"
+    },
+    {
+      "id": "GHSA-7pgq-cr25-xvc8",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/09/GHSA-7pgq-cr25-xvc8/GHSA-7pgq-cr25-xvc8.json",
+      "eligible": false,
+      "scopeOutcome": "excluded-ecosystem",
+      "changedFields": [
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-7pgq-cr25-xvc8",
+        "aliases": [
+          "CVE-2026-69088"
+        ],
+        "published": "2026-09-17T17:16:39Z",
+        "modified": "2026-10-26T14:43:42Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Packagist",
+              "name": "getgrav/grav"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.7"
+                  },
+                  {
+                    "fixed": "2.0.11"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 2.0.10"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/getgrav/grav/security/advisories/GHSA-7pgq-cr25-xvc8",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/getgrav/grav/security-advisories/GHSA-7pgq-cr25-xvc8",
+      "curatedOutcome": "excluded-from-library-scope",
+      "verificationOutcome": "not-individually-reviewed-out-of-scope"
+    },
+    {
+      "id": "GHSA-494j-54xm-rwp3",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-494j-54xm-rwp3/GHSA-494j-54xm-rwp3.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "database_specific",
+        "modified",
+        "references",
+        "severity"
+      ],
+      "database": {
+        "id": "GHSA-494j-54xm-rwp3",
+        "aliases": [
+          "CVE-2026-111063"
+        ],
+        "published": "2026-10-19T17:07:47Z",
+        "modified": "2026-10-26T14:53:54Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "aiohttp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.14.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.14.3"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-494j-54xm-rwp3",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-494j-54xm-rwp3",
+      "primary": {
+        "ghsa_id": "GHSA-494j-54xm-rwp3",
+        "cve_id": "CVE-2026-111063",
+        "summary": "Secure attribute not enforced for shared cookie",
+        "severity": "low",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-07T01:23:58Z",
+        "updated_at": "2026-10-19T16:43:49Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "aiohttp"
+            },
+            "vulnerable_version_range": "<=3.14.3",
+            "patched_versions": "3.14.4",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "f7b2d58ece40493276d958d1ddbb6f7f44822415a0c3deea461b7ada843bd236",
+        "descriptionCharacters": 288
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-494j-54xm-rwp3",
+        "attemptAt": "2026-10-26T21:13:37.242946Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:40 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"ced03427f9e0300c7deaf975015675df308bf916b7bc9aaebaaccab5c4876594\"",
+          "last-modified": "Mon, 19 Oct 2026 16:43:49 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/aio-libs/aiohttp/security-advisories/GHSA-494j-54xm-rwp3",
+        "bytes": 4740,
+        "sha256": "5e78fc2012d09fa363cc0d7fe10208ae077a90ffe44be4772609bde725ea5ae0",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:40.183142Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-494j-54xm-rwp3",
+      "notes": [
+        "開発元の深刻度はLowで数値CVSSは未提示。Reviewedは今回ModerateとCVSS4.0ベクトルを追加した。表示ラベルは開発元Low、DBベクトルはDB出典として分離し、数値を独自計算しない。",
+        "共有CookieのSecure属性が非暗号化リクエストで守られない問題。開発元の含む影響上限3.14.3と修正版3.14.4を保持する。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-6q48-6c7w-9gw2",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-6q48-6c7w-9gw2/GHSA-6q48-6c7w-9gw2.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified"
+      ],
+      "database": {
+        "id": "GHSA-6q48-6c7w-9gw2",
+        "aliases": [],
+        "published": "2026-10-20T19:35:05Z",
+        "modified": "2026-10-26T16:02:12Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "certifi"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2019.03.09"
+                  },
+                  {
+                    "fixed": "2026.10.18"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "databaseSeverity": "CRITICAL",
+      "primaryUrl": "https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/certifi/python-certifi/security-advisories/GHSA-6q48-6c7w-9gw2",
+      "primary": {
+        "ghsa_id": "GHSA-6q48-6c7w-9gw2",
+        "cve_id": null,
+        "summary": "Removal of emSign root cerificate",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-20T11:31:16Z",
+        "updated_at": "2026-10-20T11:31:34Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "certifi"
+            },
+            "vulnerable_version_range": ">=2019.03.09",
+            "patched_versions": "2026.10.18",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "44b8e710d7c6aa709fc1294846dd17028e8dd60a5fd8a11da09b5095ae48e269",
+        "descriptionCharacters": 276
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/certifi/python-certifi/security-advisories/GHSA-6q48-6c7w-9gw2",
+        "attemptAt": "2026-10-26T21:13:37.336751Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:40 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"8bd79353bf9897b860c642074a0ed8105f8695c201e55974045730f7a5e57459\"",
+          "last-modified": "Tue, 20 Oct 2026 11:31:34 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/certifi/python-certifi/security-advisories/GHSA-6q48-6c7w-9gw2",
+        "bytes": 2205,
+        "sha256": "a91bc35bc43bb5120566330c7f7be10674289faf570e91670de559cd1fad42ce",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:40.336455Z"
+      },
+      "curatedOutcome": "refreshed",
+      "curatedId": "GHSA-6q48-6c7w-9gw2",
+      "notes": [],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-7cxh-94cf-mfp6",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-7cxh-94cf-mfp6/GHSA-7cxh-94cf-mfp6.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified"
+      ],
+      "database": {
+        "id": "GHSA-7cxh-94cf-mfp6",
+        "aliases": [
+          "CVE-2026-77564"
+        ],
+        "published": "2026-10-15T20:20:16Z",
+        "modified": "2026-10-26T14:41:03Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/siderolabs/talos"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.14.0-alpha.0.0.20260513110206-76080416beee"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "LOW",
+      "primaryUrl": "https://github.com/siderolabs/talos/security/advisories/GHSA-7cxh-94cf-mfp6",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/siderolabs/talos/security-advisories/GHSA-7cxh-94cf-mfp6",
+      "primary": {
+        "ghsa_id": "GHSA-7cxh-94cf-mfp6",
+        "cve_id": "CVE-2026-77564",
+        "summary": "Support bundle does not redact registry credentials",
+        "severity": "low",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+          "score": 3.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "score": 3.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-08-24T07:57:11Z",
+        "updated_at": "2026-08-24T07:57:11Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "",
+              "name": "Talos"
+            },
+            "vulnerable_version_range": "<1.13.3,<1.12.9",
+            "patched_versions": "1.13.3,1.12.9",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "cf8c8e78cfd854e6cd24085e72a3a1c38d0e667f7b861f34b4f7b160c5937f7b",
+        "descriptionCharacters": 1557
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/siderolabs/talos/security-advisories/GHSA-7cxh-94cf-mfp6",
+        "attemptAt": "2026-10-26T21:13:37.359943Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:40 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"6605d1283b06f0759875b36badc8ffce5b89dd20df0491f63605165db63fa4c3\"",
+          "last-modified": "Mon, 24 Aug 2026 07:57:11 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/siderolabs/talos/security-advisories/GHSA-7cxh-94cf-mfp6",
+        "bytes": 4692,
+        "sha256": "e5bf4630fcbcb19e44070e5f5c35c4e97694410092aee0cd0981237bdf9e316e",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:40.588929Z"
+      },
+      "curatedOutcome": "refreshed",
+      "curatedId": "GHSA-7cxh-94cf-mfp6",
+      "notes": [],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-c72h-82w6-rqfp",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-c72h-82w6-rqfp/GHSA-c72h-82w6-rqfp.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-c72h-82w6-rqfp",
+        "aliases": [
+          "CVE-2026-43976"
+        ],
+        "published": "2026-10-07T13:33:14Z",
+        "modified": "2026-10-26T15:50:07Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "wger"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "2.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-c72h-82w6-rqfp",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-c72h-82w6-rqfp",
+      "primary": {
+        "ghsa_id": "GHSA-c72h-82w6-rqfp",
+        "cve_id": "CVE-2026-43976",
+        "summary": "wger: cross-tenant admin notes/contracts leak via gym=None bypass (5 views)",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+          "score": 7.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+            "score": 7.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-04T17:38:27Z",
+        "updated_at": "2026-10-04T17:38:27Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "wger"
+            },
+            "vulnerable_version_range": "<= 2.5.0",
+            "patched_versions": ">= 2.6",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "1fe75a52460e6dfe984be53f53305c1b9e7e567edbb08c24e74fcc7291e43901",
+        "descriptionCharacters": 6168
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-c72h-82w6-rqfp",
+        "attemptAt": "2026-10-26T21:13:37.393467Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:40 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"b73055e0321be763bed328f60d69884b82313f598f03fb0f4dbd39f5a62400b0\"",
+          "last-modified": "Sun, 04 Oct 2026 17:38:27 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-c72h-82w6-rqfp",
+        "bytes": 9732,
+        "sha256": "c378bb1e2786a27c842fd0eafcb1272c1e5743e98e32cd14df46180adb3f3f20",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:40.216434Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-c72h-82w6-rqfp",
+      "notes": [
+        "開発元は影響欄<=2.5.0、修正欄>=2.6。Reviewedの<=2.1／修正版不明とは異なるため、開発元の原表記を表示する。>=2.6を単一の厳密な修正境界へ読み替えない。",
+        "gym=Noneの利用者間で、委譲されたtrainerとadmin-note権限が必要。未所属利用者への資料閲覧等に限定した条件を保持する。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-gwg2-r3hj-4w44",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-gwg2-r3hj-4w44/GHSA-gwg2-r3hj-4w44.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-gwg2-r3hj-4w44",
+        "aliases": [
+          "CVE-2026-106114"
+        ],
+        "published": "2026-10-07T20:24:19Z",
+        "modified": "2026-10-26T14:17:37Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.1.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.0.0-beta0001"
+                  },
+                  {
+                    "fixed": "3.2.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-gwg2-r3hj-4w44",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-gwg2-r3hj-4w44",
+      "primary": {
+        "ghsa_id": "GHSA-gwg2-r3hj-4w44",
+        "cve_id": "CVE-2026-106114",
+        "summary": "ICC CLUT parsing allocates from unvalidated channel and grid dimensions",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 5.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "score": 5.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-15T07:21:39Z",
+        "updated_at": "2026-10-09T11:34:05Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 1.0.0-beta0001, < 3.2.0",
+            "patched_versions": "3.2.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+            "patched_versions": "4.1.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "87937285c91eed4ccbf4ba629e87382bd427185ff9a8758567ae99288f670965",
+        "descriptionCharacters": 10440
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-gwg2-r3hj-4w44",
+        "attemptAt": "2026-10-26T21:13:40.183576Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:43 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"46aabe8f690bf1ba9ba598b295d1cb47f067d597eab5839f1396ff06261c0a14\"",
+          "last-modified": "Fri, 09 Oct 2026 11:34:05 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-gwg2-r3hj-4w44",
+        "bytes": 14277,
+        "sha256": "5adb3ef12221a5394e2aab6ff856e9077d83b33c9707b5df4fad020e88a42bf4",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:43.120417Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-gwg2-r3hj-4w44",
+      "notes": [
+        "3.2.0と4.1.2の系列別修正を開発元本文・構造化欄で確認。v1〜v3の遅延ICC解析とv4のICC変換経路を区別する。示されている影響はメモリ圧迫で、処理停止やコード実行を実証した報告ではない。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-h895-cgqg-jf52",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-h895-cgqg-jf52/GHSA-h895-cgqg-jf52.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "severity"
+      ],
+      "database": {
+        "id": "GHSA-h895-cgqg-jf52",
+        "aliases": [
+          "CVE-2026-114142"
+        ],
+        "published": "2026-10-22T16:39:55Z",
+        "modified": "2026-10-26T14:28:55Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "toml"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.0.1"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 5.0.0"
+            }
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/BinaryMuse/toml-node/security/advisories/GHSA-h895-cgqg-jf52",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/BinaryMuse/toml-node/security-advisories/GHSA-h895-cgqg-jf52",
+      "primary": {
+        "ghsa_id": "GHSA-h895-cgqg-jf52",
+        "cve_id": "CVE-2026-114142",
+        "summary": "Prototype pollution: parsing a TOML document can write to Object.prototype",
+        "severity": "high",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-12T23:01:02Z",
+        "updated_at": "2026-10-25T10:02:46Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "toml"
+            },
+            "vulnerable_version_range": "<= 5.0.0",
+            "patched_versions": ">= 5.0.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "dbeb57d6fd7dd071461e83060aef986c9e8e390808c6aabad056e326b7748541",
+        "descriptionCharacters": 4381
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/BinaryMuse/toml-node/security-advisories/GHSA-h895-cgqg-jf52",
+        "attemptAt": "2026-10-26T21:13:40.216986Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:43 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"2565fe1b36444a54fe11f17fab1a3f8ae7b6cb10ee5547847be67d182cb4ec56\"",
+          "last-modified": "Sun, 25 Oct 2026 10:02:46 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/BinaryMuse/toml-node/security-advisories/GHSA-h895-cgqg-jf52",
+        "bytes": 7748,
+        "sha256": "2d223220847b7d759c4e0a16299c8bf767631d191df264ce91cab12a99357282",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:43.152002Z"
+      },
+      "curatedOutcome": "refreshed",
+      "curatedId": "GHSA-h895-cgqg-jf52",
+      "notes": [],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-j3p4-wp97-rph4",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-j3p4-wp97-rph4/GHSA-j3p4-wp97-rph4.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-j3p4-wp97-rph4",
+        "aliases": [
+          "CVE-2026-106113"
+        ],
+        "published": "2026-10-07T20:24:23Z",
+        "modified": "2026-10-26T14:18:59Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "3.2.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j3p4-wp97-rph4",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-j3p4-wp97-rph4",
+      "primary": {
+        "ghsa_id": "GHSA-j3p4-wp97-rph4",
+        "cve_id": "CVE-2026-106113",
+        "summary": "HistogramEqualization uses an unvalidated luminance as an unchecked histogram index",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-15T07:21:44Z",
+        "updated_at": "2026-10-09T11:35:17Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 2.0.0, < 3.2.0",
+            "patched_versions": "3.2.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+            "patched_versions": "4.1.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "397d77c053b00f32fb5d40a37d46bdcba3a884a84711e151081741c08e719a8f",
+        "descriptionCharacters": 7565
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-j3p4-wp97-rph4",
+        "attemptAt": "2026-10-26T21:13:40.336768Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:43 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"f75bcbb990f28cc40497dc76a05b5e5a7d520406d99d927fec7bc49de0d5809a\"",
+          "last-modified": "Fri, 09 Oct 2026 11:35:17 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-j3p4-wp97-rph4",
+        "bytes": 11326,
+        "sha256": "333d4f7749d7b5320016a86150b5975ec51c87c4d8cb524d2648eec2d5d59e64",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:43.219461Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-j3p4-wp97-rph4",
+      "notes": [
+        "3.2.0と4.1.2の系列別修正を開発元本文・構造化欄で確認。浮動小数点TIFFをHalfVector4として読み込みHistogramEqualizationを適用する経路が対象で、Adaptive Histogram EqualizationやAutoLevelへ一般化しない。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-j9gm-c75j-xc9q",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-j9gm-c75j-xc9q/GHSA-j9gm-c75j-xc9q.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-j9gm-c75j-xc9q",
+        "aliases": [
+          "CVE-2026-106110"
+        ],
+        "published": "2026-10-07T20:24:28Z",
+        "modified": "2026-10-26T14:22:51Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "3.2.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j9gm-c75j-xc9q",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-j9gm-c75j-xc9q",
+      "primary": {
+        "ghsa_id": "GHSA-j9gm-c75j-xc9q",
+        "cve_id": "CVE-2026-106110",
+        "summary": "TIFF CCITT T4 encoder can write past its compressed output buffer",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-15T07:22:00Z",
+        "updated_at": "2026-10-09T11:35:28Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 2.0.0, < 3.2.0",
+            "patched_versions": "3.2.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+            "patched_versions": "4.1.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "7a28400229774e2f2eee67f3da464c9343ef3190795f5763a03a99e0d2d3996a",
+        "descriptionCharacters": 4295
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-j9gm-c75j-xc9q",
+        "attemptAt": "2026-10-26T21:13:40.590938Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:43 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"4f511cd528a258b48d570eb8e4be18910fb7a8dc01c9ff697d53984d0635be66\"",
+          "last-modified": "Fri, 09 Oct 2026 11:35:28 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-j9gm-c75j-xc9q",
+        "bytes": 7920,
+        "sha256": "7dabe99068b61fcfacc6e2d0f8bb14987bb9d7b448917f39c9c3762d42242b6b",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:43.139180Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-j9gm-c75j-xc9q",
+      "notes": [
+        "3.2.0と4.1.2の系列別修正を開発元本文・構造化欄で確認。対象はT4 CCITT Group 3 TIFFのエンコードで、過去の無関係なICC説明ではない。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-jjfr-hcj7-qf5w",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-jjfr-hcj7-qf5w/GHSA-jjfr-hcj7-qf5w.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-jjfr-hcj7-qf5w",
+        "aliases": [
+          "CVE-2026-106115"
+        ],
+        "published": "2026-10-07T20:24:46Z",
+        "modified": "2026-10-26T14:21:21Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.1.0"
+                  },
+                  {
+                    "fixed": "3.2.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-jjfr-hcj7-qf5w",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-jjfr-hcj7-qf5w",
+      "primary": {
+        "ghsa_id": "GHSA-jjfr-hcj7-qf5w",
+        "cve_id": "CVE-2026-106115",
+        "summary": "TIFF CCITT T6 encoder writes beyond an undersized output buffer",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-15T07:21:54Z",
+        "updated_at": "2026-10-09T11:35:24Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 2.1.0, < 3.2.0",
+            "patched_versions": "3.2.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+            "patched_versions": "4.1.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "1902c9280ab9de77bbdda3aa04e4f187201b5d1e4427c0d0a1af818d40b8c4f2",
+        "descriptionCharacters": 4414
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-jjfr-hcj7-qf5w",
+        "attemptAt": "2026-10-26T21:13:43.121499Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:46 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"abc14bcb1ffba1a69bc7c578a867e18b30d8925418d91db5b7524e356fe53df2\"",
+          "last-modified": "Fri, 09 Oct 2026 11:35:24 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-jjfr-hcj7-qf5w",
+        "bytes": 8045,
+        "sha256": "dc71c88e43bb72c7e67020cb99ce2ee729bdb128eb9ecd3ecc46381eb28beb71",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:46.149583Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-jjfr-hcj7-qf5w",
+      "notes": [
+        "3.2.0と4.1.2の系列別修正を開発元本文・構造化欄で確認。対象はT6 CCITT Group 4エンコードで、継承したTIFFメタデータを使う再エンコード経路も含む。実証された停止と将来のコード実行可能性を混同しない。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-p3pr-8f3m-4qp8",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-p3pr-8f3m-4qp8/GHSA-p3pr-8f3m-4qp8.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-p3pr-8f3m-4qp8",
+        "aliases": [],
+        "published": "2026-10-09T17:09:03Z",
+        "modified": "2026-10-26T15:52:23Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pyload-ng"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "0.5.0b3.dev101"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/pyload/pyload/security/advisories/GHSA-p3pr-8f3m-4qp8",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/pyload/pyload/security-advisories/GHSA-p3pr-8f3m-4qp8",
+      "primary": {
+        "ghsa_id": "GHSA-p3pr-8f3m-4qp8",
+        "cve_id": null,
+        "summary": "pyLoad WindowsPhoneNotify addon: non-admin SETTINGS user triggers SSRF via unguarded http.client notification host",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+          "score": 6.4
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+            "score": 6.4
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-26T13:29:39Z",
+        "updated_at": "2026-09-26T13:29:39Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "pyload-ng"
+            },
+            "vulnerable_version_range": "<= 0.5.0b3.dev101",
+            "patched_versions": "0.5.0b3.dev102",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "ad0ed200fef99a91f8910dee071adef03f49cd2b5f9d563ca627c0ac1de23fbb",
+        "descriptionCharacters": 8338
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/pyload/pyload/security-advisories/GHSA-p3pr-8f3m-4qp8",
+        "attemptAt": "2026-10-26T21:13:43.140057Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:46 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"884cc311d81c381a8f3b369c23690643207519d7c9546d47da4284624c3a225a\"",
+          "last-modified": "Sat, 26 Sep 2026 13:29:39 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/pyload/pyload/security-advisories/GHSA-p3pr-8f3m-4qp8",
+        "bytes": 12743,
+        "sha256": "b41179c5f6bdbb67b68a39a35512d429c77ca1bdbbc148bb867cf957f46c4d51",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:46.332317Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-p3pr-8f3m-4qp8",
+      "notes": [
+        "開発元の構造化修正欄は0.5.0b3.dev102だが、本文は未公開・未修正と記す。公式修正commitは通知プラグインを削除する一方、当該PyPI版APIはHTTP404だった。公開済み修正版の確認が取れないため表示fixedはnullを維持し、開発元の修正候補を監査に保存する。404だけで将来の公開不存在を断定しない。",
+        "非管理者のSETTINGS権限とWindowsPhoneNotify設定・通知イベントが必要なblind SSRF。応答本文の直接取得や実悪用を確認した意味ではない。"
+      ],
+      "verificationOutcome": "developer-ghsa-reviewed-fixed-release-publication-unresolved"
+    },
+    {
+      "id": "GHSA-rj75-hqrm-r3gf",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-rj75-hqrm-r3gf/GHSA-rj75-hqrm-r3gf.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-rj75-hqrm-r3gf",
+        "aliases": [
+          "CVE-2026-104844"
+        ],
+        "published": "2026-10-05T22:53:54Z",
+        "modified": "2026-10-26T14:07:54Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "postcss-selector-parser"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "fixed": "7.1.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "postcss-selector-parser"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "6.1.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/postcss/postcss-selector-parser/security/advisories/GHSA-rj75-hqrm-r3gf",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/postcss/postcss-selector-parser/security-advisories/GHSA-rj75-hqrm-r3gf",
+      "primary": {
+        "ghsa_id": "GHSA-rj75-hqrm-r3gf",
+        "cve_id": "CVE-2026-104844",
+        "summary": "Quadratic complexity in flat selector parsing allows CPU exhaustion",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 5.9
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 5.9
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-03T08:57:44Z",
+        "updated_at": "2026-10-02T15:42:39Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "postcss-selector-parser"
+            },
+            "vulnerable_version_range": ">= 7.0.0, < 7.1.6",
+            "patched_versions": "7.1.6",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "postcss-selector-parser"
+            },
+            "vulnerable_version_range": "< 6.1.5",
+            "patched_versions": "6.1.5",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "b73a85a32a4e0df3d4d0e4270e6ff73250c9a50b835ab6668bd883ca73e3812d",
+        "descriptionCharacters": 1365
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/postcss/postcss-selector-parser/security-advisories/GHSA-rj75-hqrm-r3gf",
+        "attemptAt": "2026-10-26T21:13:43.153370Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:45 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"4a1e14942bd1baf112684ebbcaec4a452a029ca190aab55162bcc3fd04d0f66e\"",
+          "last-modified": "Fri, 02 Oct 2026 15:42:39 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/postcss/postcss-selector-parser/security-advisories/GHSA-rj75-hqrm-r3gf",
+        "bytes": 3856,
+        "sha256": "70c3449d9c8d6321e571620e7bbad2be2c1e5b70a34885c714a91f8d60aa73bd",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:46.020072Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-rj75-hqrm-r3gf",
+      "notes": [
+        "開発元APIと6.1.5公式リリースが6.xのバックポートを明示する。7.xの7.1.6と分けて保持し、6.xがsecurity-only maintenanceであることを区別する。",
+        "信頼できないセレクタを同期的な要求処理で解析する構成が対象。信頼済みソースの通常のビルド処理へ一般化せず、既存のネスト深度制限だけでは平坦な入力の問題を防げない。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-rjpf-7pf5-q54x",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-rjpf-7pf5-q54x/GHSA-rjpf-7pf5-q54x.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-rjpf-7pf5-q54x",
+        "aliases": [
+          "CVE-2026-46438"
+        ],
+        "published": "2026-10-07T13:59:17Z",
+        "modified": "2026-10-26T15:51:03Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "wger"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "2.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-rjpf-7pf5-q54x",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-rjpf-7pf5-q54x",
+      "primary": {
+        "ghsa_id": "GHSA-rjpf-7pf5-q54x",
+        "cve_id": "CVE-2026-46438",
+        "summary": "Cross-User Data Corruption via Missing Ownership Check on WorkoutLog.slot_entry",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-04T17:21:13Z",
+        "updated_at": "2026-10-04T17:21:13Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "wger"
+            },
+            "vulnerable_version_range": "<2.5",
+            "patched_versions": ">= 2.6",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "285a86738a3747d3c846a634450781c2c0f695aa30523ac8db7b7c71ab070164",
+        "descriptionCharacters": 13159
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-rjpf-7pf5-q54x",
+        "attemptAt": "2026-10-26T21:13:43.219763Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:46 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"988f108a5aaf524bdb17b0480f850b3961628a45909a6a6c67d813258b81e6aa\"",
+          "last-modified": "Sun, 04 Oct 2026 17:21:13 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-rjpf-7pf5-q54x",
+        "bytes": 17548,
+        "sha256": "c94ec2bfd14e6846e48d58ff7e498d285bbc78e4f3432582848004049e9ef502",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:46.205641Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-rjpf-7pf5-q54x",
+      "notes": [
+        "開発元は影響欄<2.5、修正欄>=2.6。Reviewedの<=2.1／修正版不明とは異なるため、開発元の原表記を表示する。2.5以上2.6未満の評価や最初の単一修正版を推測しない。",
+        "他利用者のWorkoutLog.slot_entryの所有者確認漏れによるワークアウトデータの整合性侵害。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-v76p-62qx-wwq2",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-v76p-62qx-wwq2/GHSA-v76p-62qx-wwq2.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-v76p-62qx-wwq2",
+        "aliases": [
+          "CVE-2026-106118"
+        ],
+        "published": "2026-10-07T16:18:57Z",
+        "modified": "2026-10-26T16:04:11Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "3.2.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.1.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-v76p-62qx-wwq2",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-v76p-62qx-wwq2",
+      "primary": {
+        "ghsa_id": "GHSA-v76p-62qx-wwq2",
+        "cve_id": "CVE-2026-106118",
+        "summary": "Tiled fax TIFF: tile buffer sized by TileWidth but fax decompressor writes scanlines of ImageWidth — heap OOB write in SixLabors.ImageSharp",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-08-20T09:48:49Z",
+        "updated_at": "2026-10-09T11:35:37Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 3.0.0, < 3.2.0",
+            "patched_versions": "3.2.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 4.0.0, < 4.1.1",
+            "patched_versions": "4.1.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "f0072175340a80b4f00ea6d6c4c5b80e16a30fda7d0ef29418dd0dcee5fa20b8",
+        "descriptionCharacters": 5816
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-v76p-62qx-wwq2",
+        "attemptAt": "2026-10-26T21:13:46.020394Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:48 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"ac4b459377afd2bd0590f866e66a349969420629d3db0d7d27c1c95e3b07497e\"",
+          "last-modified": "Fri, 09 Oct 2026 11:35:37 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-v76p-62qx-wwq2",
+        "bytes": 9611,
+        "sha256": "8e57fc04ade745a6b282b3c245161d39270e8d5864f0522ceadd2c0b7264e0cb",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:49.033207Z"
+      },
+      "curatedOutcome": "refreshed",
+      "curatedId": "GHSA-v76p-62qx-wwq2",
+      "notes": [],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-wmxv-xphr-5c9g",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-wmxv-xphr-5c9g/GHSA-wmxv-xphr-5c9g.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-wmxv-xphr-5c9g",
+        "aliases": [
+          "CVE-2026-106116"
+        ],
+        "published": "2026-10-07T20:24:32Z",
+        "modified": "2026-10-26T14:20:08Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "3.2.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "ecosystem": "NuGet",
+              "name": "SixLabors.ImageSharp"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ]
+      },
+      "databaseSeverity": "MODERATE",
+      "primaryUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-wmxv-xphr-5c9g",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-wmxv-xphr-5c9g",
+      "primary": {
+        "ghsa_id": "GHSA-wmxv-xphr-5c9g",
+        "cve_id": "CVE-2026-106116",
+        "summary": "BigTIFF IFD count can keep a decoder thread in a non-progressing loop",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 5.3
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "score": 5.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-09-15T07:21:48Z",
+        "updated_at": "2026-10-09T11:35:20Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 2.0.0, < 3.2.0",
+            "patched_versions": "3.2.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "SixLabors.ImageSharp"
+            },
+            "vulnerable_version_range": ">= 4.0.0, < 4.1.2",
+            "patched_versions": "4.1.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "93c1608c347a10f9325a1c7f521d5a438fc3e847e79d72897a464c65e09d9386",
+        "descriptionCharacters": 5606
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-wmxv-xphr-5c9g",
+        "attemptAt": "2026-10-26T21:13:46.159256Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:48 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"1705643d5f932982111cb4640365dd147549c275610e67924b3fbbb54a2ebc2d\"",
+          "last-modified": "Fri, 09 Oct 2026 11:35:20 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/SixLabors/ImageSharp/security-advisories/GHSA-wmxv-xphr-5c9g",
+        "bytes": 9352,
+        "sha256": "c8b2896c1917c31625d85dba2ce1789fcc7df8e45f058a1fa7d33fb989697cf5",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:49.059348Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-wmxv-xphr-5c9g",
+      "notes": [
+        "3.2.0と4.1.2の系列別修正を開発元本文・構造化欄で確認。BigTIFFの宣言エントリー数で1デコーダースレッドが進行しない問題で、報告はワーカープール全体の枯渇を実証していない。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    },
+    {
+      "id": "GHSA-x249-cx55-2h87",
+      "change": "M",
+      "sourcePath": "advisories/github-reviewed/2026/10/GHSA-x249-cx55-2h87/GHSA-x249-cx55-2h87.json",
+      "eligible": true,
+      "scopeOutcome": "in-scope",
+      "changedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "database": {
+        "id": "GHSA-x249-cx55-2h87",
+        "aliases": [
+          "CVE-2026-46434"
+        ],
+        "published": "2026-10-07T13:59:14Z",
+        "modified": "2026-10-26T15:48:38Z",
+        "withdrawn": null,
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "wger"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "2.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N"
+          }
+        ]
+      },
+      "databaseSeverity": "HIGH",
+      "primaryUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-x249-cx55-2h87",
+      "method": "developer-ghsa-api",
+      "apiUrl": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-x249-cx55-2h87",
+      "primary": {
+        "ghsa_id": "GHSA-x249-cx55-2h87",
+        "cve_id": "CVE-2026-46434",
+        "summary": "Trainer Privilege Escalation - Improper Privilege Management",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
+          "score": 7.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
+            "score": 7.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "published_at": "2026-10-04T17:18:55Z",
+        "updated_at": "2026-10-04T17:18:55Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "wger"
+            },
+            "vulnerable_version_range": "<2.5",
+            "patched_versions": ">= 2.6",
+            "vulnerable_functions": []
+          }
+        ],
+        "descriptionSha256": "1611a81816aa0a380f476bb59520c2f46a9093c6e986e6fcb7616d7be8567406",
+        "descriptionCharacters": 9857
+      },
+      "receipt": {
+        "url": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-x249-cx55-2h87",
+        "attemptAt": "2026-10-26T21:13:46.206216Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:13:49 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"44cb6c2b5fc84d0ecce3aebd7bd069e2c4054e8805f9159bfe94b6807d41405c\"",
+          "last-modified": "Sun, 04 Oct 2026 17:18:55 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/wger-project/wger/security-advisories/GHSA-x249-cx55-2h87",
+        "bytes": 13815,
+        "sha256": "d6a5d2189f81fdf52e4511afb627854ea0443ec3b38956dbfe8236dab9b0a2a9",
+        "outcome": "success",
+        "idMatches": true,
+        "fetchedAt": "2026-10-26T21:13:49.275787Z"
+      },
+      "curatedOutcome": "added",
+      "curatedId": "GHSA-x249-cx55-2h87",
+      "notes": [
+        "開発元は影響欄<2.5、修正欄>=2.6。Reviewedの<=2.1／修正版不明とは異なるため、開発元の原表記を表示する。2.5以上2.6未満の評価や最初の単一修正版を推測しない。",
+        "trainerによる同じgymのmanagerの無効化など、権限階層検証不足が対象。"
+      ],
+      "verificationOutcome": "developer-ghsa-structured-fields-and-relevant-description-reviewed"
+    }
+  ],
+  "newCuratedOverlayIds": [
+    "GHSA-494j-54xm-rwp3",
+    "GHSA-794g-x443-36f7",
+    "GHSA-7pwq-q9jf-539h",
+    "GHSA-c72h-82w6-rqfp",
+    "GHSA-gwg2-r3hj-4w44",
+    "GHSA-h383-gmxw-35v2",
+    "GHSA-j3p4-wp97-rph4",
+    "GHSA-j9gm-c75j-xc9q",
+    "GHSA-jjfr-hcj7-qf5w",
+    "GHSA-jm5p-837g-rv8g",
+    "GHSA-p3pr-8f3m-4qp8",
+    "GHSA-rfgh-63mg-8pwm",
+    "GHSA-rj75-hqrm-r3gf",
+    "GHSA-rjpf-7pf5-q54x",
+    "GHSA-w466-2wfc-8g58",
+    "GHSA-wmxv-xphr-5c9g",
+    "GHSA-x249-cx55-2h87",
+    "GHSA-xcvc-5hgv-phqg",
+    "GHSA-xw5h-cmh3-8j6j"
+  ],
+  "refreshedCuratedOverlayIds": [
+    "GHSA-6q48-6c7w-9gw2",
+    "GHSA-7cxh-94cf-mfp6",
+    "GHSA-h895-cgqg-jf52",
+    "GHSA-v76p-62qx-wwq2"
+  ],
+  "counts": {
+    "changedReviewedRecords": 34,
+    "eligibleRecords": 29,
+    "excludedPublicationWindowRecords": 1,
+    "excludedEcosystemRecords": 4,
+    "sameIdDeveloperGhsaReferences": 19,
+    "developerApiSuccess": 19,
+    "developerApiFailures": 0,
+    "eligibleWithoutSameIdDeveloperGhsaReference": 10,
+    "curatedRecordsAddedOrRefreshed": 23,
+    "newCuratedOverlays": 19,
+    "refreshedCuratedOverlays": 4,
+    "retainedDatabaseOnlyEligibleRecords": 6,
+    "databaseAffectedFieldChangesEligible": 18,
+    "databaseCvssFieldChangesEligible": 2,
+    "databaseAliasChangesEligible": 0,
+    "databaseWithdrawalChangesEligible": 0,
+    "additionalHttpRequests": 35,
+    "additionalHttpFailures": 1,
+    "http200ContentUnavailable": 6,
+    "materialAffectedCvssAliasOrWithdrawalChangesEligible": 19
+  },
+  "additionalEvidence": {
+    "apache": {
+      "schemaVersion": 1,
+      "checkedAt": "2026-10-26T21:15:12.244896Z",
+      "scope": "Read-only verification of two changed Apache Reviewed advisories. Necessary structured vendor fields, checksums and file identities only; no report bodies, patches, PoCs or unrelated personal metadata retained.",
+      "counts": {
+        "advisories": 2,
+        "httpAttempts": 7,
+        "http200": 7,
+        "httpFailures": 0
+      },
+      "receipts": [
+        {
+          "url": "https://logging.apache.org/security.html",
+          "attemptAt": "2026-10-26T21:13:58.144960Z",
+          "status": 200,
+          "bytes": 126652,
+          "sha256": "0bf2d905a835c2307cbb1f15a60e18b93687b10171f346100a6db03eaea04c6b",
+          "headers": {
+            "last-modified": "Tue, 06 Oct 2026 20:00:31 GMT",
+            "etag": "\"1eebc-65d317367aea6\"",
+            "content-type": "text/html",
+            "date": "Mon, 26 Oct 2026 21:14:06 GMT"
+          },
+          "outcome": "success",
+          "fetchedAt": "2026-10-26T21:14:06.180523Z"
+        },
+        {
+          "url": "https://logging.apache.org/cyclonedx/vdr.xml",
+          "attemptAt": "2026-10-26T21:14:06.181150Z",
+          "status": 200,
+          "bytes": 68026,
+          "sha256": "3a9828c4c529a3e7fec4e6141d10c4de115bea6afc7676db832bed209e5bf73f",
+          "headers": {
+            "last-modified": "Tue, 06 Oct 2026 20:00:31 GMT",
+            "etag": "\"109ba-65d317367aabe\"",
+            "content-type": "application/xml",
+            "date": "Mon, 26 Oct 2026 21:14:10 GMT"
+          },
+          "outcome": "success",
+          "fetchedAt": "2026-10-26T21:14:10.756382Z"
+        },
+        {
+          "url": "https://cxf.apache.org/security-advisories.data/CVE-2026-49875.txt",
+          "attemptAt": "2026-10-26T21:14:10.756418Z",
+          "status": 200,
+          "bytes": 856,
+          "sha256": "8a4d5c039113d69618b27ec354ef9922361854714d364dc5d58f31a1210307e4",
+          "headers": {
+            "last-modified": "Fri, 07 Aug 2026 11:43:14 GMT",
+            "etag": "\"358-658738281841b\"",
+            "content-type": "text/plain",
+            "date": "Mon, 26 Oct 2026 21:14:22 GMT"
+          },
+          "outcome": "success",
+          "fetchedAt": "2026-10-26T21:14:22.893598Z"
+        },
+        {
+          "url": "https://api.github.com/repos/apache/logging-log4j2/pulls/4078",
+          "attemptAt": "2026-10-26T21:14:25.808158Z",
+          "status": 200,
+          "bytes": 20537,
+          "sha256": "b606b4a7cb2a666c17d952e6f0d515c8ec85e355bd14bfcd43ace5abc59ab995",
+          "headers": {
+            "content-type": "application/json; charset=utf-8",
+            "date": "Mon, 26 Oct 2026 21:14:29 GMT",
+            "etag": "\"9ec352f8312d26eb73f1762dbca592d082b3303076844efa6e630cd96afe3802\"",
+            "last-modified": "Fri, 23 Oct 2026 15:16:08 GMT"
+          },
+          "outcome": "success",
+          "fetchedAt": "2026-10-26T21:14:29.759772Z"
+        },
+        {
+          "url": "https://api.github.com/repos/apache/logging-log4j2/pulls/4078/files",
+          "attemptAt": "2026-10-26T21:14:25.813505Z",
+          "status": 200,
+          "bytes": 19541,
+          "sha256": "29c766ef76be278dd41de74646ec0ab7c7ec0809fe06f9fbd63a5688c542cb9e",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:14:29 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"658c11c64b5398ec07e2bf3669c6e8c67fbf304ba4995ade550e6b45568ca541\"",
+            "last-modified": "Fri, 23 Oct 2026 15:16:08 GMT"
+          },
+          "outcome": "success",
+          "fetchedAt": "2026-10-26T21:14:29.837145Z"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/apache/logging-log4j2/rel/2.25.4/log4j-1.2-api/src/main/java/org/apache/log4j/layout/Log4j1XmlLayout.java",
+          "attemptAt": "2026-10-26T21:14:25.815629Z",
+          "status": 200,
+          "bytes": 6748,
+          "sha256": "824761f3fa0bdd267c428a09a5ffb8cd2dcb349d11154df55a279c1b7913488c",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"c5a71f066b1f5509d962ddb4e4061982dc25578b9eebbccaf680e0133c2e9389\"",
+            "date": "Mon, 26 Oct 2026 21:14:30 GMT"
+          },
+          "outcome": "success",
+          "fetchedAt": "2026-10-26T21:14:30.384300Z"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/apache/logging-log4j2/rel/2.25.4/log4j-1.2-api/pom.xml",
+          "attemptAt": "2026-10-26T21:14:25.818869Z",
+          "status": 200,
+          "bytes": 5470,
+          "sha256": "c4dd3bff206d345fe8a43f415fe0191d34b6ed0bed556889bb0ff2a4b315f381",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"ff9ef2d0de3f5bc9c399aaa079dea7235401290d1063f783aac32903b67135f7\"",
+            "date": "Mon, 26 Oct 2026 21:14:30 GMT"
+          },
+          "outcome": "success",
+          "fetchedAt": "2026-10-26T21:14:30.412012Z"
+        }
+      ],
+      "records": [
+        {
+          "id": "GHSA-h383-gmxw-35v2",
+          "cve": "CVE-2026-34479",
+          "primaryUrl": "https://logging.apache.org/security.html#CVE-2026-34479",
+          "method": "official-advisory-and-CycloneDX-vdr-plus-fix-source-review",
+          "officialStructured": {
+            "component": "log4j-1.2-api",
+            "package": "org.apache.logging.log4j:log4j-1.2-api",
+            "ecosystem": "Maven",
+            "ranges": [
+              {
+                "affected": ">= 2.7, < 2.25.4",
+                "fixed": "2.25.4"
+              },
+              {
+                "affected": ">= 3.0.0-alpha1, <= 3.0.0-beta2",
+                "fixed": null
+              }
+            ],
+            "publishedAt": "2026-04-10T11:53:17Z",
+            "modifiedAt": "2026-04-10T11:53:17Z",
+            "severity": {
+              "label": "medium",
+              "version": "4.0",
+              "score": 6.9,
+              "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+            }
+          },
+          "implementationEvidence": {
+            "pullRequestUrl": "https://github.com/apache/logging-log4j2/pull/4078",
+            "merged": true,
+            "mergedAt": "2026-03-24T22:57:28Z",
+            "mergeCommitSha": "25043cfad1bac2e43ebc4638450cbb73c51451c4",
+            "changedFilenames": [
+              "log4j-1.2-api/src/test/java/org/apache/log4j/layout/Log4j1XmlLayoutTest.java",
+              "log4j-core-test/src/test/java/org/apache/logging/log4j/core/util/TransformTest.java",
+              "log4j-core/src/main/java/org/apache/logging/log4j/core/util/Transform.java",
+              "src/changelog/.2.x.x/4078_log4j1-xml-control-characters.xml"
+            ],
+            "classArtifact": "log4j-1.2-api",
+            "classFqcn": "org.apache.log4j.layout.Log4j1XmlLayout",
+            "implementationCalls": [
+              "org.apache.logging.log4j.core.util.Transform.escapeHtmlTags",
+              "org.apache.logging.log4j.core.util.Transform.appendEscapingCData"
+            ],
+            "pomArtifactId": "log4j-1.2-api",
+            "bridgeCoreDependency": {
+              "groupId": "org.apache.logging.log4j",
+              "artifactId": "log4j-core",
+              "optional": true
+            }
+          },
+          "assessment": [
+            "The official security page and CycloneDX VDR agree on the bridge artifact and alpha1 lower bound. The new Reviewed record names log4j-core and starts its 3.x range at beta1. Preserve both source-specific values rather than asserting their equivalence.",
+            "The bridge class delegates sanitization to Transform in log4j-core. Merged official fix PR 4078 changes the core implementation and tests in both core and bridge, so the DB package change is not proven to be a typo. Do not discard core solely because the security page names bridge.",
+            "Only users configuring Log4j1XmlLayout directly or selecting the compatibility XMLLayout route are described by this advisory. Do not generalize to every logging path.",
+            "The 3.x maximum is inclusive beta2; the official advisory supplies no 3.x fixed version. Do not invent a fix from a subsequent beta.",
+            "Official CVSS4.0 6.9/medium has the same vector as Reviewed. Vendor exact timestamps are distinct from database publication/update timestamps."
+          ]
+        },
+        {
+          "id": "GHSA-xw5h-cmh3-8j6j",
+          "cve": "CVE-2026-49875",
+          "primaryUrl": "https://cxf.apache.org/security-advisories.data/CVE-2026-49875.txt",
+          "method": "official-maintainer-text-advisory",
+          "officialStructured": {
+            "package": "org.apache.cxf:cxf-core",
+            "ecosystem": "Maven",
+            "ranges": [
+              {
+                "affected": ">= 4.2.0, < 4.2.2",
+                "fixed": "4.2.2"
+              },
+              {
+                "affected": ">= 4.0.0, < 4.1.7",
+                "fixed": "4.1.7"
+              },
+              {
+                "affected": "< 3.6.12",
+                "fixed": "3.6.12"
+              }
+            ],
+            "severityLabelLiteral": "important",
+            "cvss": [],
+            "publishedAt": null,
+            "modifiedAt": null
+          },
+          "assessment": [
+            "Official advisory explicitly confirms all three series and fixed versions, including the new 3.6.12 backport boundary.",
+            "Official severity is literal important; it supplies no CVSS score or vector. Reviewed says CRITICAL and publishes CVSS3.1 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H. Keep these assessments attributed separately; do not derive a numeric score or map important silently.",
+            "EndpointReferenceUtils and W3CMultiSchemaFactory create a SAXParserFactory without the required JAXP hardening, enabling out-of-band external entity resolution.",
+            "The fetched text does not state advisory publication/update timestamps; HTTP Last-Modified is a file header, not an advisory date."
+          ]
+        }
+      ]
+    },
+    "openWebUI": {
+      "schemaVersion": 1,
+      "reportDateJst": "2026-10-27",
+      "checkedAt": "2026-10-26T21:15:41.771738Z",
+      "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+      "scope": "Three changed Open WebUI records only. Public release APIs, tagged developer files, fix commits/ancestry and original reporter/advisory content inspected without executing any proof of concept. Raw API bodies and unrelated personal metadata are excluded.",
+      "counts": {
+        "records": 3,
+        "fixedBoundariesCorroborated": 2,
+        "databaseOnlyFixedBoundaries": 1,
+        "uniqueDirectFetchTargets": 18,
+        "directFetchAttempts": 33,
+        "httpFailures": 0,
+        "distinctUnavailableContentTargets": 1
+      },
+      "receipts": [
+        {
+          "key": "release0314",
+          "url": "https://api.github.com/repos/open-webui/open-webui/releases/tags/v0.3.14",
+          "attemptAt": "2026-10-26T21:14:20.381598Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repos/open-webui/open-webui/releases/tags/v0.3.14",
+          "bytes": 5580,
+          "sha256": "a2d1cc4bb4aa05631a333e8d120ec352c9c94d307b6e03d9a3f437dbab3801ca",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:13:51 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"57af212c105173464af077338777c53c53068a90949e5e86cd5930c9e47f1452\"",
+            "last-modified": "Wed, 21 Aug 2024 15:39:51 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:24.917200Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "release063",
+          "url": "https://api.github.com/repos/open-webui/open-webui/releases/tags/v0.6.3",
+          "attemptAt": "2026-10-26T21:14:20.386023Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repos/open-webui/open-webui/releases/tags/v0.6.3",
+          "bytes": 7579,
+          "sha256": "583900f53f3a4c8bbe2864a53e33fb5604f630fe007c59a39459613724bb85d6",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:13:51 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"da871c2ebdc3aa67d1b9d6b186e598be623c57b2dcab523a6839fc7d5f1b3a8d\"",
+            "last-modified": "Sun, 13 Apr 2025 05:44:37 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:24.963017Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "release058",
+          "url": "https://api.github.com/repos/open-webui/open-webui/releases/tags/v0.5.8",
+          "attemptAt": "2026-10-26T21:14:20.387824Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repos/open-webui/open-webui/releases/tags/v0.5.8",
+          "bytes": 6037,
+          "sha256": "089be2d6a297cf8f2b5d80adc4d67266fdbe121df21094ce11714bfd3052daf6",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:13:51 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"3633c6e5510a9b7eb88c0de946bbef3c1fc689433a7030d1b40379465f4ab4f8\"",
+            "last-modified": "Wed, 05 Feb 2025 09:38:31 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:24.910299Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "pyproject057",
+          "url": "https://raw.githubusercontent.com/open-webui/open-webui/v0.5.7/pyproject.toml",
+          "attemptAt": "2026-10-26T21:14:20.389396Z",
+          "status": 200,
+          "finalUrl": "https://raw.githubusercontent.com/open-webui/open-webui/v0.5.7/pyproject.toml",
+          "bytes": 3702,
+          "sha256": "6091b2f21201a285639c4280e0e12401112210e25374e20b976b2e99ae35f51d",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"e1fd75ed1c5944161302a3093c5a487582d40c7c99153189da0cd09ba7742277\"",
+            "date": "Mon, 26 Oct 2026 21:14:25 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:25.363635Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "pyproject058",
+          "url": "https://raw.githubusercontent.com/open-webui/open-webui/v0.5.8/pyproject.toml",
+          "attemptAt": "2026-10-26T21:14:20.391054Z",
+          "status": 200,
+          "finalUrl": "https://raw.githubusercontent.com/open-webui/open-webui/v0.5.8/pyproject.toml",
+          "bytes": 3704,
+          "sha256": "ddaacf89cb06daa598f03c38243bbd0dc3a762251116abb38e5678ecf008a01a",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"b374cdd295a030c3b343943b04e7f1074e521b4e5b84238ae0a1003f5b5290d2\"",
+            "date": "Mon, 26 Oct 2026 21:14:25 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:25.352681Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "fastapi01157",
+          "url": "https://raw.githubusercontent.com/fastapi/fastapi/0.115.7/pyproject.toml",
+          "attemptAt": "2026-10-26T21:14:24.910847Z",
+          "status": 200,
+          "finalUrl": "https://raw.githubusercontent.com/fastapi/fastapi/0.115.7/pyproject.toml",
+          "bytes": 8084,
+          "sha256": "2302a8ae4620ca4301ad8cb6fcf1bfecf63abd44aa1e46d5ba41ea285f0dcacb",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"ffd43d2185ddb2dd40f4324eaf608989d2f1bef2f15e4aee242718a2a7de0bd1\"",
+            "date": "Mon, 26 Oct 2026 21:14:25 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:25.440559Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "memories062",
+          "url": "https://raw.githubusercontent.com/open-webui/open-webui/v0.6.2/backend/open_webui/routers/memories.py",
+          "attemptAt": "2026-10-26T21:14:24.917273Z",
+          "status": 200,
+          "finalUrl": "https://raw.githubusercontent.com/open-webui/open-webui/v0.6.2/backend/open_webui/routers/memories.py",
+          "bytes": 5113,
+          "sha256": "723cd53062227578e254c83c1caaa17f10f8c917650a07617cb353ebaaa8611f",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"44a8bd7555ce35b8a21513ecd558a458800ccb98e70db4798f830d27da0b2dd3\"",
+            "date": "Mon, 26 Oct 2026 21:14:25 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:25.344964Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "memories063",
+          "url": "https://raw.githubusercontent.com/open-webui/open-webui/v0.6.3/backend/open_webui/routers/memories.py",
+          "attemptAt": "2026-10-26T21:14:24.963639Z",
+          "status": 200,
+          "finalUrl": "https://raw.githubusercontent.com/open-webui/open-webui/v0.6.3/backend/open_webui/routers/memories.py",
+          "bytes": 5148,
+          "sha256": "a9fb0ddc008ba17b7611861d430149939113887fd73b7a196068f1b19dd7e801",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"9c55bd4054ffe55d50261db32f165973f4ad854ceb5bcf43240ffcd2eb491714\"",
+            "date": "Mon, 26 Oct 2026 21:14:25 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:25.395239Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "model063",
+          "url": "https://raw.githubusercontent.com/open-webui/open-webui/v0.6.3/backend/open_webui/models/memories.py",
+          "attemptAt": "2026-10-26T21:14:25.345012Z",
+          "status": 200,
+          "finalUrl": "https://raw.githubusercontent.com/open-webui/open-webui/v0.6.3/backend/open_webui/models/memories.py",
+          "bytes": 3828,
+          "sha256": "857af7763da3335dca00ea821eb58424e0405e64d13aae50ba1178f2aa06554b",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"09350985c862a9111810be8fbc62b48d256347eed4420149faa4d2a3a20500d8\"",
+            "date": "Mon, 26 Oct 2026 21:14:27 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:27.969399Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "fastapibump",
+          "url": "https://api.github.com/repos/open-webui/open-webui/commits/941836406219f51dc5f807ea426795b42884b688",
+          "attemptAt": "2026-10-26T21:14:25.352740Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repos/open-webui/open-webui/commits/941836406219f51dc5f807ea426795b42884b688",
+          "bytes": 4708,
+          "sha256": "2a22c5145d7f4e37b163d7cb2fa8c0dfa143c84d5bd740952591971af5bfe090",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:13:58 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"d9ad7bc43cc48d2d160cda358f4ccf938856d07939b756895a6382cfd08eee1b\"",
+            "last-modified": "Wed, 29 Jan 2025 02:36:23 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:33.663555Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "memorieshistory",
+          "url": "https://api.github.com/repos/open-webui/open-webui/commits?path=backend/open_webui/routers/memories.py&since=2025-04-01T00:00:00Z&until=2025-04-14T00:00:00Z&per_page=100",
+          "attemptAt": "2026-10-26T21:14:25.363707Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repos/open-webui/open-webui/commits?path=backend/open_webui/routers/memories.py&since=2025-04-01T00:00:00Z&until=2025-04-14T00:00:00Z&per_page=100",
+          "bytes": 3195,
+          "sha256": "0bd902c5a4a64c32e9ac34efeb274d48688f42d2ca068de49bcfb6cc92237474",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:13:58 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"ef99a70cbe2675f067444468918d0f20917af8cb72393d43e5ba2d31d3157da6\"",
+            "last-modified": "Sat, 12 Apr 2025 22:10:43 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:33.698521Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "korelogic",
+          "url": "https://korelogic.com/advisories/KL-001-2024-005.txt",
+          "attemptAt": "2026-10-26T21:14:25.395301Z",
+          "status": 200,
+          "finalUrl": "https://korelogic.com/advisories/KL-001-2024-005.txt",
+          "bytes": 8439,
+          "sha256": "aca1b76059e10d03956f5e40d0a9686f0cce53b1c1cab865860c7a646a8fc13e",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:14:30 GMT",
+            "last-modified": "Wed, 05 Aug 2026 00:54:17 GMT",
+            "etag": "\"20f7-6584236028bb7\"",
+            "content-type": "text/plain"
+          },
+          "fetchedAt": "2026-10-26T21:14:30.507306Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "starlette",
+          "url": "https://api.github.com/repos/encode/starlette/security-advisories/GHSA-f96h-pmfr-66vw",
+          "attemptAt": "2026-10-26T21:14:25.443389Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repositories/138597372/security-advisories/GHSA-f96h-pmfr-66vw",
+          "bytes": 4334,
+          "sha256": "dd2e2d89f519b3a02d0302bbb5298ab9c4b7854d986b5c012920eae7b2a593c8",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:14:03 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"7c43cf6c5cdb0ce204bc40485b4cfa6d1a199ff4348232094bf4b684b7f80402\"",
+            "last-modified": "Tue, 15 Oct 2024 06:56:15 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:36.507265Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "idorhuntr",
+          "url": "https://huntr.com/bounties/6855227f-1237-47b8-8d37-29aad7ddec3a",
+          "attemptAt": "2026-10-26T21:14:27.970802Z",
+          "status": 200,
+          "finalUrl": "https://huntr.com/bounties/6855227f-1237-47b8-8d37-29aad7ddec3a",
+          "bytes": 75276,
+          "sha256": "634b9f7d085c39799f1e23c2d6101acd29684cd8e91d9837913db0e83ff82c4e",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 26 Oct 2026 21:14:33 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:33.575990Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "unusable-loading-application-shell"
+        },
+        {
+          "key": "pysec",
+          "url": "https://raw.githubusercontent.com/pypa/advisory-database/main/vulns/open-webui/PYSEC-2026-1722.yaml",
+          "attemptAt": "2026-10-26T21:14:30.507792Z",
+          "status": 200,
+          "finalUrl": "https://raw.githubusercontent.com/pypa/advisory-database/main/vulns/open-webui/PYSEC-2026-1722.yaml",
+          "bytes": 1296,
+          "sha256": "276a00e8e1873b031afd03b615c24c8541489a6fd67db461c73fda043972a464",
+          "headers": {
+            "content-type": "text/plain; charset=utf-8",
+            "etag": "\"064543b82a29f58079b3b9ad9eafee67e360877754008ce14d1a6e1dfcb9f7c3\"",
+            "date": "Mon, 26 Oct 2026 21:14:34 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:34.383579Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "idorcommit",
+          "url": "https://api.github.com/repos/open-webui/open-webui/commits/bdef1001ac0ff4003dc7e1fdfce4ccf4b16a80ab",
+          "attemptAt": "2026-10-26T21:14:36.513609Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repos/open-webui/open-webui/commits/bdef1001ac0ff4003dc7e1fdfce4ccf4b16a80ab",
+          "bytes": 5528,
+          "sha256": "910b9160dc947749985d01a40ea3a8cbedb7bf62bca1eb13d10d85d4274487b5",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:14:39 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"aa3ca530719fd7ab903ff31e47e95d5da491e0627e9f472155ed96ade6ef35ab\"",
+            "last-modified": "Sat, 12 Apr 2025 22:10:43 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:39.568249Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "idorancestry",
+          "url": "https://api.github.com/repos/open-webui/open-webui/compare/bdef1001ac0ff4003dc7e1fdfce4ccf4b16a80ab...v0.6.3?per_page=1",
+          "attemptAt": "2026-10-26T21:14:36.515351Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repos/open-webui/open-webui/compare/bdef1001ac0ff4003dc7e1fdfce4ccf4b16a80ab...v0.6.3?per_page=1",
+          "bytes": 837816,
+          "sha256": "28c179cd2d50619afd3d1d63c85a718fcdac35ea59ebca161ccf46b57c3f577c",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:14:40 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"6fe8db6a3b5aab5a904baa8ba8a1b85e6464611cba95aad163267347ca1111e3\"",
+            "last-modified": "Sun, 13 Apr 2025 05:44:24 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:40.358167Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        },
+        {
+          "key": "fastapiancestry",
+          "url": "https://api.github.com/repos/open-webui/open-webui/compare/941836406219f51dc5f807ea426795b42884b688...v0.5.8?per_page=1",
+          "attemptAt": "2026-10-26T21:14:36.516235Z",
+          "status": 200,
+          "finalUrl": "https://api.github.com/repos/open-webui/open-webui/compare/941836406219f51dc5f807ea426795b42884b688...v0.5.8?per_page=1",
+          "bytes": 911875,
+          "sha256": "a476e966ee45c5e7a005044c53680286d34f73645c597749aef890c89a1600ea",
+          "headers": {
+            "date": "Mon, 26 Oct 2026 21:14:40 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "etag": "W/\"9ef2a08c45352499366f79f7cad156b5d8ae94ae64aac68e116ea67ee5b4b24d\"",
+            "last-modified": "Wed, 05 Feb 2025 09:16:35 GMT"
+          },
+          "fetchedAt": "2026-10-26T21:14:40.281236Z",
+          "transport": "urllib-public-https",
+          "contentOutcome": "reviewed"
+        }
+      ],
+      "repeatFetchReceiptNotes": {
+        "reason": "Initial successful requests were repeated when importing the helper during ancestry checks. This count is network attempts, not additional independent evidence.",
+        "initialAttemptCount": 15,
+        "initialHttpStatuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "initialLatestFetchedAt": "2026-10-26T21:14:04.893062Z"
+      },
+      "records": [
+        {
+          "id": "GHSA-5jp3-wp5v-5363",
+          "verificationOutcome": "database-fixed-boundary-not-independently-corroborated",
+          "database": {
+            "id": "GHSA-5jp3-wp5v-5363",
+            "aliases": [
+              "CVE-2024-6706"
+            ],
+            "published": "2024-08-08T00:31:44Z",
+            "modified": "2026-10-26T15:10:14Z",
+            "withdrawn": null,
+            "affected": [
+              {
+                "package": {
+                  "ecosystem": "PyPI",
+                  "name": "open-webui"
+                },
+                "ranges": [
+                  {
+                    "type": "ECOSYSTEM",
+                    "events": [
+                      {
+                        "introduced": "0"
+                      },
+                      {
+                        "fixed": "0.3.14"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "severity": [
+              {
+                "type": "CVSS_V3",
+                "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+              },
+              {
+                "type": "CVSS_V4",
+                "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+              }
+            ]
+          },
+          "primarySourceKeys": [
+            "korelogic",
+            "release0314"
+          ],
+          "databaseCorroborationKeys": [
+            "pysec"
+          ],
+          "primary": {
+            "reporterPublicationDate": "2024-08-07",
+            "reporterTestedVersion": "0.1.105",
+            "reporterRemediation": "Reporter says the issue appeared silently remediated as of publication; no exact first fixed version supplied.",
+            "release": {
+              "tag_name": "v0.3.14",
+              "html_url": "https://github.com/open-webui/open-webui/releases/tag/v0.3.14",
+              "published_at": "2024-08-21T15:37:11Z",
+              "updated_at": "2024-08-21T15:39:51Z",
+              "draft": false,
+              "prerelease": false,
+              "bodySha256": "2ff1e0831aae354ace20dda515ef6529962179fd3ca1ce7f5f175435bdb67b71"
+            }
+          },
+          "assessment": [
+            "Reviewed now projects <0.3.14 with fixed 0.3.14, replacing the previous inclusive tested maximum 0.1.105. PyPA repeats fixed 0.3.14 but is another database, not independent maintainer confirmation.",
+            "The developer release exists and mentions generic security improvements but does not identify CVE-2024-6706 or its specific fix. The reporter publication predates the 0.3.14 release. This is a provenance limitation, not proof the DB boundary is wrong.",
+            "Keep the DB boundary attributed to the pinned DB. Do not present it as an independently verified maintainer first-fix boundary or infer all later versions universally safe."
+          ]
+        },
+        {
+          "id": "GHSA-xcvc-5hgv-phqg",
+          "verificationOutcome": "fixed-boundary-corroborated-by-developer-code-and-release",
+          "database": {
+            "id": "GHSA-xcvc-5hgv-phqg",
+            "aliases": [
+              "CVE-2024-7041"
+            ],
+            "published": "2024-10-09T21:31:08Z",
+            "modified": "2026-10-26T15:08:54Z",
+            "withdrawn": null,
+            "affected": [
+              {
+                "package": {
+                  "ecosystem": "PyPI",
+                  "name": "open-webui"
+                },
+                "ranges": [
+                  {
+                    "type": "ECOSYSTEM",
+                    "events": [
+                      {
+                        "introduced": "0"
+                      },
+                      {
+                        "fixed": "0.6.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "severity": [
+              {
+                "type": "CVSS_V3",
+                "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+              },
+              {
+                "type": "CVSS_V4",
+                "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P"
+              }
+            ]
+          },
+          "primarySourceKeys": [
+            "release063",
+            "memories062",
+            "memories063",
+            "model063",
+            "memorieshistory",
+            "idorcommit",
+            "idorancestry"
+          ],
+          "unavailableContentKeys": [
+            "idorhuntr"
+          ],
+          "primary": {
+            "release": {
+              "tag_name": "v0.6.3",
+              "html_url": "https://github.com/open-webui/open-webui/releases/tag/v0.6.3",
+              "published_at": "2025-04-13T05:44:37Z",
+              "updated_at": "2025-04-13T05:44:37Z",
+              "draft": false,
+              "prerelease": false,
+              "bodySha256": "c94d6dfd632bf08bdf7c27ba63b3281809f8e21a5b7527eae3537da87bc7fddc"
+            },
+            "fixCommit": "bdef1001ac0ff4003dc7e1fdfce4ccf4b16a80ab",
+            "fixCommittedAt": "2025-04-12T22:10:43Z",
+            "tagAncestry": {
+              "status": "ahead",
+              "ahead_by": 38,
+              "behind_by": 0,
+              "mergeBaseSha": "bdef1001ac0ff4003dc7e1fdfce4ccf4b16a80ab",
+              "headSha": "c3497da5dd5a61f0e75e2a0bfdcc70e9e0cdaa8a",
+              "note": "per_page=1 returned commit is not necessarily tag tip; only merge-base/behind-by ancestry used."
+            },
+            "previousTag": "v0.6.2",
+            "fixedTag": "v0.6.3",
+            "observedCodeDifference": "The memory-update handler passes the authenticated user ID in v0.6.3, and its database update filters on both memory ID and user ID; v0.6.2 updates by memory ID alone."
+          },
+          "assessment": [
+            "The new 0.6.3 boundary is supported by a developer code change present in the release tag and absent in the preceding 0.6.2 tag.",
+            "The checked scope is prevention of the cross-user memory edit described by this advisory; do not turn it into an assertion that every memory endpoint or all other privacy issues were repaired.",
+            "The Huntr URL returns HTTP 200 with an application loading shell, not a readable report. It is not counted as successful content verification."
+          ]
+        },
+        {
+          "id": "GHSA-w466-2wfc-8g58",
+          "verificationOutcome": "fixed-boundary-corroborated-and-database-narrative-conflict",
+          "database": {
+            "id": "GHSA-w466-2wfc-8g58",
+            "aliases": [],
+            "published": "2025-03-20T12:32:44Z",
+            "modified": "2026-10-26T15:12:30Z",
+            "withdrawn": null,
+            "affected": [
+              {
+                "package": {
+                  "ecosystem": "PyPI",
+                  "name": "open-webui"
+                },
+                "ranges": [
+                  {
+                    "type": "ECOSYSTEM",
+                    "events": [
+                      {
+                        "introduced": "0"
+                      },
+                      {
+                        "fixed": "0.5.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "severity": [
+              {
+                "type": "CVSS_V3",
+                "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+              }
+            ]
+          },
+          "primarySourceKeys": [
+            "release058",
+            "pyproject057",
+            "pyproject058",
+            "fastapi01157",
+            "fastapibump",
+            "fastapiancestry",
+            "starlette"
+          ],
+          "primary": {
+            "release": {
+              "tag_name": "v0.5.8",
+              "html_url": "https://github.com/open-webui/open-webui/releases/tag/v0.5.8",
+              "published_at": "2025-02-05T09:22:39Z",
+              "updated_at": "2025-02-05T09:38:31Z",
+              "draft": false,
+              "prerelease": false,
+              "bodySha256": "faded50e1a3c30eb4f68151ea04f7fbae1e833b5fb500eeae1ef045e954e8b2d"
+            },
+            "fixCommit": "941836406219f51dc5f807ea426795b42884b688",
+            "fixCommittedAt": "2025-01-29T02:36:23Z",
+            "tagAncestry": {
+              "status": "ahead",
+              "ahead_by": 181,
+              "behind_by": 0,
+              "mergeBaseSha": "941836406219f51dc5f807ea426795b42884b688",
+              "headSha": "1ad9be9c07ddc91ffb1c5a40b9a044fd3fa305e9",
+              "note": "per_page=1 returned commit is not necessarily tag tip; only merge-base/behind-by ancestry used."
+            },
+            "previousTagFastapiDependency": "v0.5.7: fastapi==0.111.0",
+            "fixedTagFastapiDependency": "v0.5.8: fastapi==0.115.7",
+            "fastapi01157StarletteDependency": "starlette>=0.40.0,<0.46.0",
+            "upstreamStarletteAdvisory": {
+              "ghsa_id": "GHSA-f96h-pmfr-66vw",
+              "cve_id": "CVE-2024-47874",
+              "published_at": "2024-10-15T06:56:14Z",
+              "updated_at": "2024-10-15T06:56:15Z",
+              "withdrawn_at": null,
+              "severity": "high",
+              "cvss": {
+                "vector_string": null,
+                "score": null
+              },
+              "cvss_severities": {
+                "cvss_v3": {
+                  "vector_string": null,
+                  "score": null
+                },
+                "cvss_v4": {
+                  "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                  "score": 8.7
+                }
+              },
+              "vulnerabilities": [
+                {
+                  "package": {
+                    "ecosystem": "pip",
+                    "name": "starlette"
+                  },
+                  "vulnerable_version_range": "<0.39.2",
+                  "patched_versions": "0.40.0",
+                  "vulnerable_functions": []
+                }
+              ]
+            }
+          },
+          "assessment": [
+            "Open WebUI 0.5.8 contains the developer FastAPI dependency bump. FastAPI 0.115.7 requires Starlette >=0.40.0,<0.46.0, consistent with the upstream issue-specific patched version 0.40.0.",
+            "The pinned DB narrative says Starlette <=0.49 is vulnerable. The developer Starlette advisory instead has affected <0.39.2 and patched 0.40.0. Preserve both published strings; do not silently equate its affected upper bound to its patch version or broaden it to <=0.49.",
+            "Upstream Starlette CVE-2024-47874 and GHSA-f96h-pmfr-66vw are dependency evidence, not alias proof for this Open WebUI record whose DB aliases are empty. Do not transplant the upstream CVSS4.0 8.7 into the Open WebUI issue as its own rating.",
+            "This is an issue-specific first-fix validation, not a statement that 0.5.8 is currently safe against every vulnerability."
+          ]
+        }
+      ]
+    },
+    "otherReceipts": [
+      {
+        "url": "https://pypi.org/pypi/pyload-ng/0.5.0b3.dev102/json",
+        "attemptAt": "2026-10-26T21:14:56.154608Z",
+        "status": 404,
+        "headers": {
+          "content-type": "application/json",
+          "date": "Mon, 26 Oct 2026 21:15:03 GMT"
+        },
+        "finalUrl": "https://pypi.org/pypi/pyload-ng/0.5.0b3.dev102/json",
+        "bytes": 24,
+        "sha256": "b82014934f66beeb9e05a37f65357c4b50db0349d25d68d818ed0319dd4feb40",
+        "outcome": "failed",
+        "fetchedAt": "2026-10-26T21:15:03.756376Z",
+        "key": "pyload-dev102"
+      },
+      {
+        "url": "https://api.github.com/repos/pyload/pyload/commits/989a551d2ae0c00b0d2c7baf6d850180c9b46559",
+        "attemptAt": "2026-10-26T21:14:56.162525Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:15:04 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"b6b28324b72293d58fc0599da24ad27eb3ee1f006aa31a8b16bc560e6028c5bf\"",
+          "last-modified": "Fri, 25 Sep 2026 23:20:25 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/pyload/pyload/commits/989a551d2ae0c00b0d2c7baf6d850180c9b46559",
+        "bytes": 9675,
+        "sha256": "dc73b643094f10d61b127e104fa5a7df1aa4ae81e28f8c9d7a9c216d06b12299",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:15:05.022977Z",
+        "key": "pyload-ssrf-fix"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/siderolabs/talos/76080416beee/go.mod",
+        "attemptAt": "2026-10-26T21:14:56.226412Z",
+        "status": 200,
+        "headers": {
+          "content-type": "text/plain; charset=utf-8",
+          "etag": "\"579077c48f8c7689e9ec19188ba2ab36f37c98a00b669557a374d5a9d00b4f9d\"",
+          "date": "Mon, 26 Oct 2026 21:15:05 GMT"
+        },
+        "finalUrl": "https://raw.githubusercontent.com/siderolabs/talos/76080416beee/go.mod",
+        "bytes": 20147,
+        "sha256": "0e83860b7748f29a9115a27d4613c9a6a3a2f08a6de24002b19590fbc595c958",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:15:05.939220Z",
+        "key": "talos-module"
+      },
+      {
+        "url": "https://api.github.com/repos/SixLabors/ImageSharp/releases/tags/v3.2.0",
+        "attemptAt": "2026-10-26T21:15:00.357411Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:15:04 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"e89deb3e587da7b7dbae11fbe475c058e5c8c8e147f224ff71f0dc322c8a0201\"",
+          "last-modified": "Fri, 09 Oct 2026 08:56:56 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/SixLabors/ImageSharp/releases/tags/v3.2.0",
+        "bytes": 2717,
+        "sha256": "c19bf3db1f3542c65e88e618e61b1a37a30e5400061d3e45c28feed0bb8cebcd",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:15:04.984282Z",
+        "key": "imagesharp-3.2.0-release"
+      },
+      {
+        "url": "https://api.github.com/repos/postcss/postcss-selector-parser/releases/tags/6.1.5",
+        "attemptAt": "2026-10-26T21:15:03.756843Z",
+        "status": 200,
+        "headers": {
+          "date": "Mon, 26 Oct 2026 21:15:04 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "etag": "W/\"a577a94c1af9aa5d4f0d60a3732354f1c26b0ef428278d3badfb9b2188ddac0e\"",
+          "last-modified": "Mon, 19 Oct 2026 15:00:37 GMT"
+        },
+        "finalUrl": "https://api.github.com/repos/postcss/postcss-selector-parser/releases/tags/6.1.5",
+        "bytes": 2935,
+        "sha256": "dfb49e7850f8d21d9f060fba0dbf4de4cde51c78b3e34d7ce50e6be5357069d3",
+        "outcome": "success",
+        "fetchedAt": "2026-10-26T21:15:04.973456Z",
+        "key": "postcss-6.1.5-release"
+      }
+    ]
+  },
+  "fetchLimitations": [
+    "pyload-ng 0.5.0b3.dev102 PyPI API returned HTTP404; structured maintainer fix is recorded but release publication remains unverified and displayed fixed stays null.",
+    "Six Huntr pages returned HTTP200 loading shells rather than readable report content (five reference-only changes and Open WebUI IDOR); official code corroborates the IDOR fix independently."
+  ],
+  "acquisitionDiagnostics": [
+    {
+      "method": "curl-public-api",
+      "outcome": "timeout-before-content",
+      "note": "Initial bounded curl attempt returned no content; successful urllib API fetches were used instead."
+    },
+    {
+      "method": "github-connector-security-advisories-endpoint",
+      "outcome": "unsupported-endpoint-400",
+      "note": "Connector rejected this endpoint family; direct public urllib fetch succeeded."
+    }
+  ],
+  "materialChangedEligibleIds": [
+    "GHSA-5jp3-wp5v-5363",
+    "GHSA-xcvc-5hgv-phqg",
+    "GHSA-w466-2wfc-8g58",
+    "GHSA-h383-gmxw-35v2",
+    "GHSA-rfgh-63mg-8pwm",
+    "GHSA-xw5h-cmh3-8j6j",
+    "GHSA-794g-x443-36f7",
+    "GHSA-jm5p-837g-rv8g",
+    "GHSA-494j-54xm-rwp3",
+    "GHSA-6q48-6c7w-9gw2",
+    "GHSA-7cxh-94cf-mfp6",
+    "GHSA-gwg2-r3hj-4w44",
+    "GHSA-h895-cgqg-jf52",
+    "GHSA-j3p4-wp97-rph4",
+    "GHSA-j9gm-c75j-xc9q",
+    "GHSA-jjfr-hcj7-qf5w",
+    "GHSA-rj75-hqrm-r3gf",
+    "GHSA-v76p-62qx-wwq2",
+    "GHSA-wmxv-xphr-5c9g"
+  ],
+  "validation": {
+    "focusedCuratedRecords": 23,
+    "focusedSchemaErrors": 0,
+    "fullImportValidation": "Owned by parent; this audit does not claim final aggregate/build validation."
+  }
+}

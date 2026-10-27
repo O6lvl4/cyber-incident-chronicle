@@ -1,0 +1,181 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-j9gm-c75j-xc9q",
+  "aliases": [
+    "CVE-2026-106110"
+  ],
+  "title": "ImageSharp: TIFF CCITT T4 encoder can write past its compressed output buffer",
+  "summary": "ImageSharp: TIFF CCITT T4 encoder can write past its compressed output buffer",
+  "publishedAt": "2026-10-07T20:24:28Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j9gm-c75j-xc9q/GHSA-j9gm-c75j-xc9q.json",
+  "modifiedAt": "2026-10-26T14:22:51Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "SixLabors.ImageSharp",
+      "ranges": [
+        {
+          "affected": ">= 2.0.0, < 3.2.0",
+          "fixed": "3.2.0",
+          "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j9gm-c75j-xc9q"
+        },
+        {
+          "affected": ">= 4.0.0, < 4.1.2",
+          "fixed": "4.1.2",
+          "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j9gm-c75j-xc9q"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j9gm-c75j-xc9q",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j9gm-c75j-xc9q"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j9gm-c75j-xc9q/GHSA-j9gm-c75j-xc9q.json",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:24:28Z",
+      "modifiedAt": "2026-10-26T14:22:51Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ImageSharp: TIFF CCITT T4 encoder can write past its compressed output buffer",
+      "url": "https://github.com/advisories/GHSA-j9gm-c75j-xc9q",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j9gm-c75j-xc9q",
+      "publishedDate": "2026-09-15",
+      "publishedAt": "2026-09-15T07:22:00Z",
+      "modifiedAt": "2026-10-09T11:35:28Z"
+    },
+    {
+      "type": "release",
+      "title": "Official ImageSharp 3.2.0 security-backport release",
+      "url": "https://github.com/SixLabors/ImageSharp/releases/tag/v3.2.0",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T08:56:56Z"
+    }
+  ],
+  "caveats": [
+    "3.2.0と4.1.2の系列別修正を開発元本文・構造化欄で確認。対象はT4 CCITT Group 3 TIFFのエンコードで、過去の無関係なICC説明ではない。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-j9gm-c75j-xc9q",
+        "aliases": [
+          "CVE-2026-106110"
+        ],
+        "publishedAt": "2026-10-07T20:24:28Z",
+        "modifiedAt": "2026-10-26T14:22:51Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j9gm-c75j-xc9q/GHSA-j9gm-c75j-xc9q.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "nuget",
+        "packageName": "SixLabors.ImageSharp",
+        "ranges": [
+          {
+            "affected": ">= 2.0.0, < 3.2.0",
+            "fixed": "3.2.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j9gm-c75j-xc9q/GHSA-j9gm-c75j-xc9q.json"
+          },
+          {
+            "affected": ">= 4.0.0, < 4.1.2",
+            "fixed": "4.1.2",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j9gm-c75j-xc9q/GHSA-j9gm-c75j-xc9q.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.0.0"
+              },
+              {
+                "fixed": "3.2.0"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.0.0"
+              },
+              {
+                "fixed": "4.1.2"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-j9gm-c75j-xc9q"
+    ],
+    "conflicts": []
+  }
+}

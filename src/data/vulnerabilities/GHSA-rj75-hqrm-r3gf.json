@@ -1,0 +1,182 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rj75-hqrm-r3gf",
+  "aliases": [
+    "CVE-2026-104844"
+  ],
+  "title": "PostCSS: Quadratic complexity in flat selector parsing allows CPU exhaustion",
+  "summary": "PostCSS: Quadratic complexity in flat selector parsing allows CPU exhaustion",
+  "publishedAt": "2026-10-05T22:53:54Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rj75-hqrm-r3gf/GHSA-rj75-hqrm-r3gf.json",
+  "modifiedAt": "2026-10-26T14:07:54Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "postcss-selector-parser",
+      "ranges": [
+        {
+          "affected": ">= 7.0.0, < 7.1.6",
+          "fixed": "7.1.6",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rj75-hqrm-r3gf/GHSA-rj75-hqrm-r3gf.json"
+        },
+        {
+          "affected": "< 6.1.5",
+          "fixed": "6.1.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rj75-hqrm-r3gf/GHSA-rj75-hqrm-r3gf.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.1.6"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.1.5"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/postcss/postcss-selector-parser/security/advisories/GHSA-rj75-hqrm-r3gf",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/postcss/postcss-selector-parser/security/advisories/GHSA-rj75-hqrm-r3gf"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rj75-hqrm-r3gf/GHSA-rj75-hqrm-r3gf.json",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T22:53:54Z",
+      "modifiedAt": "2026-10-26T14:07:54Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "PostCSS: Quadratic complexity in flat selector parsing allows CPU exhaustion",
+      "url": "https://github.com/advisories/GHSA-rj75-hqrm-r3gf",
+      "publishedDate": "2026-10-05"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/postcss/postcss-selector-parser/security/advisories/GHSA-rj75-hqrm-r3gf",
+      "publishedDate": "2026-09-03",
+      "publishedAt": "2026-09-03T08:57:44Z",
+      "modifiedAt": "2026-10-02T15:42:39Z"
+    },
+    {
+      "type": "release",
+      "title": "Official PostCSS selector parser 6.1.5 security backport release",
+      "url": "https://github.com/postcss/postcss-selector-parser/releases/tag/6.1.5",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T15:00:37Z"
+    }
+  ],
+  "caveats": [
+    "開発元APIと6.1.5公式リリースが6.xのバックポートを明示する。7.xの7.1.6と分けて保持し、6.xがsecurity-only maintenanceであることを区別する。",
+    "信頼できないセレクタを同期的な要求処理で解析する構成が対象。信頼済みソースの通常のビルド処理へ一般化せず、既存のネスト深度制限だけでは平坦な入力の問題を防げない。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-rj75-hqrm-r3gf",
+        "aliases": [
+          "CVE-2026-104844"
+        ],
+        "publishedAt": "2026-10-05T22:53:54Z",
+        "modifiedAt": "2026-10-26T14:07:54Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rj75-hqrm-r3gf/GHSA-rj75-hqrm-r3gf.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "npm",
+        "packageName": "postcss-selector-parser",
+        "ranges": [
+          {
+            "affected": ">= 7.0.0, < 7.1.6",
+            "fixed": "7.1.6",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rj75-hqrm-r3gf/GHSA-rj75-hqrm-r3gf.json"
+          },
+          {
+            "affected": "< 6.1.5",
+            "fixed": "6.1.5",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-rj75-hqrm-r3gf/GHSA-rj75-hqrm-r3gf.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "7.0.0"
+              },
+              {
+                "fixed": "7.1.6"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "6.1.5"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-rj75-hqrm-r3gf"
+    ],
+    "conflicts": []
+  }
+}

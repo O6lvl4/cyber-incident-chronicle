@@ -1,0 +1,137 @@
+{
+  "reportDateJst": "2026-10-27",
+  "checkedAt": "2026-10-26T21:19:52.790762Z",
+  "sourceReceipts": [
+    {
+      "url": "https://www.jpcert.or.jp/at/2026/at260034.html",
+      "attemptAt": "2026-10-26T21:10:54.252470Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "text/html",
+        "content-length": "29951",
+        "last-modified": "Mon, 26 Oct 2026 07:49:50 GMT",
+        "etag": "\"74ff-65eb993174380\""
+      },
+      "checkedAt": "2026-10-26T21:10:59.979549Z",
+      "bytes": 29951,
+      "sha256": "a7328d21023a7a81bb6984c11a1628d66c88dae88af6b61bac535d7c254cb28d",
+      "status": "success"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/at/2026/at260033.html",
+      "attemptAt": "2026-10-26T21:10:54.256675Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "text/html",
+        "content-length": "33234",
+        "last-modified": "Mon, 26 Oct 2026 07:49:50 GMT",
+        "etag": "\"81d2-65eb993174380\""
+      },
+      "checkedAt": "2026-10-26T21:11:00.004351Z",
+      "bytes": 33234,
+      "sha256": "35becb4bacfd3f4e3b4388f1bfbdbddfbccb792b868376acd92bc45377647ccc",
+      "status": "success"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU97400824/",
+      "attemptAt": "2026-10-26T21:10:54.264037Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "text/html",
+        "content-length": "11653",
+        "last-modified": "Mon, 26 Oct 2026 09:00:20 GMT",
+        "etag": "\"df0f7eacf47e6714dfb55fbbf568110ba6b6360a\""
+      },
+      "checkedAt": "2026-10-26T21:11:00.155328Z",
+      "bytes": 11653,
+      "sha256": "ae81dc94e27897e0a7e4bc663e44dbed3ea8840e1bd53c1fe909c411b1100c36",
+      "status": "success"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU96549652/",
+      "attemptAt": "2026-10-26T21:10:54.267360Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "text/html",
+        "content-length": "15295",
+        "last-modified": "Mon, 26 Oct 2026 04:00:10 GMT",
+        "etag": "\"0e9dfdb1e97fbacc5b00751b4cb1fa128cccd0bf\""
+      },
+      "checkedAt": "2026-10-26T21:11:00.150429Z",
+      "bytes": 15295,
+      "sha256": "f57fa68fdcffca98ef30b3fb0c75f129eb5deecbea538a9d11c9b11a0e11c412",
+      "status": "success"
+    },
+    {
+      "url": "https://jvn.jp/jp/JVN75668103/",
+      "attemptAt": "2026-10-26T21:10:59.980184Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "text/html",
+        "content-length": "11683",
+        "last-modified": "Mon, 26 Oct 2026 03:00:08 GMT",
+        "etag": "\"4cbe44d1a4bb9169c75cfc5831af43161010cdd7\""
+      },
+      "checkedAt": "2026-10-26T21:11:05.674486Z",
+      "bytes": 11683,
+      "sha256": "5867920064d16bec67e7bc548b994b1130460d1562ec5df0a3305faf4474dd17",
+      "status": "success"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU90141693/",
+      "attemptAt": "2026-10-26T21:11:00.015754Z",
+      "httpStatus": 200,
+      "headers": {
+        "content-type": "text/html",
+        "content-length": "16703",
+        "last-modified": "Mon, 26 Oct 2026 00:00:05 GMT",
+        "etag": "\"8aad485263afd55d56d926c37579f31c929eeb66\""
+      },
+      "checkedAt": "2026-10-26T21:11:06.091005Z",
+      "bytes": 16703,
+      "sha256": "eb00b8f4cff61de47473d4ecfab4124f115554b8193ed35332158307c9c14b81",
+      "status": "success"
+    }
+  ],
+  "findings": [
+    {
+      "url": "https://www.jpcert.or.jp/at/2026/at260034.html",
+      "decision": "existing-brotli-identity-audit-only",
+      "publishedDate": "2026-10-26",
+      "findings": "JPCERTの上流範囲1.0.3〜1.0.10未満、1.1.0〜1.1.1未満、1.2.0〜1.2.1未満は既存GHSA-9v8h-qqgm-4m35の出典付き注意書きと一致。Python wrapperの版へ混ぜず、新しい別脆弱性や実悪用とはしない。"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU97400824/",
+      "decision": "existing-brotli-identity-audit-only",
+      "publishedDate": "2026-10-26",
+      "findings": "Brotliの同一CVE、3系列の上流範囲を確認。ライブラリ表示に新規の影響境界は加えない。"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/at/2026/at260033.html",
+      "decision": "product-runtime-not-library",
+      "publishedDate": "2026-10-22",
+      "modifiedDate": "2026-10-26",
+      "findings": "10月26日追記はPHP既存2件の悪用試行通信の報告と、別のCVE-2026-115560（Session upload progress）の構成依存・未修正時緩和策を説明。PoC公開を侵害成立と同一視しない。対象はPHPランタイムであり、この補助ライブラリ更新には追加しない。"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU96549652/",
+      "decision": "product-not-library",
+      "publishedDate": "2026-10-26",
+      "findings": "V-SFT 6.2.11.0以前の7件CVE-2026-107894〜107900。7対象パッケージエコシステムの明示対応なし。"
+    },
+    {
+      "url": "https://jvn.jp/jp/JVN75668103/",
+      "decision": "product-not-library",
+      "publishedDate": "2026-10-26",
+      "findings": "電子納品物検査支援システム4.0.36以前の権限設定、CVE-2026-113345。7対象パッケージエコシステムの明示対応なし。"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU90141693/",
+      "decision": "product-aggregate-not-library-denominator",
+      "publishedDate": "2026-10-14",
+      "modifiedDate": "2026-10-26",
+      "findings": "Siemensアドバイザリ集約ページの詳細更新。元の公開日10月14日を保ち、製品件数や集約掲載件数をライブラリ未収録数へ換算しない。各Siemens本文を今回個別確認したとはしない。"
+    }
+  ],
+  "productDataChanged": false
+}

@@ -1,0 +1,135 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c72h-82w6-rqfp",
+  "aliases": [
+    "CVE-2026-43976"
+  ],
+  "title": "wger: cross-tenant admin notes/contracts leak via gym=None bypass (5 views)",
+  "summary": "wger: cross-tenant admin notes/contracts leak via gym=None bypass (5 views)",
+  "publishedAt": "2026-10-07T13:33:14Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-c72h-82w6-rqfp/GHSA-c72h-82w6-rqfp.json",
+  "modifiedAt": "2026-10-26T15:50:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "wger",
+      "ranges": [
+        {
+          "affected": "<= 2.5.0",
+          "fixed": ">= 2.6",
+          "sourceUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-c72h-82w6-rqfp"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-c72h-82w6-rqfp",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.1,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://github.com/wger-project/wger/security/advisories/GHSA-c72h-82w6-rqfp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-c72h-82w6-rqfp/GHSA-c72h-82w6-rqfp.json",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T13:33:14Z",
+      "modifiedAt": "2026-10-26T15:50:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "wger: cross-tenant admin notes/contracts leak via gym=None bypass (5 views)",
+      "url": "https://github.com/advisories/GHSA-c72h-82w6-rqfp",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/wger-project/wger/security/advisories/GHSA-c72h-82w6-rqfp",
+      "publishedDate": "2026-10-04",
+      "publishedAt": "2026-10-04T17:38:27Z",
+      "modifiedAt": "2026-10-04T17:38:27Z"
+    }
+  ],
+  "caveats": [
+    "開発元は影響欄<=2.5.0、修正欄>=2.6。Reviewedの<=2.1／修正版不明とは異なるため、開発元の原表記を表示する。>=2.6を単一の厳密な修正境界へ読み替えない。",
+    "gym=Noneの利用者間で、委譲されたtrainerとadmin-note権限が必要。未所属利用者への資料閲覧等に限定した条件を保持する。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-c72h-82w6-rqfp",
+        "aliases": [
+          "CVE-2026-43976"
+        ],
+        "publishedAt": "2026-10-07T13:33:14Z",
+        "modifiedAt": "2026-10-26T15:50:07Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-c72h-82w6-rqfp/GHSA-c72h-82w6-rqfp.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "wger",
+        "ranges": [
+          {
+            "affected": "<= 2.1",
+            "fixed": null,
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-c72h-82w6-rqfp/GHSA-c72h-82w6-rqfp.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "2.1"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-c72h-82w6-rqfp"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元は影響欄<=2.5.0、修正欄>=2.6。Reviewedの<=2.1／修正版不明とは異なるため、開発元の原表記を表示する。>=2.6を単一の厳密な修正境界へ読み替えない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

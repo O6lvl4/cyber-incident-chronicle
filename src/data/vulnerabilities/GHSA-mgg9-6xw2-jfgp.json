@@ -1,0 +1,104 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mgg9-6xw2-jfgp",
+  "aliases": [
+    "CVE-2026-105298",
+    "RUSTSEC-2026-0388"
+  ],
+  "title": "Pingora：HTTP/2のauthorityとHostの不一致によるキャッシュ汚染・認可回避",
+  "summary": "HTTP/2リクエストのURI authorityと転送先のHostが一致しないため、URI authorityを使うフィルターやキャッシュ判断と上流のルーティングが食い違う。HTTP/2を受け付け、ホスト名を認可・キャッシュ判断に使う構成で、キャッシュ汚染やホストベースのアクセス制御回避につながり得る。0.9.0に修正。",
+  "publishedAt": "2026-10-20T12:00:00Z",
+  "modifiedAt": "2026-10-26T11:15:11.364389641Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:15:03.148485Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0388",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "pingora-proxy",
+      "ranges": [
+        {
+          "affected": "< 0.9.0",
+          "fixed": "0.9.0",
+          "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-mgg9-6xw2-jfgp"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "pingora-core",
+      "ranges": [
+        {
+          "affected": "< 0.9.0",
+          "fixed": "0.9.0",
+          "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-mgg9-6xw2-jfgp"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.9.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/pingora-core"
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-mgg9-6xw2-jfgp",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 6.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+        "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-mgg9-6xw2-jfgp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0388",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0388",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T12:00:00Z",
+      "modifiedAt": "2026-10-26T11:15:11.364389641Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Pingora HTTP/2 :authority and Host header mismatch enables cache poisoning and host-based access control bypass",
+      "url": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-mgg9-6xw2-jfgp",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T16:25:35Z",
+      "modifiedAt": "2026-10-20T16:25:35Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "OSV/RustSecの公開日時・更新日時を表示し、開発元GHSAの公表・更新日時とは出典別に保持する。収録日を新規公表日へ置き換えない。",
+    "OSV API本文が固定generationの全件エクスポートと正規化JSONで一致することを確認し、明示されたGHSA/CVE別名だけを採用した。relatedや類似タイトルによる統合はしない。",
+    "影響範囲・修正境界と深刻度は実際に取得した開発元GHSA APIを根拠とする。rawRangesはOSV原文であり、導入下限0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・CISA KEVは未確認。KEV公式取得のHTTP403を未掲載や悪用なしと扱わない。",
+    "開発元GHSAはpingora-coreとpingora-proxyの両方を列挙するため両パッケージを保持。RustSec/OSVはpingora-coreのみを列挙し、その原文範囲も保持する。",
+    "HTTP/2をクライアントから受け付けない構成や、authorityをセキュリティ・キャッシュ判断に使用しない構成は開発元が対象外と説明。Cloudflare CDN顧客は内部PingoraがHTTP/2クライアントを持たないため影響しないとしている。",
+    "修正はHostとauthorityの不一致、複数Host、userinfoを含むauthorityの拒否と、上流のHost/authorityの整合。回避策はrequest_filterで不一致等を拒否すること。"
+  ]
+}
