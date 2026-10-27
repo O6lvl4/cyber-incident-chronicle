@@ -1,0 +1,169 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-w466-2wfc-8g58",
+  "aliases": [],
+  "title": "Open WebUI has vulnerable dependency on starlette via fastapi",
+  "summary": "Open WebUI has vulnerable dependency on starlette via fastapi",
+  "publishedAt": "2025-03-20T12:32:44Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2025/03/GHSA-w466-2wfc-8g58/GHSA-w466-2wfc-8g58.json",
+  "modifiedAt": "2026-10-26T15:12:30Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:18:17.586793Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "open-webui",
+      "ranges": [
+        {
+          "affected": "< 0.5.8",
+          "fixed": "0.5.8",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2025/03/GHSA-w466-2wfc-8g58/GHSA-w466-2wfc-8g58.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.5.8"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2025/03/GHSA-w466-2wfc-8g58/GHSA-w466-2wfc-8g58.json",
+    "cvss": [
+      {
+        "version": "3.0",
+        "score": null,
+        "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2025/03/GHSA-w466-2wfc-8g58/GHSA-w466-2wfc-8g58.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2025/03/GHSA-w466-2wfc-8g58/GHSA-w466-2wfc-8g58.json",
+      "publishedDate": "2025-03-20",
+      "publishedAt": "2025-03-20T12:32:44Z",
+      "modifiedAt": "2026-10-26T15:12:30Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Open WebUI has vulnerable dependency on starlette via fastapi",
+      "url": "https://github.com/advisories/GHSA-w466-2wfc-8g58",
+      "publishedDate": "2025-03-20"
+    },
+    {
+      "type": "maintainer",
+      "title": "Official issue-specific fix commit",
+      "url": "https://github.com/open-webui/open-webui/commit/941836406219f51dc5f807ea426795b42884b688",
+      "publishedDate": "2025-01-29",
+      "publishedAt": "2025-01-29T02:36:23Z"
+    },
+    {
+      "type": "release",
+      "title": "Official Open WebUI fixed release",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.5.8",
+      "publishedDate": "2025-02-05",
+      "publishedAt": "2025-02-05T09:22:39Z",
+      "modifiedAt": "2025-02-05T09:38:31Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Upstream Starlette dependency advisory; not alias evidence",
+      "url": "https://api.github.com/repos/encode/starlette/security-advisories/GHSA-f96h-pmfr-66vw",
+      "publishedDate": "2024-10-15",
+      "publishedAt": "2024-10-15T06:56:14Z",
+      "modifiedAt": "2024-10-15T06:56:15Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "FastAPI 0.115.7 declared Starlette dependency",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/0.115.7/pyproject.toml",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "DBと開発元の根拠・日時・範囲は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
+    "Open WebUI 0.5.8 contains the developer FastAPI dependency bump. FastAPI 0.115.7 requires Starlette >=0.40.0,<0.46.0, consistent with the upstream issue-specific patched version 0.40.0.",
+    "The pinned DB narrative says Starlette <=0.49 is vulnerable. The developer Starlette advisory instead has affected <0.39.2 and patched 0.40.0. Preserve both published strings; do not silently equate its affected upper bound to its patch version or broaden it to <=0.49.",
+    "Upstream Starlette CVE-2024-47874 and GHSA-f96h-pmfr-66vw are dependency evidence, not alias proof for this Open WebUI record whose DB aliases are empty. Do not transplant the upstream CVSS4.0 8.7 into the Open WebUI issue as its own rating.",
+    "This is an issue-specific first-fix validation, not a statement that 0.5.8 is currently safe against every vulnerability.",
+    "開発元コードで前版と修正tagの差を確認したのは修正境界。過去すべての版を走査して導入時点を確定した意味ではなく、開放下限はDB由来のまま保持する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:18:17.586793Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-w466-2wfc-8g58",
+        "aliases": [],
+        "publishedAt": "2025-03-20T12:32:44Z",
+        "modifiedAt": "2026-10-26T15:12:30Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2025/03/GHSA-w466-2wfc-8g58/GHSA-w466-2wfc-8g58.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "open-webui",
+        "ranges": [
+          {
+            "affected": "< 0.5.8",
+            "fixed": "0.5.8",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2025/03/GHSA-w466-2wfc-8g58/GHSA-w466-2wfc-8g58.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.5.8"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-w466-2wfc-8g58"
+    ],
+    "conflicts": [
+      {
+        "field": "content",
+        "reason": "The pinned DB narrative says Starlette <=0.49 is vulnerable. The developer Starlette advisory instead has affected <0.39.2 and patched 0.40.0. Preserve both published strings; do not silently equate its affected upper bound to its patch version or broaden it to <=0.49.",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

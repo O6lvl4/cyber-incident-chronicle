@@ -1,0 +1,92 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vx4q-2c55-cvmg",
+  "aliases": [
+    "CVE-2026-105299",
+    "RUSTSEC-2026-0390"
+  ],
+  "title": "Pingora：Connection指定ヘッダーの転送による連鎖構成の認可回避",
+  "summary": "pingora-proxyがクライアント指定のConnectionと指名されたヘッダーをHTTP/1上流へ転送するため、後段プロキシがPingoraの付加した信頼用ヘッダーを取り除く場合がある。後段のHTTP/1中継とそのヘッダーを信頼するオリジンを組み合わせた特定の構成で認可回避につながり得る。0.9.0に修正。",
+  "publishedAt": "2026-10-20T12:00:00Z",
+  "modifiedAt": "2026-10-26T11:15:11.361865763Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:15:03.152301Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0390",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "pingora-proxy",
+      "ranges": [
+        {
+          "affected": "< 0.9.0",
+          "fixed": "0.9.0",
+          "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-vx4q-2c55-cvmg"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.9.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/pingora-proxy"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-vx4q-2c55-cvmg",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 7.0,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N",
+        "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-vx4q-2c55-cvmg"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0390",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0390",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T12:00:00Z",
+      "modifiedAt": "2026-10-26T11:15:11.361865763Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Pingora forwards client-nominated Connection headers to HTTP/1 upstreams, allowing ACL bypass in specific chained deployments",
+      "url": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-vx4q-2c55-cvmg",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T16:25:08Z",
+      "modifiedAt": "2026-10-20T16:25:08Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "OSV/RustSecの公開日時・更新日時を表示し、開発元GHSAの公表・更新日時とは出典別に保持する。収録日を新規公表日へ置き換えない。",
+    "OSV API本文が固定generationの全件エクスポートと正規化JSONで一致することを確認し、明示されたGHSA/CVE別名だけを採用した。relatedや類似タイトルによる統合はしない。",
+    "影響範囲・修正境界と深刻度は実際に取得した開発元GHSA APIを根拠とする。rawRangesはOSV原文であり、導入下限0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・CISA KEVは未確認。KEV公式取得のHTTP403を未掲載や悪用なしと扱わない。",
+    "HTTP/2上流経路では既にConnection等を除去していた。HTTP/1中継がConnection指名を処理し、オリジンが付加されたヘッダーを認可に利用する連鎖構成の条件を、一律の全Pingora利用へ拡張しない。",
+    "0.9.0以降でもHttpUpstreamRequestPolicy::preserve()は旧転送挙動を復元するため、付加ヘッダーを信頼する構成では使わないよう開発元は注意する。Cloudflare CDN顧客は該当する連鎖構成がなく事前のヘッダー除去もあるため影響しないとしている。"
+  ]
+}

@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-c6hw-5grf-ff96",
   "aliases": [
+    "BIT-pillow-2026-112404",
     "CVE-2026-112404"
   ],
   "title": "Pillow: OOB read in TiffDecode.c tile and RGBA paths leaks heap memory into pixels",
@@ -10,7 +11,7 @@
   "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-c6hw-5grf-ff96/GHSA-c6hw-5grf-ff96.json",
   "modifiedAt": "2026-10-20T20:42:00Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:39:02Z",
+  "lastVerifiedAt": "2026-10-26T21:17:11.554969Z",
   "affected": [
     {
       "ecosystem": "pip",
@@ -81,12 +82,22 @@
       "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-c6hw-5grf-ff96",
       "publishedDate": "2026-10-17",
       "publishedAt": "2026-10-17T10:35:54Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV：GHSA-c6hw-5grf-ff96（Bitnami別名の照合）",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-c6hw-5grf-ff96",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:42:00Z",
+      "modifiedAt": "2026-10-26T08:55:55.669563065Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発元の公開本文・版情報を個別確認。公開・更新・撤回日時は固定GitHub Reviewed原データの日時で、開発元の初回公表日時とは異なる。",
     "実悪用・CISA KEVは未確認であり、未掲載・悪用なしを意味しない。",
     "TIFFのタイル経路とRGBA経路で導入時期が異なり、開発元本文はそれぞれ8.2.0と8.1.0を挙げる。構造化欄は<=12.3.0、修正版13.0.0。DB下限8.1.0と経路別の違いを区別する。",
-    "開発元は画像ピクセルへのプロセス内ヒープ情報露出とクラッシュを説明する。実際の企業被害やコード実行の確認を意味しない。"
+    "開発元は画像ピクセルへのプロセス内ヒープ情報露出とクラッシュを説明する。実際の企業被害やコード実行の確認を意味しない。",
+    "2026-10-27 JSTにOSV APIと固定generationのPyPI全件エクスポートの正規化JSON一致を確認し、明示されたBitnami識別子を別名へ追補。元の公表・更新日時、影響範囲、開発元確認内容は保持し、今回すべての開発元本文を再確認したとは扱わない。"
   ]
 }

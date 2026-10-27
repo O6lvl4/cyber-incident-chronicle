@@ -1,0 +1,102 @@
+{
+  "id": "chariloto-app-2026",
+  "company": "チャリ・ロト（チャリロトアプリ）",
+  "geography": "日本",
+  "title": "チャリロトアプリの脆弱性悪用でチャリカ会員373名の情報が流出",
+  "announcementDate": "2026-10-24",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-21",
+  "occurredDateLabel": "公式が公表した不正アクセス時間帯（9時30分頃～13時00分頃）",
+  "updatedDate": "2026-10-24",
+  "statusAsOfDate": "2026-10-24",
+  "lastVerifiedDate": "2026-10-27",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "チャリロトシステムの脆弱性を悪用した第三者による不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "10月21日9時30分頃～13時頃の脆弱性悪用による不正アクセスで、チャリカ会員373名の情報が流出。22日の点検で不審ログを発見しアプリを停止、23日に修正・再開した。24日に取得情報を特定して公表し、対象者への連絡を進めている。",
+  "affectedData": [
+    "会員ID、氏名、生年月日、性別、郵便番号、住所、メール・サブメール、電話番号、ニックネーム、会員ランク、通知・オートチャージ設定等",
+    "銀行名、支店名、口座種別・番号、名義",
+    "カード名義、番号下4桁、有効期限、ブランド（全桁・セキュリティコードは対象外）",
+    "チャリカ残高、払戻金残高、入出金・精算履歴、当日購入額・払戻額等",
+    "投票履歴の場・レース・券種・買い目・購入金額・的中・払戻金額"
+  ],
+  "counts": [
+    {
+      "value": 373,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "チャリロトアプリ利用者のうち不正取得対象となったチャリカ会員",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "対象はアプリ利用者の一部のチャリカ会員で、全チャリロト利用者ではない。",
+    "ログインパスワード、カード番号全桁、セキュリティコードの漏えいはないと公表。カード情報の一部流出と区別する。",
+    "10月22日は不審ログ発見・不正アクセス判明、24日は不正取得情報の特定。攻撃実行時間帯は21日で、日付を区別する。",
+    "23日に脆弱性修正を反映しアプリサービスを再開。同じ手法への対策完了を、すべての将来リスクがないという意味に広げない。",
+    "二次被害は公表時点で未確認。個人情報保護委員会へ速報済みで、個別連絡は順次実施。"
+  ],
+  "sources": [
+    {
+      "title": "チャリ・ロト：アプリへの不正アクセス・個人情報漏えい公表",
+      "url": "https://chariloto.jp/news/20261024/index.html",
+      "publishedDate": "2026-10-24"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-21",
+      "label": "脆弱性を悪用した不正アクセス",
+      "kind": "occurrence",
+      "summary": "9時30分頃～13時00分頃に発生。",
+      "sourceUrl": "https://chariloto.jp/news/20261024/index.html"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "不審ログ発見・アプリ停止",
+      "kind": "occurrence",
+      "summary": "点検でログを発見し、不正アクセスと判明。緊急メンテナンスを開始。",
+      "sourceUrl": "https://chariloto.jp/news/20261024/index.html"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "修正を反映しアプリ再開",
+      "kind": "update",
+      "summary": "安全性を確認して緊急メンテナンスを終了。",
+      "sourceUrl": "https://chariloto.jp/news/20261024/index.html"
+    },
+    {
+      "date": "2026-10-24",
+      "label": "不正取得情報の特定と公表",
+      "kind": "disclosure",
+      "summary": "影響範囲を精査し取得情報を特定。373名の範囲を公表。",
+      "sourceUrl": "https://chariloto.jp/news/20261024/index.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "startDate": "2026-10-21",
+      "label": "2026年10月21日 9時30分頃～13時00分頃",
+      "note": "公式が不正アクセスの発生時間帯を明記。時刻は概数であり、初期侵入の全期間を推定しない。",
+      "sourceUrl": "https://chariloto.jp/news/20261024/index.html",
+      "reviewedDate": "2026-10-27"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "startDate": "2026-10-24",
+      "label": "2026年10月24日（不正取得された情報の特定）",
+      "note": "公式対応経緯の24日欄で第三者に不正取得された情報を特定したと記載。22日の不審ログ検知・侵入判明とは区別し、取得情報を特定した日として扱う。",
+      "sourceUrl": "https://chariloto.jp/news/20261024/index.html",
+      "reviewedDate": "2026-10-27"
+    }
+  }
+}

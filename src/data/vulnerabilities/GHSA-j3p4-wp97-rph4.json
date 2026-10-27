@@ -1,0 +1,181 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-j3p4-wp97-rph4",
+  "aliases": [
+    "CVE-2026-106113"
+  ],
+  "title": "ImageSharp: HistogramEqualization uses an unvalidated luminance as an unchecked histogram index",
+  "summary": "ImageSharp: HistogramEqualization uses an unvalidated luminance as an unchecked histogram index",
+  "publishedAt": "2026-10-07T20:24:23Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j3p4-wp97-rph4/GHSA-j3p4-wp97-rph4.json",
+  "modifiedAt": "2026-10-26T14:18:59Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "nuget",
+      "packageName": "SixLabors.ImageSharp",
+      "ranges": [
+        {
+          "affected": ">= 2.0.0, < 3.2.0",
+          "fixed": "3.2.0",
+          "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j3p4-wp97-rph4"
+        },
+        {
+          "affected": ">= 4.0.0, < 4.1.2",
+          "fixed": "4.1.2",
+          "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j3p4-wp97-rph4"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j3p4-wp97-rph4",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j3p4-wp97-rph4"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j3p4-wp97-rph4/GHSA-j3p4-wp97-rph4.json",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T20:24:23Z",
+      "modifiedAt": "2026-10-26T14:18:59Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ImageSharp: HistogramEqualization uses an unvalidated luminance as an unchecked histogram index",
+      "url": "https://github.com/advisories/GHSA-j3p4-wp97-rph4",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-j3p4-wp97-rph4",
+      "publishedDate": "2026-09-15",
+      "publishedAt": "2026-09-15T07:21:44Z",
+      "modifiedAt": "2026-10-09T11:35:17Z"
+    },
+    {
+      "type": "release",
+      "title": "Official ImageSharp 3.2.0 security-backport release",
+      "url": "https://github.com/SixLabors/ImageSharp/releases/tag/v3.2.0",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T08:56:56Z"
+    }
+  ],
+  "caveats": [
+    "3.2.0と4.1.2の系列別修正を開発元本文・構造化欄で確認。浮動小数点TIFFをHalfVector4として読み込みHistogramEqualizationを適用する経路が対象で、Adaptive Histogram EqualizationやAutoLevelへ一般化しない。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-j3p4-wp97-rph4",
+        "aliases": [
+          "CVE-2026-106113"
+        ],
+        "publishedAt": "2026-10-07T20:24:23Z",
+        "modifiedAt": "2026-10-26T14:18:59Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j3p4-wp97-rph4/GHSA-j3p4-wp97-rph4.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "nuget",
+        "packageName": "SixLabors.ImageSharp",
+        "ranges": [
+          {
+            "affected": ">= 2.0.0, < 3.2.0",
+            "fixed": "3.2.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j3p4-wp97-rph4/GHSA-j3p4-wp97-rph4.json"
+          },
+          {
+            "affected": ">= 4.0.0, < 4.1.2",
+            "fixed": "4.1.2",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-j3p4-wp97-rph4/GHSA-j3p4-wp97-rph4.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.0.0"
+              },
+              {
+                "fixed": "3.2.0"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.0.0"
+              },
+              {
+                "fixed": "4.1.2"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-j3p4-wp97-rph4"
+    ],
+    "conflicts": []
+  }
+}

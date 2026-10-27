@@ -1,0 +1,151 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-p3pr-8f3m-4qp8",
+  "aliases": [],
+  "title": "pyLoad WindowsPhoneNotify addon: non-admin SETTINGS user triggers SSRF via unguarded http.client notification host",
+  "summary": "pyLoad WindowsPhoneNotify addon: non-admin SETTINGS user triggers SSRF via unguarded http.client notification host",
+  "publishedAt": "2026-10-09T17:09:03Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-p3pr-8f3m-4qp8/GHSA-p3pr-8f3m-4qp8.json",
+  "modifiedAt": "2026-10-26T15:52:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "pyload-ng",
+      "ranges": [
+        {
+          "affected": "<= 0.5.0b3.dev101",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-p3pr-8f3m-4qp8/GHSA-p3pr-8f3m-4qp8.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "0.5.0b3.dev101"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/pyload/pyload/security/advisories/GHSA-p3pr-8f3m-4qp8",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.4,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+        "sourceUrl": "https://github.com/pyload/pyload/security/advisories/GHSA-p3pr-8f3m-4qp8"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-p3pr-8f3m-4qp8/GHSA-p3pr-8f3m-4qp8.json",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T17:09:03Z",
+      "modifiedAt": "2026-10-26T15:52:23Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "pyLoad WindowsPhoneNotify addon: non-admin SETTINGS user triggers SSRF via unguarded http.client notification host",
+      "url": "https://github.com/advisories/GHSA-p3pr-8f3m-4qp8",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/pyload/pyload/security/advisories/GHSA-p3pr-8f3m-4qp8",
+      "publishedDate": "2026-09-26",
+      "publishedAt": "2026-09-26T13:29:39Z",
+      "modifiedAt": "2026-09-26T13:29:39Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Official removal of deprecated notification plugins",
+      "url": "https://github.com/pyload/pyload/commit/989a551d2ae0c00b0d2c7baf6d850180c9b46559",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "開発元の構造化修正欄は0.5.0b3.dev102だが、本文は未公開・未修正と記す。公式修正commitは通知プラグインを削除する一方、当該PyPI版APIはHTTP404だった。公開済み修正版の確認が取れないため表示fixedはnullを維持し、開発元の修正候補を監査に保存する。404だけで将来の公開不存在を断定しない。",
+    "非管理者のSETTINGS権限とWindowsPhoneNotify設定・通知イベントが必要なblind SSRF。応答本文の直接取得や実悪用を確認した意味ではない。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-p3pr-8f3m-4qp8",
+        "aliases": [],
+        "publishedAt": "2026-10-09T17:09:03Z",
+        "modifiedAt": "2026-10-26T15:52:23Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-p3pr-8f3m-4qp8/GHSA-p3pr-8f3m-4qp8.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "pip",
+        "packageName": "pyload-ng",
+        "ranges": [
+          {
+            "affected": "<= 0.5.0b3.dev101",
+            "fixed": null,
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-p3pr-8f3m-4qp8/GHSA-p3pr-8f3m-4qp8.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "0.5.0b3.dev101"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-p3pr-8f3m-4qp8"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元の構造化修正欄は0.5.0b3.dev102だが、本文は未公開・未修正と記す。公式修正commitは通知プラグインを削除する一方、当該PyPI版APIはHTTP404だった。公開済み修正版の確認が取れないため表示fixedはnullを維持し、開発元の修正候補を監査に保存する。404だけで将来の公開不存在を断定しない。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

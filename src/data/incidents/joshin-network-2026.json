@@ -1,0 +1,122 @@
+{
+  "id": "joshin-network-2026",
+  "company": "Joshin",
+  "geography": "日本",
+  "title": "ネットワーク不正アクセスと一部停止、会員DB等3システムの漏えい可能性を調査",
+  "announcementDate": "2026-10-17",
+  "announcementDateLabel": "初報公表（同内容の適時開示は10月19日）",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃時期未公表（10月16日は異常・不正アクセスの認識日）",
+  "updatedDate": "2026-10-26",
+  "statusAsOfDate": "2026-10-26",
+  "lastVerifiedDate": "2026-10-27",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月16日にネットワーク異常と不正アクセスの形跡を確認し、遮断措置で一部サービスが停止。26日第2報は会員DB最大約600万件、サブスク最大約23万件、写真アップロード最大約800件の漏えい可能性を公表。いずれも確定漏えい数ではなく、調査・復旧対応が継続している。",
+  "affectedData": [
+    "会員情報DB：氏名、住所、電話番号、会員番号（漏えい可能性）",
+    "ジョーシンのサブスク：会員番号、電話番号・手書きサインのバイナリデータ、ログインID・初期パスワード、請求履歴、契約番号・デバイスID、有効化コード（漏えい可能性）",
+    "リフォーム写真アップロード：工事写真、免許証画像2件・マイナンバーカード1件・口座番号5件（漏えい可能性。個別連絡中）"
+  ],
+  "counts": [
+    {
+      "value": 6000000,
+      "unit": "件",
+      "status": "possible",
+      "label": "会員情報DBの最大約件数。確定漏えい数・実人数ではない",
+      "approximate": true
+    },
+    {
+      "value": 230000,
+      "unit": "件",
+      "status": "possible",
+      "label": "サブスクの最大約件数。他システムと合算しない",
+      "approximate": true
+    },
+    {
+      "value": 800,
+      "unit": "件",
+      "status": "possible",
+      "label": "写真アップロードシステムの最大約件数。画像等の内数を再加算しない",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "3システムの件数は重複を除いた実人数ではなく、合算しない。公式が明記する最大可能性範囲で、個人情報漏えい確定件数ではない。",
+    "免許証画像2件・マイナンバーカード1件・口座番号5件は写真システムの対象内訳で、追加被害人数ではない。",
+    "決済情報を非保持化しておりクレジットカード情報は保有していないと説明。",
+    "10月16日は異常と不正アクセス形跡の認識日。攻撃開始日・漏えいの初確認日には転用しない。",
+    "17日の自社公表と19日の同内容の東京証券取引所開示は同一事案。遮断による一部サービス停止と、復旧への対応継続を区別する。"
+  ],
+  "sources": [
+    {
+      "title": "Joshin：不正アクセスによるシステム障害の初報",
+      "url": "https://www.joshin.co.jp/ja/news/info/info-20261017/main/0/link/20261017Notice%20and%20Apology%20Regarding%20System%20Disruption%20Caused%20by%20Unauthorized%20Access.pdf",
+      "publishedDate": "2026-10-17"
+    },
+    {
+      "title": "Joshin：初報と同内容の適時開示",
+      "url": "https://www.joshin.co.jp/ja/ir/news/auto_20261019552813/pdfFile.pdf",
+      "publishedDate": "2026-10-19"
+    },
+    {
+      "title": "Joshin：第2報・3システムの漏えい可能性範囲",
+      "url": "https://www.joshin.co.jp/ja/ir/news/auto_20261026556267/pdfFile.pdf",
+      "publishedDate": "2026-10-26"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-16",
+      "label": "ネットワーク異常と不正アクセス形跡を認識",
+      "kind": "occurrence",
+      "summary": "形跡のあるサーバーを遮断し外部調査を依頼。攻撃開始日とは区別。",
+      "sourceUrl": "https://www.joshin.co.jp/ja/ir/news/auto_20261026556267/pdfFile.pdf"
+    },
+    {
+      "date": "2026-10-17",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "一部サービス停止と漏えい有無の調査を案内。",
+      "sourceUrl": "https://www.joshin.co.jp/ja/news/info/info-20261017/main/0/link/20261017Notice%20and%20Apology%20Regarding%20System%20Disruption%20Caused%20by%20Unauthorized%20Access.pdf"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "同内容を適時開示",
+      "kind": "update",
+      "summary": "17日の初報と同一事案・同内容の開示。",
+      "sourceUrl": "https://www.joshin.co.jp/ja/ir/news/auto_20261019552813/pdfFile.pdf"
+    },
+    {
+      "date": "2026-10-26",
+      "label": "可能性範囲を公表",
+      "kind": "update",
+      "summary": "最大約600万件・23万件・800件を別々の可能性範囲として公表。調査・復旧は継続。",
+      "sourceUrl": "https://www.joshin.co.jp/ja/ir/news/auto_20261026556267/pdfFile.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃の実施日・期間は明記されていない。検知・停止・公表日を転用しない。",
+      "sourceUrl": "https://www.joshin.co.jp/ja/ir/news/auto_20261026556267/pdfFile.pdf",
+      "reviewedDate": "2026-10-27"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "確定した被害の最初の確認日は明記されていない。異常検知・漏えい可能性の把握・公表日を転用しない。",
+      "sourceUrl": "https://www.joshin.co.jp/ja/ir/news/auto_20261026556267/pdfFile.pdf",
+      "reviewedDate": "2026-10-27"
+    }
+  }
+}

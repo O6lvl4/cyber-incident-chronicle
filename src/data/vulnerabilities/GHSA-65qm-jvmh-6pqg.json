@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-65qm-jvmh-6pqg",
   "aliases": [
+    "BIT-pillow-2026-112400",
     "CVE-2026-112400"
   ],
   "title": "Pillow: GIF seek keeps rejected size after DecompressionBombError, allowing DoS",
@@ -10,7 +11,7 @@
   "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-65qm-jvmh-6pqg/GHSA-65qm-jvmh-6pqg.json",
   "modifiedAt": "2026-10-20T20:53:36Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:30:40.725087Z",
+  "lastVerifiedAt": "2026-10-26T21:17:11.575654Z",
   "affected": [
     {
       "ecosystem": "pip",
@@ -81,6 +82,15 @@
       "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg",
       "publishedDate": "2026-10-17",
       "publishedAt": "2026-10-17T10:38:15Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV：GHSA-65qm-jvmh-6pqg（Bitnami別名の照合）",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-65qm-jvmh-6pqg",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:53:36Z",
+      "modifiedAt": "2026-10-26T08:55:49.781288748Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
@@ -88,7 +98,8 @@
     "Only applications catching the frame-seek decompression-bomb exception and continuing to use the same image reach this amplification. Default open/load, normal iteration, and n_frames/is_animated paths are excluded; no memory corruption is claimed.",
     "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
     "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
-    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed.",
+    "2026-10-27 JSTにOSV APIと固定generationのPyPI全件エクスポートの正規化JSON一致を確認し、明示されたBitnami識別子を別名へ追補。元の公表・更新日時、影響範囲、開発元確認内容は保持し、今回すべての開発元本文を再確認したとは扱わない。"
   ],
   "verification": {
     "level": "mixed",

@@ -1,0 +1,128 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7pwq-q9jf-539h",
+  "aliases": [
+    "CVE-2026-55107"
+  ],
+  "title": "kobako Sandbox Escape: guest eval reaches host RCE via method_missing → public_send (any bound Service)",
+  "summary": "kobako Sandbox Escape: guest eval reaches host RCE via method_missing → public_send (any bound Service)",
+  "publishedAt": "2026-08-18T20:09:59Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/08/GHSA-7pwq-q9jf-539h/GHSA-7pwq-q9jf-539h.json",
+  "modifiedAt": "2026-10-26T14:45:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "rubygems",
+      "packageName": "kobako",
+      "ranges": [
+        {
+          "affected": ">= 0.1.0, <= 0.9.0",
+          "fixed": "0.9.1",
+          "sourceUrl": "https://github.com/elct9620/kobako/security/advisories/GHSA-7pwq-q9jf-539h"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/elct9620/kobako/security/advisories/GHSA-7pwq-q9jf-539h",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/elct9620/kobako/security/advisories/GHSA-7pwq-q9jf-539h"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/08/GHSA-7pwq-q9jf-539h/GHSA-7pwq-q9jf-539h.json",
+      "publishedDate": "2026-08-18",
+      "publishedAt": "2026-08-18T20:09:59Z",
+      "modifiedAt": "2026-10-26T14:45:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "kobako Sandbox Escape: guest eval reaches host RCE via method_missing → public_send (any bound Service)",
+      "url": "https://github.com/advisories/GHSA-7pwq-q9jf-539h",
+      "publishedDate": "2026-08-18"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/elct9620/kobako/security/advisories/GHSA-7pwq-q9jf-539h",
+      "publishedDate": "2026-06-11",
+      "publishedAt": "2026-06-11T02:26:21Z",
+      "modifiedAt": "2026-06-16T15:20:33Z"
+    }
+  ],
+  "caveats": [
+    "開発元の影響欄>=0.1.0,<=0.9.0と修正版0.9.1を保持する。信頼できないmrubyスクリプトにhost Serviceを公開する環境が対象。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-7pwq-q9jf-539h",
+        "aliases": [
+          "CVE-2026-55107"
+        ],
+        "publishedAt": "2026-08-18T20:09:59Z",
+        "modifiedAt": "2026-10-26T14:45:07Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/08/GHSA-7pwq-q9jf-539h/GHSA-7pwq-q9jf-539h.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "rubygems",
+        "packageName": "kobako",
+        "ranges": [
+          {
+            "affected": ">= 0.1.0, < 0.9.1",
+            "fixed": "0.9.1",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/08/GHSA-7pwq-q9jf-539h/GHSA-7pwq-q9jf-539h.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.1.0"
+              },
+              {
+                "fixed": "0.9.1"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-7pwq-q9jf-539h"
+    ],
+    "conflicts": []
+  }
+}

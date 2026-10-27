@@ -1,0 +1,92 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7gpj-mj4q-x62x",
+  "aliases": [
+    "CVE-2026-105297",
+    "RUSTSEC-2026-0389"
+  ],
+  "title": "Pingora：HTTP/2の既定制限不足によるメモリ枯渇",
+  "summary": "HTTP/2サーバーでヘッダーリストと同時ストリームの制限を明示しない構成では、認証なしのクライアントがメモリを大量消費させ、プロセスの性能低下や終了を引き起こし得る。pingora-core 0.8.1で既定設定を修正したが、独自H2Optionsを渡すアプリケーションには別途制限設定が必要。",
+  "publishedAt": "2026-10-20T12:00:00Z",
+  "modifiedAt": "2026-10-26T11:15:11.357540777Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:15:03.150657Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0389",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "pingora-core",
+      "ranges": [
+        {
+          "affected": "< 0.8.1",
+          "fixed": "0.8.1",
+          "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-7gpj-mj4q-x62x"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.8.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/pingora-core"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-7gpj-mj4q-x62x",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-7gpj-mj4q-x62x"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0389",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0389",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T12:00:00Z",
+      "modifiedAt": "2026-10-26T11:15:11.357540777Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Pingora HTTP/2 server memory exhaustion through unbounded default header-list and concurrent-stream limits",
+      "url": "https://api.github.com/repos/cloudflare/pingora/security-advisories/GHSA-7gpj-mj4q-x62x",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T16:25:43Z",
+      "modifiedAt": "2026-10-20T16:25:43Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "OSV/RustSecの公開日時・更新日時を表示し、開発元GHSAの公表・更新日時とは出典別に保持する。収録日を新規公表日へ置き換えない。",
+    "OSV API本文が固定generationの全件エクスポートと正規化JSONで一致することを確認し、明示されたGHSA/CVE別名だけを採用した。relatedや類似タイトルによる統合はしない。",
+    "影響範囲・修正境界と深刻度は実際に取得した開発元GHSA APIを根拠とする。rawRangesはOSV原文であり、導入下限0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・CISA KEVは未確認。KEV公式取得のHTTP403を未掲載や悪用なしと扱わない。",
+    "h2/h2cを終端しmax_header_list_sizeとmax_concurrent_streamsを明示していない構成が対象。Cloudflare CDN顧客は内部PingoraがHTTP/2クライアントを持たないため影響しないと開発元は説明する。",
+    "0.8.1以降でH2Optionsを指定しない場合、展開後ヘッダーリスト64 KiB、接続当たり同時ストリーム100の既定値を適用する。独自H2OptionsやH2Options::default()にはこの安全側の既定値が適用されないため、更新だけで全構成が解消したとはしない。"
+  ]
+}

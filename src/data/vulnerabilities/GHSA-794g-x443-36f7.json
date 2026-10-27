@@ -1,0 +1,177 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-794g-x443-36f7",
+  "aliases": [
+    "CVE-2026-2092"
+  ],
+  "title": "Keycloak: Unauthorized access via improper validation of encrypted SAML assertions",
+  "summary": "Keycloak: Unauthorized access via improper validation of encrypted SAML assertions",
+  "publishedAt": "2026-07-02T20:42:23Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/07/GHSA-794g-x443-36f7/GHSA-794g-x443-36f7.json",
+  "modifiedAt": "2026-10-26T14:50:03Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.keycloak:keycloak-services",
+      "ranges": [
+        {
+          "affected": "< 26.2.14",
+          "fixed": "26.2.14",
+          "sourceUrl": "https://github.com/keycloak/keycloak/security/advisories/GHSA-794g-x443-36f7"
+        },
+        {
+          "affected": ">= 26.3.0, < 26.4.10",
+          "fixed": "26.4.10",
+          "sourceUrl": "https://github.com/keycloak/keycloak/security/advisories/GHSA-794g-x443-36f7"
+        },
+        {
+          "affected": ">= 26.5.0, < 26.5.5",
+          "fixed": "26.5.5",
+          "sourceUrl": "https://github.com/keycloak/keycloak/security/advisories/GHSA-794g-x443-36f7"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/keycloak/keycloak/security/advisories/GHSA-794g-x443-36f7",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.7,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L",
+        "sourceUrl": "https://github.com/keycloak/keycloak/security/advisories/GHSA-794g-x443-36f7"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/07/GHSA-794g-x443-36f7/GHSA-794g-x443-36f7.json",
+      "publishedDate": "2026-07-02",
+      "publishedAt": "2026-07-02T20:42:23Z",
+      "modifiedAt": "2026-10-26T14:50:03Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Keycloak: Unauthorized access via improper validation of encrypted SAML assertions",
+      "url": "https://github.com/advisories/GHSA-794g-x443-36f7",
+      "publishedDate": "2026-07-02"
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
+      "url": "https://github.com/keycloak/keycloak/security/advisories/GHSA-794g-x443-36f7",
+      "publishedDate": "2026-05-29",
+      "publishedAt": "2026-05-29T15:20:22Z",
+      "modifiedAt": "2026-05-29T15:20:22Z"
+    }
+  ],
+  "caveats": [
+    "開発元は系列別の修正版26.2.14、26.4.10、26.5.5を記載し、追加の修正版欄に26.6.0も列挙する。Reviewedの含む上限26.2.5／26.4.7とは異なるため、開発元の各系列の除外境界を表示する。",
+    "署名付きの有効なSAML assertionが必要で、全体のSAML応答が未署名の場合の暗号化assertion検証が対象。一般的な無認証アクセスと同一視しない。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-794g-x443-36f7",
+        "aliases": [
+          "CVE-2026-2092"
+        ],
+        "publishedAt": "2026-07-02T20:42:23Z",
+        "modifiedAt": "2026-10-26T14:50:03Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/07/GHSA-794g-x443-36f7/GHSA-794g-x443-36f7.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "maven",
+        "packageName": "org.keycloak:keycloak-services",
+        "ranges": [
+          {
+            "affected": "<= 26.2.5",
+            "fixed": null,
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/07/GHSA-794g-x443-36f7/GHSA-794g-x443-36f7.json"
+          },
+          {
+            "affected": ">= 26.3.0, <= 26.4.7",
+            "fixed": null,
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/07/GHSA-794g-x443-36f7/GHSA-794g-x443-36f7.json"
+          },
+          {
+            "affected": ">= 26.5.0, < 26.5.5",
+            "fixed": "26.5.5",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/07/GHSA-794g-x443-36f7/GHSA-794g-x443-36f7.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "26.2.5"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "26.3.0"
+              },
+              {
+                "last_affected": "26.4.7"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "26.5.0"
+              },
+              {
+                "fixed": "26.5.5"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-794g-x443-36f7"
+    ],
+    "conflicts": [
+      {
+        "field": "affected",
+        "reason": "開発元は系列別の修正版26.2.14、26.4.10、26.5.5を記載し、追加の修正版欄に26.6.0も列挙する。Reviewedの含む上限26.2.5／26.4.7とは異なるため、開発元の各系列の除外境界を表示する。",
+        "newerDatabase": false
+      }
+    ]
+  }
+}

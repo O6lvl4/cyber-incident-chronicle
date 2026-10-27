@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-23hp-j76v-pcwj",
+  "aliases": [
+    "RUSTSEC-2026-0407"
+  ],
+  "title": "webpage：未検証URLによるSSRF・ローカルファイル漏えい",
+  "summary": "攻撃者が制御するURLをHTTP::fetchやWebpage::from_urlへ渡すアプリケーションで、URLスキーム・宛先IP・リダイレクト先の検証不足により、内部サービスへのリクエストやローカルファイル読取りが起こり得る。読み取った内容が外部へ返るかは利用アプリケーションに依存する。2.1.0でHTTP(S)と公開IPに制限。",
+  "publishedAt": "2026-10-22T12:00:00Z",
+  "modifiedAt": "2026-10-26T14:00:04.244031092Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-26T21:15:03.152821Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0407",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "webpage",
+      "ranges": [
+        {
+          "affected": "<= 2.0.1",
+          "fixed": "2.1.0",
+          "sourceUrl": "https://api.github.com/repos/orottier/webpage-rs/security-advisories/GHSA-23hp-j76v-pcwj"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "2.1.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/webpage"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/orottier/webpage-rs/security-advisories/GHSA-23hp-j76v-pcwj",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://api.github.com/repos/orottier/webpage-rs/security-advisories/GHSA-23hp-j76v-pcwj"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec：RUSTSEC-2026-0407",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0407",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T12:00:00Z",
+      "modifiedAt": "2026-10-26T14:00:04.244031092Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "SSRF and Local File Disclosure via unvalidated URLs",
+      "url": "https://api.github.com/repos/orottier/webpage-rs/security-advisories/GHSA-23hp-j76v-pcwj",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T19:39:23Z",
+      "modifiedAt": "2026-10-23T08:28:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "OSV/RustSecの公開日時・更新日時を表示し、開発元GHSAの公表・更新日時とは出典別に保持する。収録日を新規公表日へ置き換えない。",
+    "OSV API本文が固定generationの全件エクスポートと正規化JSONで一致することを確認し、明示されたGHSA/CVE別名だけを採用した。relatedや類似タイトルによる統合はしない。",
+    "影響範囲・修正境界と深刻度は実際に取得した開発元GHSA APIを根拠とする。rawRangesはOSV原文であり、導入下限0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・CISA KEVは未確認。KEV公式取得のHTTP403を未掲載や悪用なしと扱わない。",
+    "開発元の構造化影響範囲は2.0.1以下、本文とRustSec/OSVは2.1.0未満を示す。主表示では開発元の構造化範囲を保持し、OSVの原文イベントも併記する。",
+    "2.1.0の制限はリダイレクト後も適用。HTTP::fetch_unrestrictedおよびWebpage::from_url_unrestrictedは明示的に従来挙動へ戻すAPIであり、信頼できないURLに対する保護を保証しない。"
+  ]
+}

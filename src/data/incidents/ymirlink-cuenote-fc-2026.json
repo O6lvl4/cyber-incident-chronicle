@@ -1,48 +1,62 @@
 {
   "id": "ymirlink-cuenote-fc-2026",
-  "company": "ユミルリンク（Cuenote FC）",
+  "company": "ユミルリンク（Cuenote FC・BASE）",
   "geography": "日本企業・国内サービス",
-  "title": "Cuenote FCの5システムから情報持出し、出力規模は延べ約900万件の試算",
+  "title": "Cuenote FCの49システムで流出痕跡、延べ5,162万8,280件は可能性範囲",
   "announcementDate": "2026-10-19",
   "announcementDateLabel": "収録した公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日は未公表（10月16日未明に検知）",
-  "updatedDate": "2026-10-22",
-  "statusAsOfDate": "2026-10-22",
+  "updatedDate": "2026-10-26",
+  "statusAsOfDate": "2026-10-26",
   "impactTypes": [
     "leak",
+    "outage",
     "unauthorizedAccess"
   ],
   "disclosureStatus": "confirmed",
   "attackMethod": {
-    "label": "プログラムの脆弱性、サポート・品質管理担当者の認証情報取得、不正プログラム設置とDB出力",
+    "label": "プログラム・ライブラリの脆弱性、担当者認証情報やセッション情報の取得、不正プログラムと他システム参照・DB出力",
     "status": "confirmed"
   },
-  "summary": "10月16日未明に一部システムの不正アクセスを検知。専用ASPプランの5システムで不正アクセスとデータ出力を確認し、メールアドレス等の出力規模を延べ約900万件と試算。個人情報の外部持出しは確認済みだが詳細は調査中。脆弱性修正・担当者認証情報削除等を実施した。",
+  "summary": "26日第2報でCuenote FCの49システムに情報出力・漏えい痕跡を確認。延べ51,628,280件を漏えいのおそれがある件数として示し、16システムの件数は調査中。BASEの契約者情報190件の閲覧可能状態も公表。旧5システム・約900万件の試算から範囲が拡大した。",
   "affectedData": [
-    "メールアドレスを含む情報。出力データの詳細項目・対象範囲は調査中"
+    "Cuenote FC：配信先メールアドレスと利用企業ごとに異なる氏名・都道府県・生年月日等の付属情報、配信記録、Webアクセス記録、サービス利用企業担当者情報（詳細・対象件数は調査中）",
+    "Cuenote BASE：契約者の企業名、氏名、電話、メールアドレス190件が閲覧可能な状態"
   ],
   "counts": [
     {
-      "value": 9000000,
-      "unit": "件",
-      "status": "investigating",
-      "label": "5システムから出力された情報の延べ件数の試算。確定人数ではない",
-      "approximate": true
-    },
-    {
-      "value": 5,
+      "value": 49,
       "unit": "システム",
       "status": "confirmed",
-      "label": "不正アクセスとデータ出力を確認したCuenote FC専用ASPプランのシステム",
+      "label": "Cuenote FCで不正アクセス後の出力・情報漏えい痕跡を確認したシステム数",
+      "approximate": false
+    },
+    {
+      "value": 51628280,
+      "unit": "件",
+      "status": "possible",
+      "label": "Cuenote FC詳細表の漏えいのおそれがある延べ件数。実人数・最終確定値ではなく、16システムの件数調査で増加する可能性",
+      "approximate": false
+    },
+    {
+      "value": 190,
+      "unit": "件",
+      "status": "possible",
+      "label": "Cuenote BASEで閲覧可能だった契約者情報。FCの延べ件数と合算しない",
       "approximate": false
     }
   ],
   "caveats": [
-    "外部への持出し確認と、延べ約900万件という出力試算の確度を区別する。900万人または900万件の確定漏えいとはしない。",
-    "影響対象は専用ASPプランの5システム。Cuenote全利用者・全システムが対象とはしない。",
     "10月22日にCVE-2026-109618・CVE-2026-109619のCuenoteサービスへの影響はないと公表。本件原因としてこれらPHP脆弱性を結び付けない。",
-    "10月19日は第一報の同日19:05補足更新版。10月22日のPHP影響説明は新規侵害ではない。"
+    "10月19日は第一報の同日19:05補足更新版。10月22日のPHP影響説明は新規侵害ではない。",
+    "第一報の専用ASP5システム・延べ約900万件は当時の試算として経過に保持。現在の49システム・51,628,280件に再加算しない。",
+    "第2報のサービス一覧は51,628,280件を流出した情報と表記する一方、詳細表は漏洩の恐れがある延べ件数と表記。16システムの件数が調査中で増加し得るため、個別数量はpossibleとし、確定人数へ読み替えない。",
+    "不正アクセスの試行は複数企業用3システム・単一企業用78システム。漏えい痕跡確認49システムは後者の内数で、試行数を侵入成功・流出確認数としない。",
+    "BASE190件は閲覧可能な契約者情報の範囲。FCの配信関連延べ件数や49システムとは単位・対象が異なる。",
+    "26日の追加45システムはFC44とBASE1。25日21時45分の追加42システムの確認と26日12時30分の42社への連絡を含む経過であり、49に重ねて合算しない。",
+    "16日6時49分のアカウント異常検知、20時10分のBASE閲覧記録確認、25日の追加範囲確認を、FC事案全体の最初の流出確認日や攻撃開始日としない。",
+    "20日1時から予防停止していた他システムを順次再開。全被害システムの復旧完了とは公表していない。"
   ],
   "sources": [
     {
@@ -54,6 +68,11 @@
       "title": "ユミルリンク：PHPの脆弱性はCuenoteサービスに影響なし",
       "url": "https://www.cuenote.jp/information/news/phpcuenote_20261022.html",
       "publishedDate": "2026-10-22"
+    },
+    {
+      "title": "ユミルリンク：不正アクセス第2報・FCとBASEの影響範囲（10月26日17時更新）",
+      "url": "https://www.cuenote.jp/support/news-incident.html",
+      "publishedDate": "2026-10-26"
     }
   ],
   "timeline": [
@@ -65,6 +84,13 @@
       "sourceUrl": "https://www.cuenote.jp/information/news/unauthorizedaccess.html"
     },
     {
+      "date": "2026-10-16",
+      "label": "BASEの閲覧記録確認・停止",
+      "kind": "update",
+      "summary": "20時10分にBASEの他ユーザー情報の閲覧記録を確認し停止。FC全体の流出初確認日とは区別。",
+      "sourceUrl": "https://www.cuenote.jp/support/news-incident.html"
+    },
+    {
       "date": "2026-10-19",
       "label": "外部持出しと出力試算を公表",
       "kind": "disclosure",
@@ -72,14 +98,35 @@
       "sourceUrl": "https://www.cuenote.jp/information/news/unauthorizedaccess.html"
     },
     {
+      "date": "2026-10-20",
+      "label": "予防停止していた他システムを順次再開",
+      "kind": "update",
+      "summary": "1時から順次再開。全体の復旧完了ではない。",
+      "sourceUrl": "https://www.cuenote.jp/support/news-incident.html"
+    },
+    {
       "date": "2026-10-22",
       "label": "PHPの特定脆弱性の影響なしと説明",
       "kind": "update",
       "summary": "CVE-2026-109618・CVE-2026-109619はCuenoteサービスに影響なし。漏えい件数更新ではない。",
       "sourceUrl": "https://www.cuenote.jp/information/news/phpcuenote_20261022.html"
+    },
+    {
+      "date": "2026-10-25",
+      "label": "追加42システムの不正アクセス・出力記録を確認",
+      "kind": "update",
+      "summary": "21時45分に確認し、22時55分に影響範囲調査を開始。",
+      "sourceUrl": "https://www.cuenote.jp/support/news-incident.html"
+    },
+    {
+      "date": "2026-10-26",
+      "label": "第2報で49システムと延べ件数を公表",
+      "kind": "update",
+      "summary": "17時更新。FC49システム、可能性の延べ51,628,280件、BASE190件の閲覧可能状態。16システムの件数を調査中。",
+      "sourceUrl": "https://www.cuenote.jp/support/news-incident.html"
     }
   ],
-  "lastVerifiedDate": "2026-10-24",
+  "lastVerifiedDate": "2026-10-27",
   "eventDates": {
     "attack": {
       "precision": "unknown",

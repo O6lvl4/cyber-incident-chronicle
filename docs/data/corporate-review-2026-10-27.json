@@ -1,0 +1,357 @@
+{
+  "checkedDate": "2026-10-27",
+  "timezone": "Asia/Tokyo",
+  "window": "前回10月25日21時台UTCの成功確認から24時間以上を重ね、10月26日の公式公表・更新を中心に確認。未収録だった24日のチャリロト、17日初報から26日に重要続報のJoshinを補完。2022年11月以降の全期間・全事案の再監査ではない。",
+  "overlapPolicy": {
+    "previousAudit": "docs/data/corporate-review-2026-10-26.json",
+    "overlapFromUTC": "2026-10-24T21:00:00Z",
+    "note": "失敗情報源は過去の成功点を保持し、検索結果だけを本文確認としない。"
+  },
+  "baselineIncidentCount": 224,
+  "addedIncidentCount": 4,
+  "updatedIncidentCount": 5,
+  "resultIncidentCount": 228,
+  "resultSourceCount": 506,
+  "statusDefinitions": {
+    "checked_changed": "公式本文に基づく追加・更新。対応継続のみはfindingで区別。",
+    "checked_limited_no_change": "取得した限定本文の範囲で追加変更なし。全件再確認ではない。",
+    "fetch_failed": "対象本文未取得。不存在・変更なしとは判断しない。"
+  },
+  "records": [
+    {
+      "incidentId": "joshin-network-2026",
+      "action": "add",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/joshin-network-2026.json",
+      "sourcesUsedForChanges": [
+        "https://www.joshin.co.jp/ja/news/info/info-20261017/main/0/link/20261017Notice%20and%20Apology%20Regarding%20System%20Disruption%20Caused%20by%20Unauthorized%20Access.pdf",
+        "https://www.joshin.co.jp/ja/ir/news/auto_20261019552813/pdfFile.pdf",
+        "https://www.joshin.co.jp/ja/ir/news/auto_20261026556267/pdfFile.pdf"
+      ]
+    },
+    {
+      "incidentId": "doutor-employee-system-2026",
+      "action": "add",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/doutor-employee-system-2026.json",
+      "sourcesUsedForChanges": [
+        "https://www.doutor.co.jp/news/newsrelease/detail/20261026144748.html"
+      ]
+    },
+    {
+      "incidentId": "cotta-online-shop-2026",
+      "action": "add",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/cotta-online-shop-2026.json",
+      "sourcesUsedForChanges": [
+        "https://www.cotta.jp/information/security-incident-2026-01.php"
+      ]
+    },
+    {
+      "incidentId": "chariloto-app-2026",
+      "action": "add",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/chariloto-app-2026.json",
+      "sourcesUsedForChanges": [
+        "https://chariloto.jp/news/20261024/index.html"
+      ]
+    },
+    {
+      "incidentId": "ymirlink-cuenote-fc-2026",
+      "action": "update",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/ymirlink-cuenote-fc-2026.json",
+      "sourcesUsedForChanges": [
+        "https://www.cuenote.jp/support/news-incident.html"
+      ]
+    },
+    {
+      "incidentId": "rakus-blastmail-2026",
+      "action": "update",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/rakus-blastmail-2026.json",
+      "sourcesUsedForChanges": [
+        "https://info.blastmail.jp/information_20261021.html"
+      ]
+    },
+    {
+      "incidentId": "gmo-onamae-desktop-2026",
+      "action": "update",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/gmo-onamae-desktop-2026.json",
+      "sourcesUsedForChanges": [
+        "https://www.onamae.com/news/article/11609",
+        "https://www.onamae.com/news/article/11610"
+      ]
+    },
+    {
+      "incidentId": "idc-frontier-2026",
+      "action": "update",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/idc-frontier-2026.json",
+      "sourcesUsedForChanges": [
+        "https://www.idcf.jp/"
+      ]
+    },
+    {
+      "incidentId": "valtec-services-2026",
+      "action": "update",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "record": "src/data/incidents/valtec-services-2026.json",
+      "sourcesUsedForChanges": [
+        "https://www.webjapan.co.jp/maintenance/serviceteishi261026/"
+      ]
+    }
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://www.joshin.co.jp/ja/ir/news/auto_20261026556267/pdfFile.pdf",
+      "accessedAtUTC": "2026-10-26T21:10:45.901315+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.joshin.co.jp/ja/ir/news/auto_20261026556267/pdfFile.pdf",
+      "bodySha256": "4479ba18f6df5271c0c2ee1d3e4855ee2471f50eac410bbd00e882b2fd49eae1",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:10:45.901315+00:00",
+      "finding": "Joshinの公式PDF本文を確認。17日初報・19日同内容適時開示・26日第2報を同一事案へ集約。"
+    },
+    {
+      "url": "https://www.joshin.co.jp/ja/ir/news/auto_20261019552813/pdfFile.pdf",
+      "accessedAtUTC": "2026-10-26T21:10:45.904438+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.joshin.co.jp/ja/ir/news/auto_20261019552813/pdfFile.pdf",
+      "bodySha256": "fccab8395a8c4882e1a5df0e68da43a658d01a372d2a1647a2b4419f47d75cf1",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:10:45.904438+00:00",
+      "finding": "Joshinの公式PDF本文を確認。17日初報・19日同内容適時開示・26日第2報を同一事案へ集約。"
+    },
+    {
+      "url": "https://www.joshin.co.jp/ja/news/info/info-20261017/main/0/link/20261017Notice%20and%20Apology%20Regarding%20System%20Disruption%20Caused%20by%20Unauthorized%20Access.pdf",
+      "accessedAtUTC": "2026-10-26T21:10:45.905751+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.joshin.co.jp/ja/news/info/info-20261017/main/0/link/20261017Notice%20and%20Apology%20Regarding%20System%20Disruption%20Caused%20by%20Unauthorized%20Access.pdf",
+      "bodySha256": "9b9c7b021dea5b0c730933899ba309445284089a5375db8ed7c171346a49dd8a",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:10:45.905751+00:00",
+      "finding": "Joshinの公式PDF本文を確認。17日初報・19日同内容適時開示・26日第2報を同一事案へ集約。"
+    },
+    {
+      "url": "https://www.onamae.com/news/article/11609",
+      "accessedAtUTC": "2026-10-26T21:10:45.912109+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.onamae.com/news/article/11609",
+      "bodySha256": "3343ee3699a083d3c6686ea3615d2d25689ed1b0af38b73af3b2dee54bf5fa37",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:10:45.912109+00:00",
+      "finding": "26日第6報。予防的対応再要請と任意の端末調査協力依頼。感染確認の公表ではない。"
+    },
+    {
+      "url": "https://www.onamae.com/news/article/11610",
+      "accessedAtUTC": "2026-10-26T21:10:45.916017+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.onamae.com/news/article/11610",
+      "bodySha256": "04eb3efac72aef1f2be8af8eb43abfcc56eb971afea5b55f6f89fd44cf9aa730",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:10:45.916017+00:00",
+      "finding": "26日第7報。26日22時時点の提供端末預かりと解析開始を記録。攻撃者の主張・予告を被害根拠へ採用しない。"
+    },
+    {
+      "url": "https://www.timesmobi.co.jp/news/2026/10/bca8b21d0fc52c552c3ac8e04a631177ef4cd31c.html",
+      "accessedAtUTC": "2026-10-26T21:10:45.920019+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.timesmobi.co.jp/news/2026/10/bca8b21d0fc52c552c3ac8e04a631177ef4cd31c.html",
+      "bodySha256": "1d0e423b263c13219db1dc3fa9301506c4801ee917b6e1cc3103b76936af0a1e",
+      "method": "urllib.request",
+      "status": "checked_limited_no_change",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:10:45.920019+00:00",
+      "finding": "23日第5報。前回成功取得の本文SHA256と一致。"
+    },
+    {
+      "url": "https://info.system5.jp/whatsnew/apology-20261024",
+      "accessedAtUTC": "2026-10-26T21:10:50.291104+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://info.system5.jp/whatsnew/apology-20261024",
+      "bodySha256": "5f761f8bf8a94b3d1d08bc5f2c8831206d1692b769445a78b370d7bce1f6ed4a",
+      "method": "urllib.request",
+      "status": "checked_limited_no_change",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:10:50.291104+00:00",
+      "finding": "24日続報。前回成功取得の本文SHA256と一致。"
+    },
+    {
+      "url": "https://www.recruit.co.jp/newsroom/pressrelease/2026/1021_149447.html",
+      "accessedAtUTC": "2026-10-26T21:10:50.296570+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "method": "urllib.request",
+      "status": "fetch_failed",
+      "finding": "HTTP403で本文未取得。変更なしとは扱わず過去の成功取得点・確認日を保持。",
+      "successCheckpointPolicy": "未取得本文の成功取得点・個別確認日は進めない。"
+    },
+    {
+      "url": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1561.html",
+      "accessedAtUTC": "2026-10-26T21:10:52.656192+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "method": "urllib.request",
+      "status": "fetch_failed",
+      "finding": "HTTP403で本文未取得。変更なしとは扱わず過去の成功取得点・確認日を保持。",
+      "successCheckpointPolicy": "未取得本文の成功取得点・個別確認日は進めない。"
+    },
+    {
+      "url": "https://www.webjapan.co.jp/maintenance/serviceteishi261022/",
+      "accessedAtUTC": "2026-10-26T21:10:52.676025+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.webjapan.co.jp/maintenance/serviceteishi261022/",
+      "bodySha256": "63770f1363e31a07ca144f83b54d07aee7ecd66c91268a7a6eacff90ec8f987a",
+      "method": "urllib.request",
+      "status": "checked_limited_no_change",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:10:52.676025+00:00",
+      "finding": "初報のPHP原因撤回は既存と一致。新しい第3報へのリンクを発見し本文を別途取得。"
+    },
+    {
+      "url": "https://www.webjapan.co.jp/maintenance/serviceteishi261026/",
+      "accessedAtUTC": "2026-10-26T21:11:22.057557+00:00",
+      "httpStatus": 200,
+      "bodySha256": "1157f824223b76b890f9ae77a9fce54cb47f889038e5925dec4587e0f8945303",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:11:22.057557+00:00",
+      "finding": "26日第3報。データの外部送信を確認、企業情報1,213件と売上等875社。個人情報件数は調査中、サービス再開は予定。",
+      "priorAttempt": {
+        "method": "web.run.open",
+        "status": "fetch_failed",
+        "reason": "tool returned internal error / URL not accessible; recovered by urllib.request"
+      }
+    },
+    {
+      "url": "https://www.cuenote.jp/support/news-incident.html",
+      "accessedAtUTC": "2026-10-26T21:08:10.193818+00:00",
+      "httpStatus": 200,
+      "bodySha256": "60d895e9c51382e501871e44837b06f995c59890e478a35cd3658b13d88df3ff",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:08:10.193818+00:00",
+      "finding": "26日17時第2報。FC49システムの漏えい痕跡と51,628,280件の可能性延べ件数、16システムの件数調査継続、BASE190件の閲覧可能状態を区別。",
+      "priorAttempt": {
+        "method": "web.run.open",
+        "status": "fetch_failed",
+        "reason": "tool returned internal error / URL not accessible; recovered by urllib.request"
+      }
+    },
+    {
+      "url": "https://info.blastmail.jp/information_20261021.html",
+      "accessedAtUTC": "2026-10-26T21:08:15.911742+00:00",
+      "httpStatus": 200,
+      "bodySha256": "4bc523ec60c01ab0ddb7e03ef71ab9103dd22ea2db682782db5d9d31c11a9742",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:08:15.911742+00:00",
+      "finding": "26日17時に1契約を追加確認、確認・連絡済み各345は同じ対象。再開未定。",
+      "priorAttempt": {
+        "method": "web.run.open",
+        "status": "fetch_failed",
+        "reason": "tool returned internal error / URL not accessible; recovered by urllib.request"
+      }
+    },
+    {
+      "url": "https://www.medley.jp/notice/20261015.html",
+      "accessedAtUTC": "2026-10-26T21:08:18.712527+00:00",
+      "httpStatus": 200,
+      "bodySha256": "4bbdfcfa32c0a56aa33146abeed2f6d8925057c5fec0bec97356bc499ea9b014",
+      "method": "urllib.request",
+      "status": "checked_limited_no_change",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:08:18.712527+00:00",
+      "finding": "最新表示23日16時。前回成功取得の本文SHA256と一致。全過去資料の再取得ではない。"
+    },
+    {
+      "url": "https://chariloto.jp/news/20261024/index.html",
+      "accessedAtUTC": "2026-10-26T21:09:07.936258+00:00",
+      "httpStatus": 200,
+      "bodySha256": "1d9ba7eb326ad16f3c7e7d820fbd5573e3f6e14ec39bef7f00eda08eec3ffbc6",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:09:07.936258+00:00",
+      "finding": "24日公表。確定373名、攻撃21日09:30頃～13:00頃・検知22日・取得情報特定24日・再開23日を区別。"
+    },
+    {
+      "url": "https://www.doutor.co.jp/news/newsrelease/detail/20261026144748.html",
+      "accessedAtUTC": "2026-10-26T21:09:11.731782+00:00",
+      "httpStatus": 200,
+      "bodySha256": "6d1b8b45596cde8e3553b4ff7386ffd8ad3b42305a11f8334f5a3cbb27a2adce",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:09:11.731782+00:00",
+      "finding": "26日公表。4店舗の従業員・退職者951名の漏えい可能性。20日は検知と可能性把握。"
+    },
+    {
+      "url": "https://www.idcf.jp/",
+      "accessedAtUTC": "2026-10-26T21:09:19.063568+00:00",
+      "httpStatus": 200,
+      "bodySha256": "9f832fef059d672034328471858c233bfe65b56a9f3bad5bc82e6125a58c4306",
+      "method": "urllib.request",
+      "status": "checked_changed",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:09:19.063568+00:00",
+      "finding": "26日18時更新。新たな重要事実なし、調査・復旧対応継続。日付付き継続報のみで被害範囲の変更ではない。"
+    },
+    {
+      "url": "https://www.cotta.jp/information/security-incident-2026-01.php",
+      "status": "checked_changed",
+      "method": "web.run.open",
+      "accessedAtUTC": "2026-10-26T21:08:44Z",
+      "timestampNote": "ツール結果受領時刻（秒単位）。HTTP応答コード・生本文ハッシュは提供されない。",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:08:44Z",
+      "finding": "26日公表とQAの本文を確認。不審アクセス自体の該当性・情報流出は調査中。カード決済と一部機能は予防停止。",
+      "subsequentAttempt": {
+        "method": "urllib.request",
+        "accessedAtUTC": "2026-10-26T21:09:15.611827+00:00",
+        "status": "fetch_failed",
+        "reason": "HTTP403。独立に取得済みのweb.run公式本文は保持し、urllib成功点は作らない。"
+      }
+    },
+    {
+      "url": "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE/",
+      "status": "checked_limited_no_change",
+      "method": "web.run.open",
+      "accessedAtUTC": "2026-10-26T21:08:44Z",
+      "verifiedDate": "2026-10-27",
+      "lastSuccessfulFetchAtUTC": "2026-10-26T21:08:44Z",
+      "finding": "本文の最新表示23日16時。段階再開の目処なし・停止継続は採用済み。全関連資料の再監査ではない。"
+    }
+  ],
+  "countingNotes": [
+    "新規4件は既存224件の法人名だけでなく公式URLドメイン、対象サービス、親会社および侵害文脈を照合。Joshinは自社ネットワーク、ドトールは4店舗従業員用システム、cottaは自社通販の不審アクセス、チャリロトは自社アプリ脆弱性であり、既存委託先事案と同一とする公式根拠はない。",
+    "チャリ・ロトはMIXIグループでも、既存Commune利用のMIXI公表とは対象サービス・侵害原因が異なる。親会社一致のみで結合しない。",
+    "Cuenote FCとBASEの追加範囲は提供元第2報が同じ事案として公表したため既存IDへ統合。49システム・可能性の延べ件数・BASE190件を合算しない。",
+    "Joshinの3システムの最大約件数、Doutor951名の可能性、Chariloto373名の確認、VALTECの企業情報件数と企業数は単位・確度を保持。",
+    "cottaは不正アクセス自体も調査中で、予防的停止を侵入成功やカード情報流出の確認へ格上げしない。",
+    "GMOの会社による端末調査を記録し、攻撃者の主張・予告・漏えいデータは収録しない。",
+    "未取得・今回未確認の過去資料の個別確認日は進めず、既存の検証済みeventDatesは保持。"
+  ]
+}

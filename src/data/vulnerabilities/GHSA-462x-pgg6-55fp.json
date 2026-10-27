@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-462x-pgg6-55fp",
   "aliases": [
+    "BIT-pillow-2026-112395",
     "CVE-2026-112395"
   ],
   "title": "Pillow tiled-TIFF decoder reads past tile buffer in copy4 (Unpack.c:1290)",
@@ -10,7 +11,7 @@
   "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/e411ff2b84c425b1b0349aa88916713bebe7786a/advisories/github-reviewed/2026/10/GHSA-462x-pgg6-55fp/GHSA-462x-pgg6-55fp.json",
   "modifiedAt": "2026-10-20T20:49:27Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:30:37.368427Z",
+  "lastVerifiedAt": "2026-10-26T21:17:08.717572Z",
   "affected": [
     {
       "ecosystem": "pip",
@@ -67,6 +68,15 @@
       "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp",
       "publishedDate": "2026-10-17",
       "publishedAt": "2026-10-17T10:35:44Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV：GHSA-462x-pgg6-55fp（Bitnami別名の照合）",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-462x-pgg6-55fp",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T20:49:26Z",
+      "modifiedAt": "2026-10-26T08:56:01.770928143Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
@@ -74,7 +84,8 @@
     "Crafted tiled TIFF decoding can over-read the tile buffer, causing a crash and possible adjacent heap content in pixel output; no production compromise is claimed.",
     "Fixed database source and developer advisory were individually compared. Database and maintainer dates remain separately attributed.",
     "Exploitation and CISA KEV are unverified; unknown is not evidence of absence.",
-    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed."
+    "Public HTML was reviewed after an API rate-limit failure; exact maintainer modification/withdrawal timestamps were not exposed.",
+    "2026-10-27 JSTにOSV APIと固定generationのPyPI全件エクスポートの正規化JSON一致を確認し、明示されたBitnami識別子を別名へ追補。元の公表・更新日時、影響範囲、開発元確認内容は保持し、今回すべての開発元本文を再確認したとは扱わない。"
   ],
   "verification": {
     "level": "mixed",

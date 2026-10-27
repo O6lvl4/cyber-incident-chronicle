@@ -5,34 +5,64 @@
     "CVE-2026-106118"
   ],
   "title": "ImageSharp：FAX圧縮のタイルTIFFでヒープ領域外書き込み",
-  "summary": "FAX圧縮されたタイルTIFFで、タイル幅に合わせて確保したバッファへ画像全体の幅を使って展開データを書き込む。信頼できないTIFFの読み込みでヒープ領域外書き込みとプロセス停止が起きる可能性があり、4.1.1で修正。",
+  "summary": "FAX圧縮されたタイルTIFFで、タイル幅に合わせて確保したバッファへ画像全体の幅を使って展開データを書き込む。信頼できないTIFFの読み込みでヒープ領域外書き込みとプロセス停止が起きる可能性があり、3.xは3.2.0、4.xは4.1.1で修正。",
   "publishedAt": "2026-10-07T16:18:57Z",
-  "modifiedAt": "2026-10-07T16:18:57Z",
+  "modifiedAt": "2026-10-26T16:04:11Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-08T01:49:04Z",
-  "dateSourceUrl": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2",
+  "lastVerifiedAt": "2026-10-26T21:17:14.895983Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-v76p-62qx-wwq2/GHSA-v76p-62qx-wwq2.json",
   "affected": [
     {
       "ecosystem": "nuget",
       "packageName": "SixLabors.ImageSharp",
       "ranges": [
         {
-          "affected": ">= 3.0.0, < 4.1.1",
+          "affected": ">= 3.0.0, < 3.2.0",
+          "fixed": "3.2.0",
+          "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-v76p-62qx-wwq2"
+        },
+        {
+          "affected": ">= 4.0.0, < 4.1.1",
           "fixed": "4.1.1",
-          "sourceUrl": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2"
+          "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-v76p-62qx-wwq2"
         }
-      ]
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.1.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
     }
   ],
   "severity": {
     "label": "high",
-    "sourceUrl": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2",
+    "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-v76p-62qx-wwq2",
     "cvss": [
       {
         "version": "3.1",
         "score": 7.5,
         "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-        "sourceUrl": "https://api.github.com/advisories/GHSA-v76p-62qx-wwq2"
+        "sourceUrl": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-v76p-62qx-wwq2"
       }
     ]
   },
@@ -48,10 +78,11 @@
   "sources": [
     {
       "type": "maintainer",
-      "title": "ImageSharp: Tiled fax TIFF: tile buffer sized by TileWidth but fax decompressor writes scanlines of ImageWidth — heap OOB write",
+      "title": "Developer public advisory: structured fields and relevant conditions individually reviewed",
       "url": "https://github.com/SixLabors/ImageSharp/security/advisories/GHSA-v76p-62qx-wwq2",
       "publishedDate": "2026-08-20",
-      "publishedAt": "2026-08-20T09:48:49Z"
+      "publishedAt": "2026-08-20T09:48:49Z",
+      "modifiedAt": "2026-10-09T11:35:37Z"
     },
     {
       "type": "advisoryDatabase",
@@ -67,13 +98,104 @@
       "title": "ImageSharp v4.1.1の公式プロジェクトファイル（NuGet PackageId）",
       "url": "https://raw.githubusercontent.com/SixLabors/ImageSharp/v4.1.1/src/ImageSharp/ImageSharp.csproj",
       "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-v76p-62qx-wwq2/GHSA-v76p-62qx-wwq2.json",
+      "publishedDate": "2026-10-07",
+      "publishedAt": "2026-10-07T16:18:57Z",
+      "modifiedAt": "2026-10-26T16:04:11Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "ImageSharp: Tiled fax TIFF: tile buffer sized by TileWidth but fax decompressor writes scanlines of ImageWidth — heap OOB write",
+      "url": "https://github.com/advisories/GHSA-v76p-62qx-wwq2",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "type": "release",
+      "title": "Official ImageSharp 3.2.0 security-backport release",
+      "url": "https://github.com/SixLabors/ImageSharp/releases/tag/v3.2.0",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T08:56:56Z"
     }
   ],
   "caveats": [
     "タイル形式かつT4/T6/MHのFAX圧縮TIFFを読み込む経路が対象。公式資料はヒープ破損からコード実行につながる可能性を述べるが、実悪用やコード実行の成立を確認したとは扱わない。",
-    "アドバイザリのパッケージ欄はImageSharpと記載する一方、公式v4.1.1のプロジェクトファイルはPackageId=SixLabors.ImageSharpと定義する。本記録のNuGet名は取得した公式プロジェクトファイルに合わせた。",
-    "メンテナーの影響欄は>=3.0.0、修正欄は4.1.1。修正版を除外したGitHub Reviewedの>=3.0.0, <4.1.1を保持。",
+    "2026-10-08確認時の履歴: アドバイザリのパッケージ欄はImageSharpと記載する一方、公式v4.1.1のプロジェクトファイルはPackageId=SixLabors.ImageSharpと定義する。本記録のNuGet名は取得した公式プロジェクトファイルに合わせた。",
+    "2026-10-08確認時の履歴: メンテナーの影響欄は>=3.0.0、修正欄は4.1.1。修正版を除外したGitHub Reviewedの>=3.0.0, <4.1.1を保持。",
     "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
-    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
-  ]
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。",
+    "今回の開発元APIはSixLabors.ImageSharpと系列別の>=3.0.0,<3.2.0／>=4.0.0,<4.1.1を明示する。旧記録の単一範囲を訂正し、元の日本語の適用条件を保持した。",
+    "固定Reviewedと開発元資料を個別照合。DBと開発元の公開・更新日時は出典別に保持する。",
+    "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "af4e4b65e9787a45b2e6475edb959f65f430afaa",
+    "checkedAt": "2026-10-26T21:17:14.895983Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-v76p-62qx-wwq2",
+        "aliases": [
+          "CVE-2026-106118"
+        ],
+        "publishedAt": "2026-10-07T16:18:57Z",
+        "modifiedAt": "2026-10-26T16:04:11Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-v76p-62qx-wwq2/GHSA-v76p-62qx-wwq2.json"
+      }
+    ],
+    "databaseAffected": [
+      {
+        "ecosystem": "nuget",
+        "packageName": "SixLabors.ImageSharp",
+        "ranges": [
+          {
+            "affected": ">= 3.0.0, < 3.2.0",
+            "fixed": "3.2.0",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-v76p-62qx-wwq2/GHSA-v76p-62qx-wwq2.json"
+          },
+          {
+            "affected": ">= 4.0.0, < 4.1.1",
+            "fixed": "4.1.1",
+            "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/af4e4b65e9787a45b2e6475edb959f65f430afaa/advisories/github-reviewed/2026/10/GHSA-v76p-62qx-wwq2/GHSA-v76p-62qx-wwq2.json"
+          }
+        ],
+        "rawRanges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0"
+              },
+              {
+                "fixed": "3.2.0"
+              }
+            ]
+          },
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.0.0"
+              },
+              {
+                "fixed": "4.1.1"
+              }
+            ]
+          }
+        ],
+        "explicitVersions": []
+      }
+    ],
+    "curatedIds": [
+      "GHSA-v76p-62qx-wwq2"
+    ],
+    "conflicts": []
+  }
 }
