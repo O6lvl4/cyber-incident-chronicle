@@ -1,0 +1,88 @@
+{
+  "id": "rakuten-travel-xchange-overseas-2026",
+  "company": "Rakuten Travel Xchange（楽天トラベル海外ホテル）",
+  "geography": "日本企業の海外子会社管理ページ（海外ホテル予約）",
+  "title": "海外ホテル一部ページへの不正アクセス、最大約260万件のログイン者情報等が対象",
+  "announcementDate": "2026-10-26",
+  "announcementDateLabel": "公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃時期は未公表・未確認",
+  "updatedDate": "2026-10-26",
+  "statusAsOfDate": "2026-10-26",
+  "lastVerifiedDate": "2026-10-29",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。詳細な手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "9月10日に子会社管理の海外ホテル一部ページで異常を検知し、16日に改修完了。不正アクセス対象は予約者最大約4万件、ログイン者最大約260万件で、予約者の内数最大約3万6千件に部分的な支払情報を含む。",
+  "affectedData": [
+    "予約者の氏名・連絡先・居住国・社内識別番号・予約情報と同伴者氏名・居住国",
+    "内数の支払情報：カード発行者識別番号と下4桁・名義・有効期限・ブランド",
+    "ログイン者の氏名・メールアドレス・電話番号・社内識別番号"
+  ],
+  "counts": [
+    {
+      "value": 40000,
+      "unit": "件",
+      "status": "possible",
+      "label": "予約者の最大対象概数",
+      "approximate": true
+    },
+    {
+      "value": 36000,
+      "unit": "件",
+      "status": "possible",
+      "label": "予約者最大約4万件の内数：支払情報",
+      "approximate": true
+    },
+    {
+      "value": 2600000,
+      "unit": "件",
+      "status": "possible",
+      "label": "ログイン者の最大対象概数。予約者との重複不明",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "不正アクセス対象情報の最大概数で、実人数・外部持ち出し確定数と同一視しない。",
+    "カード全桁・セキュリティコード・パスワード・身分証明書情報・住所は事象①の対象外。2事象の対象・日付を混同しない。",
+    "同じ公式公表内の事象①と②は管理主体と検知・改修経緯が異なるため別記録。合算しない。"
+  ],
+  "sources": [
+    {
+      "title": "楽天トラベル：事象①・②の公式説明",
+      "url": "https://travel.rakuten.co.jp/info/announce/20261026.html",
+      "publishedDate": "2026-10-26"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-26",
+      "label": "事案を公表",
+      "kind": "disclosure",
+      "summary": "9月10日に子会社管理の海外ホテル一部ページで異常を検知し、16日に改修完了。不正アクセス対象は予約者最大約4万件、ログイン者最大約260万件で、予約者の内数最大約3万6千件に部分的な支払情報を含む。",
+      "sourceUrl": "https://travel.rakuten.co.jp/info/announce/20261026.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃実施日は今回確認した資料に明記なし。検知・公表日から推定しない。",
+      "sourceUrl": "https://travel.rakuten.co.jp/info/announce/20261026.html",
+      "reviewedDate": "2026-10-29"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害の初確認日は今回確認した資料に明記なし。検知・公表日から推定しない。",
+      "sourceUrl": "https://travel.rakuten.co.jp/info/announce/20261026.html",
+      "reviewedDate": "2026-10-29"
+    }
+  }
+}

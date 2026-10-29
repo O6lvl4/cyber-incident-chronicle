@@ -2,7 +2,8 @@
   "kind": "vulnerability",
   "id": "GHSA-654x-cwwv-5j9c",
   "aliases": [
-    "CVE-2026-114501"
+    "CVE-2026-114501",
+    "PYSEC-2026-4336"
   ],
   "title": "Pillow：非標準alignmentのArrow出力に古いヒープ内容が混入",
   "summary": "PILLOW_ALIGNMENTが1より大きい構成で画像をArrowへ出力すると、行paddingや古いヒープ内容が画素データに混ざり、以前の画像の情報などを漏らし得る。",
@@ -89,12 +90,22 @@
       "title": "開発元の修正commitとrelease tagの包含関係",
       "url": "https://github.com/python-pillow/Pillow/compare/19f64946eb247b973dd4560be7dea3bf979d2e6a...13.0.0",
       "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV PyPI全件固定エクスポート：別名の同一性を照合",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793228588883577",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T22:16:49.410Z",
+      "modifiedAt": "2026-10-28T11:00:02.234829126Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
     "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
     "PILLOW_ALIGNMENTを変更しArrow exportを使うアプリケーションが対象。単なる画像読込すべてへ影響を広げない。",
-    "開発元GHSAの構造化範囲は11.2.1 - 13.0.0、patched_versionsは空欄で、Reviewedの修正境界13.0.0と相違する。PR #10172のマージ、修正commitの13.0.0 tagへの包含、公開リリースの記載を確認し、表示は11.2.1以上13.0.0未満・修正版13.0.0とする。元の表記は監査に保持する。"
+    "開発元GHSAの構造化範囲は11.2.1 - 13.0.0、patched_versionsは空欄で、Reviewedの修正境界13.0.0と相違する。PR #10172のマージ、修正commitの13.0.0 tagへの包含、公開リリースの記載を確認し、表示は11.2.1以上13.0.0未満・修正版13.0.0とする。元の表記は監査に保持する。",
+    "2026-10-29のOSV全件エクスポートでPYSEC別名を確認。影響範囲・修正版・開発元の既存解釈は保持し、OSV原レコードの日時・列挙版・撤回は確認監査へ保存。"
   ]
 }

@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-h3rc-6mm3-gc2m",
+  "aliases": [
+    "CVE-2026-114053",
+    "GHSA-f623-hjm8-5wg5"
+  ],
+  "title": "vLLM: Request-controlled mm_processor_kwargs.code_revision allows remote code execution",
+  "summary": "vLLM: Request-controlled mm_processor_kwargs.code_revision allows remote code execution",
+  "publishedAt": "2026-10-27T15:36:17Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-h3rc-6mm3-gc2m/GHSA-h3rc-6mm3-gc2m.json",
+  "modifiedAt": "2026-10-27T15:36:18Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T06:00:45.828Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "vllm",
+      "ranges": [
+        {
+          "affected": ">= 0.7.3, < 0.31.0",
+          "fixed": "0.31.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-h3rc-6mm3-gc2m/GHSA-h3rc-6mm3-gc2m.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.7.3"
+            },
+            {
+              "fixed": "0.31.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-h3rc-6mm3-gc2m/GHSA-h3rc-6mm3-gc2m.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-h3rc-6mm3-gc2m/GHSA-h3rc-6mm3-gc2m.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-h3rc-6mm3-gc2m/GHSA-h3rc-6mm3-gc2m.json",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T15:36:17Z",
+      "modifiedAt": "2026-10-27T15:36:18Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "vLLM: Request-controlled mm_processor_kwargs.code_revision allows remote code execution",
+      "url": "https://github.com/advisories/GHSA-h3rc-6mm3-gc2m",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database：重複撤回の明示",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-f623-hjm8-5wg5/GHSA-f623-hjm8-5wg5.json",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T03:32:16Z",
+      "modifiedAt": "2026-10-27T15:36:11Z",
+      "withdrawnAt": "2026-10-27T15:36:11Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Request-controlled mm_processor_kwargs.code_revision allows remote code execution",
+      "url": "https://api.github.com/repos/vllm-project/vllm/security-advisories/GHSA-h3rc-6mm3-gc2m",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T07:06:53Z",
+      "modifiedAt": "2026-10-06T07:06:53Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "2026-10-29確認：GHSA-f623-hjm8-5wg5はGitHub Advisory Database本文で本件の重複と明記され撤回済み。別名として集約し、その撤回を本件全体の撤回とはしない。",
+    "GitHub Advisory Databaseの固定原データと、実際に取得した開発元の公開資料を併記。重複・撤回の確認と、元の影響範囲・評価の出典を区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "f9caf5760b073998aa95fd8103510e6f308791bb",
+    "checkedAt": "2026-10-29T06:00:45.828Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-h3rc-6mm3-gc2m",
+        "aliases": [
+          "CVE-2026-114053"
+        ],
+        "publishedAt": "2026-10-27T15:36:17Z",
+        "modifiedAt": "2026-10-27T15:36:18Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-h3rc-6mm3-gc2m/GHSA-h3rc-6mm3-gc2m.json"
+      }
+    ]
+  }
+}

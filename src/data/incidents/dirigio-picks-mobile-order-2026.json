@@ -1,0 +1,81 @@
+{
+  "id": "dirigio-picks-mobile-order-2026",
+  "company": "DIRIGIO（PICKS／SUBWAY公式モバイルオーダー）",
+  "geography": "日本",
+  "title": "PICKSのAPIへの不正アクセス、SUBWAY3店舗の注文7件に漏えい可能性",
+  "announcementDate": "2026-10-28",
+  "announcementDateLabel": "公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃時期は未公表・未確認",
+  "updatedDate": "2026-10-29",
+  "statusAsOfDate": "2026-10-29",
+  "lastVerifiedDate": "2026-10-29",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。詳細な手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "27日12時30分頃に提供元DIRIGIOがAPIへの不正アクセスを検知し、15時にSUBWAYモバイルオーダーを停止。確認された対象は3店舗の7注文・7名。29日更新で原因箇所への対策と同日からの順次再開方針を公表。",
+  "affectedData": [
+    "氏名・メールアドレス・電話番号・生年月日・性別",
+    "注文商品・金額・日時・状態"
+  ],
+  "counts": [
+    {
+      "value": 7,
+      "unit": "名",
+      "status": "possible",
+      "label": "SUBWAY対象3店舗の7注文に対応する対象者。PICKS全体の数ではない",
+      "approximate": false
+    },
+    {
+      "value": 7,
+      "unit": "注文",
+      "status": "possible",
+      "label": "同じ7名の対象注文。人数と加算しない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "決済情報・会員ID・配送先情報は対象外。金銭的被害は未確認。",
+    "29日の順次再開方針を全店舗再開完了としない。",
+    "提供元の同一事案として集約するためPICKSを識別子に使用。未確認の他社利用者被害を加算しない。"
+  ],
+  "sources": [
+    {
+      "title": "SUBWAY：PICKS不正アクセスと29日再開方針",
+      "url": "https://subway.co.jp/news/bhi2h9kf00mf/",
+      "publishedDate": "2026-10-29"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-28",
+      "label": "事案を公表",
+      "kind": "disclosure",
+      "summary": "27日12時30分頃に提供元DIRIGIOがAPIへの不正アクセスを検知し、15時にSUBWAYモバイルオーダーを停止。確認された対象は3店舗の7注文・7名。29日更新で原因箇所への対策と同日からの順次再開方針を公表。",
+      "sourceUrl": "https://subway.co.jp/news/bhi2h9kf00mf/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃実施日は今回確認した資料に明記なし。検知・公表日から推定しない。",
+      "sourceUrl": "https://subway.co.jp/news/bhi2h9kf00mf/",
+      "reviewedDate": "2026-10-29"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害の初確認日は今回確認した資料に明記なし。検知・公表日から推定しない。",
+      "sourceUrl": "https://subway.co.jp/news/bhi2h9kf00mf/",
+      "reviewedDate": "2026-10-29"
+    }
+  }
+}

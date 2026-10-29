@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-frvg-qw88-hww9",
+  "aliases": [
+    "CVE-2026-94624",
+    "GHSA-8qpc-6rxx-4pxf"
+  ],
+  "title": "vllm p2p never connected zmq_exhaustion",
+  "summary": "vllm p2p never connected zmq_exhaustion",
+  "publishedAt": "2026-10-27T14:45:53Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-frvg-qw88-hww9/GHSA-frvg-qw88-hww9.json",
+  "modifiedAt": "2026-10-27T14:45:53Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T06:00:45.828Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "vllm",
+      "ranges": [
+        {
+          "affected": "< 0.32.0",
+          "fixed": "0.32.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-frvg-qw88-hww9/GHSA-frvg-qw88-hww9.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.32.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-frvg-qw88-hww9/GHSA-frvg-qw88-hww9.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-frvg-qw88-hww9/GHSA-frvg-qw88-hww9.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-frvg-qw88-hww9/GHSA-frvg-qw88-hww9.json",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T14:45:53Z",
+      "modifiedAt": "2026-10-27T14:45:53Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "vllm p2p never connected zmq_exhaustion",
+      "url": "https://github.com/advisories/GHSA-frvg-qw88-hww9",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database：重複撤回の明示",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/09/GHSA-8qpc-6rxx-4pxf/GHSA-8qpc-6rxx-4pxf.json",
+      "publishedDate": "2026-09-22",
+      "publishedAt": "2026-09-22T00:30:55Z",
+      "modifiedAt": "2026-10-27T14:45:47Z",
+      "withdrawnAt": "2026-10-27T14:45:47Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "vllm p2p never connected zmq_exhaustion",
+      "url": "https://api.github.com/repos/vllm-project/vllm/security-advisories/GHSA-frvg-qw88-hww9",
+      "publishedDate": "2026-10-20",
+      "publishedAt": "2026-10-20T07:35:45Z",
+      "modifiedAt": "2026-10-20T07:45:06Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "2026-10-29確認：GHSA-8qpc-6rxx-4pxfはGitHub Advisory Database本文で本件の重複と明記され撤回済み。別名として集約し、その撤回を本件全体の撤回とはしない。",
+    "GitHub Advisory Databaseの固定原データと、実際に取得した開発元の公開資料を併記。重複・撤回の確認と、元の影響範囲・評価の出典を区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "f9caf5760b073998aa95fd8103510e6f308791bb",
+    "checkedAt": "2026-10-29T06:00:45.828Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-frvg-qw88-hww9",
+        "aliases": [
+          "CVE-2026-94624"
+        ],
+        "publishedAt": "2026-10-27T14:45:53Z",
+        "modifiedAt": "2026-10-27T14:45:53Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-frvg-qw88-hww9/GHSA-frvg-qw88-hww9.json"
+      }
+    ]
+  }
+}

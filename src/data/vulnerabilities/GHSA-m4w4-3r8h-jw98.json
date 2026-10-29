@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m4w4-3r8h-jw98",
+  "aliases": [
+    "CVE-2026-35002",
+    "GHSA-77rh-m34w-rv36"
+  ],
+  "title": "Agno: Arbitrary code execution via `eval()` on `field_type` in `FunctionCall`",
+  "summary": "Agno: Arbitrary code execution via `eval()` on `field_type` in `FunctionCall`",
+  "publishedAt": "2026-10-27T13:30:41Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-m4w4-3r8h-jw98/GHSA-m4w4-3r8h-jw98.json",
+  "modifiedAt": "2026-10-27T13:30:42Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T06:00:45.828Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "agno",
+      "ranges": [
+        {
+          "affected": "< 2.3.24",
+          "fixed": "2.3.24",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-m4w4-3r8h-jw98/GHSA-m4w4-3r8h-jw98.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.24"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-m4w4-3r8h-jw98/GHSA-m4w4-3r8h-jw98.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-m4w4-3r8h-jw98/GHSA-m4w4-3r8h-jw98.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-m4w4-3r8h-jw98/GHSA-m4w4-3r8h-jw98.json",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T13:30:41Z",
+      "modifiedAt": "2026-10-27T13:30:42Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Agno: Arbitrary code execution via `eval()` on `field_type` in `FunctionCall`",
+      "url": "https://github.com/advisories/GHSA-m4w4-3r8h-jw98",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database：重複撤回の明示",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/04/GHSA-77rh-m34w-rv36/GHSA-77rh-m34w-rv36.json",
+      "publishedDate": "2026-04-02",
+      "publishedAt": "2026-04-02T15:31:43Z",
+      "modifiedAt": "2026-10-27T13:30:35Z",
+      "withdrawnAt": "2026-10-27T13:30:35Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Arbitrary code execution via eval() on field_type in FunctionCall (CWE-95)",
+      "url": "https://api.github.com/repos/agno-agi/agno/security-advisories/GHSA-m4w4-3r8h-jw98",
+      "publishedDate": "2026-06-30",
+      "publishedAt": "2026-06-30T07:46:38Z",
+      "modifiedAt": "2026-06-30T07:47:00Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "2026-10-29確認：GHSA-77rh-m34w-rv36はGitHub Advisory Database本文で本件の重複と明記され撤回済み。別名として集約し、その撤回を本件全体の撤回とはしない。",
+    "GitHub Advisory Databaseの固定原データと、実際に取得した開発元の公開資料を併記。重複・撤回の確認と、元の影響範囲・評価の出典を区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "f9caf5760b073998aa95fd8103510e6f308791bb",
+    "checkedAt": "2026-10-29T06:00:45.828Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-m4w4-3r8h-jw98",
+        "aliases": [
+          "CVE-2026-35002"
+        ],
+        "publishedAt": "2026-10-27T13:30:41Z",
+        "modifiedAt": "2026-10-27T13:30:42Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-m4w4-3r8h-jw98/GHSA-m4w4-3r8h-jw98.json"
+      }
+    ]
+  }
+}

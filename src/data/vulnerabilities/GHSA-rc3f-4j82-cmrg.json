@@ -1,0 +1,79 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rc3f-4j82-cmrg",
+  "aliases": [
+    "RUSTSEC-2026-0413"
+  ],
+  "title": "Use-after-free of caller-owned server name in client connection constructors",
+  "summary": "In rustls-ffi 0.12.0 through 0.15.6, `rustls_client_connection_new()` and\n`rustls_client_connection_new_alpn()` retained a reference to the caller's\n`server_name` buffer after returning, rather than copying it. The API\ndocumentation did not require the buffer to outlive the call and as a result\nif the caller freed or reused the buffer, later TLS processing read freed\nmemory.\n\nClients that free or reuse the `server_name` buffer after the constructor\nreturns are affected. This is most likely for language bindings that pass\ntemporary strings. Callers that keep the `server_name` buffer alive for the\nlifetime of the `rustls_client_config` are not affected.\n\nVersions 0.12.0 through 0.15.6 are affected. Version 0.15.7+ changed these APIs\nto copy the input buffer.",
+  "publishedAt": "2026-10-26T12:00:00Z",
+  "modifiedAt": "2026-10-27T10:15:12.837053276Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T06:00:09.069799Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0413",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "rustls-ffi",
+      "ranges": [
+        {
+          "affected": ">= 0.12.0, < 0.15.7",
+          "fixed": "0.15.7",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0413"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.12.0"
+            },
+            {
+              "fixed": "0.15.7"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/rustls/rustls-ffi/security-advisories/GHSA-rc3f-4j82-cmrg",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RUSTSEC-2026-0413",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0413",
+      "publishedDate": "2026-10-26",
+      "publishedAt": "2026-10-26T12:00:00Z",
+      "modifiedAt": "2026-10-27T10:15:12.837053276Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Use-after-free of caller-owned server_name in client conn. constructors",
+      "url": "https://api.github.com/repos/rustls/rustls-ffi/security-advisories/GHSA-rc3f-4j82-cmrg",
+      "publishedDate": "2026-10-26",
+      "publishedAt": "2026-10-26T17:46:21Z",
+      "modifiedAt": "2026-10-26T17:46:21Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "OSVエクスポートと個別APIの全文一致、開発元の公開アドバイザリを確認。公表日時はOSVと開発元で分けて保持。",
+    "実悪用とCISA KEVは未確認。PoCや重大度から実悪用を推定しない。"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6v38-4h7w-rj9h",
+  "aliases": [
+    "CVE-2026-96760",
+    "GHSA-6m87-8wg6-hh8w"
+  ],
+  "title": "Authlib: empty signatures validation in JWS JSON deserialization",
+  "summary": "Authlib: empty signatures validation in JWS JSON deserialization",
+  "publishedAt": "2026-10-27T14:50:18Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-6v38-4h7w-rj9h/GHSA-6v38-4h7w-rj9h.json",
+  "modifiedAt": "2026-10-27T14:50:18Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T06:00:45.828Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "authlib",
+      "ranges": [
+        {
+          "affected": "< 1.9.0",
+          "fixed": "1.9.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-6v38-4h7w-rj9h/GHSA-6v38-4h7w-rj9h.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.9.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-6v38-4h7w-rj9h/GHSA-6v38-4h7w-rj9h.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-6v38-4h7w-rj9h/GHSA-6v38-4h7w-rj9h.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-6v38-4h7w-rj9h/GHSA-6v38-4h7w-rj9h.json",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T14:50:18Z",
+      "modifiedAt": "2026-10-27T14:50:18Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Authlib: empty signatures validation in JWS JSON deserialization",
+      "url": "https://github.com/advisories/GHSA-6v38-4h7w-rj9h",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database：重複撤回の明示",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/09/GHSA-6m87-8wg6-hh8w/GHSA-6m87-8wg6-hh8w.json",
+      "publishedDate": "2026-09-28",
+      "publishedAt": "2026-09-28T21:31:18Z",
+      "modifiedAt": "2026-10-27T14:50:09Z",
+      "withdrawnAt": "2026-10-27T14:50:09Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Signature verification bypass (CVE-2026-96760) is live in the current release 1.8.0, which every published record excludes",
+      "url": "https://api.github.com/repos/authlib/authlib/security-advisories/GHSA-6v38-4h7w-rj9h",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T08:57:37Z",
+      "modifiedAt": "2026-10-14T08:57:37Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "2026-10-29確認：GHSA-6m87-8wg6-hh8wはGitHub Advisory Database本文で本件の重複と明記され撤回済み。別名として集約し、その撤回を本件全体の撤回とはしない。",
+    "GitHub Advisory Databaseの固定原データと、実際に取得した開発元の公開資料を併記。重複・撤回の確認と、元の影響範囲・評価の出典を区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "f9caf5760b073998aa95fd8103510e6f308791bb",
+    "checkedAt": "2026-10-29T06:00:45.828Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-6v38-4h7w-rj9h",
+        "aliases": [
+          "CVE-2026-96760"
+        ],
+        "publishedAt": "2026-10-27T14:50:18Z",
+        "modifiedAt": "2026-10-27T14:50:18Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-6v38-4h7w-rj9h/GHSA-6v38-4h7w-rj9h.json"
+      }
+    ]
+  }
+}

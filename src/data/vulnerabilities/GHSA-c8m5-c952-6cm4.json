@@ -45,7 +45,7 @@
     "cvss": [
       {
         "version": "3.1",
-        "score": 4.0,
+        "score": 4,
         "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:N/A:N",
         "sourceUrl": "https://github.com/rustls/rustls/security/advisories/GHSA-c8m5-c952-6cm4"
       }
@@ -84,12 +84,22 @@
       "publishedAt": "2026-10-14T09:54:58Z",
       "modifiedAt": "2026-10-14T09:54:58Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Session Debug formatting exposes TLS master secrets and resumption PSKs",
+      "url": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-c8m5-c952-6cm4",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T09:54:58Z",
+      "modifiedAt": "2026-10-14T09:54:58Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "影響範囲と系列別修正境界はRustSec公式固定ソースとOSVの原文を保持する。修正版は現在のすべての脆弱性に対する安全性を保証しない。",
     "公表・更新日時はOSVのデータベース日時。開発元の初回公表日時と更新日時は出典ごとに別保存する。",
     "CVSSは開発元公表の点数・ベクトルで独自計算しない。脆弱性公表は実悪用や企業被害の確認ではない。CISA KEVの最新掲載状況は未確認。",
-    "開発元の影響欄は「< 0.23.46, > 0.24.0-dev.1」、修正欄は「>= 0.23.46, >= 0.24.0-dev.2」。RustSecは0.21.0以上0.23.46未満とし、開発版系列を列挙しない。表示範囲はRustSecを根拠とし、矛盾する開発版の下限を推定・訂正しない。"
+    "開発元の影響欄は「< 0.23.46, > 0.24.0-dev.1」、修正欄は「>= 0.23.46, >= 0.24.0-dev.2」。RustSecは0.21.0以上0.23.46未満とし、開発版系列を列挙しない。表示範囲はRustSecを根拠とし、矛盾する開発版の下限を推定・訂正しない。",
+    "2026-10-29再確認：固定DBの影響範囲更新と開発元APIの表記を個別に取得。出典間の範囲・修正版の違いを監査およびprovenance.databaseAffectedに保持し、既存の個別解釈を一律に上書きしない。"
   ]
 }

@@ -77,7 +77,7 @@
     },
     {
       "type": "maintainer",
-      "title": "開発元GitHub Advisory API：本文・影響範囲・修正版・評価を個別確認",
+      "title": "TOTP / passkey enrolment requires no re-authentication, enabling persistent account takeover",
       "url": "https://api.github.com/repos/0xJacky/nginx-ui/security-advisories/GHSA-gfrc-g87h-7h5w",
       "publishedDate": "2026-07-17",
       "publishedAt": "2026-07-17T03:02:28Z",
@@ -90,7 +90,8 @@
     "実悪用とCISA KEVは未確認。未確認は悪用なし・未掲載を意味しない。",
     "開発元はRequireSecureSessionの内側へルートを移すだけでは不十分で、OTP未設定の利用者にも現在のパスワード等で再認証する必要があると説明する。",
     "開発元の影響欄は<=v2.3.9、修正版欄はnull。表示するGo疑似版の修正境界はReviewed由来。開発元が修正版を明示したと扱わない。",
-    "両出典がパッケージ名をNginx-UIとしており、根拠なく完全なGoモジュール名へ置き換えない。"
+    "両出典がパッケージ名をNginx-UIとしており、根拠なく完全なGoモジュール名へ置き換えない。",
+    "2026-10-29再確認：固定DBの影響範囲更新と開発元APIの表記を個別に取得。出典間の範囲・修正版の違いを監査およびprovenance.databaseAffectedに保持し、既存の個別解釈を一律に上書きしない。"
   ],
   "verification": {
     "level": "mixed",

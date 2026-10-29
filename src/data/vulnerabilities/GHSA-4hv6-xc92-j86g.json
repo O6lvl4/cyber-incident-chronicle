@@ -86,7 +86,7 @@
     },
     {
       "type": "maintainer",
-      "title": "開発元の公開GitHub Advisory API：GHSA同一性と公開項目を個別照合",
+      "title": "WebSocket authentication ignores server-side session state, so revoked sessions keep receiving live pushes",
       "url": "https://api.github.com/repos/go-vikunja/vikunja/security-advisories/GHSA-4hv6-xc92-j86g",
       "publishedDate": "2026-10-03",
       "publishedAt": "2026-10-03T06:31:13Z",
@@ -99,6 +99,7 @@
     "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
     "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
     "今回取得した開発元APIのcve_idは未設定。OSVのCVE別名を開発元が同じ時点で掲示したとはみなさず、開発元とOSVの公開日時・更新日時も別々に保存する。",
-    "公表・更新・撤回日時、影響範囲とCVSSは引き続き固定Reviewed JSONの出典に基づく。今回の別名確認日時で原公表・更新日を進めない。開発元の異なる版表記・評価・日時は別名照合監査に保存し、別名補完の際に推測で置換しない。"
+    "公表・更新・撤回日時、影響範囲とCVSSは引き続き固定Reviewed JSONの出典に基づく。今回の別名確認日時で原公表・更新日を進めない。開発元の異なる版表記・評価・日時は別名照合監査に保存し、別名補完の際に推測で置換しない。",
+    "2026-10-29再確認：固定DBの影響範囲更新と開発元APIの表記を個別に取得。出典間の範囲・修正版の違いを監査およびprovenance.databaseAffectedに保持し、既存の個別解釈を一律に上書きしない。"
   ]
 }

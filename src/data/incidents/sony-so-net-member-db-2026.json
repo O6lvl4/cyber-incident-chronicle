@@ -1,0 +1,145 @@
+{
+  "id": "sony-so-net-member-db-2026",
+  "company": "ソニーネットワークコミュニケーションズ",
+  "geography": "日本",
+  "title": "So-net会員DBへの不正アクセス、会員情報と一部メールパスワードが対象",
+  "announcementDate": "2026-10-27",
+  "announcementDateLabel": "公式公表日",
+  "occurredDate": "2026-10-19",
+  "occurredDateLabel": "公式が明記する攻撃日",
+  "updatedDate": "2026-10-29",
+  "statusAsOfDate": "2026-10-29",
+  "lastVerifiedDate": "2026-10-29",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。詳細な手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月19日の不正アクセスを23日に検知し、24日に漏えいの項目・件数を確認。So-netとplala(Sコース)の会員情報、一部メールパスワード等が対象。29日のFAQは会員情報全体を可能性範囲と説明しており、項目別の確認状況を区別する。",
+  "affectedData": [
+    "会員情報：氏名・連絡先・ユーザーID・生年月日・性別・接続用ID",
+    "一部メールサービスのメールアドレス・メールパスワード",
+    "口座情報16件と再設定通知書情報7件"
+  ],
+  "counts": [
+    {
+      "value": 2141986,
+      "unit": "件",
+      "status": "possible",
+      "label": "So-net会員情報。本文は漏えい確認、29日FAQは可能性範囲と表現",
+      "approximate": false
+    },
+    {
+      "value": 443495,
+      "unit": "件",
+      "status": "possible",
+      "label": "plala(Sコース)会員情報。同様にFAQの可能性表現を保持",
+      "approximate": false
+    },
+    {
+      "value": 24655,
+      "unit": "アドレス",
+      "status": "confirmed",
+      "label": "メールサービス(G)のメールパスワード対象",
+      "approximate": false
+    },
+    {
+      "value": 17672,
+      "unit": "アドレス",
+      "status": "confirmed",
+      "label": "A-Boxのメールパスワード対象",
+      "approximate": false
+    },
+    {
+      "value": 7005,
+      "unit": "アドレス",
+      "status": "confirmed",
+      "label": "ソネットVAIOメールのメールパスワード対象",
+      "approximate": false
+    },
+    {
+      "value": 5069,
+      "unit": "アドレス",
+      "status": "confirmed",
+      "label": "PostPetのメールパスワード対象",
+      "approximate": false
+    },
+    {
+      "value": 16,
+      "unit": "件",
+      "status": "possible",
+      "label": "銀行口座情報。本文は確認、FAQは可能性と表現",
+      "approximate": false
+    },
+    {
+      "value": 7,
+      "unit": "件",
+      "status": "possible",
+      "label": "再設定通知書情報。本文は確認、FAQは可能性と表現",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "本文は会員情報等の漏えい確認と記す一方、29日FAQは最大約258.6万件を漏えい可能性と表現。一部メールパスワードはFAQも確認済み。資料間の表現差を消さない。",
+    "So-net内訳は現会員1,869,771件と元会員272,215件。plala(Sコース)内訳は現会員422,365件と元会員21,130件。内訳・メールアドレス数を会員総数へ加算しない。",
+    "クレジットカード情報は対象外。基本メールボックスのパスワードは漏えい未確認。通常のユーザーIDパスワードは通知書7件の例外を区別する。",
+    "FAQは顧客パスワードを用いた侵入ではないと説明。具体的侵入原因は調査中。29日時点で二次被害は未確認。"
+  ],
+  "sources": [
+    {
+      "title": "So-net：会員DBへの不正アクセス（29日更新）",
+      "url": "https://www.so-net.ne.jp/info/2026/20261027_0001.html",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "title": "So-net：公式FAQ（29日時点の説明）",
+      "url": "https://www.so-net.ne.jp/support/faq/qa202610_01/",
+      "publishedDate": "2026-10-29"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-23",
+      "label": "不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "対象サーバーを停止し通信元を遮断。",
+      "sourceUrl": "https://www.so-net.ne.jp/info/2026/20261027_0001.html"
+    },
+    {
+      "date": "2026-10-27",
+      "label": "事案を公表",
+      "kind": "disclosure",
+      "summary": "会員情報と一部メールパスワード等の対象範囲を案内。",
+      "sourceUrl": "https://www.so-net.ne.jp/info/2026/20261027_0001.html"
+    },
+    {
+      "date": "2026-10-29",
+      "label": "公式FAQを確認",
+      "kind": "update",
+      "summary": "全体の可能性範囲とメールパスワードの確認済み範囲を区別。",
+      "sourceUrl": "https://www.so-net.ne.jp/support/faq/qa202610_01/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026-10-19",
+      "startDate": "2026-10-19",
+      "note": "攻撃実施日を公式本文が明記。",
+      "sourceUrl": "https://www.so-net.ne.jp/info/2026/20261027_0001.html",
+      "reviewedDate": "2026-10-29"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026-10-24",
+      "startDate": "2026-10-24",
+      "note": "被害の初確認日を公式本文が明記。",
+      "sourceUrl": "https://www.so-net.ne.jp/info/2026/20261027_0001.html",
+      "reviewedDate": "2026-10-29"
+    }
+  }
+}
