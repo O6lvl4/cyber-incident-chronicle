@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c8r8-95hg-mp34",
+  "aliases": [
+    "CVE-2026-60083",
+    "GHSA-rp7c-4prv-9rrg"
+  ],
+  "title": "SiYuan: MCP file tool's blocklist is incomplete relative to the HTTP file API it claims to align with, exposing publish-mode passwords and other sensitive workspace files",
+  "summary": "SiYuan: MCP file tool's blocklist is incomplete relative to the HTTP file API it claims to align with, exposing publish-mode passwords and other sensitive workspace files",
+  "publishedAt": "2026-10-27T14:43:57Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-c8r8-95hg-mp34/GHSA-c8r8-95hg-mp34.json",
+  "modifiedAt": "2026-10-27T14:43:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T06:00:45.828Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/siyuan-note/siyuan/kernel",
+      "ranges": [
+        {
+          "affected": "< 0.0.0-20260808051406-3542530c505f",
+          "fixed": "0.0.0-20260808051406-3542530c505f",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-c8r8-95hg-mp34/GHSA-c8r8-95hg-mp34.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.0.0-20260808051406-3542530c505f"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-c8r8-95hg-mp34/GHSA-c8r8-95hg-mp34.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-c8r8-95hg-mp34/GHSA-c8r8-95hg-mp34.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-c8r8-95hg-mp34/GHSA-c8r8-95hg-mp34.json",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T14:43:57Z",
+      "modifiedAt": "2026-10-27T14:43:57Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "SiYuan: MCP file tool's blocklist is incomplete relative to the HTTP file API it claims to align with, exposing publish-mode passwords and other sensitive workspace files",
+      "url": "https://github.com/advisories/GHSA-c8r8-95hg-mp34",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database：重複撤回の明示",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/08/GHSA-rp7c-4prv-9rrg/GHSA-rp7c-4prv-9rrg.json",
+      "publishedDate": "2026-08-22",
+      "publishedAt": "2026-08-22T15:31:02Z",
+      "modifiedAt": "2026-10-27T14:43:49Z",
+      "withdrawnAt": "2026-10-27T14:43:48Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Title: MCP file tool's blocklist is incomplete relative to the HTTP file API it claims to align with, exposing publish-mode passwords and other sensitive workspace files",
+      "url": "https://api.github.com/repos/siyuan-note/siyuan/security-advisories/GHSA-c8r8-95hg-mp34",
+      "publishedDate": "2026-08-08",
+      "publishedAt": "2026-08-08T05:09:28Z",
+      "modifiedAt": "2026-08-08T05:09:28Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "2026-10-29確認：GHSA-rp7c-4prv-9rrgはGitHub Advisory Database本文で本件の重複と明記され撤回済み。別名として集約し、その撤回を本件全体の撤回とはしない。",
+    "GitHub Advisory Databaseの固定原データと、実際に取得した開発元の公開資料を併記。重複・撤回の確認と、元の影響範囲・評価の出典を区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "f9caf5760b073998aa95fd8103510e6f308791bb",
+    "checkedAt": "2026-10-29T06:00:45.828Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-c8r8-95hg-mp34",
+        "aliases": [
+          "CVE-2026-60083"
+        ],
+        "publishedAt": "2026-10-27T14:43:57Z",
+        "modifiedAt": "2026-10-27T14:43:57Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-c8r8-95hg-mp34/GHSA-c8r8-95hg-mp34.json"
+      }
+    ]
+  }
+}

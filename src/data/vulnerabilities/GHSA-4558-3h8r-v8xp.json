@@ -3,7 +3,8 @@
   "id": "GHSA-4558-3h8r-v8xp",
   "aliases": [
     "BIT-pillow-2026-112394",
-    "CVE-2026-112394"
+    "CVE-2026-112394",
+    "PYSEC-2026-4327"
   ],
   "title": "Pillow: P;2L and P;4L decoders may read 1 to 3 bytes past the passed buffer size",
   "summary": "Pillow: P;2L and P;4L decoders may read 1 to 3 bytes past the passed buffer size",
@@ -99,12 +100,22 @@
       "publishedAt": "2026-10-21T20:00:32Z",
       "modifiedAt": "2026-10-26T08:55:42.792349705Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV PyPI全件固定エクスポート：別名の同一性を照合",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793228588883577",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T21:17:07.747Z",
+      "modifiedAt": "2026-10-27T11:10:34.006455299Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
     "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed.",
-    "2026-10-27 JSTにOSV APIと固定generationのPyPI全件エクスポートの正規化JSON一致を確認し、明示されたBitnami識別子を別名へ追補。元の公表・更新日時、影響範囲、開発元確認内容は保持し、今回すべての開発元本文を再確認したとは扱わない。"
+    "2026-10-27 JSTにOSV APIと固定generationのPyPI全件エクスポートの正規化JSON一致を確認し、明示されたBitnami識別子を別名へ追補。元の公表・更新日時、影響範囲、開発元確認内容は保持し、今回すべての開発元本文を再確認したとは扱わない。",
+    "2026-10-29のOSV全件エクスポートでPYSEC別名を確認。影響範囲・修正版・開発元の既存解釈は保持し、OSV原レコードの日時・列挙版・撤回は確認監査へ保存。"
   ],
   "verification": {
     "level": "mixed",

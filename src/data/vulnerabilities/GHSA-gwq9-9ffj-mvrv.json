@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-gwq9-9ffj-mvrv",
+  "aliases": [
+    "CVE-2026-93451",
+    "GHSA-wm36-87w8-wg22"
+  ],
+  "title": "snappy-java: Heap buffer overflow in Snappy.uncompress*Array typed-array methods",
+  "summary": "snappy-java: Heap buffer overflow in Snappy.uncompress*Array typed-array methods",
+  "publishedAt": "2026-10-27T15:33:42Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-gwq9-9ffj-mvrv/GHSA-gwq9-9ffj-mvrv.json",
+  "modifiedAt": "2026-10-27T15:33:42Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T06:00:45.828Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.xerial.snappy:snappy-java",
+      "ranges": [
+        {
+          "affected": "< 1.1.10.9",
+          "fixed": "1.1.10.9",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-gwq9-9ffj-mvrv/GHSA-gwq9-9ffj-mvrv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.1.10.9"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-gwq9-9ffj-mvrv/GHSA-gwq9-9ffj-mvrv.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-gwq9-9ffj-mvrv/GHSA-gwq9-9ffj-mvrv.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-gwq9-9ffj-mvrv/GHSA-gwq9-9ffj-mvrv.json",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T15:33:42Z",
+      "modifiedAt": "2026-10-27T15:33:42Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "snappy-java: Heap buffer overflow in Snappy.uncompress*Array typed-array methods",
+      "url": "https://github.com/advisories/GHSA-gwq9-9ffj-mvrv",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database：重複撤回の明示",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/09/GHSA-wm36-87w8-wg22/GHSA-wm36-87w8-wg22.json",
+      "publishedDate": "2026-09-18",
+      "publishedAt": "2026-09-18T00:31:11Z",
+      "modifiedAt": "2026-10-27T15:33:36Z",
+      "withdrawnAt": "2026-10-27T15:33:36Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Heap buffer overflow in Snappy.uncompress*Array typed-array methods",
+      "url": "https://api.github.com/repos/xerial/snappy-java/security-advisories/GHSA-gwq9-9ffj-mvrv",
+      "publishedDate": "2026-10-03",
+      "publishedAt": "2026-10-03T16:55:50Z",
+      "modifiedAt": "2026-10-03T16:55:50Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "2026-10-29確認：GHSA-wm36-87w8-wg22はGitHub Advisory Database本文で本件の重複と明記され撤回済み。別名として集約し、その撤回を本件全体の撤回とはしない。",
+    "GitHub Advisory Databaseの固定原データと、実際に取得した開発元の公開資料を併記。重複・撤回の確認と、元の影響範囲・評価の出典を区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "f9caf5760b073998aa95fd8103510e6f308791bb",
+    "checkedAt": "2026-10-29T06:00:45.828Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-gwq9-9ffj-mvrv",
+        "aliases": [
+          "CVE-2026-93451"
+        ],
+        "publishedAt": "2026-10-27T15:33:42Z",
+        "modifiedAt": "2026-10-27T15:33:42Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-gwq9-9ffj-mvrv/GHSA-gwq9-9ffj-mvrv.json"
+      }
+    ]
+  }
+}

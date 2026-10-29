@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9jhj-wvmw-cfx5",
+  "aliases": [
+    "CVE-2026-115730",
+    "GHSA-w47m-j727-m843"
+  ],
+  "title": "i18next-http-backend: Namespace value starting with / forms a protocol-relative URL when loadPath/addPath places {{ns}} right after a / (bypass of the // check added for GHSA-xvq9-wjp8-hwqf)",
+  "summary": "i18next-http-backend: Namespace value starting with / forms a protocol-relative URL when loadPath/addPath places {{ns}} right after a / (bypass of the // check added for GHSA-xvq9-wjp8-hwqf)",
+  "publishedAt": "2026-10-28T21:07:57Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-9jhj-wvmw-cfx5/GHSA-9jhj-wvmw-cfx5.json",
+  "modifiedAt": "2026-10-28T21:07:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T06:00:45.828Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "i18next-http-backend",
+      "ranges": [
+        {
+          "affected": "< 4.0.3",
+          "fixed": "4.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-9jhj-wvmw-cfx5/GHSA-9jhj-wvmw-cfx5.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-9jhj-wvmw-cfx5/GHSA-9jhj-wvmw-cfx5.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-9jhj-wvmw-cfx5/GHSA-9jhj-wvmw-cfx5.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-9jhj-wvmw-cfx5/GHSA-9jhj-wvmw-cfx5.json",
+      "publishedDate": "2026-10-28",
+      "publishedAt": "2026-10-28T21:07:57Z",
+      "modifiedAt": "2026-10-28T21:07:57Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "i18next-http-backend: Namespace value starting with / forms a protocol-relative URL when loadPath/addPath places {{ns}} right after a / (bypass of the // check added for GHSA-xvq9-wjp8-hwqf)",
+      "url": "https://github.com/advisories/GHSA-9jhj-wvmw-cfx5",
+      "publishedDate": "2026-10-28"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database：重複撤回の明示",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-w47m-j727-m843/GHSA-w47m-j727-m843.json",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T15:31:30Z",
+      "modifiedAt": "2026-10-28T21:07:51Z",
+      "withdrawnAt": "2026-10-28T21:07:51Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "Namespace value starting with / forms a protocol-relative URL when loadPath/addPath places {{ns}} right after a / (bypass of the // check added for GHSA-xvq9-wjp8-hwqf)",
+      "url": "https://api.github.com/repos/i18next/i18next-http-backend/security-advisories/GHSA-9jhj-wvmw-cfx5",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T20:57:28Z",
+      "modifiedAt": "2026-10-14T20:57:28Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "2026-10-29確認：GHSA-w47m-j727-m843はGitHub Advisory Database本文で本件の重複と明記され撤回済み。別名として集約し、その撤回を本件全体の撤回とはしない。",
+    "GitHub Advisory Databaseの固定原データと、実際に取得した開発元の公開資料を併記。重複・撤回の確認と、元の影響範囲・評価の出典を区別する。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "f9caf5760b073998aa95fd8103510e6f308791bb",
+    "checkedAt": "2026-10-29T06:00:45.828Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-9jhj-wvmw-cfx5",
+        "aliases": [
+          "CVE-2026-115730"
+        ],
+        "publishedAt": "2026-10-28T21:07:57Z",
+        "modifiedAt": "2026-10-28T21:07:57Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/f9caf5760b073998aa95fd8103510e6f308791bb/advisories/github-reviewed/2026/10/GHSA-9jhj-wvmw-cfx5/GHSA-9jhj-wvmw-cfx5.json"
+      }
+    ]
+  }
+}

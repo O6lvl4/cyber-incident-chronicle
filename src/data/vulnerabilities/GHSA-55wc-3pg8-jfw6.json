@@ -66,12 +66,22 @@
       "url": "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6",
       "publishedDate": "2026-10-15",
       "publishedAt": "2026-10-15T15:57:36Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "undici vulnerable to Denial of Service via unhandled exception in the decompress interceptor",
+      "url": "https://api.github.com/repos/nodejs/undici/security-advisories/GHSA-55wc-3pg8-jfw6",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T15:57:36Z",
+      "modifiedAt": "2026-10-15T15:57:36Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
     "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
     "decompressとdump等の例外を投げるhandlerの合成に依存。グローバル例外handlerで生存させても要求がbody timeoutまで停止する場合がある。",
-    "記録の日時はCNA公開・更新日時。開発元GHSAの先行公表日時は出典に別記し、今回の収録日やJVN掲載日で置き換えない。"
+    "記録の日時はCNA公開・更新日時。開発元GHSAの先行公表日時は出典に別記し、今回の収録日やJVN掲載日で置き換えない。",
+    "2026-10-29再確認：固定DBの影響範囲更新と開発元APIの表記を個別に取得。出典間の範囲・修正版の違いを監査およびprovenance.databaseAffectedに保持し、既存の個別解釈を一律に上書きしない。"
   ]
 }

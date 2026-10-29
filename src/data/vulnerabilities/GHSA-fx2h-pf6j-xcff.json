@@ -9,7 +9,7 @@
   "publishedAt": "2026-06-15T17:17:45Z",
   "modifiedAt": "2026-07-15T22:05:54Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-07T22:24:54Z",
+  "lastVerifiedAt": "2026-10-29T05:58:47.699690Z",
   "dateSourceUrl": "https://api.github.com/advisories/GHSA-fx2h-pf6j-xcff",
   "affected": [
     {
@@ -46,20 +46,14 @@
     }
   ],
   "severity": {
-    "label": "high",
-    "sourceUrl": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff",
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/vitejs/vite/security-advisories/GHSA-fx2h-pf6j-xcff",
     "cvss": [
       {
         "version": "4.0",
-        "score": 8.2,
-        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
-        "sourceUrl": "https://github.com/vitejs/vite/security/advisories/GHSA-fx2h-pf6j-xcff"
-      },
-      {
-        "version": "3.1",
-        "score": 7.5,
-        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-        "sourceUrl": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff"
+        "score": 6.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/repos/vitejs/vite/security-advisories/GHSA-fx2h-pf6j-xcff"
       }
     ]
   },
@@ -96,13 +90,22 @@
       "title": "GitHub Advisory Database API（登録・更新日時）",
       "url": "https://api.github.com/advisories/GHSA-fx2h-pf6j-xcff",
       "publishedDate": "2026-06-15"
+    },
+    {
+      "type": "maintainer",
+      "title": "`server.fs.deny` bypass on Windows alternate paths",
+      "url": "https://api.github.com/repos/vitejs/vite/security-advisories/GHSA-fx2h-pf6j-xcff",
+      "publishedDate": "2026-06-01",
+      "publishedAt": "2026-06-01T13:32:24Z",
+      "modifiedAt": "2026-10-19T05:24:46Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発サーバーをネットワークに公開し、機密ファイルがserver.fs.allowの許可ディレクトリ内にあることが前提。",
     "NTFS上のファイル、またはWindowsで8.3短いファイル名が有効なボリューム上のファイルが対象。",
-    "メンテナーのCVSS 4.0は8.2。GitHub Advisory DatabaseにはCVSS 3.1の7.5も掲載されており、異なる版の数値を混同しない。",
     "日時はGitHub Advisory Databaseへの登録・更新日時。メンテナーの初回公開日は出典欄に別記。",
-    "確認した公式アドバイザリだけでは実悪用を確認できない。KEV掲載状況も未確認であり、いずれも「なし」を意味しない。"
+    "確認した公式アドバイザリだけでは実悪用を確認できない。KEV掲載状況も未確認であり、いずれも「なし」を意味しない。",
+    "2026-10-29再確認で、開発元の現行評価はMedium・CVSS 4.0 6.9。旧確認時のCVSS 4.0 8.2および旧DBのCVSS 3.1 7.5からの訂正履歴は公開監査に保持し、現行評価として表示しない。"
   ]
 }

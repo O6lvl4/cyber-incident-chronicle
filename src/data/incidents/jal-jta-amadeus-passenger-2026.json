@@ -1,0 +1,88 @@
+{
+  "id": "jal-jta-amadeus-passenger-2026",
+  "company": "日本航空・日本トランスオーシャン航空",
+  "geography": "日本",
+  "title": "委託先旅客サービスシステムで約9万2千名の予約情報に外部参照の形跡",
+  "announcementDate": "2026-10-28",
+  "announcementDateLabel": "公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃時期は未公表・未確認",
+  "updatedDate": "2026-10-28",
+  "statusAsOfDate": "2026-10-28",
+  "lastVerifiedDate": "2026-10-29",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。詳細な手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "委託先Amadeusから23日に予約情報の外部参照の形跡を報告された。対象は合計約9万2千名。外部参照の形跡がある期間は2023年8月10日〜2026年9月23日であり、侵入開始・継続期間とは区別する。",
+  "affectedData": [
+    "約9万名：予約番号・氏名・搭乗日・区間・クラス",
+    "約2千名：上記に加え連絡先・パスポート番号・国籍・マイレージ番号・航空券番号等"
+  ],
+  "counts": [
+    {
+      "value": 92000,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "外部参照の形跡がある対象の合計概数",
+      "approximate": true
+    },
+    {
+      "value": 90000,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "合計約9万2千名の内数：基本予約情報",
+      "approximate": true
+    },
+    {
+      "value": 2000,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "合計約9万2千名の内数：追加項目あり",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "外部参照の形跡の確認であり、全項目の持ち出し・悪用が確定した人数とはしない。",
+    "カード番号と各種パスワードの漏えいなし。情報悪用と運航への影響は未確認・なしと説明。",
+    "同じAmadeusが関与するホテル予約事案とは製品・対象が異なり、同一攻撃の根拠がないため自動集約しない。",
+    "10月23日は委託先からの報告日。攻撃開始日や最初の被害確認日へ転用しない。"
+  ],
+  "sources": [
+    {
+      "title": "JAL・JTA：Amadeus旅客サービスシステムへの不正アクセス",
+      "url": "https://www.jal.co.jp/ja-jp/news/general/2026/other/261028.html",
+      "publishedDate": "2026-10-28"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-28",
+      "label": "事案を公表",
+      "kind": "disclosure",
+      "summary": "委託先Amadeusから23日に予約情報の外部参照の形跡を報告された。対象は合計約9万2千名。外部参照の形跡がある期間は2023年8月10日〜2026年9月23日であり、侵入開始・継続期間とは区別する。",
+      "sourceUrl": "https://www.jal.co.jp/ja-jp/news/general/2026/other/261028.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "攻撃実施日は今回確認した資料に明記なし。検知・公表日から推定しない。",
+      "sourceUrl": "https://www.jal.co.jp/ja-jp/news/general/2026/other/261028.html",
+      "reviewedDate": "2026-10-29"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害の初確認日は今回確認した資料に明記なし。検知・公表日から推定しない。",
+      "sourceUrl": "https://www.jal.co.jp/ja-jp/news/general/2026/other/261028.html",
+      "reviewedDate": "2026-10-29"
+    }
+  }
+}
