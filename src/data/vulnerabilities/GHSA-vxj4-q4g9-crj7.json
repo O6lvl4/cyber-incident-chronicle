@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-vxj4-q4g9-crj7",
   "aliases": [
+    "BIT-virtualenv-2026-113725",
     "CVE-2026-113725"
   ],
   "title": "virtualenv bash activate runs commands from an environment name with a backslash before $",
@@ -89,12 +90,22 @@
       "publishedAt": "2026-10-12T01:57:05Z",
       "modifiedAt": "2026-10-20T19:54:21Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T16:49:01Z",
+      "modifiedAt": "2026-10-29T10:55:53.696944055Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "Requires attacker-controlled environment path/prompt and activation in bash; root bash and zsh do not execute the described payload in this particular mechanism.",
     "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
-    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed.",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ],
   "verification": {
     "level": "mixed",

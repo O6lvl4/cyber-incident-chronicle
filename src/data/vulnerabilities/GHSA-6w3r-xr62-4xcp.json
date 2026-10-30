@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-6w3r-xr62-4xcp",
   "aliases": [
+    "BIT-virtualenv-2026-113723",
     "CVE-2026-113723"
   ],
   "title": "virtualenv：古いBash互換モードのpromptでコマンド解釈",
@@ -62,12 +63,22 @@
       "publishedAt": "2026-10-17T16:10:21Z",
       "modifiedAt": "2026-10-22T15:51:31Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:21:57Z",
+      "modifiedAt": "2026-10-29T10:55:32.039209236Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
     "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
     "開発元の確認範囲は21.14.8で最初の影響版は未確定。DBの全旧版を含む範囲を保持し、未確認の旧版が安全とはしない。",
-    "影響するshell・互換モードと後のactivationやprompt表示が条件で、環境を生成するだけでは実行しない。修正後は環境を再生成する。"
+    "影響するshell・互換モードと後のactivationやprompt表示が条件で、環境を生成するだけでは実行しない。修正後は環境を再生成する。",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ]
 }

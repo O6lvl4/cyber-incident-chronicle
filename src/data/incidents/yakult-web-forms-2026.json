@@ -1,0 +1,81 @@
+{
+  "id": "yakult-web-forms-2026",
+  "company": "株式会社ヤクルト本社",
+  "geography": "日本",
+  "title": "ウェブサイトへの不正アクセスで問い合わせ・会員情報等の漏えいを確認",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "確認できた公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-10-31",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月26日に不正アクセスを確認しウェブ機能を停止。その後の調査で顧客情報の漏えいが判明し、件数の詳細を確認中。",
+  "affectedData": [
+    "問い合わせ・報道フォームの氏名・連絡先・問い合わせ内容等",
+    "たのしい給食会員の氏名・勤務先情報・メール・暗号化パスワード等",
+    "一部問い合わせ対応社員の氏名"
+  ],
+  "counts": [
+    {
+      "value": 40000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "漏えい対象の概数。最終件数は確認中",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "カード・銀行口座情報は保存していない。公表時点で悪用・二次被害は未確認。",
+    "26日は不正アクセス確認日であり、漏えい初確認日や侵入日を意味しない。"
+  ],
+  "sources": [
+    {
+      "title": "株式会社ヤクルト本社：公式公表",
+      "url": "https://www.release.tdnet.info/inbs/140120261029560120.pdf",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-26",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "検知・確認日。攻撃実施日と区別。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261029560120.pdf"
+    },
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月26日に不正アクセスを確認しウェブ機能を停止。その後の調査で顧客情報の漏えいが判明し、件数の詳細を確認中。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261029560120.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃日未公表",
+      "note": "検知日・公表日を攻撃日や被害初確認日に転用しない。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261029560120.pdf",
+      "reviewedDate": "2026-10-31"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害初確認日未公表",
+      "note": "検知日・公表日を攻撃日や被害初確認日に転用しない。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261029560120.pdf",
+      "reviewedDate": "2026-10-31"
+    }
+  }
+}

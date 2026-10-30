@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-43mp-35q3-x3fq",
   "aliases": [
+    "BIT-virtualenv-2026-113724",
     "CVE-2026-113724"
   ],
   "title": "virtualenv: Deletion recovery can change a symlink target's mode",
@@ -82,12 +83,22 @@
       "publishedDate": "2026-10-17",
       "publishedAt": "2026-10-17T16:10:24Z",
       "modifiedAt": "2026-10-22T15:51:27Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T21:31:34Z",
+      "modifiedAt": "2026-10-29T10:55:47.691444554Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "Requires a failed symlink deletion entering permission recovery and target chmod permissions; not the successful unlink path.",
     "Developer public advisory and fixed Reviewed record compared. Exact maintainer package/range/fix fields or complete HTML version panel are preserved separately in the linked audit; inclusive maxima are not silently equated to exclusive fixed boundaries.",
-    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed.",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ],
   "verification": {
     "level": "mixed",

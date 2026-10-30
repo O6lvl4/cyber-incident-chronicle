@@ -1,0 +1,84 @@
+{
+  "id": "sony-life-contract-systems-2026",
+  "company": "ソニー生命保険",
+  "geography": "日本",
+  "title": "契約者向けシステムに不正アクセス、代理店取扱契約の情報約38.5万件が流出",
+  "announcementDate": "2026-10-28",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入開始日は未公表",
+  "updatedDate": "2026-10-28",
+  "statusAsOfDate": "2026-10-28",
+  "lastVerifiedDate": "2026-10-31",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入経路・手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月27日に契約者向けシステム等への不正アクセスが判明。ソニー生命が代理店として取り扱ったメディケア生命の契約者・被保険者情報約38.5万件の漏えいを公表。関連サービスを停止し、原因・影響範囲を調査中。",
+  "affectedData": [
+    "ソニー生命が保険代理店として扱ったメディケア生命の契約者・被保険者の氏名、生年月日、性別、住所、電話番号、証券番号、契約内容"
+  ],
+  "counts": [
+    {
+      "value": 385000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "メディケア生命の契約者・被保険者情報の漏えい件数。実人数やソニー生命全顧客数ではない",
+      "approximate": true
+    }
+  ],
+  "scaleLabel": "漏えい約385,000件（契約者・被保険者情報）",
+  "caveats": [
+    "被害システムの運営主体はソニー生命。漏えい情報は同社が代理店として扱ったメディケア生命の契約に関するもので、メディケア生命自身への侵入を確認した意味ではない。",
+    "約38.5万件は公表された漏えい件数で、契約者と被保険者の重複を除く人数は示されていない。",
+    "マイナンバー、クレジットカード情報、保険料振替口座情報は対象に含まれない。",
+    "10月27日は不正アクセスが判明した日。攻撃実施日・漏えいを最初に確認した日へ転用しない。",
+    "28日時点で不正使用は未確認。関連サービス停止・外部アクセス遮断は被害拡大防止の措置で、調査や復旧の完了ではない。金融庁への報告は実施済み、対象者への連絡は順次予定。"
+  ],
+  "sources": [
+    {
+      "title": "ソニー生命保険：不正アクセス・情報漏えいに関する公式公表",
+      "url": "https://www.sonylife.co.jp/info/popup/261028_oshirase2.pdf",
+      "publishedDate": "2026-10-28"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-27",
+      "label": "不正アクセスが判明",
+      "kind": "occurrence",
+      "summary": "契約者向けシステム等への第三者の不正アクセスが判明。",
+      "sourceUrl": "https://www.sonylife.co.jp/info/popup/261028_oshirase2.pdf"
+    },
+    {
+      "date": "2026-10-28",
+      "label": "情報漏えいとサービス停止を公表",
+      "kind": "disclosure",
+      "summary": "代理店取扱契約の情報約38.5万件の流出、関連サービス停止、外部アクセス遮断と調査継続を公表。",
+      "sourceUrl": "https://www.sonylife.co.jp/info/popup/261028_oshirase2.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "不正アクセス判明日は10月27日と示されるが、攻撃実施時期は本文に示されない。",
+      "sourceUrl": "https://www.sonylife.co.jp/info/popup/261028_oshirase2.pdf",
+      "reviewedDate": "2026-10-31"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "情報漏えいの確認は明記されるが、最初の漏えい確認日は示されない。不正アクセス判明日を流用しない。",
+      "sourceUrl": "https://www.sonylife.co.jp/info/popup/261028_oshirase2.pdf",
+      "reviewedDate": "2026-10-31"
+    }
+  },
+  "detectedDate": "2026-10-27"
+}

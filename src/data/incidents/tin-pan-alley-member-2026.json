@@ -1,0 +1,80 @@
+{
+  "id": "tin-pan-alley-member-2026",
+  "company": "株式会社ティンパンアレイ",
+  "geography": "日本",
+  "title": "業務サーバー侵害、延べ約120万件の会員情報漏えい可能性",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "確認できた公式公表日",
+  "occurredDate": "2026-10-17",
+  "occurredDateLabel": "公式が明記する攻撃日",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-10-31",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "親会社ワールドが子会社の不正アクセスを公表。10月17日に侵入・情報抽出操作があり、28日に不正操作を検知。隔離と経路遮断を行い、詳細範囲を調査中。",
+  "affectedData": [
+    "会員の氏名・住所・電話番号・生年月日・性別・メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 1200000,
+      "unit": "件",
+      "status": "possible",
+      "label": "延べ会員情報の概数。詳細範囲確認中",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "決済情報・顔画像の漏えいは公表時点で未確認。",
+    "対象は子会社。ワールドの上場区分を対象法人へ継承しない。"
+  ],
+  "sources": [
+    {
+      "title": "株式会社ティンパンアレイ：公式公表",
+      "url": "https://www.release.tdnet.info/inbs/140120261030560364.pdf",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-28",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "検知・確認日。攻撃実施日と区別。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261030560364.pdf"
+    },
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "親会社ワールドが子会社の不正アクセスを公表。10月17日に侵入・情報抽出操作があり、28日に不正操作を検知。隔離と経路遮断を行い、詳細範囲を調査中。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261030560364.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026-10-17",
+      "startDate": "2026-10-17",
+      "note": "公式資料が侵入日を明記。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261030560364.pdf",
+      "reviewedDate": "2026-10-31"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害初確認日未公表",
+      "note": "検知日・公表日を攻撃日や被害初確認日に転用しない。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261030560364.pdf",
+      "reviewedDate": "2026-10-31"
+    }
+  }
+}

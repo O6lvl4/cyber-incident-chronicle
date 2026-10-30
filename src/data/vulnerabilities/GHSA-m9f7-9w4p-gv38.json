@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-m9f7-9w4p-gv38",
   "aliases": [
+    "CVE-2026-118688",
     "RUSTSEC-2026-0352"
   ],
   "title": "Wasmtime：末尾スラッシュ付きシンボリックリンクの改名によるサンドボックス逸脱",
@@ -9,7 +10,7 @@
   "publishedAt": "2026-10-14T12:00:00Z",
   "modifiedAt": "2026-10-14T20:30:02.524338627Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-14T23:09:03.560882Z",
+  "lastVerifiedAt": "2026-10-29T21:45:17.480318Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0352",
   "affected": [
     {
@@ -106,11 +107,22 @@
       "publishedAt": "2026-10-14T17:23:56Z",
       "modifiedAt": "2026-10-14T17:23:56Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip?generation=1793295312041381",
+      "publishedDate": "2026-10-14",
+      "publishedAt": "2026-10-14T12:00:00Z",
+      "modifiedAt": "2026-10-29T10:56:01.834981839Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "影響範囲と系列別修正境界はRustSec公式固定ソースとOSVの原文を保持する。修正版は現在のすべての脆弱性に対する安全性を保証しない。",
     "公表・更新日時はOSVのデータベース日時。開発元の初回公表日時と更新日時は出典ごとに別保存する。",
-    "CVSSは開発元公表の点数・ベクトルで独自計算しない。脆弱性公表は実悪用や企業被害の確認ではない。CISA KEVの最新掲載状況は未確認。"
+    "CVSSは開発元公表の点数・ベクトルで独自計算しない。脆弱性公表は実悪用や企業被害の確認ではない。CISA KEVの最新掲載状況は未確認。",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。",
+    "今回の確認日はOSV別名・原データ出典追補の確認を含む。既存の開発元解釈と影響範囲は前回確認（2026-10-14T23:09:03.560882Z）の内容を保持し、全面再確認した意味ではない。"
   ]
 }

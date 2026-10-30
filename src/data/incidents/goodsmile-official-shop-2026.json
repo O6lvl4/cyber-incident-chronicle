@@ -1,0 +1,125 @@
+{
+  "id": "goodsmile-official-shop-2026",
+  "company": "株式会社グッドスマイルカンパニー",
+  "geography": "日本",
+  "title": "公式ショップ侵害、第4報で注文情報の対象範囲を訂正",
+  "announcementDate": "2026-10-23",
+  "announcementDateLabel": "確認できた公式公表日",
+  "occurredDate": "2026-10-19",
+  "occurredDateLabel": "公式が明記する攻撃日",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-10-31",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "システムの脆弱性を悪用した管理者権限取得",
+    "status": "confirmed"
+  },
+  "summary": "公式ショップへの侵入・情報閲覧と決済画面の不正プログラムを確認。30日第4報は注文情報の対象範囲を訂正。カード全情報・下4桁等・注文情報は別範囲として扱う。",
+  "affectedData": [
+    "カード全情報：名義・番号・有効期限・セキュリティコード",
+    "保存カードの下4桁・有効期限",
+    "注文情報：氏名・住所・電話・メール・注文内容・金額・決済方法"
+  ],
+  "counts": [
+    {
+      "value": 2800,
+      "unit": "名",
+      "status": "possible",
+      "label": "カード入力の可能性がある連絡対象。全対象の上限ではない",
+      "approximate": false
+    },
+    {
+      "value": 402466,
+      "unit": "枚",
+      "status": "possible",
+      "label": "下4桁・有効期限の可能性範囲。重複除外したカード数、人数不明",
+      "approximate": false
+    },
+    {
+      "value": 5356,
+      "unit": "名",
+      "status": "possible",
+      "label": "注文情報について個別連絡した対象範囲。全員の漏えい確認ではない",
+      "approximate": false
+    },
+    {
+      "value": 7774,
+      "unit": "件",
+      "status": "possible",
+      "label": "対象注文の母集団。実際の閲覧202件はこの内数",
+      "approximate": false
+    },
+    {
+      "value": 202,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "第4報で不正閲覧を確認した注文数。対象注文は特定不能",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "第3報の7673名を第4報で訂正。5356名・7774件のうち最大202名・202件という範囲を区別し、合算しない。",
+    "第4報末尾とFAQの一部には旧7673件の記載が残る。明示された正誤訂正とFAQ該当条件の7774件を採用し、残存表現差を保持。",
+    "2800名の内数は注文完了384名・カード変更185名等。入力なしのカート利用者も通知対象。変更未完了者にも漏えい可能性があり対象を特定できない。",
+    "不正プログラム設置は10月21日13時55分〜23日7時、発見は28日18時30分過ぎ。近時報告されたPHP脆弱性とは異なると公式が明記。"
+  ],
+  "sources": [
+    {
+      "title": "グッドスマイル：第4報（10月30日訂正）",
+      "url": "https://support.goodsmile.com/hc/ja/articles/63718007508761",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "title": "グッドスマイル：注文情報対象グループCの公式FAQ",
+      "url": "https://support.goodsmile.com/hc/ja/articles/63753454602521",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-23",
+      "label": "検知・サイト閉鎖・初報",
+      "kind": "disclosure",
+      "summary": "6時過ぎの委託先連絡で判明し7時に閉鎖。",
+      "sourceUrl": "https://support.goodsmile.com/hc/ja/articles/63718007508761"
+    },
+    {
+      "date": "2026-10-28",
+      "label": "決済画面の不正プログラムを確認",
+      "kind": "update",
+      "summary": "18時30分過ぎに判明。侵入期間やプログラム設置期間と区別。",
+      "sourceUrl": "https://support.goodsmile.com/hc/ja/articles/63718007508761"
+    },
+    {
+      "date": "2026-10-30",
+      "label": "第4報で注文対象を訂正",
+      "kind": "update",
+      "summary": "5356名の7774件のうち202件が不正閲覧。対象特定ができず広い範囲に個別通知。",
+      "sourceUrl": "https://support.goodsmile.com/hc/ja/articles/63718007508761"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026-10-19〜2026-10-22",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-22",
+      "note": "公式が確認した第三者アクセスは19日15時過ぎ〜22日23時前。不正プログラム設置期間とは区別。",
+      "sourceUrl": "https://support.goodsmile.com/hc/ja/articles/63718007508761",
+      "reviewedDate": "2026-10-31"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害初確認日未公表",
+      "note": "検知日・公表日を攻撃日や被害初確認日に転用しない。",
+      "sourceUrl": "https://support.goodsmile.com/hc/ja/articles/63718007508761",
+      "reviewedDate": "2026-10-31"
+    }
+  }
+}

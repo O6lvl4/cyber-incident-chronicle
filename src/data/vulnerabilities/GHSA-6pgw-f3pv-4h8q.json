@@ -1,0 +1,71 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6pgw-f3pv-4h8q",
+  "aliases": [
+    "CVE-2026-116173",
+    "PYSEC-2026-4350"
+  ],
+  "title": "vLLM：Rust gRPC候補トークン検証不備によるサービス停止",
+  "summary": "Rust gRPC経由の出力候補トークン指定の上限検証が欠け、エンジン停止を起こし得る。",
+  "publishedAt": "2026-10-25T14:16:56.720Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/PYSEC-2026-4350",
+  "modifiedAt": "2026-10-29T11:00:02.789228032Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:44:23.664076Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "vllm",
+      "ranges": [
+        {
+          "affected": ">= 0.22.0, < 0.24.0",
+          "fixed": "0.24.0",
+          "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-6pgw-f3pv-4h8q"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-6pgw-f3pv-4h8q",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-6pgw-f3pv-4h8q"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV PYSEC-2026-4350",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4350",
+      "publishedDate": "2026-10-25",
+      "publishedAt": "2026-10-25T14:16:56.720Z",
+      "modifiedAt": "2026-10-29T11:00:02.789228032Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-6pgw-f3pv-4h8q",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T07:47:33Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開アドバイザリと公開OSV原データを個別確認。OSVの公表・変更日時と開発元公表日時を出典別に保持。実悪用・企業被害を確認したという意味ではない。",
+    "GitHub global advisory APIは404だが、開発元の公開repository advisory本文は正常取得して確認済み。"
+  ]
+}

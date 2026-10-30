@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9hj8-73fh-9963",
+  "aliases": [
+    "CVE-2026-115907"
+  ],
+  "title": "zip: legacy Shrink/Reduce/Implode decoder: denial of service from attacker-controlled ZIP64 uncompressed size",
+  "summary": "zip: legacy Shrink/Reduce/Implode decoder: denial of service from attacker-controlled ZIP64 uncompressed size",
+  "publishedAt": "2026-10-29T16:40:19Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-9hj8-73fh-9963/GHSA-9hj8-73fh-9963.json",
+  "modifiedAt": "2026-10-29T16:40:19Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:42:43.696953Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "zip",
+      "ranges": [
+        {
+          "affected": ">= 5.1.0, < 9.0.0",
+          "fixed": "9.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-9hj8-73fh-9963/GHSA-9hj8-73fh-9963.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "9.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-9hj8-73fh-9963/GHSA-9hj8-73fh-9963.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-9hj8-73fh-9963/GHSA-9hj8-73fh-9963.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-9hj8-73fh-9963/GHSA-9hj8-73fh-9963.json",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:40:19Z",
+      "modifiedAt": "2026-10-29T16:40:19Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "zip: legacy Shrink/Reduce/Implode decoder: denial of service from attacker-controlled ZIP64 uncompressed size",
+      "url": "https://github.com/advisories/GHSA-9hj8-73fh-9963",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/zip-rs/zip2/security/advisories/GHSA-9hj8-73fh-9963",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T19:31:42Z",
+      "modifiedAt": "2026-10-26T16:31:32Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
+    "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。",
+    "legacy-zip機能を有効化してZipArchive::extractを使う場合。開発元は>=5.1.0と修正版9.0.0を記載。"
+  ]
+}

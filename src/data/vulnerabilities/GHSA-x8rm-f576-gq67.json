@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-x8rm-f576-gq67",
+  "aliases": [
+    "CVE-2026-115887"
+  ],
+  "title": "graphql-scalars PhoneNumber scalar is vulnerable to regular expression denial of service",
+  "summary": "graphql-scalars PhoneNumber scalar is vulnerable to regular expression denial of service",
+  "publishedAt": "2026-10-28T21:13:10Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-x8rm-f576-gq67/GHSA-x8rm-f576-gq67.json",
+  "modifiedAt": "2026-10-30T15:36:51Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T21:21:45Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "graphql-scalars",
+      "ranges": [
+        {
+          "affected": ">= 1.24.1, < 2.0.1",
+          "fixed": "2.0.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-x8rm-f576-gq67/GHSA-x8rm-f576-gq67.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.24.1"
+            },
+            {
+              "fixed": "2.0.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-x8rm-f576-gq67/GHSA-x8rm-f576-gq67.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-x8rm-f576-gq67/GHSA-x8rm-f576-gq67.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-x8rm-f576-gq67/GHSA-x8rm-f576-gq67.json",
+      "publishedDate": "2026-10-28",
+      "publishedAt": "2026-10-28T21:13:10Z",
+      "modifiedAt": "2026-10-30T15:36:51Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "graphql-scalars PhoneNumber scalar is vulnerable to regular expression denial of service",
+      "url": "https://github.com/advisories/GHSA-x8rm-f576-gq67",
+      "publishedDate": "2026-10-28"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/graphql-hive/graphql-scalars/security/advisories/GHSA-x8rm-f576-gq67",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T08:42:56Z",
+      "modifiedAt": "2026-10-23T21:18:36Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・APIを確認。表示する版範囲は固定Reviewed原データに基づき、開発元の構造化版表・評価・日時は確認監査に分けて保持する。未解決の表記差を推測で統一しない。",
+    "実悪用・CISA KEVは未確認。PoC公開や深刻度から実悪用・企業被害を推定しない。",
+    "PhoneNumber scalarの入力処理が対象。開発元本文は導入版1.24.1を明記するがAPI版表は<=2.0.0。2.0.1の修正境界と、本文に残る修正前の状況説明を区別する。"
+  ]
+}

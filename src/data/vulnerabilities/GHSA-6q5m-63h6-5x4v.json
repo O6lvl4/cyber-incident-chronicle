@@ -1,0 +1,111 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6q5m-63h6-5x4v",
+  "aliases": [
+    "CVE-2026-33287"
+  ],
+  "title": "LiquidJS has Exponential Memory Amplification through its replace_first Filter $& Pattern",
+  "summary": "LiquidJS has Exponential Memory Amplification through its replace_first Filter $& Pattern",
+  "publishedAt": "2026-03-25T17:44:23Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/03/GHSA-6q5m-63h6-5x4v/GHSA-6q5m-63h6-5x4v.json",
+  "modifiedAt": "2026-10-29T17:28:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T21:21:45Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "liquidjs",
+      "ranges": [
+        {
+          "affected": "< 10.25.1",
+          "fixed": "10.25.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/03/GHSA-6q5m-63h6-5x4v/GHSA-6q5m-63h6-5x4v.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "10.25.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/03/GHSA-6q5m-63h6-5x4v/GHSA-6q5m-63h6-5x4v.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/03/GHSA-6q5m-63h6-5x4v/GHSA-6q5m-63h6-5x4v.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/03/GHSA-6q5m-63h6-5x4v/GHSA-6q5m-63h6-5x4v.json",
+      "publishedDate": "2026-03-25",
+      "publishedAt": "2026-03-25T17:44:23Z",
+      "modifiedAt": "2026-10-29T17:28:57Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "LiquidJS has Exponential Memory Amplification through its replace_first Filter $& Pattern",
+      "url": "https://github.com/advisories/GHSA-6q5m-63h6-5x4v",
+      "publishedDate": "2026-03-25"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/harttle/liquidjs/security/advisories/GHSA-6q5m-63h6-5x4v",
+      "publishedDate": "2026-03-25",
+      "publishedAt": "2026-03-25T13:15:58Z",
+      "modifiedAt": "2026-03-25T13:15:58Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "release",
+      "title": "LiquidJS v10.25.1: replace_firstをliteralとして扱う修正",
+      "url": "https://github.com/harttle/liquidjs/releases/tag/v10.25.1",
+      "publishedDate": "2026-03-22",
+      "publishedAt": "2026-03-22T14:19:03Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/03/GHSA-6q5m-63h6-5x4v/GHSA-6q5m-63h6-5x4v.json",
+      "publishedDate": "2026-03-25",
+      "publishedAt": "2026-03-25T17:44:23Z",
+      "modifiedAt": "2026-10-29T17:28:57Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
+    "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。",
+    "Reviewedは修正境界を10.25.1へ更新。開発元GHSAの版表は<=10.24.x・修正版空欄のままで、開発元告知表とDB表記を同一視しない。",
+    "開発元v10.25.1リリース本文でreplace_firstの引数をリテラルとして扱う修正commit35d5230を確認。GHSAの未更新の修正版欄とは区別する。",
+    "2026-10-31（JST）再確認でReviewedも修正境界10.25.1を明示。開発元APIの修正版欄は空のままで、本文の<=10.24.xと公開リリースの修正内容を区別する。"
+  ]
+}

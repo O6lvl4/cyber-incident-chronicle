@@ -1,0 +1,70 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-34cw-x8g7-rcv5",
+  "aliases": [
+    "RUSTSEC-2026-0416"
+  ],
+  "title": "juniper：深くネストしたGraphQL文書によるスタック枯渇",
+  "summary": "GraphQL文書やフラグメントの再帰処理でスタックが枯渇し、サーバープロセスが停止し得る。",
+  "publishedAt": "2026-10-28T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0416",
+  "modifiedAt": "2026-10-29T14:15:02.330313422Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:45:17.480318Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "juniper",
+      "ranges": [
+        {
+          "affected": "<= 0.17.1",
+          "fixed": "0.17.2",
+          "sourceUrl": "https://github.com/graphql-rust/juniper/security/advisories/GHSA-34cw-x8g7-rcv5"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/graphql-rust/juniper/security/advisories/GHSA-34cw-x8g7-rcv5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/graphql-rust/juniper/security/advisories/GHSA-34cw-x8g7-rcv5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV RUSTSEC-2026-0416",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0416",
+      "publishedDate": "2026-10-28",
+      "publishedAt": "2026-10-28T12:00:00Z",
+      "modifiedAt": "2026-10-29T14:15:02.330313422Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/graphql-rust/juniper/security/advisories/GHSA-34cw-x8g7-rcv5",
+      "publishedDate": "2026-10-28",
+      "publishedAt": "2026-10-28T22:47:59Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開アドバイザリと公開OSV原データを個別確認。OSVの公表・変更日時と開発元公表日時を出典別に保持。実悪用・企業被害を確認したという意味ではない。",
+    "GitHub global advisory APIは404だが、開発元の公開repository advisory本文は正常取得して確認済み。"
+  ]
+}

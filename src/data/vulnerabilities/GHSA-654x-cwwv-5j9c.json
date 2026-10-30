@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-654x-cwwv-5j9c",
   "aliases": [
+    "BIT-pillow-2026-114501",
     "CVE-2026-114501",
     "PYSEC-2026-4336"
   ],
@@ -99,6 +100,15 @@
       "publishedAt": "2026-10-21T22:16:49.410Z",
       "modifiedAt": "2026-10-28T11:00:02.234829126Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:53:21Z",
+      "modifiedAt": "2026-10-29T10:56:00.934076155Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
@@ -106,6 +116,7 @@
     "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
     "PILLOW_ALIGNMENTを変更しArrow exportを使うアプリケーションが対象。単なる画像読込すべてへ影響を広げない。",
     "開発元GHSAの構造化範囲は11.2.1 - 13.0.0、patched_versionsは空欄で、Reviewedの修正境界13.0.0と相違する。PR #10172のマージ、修正commitの13.0.0 tagへの包含、公開リリースの記載を確認し、表示は11.2.1以上13.0.0未満・修正版13.0.0とする。元の表記は監査に保持する。",
-    "2026-10-29のOSV全件エクスポートでPYSEC別名を確認。影響範囲・修正版・開発元の既存解釈は保持し、OSV原レコードの日時・列挙版・撤回は確認監査へ保存。"
+    "2026-10-29のOSV全件エクスポートでPYSEC別名を確認。影響範囲・修正版・開発元の既存解釈は保持し、OSV原レコードの日時・列挙版・撤回は確認監査へ保存。",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ]
 }

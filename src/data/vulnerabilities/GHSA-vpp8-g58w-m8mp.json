@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vpp8-g58w-m8mp",
+  "aliases": [],
+  "title": "Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset",
+  "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset",
+  "publishedAt": "2026-10-29T16:41:06Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-vpp8-g58w-m8mp/GHSA-vpp8-g58w-m8mp.json",
+  "modifiedAt": "2026-10-29T16:41:06Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:42:43.696953Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "Twisted",
+      "ranges": [
+        {
+          "affected": "< 26.10.0rc1",
+          "fixed": "26.10.0rc1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-vpp8-g58w-m8mp/GHSA-vpp8-g58w-m8mp.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "26.10.0rc1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-vpp8-g58w-m8mp/GHSA-vpp8-g58w-m8mp.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-vpp8-g58w-m8mp/GHSA-vpp8-g58w-m8mp.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-vpp8-g58w-m8mp/GHSA-vpp8-g58w-m8mp.json",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:41:06Z",
+      "modifiedAt": "2026-10-29T16:41:06Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset",
+      "url": "https://github.com/advisories/GHSA-vpp8-g58w-m8mp",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/twisted/twisted/security/advisories/GHSA-vpp8-g58w-m8mp",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T21:16:30Z",
+      "modifiedAt": "2026-10-22T21:16:30Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
+    "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。",
+    "開発元が示す修正版26.10.0rc1はリリース候補版。安定版26.10.0の公開・安全性はこの記録から推定しない。HTTP/2 Rapid Resetのクラスへの言及だけでCVE-2023-44487を別名に加えない。"
+  ]
+}
