@@ -1,0 +1,109 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-qw58-7h65-crq2",
+  "aliases": [
+    "RUSTSEC-2026-0423"
+  ],
+  "title": "Wasmtime：異なるEngineをまたぐStructTypeの型混同",
+  "summary": "埋込み側が別Engine由来のsupertypeでStructTypeを作ると、型情報が混同し、GCヒープ破損やパニックにつながり得る。",
+  "publishedAt": "2026-10-29T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0423",
+  "modifiedAt": "2026-10-30T10:45:03.975621660Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T21:23:09.320885Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 47.0.0, < 48.0.8",
+          "fixed": "48.0.8",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0423"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.5",
+          "fixed": "49.0.5",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0423"
+        },
+        {
+          "affected": ">= 50.0.0, < 50.0.1",
+          "fixed": "50.0.1",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0423"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "47.0.0"
+            },
+            {
+              "fixed": "48.0.8"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.5"
+            },
+            {
+              "introduced": "50.0.0"
+            },
+            {
+              "fixed": "50.0.1"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/wasmtime",
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-qw58-7h65-crq2",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 1.8,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-qw58-7h65-crq2"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV RUSTSEC-2026-0423",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0423",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T12:00:00Z",
+      "modifiedAt": "2026-10-30T10:45:03.975621660Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-qw58-7h65-crq2",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T19:06:00Z",
+      "modifiedAt": "2026-10-29T19:06:00Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開アドバイザリと公開OSV個別APIを確認し、OSVは現在の全件エクスポートと全文一致。公表・変更日時と開発元公表日時を出典別に保持。実悪用・企業被害を確認したものではなく、KEVは今回取得失敗のため未確認。",
+    "ゲストだけでは発火できず、埋込み側による2つ以上のEngine利用が条件。開発元は既知のサンドボックス脱出はないと説明している。"
+  ]
+}

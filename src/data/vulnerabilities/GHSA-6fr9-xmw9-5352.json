@@ -1,0 +1,120 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6fr9-xmw9-5352",
+  "aliases": [
+    "RUSTSEC-2026-0424"
+  ],
+  "title": "Wasmtime：コンポーネント間の借用リソース移動によるメモリ枯渇",
+  "summary": "コンポーネントが自身のリソースの借用を受け取る経路でホストメモリ消費の計上が抜け、ゲストが無制限にメモリを消費し得る。",
+  "publishedAt": "2026-10-29T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0424",
+  "modifiedAt": "2026-10-30T10:45:03.676850729Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T21:23:13.948910Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wasmtime",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 36.0.20",
+          "fixed": "36.0.20",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0424"
+        },
+        {
+          "affected": ">= 37.0.0, < 48.0.8",
+          "fixed": "48.0.8",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0424"
+        },
+        {
+          "affected": ">= 49.0.0, < 49.0.5",
+          "fixed": "49.0.5",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0424"
+        },
+        {
+          "affected": ">= 50.0.0, < 50.0.1",
+          "fixed": "50.0.1",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0424"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "36.0.20"
+            },
+            {
+              "introduced": "37.0.0"
+            },
+            {
+              "fixed": "48.0.8"
+            },
+            {
+              "introduced": "49.0.0"
+            },
+            {
+              "fixed": "49.0.5"
+            },
+            {
+              "introduced": "50.0.0"
+            },
+            {
+              "fixed": "50.0.1"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/wasmtime",
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-6fr9-xmw9-5352",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 5.9,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-6fr9-xmw9-5352"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV RUSTSEC-2026-0424",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0424",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T12:00:00Z",
+      "modifiedAt": "2026-10-30T10:45:03.676850729Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-6fr9-xmw9-5352",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T19:06:21Z",
+      "modifiedAt": "2026-10-29T19:06:21Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開アドバイザリと公開OSV個別APIを確認し、OSVは現在の全件エクスポートと全文一致。公表・変更日時と開発元公表日時を出典別に保持。実悪用・企業被害を確認したものではなく、KEVは今回取得失敗のため未確認。",
+    "GHSA-q554-3cjc-rx7pとは異なる未修正経路であり、別名として統合しない。開発元は標準設定でも影響し既知の緩和策はなく修正版への更新を推奨している。"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-jpxq-7h8p-2q76",
+  "aliases": [
+    "CVE-2026-119283"
+  ],
+  "title": "joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Decryption",
+  "summary": "joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Decryption",
+  "publishedAt": "2026-10-30T14:54:20Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-jpxq-7h8p-2q76/GHSA-jpxq-7h8p-2q76.json",
+  "modifiedAt": "2026-10-30T14:54:20Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T21:21:45Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "joserfc",
+      "ranges": [
+        {
+          "affected": "< 1.7.5",
+          "fixed": "1.7.5",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-jpxq-7h8p-2q76/GHSA-jpxq-7h8p-2q76.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.7.5"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-jpxq-7h8p-2q76/GHSA-jpxq-7h8p-2q76.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-jpxq-7h8p-2q76/GHSA-jpxq-7h8p-2q76.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-jpxq-7h8p-2q76/GHSA-jpxq-7h8p-2q76.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T14:54:20Z",
+      "modifiedAt": "2026-10-30T14:54:20Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "joserfc: Unbounded JWE General JSON `recipients` Array Leads to CPU Exhaustion (DoS) via Repeated RSA Private-Key Decryption",
+      "url": "https://github.com/advisories/GHSA-jpxq-7h8p-2q76",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/authlib/joserfc/security/advisories/GHSA-jpxq-7h8p-2q76",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T13:46:43Z",
+      "modifiedAt": "2026-10-29T21:09:17Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・APIを確認。表示する版範囲は固定Reviewed原データに基づき、開発元の構造化版表・評価・日時は確認監査に分けて保持する。未解決の表記差を推測で統一しない。",
+    "実悪用・CISA KEVは未確認。PoC公開や深刻度から実悪用・企業被害を推定しない。",
+    "JWE General JSONのrecipients配列をRSA等で復号する場合のCPU枯渇。verify_all_recipients=Falseだけでは計算量を制限しないと開発元が説明。"
+  ]
+}

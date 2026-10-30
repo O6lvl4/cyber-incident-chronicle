@@ -1,0 +1,71 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8p3x-q3q3-q3v5",
+  "aliases": [
+    "RUSTSEC-2026-0418"
+  ],
+  "title": "libz-sys：ビルド出力への環境変数の混入",
+  "summary": "Unixホストでcc 1.6.0以降を使う該当ビルドでは環境変数がCargoのビルド出力に保存され、targetディレクトリやCIキャッシュを共有した場合に秘密情報が漏えいし得る。",
+  "publishedAt": "2026-10-28T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0418",
+  "modifiedAt": "2026-10-29T14:15:02.333141406Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:45:17.477401Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "libz-sys",
+      "ranges": [
+        {
+          "affected": ">= 1.0.21, <= 1.1.30",
+          "fixed": "1.1.31",
+          "sourceUrl": "https://github.com/rust-lang/libz-sys/security/advisories/GHSA-8p3x-q3q3-q3v5"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/rust-lang/libz-sys/security/advisories/GHSA-8p3x-q3q3-q3v5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 0.0,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N",
+        "sourceUrl": "https://github.com/rust-lang/libz-sys/security/advisories/GHSA-8p3x-q3q3-q3v5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV RUSTSEC-2026-0418",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0418",
+      "publishedDate": "2026-10-28",
+      "publishedAt": "2026-10-28T12:00:00Z",
+      "modifiedAt": "2026-10-29T14:15:02.333141406Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/rust-lang/libz-sys/security/advisories/GHSA-8p3x-q3q3-q3v5",
+      "publishedDate": "2026-10-28",
+      "publishedAt": "2026-10-28T20:54:38Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開アドバイザリと公開OSV原データを個別確認。OSVの公表・変更日時と開発元公表日時を出典別に保持。実悪用・企業被害を確認したという意味ではない。",
+    "GitHub global advisory APIは404だが、開発元の公開repository advisory本文は正常取得して確認済み。",
+    "開発元のSeverity LowとCVSS v3.1 0.0を原文通り保持。ビルド環境・キャッシュ共有条件を満たす場合の露出であり、全ビルドで秘密漏えいが確認されたとは扱わない。"
+  ]
+}

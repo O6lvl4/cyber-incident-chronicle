@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8hxf-qr8p-62x4",
+  "aliases": [
+    "CVE-2026-115906"
+  ],
+  "title": "zip: AES Entry HMAC Authentication Bypass on Premature EOF",
+  "summary": "zip: AES Entry HMAC Authentication Bypass on Premature EOF",
+  "publishedAt": "2026-10-29T16:40:07Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-8hxf-qr8p-62x4/GHSA-8hxf-qr8p-62x4.json",
+  "modifiedAt": "2026-10-29T16:40:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:42:43.696953Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "zip",
+      "ranges": [
+        {
+          "affected": ">= 0.6.0, < 9.0.0",
+          "fixed": "9.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-8hxf-qr8p-62x4/GHSA-8hxf-qr8p-62x4.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.6.0"
+            },
+            {
+              "fixed": "9.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-8hxf-qr8p-62x4/GHSA-8hxf-qr8p-62x4.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-8hxf-qr8p-62x4/GHSA-8hxf-qr8p-62x4.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-8hxf-qr8p-62x4/GHSA-8hxf-qr8p-62x4.json",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:40:07Z",
+      "modifiedAt": "2026-10-29T16:40:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "zip: AES Entry HMAC Authentication Bypass on Premature EOF",
+      "url": "https://github.com/advisories/GHSA-8hxf-qr8p-62x4",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/zip-rs/zip2/security/advisories/GHSA-8hxf-qr8p-62x4",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T19:27:58Z",
+      "modifiedAt": "2026-10-26T16:30:48Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
+    "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。",
+    "AES暗号化エントリーで早期EOF時に認証検証が省略される問題。開発元の>=0.6.0と修正版9.0.0、Reviewedの修正上限付き区間を区別。"
+  ]
+}

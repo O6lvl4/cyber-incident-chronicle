@@ -1,0 +1,92 @@
+{
+  "id": "hana-cupid-member-system-2026",
+  "company": "花キューピット",
+  "geography": "日本",
+  "title": "管理システムへの不正アクセスで会員情報流出、対象423万8,242件は可能性範囲",
+  "announcementDate": "2026-10-28",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-14",
+  "occurredDateLabel": "公式が示す不正アクセス期間の開始日（10月14〜15日）",
+  "updatedDate": "2026-10-28",
+  "statusAsOfDate": "2026-10-28",
+  "lastVerifiedDate": "2026-10-31",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入経路・手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月14〜15日の管理システムへの不正アクセスにより、19日に会員情報漏えいを確認。対象の4,238,242件は該当する可能性のある顧客の件数。ログインID・ハッシュ化パスワード・メールアドレスが対象で、28日から個別連絡を開始。",
+  "affectedData": [
+    "インターネット花キューピット・ビジネス花キューピットのログインID、パスワードのハッシュ値、PC用・携帯用メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 4238242,
+      "unit": "件",
+      "status": "possible",
+      "label": "公式本文が「該当する可能性のあるお客様」とする対象件数。確定流出人数ではない",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "漏えい発生確認／4,238,242件は可能性を含む対象範囲",
+  "caveats": [
+    "会員情報の漏えい発生は確認済みだが、4,238,242件は本文が可能性を含む対象件数としている。全件の流出確認や実人数に置き換えない。",
+    "本文・FAQはパスワードの説明を「暗号化」から「ハッシュ値」「不可逆な変換」に訂正している。訂正日自体は未記載。平文漏えいとは扱わず、アルゴリズムや解析耐性は推定しない。",
+    "氏名・性別・生年月日・住所・電話番号・カード番号・社名・部署名・届け先情報は流出していないと説明。カード情報は対象DBで保持していない。",
+    "対象は自社ECにメールアドレスを登録した顧客。外部モール・電話注文でメール未登録の顧客や加盟店での購入者は対象外。退会済みでも漏えい確認者は個別案内対象。",
+    "28日からの順次通知は全員への通知完了ではない。攻撃経路遮断・監視強化を実施し新たな不正挙動・二次被害は未確認とするが、調査完了を意味しない。"
+  ],
+  "sources": [
+    {
+      "title": "花キューピット：不正アクセス・情報漏えいに関する公式公表",
+      "url": "https://www.hana-cupid.co.jp/news/news/20261028/",
+      "publishedDate": "2026-10-28"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-14",
+      "label": "不正アクセス期間の開始",
+      "kind": "occurrence",
+      "summary": "14〜15日に管理システムへ不正アクセス。",
+      "sourceUrl": "https://www.hana-cupid.co.jp/news/news/20261028/"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "会員情報漏えいを確認",
+      "kind": "update",
+      "summary": "調査過程で会員情報の漏えいを確認。",
+      "sourceUrl": "https://www.hana-cupid.co.jp/news/news/20261028/"
+    },
+    {
+      "date": "2026-10-28",
+      "label": "公表・個別通知開始",
+      "kind": "disclosure",
+      "summary": "対象範囲・除外項目・対応を公表。FAQで退会済みの対象者も個別案内すると説明。",
+      "sourceUrl": "https://www.hana-cupid.co.jp/news/news/20261028/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026年10月14〜15日",
+      "note": "公式本文が管理システムへの不正アクセス発生期間として明記。これ以前の侵入がなかったことまでは示さない。",
+      "sourceUrl": "https://www.hana-cupid.co.jp/news/news/20261028/",
+      "reviewedDate": "2026-10-31",
+      "startDate": "2026-10-14",
+      "endDate": "2026-10-15"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月19日",
+      "note": "調査過程で会員情報の漏えいを確認した日として明記。",
+      "sourceUrl": "https://www.hana-cupid.co.jp/news/news/20261028/",
+      "reviewedDate": "2026-10-31",
+      "startDate": "2026-10-19"
+    }
+  }
+}

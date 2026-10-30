@@ -1,0 +1,95 @@
+{
+  "id": "matsuya-app-order-2026",
+  "company": "株式会社松屋フーズホールディングス",
+  "geography": "日本",
+  "title": "松屋フーズのアプリ・注文管理システムで情報漏えいを確認",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "確認できた公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-10-31",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月28日に不正アクセスと会員情報等の漏えいが判明。アプリ登録情報と注文系サービスの確認範囲を区別し、原因・経路は調査中。",
+  "affectedData": [
+    "アプリ：会員ID・都道府県・氏名・電話番号・生年月日・メール・暗号化パスワード・ポイント",
+    "松弁ネット・モバイルオーダー・松弁デリバリー：会員ID・配送先住所・氏名・電話番号・ポイント"
+  ],
+  "counts": [
+    {
+      "value": 2000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "アプリ登録情報の漏えい確認",
+      "approximate": false
+    },
+    {
+      "value": 3000,
+      "unit": "件",
+      "status": "possible",
+      "label": "アプリ登録情報の最大可能性範囲。確認2000件を含む",
+      "approximate": false
+    },
+    {
+      "value": 2377127,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "注文系サービスの漏えい確認",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "2000件と最大3000件は同一対象の内数で合算しない。注文系との重複人数は不明。",
+    "カード情報は保有していない。復旧・補償予定を実施完了としない。"
+  ],
+  "sources": [
+    {
+      "title": "株式会社松屋フーズホールディングス：公式公表",
+      "url": "https://www.release.tdnet.info/inbs/140120261030561172.pdf",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-28",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "検知・確認日。攻撃実施日と区別。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261030561172.pdf"
+    },
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月28日に不正アクセスと会員情報等の漏えいが判明。アプリ登録情報と注文系サービスの確認範囲を区別し、原因・経路は調査中。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261030561172.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃日未公表",
+      "note": "検知日・公表日を攻撃日や被害初確認日に転用しない。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261030561172.pdf",
+      "reviewedDate": "2026-10-31"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026-10-28",
+      "startDate": "2026-10-28",
+      "note": "公式が会員情報等の漏えい判明日を明記。攻撃実施日は不明。",
+      "sourceUrl": "https://www.release.tdnet.info/inbs/140120261030561172.pdf",
+      "reviewedDate": "2026-10-31"
+    }
+  }
+}

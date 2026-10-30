@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-wwpr-jff3-395c",
+  "aliases": [
+    "CVE-2026-61847"
+  ],
+  "title": "Crass: A large number of adjacent CSS comments can trigger a SystemStackError",
+  "summary": "Crass: A large number of adjacent CSS comments can trigger a SystemStackError",
+  "publishedAt": "2026-10-29T16:35:23Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-wwpr-jff3-395c/GHSA-wwpr-jff3-395c.json",
+  "modifiedAt": "2026-10-29T16:35:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:42:43.696953Z",
+  "affected": [
+    {
+      "ecosystem": "rubygems",
+      "packageName": "crass",
+      "ranges": [
+        {
+          "affected": "< 1.0.7",
+          "fixed": "1.0.7",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-wwpr-jff3-395c/GHSA-wwpr-jff3-395c.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.0.7"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-wwpr-jff3-395c/GHSA-wwpr-jff3-395c.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-wwpr-jff3-395c/GHSA-wwpr-jff3-395c.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-wwpr-jff3-395c/GHSA-wwpr-jff3-395c.json",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:35:23Z",
+      "modifiedAt": "2026-10-29T16:35:23Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Crass: A large number of adjacent CSS comments can trigger a SystemStackError",
+      "url": "https://github.com/advisories/GHSA-wwpr-jff3-395c",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/rgrove/crass/security/advisories/GHSA-wwpr-jff3-395c",
+      "publishedDate": "2026-06-25",
+      "publishedAt": "2026-06-25T17:11:38Z",
+      "modifiedAt": "2026-08-30T22:43:12Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
+    "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。",
+    "preserve_commentsを有効化していない既定動作で隣接コメント処理が過剰再帰する。Crass3事案を同一事案へ混同しない。"
+  ]
+}

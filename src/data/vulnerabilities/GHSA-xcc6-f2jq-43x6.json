@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xcc6-f2jq-43x6",
+  "aliases": [
+    "RUSTSEC-2026-0428"
+  ],
+  "title": "orion：異なる長さの鍵でBLAKE2bをresetした場合の誤ったタグ",
+  "summary": "BLAKE2bの初期化時と異なる長さの鍵でresetすると、保持された鍵長が使われ誤った認証タグが生成される。正常な通信でもタグ検証が失敗し得る。",
+  "publishedAt": "2026-10-29T23:57:11Z",
+  "dateSourceUrl": "https://github.com/orion-rs/orion/security/advisories/GHSA-xcc6-f2jq-43x6",
+  "modifiedAt": "2026-10-29T23:57:11Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T21:23:13.853010Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "orion",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 0.17.16",
+          "fixed": "0.17.16",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0428"
+        },
+        {
+          "affected": ">= 0.18.0-0, < 0.18.1",
+          "fixed": "0.18.1",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0428"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.17.16"
+            },
+            {
+              "introduced": "0.18.0-0"
+            },
+            {
+              "fixed": "0.18.1"
+            }
+          ]
+        }
+      ],
+      "packageUrl": "pkg:cargo/orion",
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/orion-rs/orion/security/advisories/GHSA-xcc6-f2jq-43x6",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV RUSTSEC-2026-0428",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0428",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T12:00:00Z",
+      "modifiedAt": "2026-10-30T11:15:02.170453141Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/orion-rs/orion/security/advisories/GHSA-xcc6-f2jq-43x6",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T23:57:11Z",
+      "modifiedAt": "2026-10-29T23:57:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開アドバイザリと公開OSV個別APIを確認し、OSVは現在の全件エクスポートと全文一致。公表・変更日時と開発元公表日時を出典別に保持。実悪用・企業被害を確認したものではなく、KEVは今回取得失敗のため未確認。",
+    "鍵長が変わるreset呼出しが条件。鍵漏えいや認証迂回を確認したという意味ではない。",
+    "開発元の2行の影響範囲は「< 0.18.1」と「< 0.17.16」で重なっている。表示範囲はRustSec/OSVの系列別境界（0.17.16、0.18.1）を保持し、開発元の原表記は確認監査に残す。",
+    "OSV原データでは変更日時が公表日時より前になっているため、代表日時には確認済みの開発元公表・変更日時を使用。OSVの原日時は出典別に改変せず保持。"
+  ]
+}

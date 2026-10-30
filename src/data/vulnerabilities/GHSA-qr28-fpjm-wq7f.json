@@ -1,0 +1,92 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-qr28-fpjm-wq7f",
+  "aliases": [
+    "CVE-2026-118664"
+  ],
+  "title": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
+  "summary": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
+  "publishedAt": "2026-10-29T16:41:28Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-qr28-fpjm-wq7f/GHSA-qr28-fpjm-wq7f.json",
+  "modifiedAt": "2026-10-29T16:41:28Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:42:43.696953Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "decode-uri-component",
+      "ranges": [
+        {
+          "affected": "< 0.5.1",
+          "fixed": "0.5.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-qr28-fpjm-wq7f/GHSA-qr28-fpjm-wq7f.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.5.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-qr28-fpjm-wq7f/GHSA-qr28-fpjm-wq7f.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-qr28-fpjm-wq7f/GHSA-qr28-fpjm-wq7f.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-qr28-fpjm-wq7f/GHSA-qr28-fpjm-wq7f.json",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:41:28Z",
+      "modifiedAt": "2026-10-29T16:41:28Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
+      "url": "https://github.com/advisories/GHSA-qr28-fpjm-wq7f",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/SamVerschueren/decode-uri-component/security/advisories/GHSA-qr28-fpjm-wq7f",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T12:48:19Z",
+      "modifiedAt": "2026-10-28T20:36:37Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
+    "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。"
+  ]
+}

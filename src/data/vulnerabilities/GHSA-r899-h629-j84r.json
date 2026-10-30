@@ -1,0 +1,139 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-r899-h629-j84r",
+  "aliases": [
+    "BIT-parse-2026-61448",
+    "CVE-2026-61448",
+    "GHSA-p6c5-mjgj-m4rm"
+  ],
+  "title": "Parse Server vulnerable to stored XSS via malformed Content-Type bypassing file upload extension blocklist",
+  "summary": "Parse Server vulnerable to stored XSS via malformed Content-Type bypassing file upload extension blocklist",
+  "publishedAt": "2026-10-29T16:33:48Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-r899-h629-j84r/GHSA-r899-h629-j84r.json",
+  "modifiedAt": "2026-10-29T16:33:48Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:42:43.696953Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "parse-server",
+      "ranges": [
+        {
+          "affected": ">= 9.0.0, < 9.10.0-alpha.2",
+          "fixed": "9.10.0-alpha.2",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-r899-h629-j84r/GHSA-r899-h629-j84r.json"
+        },
+        {
+          "affected": "< 8.6.84",
+          "fixed": "8.6.84",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-r899-h629-j84r/GHSA-r899-h629-j84r.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.0-alpha.2"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.84"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-r899-h629-j84r/GHSA-r899-h629-j84r.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-r899-h629-j84r/GHSA-r899-h629-j84r.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-r899-h629-j84r/GHSA-r899-h629-j84r.json",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:33:48Z",
+      "modifiedAt": "2026-10-29T16:33:48Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Parse Server vulnerable to stored XSS via malformed Content-Type bypassing file upload extension blocklist",
+      "url": "https://github.com/advisories/GHSA-r899-h629-j84r",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-r899-h629-j84r",
+      "publishedDate": "2026-06-25",
+      "publishedAt": "2026-06-25T10:20:43Z",
+      "modifiedAt": "2026-06-25T10:20:43Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "上流が重複と明記した撤回記録",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/07/GHSA-p6c5-mjgj-m4rm/GHSA-p6c5-mjgj-m4rm.json",
+      "publishedDate": "2026-07-11",
+      "publishedAt": "2026-07-11T15:30:23Z",
+      "modifiedAt": "2026-10-29T16:33:41Z",
+      "withdrawnAt": "2026-10-29T16:33:41Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip?generation=1793308700503468",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:33:48Z",
+      "modifiedAt": "2026-10-29T16:45:04.358417589Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Upstream explicit duplicate withdrawal: GHSA-p6c5-mjgj-m4rm",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/07/GHSA-p6c5-mjgj-m4rm/GHSA-p6c5-mjgj-m4rm.json",
+      "publishedDate": "2026-07-11",
+      "publishedAt": "2026-07-11T15:30:23Z",
+      "modifiedAt": "2026-10-29T16:33:41Z",
+      "withdrawnAt": "2026-10-29T16:33:41Z"
+    }
+  ],
+  "caveats": [
+    "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
+    "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。",
+    "GHSA-p6c5-mjgj-m4rmは上流本文が本IDの重複と明記した撤回記録。統合後の有効な脆弱性全体の撤回ではなく、元IDの撤回日時を履歴に保持する。",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
+  ]
+}

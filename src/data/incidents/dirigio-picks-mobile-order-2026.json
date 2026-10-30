@@ -1,29 +1,29 @@
 {
   "id": "dirigio-picks-mobile-order-2026",
-  "company": "DIRIGIO（PICKS／SUBWAY公式モバイルオーダー）",
+  "company": "DIRIGIO（PICKS／SUBWAY・31モバイルオーダー）",
   "geography": "日本",
-  "title": "PICKSのAPIへの不正アクセス、SUBWAY3店舗の注文7件に漏えい可能性",
+  "title": "PICKSの不正アクセス、利用企業別に流出確認と最大対象範囲を公表",
   "announcementDate": "2026-10-28",
   "announcementDateLabel": "公式公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃時期は未公表・未確認",
   "updatedDate": "2026-10-29",
   "statusAsOfDate": "2026-10-29",
-  "lastVerifiedDate": "2026-10-29",
+  "lastVerifiedDate": "2026-10-31",
   "impactTypes": [
     "unauthorizedAccess",
     "leak",
     "outage"
   ],
-  "disclosureStatus": "possible",
+  "disclosureStatus": "confirmed",
   "attackMethod": {
     "label": "第三者による不正アクセス。詳細な手法・初期侵入経路は未公表",
     "status": "unknown"
   },
-  "summary": "27日12時30分頃に提供元DIRIGIOがAPIへの不正アクセスを検知し、15時にSUBWAYモバイルオーダーを停止。確認された対象は3店舗の7注文・7名。29日更新で原因箇所への対策と同日からの順次再開方針を公表。",
+  "summary": "27日にDIRIGIOのAPI不正アクセスを検知しモバイルオーダーを停止。SUBWAYは3店舗の7注文・7名の漏えい可能性を公表。サーティワンは一部情報の漏えいを確認し、最大8,174名・注文9,799件を対象範囲とした。SUBWAYの29日順次再開方針を全利用企業の復旧完了としない。",
   "affectedData": [
-    "氏名・メールアドレス・電話番号・生年月日・性別",
-    "注文商品・金額・日時・状態"
+    "SUBWAY：氏名・メールアドレス・電話番号・生年月日・性別、注文商品・金額・日時・状態（可能性）",
+    "サーティワン：メールアドレス・電話番号・氏名・31Club会員ID、うち1名の配送先住所（取得された可能性のある情報。流出発生は確認）"
   ],
   "counts": [
     {
@@ -39,18 +39,47 @@
       "status": "possible",
       "label": "同じ7名の対象注文。人数と加算しない",
       "approximate": false
+    },
+    {
+      "value": 8174,
+      "unit": "名",
+      "status": "possible",
+      "label": "サーティワンの最大対象顧客数。PICKS全体の確定流出人数ではない",
+      "approximate": false
+    },
+    {
+      "value": 9799,
+      "unit": "件",
+      "status": "possible",
+      "label": "サーティワン対象注文情報の件数。最大8,174名と異なる単位であり加算しない",
+      "approximate": false
+    },
+    {
+      "value": 1,
+      "unit": "名",
+      "status": "possible",
+      "label": "サーティワン対象者の内数：配送先住所を含む対象者",
+      "approximate": false
     }
   ],
   "caveats": [
-    "決済情報・会員ID・配送先情報は対象外。金銭的被害は未確認。",
+    "SUBWAYの公表範囲では決済情報・会員ID・配送先情報は対象外で金銭的被害未確認。サーティワンの会員ID・内数1名の住所とは対象が異なる。",
     "29日の順次再開方針を全店舗再開完了としない。",
-    "提供元の同一事案として集約するためPICKSを識別子に使用。未確認の他社利用者被害を加算しない。"
+    "提供元の同一事案として集約するためPICKSを識別子に使用。未確認の他社利用者被害を加算しない。",
+    "サーティワンは一部情報の漏えい発生を確認した一方、情報項目は取得された可能性があると記載。最大8,174名全員の全項目流出確定としない。9,799注文、190店舗、最大8,174名、うち住所1名を合算しない。",
+    "サーティワンのクレジットカード情報・パスワードは漏えい対象外。31Clubアプリは別システムで、モバイルオーダーに含まれる会員IDをアプリ全体の侵害としない。",
+    "両利用企業が同じDIRIGIOの27日不正アクセス・停止を報告しているため既存PICKS事案へ集約。独立した攻撃として追加せず、利用企業間の人数を提供元全体の総人数として合算しない。"
   ],
   "sources": [
     {
       "title": "SUBWAY：PICKS不正アクセスと29日再開方針",
       "url": "https://subway.co.jp/news/bhi2h9kf00mf/",
       "publishedDate": "2026-10-29"
+    },
+    {
+      "title": "B-R サーティワン：31モバイルオーダーの情報漏えいと対象範囲",
+      "url": "https://www.br31.jp/contents/topics/261028_01.html",
+      "publishedDate": "2026-10-28"
     }
   ],
   "timeline": [
@@ -60,6 +89,13 @@
       "kind": "disclosure",
       "summary": "27日12時30分頃に提供元DIRIGIOがAPIへの不正アクセスを検知し、15時にSUBWAYモバイルオーダーを停止。確認された対象は3店舗の7注文・7名。29日更新で原因箇所への対策と同日からの順次再開方針を公表。",
       "sourceUrl": "https://subway.co.jp/news/bhi2h9kf00mf/"
+    },
+    {
+      "date": "2026-10-28",
+      "label": "サーティワンが流出発生と対象範囲を公表",
+      "kind": "update",
+      "summary": "27日にDIRIGIOから報告を受け、その後の調査で一部情報の漏えいを確認。対象は最大8,174名・注文9,799件・190店舗で、うち1名は住所を含む可能性。",
+      "sourceUrl": "https://www.br31.jp/contents/topics/261028_01.html"
     }
   ],
   "eventDates": {
@@ -77,5 +113,6 @@
       "sourceUrl": "https://subway.co.jp/news/bhi2h9kf00mf/",
       "reviewedDate": "2026-10-29"
     }
-  }
+  },
+  "scaleLabel": "利用企業別：SUBWAY7名の可能性／サーティワン最大8,174名・9,799注文、合算しない"
 }

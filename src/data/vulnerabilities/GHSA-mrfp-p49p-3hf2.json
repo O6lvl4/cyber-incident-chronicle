@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-mrfp-p49p-3hf2",
   "aliases": [
+    "BIT-pillow-2026-96640",
     "CVE-2026-96640"
   ],
   "title": "Pillow PDF append accepts malformed shared page-tree DAG causing resource exhaustion",
@@ -82,12 +83,22 @@
       "publishedDate": "2026-10-17",
       "publishedAt": "2026-10-17T10:36:14Z",
       "modifiedAt": "2026-10-17T10:36:14Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T16:00:47Z",
+      "modifiedAt": "2026-10-29T10:55:39.916451864Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "Requires appending to an attacker-controlled PDF. Primary structured patch is 13.0.0 while older report narrative says no known fix; do not read the older report section as current release status.",
     "Developer public advisory and fixed Reviewed record compared. Exact maintainer package/range/fix fields or complete HTML version panel are preserved separately in the linked audit; inclusive maxima are not silently equated to exclusive fixed boundaries.",
-    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+    "Database and developer dates and assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed.",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ],
   "verification": {
     "level": "mixed",

@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fgxm-5hvv-x4vh",
+  "aliases": [],
+  "title": "charmbracelet/soft-serve HTTP responses disclose the existence and names of private repositories",
+  "summary": "charmbracelet/soft-serve HTTP responses disclose the existence and names of private repositories",
+  "publishedAt": "2026-10-30T14:42:35Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-fgxm-5hvv-x4vh/GHSA-fgxm-5hvv-x4vh.json",
+  "modifiedAt": "2026-10-30T14:42:35Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T21:21:45Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/charmbracelet/soft-serve",
+      "ranges": [
+        {
+          "affected": ">= 0.5.0, < 0.12.3",
+          "fixed": "0.12.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-fgxm-5hvv-x4vh/GHSA-fgxm-5hvv-x4vh.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.5.0"
+            },
+            {
+              "fixed": "0.12.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-fgxm-5hvv-x4vh/GHSA-fgxm-5hvv-x4vh.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-fgxm-5hvv-x4vh/GHSA-fgxm-5hvv-x4vh.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/4bc5ec5e701e2c11bf0865f7ebff2a35d4b4b1bc/advisories/github-reviewed/2026/10/GHSA-fgxm-5hvv-x4vh/GHSA-fgxm-5hvv-x4vh.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T14:42:35Z",
+      "modifiedAt": "2026-10-30T14:42:35Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "charmbracelet/soft-serve HTTP responses disclose the existence and names of private repositories",
+      "url": "https://github.com/advisories/GHSA-fgxm-5hvv-x4vh",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/charmbracelet/soft-serve/security/advisories/GHSA-fgxm-5hvv-x4vh",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T15:24:07Z",
+      "modifiedAt": "2026-10-05T15:24:07Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開本文・APIを確認。表示する版範囲は固定Reviewed原データに基づき、開発元の構造化版表・評価・日時は確認監査に分けて保持する。未解決の表記差を推測で統一しない。",
+    "実悪用・CISA KEVは未確認。PoC公開や深刻度から実悪用・企業被害を推定しない。",
+    "privateリポジトリの存在・名前・clone URLの開示。内容・refs・commitの露出や書込み権限取得とは区別する。修正版0.12.3。"
+  ]
+}

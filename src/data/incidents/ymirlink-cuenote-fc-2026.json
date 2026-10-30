@@ -7,8 +7,8 @@
   "announcementDateLabel": "収録した公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日は未公表（10月16日未明に検知）",
-  "updatedDate": "2026-10-26",
-  "statusAsOfDate": "2026-10-26",
+  "updatedDate": "2026-10-29",
+  "statusAsOfDate": "2026-10-29",
   "impactTypes": [
     "leak",
     "outage",
@@ -45,6 +45,13 @@
       "status": "possible",
       "label": "Cuenote BASEで閲覧可能だった契約者情報。FCの延べ件数と合算しない",
       "approximate": false
+    },
+    {
+      "value": 70921,
+      "unit": "件",
+      "status": "possible",
+      "label": "朝日新聞社・関連団体イベント等の延べ登録情報。提供元全体の部分範囲",
+      "approximate": false
     }
   ],
   "caveats": [
@@ -56,7 +63,8 @@
     "BASE190件は閲覧可能な契約者情報の範囲。FCの配信関連延べ件数や49システムとは単位・対象が異なる。",
     "26日の追加45システムはFC44とBASE1。25日21時45分の追加42システムの確認と26日12時30分の42社への連絡を含む経過であり、49に重ねて合算しない。",
     "16日6時49分のアカウント異常検知、20時10分のBASE閲覧記録確認、25日の追加範囲確認を、FC事案全体の最初の流出確認日や攻撃開始日としない。",
-    "20日1時から予防停止していた他システムを順次再開。全被害システムの復旧完了とは公表していない。"
+    "20日1時から予防停止していた他システムを順次再開。全被害システムの復旧完了とは公表していない。",
+    "朝日新聞社の延べ70,921件は9割超がメールアドレスのみで一部に氏名・学校名等。デジタル版購読登録とは異なる。提供元全体への加算や独立した別攻撃としての重複計上をしない。"
   ],
   "sources": [
     {
@@ -73,6 +81,11 @@
       "title": "ユミルリンク：不正アクセス第2報・FCとBASEの影響範囲（10月26日17時更新）",
       "url": "https://www.cuenote.jp/support/news-incident.html",
       "publishedDate": "2026-10-26"
+    },
+    {
+      "title": "朝日新聞社：Cuenote FCに登録した延べ70921件の可能性範囲",
+      "url": "https://www.asahi.com/corporate/info/17004624",
+      "publishedDate": "2026-10-29"
     }
   ],
   "timeline": [
@@ -124,9 +137,16 @@
       "kind": "update",
       "summary": "17時更新。FC49システム、可能性の延べ51,628,280件、BASE190件の閲覧可能状態。16システムの件数を調査中。",
       "sourceUrl": "https://www.cuenote.jp/support/news-incident.html"
+    },
+    {
+      "date": "2026-10-29",
+      "label": "朝日新聞社が利用環境の範囲を公表",
+      "kind": "update",
+      "summary": "延べ70,921件の漏えい可能性。26日に提供元から連絡、当該環境の不正アクセス・出力は16日午後とみられる。全体の攻撃開始日へ転用しない。",
+      "sourceUrl": "https://www.asahi.com/corporate/info/17004624"
     }
   ],
-  "lastVerifiedDate": "2026-10-27",
+  "lastVerifiedDate": "2026-10-31",
   "eventDates": {
     "attack": {
       "precision": "unknown",

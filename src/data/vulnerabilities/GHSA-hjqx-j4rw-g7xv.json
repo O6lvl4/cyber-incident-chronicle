@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-hjqx-j4rw-g7xv",
+  "aliases": [
+    "CVE-2026-115908"
+  ],
+  "title": "zip: Arbitrary file write outside the extraction directory, because ZipArchive::extract validates symlink targets lexically. ",
+  "summary": "zip: Arbitrary file write outside the extraction directory, because ZipArchive::extract validates symlink targets lexically. ",
+  "publishedAt": "2026-10-29T16:40:12Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-hjqx-j4rw-g7xv/GHSA-hjqx-j4rw-g7xv.json",
+  "modifiedAt": "2026-10-29T16:40:13Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:42:43.696953Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "zip",
+      "ranges": [
+        {
+          "affected": ">= 7.2.0, < 9.0.0",
+          "fixed": "9.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-hjqx-j4rw-g7xv/GHSA-hjqx-j4rw-g7xv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "9.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-hjqx-j4rw-g7xv/GHSA-hjqx-j4rw-g7xv.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-hjqx-j4rw-g7xv/GHSA-hjqx-j4rw-g7xv.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/ff6f6452f3cc70586b3fee4f41fa7e490388dd14/advisories/github-reviewed/2026/10/GHSA-hjqx-j4rw-g7xv/GHSA-hjqx-j4rw-g7xv.json",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:40:12Z",
+      "modifiedAt": "2026-10-29T16:40:13Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "zip: Arbitrary file write outside the extraction directory, because ZipArchive::extract validates symlink targets lexically. ",
+      "url": "https://github.com/advisories/GHSA-hjqx-j4rw-g7xv",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/zip-rs/zip2/security/advisories/GHSA-hjqx-j4rw-g7xv",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T19:28:32Z",
+      "modifiedAt": "2026-10-26T16:33:34Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
+    "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。",
+    "展開先の絶対パスを知るか推測できることが前提。Windowsのシンボリックリンク作成権限等の条件を無視しない。7.2.0以降と9.0.0修正を確認。"
+  ]
+}

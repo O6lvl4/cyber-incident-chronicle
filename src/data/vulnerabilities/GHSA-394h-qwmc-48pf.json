@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-394h-qwmc-48pf",
   "aliases": [
+    "BIT-virtualenv-2026-113718",
     "CVE-2026-113718"
   ],
   "title": "virtualenv：Xonshの文字コードによるactivation文字列の再解釈",
@@ -62,12 +63,22 @@
       "publishedAt": "2026-10-17T16:10:22Z",
       "modifiedAt": "2026-10-22T15:51:26Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:24:43Z",
+      "modifiedAt": "2026-10-29T10:55:57.228294866Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発元の公開GHSA本文を取得して照合。記録の公表・更新・撤回日時は固定Reviewedソースの値で、開発元の先行公表日時を出典に別記する。",
     "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
     "開発元の確認範囲は21.14.8。最初の影響版は未確定であり、それ以前が安全という意味ではない。DBの全旧版を含む範囲を別に保持する。",
-    "POSIXのXonsh、影響するsource encodingと後のactivationが条件。修正後は既存のactivate.xshも再生成する必要がある。"
+    "POSIXのXonsh、影響するsource encodingと後のactivationが条件。修正後は既存のactivate.xshも再生成する必要がある。",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ]
 }

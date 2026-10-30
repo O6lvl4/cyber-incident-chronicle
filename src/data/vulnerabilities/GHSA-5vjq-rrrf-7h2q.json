@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-5vjq-rrrf-7h2q",
   "aliases": [
+    "BIT-virtualenv-2026-113726",
     "CVE-2026-113726"
   ],
   "title": "virtualenv activate runs commands from the environment name in zsh with PROMPT_SUBST",
@@ -89,12 +90,22 @@
       "publishedAt": "2026-10-02T13:56:33Z",
       "modifiedAt": "2026-10-20T19:58:33Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T16:46:23Z",
+      "modifiedAt": "2026-10-29T10:55:33.825448161Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "Requires attacker-influenced path/prompt and zsh PROMPT_SUBST enabled; plain zsh defaults off and the described payload does not run in bash.",
     "Developer public advisory and fixed Reviewed record compared. Maintainer exact inclusive affected maxima and database exclusive fixed boundaries remain separately preserved in the linked audit; no untested intermediate version is inferred.",
-    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed."
+    "Database and maintainer publication/modification dates and severity assessments are separately attributed. Exploitation and KEV remain unknown; no exploit was executed.",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ],
   "verification": {
     "level": "mixed",

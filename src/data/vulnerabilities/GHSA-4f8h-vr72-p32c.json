@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-4f8h-vr72-p32c",
   "aliases": [
+    "BIT-virtualenv-2026-113713",
     "CVE-2026-113713"
   ],
   "title": "virtualenv：削除された一時app-dataへのseedリンクが残る",
@@ -82,6 +83,15 @@
       "title": "開発元の修正commitとrelease tagの包含関係",
       "url": "https://github.com/pypa/virtualenv/compare/b81995c3feab9e1edb453c75ffc6616e1a77335e...21.14.10",
       "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:26:57Z",
+      "modifiedAt": "2026-10-29T10:55:30.640343852Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
@@ -89,6 +99,7 @@
     "実悪用とCISA KEVは未確認。PoC・深刻度・収録を実悪用の確認とせず、修正版を現在の全脆弱性に対する安全版と保証しない。",
     "開発元の構造化範囲は20.0.6以上21.14.10未満、Reviewedは21.14.8以上21.14.10未満。本文では21.14.8の確認と歴史的境界の未検証を区別している。",
     "本文の修正版未公開という記述は構造化欄と相違する。PR #3437のマージ、修正commitが21.14.10 tagに含まれること、同版の公開リリースで確認し、修正版は21.14.10とする。",
-    "共有一時領域と後続の利用が条件。通常のcopy seedingや利用者専用の一時領域へ影響を広げない。開発元LowとReviewed Moderateを別々に保持する。"
+    "共有一時領域と後続の利用が条件。通常のcopy seedingや利用者専用の一時領域へ影響を広げない。開発元LowとReviewed Moderateを別々に保持する。",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ]
 }

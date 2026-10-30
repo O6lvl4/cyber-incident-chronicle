@@ -2,6 +2,7 @@
   "kind": "vulnerability",
   "id": "GHSA-cx6f-vjhg-g3cc",
   "aliases": [
+    "BIT-virtualenv-2026-115586",
     "CVE-2026-115586"
   ],
   "title": "virtualenv: Bash activator leaves the --prompt value unescaped in PS1 when promptvars is off, so prompt expansion later executes it (regression in 21.14.9)",
@@ -69,11 +70,21 @@
       "publishedAt": "2026-10-22T20:36:50Z",
       "modifiedAt": "2026-10-23T19:33:42Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV full export (immutable generation; alias identity only)",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip?generation=1793305993836715",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T20:47:16Z",
+      "modifiedAt": "2026-10-29T10:55:32.724606632Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発元の公開資料を実際に取得して照合。DBの公表・更新・撤回日時は開発元の公表日時と区別する。",
     "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
-    "Bashのpromptvarsがactivation時点で無効でも、後でprompt展開が有効になる場合がある。21.14.9で生じた回帰であり、すべてのshellへ影響を拡張しない。"
+    "Bashのpromptvarsがactivation時点で無効でも、後でprompt展開が有効になる場合がある。21.14.9で生じた回帰であり、すべてのshellへ影響を拡張しない。",
+    "2026-10-30 JST: OSV公開原データの同一レコードID/aliasesを照合し別名のみ追補。BIT等の下流パッケージ名は別名の出典であり、既存の影響パッケージ・版範囲・開発元検証日を拡張しない。"
   ]
 }

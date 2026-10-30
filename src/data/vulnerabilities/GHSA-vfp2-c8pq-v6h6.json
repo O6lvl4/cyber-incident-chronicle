@@ -1,0 +1,64 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vfp2-c8pq-v6h6",
+  "aliases": [
+    "CVE-2026-116176",
+    "PYSEC-2026-4351"
+  ],
+  "title": "vLLM：P2pNcclConnectorのリクエストID経由SSRF",
+  "summary": "P2pNcclConnectorを使用する構成でAPIクライアントのヘッダーから外部接続先が指定され、KV-cache情報の漏えいやサービス停止につながり得る。",
+  "publishedAt": "2026-10-25T14:16:57.160Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/PYSEC-2026-4351",
+  "modifiedAt": "2026-10-29T11:00:02.792757334Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-29T21:44:23.582230Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "vllm",
+      "ranges": [
+        {
+          "affected": ">= 0.9.2, < 0.24.0",
+          "fixed": "0.24.0",
+          "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-vfp2-c8pq-v6h6"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-vfp2-c8pq-v6h6",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV PYSEC-2026-4351",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4351",
+      "publishedDate": "2026-10-25",
+      "publishedAt": "2026-10-25T14:16:57.160Z",
+      "modifiedAt": "2026-10-29T11:00:02.792757334Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-vfp2-c8pq-v6h6",
+      "publishedDate": "2026-10-09",
+      "publishedAt": "2026-10-09T07:58:03Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公開アドバイザリと公開OSV原データを個別確認。OSVの公表・変更日時と開発元公表日時を出典別に保持。実悪用・企業被害を確認したという意味ではない。",
+    "GitHub global advisory APIは404だが、開発元の公開repository advisory本文は正常取得して確認済み。"
+  ]
+}
