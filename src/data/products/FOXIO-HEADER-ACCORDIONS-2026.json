@@ -19,7 +19,7 @@
   "listedNote": "公表者が GitHub に実装ごとの攻撃コード（headeraccordions）を push し、ブログを公開した日",
   "modifiedAt": "2026-03-27T13:56:58.495Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-23T02:06:57Z",
+  "lastVerifiedAt": "2026-10-30T23:21:14.021798Z",
   "affected": [
     {
       "name": "quic-go（Go）",
@@ -44,10 +44,10 @@
     },
     {
       "name": "Wireshark",
-      "affected": "4.6.0 〜 4.6.1（CNA）。公表者は 4.4 系も修正対象としている",
+      "affected": "4.6.0〜4.6.1、および4.4.0〜4.4.11（開発元）",
       "fixed": "4.6.2 / 4.4.12",
       "sourceUrl": "https://www.wireshark.org/security/wnpa-sec-2025-07.html",
-      "note": "CVE-2025-13945"
+      "note": "開発元は両系列の影響と修正版を明記。CNAのlessThan4.6.1と差があるため開発元を採用。"
     },
     {
       "name": "Bun",
@@ -214,6 +214,7 @@
     "公表者は CVSS や深刻度を示していない。CNA の評価は quic-go 5.3 Medium、quiche 7.5 High、Wireshark 5.5 Medium と実装ごとに異なるため、記録全体のラベルは未確認とし、各 CVSS を出典つきで保持する。",
     "公表者は IIS、Envoy、ngtcp2 / nghttp3 を影響なしとしている。未修正の実装は公表時点（2026-10-20）の状態で、その後の修正は反映していない。",
     "JPCERT/CC・IPA の注意喚起は確認時点でない。CISA KEV は全件 JSON を照合して3件とも未掲載。",
-    "未収録の脆弱性がないことを意味しない。収録基準（注意喚起・Critical・実悪用・KEV・攻撃コード公開）を満たした記録だけを扱う。"
+    "未収録の脆弱性がないことを意味しない。収録基準（注意喚起・Critical・実悪用・KEV・攻撃コード公開）を満たした記録だけを扱う。",
+    "Wiresharkの公式告知は4.6.0〜4.6.1と4.4.0〜4.4.11を対象とする一方、CNAの構造化範囲は4.6.0以上4.6.1未満のみ。公式範囲を採用し差を保持する。未修正とした他実装は公表時点の状態を維持。"
   ]
 }

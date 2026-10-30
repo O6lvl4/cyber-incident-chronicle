@@ -1,0 +1,129 @@
+{
+  "checkedAt": "2026-10-30T23:19:45.544450+00:00",
+  "scope": "2026-10-23以降の重なり期間を含むJPCERT/IPA/KEV候補探索とJVNから発見した三菱・Siemensの個別確認。全開発元Criticalの網羅ではない。",
+  "candidateScan": {
+    "generatedAt": "2026-10-30T23:17:33.563Z",
+    "since": "2026-10-23",
+    "records": 42,
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+        "status": "failed",
+        "fetchedAt": "2026-10-30T23:17:33.562Z",
+        "error": "HTTP 403"
+      },
+      {
+        "name": "JPCERT/CC 注意喚起",
+        "url": "https://www.jpcert.or.jp/at/2026.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-30T23:17:33.251Z",
+        "items": 35
+      },
+      {
+        "name": "IPA 重要なセキュリティ情報",
+        "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-30T23:17:32.988Z",
+        "items": 29
+      }
+    ],
+    "candidates": [],
+    "drift": [
+      {
+        "kind": "alert-not-recorded",
+        "issuer": "JPCERT/CC",
+        "url": "https://www.jpcert.or.jp/at/2026/at260034.html",
+        "date": "2026-10-26",
+        "title": "BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起 (公開)",
+        "records": [
+          "NODEJS-2026-OCTOBER-SECURITY-RELEASES"
+        ]
+      }
+    ],
+    "note": "取得失敗は候補なしを意味しない。候補は一次資料を読んで判定し、除外も確認記録に残す。"
+  },
+  "sourceChecks": [
+    {
+      "url": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf",
+      "checkedAt": "2026-10-30T23:18:42.255040+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "9e3798e99ccca22fe9aca478baae3d782bba7c7bd01d3cb955593c56267e12a8"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU93251594/",
+      "checkedAt": "2026-10-30T23:18:42.255495+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "b6c52b0c89d1cce45752e3671c30946fb497a630e6b6da677761e4faa5925f83"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU95856220/",
+      "checkedAt": "2026-10-30T23:18:42.255923+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "f0ec645e56796017f2ce60f7cfe68ff2628a87a4173f38223a0bac959c1d42dc"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-137528.html",
+      "checkedAt": "2026-10-30T23:18:42.256463+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "326b0abcc944d85176e6e59e56a8b6c06eb3786d8681ecf081dae664d9965fb2"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/csaf/ssa-137528.json",
+      "checkedAt": "2026-10-30T23:18:42.257069+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "7c358eadf76bac8956e9611ff62e04082cbc3c27cec618e89b70fcf00cc2df28"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-01.json",
+      "checkedAt": "2026-10-30T23:18:42.257539+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "e9c3247ebabd0894298c870e160d99c549c2963c7881c4acb6305355b05c78b1"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-89209",
+      "checkedAt": "2026-10-30T23:18:45.731109+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "f8814ba9da1fe980c66f38f9f51783b67a5a2e00e3a04e60bc63d01c8dc04c30"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2023-4863",
+      "checkedAt": "2026-10-30T23:18:46.094794+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "ebad3c8097c8b086599204b46e3cef87e9a3ba0fd2cc2e8864a1ca80799ac61a"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-16436",
+      "checkedAt": "2026-10-30T23:18:46.258651+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "bb4eb7f86df0564ef56befff9a9055ef3f5725973182202dba616f3ab5acb426"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-16437",
+      "checkedAt": "2026-10-30T23:18:46.331115+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "7ef5fffe73198d21d1f44ac788e07348629a411e03a2a5a43795265b8e1bb4fe"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-16438",
+      "checkedAt": "2026-10-30T23:18:46.551018+00:00",
+      "httpStatus": 200,
+      "status": "checked",
+      "sha256": "1134482f370c87822977237f5e042b4f18caa5c265efa6aea70f5d38f204e994"
+    }
+  ],
+  "notes": [
+    "Node.jsの欠落JPCERT警告は既存記録担当へ引継ぎ。",
+    "三菱4 CVEおよびSiemens CVEは既存42製品のID/別名と重複なし。"
+  ]
+}

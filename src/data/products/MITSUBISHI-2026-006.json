@@ -1,0 +1,190 @@
+{
+  "kind": "product",
+  "id": "MITSUBISHI-2026-006",
+  "aliases": [
+    "CVE-2023-4863",
+    "CVE-2026-16436",
+    "CVE-2026-16437",
+    "CVE-2026-16438"
+  ],
+  "vendor": "三菱電機 / Mitsubishi Electric Iconics Digital Solutions",
+  "product": "GENESIS / ICONICS 製品群",
+  "productKey": "mitsubishi-genesis-iconics",
+  "title": "GENESIS・ICONICS製品群の認証回避・権限設定等の4脆弱性",
+  "summary": "製品別に任意コード実行、ロック解除、DCOM操作のおそれがある。管理者権限を要する問題と遠隔の認証回避を区別。MC Works64・GENESIS32・BizVizには修正版の予定がなく、軽減策や移行が必要。",
+  "publishedDate": "2026-10-15",
+  "publishedAt": null,
+  "dateSourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf",
+  "dateNote": "開発元の告知本文の公表日。CVEレコードや公的機関による再公表の日付とは区別する。",
+  "listedDate": "2026-10-15",
+  "listedNote": "開発元のCVSS 4.0でCritical相当の評価が公表された日。JVN公表10月23日・参考リンク追記10月30日とは異なる。",
+  "modifiedAt": "2026-10-16T05:41:46.956Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T23:19:45.544450Z",
+  "affected": [
+    {
+      "name": "CVE-2023-4863: GENESIS64 / ICONICS Suite",
+      "affected": "10.97〜10.97.2",
+      "fixed": "10.97.3",
+      "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+    },
+    {
+      "name": "CVE-2026-16436 / 16437: GENESIS",
+      "affected": "11.03以前",
+      "fixed": "11.04",
+      "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+    },
+    {
+      "name": "CVE-2026-16436 / 16437: GENESIS64 / ICONICS Suite / Hyper Historian / AnalytiX / MobileHMI",
+      "affected": "10.97.3以前",
+      "fixed": "ICONICS Suite 10.98",
+      "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+    },
+    {
+      "name": "CVE-2026-16436 / 16437: IoTWorX",
+      "affected": "10.97.3以前",
+      "fixed": "10.98",
+      "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+    },
+    {
+      "name": "CVE-2026-16436 / 16437: MC Works64 / GENESIS32 / BizViz",
+      "affected": "全バージョン",
+      "fixed": null,
+      "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+    },
+    {
+      "name": "CVE-2026-16438: GENESIS64 / ICONICS Suite / Hyper Historian / AnalytiX / MobileHMI",
+      "affected": "10.97.3以前",
+      "fixed": "ICONICS Suite 10.98",
+      "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+    },
+    {
+      "name": "CVE-2026-16438: MC Works64",
+      "affected": "全バージョン",
+      "fixed": null,
+      "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+        "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+      },
+      {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+      },
+      {
+        "version": "4.0",
+        "score": 7.1,
+        "vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+      },
+      {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+        "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [
+    {
+      "issuer": "JPCERT/CC（JVN）",
+      "title": "三菱電機製の複数製品における複数の脆弱性（2026-006）",
+      "url": "https://jvn.jp/vu/JVNVU93251594/",
+      "publishedDate": "2026-10-23"
+    }
+  ],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC（JVN）",
+      "url": "https://jvn.jp/vu/JVNVU93251594/",
+      "checkedAt": "2026-10-30T23:19:45.544450Z",
+      "result": "found"
+    }
+  ],
+  "inclusion": [
+    "critical",
+    "alert"
+  ],
+  "mitigations": [
+    {
+      "text": "該当系列を公式表の修正版へ更新。修正版予定のない製品は接続・管理者アクセス制限と脆弱性別の軽減策を実施し、GENESIS等への移行を検討する。",
+      "sourceUrl": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "三菱電機 PSIRT 2026-006",
+      "url": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "type": "alert",
+      "title": "JVN JVNVU#93251594",
+      "url": "https://jvn.jp/vu/JVNVU93251594/",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開CVEレコード CVE-2023-4863",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2023-4863",
+      "publishedDate": "2023-09-12",
+      "publishedAt": "2023-09-12T14:24:59.275Z",
+      "modifiedAt": "2025-10-21T23:05:38.429Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開CVEレコード CVE-2026-16436",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-16436",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T08:29:44.678Z",
+      "modifiedAt": "2026-10-16T05:40:07.210Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開CVEレコード CVE-2026-16437",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-16437",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T08:30:39.094Z",
+      "modifiedAt": "2026-10-16T05:41:07.264Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開CVEレコード CVE-2026-16438",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-16438",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T08:31:41.267Z",
+      "modifiedAt": "2026-10-16T05:41:46.956Z"
+    }
+  ],
+  "caveats": [
+    "CISA KEV全件JSONの今回取得はHTTP 403で失敗。未掲載・実悪用なしとは判断しない。",
+    "告知単位で4 CVEを1記録に集約。CVSSの掲載順はCVE-2023-4863が9.3、CVE-2026-16436が9.2、CVE-2026-16437が7.1、CVE-2026-16438が9.4。総合ラベルは最高値のCriticalであり全4件がCriticalではない。数値からCVSS 4.0の定性区分へ対応させた。",
+    "CVE-2023-4863は2023年公表のlibwebp脆弱性だが、本記録は三菱製品に対する2026年10月15日の開発元告知。ライブラリの修正版と製品修正版を混同しない。",
+    "JVNの10月30日更新はICS Advisoryリンク追加。被害・実悪用の新規確認ではない。CISA ICS本文は403で取得できず、JVNと開発元PDF/CNAを根拠にした。",
+    "PDFの10.97.3以前等の範囲と修正版10.98をそのまま保持し、中間版の存在や修正状況を推測しない。"
+  ]
+}

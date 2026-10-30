@@ -1,0 +1,162 @@
+{
+  "kind": "product",
+  "id": "HITACHI-8DBD000224",
+  "aliases": [
+    "CVE-2026-10756",
+    "CVE-2026-106087"
+  ],
+  "vendor": "Hitachi Energy",
+  "product": "TRO600",
+  "productKey": "hitachi-tro600",
+  "title": "TRO600のアクセス制限回避と任意ファイル読取り",
+  "summary": "TRO600の2件の脆弱性。CVEごとの影響上限9.2.1.6／9.1.1.0と、修正版9.2.2.1／9.1.2.0を区別する。CISAが開発元告知を再公表した。",
+  "publishedDate": "2026-10-27",
+  "publishedAt": null,
+  "dateSourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json",
+  "dateNote": "CISAが開発元CSAFを直接変換・転載した公式JSONのinitial_release_dateと改訂履歴にある開発元初回公表日。CISA再公表10月29日、JVN掲載10月30日とは区別。 modifiedAtは今回照合したCVEレコード全体の最新更新日時であり、開発元告知の改訂日時ではない。",
+  "listedDate": "2026-10-29",
+  "listedNote": "CISA ICS Advisoryの初回再公表日。Critical評価や実悪用を推定せず、公的注意喚起を収録根拠とする。",
+  "modifiedAt": "2026-10-27T11:56:54.738Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T23:22:49.667273Z",
+  "affected": [
+    {
+      "name": "CVE-2026-10756 — TRO600",
+      "affected": "9.2.1.6以前",
+      "fixed": "9.2.2.1",
+      "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json",
+      "note": "認証済み攻撃者によるlocalhost限定サービスへのアクセス制限回避。 CNAは影響下限を9.0.0.0と明記。上限はCSAFと一致する。"
+    },
+    {
+      "name": "CVE-2026-106087 — TRO600",
+      "affected": "9.1.1.0以前",
+      "fixed": "9.1.2.0（開発元は最新9.2.2.1への更新を推奨）",
+      "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json",
+      "note": "認証なしの任意ファイル読取り。別CVEの影響上限9.2.1.6と混同しない。 CNAは影響下限を9.0.0.0と明記。上限はCSAFと一致する。"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json"
+      },
+      {
+        "version": "4.0",
+        "score": 7.7,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-10756"
+      },
+      {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-106087"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [
+    {
+      "issuer": "CISA",
+      "title": "Hitachi Energy TRO600 series products (ICSA-26-302-02)",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "issuer": "JVN（JPCERT/CC）",
+      "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月29日）",
+      "url": "https://jvn.jp/vu/JVNVU95856220/",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "alertChecks": [
+    {
+      "issuer": "CISA",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json",
+      "checkedAt": "2026-10-30T23:21:26Z",
+      "result": "found"
+    },
+    {
+      "issuer": "JVN（JPCERT/CC）",
+      "url": "https://jvn.jp/vu/JVNVU95856220/",
+      "checkedAt": "2026-10-30T23:21:26Z",
+      "result": "found"
+    }
+  ],
+  "inclusion": [
+    "alert"
+  ],
+  "mitigations": [
+    {
+      "text": "各CVEの修正版を適用し、開発元推奨の9.2.2.1へ更新する。制御ネットワークを分離し、インターネットへ直接公開しない。",
+      "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Hitachi Energy PSIRT 8DBD000224（開発元PDF、今回HTTP403）",
+      "url": "https://publisher.hitachienergy.com/preview?DocumentID=8DBD000224&LanguageCode=en&DocumentPartId=&Action=launch",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "alert",
+      "title": "CISA公式CSAF: Hitachi Energy PSIRT 8DBD000224の直接変換・転載",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json",
+      "publishedDate": "2026-10-29",
+      "modifiedAt": "2026-10-29T06:00:00Z"
+    },
+    {
+      "type": "alert",
+      "title": "JVNVU#95856220",
+      "url": "https://jvn.jp/vu/JVNVU95856220/",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開CVEレコード（CNA: Hitachi Energy） CVE-2026-10756",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-10756",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T11:56:05.906Z",
+      "modifiedAt": "2026-10-27T11:56:05.906Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開CVEレコード（CNA: Hitachi Energy） CVE-2026-106087",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106087",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T11:56:54.738Z",
+      "modifiedAt": "2026-10-27T11:56:54.738Z"
+    }
+  ],
+  "caveats": [
+    "開発元PDFの直接取得はHTTP403。開発元CSAFの直接変換・原文転載と明記されたCISA公式GitHub JSONで影響範囲・修正・スコア・開発元初回日を確認した。PDFを直接確認済みとはしない。",
+    "先頭2件のCVSSは列挙したCVE順のCISA転載3.1評価。後続のCNA評価は個別CVEの出典URLで区別する。告知全体または両CVE共通のスコアではない。",
+    "CISA ICS注意喚起の公表とKEV掲載は別。今回KEV全件JSONはHTTP403で未取得のため状態はunknown。実悪用・公開攻撃コードも確認済みとはしない。",
+    "開発元とCISAの初回・再公表日を区別し、既存ライブラリの同名CVEがある場合も製品固有の影響範囲をライブラリへ流用しない。",
+    "CNAは両CVEの影響下限を9.0.0.0と明記する一方、CISA転載の開発元CSAFは上限以前と表記する。表示範囲はCSAFを採用し、この表記差を保持。CNAのCVSS 4.0はCVE-2026-10756が7.7、CVE-2026-106087が8.7。"
+  ]
+}

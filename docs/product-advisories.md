@@ -81,3 +81,15 @@
 - BIND CVE-2026-94300はISC High 8.1。CERT-FRの10月22日注意喚起を契機とし、Criticalや実悪用を推定しない。併せて、既存ライブラリWasmtimeのGHSA-897f-g5gm-fmxmへ、開発元・CNA・OSVで確認したCVE-2026-115889を別名として追加。新規脆弱性件数は増やさない。[確認記録](data/bind-wasmtime-gap-review-2026-10-24.json)
 - Arista CVE-2026-114625はCriticalと開発元が確認した実悪用を根拠に収録。Oracle CVE-2026-91403は定例CPU集合とは別のCritical告知で、更新済みランタイムにもルート証明書除去や失効確認等の追加対策が必要。単一修正版で解決したと表現しない。[確認記録](data/product-advisory-review-2026-10-24-arista-oracle.json)
 - CISA全件JSONはHTTP403で取得できず、新規記録のKEV状態は不明。AristaのCNA内CISA ADPに10月23日KEV追加の記載があることは留保・監査に残すが、直接取得に成功したと扱わない。既存の良好なデータと収集成功点は保持した。
+
+## 2026-10-31 の継続更新
+
+既存42記録を棚卸しし、5記録追加・12記録更新で47件。企業事案・ライブラリとは独立した既存カテゴリーとして確認した。候補探索は前回確認に重なる10月23日からのJPCERT/IPA一覧と公的告知・開発元資料を用い、全開発元のCritical公表を網羅したとはしない。
+
+- 新規：PHP CVE-2026-115560、三菱GENESIS/ICONICSの4 CVE集約、Mendix SAML、Hitachi TRO600・CoreTecの各2 CVE集約。版別範囲・修正と移行を区別する。CoreTec5のCNAと開発元転載資料の5.0.0表記差は解消を推測せず残した。
+- 更新：PHP2ShellのIPA/JPCERT続報、Node.jsのBrotli注意喚起、Ahsay2件の不完全パッチ範囲、Linux・Microsoft・FortiMail・Atlassian・BeyondTrust・SiteGuard・Wiresharkの根拠付き訂正。PHP WindowsのBrotli再ビルドはPHP2Shell修正版と混同しない。
+- 既存40記録のCNA状態・範囲を比較し、選定した開発元本文を確認。Oracle CPUとProFTPD、一部のエラーページやスクリプトのみの本文は未確認で、良好データと確認日を保持。132レスポンスの保存は全本文の検証成功を意味しない。
+- KEVの直接取得はHTTP403。PHP2Shellの10月26日追加をIPAとCISA-ADPは示すが、構造化された旧notListedは過去の成功確認結果として日時付きで保持し、現在の未掲載とは説明しない。Hitachi PDFの403には開発元CSAFを直接転載したCISA公式データとCNAを用い、代替根拠を明記した。
+- PHP WindowsのCVE-2026-111497はNode.jsの既存別名と衝突し、Envoyと同じ独立製品追加の制約がある。偽IDや別名削除で回避せず候補に保持。PCM600/MSMは初回収録契機が対象期間より前で、10月の対策更新を新規公表に置換しない。
+
+[確認記録](data/product-advisory-review-2026-10-31.json)に候補・除外・保留・情報源別の取得状態を保持する。

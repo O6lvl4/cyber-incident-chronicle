@@ -1,0 +1,170 @@
+{
+  "kind": "product",
+  "id": "HITACHI-8DBD000258",
+  "aliases": [
+    "CVE-2026-13162",
+    "CVE-2026-43284"
+  ],
+  "vendor": "Hitachi Energy",
+  "product": "CoreTec4 / CoreTec5",
+  "productKey": "hitachi-coretec",
+  "title": "CoreTecのOSコマンドインジェクションとDirty Frag",
+  "summary": "CoreTecの2件の脆弱性。CoreTec5は5.0.0で修正。CoreTec4のコマンドインジェクションはCoreTec5への移行または緩和策が案内され、CoreTec4自体の修正版とは扱わない。",
+  "publishedDate": "2026-10-27",
+  "publishedAt": null,
+  "dateSourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+  "dateNote": "CISAが開発元CSAFを直接変換・転載した公式JSONのinitial_release_dateと改訂履歴にある開発元初回公表日。CISA再公表10月29日、JVN掲載10月30日とは区別。 modifiedAtは今回照合したCVEレコード全体の最新更新日時であり、開発元告知の改訂日時ではない。",
+  "listedDate": "2026-10-29",
+  "listedNote": "CISA ICS Advisoryの初回再公表日。Critical評価や実悪用を推定せず、公的注意喚起を収録根拠とする。",
+  "modifiedAt": "2026-10-27T11:50:44.803Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-30T23:22:49.667992Z",
+  "affected": [
+    {
+      "name": "CVE-2026-13162 — CoreTec4",
+      "affected": "3.4.0以前",
+      "fixed": null,
+      "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+      "note": "CoreTec4の修正版は示されず、CoreTec5 5.0.0への移行または緩和策が案内されている。 CNAでは影響下限3.0.0が明記される。"
+    },
+    {
+      "name": "CVE-2026-13162 — CoreTec5",
+      "affected": "CoreTec5 3.4.0以前",
+      "fixed": "CoreTec5 5.0.0",
+      "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+      "note": "OSコマンドインジェクション。CoreTec4も影響するが修正先・移行先を別行で記録。 CNAは3.0.0〜5.0.0（5.0.0含む）をaffectedとし、CSAFの修正5.0.0と不一致。ここではCSAFを表示し、相違を保持する。"
+    },
+    {
+      "name": "CVE-2026-43284 — CoreTec5",
+      "affected": "CoreTec5 3.4.0以前",
+      "fixed": "CoreTec5 5.0.0",
+      "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+      "note": "Dirty Frag。CISA掲載のknown_affectedはCoreTec5のみであり、CoreTec4へ推定拡張しない。"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json"
+      },
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json"
+      },
+      {
+        "version": "4.0",
+        "score": 7.7,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-13162"
+      },
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-43284"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [
+    {
+      "issuer": "CISA",
+      "title": "Hitachi Energy CoreTec Product (ICSA-26-302-03)",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "issuer": "JVN（JPCERT/CC）",
+      "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月29日）",
+      "url": "https://jvn.jp/vu/JVNVU95856220/",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "alertChecks": [
+    {
+      "issuer": "CISA",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+      "checkedAt": "2026-10-30T23:21:26Z",
+      "result": "found"
+    },
+    {
+      "issuer": "JVN（JPCERT/CC）",
+      "url": "https://jvn.jp/vu/JVNVU95856220/",
+      "checkedAt": "2026-10-30T23:21:26Z",
+      "result": "found"
+    }
+  ],
+  "inclusion": [
+    "alert"
+  ],
+  "mitigations": [
+    {
+      "text": "CoreTec5を5.0.0へ更新する。CoreTec4ではCoreTec5 5.0.0への移行または告知の緩和策を検討する。制御ネットワークを分離し、インターネットへ直接公開しない。",
+      "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Hitachi Energy PSIRT 8DBD000258（開発元PDF、今回HTTP403）",
+      "url": "https://publisher.hitachienergy.com/preview?DocumentID=8DBD000258&LanguageCode=en&DocumentPartId=&Action=launch",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "alert",
+      "title": "CISA公式CSAF: Hitachi Energy PSIRT 8DBD000258の直接変換・転載",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+      "publishedDate": "2026-10-29",
+      "modifiedAt": "2026-10-29T06:00:00Z"
+    },
+    {
+      "type": "alert",
+      "title": "JVNVU#95856220",
+      "url": "https://jvn.jp/vu/JVNVU95856220/",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開CVEレコード（CNA: Hitachi Energy） CVE-2026-13162",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-13162",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T11:50:44.803Z",
+      "modifiedAt": "2026-10-27T11:50:44.803Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開CVEレコード（CNA: Linux） CVE-2026-43284",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-43284",
+      "publishedDate": "2026-05-08",
+      "publishedAt": "2026-05-08T07:21:47.524Z",
+      "modifiedAt": "2026-10-15T01:19:19.235Z"
+    }
+  ],
+  "caveats": [
+    "開発元PDFの直接取得はHTTP403。開発元CSAFの直接変換・原文転載と明記されたCISA公式GitHub JSONで影響範囲・修正・スコア・開発元初回日を確認した。PDFを直接確認済みとはしない。",
+    "先頭2件のCVSSは列挙したCVE順のCISA転載3.1評価。後続のCNA評価は個別CVEの出典URLで区別する。告知全体または両CVE共通のスコアではない。",
+    "CISA ICS注意喚起の公表とKEV掲載は別。今回KEV全件JSONはHTTP403で未取得のため状態はunknown。実悪用・公開攻撃コードも確認済みとはしない。",
+    "開発元とCISAの初回・再公表日を区別し、既存ライブラリの同名CVEがある場合も製品固有の影響範囲をライブラリへ流用しない。",
+    "CVE-2026-13162のCNAはCoreTec5を3.0.0以上5.0.0以下（5.0.0を含む）とする一方、開発元CSAFのCISA転載は3.4.0以前が影響し5.0.0で修正とする。表示はCSAFを採用するが、この矛盾は未解消。CoreTec4のCNA範囲は3.0.0以上3.4.0以下。CNA CVSS 4.0は7.7。",
+    "CVE-2026-43284はLinux CNAの2026年5月公表のカーネル脆弱性で、CVSS 3.1は8.8。CNAのカーネル系列別修正をCoreTec製品バージョンへ推定換算しない。製品に関する公表日10月27日とCVE原公表日を区別。"
+  ]
+}
