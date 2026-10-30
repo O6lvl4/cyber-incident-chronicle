@@ -21,23 +21,83 @@
   "publishedDate": "2026-10-21",
   "publishedAt": "2026-10-21T22:00:00Z",
   "dateSourceUrl": "https://github.com/nodejs/nodejs.org/blob/main/apps/site/pages/en/blog/vulnerability/october-2026-security-releases.md",
-  "dateNote": "開発元の告知ソースのdate。各修正版リリースノートも2026年10月21日。CNAの公開日は別に保持。",
+  "dateNote": "開発元の告知ソースのdate。各修正版リリースノートも2026年10月21日。CNAの公開日は別に保持。 modifiedAtは引用したCVE公開原データの最終更新であり、Node.js開発元告知の更新時刻ではない。",
   "listedDate": "2026-10-21",
   "listedNote": "CERT.LVが全10 CVEを列挙した注意喚起の公開日。",
-  "modifiedAt": null,
+  "modifiedAt": "2026-10-30T18:31:38.139Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-24T00:56:48Z",
+  "lastVerifiedAt": "2026-10-30T23:21:14.021798Z",
   "affected": [
-    {"name": "CVE-2026-105482 — DNS入力のNUL文字による切り詰め", "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）", "fixed": "22.23.4 / 24.22.1 / 26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: High。修正版は各ブランチのリリースノートで確認。"},
-    {"name": "CVE-2026-105483 — 全角数字のIPでTLS検証を回避", "affected": "24.x（24.22.1未満） / 26.x（26.12.1未満）", "fixed": "24.22.1 / 26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: High。修正版は各ブランチのリリースノートで確認。22.xは本CVEの対象として列挙されていない。"},
-    {"name": "CVE-2026-106069 — 曖昧なIP表記でTLS検証先が不一致", "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）", "fixed": "22.23.4 / 24.22.1 / 26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: High。修正版は各ブランチのリリースノートで確認。"},
-    {"name": "CVE-2026-111497 — Brotliの境界外書き込み", "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）", "fixed": "22.23.4 / 24.22.1 / 26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: High。修正版は各ブランチのリリースノートで確認。"},
-    {"name": "CVE-2026-105481 — HTTP接続再利用時の応答取り違え", "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）", "fixed": "22.23.4 / 24.22.1 / 26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: Medium。修正版は各ブランチのリリースノートで確認。"},
-    {"name": "CVE-2026-106072 — 非正規IPv4表記でTLS検証を回避", "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）", "fixed": "22.23.4 / 24.22.1 / 26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: Medium。修正版は各ブランチのリリースノートで確認。"},
-    {"name": "CVE-2026-106074 — スナップショットによる乱数キャッシュ再利用", "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）", "fixed": "22.23.4 / 24.22.1 / 26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: Medium。修正版は各ブランチのリリースノートで確認。"},
-    {"name": "CVE-2026-106070 — ZIPヘッダー検証失敗後の内容取り違え", "affected": "26.x（26.12.1未満）", "fixed": "26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: Low。修正版は各ブランチのリリースノートで確認。24.x・22.xは本CVEの対象として列挙されていない。"},
-    {"name": "CVE-2026-106071 — Permission Modelのワイルドカード過剰許可", "affected": "26.x（26.12.1未満）", "fixed": "26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: Low。修正版は各ブランチのリリースノートで確認。24.x・22.xは本CVEの対象として列挙されていない。"},
-    {"name": "CVE-2026-106073 — fs.realpathSyncの権限確認欠落", "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）", "fixed": "22.23.4 / 24.22.1 / 26.12.1", "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases", "note": "Node.js個別告知の評価: Low。修正版は各ブランチのリリースノートで確認。"}
+    {
+      "name": "CVE-2026-105482 — DNS入力のNUL文字による切り詰め",
+      "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）",
+      "fixed": "22.23.4 / 24.22.1 / 26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: High。修正版は各ブランチのリリースノートで確認。"
+    },
+    {
+      "name": "CVE-2026-105483 — 全角数字のIPでTLS検証を回避",
+      "affected": "24.x（24.22.1未満） / 26.x（26.12.1未満）",
+      "fixed": "24.22.1 / 26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: High。修正版は各ブランチのリリースノートで確認。22.xは本CVEの対象として列挙されていない。"
+    },
+    {
+      "name": "CVE-2026-106069 — 曖昧なIP表記でTLS検証先が不一致",
+      "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）",
+      "fixed": "22.23.4 / 24.22.1 / 26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: High。修正版は各ブランチのリリースノートで確認。"
+    },
+    {
+      "name": "CVE-2026-111497 — Brotliの境界外書き込み",
+      "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）",
+      "fixed": "22.23.4 / 24.22.1 / 26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: High。修正版は各ブランチのリリースノートで確認。"
+    },
+    {
+      "name": "CVE-2026-105481 — HTTP接続再利用時の応答取り違え",
+      "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）",
+      "fixed": "22.23.4 / 24.22.1 / 26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: Medium。修正版は各ブランチのリリースノートで確認。"
+    },
+    {
+      "name": "CVE-2026-106072 — 非正規IPv4表記でTLS検証を回避",
+      "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）",
+      "fixed": "22.23.4 / 24.22.1 / 26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: Medium。修正版は各ブランチのリリースノートで確認。"
+    },
+    {
+      "name": "CVE-2026-106074 — スナップショットによる乱数キャッシュ再利用",
+      "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）",
+      "fixed": "22.23.4 / 24.22.1 / 26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: Medium。修正版は各ブランチのリリースノートで確認。"
+    },
+    {
+      "name": "CVE-2026-106070 — ZIPヘッダー検証失敗後の内容取り違え",
+      "affected": "26.x（26.12.1未満）",
+      "fixed": "26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: Low。修正版は各ブランチのリリースノートで確認。24.x・22.xは本CVEの対象として列挙されていない。"
+    },
+    {
+      "name": "CVE-2026-106071 — Permission Modelのワイルドカード過剰許可",
+      "affected": "26.x（26.12.1未満）",
+      "fixed": "26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: Low。修正版は各ブランチのリリースノートで確認。24.x・22.xは本CVEの対象として列挙されていない。"
+    },
+    {
+      "name": "CVE-2026-106073 — fs.realpathSyncの権限確認欠落",
+      "affected": "22.x（22.23.4未満） / 24.x（24.22.1未満） / 26.x（26.12.1未満）",
+      "fixed": "22.23.4 / 24.22.1 / 26.12.1",
+      "sourceUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+      "note": "Node.js個別告知の評価: Low。修正版は各ブランチのリリースノートで確認。"
+    }
   ],
   "severity": {
     "label": "high",
@@ -136,6 +196,12 @@
       "title": "Node.js Releases Security Updates Addressing Multiple Vulnerabilities (CC-4881)",
       "url": "https://digital.nhs.uk/cyber-alerts/2026/cc-4881",
       "publishedDate": "2026-10-23"
+    },
+    {
+      "issuer": "JPCERT/CC",
+      "title": "BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起",
+      "url": "https://www.jpcert.or.jp/at/2026/at260034.html",
+      "publishedDate": "2026-10-26"
     }
   ],
   "alertChecks": [
@@ -158,16 +224,16 @@
       "result": "found"
     },
     {
-      "issuer": "JPCERT/CC",
-      "url": "https://www.jpcert.or.jp/at/2026.html",
-      "checkedAt": "2026-10-24T00:56:48Z",
-      "result": "notFound"
-    },
-    {
       "issuer": "IPA",
       "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
       "checkedAt": "2026-10-24T00:56:48Z",
       "result": "notFound"
+    },
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026/at260034.html",
+      "checkedAt": "2026-10-30T23:21:14.021798Z",
+      "result": "found"
     }
   ],
   "inclusion": [
@@ -191,14 +257,15 @@
     {"type": "advisoryDatabase", "title": "CVE-2026-105482 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105482", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.831Z", "modifiedAt": "2026-10-23T16:15:05.831Z"},
     {"type": "advisoryDatabase", "title": "CVE-2026-105483 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105483", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.773Z", "modifiedAt": "2026-10-23T16:15:05.773Z"},
     {"type": "advisoryDatabase", "title": "CVE-2026-106069 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106069", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.850Z", "modifiedAt": "2026-10-23T16:15:05.850Z"},
-    {"type": "advisoryDatabase", "title": "CVE-2026-111497 CNA record (Google)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-111497", "publishedDate": "2026-10-22", "publishedAt": "2026-10-22T13:35:41.975Z", "modifiedAt": "2026-10-23T23:06:44.113Z"},
+    {"type": "advisoryDatabase", "title": "CVE-2026-111497 CNA record (Google)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-111497", "publishedDate": "2026-10-22", "publishedAt": "2026-10-22T13:35:41.975Z", "modifiedAt": "2026-10-30T18:31:38.139Z"},
     {"type": "advisoryDatabase", "title": "CVE-2026-105481 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105481", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.837Z", "modifiedAt": "2026-10-23T16:15:05.837Z"},
     {"type": "advisoryDatabase", "title": "CVE-2026-106072 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106072", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.783Z", "modifiedAt": "2026-10-23T16:15:05.783Z"},
     {"type": "advisoryDatabase", "title": "CVE-2026-106074 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106074", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.829Z", "modifiedAt": "2026-10-23T16:15:05.829Z"},
     {"type": "advisoryDatabase", "title": "CVE-2026-106070 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106070", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.741Z", "modifiedAt": "2026-10-23T16:15:05.741Z"},
     {"type": "advisoryDatabase", "title": "CVE-2026-106071 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106071", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.791Z", "modifiedAt": "2026-10-23T16:15:05.791Z"},
     {"type": "advisoryDatabase", "title": "CVE-2026-106073 CNA record (hackerone)", "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106073", "publishedDate": "2026-10-23", "publishedAt": "2026-10-23T16:15:05.728Z", "modifiedAt": "2026-10-23T16:15:05.728Z"},
-    {"type": "advisoryDatabase", "title": "Imperva: Node2Shell（研究環境での再現報告）", "url": "https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/", "publishedDate": "2026-10-22"}
+    {"type": "advisoryDatabase", "title": "Imperva: Node2Shell（研究環境での再現報告）", "url": "https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/", "publishedDate": "2026-10-22"},
+    {"type": "alert", "title": "JPCERT/CC：BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起", "url": "https://www.jpcert.or.jp/at/2026/at260034.html", "publishedDate": "2026-10-26"}
   ],
   "caveats": [
     "告知単位の1記録で10 CVEをまとめる。CERT.LV・HKCERT・NHS Englandは全10件を列挙しており、High以外の6件も既存のalert基準を満たす。",
@@ -209,7 +276,8 @@
     "Node.jsはEOL版にも注意を促すが、各CVEが全EOL版に存在するとは推定しない。サポート対象版への移行が必要。",
     "ImpervaはCVE-2026-111497の研究環境でのコード実行を報告したが、確認した本文に攻撃コードの公開先はない。NHSのpublic PoC記述だけでは既存の一次資料による公開コード基準を満たさないためpocはunknown。再現実験や将来悪用の予測を実悪用報告とは扱わない。",
     "CISA KEV全件JSONの取得はHTTP 403で失敗。未掲載とは断定せずunknownとした。実悪用は確認した一次資料で確認できていない。",
-    "JPCERT/CC・IPAの確認対象一覧にはNode.jsの該当注意喚起を確認できなかった。海外公的機関の製品固有注意喚起を根拠として収録する。",
-    "同時更新されたc-ares、Undici、OpenSSL、SQLite、証明書ストアのすべての問題を、この10 CVEの別名や同一脆弱性とは扱わない。"
+    "2026年10月24日の確認時点ではJPCERT/CC・IPA一覧に該当注意喚起を確認できず、海外公的機関の告知を収録根拠とした。その後のJPCERT/CCの10月26日注意喚起を今回追加した。",
+    "同時更新されたc-ares、Undici、OpenSSL、SQLite、証明書ストアのすべての問題を、この10 CVEの別名や同一脆弱性とは扱わない。",
+    "2026年10月26日JPCERT/CCがBrotli CVE-2026-111497についてNode.jsを含む注意喚起を公表。これは10 CVE全件への新しい注意喚起ではなくBrotliの項目に対応する。Node.js各系列の修正版は既存の開発元告知を保持。"
   ]
 }

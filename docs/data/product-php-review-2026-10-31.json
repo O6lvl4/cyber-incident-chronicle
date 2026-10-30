@@ -1,0 +1,153 @@
+{
+  "checkedAt": "2026-10-30T23:19:04.478073+00:00",
+  "scope": "Read-only review of the two existing PHP product records and related official follow-ups. No repository edits.",
+  "sources": [
+    {
+      "url": "https://www.jpcert.or.jp/at/2026/at260033.html",
+      "status": "checked",
+      "publishedDate": "2026-10-22",
+      "modifiedDate": "2026-10-29",
+      "finding": "October 26 addition covers distinct CVE-2026-115560; October 29 addition cites successful-intrusion indicators in certain firewall versions and vendor observations of PHP2Shell attacks. This is not confirmation of named Japanese corporate victims."
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html",
+      "status": "checked",
+      "publishedDate": "2026-10-22",
+      "modifiedDate": "2026-10-27",
+      "finding": "Explicitly says both PHP2Shell CVEs entered KEV on October 26. IPA has not identified domestic attack damage."
+    },
+    {
+      "url": "https://www.php.net/archive/2026.php",
+      "status": "checked",
+      "finding": "October 23 session-upload informational advisory and October 26 Windows Brotli rebuild confirmed."
+    },
+    {
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+      "status": "checked",
+      "finding": "Critical and fixes 8.2.35 / 8.3.36 / 8.4.27 / 8.5.12 remain."
+    },
+    {
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+      "status": "checked",
+      "finding": "Critical and same branch fixes remain."
+    },
+    {
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-109618",
+      "status": "failed",
+      "error": "HTTP 403"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-115560",
+      "status": "failed",
+      "error": "HTTP 404; ID independently confirmed by PHP developer and JPCERT, but CNA ranges and score unavailable."
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109618",
+      "status": "checked",
+      "state": "PUBLISHED",
+      "modifiedAt": "2026-10-30T18:31:35.583Z",
+      "finding": "CNA branch ranges and CVSS 4.0 9.2 unchanged. CISA-ADP container explicitly gives KEV dateAdded 2026-10-26. Later whole-record modification also includes Siemens supplier ADP; do not call it PHP maintainer modification."
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109619",
+      "status": "checked",
+      "state": "PUBLISHED",
+      "modifiedAt": "2026-10-30T18:31:36.959Z",
+      "finding": "CNA branch ranges and CVSS 4.0 9.2 unchanged. CISA-ADP container explicitly gives KEV dateAdded 2026-10-26. Later whole-record modification also includes Siemens supplier ADP; do not call it PHP maintainer modification."
+    }
+  ],
+  "updates": [
+    {
+      "id": "CVE-2026-109618",
+      "modifiedAt": "2026-10-30T18:31:35.583Z",
+      "lastVerifiedAt": "2026-10-30T23:19:04.478073+00:00",
+      "exploitation": {
+        "status": "reported",
+        "sourceUrl": "https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html"
+      },
+      "inclusionAdd": [
+        "exploited"
+      ],
+      "preserve": [
+        "publishedDate",
+        "publishedAt",
+        "listedDate",
+        "affected",
+        "severity",
+        "withdrawnAt"
+      ],
+      "sourceDateCorrections": {
+        "JPCERT": "Retain original publishedDate 2026-10-22; add update date only if schema supports date-only value or put in caveat. Do not invent timestamp.",
+        "IPA": "Retain original publishedDate 2026-10-22; October 27 update in caveat."
+      },
+      "replaceCaveatPrefix": "実悪用は開発元・IPA・CISAの一次資料で確認していない",
+      "replacementCaveat": "IPAは10月27日更新で両CVEが10月26日にKEVへ追加されたと公表。CVE原データのCISA-ADPも同じ追加日を記載。JPCERT/CCは10月29日更新で特定ファイアウォールの侵害成功を示唆する痕跡とベンダーの攻撃観測を紹介しているが、国内企業の被害確認や全PHP構成での侵害成功を意味しない。IPAは国内被害を把握していないとしている。",
+      "kevHandling": "Direct CISA page fetch failed. Do not falsely advance successful JSON collection point. Prefer represent current IPA/CISA-ADP evidence with exact provenance; if current schema requires direct JSON for listed, keep historical result explicitly dated and add caveat rather than claim current not-listed.",
+      "additionalCaveats": [
+        "CVE-2026-115560は10月23日に開発元が別件として公表。特定のsession.serialize_handler設定と実行時変更、session upload progress有効が組み合わさる条件で、次回通常リリースまでsession.upload_progress.enabled=0を推奨。既存2件の修正版が全面的に無効になったとは解釈しない。",
+        "PHP Windowsの10月26日 -1 再ビルドはBrotli CVE-2026-111497への依存ライブラリ修正であり、PHP2Shellの修正版番号やPHPランタイム自体の版変更とは別。"
+      ]
+    },
+    {
+      "id": "CVE-2026-109619",
+      "modifiedAt": "2026-10-30T18:31:36.959Z",
+      "lastVerifiedAt": "2026-10-30T23:19:04.478073+00:00",
+      "exploitation": {
+        "status": "reported",
+        "sourceUrl": "https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html"
+      },
+      "inclusionAdd": [
+        "exploited"
+      ],
+      "preserve": [
+        "publishedDate",
+        "publishedAt",
+        "listedDate",
+        "affected",
+        "severity",
+        "withdrawnAt"
+      ],
+      "sourceDateCorrections": {
+        "JPCERT": "Retain original publishedDate 2026-10-22; add update date only if schema supports date-only value or put in caveat. Do not invent timestamp.",
+        "IPA": "Retain original publishedDate 2026-10-22; October 27 update in caveat."
+      },
+      "replaceCaveatPrefix": "実悪用は開発元・IPA・CISAの一次資料で確認していない",
+      "replacementCaveat": "IPAは10月27日更新で両CVEが10月26日にKEVへ追加されたと公表。CVE原データのCISA-ADPも同じ追加日を記載。JPCERT/CCは10月29日更新で特定ファイアウォールの侵害成功を示唆する痕跡とベンダーの攻撃観測を紹介しているが、国内企業の被害確認や全PHP構成での侵害成功を意味しない。IPAは国内被害を把握していないとしている。",
+      "kevHandling": "Direct CISA page fetch failed. Do not falsely advance successful JSON collection point. Prefer represent current IPA/CISA-ADP evidence with exact provenance; if current schema requires direct JSON for listed, keep historical result explicitly dated and add caveat rather than claim current not-listed.",
+      "additionalCaveats": [
+        "CVE-2026-115560は10月23日に開発元が別件として公表。特定のsession.serialize_handler設定と実行時変更、session upload progress有効が組み合わさる条件で、次回通常リリースまでsession.upload_progress.enabled=0を推奨。既存2件の修正版が全面的に無効になったとは解釈しない。",
+        "PHP Windowsの10月26日 -1 再ビルドはBrotli CVE-2026-111497への依存ライブラリ修正であり、PHP2Shellの修正版番号やPHPランタイム自体の版変更とは別。"
+      ]
+    }
+  ],
+  "newCandidates": [
+    {
+      "id": "CVE-2026-115560",
+      "product": "PHP",
+      "publishedDate": "2026-10-23",
+      "dateSourceUrl": "https://www.php.net/archive/2026.php#2026-10-23-1",
+      "listedDate": "2026-10-26",
+      "inclusion": [
+        "alert"
+      ],
+      "alertSourceUrl": "https://www.jpcert.or.jp/at/2026/at260033.html",
+      "alertDateExplanation": "JPCERT initial page October 22 does not yet cover this CVE. Revision log explicitly says October 26 added overview and mitigation, which now identify this CVE. Use alert date October 26 for this CVE, not page initial October 22.",
+      "affected": "特定の版範囲は未公表。session.serialize_handler を php_binary または php_serialize と設定し、session_start() 前に ini_set() で php へ変更し、session upload progress が有効な組み合わせ。",
+      "fixed": null,
+      "severity": "unknown",
+      "cvss": [],
+      "withdrawnAt": null,
+      "mitigation": "session.upload_progress.enabled=0 として全ワーカーを再起動。通常の次回bugfix releaseで修正予定。既に設定済みなら追加変更不要。",
+      "caveat": "開発元がIDを明示しているが公開CVE APIは404。通常リリース前の完全なアドバイザリは未公表。旧2件の範囲・CVSSを転用しない。"
+    },
+    {
+      "id": "CVE-2026-111497",
+      "product": "PHP Windows packages (downstream Brotli)",
+      "publishedDate": "2026-10-26",
+      "sourceUrl": "https://www.php.net/archive/2026.php#2026-10-26-1",
+      "fixed": "8.5.12-1 / 8.4.27-1 / 8.3.36-1 / 8.2.35-1 (Brotli 1.2.1)",
+      "condition": "cURL extension automatic HTTP response decompression enabled, disabled by default but applications can enable it.",
+      "decision": "Hold independent product record unless qualifying product-level alert/Critical/exploited/KEV/PoC established. Same CVE already aliases Node.js multi-CVE product record; current global duplicate-ID gate may block a distinct downstream product record. Record audit evidence instead of changing schema."
+    }
+  ]
+}

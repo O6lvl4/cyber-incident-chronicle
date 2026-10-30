@@ -1,0 +1,141 @@
+{
+  "reportDateJst": "2026-10-31",
+  "checkedAt": "2026-10-30T23:24:22Z",
+  "baseCommit": "a83c2dbfb92f9203e8ed555932e3f85efd360956",
+  "recordsBefore": 42,
+  "recordsAfter": 47,
+  "addedRecords": 5,
+  "updatedRecords": 12,
+  "scope": "Existing product/runtime category only. All42 records inventoried,40 reviewed against saved CNA states/ranges; selected vendor originals checked. Oracle CPU and ProFTPD remain incomplete; not a full paragraph-by-paragraph revalidation of every source. New candidate window since October23 overlaps previous October25 review. No comprehensive scan of every vendor Critical bulletin.",
+  "added": [
+    "MITSUBISHI-2026-006",
+    "CVE-2026-89209",
+    "CVE-2026-115560",
+    "HITACHI-8DBD000224",
+    "HITACHI-8DBD000258"
+  ],
+  "updated": [
+    "CVE-2026-21589",
+    "CVE-2026-106931",
+    "CVE-2026-105134",
+    "CVE-2026-109618",
+    "CVE-2026-105133",
+    "CVE-2026-98260",
+    "CVE-2026-96951",
+    "CVE-2026-104286",
+    "CVE-2026-109619",
+    "CVE-2026-102764",
+    "NODEJS-2026-OCTOBER-SECURITY-RELEASES",
+    "FOXIO-HEADER-ACCORDIONS-2026"
+  ],
+  "candidateScan": {
+    "generatedAt": "2026-10-30T23:17:33.563Z",
+    "since": "2026-10-23",
+    "records": 42,
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+        "status": "failed",
+        "fetchedAt": "2026-10-30T23:17:33.562Z",
+        "error": "HTTP 403"
+      },
+      {
+        "name": "JPCERT/CC 注意喚起",
+        "url": "https://www.jpcert.or.jp/at/2026.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-30T23:17:33.251Z",
+        "items": 35
+      },
+      {
+        "name": "IPA 重要なセキュリティ情報",
+        "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-30T23:17:32.988Z",
+        "items": 29
+      }
+    ],
+    "candidates": [],
+    "drift": [
+      {
+        "kind": "alert-not-recorded",
+        "issuer": "JPCERT/CC",
+        "url": "https://www.jpcert.or.jp/at/2026/at260034.html",
+        "date": "2026-10-26",
+        "title": "BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起 (公開)",
+        "records": [
+          "NODEJS-2026-OCTOBER-SECURITY-RELEASES"
+        ]
+      }
+    ],
+    "note": "取得失敗は候補なしを意味しない。候補は一次資料を読んで判定し、除外も確認記録に残す。"
+  },
+  "candidates": [
+    {
+      "id": "MITSUBISHI-2026-006",
+      "url": "https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2026-006.pdf",
+      "decision": "included",
+      "reasons": [
+        "critical",
+        "alert"
+      ]
+    },
+    {
+      "id": "CVE-2026-89209",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-137528.html",
+      "decision": "included",
+      "reasons": [
+        "alert"
+      ]
+    },
+    {
+      "id": "CVE-2026-115560",
+      "url": "https://www.php.net/archive/2026.php#2026-10-23-1",
+      "decision": "included",
+      "reasons": [
+        "alert"
+      ]
+    },
+    {
+      "id": "HITACHI-8DBD000224",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-02.json",
+      "decision": "included",
+      "reasons": [
+        "alert"
+      ]
+    },
+    {
+      "id": "HITACHI-8DBD000258",
+      "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-302-03.json",
+      "decision": "included",
+      "reasons": [
+        "alert"
+      ]
+    },
+    {
+      "id": "PHP-WINDOWS-BROTLI-2026-10-26",
+      "url": "https://www.php.net/archive/2026.php#2026-10-26-1",
+      "decision": "held-schema-duplicate-cve-identity",
+      "reason": "CVE-2026-111497 already belongs to Node.js multi-CVE product record. Do not invent another identity or mix PHP product versions into Node.js. Official PHP Windows rebuilds 8.5.12-1 / 8.4.27-1 / 8.3.36-1 / 8.2.35-1 contain Brotli1.2.1. Automatic cURL decompression is disabled by default but can be enabled. Runtime source versions unchanged. Separate product record remains constrained by existing unique-alias schema."
+    }
+  ],
+  "sourceHandling": [
+    "JPCERT/IPA index retrieval succeeded. CISA KEV failed HTTP403; old successful values and checkpoints retained.",
+    "PHP2Shell KEV October26 addition is confirmed by IPA and CISA-ADP, but direct KEV snapshot retrieval did not succeed. Structured old notListed remains explicitly dated history, not a current non-listing claim.",
+    "Bulk source fetch interrupted with132 saved responses and7 missing URLs. Saved error pages and shells are not successful verification.",
+    "New PHP115560 CNA HTTP404. Hitachi original PDF HTTP403, with official CISA vendor-CSAF republication and CNA fallback."
+  ],
+  "detailAudits": [
+    "product-existing-review-2026-10-31.json",
+    "product-new-review-2026-10-31.json",
+    "product-php-review-2026-10-31.json",
+    "product-hitachi-review-2026-10-31.json"
+  ],
+  "publication": "Prepared data; no preclaim of CI, merge or live verification.",
+  "validation": {
+    "products": "47 records pass current evidence/identity/date validation",
+    "check": "PASS: final pnpm check after source timestamp refresh;161 tests,data validation,typecheck,production build",
+    "quality": "Pinned codopsy fabfbdc:100/100,zero warnings/errors",
+    "fixtureCorrection": "One explicit test-fixture line sets exploitation to unknown for the negative evidence test. Assertion and validator remain unchanged. Separately authorized; no UI or application behavior change."
+  }
+}

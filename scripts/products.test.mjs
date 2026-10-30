@@ -20,7 +20,7 @@ test('all product advisories pass evidence validation and sit inside the coverag
 test('every retention reason must be backed by its evidence field', () => {
   const a = structuredClone(critical); a.inclusion = ['kev'];
   assert.match(validateProducts([a], meta).join(' '), /kev inclusion without KEV listing/);
-  const b = structuredClone(critical); b.inclusion = ['exploited'];
+  const b = structuredClone(critical); b.inclusion = ['exploited']; b.exploitation = { status: 'unknown', sourceUrl: null };
   assert.match(validateProducts([b], meta).join(' '), /exploited inclusion without exploitation evidence/);
   const c = structuredClone(critical); c.inclusion = ['alert']; c.alerts = [];
   assert.match(validateProducts([c], meta).join(' '), /alert inclusion without an alert/);
