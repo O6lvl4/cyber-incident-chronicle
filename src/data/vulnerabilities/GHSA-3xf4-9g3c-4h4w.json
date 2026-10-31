@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3xf4-9g3c-4h4w",
+  "aliases": [
+    "CVE-2026-119201"
+  ],
+  "title": "Nuxt dev server exposes generated appSecret through Vite file serving",
+  "summary": "Nuxt dev server exposes generated appSecret through Vite file serving",
+  "publishedAt": "2026-10-30T23:01:12Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-3xf4-9g3c-4h4w/GHSA-3xf4-9g3c-4h4w.json",
+  "modifiedAt": "2026-10-30T23:01:12Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:58.329039Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@nuxt/vite-builder",
+      "ranges": [
+        {
+          "affected": ">= 4.6.0, < 4.6.3",
+          "fixed": "4.6.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-3xf4-9g3c-4h4w/GHSA-3xf4-9g3c-4h4w.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.6.0"
+            },
+            {
+              "fixed": "4.6.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-3xf4-9g3c-4h4w/GHSA-3xf4-9g3c-4h4w.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-3xf4-9g3c-4h4w/GHSA-3xf4-9g3c-4h4w.json"
+      },
+      {
+        "version": "3.1",
+        "score": 4.8,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://github.com/nuxt/nuxt/security/advisories/GHSA-3xf4-9g3c-4h4w"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-3xf4-9g3c-4h4w/GHSA-3xf4-9g3c-4h4w.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T23:01:12Z",
+      "modifiedAt": "2026-10-30T23:01:12Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Nuxt dev server exposes generated appSecret through Vite file serving",
+      "url": "https://github.com/advisories/GHSA-3xf4-9g3c-4h4w",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-3xf4-9g3c-4h4w",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T01:10:29Z",
+      "modifiedAt": "2026-10-29T20:19:37Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。"
+  ]
+}

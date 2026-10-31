@@ -1,0 +1,97 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7wpf-ch8f-5f4x",
+  "aliases": [],
+  "title": "signalk-server has SSRF via absolute signalk.appIcon URL in the app store icon fetcher",
+  "summary": "signalk-server has SSRF via absolute signalk.appIcon URL in the app store icon fetcher",
+  "publishedAt": "2026-10-30T22:57:37Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7wpf-ch8f-5f4x/GHSA-7wpf-ch8f-5f4x.json",
+  "modifiedAt": "2026-10-30T22:57:37Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:32.664499Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "signalk-server",
+      "ranges": [
+        {
+          "affected": ">= 2.28.0-beta.2, < 2.34.0",
+          "fixed": "2.34.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7wpf-ch8f-5f4x/GHSA-7wpf-ch8f-5f4x.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.28.0-beta.2"
+            },
+            {
+              "fixed": "2.34.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7wpf-ch8f-5f4x/GHSA-7wpf-ch8f-5f4x.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7wpf-ch8f-5f4x/GHSA-7wpf-ch8f-5f4x.json"
+      },
+      {
+        "version": "3.1",
+        "score": 4.2,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-7wpf-ch8f-5f4x"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7wpf-ch8f-5f4x/GHSA-7wpf-ch8f-5f4x.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:57:37Z",
+      "modifiedAt": "2026-10-30T22:57:37Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "signalk-server has SSRF via absolute signalk.appIcon URL in the app store icon fetcher",
+      "url": "https://github.com/advisories/GHSA-7wpf-ch8f-5f4x",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-7wpf-ch8f-5f4x",
+      "publishedDate": "2026-10-18",
+      "publishedAt": "2026-10-18T19:17:28Z",
+      "modifiedAt": "2026-10-18T19:17:28Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元APIは<=2.33.0、修正版未指定。Reviewedの導入境界2.28.0-beta.2と修正版2.34.0はDB由来で、今回の開発元本文の修正版確認と混同しない。"
+  ]
+}

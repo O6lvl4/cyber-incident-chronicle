@@ -1,0 +1,97 @@
+{
+  "id": "saison-realestate-platform-2026",
+  "company": "株式会社クレディセゾン",
+  "geography": "日本",
+  "title": "セゾンのスマート不動産投資の委託先侵害、1889名の漏えい確認",
+  "announcementDate": "2026-10-31",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": "2026-10-29",
+  "occurredDateLabel": "公式が確認した攻撃日",
+  "updatedDate": "2026-10-31",
+  "statusAsOfDate": "2026-10-31",
+  "lastVerifiedDate": "2026-11-01",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "外部委託先の報告による、外部公開された認証の仕組みの不備の悪用",
+    "status": "confirmed"
+  },
+  "summary": "外部委託先の会員管理基盤に不正アクセスがあり、1,889名の情報漏えいを確認。29日22時から基盤を緊急停止し、再開時期は未定。",
+  "affectedData": [
+    "39名：氏名、メールアドレス、住所、生年月日、電話番号、国籍、配当金受取口座・投資家適合性の情報、購入口数（項目は人により異なる）",
+    "1,850名：氏名・購入口数"
+  ],
+  "counts": [
+    {
+      "value": 1889,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "漏えい確認された本サービス利用者の合計",
+      "approximate": false
+    },
+    {
+      "value": 39,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "合計1,889名の内数：口座・適合性情報等を含み得る範囲",
+      "approximate": false
+    },
+    {
+      "value": 1850,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "合計1,889名の内数：氏名・購入口数",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "1,889名と内数39名・1,850名を合算しない。委託先全利用者の総数ではない。",
+    "調査範囲で資産記録の書換え・ブロックチェーン上の資産移転は未確認。クレジットカード情報は保有せず対象外。",
+    "委託先名は本資料では未公表。他社の証券基盤事案と同一侵入であることは未確認。"
+  ],
+  "sources": [
+    {
+      "title": "「セゾンのスマート不動産投資」に関する外部委託先への不正アクセスによる個人情報漏えいに関するお知らせ",
+      "url": "https://www.saisoncard.co.jp/customer-support/information/20261031/",
+      "publishedDate": "2026-10-31"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-29",
+      "label": "侵入・漏えい報告受領・緊急停止",
+      "kind": "occurrence",
+      "summary": "3時42分〜6時17分の侵入を確認。委託先から漏えい報告を受け、22時に基盤を停止。",
+      "sourceUrl": "https://www.saisoncard.co.jp/customer-support/information/20261031/"
+    },
+    {
+      "date": "2026-10-31",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "外部委託先の会員管理基盤に不正アクセスがあり、1,889名の情報漏えいを確認。29日22時から基盤を緊急停止し、再開時期は未定。",
+      "sourceUrl": "https://www.saisoncard.co.jp/customer-support/information/20261031/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026-10-29",
+      "note": "2026年10月29日3時42分〜6時17分（日本時間）。",
+      "sourceUrl": "https://www.saisoncard.co.jp/customer-support/information/20261031/",
+      "reviewedDate": "2026-11-01",
+      "startDate": "2026-10-29"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月29日（委託元の報告受領）",
+      "startDate": "2026-10-29",
+      "note": "クレディセゾンが委託先から漏えい発生の報告を受けた日。委託先自身の初確認日時は未公表。",
+      "sourceUrl": "https://www.saisoncard.co.jp/customer-support/information/20261031/",
+      "reviewedDate": "2026-11-01"
+    }
+  }
+}

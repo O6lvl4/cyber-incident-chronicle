@@ -1,0 +1,82 @@
+{
+  "id": "tokyu-land-shared-web-server-2026",
+  "company": "東急不動産株式会社",
+  "geography": "日本",
+  "title": "共同サーバー環境への不正アクセス、会員4079件等に漏えい可能性",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-11-01",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "CMS（WordPress等）のソフトウェア脆弱性およびサーバー内アクセス権限の設定不備を突いた攻撃",
+    "status": "confirmed"
+  },
+  "summary": "管理サイトのAWS共同サーバー環境で侵入を確認し、19日に遮断。CMSの脆弱性とアクセス権限設定不備が原因と説明し、20日以降に対策・順次復旧を実施。",
+  "affectedData": [
+    "GREEN CROSS PARK：会社・部署・氏名・メール・電話・関心プロジェクト等",
+    "GREENUP Cooldown Project：会社・氏名・フリガナ・メール・電話・問い合わせ内容"
+  ],
+  "counts": [
+    {
+      "value": 4079,
+      "unit": "件",
+      "status": "possible",
+      "label": "GREEN CROSS PARKの会員登録情報",
+      "approximate": false
+    },
+    {
+      "value": 3,
+      "unit": "件",
+      "status": "possible",
+      "label": "GREENUP Cooldown Projectの問い合わせ情報",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "流出有無の特定は困難と説明し、可能性を否定できないとして対応。確定漏えい人数ではない。",
+    "同日公表のStudio利用サイトの5件・20件とは別の環境・対象であり、Studioの既存事案へ混ぜない。",
+    "AWS自体の脆弱性が原因との公表ではない。発生日・侵入開始日と検知日を区別する。"
+  ],
+  "sources": [
+    {
+      "title": "当社管理ウェブサイトにおける不正アクセスおよび個人情報流出の可能性について",
+      "url": "https://www.tokyu-land.co.jp/news/uploads/4e81382e895fcd779559705843fcb56f83846c28.pdf",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "管理サイトのAWS共同サーバー環境で侵入を確認し、19日に遮断。CMSの脆弱性とアクセス権限設定不備が原因と説明し、20日以降に対策・順次復旧を実施。",
+      "sourceUrl": "https://www.tokyu-land.co.jp/news/uploads/4e81382e895fcd779559705843fcb56f83846c28.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃日未公表",
+      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
+      "sourceUrl": "https://www.tokyu-land.co.jp/news/uploads/4e81382e895fcd779559705843fcb56f83846c28.pdf",
+      "reviewedDate": "2026-11-01"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害初確認日未公表",
+      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
+      "sourceUrl": "https://www.tokyu-land.co.jp/news/uploads/4e81382e895fcd779559705843fcb56f83846c28.pdf",
+      "reviewedDate": "2026-11-01"
+    }
+  },
+  "detectedDate": "2026-10-19"
+}

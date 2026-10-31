@@ -1,0 +1,99 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vp5q-ff62-jwqv",
+  "aliases": [
+    "CVE-2026-116794"
+  ],
+  "title": "russh: Agent server never calls `Agent::confirm`, so keys added with the confirm constraint (`ssh-add -c`) sign without confirmation",
+  "summary": "russh: Agent server never calls `Agent::confirm`, so keys added with the confirm constraint (`ssh-add -c`) sign without confirmation",
+  "publishedAt": "2026-10-30T22:59:08Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-vp5q-ff62-jwqv/GHSA-vp5q-ff62-jwqv.json",
+  "modifiedAt": "2026-10-30T22:59:08Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:28.250209Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "russh",
+      "ranges": [
+        {
+          "affected": "< 0.65",
+          "fixed": "0.65",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-vp5q-ff62-jwqv/GHSA-vp5q-ff62-jwqv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.65"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-vp5q-ff62-jwqv/GHSA-vp5q-ff62-jwqv.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-vp5q-ff62-jwqv/GHSA-vp5q-ff62-jwqv.json"
+      },
+      {
+        "version": "4.0",
+        "score": 8.3,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+        "sourceUrl": "https://github.com/Eugeny/russh/security/advisories/GHSA-vp5q-ff62-jwqv"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-vp5q-ff62-jwqv/GHSA-vp5q-ff62-jwqv.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:59:08Z",
+      "modifiedAt": "2026-10-30T22:59:08Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "russh: Agent server never calls `Agent::confirm`, so keys added with the confirm constraint (`ssh-add -c`) sign without confirmation",
+      "url": "https://github.com/advisories/GHSA-vp5q-ff62-jwqv",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/Eugeny/russh/security/advisories/GHSA-vp5q-ff62-jwqv",
+      "publishedDate": "2026-10-25",
+      "publishedAt": "2026-10-25T16:50:46Z",
+      "modifiedAt": "2026-10-28T17:06:19Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元構造化範囲は<0.65だが、本文は0.50.0-beta.12から0.64.1のagent serverに限定し、古いrussh-keysやSSH client/serverを対象外とする。confirm_requestによる検査は別経路として残る。"
+  ]
+}

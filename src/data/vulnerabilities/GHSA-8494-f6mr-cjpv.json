@@ -1,0 +1,123 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8494-f6mr-cjpv",
+  "aliases": [
+    "CVE-2026-119202"
+  ],
+  "title": "@hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service",
+  "summary": "@hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service",
+  "publishedAt": "2026-10-30T23:10:13Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8494-f6mr-cjpv/GHSA-8494-f6mr-cjpv.json",
+  "modifiedAt": "2026-10-30T23:10:13Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:46.783055Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@hapi/content",
+      "ranges": [
+        {
+          "affected": "< 6.0.3",
+          "fixed": "6.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8494-f6mr-cjpv/GHSA-8494-f6mr-cjpv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "content",
+      "ranges": [
+        {
+          "affected": ">= 3.0.6, <= 4.0.6",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8494-f6mr-cjpv/GHSA-8494-f6mr-cjpv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.0.6"
+            },
+            {
+              "last_affected": "4.0.6"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8494-f6mr-cjpv/GHSA-8494-f6mr-cjpv.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8494-f6mr-cjpv/GHSA-8494-f6mr-cjpv.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/hapijs/content/security/advisories/GHSA-8494-f6mr-cjpv"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8494-f6mr-cjpv/GHSA-8494-f6mr-cjpv.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T23:10:13Z",
+      "modifiedAt": "2026-10-30T23:10:13Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "@hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service",
+      "url": "https://github.com/advisories/GHSA-8494-f6mr-cjpv",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/hapijs/content/security/advisories/GHSA-8494-f6mr-cjpv",
+      "publishedDate": "2026-10-28",
+      "publishedAt": "2026-10-28T09:04:50Z",
+      "modifiedAt": "2026-10-29T20:22:57Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。"
+  ]
+}

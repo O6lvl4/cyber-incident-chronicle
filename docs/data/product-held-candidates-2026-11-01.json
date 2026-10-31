@@ -1,0 +1,298 @@
+{
+  "status": "verified-candidates-not-published-product-records",
+  "reason": "Existing validation source/date contracts require separate code review; this data-only run does not change gates.",
+  "candidates": [
+    {
+      "kind": "product",
+      "id": "CVE-2026-41709",
+      "aliases": [],
+      "vendor": "Broadcom",
+      "product": "VMware ESX",
+      "productKey": "vmware-esx",
+      "title": "管理者による操作を記録しないログ不足の脆弱性",
+      "summary": "VMware ESXの管理者が特定の操作をログへ記録させずに実行できる問題。個別評価はLow（CVSS 3.1: 2.7）だが、CISAは10月28日に実悪用の根拠に基づきKEVへ追加した。",
+      "publishedDate": "2026-07-29",
+      "publishedAt": "2026-07-29T04:30:00.000Z",
+      "dateSourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-41709",
+      "dateNote": "開発元告知の初回公開日7月29日とVMware CNAのdatePublicが一致。CVEレコードの公開日7月30日、KEV追加日10月28日と区別。",
+      "listedDate": "2026-10-28",
+      "listedNote": "個別CVEはLow評価。確認した一次資料ではCISA KEV追加と実悪用公表が初めての収録契機。複数CVEを含む開発元告知全体のCriticalを本CVEへ流用しない。",
+      "modifiedAt": "2026-10-29T03:56:50.795Z",
+      "withdrawnAt": null,
+      "lastVerifiedAt": "2026-10-31T21:10:20Z",
+      "affected": [
+        {
+          "name": "VMware ESX 9.1.x.x（VCF / vSphere Foundation）",
+          "affected": "9.1.x.x の ESXi-9.1.0.0-25370933 未満",
+          "fixed": "ESXi-9.1.0.0-25370933",
+          "sourceUrl": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        },
+        {
+          "name": "VMware ESX 9.0.x.x（VCF / vSphere Foundation）",
+          "affected": "9.0.x.x の ESXi-9.0.2.0100-25595025 未満",
+          "fixed": "ESXi-9.0.2.0100-25595025",
+          "sourceUrl": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        },
+        {
+          "name": "VMware ESX 8.0",
+          "affected": "8.0 の ESXi80U3j-25429389 未満",
+          "fixed": "ESXi80U3j-25429389",
+          "sourceUrl": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        },
+        {
+          "name": "VMware Cloud Foundation 5.x（ESX）",
+          "affected": "5.x の 5.2.4 未満",
+          "fixed": "5.2.4",
+          "sourceUrl": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        },
+        {
+          "name": "VMware Telco Cloud Platform（ESX）",
+          "affected": "5.0.x、5.1.x",
+          "fixed": null,
+          "sourceUrl": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        }
+      ],
+      "severity": {
+        "label": "low",
+        "sourceUrl": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017",
+        "cvss": [
+          {
+            "version": "3.1",
+            "score": 2.7,
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N",
+            "sourceUrl": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+          }
+        ]
+      },
+      "exploitation": {
+        "status": "reported",
+        "sourceUrl": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      },
+      "kev": {
+        "status": "listed",
+        "sourceUrl": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+        "checkedAt": "2026-10-31T21:10:20Z",
+        "addedDate": "2026-10-28"
+      },
+      "poc": {
+        "status": "unknown",
+        "sourceUrl": null
+      },
+      "alerts": [],
+      "alertChecks": [],
+      "inclusion": [
+        "exploited",
+        "kev"
+      ],
+      "mitigations": [
+        {
+          "text": "開発元のResponse Matrixに従って製品・系列別の修正版を適用する。開発元は本CVEの回避策を案内していない。",
+          "sourceUrl": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        }
+      ],
+      "sources": [
+        {
+          "type": "maintainer",
+          "title": "VMSA-2026-0006.2, section 3e: ESX insufficient logging vulnerability",
+          "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017",
+          "publishedDate": "2026-07-29"
+        },
+        {
+          "type": "advisoryDatabase",
+          "title": "VMware CNA CVE-2026-41709",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-41709",
+          "publishedDate": "2026-07-30",
+          "publishedAt": "2026-07-30T12:45:02.292Z",
+          "modifiedAt": "2026-10-29T03:56:50.795Z"
+        },
+        {
+          "type": "kev",
+          "title": "CISA KEV catalog 2026.10.30 (official cisagov/kev-data mirror)",
+          "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+          "publishedDate": "2026-10-28"
+        }
+      ],
+      "caveats": [
+        "本件は管理者権限を持つ攻撃者によるログ回避であり、未認証の侵入や権限昇格を単独で可能にする問題ではない。",
+        "CISA本体JSONと個別カタログはHTTP403。CISAが運営する公式GitHubミラー2026.10.30を直接取得してKEV掲載を確認した。本体の取得成功とは扱わない。",
+        "開発元告知全体はCriticalだが、対象CVE-2026-41709の個別評価はLow2.7。",
+        "CNAのCloud Foundation / vSphere Foundation 9.x範囲は系列全体の表記であり、修正ビルドは開発元Response Matrixを採用。Telco Cloud PlatformはKB449886の案内を参照し、単一の修正版を推測しない。",
+        "KEV掲載は実悪用の存在を示すが、個別の日本企業の被害や被害件数を意味しない。"
+      ]
+    },
+    {
+      "kind": "product",
+      "id": "CVE-2026-98432",
+      "aliases": [],
+      "vendor": "Linux / AlmaLinux OS Foundation",
+      "product": "Linux kernel（IPv4 TCP）",
+      "productKey": "linux-kernel",
+      "title": "IPv4 TCP接続処理のuse-after-free（Critical、AlmaLinux修正版はtesting）",
+      "summary": "IPv4オプションを持つTCP接続の処理で解放済みメモリーを参照する問題。Linux CNAはCritical9.8と評価。AnthropicはMPTCP待受での遠隔コード実行を実証したと公表したが、MPTCP無効でも本体の欠陥は残る。AlmaLinuxは10月30日にtesting版の修正カーネルを提供した。",
+      "publishedDate": "2026-10-15",
+      "publishedAt": "2026-10-15T12:08:22.205Z",
+      "dateSourceUrl": "https://raw.githubusercontent.com/CVEProject/cvelistV5/bab0e0d43de5b4d0d6142616a74e891ee766a8ca/cves/2026/98xxx/CVE-2026-98432.json",
+      "dateNote": "Linux kernel CNAが公開した初版の公表日時。kernel.orgの告知本文は403で取得できず、開発元自身が発行したCNAの初版履歴を採用。AlmaLinuxの10月30日告知とは区別。",
+      "listedDate": "2026-10-24",
+      "listedNote": "CVEProjectの10月15日初版・追補、10月19日版にCVSSはなく、10月24日14:08:46.326ZのLinux CNA改訂でCritical9.8が初めて確認できる。公表日に遡及させない。",
+      "modifiedAt": "2026-10-31T21:04:43.990Z",
+      "withdrawnAt": null,
+      "lastVerifiedAt": "2026-10-31T21:12:31Z",
+      "affected": [
+        {
+          "name": "Linux upstream 5.10.*",
+          "affected": "4.4以降の対象系列で修正5.10.272より前（CNAの系列別範囲）",
+          "fixed": "5.10.272",
+          "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+        },
+        {
+          "name": "Linux upstream 5.15.*",
+          "affected": "4.4以降の対象系列で修正5.15.223より前（CNAの系列別範囲）",
+          "fixed": "5.15.223",
+          "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+        },
+        {
+          "name": "Linux upstream 6.1.*",
+          "affected": "4.4以降の対象系列で修正6.1.190より前（CNAの系列別範囲）",
+          "fixed": "6.1.190",
+          "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+        },
+        {
+          "name": "Linux upstream 6.6.*",
+          "affected": "4.4以降の対象系列で修正6.6.159より前（CNAの系列別範囲）",
+          "fixed": "6.6.159",
+          "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+        },
+        {
+          "name": "Linux upstream 6.12.*",
+          "affected": "4.4以降の対象系列で修正6.12.113より前（CNAの系列別範囲）",
+          "fixed": "6.12.113",
+          "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+        },
+        {
+          "name": "Linux upstream 6.18.*",
+          "affected": "4.4以降の対象系列で修正6.18.56より前（CNAの系列別範囲）",
+          "fixed": "6.18.56",
+          "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+        },
+        {
+          "name": "Linux upstream 7.2.*",
+          "affected": "4.4以降の対象系列で修正7.2.10より前（CNAの系列別範囲）",
+          "fixed": "7.2.10",
+          "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+        },
+        {
+          "name": "Linux upstream 7.3以降",
+          "affected": "4.4以降の対象系列で修正7.3より前（CNAの系列別範囲）",
+          "fixed": "7.3",
+          "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+        },
+        {
+          "name": "AlmaLinux 8",
+          "affected": "開発元が影響ありとしたAlmaLinux 8の未修正カーネル",
+          "fixed": "kernel-4.18.0-553.180.2.el8_10",
+          "sourceUrl": "https://almalinux.org/blog/2026-10-30-cve-2026-98432/",
+          "note": "確認時点ではtestingリポジトリで提供。本番リポジトリでの提供完了は未確認。"
+        },
+        {
+          "name": "AlmaLinux 9",
+          "affected": "開発元が影響ありとしたAlmaLinux 9の未修正カーネル",
+          "fixed": "kernel-5.14.0-687.61.2.el9_8",
+          "sourceUrl": "https://almalinux.org/blog/2026-10-30-cve-2026-98432/",
+          "note": "確認時点ではtestingリポジトリで提供。本番リポジトリでの提供完了は未確認。"
+        },
+        {
+          "name": "AlmaLinux 10",
+          "affected": "開発元が影響ありとしたAlmaLinux 10の未修正カーネル",
+          "fixed": "kernel-6.12.0-211.69.2.el10_2",
+          "sourceUrl": "https://almalinux.org/blog/2026-10-30-cve-2026-98432/",
+          "note": "確認時点ではtestingリポジトリで提供。本番リポジトリでの提供完了は未確認。"
+        }
+      ],
+      "severity": {
+        "label": "critical",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432",
+        "cvss": [
+          {
+            "version": "3.1",
+            "score": 9.8,
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-98432"
+          }
+        ]
+      },
+      "exploitation": {
+        "status": "unknown",
+        "sourceUrl": null
+      },
+      "kev": {
+        "status": "unknown",
+        "sourceUrl": null,
+        "checkedAt": null
+      },
+      "poc": {
+        "status": "unknown",
+        "sourceUrl": null
+      },
+      "alerts": [],
+      "alertChecks": [],
+      "inclusion": [
+        "critical"
+      ],
+      "mitigations": [
+        {
+          "text": "利用ディストリビューションの修正カーネルを適用し再起動する。AlmaLinuxの記載ビルドは確認時testing提供で、本番リポジトリ提供済みとは扱わない。",
+          "sourceUrl": "https://almalinux.org/blog/2026-10-30-cve-2026-98432/"
+        },
+        {
+          "text": "AlmaLinuxは一時的にIPv4オプションを含むTCP通信を遮断する対策を案内。CIPSO/NetLabel利用時は不適合、同一ホスト内コンテナー間通信等の限界がある。MPTCP停止も修正の代替ではない。",
+          "sourceUrl": "https://almalinux.org/blog/2026-10-30-cve-2026-98432/"
+        }
+      ],
+      "sources": [
+        {
+          "type": "maintainer",
+          "title": "Linux kernel CNA initial publication (CVEProject immutable revision)",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/bab0e0d43de5b4d0d6142616a74e891ee766a8ca/cves/2026/98xxx/CVE-2026-98432.json",
+          "publishedDate": "2026-10-15",
+          "publishedAt": "2026-10-15T12:08:22.205Z"
+        },
+        {
+          "type": "advisoryDatabase",
+          "title": "Linux kernel CNA CVE-2026-98432 current record",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-98432",
+          "publishedDate": "2026-10-15",
+          "publishedAt": "2026-10-15T12:08:22.205Z",
+          "modifiedAt": "2026-10-31T21:04:43.990Z"
+        },
+        {
+          "type": "advisoryDatabase",
+          "title": "Linux kernel CNA October24 revision adding Critical CVSS assessment",
+          "url": "https://raw.githubusercontent.com/CVEProject/cvelistV5/60903919a7c321ee5353716e0314268cb8bb9f48/cves/2026/98xxx/CVE-2026-98432.json",
+          "publishedDate": "2026-10-15",
+          "modifiedAt": "2026-10-24T14:08:46.326Z"
+        },
+        {
+          "type": "maintainer",
+          "title": "AlmaLinux: CVE-2026-98432: Patched kernels available in testing",
+          "url": "https://almalinux.org/blog/2026-10-30-cve-2026-98432/",
+          "publishedDate": "2026-10-30"
+        },
+        {
+          "type": "maintainer",
+          "title": "Anthropic original researcher report: Discovering and exploiting vulnerabilities in critical, real-world software with Claude",
+          "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+          "publishedDate": "2026-10-27"
+        }
+      ],
+      "caveats": [
+        "CNAの修正版はupstream系列の値。ディストリビューションのバックポートはバージョン番号だけで影響判定せず、各開発元告知を確認する。",
+        "AlmaLinux 8/9/10の修正ビルドは10月30日の記事でtesting提供。記事は本番リポジトリへの移行後に更新予定としており、確認時点で移行完了は確認していない。",
+        "Anthropicによる攻撃実証の記述は、第三者による実悪用や攻撃コードの公開を意味しない。poc/exploitationはunknownを保持。",
+        "MPTCPを無効にすると公表された実証の条件は減るが、欠陥は通常のIPv4 TCP処理にもある。MPTCP無効を修正済みと扱わない。IPv6の主問題は対象外だが、CALIPSOを用いるrequest migrationの類似問題はCNAが別パッチ対象と記載。",
+        "kernel.orgの初版mboxと修正コミットはHTTP403。CVE Services API、CVEProjectの不変履歴、AlmaLinuxの告知を取得して代替確認した。",
+        "CISA本体のKEV取得失敗と既存の出典契約制約により、構造化KEVはunknownとする。"
+      ]
+    }
+  ]
+}

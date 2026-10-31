@@ -1,0 +1,97 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-2wrx-84qj-4pcg",
+  "aliases": [],
+  "title": "anacrolix torrent has unbounded recursion in the bencode decoder that causes stack-overflow crash and CPU-exhaustion DoS",
+  "summary": "anacrolix torrent has unbounded recursion in the bencode decoder that causes stack-overflow crash and CPU-exhaustion DoS",
+  "publishedAt": "2026-10-30T22:55:09Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-2wrx-84qj-4pcg/GHSA-2wrx-84qj-4pcg.json",
+  "modifiedAt": "2026-10-30T22:55:09Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:32.719189Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/anacrolix/torrent",
+      "ranges": [
+        {
+          "affected": "< 1.61.1-0.20260911233437-76452a2c8a2f",
+          "fixed": "1.61.1-0.20260911233437-76452a2c8a2f",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-2wrx-84qj-4pcg/GHSA-2wrx-84qj-4pcg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.61.1-0.20260911233437-76452a2c8a2f"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-2wrx-84qj-4pcg/GHSA-2wrx-84qj-4pcg.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-2wrx-84qj-4pcg/GHSA-2wrx-84qj-4pcg.json"
+      },
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/anacrolix/torrent/security/advisories/GHSA-2wrx-84qj-4pcg"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-2wrx-84qj-4pcg/GHSA-2wrx-84qj-4pcg.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:55:09Z",
+      "modifiedAt": "2026-10-30T22:55:09Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "anacrolix torrent has unbounded recursion in the bencode decoder that causes stack-overflow crash and CPU-exhaustion DoS",
+      "url": "https://github.com/advisories/GHSA-2wrx-84qj-4pcg",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/anacrolix/torrent/security/advisories/GHSA-2wrx-84qj-4pcg",
+      "publishedDate": "2026-09-11",
+      "publishedAt": "2026-09-11T23:39:23Z",
+      "modifiedAt": "2026-09-11T23:39:23Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元APIはactions/anacrolix/torrent、確認版1.61.0、修正版未指定。ReviewedはGoモジュールと修正擬似バージョンを示すため、その違いを保持。開発元の修正版確認済みとは扱わない。"
+  ]
+}

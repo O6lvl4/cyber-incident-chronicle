@@ -1,0 +1,1401 @@
+{
+  "checkedAt": "2026-10-31T21:12:16.287846Z",
+  "source": "CISA official GitHub mirror, separate from failed cisa.gov endpoint",
+  "sourceCommit": "7ccba8e1223ccec82d12c7736bf3fae11e5bee86",
+  "sourceChecks": [
+    {
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/7ccba8e1223ccec82d12c7736bf3fae11e5bee86/README.md",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-31T21:11:52.089998Z",
+      "bytes": 3318,
+      "sha256": "7d18e1fc40185acc90128fcceb18f016e010c8d0cf4125c3311c9381cbafcfe2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/7ccba8e1223ccec82d12c7736bf3fae11e5bee86/known_exploited_vulnerabilities.json",
+      "httpStatus": 200,
+      "checkedAt": "2026-10-31T21:11:55.487214Z",
+      "bytes": 1826755,
+      "sha256": "3aa9cf3c01f116362a29d111702979175453c425e3733bde80fc4f6f8e2294e5"
+    }
+  ],
+  "catalog": {
+    "title": "CISA Catalog of Known Exploited Vulnerabilities",
+    "catalogVersion": "2026.10.30",
+    "dateReleased": "2026-10-30T17:02:45.3665Z",
+    "count": 1766
+  },
+  "matchingMethod": "Exact primary ID or alias equality with cveID; no inferred mapping or package-name matching. Full imported set of 19684 checked.",
+  "matchedLibraryRecords": 45,
+  "candidates": [
+    {
+      "id": "GHSA-2679-6mx9-h9xc",
+      "aliases": [
+        "CVE-2026-39987"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Marimo: Pre-Auth Remote Code Execution via Terminal WebSocket Authentication Bypass",
+      "matches": [
+        {
+          "cveID": "CVE-2026-39987",
+          "vendorProject": "Marimo",
+          "product": "Marimo",
+          "vulnerabilityName": "Marimo Remote Code Execution Vulnerability",
+          "dateAdded": "2026-04-23",
+          "shortDescription": "Marimo contains an pre-authorization remote code execution vulnerability, allowing an unauthenticated attacked to shell access and execute arbitrary system commands.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-05-07",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/marimo-team/marimo/security/advisories/GHSA-2679-6mx9-h9xc ; https://nvd.nist.gov/vuln/detail/CVE-2026-39987",
+          "cwes": [
+            "CWE-306"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-29rc-vq7f-x335",
+      "aliases": [
+        "CVE-2024-27348"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Apache HugeGraph-Server: Command execution in gremlin",
+      "matches": [
+        {
+          "cveID": "CVE-2024-27348",
+          "vendorProject": "Apache",
+          "product": "HugeGraph-Server",
+          "vulnerabilityName": "Apache HugeGraph-Server Improper Access Control Vulnerability",
+          "dateAdded": "2024-09-18",
+          "shortDescription": "Apache HugeGraph-Server contains an improper access control vulnerability that could allow a remote attacker to execute arbitrary code.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2024-10-09",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects a common open-source component, third-party library, or a protocol used by different products. Please check with specific vendors for information on patching status. For more information, please see:  https://lists.apache.org/thread/nx6g6htyhpgtzsocybm242781o8w5kq9 ; https://nvd.nist.gov/vuln/detail/CVE-2024-27348",
+          "cwes": [
+            "CWE-284"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2pxw-r47w-4p8c",
+      "aliases": [
+        "CVE-2023-28434"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Privilege Escalation on Linux/MacOS",
+      "matches": [
+        {
+          "cveID": "CVE-2023-28434",
+          "vendorProject": "MinIO",
+          "product": "MinIO",
+          "vulnerabilityName": "MinIO Security Feature Bypass Vulnerability",
+          "dateAdded": "2023-09-19",
+          "shortDescription": "MinIO contains a security feature bypass vulnerability that allows an attacker to use crafted requests to bypass metadata bucket name checking and put an object into any bucket while processing `PostPolicyBucket` to conduct privilege escalation. To carry out this attack, the attacker requires credentials with `arn:aws:s3:::*` permission, as well as enabled Console API access.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2023-10-10",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/minio/minio/security/advisories/GHSA-2pxw-r47w-4p8c;  https://nvd.nist.gov/vuln/detail/CVE-2023-28434",
+          "cwes": [
+            "CWE-269"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-399j-vxmf-hjvr",
+      "aliases": [
+        "CVE-2025-11953"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "@react-native-community/cli has arbitrary OS command injection",
+      "matches": [
+        {
+          "cveID": "CVE-2025-11953",
+          "vendorProject": "React Native Community",
+          "product": "CLI",
+          "vulnerabilityName": "React Native Community CLI OS Command Injection Vulnerability",
+          "dateAdded": "2026-02-05",
+          "shortDescription": "React Native Community CLI contains an OS command injection vulnerability which could allow unauthenticated network attackers to send POST requests to the Metro Development Server and run arbitrary executables via a vulnerable endpoint exposed by the server. On Windows, attackers can also execute arbitrary shell commands with fully controlled arguments.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-02-26",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/react-native-community/cli/commit/15089907d1f1301b22c72d7f68846a2ef20df547 ; https://github.com/react-native-community/cli/pull/2735 ; https://nvd.nist.gov/vuln/detail/CVE-2025-11953",
+          "cwes": [
+            "CWE-78"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4r4m-qw57-chr8",
+      "aliases": [
+        "CVE-2025-31125"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Vite has a `server.fs.deny` bypassed for `inline` and `raw` with `?import` query",
+      "matches": [
+        {
+          "cveID": "CVE-2025-31125",
+          "vendorProject": "Vite",
+          "product": "Vitejs",
+          "vulnerabilityName": "Vite Vitejs Improper Access Control Vulnerability",
+          "dateAdded": "2026-01-22",
+          "shortDescription": "Vite Vitejs contains an improper access control vulnerability that exposes content of non-allowed files using ?inline&import or ?raw?import. Only apps explicitly exposing the Vite dev server to the network (using --host or server.host config option) are affected.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-02-12",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/vitejs/vite/commit/59673137c45ac2bcfad1170d954347c1a17ab949 ; https://nvd.nist.gov/vuln/detail/CVE-2025-31125",
+          "cwes": [
+            "CWE-200",
+            "CWE-284"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-577h-p2hh-v4mv",
+      "aliases": [
+        "CVE-2025-34291"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Langflow CORS misconfiguration enables Account Takeover and RCE",
+      "matches": [
+        {
+          "cveID": "CVE-2025-34291",
+          "vendorProject": "Langflow",
+          "product": "Langflow",
+          "vulnerabilityName": "Langflow Origin Validation Error Vulnerability",
+          "dateAdded": "2026-05-21",
+          "shortDescription": "Langflow contains an origin validation error vulnerability in which an overly permissive CORS configuration combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. This could allow the attacker to execute arbitrary code and achieve full system compromise via obtained tokens that permit access to authenticated endpoints.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-06-04",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/langflow-ai/langflow ; https://github.com/langflow-ai/langflow/releases/tag/v1.9.3; https://github.com/langflow-ai/langflow/issues/11465#event-25774545848 ; https://nvd.nist.gov/vuln/detail/CVE-2025-34291",
+          "cwes": [
+            "CWE-346"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5cx2-vq3h-x52c",
+      "aliases": [
+        "CVE-2023-27524"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Apache superset missing check for default SECRET_KEY",
+      "matches": [
+        {
+          "cveID": "CVE-2023-27524",
+          "vendorProject": "Apache",
+          "product": "Superset",
+          "vulnerabilityName": "Apache Superset Insecure Default Initialization of Resource Vulnerability",
+          "dateAdded": "2024-01-08",
+          "shortDescription": "Apache Superset contains an insecure default initialization of a resource vulnerability that allows an attacker to authenticate and access unauthorized resources on installations that have not altered the default configured SECRET_KEY according to installation instructions.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2024-01-29",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://lists.apache.org/thread/n0ftx60sllf527j7g11kmt24wvof8xyk;  https://nvd.nist.gov/vuln/detail/CVE-2023-27524",
+          "cwes": [
+            "CWE-1188"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-69fq-xp46-6x23",
+      "aliases": [
+        "CVE-2026-33634"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Trivy ecosystem supply chain was briefly compromised",
+      "matches": [
+        {
+          "cveID": "CVE-2026-33634",
+          "vendorProject": "Aquasecurity",
+          "product": "Trivy",
+          "vulnerabilityName": "Aquasecurity Trivy Embedded Malicious Code Vulnerability",
+          "dateAdded": "2026-03-26",
+          "shortDescription": "Aquasecurity Trivy contains an embedded malicious code vulnerability that could allow an attacker to gain access to everything in the CI/CD environment, including all tokens, SSH keys, cloud credentials, database passwords, and any sensitive configuration in memory.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-04-09",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability involves a supply‑chain compromise in a product that may be used across multiple products and environments. Additional vendor‑provided guidance must be followed to ensure full remediation. For more information, please see: https://github.com/advisories/GHSA-69fq-xp46-6x23 ; https://nvd.nist.gov/vuln/detail/CVE-2026-33634",
+          "cwes": [
+            "CWE-506"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-69r9-qgr7-g2wj",
+      "aliases": [
+        "CVE-2026-34486"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Apache Tomcat Missing Encryption of Sensitive Data vulnerability",
+      "matches": [
+        {
+          "cveID": "CVE-2026-34486",
+          "vendorProject": "Apache",
+          "product": "Tomcat",
+          "vulnerabilityName": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
+          "dateAdded": "2026-08-04",
+          "shortDescription": "Apache Tomcat contains a missing encryption of sensitive data vulnerability that allows the bypass of the EncryptInterceptor. This vulnerability can be chained with CVE‑2025‑24813.",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-08-07",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://lists.apache.org/thread/9510k5p5zdvt9pkkgtyp85mvwxo2qrly ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-34486",
+          "cwes": [
+            "CWE-311"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6f9g-cxwr-q5jr",
+      "aliases": [
+        "CVE-2024-23897"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Arbitrary file read vulnerability through the Jenkins CLI can lead to RCE",
+      "matches": [
+        {
+          "cveID": "CVE-2024-23897",
+          "vendorProject": "Jenkins",
+          "product": "Jenkins Command Line Interface (CLI)",
+          "vulnerabilityName": "Jenkins Command Line Interface (CLI) Path Traversal Vulnerability",
+          "dateAdded": "2024-08-19",
+          "shortDescription": "Jenkins Command Line Interface (CLI) contains a path traversal vulnerability that allows attackers limited read access to certain files, which can lead to code execution.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2024-09-09",
+          "knownRansomwareCampaignUse": "Known",
+          "forensicTriage": "No",
+          "notes": "https://www.jenkins.io/security/advisory/2024-01-24/#SECURITY-3314; https://nvd.nist.gov/vuln/detail/CVE-2024-23897",
+          "cwes": [
+            "CWE-27"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6jj6-gm7p-fcvv",
+      "aliases": [
+        "CVE-2024-36401"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Remote Code Execution (RCE) vulnerability in geoserver",
+      "matches": [
+        {
+          "cveID": "CVE-2024-36401",
+          "vendorProject": "OSGeo",
+          "product": "GeoServer",
+          "vulnerabilityName": "OSGeo GeoServer GeoTools Eval Injection Vulnerability",
+          "dateAdded": "2024-07-15",
+          "shortDescription": "OSGeo GeoServer GeoTools contains an improper neutralization of directives in dynamically evaluated code vulnerability due to unsafely evaluating property names as XPath expressions. This allows unauthenticated attackers to conduct remote code execution via specially crafted input.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2024-08-05",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects an open-source component, third-party library, or a protocol used by different products. For more information, please see: https://github.com/geoserver/geoserver/security/advisories/GHSA-6jj6-gm7p-fcvv, https://github.com/geotools/geotools/pull/4797 ;   https://nvd.nist.gov/vuln/detail/CVE-2024-36401",
+          "cwes": [
+            "CWE-95"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-6pm2-j2v8-h3cj",
+      "aliases": [
+        "CVE-2023-0669"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Withdrawn: Fortra GoAnywhere MFT Deserialization of Untrusted Data vulnerability affects metasploit-framework",
+      "matches": [
+        {
+          "cveID": "CVE-2023-0669",
+          "vendorProject": "Fortra",
+          "product": "GoAnywhere MFT",
+          "vulnerabilityName": "Fortra GoAnywhere MFT Remote Code Execution Vulnerability",
+          "dateAdded": "2023-02-10",
+          "shortDescription": "Fortra (formerly, HelpSystems) GoAnywhere MFT contains a pre-authentication remote code execution vulnerability in the License Response Servlet due to deserializing an attacker-controlled object.",
+          "requiredAction": "Apply updates per vendor instructions.",
+          "dueDate": "2023-03-03",
+          "knownRansomwareCampaignUse": "Known",
+          "forensicTriage": "No",
+          "notes": "This CVE has a CISA AA located here: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-158a. Please see the AA for associated IOCs. Additional information is available at: https://my.goanywhere.com/webclient/DownloadProductFiles.xhtml. Fortra users must have an account in order to login and access the patch.;  https://nvd.nist.gov/vuln/detail/CVE-2023-0669",
+          "cwes": [
+            "CWE-502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7488-6r32-c95q",
+      "aliases": [
+        "CVE-2026-59822"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+      "matches": [
+        {
+          "cveID": "CVE-2026-59822",
+          "vendorProject": "BerriAI",
+          "product": "LiteLLM",
+          "vulnerabilityName": "BerriAI LiteLLM Improper Authentication Vulnerability",
+          "dateAdded": "2026-09-02",
+          "shortDescription": "BerriAI LiteLLM contains an improper authentication vulnerability in the MCP Streamable HTTP endpoint that could allow an unauthenticated attacker to establish an authenticated MCP session using an arbitrary Bearer token.",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-09-16",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-59822",
+          "cwes": [
+            "CWE-287",
+            "CWE-306"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7gwp-5pfp-969j",
+      "aliases": [
+        "CVE-2026-64849"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "MLflow: Unauthenticated full-read SSRF in webhook delivery: _validate_webhook_url bypassed via unvalidated HTTP redirects (and DNS rebinding)",
+      "matches": [
+        {
+          "cveID": "CVE-2026-64849",
+          "vendorProject": "MLflow",
+          "product": "MLflow",
+          "vulnerabilityName": "MLflow Server-Side Request Forgery Vulnerability",
+          "dateAdded": "2026-08-19",
+          "shortDescription": "MLflow contains a server-side request forgery vulnerability that can allow attackers to reach internal or cloud metadata services and receive response_status and response_body.",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-09-02",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/mlflow/mlflow/pull/24258 ; https://github.com/mlflow/mlflow/issues/24179 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-64849",
+          "cwes": [
+            "CWE-918"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-83qj-6fr2-vhqg",
+      "aliases": [
+        "CVE-2025-24813"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Apache Tomcat: Potential RCE and/or information disclosure and/or information corruption with partial PUT",
+      "matches": [
+        {
+          "cveID": "CVE-2025-24813",
+          "vendorProject": "Apache",
+          "product": "Tomcat",
+          "vulnerabilityName": "Apache Tomcat Path Equivalence Vulnerability",
+          "dateAdded": "2025-04-01",
+          "shortDescription": "Apache Tomcat contains a path equivalence vulnerability that allows a remote attacker to execute code, disclose information, or inject malicious content via a partial PUT request. This vulnerability can be chained with CVE‑2026‑34486.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2025-04-22",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects a common open-source component, third-party library, or a protocol used by different products. Please check with specific vendors for information on patching status. For more information, please see: https://lists.apache.org/thread/j5fkjv2k477os90nczf2v9l61fb0kkgq ; https://nvd.nist.gov/vuln/detail/CVE-2025-24813",
+          "cwes": [
+            "CWE-44",
+            "CWE-502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-86qp-5c8j-p5mr",
+      "aliases": [
+        "CVE-2026-48710"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Starlette has missing Host header validation that poisons request.url.path, bypassing path-based security checks",
+      "matches": [
+        {
+          "cveID": "CVE-2026-48710",
+          "vendorProject": "Kludex",
+          "product": "Starlette",
+          "vulnerabilityName": "Kludex Starlette HTTP Request/Response Smuggling Vulnerability",
+          "dateAdded": "2026-09-02",
+          "shortDescription": "Kludex Starlette contains a HTTP request/response smuggling vulnerability that could allow attackers to inject paths into the host part, prepending the actual path leading to issues such as authentication bypass when the authentication depends on the reconstructed URL’s path. This vulnerability could be chaned with CVE-2026-42271.",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-09-16",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/Kludex/starlette/security/advisories/GHSA-86qp-5c8j-p5mr ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-48710",
+          "cwes": [
+            "CWE-444"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8pjx-jj86-j47p",
+      "aliases": [
+        "CVE-2021-43798"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Grafana path traversal",
+      "matches": [
+        {
+          "cveID": "CVE-2021-43798",
+          "vendorProject": "Grafana Labs",
+          "product": "Grafana",
+          "vulnerabilityName": "Grafana Path Traversal Vulnerability",
+          "dateAdded": "2025-10-09",
+          "shortDescription": "Grafana contains a path traversal vulnerability that could allow access to local files.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2025-10-30",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://grafana.com/blog/2021/12/07/grafana-8.3.1-8.2.7-8.1.8-and-8.0.7-released-with-high-severity-security-fix/ ; https://nvd.nist.gov/vuln/detail/CVE-2021-43798",
+          "cwes": [
+            "CWE-22"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-995f-9x5r-2rcj",
+      "aliases": [
+        "CVE-2022-4135"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Heap buffer overflow in GPU",
+      "matches": [
+        {
+          "cveID": "CVE-2022-4135",
+          "vendorProject": "Google",
+          "product": "Chromium GPU",
+          "vulnerabilityName": "Google Chromium GPU Heap Buffer Overflow Vulnerability",
+          "dateAdded": "2022-11-28",
+          "shortDescription": "Google Chromium GPU contains a heap buffer overflow vulnerability that allows a remote attacker, who has compromised the renderer process, to potentially perform a sandbox escape via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+          "requiredAction": "Apply updates per vendor instructions.",
+          "dueDate": "2022-12-19",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://chromereleases.googleblog.com/2022/11/stable-channel-update-for-desktop_24.html;  https://nvd.nist.gov/vuln/detail/CVE-2022-4135",
+          "cwes": [
+            "CWE-787"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9v8h-qqgm-4m35",
+      "aliases": [
+        "BIT-brotli-2026-111497",
+        "BIT-dotnet-2026-111497",
+        "BIT-dotnet-sdk-2026-111497",
+        "BIT-node-2026-111497",
+        "BIT-node-min-2026-111497",
+        "BIT-powershell-2026-111497",
+        "CVE-2026-111497",
+        "GHSA-3wvj-j6qm-62mr",
+        "PYSEC-2026-4322",
+        "PYSEC-2026-4323"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Brotli：細工した圧縮データの展開による境界外書き込み",
+      "matches": [
+        {
+          "cveID": "CVE-2026-111497",
+          "vendorProject": "Google",
+          "product": "Brotli",
+          "vulnerabilityName": "Google Brotli Unchecked Return Value Vulnerability",
+          "dateAdded": "2026-10-27",
+          "shortDescription": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-11-10",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/google/brotli/releases/tag/v1.2.1 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
+          "cwes": [
+            "CWE-252",
+            "CWE-787"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-crg9-44h2-xw35",
+      "aliases": [
+        "CVE-2023-46604"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Apache ActiveMQ is vulnerable to Remote Code Execution",
+      "matches": [
+        {
+          "cveID": "CVE-2023-46604",
+          "vendorProject": "Apache",
+          "product": "ActiveMQ",
+          "vulnerabilityName": "Apache ActiveMQ Deserialization of Untrusted Data Vulnerability",
+          "dateAdded": "2023-11-02",
+          "shortDescription": "Apache ActiveMQ contains a deserialization of untrusted data vulnerability that may allow a remote attacker with network access to a broker to run shell commands by manipulating serialized class types in the OpenWire protocol to cause the broker to instantiate any class on the classpath.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2023-11-23",
+          "knownRansomwareCampaignUse": "Known",
+          "forensicTriage": "No",
+          "notes": "https://activemq.apache.org/security-advisories.data/CVE-2023-46604-announcement.txt; https://nvd.nist.gov/vuln/detail/CVE-2023-46604",
+          "cwes": [
+            "CWE-502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f29h-pxvx-f335",
+      "aliases": [
+        "CVE-2025-54313"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "eslint-config-prettier, eslint-plugin-prettier, synckit, @pkgr/core, napi-postinstall have embedded malicious code",
+      "matches": [
+        {
+          "cveID": "CVE-2025-54313",
+          "vendorProject": "Prettier",
+          "product": "eslint-config-prettier",
+          "vulnerabilityName": "Prettier eslint-config-prettier Embedded Malicious Code Vulnerability",
+          "dateAdded": "2026-01-22",
+          "shortDescription": "Prettier eslint-config-prettier contains an embedded malicious code vulnerability. Installing an affected package executes an install.js file that launches the node-gyp.dll malware on Windows.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-02-12",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://www.npmjs.com/package/eslint-config-prettier?activeTab=versions ; https://github.com/prettier/eslint-config-prettier/issues/339#issuecomment-3090304490 ; https://nvd.nist.gov/vuln/detail/CVE-2025-54313",
+          "cwes": [
+            "CWE-506"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fjf5-xgmq-5525",
+      "aliases": [
+        "CVE-2025-58360"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "GeoServer is vulnerable to Unauthenticated XML External Entities (XXE) attack via WMS GetMap feature",
+      "matches": [
+        {
+          "cveID": "CVE-2025-58360",
+          "vendorProject": "OSGeo",
+          "product": "GeoServer",
+          "vulnerabilityName": "OSGeo GeoServer Improper Restriction of XML External Entity Reference Vulnerability",
+          "dateAdded": "2025-12-11",
+          "shortDescription": "OSGeo GeoServer contains an improper restriction of XML external entity reference vulnerability that occurs when the application accepts XML input through a specific endpoint /geoserver/wms operation GetMap and could allow an attacker to define external entities within the XML request.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-01-01",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects an open-source component, third-party library, or a protocol used by different products. For more information, please see: https://github.com/geoserver/geoserver/security/advisories/GHSA-fjf5-xgmq-5525 ; https://osgeo-org.atlassian.net/browse/GEOS-11922 ; https://nvd.nist.gov/vuln/detail/CVE-2025-58360",
+          "cwes": [
+            "CWE-611"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fv66-9v8q-g76r",
+      "aliases": [
+        "CVE-2025-55182"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "React Server Components：認証不要のリモートコード実行",
+      "matches": [
+        {
+          "cveID": "CVE-2025-55182",
+          "vendorProject": "Meta",
+          "product": "React Server Components",
+          "vulnerabilityName": "Meta React Server Components Remote Code Execution Vulnerability",
+          "dateAdded": "2025-12-05",
+          "shortDescription": "Meta React Server Components contains a remote code execution vulnerability that could allow unauthenticated remote code execution by exploiting a flaw in how React decodes payloads sent to React Server Function endpoints. Please note CVE-2025-66478 has been rejected, but it is associated with CVE-2025- 55182.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2025-12-12",
+          "knownRansomwareCampaignUse": "Known",
+          "forensicTriage": "No",
+          "notes": "Check for signs of potential compromise on all internet accessible REACT instances after applying mitigations. For more information, please see: https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components ; https://github.com/vercel-labs/fix-react2shell-next?tab=readme-ov-file ; https://nvd.nist.gov/vuln/detail/CVE-2025-55182",
+          "cwes": []
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g22f-v6f7-2hrh",
+      "aliases": [
+        "CVE-2026-0770"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Langflow affected by Remote Code Execution via validate_code() exec()",
+      "matches": [
+        {
+          "cveID": "CVE-2026-0770",
+          "vendorProject": "Langflow",
+          "product": "Langflow",
+          "vulnerabilityName": "Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+          "dateAdded": "2026-07-21",
+          "shortDescription": "Langflow contains an inclusion of functionality from untrusted control sphere vulnerability that allows remote attackers to execute arbitrary code on affected installations. ",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-07-24",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "Yes",
+          "notes": "https://github.com/langflow-ai/langflow/releases/tag/v1.9.0 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-0770 ",
+          "cwes": [
+            "CWE-829"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g7cv-rxg3-hmpx",
+      "aliases": [
+        "CVE-2026-45321"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Malware in @tanstack/* packages exfiltrates cloud credentials, GitHub tokens, and SSH keys",
+      "matches": [
+        {
+          "cveID": "CVE-2026-45321",
+          "vendorProject": "TanStack",
+          "product": "TanStack",
+          "vulnerabilityName": "TanStack Unspecified Vulnerability",
+          "dateAdded": "2026-05-27",
+          "shortDescription": "TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-06-10",
+          "knownRansomwareCampaignUse": "Known",
+          "forensicTriage": "No",
+          "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/TanStack/router/security/advisories/GHSA-g7cv-rxg3-hmpx ; https://nvd.nist.gov/vuln/detail/CVE-2026-45321",
+          "cwes": []
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gw42-f939-fhvm",
+      "aliases": [
+        "CVE-2023-32315"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Administration Console authentication bypass in openfire xmppserver",
+      "matches": [
+        {
+          "cveID": "CVE-2023-32315",
+          "vendorProject": "Ignite Realtime",
+          "product": "Openfire",
+          "vulnerabilityName": "Ignite Realtime Openfire Path Traversal Vulnerability",
+          "dateAdded": "2023-08-24",
+          "shortDescription": "Ignite Realtime Openfire contains a path traversal vulnerability that allows an unauthenticated attacker to access restricted pages in the Openfire Admin Console reserved for administrative users.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2023-09-14",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://www.igniterealtime.org/downloads/#openfire;  https://nvd.nist.gov/vuln/detail/CVE-2023-32315",
+          "cwes": [
+            "CWE-22"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hcrc-79hj-m3qh",
+      "aliases": [
+        "CVE-2025-24016"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Wazuh server vulnerable to remote code execution",
+      "matches": [
+        {
+          "cveID": "CVE-2025-24016",
+          "vendorProject": "Wazuh",
+          "product": "Wazuh Server",
+          "vulnerabilityName": "Wazuh Server Deserialization of Untrusted Data Vulnerability",
+          "dateAdded": "2025-06-10",
+          "shortDescription": "Wazuh contains a deserialization of untrusted data vulnerability that allows for remote code execution on Wazuh servers.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2025-07-01",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://wazuh.com/blog/addressing-the-cve-2025-24016-vulnerability/ ; https://github.com/wazuh/wazuh/security/advisories/GHSA-hcrc-79hj-m3qh ; https://nvd.nist.gov/vuln/detail/CVE-2025-24016",
+          "cwes": [
+            "CWE-502"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j7hp-h8jx-5ppr",
+      "aliases": [
+        "CVE-2023-4863"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "libwebp: OOB write in BuildHuffmanTable",
+      "matches": [
+        {
+          "cveID": "CVE-2023-4863",
+          "vendorProject": "Google",
+          "product": "Chromium WebP",
+          "vulnerabilityName": "Google Chromium WebP Heap-Based Buffer Overflow Vulnerability",
+          "dateAdded": "2023-09-13",
+          "shortDescription": "Google Chromium WebP contains a heap-based buffer overflow vulnerability that allows a remote attacker to perform an out-of-bounds memory write via a crafted HTML page. This vulnerability can affect applications that use the WebP Codec.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2023-10-04",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_11.html?m=1; https://nvd.nist.gov/vuln/detail/CVE-2023-4863",
+          "cwes": [
+            "CWE-787"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jjqf-j4w7-92w8",
+      "aliases": [
+        "CVE-2023-22894"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Strapi leaking sensitive user information by filtering on private fields",
+      "matches": [
+        {
+          "cveID": "CVE-2023-22894",
+          "vendorProject": "Strapi",
+          "product": "Strapi",
+          "vulnerabilityName": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
+          "dateAdded": "2026-10-08",
+          "shortDescription": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-22621 to achieve remote code execution. ",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-10-11",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "Yes",
+          "notes": "This vulnerability could affect an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://strapi.io/blog/security-disclosure-of-vulnerabilities-cve ; https://github.com/strapi/strapi/releases ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2023-22894",
+          "cwes": [
+            "CWE-312"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mq8m-42gh-wq7r",
+      "aliases": [
+        "CVE-2025-8110"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Gogs vulnerable to a bypass of CVE-2024-55947",
+      "matches": [
+        {
+          "cveID": "CVE-2025-8110",
+          "vendorProject": "Gogs",
+          "product": "Gogs",
+          "vulnerabilityName": "Gogs Path Traversal Vulnerability",
+          "dateAdded": "2026-01-12",
+          "shortDescription": "Gogs contains a path traversal vulnerability affecting improper Symbolic link handling in the PutContents API that could allow for code execution.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-02-02",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/gogs/gogs/commit/553707f3fd5f68f47f531cfcff56aa3ec294c6f6 ; https://nvd.nist.gov/vuln/detail/CVE-2025-8110",
+          "cwes": [
+            "CWE-22"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q279-jhrf-cc6v",
+      "aliases": [
+        "CVE-2025-62593"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Ray is vulnerable to Critical RCE via Safari & Firefox Browsers through DNS Rebinding Attack",
+      "matches": [
+        {
+          "cveID": "CVE-2025-62593",
+          "vendorProject": "Ray-Project",
+          "product": "Ray",
+          "vulnerabilityName": "Ray-Project Ray Code Injection Vulnerability",
+          "dateAdded": "2026-08-17",
+          "shortDescription": "Ray-Project Ray contains a code injection vulnerability that could allow remote code execution. Developers using Ray as a development tool may be exposed to this vulnerability exploitable through Firefox and Safari.",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-08-20",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "Yes",
+          "notes": "https://github.com/ray-project/ray/security/advisories/GHSA-q279-jhrf-cc6v ; https://github.com/ray-project/ray/commit/70e7c72780bdec075dba6cad1afe0832772bfe09 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-62593",
+          "cwes": [
+            "CWE-94",
+            "CWE-352"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qppj-fm5r-hxr3",
+      "aliases": [
+        "CVE-2023-44487"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "HTTP/2 Stream Cancellation Attack",
+      "matches": [
+        {
+          "cveID": "CVE-2023-44487",
+          "vendorProject": "IETF",
+          "product": "HTTP/2",
+          "vulnerabilityName": "HTTP/2 Rapid Reset Attack Vulnerability",
+          "dateAdded": "2023-10-10",
+          "shortDescription": "HTTP/2 contains a rapid reset vulnerability that allows for a distributed denial-of-service attack (DDoS).",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2023-10-31",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects a common open-source component, third-party library, or protocol used by different products. For more information, please see: HTTP/2 Rapid Reset Vulnerability, CVE-2023-44487 | CISA: https://www.cisa.gov/news-events/alerts/2023/10/10/http2-rapid-reset-vulnerability-cve-2023-44487; https://blog.cloudflare.com/technical-breakdown-http2-rapid-reset-ddos-attack/;  https://nvd.nist.gov/vuln/detail/CVE-2023-44487",
+          "cwes": [
+            "CWE-400"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qqvq-6xgj-jw8g",
+      "aliases": [
+        "CVE-2023-5217"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Electron affected by libvpx's heap buffer overflow in vp8 encoding",
+      "matches": [
+        {
+          "cveID": "CVE-2023-5217",
+          "vendorProject": "Google",
+          "product": "Chromium libvpx",
+          "vulnerabilityName": "Google Chromium libvpx Heap Buffer Overflow Vulnerability",
+          "dateAdded": "2023-10-02",
+          "shortDescription": "Google Chromium libvpx contains a heap buffer overflow vulnerability in vp8 encoding that allows a remote attacker to potentially exploit heap corruption via a crafted HTML page. This vulnerability could impact web browsers using libvpx, including but not limited to Google Chrome.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2023-10-23",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_27.html; https://nvd.nist.gov/vuln/detail/CVE-2023-5217",
+          "cwes": [
+            "CWE-787"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qrpv-q767-xqq2",
+      "aliases": [
+        "CVE-2026-55255"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Langflow: IDOR Vulnerability in `/api/v1/responses` Endpoint Allows Authenticated Attackers to Access Another User's Flow",
+      "matches": [
+        {
+          "cveID": "CVE-2026-55255",
+          "vendorProject": "Langflow",
+          "product": "Langflow",
+          "vulnerabilityName": "Langflow Authorization Bypass Through User-Controlled Key Vulnerability",
+          "dateAdded": "2026-07-07",
+          "shortDescription": "Langflow contains an authorization bypass through user-controlled key vulnerability which allows an authenticated attacker to execute any flow belonging to another user by specifying the victim's flow ID in the request.",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-07-10",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "Yes",
+          "notes": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-qrpv-q767-xqq2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-55255",
+          "cwes": [
+            "CWE-639"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r75f-5x8p-qvmc",
+      "aliases": [
+        "CVE-2026-42208"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "LiteLLM has SQL Injection in Proxy API key verification",
+      "matches": [
+        {
+          "cveID": "CVE-2026-42208",
+          "vendorProject": "BerriAI",
+          "product": "LiteLLM",
+          "vulnerabilityName": "BerriAI LiteLLM SQL Injection Vulnerability",
+          "dateAdded": "2026-05-08",
+          "shortDescription": "BerriAI LiteLLM contains a SQL injection vulnerability that allows an attacker to read data from the proxy's database and potentially modify it, leading to unauthorized access to the proxy and the credentials it manages.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-05-11",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc ; https://nvd.nist.gov/vuln/detail/CVE-2026-42208",
+          "cwes": [
+            "CWE-89"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rcr6-4jqh-j84m",
+      "aliases": [
+        "CVE-2026-60004"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Gitea: Remote Code Execution via diffpatch Git Hook Installation",
+      "matches": [
+        {
+          "cveID": "CVE-2026-60004",
+          "vendorProject": "Gitea",
+          "product": "Gitea",
+          "vulnerabilityName": "Gitea Code Injection Vulnerability",
+          "dateAdded": "2026-08-25",
+          "shortDescription": "Gitea contains a code injection vulnerability that allows an attacker with repository write access to send a malicious patch to the diffpatch API endpoint to plant an executable Git hook and run shell commands as the Gitea service account.",
+          "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "dueDate": "2026-08-28",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "Yes",
+          "notes": "https://github.com/go-gitea/gitea/security/advisories/GHSA-rcr6-4jqh-j84m ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-60004",
+          "cwes": [
+            "CWE-94"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rr6p-3pfg-562j",
+      "aliases": [
+        "CVE-2025-24893"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "XWiki Platform allows remote code execution as guest via SolrSearchMacros request",
+      "matches": [
+        {
+          "cveID": "CVE-2025-24893",
+          "vendorProject": "XWiki",
+          "product": "Platform",
+          "vulnerabilityName": "XWiki Platform Eval Injection Vulnerability",
+          "dateAdded": "2025-10-30",
+          "shortDescription": "XWiki Platform contains an eval injection vulnerability that could allow any guest to perform arbitrary remote code execution through a request to SolrSearch.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2025-11-20",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-rr6p-3pfg-562j ; https://nvd.nist.gov/vuln/detail/CVE-2025-24893",
+          "cwes": [
+            "CWE-95"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rvqx-wpfh-mfx7",
+      "aliases": [
+        "CVE-2025-3248"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Langflow Unauth RCE",
+      "matches": [
+        {
+          "cveID": "CVE-2025-3248",
+          "vendorProject": "Langflow",
+          "product": "Langflow",
+          "vulnerabilityName": "Langflow Missing Authentication Vulnerability",
+          "dateAdded": "2025-05-05",
+          "shortDescription": "Langflow contains a missing authentication vulnerability in the /api/v1/validate/code endpoint that allows a remote, unauthenticated attacker to execute arbitrary code via crafted HTTP requests.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2025-05-26",
+          "knownRansomwareCampaignUse": "Known",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects a common open-source project, third-party library, or a protocol used by different products. For more information, please see: https://github.com/advisories/GHSA-c995-4fw3-j39m ; https://nvd.nist.gov/vuln/detail/CVE-2025-3248",
+          "cwes": [
+            "CWE-306"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rxpj-7qvf-xv32",
+      "aliases": [
+        "CVE-2026-34197"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Authenticated Apache ActiveMQ Broker and Apache ActiveMQ users could perform RCE via Jolokia MBeans",
+      "matches": [
+        {
+          "cveID": "CVE-2026-34197",
+          "vendorProject": "Apache",
+          "product": "ActiveMQ",
+          "vulnerabilityName": "Apache ActiveMQ Improper Input Validation Vulnerability",
+          "dateAdded": "2026-04-16",
+          "shortDescription": "Apache ActiveMQ contains an improper input validation vulnerability that allows for code injection.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-04-30",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://activemq.apache.org/security-advisories.data/CVE-2026-34197-announcement.txt ; https://nvd.nist.gov/vuln/detail/CVE-2026-34197",
+          "cwes": [
+            "CWE-20",
+            "CWE-94"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v4p8-mg3p-g94g",
+      "aliases": [
+        "CVE-2026-42271"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "LiteLLM: Authenticated command execution via MCP stdio test endpoints",
+      "matches": [
+        {
+          "cveID": "CVE-2026-42271",
+          "vendorProject": "BerriAI",
+          "product": "LiteLLM",
+          "vulnerabilityName": "BerriAI LiteLLM Command Injection Vulnerability",
+          "dateAdded": "2026-06-08",
+          "shortDescription": "BerriAI LiteLLM contains a command injection vulnerability that could allow any authenticated user, including holders of low-privilege internal-user keys, to run arbitrary commands on the host.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-06-22",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects a common open-source component, third-party library, or a protocol used by different products. Please check with specific vendors for information on patching status. For more information, please see: https://github.com/BerriAI/litellm/security/advisories/GHSA-v4p8-mg3p-g94g ; https://github.com/BerriAI/litellm/releases/tag/v1.83.7-stable ; https://nvd.nist.gov/vuln/detail/CVE-2026-42271",
+          "cwes": [
+            "CWE-78",
+            "CWE-77"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v92f-jx6p-73rx",
+      "aliases": [
+        "CVE-2022-24816"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Improper Control of Generation of Code ('Code Injection') in jai-ext",
+      "matches": [
+        {
+          "cveID": "CVE-2022-24816",
+          "vendorProject": "OSGeo",
+          "product": "JAI-EXT",
+          "vulnerabilityName": "OSGeo GeoServer JAI-EXT Code Injection Vulnerability",
+          "dateAdded": "2024-06-26",
+          "shortDescription": "OSGeo GeoServer JAI-EXT contains a code injection vulnerability that, when programs use jt-jiffle and allow Jiffle script to be provided via network request, could allow remote code execution.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2024-07-17",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "This vulnerability affects a common open-source component, third-party library, or a protocol used by different products. The patched JAI-EXT is version 1.1.22: https://github.com/geosolutions-it/jai-ext/releases/tag/1.1.22, https://github.com/geosolutions-it/jai-ext/security/advisories/GHSA-v92f-jx6p-73rx;  https://nvd.nist.gov/vuln/detail/CVE-2022-24816",
+          "cwes": [
+            "CWE-94"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v98v-ff95-f3cp",
+      "aliases": [
+        "CVE-2025-68613"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "n8n Vulnerable to Remote Code Execution via Expression Injection",
+      "matches": [
+        {
+          "cveID": "CVE-2025-68613",
+          "vendorProject": "n8n",
+          "product": "n8n",
+          "vulnerabilityName": "n8n Improper Control of Dynamically-Managed Code Resources Vulnerability",
+          "dateAdded": "2026-03-11",
+          "shortDescription": "n8n contains an improper control of dynamically managed code resources vulnerability in its workflow expression evaluation system that allows for remote code execution.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-03-25",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp ; https://nvd.nist.gov/vuln/detail/CVE-2025-68613",
+          "cwes": [
+            "CWE-913"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vmch-3w2x-vhgq",
+      "aliases": [
+        "CVE-2023-38180"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": ".NET Denial of Service Vulnerability",
+      "matches": [
+        {
+          "cveID": "CVE-2023-38180",
+          "vendorProject": "Microsoft",
+          "product": ".NET Core and Visual Studio",
+          "vulnerabilityName": "Microsoft .NET Core and Visual Studio Denial-of-Service Vulnerability",
+          "dateAdded": "2023-08-09",
+          "shortDescription": "Microsoft .NET Core and Visual Studio contain an unspecified vulnerability that allows for denial-of-service (DoS).",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2023-08-30",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2023-38180;  https://nvd.nist.gov/vuln/detail/CVE-2023-38180",
+          "cwes": []
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vwmf-pq79-vjvx",
+      "aliases": [
+        "CVE-2026-33017"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Unauthenticated Remote Code Execution in Langflow via Public Flow Build Endpoint",
+      "matches": [
+        {
+          "cveID": "CVE-2026-33017",
+          "vendorProject": "Langflow",
+          "product": "Langflow",
+          "vulnerabilityName": "Langflow Code Injection Vulnerability",
+          "dateAdded": "2026-03-25",
+          "shortDescription": "Langflow contains a code injection vulnerability that could allow building public flows without requiring authentication.",
+          "requiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2026-04-08",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-vwmf-pq79-vjvx ; https://nvd.nist.gov/vuln/detail/CVE-2026-33017",
+          "cwes": [
+            "CWE-94",
+            "CWE-95",
+            "CWE-306"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x3cq-8f32-5f63",
+      "aliases": [
+        "CVE-2023-33246"
+      ],
+      "kev": {
+        "status": "unknown",
+        "checkedAt": null,
+        "sourceUrl": null
+      },
+      "title": "Apache RocketMQ may have remote code execution vulnerability when using update configuration function",
+      "matches": [
+        {
+          "cveID": "CVE-2023-33246",
+          "vendorProject": "Apache",
+          "product": "RocketMQ",
+          "vulnerabilityName": "Apache RocketMQ Command Execution Vulnerability",
+          "dateAdded": "2023-09-06",
+          "shortDescription": "Several components of Apache RocketMQ, including NameServer, Broker, and Controller, are exposed to the extranet and lack permission verification. An attacker can exploit this vulnerability by using the update configuration function to execute commands as the system users that RocketMQ is running as or achieve the same effect by forging the RocketMQ protocol content.",
+          "requiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+          "dueDate": "2023-09-27",
+          "knownRansomwareCampaignUse": "Unknown",
+          "forensicTriage": "No",
+          "notes": "https://lists.apache.org/thread/1s8j2c8kogthtpv3060yddk03zq0pxyp;  https://nvd.nist.gov/vuln/detail/CVE-2023-33246",
+          "cwes": [
+            "CWE-94"
+          ]
+        }
+      ]
+    }
+  ],
+  "disposition": "verified_candidates_held_schema_constraint",
+  "blocker": "Existing vulnerability-status.mjs requires cisa.gov source URLs for kev.listed. The fetched official GitHub mirror URL is rejected by that unchanged validator. Do not claim a failed cisa.gov fetch succeeded or substitute an unvisited source URL. Accepting the official mirror requires a separately authorized schema/validation change outside this data-only run.",
+  "dataChanged": false,
+  "limitations": [
+    "KEV dateAdded is a catalog inclusion date, not the vulnerability publication date or a corporate incident date.",
+    "Matching establishes a known-exploitation catalog record; affected conditions and package/runtime applicability remain as their original advisory states.",
+    "Unmatched records are not marked notListed and no corporate incidents are inferred."
+  ]
+}

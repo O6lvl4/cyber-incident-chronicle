@@ -1,0 +1,94 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9gh4-xw24-9xh5",
+  "aliases": [
+    "CVE-2026-116677"
+  ],
+  "title": "OpenWISP Controller CA CRL REST API does not scope requests to managed organizations",
+  "summary": "OpenWISP Controller CA CRL REST API does not scope requests to managed organizations",
+  "publishedAt": "2026-10-30T22:58:10Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9gh4-xw24-9xh5/GHSA-9gh4-xw24-9xh5.json",
+  "modifiedAt": "2026-10-30T22:58:10Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:10:06.050717Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "openwisp-controller",
+      "ranges": [
+        {
+          "affected": ">= 1.0.0, < 1.3.2",
+          "fixed": "1.3.2",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9gh4-xw24-9xh5/GHSA-9gh4-xw24-9xh5.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "1.3.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://github.com/openwisp/openwisp-controller/security/advisories/GHSA-9gh4-xw24-9xh5",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9gh4-xw24-9xh5/GHSA-9gh4-xw24-9xh5.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9gh4-xw24-9xh5/GHSA-9gh4-xw24-9xh5.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:58:10Z",
+      "modifiedAt": "2026-10-30T22:58:10Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OpenWISP Controller CA CRL REST API does not scope requests to managed organizations",
+      "url": "https://github.com/advisories/GHSA-9gh4-xw24-9xh5",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/openwisp/openwisp-controller/security/advisories/GHSA-9gh4-xw24-9xh5",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T21:57:26Z",
+      "modifiedAt": "2026-10-27T17:22:04Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "認証済み組織管理者による別組織CRLの取得。CA秘密鍵の流出や改変は報告されておらず、CRL公開が既定の場合と明示保護した場合を区別する。",
+    "Reviewedの深刻度mediumと開発元のlowは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。"
+  ]
+}

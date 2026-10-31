@@ -1,0 +1,389 @@
+{
+  "reportDateJst": "2026-11-01",
+  "checkedAt": "2026-10-31T21:12:55Z",
+  "baseCommit": "ee23e939dc90943444317b05ac6034eefe8fb6fa",
+  "recordsBefore": 47,
+  "recordsAfter": 48,
+  "addedRecords": 1,
+  "updatedRecords": 1,
+  "added": [
+    "CVE-2026-76418"
+  ],
+  "updated": [
+    "CVE-2026-98385"
+  ],
+  "scope": "Existing product/runtime category independently reviewed. Discovery overlaps the previous successful 2026-10-30T23:24:22Z review from 2026-10-24. JPCERT/IPA complete alert indexes, CISA official mirror and selected vendor/oss-security sources reviewed. Existing47 records inventoried;116 unique CVE identities fetched for state/update comparison,115 successful and PHP115560404. Not every vendor bulletin was reread and not an exhaustive global Critical scan.",
+  "candidateScan": {
+    "generatedAt": "2026-10-31T21:07:47.217Z",
+    "since": "2026-10-24",
+    "records": 47,
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+        "status": "failed",
+        "fetchedAt": "2026-10-31T21:07:47.214Z",
+        "error": "HTTP 403"
+      },
+      {
+        "name": "JPCERT/CC 注意喚起",
+        "url": "https://www.jpcert.or.jp/at/2026.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-31T21:07:46.432Z",
+        "items": 35
+      },
+      {
+        "name": "IPA 重要なセキュリティ情報",
+        "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+        "status": "ok",
+        "fetchedAt": "2026-10-31T21:07:46.683Z",
+        "items": 29
+      }
+    ],
+    "candidates": [],
+    "drift": [],
+    "note": "取得失敗は候補なしを意味しない。候補は一次資料を読んで判定し、除外も確認記録に残す。"
+  },
+  "sources": [
+    {
+      "name": "CISA canonical KEV JSON",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "status": "fetch-failed",
+      "error": "HTTP403 in candidate script and independent web open",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "name": "CISA official GitHub KEV mirror",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/7ccba8e1223ccec82d12c7736bf3fae11e5bee86/known_exploited_vulnerabilities.json",
+      "status": "verified-changes",
+      "checkedAt": "2026-10-31T21:12:55Z",
+      "catalogVersion": "2026.10.30",
+      "dateReleased": "2026-10-30T17:02:45.3665Z",
+      "sha256": "3aa9cf3c01f116362a29d111702979175453c425e3733bde80fc4f6f8e2294e5",
+      "snapshotCount": 1766,
+      "provenance": "https://github.com/cisagov/kev-data",
+      "provenanceNote": "CISA-owned README explicitly identifies the repository as its KEV catalog mirror, synchronized shortly after canonical source updates. Fixed commit and develop downloads have identical SHA256. This is not successful retrieval of the canonical cisa.gov feed.",
+      "structuredKevChanges": "held: current product validator requires cisa.gov hostname; preserve all prior good KEV fields/checkpoints."
+    },
+    {
+      "name": "JPCERT/CC alerts2026",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "status": "verified-no-change",
+      "items": 35,
+      "checkedAt": "2026-10-31T21:07:46.432Z",
+      "latestIndexDate": "2026-10-29"
+    },
+    {
+      "name": "IPA important security information2026",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "status": "verified-no-change",
+      "items": 29,
+      "checkedAt": "2026-10-31T21:07:46.683Z",
+      "latestIndexDate": "2026-10-27"
+    },
+    {
+      "name": "PHP announcements2026",
+      "url": "https://www.php.net/archive/2026.php",
+      "status": "verified-no-change",
+      "latestAnnouncementDate": "2026-10-26",
+      "note": "Existing informational115560 and Windows Brotli rebuild remain unchanged; do not invent fixed PHP versions for115560."
+    },
+    {
+      "name": "GitLab critical patch bulletins19.4.2/19.5.1",
+      "urls": [
+        "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/",
+        "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+      ],
+      "status": "verified-no-range-change",
+      "note": "CNA modified dates advanced for97229/110264; affected/fixed ranges and scores match existing records. KEV mirror97229 addition held separately."
+    },
+    {
+      "name": "Siemens Mendix SAML",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-137528.html",
+      "status": "verified-no-range-change",
+      "note": "CNA updated2026-10-31; existing V4.2.4/V3.6.29 ranges and severity remain consistent."
+    },
+    {
+      "name": "Microsoft Windows Shell96951",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951",
+      "status": "fetch-failed",
+      "note": "Web fetch unavailable. Microsoft CNA2026-10-31 update fetched; existing affected/fixed values and scores match. No claim of vendor-page revalidation."
+    },
+    {
+      "name": "Linux CNA98385 and maintainer announcement",
+      "urls": [
+        "https://cveawg.mitre.org/api/cve/CVE-2026-98385",
+        "https://lists.openwall.net/linux-cve-announce/2026/10/12/1"
+      ],
+      "status": "verified-correction",
+      "note": "CNA2026-10-24 has CVSS3.1 High7.8. Replace obsolete unknown-score note; retain PoC versus exploitation distinction and explain mainline7.3 versus initial7.3-rc5 text."
+    },
+    {
+      "name": "Cisco76418",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75",
+      "status": "verified-addition",
+      "note": "Official article read with web tool; direct local fetch returned a195-byte response and was not treated as verified full body. Cisco CNA opened separately. Vendor explicitly reports exploitation; published2026-10-28T19:15Z, series-specific fixes retained."
+    },
+    {
+      "name": "Ivanti new KEV candidates",
+      "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US",
+      "status": "fetch-failed",
+      "note": "Web403; local HTML is a JavaScript/loading/CSS error shell, not the advisory body. No successful checkpoint advanced."
+    },
+    {
+      "name": "oss-security October31",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/31/",
+      "status": "verified",
+      "note": "Direct HTTP index and message5 opened; surfaced Linux98432/AlmaLinux. No attack code executed."
+    },
+    {
+      "name": "GNU libc announcement",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/30/17",
+      "status": "verified-excluded",
+      "note": "CVE-2026-84243 has CVSS7.0/Public-Date2014-07-11. No product inclusion criterion confirmed; library-side candidate handed over."
+    }
+  ],
+  "kevMirrorNewSinceOverlap": [
+    {
+      "cveID": "CVE-2026-118527",
+      "vendorProject": "Ivanti",
+      "product": "Connect Secure",
+      "vulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+      "dateAdded": "2026-10-30",
+      "shortDescription": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-11-13",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "No",
+      "notes": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-118527",
+      "cwes": [
+        "CWE-340"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-111357",
+      "vendorProject": "Ivanti",
+      "product": "Connect Secure",
+      "vulnerabilityName": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+      "dateAdded": "2026-10-30",
+      "shortDescription": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-11-02",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "Yes",
+      "notes": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US ; https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-111357",
+      "cwes": [
+        "CWE-306",
+        "CWE-862",
+        "CWE-345"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-97229",
+      "vendorProject": "GitLab",
+      "product": "Community Edition and Enterprise Edition",
+      "vulnerabilityName": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+      "dateAdded": "2026-10-29",
+      "shortDescription": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-11-01",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "Yes",
+      "notes": "Other products can potentially be affected by the same underlying Ruby/Onigmo Integer Overflow issue in CI/CD Regular Expression Compiler. For more information please see: https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves ; https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+      "cwes": [
+        "CWE-190"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-76418",
+      "vendorProject": "Cisco",
+      "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+      "vulnerabilityName": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+      "dateAdded": "2026-10-29",
+      "shortDescription": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-11-01",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "No",
+      "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-tunnel-dos-s6mgkb75 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
+      "cwes": [
+        "CWE-690"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-41709",
+      "vendorProject": "Broadcom",
+      "product": "VMware ESX",
+      "vulnerabilityName": "Broadcom VMWare ESX Insufficient Logging Vulnerability",
+      "dateAdded": "2026-10-28",
+      "shortDescription": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-11-11",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "No",
+      "notes": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-41709",
+      "cwes": [
+        "CWE-778"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-46300",
+      "vendorProject": "Linux",
+      "product": "Kernel",
+      "vulnerabilityName": "Linux Kernel Missing Initialization of a Variable Vulnerability",
+      "dateAdded": "2026-10-28",
+      "shortDescription": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells and run commands as root.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-10-31",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "Yes",
+      "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: ; https://git.kernel.org/stable/c/3599e6b3cc1ada96883d496a50a210d3afbb6987 ; https://git.kernel.org/stable/c/2f2b16022a2e10ca7bccfb98db5ed2ec0f72641c ; https://git.kernel.org/stable/c/9d3e5fd19fe1063bf607219e8562fbd567b8e8d5 ; https://git.kernel.org/stable/c/78bf6b6bb19541d19fbda6242e7cfe2c682763c0 ; https://git.kernel.org/stable/c/760e1addc27ba1a7beb4a0a7e8b3e9ec49e7a34e ; https://git.kernel.org/stable/c/3bd9e113d50034db99d7ef69fd8e5242d15e414a ; https://git.kernel.org/stable/c/3884358a9286b17f389a72b1426fc4547c23c111 ; https://git.kernel.org/stable/c/f84eca5817390257cef78013d0112481c503b4a3 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-46300",
+      "cwes": [
+        "CWE-456"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-48356",
+      "vendorProject": "Adobe",
+      "product": "Commerce and Magento",
+      "vulnerabilityName": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+      "dateAdded": "2026-10-27",
+      "shortDescription": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-11-10",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "No",
+      "notes": "https://www.adobe.com/trust/security/products/commerce/apsb26-73.html ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-48356",
+      "cwes": [
+        "CWE-434"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-111497",
+      "vendorProject": "Google",
+      "product": "Brotli",
+      "vulnerabilityName": "Google Brotli Unchecked Return Value Vulnerability",
+      "dateAdded": "2026-10-27",
+      "shortDescription": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-11-10",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "No",
+      "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/google/brotli/releases/tag/v1.2.1 ; ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
+      "cwes": [
+        "CWE-252",
+        "CWE-787"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-109618",
+      "vendorProject": "PHP Group",
+      "product": "PHP",
+      "vulnerabilityName": "PHP Memory Corruption Vulnerability",
+      "dateAdded": "2026-10-26",
+      "shortDescription": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-10-29",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "Yes",
+      "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://www.php.net/ ; https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ;  https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
+      "cwes": [
+        "CWE-416",
+        "CWE-755",
+        "CWE-824",
+        "CWE-1325",
+        "CWE-1419"
+      ]
+    },
+    {
+      "cveID": "CVE-2026-109619",
+      "vendorProject": "PHP Group",
+      "product": "PHP",
+      "vulnerabilityName": "PHP Stale Internal Request-State Vulnerability",
+      "dateAdded": "2026-10-26",
+      "shortDescription": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.",
+      "requiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+      "dueDate": "2026-10-29",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "Yes",
+      "notes": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://www.php.net/ ; https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ;  https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
+      "cwes": [
+        "CWE-416",
+        "CWE-755",
+        "CWE-824",
+        "CWE-1325",
+        "CWE-1419"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CVE-2026-76418",
+      "decision": "included",
+      "reason": "Vendor reports active exploitation on10/28; independent of unreflected KEV mirror10/29."
+    },
+    {
+      "id": "CVE-2026-118527",
+      "decision": "held-source-incomplete",
+      "reason": "Official KEV mirror confirms10/30 listing; vendor article unavailable and CNA API404. Do not infer affected/fixed or vendor publication date."
+    },
+    {
+      "id": "CVE-2026-111357",
+      "decision": "held-source-incomplete",
+      "reason": "MITRE CNA and KEV mirror confirm publication/listing and ICS22.8R2.4 affected, but vendor text and fixed ranges unavailable. No borrowed fix from104935."
+    },
+    {
+      "id": "CVE-2026-41709",
+      "decision": "held-validator-source-contract",
+      "reason": "Vendor/CNA verified; KEV-only inclusion relies on official mirror, rejected by existing cisa.gov-only validator."
+    },
+    {
+      "id": "CVE-2026-48356",
+      "decision": "excluded",
+      "reason": "Adobe Critical publication2026-07-14 precedes windowStart2026-10-01. KEV10/27 is not first inclusion trigger."
+    },
+    {
+      "id": "CVE-2026-46300",
+      "decision": "excluded",
+      "reason": "Original discloserPoC and maintainer announcement2026-05-13 precede window; do not replace with KEV10/28."
+    },
+    {
+      "id": "CVE-2026-98432",
+      "decision": "held-validator-date-contract",
+      "reason": "Original CNA disclosure10/15 lacked severity, firstCritical9.8 added10/24. Validator binds critical listedDate to publishedDate; accurate distinct dates cannot pass without code/schema-contract change."
+    },
+    {
+      "id": "PHP-WINDOWS-BROTLI-2026-10-26",
+      "decision": "held-schema-duplicate-cve-identity",
+      "reason": "Existing unique-alias rule still conflicts with Node.js recordCVE-2026-111497. No fakeID or alias deletion."
+    }
+  ],
+  "blockers": [
+    {
+      "kind": "validator-source-contract",
+      "description": "Product KEV validation accepts only cisa.gov source hostname. Official CISA GitHub mirror is verified but cannot be structurally reflected without changing validation. Canonical403 and prior checkpoints retained."
+    },
+    {
+      "kind": "validator-date-contract",
+      "description": "Critical inclusion supports only original publishedDate as trigger, not later Critical assessment date (Linux98432). Accurate candidate retained; no date falsification or gate weakening."
+    },
+    {
+      "kind": "source-fetch-failure",
+      "description": "Ivanti vendor body unavailable,118527 and115560 CNA404. Data not invented."
+    },
+    {
+      "kind": "existing-identity-contract",
+      "description": "Shared CVE across separate product entries unsupported; PHP Windows/Brotli remains candidate."
+    }
+  ],
+  "detailAudits": [
+    "product-cna-review-2026-11-01.json",
+    "product-new-kev-review-2026-11-01.json",
+    "product-held-candidates-2026-11-01.json"
+  ],
+  "validation": {
+    "products": "node scripts/product-status.mjs passed48 records before final combined checks",
+    "fullCheck": "Parent coordinator runs final repository checks after integration."
+  },
+  "publication": "Local data prepared. No claim of push, CI, merge or live publication."
+}

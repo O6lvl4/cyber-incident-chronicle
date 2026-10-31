@@ -1,0 +1,80 @@
+{
+  "id": "mofa-external-network-2026",
+  "company": "外務省",
+  "geography": "日本",
+  "title": "外部接続ネットワークへの侵入、約3600件の情報に漏えい可能性",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-11-01",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "7月27日に不正アクセスを検知し遮断・認証情報無効化を実施。調査でメール等に含まれる氏名・メールアドレスなど約3,600件の漏えい可能性が判明。",
+  "affectedData": [
+    "メール等に含まれる氏名・メールアドレスなど"
+  ],
+  "counts": [
+    {
+      "value": 3600,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいした可能性がある個人情報",
+      "approximate": true
+    },
+    {
+      "value": 900,
+      "unit": "件",
+      "status": "possible",
+      "label": "約3,600件の内数：外務省員以外の情報",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "約900件は内数であり約3,600件へ加算しない。件数を人数としない。",
+    "機密性の高い情報を扱う閉域網ではない。旅券・たびレジ等を扱う別の領事システムは対象外。機密性の高い情報の混入・二次被害は未確認。",
+    "7月27日は検知日。攻撃開始・漏えい確定の日ではない。"
+  ],
+  "sources": [
+    {
+      "title": "不正アクセスによる個人情報の漏えいの可能性について",
+      "url": "https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04395.html",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "7月27日に不正アクセスを検知し遮断・認証情報無効化を実施。調査でメール等に含まれる氏名・メールアドレスなど約3,600件の漏えい可能性が判明。",
+      "sourceUrl": "https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04395.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃日未公表",
+      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
+      "sourceUrl": "https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04395.html",
+      "reviewedDate": "2026-11-01"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害初確認日未公表",
+      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
+      "sourceUrl": "https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04395.html",
+      "reviewedDate": "2026-11-01"
+    }
+  },
+  "detectedDate": "2026-07-27"
+}
