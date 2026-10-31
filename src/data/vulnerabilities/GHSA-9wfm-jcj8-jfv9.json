@@ -1,0 +1,99 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9wfm-jcj8-jfv9",
+  "aliases": [
+    "CVE-2026-116696"
+  ],
+  "title": "russh's SSH agent server is susceptible to unbound allocations via repeated SSH_AGENT_CONSTRAIN_CONFIRM messages",
+  "summary": "russh's SSH agent server is susceptible to unbound allocations via repeated SSH_AGENT_CONSTRAIN_CONFIRM messages",
+  "publishedAt": "2026-10-30T22:58:47Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9wfm-jcj8-jfv9/GHSA-9wfm-jcj8-jfv9.json",
+  "modifiedAt": "2026-10-30T22:58:48Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:21.959083Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "russh",
+      "ranges": [
+        {
+          "affected": "< 0.65.0",
+          "fixed": "0.65.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9wfm-jcj8-jfv9/GHSA-9wfm-jcj8-jfv9.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.65.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9wfm-jcj8-jfv9/GHSA-9wfm-jcj8-jfv9.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9wfm-jcj8-jfv9/GHSA-9wfm-jcj8-jfv9.json"
+      },
+      {
+        "version": "3.1",
+        "score": 3.3,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://github.com/Eugeny/russh/security/advisories/GHSA-9wfm-jcj8-jfv9"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-9wfm-jcj8-jfv9/GHSA-9wfm-jcj8-jfv9.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:58:47Z",
+      "modifiedAt": "2026-10-30T22:58:48Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "russh's SSH agent server is susceptible to unbound allocations via repeated SSH_AGENT_CONSTRAIN_CONFIRM messages",
+      "url": "https://github.com/advisories/GHSA-9wfm-jcj8-jfv9",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/Eugeny/russh/security/advisories/GHSA-9wfm-jcj8-jfv9",
+      "publishedDate": "2026-10-25",
+      "publishedAt": "2026-10-25T16:49:48Z",
+      "modifiedAt": "2026-10-27T20:13:55Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元構造化修正版0.65とReviewedの0.65.0の綴りを区別し、勝手に版を統合しない。agent socketへ接続できるプロセスが条件で、転送時のリモート側も含む。"
+  ]
+}

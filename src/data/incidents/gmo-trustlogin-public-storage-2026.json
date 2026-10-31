@@ -1,0 +1,83 @@
+{
+  "id": "gmo-trustlogin-public-storage-2026",
+  "company": "GMOトラスト・ログイン",
+  "geography": "日本",
+  "title": "公開ストレージからの取得を確認、2492社・45030人へ訂正",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-11-01",
+  "impactTypes": [
+    "leak"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "公開ストレージへの顧客情報ファイル保存と一覧取得・署名期限設定の不備。第三者取得をログで確認",
+    "status": "confirmed"
+  },
+  "summary": "設定不備で顧客情報を含むファイルが外部取得可能となっていた事案。第三報で対象を2,492社・45,030人へ更新し、公開可能期間と取得確認期間・段階遮断時期を訂正した。",
+  "affectedData": [
+    "一括操作ファイル：氏名・メール・対象アプリ名・カスタム属性値",
+    "契約情報ファイル：企業ID・ライセンス数・利用状況・解約日、請求先担当者の氏名・住所・電話・メール"
+  ],
+  "counts": [
+    {
+      "value": 2492,
+      "unit": "社",
+      "status": "confirmed",
+      "label": "第三報の対象企業合計（内数2,184社・217社・特定できない91社）",
+      "approximate": false
+    },
+    {
+      "value": 45030,
+      "unit": "人",
+      "status": "confirmed",
+      "label": "メールアドレス重複除外後の対象人数合計（内数44,836人・194人）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "旧暫定値2,007社・37,747人からの訂正。会社数と人数、合計と内数を合算しない。",
+    "外部取得可能期間は2017年11月14日頃〜2026年9月15日。ログ上の取得確認は2021年6月8日以降で、それ以前は記録がなく取得有無は不明。",
+    "第一報の9月14日中遮断との説明を、14日23時45分頃〜15日16時の段階遮断へ訂正。初報は9月16日で、本記録の起点は10月30日の調査結果。",
+    "認証用パスワード・MFA情報・連携サービスのパスワード・決済情報は含まれない。11月末等の再発防止策は予定であり完了とはしない。"
+  ],
+  "sources": [
+    {
+      "title": "【重要】GMOトラスト・ログインにおけるお客様情報の漏えいに関するお詫びとお知らせ（第三報）",
+      "url": "https://news.trustlogin.com/20261030",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "設定不備で顧客情報を含むファイルが外部取得可能となっていた事案。第三報で対象を2,492社・45,030人へ更新し、公開可能期間と取得確認期間・段階遮断時期を訂正した。",
+      "sourceUrl": "https://news.trustlogin.com/20261030"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2021年6月8日〜2026年9月15日（ログ上の取得確認）",
+      "startDate": "2021-06-08",
+      "endDate": "2026-09-15",
+      "note": "資料が第三者の取得をアクセス記録で確認した期間。公開設定の開始である2017年11月14日頃とは区別し、ログ以前の取得有無は不明。",
+      "sourceUrl": "https://news.trustlogin.com/20261030",
+      "reviewedDate": "2026-11-01"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害初確認日未公表",
+      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
+      "sourceUrl": "https://news.trustlogin.com/20261030",
+      "reviewedDate": "2026-11-01"
+    }
+  },
+  "detectedDate": "2026-09-14"
+}

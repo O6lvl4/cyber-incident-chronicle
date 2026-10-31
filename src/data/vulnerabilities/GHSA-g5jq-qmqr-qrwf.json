@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-g5jq-qmqr-qrwf",
+  "aliases": [
+    "CVE-2026-119285"
+  ],
+  "title": "Fiber: CORS wildcard origins matched without a dot boundary, allowing credentialed cross-origin reads",
+  "summary": "Fiber: CORS wildcard origins matched without a dot boundary, allowing credentialed cross-origin reads",
+  "publishedAt": "2026-10-30T22:58:05Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-g5jq-qmqr-qrwf/GHSA-g5jq-qmqr-qrwf.json",
+  "modifiedAt": "2026-10-30T22:58:05Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:43.287382Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/gofiber/fiber/v2",
+      "ranges": [
+        {
+          "affected": ">= 2.52.1, < 2.52.3",
+          "fixed": "2.52.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-g5jq-qmqr-qrwf/GHSA-g5jq-qmqr-qrwf.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.52.1"
+            },
+            {
+              "fixed": "2.52.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-g5jq-qmqr-qrwf/GHSA-g5jq-qmqr-qrwf.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-g5jq-qmqr-qrwf/GHSA-g5jq-qmqr-qrwf.json"
+      },
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://github.com/gofiber/fiber/security/advisories/GHSA-g5jq-qmqr-qrwf"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-g5jq-qmqr-qrwf/GHSA-g5jq-qmqr-qrwf.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:58:05Z",
+      "modifiedAt": "2026-10-30T22:58:05Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Fiber: CORS wildcard origins matched without a dot boundary, allowing credentialed cross-origin reads",
+      "url": "https://github.com/advisories/GHSA-g5jq-qmqr-qrwf",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/gofiber/fiber/security/advisories/GHSA-g5jq-qmqr-qrwf",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T08:23:46Z",
+      "modifiedAt": "2026-10-29T21:34:42Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7984-qgvg-3j9c",
+  "aliases": [
+    "CVE-2026-118669"
+  ],
+  "title": "OAuthLib: Token grants can use attacker-supplied client_id for authorization after authenticating a different client",
+  "summary": "OAuthLib: Token grants can use attacker-supplied client_id for authorization after authenticating a different client",
+  "publishedAt": "2026-10-30T22:58:16Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7984-qgvg-3j9c/GHSA-7984-qgvg-3j9c.json",
+  "modifiedAt": "2026-10-30T22:58:16Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:10:01.771496Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "oauthlib",
+      "ranges": [
+        {
+          "affected": "< 4.0.0",
+          "fixed": "4.0.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7984-qgvg-3j9c/GHSA-7984-qgvg-3j9c.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7984-qgvg-3j9c/GHSA-7984-qgvg-3j9c.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7984-qgvg-3j9c/GHSA-7984-qgvg-3j9c.json"
+      },
+      {
+        "version": "4.0",
+        "score": 8.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+        "sourceUrl": "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-7984-qgvg-3j9c"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-7984-qgvg-3j9c/GHSA-7984-qgvg-3j9c.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:58:16Z",
+      "modifiedAt": "2026-10-30T22:58:16Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OAuthLib: Token grants can use attacker-supplied client_id for authorization after authenticating a different client",
+      "url": "https://github.com/advisories/GHSA-7984-qgvg-3j9c",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-7984-qgvg-3j9c",
+      "publishedDate": "2026-10-24",
+      "publishedAt": "2026-10-24T18:41:43Z",
+      "modifiedAt": "2026-10-28T21:09:22Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元構造化欄は確認版3.3.1と修正版4.0.0、Reviewedは<4.0.0。古い全版を開発元が個別確認したとの意味にしない。",
+    "有効な低権限confidential clientの資格情報が必要。client_id引数で認可するprovider側validatorが対象で、request.clientのみを用いる実装は条件が異なる。"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8hrf-8g6f-7xwp",
+  "aliases": [
+    "CVE-2026-119188"
+  ],
+  "title": "Forge: Denial of service in TLS record processing via a record interleaved with a fragmented handshake message",
+  "summary": "Forge: Denial of service in TLS record processing via a record interleaved with a fragmented handshake message",
+  "publishedAt": "2026-10-30T23:02:00Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8hrf-8g6f-7xwp/GHSA-8hrf-8g6f-7xwp.json",
+  "modifiedAt": "2026-10-30T23:02:00Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:39.826038Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "node-forge",
+      "ranges": [
+        {
+          "affected": "< 1.4.1",
+          "fixed": "1.4.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8hrf-8g6f-7xwp/GHSA-8hrf-8g6f-7xwp.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8hrf-8g6f-7xwp/GHSA-8hrf-8g6f-7xwp.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8hrf-8g6f-7xwp/GHSA-8hrf-8g6f-7xwp.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-8hrf-8g6f-7xwp"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-8hrf-8g6f-7xwp/GHSA-8hrf-8g6f-7xwp.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T23:02:00Z",
+      "modifiedAt": "2026-10-30T23:02:00Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Forge: Denial of service in TLS record processing via a record interleaved with a fragmented handshake message",
+      "url": "https://github.com/advisories/GHSA-8hrf-8g6f-7xwp",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-8hrf-8g6f-7xwp",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T05:02:48Z",
+      "modifiedAt": "2026-10-29T19:20:55Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4642-5mcj-2rqw",
+  "aliases": [
+    "CVE-2026-118775"
+  ],
+  "title": "Forge: ASN.1 OID first arc truncation in asn1.oidToDer",
+  "summary": "Forge: ASN.1 OID first arc truncation in asn1.oidToDer",
+  "publishedAt": "2026-10-30T23:02:40Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4642-5mcj-2rqw/GHSA-4642-5mcj-2rqw.json",
+  "modifiedAt": "2026-10-30T23:02:40Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:36.194768Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "node-forge",
+      "ranges": [
+        {
+          "affected": "< 1.4.1",
+          "fixed": "1.4.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4642-5mcj-2rqw/GHSA-4642-5mcj-2rqw.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4642-5mcj-2rqw/GHSA-4642-5mcj-2rqw.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4642-5mcj-2rqw/GHSA-4642-5mcj-2rqw.json"
+      },
+      {
+        "version": "3.1",
+        "score": 3.7,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-4642-5mcj-2rqw"
+      },
+      {
+        "version": "4.0",
+        "score": 6.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-4642-5mcj-2rqw"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4642-5mcj-2rqw/GHSA-4642-5mcj-2rqw.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T23:02:40Z",
+      "modifiedAt": "2026-10-30T23:02:40Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Forge: ASN.1 OID first arc truncation in asn1.oidToDer",
+      "url": "https://github.com/advisories/GHSA-4642-5mcj-2rqw",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-4642-5mcj-2rqw",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T05:09:54Z",
+      "modifiedAt": "2026-10-29T18:35:03Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元本文はCVSS3.1 Low 3.7を主評価、CVSS4.0 6.3を参考評価として併記している。両者の版と出典を保持する。"
+  ]
+}

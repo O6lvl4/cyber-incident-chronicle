@@ -1,0 +1,110 @@
+{
+  "id": "lifenet-kddi-linked-system-2026",
+  "company": "ライフネット生命保険株式会社・KDDI株式会社",
+  "geography": "日本",
+  "title": "連携システムへの侵入でKDDI顧客情報に漏えい可能性",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-11-01",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "ライフネット生命の連携システムの一部機能の脆弱性を通じた不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "23日にライフネット生命のKDDI連携システムへの侵入と情報漏えいの可能性を確認。翌日、KDDI側への経路を遮断し、auの生命ほけんの申込等をメンテナンス中。",
+  "affectedData": [
+    "氏名・郵便番号・電話番号・メールアドレス・会員識別子（項目別の6区分）",
+    "一部の顧客は性別・生年月日も対象の可能性"
+  ],
+  "counts": [
+    {
+      "value": 4524,
+      "unit": "件",
+      "status": "possible",
+      "label": "氏名・郵便番号・電話番号・メールアドレス・会員識別子",
+      "approximate": false
+    },
+    {
+      "value": 226,
+      "unit": "件",
+      "status": "possible",
+      "label": "氏名・郵便番号・電話番号・会員識別子",
+      "approximate": false
+    },
+    {
+      "value": 8434,
+      "unit": "件",
+      "status": "possible",
+      "label": "氏名・郵便番号・メールアドレス・会員識別子",
+      "approximate": false
+    },
+    {
+      "value": 3662,
+      "unit": "件",
+      "status": "possible",
+      "label": "氏名・郵便番号・会員識別子",
+      "approximate": false
+    },
+    {
+      "value": 4888,
+      "unit": "件",
+      "status": "possible",
+      "label": "メールアドレス・会員識別子",
+      "approximate": false
+    },
+    {
+      "value": 807,
+      "unit": "件",
+      "status": "possible",
+      "label": "会員識別子",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "6区分は公表表の件数を保持。漏えい確認人数や保険契約者数には読み替えない。",
+    "パスワード、カード・口座・本人確認情報、ライフネット生命保有の保険契約情報は対象外。KDDI通信設備・ライフネット生命の他システムに影響なし。",
+    "23日は検知と可能性確認の日。実際の攻撃開始日・漏えい初確認日を推定しない。"
+  ],
+  "sources": [
+    {
+      "title": "ライフネット生命の一部システムへの不正アクセスによるKDDIお客さま情報の漏えいの可能性について",
+      "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-82_4796/kddi_nr_s-82_4796_pdf_01.pdf",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "23日にライフネット生命のKDDI連携システムへの侵入と情報漏えいの可能性を確認。翌日、KDDI側への経路を遮断し、auの生命ほけんの申込等をメンテナンス中。",
+      "sourceUrl": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-82_4796/kddi_nr_s-82_4796_pdf_01.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃日未公表",
+      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
+      "sourceUrl": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-82_4796/kddi_nr_s-82_4796_pdf_01.pdf",
+      "reviewedDate": "2026-11-01"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害初確認日未公表",
+      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
+      "sourceUrl": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-82_4796/kddi_nr_s-82_4796_pdf_01.pdf",
+      "reviewedDate": "2026-11-01"
+    }
+  },
+  "detectedDate": "2026-10-23"
+}

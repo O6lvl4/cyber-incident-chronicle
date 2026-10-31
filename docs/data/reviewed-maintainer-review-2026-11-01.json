@@ -1,0 +1,3088 @@
+{
+  "checkedAt": "2026-10-31T21:10:20.336015Z",
+  "snapshot": "9c5259313420aa2a0fdd7b88d1cf6ebd31109604",
+  "scope": "Changed eligible Reviewed advisories with repository advisories. Public maintainer API actually fetched; public structured fields retained, descriptions hashed instead of reproducing PoC or unrelated personal data. No claim of all-corpus maintainer verification.",
+  "records": [
+    {
+      "url": "https://github.com/Eugeny/russh/security/advisories/GHSA-4p9f-7p9m-5vfg",
+      "apiUrl": "https://api.github.com/repos/Eugeny/russh/security-advisories/GHSA-4p9f-7p9m-5vfg",
+      "checkedAt": "2026-10-31T21:09:21.957284Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "93fc4cce7ac085f41026c30bb1af817d6d0eca5845787912476ffd4d201cc896",
+      "ghsa_id": "GHSA-4p9f-7p9m-5vfg",
+      "cve_id": "CVE-2026-116773",
+      "summary": "russh's SSH client is susceptible to unbounded allocations via EXT_INFO packets",
+      "published_at": "2026-10-25T16:49:58Z",
+      "updated_at": "2026-10-27T20:22:52Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "score": 4.3
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "score": 4.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "russh"
+          },
+          "vulnerable_version_range": "<0.65",
+          "patched_versions": "0.65",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b103dfdff21468dfd936d2b5245911aaa43c1c0976daa68553ce84e16f91a2f8",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/Eugeny/russh/security/advisories/GHSA-662x-8wvj-2276",
+      "apiUrl": "https://api.github.com/repos/Eugeny/russh/security-advisories/GHSA-662x-8wvj-2276",
+      "checkedAt": "2026-10-31T21:09:21.958423Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "f2632be8e7be4a11464be946c65d089d12a55bf3b866b49fbf18f905bbc1f03f",
+      "ghsa_id": "GHSA-662x-8wvj-2276",
+      "cve_id": "CVE-2026-116775",
+      "summary": "pageant: unbounded frame buffering on peer-controlled 4-byte length prefix (memory-exhaustion DoS)",
+      "published_at": "2026-10-25T16:50:34Z",
+      "updated_at": "2026-10-27T20:27:00Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "score": 2.3
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "pageant"
+          },
+          "vulnerable_version_range": ">= 0.2.0, <= 0.2.4",
+          "patched_versions": "0.2.5",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "28fd3ebbc9e8b76b35724e9dd4ec3e57c4ad3293e7322edf0b6fa7b061258111",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "low",
+        "maintainerSeverity": "low",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/Eugeny/russh/security/advisories/GHSA-9wfm-jcj8-jfv9",
+      "apiUrl": "https://api.github.com/repos/Eugeny/russh/security-advisories/GHSA-9wfm-jcj8-jfv9",
+      "checkedAt": "2026-10-31T21:09:21.959083Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "513bb03fedbe26281925ba63149fb2019285321a1d47c4cc1eec9aacfba54de9",
+      "ghsa_id": "GHSA-9wfm-jcj8-jfv9",
+      "cve_id": "CVE-2026-116696",
+      "summary": "russh's SSH agent server is susceptible to unbound allocations via repeated SSH_AGENT_CONSTRAIN_CONFIRM messages",
+      "published_at": "2026-10-25T16:49:48Z",
+      "updated_at": "2026-10-27T20:13:55Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "score": 3.3
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "score": 3.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "russh"
+          },
+          "vulnerable_version_range": "<0.65",
+          "patched_versions": "0.65",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "52d23d2904a9dad028d2b4cadf201ece03c9392d5ac0338f622a9c0ac88525f6",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "low",
+        "maintainerSeverity": "low",
+        "notes": [
+          "開発元構造化修正版0.65とReviewedの0.65.0の綴りを区別し、勝手に版を統合しない。agent socketへ接続できるプロセスが条件で、転送時のリモート側も含む。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/Eugeny/russh/security/advisories/GHSA-fw5c-8223-6h42",
+      "apiUrl": "https://api.github.com/repos/Eugeny/russh/security-advisories/GHSA-fw5c-8223-6h42",
+      "checkedAt": "2026-10-31T21:09:21.959513Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "e149b6a91b8bdad1376ffc9896189353d7cfda39243dbcf4c547e50d2012252f",
+      "ghsa_id": "GHSA-fw5c-8223-6h42",
+      "cve_id": "CVE-2026-116774",
+      "summary": "russh: peer-declared zero maximum packet size permanently stalls channel writes (silent AsyncWrite hang)",
+      "published_at": "2026-10-25T16:50:05Z",
+      "updated_at": "2026-10-27T20:24:57Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "score": 4.3
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "score": 4.3
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "russh"
+          },
+          "vulnerable_version_range": ">= 0.60.0, <= 0.64.1",
+          "patched_versions": "0.65",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "feaef7723d35140b2a0a96bc0c0087cdbb60e6e3ebe5373e9d1b59e0e86a2c01",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "開発元APIのCVSS3.1ベクトルは可用性L、本文は可用性H・6.5を示す。出典内の評価差を保持し独自に計算しない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/Eugeny/russh/security/advisories/GHSA-vp5q-ff62-jwqv",
+      "apiUrl": "https://api.github.com/repos/Eugeny/russh/security-advisories/GHSA-vp5q-ff62-jwqv",
+      "checkedAt": "2026-10-31T21:09:28.250209Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "ac2393bac2f982c5b893246256a3b37b1e3a9cb22c6377ecbe4d0fcf3a4e3d65",
+      "ghsa_id": "GHSA-vp5q-ff62-jwqv",
+      "cve_id": "CVE-2026-116794",
+      "summary": "Agent server never calls `Agent::confirm`, so keys added with the confirm constraint (`ssh-add -c`) sign without confirmation",
+      "published_at": "2026-10-25T16:50:46Z",
+      "updated_at": "2026-10-28T17:06:19Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+          "score": 8.3
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "russh"
+          },
+          "vulnerable_version_range": "<0.65",
+          "patched_versions": "0.65",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "cd4739e32eb121d5fcf3ff376154713cbe1ad11d718d72f675cd0bb1134806b3",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": [
+          "開発元構造化範囲は<0.65だが、本文は0.50.0-beta.12から0.64.1のagent serverに限定し、古いrussh-keysやSSH client/serverを対象外とする。confirm_requestによる検査は別経路として残る。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/NationalSecurityAgency/emissary/security/advisories/GHSA-c6q7-wqw2-h65w",
+      "apiUrl": "https://api.github.com/repos/NationalSecurityAgency/emissary/security-advisories/GHSA-c6q7-wqw2-h65w",
+      "checkedAt": "2026-10-31T21:09:28.271379Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "a39c3f5f97b1533a4d5f7e3af53907394adb9f4f559ec9abd95b1a4bcb5fc3c3",
+      "ghsa_id": "GHSA-c6q7-wqw2-h65w",
+      "cve_id": "CVE-2026-54442",
+      "summary": "Incomplete fix for CVE-2026-35571: SSRF in NationalSecurityAgency/emissary",
+      "published_at": "2026-10-30T00:24:38Z",
+      "updated_at": "2026-10-30T00:24:39Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "gov.nsa.emissary:emissary"
+          },
+          "vulnerable_version_range": "< 8.51.0",
+          "patched_versions": "8.51.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "9e5d7b55f43850feabb6374de3ac7bbf3b555f8236c2f96c2edd9f9995543757",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/NationalSecurityAgency/emissary/security/advisories/GHSA-cpm7-cfpx-3hvp",
+      "apiUrl": "https://api.github.com/repos/NationalSecurityAgency/emissary/security-advisories/GHSA-cpm7-cfpx-3hvp",
+      "checkedAt": "2026-10-31T21:09:28.295233Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "79c85d4ea32a80f478fe9343a941ad120b288b83caeb2c6d15fbef41d2a69afa",
+      "ghsa_id": "GHSA-cpm7-cfpx-3hvp",
+      "cve_id": "CVE-2026-35571",
+      "summary": "Stored XSS via Navigation Template Link Injection",
+      "published_at": "2026-04-06T22:12:18Z",
+      "updated_at": "2026-04-06T22:12:18Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+        "score": 4.8
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+          "score": 4.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "gov.nsa.emissary:emissary"
+          },
+          "vulnerable_version_range": "<= 8.38.0",
+          "patched_versions": "8.39.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c90c7d4f9be42caaab025dc4a48e97ba68c46213bfa2c9e9a927e5e333673ab9"
+    },
+    {
+      "url": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-4xm8-rg9h-jhq2",
+      "apiUrl": "https://api.github.com/repos/SignalK/signalk-server/security-advisories/GHSA-4xm8-rg9h-jhq2",
+      "checkedAt": "2026-10-31T21:09:28.312393Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "e76fc4eb85347f5109248b6b9307051164a961e3f5b3170f9547191646810eb5",
+      "ghsa_id": "GHSA-4xm8-rg9h-jhq2",
+      "cve_id": null,
+      "summary": "Unauthenticated path traversal in resources and applicationData APIs leads to JWT secret disclosure, admin impersonation and remote code execution",
+      "published_at": "2026-10-18T19:03:54Z",
+      "updated_at": "2026-10-18T19:03:54Z",
+      "withdrawn_at": null,
+      "severity": "critical",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 9.8
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "signalk-server"
+          },
+          "vulnerable_version_range": ">= 2.0.0",
+          "patched_versions": "2.34.0",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@signalk/resources-provider"
+          },
+          "vulnerable_version_range": "1.0.0 - 1.5.2",
+          "patched_versions": "1.5.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "2f0cd11ee6962dd40652f4184aa80ac1e95cd661c625d60bfd80b908b39a4d37",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "critical",
+        "maintainerSeverity": "critical",
+        "notes": [
+          "開発元のsignalk-server影響範囲は>=2.0.0、修正版2.34.0。Reviewedは修正版を除外境界にしている。resources-providerの1.5.3修正は別パッケージとして保持。未認証での影響はallow_readonly等の条件に依存する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-7wpf-ch8f-5f4x",
+      "apiUrl": "https://api.github.com/repos/SignalK/signalk-server/security-advisories/GHSA-7wpf-ch8f-5f4x",
+      "checkedAt": "2026-10-31T21:09:32.664499Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "e940f29942444d00b10c1924a774ce91329577cccb976c49322ef4a4cde1f39c",
+      "ghsa_id": "GHSA-7wpf-ch8f-5f4x",
+      "cve_id": null,
+      "summary": "SSRF via absolute signalk.appIcon URL in the app store icon fetcher",
+      "published_at": "2026-10-18T19:17:28Z",
+      "updated_at": "2026-10-18T19:17:28Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+        "score": 4.2
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "score": 4.2
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "signalk-server"
+          },
+          "vulnerable_version_range": "<= 2.33.0",
+          "patched_versions": null,
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c90b2b40479621b10ec5f6dd836eb9ffa7d1c0732dc36ae713d5fd3e5bd855a9",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "開発元APIは<=2.33.0、修正版未指定。Reviewedの導入境界2.28.0-beta.2と修正版2.34.0はDB由来で、今回の開発元本文の修正版確認と混同しない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/anacrolix/torrent/security/advisories/GHSA-2wrx-84qj-4pcg",
+      "apiUrl": "https://api.github.com/repos/anacrolix/torrent/security-advisories/GHSA-2wrx-84qj-4pcg",
+      "checkedAt": "2026-10-31T21:09:32.719189Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "aa1c0327373966b8045122273dd98f3f97b125346f194213e8969956d116d31b",
+      "ghsa_id": "GHSA-2wrx-84qj-4pcg",
+      "cve_id": null,
+      "summary": "Unbounded recursion in the bencode decoder causes stack-overflow crash and CPU-exhaustion DoS",
+      "published_at": "2026-09-11T23:39:23Z",
+      "updated_at": "2026-09-11T23:39:23Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "score": 6.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "actions",
+            "name": "anacrolix/torrent"
+          },
+          "vulnerable_version_range": "1.61.0",
+          "patched_versions": "",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c19e5ce1949ee2cc0d36f2a5602472d4ea0dc8a40527ec27364d243a18a20e4b",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "開発元APIはactions/anacrolix/torrent、確認版1.61.0、修正版未指定。ReviewedはGoモジュールと修正擬似バージョンを示すため、その違いを保持。開発元の修正版確認済みとは扱わない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/authlib/authlib/security/advisories/GHSA-c73q-w75p-j82v",
+      "apiUrl": "https://api.github.com/repos/authlib/authlib/security-advisories/GHSA-c73q-w75p-j82v",
+      "checkedAt": "2026-10-31T21:09:32.743348Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "09f82b97075850645369a36fb8d34bccc7fea6472205b0f424d5efb274a3bcaa",
+      "ghsa_id": "GHSA-c73q-w75p-j82v",
+      "cve_id": "CVE-2026-116672",
+      "summary": "Documented reference implementations for authenticate_client and check_permission in RFC7592 ClientConfigurationEndpoint never verify that the presented registration_access_token belongs to the target client.",
+      "published_at": "2026-10-14T14:22:06Z",
+      "updated_at": "2026-10-28T02:55:57Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "score": 8.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "Authlib"
+          },
+          "vulnerable_version_range": ">=0.15,<=1.9.0",
+          "patched_versions": "1.9.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b87a8d9b990d227d578192c175591bb357c7f60408cdcb244b7a6a2f849ae1c3",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": [
+          "RFC7592の文書中のauthenticate_client/check_permission実装例にある登録アクセストークンと対象clientの紐付け不足。全Authlib利用アプリが自動的に該当するとは扱わない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-4487-j8r4-4g2f",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-4487-j8r4-4g2f",
+      "checkedAt": "2026-10-31T21:09:32.747109Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "37b579bbf0ad1c5ba2f30f5a9828585b8e9362a8b5cddd547a022d9060d48de9",
+      "ghsa_id": "GHSA-4487-j8r4-4g2f",
+      "cve_id": "CVE-2026-118780",
+      "summary": "verifyCertificateChain() removes trusted CA certificates with the same subject from the CA store",
+      "published_at": "2026-10-27T05:09:06Z",
+      "updated_at": "2026-10-29T18:47:04Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "score": 3.7
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 3.7
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "833a1749d878c126a75d59279dc7c4223131df65ad932c1866d0c08443d98ca3",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "low",
+        "maintainerSeverity": "low",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-4642-5mcj-2rqw",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-4642-5mcj-2rqw",
+      "checkedAt": "2026-10-31T21:09:36.194768Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "63d76351f1757c920632dc129d724f7b57c328d8098b5687a7ce2cb3399cb983",
+      "ghsa_id": "GHSA-4642-5mcj-2rqw",
+      "cve_id": "CVE-2026-118775",
+      "summary": "ASN.1 OID first arc truncation in asn1.oidToDer",
+      "published_at": "2026-10-27T05:09:54Z",
+      "updated_at": "2026-10-29T18:35:03Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "score": 3.7
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "score": 3.7
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "3a3fdd98ad582e794fab828531308cc058814c26443d3fdd39a7e9ccebd34063",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "low",
+        "maintainerSeverity": "low",
+        "notes": [
+          "開発元本文はCVSS3.1 Low 3.7を主評価、CVSS4.0 6.3を参考評価として併記している。両者の版と出典を保持する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-525v-9gp9-w22h",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-525v-9gp9-w22h",
+      "checkedAt": "2026-10-31T21:09:36.247703Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "a6b1155324a93f87644fde916c78fb28bd8c02d67311536d76b53c7351571616",
+      "ghsa_id": "GHSA-525v-9gp9-w22h",
+      "cve_id": "CVE-2026-118778",
+      "summary": "TLS client crash when the server sends no certificate",
+      "published_at": "2026-10-27T05:09:30Z",
+      "updated_at": "2026-10-29T18:43:24Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "ce5fdeefcff1240e67b13a30b3a4d6464711edeeaa2fdca7dcb59d82a34e1c3d",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-5cwg-6vw7-rj6p",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-5cwg-6vw7-rj6p",
+      "checkedAt": "2026-10-31T21:09:36.303730Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "cdd17780526b25a29cee04c92e6b4b50a421c78c1284e14a243e104301cd0419",
+      "ghsa_id": "GHSA-5cwg-6vw7-rj6p",
+      "cve_id": "CVE-2026-119186",
+      "summary": "AES-GCM authentication bypass via unvalidated tagLength option",
+      "published_at": "2026-10-27T05:05:42Z",
+      "updated_at": "2026-10-29T19:16:57Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "1bd7a9dbd907b9964ab69643b13939815cb92ee96fcb837dc35202289e7e8fc7",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-5x38-2vff-x55p",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-5x38-2vff-x55p",
+      "checkedAt": "2026-10-31T21:09:36.304052Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "2f0cea69c003f1031ac93fd0e4b8d35490017a2eedfda7f4eb5db57c3dc790a5",
+      "ghsa_id": "GHSA-5x38-2vff-x55p",
+      "cve_id": "CVE-2026-119190",
+      "summary": "X.509 basicConstraints bypass in verifyCertificateChain() via deprecated extension OIDs 2.5.29.10 and 2.5.29.13",
+      "published_at": "2026-10-27T04:57:26Z",
+      "updated_at": "2026-10-29T19:24:33Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 7.4
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "score": 7.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "06c62792336e01e67f32af228978d9394225ac42f54c152a9fc6bf10aa92c64d",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-6wvx-3r32-xmcg",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-6wvx-3r32-xmcg",
+      "checkedAt": "2026-10-31T21:09:39.708966Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "d9294b1d956562076b67c880df8fe80c682ea271a63dd26ba1d846968007d139",
+      "ghsa_id": "GHSA-6wvx-3r32-xmcg",
+      "cve_id": "CVE-2026-118777",
+      "summary": "Prototype Pollution in forge.http cookie handling via a malicious Set-Cookie",
+      "published_at": "2026-10-27T05:09:41Z",
+      "updated_at": "2026-10-29T18:41:15Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+        "score": 4.8
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "score": 4.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "2b801deca0db38d6579d884053071127c366003f632c505b71ea7a5007dfbd49",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-7wch-p9px-956x",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-7wch-p9px-956x",
+      "checkedAt": "2026-10-31T21:09:39.731328Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "6855be6c8368c28f5ca77cf267aecf2a24a81ab2497a4087b79fc794494ea517",
+      "ghsa_id": "GHSA-7wch-p9px-956x",
+      "cve_id": "CVE-2026-118779",
+      "summary": "Regular expression denial of service in PEM decoding (pem.decode)",
+      "published_at": "2026-10-27T05:09:21Z",
+      "updated_at": "2026-10-29T18:45:11Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "33813647feab1d2cfc68beea26780b83f2ade7a94c6cc391f978c641eed5e2ff",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-8hrf-8g6f-7xwp",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-8hrf-8g6f-7xwp",
+      "checkedAt": "2026-10-31T21:09:39.826038Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "4ffd3672d5aa11d5309436d1e10440979958ad0a89138600599123277dc36d86",
+      "ghsa_id": "GHSA-8hrf-8g6f-7xwp",
+      "cve_id": "CVE-2026-119188",
+      "summary": "Denial of service in TLS record processing via a record interleaved with a fragmented handshake message",
+      "published_at": "2026-10-27T05:02:48Z",
+      "updated_at": "2026-10-29T19:20:55Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "0f42056a351bf959bf563a6943a22250e5f00fc5e0fb1a31472bb9ed099a0049",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-h6cr-wjv9-3cpp",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-h6cr-wjv9-3cpp",
+      "checkedAt": "2026-10-31T21:09:39.826985Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "a1a7dc01f1f5ca87c673f615e249b1cb57704191861f43fb4d61808720591481",
+      "ghsa_id": "GHSA-h6cr-wjv9-3cpp",
+      "cve_id": "CVE-2026-118781",
+      "summary": "Denial of Service via infinite loop in BigInteger.modInverse() with negative input (incomplete fix of CVE-2026-33891)",
+      "published_at": "2026-10-27T05:09:16Z",
+      "updated_at": "2026-10-29T18:48:44Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "score": 2.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 2.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "4a05a6a47924fd390413dbc20ebc936c8d7de766c86078701648bea866f29552",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "low",
+        "maintainerSeverity": "low",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-hqq3-7jhf-c5jx",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-hqq3-7jhf-c5jx",
+      "checkedAt": "2026-10-31T21:09:43.171683Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "31267b14e2c885c10b7311b0e23a6d18d57c36031d925142cd0e8f96849d4adb",
+      "ghsa_id": "GHSA-hqq3-7jhf-c5jx",
+      "cve_id": "CVE-2026-119187",
+      "summary": "Denial of service in TLS record processing via call stack exhaustion",
+      "published_at": "2026-10-27T05:01:46Z",
+      "updated_at": "2026-10-29T19:19:02Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "afa8e2b2dd68d137d04307edb89031a7057d2ec5303a1500a2a2f9ec943a78b1",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-jc66-7q78-782g",
+      "apiUrl": "https://api.github.com/repos/digitalbazaar/forge/security-advisories/GHSA-jc66-7q78-782g",
+      "checkedAt": "2026-10-31T21:09:43.179150Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "8d9856197f16c1d4cf8583e4037eb30e9966a4bb69015808f6254d046d7aa01d",
+      "ghsa_id": "GHSA-jc66-7q78-782g",
+      "cve_id": "CVE-2026-118782",
+      "summary": "PKCS#12 MAC forgery and constant-key PBE via zero iteration count",
+      "published_at": "2026-10-27T05:04:56Z",
+      "updated_at": "2026-10-29T18:50:28Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "node-forge"
+          },
+          "vulnerable_version_range": "<= 1.4.0",
+          "patched_versions": "1.4.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "fff5339ce47510d26a5f5351f4f9297b6abc13b90b789e8434af75f8c56733a0",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-mrwp-f3q8-3g9p",
+      "apiUrl": "https://api.github.com/repos/follow-redirects/follow-redirects/security-advisories/GHSA-mrwp-f3q8-3g9p",
+      "checkedAt": "2026-10-31T21:09:43.275514Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "390f23e9859df85d4b157e23874b185502a8e33b1a7a3419801c1966153a025d",
+      "ghsa_id": "GHSA-mrwp-f3q8-3g9p",
+      "cve_id": "CVE-2026-116689",
+      "summary": "Cross-realm sensitiveHeaders arrays are discarded and custom credentials can follow redirects",
+      "published_at": "2026-10-25T21:29:54Z",
+      "updated_at": "2026-10-27T19:37:46Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "follow-redirects"
+          },
+          "vulnerable_version_range": ">= 1.16.0, <= 1.16.1",
+          "patched_versions": "1.16.2",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c52193492f35d8ab6fe150cb9103fc27cab4d85a1bf41e8c17939dfa565c7e87",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "cross-realmのsensitiveHeaders配列と独自資格情報ヘッダー、クロスオリジンredirectの組合せが条件。組込みAuthorization/Proxy-Authorization/Cookieの保護まで失われるとは説明されていない。",
+          "Reviewedの深刻度highと開発元のmediumは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/gofiber/fiber/security/advisories/GHSA-g5jq-qmqr-qrwf",
+      "apiUrl": "https://api.github.com/repos/gofiber/fiber/security-advisories/GHSA-g5jq-qmqr-qrwf",
+      "checkedAt": "2026-10-31T21:09:43.287382Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "630450c4ad319cc3854b38c96566544e0739a845dd233a8a91630dfb0d36f148",
+      "ghsa_id": "GHSA-g5jq-qmqr-qrwf",
+      "cve_id": "CVE-2026-119285",
+      "summary": "CORS wildcard origins matched without a dot boundary in v2.52.1 and v2.52.2, allowing credentialed cross-origin reads",
+      "published_at": "2026-10-23T08:23:46Z",
+      "updated_at": "2026-10-29T21:34:42Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/gofiber/fiber/v2"
+          },
+          "vulnerable_version_range": ">= 2.52.1, <= 2.52.2",
+          "patched_versions": "2.52.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "e10fd3c877e02e1937188865a2b134ad9202f603c0804e004b304099bae5bf98",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/graphql-python/graphql-core/security/advisories/GHSA-mpqx-q82w-9x46",
+      "apiUrl": "https://api.github.com/repos/graphql-python/graphql-core/security-advisories/GHSA-mpqx-q82w-9x46",
+      "checkedAt": "2026-10-31T21:09:46.764375Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "422fd2d5baa7ca95eb1d84adb499572d9a4368794d02b92f3eeff31a15af8d5c",
+      "ghsa_id": "GHSA-mpqx-q82w-9x46",
+      "cve_id": "CVE-2026-119286",
+      "summary": "Denial of service via memory leak in aborted validations",
+      "published_at": "2026-10-25T09:36:13Z",
+      "updated_at": "2026-10-29T21:38:03Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "graphql-core"
+          },
+          "vulnerable_version_range": ">= 3.3.0a3, < 3.3.1",
+          "patched_versions": "3.3.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c9dacf7e24e6bc7b6c22bb4fd87f2d8a2953b964adb4b76e86d37072f300dd23",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/hapijs/content/security/advisories/GHSA-8494-f6mr-cjpv",
+      "apiUrl": "https://api.github.com/repos/hapijs/content/security-advisories/GHSA-8494-f6mr-cjpv",
+      "checkedAt": "2026-10-31T21:09:46.783055Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "072477d6cca61e3aeb3afe0993d1db331140c5c27fe5c8053d9069ce38fb67f2",
+      "ghsa_id": "GHSA-8494-f6mr-cjpv",
+      "cve_id": "CVE-2026-119202",
+      "summary": "@hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service",
+      "published_at": "2026-10-28T09:04:50Z",
+      "updated_at": "2026-10-29T20:22:57Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@hapi/content"
+          },
+          "vulnerable_version_range": "<= 6.0.2",
+          "patched_versions": "6.0.3",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "content"
+          },
+          "vulnerable_version_range": ">= 3.0.6, <= 4.0.6",
+          "patched_versions": "",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "bcd334074c9595b81310af09586152d6098c96bc9e8190269f67728c03b36169",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/hapijs/joi/security/advisories/GHSA-4528-x5fx-h6hg",
+      "apiUrl": "https://api.github.com/repos/hapijs/joi/security-advisories/GHSA-4528-x5fx-h6hg",
+      "checkedAt": "2026-10-31T21:09:46.827547Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "f6e9c8360549aa0a737907818aaac3b3faa4359d9fb5624c40ff42e78f7ea19e",
+      "ghsa_id": "GHSA-4528-x5fx-h6hg",
+      "cve_id": "CVE-2026-118772",
+      "summary": "quadratic-time split in `string().email({ multiple: true })` allows denial of service",
+      "published_at": "2026-10-28T09:06:13Z",
+      "updated_at": "2026-10-29T18:09:27Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "joi"
+          },
+          "vulnerable_version_range": ">=17.1.1 <17.13.9 || >=18.0.0 <18.3.1",
+          "patched_versions": "18.3.1",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@hapi/joi"
+          },
+          "vulnerable_version_range": ">= 16.0.0",
+          "patched_versions": "",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "3f6fb0b506d3fe60c75a7556dc2367c5e9cfadaac0e62f86071d93cf37367dbc",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": [
+          "joiの17系・18系の修正境界は別。@hapi/joiは開発元で>=16.0.0・修正版なし、Reviewedは含む上限17.1.1を示す。@hapi/joiの修正版を推測しない。",
+          "multiple:trueによるメール分割が対象。maxをemailより先に置く緩和策もabortEarly:falseでは処理継続するため、全設定に有効とはしない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/imgproxy/imgproxy/security/advisories/GHSA-494m-4556-wf5p",
+      "apiUrl": "https://api.github.com/repos/imgproxy/imgproxy/security-advisories/GHSA-494m-4556-wf5p",
+      "checkedAt": "2026-10-31T21:09:46.835002Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "8f7285acb7676f496114bef954d5fe662013b8b8b4257cc3a637ddb1265f2658",
+      "ghsa_id": "GHSA-494m-4556-wf5p",
+      "cve_id": null,
+      "summary": "Out-of-bounds heap read/write in ICO loader BMP header reconstruction allows unauthenticated remote worker crash",
+      "published_at": "2026-10-06T15:29:47Z",
+      "updated_at": "2026-10-06T15:29:47Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": "github.com/darthsim/imgproxy"
+          },
+          "vulnerable_version_range": ">= 3.3.0, <= 4.0.16",
+          "patched_versions": ">= 4.0.17",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "fe84399b16f011269bb92498a5ecea7e8086771293a1d64053808dee13d66ad5",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": [
+          "開発元APIのgithub.com/darthsim/imgproxy（ecosystem空欄）とReviewedのgithub.com/imgproxy/imgproxy/v3を同一のパッケージ表記へ推測統一しない。開発元は製品系列3.3.0〜4.0.16・4.0.17以降を示す。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/imgproxy/imgproxy/security/advisories/GHSA-hff9-5pqw-6w9f",
+      "apiUrl": "https://api.github.com/repos/imgproxy/imgproxy/security-advisories/GHSA-hff9-5pqw-6w9f",
+      "checkedAt": "2026-10-31T21:09:50.271112Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "bb3a9f9f37da82a540073fe4a906d6a4773df3325f72843c2184fc87c1ab3008",
+      "ghsa_id": "GHSA-hff9-5pqw-6w9f",
+      "cve_id": null,
+      "summary": "Integer overflow in ICO loader causes remote denial of service and permits remote code execution via heap buffer overflow",
+      "published_at": "2026-10-06T15:30:41Z",
+      "updated_at": "2026-10-06T15:30:41Z",
+      "withdrawn_at": null,
+      "severity": "critical",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 9.8
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/imgproxy/imgproxy/v4"
+          },
+          "vulnerable_version_range": ">= 4.0.0, <= 4.0.15",
+          "patched_versions": ">= 4.0.16",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "2ffe709530e9f9e015159e76feb9e2de0ea3176d35fb11cad7576d649ec126d9",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "critical",
+        "maintainerSeverity": "critical",
+        "notes": [
+          "開発元APIはGoモジュールgithub.com/imgproxy/imgproxy/v4、Reviewedは/v3・/v2・末尾なしの3座標。製品4.0.0〜4.0.15と修正版4.0.16の表記を各モジュール版へ推測で変換しない。座標差は未解決として原データを保持。",
+          "開発元はヒープ破壊によるプロセス停止とRCEの可能性を述べている。公開検証コードや重大度は企業被害・実悪用の証拠ではない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/imgproxy/imgproxy/security/advisories/GHSA-mmq5-xm89-9pfg",
+      "apiUrl": "https://api.github.com/repos/imgproxy/imgproxy/security-advisories/GHSA-mmq5-xm89-9pfg",
+      "checkedAt": "2026-10-31T21:09:50.331182Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "773103118e251e6e47b3e7397a4cc935e898adceb4f6f91911777c8711ce91ae",
+      "ghsa_id": "GHSA-mmq5-xm89-9pfg",
+      "cve_id": null,
+      "summary": "Unbounded memory allocation in ICO loader allows unauthenticated memory-exhaustion DoS via crafted data_size field",
+      "published_at": "2026-10-06T15:28:16Z",
+      "updated_at": "2026-10-06T15:28:16Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": "github.com/darthsim/imgproxy"
+          },
+          "vulnerable_version_range": ">= 3.3.0, <= 4.0.15",
+          "patched_versions": ">= 4.0.16",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "19a0f1cecdbf426f7a1d66b7ad59e492123285d6160ee8f019bb934b531126d9",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": [
+          "開発元APIのgithub.com/darthsim/imgproxy（ecosystem空欄）とReviewedのgithub.com/imgproxy/imgproxy/v3を同一表記へ推測統一しない。製品系列3.3.0〜4.0.15と修正版4.0.16以降の表記を保持する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/isaacs/minimatch/security/advisories/GHSA-g3hv-75wg-m249",
+      "apiUrl": "https://api.github.com/repos/isaacs/minimatch/security-advisories/GHSA-g3hv-75wg-m249",
+      "checkedAt": "2026-10-31T21:09:50.355034Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "430f9eb73c63b31ac6003bc54d457fb68caa3893144fb87d03e1d57c73ad9716",
+      "ghsa_id": "GHSA-g3hv-75wg-m249",
+      "cve_id": "CVE-2026-118764",
+      "summary": "denial of service via globparts amplification",
+      "published_at": "2026-10-27T22:23:27Z",
+      "updated_at": "2026-10-29T17:05:52Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": ""
+          },
+          "vulnerable_version_range": "10.2.6",
+          "patched_versions": "11.0.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "427acbdb3766d54cf1e15e00ad484d477258ca0ebe40d6a9045120451a16cf98",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "開発元APIはecosystem・package名が空欄で確認版10.2.6、修正版11.0.1。Reviewedのnpm/minimatch,<11.0.1と別に保持する。optimizationLevel>=2で攻撃者由来のpatternを処理する条件が示されている。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/isaacs/node-glob/security/advisories/GHSA-3g3m-2fjr-6pw4",
+      "apiUrl": "https://api.github.com/repos/isaacs/node-glob/security-advisories/GHSA-3g3m-2fjr-6pw4",
+      "checkedAt": "2026-10-31T21:09:50.387209Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "f916d345ef543af8416ea723971cefe3f47123a4944b923eccf800252a1a56dc",
+      "ghsa_id": "GHSA-3g3m-2fjr-6pw4",
+      "cve_id": "CVE-2026-118773",
+      "summary": "AbortSignal cancellation bypass allows post-timeout filesystem traversal in glob",
+      "published_at": "2026-10-27T22:08:53Z",
+      "updated_at": "2026-10-29T18:27:08Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "score": 6.3
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "glob"
+          },
+          "vulnerable_version_range": ">= 9.0.0, <= 14.0.1",
+          "patched_versions": ">=14.0.2",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c294d367a210de77a664649cc4a6bc84dfae783d7a888ba023b046bad0847ca4",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/kubeflow/pipelines/security/advisories/GHSA-8fmv-6rg5-5924",
+      "apiUrl": "https://api.github.com/repos/kubeflow/pipelines/security-advisories/GHSA-8fmv-6rg5-5924",
+      "checkedAt": "2026-10-31T21:09:53.869809Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "30c1e3395b59d901f20295414b077542cd94bd0f0030a41e2a47336a57b63551",
+      "ghsa_id": "GHSA-8fmv-6rg5-5924",
+      "cve_id": "CVE-2026-118761",
+      "summary": "Pipeline archive upload allows decompression bomb to exhaust server memory",
+      "published_at": "2026-10-29T04:44:16Z",
+      "updated_at": "2026-10-29T16:36:43Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "other",
+            "name": "ghcr.io/kubeflow/kfp-api-server"
+          },
+          "vulnerable_version_range": "<= 2.17.3",
+          "patched_versions": "2.18.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "459e8a0f1b39fa622fad37c09a22e91e4a6d677ac6448dca5ca30335e7dbb1b0",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": [
+          "開発元のコンテナ製品ghcr.io/kubeflow/kfp-api-server（<=2.17.3、2.18.0修正）とReviewedのGoモジュール擬似バージョン・列挙版を区別する。製品版をGoの修正境界に置き換えない。",
+          "APIサーバーへの到達条件と外部認証・ネットワーク境界を区別する。2.18のアップロード上限・リソース設定も確認対象で、更新だけから運用設定を推測しない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/kubeflow/pipelines/security/advisories/GHSA-wg5q-x4j9-qm54",
+      "apiUrl": "https://api.github.com/repos/kubeflow/pipelines/security-advisories/GHSA-wg5q-x4j9-qm54",
+      "checkedAt": "2026-10-31T21:09:53.888735Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "e7da69a0ade681b23b1b9f616bad326345f8fc15ff3b347d6902d7f8bf4dd27c",
+      "ghsa_id": "GHSA-wg5q-x4j9-qm54",
+      "cve_id": "CVE-2026-118759",
+      "summary": "Run-log endpoint permits unauthorized access to pod logs",
+      "published_at": "2026-10-29T04:44:21Z",
+      "updated_at": "2026-10-29T16:14:56Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "other",
+            "name": "ghcr.io/kubeflow/kfp-api-server"
+          },
+          "vulnerable_version_range": "<= 2.17.3",
+          "patched_versions": "2.18.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "8f5fbc66aab8599a95346985f8ed3db4c6403b891b021dbcb4e4859982b57ff8",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": [
+          "開発元のコンテナ製品ghcr.io/kubeflow/kfp-api-server（<=2.17.3、2.18.0修正）とReviewedのGoモジュール擬似バージョン・列挙版を区別する。製品版をGoの修正境界に置き換えない。",
+          "バックエンド到達とrun ID等の識別子が必要。外部認証を無条件に迂回するという意味ではない。2.18.0ではreadLog権限とpod/runの照合が追加され、独自Kubernetes roleの権限確認も必要。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/mariadb-corporation/mariadb-connector-j/security/advisories/GHSA-4jq2-8v3c-97w8",
+      "apiUrl": "https://api.github.com/repos/mariadb-corporation/mariadb-connector-j/security-advisories/GHSA-4jq2-8v3c-97w8",
+      "checkedAt": "2026-10-31T21:09:53.919574Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "8d160069e878db49979e39f4b4a35a682bd5feb4be67dfb20340510f39bae013",
+      "ghsa_id": "GHSA-4jq2-8v3c-97w8",
+      "cve_id": "CVE-2026-119280",
+      "summary": "XA recover() trusted server-supplied gtrid and bqual lengths",
+      "published_at": "2026-10-26T13:41:18Z",
+      "updated_at": "2026-10-29T20:54:54Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "score": 3.7
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 3.7
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.0.0, < 3.3.7",
+          "patched_versions": "3.3.7",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.4.0, < 3.4.5",
+          "patched_versions": "3.4.5",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.5.0, < 3.5.11",
+          "patched_versions": "3.5.11",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "4cf5cadc850ab2da6a8024bac38414e152e9830d4ba2e854761122c32933ce46",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "low",
+        "maintainerSeverity": "low",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/mariadb-corporation/mariadb-connector-j/security/advisories/GHSA-797x-p4mc-jwpm",
+      "apiUrl": "https://api.github.com/repos/mariadb-corporation/mariadb-connector-j/security-advisories/GHSA-797x-p4mc-jwpm",
+      "checkedAt": "2026-10-31T21:09:53.967451Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "5abca9c2eee3c730254b7c6f4f7e25ad0d6830c46c89a37064d3b40293c6c5af",
+      "ghsa_id": "GHSA-797x-p4mc-jwpm",
+      "cve_id": "CVE-2026-119279",
+      "summary": "Length-encoded integers larger than Integer.MAX_VALUE were truncated before being used as lengths",
+      "published_at": "2026-10-26T13:41:28Z",
+      "updated_at": "2026-10-29T20:51:27Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.0.0, < 3.3.7",
+          "patched_versions": "3.3.7",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.4.0, < 3.4.5",
+          "patched_versions": "3.4.5",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.5.0, < 3.5.10",
+          "patched_versions": "3.5.10",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "6e73b3d506940058e1f08501ef37250dff5503dc98f21059df4d8a5682d46268",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/mariadb-corporation/mariadb-connector-j/security/advisories/GHSA-fhx5-2xqw-2cgm",
+      "apiUrl": "https://api.github.com/repos/mariadb-corporation/mariadb-connector-j/security-advisories/GHSA-fhx5-2xqw-2cgm",
+      "checkedAt": "2026-10-31T21:09:58.230623Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "95f9ad1242de261bdd6297ca6b0cddae6061fc2c14b2c648e7d17eb7268a769b",
+      "ghsa_id": "GHSA-fhx5-2xqw-2cgm",
+      "cve_id": "CVE-2026-119210",
+      "summary": "LOAD DATA LOCAL INFILE file check could be satisfied by text inside quoted identifiers, letting a malicious server read client files",
+      "published_at": "2026-10-26T13:40:07Z",
+      "updated_at": "2026-10-29T20:44:31Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.0.0, < 3.3.7",
+          "patched_versions": "3.3.7",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.4.0, < 3.4.5",
+          "patched_versions": "3.4.5",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.5.0, < 3.5.11",
+          "patched_versions": "3.5.11",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "9f1d6c9c81d38548d43d754e7a10a96dcec7a04537dc9234906d49499c338d77",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/mariadb-corporation/mariadb-connector-j/security/advisories/GHSA-grfq-r75j-rw9x",
+      "apiUrl": "https://api.github.com/repos/mariadb-corporation/mariadb-connector-j/security-advisories/GHSA-grfq-r75j-rw9x",
+      "checkedAt": "2026-10-31T21:09:58.323829Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "fdc9c5d75bf0615a1ca3495ff7217864bfd2e848fd2e263f84780be6d2250169",
+      "ghsa_id": "GHSA-grfq-r75j-rw9x",
+      "cve_id": "CVE-2026-119281",
+      "summary": "Server could switch character_set_results away from UTF-8 without the client noticing",
+      "published_at": "2026-10-26T13:40:18Z",
+      "updated_at": "2026-10-29T20:56:44Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.0.0, < 3.3.7",
+          "patched_versions": "3.3.7",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.4.0, < 3.4.5",
+          "patched_versions": "3.4.5",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.5.0, < 3.5.11",
+          "patched_versions": "3.5.11",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "30bddf0669c12828b61c905b5c9abdfe225e79a199c53e486acd6a19b0adb7df",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/mariadb-corporation/mariadb-connector-j/security/advisories/GHSA-h599-m3w5-9m7x",
+      "apiUrl": "https://api.github.com/repos/mariadb-corporation/mariadb-connector-j/security-advisories/GHSA-h599-m3w5-9m7x",
+      "checkedAt": "2026-10-31T21:09:58.324459Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "9d0308bb5bd012aaa0beb72bfbb112c2f1ff786c35cdb9d90e847d2a4de7261a",
+      "ghsa_id": "GHSA-h599-m3w5-9m7x",
+      "cve_id": "CVE-2026-119276",
+      "summary": "Rogue server can drive large heap allocations from server-declared lengths in OK packets",
+      "published_at": "2026-10-26T13:42:03Z",
+      "updated_at": "2026-10-29T20:46:36Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.0.0, < 3.3.7",
+          "patched_versions": "3.3.7",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.4.0, < 3.4.5",
+          "patched_versions": "3.4.5",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "maven",
+            "name": "org.mariadb.jdbc:mariadb-java-client"
+          },
+          "vulnerable_version_range": ">= 3.5.0, < 3.5.11",
+          "patched_versions": "3.5.11",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "9831384ec2ebf29b2b56dfd9d5a1da5ddc1d48a94f5be8367a65f29127576154",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-3xf4-9g3c-4h4w",
+      "apiUrl": "https://api.github.com/repos/nuxt/nuxt/security-advisories/GHSA-3xf4-9g3c-4h4w",
+      "checkedAt": "2026-10-31T21:09:58.329039Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "73cf51cdcb044fcfd0cc87bf3ab393bf029f9ae0fdb6d2fb49ea7f8a474bf8aa",
+      "ghsa_id": "GHSA-3xf4-9g3c-4h4w",
+      "cve_id": "CVE-2026-119201",
+      "summary": "Nuxt dev server exposes generated appSecret through Vite file serving",
+      "published_at": "2026-10-27T01:10:29Z",
+      "updated_at": "2026-10-29T20:19:37Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "score": 4.8
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "score": 4.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@nuxt/vite-builder"
+          },
+          "vulnerable_version_range": ">= 4.6.0 < 4.6.3",
+          "patched_versions": "4.6.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "5f518528972c435ecb46a1a3f743cf421b5dd05b739020008e68857a84768858",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-648h-gw55-m2g7",
+      "apiUrl": "https://api.github.com/repos/nuxt/nuxt/security-advisories/GHSA-648h-gw55-m2g7",
+      "checkedAt": "2026-10-31T21:10:01.700737Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "0836addf442c885e3a6f5bcebd1bdee456cf23c4ff4e8dbe50cf7a53ebba6607",
+      "ghsa_id": "GHSA-648h-gw55-m2g7",
+      "cve_id": "CVE-2026-119199",
+      "summary": "Nuxt dev server exposes private runtime config through the Nitro dev bundle",
+      "published_at": "2026-10-27T01:09:30Z",
+      "updated_at": "2026-10-29T20:13:03Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@nuxt/vite-builder"
+          },
+          "vulnerable_version_range": ">= 3.0.0 < 4.0.0",
+          "patched_versions": "",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@nuxt/vite-builder"
+          },
+          "vulnerable_version_range": ">= 4.0.0 < 4.6.3",
+          "patched_versions": "4.6.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "30e471ca59f0d79600711bb28ebd36516d1ed45d0bcdad8a96bf6164ad8f8a0f",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "maintainer-series-specific",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "開発元はNuxt 3系をサポート終了・修正提供なし、4系を4.6.3修正として分ける。Reviewedの>=3.0.0,<4.6.3一範囲と異なるため系列別表示を保持。",
+          "Nitro 2を使う開発サーバーへの直接HTTP到達が条件。production build・Nitro 3は対象外で、起動時NUXT_*環境変数から供給する空の既定値はinlined値と区別する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-9v7c-q64q-vv33",
+      "apiUrl": "https://api.github.com/repos/nuxt/nuxt/security-advisories/GHSA-9v7c-q64q-vv33",
+      "checkedAt": "2026-10-31T21:10:01.751210Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "77ef744a744b186b20aef56e494656faba586b88834a92a90dae3295004ee7a9",
+      "ghsa_id": "GHSA-9v7c-q64q-vv33",
+      "cve_id": "CVE-2026-119200",
+      "summary": "Dot segments in the request path bypass `server/middleware` path checks and server route rules on page routes",
+      "published_at": "2026-10-27T01:09:53Z",
+      "updated_at": "2026-10-29T20:16:17Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "score": 6.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "nuxt"
+          },
+          "vulnerable_version_range": ">= 4.6.0 < 4.6.3",
+          "patched_versions": "4.6.3",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@nuxt/nitro-server"
+          },
+          "vulnerable_version_range": ">= 4.6.0 < 4.6.3",
+          "patched_versions": "4.6.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "784afaba74203503333454ae237ff4ad3e2faf6d135fd22bcc8feb48c42e7034",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-x287-wcfc-q46c",
+      "apiUrl": "https://api.github.com/repos/nuxt/nuxt/security-advisories/GHSA-x287-wcfc-q46c",
+      "checkedAt": "2026-10-31T21:10:01.752390Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "bffd8e3537a344c6f5dd9f60496718beaa8a5cad04541c5887a2edb135a8e47e",
+      "ghsa_id": "GHSA-x287-wcfc-q46c",
+      "cve_id": "CVE-2026-119198",
+      "summary": "Nuxt dev server arbitrary file read through client error reports",
+      "published_at": "2026-10-27T01:09:38Z",
+      "updated_at": "2026-10-29T20:10:55Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 5.9
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 5.9
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@nuxt/vite-builder"
+          },
+          "vulnerable_version_range": ">= 4.6.0 < 4.6.3",
+          "patched_versions": "4.6.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "ec00a76dab1dc0070acf2bd31cd87fbc6f01ee3502061d842221d2633da3f350",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "medium",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-7984-qgvg-3j9c",
+      "apiUrl": "https://api.github.com/repos/oauthlib/oauthlib/security-advisories/GHSA-7984-qgvg-3j9c",
+      "checkedAt": "2026-10-31T21:10:01.771496Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "a8d5f263b85a2134c968fef068405ceb38911a30e3b1393c86cf702e35904ac7",
+      "ghsa_id": "GHSA-7984-qgvg-3j9c",
+      "cve_id": "CVE-2026-118669",
+      "summary": "Token grants can use attacker-supplied client_id for authorization after authenticating a different client",
+      "published_at": "2026-10-24T18:41:43Z",
+      "updated_at": "2026-10-28T21:09:22Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N",
+          "score": 8.4
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "oauthlib"
+          },
+          "vulnerable_version_range": "3.3.1 ",
+          "patched_versions": "4.0.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c0ac6707ea984b23e636d8081472dc5e5a3f85cc2fcb21ed8f53376122351eec",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": [
+          "開発元構造化欄は確認版3.3.1と修正版4.0.0、Reviewedは<4.0.0。古い全版を開発元が個別確認したとの意味にしない。",
+          "有効な低権限confidential clientの資格情報が必要。client_id引数で認可するprovider側validatorが対象で、request.clientのみを用いる実装は条件が異なる。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/openwisp/openwisp-controller/security/advisories/GHSA-9gh4-xw24-9xh5",
+      "apiUrl": "https://api.github.com/repos/openwisp/openwisp-controller/security-advisories/GHSA-9gh4-xw24-9xh5",
+      "checkedAt": "2026-10-31T21:10:06.050717Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "8ddf0f5fe732ca874479220a6f5d0c8c3a412aeae78d96ea2853446a8783e6a1",
+      "ghsa_id": "GHSA-9gh4-xw24-9xh5",
+      "cve_id": "CVE-2026-116677",
+      "summary": "OpenWISP Controller CA CRL REST API does not scope requests to managed organizations",
+      "published_at": "2026-10-23T21:57:26Z",
+      "updated_at": "2026-10-27T17:22:04Z",
+      "withdrawn_at": null,
+      "severity": "low",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "openwisp-controller"
+          },
+          "vulnerable_version_range": ">= 1.0.0, < 1.3.2",
+          "patched_versions": "1.3.2",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "ded5612e07880f666e1fa53bb80415e21533f955e6083102003461b678a7c034",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "medium",
+        "maintainerSeverity": "low",
+        "notes": [
+          "認証済み組織管理者による別組織CRLの取得。CA秘密鍵の流出や改変は報告されておらず、CRL公開が既定の場合と明示保護した場合を区別する。",
+          "Reviewedの深刻度mediumと開発元のlowは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-42gh-23hr-vphw",
+      "apiUrl": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-42gh-23hr-vphw",
+      "checkedAt": "2026-10-31T21:10:06.087661Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "ffdd256588789afc75e6f7430c35317eaf27c754f08ac71eadeee16d20ab3b93",
+      "ghsa_id": "GHSA-42gh-23hr-vphw",
+      "cve_id": "CVE-2026-119206",
+      "summary": "Possible long runtimes when retrieving page labels",
+      "published_at": "2026-10-27T12:24:24Z",
+      "updated_at": "2026-10-29T20:36:29Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.21.3",
+          "patched_versions": ">= 6.21.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "3db8ef06b57edeb12702eeb46f76106e88d0bce35ff752098350f5c1cba25f77",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "Reviewedの深刻度highと開発元のmediumは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-4vqv-7265-gm2w",
+      "apiUrl": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-4vqv-7265-gm2w",
+      "checkedAt": "2026-10-31T21:10:06.167116Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "bf778c08e6a2c29f5abf0dede23ae15cb58269d0178c8054edc306d0008b0f5d",
+      "ghsa_id": "GHSA-4vqv-7265-gm2w",
+      "cve_id": "CVE-2026-119207",
+      "summary": "Possible large memory usage for exceptions in strict mode",
+      "published_at": "2026-10-27T12:22:36Z",
+      "updated_at": "2026-10-29T20:38:04Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.21.3",
+          "patched_versions": ">= 6.21.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "0f54a874264672f2c047782693c9b2e2faf02fd9b3795b195d5232bf842a5006",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "Reviewedの深刻度highと開発元のmediumは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-5849-834g-hvw5",
+      "apiUrl": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-5849-834g-hvw5",
+      "checkedAt": "2026-10-31T21:10:06.207404Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "d8fe5a93c1b231e40638cfb89360f23da5d7b60ef9e0769fdb0b286094a8f607",
+      "ghsa_id": "GHSA-5849-834g-hvw5",
+      "cve_id": "CVE-2026-119203",
+      "summary": "Possible infinite loop when hitting EOF in standard xref table during trailer search",
+      "published_at": "2026-10-28T17:03:03Z",
+      "updated_at": "2026-10-29T20:29:31Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypi"
+          },
+          "vulnerable_version_range": "< 6.21.4",
+          "patched_versions": ">= 6.21.4",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "82efd13407115b61c912aeb434dad7ccebed6405b193ebc27caf43da3a15aab4",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "Reviewedの深刻度highと開発元のmediumは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。",
+          "開発元APIのpackage.nameはpypiだが、同じ開発元本文はpypdfとそのリリースを明示する。Reviewedのpypdfを保持し、pypiという別パッケージへ追加しない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-62m5-6wh8-28x7",
+      "apiUrl": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-62m5-6wh8-28x7",
+      "checkedAt": "2026-10-31T21:10:09.501706Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "1182877a8c151ad72b1e2d89f6df0010022eb9ffa99a1c35c734433302b776d5",
+      "ghsa_id": "GHSA-62m5-6wh8-28x7",
+      "cve_id": "CVE-2026-119208",
+      "summary": "Possible long runtimes/large memory usage for encrypted PDF files",
+      "published_at": "2026-10-27T12:20:30Z",
+      "updated_at": "2026-10-29T20:40:24Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.21.3",
+          "patched_versions": ">= 6.21.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "c10392e7f6eede54106a5ede51daf551e404b8a1dd5649b8a073495a951f2552",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "Reviewedの深刻度highと開発元のmediumは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-cggf-277g-3q54",
+      "apiUrl": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-cggf-277g-3q54",
+      "checkedAt": "2026-10-31T21:10:09.526123Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "53de2abbc1a6a704e6b800b03e0389e728f234eaea3ae10aec310cc393bf755f",
+      "ghsa_id": "GHSA-cggf-277g-3q54",
+      "cve_id": "CVE-2026-119204",
+      "summary": "Possible large memory usage when parsing page tree",
+      "published_at": "2026-10-28T17:02:23Z",
+      "updated_at": "2026-10-29T20:31:13Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypi"
+          },
+          "vulnerable_version_range": "< 6.21.4",
+          "patched_versions": ">= 6.21.4",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "cc6096551afb17fa4a4de8e1751d9733fe31fb8cb73bdbe907fc135502ed2175",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "Reviewedの深刻度highと開発元のmediumは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。",
+          "開発元APIのpackage.nameはpypiだが、同じ開発元本文はpypdfとそのリリースを明示する。Reviewedのpypdfを保持し、pypiという別パッケージへ追加しない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-mfr5-77xh-9j7h",
+      "apiUrl": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-mfr5-77xh-9j7h",
+      "checkedAt": "2026-10-31T21:10:09.579339Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "512d1387a055de5164fca9b0bd7a0235cfa126d9107f3697253430461fbdd57e",
+      "ghsa_id": "GHSA-mfr5-77xh-9j7h",
+      "cve_id": "CVE-2026-119205",
+      "summary": "Possible infinite loop when cloning dictionaries",
+      "published_at": "2026-10-28T17:01:41Z",
+      "updated_at": "2026-10-29T20:34:46Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypi"
+          },
+          "vulnerable_version_range": "< 6.21.4",
+          "patched_versions": ">= 6.21.4",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "dd83df4f8156838b31cc9a4c7fd0afcec93aeb3e5e4cbb12fd85c1d14ac321c2",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "Reviewedの深刻度highと開発元のmediumは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。",
+          "開発元APIのpackage.nameはpypiだが、同じ開発元本文はpypdfとそのリリースを明示する。Reviewedのpypdfを保持し、pypiという別パッケージへ追加しない。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/security/advisories/GHSA-x3rh-gjgm-fmqc",
+      "apiUrl": "https://api.github.com/repos/py-pdf/pypdf/security-advisories/GHSA-x3rh-gjgm-fmqc",
+      "checkedAt": "2026-10-31T21:10:09.583816Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "0c621454c4cea42db102bf23165b315fae46d75157b916e83c3c5b697ccb891d",
+      "ghsa_id": "GHSA-x3rh-gjgm-fmqc",
+      "cve_id": "CVE-2026-119209",
+      "summary": "Possible large memory usage when parsing cross-reference streams",
+      "published_at": "2026-10-27T12:18:39Z",
+      "updated_at": "2026-10-29T20:42:15Z",
+      "withdrawn_at": null,
+      "severity": "medium",
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pypdf"
+          },
+          "vulnerable_version_range": "< 6.21.3",
+          "patched_versions": ">= 6.21.3",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "61a39761ff1944b45dbb1fdf6f1c26a164fb13cbc9948f858f7ddf190c49ea3e",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "medium",
+        "notes": [
+          "Reviewedの深刻度highと開発元のmediumは一致しない。開発元評価を表示し、DB評価は統合時の出典・provenanceに保持する。"
+        ]
+      }
+    },
+    {
+      "url": "https://github.com/pyasn1/pyasn1/security/advisories/GHSA-2qm8-x737-gmw5",
+      "apiUrl": "https://api.github.com/repos/pyasn1/pyasn1/security-advisories/GHSA-2qm8-x737-gmw5",
+      "checkedAt": "2026-10-31T21:10:13.034743Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "2556d09c80d42ce50394e40e441172735dd170056501345a851e81adee15e535",
+      "ghsa_id": "GHSA-2qm8-x737-gmw5",
+      "cve_id": "CVE-2026-119196",
+      "summary": "Quadratic CPU consumption in constructed BIT STRING decoding",
+      "published_at": "2026-10-27T06:59:22Z",
+      "updated_at": "2026-10-29T19:43:51Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pyasn1"
+          },
+          "vulnerable_version_range": "<= 0.6.4",
+          "patched_versions": "0.6.5",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "a7483f7e2e19ec2d5add4f70ffe5be3ec10df18896d22833537fbf4a002a5365",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/pyasn1/pyasn1/security/advisories/GHSA-9m75-vc3g-4x39",
+      "apiUrl": "https://api.github.com/repos/pyasn1/pyasn1/security-advisories/GHSA-9m75-vc3g-4x39",
+      "checkedAt": "2026-10-31T21:10:13.090521Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "c501db1bc0f7c5cf6df85f4e11877069fce8b331dc4a7fb9308ac645a17b3f38",
+      "ghsa_id": "GHSA-9m75-vc3g-4x39",
+      "cve_id": "CVE-2026-119195",
+      "summary": "Quadratic-time denial of service in constructed string and indefinite-length ANY decoding",
+      "published_at": "2026-10-27T06:58:57Z",
+      "updated_at": "2026-10-29T19:40:28Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pyasn1"
+          },
+          "vulnerable_version_range": "<= 0.6.4",
+          "patched_versions": "0.6.5",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "19b57a4f54ce6e739310965c07fdb823f67f97292eef84068d4b986064834bb6",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/pyasn1/pyasn1/security/advisories/GHSA-fm9c-5rcf-2q5p",
+      "apiUrl": "https://api.github.com/repos/pyasn1/pyasn1/security-advisories/GHSA-fm9c-5rcf-2q5p",
+      "checkedAt": "2026-10-31T21:10:13.091398Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "43185c923d588d70e7b066f73746cd5c4f3af8c2026a6ab5e713e6a0adbf81ff",
+      "ghsa_id": "GHSA-fm9c-5rcf-2q5p",
+      "cve_id": "CVE-2026-119194",
+      "summary": "Quadratic CPU use in schemaless BER/CER/DER container decoding",
+      "published_at": "2026-10-27T06:58:27Z",
+      "updated_at": "2026-10-29T19:37:36Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pyasn1"
+          },
+          "vulnerable_version_range": ">= 0.3.3, < 0.6.5",
+          "patched_versions": "0.6.5",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "b03dda156f7a1339dde50d9e72919ef7deca5a797109131a2b16a426687cedbd",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/pyasn1/pyasn1/security/advisories/GHSA-mm57-4v3p-rchx",
+      "apiUrl": "https://api.github.com/repos/pyasn1/pyasn1/security-advisories/GHSA-mm57-4v3p-rchx",
+      "checkedAt": "2026-10-31T21:10:13.096397Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "1fb2d0ff2de6f0ba84a34f55444149ccc276a5c67da890fefe2d421cb78f5ca3",
+      "ghsa_id": "GHSA-mm57-4v3p-rchx",
+      "cve_id": "CVE-2026-119197",
+      "summary": "Quadratic-complexity denial of service in binary REAL decoding",
+      "published_at": "2026-10-27T06:59:39Z",
+      "updated_at": "2026-10-29T19:48:02Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pyasn1"
+          },
+          "vulnerable_version_range": "<= 0.6.4",
+          "patched_versions": "0.6.5",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "a1b8a790ff46c5fd5dc614f3bedabb5c165210305a592149eab1d73e613617b5",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    },
+    {
+      "url": "https://github.com/sigstore/sigstore-js/security/advisories/GHSA-j63v-mwhm-56jx",
+      "apiUrl": "https://api.github.com/repos/sigstore/sigstore-js/security-advisories/GHSA-j63v-mwhm-56jx",
+      "checkedAt": "2026-10-31T21:10:16.608023Z",
+      "status": "success",
+      "httpStatus": 200,
+      "sha256": "6e09530938301235da470c8630435909971f6e962a4136c1d51af89e2c6b751c",
+      "ghsa_id": "GHSA-j63v-mwhm-56jx",
+      "cve_id": "CVE-2026-118763",
+      "summary": "@sigstore/oci sends the registry Authorization header to a cross-host blob-upload Location",
+      "published_at": "2026-10-26T16:34:39Z",
+      "updated_at": "2026-10-29T16:59:54Z",
+      "withdrawn_at": null,
+      "severity": "high",
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+        "score": 7.4
+      },
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+          "score": 7.4
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": null
+        }
+      },
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@sigstore/oci"
+          },
+          "vulnerable_version_range": "<= 0.7.1",
+          "patched_versions": ">= 0.7.2",
+          "vulnerable_functions": []
+        }
+      ],
+      "descriptionSha256": "23c4c7ba9fac0a80f495e22058591090a8f8497acc651587dc207e4378238df7",
+      "displayTreatment": {
+        "dateSource": "pinned-reviewed",
+        "affectedSource": "pinned-reviewed-with-caveats",
+        "databaseSeverity": "high",
+        "maintainerSeverity": "high",
+        "notes": []
+      }
+    }
+  ],
+  "curatedOverlayIds": [
+    "GHSA-2qm8-x737-gmw5",
+    "GHSA-2wrx-84qj-4pcg",
+    "GHSA-3g3m-2fjr-6pw4",
+    "GHSA-3xf4-9g3c-4h4w",
+    "GHSA-42gh-23hr-vphw",
+    "GHSA-4487-j8r4-4g2f",
+    "GHSA-4528-x5fx-h6hg",
+    "GHSA-4642-5mcj-2rqw",
+    "GHSA-494m-4556-wf5p",
+    "GHSA-4jq2-8v3c-97w8",
+    "GHSA-4p9f-7p9m-5vfg",
+    "GHSA-4vqv-7265-gm2w",
+    "GHSA-4xm8-rg9h-jhq2",
+    "GHSA-525v-9gp9-w22h",
+    "GHSA-5849-834g-hvw5",
+    "GHSA-5cwg-6vw7-rj6p",
+    "GHSA-5x38-2vff-x55p",
+    "GHSA-62m5-6wh8-28x7",
+    "GHSA-648h-gw55-m2g7",
+    "GHSA-662x-8wvj-2276",
+    "GHSA-6wvx-3r32-xmcg",
+    "GHSA-797x-p4mc-jwpm",
+    "GHSA-7984-qgvg-3j9c",
+    "GHSA-7wch-p9px-956x",
+    "GHSA-7wpf-ch8f-5f4x",
+    "GHSA-8494-f6mr-cjpv",
+    "GHSA-8fmv-6rg5-5924",
+    "GHSA-8hrf-8g6f-7xwp",
+    "GHSA-9gh4-xw24-9xh5",
+    "GHSA-9m75-vc3g-4x39",
+    "GHSA-9v7c-q64q-vv33",
+    "GHSA-9wfm-jcj8-jfv9",
+    "GHSA-c6q7-wqw2-h65w",
+    "GHSA-c73q-w75p-j82v",
+    "GHSA-cggf-277g-3q54",
+    "GHSA-fhx5-2xqw-2cgm",
+    "GHSA-fm9c-5rcf-2q5p",
+    "GHSA-fw5c-8223-6h42",
+    "GHSA-g3hv-75wg-m249",
+    "GHSA-g5jq-qmqr-qrwf",
+    "GHSA-grfq-r75j-rw9x",
+    "GHSA-h599-m3w5-9m7x",
+    "GHSA-h6cr-wjv9-3cpp",
+    "GHSA-hff9-5pqw-6w9f",
+    "GHSA-hqq3-7jhf-c5jx",
+    "GHSA-j63v-mwhm-56jx",
+    "GHSA-jc66-7q78-782g",
+    "GHSA-mfr5-77xh-9j7h",
+    "GHSA-mm57-4v3p-rchx",
+    "GHSA-mmq5-xm89-9pfg",
+    "GHSA-mpqx-q82w-9x46",
+    "GHSA-mrwp-f3q8-3g9p",
+    "GHSA-vp5q-ff62-jwqv",
+    "GHSA-wg5q-x4j9-qm54",
+    "GHSA-x287-wcfc-q46c",
+    "GHSA-x3rh-gjgm-fmqc"
+  ],
+  "eligibleChangedIds": [
+    "GHSA-gv3v-2cpp-3pmq",
+    "GHSA-2qm8-x737-gmw5",
+    "GHSA-2wrx-84qj-4pcg",
+    "GHSA-3g3m-2fjr-6pw4",
+    "GHSA-3xf4-9g3c-4h4w",
+    "GHSA-42gh-23hr-vphw",
+    "GHSA-4487-j8r4-4g2f",
+    "GHSA-4528-x5fx-h6hg",
+    "GHSA-4642-5mcj-2rqw",
+    "GHSA-494m-4556-wf5p",
+    "GHSA-4jq2-8v3c-97w8",
+    "GHSA-4p9f-7p9m-5vfg",
+    "GHSA-4vqv-7265-gm2w",
+    "GHSA-4xm8-rg9h-jhq2",
+    "GHSA-525v-9gp9-w22h",
+    "GHSA-5849-834g-hvw5",
+    "GHSA-5cwg-6vw7-rj6p",
+    "GHSA-5x38-2vff-x55p",
+    "GHSA-62m5-6wh8-28x7",
+    "GHSA-648h-gw55-m2g7",
+    "GHSA-662x-8wvj-2276",
+    "GHSA-6wvx-3r32-xmcg",
+    "GHSA-797x-p4mc-jwpm",
+    "GHSA-7984-qgvg-3j9c",
+    "GHSA-7wch-p9px-956x",
+    "GHSA-7wpf-ch8f-5f4x",
+    "GHSA-8494-f6mr-cjpv",
+    "GHSA-8fmv-6rg5-5924",
+    "GHSA-8hrf-8g6f-7xwp",
+    "GHSA-9gh4-xw24-9xh5",
+    "GHSA-9m75-vc3g-4x39",
+    "GHSA-9v7c-q64q-vv33",
+    "GHSA-9wfm-jcj8-jfv9",
+    "GHSA-c6q7-wqw2-h65w",
+    "GHSA-c73q-w75p-j82v",
+    "GHSA-cggf-277g-3q54",
+    "GHSA-fhx5-2xqw-2cgm",
+    "GHSA-fm9c-5rcf-2q5p",
+    "GHSA-fw5c-8223-6h42",
+    "GHSA-g3hv-75wg-m249",
+    "GHSA-g5jq-qmqr-qrwf",
+    "GHSA-grfq-r75j-rw9x",
+    "GHSA-h599-m3w5-9m7x",
+    "GHSA-h6cr-wjv9-3cpp",
+    "GHSA-hff9-5pqw-6w9f",
+    "GHSA-hqq3-7jhf-c5jx",
+    "GHSA-j63v-mwhm-56jx",
+    "GHSA-jc66-7q78-782g",
+    "GHSA-mfr5-77xh-9j7h",
+    "GHSA-mm57-4v3p-rchx",
+    "GHSA-mmq5-xm89-9pfg",
+    "GHSA-mpqx-q82w-9x46",
+    "GHSA-mrwp-f3q8-3g9p",
+    "GHSA-vp5q-ff62-jwqv",
+    "GHSA-wg5q-x4j9-qm54",
+    "GHSA-x287-wcfc-q46c",
+    "GHSA-x3rh-gjgm-fmqc"
+  ],
+  "sameIdMaintainerVerified": 56,
+  "relatedMaintainerAdvisories": [
+    "GHSA-cpm7-cfpx-3hvp"
+  ],
+  "keycloakRelatedSourceChecks": [
+    {
+      "url": "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2025-11537.json",
+      "checkedAt": "2026-10-31T21:12:27.625206Z",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "status": "fetch_failed",
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "reason": "HTTP 200 body is a Site Unavailable HTML page, not a CVE JSON record. Not a successful advisory fetch."
+    },
+    {
+      "url": "https://www.keycloak.org/server/logging",
+      "checkedAt": "2026-10-31T21:12:31.483821Z",
+      "httpStatus": 200,
+      "sha256": "4f3de9900751bde666794325ead7edd27b2bb71f463b1e9b394c5e4f3b61793c",
+      "status": "success",
+      "scope": "Official logging documentation only; does not independently establish CVE affected/fixed bounds."
+    },
+    {
+      "url": "https://api.github.com/repos/keycloak/keycloak/releases/tags/26.5.6",
+      "checkedAt": "2026-10-31T21:12:35.996317Z",
+      "httpStatus": 200,
+      "sha256": "5011755230bf77dcea80a9d30fae8c4d5fded4d501026cff11591a14a3287cea",
+      "status": "success",
+      "scope": "Official 26.5.6 release API retrieved; body does not name CVE-2025-11537. Not treated as direct confirmation of this CVE fix."
+    }
+  ],
+  "notIndividuallyMaintainerVerified": [
+    {
+      "id": "GHSA-gv3v-2cpp-3pmq",
+      "reason": "Only modified timestamp and references changed in Reviewed. Red Hat CVE primary endpoint returned unavailable HTML; logging documentation and release page do not establish CVE bounds. Existing database provenance retained."
+    }
+  ]
+}

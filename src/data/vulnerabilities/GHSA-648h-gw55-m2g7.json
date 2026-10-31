@@ -1,0 +1,92 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-648h-gw55-m2g7",
+  "aliases": [
+    "CVE-2026-119199"
+  ],
+  "title": "Nuxt dev server exposes private runtime config through the Nitro dev bundle",
+  "summary": "Nuxt dev server exposes private runtime config through the Nitro dev bundle",
+  "publishedAt": "2026-10-30T23:00:43Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-648h-gw55-m2g7/GHSA-648h-gw55-m2g7.json",
+  "modifiedAt": "2026-10-30T23:00:43Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:10:01.700737Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@nuxt/vite-builder",
+      "ranges": [
+        {
+          "affected": ">= 3.0.0 < 4.0.0",
+          "fixed": null,
+          "sourceUrl": "https://github.com/nuxt/nuxt/security/advisories/GHSA-648h-gw55-m2g7"
+        },
+        {
+          "affected": ">= 4.0.0 < 4.6.3",
+          "fixed": "4.6.3",
+          "sourceUrl": "https://github.com/nuxt/nuxt/security/advisories/GHSA-648h-gw55-m2g7"
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-648h-gw55-m2g7/GHSA-648h-gw55-m2g7.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-648h-gw55-m2g7/GHSA-648h-gw55-m2g7.json"
+      },
+      {
+        "version": "3.1",
+        "score": 5.9,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://github.com/nuxt/nuxt/security/advisories/GHSA-648h-gw55-m2g7"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-648h-gw55-m2g7/GHSA-648h-gw55-m2g7.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T23:00:43Z",
+      "modifiedAt": "2026-10-30T23:00:43Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Nuxt dev server exposes private runtime config through the Nitro dev bundle",
+      "url": "https://github.com/advisories/GHSA-648h-gw55-m2g7",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-648h-gw55-m2g7",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T01:09:30Z",
+      "modifiedAt": "2026-10-29T20:13:03Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元はNuxt 3系をサポート終了・修正提供なし、4系を4.6.3修正として分ける。Reviewedの>=3.0.0,<4.6.3一範囲と異なるため系列別表示を保持。",
+    "Nitro 2を使う開発サーバーへの直接HTTP到達が条件。production build・Nitro 3は対象外で、起動時NUXT_*環境変数から供給する空の既定値はinlined値と区別する。"
+  ]
+}

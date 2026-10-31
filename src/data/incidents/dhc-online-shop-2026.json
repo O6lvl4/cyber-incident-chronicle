@@ -1,0 +1,94 @@
+{
+  "id": "dhc-online-shop-2026",
+  "company": "株式会社ディーエイチシー",
+  "geography": "日本",
+  "title": "オンラインショップで5096アカウントの情報書換えを確認",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-10-30",
+  "statusAsOfDate": "2026-10-30",
+  "lastVerifiedDate": "2026-11-01",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "システムの脆弱性の悪用を確認。詳細は非公表",
+    "status": "confirmed"
+  },
+  "summary": "28日に侵入と会員情報の書換えを確認。情報を復元し、不審注文27件の取消しと不正登録71件の無効化を実施。登録情報の閲覧可能性はあるが、外部持出しの形跡は未確認。",
+  "affectedData": [
+    "会員番号、届け先の氏名・住所・電話番号、購入履歴、カード番号下4桁（閲覧可能性）"
+  ],
+  "counts": [
+    {
+      "value": 5096,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "情報書換えを確認したアカウント",
+      "approximate": false
+    },
+    {
+      "value": 5520,
+      "unit": "住所",
+      "status": "confirmed",
+      "label": "上記アカウントに登録された複数のお届け先住所の最大数",
+      "approximate": false
+    },
+    {
+      "value": 27,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "不審な注文（取消し済み）",
+      "approximate": false
+    },
+    {
+      "value": 71,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "不正な新規会員登録（取消し済み）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "アカウント数・住所数・注文件数・登録件数は異なる単位で合算しない。これらは漏えい確定人数ではない。",
+    "カード番号全桁は保有していない。公表時点で外部への持出しの形跡・本件に起因する二次被害は未確認。"
+  ],
+  "sources": [
+    {
+      "title": "当社オンラインショップへの不正アクセスに関するお詫びとお知らせ",
+      "url": "https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/10/0deb6f2426f1d5ab2b2b1824288b374d.pdf",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "28日に侵入と会員情報の書換えを確認。情報を復元し、不審注文27件の取消しと不正登録71件の無効化を実施。登録情報の閲覧可能性はあるが、外部持出しの形跡は未確認。",
+      "sourceUrl": "https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/10/0deb6f2426f1d5ab2b2b1824288b374d.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃日未公表",
+      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
+      "sourceUrl": "https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/10/0deb6f2426f1d5ab2b2b1824288b374d.pdf",
+      "reviewedDate": "2026-11-01"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月28日（情報書換え等の確認）",
+      "startDate": "2026-10-28",
+      "note": "公式は不正アクセスおよび会員情報の書換え等を同日に確認したと説明。漏えい確定日ではない。",
+      "sourceUrl": "https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/10/0deb6f2426f1d5ab2b2b1824288b374d.pdf",
+      "reviewedDate": "2026-11-01"
+    }
+  },
+  "detectedDate": "2026-10-28"
+}

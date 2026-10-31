@@ -1,0 +1,97 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-494m-4556-wf5p",
+  "aliases": [],
+  "title": "imgproxy has out-of-bounds heap read/write in ICO loader BMP header reconstruction that allows unauthenticated remote worker crash",
+  "summary": "imgproxy has out-of-bounds heap read/write in ICO loader BMP header reconstruction that allows unauthenticated remote worker crash",
+  "publishedAt": "2026-10-30T22:56:14Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-494m-4556-wf5p/GHSA-494m-4556-wf5p.json",
+  "modifiedAt": "2026-10-30T22:56:14Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:46.835002Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/imgproxy/imgproxy/v3",
+      "ranges": [
+        {
+          "affected": ">= 3.3.0, < 4.0.17",
+          "fixed": "4.0.17",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-494m-4556-wf5p/GHSA-494m-4556-wf5p.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.3.0"
+            },
+            {
+              "fixed": "4.0.17"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-494m-4556-wf5p/GHSA-494m-4556-wf5p.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-494m-4556-wf5p/GHSA-494m-4556-wf5p.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/imgproxy/imgproxy/security/advisories/GHSA-494m-4556-wf5p"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-494m-4556-wf5p/GHSA-494m-4556-wf5p.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:56:14Z",
+      "modifiedAt": "2026-10-30T22:56:14Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "imgproxy has out-of-bounds heap read/write in ICO loader BMP header reconstruction that allows unauthenticated remote worker crash",
+      "url": "https://github.com/advisories/GHSA-494m-4556-wf5p",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/imgproxy/imgproxy/security/advisories/GHSA-494m-4556-wf5p",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T15:29:47Z",
+      "modifiedAt": "2026-10-06T15:29:47Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元APIのgithub.com/darthsim/imgproxy（ecosystem空欄）とReviewedのgithub.com/imgproxy/imgproxy/v3を同一のパッケージ表記へ推測統一しない。開発元は製品系列3.3.0〜4.0.16・4.0.17以降を示す。"
+  ]
+}

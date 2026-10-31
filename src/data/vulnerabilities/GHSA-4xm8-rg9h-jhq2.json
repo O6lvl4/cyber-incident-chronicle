@@ -1,0 +1,122 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4xm8-rg9h-jhq2",
+  "aliases": [],
+  "title": "Signal K resources API path traversal can disclose the JWT signing secret and enable remote code execution",
+  "summary": "Signal K resources API path traversal can disclose the JWT signing secret and enable remote code execution",
+  "publishedAt": "2026-10-30T22:57:22Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4xm8-rg9h-jhq2/GHSA-4xm8-rg9h-jhq2.json",
+  "modifiedAt": "2026-10-30T22:57:22Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:28.312393Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@signalk/resources-provider",
+      "ranges": [
+        {
+          "affected": ">= 1.0.0, < 1.5.3",
+          "fixed": "1.5.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4xm8-rg9h-jhq2/GHSA-4xm8-rg9h-jhq2.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "1.5.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "npm",
+      "packageName": "signalk-server",
+      "ranges": [
+        {
+          "affected": ">= 2.0.0, < 2.34.0",
+          "fixed": "2.34.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4xm8-rg9h-jhq2/GHSA-4xm8-rg9h-jhq2.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.34.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4xm8-rg9h-jhq2/GHSA-4xm8-rg9h-jhq2.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4xm8-rg9h-jhq2/GHSA-4xm8-rg9h-jhq2.json"
+      },
+      {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-4xm8-rg9h-jhq2"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-4xm8-rg9h-jhq2/GHSA-4xm8-rg9h-jhq2.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:57:22Z",
+      "modifiedAt": "2026-10-30T22:57:22Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Signal K resources API path traversal can disclose the JWT signing secret and enable remote code execution",
+      "url": "https://github.com/advisories/GHSA-4xm8-rg9h-jhq2",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-4xm8-rg9h-jhq2",
+      "publishedDate": "2026-10-18",
+      "publishedAt": "2026-10-18T19:03:54Z",
+      "modifiedAt": "2026-10-18T19:03:54Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
+    "開発元のsignalk-server影響範囲は>=2.0.0、修正版2.34.0。Reviewedは修正版を除外境界にしている。resources-providerの1.5.3修正は別パッケージとして保持。未認証での影響はallow_readonly等の条件に依存する。"
+  ]
+}

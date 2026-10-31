@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mpqx-q82w-9x46",
+  "aliases": [
+    "CVE-2026-119286"
+  ],
+  "title": "GraphQL-core has denial of service via memory leak in aborted validations",
+  "summary": "GraphQL-core has denial of service via memory leak in aborted validations",
+  "publishedAt": "2026-10-30T22:58:31Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-mpqx-q82w-9x46/GHSA-mpqx-q82w-9x46.json",
+  "modifiedAt": "2026-10-30T22:58:31Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-10-31T21:09:46.764375Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "graphql-core",
+      "ranges": [
+        {
+          "affected": ">= 3.3.0a3, < 3.3.1",
+          "fixed": "3.3.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-mpqx-q82w-9x46/GHSA-mpqx-q82w-9x46.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.3.0a3"
+            },
+            {
+              "fixed": "3.3.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-mpqx-q82w-9x46/GHSA-mpqx-q82w-9x46.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-mpqx-q82w-9x46/GHSA-mpqx-q82w-9x46.json"
+      },
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/graphql-python/graphql-core/security/advisories/GHSA-mpqx-q82w-9x46"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-mpqx-q82w-9x46/GHSA-mpqx-q82w-9x46.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:58:31Z",
+      "modifiedAt": "2026-10-30T22:58:31Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GraphQL-core has denial of service via memory leak in aborted validations",
+      "url": "https://github.com/advisories/GHSA-mpqx-q82w-9x46",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/graphql-python/graphql-core/security/advisories/GHSA-mpqx-q82w-9x46",
+      "publishedDate": "2026-10-25",
+      "publishedAt": "2026-10-25T09:36:13Z",
+      "modifiedAt": "2026-10-29T21:38:03Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。"
+  ]
+}
