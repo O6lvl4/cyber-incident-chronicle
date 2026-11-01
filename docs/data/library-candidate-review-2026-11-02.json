@@ -1,0 +1,60 @@
+{
+  "reportDateJst": "2026-11-02",
+  "checkedAt": "2026-11-01T21:43:33.978497Z",
+  "records": [
+    {
+      "id": "GHSA-xg75-xf37-cph9",
+      "status": "verified_maintainer_candidate_held_database_unavailable",
+      "sourceUrl": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-xg75-xf37-cph9",
+      "httpStatus": 200,
+      "originalResponseSha256": "c42fb252568c06eb3dd5c8c0ef2e3fab0702a93b97e07e0ea0c3bf36a419cc92",
+      "maintainer": {
+        "ghsa_id": "GHSA-xg75-xf37-cph9",
+        "cve_id": null,
+        "html_url": "https://github.com/lxc/incus/security/advisories/GHSA-xg75-xf37-cph9",
+        "summary": "Authentication and authorization bypass through unverified client certificate chains",
+        "description": "### Summary\r\n\r\nThe HTTPS listener requests client certificates without verifying them,\r\nso the TLS handshake only proves that the client holds the private key\r\nof the first certificate in the chain it presents. The remaining\r\ncertificates are entirely client controlled.\r\n\r\nThe authentication and certificate ownership checks compared every\r\ncertificate in the presented chain against the trust store. A client\r\ncould therefore authenticate as any trusted certificate by appending\r\nthat certificate's public part to its own chain, without holding the\r\nmatching private key.\r\n\r\nThis has been the case since the initial release.\r\n\r\n### Impact\r\n\r\nAny client able to reach the HTTPS listener can authenticate as any\r\ntrusted client, metrics or server certificate for which it has the\r\npublic certificate, including as a cluster member, which bypasses\r\nauthorization entirely.\r\n\r\nServer certificates are returned by every TLS handshake, so no prior\r\naccess is needed to obtain one. Appending the server's own certificate\r\ngrants access to the database gateway, and on a cluster appending\r\nanother member's certificate grants internal cluster access. Client\r\ncertificates can be read by any trusted client through the certificates\r\nAPI or obtained from any server the client connected to.\r\n\r\nThe same flaw lets a client renew or delete any trust store entry\r\nthrough the self-service paths, and affects the authentication of the\r\nagent connection between the host and virtual machines.\r\n\r\nThe unverified presented chain was also passed to the authorization\r\nscriptlet, so a client could feed it attacker-chosen certificates to\r\ninfluence scriptlet-based authorization decisions. This includes\r\nclients not authenticated through mutual TLS, such as token or OIDC\r\nclients, which can still present an arbitrary certificate during the\r\nhandshake.\r\n\r\n### Workarounds\r\n\r\nRestrict network access to the HTTPS listener to trusted hosts. There\r\nis no configuration based workaround.",
+        "severity": "critical",
+        "updated_at": "2026-10-29T22:17:06Z",
+        "published_at": "2026-10-29T22:17:06Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/lxc/incus/v7/cmd/incusd"
+            },
+            "vulnerable_version_range": "< v7.6.0",
+            "patched_versions": ">= v7.6.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "score": 10.0
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "cwe_ids": [
+          "CWE-287",
+          "CWE-295"
+        ]
+      },
+      "osvCheck": {
+        "url": "https://api.osv.dev/v1/vulns/GHSA-xg75-xf37-cph9",
+        "httpStatus": 404
+      },
+      "globalGhsaCheck": {
+        "url": "https://api.github.com/advisories/GHSA-xg75-xf37-cph9",
+        "httpStatus": 404
+      },
+      "goExportCheck": "No ID or alias found in the current full Go export. This does not invalidate the maintainer advisory.",
+      "decision": "Hold as a library candidate pending public database registration; no product or corporate record inferred.",
+      "caveat": "The affected coordinate is github.com/lxc/incus/v7/cmd/incusd, not every package in the repository. No CVE is assigned in the public maintainer advisory."
+    }
+  ]
+}

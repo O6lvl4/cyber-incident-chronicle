@@ -1,0 +1,138 @@
+{
+  "kind": "product",
+  "id": "TNS-2026-34",
+  "aliases": [
+    "CVE-2026-119314",
+    "CVE-2026-119315",
+    "CVE-2026-119316"
+  ],
+  "vendor": "Tenable",
+  "product": "Tenable Identity Exposure",
+  "productKey": "tenable-identity-exposure",
+  "title": "IoAイベントリスナーのコマンド注入など3件",
+  "summary": "認証済み低権限利用者によるSYSTEM権限でのコマンド実行、GraphQLのサービス妨害、Secure Relay失敗ログへのlinking key露出を修正。",
+  "publishedDate": "2026-10-30",
+  "publishedAt": null,
+  "dateSourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34",
+  "dateNote": "開発元告知の初回公表日。CVEデータベース公開日とは区別する。",
+  "listedDate": "2026-10-30",
+  "listedNote": "開発元がCriticalとして公表した日。",
+  "modifiedAt": null,
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-01T21:42:00Z",
+  "affected": [
+    {
+      "name": "Identity Exposure 3.93 系",
+      "affected": "3.93.5以前（当該系列）",
+      "fixed": "3.93.6。IoAは更新後にスクリプトのアンインストール・再インストールも必要。",
+      "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34"
+    },
+    {
+      "name": "Identity Exposure 3.77 系",
+      "affected": "3.77.17以前（当該系列）",
+      "fixed": "3.77.18。IoAは更新後にスクリプトのアンインストール・再インストールも必要。",
+      "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34"
+      },
+      {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+        "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34"
+      },
+      {
+        "version": "3.1",
+        "score": 4.3,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34"
+      },
+      {
+        "version": "4.0",
+        "score": 5.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34"
+      },
+      {
+        "version": "3.1",
+        "score": 4.1,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34"
+      },
+      {
+        "version": "4.0",
+        "score": 5.6,
+        "vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-34"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-01T21:42:00Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-01T21:42:00Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "critical"
+  ],
+  "mitigations": [
+    {
+      "text": "系列別修正版へ更新後、ドメインコントローラのIoAスクリプトをアンインストールして再インストールする。更新だけでは旧リスナーが残る。更新前にカスタムTLS証明書とCAのRSA鍵が2048ビット以上であることを確認する。",
+      "sourceUrl": "https://docs.tenable.com/release-notes/Content/identity-exposure/onprem/2026.htm"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Tenable TNS-2026-34",
+      "url": "https://zh-tw.tenable.com/security/tns-2026-34",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "type": "release",
+      "title": "Identity Exposure 3.93.6 / 3.77.18 release notes",
+      "url": "https://docs.tenable.com/release-notes/Content/identity-exposure/onprem/2026.htm",
+      "publishedDate": "2026-10-30"
+    }
+  ],
+  "caveats": [
+    "実悪用・公開攻撃コードは今回確認した一次資料では確認できず、unknownは安全という意味ではない。",
+    "CISA本体JSONはHTTP403。公式GitHubミラーでは未掲載だが、既存検証のホスト制約により構造化KEV欄はunknownを保持する。",
+    "告知全体のCriticalと表示CVSSは119314。119315はCVSS3.1 4.3（Temporal 3.9）/4.0 5.3、119316は3.1 4.1（Temporal 3.7）/4.0 5.6であり、全3件をCriticalとしない。119314のTemporalは8.9。CVSS欄はBase評価。",
+    "CVSSのE:Pだけから公開攻撃コードや実悪用を推定しない。",
+    "英語本体は403、開発元公式zh-twホストの同一英語本文を確認。3 CVEのCNA APIは404で、範囲・評価・修正版は開発元告知に基づく。",
+    "CVSS配列は119314、119315、119316の順に、それぞれ3.1 Baseと4.0 Baseを併記。告知の3.1ベクトル末尾E:P/RL:O/RC:CはTemporalであり、Baseベクトルから分離した。"
+  ]
+}
