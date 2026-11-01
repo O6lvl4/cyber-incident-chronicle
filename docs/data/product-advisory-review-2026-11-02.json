@@ -1,0 +1,1741 @@
+{
+  "reportDateJst": "2026-11-02",
+  "checkedAt": "2026-11-01T21:44:00Z",
+  "baseCommit": "e460beb455674d0a470131918b65ed4890bf6884",
+  "recordsBefore": 48,
+  "recordsAfter": 50,
+  "addedRecords": 2,
+  "updatedRecords": 0,
+  "added": [
+    "CVE-2026-112816",
+    "TNS-2026-34"
+  ],
+  "updated": [],
+  "scope": "Existing product/runtime category only. Discovery since2026-10-24 overlaps last successful2026-10-31T21:12:55Z review. JPCERT/IPA complete indexes, official KEV mirror, PHP, selected Canonical/Tenable and oss-security sources. All48 prior records inventoried via117 unique CVE IDs;116 retrieved,115 exact-byte matches with previous CNA audit and Cisco76418 new per-ID snapshot with unchanged recorded timestamp. Not all vendor pages reread; not exhaustive global Critical scanning. Failed-source checkpoints retained.",
+  "candidateScan": {
+    "generatedAt": "2026-11-01T21:40:38.640Z",
+    "since": "2026-10-24",
+    "records": 48,
+    "sources": [
+      {
+        "name": "CISA KEV",
+        "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+        "status": "failed",
+        "fetchedAt": "2026-11-01T21:40:38.638Z",
+        "error": "HTTP 403"
+      },
+      {
+        "name": "JPCERT/CC 注意喚起",
+        "url": "https://www.jpcert.or.jp/at/2026.html",
+        "status": "ok",
+        "fetchedAt": "2026-11-01T21:40:38.407Z",
+        "items": 35
+      },
+      {
+        "name": "IPA 重要なセキュリティ情報",
+        "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+        "status": "ok",
+        "fetchedAt": "2026-11-01T21:40:38.320Z",
+        "items": 29
+      }
+    ],
+    "candidates": [],
+    "drift": [],
+    "note": "取得失敗は候補なしを意味しない。候補は一次資料を読んで判定し、除外も確認記録に残す。"
+  },
+  "sources": [
+    {
+      "name": "CISA KEV",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "status": "fetch-failed",
+      "checkedAt": "2026-11-01T21:40:38.638Z",
+      "error": "HTTP 403",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "name": "JPCERT/CC 注意喚起",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "status": "verified-no-change",
+      "checkedAt": "2026-11-01T21:40:38.407Z",
+      "items": 35
+    },
+    {
+      "name": "IPA 重要なセキュリティ情報",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "status": "verified-no-change",
+      "checkedAt": "2026-11-01T21:40:38.320Z",
+      "items": 29
+    },
+    {
+      "name": "CISA official GitHub KEV mirror",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "status": "verified-no-change",
+      "checkedAt": "2026-11-01T21:44:00Z",
+      "catalogVersion": "2026.10.30",
+      "snapshotCount": 1766,
+      "sha256": "3aa9cf3c01f116362a29d111702979175453c425e3733bde80fc4f6f8e2294e5",
+      "note": "Identical bytes to previous fixed-commit official mirror snapshot. Canonical retrieval remains failed; existing cisa.gov-only gate unchanged."
+    },
+    {
+      "name": "PHP announcements",
+      "url": "https://www.php.net/archive/2026.php",
+      "status": "verified-no-change",
+      "latestAnnouncementDate": "2026-10-26"
+    },
+    {
+      "name": "Canonical LXD/MicroCloud advisory and post metadata",
+      "url": "https://discourse.ubuntu.com/t/security-advisory-critical-vulnerability-found-in-canonical-lxd-and-microcloud/90557",
+      "status": "verified-addition",
+      "note": "Vendor publication October28 and release table October29 distinguished from CNA publication October30. Four LXD ranges from CNA, two MicroCloud snap fixes from vendor; do not invent MicroCloud lower bounds."
+    },
+    {
+      "name": "Canonical GHSA",
+      "url": "https://github.com/canonical/lxd/security/advisories/GHSA-99jp-jwmc-65p4",
+      "status": "fetch-failed",
+      "error": "HTTP404 for page and GitHub repository advisory API",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "name": "Ubuntu CVE page",
+      "url": "https://ubuntu.com/security/CVE-2026-112816",
+      "status": "fetch-failed",
+      "error": "web fetch timeout",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "name": "Tenable Identity Exposure TNS-2026-34",
+      "url": "https://zh-tw.tenable.com/security/tns-2026-34",
+      "status": "verified-addition",
+      "note": "Official locale host serves full English vendor article. www.tenable.com returns403. CNA API119314/119315/119316 each404. Vendor article confirms publication/ranges/scores; release notes confirm IoA reinstall requirement."
+    },
+    {
+      "name": "Tenable Identity Exposure release notes",
+      "url": "https://docs.tenable.com/release-notes/Content/identity-exposure/onprem/2026.htm",
+      "status": "verified",
+      "note": "3.93.6 and3.77.18 require IoA script uninstall/reinstall after upgrade; RSA minimum2048-bit requirement retained."
+    },
+    {
+      "name": "Tenable Network Monitor TNS-2026-32",
+      "url": "https://zh-tw.tenable.com/security/tns-2026-32",
+      "status": "verified-held",
+      "note": "Full vendor advisory via web including93 component CVEs, Critical risk, <=6.5.4 affected and6.6.0 fixed. Direct local fetch403. Existing product alias collision prevents addition."
+    },
+    {
+      "name": "oss-security November1 and October31 indexes and November1 messages1–3",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/01/",
+      "status": "verified-excluded",
+      "note": "Web index fetch failed but direct local HTTP fetch succeeded. CPAN notices are primary discloser announcements, not proof of product selection criteria."
+    },
+    {
+      "name": "Incus original developer advisory",
+      "url": "https://github.com/lxc/incus/security/advisories/GHSA-xg75-xf37-cph9",
+      "status": "verified-library-handoff",
+      "note": "Critical10.0, Go cmd/incusd, <v7.6.0 fixed>=v7.6.0, no known CVE; not equated with Canonical CVE identity."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CVE-2026-112816",
+      "decision": "included",
+      "reason": "Canonical Critical publication October28; CVSS4.0 10.0 from CNA. Separate publication/release/CNA dates preserved."
+    },
+    {
+      "id": "TNS-2026-34",
+      "decision": "included",
+      "reason": "Vendor Critical advisory October30 grouping3 CVEs. Severity distinction and additional IoA reinstall action retained."
+    },
+    {
+      "id": "TNS-2026-32",
+      "decision": "held-schema-duplicate-cve-identity",
+      "reason": "Vendor October26 Critical bulletin contains93 CVEs; CVE-2026-6732 already aliases ORACLE-CPUOCT2026-JAVA-SE. Do not delete aliases or invent identity to bypass validation.",
+      "aliases": [
+        "CVE-2026-0989",
+        "CVE-2026-0990",
+        "CVE-2026-0992",
+        "CVE-2026-102633",
+        "CVE-2026-11352",
+        "CVE-2026-11564",
+        "CVE-2026-11586",
+        "CVE-2026-11979",
+        "CVE-2026-14456",
+        "CVE-2026-14457",
+        "CVE-2026-1757",
+        "CVE-2026-18798",
+        "CVE-2026-1965",
+        "CVE-2026-34180",
+        "CVE-2026-34181",
+        "CVE-2026-34182",
+        "CVE-2026-34183",
+        "CVE-2026-35189",
+        "CVE-2026-35191",
+        "CVE-2026-3783",
+        "CVE-2026-3784",
+        "CVE-2026-3805",
+        "CVE-2026-42764",
+        "CVE-2026-42766",
+        "CVE-2026-42767",
+        "CVE-2026-42772",
+        "CVE-2026-45186",
+        "CVE-2026-4873",
+        "CVE-2026-50219",
+        "CVE-2026-54872",
+        "CVE-2026-54873",
+        "CVE-2026-54874",
+        "CVE-2026-54875",
+        "CVE-2026-5545",
+        "CVE-2026-56131",
+        "CVE-2026-56132",
+        "CVE-2026-56403",
+        "CVE-2026-56404",
+        "CVE-2026-56405",
+        "CVE-2026-56406",
+        "CVE-2026-56407",
+        "CVE-2026-56408",
+        "CVE-2026-56409",
+        "CVE-2026-56410",
+        "CVE-2026-56411",
+        "CVE-2026-56412",
+        "CVE-2026-5773",
+        "CVE-2026-6253",
+        "CVE-2026-6276",
+        "CVE-2026-63072",
+        "CVE-2026-63073",
+        "CVE-2026-63074",
+        "CVE-2026-63075",
+        "CVE-2026-63076",
+        "CVE-2026-6429",
+        "CVE-2026-66046",
+        "CVE-2026-6732",
+        "CVE-2026-7009",
+        "CVE-2026-7168",
+        "CVE-2026-72897",
+        "CVE-2026-74860",
+        "CVE-2026-75803",
+        "CVE-2026-75804",
+        "CVE-2026-75805",
+        "CVE-2026-75806",
+        "CVE-2026-76641",
+        "CVE-2026-76781",
+        "CVE-2026-76956",
+        "CVE-2026-76957",
+        "CVE-2026-77214",
+        "CVE-2026-77696",
+        "CVE-2026-8286",
+        "CVE-2026-8458",
+        "CVE-2026-84784",
+        "CVE-2026-86137",
+        "CVE-2026-86138",
+        "CVE-2026-86139",
+        "CVE-2026-86140",
+        "CVE-2026-86141",
+        "CVE-2026-86142",
+        "CVE-2026-86143",
+        "CVE-2026-86144",
+        "CVE-2026-8924",
+        "CVE-2026-8925",
+        "CVE-2026-8926",
+        "CVE-2026-8927",
+        "CVE-2026-8932",
+        "CVE-2026-9079",
+        "CVE-2026-9080",
+        "CVE-2026-93990",
+        "CVE-2026-9545",
+        "CVE-2026-9546",
+        "CVE-2026-9547"
+      ],
+      "affected": "Tenable Network Monitor6.5.4 and earlier",
+      "fixed": "6.6.0",
+      "sourceUrl": "https://zh-tw.tenable.com/security/tns-2026-32"
+    },
+    {
+      "id": "GHSA-xg75-xf37-cph9",
+      "decision": "library-handoff",
+      "reason": "Developer lists Go package github.com/lxc/incus/v7/cmd/incusd. Library reviewer reports global GHSA/OSV404 and export absence; held on library side, not double-added here."
+    },
+    {
+      "id": "CVE-2026-118527",
+      "decision": "held-source-incomplete",
+      "reason": "Official KEV mirror confirms10/30 listing; vendor article unavailable and CNA API404. Do not infer affected/fixed or vendor publication date.",
+      "reviewNote": "Existing hold preserved; validation/schema unchanged. CNA recheck retained separately where available."
+    },
+    {
+      "id": "CVE-2026-111357",
+      "decision": "held-source-incomplete",
+      "reason": "MITRE CNA and KEV mirror confirm publication/listing and ICS22.8R2.4 affected, but vendor text and fixed ranges unavailable. No borrowed fix from104935.",
+      "reviewNote": "Existing hold preserved; validation/schema unchanged. CNA recheck retained separately where available."
+    },
+    {
+      "id": "CVE-2026-41709",
+      "decision": "held-validator-source-contract",
+      "reason": "Vendor/CNA verified; KEV-only inclusion relies on official mirror, rejected by existing cisa.gov-only validator.",
+      "reviewNote": "Existing hold preserved; validation/schema unchanged. CNA recheck retained separately where available."
+    },
+    {
+      "id": "CVE-2026-98432",
+      "decision": "held-validator-date-contract",
+      "reason": "Original CNA disclosure10/15 lacked severity, firstCritical9.8 added10/24. Validator binds critical listedDate to publishedDate; accurate distinct dates cannot pass without code/schema-contract change.",
+      "reviewNote": "Existing hold preserved; validation/schema unchanged. CNA recheck retained separately where available."
+    },
+    {
+      "id": "PHP-WINDOWS-BROTLI-2026-10-26",
+      "decision": "held-schema-duplicate-cve-identity",
+      "reason": "Existing unique-alias rule still conflicts with Node.js recordCVE-2026-111497. No fakeID or alias deletion.",
+      "reviewNote": "Existing hold preserved; validation/schema unchanged. CNA recheck retained separately where available."
+    },
+    {
+      "id": "CVE-2026-115946",
+      "product": "XS::libbrotli",
+      "decision": "excluded",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/01/1",
+      "reason": "CPAN/Perl module outside library seven-ecosystem coverage; no independently confirmed product inclusion criterion. Do not automatically convert unsupported packages to product records.",
+      "note": "<1.2.1.0; fixed1.2.1.0 plus rebuild/reinstall dependent XS modules. Bundled Brotli111497, separate wrapper CVE; not a Node.js alias."
+    },
+    {
+      "id": "CVE-2026-13575",
+      "product": "HTTP::Session",
+      "decision": "excluded",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/01/2",
+      "reason": "CPAN/Perl module outside library seven-ecosystem coverage; no independently confirmed product inclusion criterion. Do not automatically convert unsupported packages to product records.",
+      "note": "<0.54, fixed0.54; memcached command injection."
+    },
+    {
+      "id": "CVE-2026-74759",
+      "product": "Google::Auth",
+      "decision": "excluded",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/01/3",
+      "reason": "CPAN/Perl module outside library seven-ecosystem coverage; no independently confirmed product inclusion criterion. Do not automatically convert unsupported packages to product records.",
+      "note": "0.12 affected; future release recommended, no released fix confirmed."
+    },
+    {
+      "id": "CVE-2026-74760",
+      "product": "Google::Auth",
+      "decision": "excluded",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/01/3",
+      "reason": "CPAN/Perl module outside library seven-ecosystem coverage; no independently confirmed product inclusion criterion. Do not automatically convert unsupported packages to product records.",
+      "note": "0.11–0.12 affected; future release recommended, no released fix confirmed."
+    }
+  ],
+  "cnaReview": {
+    "total": 117,
+    "successful": 116,
+    "failed": 1,
+    "unchangedBytes": 115,
+    "newSnapshot": 1,
+    "results": [
+      {
+        "id": "CVE-2015-3306",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-09T16:02:13.824Z",
+        "sha256": "1b19f766c5ef14d23ffe346c82a83b537f8ff273bb2a547a641899201945895f",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-09T16:02:13.824Z"
+      },
+      {
+        "id": "CVE-2015-5477",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-09T03:55:29.574Z",
+        "sha256": "453747107220371c474710fc2c3b147f20e3fc9bfc3753204a97763aa3bed558",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-09T03:55:29.574Z"
+      },
+      {
+        "id": "CVE-2016-3081",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-09T03:55:30.407Z",
+        "sha256": "f4649ff10a971547bf7f00d4c263380847ee14bab9d5ac68dc246b0f61439c27",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-09T03:55:30.407Z"
+      },
+      {
+        "id": "CVE-2021-3199",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-09T03:55:31.111Z",
+        "sha256": "01204c55667d2691afde9d8c539406fa1f162a33fd6bc3fe63bfa1006637c803",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-09T03:55:31.111Z"
+      },
+      {
+        "id": "CVE-2023-22894",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-09T03:55:26.444Z",
+        "sha256": "9e14125acba71ef3587587a1d9bf273abeac8bd3fa9ec2c8782e81179f348244",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-09T03:55:26.444Z"
+      },
+      {
+        "id": "CVE-2023-4863",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2025-10-21T23:05:38.429Z",
+        "sha256": "ebad3c8097c8b086599204b46e3cef87e9a3ba0fd2cc2e8864a1ca80799ac61a",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2025-10-21T23:05:38.429Z"
+      },
+      {
+        "id": "CVE-2025-13945",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-03-27T13:56:58.495Z",
+        "sha256": "278b533b578f51b6a40a729d58a2a59e304df0b947bef4d1f84ce0f681d55327",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-03-27T13:56:58.495Z"
+      },
+      {
+        "id": "CVE-2025-61624",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-17T03:55:20.565Z",
+        "sha256": "a7cc50d645492ac21252fe8fa316c609b5449d53385516ee99339551820a5895",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-17T03:55:20.565Z"
+      },
+      {
+        "id": "CVE-2025-64702",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2025-12-12T20:45:30.439Z",
+        "sha256": "775ec8b542166c2b3ba1ea20ac1f537bc690b8e600b83a105cebac1d5210ba64",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2025-12-12T20:45:30.439Z"
+      },
+      {
+        "id": "CVE-2026-0322",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-15T03:57:17.169Z",
+        "sha256": "ffb78da08cb4e7f30a32fbcb5298c043eb1b243efc29d988fecc4e43245b2f8e",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-15T03:57:17.169Z"
+      },
+      {
+        "id": "CVE-2026-101516",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-20T21:21:18.319Z",
+        "sha256": "b64c481a84848338324f1e5bb7bc330b9cad999b488d98600bc459e446f95f02",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-20T21:21:18.319Z"
+      },
+      {
+        "id": "CVE-2026-101737",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T17:33:26.985Z",
+        "sha256": "57e3362bb762b1105ed5ed8206ef2666ecd34adf2629201c21de06653876eee0",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T17:33:26.985Z"
+      },
+      {
+        "id": "CVE-2026-102489",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-19T09:10:59.656Z",
+        "sha256": "90d1c11c1c7aa3662e6f8b475abff68acd63a79394671fe438abf32cbc666084",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-19T09:10:59.656Z"
+      },
+      {
+        "id": "CVE-2026-102490",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-08T19:55:53.033Z",
+        "sha256": "bb3af0de4144e80632b05b1a09a303a6b54dd8cbd0d7633349461b4623bdc155",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-08T19:55:53.033Z"
+      },
+      {
+        "id": "CVE-2026-102764",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-17T03:55:27.214Z",
+        "sha256": "d18cc30ff984dc098b2d210d556380457e196c3aefe23458118d10b8d61b8580",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-17T03:55:27.214Z"
+      },
+      {
+        "id": "CVE-2026-103668",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-07T17:46:03.432Z",
+        "sha256": "bc4adb617e9464ab62d4dd42ca3d49034d7e3472717264aefef9a56029640f48",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-07T17:46:03.432Z"
+      },
+      {
+        "id": "CVE-2026-104286",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-28T17:10:14.979Z",
+        "sha256": "35910072be1c6e0c7d0255a32f8391c4198e281400389afcf9e6cb020ee1dbf2",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-28T17:10:14.979Z"
+      },
+      {
+        "id": "CVE-2026-104935",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-13T19:58:23.946Z",
+        "sha256": "3ea3901cd1371613692cfea61b2de0f1ca1dddc3aafba6e192473ec6bc2a01cd",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-13T19:58:23.946Z"
+      },
+      {
+        "id": "CVE-2026-105133",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-26T14:31:10.237Z",
+        "sha256": "b1b438abafa7ecce896c028bd345262d9321720f5c11d772ad010372184f40be",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-26T14:31:10.237Z"
+      },
+      {
+        "id": "CVE-2026-105134",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-26T14:31:13.988Z",
+        "sha256": "5141d891d77c3ea17378f7b53308774e08e8070466f4bbc4c66c42cc81105574",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-26T14:31:13.988Z"
+      },
+      {
+        "id": "CVE-2026-105481",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.837Z",
+        "sha256": "d6bbb7f853feec89bc81ceda5cd6053a6b817554ca7963d2e4b62b7347407f20",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.837Z"
+      },
+      {
+        "id": "CVE-2026-105482",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.831Z",
+        "sha256": "e95d9eabaf6cc9af11b2510d0c4368fb76f1a1b23d3c66d38d98873359325bea",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.831Z"
+      },
+      {
+        "id": "CVE-2026-105483",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.773Z",
+        "sha256": "9c0c4a8e6d2ca32b7a9f4ff6a9dfcaecd71ee520b66e19310434fdf898dff91a",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.773Z"
+      },
+      {
+        "id": "CVE-2026-106069",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.850Z",
+        "sha256": "d8f5b8ac27ae64e919799d98396280bc02af1715a463c61fcf0e148c32455bad",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.850Z"
+      },
+      {
+        "id": "CVE-2026-106070",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.741Z",
+        "sha256": "15dd2bee14b4c72705cf58236ac9b975113bbbe6229695ed40e9c3eb5f7b71f5",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.741Z"
+      },
+      {
+        "id": "CVE-2026-106071",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.791Z",
+        "sha256": "d6d114790a8503d3be4fe36bbfffbe634e83c4493594970cd8c3110a60b8a588",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.791Z"
+      },
+      {
+        "id": "CVE-2026-106072",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.783Z",
+        "sha256": "c82cb2c831f00d699aedf9785861d2505933e933d1721fb7987e8f39664db1f5",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.783Z"
+      },
+      {
+        "id": "CVE-2026-106073",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.728Z",
+        "sha256": "584b73666c9610f5427b56070178c4e7c09242779033b8955e7c77c305cbd2fe",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.728Z"
+      },
+      {
+        "id": "CVE-2026-106074",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T16:15:05.829Z",
+        "sha256": "1d5b234e2849dc70fdbc6afa5807918137dfa6dfd27e3475c256da1fee975f7b",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T16:15:05.829Z"
+      },
+      {
+        "id": "CVE-2026-106087",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T11:56:54.738Z",
+        "sha256": "c8aaa21aec0a205b61fe604809b4b369af103f7b00051b36525a85cfbbce761f",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T11:56:54.738Z"
+      },
+      {
+        "id": "CVE-2026-106931",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T03:56:27.300Z",
+        "sha256": "23b87f8e759d87b0bba2c06c1ca9d23ea349abfd4b08423ddc27f3eca320616e",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T03:56:27.300Z"
+      },
+      {
+        "id": "CVE-2026-10756",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T11:56:05.906Z",
+        "sha256": "3c0e12e60afcd12f99b11b8b78d1560fabdddec5fa008a6bd3f13d97f7f6dca8",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T11:56:05.906Z"
+      },
+      {
+        "id": "CVE-2026-109618",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-30T18:31:35.583Z",
+        "sha256": "7ee9120ed32b057e2b50d1c971c95a7dfaa7b0023b0ae2eeb439733b36c7a383",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-30T18:31:35.583Z"
+      },
+      {
+        "id": "CVE-2026-109619",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-30T18:31:36.959Z",
+        "sha256": "cd7304c2044ba38e7efbdd891f4d1d6cacbc9006e0113d1f6385d7d8c299e416",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-30T18:31:36.959Z"
+      },
+      {
+        "id": "CVE-2026-110264",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-30T23:20:24.882Z",
+        "sha256": "7a1f44937d01a5696a9622f5bb01f70d14c249cca3dd7ec9cf82bfe2c7b8a687",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-30T23:20:24.882Z"
+      },
+      {
+        "id": "CVE-2026-110936",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T03:56:21.823Z",
+        "sha256": "8d25a30edb8de9b073efc9e9a50cac2aae926406a3d45c0daadd174cff2cf42c",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T03:56:21.823Z"
+      },
+      {
+        "id": "CVE-2026-111497",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-30T18:31:38.139Z",
+        "sha256": "ba4aaa449fbf6319429ef56aa2336c9e5b82b3889792b2d8a88c3fe706a503d0",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-30T18:31:38.139Z"
+      },
+      {
+        "id": "CVE-2026-114625",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T03:55:14.884Z",
+        "sha256": "ec3ef226aa4e747fbf98f8182a74ff2613a6f9787998613093bbeeb133769d71",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T03:55:14.884Z"
+      },
+      {
+        "id": "CVE-2026-115560",
+        "status": "failed",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "id": "CVE-2026-12523",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-07-15T17:47:52.441Z",
+        "sha256": "985aec688a1e8102024b46b60cd930fc08ecdc74d255c2ec419f15d5a28d2986",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-07-15T17:47:52.441Z"
+      },
+      {
+        "id": "CVE-2026-13162",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T11:50:44.803Z",
+        "sha256": "3e66d62f49f4add7a6dd108b4e0f4c1c9404984836677f2408d79bdf4cc90798",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T11:50:44.803Z"
+      },
+      {
+        "id": "CVE-2026-16436",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-16T05:40:07.210Z",
+        "sha256": "bb4eb7f86df0564ef56befff9a9055ef3f5725973182202dba616f3ab5acb426",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-16T05:40:07.210Z"
+      },
+      {
+        "id": "CVE-2026-16437",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-16T05:41:07.264Z",
+        "sha256": "7ef5fffe73198d21d1f44ac788e07348629a411e03a2a5a43795265b8e1bb4fe",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-16T05:41:07.264Z"
+      },
+      {
+        "id": "CVE-2026-16438",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-16T05:41:46.956Z",
+        "sha256": "1134482f370c87822977237f5e042b4f18caa5c265efa6aea70f5d38f204e994",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-16T05:41:46.956Z"
+      },
+      {
+        "id": "CVE-2026-21589",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-29T12:04:46.110Z",
+        "sha256": "e5c8d358938fa3e3a2c61ed073def0e33a46f69f77f3a8ab5d4dc44b48b80a9a",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-29T12:04:46.110Z"
+      },
+      {
+        "id": "CVE-2026-43284",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-15T01:19:19.235Z",
+        "sha256": "9e7e96c835b1e1d710805cd4ca679e78fbe18afaa5088783c1337de4dc075dde",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-15T01:19:19.235Z"
+      },
+      {
+        "id": "CVE-2026-43660",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-05-13T19:58:49.368Z",
+        "sha256": "6fa6f840565e91849a545df22caaf4692f0a9c8d3185210bcb7bc2af742df175",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-05-13T19:58:49.368Z"
+      },
+      {
+        "id": "CVE-2026-46470",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-05-14T18:45:00.346Z",
+        "sha256": "5e156e10d780841c089310bbfbd3b3c48df84c7a4e91c5146fd9ae39944f288a",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-05-14T18:45:00.346Z"
+      },
+      {
+        "id": "CVE-2026-6732",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-08-31T11:15:35.301Z",
+        "sha256": "12726f0723afb6139bb863fe425e475ccd7529d69baa5c9d02a790915c449ff5",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-08-31T11:15:35.301Z"
+      },
+      {
+        "id": "CVE-2026-76418",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-30T03:55:57.976Z",
+        "sha256": "f98e0137ff3a682bd005eb9980f27c31f4012ad3158fc1134d88c1d0084590ff",
+        "comparison": "new-snapshot",
+        "priorModifiedAt": null
+      },
+      {
+        "id": "CVE-2026-76519",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-15T03:56:57.762Z",
+        "sha256": "c59893a4cb4d1d8d337bc67dd755a08880bb04c971d978fab3e69332556e8306",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-15T03:56:57.762Z"
+      },
+      {
+        "id": "CVE-2026-80775",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-19T08:43:31.761Z",
+        "sha256": "e101c82fd5f175d70fdac1b1ae2f634d45cf3d91710782661b585841737d8641",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-19T08:43:31.761Z"
+      },
+      {
+        "id": "CVE-2026-83374",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T13:20:58.910Z",
+        "sha256": "fa341eae2c4301ec1a87ee247f8e0fead84b2a78fcd8711f78e8c56a94a43e08",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T13:20:58.910Z"
+      },
+      {
+        "id": "CVE-2026-83376",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T13:24:58.718Z",
+        "sha256": "0b224909aff52da11c763cf8b70afff00b883e894786dd15f9f867655e74fc38",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T13:24:58.718Z"
+      },
+      {
+        "id": "CVE-2026-83378",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T13:38:09.949Z",
+        "sha256": "416aba777d69098dcc6eacbcd473170606b1030b0d8422ca1aa9270eebb488f5",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T13:38:09.949Z"
+      },
+      {
+        "id": "CVE-2026-83380",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T13:39:42.444Z",
+        "sha256": "4da402d3f2bfbe39e74844877c556905272b1352c8a0ed1c188f58e4dbd56dec",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T13:39:42.444Z"
+      },
+      {
+        "id": "CVE-2026-83381",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T13:41:03.875Z",
+        "sha256": "88fd583385124d50fbee7f16f72c2d620271a980ae6e0e34f70ee6b13d2a3135",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T13:41:03.875Z"
+      },
+      {
+        "id": "CVE-2026-83387",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T14:01:47.624Z",
+        "sha256": "c17b4796f6d8b3cdea46228fd68fcbe1715e067287b8d2591327b78d47f4d703",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T14:01:47.624Z"
+      },
+      {
+        "id": "CVE-2026-83395",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:25.076Z",
+        "sha256": "06492dd7aa2d47e2b32689d8543594adaae4483e339f506b958fd566dcc90089",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:25.076Z"
+      },
+      {
+        "id": "CVE-2026-83400",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:24.014Z",
+        "sha256": "b202800f049a30ce49bd6015d5802a9dbdcc12272de84737baf60d8647262b90",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:24.014Z"
+      },
+      {
+        "id": "CVE-2026-87255",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T18:50:10.598Z",
+        "sha256": "34f2997afda972157cb6288eba9ab370a16d1375b3f4149b11add64fcfdb6f3a",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T18:50:10.598Z"
+      },
+      {
+        "id": "CVE-2026-87290",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T19:37:24.361Z",
+        "sha256": "d4923afc07b444b49e7a0e5f1d0d2ead1fbf3abb4ff184b7f9c5a79104923e8d",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T19:37:24.361Z"
+      },
+      {
+        "id": "CVE-2026-87291",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T18:52:59.378Z",
+        "sha256": "0e230ea6c7fdbacab6a77eb09f1843165f21232d66b988064ad4a41541981986",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T18:52:59.378Z"
+      },
+      {
+        "id": "CVE-2026-87292",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T18:54:01.116Z",
+        "sha256": "2a3ee0d131dc6d78c9afe476187abc5f62a1404afd60ea27a70229011565414a",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T18:54:01.116Z"
+      },
+      {
+        "id": "CVE-2026-87293",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T18:58:28.592Z",
+        "sha256": "c7dfa32f421301476d06a4860f35e1705f0569691f482a19e1e73f1e81ce888a",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T18:58:28.592Z"
+      },
+      {
+        "id": "CVE-2026-87294",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-27T19:00:47.038Z",
+        "sha256": "3b8363d619058648fdfd611f87b2a199c909c0fb22553a9c55e90046d9b1293e",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-27T19:00:47.038Z"
+      },
+      {
+        "id": "CVE-2026-87367",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-28T14:10:24.355Z",
+        "sha256": "232711f56601096b1eb1b6185452132447306b56b59c1c3a0619d90ad8f1703c",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-28T14:10:24.355Z"
+      },
+      {
+        "id": "CVE-2026-88779",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-05T03:55:38.096Z",
+        "sha256": "ff93ab6e2982237fdd6892b2362934306038eef694b53d89bc18a2f4f13c37e0",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-05T03:55:38.096Z"
+      },
+      {
+        "id": "CVE-2026-89209",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-31T01:13:36.246Z",
+        "sha256": "5a35f62b7786b689533c356b1a7e71de61b4c5921bd6a55b7ad39df7e735d545",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-31T01:13:36.246Z"
+      },
+      {
+        "id": "CVE-2026-89754",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-19T08:52:07.951Z",
+        "sha256": "4b54bf3358f3054bd83e5d423563dc48c4af043bc9ec98f4fc0e9b08e385e9c2",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-19T08:52:07.951Z"
+      },
+      {
+        "id": "CVE-2026-91332",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:26.421Z",
+        "sha256": "bb4fb42ad4958b99a138342fe26183104abc284444b219b19e6ea7f2eb4c2c21",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:26.421Z"
+      },
+      {
+        "id": "CVE-2026-91333",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-28T17:52:10.353Z",
+        "sha256": "d35f5bd3fb316262402a477028bf99ebfb1d8db65cadb61ea61c0319146e4ed5",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-28T17:52:10.353Z"
+      },
+      {
+        "id": "CVE-2026-91334",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-28T17:53:52.517Z",
+        "sha256": "28921aa5a09e46a841338ab65fab15671072f3791c99f59007adca266365a4b7",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-28T17:53:52.517Z"
+      },
+      {
+        "id": "CVE-2026-91335",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-28T17:54:38.881Z",
+        "sha256": "13125d939fadb5bfcdb09617970998c4b9dc3f2cf1de47558f801a64b5c44630",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-28T17:54:38.881Z"
+      },
+      {
+        "id": "CVE-2026-91373",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:23.716Z",
+        "sha256": "8fd3731e98598e46868b713c4faff773798ae8f9d9f06262809bc8bf38d9c8f7",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:23.716Z"
+      },
+      {
+        "id": "CVE-2026-91374",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T15:47:05.057Z",
+        "sha256": "aafff5086e29dd955677e7b8558e62a723dc7492edd2ced9e3c258380000f7e3",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T15:47:05.057Z"
+      },
+      {
+        "id": "CVE-2026-91375",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T15:30:13.216Z",
+        "sha256": "6865a3a967b6e1d1a9066c2c071422c2ee88c43cf12d0176e69674c6413bed39",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T15:30:13.216Z"
+      },
+      {
+        "id": "CVE-2026-91379",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T15:35:59.006Z",
+        "sha256": "555e05d0fe168ee19ae51db8ab92afe69fbca04c97794cc16cb7352d6774adb0",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T15:35:59.006Z"
+      },
+      {
+        "id": "CVE-2026-91380",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T15:34:56.943Z",
+        "sha256": "a9d93350717418076c065222b928e36ad1edfe2bd536498a014b7a8e2f6b80c4",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T15:34:56.943Z"
+      },
+      {
+        "id": "CVE-2026-91381",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T15:11:21.561Z",
+        "sha256": "9261aa8aff894b4ccb31b1812132c5fd00f3d06d74004fd9457302119503b95b",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T15:11:21.561Z"
+      },
+      {
+        "id": "CVE-2026-91382",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T15:12:03.820Z",
+        "sha256": "8e58b851f8bec227873ad26fc42ffd3e5d752fd0ac8bf31c6a88f7db55edfae4",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T15:12:03.820Z"
+      },
+      {
+        "id": "CVE-2026-91385",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T15:25:34.101Z",
+        "sha256": "45c2474b4d5a0fef9c363f7fd5a0fd593c733e6b9f1714b3c1473e798d79b206",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T15:25:34.101Z"
+      },
+      {
+        "id": "CVE-2026-91394",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T02:22:02.263Z",
+        "sha256": "1942833454886f3e3d5a00b0002e7a6b509930d3800d2f6d460167ddf1d6d148",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T02:22:02.263Z"
+      },
+      {
+        "id": "CVE-2026-91395",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:24.928Z",
+        "sha256": "c2a4d382024915db26ac01468bffff8cc90386366e8a1613fc52b898cfa5ce98",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:24.928Z"
+      },
+      {
+        "id": "CVE-2026-91396",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:24.784Z",
+        "sha256": "ba9e56043e3191051bfae7c2548b6a3db767f9f6aaa028712a65675e4e28eb80",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:24.784Z"
+      },
+      {
+        "id": "CVE-2026-91397",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T02:22:58.079Z",
+        "sha256": "4a0e3d04a6d1a7887ba6812d6750340c96a8a62d2669b620428a7ee8431f30ea",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T02:22:58.079Z"
+      },
+      {
+        "id": "CVE-2026-91398",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T02:24:25.266Z",
+        "sha256": "83d5e53215e00fcd17d240f44a0548d7b966586e0cc5f5e84387b1eb9df29ea0",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T02:24:25.266Z"
+      },
+      {
+        "id": "CVE-2026-91400",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-29T12:09:28.628Z",
+        "sha256": "9902846d4e71138e24d33b2ffbcef6b3fb9358d8110a4cdf7972520a5e594eb2",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-29T12:09:28.628Z"
+      },
+      {
+        "id": "CVE-2026-91402",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T19:50:53.409Z",
+        "sha256": "6b339189f400b5c53c05c407932a81c260910419c6a09c67bfaef6823569c563",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T19:50:53.409Z"
+      },
+      {
+        "id": "CVE-2026-91403",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T20:01:56.993Z",
+        "sha256": "f705220991e37a821e5adad6ad0fe1a575148e7bfd55afd1c6b41e1af94936b3",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T20:01:56.993Z"
+      },
+      {
+        "id": "CVE-2026-91409",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T19:56:25.258Z",
+        "sha256": "8e512abb8f5771150109605ad2a6fc40dd6ea51e7ac3c59d9213fc147b0da98f",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T19:56:25.258Z"
+      },
+      {
+        "id": "CVE-2026-91410",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:23.564Z",
+        "sha256": "e2bf28b366a94be2362bac2b41332c676de75d70e916ecc3ad372f175beac242",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:23.564Z"
+      },
+      {
+        "id": "CVE-2026-91411",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T19:58:11.357Z",
+        "sha256": "e7ac78439d19eb97615b1f11e2b298b19cc4795ac980a2e4e88bc950b0e2dd0e",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T19:58:11.357Z"
+      },
+      {
+        "id": "CVE-2026-91415",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-23T20:03:53.584Z",
+        "sha256": "05bdc98083cafc40ee4ce7d4218baf2e97f4ca7089f29fb2431cfb764064d165",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-23T20:03:53.584Z"
+      },
+      {
+        "id": "CVE-2026-91417",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:23.419Z",
+        "sha256": "80acdf04e356f9f4d9522fca4d6aeef194977b7f4c9d48622492340de683b4e5",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:23.419Z"
+      },
+      {
+        "id": "CVE-2026-91418",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:23.261Z",
+        "sha256": "b4b9707468fe0b2c01216ad243725561263f53daa9646af413ef36f453d9bf2e",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:23.261Z"
+      },
+      {
+        "id": "CVE-2026-91451",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:26.101Z",
+        "sha256": "82548edc6798b8eaa06ff6fcc7577a848ae138c41ef6cb7176bbcd127cbac734",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:26.101Z"
+      },
+      {
+        "id": "CVE-2026-91452",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:25.927Z",
+        "sha256": "97fc08b3ebf0d76e0f017cd9b3418434e383524434b37110557d82886f2cbcc8",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:25.927Z"
+      },
+      {
+        "id": "CVE-2026-91453",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T18:50:25.754Z",
+        "sha256": "6ba53213c3569195f0e77020dc762d4e0bb494d8303fb79e6c5caff58b5942d5",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T18:50:25.754Z"
+      },
+      {
+        "id": "CVE-2026-91461",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T03:03:30.706Z",
+        "sha256": "11045d817eee46425d4135127b259e5b14bef363c4e70b499548158e064ee7bc",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T03:03:30.706Z"
+      },
+      {
+        "id": "CVE-2026-91462",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T03:05:38.266Z",
+        "sha256": "1ae793c9fc0610b6b6d5cbd8e7a104403f95cfe76eba045d1a80fc8bbbc71660",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T03:05:38.266Z"
+      },
+      {
+        "id": "CVE-2026-91463",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T03:07:00.037Z",
+        "sha256": "097573fac7ee155b25d62106d725d3f21c6ed52298679cd71404fd8139713a28",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T03:07:00.037Z"
+      },
+      {
+        "id": "CVE-2026-91464",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T03:07:54.796Z",
+        "sha256": "4fe78f34846251688a95129fa9fea4cc521f993f46328a366f5648fad1819d2c",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T03:07:54.796Z"
+      },
+      {
+        "id": "CVE-2026-91484",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T03:25:05.525Z",
+        "sha256": "fa6888c7eb430a0d4f435e918e2e2c23a4d3ae3f65b936c1630788b7463d5ffb",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T03:25:05.525Z"
+      },
+      {
+        "id": "CVE-2026-91487",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T03:29:02.474Z",
+        "sha256": "ad404958aad05b92b6d5c21a470b12617c1e70b0b1ad074052b77d5d09c19ce9",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T03:29:02.474Z"
+      },
+      {
+        "id": "CVE-2026-94300",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-22T23:04:30.599Z",
+        "sha256": "83300834028f2d9c0fee1fa30e706d72dce139b5509c7bc1747677aabcfa0533",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-22T23:04:30.599Z"
+      },
+      {
+        "id": "CVE-2026-96408",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-07T17:47:24.024Z",
+        "sha256": "ffc59f2a60fe1ee9c5ca88f1d733c43b8a67de0986c6e6c7860833a4bc474d1d",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-07T17:47:24.024Z"
+      },
+      {
+        "id": "CVE-2026-96652",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T03:56:26.467Z",
+        "sha256": "b5ab35f8298c968f4ecda663ca92f01f64ad675fccf9f38e186950663efa8c47",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T03:56:26.467Z"
+      },
+      {
+        "id": "CVE-2026-96654",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T03:56:25.683Z",
+        "sha256": "0b894d38351635cd5038791334e4710c0034ff33e5e77b0f1a84d358307cf013",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T03:56:25.683Z"
+      },
+      {
+        "id": "CVE-2026-96655",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T03:56:24.883Z",
+        "sha256": "42b622abda70558149f5a2b215d1adb59a069d85c40671bfb7ef009803b22cb4",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T03:56:24.883Z"
+      },
+      {
+        "id": "CVE-2026-96656",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-21T03:56:10.489Z",
+        "sha256": "77d6b2619ecf662de14e3e5e7e48e26fbf62761686ed76e74c854e459fe84700",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-21T03:56:10.489Z"
+      },
+      {
+        "id": "CVE-2026-96951",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-31T18:11:44.034Z",
+        "sha256": "3e27f69c293ca07636525b6f70f508f7b9eed0e1dcd00b19b59869f65ac3d781",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-31T18:11:44.034Z"
+      },
+      {
+        "id": "CVE-2026-97229",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-30T23:18:16.598Z",
+        "sha256": "6ba85077fa641d17198c1caab388b64565510fcb35ba7db594228c2b2ddba4ba",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-30T23:18:16.598Z"
+      },
+      {
+        "id": "CVE-2026-97941",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-19T09:11:07.833Z",
+        "sha256": "24ffe1d4938107226dd7c0f45d31a1e1261553db60bd1a6c1f9960a98c3a92f0",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-19T09:11:07.833Z"
+      },
+      {
+        "id": "CVE-2026-98256",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-19T09:16:27.502Z",
+        "sha256": "f4c469216d9026667d9ac3e91dcafcdd1e27c6f5eddbba8765885a084df4c4b7",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-19T09:16:27.502Z"
+      },
+      {
+        "id": "CVE-2026-98260",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-30T12:37:58.294Z",
+        "sha256": "99b83d553671b26e3c0f63f5f405a20982f1d2ec503a00586a5ae24342965f06",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-30T12:37:58.294Z"
+      },
+      {
+        "id": "CVE-2026-98385",
+        "status": "ok",
+        "state": "PUBLISHED",
+        "dateUpdated": "2026-10-24T14:08:42.034Z",
+        "sha256": "43dc43b2d79d379dc1f8cc2463cd11101a531dfe1cdedb351ece4549a7f017c0",
+        "comparison": "unchanged-bytes",
+        "priorModifiedAt": "2026-10-24T14:08:42.034Z"
+      }
+    ]
+  },
+  "heldCnaRecheck": [
+    {
+      "id": "CVE-2026-98432",
+      "status": "ok",
+      "metadata": {
+        "cveId": "CVE-2026-98432",
+        "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "state": "PUBLISHED",
+        "assignerShortName": "Linux",
+        "dateReserved": "2026-09-25T10:25:14.348Z",
+        "datePublished": "2026-10-15T12:08:22.205Z",
+        "dateUpdated": "2026-10-31T21:04:43.990Z"
+      },
+      "affected": [
+        {
+          "product": "Linux",
+          "vendor": "Linux",
+          "defaultStatus": "unaffected",
+          "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+          "programFiles": [
+            "net/ipv4/af_inet.c",
+            "net/ipv4/tcp_ipv4.c"
+          ],
+          "versions": [
+            {
+              "version": "079096f103faca2dd87342cca6f23d4b34da8871",
+              "lessThan": "b3b027ef0cd322bfa839b9aaf5b27551eea54cf6",
+              "status": "affected",
+              "versionType": "git"
+            },
+            {
+              "version": "079096f103faca2dd87342cca6f23d4b34da8871",
+              "lessThan": "95a8c8fa9f27dce64c40c41c062de7728bf34ab5",
+              "status": "affected",
+              "versionType": "git"
+            },
+            {
+              "version": "079096f103faca2dd87342cca6f23d4b34da8871",
+              "lessThan": "89b5b1eb7d633c33832b7ff2c02e19a144705036",
+              "status": "affected",
+              "versionType": "git"
+            },
+            {
+              "version": "079096f103faca2dd87342cca6f23d4b34da8871",
+              "lessThan": "742f73df544e03744f2981c467d6542fe8172a2a",
+              "status": "affected",
+              "versionType": "git"
+            },
+            {
+              "version": "079096f103faca2dd87342cca6f23d4b34da8871",
+              "lessThan": "11a03ce3c4a62d84c10ccdfe47f8075006498568",
+              "status": "affected",
+              "versionType": "git"
+            },
+            {
+              "version": "079096f103faca2dd87342cca6f23d4b34da8871",
+              "lessThan": "a47406c769f72c070386985488f1c4d057df86b2",
+              "status": "affected",
+              "versionType": "git"
+            },
+            {
+              "version": "079096f103faca2dd87342cca6f23d4b34da8871",
+              "lessThan": "26d4c36d318cffbbd160884a0e4cec0da4da4936",
+              "status": "affected",
+              "versionType": "git"
+            },
+            {
+              "version": "079096f103faca2dd87342cca6f23d4b34da8871",
+              "lessThan": "e3f33b0a1d89d738e2b913dab519226eaf76e15b",
+              "status": "affected",
+              "versionType": "git"
+            }
+          ]
+        },
+        {
+          "product": "Linux",
+          "vendor": "Linux",
+          "defaultStatus": "affected",
+          "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+          "programFiles": [
+            "net/ipv4/af_inet.c",
+            "net/ipv4/tcp_ipv4.c"
+          ],
+          "versions": [
+            {
+              "version": "4.4",
+              "status": "affected"
+            },
+            {
+              "version": "0",
+              "lessThan": "4.4",
+              "status": "unaffected",
+              "versionType": "semver"
+            },
+            {
+              "version": "5.10.272",
+              "lessThanOrEqual": "5.10.*",
+              "status": "unaffected",
+              "versionType": "semver"
+            },
+            {
+              "version": "5.15.223",
+              "lessThanOrEqual": "5.15.*",
+              "status": "unaffected",
+              "versionType": "semver"
+            },
+            {
+              "version": "6.1.190",
+              "lessThanOrEqual": "6.1.*",
+              "status": "unaffected",
+              "versionType": "semver"
+            },
+            {
+              "version": "6.6.159",
+              "lessThanOrEqual": "6.6.*",
+              "status": "unaffected",
+              "versionType": "semver"
+            },
+            {
+              "version": "6.12.113",
+              "lessThanOrEqual": "6.12.*",
+              "status": "unaffected",
+              "versionType": "semver"
+            },
+            {
+              "version": "6.18.56",
+              "lessThanOrEqual": "6.18.*",
+              "status": "unaffected",
+              "versionType": "semver"
+            },
+            {
+              "version": "7.2.10",
+              "lessThanOrEqual": "7.2.*",
+              "status": "unaffected",
+              "versionType": "semver"
+            },
+            {
+              "version": "7.3",
+              "lessThanOrEqual": "*",
+              "status": "unaffected",
+              "versionType": "original_commit_for_fix"
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 9.8,
+            "baseSeverity": "CRITICAL"
+          },
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "AV:N - An unauthenticated peer supplies IPv4 Record Route or Timestamp bytes in a TCP SYN; ip_rcv_options() and tcp_v4_save_options() store them in ireq_opt. Its retransmitted SYN follows tcp_v4_rcv()->tcp_check_req()->tcp_rtx_synack()->tcp_v4_send_synack(), racing frees in patched inet_sock_destruct() or tcp_v4_reqsk_destructor().\nAC:L - On an accepting server, the peer can repeatedly create an option-bearing request and race a retransmitted SYN against completing and tearing down that same TCP connection. Both racing sides are attacker-induced; multicore scheduling and heap grooming do not constitute conditions outside the attacker's influence.\nPR:N - tcp_v4_rcv() reaches tcp_check_req() and tcp_v4_send_synack() during the TCP handshake, before application authentication. The target performs no capability or credential check on the peer's valid IPv4 Record Route or Timestamp option.\nUI:N - The peer sends the option-bearing SYN, retransmitted SYN, and handshake or teardown packets to an already listening service; no victim user must mount, open, or approve anything.\nS:U - The stale ip_options_rcu object is consumed and corrupts memory within the same host kernel in ip_build_and_send_pkt() and ip_options_build(); no separate security authority is crossed.\nC:H - After inet_sock_destruct() frees inet_opt, ip_options_build() copies opt->__data for the stale opt->optlen into the network-bound SYNACK. Reclaiming the object can therefore disclose adjacent kernel heap contents directly to the peer.\nI:H - Reclaiming the freed ip_options_rcu lets stale optlen and srr, rr, or ts offsets steer ip_options_build() memcpy and address or timestamp writes, permitting out-of-bounds kernel writes and potential control-flow corruption.\nA:H - A reclaimed optlen can make ip_build_and_send_pkt() call skb_push() beyond the SYNACK headroom, invoking skb_under_panic(); the stale-offset writes in ip_options_build() can also oops the kernel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-118527",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-111357",
+      "status": "ok",
+      "metadata": {
+        "cveId": "CVE-2026-111357",
+        "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+        "state": "PUBLISHED",
+        "assignerShortName": "mitre",
+        "dateReserved": "2026-10-15T20:56:57.139Z",
+        "datePublished": "2026-10-15T20:56:58.045Z",
+        "dateUpdated": "2026-10-31T03:56:17.842Z"
+      },
+      "affected": [
+        {
+          "defaultStatus": "unknown",
+          "product": "Connect Secure",
+          "vendor": "Ivanti",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "22.8R2.4",
+              "versionType": "custom"
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "cvssV3_1": {
+            "attackComplexity": "HIGH",
+            "attackVector": "LOCAL",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS",
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-41709",
+      "status": "ok",
+      "metadata": {
+        "cveId": "CVE-2026-41709",
+        "assignerOrgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+        "state": "PUBLISHED",
+        "assignerShortName": "vmware",
+        "dateReserved": "2026-04-22T06:21:34.490Z",
+        "datePublished": "2026-07-30T12:45:02.292Z",
+        "dateUpdated": "2026-10-29T03:56:50.795Z"
+      },
+      "affected": [
+        {
+          "vendor": "VMware",
+          "product": "Cloud Foundation",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "9.1.x.x"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.x.x"
+            },
+            {
+              "status": "affected",
+              "version": "5.x",
+              "lessThan": "5.2.4",
+              "versionType": "custom"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        },
+        {
+          "vendor": "VMware",
+          "product": "vSphere Foundation",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "9.1.x.x"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.x.x"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        },
+        {
+          "vendor": "VMware",
+          "product": "ESX",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "9.1.x.x",
+              "lessThan": "ESXi-9.1.0.0-25370933",
+              "versionType": "custom"
+            },
+            {
+              "status": "affected",
+              "version": "9.0.x.x",
+              "lessThan": "ESXi-9.0.2.0100-25595025",
+              "versionType": "custom"
+            },
+            {
+              "status": "affected",
+              "version": "8.0",
+              "lessThan": "ESXi80U3j-25429389",
+              "versionType": "custom"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        },
+        {
+          "vendor": "VMware",
+          "product": "Telco Cloud Platform",
+          "versions": [
+            {
+              "status": "affected",
+              "version": "5.1.x"
+            },
+            {
+              "status": "affected",
+              "version": "5.0.x"
+            }
+          ],
+          "defaultStatus": "unaffected"
+        }
+      ],
+      "metrics": [
+        {
+          "format": "CVSS",
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ],
+          "cvssV3_1": {
+            "version": "3.1",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "HIGH",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE",
+            "baseSeverity": "LOW",
+            "baseScore": 2.7,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+          }
+        }
+      ]
+    }
+  ],
+  "blockers": [
+    {
+      "kind": "validator-source-contract",
+      "description": "Product KEV validation accepts only cisa.gov source hostname. Official CISA GitHub mirror is verified but cannot be structurally reflected without changing validation. Canonical403 and prior checkpoints retained."
+    },
+    {
+      "kind": "validator-date-contract",
+      "description": "Critical inclusion supports only original publishedDate as trigger, not later Critical assessment date (Linux98432). Accurate candidate retained; no date falsification or gate weakening."
+    },
+    {
+      "kind": "source-fetch-failure",
+      "description": "Ivanti vendor body unavailable,118527 and115560 CNA404. Data not invented."
+    },
+    {
+      "kind": "existing-identity-contract",
+      "description": "Shared CVE across separate product entries unsupported; PHP Windows/Brotli remains candidate."
+    },
+    {
+      "kind": "existing-identity-contract",
+      "description": "TNS-2026-32 shares CVE-2026-6732 with Oracle CPU; truthful multi-product alias reuse rejected by current validator.",
+      "requiredAction": "Change product identity schema/validator to support shared CVEs only with separate authorization; target scripts/product-status.mjs and product model.",
+      "state": "held; no gate changes"
+    }
+  ],
+  "validation": {
+    "products": "node scripts/product-status.mjs passed50 records",
+    "fullCheck": "Parent coordinator runs final combined pnpm check."
+  },
+  "publication": "Local data only; no push/PR/merge/deployment by this worker."
+}

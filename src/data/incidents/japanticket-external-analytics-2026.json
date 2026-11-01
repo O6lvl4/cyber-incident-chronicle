@@ -1,0 +1,104 @@
+{
+  "id": "japanticket-external-analytics-2026",
+  "company": "株式会社Japanticket",
+  "geography": "日本",
+  "title": "外部分析ツールへの不正アクセスで予約情報の漏えいを確認",
+  "announcementDate": "2026-10-30",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-10-31",
+  "statusAsOfDate": "2026-10-31",
+  "lastVerifiedDate": "2026-11-02",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "外部分析ツールへの侵入で顧客情報の漏えいが判明。10月28日に検知・経路遮断を実施。最大約26.4万件を精査中で、山梨県とPARCOの利用者情報が含まれるかは調査中。",
+  "affectedData": [
+    "予約・購入者の氏名、メールアドレス、電話番号、国・地域、予約・注文内容、備考欄（漏えい確認および可能性のある項目）"
+  ],
+  "counts": [
+    {
+      "value": 264000,
+      "unit": "件",
+      "status": "possible",
+      "label": "提供元が特定した最大対象範囲（精査中）。漏えい発生は確認されたが全件確定ではない",
+      "approximate": true
+    },
+    {
+      "value": 70000,
+      "unit": "件",
+      "status": "possible",
+      "label": "令和6年度富士山吉田ルート予約情報。上記対象に含まれるか調査中の部分範囲",
+      "approximate": true
+    },
+    {
+      "value": 3208,
+      "unit": "名",
+      "status": "possible",
+      "label": "PARCOの渋谷・心斎橋2店舗の予約者数（キャンセル含む）。実際の漏えい対象件数は確認中",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "最大約26.4万件は精査中の対象範囲。約7万件と3,208名は利用者側の部分範囲であり、合算も漏えい確定人数への転換もしない。",
+    "9月15日以前に持ち出された可能性があり、9月16日以降の持出しを示す記録は未確認。開始日や正確な持出し日は不明で、検知日の10月28日を攻撃日に代用しない。",
+    "カード番号は下4桁を含め対象外。ログインパスワード漏えい、他システム侵害、改ざん・削除、二次被害は公表時点で未確認。JapanTicketは通常利用可能。",
+    "山梨県の令和7・8年度利用者は対象外。PARCOのサービス利用期間はデータ対象期間であり攻撃期間ではない。"
+  ],
+  "sources": [
+    {
+      "title": "外部分析ツールへの不正アクセスによるお客様情報の漏えいについて（第1報）",
+      "url": "https://www.japanticket.com/news-20261029/",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "title": "山梨県：富士山吉田ルート通行予約システムに係る情報漏洩の可能性",
+      "url": "https://www.pref.yamanashi.jp/fujisan/261030.html",
+      "publishedDate": "2026-10-30"
+    },
+    {
+      "title": "PARCO：JapanTicketにおける不正アクセスに伴う個人情報漏えいの可能性",
+      "url": "https://cafe.parco.jp/news/detail/?id=39359",
+      "publishedDate": "2026-10-31"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-30",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "外部分析ツールへの侵入で顧客情報の漏えいが判明。10月28日に検知・経路遮断を実施。提供元は最大約26.4万件の対象範囲を精査中と公表。",
+      "sourceUrl": "https://www.japanticket.com/news-20261029/"
+    },
+    {
+      "date": "2026-10-31",
+      "label": "利用店舗の部分範囲公表",
+      "kind": "update",
+      "summary": "PARCOは予約者3,208名のうち実際の漏えい対象は調査中と説明。",
+      "sourceUrl": "https://cafe.parco.jp/news/detail/?id=39359"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "持出し時期調査中（9月15日以前の可能性）",
+      "note": "公式は2026年9月15日以前の可能性と説明。初期侵入日・開始日は未公表のため期間境界を作らない。",
+      "sourceUrl": "https://www.japanticket.com/news-20261029/",
+      "reviewedDate": "2026-11-02"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害初確認日未公表",
+      "note": "不正アクセスの検知や漏えい可能性の把握を確定被害の初確認日に転用しない。",
+      "sourceUrl": "https://www.japanticket.com/news-20261029/",
+      "reviewedDate": "2026-11-02"
+    }
+  }
+}

@@ -2,33 +2,41 @@
   "id": "arara-paydon-mail-2026",
   "company": "アララ株式会社／Payどん参加4行庫",
   "geography": "日本",
-  "title": "Payどんメール通知委託先への不正アクセス、メール・決済情報の漏えい可能性",
+  "title": "アララメッセージのメールアドレス約301万件の流出を確認",
   "announcementDate": "2026-10-28",
   "announcementDateLabel": "確認できた公式公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日未公表",
-  "updatedDate": "2026-10-28",
-  "statusAsOfDate": "2026-10-28",
-  "lastVerifiedDate": "2026-10-31",
+  "updatedDate": "2026-10-29",
+  "statusAsOfDate": "2026-10-29",
+  "lastVerifiedDate": "2026-11-02",
   "impactTypes": [
     "unauthorizedAccess",
     "leak",
     "outage"
   ],
-  "disclosureStatus": "possible",
+  "disclosureStatus": "confirmed",
   "attackMethod": {
-    "label": "第三者による不正アクセス。具体的手法・初期侵入経路は未公表",
-    "status": "unknown"
+    "label": "一部環境のWebサーバー脆弱性を悪用。製品・脆弱性識別番号は未公表",
+    "status": "confirmed"
   },
-  "summary": "鹿児島銀行等4行庫は28日、メール送信委託先アララへの不正アクセスを確認。17時23分にメール通知・新規登録等を停止し、送信情報の一部に漏えい可能性を公表。",
+  "summary": "メール配信基盤の1システムでWebサーバーの脆弱性を悪用され、約301万件のメールアドレスが持ち出されたことを確認。Payどんの通知・新規登録等の停止と決済情報の漏えい可能性は利用者側の部分範囲として扱う。",
   "affectedData": [
-    "利用者・加盟店のメールアドレス",
-    "決済の日時・店舗名・支払金額"
+    "提供元が外部持出しを確認した利用企業のメールアドレス",
+    "Payどん利用者・加盟店メールアドレスと決済日時・店舗名・金額（利用者側公表の漏えい可能性）"
   ],
-  "counts": [],
+  "counts": [
+    {
+      "value": 3010000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "侵害された1システムの利用企業が保有するメールアドレス。人数ではない",
+      "approximate": true
+    }
+  ],
   "caveats": [
     "URLの日付ではなく本文の10月28日を公表日とする。侵入開始日は未公表。",
-    "Payどんの部分範囲。アララ全体の件数は未検証のため収録しない。決済全体の停止を意味しない。",
+    "提供元の約301万件はメールアドレス件数。Payどん部分範囲と合算しない。メール流出確認を決済情報全項目の確定へ拡張しない。決済全体の停止を意味しない。",
     "公表時点で二次被害の報告なし。委託元を独立した別攻撃として重複登録しない。"
   ],
   "sources": [
@@ -36,6 +44,11 @@
       "title": "アララ株式会社／Payどん参加4行庫：公式公表",
       "url": "https://www.kagin.co.jp/important/emergency_20261029_3.html",
       "publishedDate": "2026-10-28"
+    },
+    {
+      "title": "アララメッセージへの不正アクセスによる情報流出およびサービス停止について",
+      "url": "https://www.arara.com/news/info/20261029_arara",
+      "publishedDate": "2026-10-29"
     }
   ],
   "timeline": [
@@ -52,6 +65,13 @@
       "kind": "disclosure",
       "summary": "鹿児島銀行等4行庫は28日、メール送信委託先アララへの不正アクセスを確認。17時23分にメール通知・新規登録等を停止し、送信情報の一部に漏えい可能性を公表。",
       "sourceUrl": "https://www.kagin.co.jp/important/emergency_20261029_3.html"
+    },
+    {
+      "date": "2026-10-29",
+      "label": "提供元が流出範囲と原因を公表",
+      "kind": "update",
+      "summary": "1システムのメールアドレス約301万件の外部持出しとWebサーバーの脆弱性悪用を確認。",
+      "sourceUrl": "https://www.arara.com/news/info/20261029_arara"
     }
   ],
   "eventDates": {

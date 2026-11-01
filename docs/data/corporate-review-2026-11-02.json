@@ -1,0 +1,500 @@
+{
+  "checkedDate": "2026-11-02",
+  "timezone": "Asia/Tokyo",
+  "reviewedAt": "2026-11-01T21:43:09.817120+00:00",
+  "baseCommit": "e460beb455674d0a470131918b65ed4890bf6884",
+  "status": "verified-selection-with-source-failure",
+  "overlap": {
+    "previousAudit": "docs/data/corporate-review-2026-11-01.json",
+    "previousReviewedAt": "2026-10-31T21:14:01.982136+00:00",
+    "overlapFromUTC": "2026-10-27T00:00:00Z",
+    "policy": "前回32出典の取得を再試行し、10月末〜11月1日公表の未収録・続報を限定調査。検索・二次索引は発見用のみ。"
+  },
+  "baselineIncidentCount": 255,
+  "addedIncidentCount": 4,
+  "updatedIncidentCount": 1,
+  "resultIncidentCount": 259,
+  "resultSourceCount": 562,
+  "records": [
+    {
+      "id": "smartnews-points-system-2026-11",
+      "action": "added",
+      "summary": "10月31日〜11月1日にシステムへの不正アクセスが発生。ポイント・特典の不正操作を確認し、ポイント交換や通知等を停止・制限。アカウントや広告関連情報への影響は調査中。"
+    },
+    {
+      "id": "club-tourism-reservation-2026",
+      "action": "added",
+      "summary": "10月30日5時45分にサーバーへの不正アクセスを検知し通信を遮断。調査で予約システムの会員情報に漏えいの可能性が判明し、ホームページを停止して調査を継続。"
+    },
+    {
+      "id": "japanticket-external-analytics-2026",
+      "action": "added",
+      "summary": "外部分析ツールへの侵入で顧客情報の漏えいが判明。10月28日に検知・経路遮断を実施。最大約26.4万件を精査中で、山梨県とPARCOの利用者情報が含まれるかは調査中。"
+    },
+    {
+      "id": "ana-trading-egift-2026-10",
+      "action": "added",
+      "summary": "10月23日8時のメンテナンス停止後、調査範囲を広げて不正アクセスを確認。全サービス停止を継続し、再開には長期間を要する見込み。個人情報流出とギフトの不正利用は未確認。"
+    },
+    {
+      "id": "arara-paydon-mail-2026",
+      "action": "updated",
+      "summary": "メール配信基盤の1システムでWebサーバーの脆弱性を悪用され、約301万件のメールアドレスが持ち出されたことを確認。Payどんの通知・新規登録等の停止と決済情報の漏えい可能性は利用者側の部分範囲として扱う。"
+    }
+  ],
+  "verifiedCandidates": [
+    {
+      "url": "https://www.westjr.co.jp/press/article/2026/10/31/items/261031_00_press_gaibuservice.pdf",
+      "status": "verified_deferred",
+      "summary": "NTTデータ委託先デジタル証券プラットフォームへの不正アクセスによりJR西日本第80回無担保社債の投資家情報2件に漏えい可能性。10月31日公表の公式PDFは前回確認済み。今回は本文を再取得していない。",
+      "reason": "STdirectServicesまたは他の証券プラットフォーム事案との同一性を公表資料だけでは確定できない。カテゴリ内の同一事案重複を避け、別事件化や断定的集約を保留。"
+    }
+  ],
+  "limits": [
+    "全255既存事案・全公式サイトの再巡回ではない。限定選定であり未掲載を事案なしとしない。",
+    "アララのサービスサイトは403のまま。別の公式企業サイトで本文を確認したが、失敗URLの成功点は進めない。",
+    "ソニー生命FAQは誘導のみの部分取得。詳細確認成功としない。",
+    "既存事案の事実差分がない場合は個別lastVerifiedDateを一律更新せず、今回の取得監査に記録。",
+    "JR西日本のデジタル証券基盤候補は前回から保留継承。今回その本文再取得・同一性の解決はしていない。"
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://www.ryohin-keikaku.jp/news/articles/2026_1030_01",
+      "checkedAt": "2026-11-01T21:40:39.761735+00:00",
+      "httpStatus": 200,
+      "bodySha256": "1e6ec9214a78f9d01c205c8e909f1f31af2d673485bcf5c7018b7074d608011c",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:47.437350+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:39.761735+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://www.release.tdnet.info/inbs/140120261030561172.pdf",
+      "checkedAt": "2026-11-01T21:40:39.762494+00:00",
+      "httpStatus": 200,
+      "bodySha256": "981fb63d8a7b54a3785ccd63729d69536d2486b3b7966aaffd8f2a9bc56f02e5",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:47.438058+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:39.762494+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://www.release.tdnet.info/inbs/140120261030560364.pdf",
+      "checkedAt": "2026-11-01T21:40:39.763080+00:00",
+      "httpStatus": 200,
+      "bodySha256": "782c749c7d8b92d86f6eb0ea677619336f5064dc7af9056e1892deeb42aa0db7",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:47.438741+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:39.763080+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://www.release.tdnet.info/inbs/140120261029560120.pdf",
+      "checkedAt": "2026-11-01T21:40:39.763507+00:00",
+      "httpStatus": 200,
+      "bodySha256": "186e97eaf8f092b47cb69e69d07328c6aa5688b48cc8e8ee43147854110e3d58",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:47.439702+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:39.763507+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://www.irisohyama.co.jp/news/2026/?date=1029",
+      "checkedAt": "2026-11-01T21:40:39.764033+00:00",
+      "httpStatus": 200,
+      "bodySha256": "1b47895828277af241896711040de8089f4f18bb0afeee3dfcaaeee2e96213ef",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:47.443775+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:39.764033+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.anahd.co.jp/group/pr/202610/notification.html",
+      "checkedAt": "2026-11-01T21:40:39.764522+00:00",
+      "httpStatus": 200,
+      "bodySha256": "fadb4b12a3de60c715185cb0e8c1acbe505d7d95ae40d7aa2b65347c88b582af",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:47.444445+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:39.764522+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://support.goodsmile.com/hc/ja/articles/63718007508761",
+      "checkedAt": "2026-11-01T21:40:39.764923+00:00",
+      "httpStatus": 200,
+      "bodySha256": "626baa0490290293424aeffbb44e6d69ef731887993b2d9891dacd5a1562000d",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:47.445273+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:39.764923+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.kagin.co.jp/important/emergency_20261029_3.html",
+      "checkedAt": "2026-11-01T21:40:39.765748+00:00",
+      "httpStatus": 200,
+      "bodySha256": "045ee2ecd7a1c9614ece79fc3bdf78ec8cf3e520b0b61f550f3e0a2acc46a3af",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:47.445908+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:39.765748+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.asahi.com/corporate/info/17004624",
+      "checkedAt": "2026-11-01T21:40:45.289514+00:00",
+      "httpStatus": 200,
+      "bodySha256": "964c76164e3c0569c019017f417de684e2adb01cbb6e7e04ce72219c85950035",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:52.013522+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:45.289514+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://am.arara.com/news/2026102901",
+      "checkedAt": "2026-11-01T21:40:45.620824+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "previousLastSuccessfulFetchAtUTC": null,
+      "retrievalMethod": "direct_http",
+      "status": "fetch_failed",
+      "lastSuccessfulFetchAt": null,
+      "checkpointPolicy": "取得失敗は以前の成功点を保持し、取得成功や事実変更として扱わない。"
+    },
+    {
+      "url": "https://www.cuenote.jp/support/news-incident.html",
+      "checkedAt": "2026-11-01T21:40:45.666315+00:00",
+      "httpStatus": 200,
+      "bodySha256": "9216270ff05246f470de7c07506674da321dccbcd91cb845e04ebb09633bade8",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:52.256099+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:45.666315+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://support.goodsmile.com/hc/ja/articles/63753454602521",
+      "checkedAt": "2026-11-01T21:40:45.673557+00:00",
+      "httpStatus": 200,
+      "bodySha256": "00e728d007714f870579b10129d7812e000bc979799d8905ec732a4003499f2a",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:52.379241+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:45.673557+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.hana-cupid.co.jp/news/news/20261028/",
+      "checkedAt": "2026-11-01T21:40:46.038614+00:00",
+      "httpStatus": 200,
+      "bodySha256": "a75868a511df4ccecd7fe12cf63e857c7777be0dfc1b1eee0c2d4dbf6225d856",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:53.359374+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:46.038614+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://www.sonylife.co.jp/info/popup/261028_oshirase2.pdf",
+      "checkedAt": "2026-11-01T21:40:46.186607+00:00",
+      "httpStatus": 200,
+      "bodySha256": "0200301fe59fcaee5dde5aad7f100917947f69fd44865dc78ccd1f825c4dba47",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:55.668252+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:46.186607+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://www.onamae.com/news/article/11616",
+      "checkedAt": "2026-11-01T21:40:48.241482+00:00",
+      "httpStatus": 200,
+      "bodySha256": "784c7ff4e4c4134149d0b01d3b71599b111175c4356777bdb72c3040ea8a8c69",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:56.577989+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:48.241482+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.onamae.com/news/article/11620",
+      "checkedAt": "2026-11-01T21:40:49.953578+00:00",
+      "httpStatus": 200,
+      "bodySha256": "9b10858b84eaf950b823d67f7db7fc5e4edcd6ea2924db80ad973f998db3b42c",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:56.615796+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:49.953578+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.onamae.com/news/article/11623",
+      "checkedAt": "2026-11-01T21:40:50.463871+00:00",
+      "httpStatus": 200,
+      "bodySha256": "3bd2c5e8a7b9e682e324f406475d60cb4f3e650ec13f2030bbe7bd10c9fccd37",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:56.831686+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:50.463871+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.br31.jp/contents/topics/261028_01.html",
+      "checkedAt": "2026-11-01T21:40:50.485932+00:00",
+      "httpStatus": 200,
+      "bodySha256": "2a0d5272be6a4332a076a482fb4dff262e393a40304a69c7b05be3934ba656dd",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:08:57.454228+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:50.485932+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://subway.co.jp/news/bhi2h9kf00mf/",
+      "checkedAt": "2026-11-01T21:40:50.628659+00:00",
+      "httpStatus": 200,
+      "bodySha256": "9f39d3cda13b7896c763e20ebb59990aaf8a5b1d1d427b63af056d8304e842fe",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:09:00.234745+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:50.628659+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://info.system5.jp/whatsnew/apology-20261027",
+      "checkedAt": "2026-11-01T21:40:50.786050+00:00",
+      "httpStatus": 200,
+      "bodySha256": "276bcc97c0aabdcca1aa5d4d9bc5c0a976b2a8d8d53b5fcec789eea31aa91eda",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:09:00.431642+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:50.786050+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://internet.gmo/news/article/262/",
+      "checkedAt": "2026-11-01T21:40:52.214726+00:00",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "web_open_after_direct_failure",
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "note": "公式本文をwebで再確認。直接取得の失敗とは区別する。",
+      "attemptError": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://internet.gmo/news/article/263/",
+      "checkedAt": "2026-11-01T21:40:52.345144+00:00",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "web_open_after_direct_failure",
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "note": "公式本文をwebで再確認。直接取得の失敗とは区別する。",
+      "attemptError": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://sonylife.my.salesforce-sites.com/faq/pkb_Home?fs=Search&id=kA0fQ000000B3aT&l=ja&pn_ka_pass=1&pn_pass=1&sn_ka_pass=1",
+      "checkedAt": "2026-11-01T21:40:52.397313+00:00",
+      "httpStatus": 200,
+      "bodySha256": "3654556ccf1feceaa0fcd3425a810629c3c161f1bf74a9a3ac4ef579b534f7d9",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-30T21:23:40.549866+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_limited",
+      "lastSuccessfulFetchAt": "2026-10-30T21:23:40.549866+00:00",
+      "note": "FAQは詳細発表への誘導のみ。成功点を進めない。"
+    },
+    {
+      "url": "https://www.saisoncard.co.jp/customer-support/information/20261031/",
+      "checkedAt": "2026-11-01T21:40:52.402697+00:00",
+      "httpStatus": 200,
+      "bodySha256": "0b1a546ec3277efc8e5c53951deda196b00b651541e6d55a9e534a50e7e1ec6c",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:52.402697+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.nttdata.com/global/ja/news/release/2026/103101/",
+      "checkedAt": "2026-11-01T21:40:52.993646+00:00",
+      "httpStatus": 200,
+      "bodySha256": "ab752020b4e0fe4dd2b9e6ff82657a0974cabc69313d269660d2b332e52c9621",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:52.993646+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/10/0deb6f2426f1d5ab2b2b1824288b374d.pdf",
+      "checkedAt": "2026-11-01T21:40:54.946722+00:00",
+      "httpStatus": 200,
+      "bodySha256": "a35be0e7a62a88c35831f5b3963e08690951b4da5d75480733569c54394c5500",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:54.946722+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-82_4796/kddi_nr_s-82_4796_pdf_01.pdf",
+      "checkedAt": "2026-11-01T21:40:55.285663+00:00",
+      "httpStatus": 200,
+      "bodySha256": "caf89a0dd55392ac1683da5cf4d1d4d1c7ec18a464dd2ef99d53482b3ace40a6",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:55.285663+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04395.html",
+      "checkedAt": "2026-11-01T21:40:55.445359+00:00",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "web_open_after_direct_failure",
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "note": "公式本文をwebで再確認。直接取得の失敗とは区別する。",
+      "attemptError": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.tokyu-land.co.jp/news/uploads/4e81382e895fcd779559705843fcb56f83846c28.pdf",
+      "checkedAt": "2026-11-01T21:40:55.457471+00:00",
+      "httpStatus": 200,
+      "bodySha256": "e750e2ba2aaa241e26bf97c170c6a140183f2d6f5adfc368ddda325b9239dbc0",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": true,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:55.457471+00:00",
+      "note": "前回と本文ハッシュ一致。"
+    },
+    {
+      "url": "https://news.trustlogin.com/20261030",
+      "checkedAt": "2026-11-01T21:40:56.555044+00:00",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "web_open_after_direct_failure",
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "note": "公式本文をwebで再確認。直接取得の失敗とは区別する。",
+      "attemptError": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.tokyu-land.co.jp/news/uploads/d90301ccbf6bc6dd9148a9b110b5824a889ae4f9.pdf",
+      "checkedAt": "2026-11-01T21:40:56.789460+00:00",
+      "httpStatus": 200,
+      "bodySha256": "4d6b05704ad6cd4693ef77e4c9beb3b323bf9bc339acb81484bd379fd79e6598",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:56.789460+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://studio.design/ja/security/notice/2026-10-incident",
+      "checkedAt": "2026-11-01T21:40:56.842584+00:00",
+      "previousLastSuccessfulFetchAtUTC": "2026-10-31T21:14:01.982136+00:00",
+      "retrievalMethod": "web_open_after_direct_failure",
+      "status": "checked_no_change",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "note": "公式本文をwebで再確認。直接取得の失敗とは区別する。",
+      "attemptError": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://about.smartnews.com/ja/news/2617.html",
+      "checkedAt": "2026-11-01T21:40:58.610048+00:00",
+      "httpStatus": 200,
+      "bodySha256": "4ac78386532706ff854094979efe3768c350e4e433babefc84658c14ed21a52e",
+      "previousLastSuccessfulFetchAtUTC": null,
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "verified_added",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:58.610048+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.club-tourism.co.jp/jpn/news/2026/1031/",
+      "checkedAt": "2026-11-01T21:40:58.876448+00:00",
+      "httpStatus": 200,
+      "bodySha256": "1e023cbb3dcdb9a19243231d3bb2e1ba1b378f891362e172f5e49ba961146bf8",
+      "previousLastSuccessfulFetchAtUTC": null,
+      "retrievalMethod": "direct_http",
+      "sameBodyAsPrevious": false,
+      "status": "verified_added",
+      "lastSuccessfulFetchAt": "2026-11-01T21:40:58.876448+00:00",
+      "note": "公式本文を開いて内容を確認。周辺HTML・PDFバイト差を事案更新とはしない。"
+    },
+    {
+      "url": "https://www.pref.yamanashi.jp/fujisan/261030.html",
+      "checkedAt": "2026-11-01T21:40:59.491787+00:00",
+      "previousLastSuccessfulFetchAtUTC": null,
+      "retrievalMethod": "web_open_after_direct_failure",
+      "status": "verified_added",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "note": "公式本文をwebで再確認。直接取得の失敗とは区別する。",
+      "attemptError": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.japanticket.com/news-20261029/",
+      "status": "verified_added",
+      "retrievalMethod": "web_open",
+      "checkedAt": "2026-11-01T21:43:09.817120+00:00",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "previousLastSuccessfulFetchAtUTC": null
+    },
+    {
+      "url": "https://cafe.parco.jp/news/detail/?id=39359",
+      "status": "verified_added",
+      "retrievalMethod": "web_open",
+      "checkedAt": "2026-11-01T21:43:09.817120+00:00",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "previousLastSuccessfulFetchAtUTC": null
+    },
+    {
+      "url": "https://www.anatc.com/pressroom/20261030_02/",
+      "status": "verified_added",
+      "retrievalMethod": "web_open",
+      "checkedAt": "2026-11-01T21:43:09.817120+00:00",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "previousLastSuccessfulFetchAtUTC": null
+    },
+    {
+      "url": "https://www.arara.com/news/info/20261029_arara",
+      "status": "verified_updated",
+      "retrievalMethod": "web_open",
+      "checkedAt": "2026-11-01T21:43:09.817120+00:00",
+      "lastSuccessfulFetchAt": "2026-11-01T21:43:09.817120+00:00",
+      "previousLastSuccessfulFetchAtUTC": null
+    }
+  ]
+}
