@@ -1,0 +1,87 @@
+{
+  "id": "ryohin-curtain-nanotec-2026",
+  "company": "株式会社良品計画／MNインターファッション株式会社／株式会社ナノテック",
+  "geography": "日本",
+  "title": "オーダーカーテンの旧受注情報19,933件に漏えいの可能性",
+  "announcementDate": "2026-11-02",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": "2026-10-19",
+  "occurredDateLabel": "公表資料が明記する攻撃日",
+  "updatedDate": "2026-11-02",
+  "statusAsOfDate": "2026-11-02",
+  "lastVerifiedDate": "2026-11-03",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入手法は調査中・未公表",
+    "status": "unknown"
+  },
+  "summary": "委託先MNインターファッションの再委託先ナノテックが管理するサーバーに10月19日の侵入痕跡を28日に確認。旧オーダーカーテン顧客情報の流出可能性を調査している。",
+  "affectedData": [
+    "氏名・住所・電話番号・注文情報・配送先住所"
+  ],
+  "counts": [
+    {
+      "value": 19933,
+      "unit": "件",
+      "status": "possible",
+      "label": "2018年4月10日〜2022年1月25日のオーダーカーテン注文顧客。同一顧客の重複データを含む",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "過去の注文対象期間は攻撃期間ではない。クレジットカード情報・メールアドレスは含まれない。",
+    "現在の受注業務は別サーバーで運用し、問題は未確認。不正利用も未確認。",
+    "10月30日のMUJIアプリ事案とは対象業務・保有元が異なるため別件として扱い、件数を合算しない。"
+  ],
+  "sources": [
+    {
+      "title": "オーダーカーテンに関するお客さま情報の流出の可能性について",
+      "url": "https://www.ryohin-keikaku.jp/news/articles/2026_1102_01",
+      "publishedDate": "2026-11-02"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-19",
+      "label": "後日確認された不正アクセス",
+      "kind": "occurrence",
+      "summary": "ナノテック管理サーバーが外部から不正アクセスを受けた日。",
+      "sourceUrl": "https://www.ryohin-keikaku.jp/news/articles/2026_1102_01"
+    },
+    {
+      "date": "2026-10-28",
+      "label": "痕跡確認・委託元へ報告",
+      "kind": "occurrence",
+      "summary": "ナノテックが10月19日の侵入痕跡を確認し、MNインターファッションを通じ良品計画へ報告。",
+      "sourceUrl": "https://www.ryohin-keikaku.jp/news/articles/2026_1102_01"
+    },
+    {
+      "date": "2026-11-02",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "委託先MNインターファッションの再委託先ナノテックが管理するサーバーに10月19日の侵入痕跡を28日に確認。旧オーダーカーテン顧客情報の流出可能性を調査している。",
+      "sourceUrl": "https://www.ryohin-keikaku.jp/news/articles/2026_1102_01"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026-10-19",
+      "note": "ナノテックが10月28日に確認した痕跡から、10月19日に不正アクセスを受けたことを公式が公表。注文対象期間とは別。",
+      "sourceUrl": "https://www.ryohin-keikaku.jp/news/articles/2026_1102_01",
+      "reviewedDate": "2026-11-03",
+      "startDate": "2026-10-19"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表",
+      "note": "外部流出の有無は調査中。10月28日の痕跡確認や報告受領を流出確認日としない。",
+      "sourceUrl": "https://www.ryohin-keikaku.jp/news/articles/2026_1102_01",
+      "reviewedDate": "2026-11-03"
+    }
+  }
+}

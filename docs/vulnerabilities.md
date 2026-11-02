@@ -24,7 +24,7 @@
 
 ## 保存先・再現性
 
-- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認510件と、固定ソース外で個別確認した165件を含む計675件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
+- `src/data/vulnerabilities/<ID>.json`: 固定ソースに重なる個別確認515件と、固定ソース外で個別確認した166件を含む計681件の個別編集記録。手作業の日本語要約と資料上の訂正を保持する
 - `src/data/vulnerability-imported.json`: 固定ソース全件を変換・別名統合し、個別確認済み記録を重ねた表示用正本。上記の個別編集記録を追加連結して二重計上しない
 - `src/data/vulnerability-coverage.json`: 簡潔な公開カバレッジ・再実行コマンド・出力ハッシュ
 - `docs/data/vulnerability-import-audit.json`: ファイル単位の収録/除外/失敗監査。ブラウザーに全量を同梱しない
@@ -73,6 +73,18 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 - 未訪問の参照先を確認済み資料として扱わない。機械収録は固定JSONへの直接リンクが必須
 
 2026-10-08の個別50件拡充ではCISA公式カタログがHTTP403で取得できなかったためKEV未確認を維持した。React Server Componentsの実悪用試行はAWSの独立した一次観測報告を引用している。
+
+## 2026-11-03の更新記録
+
+固定ソースを `b5542e1d1ef8751817ac573f83d4433c852ede80`（2026-11-02T21:09:58Z）へ更新。前回成功確認点から24時間の重複窓に加え、固定Reviewed全ツリーを比較し、全37,495件・対象19,539件を再照合した。Reviewed差分6件のうち対象は新規2件・既存3件で、残る1件は2021年公表の期間外訂正。表示は19,687件（未撤回18,819件・撤回履歴868件）となった。
+
+- SD-JWTとDBHubを追加。SD-JWTのdecodeの修正版不明とcoreの0.20.0を分離。DBHubはMySQL/MariaDBの読み取り専用検証回避で、PostgreSQLを同じ影響としない。開発元HighとReviewed MODERATEの評価差を留保する。
+- obsidian-local-rest-apiの修正境界4.1.3を反映。websocket-driverとfunctypeの参照・日時更新、zipの明示OSV別名追加を保存。開発元の初回公表日と集約DBの収録日は別々に保持する。
+- rio-vtは公開OSVのRustSec記録と開発元GHSA本文を照合して追加。OSV側にGHSA別名がないためRustSec IDを推測で統合せず、開発元GHSAを主IDとする。修正版0.5.29、攻撃に必要な既存ディレクトリ条件、ファイルの読み込みと外部流出の違いを留保する。
+- OSV7エクスポート285,341行を前回成功時の固定generation・SHA256と照合し、ZIP CRC・正規化全文を比較。通常情報は追加9・変更19・削除0、MALは追加52・変更17で別記した。zstd/zstd-safeの13訂正は旧系列の修正境界追加を候補原データに保持するが、検証済みGHSA/CVE対応がないため推測収録しない。その他RustSec-only候補、Apacheの新規告知とパッケージ座標未確定候補、Incusの集約DB未登録も保存。
+- CISA本体403・MyJVN503は取得失敗として最後の成功点を保持。公式KEVミラー固定コミットは前回と同一で1,766件、ライブラリ45件に一致。既存cisa.govホスト限定検証に阻まれるため未確認状態を変更せず、ミラーを本体取得成功とは扱わない。
+
+[Reviewed差分](data/github-reviewed-delta-2026-11-03.json)、[開発元確認](data/reviewed-maintainer-review-2026-11-03.json)、[補助ソース](data/supplemental-source-status-2026-11-03.json)、[補助差分](data/supplemental-candidate-delta-2026-11-03.json)、[候補](data/library-candidate-review-2026-11-03.json)、[KEV保留](data/library-kev-mirror-review-2026-11-03.json)。全開発元の個別再確認や全件網羅を意味しない。
 
 ## 2026-11-01の更新記録
 

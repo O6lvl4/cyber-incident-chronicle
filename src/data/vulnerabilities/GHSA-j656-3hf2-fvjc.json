@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-j656-3hf2-fvjc",
+  "aliases": [],
+  "title": "DBHub: MySQL and MariaDB comment interpretation bypasses read-only SQL validation",
+  "summary": "DBHub: MySQL and MariaDB comment interpretation bypasses read-only SQL validation",
+  "publishedAt": "2026-11-02T17:57:51Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b5542e1d1ef8751817ac573f83d4433c852ede80/advisories/github-reviewed/2026/11/GHSA-j656-3hf2-fvjc/GHSA-j656-3hf2-fvjc.json",
+  "modifiedAt": "2026-11-02T17:57:51Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-02T21:33:50.670711Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@bytebase/dbhub",
+      "ranges": [
+        {
+          "affected": "< 0.22.6",
+          "fixed": "0.22.6",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b5542e1d1ef8751817ac573f83d4433c852ede80/advisories/github-reviewed/2026/11/GHSA-j656-3hf2-fvjc/GHSA-j656-3hf2-fvjc.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.22.6"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b5542e1d1ef8751817ac573f83d4433c852ede80/advisories/github-reviewed/2026/11/GHSA-j656-3hf2-fvjc/GHSA-j656-3hf2-fvjc.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/b5542e1d1ef8751817ac573f83d4433c852ede80/advisories/github-reviewed/2026/11/GHSA-j656-3hf2-fvjc/GHSA-j656-3hf2-fvjc.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/b5542e1d1ef8751817ac573f83d4433c852ede80/advisories/github-reviewed/2026/11/GHSA-j656-3hf2-fvjc/GHSA-j656-3hf2-fvjc.json",
+      "publishedDate": "2026-11-02",
+      "publishedAt": "2026-11-02T17:57:51Z",
+      "modifiedAt": "2026-11-02T17:57:51Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "DBHub: MySQL and MariaDB comment interpretation bypasses read-only SQL validation",
+      "url": "https://github.com/advisories/GHSA-j656-3hf2-fvjc",
+      "publishedDate": "2026-11-02"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/bytebase/dbhub/security/advisories/GHSA-j656-3hf2-fvjc",
+      "publishedDate": "2026-06-24",
+      "publishedAt": "2026-06-24T07:42:54Z",
+      "modifiedAt": "2026-07-10T20:23:36Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "GitHub-reviewed Advisory Databaseの固定スナップショットから収録。開発元の資料は個別に確認していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "MySQL/MariaDB接続の読み取り専用検証がコメント解釈差で回避される。PostgreSQLを同じ経路の影響対象としない。開発元HighとReviewed MODERATE/CVSS4.0の出典差を保持する。",
+    "開発元の初回公開日時と集約DBへの収録日時を区別する。実悪用・KEVは未確認であり、PoCや深刻度だけで企業被害を推定しない。"
+  ]
+}

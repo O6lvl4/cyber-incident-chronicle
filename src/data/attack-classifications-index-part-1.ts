@@ -97,9 +97,9 @@ import record93 from './attack-classifications/iij-securemx-2025.json' with { ty
 import record94 from './attack-classifications/ikegami-cyberattack-2026.json' with { type: 'json' };
 import record95 from './attack-classifications/irisplaza-ec-2026.json' with { type: 'json' };
 import record96 from './attack-classifications/iseto-2024.json' with { type: 'json' };
-import record97 from './attack-classifications/ites-2023.json' with { type: 'json' };
-import record98 from './attack-classifications/iwaicosmo-tradeworks-2026.json' with { type: 'json' };
-import record99 from './attack-classifications/jaea-jrr3-support-2026.json' with { type: 'json' };
+import record97 from './attack-classifications/istyle-cosme-commonid-2026-10.json' with { type: 'json' };
+import record98 from './attack-classifications/ites-2023.json' with { type: 'json' };
+import record99 from './attack-classifications/iwaicosmo-tradeworks-2026.json' with { type: 'json' };
 
 export const ATTACKS_PART_1 = {
   "2rinkan-2026": record0,
@@ -199,7 +199,7 @@ export const ATTACKS_PART_1 = {
   "ikegami-cyberattack-2026": record94,
   "irisplaza-ec-2026": record95,
   "iseto-2024": record96,
-  "ites-2023": record97,
-  "iwaicosmo-tradeworks-2026": record98,
-  "jaea-jrr3-support-2026": record99,
+  "istyle-cosme-commonid-2026-10": record97,
+  "ites-2023": record98,
+  "iwaicosmo-tradeworks-2026": record99,
 } as Record<string, AttackClassification>;

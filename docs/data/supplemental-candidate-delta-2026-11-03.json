@@ -1,0 +1,2551 @@
+{
+  "checkedAt": "2026-11-02T21:32:28.918061Z",
+  "rows": [
+    {
+      "ecosystem": "npm",
+      "change": "added",
+      "id": "GHSA-f9j6-8p6x-r9j6",
+      "changedFields": [
+        "aliases",
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "GHSA-f9j6-8p6x-r9j6",
+        "published": "2026-11-02T17:54:39Z",
+        "modified": "2026-11-02T18:00:04.175458008Z",
+        "aliases": [
+          "CVE-2026-62374"
+        ],
+        "summary": "SD JWT JS: Tampered disclosures silently dropped instead of rejected",
+        "affected": [
+          {
+            "package": {
+              "name": "@sd-jwt/decode",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/%40sd-jwt/decode"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "0.19.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-f9j6-8p6x-r9j6/GHSA-f9j6-8p6x-r9j6.json"
+            }
+          },
+          {
+            "package": {
+              "name": "@sd-jwt/core",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/%40sd-jwt/core"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.20.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 0.19.0",
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-f9j6-8p6x-r9j6/GHSA-f9j6-8p6x-r9j6.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/openwallet-foundation/sd-jwt-js/security/advisories/GHSA-f9j6-8p6x-r9j6"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62374"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/openwallet-foundation/sd-jwt-js/pull/380"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/openwallet-foundation/sd-jwt-js/commit/3d8a72a0a279d67439db038c9c2b52621568b866"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/openwallet-foundation/sd-jwt-js"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-176"
+          ],
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-02T17:54:39Z",
+          "nvd_published_at": "2026-10-29T17:18:10Z",
+          "severity": "HIGH"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "detailsSha256": "3b1d3b7150e7178c2f85ba8f9f643ba176e0fbff70eaa6bc86f3c4fc0324fe6b"
+    },
+    {
+      "ecosystem": "npm",
+      "change": "added",
+      "id": "GHSA-j656-3hf2-fvjc",
+      "changedFields": [
+        "aliases",
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "GHSA-j656-3hf2-fvjc",
+        "published": "2026-11-02T17:57:51Z",
+        "modified": "2026-11-02T18:15:06.081593729Z",
+        "aliases": [
+          "CVE-2026-61789"
+        ],
+        "summary": "DBHub: MySQL and MariaDB comment interpretation bypasses read-only SQL validation",
+        "affected": [
+          {
+            "package": {
+              "name": "@bytebase/dbhub",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/%40bytebase/dbhub"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.22.6"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-j656-3hf2-fvjc/GHSA-j656-3hf2-fvjc.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/bytebase/dbhub/security/advisories/GHSA-j656-3hf2-fvjc"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/bytebase/dbhub/pull/342"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/bytebase/dbhub/commit/872bb338f7d31f6afe517a076ac3e3edafaaaf08"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/bytebase/dbhub"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/bytebase/dbhub/releases/tag/v0.22.6"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-436",
+            "CWE-863"
+          ],
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-02T17:57:51Z",
+          "nvd_published_at": null,
+          "severity": "MODERATE"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "detailsSha256": "00466d70731c836613526d0c49b1b89d13a2ec2909d18cb13905ed136cc16fa3"
+    },
+    {
+      "ecosystem": "npm",
+      "change": "changed",
+      "id": "GHSA-593v-wcqx-hq2w",
+      "changedFields": [
+        "modified",
+        "severity",
+        "references",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "GHSA-593v-wcqx-hq2w",
+        "published": "2021-09-07T22:57:58Z",
+        "modified": "2026-11-02T18:45:04.763134680Z",
+        "aliases": [
+          "BIT-parse-2021-47986",
+          "BIT-parse-2021-47987",
+          "CVE-2021-47986",
+          "CVE-2021-47987"
+        ],
+        "summary": "Incorrect version tags linked to external repository",
+        "affected": [
+          {
+            "package": {
+              "name": "parse-server",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/parse-server"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.5.2"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-593v-wcqx-hq2w/GHSA-593v-wcqx-hq2w.json"
+            }
+          },
+          {
+            "package": {
+              "name": "parse-server",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/parse-server"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.6.0"
+                  },
+                  {
+                    "fixed": "4.10.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-593v-wcqx-hq2w/GHSA-593v-wcqx-hq2w.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-593v-wcqx-hq2w"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47986"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47987"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/parse-community/parse-server"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/parse-server-arbitrary-code-execution-via-malicious-version-tags"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/parse-server-unreviewed-code-execution-via-malicious-version-tags"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-484",
+            "CWE-494"
+          ],
+          "github_reviewed": true,
+          "github_reviewed_at": "2021-09-03T21:34:00Z",
+          "nvd_published_at": null,
+          "severity": "HIGH"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ]
+      },
+      "detailsSha256": "2a8dd60c1a7fa885e351a323e90a37ff25a8df2bda4f6aa1baa36c313f23ad1b"
+    },
+    {
+      "ecosystem": "npm",
+      "change": "changed",
+      "id": "GHSA-62gx-5q78-wrvx",
+      "changedFields": [
+        "modified",
+        "affected",
+        "references",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "GHSA-62gx-5q78-wrvx",
+        "published": "2026-07-15T21:56:45Z",
+        "modified": "2026-11-02T19:30:04.035186033Z",
+        "summary": "obsidian-local-rest-api: Authenticated path traversal via URL-encoded %2F in /vault/{path} — arbitrary host file read/write/delete",
+        "affected": [
+          {
+            "package": {
+              "name": "obsidian-local-rest-api",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/obsidian-local-rest-api"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.1.3"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/07/GHSA-62gx-5q78-wrvx/GHSA-62gx-5q78-wrvx.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/coddingtonbear/obsidian-local-rest-api/security/advisories/GHSA-62gx-5q78-wrvx"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/coddingtonbear/obsidian-local-rest-api/commit/fdc97f9e652e0d38cb43911d31f827a12b248fc8"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/coddingtonbear/obsidian-local-rest-api"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/coddingtonbear/obsidian-local-rest-api/releases/tag/4.1.3"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-22"
+          ],
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-07-15T21:56:45Z",
+          "nvd_published_at": null,
+          "severity": "HIGH"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          }
+        ]
+      },
+      "detailsSha256": "6804c585fd160c01d2cc4b7f759617565b0dd6ba97bc0842c1042460a918e232"
+    },
+    {
+      "ecosystem": "npm",
+      "change": "changed",
+      "id": "GHSA-wcjj-9m6g-2fr2",
+      "changedFields": [
+        "modified",
+        "references",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "GHSA-wcjj-9m6g-2fr2",
+        "published": "2026-09-09T23:49:20Z",
+        "modified": "2026-11-02T19:45:10.888461676Z",
+        "aliases": [
+          "CVE-2026-59176"
+        ],
+        "summary": "functype-mcp-server: MCP `set_functype_version` Package Alias RCE via Unsanitized pnpm install + Dynamic Import",
+        "affected": [
+          {
+            "package": {
+              "name": "functype-mcp-server",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/functype-mcp-server"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.4.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 1.4.3",
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/09/GHSA-wcjj-9m6g-2fr2/GHSA-wcjj-9m6g-2fr2.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/jordanburke/functype/security/advisories/GHSA-wcjj-9m6g-2fr2"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59176"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/jordanburke/functype/commit/c0d58ad9c2a7d15c6117bd3adbbd75de37317dcf"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/jordanburke/functype"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/jordanburke/functype/releases/tag/v1.4.4"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-829"
+          ],
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-09-09T23:49:20Z",
+          "nvd_published_at": "2026-10-28T14:17:04Z",
+          "severity": "HIGH"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+          }
+        ]
+      },
+      "detailsSha256": "b18f8b7c1f2bb9ae29a52cd24044868cf8608283d7a77519e74676feb7635504"
+    },
+    {
+      "ecosystem": "RubyGems",
+      "change": "changed",
+      "id": "GHSA-2x63-gw47-w4mm",
+      "changedFields": [
+        "modified",
+        "references",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "GHSA-2x63-gw47-w4mm",
+        "published": "2026-07-21T18:34:42Z",
+        "modified": "2026-11-02T21:15:04.252525532Z",
+        "aliases": [
+          "CVE-2026-61666"
+        ],
+        "summary": "websocket-driver-ruby: Denial of service via malformed Host header",
+        "affected": [
+          {
+            "package": {
+              "name": "websocket-driver",
+              "ecosystem": "RubyGems",
+              "purl": "pkg:gem/websocket-driver"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.8.2"
+                  }
+                ]
+              }
+            ],
+            "versions": [
+              "0.1.0",
+              "0.2.0",
+              "0.2.1",
+              "0.2.2",
+              "0.2.3",
+              "0.3.0",
+              "0.3.1",
+              "0.3.2",
+              "0.3.3",
+              "0.3.4",
+              "0.3.5",
+              "0.4.0",
+              "0.5.0",
+              "0.5.1",
+              "0.5.2",
+              "0.5.3",
+              "0.5.4",
+              "0.6.0",
+              "0.6.1",
+              "0.6.2",
+              "0.6.3",
+              "0.6.4",
+              "0.6.5",
+              "0.7.0",
+              "0.7.1",
+              "0.7.2",
+              "0.7.3",
+              "0.7.4",
+              "0.7.5",
+              "0.7.6",
+              "0.7.7",
+              "0.8.0",
+              "0.8.1"
+            ],
+            "database_specific": {
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/07/GHSA-2x63-gw47-w4mm/GHSA-2x63-gw47-w4mm.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/faye/websocket-driver-ruby/security/advisories/GHSA-2x63-gw47-w4mm"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61666"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/faye/websocket-driver-ruby/commit/7d6fd87759a2fdc83590d3b49ffa661dc53fa128"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/faye/websocket-driver-ruby"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/rubysec/ruby-advisory-db/blob/a58f1d0a3343e85cef597970f2c5458dcfbaf909/gems/websocket-driver/CVE-2026-61666.yml"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-248"
+          ],
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-07-21T18:34:42Z",
+          "nvd_published_at": "2026-08-17T17:16:39Z",
+          "severity": "HIGH"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H"
+          }
+        ]
+      },
+      "detailsSha256": "9f212413444df6f02d0d79e60a74861458327847282391a1af801a8055337cb7"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "added",
+      "id": "RUSTSEC-2026-0429",
+      "changedFields": [
+        "aliases",
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0429",
+        "published": "2026-10-22T12:00:00Z",
+        "modified": "2026-11-02T10:00:02.471399952Z",
+        "aliases": [
+          "CVE-2026-115909",
+          "GHSA-q7v9-x93c-xqv3"
+        ],
+        "summary": "zip: `ZipArchive::extract` aborts the process on a symlink entry with a large declared size",
+        "affected": [
+          {
+            "package": {
+              "name": "zip",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zip"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "9.0.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "denial-of-service"
+              ],
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0429.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zip"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0429.html"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "detailsSha256": "8335e630777e9be326b5e160019b88e25e8bba74006e0b58e2b28f8461b92497"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "added",
+      "id": "RUSTSEC-2026-0430",
+      "changedFields": [
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0430",
+        "published": "2026-11-01T12:00:00Z",
+        "modified": "2026-11-02T11:00:02.247101984Z",
+        "summary": "Path traversal in `rio-vt` Kitty graphics protocol handler allows out-of-bounds file delete (and read)",
+        "affected": [
+          {
+            "package": {
+              "name": "rio-vt",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/rio-vt"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "0.5.29"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "rio_vt::ansi::kitty_graphics_protocol::parse"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "file-disclosure"
+              ],
+              "cvss": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0430.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/rio-vt"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0430.html"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://github.com/raphamorim/rio/security/advisories/GHSA-m926-9wrf-jr8w"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/raphamorim/rio/pull/1998"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N"
+          }
+        ]
+      },
+      "detailsSha256": "8ff641d3aba810f31e1618932e8c30faa8c9f49f938dac883baab03894dda087"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "added",
+      "id": "RUSTSEC-2026-0431",
+      "changedFields": [
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0431",
+        "published": "2026-11-01T12:00:00Z",
+        "modified": "2026-11-02T11:00:02.238924591Z",
+        "summary": "Unbounded memory allocation in `evtx` parsing a `.wevtcache` file",
+        "affected": [
+          {
+            "package": {
+              "name": "evtx",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/evtx"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.11.0"
+                  },
+                  {
+                    "fixed": "0.15.1"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "evtx::wevt_templates::wevtcache::WevtCacheReader::next_entry",
+                  "evtx::wevt_templates::wevtcache::for_each_crim_blob"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "denial-of-service"
+              ],
+              "cvss": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0431.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/evtx"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0431.html"
+          },
+          {
+            "type": "REPORT",
+            "url": "https://github.com/omerbenamram/evtx/issues/334"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/omerbenamram/evtx/pull/335"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "detailsSha256": "c0e6f2a14ecbd3a180bb5ca4fb8d4d1badc931162e3b2d6c987cb5657d186af3"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "added",
+      "id": "RUSTSEC-2026-0432",
+      "changedFields": [
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0432",
+        "published": "2026-10-31T12:00:00Z",
+        "modified": "2026-11-02T11:30:16.809391425Z",
+        "summary": "`codeq`: decoding untrusted input can allocate memory from an unchecked length prefix (denial of service)",
+        "affected": [
+          {
+            "package": {
+              "name": "codeq",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/codeq"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "0.6.3"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "denial-of-service"
+              ],
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0432.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/codeq"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0432.html"
+          },
+          {
+            "type": "REPORT",
+            "url": "https://github.com/drmingdrmer/codeq/issues/4"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ]
+      },
+      "detailsSha256": "ea4c214cb301455043c716cec446c7c1d4606e15dc4772dee9035e01d366447c"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "added",
+      "id": "RUSTSEC-2026-0433",
+      "changedFields": [
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0433",
+        "published": "2026-10-28T12:00:00Z",
+        "modified": "2026-11-02T11:30:18.315201167Z",
+        "summary": "Quadratic parsing of nested image wikilinks with `ENABLE_WIKILINKS`",
+        "affected": [
+          {
+            "package": {
+              "name": "pulldown-cmark",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/pulldown-cmark"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.13.0"
+                  },
+                  {
+                    "fixed": "0.13.6"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "denial-of-service"
+              ],
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0433.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/pulldown-cmark"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0433.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/pulldown-cmark/pulldown-cmark/pull/1186"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/pulldown-cmark/pulldown-cmark/pull/1186"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "detailsSha256": "ce2a02bf05e60e40eb4eca6d9a4c4a5c6e496837449180177cd0d69ccc82054c"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "added",
+      "id": "RUSTSEC-2026-0434",
+      "changedFields": [
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0434",
+        "published": "2026-10-31T12:00:00Z",
+        "modified": "2026-11-02T11:30:18.468635637Z",
+        "summary": "`ant-releases`: extracting a release archive can write files outside the destination directory (path traversal / zip-slip)",
+        "affected": [
+          {
+            "package": {
+              "name": "ant-releases",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/ant-releases"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "ant_releases::AntReleaseRepoActions::extract_release_archive"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "code-execution"
+              ],
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:N",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0434.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/ant-releases"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0434.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/maidsafe/ant-releases"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:N"
+          }
+        ]
+      },
+      "detailsSha256": "c0bc57f376f4cc025308311b018bbeea23c7932e36bbf55db9a7617e50a3d432"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "added",
+      "id": "RUSTSEC-2026-0435",
+      "changedFields": [
+        "aliases",
+        "published",
+        "modified",
+        "id",
+        "affected",
+        "severity",
+        "summary",
+        "references",
+        "details",
+        "schema_version",
+        "database_specific"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0435",
+        "published": "2026-11-02T12:00:00Z",
+        "modified": "2026-11-02T12:10:42.318149664Z",
+        "aliases": [
+          "BIT-thrift-2026-43868",
+          "CVE-2026-43868",
+          "GHSA-2f9f-gq7v-9h6m"
+        ],
+        "summary": "Unbounded memory allocation in `thrift` binary protocol `read_bytes`",
+        "affected": [
+          {
+            "package": {
+              "name": "thrift",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/thrift"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "0.23.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "thrift::protocol::binary::TBinaryInputProtocol::read_bytes",
+                  "thrift::protocol::binary::TBinaryInputProtocol::read_string"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "denial-of-service"
+              ],
+              "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0435.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/thrift"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0435.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://lists.apache.org/thread/zj76dtwnbbs1m7z3focf4wd51pqpsmn9"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "detailsSha256": "7738b6b6101dcfa9c34450302df6b46332e436081ea96c8a33dcf5b4e7085175"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "GHSA-2f9f-gq7v-9h6m",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "record": {
+        "schema_version": "1.9.0",
+        "id": "GHSA-2f9f-gq7v-9h6m",
+        "published": "2026-05-05T09:31:55Z",
+        "modified": "2026-11-02T12:10:42.318149664Z",
+        "aliases": [
+          "BIT-thrift-2026-43868",
+          "CVE-2026-43868",
+          "RUSTSEC-2026-0435"
+        ],
+        "summary": "Apache Thrift has a Memory Allocation with Excessive Size Value Vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "thrift",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/thrift"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "0.23.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2f9f-gq7v-9h6m/GHSA-2f9f-gq7v-9h6m.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43868"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/apache/thrift/commit/d5152211af61f850ec393604316804096dd4632e"
+          },
+          {
+            "type": "WEB",
+            "url": "https://access.redhat.com/errata/RHSA-2026:26586"
+          },
+          {
+            "type": "WEB",
+            "url": "https://access.redhat.com/errata/RHSA-2026:42644"
+          },
+          {
+            "type": "WEB",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-43868"
+          },
+          {
+            "type": "WEB",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2466670"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/apache/thrift"
+          },
+          {
+            "type": "WEB",
+            "url": "https://lists.apache.org/thread/zj76dtwnbbs1m7z3focf4wd51pqpsmn9"
+          },
+          {
+            "type": "WEB",
+            "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-43868.json"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-1285",
+            "CWE-789"
+          ],
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-05-08T19:21:11Z",
+          "nvd_published_at": "2026-05-05T09:16:04Z",
+          "severity": "MODERATE"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ]
+      },
+      "detailsSha256": "b139995159cd1cac1dc5867a86a364b5ff5f84cea19434b6d09ce25f65103b8d"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "GHSA-q7v9-x93c-xqv3",
+      "changedFields": [
+        "aliases",
+        "modified"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "GHSA-q7v9-x93c-xqv3",
+        "published": "2026-10-29T16:40:01Z",
+        "modified": "2026-11-02T10:10:53.649189132Z",
+        "aliases": [
+          "CVE-2026-115909",
+          "RUSTSEC-2026-0429"
+        ],
+        "summary": "zip: Unbounded Symlink-Target Handling Can Abort Or Exhaust Memory During Extraction",
+        "affected": [
+          {
+            "package": {
+              "name": "zip",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zip"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "1.3.0"
+                  },
+                  {
+                    "fixed": "9.0.0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-q7v9-x93c-xqv3/GHSA-q7v9-x93c-xqv3.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/zip-rs/zip2/security/advisories/GHSA-q7v9-x93c-xqv3"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115909"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/zip-rs/zip2/pull/984"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/zip-rs/zip2/commit/a543a1fc8f3f3eef36f27bb137230295284cdb98"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/zip-rs/zip2"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/zip-rs/zip2/releases/tag/v9.0.0"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-400",
+            "CWE-789"
+          ],
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-10-29T16:40:01Z",
+          "nvd_published_at": "2026-10-26T17:17:18Z",
+          "severity": "HIGH"
+        },
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ]
+      },
+      "detailsSha256": "3311c6f84128b86d78ed33679892af0c526632001d090a596b6f53d6c3f5d7d8"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0391",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0391",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.590733846Z",
+        "summary": "Data from an abandoned stream leaks into the next stream on a reused context",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.13.2"
+                  },
+                  {
+                    "fixed": "0.13.4"
+                  },
+                  {
+                    "introduced": "0.14.0-0"
+                  },
+                  {
+                    "fixed": "0.14.3"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd::stream::raw::Decoder::with_context",
+                  "zstd::stream::raw::Encoder::with_context"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-exposure"
+              ],
+              "cvss": null,
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0391.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0391.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/74ace2dcdca62a2ce0f034895d6079458311e003"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "d63959504f3e1de9c2deee021cb38acd5be77ecabfe18db329dfa15f0cac62ad"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0395",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0395",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.420559993Z",
+        "summary": "Use-after-free with `CParameter::StableInBuffer`",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.1.0"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::CCtx::set_parameter"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-exposure"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0395.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0395.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/53a8a290d8cfb52ff5b29fb6e04a40b5a174cc65"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "79143a8c0f893aefc94284f87083e47a8313c4e93c0d6e1320f02c1b4b11d54d"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0396",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0396",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.400899521Z",
+        "summary": "`Seekable` reads a NULL or out-of-bounds seek table",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "7.2.2"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::seekable::SeekTable::frame_decompressed_size",
+                  "zstd_safe::seekable::Seekable::decompress",
+                  "zstd_safe::seekable::Seekable::decompress_frame",
+                  "zstd_safe::seekable::Seekable::frame_decompressed_size",
+                  "zstd_safe::seekable::Seekable::offset_to_frame_index"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-corruption"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0396.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0396.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/a9626069d6f2e90b782b8f627f57a361cfe8ef85"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "694cd27b71ad0d154ac69faa8663ca61c303d10bedccc6395137e85eed032df5"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0397",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0397",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.445177143Z",
+        "summary": "`OutBuffer::around_pos` exposes uninitialized memory",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::OutBuffer::around_pos"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-exposure"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0397.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0397.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/5827de2459b8ac430e87e860f00c7f3c13023833"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "dcef38599c51f2a5a6c1d93e3f463af5987fdb95d30fe63798daad3fa7517c22"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0398",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0398",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.419709171Z",
+        "summary": "`Seekable::decompress` sets a `Vec` length beyond its capacity for offsets past the end",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "7.2.2"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::seekable::AdvancedSeekable::decompress",
+                  "zstd_safe::seekable::Seekable::decompress"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-exposure",
+                "memory-corruption"
+              ],
+              "cvss": null,
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0398.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0398.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/80506be743fae2ed0c2fe8b21c374c6a2eab0be7"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "1a1eb90e84c3987930cbc62087e8d9148a44f46768deb01707181dc61e7e850e"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0399",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0399",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.328955732Z",
+        "summary": "Use-after-free through `init_using_cdict` and `init_using_ddict`",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::CCtx::init_using_cdict",
+                  "zstd_safe::DCtx::init_using_ddict"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-corruption"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0399.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0399.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/e00e7928e3e98953fc43418af6d73f6aae2378fb"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "2d5f6d0ece4df7a98fe8af8025e14ace99dae4133b4250835aa67da9528a593d"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0400",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0400",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.428341570Z",
+        "summary": "Use-after-free of a dictionary after a one-shot call on a context with an open stream",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "3.0.1"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::DCtx::decompress",
+                  "zstd_safe::DCtx::decompress_using_ddict",
+                  "zstd_safe::DCtx::decompress_using_dict"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-exposure"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0400.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0400.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/d34502a0ed07f80ab2aa4c65059578e0466f2467"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "b97720653d09de23566cb3ec44048ec3cb3650af5234531a121c398ac1bd8fdf"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0401",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0401",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.353698025Z",
+        "summary": "Out-of-bounds read in `train_from_buffer` when sample sizes overflow",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::train_from_buffer"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-exposure"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0401.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0401.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/781ea454191dbf178d09c1daf6fc896d15fbaa2f"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "d980d1cfc76f5e6843f2b5dd19b1cc1b1ac20d5368c03a24b66d1c0139d8204d"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0402",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0402",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:04.162155944Z",
+        "summary": "Heap buffer overflow in `CCtx::try_clone` on a multithreaded context",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.1.4"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::CCtx::try_clone"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-corruption"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0402.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0402.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/682b8b2967cf4aba5cfe2d940d1e381a3e23211a"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "b0f840378c73cf9bce64054df767173657639bff1ae1ae4eb76b5ca9f7f8246e"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0403",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0403",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:04.136442771Z",
+        "summary": "Uninitialized memory exposed when streaming decompression of a legacy frame fails",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::DCtx::decompress_stream"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-exposure"
+              ],
+              "cvss": null,
+              "informational": null,
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0403.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0403.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/006e1d1ad1eeaf6b5d4c28329e70217adabcec43"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "2042b4295be543d2406c9523b355e6388c607b7a5f4b13f43cf5d5fe5530552d"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0404",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0404",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:04.168804805Z",
+        "summary": "Double free in `DCtx::try_clone`",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.1.4"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::DCtx::try_clone"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-corruption"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0404.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0404.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/cee6529b553ec600a8e152aaca15a91598820ecf"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "8d226c19ef1657961dd6d057424ee6e0da7e934333de406509af11ec88b30b26"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0405",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0405",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.399517581Z",
+        "summary": "Out-of-bounds read with an out-of-range `InBuffer::pos`",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "7.2.2"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::seekable::SeekableCStream::compress_stream"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-exposure"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0405.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0405.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/20d397c0d68d8b4300c5493875ebfa10e355fcdd"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "8aa515332a9910779b8ce00cf144d4beebffc1c5e57244bcf0bd1080929516a0"
+    },
+    {
+      "ecosystem": "crates.io",
+      "change": "changed",
+      "id": "RUSTSEC-2026-0406",
+      "changedFields": [
+        "modified",
+        "affected",
+        "schema_version"
+      ],
+      "record": {
+        "schema_version": "1.9.2",
+        "id": "RUSTSEC-2026-0406",
+        "published": "2026-10-16T12:00:00Z",
+        "modified": "2026-11-02T09:30:03.591194710Z",
+        "summary": "Use-after-free when changing a multithreaded context with an unfinished frame",
+        "affected": [
+          {
+            "package": {
+              "name": "zstd-safe",
+              "ecosystem": "crates.io",
+              "purl": "pkg:cargo/zstd-safe"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0.0.0-0"
+                  },
+                  {
+                    "fixed": "7.4.0"
+                  },
+                  {
+                    "introduced": "8.0.0-0"
+                  },
+                  {
+                    "fixed": "8.2.0"
+                  }
+                ]
+              }
+            ],
+            "ecosystem_specific": {
+              "affected_functions": null,
+              "affects": {
+                "arch": [],
+                "functions": [
+                  "zstd_safe::CCtx::disable_dictionary",
+                  "zstd_safe::CCtx::init",
+                  "zstd_safe::CCtx::load_dictionary",
+                  "zstd_safe::CCtx::ref_cdict",
+                  "zstd_safe::CCtx::ref_prefix",
+                  "zstd_safe::CCtx::reset",
+                  "zstd_safe::CCtx::set_parameter"
+                ],
+                "os": []
+              }
+            },
+            "database_specific": {
+              "categories": [
+                "memory-corruption"
+              ],
+              "cvss": null,
+              "informational": "unsound",
+              "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0406.json"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "PACKAGE",
+            "url": "https://crates.io/crates/zstd-safe"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://rustsec.org/advisories/RUSTSEC-2026-0406.html"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/commit/e224018a2389915d68ed17f30109bebad36e9734"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/gyscos/zstd-rs/pull/384"
+          }
+        ],
+        "database_specific": {
+          "license": "CC0-1.0"
+        }
+      },
+      "detailsSha256": "2e9ccfe50bd0ca83cc2e49a67b6d6923a7b368a66680139c25612a33faf1de4b"
+    }
+  ]
+}

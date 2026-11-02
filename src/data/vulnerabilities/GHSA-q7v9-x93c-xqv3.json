@@ -2,7 +2,8 @@
   "kind": "vulnerability",
   "id": "GHSA-q7v9-x93c-xqv3",
   "aliases": [
-    "CVE-2026-115909"
+    "CVE-2026-115909",
+    "RUSTSEC-2026-0429"
   ],
   "title": "zip: Unbounded Symlink-Target Handling Can Abort Or Exhaust Memory During Extraction",
   "summary": "zip: Unbounded Symlink-Target Handling Can Abort Or Exhaust Memory During Extraction",
@@ -83,11 +84,20 @@
       "publishedAt": "2026-10-22T19:26:33Z",
       "modifiedAt": "2026-10-26T16:38:13Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "公開OSV crates.io全件エクスポート：別名の同一性確認",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip?generation=1793621881738111",
+      "publishedDate": "2026-10-29",
+      "publishedAt": "2026-10-29T16:40:01Z",
+      "modifiedAt": "2026-11-02T10:10:53.649189132Z"
     }
   ],
   "caveats": [
     "開発元GHSA本文と公開APIを2026-10-30（JST）確認。表示のパッケージ座標・版範囲は固定Reviewed原データを保持し、開発元APIの版表・CVSS・日時は別の確認監査に保存。表記が異なるものを機械的に統一しない。",
     "実悪用・CISA KEVは未確認。PoCや深刻度だけから実悪用・企業被害を推定しない。",
-    "開発元GHSAの影響版表は>=1.3.0、修正版9.0.0。Reviewedの修正上限付き区間と表記差を保持。シンボリックリンク展開に関する入力サイズの問題。"
+    "開発元GHSAの影響版表は>=1.3.0、修正版9.0.0。Reviewedの修正上限付き区間と表記差を保持。シンボリックリンク展開に関する入力サイズの問題。",
+    "2026-11-03（JST）公開OSVの明示別名を追補。既存の影響範囲・修正境界・公表日時の解釈は保持。"
   ]
 }
