@@ -1,0 +1,70 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m926-9wrf-jr8w",
+  "aliases": [],
+  "title": "rio-vt：Kitty画像プロトコルのパストラバーサルによる範囲外ファイル削除",
+  "summary": "攻撃者の影響を受ける端末出力を描画すると、特定のディレクトリが既に存在する条件下で一時領域外のファイルが削除され、内容がプロセスへ読み込まれる可能性がある。",
+  "publishedAt": "2026-11-01T20:13:26Z",
+  "modifiedAt": "2026-11-01T20:13:26Z",
+  "withdrawnAt": null,
+  "dateSourceUrl": "https://github.com/raphamorim/rio/security/advisories/GHSA-m926-9wrf-jr8w",
+  "lastVerifiedAt": "2026-11-02T21:34:58.732258Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "rio-vt",
+      "ranges": [
+        {
+          "affected": "<= 0.5.28",
+          "fixed": "0.5.29",
+          "sourceUrl": "https://github.com/raphamorim/rio/security/advisories/GHSA-m926-9wrf-jr8w"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://github.com/raphamorim/rio/security/advisories/GHSA-m926-9wrf-jr8w",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 4.7,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
+        "sourceUrl": "https://github.com/raphamorim/rio/security/advisories/GHSA-m926-9wrf-jr8w"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Rio開発元公開GHSA",
+      "url": "https://github.com/raphamorim/rio/security/advisories/GHSA-m926-9wrf-jr8w",
+      "publishedDate": "2026-11-01",
+      "publishedAt": "2026-11-01T20:13:26Z",
+      "modifiedAt": "2026-11-01T20:13:26Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV crates.io export：RUSTSEC-2026-0430の開発元参照と修正境界を照合",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip?generation=1793621881738111",
+      "publishedDate": "2026-11-01",
+      "publishedAt": "2026-11-01T12:00:00Z",
+      "modifiedAt": "2026-11-02T11:00:02.247101984Z"
+    }
+  ],
+  "caveats": [
+    "開発元の公表日時を使用。OSVのRustSec記録は同じGHSAを参照するがaliases配列がなく、RustSec IDを別名として推測追加しない。GHSA IDの個別OSV APIは404。",
+    "特定の文字列を含むディレクトリが既に存在し、攻撃者が参照できることが前提。ネットワークから無条件に侵害できるとはしない。読み込みはプロセス内への取り込みであり、外部への情報流出を確認した事案ではない。",
+    "修正版はrio-vt 0.5.29。旧版向け設定スイッチの回避策はないと開発元が説明。実悪用・KEVは未確認。"
+  ]
+}

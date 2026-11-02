@@ -1,0 +1,88 @@
+{
+  "id": "prestige-pcs-roadservice-2026",
+  "company": "株式会社プレステージ・インターナショナル／株式会社プレステージ・コアソリューション",
+  "geography": "日本",
+  "title": "ロードサービス等の受託業務情報、重複を含む最大約550万件が流出",
+  "announcementDate": "2026-11-02",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-02",
+  "statusAsOfDate": "2026-11-02",
+  "lastVerifiedDate": "2026-11-03",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入手法は調査中・未公表",
+    "status": "unknown"
+  },
+  "summary": "10月29日に業務システムへの侵入を検知し認証情報を無効化したが、侵入継続を確認して30日に停止。PCS受託業務の個人情報持出しを確認し、原因・範囲を調査中。",
+  "affectedData": [
+    "氏名・住所・電話番号・メールアドレス",
+    "車両情報（登録番号・車台番号等）、事故・故障受付情報、金融機関口座情報の一部"
+  ],
+  "counts": [
+    {
+      "value": 5500000,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "PCSが受託するロードサービス等の顧客情報。重複を含む最大値で人数は精査中",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "上限・重複を含む件数を確定した実人数に置き換えない。協力会社情報も一部含まれる可能性があり精査中。",
+    "カード情報の漏えいと二次被害は公表時点で未確認。システム停止中も代替運用でロードサービス等の業務を継続。",
+    "検知日は10月29日だが、初期侵入日や個人情報流出を初めて確認した日は未公表。"
+  ],
+  "sources": [
+    {
+      "title": "当社グループの業務システムへの不正アクセスによる個人情報漏えいに関するお知らせとお詫び",
+      "url": "https://www.prestigein.com/Portals/0/pdf/NEWS/news_20261102_01.pdf",
+      "publishedDate": "2026-11-02"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-29",
+      "label": "不正アクセスを検知",
+      "kind": "occurrence",
+      "summary": "不正に使用された認証情報の無効化等を実施。",
+      "sourceUrl": "https://www.prestigein.com/Portals/0/pdf/NEWS/news_20261102_01.pdf"
+    },
+    {
+      "date": "2026-10-30",
+      "label": "システム停止",
+      "kind": "occurrence",
+      "summary": "不正アクセスの継続を確認し停止。代替運用で業務継続。",
+      "sourceUrl": "https://www.prestigein.com/Portals/0/pdf/NEWS/news_20261102_01.pdf"
+    },
+    {
+      "date": "2026-11-02",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月29日に業務システムへの侵入を検知し認証情報を無効化したが、侵入継続を確認して30日に停止。PCS受託業務の個人情報持出しを確認し、原因・範囲を調査中。",
+      "sourceUrl": "https://www.prestigein.com/Portals/0/pdf/NEWS/news_20261102_01.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表",
+      "note": "公表日・検知日から侵入開始日や被害初確認日を推定しない。",
+      "sourceUrl": "https://www.prestigein.com/Portals/0/pdf/NEWS/news_20261102_01.pdf",
+      "reviewedDate": "2026-11-03"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表",
+      "note": "漏えい確認の事実は公表されているが、その初確認日は未公表。10月29日の不正アクセス検知日を転用しない。",
+      "sourceUrl": "https://www.prestigein.com/Portals/0/pdf/NEWS/news_20261102_01.pdf",
+      "reviewedDate": "2026-11-03"
+    }
+  }
+}

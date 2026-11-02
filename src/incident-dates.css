@@ -29,3 +29,8 @@
 @media (min-width: 768px) {
   .research-incidents .date-mobile-label { display: block; position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 }
+/* Keep full multi-organization names readable without crowding the desktop list. */
+@media (min-width: 1101px) {
+  .research-incidents { --research-row-gap: 12px; }
+  .workspace.view-list .research-incidents .incident-card { padding-block: 10px; }
+}

@@ -1,0 +1,129 @@
+{
+  "id": "suntory-external-cloud-2026",
+  "company": "サントリーホールディングス株式会社／サントリービバレッジ＆フード株式会社",
+  "geography": "日本",
+  "title": "外部クラウドへの侵入で従業員・応募者・顧客情報の漏えいを確認",
+  "announcementDate": "2026-11-02",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-02",
+  "statusAsOfDate": "2026-11-02",
+  "lastVerifiedDate": "2026-11-03",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入手法は調査中・未公表",
+    "status": "unknown"
+  },
+  "summary": "10月28日に外部クラウドの異常を検知してアクセスを遮断し、29日に流出ファイル内の個人情報を確認。11月1日までに確認した対象を7区分で公表し、調査を継続。",
+  "affectedData": [
+    "氏名・メールアドレス・電話番号等（対象区分ごとに異なる）",
+    "応募者マイページ登録情報、宅配のお届け先の位置情報、役職"
+  ],
+  "counts": [
+    {
+      "value": 90000,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "グループ・パートナー企業等の従業員の氏名・メールアドレス",
+      "approximate": true
+    },
+    {
+      "value": 7323,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "2023年末時点のマル・デ・シャイン登録顧客のメールアドレス",
+      "approximate": false
+    },
+    {
+      "value": 7173,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "2026年新卒ビジネス部門オープン選考応募者のマイページ情報等",
+      "approximate": false
+    },
+    {
+      "value": 1097,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "社用携帯電話2台に登録されたグループ・取引先従業員等の氏名・電話番号",
+      "approximate": false
+    },
+    {
+      "value": 324,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "モンテ物産の従業員・パートナー企業従業員の氏名・メール・電話",
+      "approximate": false
+    },
+    {
+      "value": 96,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "井筒まい泉の宅配顧客・配送従業員の氏名・位置情報",
+      "approximate": false
+    },
+    {
+      "value": 25,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "サントリーの取引先従業員の氏名・役職",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "区分間の重複を除いた総人数は公表されていないため合算しない。対象区分で情報項目が異なる。",
+    "決済情報は含まれず、公表時点で不正利用は未確認。クラウド事業者や脆弱性IDは資料にないため推定しない。"
+  ],
+  "sources": [
+    {
+      "title": "外部クラウドサービスへの不正アクセスによる個人情報漏えいに関するお詫び",
+      "url": "https://www.suntory.co.jp/note/detail/261102_008203.html",
+      "publishedDate": "2026-11-02"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-28",
+      "label": "異常検知・遮断",
+      "kind": "occurrence",
+      "summary": "外部クラウドの異常を検知し、不正アクセスを遮断。流出したファイル名を特定。",
+      "sourceUrl": "https://www.suntory.co.jp/note/detail/261102_008203.html"
+    },
+    {
+      "date": "2026-10-29",
+      "label": "個人情報の流出を確認",
+      "kind": "occurrence",
+      "summary": "流出したファイルの一部に個人情報が含まれることを確認。",
+      "sourceUrl": "https://www.suntory.co.jp/note/detail/261102_008203.html"
+    },
+    {
+      "date": "2026-11-02",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月28日に外部クラウドの異常を検知してアクセスを遮断し、29日に流出ファイル内の個人情報を確認。11月1日までに確認した対象を7区分で公表し、調査を継続。",
+      "sourceUrl": "https://www.suntory.co.jp/note/detail/261102_008203.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表",
+      "note": "公表日・検知日から侵入開始日や被害初確認日を推定しない。",
+      "sourceUrl": "https://www.suntory.co.jp/note/detail/261102_008203.html",
+      "reviewedDate": "2026-11-03"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026-10-29",
+      "note": "10月29日に漏えいファイルの一部に個人情報が含まれることを確認。10月28日の異常検知・ファイル名特定と区別。",
+      "sourceUrl": "https://www.suntory.co.jp/note/detail/261102_008203.html",
+      "reviewedDate": "2026-11-03",
+      "startDate": "2026-10-29"
+    }
+  }
+}

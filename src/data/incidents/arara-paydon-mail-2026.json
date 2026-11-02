@@ -2,14 +2,14 @@
   "id": "arara-paydon-mail-2026",
   "company": "アララ株式会社／Payどん参加4行庫",
   "geography": "日本",
-  "title": "アララメッセージのメールアドレス約301万件の流出を確認",
+  "title": "アララメッセージの流出範囲を拡大・訂正、全サービス停止",
   "announcementDate": "2026-10-28",
   "announcementDateLabel": "確認できた公式公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日未公表",
-  "updatedDate": "2026-10-29",
-  "statusAsOfDate": "2026-10-29",
-  "lastVerifiedDate": "2026-11-02",
+  "updatedDate": "2026-11-02",
+  "statusAsOfDate": "2026-11-02",
+  "lastVerifiedDate": "2026-11-03",
   "impactTypes": [
     "unauthorizedAccess",
     "leak",
@@ -17,27 +17,52 @@
   ],
   "disclosureStatus": "confirmed",
   "attackMethod": {
-    "label": "一部環境のWebサーバー脆弱性を悪用。製品・脆弱性識別番号は未公表",
+    "label": "Webサーバーの脆弱性に加えシステム環境の問題が関係。管理画面への不正ログイン・出力機能悪用とサーバー間侵入を確認",
     "status": "confirmed"
   },
-  "summary": "メール配信基盤の1システムでWebサーバーの脆弱性を悪用され、約301万件のメールアドレスが持ち出されたことを確認。Payどんの通知・新規登録等の停止と決済情報の漏えい可能性は利用者側の部分範囲として扱う。",
+  "summary": "共用環境の流出件数を3,386,187件へ訂正し、追加の97サーバーから約7,700万件のメールアドレス等の持出しを公表（おそれ含む・精査中）。不審メール最大約713万通の送信を別に確認し、10月31日に全配信サービスを停止。",
   "affectedData": [
-    "提供元が外部持出しを確認した利用企業のメールアドレス",
-    "Payどん利用者・加盟店メールアドレスと決済日時・店舗名・金額（利用者側公表の漏えい可能性）"
+    "メールアドレスと契約企業が登録した氏名・性別・生年月日・電話番号・会員番号・住所等（企業ごとに異なる）",
+    "配信宛先等の記録",
+    "Payどん利用者側のメールアドレス・決済日時・店舗名・金額は従前公表の可能性範囲。提供元全体の確定範囲へ一律拡張しない"
   ],
   "counts": [
     {
-      "value": 3010000,
+      "value": 77000000,
+      "unit": "件",
+      "status": "possible",
+      "label": "本サービス経由で侵害された97サーバーのメールアドレス。持出しのおそれを含み精査中、最終ユーザー数ではない",
+      "approximate": true
+    },
+    {
+      "value": 3386187,
       "unit": "件",
       "status": "confirmed",
-      "label": "侵害された1システムの利用企業が保有するメールアドレス。人数ではない",
+      "label": "既報の共用環境61社のメールアドレス。重複除外、旧約301万件を訂正",
+      "approximate": false
+    },
+    {
+      "value": 411827,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "共用環境のうち5社の氏名・会社名等を含む顧客データの最大値",
+      "approximate": false
+    },
+    {
+      "value": 7130000,
+      "unit": "通",
+      "status": "confirmed",
+      "label": "2環境を不正利用して送信した不審メールの最大合計。流出人数・件数ではない",
       "approximate": true
     }
   ],
   "caveats": [
-    "URLの日付ではなく本文の10月28日を公表日とする。侵入開始日は未公表。",
-    "提供元の約301万件はメールアドレス件数。Payどん部分範囲と合算しない。メール流出確認を決済情報全項目の確定へ拡張しない。決済全体の停止を意味しない。",
-    "公表時点で二次被害の報告なし。委託元を独立した別攻撃として重複登録しない。"
+    "区分間で同じメールアドレスが重複する可能性があるため、約7700万件と3386187件等を合算しない。各メールアドレス件数は人数ではない。",
+    "第1報の約301万件は共用環境の旧値。第2報で3386187件へ訂正し、5社の顧客データ最大411827件を追補。",
+    "約7700万件は持出しのおそれを含む精査中の規模。97サーバー・最大約380社は環境・契約企業の規模であり人数ではない。",
+    "不審メール最大約713万通は第三者が外部から持ち込んだ宛先への送信。漏えい件数と別。",
+    "10月27〜28日と28〜31日の観測期間を区別。最初の侵入開始時期・経路は調査中。PHP等の具体的製品やCVEは断定しない。",
+    "本サービスは10月31日19時53分に全停止完了、その他サービスは影響なし。再開未定。11月2日の当局追加報告は資料上予定であり実施としない。"
   ],
   "sources": [
     {
@@ -49,6 +74,11 @@
       "title": "アララメッセージへの不正アクセスによる情報流出およびサービス停止について",
       "url": "https://www.arara.com/news/info/20261029_arara",
       "publishedDate": "2026-10-29"
+    },
+    {
+      "title": "アララメッセージへの不正アクセスによる情報流出およびサービス停止について（第2報）",
+      "url": "https://www.arara.com/dcms_media/other/arara_20261102__.pdf",
+      "publishedDate": "2026-11-02"
     }
   ],
   "timeline": [
@@ -72,22 +102,39 @@
       "kind": "update",
       "summary": "1システムのメールアドレス約301万件の外部持出しとWebサーバーの脆弱性悪用を確認。",
       "sourceUrl": "https://www.arara.com/news/info/20261029_arara"
+    },
+    {
+      "date": "2026-10-31",
+      "label": "追加範囲の把握・全停止",
+      "kind": "update",
+      "summary": "本サービス経由の持出しを把握。認証情報を無効化し通信を遮断、19時53分に本サービスの全停止を完了。",
+      "sourceUrl": "https://www.arara.com/dcms_media/other/arara_20261102__.pdf"
+    },
+    {
+      "date": "2026-11-02",
+      "label": "範囲・件数・原因の訂正と追加",
+      "kind": "update",
+      "summary": "共用環境の流出件数を3,386,187件へ訂正し、追加の97サーバーから約7,700万件のメールアドレス等の持出しを公表（おそれ含む・精査中）。不審メール最大約713万通の送信を別に確認し、10月31日に全配信サービスを停止。",
+      "sourceUrl": "https://www.arara.com/dcms_media/other/arara_20261102__.pdf"
     }
   ],
   "eventDates": {
     "attack": {
-      "precision": "unknown",
-      "label": "攻撃日未公表",
-      "note": "検知日・公表日を攻撃日や被害初確認日に転用しない。",
-      "sourceUrl": "https://www.kagin.co.jp/important/emergency_20261029_3.html",
-      "reviewedDate": "2026-10-31"
+      "precision": "period",
+      "startDate": "2026-10-27",
+      "endDate": "2026-10-31",
+      "label": "公表された不正アクセスの観測期間",
+      "note": "共用環境は10月27〜28日、本サービス経由は10月28〜31日。全体の最初の侵入開始時期は調査中で、この期間より前を否定しない。",
+      "sourceUrl": "https://www.arara.com/dcms_media/other/arara_20261102__.pdf",
+      "reviewedDate": "2026-11-03"
     },
     "damageConfirmed": {
-      "precision": "unknown",
-      "label": "被害初確認日未公表",
-      "note": "検知日・公表日を攻撃日や被害初確認日に転用しない。",
-      "sourceUrl": "https://www.kagin.co.jp/important/emergency_20261029_3.html",
-      "reviewedDate": "2026-10-31"
+      "precision": "day",
+      "label": "2026-10-28",
+      "note": "共用環境の事象の把握日。追加サーバー経由の持出しは10月31日把握と別。",
+      "sourceUrl": "https://www.arara.com/dcms_media/other/arara_20261102__.pdf",
+      "reviewedDate": "2026-11-03",
+      "startDate": "2026-10-28"
     }
   }
 }

@@ -1,0 +1,115 @@
+{
+  "kind": "product",
+  "id": "GHSA-c5px-7h4c-gj8p",
+  "aliases": [],
+  "vendor": "Open Kermit Project",
+  "product": "C-Kermit",
+  "productKey": "ckermit",
+  "title": "C-Kermitのバッファオーバーフローとコマンド注入によるコード実行",
+  "summary": "C-Kermitのtelnet・FTPクライアント、Kermitサーバー、ファイル受信処理に複数のバッファオーバーフローやシェルコマンド注入がある。悪意のある接続先や送信元との通信などが条件となり、11.1.515で修正された。",
+  "publishedDate": "2026-10-31",
+  "publishedAt": "2026-10-31T01:36:44Z",
+  "dateSourceUrl": "https://api.github.com/repos/OpenKermit/ckermit/security-advisories/GHSA-c5px-7h4c-gj8p",
+  "dateNote": "開発元GHSAの初回公開日時。11.1.515のリリース本文は10月30日表記だがGitHub公開日時は10月31日であり、告知の公表日と混同しない。",
+  "listedDate": "2026-10-31",
+  "listedNote": "開発元GHSA本文に再現コマンドを含む公開PoCが掲載された日。Critical評価や実悪用の報告を意味しない。",
+  "modifiedAt": "2026-10-31T01:36:44Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-02T21:34:51Z",
+  "affected": [
+    {
+      "name": "C-Kermit",
+      "affected": "<11.1.515",
+      "fixed": "11.1.515",
+      "sourceUrl": "https://github.com/OpenKermit/ckermit/security/advisories/GHSA-c5px-7h4c-gj8p",
+      "note": "告知内の個別不具合の導入時期や機能条件は異なる。範囲は開発元GHSAの集約表記を保持。"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/OpenKermit/ckermit/security/advisories/GHSA-c5px-7h4c-gj8p",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/OpenKermit/ckermit/security/advisories/GHSA-c5px-7h4c-gj8p"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "public",
+    "sourceUrl": "https://github.com/OpenKermit/ckermit/security/advisories/GHSA-c5px-7h4c-gj8p"
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-02T21:34:51Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-02T21:34:51Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "poc"
+  ],
+  "mitigations": [
+    {
+      "text": "C-Kermit 11.1.515以降へ更新する。",
+      "sourceUrl": "https://github.com/OpenKermit/ckermit/security/advisories/GHSA-c5px-7h4c-gj8p"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "OpenKermit公式セキュリティアドバイザリ原データ",
+      "url": "https://api.github.com/repos/OpenKermit/ckermit/security-advisories/GHSA-c5px-7h4c-gj8p",
+      "publishedDate": "2026-10-31",
+      "publishedAt": "2026-10-31T01:36:44Z",
+      "modifiedAt": "2026-10-31T01:36:44Z"
+    },
+    {
+      "type": "poc",
+      "title": "Remote code execution in C-Kermit（開発元による再現コマンド）",
+      "url": "https://github.com/OpenKermit/ckermit/security/advisories/GHSA-c5px-7h4c-gj8p",
+      "publishedDate": "2026-10-31",
+      "publishedAt": "2026-10-31T01:36:44Z",
+      "modifiedAt": "2026-10-31T01:36:44Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元によるC-Kermitの複数脆弱性の告知",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/02/1",
+      "publishedDate": "2026-11-02",
+      "publishedAt": "2026-11-02T04:31:07Z"
+    },
+    {
+      "type": "release",
+      "title": "C-Kermit 11.1.515",
+      "url": "https://github.com/OpenKermit/ckermit/releases/tag/v11.1.515",
+      "publishedDate": "2026-10-31",
+      "publishedAt": "2026-10-31T01:41:27Z"
+    }
+  ],
+  "caveats": [
+    "CVE IDは開発元原データで未割り当てのため、GHSA IDを正本とし推測で別名を補わない。",
+    "公開PoCの存在を確認したが、実行・悪用試験は行っていない。PoC掲載は実際の被害や実悪用確認ではない。",
+    "CISA本体の取得はHTTP 403。公式GitHubミラーでは未掲載を確認したが既存のCISAホスト制約により構造化したKEV確認を記録せずunknownを保持。",
+    "JPCERT/CC注意喚起一覧とIPA重要なセキュリティ情報一覧の限定照合であり、すべての公的機関の注意喚起を網羅するものではない。"
+  ]
+}
