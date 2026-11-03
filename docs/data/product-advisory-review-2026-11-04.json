@@ -1,0 +1,128 @@
+{
+  "reportDateJst": "2026-11-04",
+  "checkedAt": "2026-11-03T21:09:00Z",
+  "baseCommit": "953c2b947e073fc4f76668053d3122245338dc22",
+  "recordsBefore": 53,
+  "recordsAfter": 55,
+  "addedRecords": 2,
+  "updatedRecords": 0,
+  "added": [
+    "GHSA-ffr6-rwpm-p5wq",
+    "GHSA-q4hm-33rc-572g"
+  ],
+  "updated": [],
+  "scope": "既存製品カテゴリーを独立確認。前回成功確認2026-11-02T21:35:58Zに対し11月1日以降の重複窓で公的一覧、oss-securityの11月1〜3日、関連開発元本文を確認。既存53件の全開発元本文や全製品の再調査ではない。",
+  "sources": [
+    {
+      "name": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "status": "verified-no-change",
+      "checkedAt": "2026-11-03T21:09:00Z",
+      "latestUpdate": "2026-10-29"
+    },
+    {
+      "name": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "status": "verified-no-change",
+      "checkedAt": "2026-11-03T21:09:00Z",
+      "latestUpdate": "2026-11-02"
+    },
+    {
+      "name": "JVN",
+      "url": "https://jvn.jp/",
+      "status": "verified-no-change",
+      "checkedAt": "2026-11-03T21:09:00Z",
+      "latestUpdate": "2026-11-02"
+    },
+    {
+      "name": "CISA KEV",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "status": "fetch-failed",
+      "checkedAt": "2026-11-03T21:09:00Z",
+      "error": "HTTP403",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "name": "CISA official GitHub mirror",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "status": "verified-catalog-metadata-unchanged",
+      "checkedAt": "2026-11-03T21:09:00Z",
+      "catalogVersion": "2026.10.30",
+      "snapshotCount": 1766,
+      "note": "全バイト比較ではない。既存のcisa.gov限定バリデーションを変更しない。"
+    },
+    {
+      "name": "oss-security",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/",
+      "status": "verified-new-candidates",
+      "checkedAt": "2026-11-03T21:09:00Z",
+      "messages": 36
+    }
+  ],
+  "candidates": [
+    {
+      "id": "GHSA-ffr6-rwpm-p5wq",
+      "decision": "included",
+      "reason": "開発元Critical評価を一次本文で確認。対象製品と系列別修正版を保持。"
+    },
+    {
+      "id": "GHSA-q4hm-33rc-572g",
+      "decision": "included",
+      "reason": "開発元Critical評価を一次本文で確認。対象製品と系列別修正版を保持。"
+    },
+    {
+      "id": "XSA-523",
+      "aliases": [
+        "CVE-2026-102703",
+        "CVE-2026-102704"
+      ],
+      "decision": "held-inclusion-evidence",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/03/6",
+      "reason": "Xen公式チーム告知を確認。4.6以降に影響、修正パッチ提供、緩和策なし。Critical表記・公的注意喚起・実悪用・公開PoC・KEVを今回確認できず、既存収録基準を満たす根拠なし。"
+    },
+    {
+      "id": "APACHE-TRAFFIC-SERVER-2026-11-03",
+      "decision": "excluded-poc-not-public",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/03/5",
+      "reason": "研究者の報告ではPoCは要請により提供。公開実行コードなし。設定依存の報告を開発元Criticalや実悪用と扱わない。"
+    },
+    {
+      "id": "CVE-2026-98432",
+      "decision": "prior-hold-retained",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/03/1",
+      "reason": "既存の日付契約による保留は解決していない。新規議論でinit_on_free=1の有効性が否定されており、確認済み対策として追加しない。"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://api.github.com/repos/OpenVoxProject/openvox/security-advisories/GHSA-ffr6-rwpm-p5wq",
+      "error": "Web inaccessible; direct request timed out",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://api.github.com/repos/OpenVoxProject/trapperkeeper-authorization/security-advisories/GHSA-q4hm-33rc-572g",
+      "error": "Web inaccessible; direct request timed out",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102703",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102704",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://xenbits.xen.org/xsa/advisory-523.html",
+      "error": "Web inaccessible",
+      "successfulCheckpointAdvanced": false
+    }
+  ],
+  "priorHolds": "前回の未解決候補・スキーマ制約はdocs/data/product-advisory-review-2026-11-03.jsonを参照。解決済みとは扱わない。",
+  "validation": {
+    "products": "node scripts/product-status.mjs passed 55 records",
+    "fullCheck": "Coordinator owns combined checks."
+  }
+}

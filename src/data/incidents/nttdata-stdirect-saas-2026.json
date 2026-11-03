@@ -2,38 +2,91 @@
   "id": "nttdata-stdirect-saas-2026",
   "company": "株式会社NTTデータ",
   "geography": "日本",
-  "title": "委託先SaaSへの不正アクセスによりSTdirectServicesを停止",
+  "title": "Securitize Japanの認証機能脆弱性悪用でデジタル社債関連情報が流出",
   "announcementDate": "2026-10-31",
   "announcementDateLabel": "収録した公式公表日",
-  "occurredDate": null,
-  "occurredDateLabel": "攻撃開始日未公表",
-  "updatedDate": "2026-10-31",
-  "statusAsOfDate": "2026-10-31",
-  "lastVerifiedDate": "2026-11-01",
+  "occurredDate": "2026-10-29",
+  "occurredDateLabel": "第2報が明記する不正アクセス発生日",
+  "updatedDate": "2026-11-02",
+  "statusAsOfDate": "2026-11-02",
+  "lastVerifiedDate": "2026-11-04",
   "impactTypes": [
     "unauthorizedAccess",
     "leak",
     "outage"
   ],
-  "disclosureStatus": "possible",
+  "disclosureStatus": "confirmed",
   "attackMethod": {
-    "label": "第三者による不正アクセス。具体的な侵入手法は未公表",
-    "status": "unknown"
+    "label": "Securitize Japanのシステム認証機能の脆弱性を悪用し管理者権限を不正取得",
+    "status": "confirmed"
   },
-  "summary": "委託先SaaSへの侵入を受け、社債購入者の特典付与を支援するSTdirectServicesを停止。委託先が取り扱う個人情報に漏えいの可能性があり調査中。",
+  "summary": "NTTデータは委託先をSecuritize Japanと明示し、10月29日の認証機能の脆弱性悪用と管理者権限の不正取得による情報持出しを確認。社債購入者111名と2,678名、人数調査中の担当者情報を公表した。丸井・PPIHの利用者別範囲も同じ委託先の事案として記録する。",
   "affectedData": [
-    "委託先サービスで扱う個人情報（項目・件数未公表）"
+    "NTTデータ発行体2社分111名：氏名、住所、電話番号、メールアドレス、性別、生年月日",
+    "NTTデータ発行体1社分2,678名：カナ氏名、社債購入数量、メールアドレス",
+    "発行体・金融機関の利用担当者：氏名、メールアドレス（人数調査中）",
+    "丸井グループ申込者：氏名、住所、電話番号、メールアドレス、生年月日、性別、銀行口座番号、投資口数（項目別に範囲が異なる）",
+    "PPIH：デジタル社債申込・登録情報の漏えい有無・項目は調査中"
   ],
-  "counts": [],
+  "counts": [
+    {
+      "value": 111,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "NTTデータの発行体2社分。STdirectServices提供開始前の個別サービス利用者",
+      "approximate": false
+    },
+    {
+      "value": 2678,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "NTTデータの発行体1社分の社債購入者",
+      "approximate": false
+    },
+    {
+      "value": 9086,
+      "unit": "名",
+      "status": "possible",
+      "label": "丸井グループ申込者の最大対象範囲。情報流出自体は確認済み",
+      "approximate": false
+    },
+    {
+      "value": 54,
+      "unit": "名",
+      "status": "possible",
+      "label": "丸井グループの銀行口座番号まで漏えいした可能性がある対象。最大9,086名の内数",
+      "approximate": false
+    }
+  ],
   "caveats": [
-    "発表時点では特典付与の対象社債がなく、特典付与業務への影響はないと説明。サービス停止と業務影響を区別する。",
-    "委託先名・侵入日・検知日・人数は未公表。セゾン等の同時期の外部基盤事案との同一性は未確認。"
+    "10月31日の初報では委託先と件数が未公表だったが、11月2日の第2報でSecuritize Japanを明示し情報流出を確認した。",
+    "NTTデータ111名と2,678名は区分別人数。担当者数は調査中であり、供給元全体の被害総数ではない。",
+    "丸井とPPIHも同じ委託先・10月29日の侵入を公表したため同一事案に集約。利用企業間の重複や関係は未公表であり人数を横断合算しない。",
+    "PPIHの漏えい有無は調査中であり、NTTデータや丸井での流出確認をPPIHへ拡張しない。",
+    "丸井の最大9,086名は対象上限、54名は銀行口座番号の可能性範囲で内数。カード情報は委託しておらず対象外。",
+    "STdirectServicesは停止中。前報では特典付与対象社債なしと説明しており、サービス停止と特典付与業務影響を区別。",
+    "セゾンやJR西日本等の他の証券プラットフォーム公表は同一性の個別検証未完了のため、この追補だけで断定的に統合しない。"
   ],
   "sources": [
     {
       "title": "STdirectServicesのサービス停止についてのお知らせ",
       "url": "https://www.nttdata.com/global/ja/news/release/2026/103101/",
       "publishedDate": "2026-10-31"
+    },
+    {
+      "title": "NTTデータ：STdirectServicesのサービス停止（第2報）",
+      "url": "https://www.nttdata.com/global/ja/news/release/2026/110200/",
+      "publishedDate": "2026-11-02"
+    },
+    {
+      "title": "PPIH：デジタル社債管理システムへの不正アクセス（第1報）",
+      "url": "https://ppih.co.jp/news/pdf/4e630f1d37e8a69c0c33fa66a61c74ee.pdf",
+      "publishedDate": "2026-11-02"
+    },
+    {
+      "title": "丸井グループ：デジタル社債管理委託先での情報漏えい",
+      "url": "https://www.0101maruigroup.co.jp/nr/o-20-0zfdye",
+      "publishedDate": "2026-11-02"
     }
   ],
   "timeline": [
@@ -43,15 +96,37 @@
       "kind": "disclosure",
       "summary": "委託先SaaSへの侵入を受け、社債購入者の特典付与を支援するSTdirectServicesを停止。委託先が取り扱う個人情報に漏えいの可能性があり調査中。",
       "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/103101/"
+    },
+    {
+      "date": "2026-11-02",
+      "label": "委託先名と流出範囲を公表",
+      "kind": "update",
+      "summary": "NTTデータは委託先をSecuritize Japanと明示し、10月29日の認証機能の脆弱性悪用と管理者権限の不正取得による情報持出しを確認。社債購入者111名と2,678名、人数調査中の担当者情報を公表した。丸井・PPIHの利用者別範囲も同じ委託先の事案として記録する。",
+      "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/110200/"
+    },
+    {
+      "date": "2026-11-02",
+      "label": "利用企業別範囲",
+      "kind": "update",
+      "summary": "丸井は最大9,086名、銀行口座番号の可能性は内数54名と公表。NTTデータの人数へ合算しない。",
+      "sourceUrl": "https://www.0101maruigroup.co.jp/nr/o-20-0zfdye"
+    },
+    {
+      "date": "2026-11-02",
+      "label": "PPIHの状況",
+      "kind": "update",
+      "summary": "PPIHは同じ委託先の10月29日の侵入と停止を公表。自社利用者の漏えい有無は調査中。",
+      "sourceUrl": "https://ppih.co.jp/news/pdf/4e630f1d37e8a69c0c33fa66a61c74ee.pdf"
     }
   ],
   "eventDates": {
     "attack": {
-      "precision": "unknown",
-      "label": "攻撃日未公表",
-      "note": "検知日・公表日や漏えい可能性の把握日から推定しない。",
-      "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/103101/",
-      "reviewedDate": "2026-11-01"
+      "precision": "day",
+      "label": "2026-10-29",
+      "note": "NTTデータ第2報がSecuritize Japanへの不正アクセス発生日を明記。",
+      "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/110200/",
+      "reviewedDate": "2026-11-04",
+      "startDate": "2026-10-29"
     },
     "damageConfirmed": {
       "precision": "unknown",

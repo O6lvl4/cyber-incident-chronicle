@@ -1,0 +1,146 @@
+{
+  "reportDateJst": "2026-11-04",
+  "checkedAt": "2026-11-03T21:11:53.863954Z",
+  "reviews": [
+    {
+      "id": "RUSTSEC-2026-0436",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0436",
+      "httpStatus": 200,
+      "sha256": "70dcaeb5f5372a6ef2b31a42b2c5a0c88ebe2da5c70fd8451bfee1f6a5ad5447",
+      "checkedAt": "2026-11-03T21:10:00.134841+00:00",
+      "aliases": [],
+      "matchesExportFullObject": true,
+      "sourceModifiedAt": "2026-11-03T09:45:02.760678368Z",
+      "status": "held_missing_stable_ghsa_cve",
+      "summary": "calamine CFB/OLE2 parser panic and unbounded allocation; source fixed boundary 0.38.0",
+      "decision": "Keep candidate; no stable GHSA/CVE alias verified. Do not manufacture an ID or infer memory corruption from denial of service."
+    },
+    {
+      "id": "GO-2026-5932",
+      "url": "https://api.osv.dev/v1/vulns/GO-2026-5932",
+      "httpStatus": 200,
+      "sha256": "bd14adfebb433aa5d6f0dfd183f5bd4c42b150813986a38f62893df230088db0",
+      "checkedAt": "2026-11-03T21:10:00.135120+00:00",
+      "aliases": [],
+      "matchesExportFullObject": true,
+      "sourceModifiedAt": "2026-11-02T22:15:06.677088389Z",
+      "status": "held_missing_stable_ghsa_cve",
+      "decision": "Preserve both separate module ranges. golang.org/x/crypto has fixed boundary 0.58.1-0.20261009181718-2f1f834330b2; golang.org/x/crypto/openpgp remains open-ended. Do not treat this as a currently safe OpenPGP version or merge related IDs."
+    },
+    {
+      "id": "PYSEC-2026-2946",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-2946",
+      "httpStatus": 200,
+      "sha256": "430af1f0a8b9cac503e03ad66410f9e5f8f47259190853f2846ec1d54cd503cf",
+      "checkedAt": "2026-11-03T21:10:00.178446+00:00",
+      "aliases": [
+        "CVE-2026-56074",
+        "GHSA-ffp3-3562-8cv3"
+      ],
+      "matchesExportFullObject": true,
+      "sourceModifiedAt": "2026-11-03T08:15:02.370290916Z",
+      "status": "existing_alias_match_enumerated_version_only",
+      "matchedIds": [
+        "GHSA-ffp3-3562-8cv3",
+        "CVE-2026-56074"
+      ],
+      "decision": "Only explicit affected version 1.7.21 added; retain source range fixed at 4.5.128. No duplicate record or inferred new patch boundary."
+    },
+    {
+      "id": "PYSEC-2026-3811",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-3811",
+      "httpStatus": 200,
+      "sha256": "ea2e7c10d87e56bbc0b90665af3ac7617737c365f6ef062cbe1ed08fbd32b31e",
+      "checkedAt": "2026-11-03T21:10:00.270554+00:00",
+      "aliases": [
+        "CVE-2026-120492",
+        "CVE-2026-45019",
+        "GHSA-hvfh-5mj3-5f3j"
+      ],
+      "matchesExportFullObject": true,
+      "sourceModifiedAt": "2026-11-03T02:55:55.261817313Z",
+      "status": "existing_alias_match_additional_alias_held_for_display_overlay",
+      "matchedIds": [
+        "GHSA-hvfh-5mj3-5f3j",
+        "CVE-2026-45019"
+      ],
+      "addedAlias": "CVE-2026-120492",
+      "decision": "Source equivalence verified in full API/export. No curated record presently exists; preserve supplementary alias in audit and do not create a duplicate. Display-source overlay remains unmodified in this pass."
+    },
+    {
+      "id": "GHSA-h26j-4vp7-x9w2",
+      "status": "maintainer_verified_conflicting_fields",
+      "sourceUrl": "https://api.github.com/repos/metalama/Metalama/security-advisories/GHSA-h26j-4vp7-x9w2",
+      "checkedAt": "2026-11-03T21:12:05.525016Z",
+      "sha256": "7571a3b97ed6998a9812ea1c819b13cc1dc853944908cb0d22db8eca4ada42fd",
+      "maintainerPublishedAt": "2026-06-27T09:47:48Z",
+      "maintainerUpdatedAt": "2026-07-14T22:33:31Z",
+      "structuredAffected": [
+        {
+          "package": {
+            "ecosystem": "nuget",
+            "name": "Metalama.Framework"
+          },
+          "vulnerable_version_range": "< 2026.1.19",
+          "patched_versions": "2026.1.19",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "visual studio marketplace",
+            "name": "PostSharpTechnologies.PostSharp"
+          },
+          "vulnerable_version_range": "< 2026.1.19",
+          "patched_versions": "2026.1.19",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "visual studio marketplace",
+            "name": " PostSharpTechnologies.Metalama"
+          },
+          "vulnerable_version_range": "All",
+          "patched_versions": "None (Upgrade to PostSharpTechnologies.PostSharp)",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "visual studio marketplace",
+            "name": " PostSharpTechnologies.caravela "
+          },
+          "vulnerable_version_range": "All",
+          "patched_versions": "None (Upgrade to PostSharpTechnologies.PostSharp)",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "nuget",
+            "name": "Metalama.Framework"
+          },
+          "vulnerable_version_range": "< 2025.1.18",
+          "patched_versions": "2025.1.18",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "nuget",
+            "name": "Metalama.Framework"
+          },
+          "vulnerable_version_range": "< 2026.0.25",
+          "patched_versions": "2026.0.25",
+          "vulnerable_functions": []
+        }
+      ],
+      "conflicts": [
+        "Maintainer prose says no backports; structured NuGet fields include 2025.1.18 and 2026.0.25 alongside 2026.1.19.",
+        "Maintainer prose says maintained PostSharp VS extension fixed in 2026.1.5; structured extension field says 2026.1.19, which is the bundled framework version.",
+        "High CVSS/base severity versus practical Medium discussed in prose, because pipe write requires already executing as same user."
+      ],
+      "decision": "Preserve source distinctions. Do not flatten all NuGet branches to one version or claim command-line/MSBuild affected; source restricts channel to Visual Studio integration. Database publication time is not maintainer publication time."
+    }
+  ],
+  "limitations": [
+    "No target scan, private dependency submission, or execution of advisory PoCs.",
+    "Not a claim that all maintainer references in GitHub Reviewed were individually checked."
+  ]
+}
