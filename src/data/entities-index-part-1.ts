@@ -79,27 +79,27 @@ import record75 from './entities/giftee.json' with { type: 'json' };
 import record76 from './entities/ginpo-pack.json' with { type: 'json' };
 import record77 from './entities/glory.json' with { type: 'json' };
 import record78 from './entities/gmo-internet.json' with { type: 'json' };
-import record79 from './entities/gmo-research-ai.json' with { type: 'json' };
-import record80 from './entities/gmo-trustlogin-unidentified.json' with { type: 'json' };
-import record81 from './entities/golf-digest-online.json' with { type: 'json' };
-import record82 from './entities/goodsmile-official-shop.json' with { type: 'json' };
-import record83 from './entities/greenmonster.json' with { type: 'json' };
-import record84 from './entities/hana-cupid.json' with { type: 'json' };
-import record85 from './entities/hanshin-expressway.json' with { type: 'json' };
-import record86 from './entities/harada.json' with { type: 'json' };
-import record87 from './entities/helpfeel.json' with { type: 'json' };
-import record88 from './entities/hi-ho.json' with { type: 'json' };
-import record89 from './entities/his-thailand.json' with { type: 'json' };
-import record90 from './entities/hj-holdings.json' with { type: 'json' };
-import record91 from './entities/hokan.json' with { type: 'json' };
-import record92 from './entities/hoya.json' with { type: 'json' };
-import record93 from './entities/huistenbosch.json' with { type: 'json' };
-import record94 from './entities/idc-frontier.json' with { type: 'json' };
-import record95 from './entities/iij.json' with { type: 'json' };
-import record96 from './entities/ikegami.json' with { type: 'json' };
-import record97 from './entities/imaginate.json' with { type: 'json' };
-import record98 from './entities/internet-disclosure.json' with { type: 'json' };
-import record99 from './entities/irisplaza-ec.json' with { type: 'json' };
+import record79 from './entities/gmo-payment-gateway.json' with { type: 'json' };
+import record80 from './entities/gmo-research-ai.json' with { type: 'json' };
+import record81 from './entities/gmo-trustlogin-unidentified.json' with { type: 'json' };
+import record82 from './entities/golf-digest-online.json' with { type: 'json' };
+import record83 from './entities/goodsmile-official-shop.json' with { type: 'json' };
+import record84 from './entities/greenmonster.json' with { type: 'json' };
+import record85 from './entities/hana-cupid.json' with { type: 'json' };
+import record86 from './entities/hanshin-expressway.json' with { type: 'json' };
+import record87 from './entities/harada.json' with { type: 'json' };
+import record88 from './entities/helpfeel.json' with { type: 'json' };
+import record89 from './entities/hi-ho.json' with { type: 'json' };
+import record90 from './entities/his-thailand.json' with { type: 'json' };
+import record91 from './entities/hj-holdings.json' with { type: 'json' };
+import record92 from './entities/hokan.json' with { type: 'json' };
+import record93 from './entities/hoya.json' with { type: 'json' };
+import record94 from './entities/huistenbosch.json' with { type: 'json' };
+import record95 from './entities/idc-frontier.json' with { type: 'json' };
+import record96 from './entities/iij.json' with { type: 'json' };
+import record97 from './entities/ikegami.json' with { type: 'json' };
+import record98 from './entities/imaginate.json' with { type: 'json' };
+import record99 from './entities/internet-disclosure.json' with { type: 'json' };
 
 export const ENTITIES_PART_1 = {
   "2rinkan-yellowhat": record0,
@@ -181,25 +181,25 @@ export const ENTITIES_PART_1 = {
   "ginpo-pack": record76,
   "glory": record77,
   "gmo-internet": record78,
-  "gmo-research-ai": record79,
-  "gmo-trustlogin-unidentified": record80,
-  "golf-digest-online": record81,
-  "goodsmile-official-shop": record82,
-  "greenmonster": record83,
-  "hana-cupid": record84,
-  "hanshin-expressway": record85,
-  "harada": record86,
-  "helpfeel": record87,
-  "hi-ho": record88,
-  "his-thailand": record89,
-  "hj-holdings": record90,
-  "hokan": record91,
-  "hoya": record92,
-  "huistenbosch": record93,
-  "idc-frontier": record94,
-  "iij": record95,
-  "ikegami": record96,
-  "imaginate": record97,
-  "internet-disclosure": record98,
-  "irisplaza-ec": record99,
+  "gmo-payment-gateway": record79,
+  "gmo-research-ai": record80,
+  "gmo-trustlogin-unidentified": record81,
+  "golf-digest-online": record82,
+  "goodsmile-official-shop": record83,
+  "greenmonster": record84,
+  "hana-cupid": record85,
+  "hanshin-expressway": record86,
+  "harada": record87,
+  "helpfeel": record88,
+  "hi-ho": record89,
+  "his-thailand": record90,
+  "hj-holdings": record91,
+  "hokan": record92,
+  "hoya": record93,
+  "huistenbosch": record94,
+  "idc-frontier": record95,
+  "iij": record96,
+  "ikegami": record97,
+  "imaginate": record98,
+  "internet-disclosure": record99,
 } as Record<string, EntityClassification>;

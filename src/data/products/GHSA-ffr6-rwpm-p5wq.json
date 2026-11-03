@@ -1,0 +1,118 @@
+{
+  "kind": "product",
+  "id": "GHSA-ffr6-rwpm-p5wq",
+  "aliases": [],
+  "vendor": "OpenVox Project",
+  "product": "OpenVox Agent / Server",
+  "productKey": "openvox",
+  "title": "OpenVoxのイベント逆シリアル化によるサーバーコード実行",
+  "summary": "有効なクライアント証明書を持つ攻撃者がイベント報告の逆シリアル化を通じてサーバー上でコードを実行できる。自動署名を有効にした構成では証明書取得と組み合わされる可能性がある。",
+  "publishedDate": "2026-11-03",
+  "publishedAt": null,
+  "dateSourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq",
+  "dateNote": "開発元GitHubアドバイザリ本文に表示された初回公表日。API取得に失敗したため秒単位の日時は補わない。",
+  "listedDate": "2026-11-03",
+  "listedNote": "開発元がCriticalと公表した日。",
+  "modifiedAt": null,
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-03T21:09:00Z",
+  "affected": [
+    {
+      "name": "OpenVox Agent 9.x",
+      "affected": "<= 9.2.0",
+      "fixed": "9.3.0",
+      "sourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq"
+    },
+    {
+      "name": "OpenVox Agent 8.x",
+      "affected": "<= 8.31.1",
+      "fixed": "8.32.0",
+      "sourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq"
+    },
+    {
+      "name": "OpenVox Server 9.x",
+      "affected": "<= 9.1.0",
+      "fixed": "9.2.0",
+      "sourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq"
+    },
+    {
+      "name": "OpenVox Server 8.x",
+      "affected": "<= 8.17.0",
+      "fixed": "8.18.0",
+      "sourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 9.4,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+        "sourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "public",
+    "sourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq"
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-03T21:09:00Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-03T21:09:00Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "critical",
+    "poc"
+  ],
+  "mitigations": [
+    {
+      "text": "各系列を開発元が示す修正版以降へ更新する。",
+      "sourceUrl": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq"
+    }
+  ],
+  "sources": [
+    {
+      "type": "poc",
+      "title": "OpenVoxのイベント逆シリアル化によるサーバーコード実行（開発元アドバイザリ）",
+      "url": "https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq",
+      "publishedDate": "2026-11-03"
+    },
+    {
+      "type": "maintainer",
+      "title": "OpenVox開発元による更新告知",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/03/14",
+      "publishedDate": "2026-11-03",
+      "publishedAt": "2026-11-03T20:09:48Z"
+    }
+  ],
+  "caveats": [
+    "開発元本文のRelated節はPuppet EnterpriseのCVE-2026-115731を挙げる一方、CVE ID欄は未割り当て。独立した同一性確認ができていないため別名へ統合しない。",
+    "実悪用の観測は確認していない。脆弱性の存在や公開実証を被害発生と同一視しない。",
+    "CISA本体JSONはHTTP 403。公式GitHubミラーはcatalogVersion 2026.10.30・1766件のまま。新規記録のKEVはunknownとし、既存の成功確認点を更新しない。",
+    "公的注意喚起の確認はJPCERT/CCとIPAの一覧に限定する。全製品・全公的機関の網羅調査ではない。",
+    "開発元GHSA APIは取得タイムアウト。HTML本文は確認したが、APIの初回・更新日時は推測で補わない。",
+    "開発元本文の実行可能な実証データを確認したが、攻撃コードを実行していない。"
+  ]
+}

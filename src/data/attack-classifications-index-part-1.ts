@@ -78,28 +78,28 @@ import record74 from './attack-classifications/ginpo-pack-2023.json' with { type
 import record75 from './attack-classifications/glory-2023.json' with { type: 'json' };
 import record76 from './attack-classifications/gmo-infoq-2026.json' with { type: 'json' };
 import record77 from './attack-classifications/gmo-onamae-desktop-2026.json' with { type: 'json' };
-import record78 from './attack-classifications/gmo-trustlogin-public-storage-2026.json' with { type: 'json' };
-import record79 from './attack-classifications/goodsmile-official-shop-2026.json' with { type: 'json' };
-import record80 from './attack-classifications/greenmonster-fxnavi-2026.json' with { type: 'json' };
-import record81 from './attack-classifications/hana-cupid-member-system-2026.json' with { type: 'json' };
-import record82 from './attack-classifications/harada-beer-engawa-2026.json' with { type: 'json' };
-import record83 from './attack-classifications/helpfeel-gyazo-2026.json' with { type: 'json' };
-import record84 from './attack-classifications/hi-ho-mypage-2026.json' with { type: 'json' };
-import record85 from './attack-classifications/his-2026.json' with { type: 'json' };
-import record86 from './attack-classifications/hokan-suito-2026.json' with { type: 'json' };
-import record87 from './attack-classifications/hoya-2024.json' with { type: 'json' };
-import record88 from './attack-classifications/huistenbosch-2025.json' with { type: 'json' };
-import record89 from './attack-classifications/hulu-credential-stuffing-2025.json' with { type: 'json' };
-import record90 from './attack-classifications/icc-2026-05-19.json' with { type: 'json' };
-import record91 from './attack-classifications/icc-support-site-2026.json' with { type: 'json' };
-import record92 from './attack-classifications/idc-frontier-2026.json' with { type: 'json' };
-import record93 from './attack-classifications/iij-securemx-2025.json' with { type: 'json' };
-import record94 from './attack-classifications/ikegami-cyberattack-2026.json' with { type: 'json' };
-import record95 from './attack-classifications/irisplaza-ec-2026.json' with { type: 'json' };
-import record96 from './attack-classifications/iseto-2024.json' with { type: 'json' };
-import record97 from './attack-classifications/istyle-cosme-commonid-2026-10.json' with { type: 'json' };
-import record98 from './attack-classifications/ites-2023.json' with { type: 'json' };
-import record99 from './attack-classifications/iwaicosmo-tradeworks-2026.json' with { type: 'json' };
+import record78 from './attack-classifications/gmo-pg-lifecard-issuing-2026.json' with { type: 'json' };
+import record79 from './attack-classifications/gmo-trustlogin-public-storage-2026.json' with { type: 'json' };
+import record80 from './attack-classifications/goodsmile-official-shop-2026.json' with { type: 'json' };
+import record81 from './attack-classifications/greenmonster-fxnavi-2026.json' with { type: 'json' };
+import record82 from './attack-classifications/hana-cupid-member-system-2026.json' with { type: 'json' };
+import record83 from './attack-classifications/harada-beer-engawa-2026.json' with { type: 'json' };
+import record84 from './attack-classifications/helpfeel-gyazo-2026.json' with { type: 'json' };
+import record85 from './attack-classifications/hi-ho-mypage-2026.json' with { type: 'json' };
+import record86 from './attack-classifications/his-2026.json' with { type: 'json' };
+import record87 from './attack-classifications/hokan-suito-2026.json' with { type: 'json' };
+import record88 from './attack-classifications/hoya-2024.json' with { type: 'json' };
+import record89 from './attack-classifications/huistenbosch-2025.json' with { type: 'json' };
+import record90 from './attack-classifications/hulu-credential-stuffing-2025.json' with { type: 'json' };
+import record91 from './attack-classifications/icc-2026-05-19.json' with { type: 'json' };
+import record92 from './attack-classifications/icc-support-site-2026.json' with { type: 'json' };
+import record93 from './attack-classifications/idc-frontier-2026.json' with { type: 'json' };
+import record94 from './attack-classifications/iij-securemx-2025.json' with { type: 'json' };
+import record95 from './attack-classifications/ikegami-cyberattack-2026.json' with { type: 'json' };
+import record96 from './attack-classifications/irisplaza-ec-2026.json' with { type: 'json' };
+import record97 from './attack-classifications/iseto-2024.json' with { type: 'json' };
+import record98 from './attack-classifications/istyle-cosme-commonid-2026-10.json' with { type: 'json' };
+import record99 from './attack-classifications/ites-2023.json' with { type: 'json' };
 
 export const ATTACKS_PART_1 = {
   "2rinkan-2026": record0,
@@ -180,26 +180,26 @@ export const ATTACKS_PART_1 = {
   "glory-2023": record75,
   "gmo-infoq-2026": record76,
   "gmo-onamae-desktop-2026": record77,
-  "gmo-trustlogin-public-storage-2026": record78,
-  "goodsmile-official-shop-2026": record79,
-  "greenmonster-fxnavi-2026": record80,
-  "hana-cupid-member-system-2026": record81,
-  "harada-beer-engawa-2026": record82,
-  "helpfeel-gyazo-2026": record83,
-  "hi-ho-mypage-2026": record84,
-  "his-2026": record85,
-  "hokan-suito-2026": record86,
-  "hoya-2024": record87,
-  "huistenbosch-2025": record88,
-  "hulu-credential-stuffing-2025": record89,
-  "icc-2026-05-19": record90,
-  "icc-support-site-2026": record91,
-  "idc-frontier-2026": record92,
-  "iij-securemx-2025": record93,
-  "ikegami-cyberattack-2026": record94,
-  "irisplaza-ec-2026": record95,
-  "iseto-2024": record96,
-  "istyle-cosme-commonid-2026-10": record97,
-  "ites-2023": record98,
-  "iwaicosmo-tradeworks-2026": record99,
+  "gmo-pg-lifecard-issuing-2026": record78,
+  "gmo-trustlogin-public-storage-2026": record79,
+  "goodsmile-official-shop-2026": record80,
+  "greenmonster-fxnavi-2026": record81,
+  "hana-cupid-member-system-2026": record82,
+  "harada-beer-engawa-2026": record83,
+  "helpfeel-gyazo-2026": record84,
+  "hi-ho-mypage-2026": record85,
+  "his-2026": record86,
+  "hokan-suito-2026": record87,
+  "hoya-2024": record88,
+  "huistenbosch-2025": record89,
+  "hulu-credential-stuffing-2025": record90,
+  "icc-2026-05-19": record91,
+  "icc-support-site-2026": record92,
+  "idc-frontier-2026": record93,
+  "iij-securemx-2025": record94,
+  "ikegami-cyberattack-2026": record95,
+  "irisplaza-ec-2026": record96,
+  "iseto-2024": record97,
+  "istyle-cosme-commonid-2026-10": record98,
+  "ites-2023": record99,
 } as Record<string, AttackClassification>;
