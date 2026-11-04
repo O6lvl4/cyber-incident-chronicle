@@ -2,14 +2,14 @@
   "id": "ryohin-muji-app-2026",
   "company": "株式会社良品計画",
   "geography": "日本",
-  "title": "MUJIアプリ顧客情報への不正アクセス、最大約2726万件の漏えい可能性",
+  "title": "MUJIアプリ・ネットストア情報漏えいの可能性、カード情報等を対象へ訂正",
   "announcementDate": "2026-10-30",
   "announcementDateLabel": "確認できた公式公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日未公表",
-  "updatedDate": "2026-10-30",
-  "statusAsOfDate": "2026-10-30",
-  "lastVerifiedDate": "2026-10-31",
+  "updatedDate": "2026-11-04",
+  "statusAsOfDate": "2026-11-04",
+  "lastVerifiedDate": "2026-11-05",
   "impactTypes": [
     "unauthorizedAccess",
     "leak"
@@ -19,28 +19,84 @@
     "label": "第三者による不正アクセス。具体的手法・初期侵入経路は未公表",
     "status": "unknown"
   },
-  "summary": "MUJIアプリの顧客情報に外部漏えいの可能性。不正アクセス経路の遮断と修正適用を実施し、アプリ・ネットストアは通常利用可能と説明。",
+  "summary": "11月4日の第2報で、最大約2726万件にはネットストア会員も含まれ、一部の氏名・住所・電話番号とカード情報にもアクセスされた可能性があると訂正。アプリ・ネットストアは利用可能で調査継続。",
   "affectedData": [
-    "メールアドレス・生年月日・性別"
+    "最大約2726万件：メールアドレス、生年月日、性別、会員ID。うち約52万件は氏名・住所・電話番号も。",
+    "2021年7月までのMUJI Card入会者約109万件：カード番号全桁、MUJI Card ID、生年月日。",
+    "カード登録者約120件：カード番号先頭6桁＋下2桁、カード名義。"
   ],
   "counts": [
     {
       "value": 27260000,
       "unit": "件",
       "status": "possible",
-      "label": "退会者を含む最大約の顧客情報",
+      "label": "退会者・ネットストアのみの利用者を含む最大約の会員情報",
+      "approximate": true
+    },
+    {
+      "value": 520000,
+      "unit": "件",
+      "status": "possible",
+      "label": "約2726万件の内数。氏名・住所・電話番号も含む現時点の規模",
+      "approximate": true
+    },
+    {
+      "value": 1090000,
+      "unit": "件",
+      "status": "possible",
+      "label": "MUJI Cardの全桁カード番号等。失効・解約済みを含む",
+      "approximate": true
+    },
+    {
+      "value": 345000,
+      "unit": "件",
+      "status": "possible",
+      "label": "約109万件の内数で現時点で有効なカード",
+      "approximate": true
+    },
+    {
+      "value": 168000,
+      "unit": "件",
+      "status": "possible",
+      "label": "有効カード約34.5万件の内数。会員基本情報と併せて閲覧可能",
+      "approximate": true
+    },
+    {
+      "value": 25000,
+      "unit": "件",
+      "status": "possible",
+      "label": "約16.8万件のさらに内数。氏名・住所・電話番号も閲覧可能",
+      "approximate": true
+    },
+    {
+      "value": 120,
+      "unit": "件",
+      "status": "possible",
+      "label": "登録カードの先頭6桁＋下2桁・名義。氏名等とも閲覧可能",
       "approximate": true
     }
   ],
   "caveats": [
-    "件数は漏えい確定人数ではない。氏名・住所・電話番号・カード情報は対象外。",
-    "公表時点でダークウェブ等への流出と不正利用は確認されていない。検知日・攻撃期間は未公表。"
+    "第1報の氏名・住所・電話番号・カード情報は対象外という説明は第2報で訂正。古い除外を現在の結論として維持しない。",
+    "件数は可能性の範囲で確定漏えい人数ではない。内数・重複のある複数区分を合算しない。",
+    "MUJI Card約109万件にはカード名義・有効期限・セキュリティコードは含まれない。一部番号＋名義の約120件にも有効期限・セキュリティコードは含まれない。",
+    "不正利用とダークウェブ等への流出は公表時点で未確認。個別通知は順次予定。攻撃期間・被害初確認日は未公表。"
   ],
   "sources": [
     {
       "title": "株式会社良品計画：公式公表",
       "url": "https://www.ryohin-keikaku.jp/news/articles/2026_1030_01",
       "publishedDate": "2026-10-30"
+    },
+    {
+      "title": "MUJIアプリ情報流出の可能性について（第二報）",
+      "url": "https://www.ryohin-keikaku.jp/news/articles/2026_1104_02",
+      "publishedDate": "2026-11-04"
+    },
+    {
+      "title": "MUJIアプリ第二報PDF（対象区分と内数の表）",
+      "url": "https://files.microcms-assets.io/assets/1abbce69114443b0af3672230990db72/76bbc0db48474ee1b82866248e210ddb/261104_MUJI%20app.pdf",
+      "publishedDate": "2026-11-04"
     }
   ],
   "timeline": [
@@ -50,6 +106,13 @@
       "kind": "disclosure",
       "summary": "MUJIアプリの顧客情報に外部漏えいの可能性。不正アクセス経路の遮断と修正適用を実施し、アプリ・ネットストアは通常利用可能と説明。",
       "sourceUrl": "https://www.ryohin-keikaku.jp/news/articles/2026_1030_01"
+    },
+    {
+      "date": "2026-11-04",
+      "label": "対象項目とカード情報の追加・訂正",
+      "kind": "update",
+      "summary": "11月4日の第2報で、最大約2726万件にはネットストア会員も含まれ、一部の氏名・住所・電話番号とカード情報にもアクセスされた可能性があると訂正。アプリ・ネットストアは利用可能で調査継続。",
+      "sourceUrl": "https://www.ryohin-keikaku.jp/news/articles/2026_1104_02"
     }
   ],
   "eventDates": {

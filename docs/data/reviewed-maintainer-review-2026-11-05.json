@@ -1,0 +1,3870 @@
+{
+  "reportDateJst": "2026-11-05",
+  "checkedAt": "2026-11-04T21:17:48.880433Z",
+  "snapshotSha": "7a766ee5a5ba897bab2181e56b8275e9cfb2349c",
+  "scope": "Targeted official references for changed Reviewed records. HTTP200 is not sufficient for successful verification. This is not a recheck of all maintainers.",
+  "requests": 79,
+  "http200": 79,
+  "maintainerApiResponses": 30,
+  "bodyUnavailable": 26,
+  "curatedOverlayIds": [
+    "GHSA-63cw-57p8-fm3p",
+    "GHSA-3r9x-f23j-gc73",
+    "GHSA-469j-vmhf-r6v7",
+    "GHSA-57q6-fvp4-pqmm",
+    "GHSA-3fxj-6jh8-hvhx",
+    "GHSA-xq3m-2v4x-88gg",
+    "GHSA-p423-j2cm-9vmq",
+    "GHSA-3cgg-c5pp-57h6",
+    "GHSA-93cm-2v4m-c56c",
+    "GHSA-mc8m-rr6c-r5qr",
+    "GHSA-g3hv-75wg-m249",
+    "GHSA-wp3c-266w-4qfq",
+    "GHSA-p93r-85wp-75v3"
+  ],
+  "reviews": [
+    {
+      "id": "GHSA-63cw-57p8-fm3p",
+      "url": "https://api.github.com/repos/pytorch/pytorch/security-advisories/GHSA-63cw-57p8-fm3p",
+      "checkedAt": "2026-11-04T21:14:13.189576+00:00",
+      "httpStatus": 200,
+      "sha256": "cc64d476736f2169a2bed258f3f097a4097535ba8cc7ab365e7e0f472bf5b309",
+      "fields": {
+        "ghsa_id": "GHSA-63cw-57p8-fm3p",
+        "cve_id": "CVE-2026-24747",
+        "published_at": "2026-01-26T21:01:52Z",
+        "updated_at": "2026-01-26T21:25:05Z",
+        "withdrawn_at": null,
+        "summary": " Loading a malicious PyTorch checkpoint with weights_only=True can result in arbitrary code execution",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "score": 8.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": 8.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "pytorch"
+            },
+            "vulnerable_version_range": "<=2.9.1",
+            "patched_versions": ">=2.10.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/pytorch/pytorch/security/advisories/GHSA-63cw-57p8-fm3p",
+        "descriptionSha256": "8337a36da01c46bd59d3da7cee31df1a4135cf1bd46b6cfc0f6f355c72baea77",
+        "descriptionCharacters": 788
+      },
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Reviewedは配布パッケージ名をtorchへ訂正。開発元APIはpytorch、影響<=2.9.1・修正>=2.10.0という表記を保持している。表示はReviewedのtorchを維持し、別パッケージの追加や同一名への無根拠な置換はしない。"
+    },
+    {
+      "id": "GHSA-xxjr-mmjv-4gpg",
+      "url": "https://api.github.com/repos/lodash/lodash/security-advisories/GHSA-xxjr-mmjv-4gpg",
+      "checkedAt": "2026-11-04T21:14:13.190859+00:00",
+      "httpStatus": 200,
+      "sha256": "e8c5ca1d46b7481f47eb761c6013e38f0216b4602f136f9c5534325a9baeeeb4",
+      "fields": {
+        "ghsa_id": "GHSA-xxjr-mmjv-4gpg",
+        "cve_id": "CVE-2025-13465",
+        "published_at": "2026-01-21T19:06:02Z",
+        "updated_at": "2026-10-15T06:12:22Z",
+        "withdrawn_at": null,
+        "summary": "Prototype Pollution Vulnerability in Lodash `_.unset` and `_.omit` functions",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "lodash"
+            },
+            "vulnerable_version_range": ">=4.0.0, <4.17.23",
+            "patched_versions": "4.17.23",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "lodash.unset"
+            },
+            "vulnerable_version_range": ">=4.0.0, <4.18.0",
+            "patched_versions": "4.18.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "lodash-es"
+            },
+            "vulnerable_version_range": ">=4.0.0, <4.17.23",
+            "patched_versions": "4.17.23",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "lodash-amd"
+            },
+            "vulnerable_version_range": ">=4.0.0, <4.17.23",
+            "patched_versions": "4.17.23",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "lodash.omit"
+            },
+            "vulnerable_version_range": ">=4.0.0, <4.18.0",
+            "patched_versions": "4.18.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg",
+        "descriptionSha256": "adb4ab217f75856f9aea6d356c83109b57324a9a33e65a7498abc0fa69b70f5b",
+        "descriptionCharacters": 557
+      },
+      "relatedChangedFields": [
+        "affected",
+        "details",
+        "modified",
+        "references",
+        "summary"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-v653-r55g-hcmg",
+      "url": "https://api.github.com/repos/astral-sh/uv/security-advisories/GHSA-pqhf-p39g-3x64",
+      "checkedAt": "2026-11-04T21:14:13.191566+00:00",
+      "httpStatus": 200,
+      "sha256": "42b43676769885c196ebf9b7db2eb088569ae4b161cb9deced4220571b869c50",
+      "fields": {
+        "ghsa_id": "GHSA-pqhf-p39g-3x64",
+        "cve_id": null,
+        "published_at": "2025-10-29T20:01:56Z",
+        "updated_at": "2025-10-29T20:01:56Z",
+        "withdrawn_at": null,
+        "summary": "ZIP payload obfuscation through parsing differentials",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "uv"
+            },
+            "vulnerable_version_range": "<= 0.9.5",
+            "patched_versions": "0.9.6",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/astral-sh/uv/security/advisories/GHSA-pqhf-p39g-3x64",
+        "descriptionSha256": "85c2055f12e3a973f13631eb4e902fc900bc83df0660ae58c830d6f5f15d0732",
+        "descriptionCharacters": 2936
+      },
+      "relatedChangedFields": [
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "related_maintainer_advisory_checked_not_identity_equivalence",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-3r9x-f23j-gc73",
+      "url": "https://api.github.com/repos/onnx/onnx/security-advisories/GHSA-3r9x-f23j-gc73",
+      "checkedAt": "2026-11-04T21:14:13.193195+00:00",
+      "httpStatus": 200,
+      "sha256": "f26ec8dac465ca2e2384150130e4583f2f00a2f1c21cb3344eedcf6e2ac362ba",
+      "fields": {
+        "ghsa_id": "GHSA-3r9x-f23j-gc73",
+        "cve_id": "CVE-2026-27489",
+        "published_at": "2026-03-31T15:56:11Z",
+        "updated_at": "2026-03-31T15:56:11Z",
+        "withdrawn_at": null,
+        "summary": "Path Traversal via Symlink",
+        "severity": "high",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+            "score": 8.7
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "onnx"
+            },
+            "vulnerable_version_range": "< 1.20.0",
+            "patched_versions": "1.21.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/onnx/onnx/security/advisories/GHSA-3r9x-f23j-gc73",
+        "descriptionSha256": "eb2d7fa328da9108cbc7a5f2095c92b3a08697151e347a207856a20e04ac92cc",
+        "descriptionCharacters": 4647
+      },
+      "relatedChangedFields": [
+        "database_specific",
+        "modified",
+        "references",
+        "severity"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "開発元APIの影響範囲<1.20.0と修正版1.21.0に間隔がある。Reviewedの<1.21.0とは別の記述として保持し、この間の版が安全と推定しない。"
+    },
+    {
+      "id": "GHSA-469j-vmhf-r6v7",
+      "url": "https://api.github.com/repos/nltk/nltk/security-advisories/GHSA-469j-vmhf-r6v7",
+      "checkedAt": "2026-11-04T21:14:13.193921+00:00",
+      "httpStatus": 200,
+      "sha256": "f7749a5133e0f235598f96f70546430ff164cb97dbce2e70dbb4830f3f61a395",
+      "fields": {
+        "ghsa_id": "GHSA-469j-vmhf-r6v7",
+        "cve_id": "CVE-2026-33236",
+        "published_at": "2026-03-18T12:18:16Z",
+        "updated_at": "2026-08-06T08:58:37Z",
+        "withdrawn_at": null,
+        "summary": "Downloader Path Traversal Vulnerability (AFO) - Arbitrary File Overwrite",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+          "score": 8.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+            "score": 8.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "nltk"
+            },
+            "vulnerable_version_range": "<= 3.9.2",
+            "patched_versions": "3.9.4",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/nltk/nltk/security/advisories/GHSA-469j-vmhf-r6v7",
+        "descriptionSha256": "7c0599cddde9e592c96bcd35dbebabe31a0672055252940b2f1507eebc2a6f43",
+        "descriptionCharacters": 5639
+      },
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "開発元は影響<=3.9.2、修正版3.9.4。Reviewedは<3.9.4へ更新した。確認された影響上限と修正版を混同せず、3.9.3の影響有無を独自に断定しない。"
+    },
+    {
+      "id": "GHSA-qr99-7898-vr7c",
+      "url": "https://api.github.com/repos/traefik/traefik/security-advisories/GHSA-qr99-7898-vr7c",
+      "checkedAt": "2026-11-04T21:14:13.195679+00:00",
+      "httpStatus": 200,
+      "sha256": "f1dcab684019722dae90078f9ce200bd6e7f2dbb3962f0d77853d2b03188a2aa",
+      "fields": {
+        "ghsa_id": "GHSA-qr99-7898-vr7c",
+        "cve_id": "CVE-2026-33433",
+        "published_at": "2026-03-27T10:29:14Z",
+        "updated_at": "2026-03-27T10:29:14Z",
+        "withdrawn_at": null,
+        "summary": "BasicAuth/DigestAuth Identity Spoofing via Non-Canonical headerField",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N",
+            "score": 5.1
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/traefik/traefik"
+            },
+            "vulnerable_version_range": "<= v1.7.34",
+            "patched_versions": "",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/traefik/traefik/v2"
+            },
+            "vulnerable_version_range": "<= v2.11.41",
+            "patched_versions": "v2.11.42",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/traefik/traefik/v3"
+            },
+            "vulnerable_version_range": "<= v3.6.11",
+            "patched_versions": "v3.6.12",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "github.com/traefik/traefik/v3"
+            },
+            "vulnerable_version_range": ">= v3.7.0-ea.1, <= v3.7.0-ea.2",
+            "patched_versions": "v3.7.0-ea.3",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/traefik/traefik/security/advisories/GHSA-qr99-7898-vr7c",
+        "descriptionSha256": "55b31365aed830b340748837beee2fcef3ed3c3e902c411bcf7ddb866ab082ce",
+        "descriptionCharacters": 4084
+      },
+      "relatedChangedFields": [
+        "modified",
+        "references",
+        "severity"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-p423-j2cm-9vmq",
+      "url": "https://api.github.com/repos/pyca/cryptography/security-advisories/GHSA-p423-j2cm-9vmq",
+      "checkedAt": "2026-11-04T21:14:19.569809+00:00",
+      "httpStatus": 200,
+      "sha256": "c3b6b883c22fe3495ded004799544dbe424cbaa5666122a5c9df00bb223725d9",
+      "fields": {
+        "ghsa_id": "GHSA-p423-j2cm-9vmq",
+        "cve_id": "CVE-2026-39892",
+        "published_at": "2026-04-08T01:50:53Z",
+        "updated_at": "2026-04-08T01:50:53Z",
+        "withdrawn_at": null,
+        "summary": "Buffer overflow if non-contiguous buffers were passed to APIs",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "cryptography"
+            },
+            "vulnerable_version_range": ">=45.0.0",
+            "patched_versions": ">=46.0.7",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/pyca/cryptography/security/advisories/GHSA-p423-j2cm-9vmq",
+        "descriptionSha256": "2ea0377d5f3b409964fb8004c94e09ae19fd0da5c8248ee1795fe5c56c1168a0",
+        "descriptionCharacters": 265
+      },
+      "relatedChangedFields": [
+        "database_specific",
+        "modified",
+        "references",
+        "severity"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "開発元は非連続PythonバッファをAPIへ渡す場合の問題とし、影響>=45.0.0・修正>=46.0.7を別欄に記載。開いた影響範囲を修正版の影響継続という主張に読み替えない。"
+    },
+    {
+      "id": "GHSA-xq3m-2v4x-88gg",
+      "url": "https://api.github.com/repos/protobufjs/protobuf.js/security-advisories/GHSA-xq3m-2v4x-88gg",
+      "checkedAt": "2026-11-04T21:14:19.573434+00:00",
+      "httpStatus": 200,
+      "sha256": "fa78b285261c86e11d88999486afb3daf747e1563c9a7bdf6ace14dde3eaf168",
+      "fields": {
+        "ghsa_id": "GHSA-xq3m-2v4x-88gg",
+        "cve_id": "CVE-2026-41242",
+        "published_at": "2026-04-16T06:12:11Z",
+        "updated_at": "2026-05-02T09:43:41Z",
+        "withdrawn_at": null,
+        "summary": "Code execution through attacker-controlled protobuf definitions",
+        "severity": "high",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "score": 8.7
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "protobufjs"
+            },
+            "vulnerable_version_range": "<=7.5.4",
+            "patched_versions": "7.5.5",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "protobufjs"
+            },
+            "vulnerable_version_range": "==8.0.0",
+            "patched_versions": "8.0.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-xq3m-2v4x-88gg",
+        "descriptionSha256": "1e8612470a278b029deee73b36f84e08692fdf21ea7f5539f9ff5f40f763fef0",
+        "descriptionCharacters": 1270
+      },
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references",
+        "summary"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "開発元APIの7系以前の影響<=7.5.4・修正7.5.5と、Reviewedに追加された6系修正版6.11.6を区別して保存する。8.0.0は8.0.1で修正。APIが6系のバックポートを列挙しないことは未修正の証明ではない。"
+    },
+    {
+      "id": "GHSA-26hh-7cqf-hhc6",
+      "url": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-267c-6grr-h53f",
+      "checkedAt": "2026-11-04T21:14:19.614509+00:00",
+      "httpStatus": 200,
+      "sha256": "db6aeca4ae6661ce1d8682c97fda26fbd938dc85e742a4794ef4d7edf665e609",
+      "fields": {
+        "ghsa_id": "GHSA-267c-6grr-h53f",
+        "cve_id": "CVE-2026-44575",
+        "published_at": "2026-05-06T18:42:50Z",
+        "updated_at": "2026-05-07T15:36:00Z",
+        "withdrawn_at": null,
+        "summary": "Middleware / Proxy bypass in App Router applications via segment-prefetch routes",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "next"
+            },
+            "vulnerable_version_range": ">= 15.2.0 < 15.5.16",
+            "patched_versions": "15.5.16",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "next"
+            },
+            "vulnerable_version_range": ">= 16.0.0 < 16.2.5",
+            "patched_versions": "16.2.5",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/vercel/next.js/security/advisories/GHSA-267c-6grr-h53f",
+        "descriptionSha256": "6875364ffe10b08acabe2f748dec9b5d9f8d3e49071407f70547c933ef4a9cea",
+        "descriptionCharacters": 814
+      },
+      "relatedChangedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "related_maintainer_advisory_checked_not_identity_equivalence",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-26hh-7cqf-hhc6",
+      "url": "https://api.github.com/repos/vercel/next.js/security-advisories/GHSA-26hh-7cqf-hhc6",
+      "checkedAt": "2026-11-04T21:14:19.666023+00:00",
+      "httpStatus": 200,
+      "sha256": "b70563b7ea5940c7750cd5cd53eb10b561374d9e655e4cdf48d685916303d6ae",
+      "fields": {
+        "ghsa_id": "GHSA-26hh-7cqf-hhc6",
+        "cve_id": "CVE-2026-45109",
+        "published_at": "2026-05-07T19:42:05Z",
+        "updated_at": "2026-05-08T20:42:58Z",
+        "withdrawn_at": null,
+        "summary": "Middleware / Proxy bypass in App Router applications via segment-prefetch routes - Incomplete Fix Follow-Up",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "next"
+            },
+            "vulnerable_version_range": ">= 15.2.0 < 15.5.18",
+            "patched_versions": "15.5.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "next"
+            },
+            "vulnerable_version_range": ">= 16.0.0 < 16.2.6",
+            "patched_versions": "16.2.6",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/vercel/next.js/security/advisories/GHSA-26hh-7cqf-hhc6",
+        "descriptionSha256": "07b87cd40b69a20dab900f3dde812d61253d6a375ac1dffe100ab2b3a31a4e21",
+        "descriptionCharacters": 438
+      },
+      "relatedChangedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-55hx-c926-fr95",
+      "url": "https://api.github.com/repos/patriksimek/vm2/security-advisories/GHSA-55hx-c926-fr95",
+      "checkedAt": "2026-11-04T21:14:19.689498+00:00",
+      "httpStatus": 200,
+      "sha256": "62fc0d5fbc2dfdbad2ef3105292f2656561695a8dcc9b6b9b9f097311db4060a",
+      "fields": {
+        "ghsa_id": "GHSA-55hx-c926-fr95",
+        "cve_id": "CVE-2026-26332",
+        "published_at": "2026-05-01T20:41:32Z",
+        "updated_at": "2026-05-01T20:41:32Z",
+        "withdrawn_at": null,
+        "summary": " Sandbox Escape Through SuppressedError",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vm2"
+            },
+            "vulnerable_version_range": "<= 3.10.4",
+            "patched_versions": "3.11.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-55hx-c926-fr95",
+        "descriptionSha256": "2d15d3769e62bb064757f8fed3b4086044a994e9ca036baea93b056d0a2d1870",
+        "descriptionCharacters": 636
+      },
+      "relatedChangedFields": [
+        "affected",
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-57q6-fvp4-pqmm",
+      "url": "https://api.github.com/repos/open-webui/open-webui/security-advisories/GHSA-57q6-fvp4-pqmm",
+      "checkedAt": "2026-11-04T21:14:19.714199+00:00",
+      "httpStatus": 200,
+      "sha256": "c1afc975724c40193ffc8fa8926c3c55a0c698437e5a1eec0b027b0b557f9324",
+      "fields": {
+        "ghsa_id": "GHSA-57q6-fvp4-pqmm",
+        "cve_id": "CVE-2026-45339",
+        "published_at": "2026-05-09T19:38:54Z",
+        "updated_at": "2026-05-12T01:25:37Z",
+        "withdrawn_at": null,
+        "summary": "API key endpoint restrictions bypassed via `x-api-key` header — full message processing on restricted endpoints",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "open-webu"
+            },
+            "vulnerable_version_range": "<= 0.8.12",
+            "patched_versions": ">= 0.9.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/open-webui/open-webui/security/advisories/GHSA-57q6-fvp4-pqmm",
+        "descriptionSha256": "5daf979cf5c4530ff24b89710e0aca2640bf5a2924529766aeb5e82b645ce7aa",
+        "descriptionCharacters": 2810
+      },
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Reviewedはパッケージ名をopen-webuからopen-webuiへ訂正。開発元APIはopen-webu表記を保持し、影響<=0.8.12・修正>=0.9.0を示す。表示はReviewedのopen-webuiを維持する。"
+    },
+    {
+      "id": "GHSA-7p85-w9px-jpjp",
+      "url": "https://api.github.com/repos/twigphp/Twig/security-advisories/GHSA-7p85-w9px-jpjp",
+      "checkedAt": "2026-11-04T21:14:26.914977+00:00",
+      "httpStatus": 200,
+      "sha256": "a04ed7cc05459e3f189c454f773abc3d2f6b53a1f273db91096b8918809fd060",
+      "fields": {
+        "ghsa_id": "GHSA-7p85-w9px-jpjp",
+        "cve_id": "CVE-2026-46633",
+        "published_at": "2026-05-20T07:44:02Z",
+        "updated_at": "2026-05-20T07:44:02Z",
+        "withdrawn_at": null,
+        "summary": "PHP code injection via `{% use %}` template name",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "composer",
+              "name": "twig/twig"
+            },
+            "vulnerable_version_range": "< 3.26.0",
+            "patched_versions": "3.26.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/twigphp/Twig/security/advisories/GHSA-7p85-w9px-jpjp",
+        "descriptionSha256": "c9c255aeb874bfe23bcd65c7d5cbba3b0439039c7246bb7c01267355ed1e70f1",
+        "descriptionCharacters": 1183
+      },
+      "relatedChangedFields": [
+        "affected",
+        "database_specific",
+        "modified",
+        "references",
+        "severity"
+      ],
+      "eligible": false,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-8hg8-63c5-gwmx",
+      "url": "https://api.github.com/repos/patriksimek/vm2/security-advisories/GHSA-8hg8-63c5-gwmx",
+      "checkedAt": "2026-11-04T21:14:26.918247+00:00",
+      "httpStatus": 200,
+      "sha256": "0987b060c5132834230ac92f4eafa3466d7272acb9f5ef9b609816fcf556a7ba",
+      "fields": {
+        "ghsa_id": "GHSA-8hg8-63c5-gwmx",
+        "cve_id": "CVE-2026-44007",
+        "published_at": "2026-05-01T21:29:07Z",
+        "updated_at": "2026-05-05T14:40:40Z",
+        "withdrawn_at": null,
+        "summary": "nesting: true bypasses require: false, allowing sandbox escape to arbitrary OS command execution",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+          "score": 9.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+            "score": 9.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vm2"
+            },
+            "vulnerable_version_range": "<= 3.11.0",
+            "patched_versions": "3.11.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-8hg8-63c5-gwmx",
+        "descriptionSha256": "a6ce46cdfae65a84705fae04feda97164ed627770e8ff3248565020775c3a646",
+        "descriptionCharacters": 5918
+      },
+      "relatedChangedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-9qj6-qjgg-37qq",
+      "url": "https://api.github.com/repos/patriksimek/vm2/security-advisories/GHSA-9qj6-qjgg-37qq",
+      "checkedAt": "2026-11-04T21:14:26.933724+00:00",
+      "httpStatus": 200,
+      "sha256": "a84bb418a18afc4e08690945f1a25357b9f4f54d0da98c4c6c162e1c859403af",
+      "fields": {
+        "ghsa_id": "GHSA-9qj6-qjgg-37qq",
+        "cve_id": "CVE-2026-44008",
+        "published_at": "2026-05-03T21:34:12Z",
+        "updated_at": "2026-05-05T14:40:51Z",
+        "withdrawn_at": null,
+        "summary": "Sandbox breakout via `neutralizeArraySpeciesBatch`",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vm2"
+            },
+            "vulnerable_version_range": "<= 3.11.1",
+            "patched_versions": "3.11.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-9qj6-qjgg-37qq",
+        "descriptionSha256": "2ccb78b13c9536bf9ae10be844736aa3b326f3bb1c5ae2ed87e420903ec2cf60",
+        "descriptionCharacters": 997
+      },
+      "relatedChangedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-9vg3-4rfj-wgcm",
+      "url": "https://api.github.com/repos/patriksimek/vm2/security-advisories/GHSA-9vg3-4rfj-wgcm",
+      "checkedAt": "2026-11-04T21:14:26.938054+00:00",
+      "httpStatus": 200,
+      "sha256": "5cb68f97022f5d2f4a74f2021ce348651798a4ce25a6598b43377ca0e106e4e6",
+      "fields": {
+        "ghsa_id": "GHSA-9vg3-4rfj-wgcm",
+        "cve_id": "CVE-2026-44009",
+        "published_at": "2026-05-03T21:34:48Z",
+        "updated_at": "2026-05-05T14:41:01Z",
+        "withdrawn_at": null,
+        "summary": "Sandbox Breakout Through Null Proto Exception",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vm2"
+            },
+            "vulnerable_version_range": "<=3.11.1",
+            "patched_versions": "3.11.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-9vg3-4rfj-wgcm",
+        "descriptionSha256": "4e4c0377560068c60eedad8e8e16e9c00ff704c45760b56137aeaf346c81d079",
+        "descriptionCharacters": 1043
+      },
+      "relatedChangedFields": [
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-grj5-jjm8-h35p",
+      "url": "https://api.github.com/repos/patriksimek/vm2/security-advisories/GHSA-grj5-jjm8-h35p",
+      "checkedAt": "2026-11-04T21:14:26.953462+00:00",
+      "httpStatus": 200,
+      "sha256": "416297561395ee8901a46c227938867b5ed50bdc886f0960aab93a76e9b33117",
+      "fields": {
+        "ghsa_id": "GHSA-grj5-jjm8-h35p",
+        "cve_id": "CVE-2026-24118",
+        "published_at": "2026-05-01T20:39:11Z",
+        "updated_at": "2026-05-01T20:39:12Z",
+        "withdrawn_at": null,
+        "summary": "VM2 Sandbox Breakout Through __lookupGetter__",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vm2"
+            },
+            "vulnerable_version_range": "<= 3.10.4",
+            "patched_versions": "3.11.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-grj5-jjm8-h35p",
+        "descriptionSha256": "369529a73de0e878c488efa1f28c4bbc7c53149397065fc6faddc26f3a6c499f",
+        "descriptionCharacters": 1861
+      },
+      "relatedChangedFields": [
+        "affected",
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-v37h-5mfm-c47c",
+      "url": "https://api.github.com/repos/patriksimek/vm2/security-advisories/GHSA-v37h-5mfm-c47c",
+      "checkedAt": "2026-11-04T21:14:26.957853+00:00",
+      "httpStatus": 200,
+      "sha256": "4bb525d71a39551c80c9e76fd8cf6d0be514626b288ff78976dc744477c466e6",
+      "fields": {
+        "ghsa_id": "GHSA-v37h-5mfm-c47c",
+        "cve_id": "CVE-2026-24781",
+        "published_at": "2026-05-01T20:39:37Z",
+        "updated_at": "2026-05-01T20:39:38Z",
+        "withdrawn_at": null,
+        "summary": "Sandbox Breakout Through Inspect",
+        "severity": "critical",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 9.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "vm2"
+            },
+            "vulnerable_version_range": "<= 3.10.3",
+            "patched_versions": "3.11.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-v37h-5mfm-c47c",
+        "descriptionSha256": "4f42c6a6bc89efe44ec1e25d668542d604996ec08f0beadd1c7b692b2639035c",
+        "descriptionCharacters": 1472
+      },
+      "relatedChangedFields": [
+        "affected",
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-262p-fj3f-xh7v",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-57915",
+      "checkedAt": "2026-11-04T21:14:32.335185+00:00",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "7e9199041de6e56b0b421a538b2c152e889cbee81b5e2997e6a95e5b2933f7e9",
+      "extractedTextCharacters": 61,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-262p-fj3f-xh7v",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2493407",
+      "checkedAt": "2026-11-04T21:14:32.336929+00:00",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "7e9199041de6e56b0b421a538b2c152e889cbee81b5e2997e6a95e5b2933f7e9",
+      "extractedTextCharacters": 61,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-3fxj-6jh8-hvhx",
+      "url": "https://api.github.com/repos/go-chi/chi/security-advisories/GHSA-3fxj-6jh8-hvhx",
+      "checkedAt": "2026-11-04T21:14:32.340470+00:00",
+      "httpStatus": 200,
+      "sha256": "1755133737a3d4871b1aafad53ce39d607ef53b9759b1a6aa4613d353aef4026",
+      "fields": {
+        "ghsa_id": "GHSA-3fxj-6jh8-hvhx",
+        "cve_id": null,
+        "published_at": "2026-05-22T15:53:05Z",
+        "updated_at": "2026-05-22T16:00:01Z",
+        "withdrawn_at": null,
+        "summary": "IP Spoofing Vulnerability in `middleware.RealIP`",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+            "score": 6.9
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "go",
+              "name": "https://github.com/go-chi/chi"
+            },
+            "vulnerable_version_range": ">= 5.2.1",
+            "patched_versions": "5.3.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/go-chi/chi/security/advisories/GHSA-3fxj-6jh8-hvhx",
+        "descriptionSha256": "43429d3bffe8bd4f3b196f0fae10be0fec4a990428c5c6e687207c84628f612e",
+        "descriptionCharacters": 5544
+      },
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "開発元APIはpackage名をURL https://github.com/go-chi/chi、影響>=5.2.1、修正版5.3.0と記載する。ReviewedはGoモジュールgithub.com/go-chi/chi/v5と/middlewareの両行を保持する。開発元の開いた影響範囲を独自に閉じず、DBの系列別範囲と分ける。"
+    },
+    {
+      "id": "GHSA-5v3h-fjv2-54fg",
+      "url": "https://lists.apache.org/thread/dcjdcnnnww9hhdm016hr0l7hpw1bzjfp",
+      "checkedAt": "2026-11-04T21:14:32.347369+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-5v3h-fjv2-54fg",
+      "url": "https://tomcat.apache.org/security-10.html",
+      "checkedAt": "2026-11-04T21:14:32.401639+00:00",
+      "httpStatus": 200,
+      "sha256": "275d796c5a1ccf618a467e90bf6a1e754cc67fb1e1a4f4b3d0240c9507da1321",
+      "bytes": 126215,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "df957925bd2d1e4f63a377037e9a28d4921695dc816c855fbedbfccd3df9bfdd",
+      "extractedTextCharacters": 73009,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-6f2p-2qg2-qqch",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-13322",
+      "checkedAt": "2026-11-04T21:14:32.446125+00:00",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "7e9199041de6e56b0b421a538b2c152e889cbee81b5e2997e6a95e5b2933f7e9",
+      "extractedTextCharacters": 61,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-6f2p-2qg2-qqch",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492681",
+      "checkedAt": "2026-11-04T21:14:38.247209+00:00",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "7e9199041de6e56b0b421a538b2c152e889cbee81b5e2997e6a95e5b2933f7e9",
+      "extractedTextCharacters": 61,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-7259-vf48-52q3",
+      "url": "https://lists.apache.org/thread/nxso951fnvf72qf9m475mpz4yf931xk0",
+      "checkedAt": "2026-11-04T21:14:38.530093+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-72v2-v53v-4qmm",
+      "url": "https://mattermost.com/security-updates",
+      "checkedAt": "2026-11-04T21:14:38.682771+00:00",
+      "httpStatus": 200,
+      "sha256": "3137ca4902d38d8f0a2163b4f16c21907d91b47a372b47c1c8744c84c07e0bd7",
+      "bytes": 20495,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "03b083d1571e3d02c4a9d6510d71b8394e3e9e0d6cf09d7f9ea9714530d48dfc",
+      "extractedTextCharacters": 746,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-748j-wm96-4wh5",
+      "url": "https://github.com/Apicurio/apicurio-registry/issues/8189",
+      "checkedAt": "2026-11-04T21:14:39.004851+00:00",
+      "httpStatus": 200,
+      "sha256": "371027b8e53302f234bd76fbd0f355356bdabf18fd2ecc93eb9ab5fdf102b7ad",
+      "bytes": 287913,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "4ec17d9a0fabfd4262479c86a323dd7a2e22765c74ec14a54f120ceb07904c86",
+      "extractedTextCharacters": 4823,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-748j-wm96-4wh5",
+      "url": "https://github.com/Apicurio/apicurio-registry/pull/8200",
+      "checkedAt": "2026-11-04T21:14:39.067939+00:00",
+      "httpStatus": 200,
+      "sha256": "cf652c3188f78be469b11919e46be7869a23bbfa0442b1cf3aced8d27c012c78",
+      "bytes": 341712,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "ee82dbbbd5f057346c615b59dd5b1c90e87880ac3b3bbb4832d3b9853c726a09",
+      "extractedTextCharacters": 6879,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-7895-gffq-w6jq",
+      "url": "https://lists.apache.org/thread/7fk339o5jvd4mcgsf0chbrn4o525ccjh",
+      "checkedAt": "2026-11-04T21:14:39.884420+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-7895-gffq-w6jq",
+      "url": "https://tomcat.apache.org/security-10.html",
+      "checkedAt": "2026-11-04T21:14:39.885138+00:00",
+      "httpStatus": 200,
+      "sha256": "275d796c5a1ccf618a467e90bf6a1e754cc67fb1e1a4f4b3d0240c9507da1321",
+      "bytes": 126215,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "df957925bd2d1e4f63a377037e9a28d4921695dc816c855fbedbfccd3df9bfdd",
+      "extractedTextCharacters": 73009,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-7g64-f2hm-vjxp",
+      "url": "https://github.com/Apicurio/apicurio-registry/issues/8187",
+      "checkedAt": "2026-11-04T21:14:42.711148+00:00",
+      "httpStatus": 200,
+      "sha256": "da81042abf9339859d28d6a580e07014765642fcb1329589ffadd720548bc0af",
+      "bytes": 282636,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "f1ee64c5d89618b5761fa85d640645cc74ebda9c3160d688d47bd747bbfba96e",
+      "extractedTextCharacters": 4739,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-7g64-f2hm-vjxp",
+      "url": "https://github.com/Apicurio/apicurio-registry/pull/8197",
+      "checkedAt": "2026-11-04T21:14:46.071335+00:00",
+      "httpStatus": 200,
+      "sha256": "776bf35ec0ecbe10f81a9ced81e01b63de494336761608b34d7ecbb6d9258dc2",
+      "bytes": 322581,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "751eadb652a38184aeaa3c6478da5879963c3b46b6add23cb30c42e4658f8634",
+      "extractedTextCharacters": 6051,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-7pm4-56h2-5rxr",
+      "url": "https://github.com/PrefectHQ/prefect/pull/21384",
+      "checkedAt": "2026-11-04T21:14:46.088400+00:00",
+      "httpStatus": 200,
+      "sha256": "0950a3c3958adefe4dfbbae5e59d26dfef194584eb64488dc16c59779de65d58",
+      "bytes": 440823,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "8a0e7528e7f1dfdb7d1cffaa826388ffc10748cf976481d00663fc6d4f2351f2",
+      "extractedTextCharacters": 14505,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-7pm4-56h2-5rxr",
+      "url": "https://github.com/PrefectHQ/prefect/commit/6a9d9918716ce4ee0297b69f3046f7067ef1faae",
+      "checkedAt": "2026-11-04T21:14:46.282244+00:00",
+      "httpStatus": 200,
+      "sha256": "5148e50d01d58efe185d1f77e12e896953074c318d1c14a0de9aa47e005c763e",
+      "bytes": 487861,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "ff6bfd8ea59b3095100248d3f08946b6f7deec131279240acf6cf4b437490439",
+      "extractedTextCharacters": 6277,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-9qj4-v6r6-3wmx",
+      "url": "https://lists.apache.org/thread/nhkmbdym61yp6wwy0dny8w1p46sm87kr",
+      "checkedAt": "2026-11-04T21:14:46.386360+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-c5ph-rghf-fjfj",
+      "url": "https://lists.apache.org/thread/g4p5sf45p3f9r011pwqs9r54yd64s106",
+      "checkedAt": "2026-11-04T21:14:50.874191+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-c5ph-rghf-fjfj",
+      "url": "https://tomcat.apache.org/security-10.html",
+      "checkedAt": "2026-11-04T21:14:51.194713+00:00",
+      "httpStatus": 200,
+      "sha256": "275d796c5a1ccf618a467e90bf6a1e754cc67fb1e1a4f4b3d0240c9507da1321",
+      "bytes": 126215,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "df957925bd2d1e4f63a377037e9a28d4921695dc816c855fbedbfccd3df9bfdd",
+      "extractedTextCharacters": 73009,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-cgm6-wvp9-4g5h",
+      "url": "https://github.com/kubevirt/kubevirt/pull/18753",
+      "checkedAt": "2026-11-04T21:14:52.162205+00:00",
+      "httpStatus": 200,
+      "sha256": "91fa7064c69fb4f7d8fe7d081e6101f3e7ea50f64ac7bcc752f6118ff49473b3",
+      "bytes": 674205,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "75b13b8c70f398aa3aee03c5965c858ba579273dc3d880ec9ca0281750c3f2c5",
+      "extractedTextCharacters": 35071,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-cgm6-wvp9-4g5h",
+      "url": "https://github.com/kubevirt/kubevirt/commit/0f5fef3309417f454565412f56f571f48358853f",
+      "checkedAt": "2026-11-04T21:14:52.248509+00:00",
+      "httpStatus": 200,
+      "sha256": "7b602ff6aa9deb5e15a94f597f9051269bce9402094d94dd7e36f8e81cc99e7f",
+      "bytes": 720885,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "4a488daa1ab28985c68898cf550131b5f28dad18df33ec0f08e0c4c61e3aa09b",
+      "extractedTextCharacters": 13716,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-f77w-px59-cqf5",
+      "url": "https://lists.apache.org/thread/grrd1mwgkgblqjbwkkq6dvmdxd9ov2dx",
+      "checkedAt": "2026-11-04T21:14:52.278574+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-f892-4h9f-j7g9",
+      "url": "https://lists.apache.org/thread/w82vtc3q02j5ot94tnyy1197y3wb98hl",
+      "checkedAt": "2026-11-04T21:14:52.279369+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-h548-jhj8-q85h",
+      "url": "https://lists.apache.org/thread/sjms84rlt4g78fwmjcowxmtjp1q8b9q4",
+      "checkedAt": "2026-11-04T21:14:52.779158+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-h5gm-rvw6-2xpx",
+      "url": "https://lists.apache.org/thread/hcjh7kdk4l85tb9ksmvcnkhso1ngj50o",
+      "checkedAt": "2026-11-04T21:14:54.484166+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-h792-v28v-ppgr",
+      "url": "https://lists.apache.org/thread/rdhpghgfskrdmw9hqzjgjrtw538smpmz",
+      "checkedAt": "2026-11-04T21:14:54.485014+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-h792-v28v-ppgr",
+      "url": "https://tomcat.apache.org/security-10.html",
+      "checkedAt": "2026-11-04T21:14:54.485539+00:00",
+      "httpStatus": 200,
+      "sha256": "275d796c5a1ccf618a467e90bf6a1e754cc67fb1e1a4f4b3d0240c9507da1321",
+      "bytes": 126215,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "df957925bd2d1e4f63a377037e9a28d4921695dc816c855fbedbfccd3df9bfdd",
+      "extractedTextCharacters": 73009,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-m8g6-vrr2-x7ff",
+      "url": "https://lists.apache.org/thread/9k9b3bmlq516ylvf7cdp3dlrtdtmxbmo",
+      "checkedAt": "2026-11-04T21:14:54.878951+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-mqg3-r7h5-24x4",
+      "url": "https://lists.apache.org/thread/jy09xjlzn6r2qwvqoph8vcmf959yq68v",
+      "checkedAt": "2026-11-04T21:14:58.116794+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-mqg3-r7h5-24x4",
+      "url": "https://tomcat.apache.org/security-10.html",
+      "checkedAt": "2026-11-04T21:14:59.291543+00:00",
+      "httpStatus": 200,
+      "sha256": "275d796c5a1ccf618a467e90bf6a1e754cc67fb1e1a4f4b3d0240c9507da1321",
+      "bytes": 126215,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "df957925bd2d1e4f63a377037e9a28d4921695dc816c855fbedbfccd3df9bfdd",
+      "extractedTextCharacters": 73009,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-pg42-rg8c-j886",
+      "url": "https://lists.apache.org/thread/wlt2no8bw45zl1w8byop4zfqphldf5j0",
+      "checkedAt": "2026-11-04T21:14:59.561737+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-pg42-rg8c-j886",
+      "url": "https://tomcat.apache.org/security-10.html",
+      "checkedAt": "2026-11-04T21:15:01.319142+00:00",
+      "httpStatus": 200,
+      "sha256": "275d796c5a1ccf618a467e90bf6a1e754cc67fb1e1a4f4b3d0240c9507da1321",
+      "bytes": 126215,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "df957925bd2d1e4f63a377037e9a28d4921695dc816c855fbedbfccd3df9bfdd",
+      "extractedTextCharacters": 73009,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-q3jc-42cq-33fj",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-13218",
+      "checkedAt": "2026-11-04T21:15:01.321895+00:00",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "7e9199041de6e56b0b421a538b2c152e889cbee81b5e2997e6a95e5b2933f7e9",
+      "extractedTextCharacters": 61,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-q3jc-42cq-33fj",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492654",
+      "checkedAt": "2026-11-04T21:15:01.323792+00:00",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "7e9199041de6e56b0b421a538b2c152e889cbee81b5e2997e6a95e5b2933f7e9",
+      "extractedTextCharacters": 61,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-q63x-9pfm-mjx4",
+      "url": "https://github.com/feast-dev/feast/commit/835cda8e2c1359f1f496ad72701dbd6a73bdb25a",
+      "checkedAt": "2026-11-04T21:15:01.325713+00:00",
+      "httpStatus": 200,
+      "sha256": "aec276a63af876595eb563ec9db6672b179481dcdb613e62e72a02cf8e32e1de",
+      "bytes": 666511,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "db448ec1ae16b6422bf0281502d006d116a3420b853174052030b8acc6a70cdd",
+      "extractedTextCharacters": 11527,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-q63x-9pfm-mjx4",
+      "url": "https://access.redhat.com/errata/RHSA-2026:60520",
+      "checkedAt": "2026-11-04T21:15:01.326464+00:00",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "7e9199041de6e56b0b421a538b2c152e889cbee81b5e2997e6a95e5b2933f7e9",
+      "extractedTextCharacters": 61,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-qj64-jj84-w38j",
+      "url": "https://lists.apache.org/thread/onmtxmy2qonbpx7xlw3o34x8sctv47r7",
+      "checkedAt": "2026-11-04T21:15:05.301237+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-rcmh-vfq7-8gf4",
+      "url": "https://github.com/Apicurio/apicurio-registry/issues/8188",
+      "checkedAt": "2026-11-04T21:15:05.356999+00:00",
+      "httpStatus": 200,
+      "sha256": "d9ee0c8143147e327169950fedafe8c5d280043dae92ce7d0e1c03ab81edcdd5",
+      "bytes": 290469,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "46f69e8df4dfdac0be15e4a9d89b0a816e54dfd8c58db5dbc3605e84823659c9",
+      "extractedTextCharacters": 5139,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-rcmh-vfq7-8gf4",
+      "url": "https://github.com/Apicurio/apicurio-registry/pull/8198",
+      "checkedAt": "2026-11-04T21:15:05.393555+00:00",
+      "httpStatus": 200,
+      "sha256": "8df9f575ff0314972bfe95cfbc583c0b23a88f454dced8cd5981f66fefc74409",
+      "bytes": 322398,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "e87faaceff16976a6b1c0f0fea0eb71a52aaeb67d2b785f158a5fbb2b0c1808c",
+      "extractedTextCharacters": 5966,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-vxpw-j846-p89q",
+      "url": "https://api.github.com/repos/nodejs/undici/security-advisories/GHSA-vxpw-j846-p89q",
+      "checkedAt": "2026-11-04T21:15:05.410035+00:00",
+      "httpStatus": 200,
+      "sha256": "42d54a3f790e84ab7ab13a29c9716da66b86bb55093d08e3ab63e5c01e7800bf",
+      "fields": {
+        "ghsa_id": "GHSA-vxpw-j846-p89q",
+        "cve_id": "CVE-2026-12151",
+        "published_at": "2026-06-17T12:37:40Z",
+        "updated_at": "2026-06-18T05:52:16Z",
+        "withdrawn_at": null,
+        "summary": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "undici"
+            },
+            "vulnerable_version_range": "6.17.0 < 6.27.0; 7.0.0 < 7.28.0; 8.0.0 < 8.5.0 ",
+            "patched_versions": "6.27.0; 7.28.0; 8.5.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/nodejs/undici/security/advisories/GHSA-vxpw-j846-p89q",
+        "descriptionSha256": "d0a30e74c7c94f8f342c49bbec011b1fe76bcdf0fa9b167b839dd789b037e018",
+        "descriptionCharacters": 1089
+      },
+      "relatedChangedFields": [
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-wp3c-266w-4qfq",
+      "url": "https://api.github.com/repos/sunnyadn/js-toml/security-advisories/GHSA-wp3c-266w-4qfq",
+      "checkedAt": "2026-11-04T21:15:06.656981+00:00",
+      "httpStatus": 200,
+      "sha256": "c47bf4b58550269bdd63b155711133e253868c3d137106fa66f26c62fc4821c7",
+      "fields": {
+        "ghsa_id": "GHSA-wp3c-266w-4qfq",
+        "cve_id": "CVE-2026-49293",
+        "published_at": "2026-05-25T17:38:00Z",
+        "updated_at": "2026-09-11T21:16:58Z",
+        "withdrawn_at": null,
+        "summary": "CPU exhaustion via O(n^2) BigInt construction on radix-prefixed integer literals",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "js-toml"
+            },
+            "vulnerable_version_range": "<= 1.1.1",
+            "patched_versions": "1.1.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/sunnyadn/js-toml/security/advisories/GHSA-wp3c-266w-4qfq",
+        "descriptionSha256": "db9cec59805c5518de77d627aaa3a97643415d710645359d95b3c6d212791ba0",
+        "descriptionCharacters": 13472
+      },
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "開発元APIは影響<=1.1.1、修正版1.1.2と明記。Reviewedも修正版を1.1.1から1.1.2へ訂正。以前の修正版を現在も安全と扱わない。"
+    },
+    {
+      "id": "GHSA-x6vc-x4v4-hjhr",
+      "url": "https://lists.apache.org/thread/w98h2q8wz0bq97vhz4vf55hqomcb2j1m",
+      "checkedAt": "2026-11-04T21:15:08.245207+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-xrvj-h9w2-3q69",
+      "url": "https://lists.apache.org/thread/lk08wlxq9sp64mo8hw6wvjxd3bh3lpqg",
+      "checkedAt": "2026-11-04T21:15:08.326860+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-2969-4q4w-w5h3",
+      "url": "https://api.github.com/repos/dotnet/wpf/security-advisories/GHSA-2969-4q4w-w5h3",
+      "checkedAt": "2026-11-04T21:15:08.398864+00:00",
+      "httpStatus": 200,
+      "sha256": "c6d1419d8b02f7043beb6b018975f7ce437f543bdca83e1d42d799c130e7698d",
+      "fields": {
+        "ghsa_id": "GHSA-2969-4q4w-w5h3",
+        "cve_id": "CVE-2026-50650",
+        "published_at": "2026-07-14T18:17:20Z",
+        "updated_at": "2026-07-14T18:46:49Z",
+        "withdrawn_at": null,
+        "summary": "Microsoft Security Advisory CVE-2026-50650 – .NET Elevation of Privilege Vulnerability",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "score": 7.8
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "score": 7.8
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/dotnet/wpf/security/advisories/GHSA-2969-4q4w-w5h3",
+        "descriptionSha256": "e57c73bdbcc195723bba00fcafa0911f3be2f44721f9e29a6d0ce905dc5493f2",
+        "descriptionCharacters": 5991
+      },
+      "relatedChangedFields": [
+        "details",
+        "modified"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-rp2p-6cmp-jxj9",
+      "url": "https://api.github.com/repos/dotnet/runtime/security-advisories/GHSA-rp2p-6cmp-jxj9",
+      "checkedAt": "2026-11-04T21:15:09.123120+00:00",
+      "httpStatus": 200,
+      "sha256": "f6b480cd4a2e028701d82c7a842c9834b6e88774c6a8469f00bd33618a7a8c9f",
+      "fields": {
+        "ghsa_id": "GHSA-rp2p-6cmp-jxj9",
+        "cve_id": "CVE-2026-57108",
+        "published_at": "2026-07-14T18:16:49Z",
+        "updated_at": "2026-07-14T18:46:36Z",
+        "withdrawn_at": null,
+        "summary": "Microsoft Security Advisory CVE-2026-57108 – .NET Denial of Service Vulnerability",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/dotnet/runtime/security/advisories/GHSA-rp2p-6cmp-jxj9",
+        "descriptionSha256": "8c2c4ecdb391d1f596f05dfa83150558780f249effc2dbc679c22c6d4d6e128c",
+        "descriptionCharacters": 8359
+      },
+      "relatedChangedFields": [
+        "details",
+        "modified"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-w7cw-xp7h-6j5j",
+      "url": "https://api.github.com/repos/dotnet/runtime/security-advisories/GHSA-w7cw-xp7h-6j5j",
+      "checkedAt": "2026-11-04T21:15:10.680743+00:00",
+      "httpStatus": 200,
+      "sha256": "ae755e7400a1595fb82602436d59b1981f2600e57f5a42d7c7f722151f65f10c",
+      "fields": {
+        "ghsa_id": "GHSA-w7cw-xp7h-6j5j",
+        "cve_id": "CVE-2026-50524",
+        "published_at": "2026-07-14T18:17:13Z",
+        "updated_at": "2026-07-14T18:46:38Z",
+        "withdrawn_at": null,
+        "summary": "Microsoft Security Advisory CVE-2026-50524 – .NET Denial of Service Vulnerability",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/dotnet/runtime/security/advisories/GHSA-w7cw-xp7h-6j5j",
+        "descriptionSha256": "30cb7effebe09d0291ba12a50fea8bae593fa4bf845e09ba74d9783cf38dd984",
+        "descriptionCharacters": 10195
+      },
+      "relatedChangedFields": [
+        "details",
+        "modified"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-wp74-jgxh-gv4q",
+      "url": "https://api.github.com/repos/dotnet/runtime/security-advisories/GHSA-wp74-jgxh-gv4q",
+      "checkedAt": "2026-11-04T21:15:10.769983+00:00",
+      "httpStatus": 200,
+      "sha256": "ac87379886c6ff495b5d6b4667eb38ec792a536a53ba2c95aaf29aaa8894a965",
+      "fields": {
+        "ghsa_id": "GHSA-wp74-jgxh-gv4q",
+        "cve_id": "CVE-2026-50651",
+        "published_at": "2026-07-14T18:17:16Z",
+        "updated_at": "2026-07-14T18:46:42Z",
+        "withdrawn_at": null,
+        "summary": "Microsoft Security Advisory CVE-2026-50651 – .NET Denial of Service Vulnerability",
+        "severity": "high",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 10.0.0, <= 10.0.9",
+            "patched_versions": "10.0.10",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 9.0.0, <= 9.0.17",
+            "patched_versions": "9.0.18",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.linux-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.osx-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-arm64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x64"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.NetCore.App.Runtime.win-x86"
+            },
+            "vulnerable_version_range": ">= 8.0.0, <= 8.0.28",
+            "patched_versions": "8.0.29",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/dotnet/runtime/security/advisories/GHSA-wp74-jgxh-gv4q",
+        "descriptionSha256": "d9b0ab0c0ed8cae430f8c4903bcc281f35c85186b5a3f46c1bb3dd0f835b7bc3",
+        "descriptionCharacters": 10138
+      },
+      "relatedChangedFields": [
+        "details",
+        "modified"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-p2gc-fm5w-94jj",
+      "url": "https://lists.apache.org/thread/h7xolzws2by2qhdjf7scbx87foxojb5h",
+      "checkedAt": "2026-11-04T21:15:10.777995+00:00",
+      "httpStatus": 200,
+      "sha256": "0b43b61e23061b35a13fc5d7d4aa4a8a924c6b957d0c470fb296a9adf80ee226",
+      "bytes": 2014,
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "a1d6cf022b7a9a0aa9ee11ec3f9a2a6b54688f0391122a0330c881d29c844cc3",
+      "extractedTextCharacters": 9,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-2j8r-3c22-8565",
+      "url": "https://api.github.com/repos/dotnet/runtime/security-advisories/GHSA-2j8r-3c22-8565",
+      "checkedAt": "2026-11-04T21:15:10.818125+00:00",
+      "httpStatus": 200,
+      "sha256": "cfa747a659a94eb94cd6cdb2dff879d367fdc2007ea5c4476ecfa16660c490af",
+      "fields": {
+        "ghsa_id": "GHSA-2j8r-3c22-8565",
+        "cve_id": "CVE-2026-69522",
+        "published_at": "2026-09-08T19:38:10Z",
+        "updated_at": "2026-09-08T19:38:10Z",
+        "withdrawn_at": null,
+        "summary": "Microsoft Security Advisory CVE-2026-69522 – .NET and Visual Studio Remote Code Execution Vulnerability",
+        "severity": "high",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "nuget",
+              "name": "Microsoft.DiaSymReader.Native"
+            },
+            "vulnerable_version_range": ">= 17.10.0-beta1.24272.1, <= 18.9.0-beta1.26405.1",
+            "patched_versions": "18.9.0-beta1.26405.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/dotnet/runtime/security/advisories/GHSA-2j8r-3c22-8565",
+        "descriptionSha256": "6dd2242bfed389c5d8c72b2d86bcd39b13f11bccad8539f9933c24a3c8fcf7a4",
+        "descriptionCharacters": 5048
+      },
+      "relatedChangedFields": [
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "Keep immutable Reviewed values and separately preserve these public maintainer fields; no inference of exploitation or alias equivalence."
+    },
+    {
+      "id": "GHSA-g3hv-75wg-m249",
+      "url": "https://api.github.com/repos/isaacs/minimatch/security-advisories/GHSA-g3hv-75wg-m249",
+      "checkedAt": "2026-11-04T21:15:12.078907+00:00",
+      "httpStatus": 200,
+      "sha256": "430f9eb73c63b31ac6003bc54d457fb68caa3893144fb87d03e1d57c73ad9716",
+      "fields": {
+        "ghsa_id": "GHSA-g3hv-75wg-m249",
+        "cve_id": "CVE-2026-118764",
+        "published_at": "2026-10-27T22:23:27Z",
+        "updated_at": "2026-10-29T17:05:52Z",
+        "withdrawn_at": null,
+        "summary": "denial of service via globparts amplification",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "",
+              "name": ""
+            },
+            "vulnerable_version_range": "10.2.6",
+            "patched_versions": "11.0.1",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/isaacs/minimatch/security/advisories/GHSA-g3hv-75wg-m249",
+        "descriptionSha256": "427acbdb3766d54cf1e15e00ad484d477258ca0ebe40d6a9045120451a16cf98",
+        "descriptionCharacters": 1146
+      },
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "2026-11-05(JST)確認のReviewedは影響下限を7.0.0へ訂正したため表示範囲を>=7.0.0,<11.0.1へ更新。開発元APIはpackage欄空白、確認版10.2.6・修正版11.0.1を維持し、この差を保持する。"
+    },
+    {
+      "id": "GHSA-3cgg-c5pp-57h6",
+      "url": "https://api.github.com/repos/GitHubNewbie0/odf-kit/security-advisories/GHSA-3cgg-c5pp-57h6",
+      "checkedAt": "2026-11-04T21:15:12.265156+00:00",
+      "httpStatus": 200,
+      "sha256": "58f3fc747824bfeb0b1e9e2b5ae2854cacc133686d6d2ed4a5dd3dd5c3a54283",
+      "fields": {
+        "ghsa_id": "GHSA-3cgg-c5pp-57h6",
+        "cve_id": "CVE-2026-113787",
+        "published_at": "2026-10-19T00:46:32Z",
+        "updated_at": "2026-10-21T15:56:00Z",
+        "withdrawn_at": null,
+        "summary": "HTML injection leading to XSS in odtToHtml() via unescaped style attribute values",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "score": 6.1
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+            "score": 6.1
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "odf-kit"
+            },
+            "vulnerable_version_range": ">= 0.6.0, < 0.14.2",
+            "patched_versions": "0.14.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/GitHubNewbie0/odf-kit/security/advisories/GHSA-3cgg-c5pp-57h6",
+        "descriptionSha256": "69e2305151ccd2f5edb6913068db210f6d4670c9742384641656539212467007",
+        "descriptionCharacters": 7384
+      },
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "開発元の構造化範囲は>=0.6.0,<0.14.2、修正版0.14.2。一方、報告本文はto-HTML機能が0.14.0で導入され、報告時点の0.14.1/mainで未修正と記述する。報告時点の本文と現在の修正版欄を区別し、全ての古い版に同じ機能があるとは推定しない。"
+    },
+    {
+      "id": "GHSA-93cm-2v4m-c56c",
+      "url": "https://api.github.com/repos/Basekick-Labs/arc/security-advisories/GHSA-93cm-2v4m-c56c",
+      "checkedAt": "2026-11-04T21:15:12.265771+00:00",
+      "httpStatus": 200,
+      "sha256": "3e3aa05c5988a705e4ef3d45edf1d0058c00a4a2ca8290b95e21fc83aa69dbba",
+      "fields": {
+        "ghsa_id": "GHSA-93cm-2v4m-c56c",
+        "cve_id": "CVE-2026-55098",
+        "published_at": "2026-06-25T22:00:40Z",
+        "updated_at": "2026-06-25T22:00:40Z",
+        "withdrawn_at": null,
+        "summary": "Incomplete fix of CVE-2026-47735: parquet_scan() (read_parquet alias) and the read_blob/glob/parquet_metadata I/O family bypass the SQL denylist and RBAC, letting any authenticated token (incl. permissions:[]) read every database's data within the allowlisted storage root",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "score": 6.5
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "other",
+              "name": "arc"
+            },
+            "vulnerable_version_range": "<= 26.06.2",
+            "patched_versions": "=> 26.06.2",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/Basekick-Labs/arc/security/advisories/GHSA-93cm-2v4m-c56c",
+        "descriptionSha256": "464b394a7ae4e9a3ecf20f66ede665b30afae34a4c042331737cbb345577c5f4",
+        "descriptionCharacters": 5058
+      },
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "開発元APIはother/arc、影響<=26.06.2と修正版「=> 26.06.2」を同時に記載し、本文は26.06.2を含む確認時点で未修正とする。ReviewedのGo疑似バージョン修正境界0.0.0-20260610131716-5dc8f53b70a3と区別し、製品版26.06.2を安全な版と断定しない。認証済みトークンによる別DBの読み取りで、OSファイルへの範囲外アクセスとは区別する。"
+    },
+    {
+      "id": "GHSA-mc8m-rr6c-r5qr",
+      "url": "https://api.github.com/repos/payloadcms/payload/security-advisories/GHSA-mc8m-rr6c-r5qr",
+      "checkedAt": "2026-11-04T21:15:18.294098+00:00",
+      "httpStatus": 200,
+      "sha256": "d4e88c9a731c92d1ecb5dcd044dc1b9a6e57c92ce56da6775febdb3b6034bc53",
+      "fields": {
+        "ghsa_id": "GHSA-mc8m-rr6c-r5qr",
+        "cve_id": "CVE-2026-93363",
+        "published_at": "2026-09-25T13:57:20Z",
+        "updated_at": "2026-10-14T20:53:27Z",
+        "withdrawn_at": null,
+        "summary": "Access control bypass of uploads in Vercel Storage adapter",
+        "severity": "medium",
+        "cvss": {
+          "vector_string": null,
+          "score": null
+        },
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+            "score": 5.3
+          }
+        },
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@payloadcms/storage-vercel-blob"
+            },
+            "vulnerable_version_range": ">= 3.25.0, < 3.90.0",
+            "patched_versions": ">= 3.90.0",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "@payloadcms/storage-vercel-blob"
+            },
+            "vulnerable_version_range": ">= 4.0.0-canary.0, < 4.0.0-canary.34",
+            "patched_versions": ">= 4.0.0-canary.34",
+            "vulnerable_functions": []
+          }
+        ],
+        "html_url": "https://github.com/payloadcms/payload/security/advisories/GHSA-mc8m-rr6c-r5qr",
+        "descriptionSha256": "65902c7d56ce1735c734b33be7fdf4d3927049731d5c08bd5754ee5c43251416",
+        "descriptionCharacters": 788
+      },
+      "relatedChangedFields": [
+        "affected",
+        "aliases",
+        "database_specific",
+        "details",
+        "id",
+        "modified",
+        "published",
+        "references",
+        "schema_version",
+        "severity",
+        "summary"
+      ],
+      "eligible": true,
+      "status": "public_maintainer_api_checked",
+      "decision": "client uploadsを有効にした@payloadcms/storage-vercel-blobが対象で、無効な構成は開発元によれば影響しない。修正版は安定版3.90.0と4.0.0-canary.34。両系列の範囲とcollection-level access条件を分ける。"
+    },
+    {
+      "id": "GHSA-mgp5-rv84-w37q",
+      "url": "https://tomcat.apache.org/security-11.html",
+      "checkedAt": "2026-11-04T21:15:46.939025+00:00",
+      "httpStatus": 200,
+      "sha256": "f5f03b4e37cb90b23a8870d08ed0d4c4c0bf4fa0e8fbe70d4d63dd8438e26b5c",
+      "bytes": 90253,
+      "relatedChangedFields": [
+        "affected",
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "344b260302264fbac977826c98ad7f8cdc88f46235234eeb48851f61f8ac8bae",
+      "extractedTextCharacters": 51080,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-68j8-pq59-fqgm",
+      "url": "https://raw.githubusercontent.com/nltk/nltk/develop/ChangeLog",
+      "checkedAt": "2026-11-04T21:15:46.940228+00:00",
+      "httpStatus": 200,
+      "sha256": "922aee8216b3ba6332560e12f459b13398db6d9697bd7843dcca6c189a06014e",
+      "bytes": 79767,
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "d8e9ef64201cabc7721ad03c70eed9aebbc7e328eea21925fc1046234f2771fa",
+      "extractedTextCharacters": 79726,
+      "status": "official_reference_body_retrieved",
+      "cveMentionMatched": false,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    },
+    {
+      "id": "GHSA-vqqj-9cmv-hx43",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-28369",
+      "checkedAt": "2026-11-04T21:15:46.941084+00:00",
+      "httpStatus": 200,
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "7e9199041de6e56b0b421a538b2c152e889cbee81b5e2997e6a95e5b2933f7e9",
+      "extractedTextCharacters": 61,
+      "status": "body_unavailable_despite_http_200",
+      "decision": "Shell/error body only, not a successful advisory verification. Reviewed import is independent; no source-specific success checkpoint advanced."
+    },
+    {
+      "id": "GHSA-c3fc-8qff-9hwx",
+      "url": "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902026%E2%80%900636",
+      "checkedAt": "2026-11-04T21:15:46.941855+00:00",
+      "httpStatus": 200,
+      "sha256": "743b60d9ab8b5a50f0ae9de2a2fb869629a81fe4acd15f532bfaea02f61df6f9",
+      "bytes": 387442,
+      "relatedChangedFields": [
+        "affected",
+        "details",
+        "modified",
+        "references",
+        "severity"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "e83fbcf20960e62edb5471731a5915d06f180c680bf4a09b27ecc4f49efd9a29",
+      "extractedTextCharacters": 1395,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source.",
+      "finding": "Bouncy Castle wiki confirms affected1.74–1.80.1,1.81,1.82–1.83 and fixes1.80.2,1.81.1,1.84; explicit LDAP API use required."
+    },
+    {
+      "id": "GHSA-p93r-85wp-75v3",
+      "url": "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902026%E2%80%905598",
+      "checkedAt": "2026-11-04T21:15:46.942558+00:00",
+      "httpStatus": 200,
+      "sha256": "274a4b50e285da7616ac162dbd9250b200dba960a48df313270df4372e0cec09",
+      "bytes": 387515,
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references",
+        "severity"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "47e1708a53eef91ae5d8dbb9ffc84091164e4226c039395d112fb4e2e0101785",
+      "extractedTextCharacters": 1350,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "開発元Wikiは影響1.71〜1.80.1、1.81、1.82〜1.83と修正版1.80.2、1.81.1、1.84を示す。Reviewedはjdk14の<1.84、jdk18onの>=1.81,<1.84など別のパッケージ別範囲を保持し、Wikiの系列境界を全パッケージに機械転用しない。FrodoKEM復号時の時間差を観測できる条件が必要。"
+    },
+    {
+      "id": "GHSA-v3vg-332r-mw99",
+      "url": "https://camel.apache.org/security/CVE-2026-40048.html",
+      "checkedAt": "2026-11-04T21:15:46.943823+00:00",
+      "httpStatus": 200,
+      "sha256": "8897915ff24518a870c0b6d83d5bb59c9c36e3347195d20ed3ea1b8abac5abd7",
+      "bytes": 15649,
+      "relatedChangedFields": [
+        "affected",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "b52753bb8c8e2bb71048476e3ad59d13274fc4aeba0df697a54ddd0804c47a45",
+      "extractedTextCharacters": 1927,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source.",
+      "finding": "Camel official advisory confirms unsafe deserialization in key files and recommends4.20.0; attacker write access to key directory is required."
+    },
+    {
+      "id": "GHSA-659w-93r5-9j6m",
+      "url": "https://raw.githubusercontent.com/apache/opennlp/9a0a05466b3e46567e7999272ff72ee37b42976b/SECURITY.md",
+      "checkedAt": "2026-11-04T21:15:51.288082+00:00",
+      "httpStatus": 200,
+      "sha256": "9a0f70e1fdb824ecd2c86636e64a5e485ec027019d70e86c95be207b941b83cd",
+      "bytes": 12496,
+      "relatedChangedFields": [
+        "affected",
+        "database_specific",
+        "modified",
+        "references"
+      ],
+      "eligible": true,
+      "extractedTextSha256": "35c9db4ae702825fe1222edba5c735836e003a48f1310cf9ba3fedc311ee8d4f",
+      "extractedTextCharacters": 11718,
+      "status": "official_body_retrieved_cve_matched",
+      "cveMentionMatched": true,
+      "decision": "Reference body retrieved; this is not a claim that every package range or maintainer was independently verified. Immutable Reviewed fields remain the display source."
+    }
+  ]
+}

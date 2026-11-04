@@ -2,14 +2,15 @@
   "kind": "vulnerability",
   "id": "GHSA-jxcf-8qw5-5c33",
   "aliases": [
+    "CVE-2026-121440",
     "RUSTSEC-2026-0377"
   ],
   "title": "Wasmtime：WASIp3の転送トレーラーが禁止ヘッダー検査を回避",
   "summary": "WASIp3ゲストが既存要求・応答のbodyを転送すると、トレーラーが独自の禁止ヘッダーフックで検査されない。開発元は具体的な攻撃を確認していないが、埋め込み側の意図した制約を破る可能性を示す。",
   "publishedAt": "2026-10-19T12:00:00Z",
-  "modifiedAt": "2026-10-20T11:15:37.076182282Z",
+  "modifiedAt": "2026-11-04T02:55:58.676339211Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "lastVerifiedAt": "2026-11-04T21:14:45.328459Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0377",
   "affected": [
     {
@@ -78,7 +79,7 @@
       "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0377",
       "publishedDate": "2026-10-19",
       "publishedAt": "2026-10-19T12:00:00Z",
-      "modifiedAt": "2026-10-20T11:15:37.076182282Z"
+      "modifiedAt": "2026-11-04T02:55:58.676339211Z"
     },
     {
       "type": "advisoryDatabase",
@@ -92,12 +93,19 @@
       "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jxcf-8qw5-5c33",
       "publishedDate": "2026-10-19",
       "publishedAt": "2026-10-19T19:20:21Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE公式レコード：CVE-2026-121440",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-121440",
+      "publishedDate": "2026-11-03"
     }
   ],
   "caveats": [
     "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
     "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
     "独自のis_forbidden_headerを実装した埋め込み側は、更新に加えてforbidden_header_filterへの移行が必要。移行しない場合、転送トレーラーには既定の禁止集合のみが適用される。",
-    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。"
+    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。",
+    "2026-11-05（JST）にOSV/RustSecの明示的な別名とCVE公式レコードの開発元参照からCVEを追補。開発元APIのcve_idは未設定のままであり、開発元が識別子を設定したとは扱わない。元の公表日・修正境界は保持する。"
   ]
 }

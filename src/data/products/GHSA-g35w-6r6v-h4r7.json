@@ -1,0 +1,122 @@
+{
+  "kind": "product",
+  "id": "GHSA-g35w-6r6v-h4r7",
+  "aliases": [],
+  "vendor": "Airbyte",
+  "product": "Airbyte Connector Builder / Manifest Server",
+  "productKey": "airbyte",
+  "title": "Airbyteのカスタムコンポーネント読み込みによるコード実行",
+  "summary": "安全でないコードを無効にしていても、コンテナ内で意図しないPythonオブジェクトを読み込める。2.xではReader以上の権限、旧Helmチャートの1.xではサービスへのネットワークアクセスが攻撃条件となる。",
+  "publishedDate": "2026-10-17",
+  "publishedAt": "2026-10-17T00:03:36Z",
+  "dateSourceUrl": "https://github.com/airbytehq/airbyte/security/advisories/GHSA-g35w-6r6v-h4r7",
+  "dateNote": "開発元GHSA APIの初回公表日時。JVNの11月4日公表とは区別する。",
+  "listedDate": "2026-10-17",
+  "listedNote": "開発元Critical公表日。11月4日のJVN注意喚起・悪用確認とは別の日付。",
+  "modifiedAt": "2026-10-17T00:03:36Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-04T21:14:21Z",
+  "affected": [
+    {
+      "name": "Airbyte（開発元範囲）",
+      "affected": "< 2.2.0",
+      "fixed": "2.2.0",
+      "sourceUrl": "https://github.com/airbytehq/airbyte/security/advisories/GHSA-g35w-6r6v-h4r7",
+      "note": "1.xには修正予定なし。2.2.0以降へ移行。"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/airbytehq/airbyte/security/advisories/GHSA-g35w-6r6v-h4r7",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.9,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/airbytehq/airbyte/security/advisories/GHSA-g35w-6r6v-h4r7"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "reported",
+    "sourceUrl": "https://jvn.jp/jp/JVN12040144/index.html"
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [
+    {
+      "issuer": "JVN",
+      "title": "Airbyteにおける任意のコードが実行可能な脆弱性",
+      "url": "https://jvn.jp/jp/JVN12040144/index.html",
+      "publishedDate": "2026-11-04"
+    }
+  ],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-04T21:14:21Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-04T21:14:21Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "JVN",
+      "url": "https://jvn.jp/",
+      "checkedAt": "2026-11-04T21:14:21Z",
+      "result": "found"
+    }
+  ],
+  "inclusion": [
+    "critical",
+    "exploited",
+    "alert"
+  ],
+  "mitigations": [
+    {
+      "text": "Airbyte 2.2.0以降へ更新する。更新前はサービスへのネットワークアクセスとReader権限を制限する。",
+      "sourceUrl": "https://github.com/airbytehq/airbyte/security/advisories/GHSA-g35w-6r6v-h4r7"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Airbyte開発元セキュリティアドバイザリ",
+      "url": "https://github.com/airbytehq/airbyte/security/advisories/GHSA-g35w-6r6v-h4r7",
+      "publishedDate": "2026-10-17"
+    },
+    {
+      "type": "alert",
+      "title": "Airbyteにおける任意のコードが実行可能な脆弱性",
+      "url": "https://jvn.jp/jp/JVN12040144/index.html",
+      "publishedDate": "2026-11-04"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Airbyte開発元GHSA API",
+      "url": "https://api.github.com/repos/airbytehq/airbyte/security-advisories/GHSA-g35w-6r6v-h4r7",
+      "publishedDate": "2026-10-17",
+      "publishedAt": "2026-10-17T00:03:36Z",
+      "modifiedAt": "2026-10-17T00:03:36Z"
+    }
+  ],
+  "caveats": [
+    "CISA本体JSONはHTTP 403。公式GitHubミラーは2026.11.03・1767件を確認したが、既存のcisa.gov限定検証契約を変えず、KEV状態はunknownとする。",
+    "実証コードの実行や利用環境の診断は行っていない。",
+    "JVNは影響範囲を1.7.0〜2.1.0、CVSS 4.0を8.7、3.0を8.8と記載。表示は開発元の範囲・Critical 9.9を採用し、評価差を保持する。",
+    "JVNは実悪用を確認したと明記するが、被害件数・対象組織を示していない。",
+    "開発元はAirbyte Cloud顧客の対応不要と記載。",
+    "CVEは開発元で未割り当て。推測の別名を付けない。"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "shippio-platform-2026",
+  "company": "株式会社Shippio",
+  "geography": "日本",
+  "title": "Shippio Platformへの不正アクセス、情報流出・データ損傷とサービス停止",
+  "announcementDate": "2026-11-04",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-04",
+  "statusAsOfDate": "2026-11-03",
+  "lastVerifiedDate": "2026-11-05",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "社内業務ツールに保存された認証情報を使ったシステムへの侵入。ツール侵害の詳細は調査中",
+    "status": "confirmed"
+  },
+  "summary": "社内業務ツールの認証情報を利用した侵入により顧客情報等の流出とデータ損傷を確認。書類約1300件がダウンロードされ、11月2日10時40分からサービスを停止。調査内容は11月3日18時時点。",
+  "affectedData": [
+    "全顧客の会社名・チーム名・電話番号・住所が閲覧された。",
+    "シップメント登録顧客のほぼ全てで輸送情報・書類ファイル名と種類が閲覧された。",
+    "ユーザー氏名・メールアドレスは一括取得痕跡未確認だが閲覧可能で漏えいのおそれ。",
+    "社内業務システムから取得された書類に利用者以外の個人情報が含まれ、範囲・項目を調査中。"
+  ],
+  "counts": [
+    {
+      "value": 1300,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "実際にダウンロードされた書類ファイル",
+      "approximate": true
+    },
+    {
+      "value": 1100,
+      "unit": "チーム",
+      "status": "confirmed",
+      "label": "不正ユーザー・API認証情報が作成された契約アカウント",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "書類件数、契約チーム数と被害人数を区別し合算しない。",
+    "悪意あるファイルのアップロードを確認したが利用者によるダウンロード痕跡と業務データ本文の書換えは未確認。",
+    "ユーザーパスワードは外部認証サービスで管理し今回取得されていないと説明。漏えい情報の悪用は未確認。",
+    "社内業務ツールへの最初の侵入手法は調査中。Platformへの認証情報悪用と区別。再開未定。"
+  ],
+  "sources": [
+    {
+      "title": "当社プラットフォームへの不正アクセスによる個人情報等の漏えいおよびサービス一時停止に関するお詫びとご報告",
+      "url": "https://www.shippio.io/news/20261104/",
+      "publishedDate": "2026-11-04"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-04",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "社内業務ツールの認証情報を利用した侵入により顧客情報等の流出とデータ損傷を確認。書類約1300件がダウンロードされ、11月2日10時40分からサービスを停止。調査内容は11月3日18時時点。",
+      "sourceUrl": "https://www.shippio.io/news/20261104/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "startDate": "2026-10-30",
+      "endDate": "2026-11-02",
+      "label": "社内業務ツール10月30日以降／Platform11月1日19時30分頃〜2日17時頃",
+      "note": "ツールへのアクセスとPlatformへの複数回の侵入を区別。全期間連続した攻撃を意味しない。",
+      "sourceUrl": "https://www.shippio.io/news/20261104/",
+      "reviewedDate": "2026-11-05"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "11月2日は不正アクセス検知とサービス停止日。流出・損傷の最初の確認日は明記されていない。",
+      "sourceUrl": "https://www.shippio.io/news/20261104/",
+      "reviewedDate": "2026-11-05"
+    }
+  }
+}

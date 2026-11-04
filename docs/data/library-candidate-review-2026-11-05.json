@@ -1,0 +1,3859 @@
+{
+  "reportDateJst": "2026-11-05",
+  "checkedAt": "2026-11-04T21:17:09.526715Z",
+  "reviews": [
+    {
+      "id": "GHSA-xg75-xf37-cph9",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-xg75-xf37-cph9",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:01.240991Z",
+      "priorDecision": "Retain prior candidate; no public OSV or global GHSA entry found. No corporate incident inferred.",
+      "priorStatus": "verified_maintainer_candidate_held_database_unavailable",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "RUSTSEC-2026-0431",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0431",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:01.181167Z",
+        "bytes": 3275,
+        "sha256": "08e4bd36d597d451866c679245d71b88e11a3496eeb0b25164f4647d926c3360",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:00 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "e5f4d2239975d7f638e639e06666f63c/6016308008920498587",
+          "traceparent": "00-e5f4d2239975d7f638e639e06666f63c-537e3842230b419b-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "3275",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "282",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T11:00:02.238924591Z",
+      "sourcePublishedAt": "2026-11-01T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Unbounded memory allocation in `evtx` parsing a `.wevtcache` file",
+      "affected": [
+        {
+          "package": {
+            "name": "evtx",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/evtx"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.11.0"
+                },
+                {
+                  "fixed": "0.15.1"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "functions": [
+                "evtx::wevt_templates::wevtcache::WevtCacheReader::next_entry",
+                "evtx::wevt_templates::wevtcache::for_each_crim_blob"
+              ],
+              "arch": [],
+              "os": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0431.json",
+            "categories": [
+              "denial-of-service"
+            ],
+            "cvss": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "informational": null
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/evtx"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0431.html"
+        },
+        {
+          "type": "REPORT",
+          "url": "https://github.com/omerbenamram/evtx/issues/334"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/omerbenamram/evtx/pull/335"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0432",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0432",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:01.158038Z",
+        "bytes": 2788,
+        "sha256": "9f0454501565b0c9c937c3c1947ccb7cc8b589ef5798db90bff98b296c682838",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:01 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "9c0de0148830b737fc404d1ed36ca726/17751591110141320953",
+          "traceparent": "00-9c0de0148830b737fc404d1ed36ca726-f65a52100df49ef9-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "2788",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "211",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T11:30:16.809391425Z",
+      "sourcePublishedAt": "2026-10-31T12:00:00Z",
+      "withdrawn": null,
+      "summary": "`codeq`: decoding untrusted input can allocate memory from an unchecked length prefix (denial of service)",
+      "affected": [
+        {
+          "package": {
+            "name": "codeq",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/codeq"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "0.6.3"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "functions": [],
+              "arch": [],
+              "os": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "informational": null,
+            "categories": [
+              "denial-of-service"
+            ],
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0432.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/codeq"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0432.html"
+        },
+        {
+          "type": "REPORT",
+          "url": "https://github.com/drmingdrmer/codeq/issues/4"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0433",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0433",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:01.099322Z",
+        "bytes": 2146,
+        "sha256": "e82864178bf4132806da167fbec88ab5ae7f34221beecff103f6a2b6bc55e0e7",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:00 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "9d40888f5d004902fc404d1ed36ca7fd/9331422324009008295",
+          "traceparent": "00-9d40888f5d004902fc404d1ed36ca7fd-817fdf29e7b4fca7-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "2146",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "195",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T11:30:18.315201167Z",
+      "sourcePublishedAt": "2026-10-28T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Quadratic parsing of nested image wikilinks with `ENABLE_WIKILINKS`",
+      "affected": [
+        {
+          "package": {
+            "name": "pulldown-cmark",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/pulldown-cmark"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.13.0"
+                },
+                {
+                  "fixed": "0.13.6"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "arch": [],
+              "os": [],
+              "functions": []
+            }
+          },
+          "database_specific": {
+            "categories": [
+              "denial-of-service"
+            ],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0433.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/pulldown-cmark"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0433.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pulldown-cmark/pulldown-cmark/pull/1186"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pulldown-cmark/pulldown-cmark/pull/1186"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0434",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0434",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:01.165028Z",
+        "bytes": 2430,
+        "sha256": "1a4ca1d4cf6f9497688093a59fae45d32f07799e31c3868428e9c065fbb081b3",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:00 GMT",
+          "server": "envoy",
+          "traceparent": "00-885b50a9a1abea1938e639e06666f24f-7c0ceda3efc06c4b-00",
+          "x-cloud-trace-context": "885b50a9a1abea1938e639e06666f24f/8938780648781409355",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "2430",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "265",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T11:30:18.468635637Z",
+      "sourcePublishedAt": "2026-10-31T12:00:00Z",
+      "withdrawn": null,
+      "summary": "`ant-releases`: extracting a release archive can write files outside the destination directory (path traversal / zip-slip)",
+      "affected": [
+        {
+          "package": {
+            "name": "ant-releases",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/ant-releases"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "os": [],
+              "functions": [
+                "ant_releases::AntReleaseRepoActions::extract_release_archive"
+              ],
+              "arch": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0434.json",
+            "categories": [
+              "code-execution"
+            ],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:N",
+            "informational": null
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/ant-releases"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0434.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/maidsafe/ant-releases"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0391",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0391",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:01.117903Z",
+        "bytes": 1946,
+        "sha256": "8802bd9de1dd39c227f150e025d5547715ddef3e1b1f27324e419bf9b991c7a2",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:00 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "f815efa9e0b8a3e938e639e06666fa29/925249919821446721",
+          "traceparent": "00-f815efa9e0b8a3e938e639e06666fa29-0cd725e65f6a7e41-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1946",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "260",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.590733846Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Data from an abandoned stream leaks into the next stream on a reused context",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.13.2"
+                },
+                {
+                  "fixed": "0.13.4"
+                },
+                {
+                  "introduced": "0.14.0-0"
+                },
+                {
+                  "fixed": "0.14.3"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "functions": [
+                "zstd::stream::raw::Decoder::with_context",
+                "zstd::stream::raw::Encoder::with_context"
+              ],
+              "arch": [],
+              "os": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "categories": [
+              "memory-exposure"
+            ],
+            "cvss": null,
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0391.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0391.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/74ace2dcdca62a2ce0f034895d6079458311e003"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0395",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0395",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:05.345750Z",
+        "bytes": 1634,
+        "sha256": "128c82ec9e6d3d548dc333d6206816e8089ae501f4b28b064f02d15375c9e09d",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:04 GMT",
+          "server": "envoy",
+          "traceparent": "00-abbcb2ad2ab5c2d47cf7e59413b03d3b-0b87d4e1d4b3fb77-00",
+          "x-cloud-trace-context": "abbcb2ad2ab5c2d47cf7e59413b03d3b/830866722674441079",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1634",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "111",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.420559993Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Use-after-free with `CParameter::StableInBuffer`",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "4.1.0"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "functions": [
+                "zstd_safe::CCtx::set_parameter"
+              ],
+              "arch": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "informational": "unsound",
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0395.json",
+            "categories": [
+              "memory-exposure"
+            ],
+            "cvss": null
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0395.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/53a8a290d8cfb52ff5b29fb6e04a40b5a174cc65"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0396",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0396",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:05.375771Z",
+        "bytes": 1947,
+        "sha256": "f605772e7e2054cca637458a8e212ec356e44156500e531dee1c3cff1f0576c2",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:04 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "018ce625af2962467cf7e59413b03a32/9197457331749295861",
+          "traceparent": "00-018ce625af2962467cf7e59413b03a32-7fa3eeb687ba96f5-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1947",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "135",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.400899521Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "`Seekable` reads a NULL or out-of-bounds seek table",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "7.2.2"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "os": [],
+              "functions": [
+                "zstd_safe::seekable::SeekTable::frame_decompressed_size",
+                "zstd_safe::seekable::Seekable::decompress",
+                "zstd_safe::seekable::Seekable::decompress_frame",
+                "zstd_safe::seekable::Seekable::frame_decompressed_size",
+                "zstd_safe::seekable::Seekable::offset_to_frame_index"
+              ],
+              "arch": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "categories": [
+              "memory-corruption"
+            ],
+            "cvss": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0396.json",
+            "informational": "unsound"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0396.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/a9626069d6f2e90b782b8f627f57a361cfe8ef85"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0397",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0397",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:05.326460Z",
+        "bytes": 1446,
+        "sha256": "6b971b8850ab5c8c8873902098351b84488656bf7a9719de145f458c5c0b651a",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:04 GMT",
+          "server": "envoy",
+          "traceparent": "00-91c9f286b3eeeb347cf7e59413b03e3f-a629a346e6d5a8f4-00",
+          "x-cloud-trace-context": "91c9f286b3eeeb347cf7e59413b03e3f/11973280609256974580",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1446",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "134",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.445177143Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "`OutBuffer::around_pos` exposes uninitialized memory",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "4.0.0"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "functions": [
+                "zstd_safe::OutBuffer::around_pos"
+              ],
+              "arch": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "informational": "unsound",
+            "categories": [
+              "memory-exposure"
+            ],
+            "cvss": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0397.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0397.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/5827de2459b8ac430e87e860f00c7f3c13023833"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0398",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0398",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:05.337324Z",
+        "bytes": 1969,
+        "sha256": "95fac9106d23d1d22af3b66951cfa02a016a387bba0a9df4ca4188d6e3ea9cc3",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:04 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "82ea60a9899323e1037848a8a3ca5a40/17109665110376984370",
+          "traceparent": "00-82ea60a9899323e1037848a8a3ca5a40-ed71bdc459ea2f32-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1969",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "108",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.419709171Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "`Seekable::decompress` sets a `Vec` length beyond its capacity for offsets past the end",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "7.2.2"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "arch": [],
+              "os": [],
+              "functions": [
+                "zstd_safe::seekable::AdvancedSeekable::decompress",
+                "zstd_safe::seekable::Seekable::decompress"
+              ]
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "informational": null,
+            "categories": [
+              "memory-exposure",
+              "memory-corruption"
+            ],
+            "cvss": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0398.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0398.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/80506be743fae2ed0c2fe8b21c374c6a2eab0be7"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0399",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0399",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:05.389424Z",
+        "bytes": 1642,
+        "sha256": "3eaf14ca8b146f80ab4df6265902bf85971037a68ef1d0da3dd42616d0c034f0",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:04 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "201b202a4dd1fcc2037848a8a3ca5119/6623663822465797394",
+          "traceparent": "00-201b202a4dd1fcc2037848a8a3ca5119-5bebfb2721ae0d12-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1642",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "153",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.328955732Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Use-after-free through `init_using_cdict` and `init_using_ddict`",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "3.0.0"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "functions": [
+                "zstd_safe::CCtx::init_using_cdict",
+                "zstd_safe::DCtx::init_using_ddict"
+              ],
+              "arch": [],
+              "os": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0399.json",
+            "categories": [
+              "memory-corruption"
+            ],
+            "cvss": null,
+            "informational": "unsound"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0399.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/e00e7928e3e98953fc43418af6d73f6aae2378fb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0400",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0400",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:05.357155Z",
+        "bytes": 1952,
+        "sha256": "b8873c53ed54966edd4cadbc22de7a922f9160396730105ad6a0567b258c967d",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:05 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "b90eddcc0ef7c4e47cf7e59413b03148/14737471607664885744",
+          "traceparent": "00-b90eddcc0ef7c4e47cf7e59413b03148-cc8604583e453ff0-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1952",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "128",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.428341570Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Use-after-free of a dictionary after a one-shot call on a context with an open stream",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "3.0.1"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "functions": [
+                "zstd_safe::DCtx::decompress",
+                "zstd_safe::DCtx::decompress_using_ddict",
+                "zstd_safe::DCtx::decompress_using_dict"
+              ],
+              "arch": [],
+              "os": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "cvss": null,
+            "informational": "unsound",
+            "categories": [
+              "memory-exposure"
+            ],
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0400.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0400.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/d34502a0ed07f80ab2aa4c65059578e0466f2467"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0401",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0401",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:08.818527Z",
+        "bytes": 1729,
+        "sha256": "edfef4c988bcec9b180f362e9cd91043c692c9ed929e10a29b7a4accb8725dd2",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:08 GMT",
+          "server": "envoy",
+          "traceparent": "00-6f4bca23a21224907cf7e59413b0355d-c9ada66b9f860008-00",
+          "x-cloud-trace-context": "6f4bca23a21224907cf7e59413b0355d/14532454553762529288",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1729",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "125",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.353698025Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Out-of-bounds read in `train_from_buffer` when sample sizes overflow",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "functions": [
+                "zstd_safe::train_from_buffer"
+              ],
+              "arch": [],
+              "os": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "categories": [
+              "memory-exposure"
+            ],
+            "cvss": null,
+            "informational": "unsound",
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0401.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0401.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/781ea454191dbf178d09c1daf6fc896d15fbaa2f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0402",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0402",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:08.810150Z",
+        "bytes": 1673,
+        "sha256": "4715f730e78ded1383e7ca43e7fd346f84d5934612e99a6ce6464f29cd732bab",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:08 GMT",
+          "server": "envoy",
+          "traceparent": "00-a726bb4a200e0fec7cf7e59413b0396a-783824ecb7dab0bc-00",
+          "x-cloud-trace-context": "a726bb4a200e0fec7cf7e59413b0396a/8662714482362593468",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1673",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "112",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:04.162155944Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Heap buffer overflow in `CCtx::try_clone` on a multithreaded context",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "4.1.4"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "arch": [],
+              "os": [],
+              "functions": [
+                "zstd_safe::CCtx::try_clone"
+              ]
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0402.json",
+            "categories": [
+              "memory-corruption"
+            ],
+            "cvss": null,
+            "informational": "unsound"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0402.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/682b8b2967cf4aba5cfe2d940d1e381a3e23211a"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0403",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0403",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:08.792609Z",
+        "bytes": 2234,
+        "sha256": "af64449739229bae5cf4945585582ee459a72dd44ca9c3f530b7583b9374035d",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:08 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "0d0130a5a5336fa0037848a8a3ca53ff/6931676917088455719",
+          "traceparent": "00-0d0130a5a5336fa0037848a8a3ca53ff-6032436e34d50c27-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "2234",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "108",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:04.136442771Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Uninitialized memory exposed when streaming decompression of a legacy frame fails",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "4.0.0"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "arch": [],
+              "os": [],
+              "functions": [
+                "zstd_safe::DCtx::decompress_stream"
+              ]
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0403.json",
+            "categories": [
+              "memory-exposure"
+            ],
+            "cvss": null
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0403.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/006e1d1ad1eeaf6b5d4c28329e70217adabcec43"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0404",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0404",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:08.815748Z",
+        "bytes": 1612,
+        "sha256": "92f09770495345ea036531d37a4773bf7da47a584001a9cb5e9cdfc5f7c01571",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:08 GMT",
+          "server": "envoy",
+          "traceparent": "00-22aa43cb5a3025957cf7e59413b03d77-8ab9fc1e3001d068-00",
+          "x-cloud-trace-context": "22aa43cb5a3025957cf7e59413b03d77/9996298054510170216",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1612",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "113",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:04.168804805Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Double free in `DCtx::try_clone`",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "4.1.4"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "arch": [],
+              "os": [],
+              "functions": [
+                "zstd_safe::DCtx::try_clone"
+              ]
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "categories": [
+              "memory-corruption"
+            ],
+            "cvss": null,
+            "informational": "unsound",
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0404.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0404.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/cee6529b553ec600a8e152aaca15a91598820ecf"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0405",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0405",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:08.817618Z",
+        "bytes": 1570,
+        "sha256": "9dd65c1e962f9ca6f50eb04a8cb179f9c776a62e4cf494133f55e2913b3c7030",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:08 GMT",
+          "server": "envoy",
+          "traceparent": "00-814aeb90440d99cb037848a8a3ca5d26-e50c21b022a3f0f4-00",
+          "x-cloud-trace-context": "814aeb90440d99cb037848a8a3ca5d26/16504603774785155316",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1570",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "135",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.399517581Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Out-of-bounds read with an out-of-range `InBuffer::pos`",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "7.2.2"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "os": [],
+              "functions": [
+                "zstd_safe::seekable::SeekableCStream::compress_stream"
+              ],
+              "arch": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0405.json",
+            "categories": [
+              "memory-exposure"
+            ],
+            "cvss": null,
+            "informational": "unsound"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0405.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/20d397c0d68d8b4300c5493875ebfa10e355fcdd"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0406",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0406",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:08.855418Z",
+        "bytes": 2099,
+        "sha256": "1b098276e75a1acbcef712bbf9ae7d4ec682ecc47d29415f01e512de3e0e4b4f",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:08 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "b5387263345512ef7cf7e59413b03184/13211570673878011783",
+          "traceparent": "00-b5387263345512ef7cf7e59413b03184-b758ed87ad778f87-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "2099",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "123",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve original OSV range changes and unresolved ID mapping; do not infer alias from similar title or discard corrections.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T09:30:03.591194710Z",
+      "sourcePublishedAt": "2026-10-16T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Use-after-free when changing a multithreaded context with an unfinished frame",
+      "affected": [
+        {
+          "package": {
+            "name": "zstd-safe",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/zstd-safe"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "7.4.0"
+                },
+                {
+                  "introduced": "8.0.0-0"
+                },
+                {
+                  "fixed": "8.2.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "os": [],
+              "functions": [
+                "zstd_safe::CCtx::disable_dictionary",
+                "zstd_safe::CCtx::init",
+                "zstd_safe::CCtx::load_dictionary",
+                "zstd_safe::CCtx::ref_cdict",
+                "zstd_safe::CCtx::ref_prefix",
+                "zstd_safe::CCtx::reset",
+                "zstd_safe::CCtx::set_parameter"
+              ],
+              "arch": []
+            }
+          },
+          "database_specific": {
+            "categories": [
+              "memory-corruption"
+            ],
+            "cvss": null,
+            "informational": "unsound",
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0406.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/zstd-safe"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0406.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/commit/e224018a2389915d68ed17f30109bebad36e9734"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/gyscos/zstd-rs/pull/384"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "CVE-2026-111959",
+      "url": "https://api.osv.dev/v1/vulns/CVE-2026-111959",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:14.082429Z",
+      "priorDecision": null,
+      "priorStatus": "held_package_mapping_and_aggregate_database_registration",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "CVE-2026-119724",
+      "url": "https://api.osv.dev/v1/vulns/CVE-2026-119724",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:13.969317Z",
+      "priorDecision": null,
+      "priorStatus": "held_package_mapping_and_aggregate_database_registration",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "CVE-2026-119641",
+      "url": "https://api.osv.dev/v1/vulns/CVE-2026-119641",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:14.083598Z",
+      "priorDecision": null,
+      "priorStatus": "held_package_mapping_and_aggregate_database_registration",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "CVE-2026-109083",
+      "url": "https://api.osv.dev/v1/vulns/CVE-2026-109083",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:14.080009Z",
+      "priorDecision": null,
+      "priorStatus": "held_package_mapping_and_aggregate_database_registration",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "CVE-2026-110535",
+      "url": "https://api.osv.dev/v1/vulns/CVE-2026-110535",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:14.046773Z",
+      "priorDecision": null,
+      "priorStatus": "held_package_mapping_and_aggregate_database_registration",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "CVE-2026-113511",
+      "url": "https://api.osv.dev/v1/vulns/CVE-2026-113511",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:13.995462Z",
+      "priorDecision": null,
+      "priorStatus": "held_package_mapping_and_aggregate_database_registration",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "CVE-2026-113687",
+      "url": "https://api.osv.dev/v1/vulns/CVE-2026-113687",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:17.525919Z",
+      "priorDecision": null,
+      "priorStatus": "held_package_mapping_and_aggregate_database_registration",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "CVE-2026-114364",
+      "url": "https://api.osv.dev/v1/vulns/CVE-2026-114364",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404,
+      "checkedAt": "2026-11-04T21:13:17.525479Z",
+      "priorDecision": null,
+      "priorStatus": "held_package_mapping_and_aggregate_database_registration",
+      "decision": "Current response does not resolve prior candidate; preserve prior decision and do not infer absence or safety."
+    },
+    {
+      "id": "GHSA-2f9f-gq7v-9h6m",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/GHSA-2f9f-gq7v-9h6m",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:17.437588Z",
+        "bytes": 1920,
+        "sha256": "affb36fe3fcee8f29a74bcd9dfecf2ef2de5cc0a0691508ce6e2e65952800b60",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:17 GMT",
+          "server": "envoy",
+          "traceparent": "00-a9de7bfaa9d22c7c52fb5e9cf9492ff5-843a26e76200f9c0-00",
+          "x-cloud-trace-context": "a9de7bfaa9d22c7c52fb5e9cf9492ff5/9527970736879237568",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1920",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "109",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Existing record retained. New source alias and Rust package observations remain in supplemental delta; no guessed maintainer confirmation.",
+      "priorStatus": "existing_display_record_alias_update_held_maintainer_body_unavailable",
+      "aliases": [
+        "BIT-thrift-2026-43868",
+        "CVE-2026-43868",
+        "RUSTSEC-2026-0435"
+      ],
+      "sourceModifiedAt": "2026-11-02T12:10:42.318149664Z",
+      "sourcePublishedAt": "2026-05-05T09:31:55Z",
+      "withdrawn": null,
+      "summary": "Apache Thrift has a Memory Allocation with Excessive Size Value Vulnerability",
+      "affected": [
+        {
+          "package": {
+            "name": "thrift",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/thrift"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "0.23.0"
+                }
+              ]
+            }
+          ],
+          "database_specific": {
+            "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/05/GHSA-2f9f-gq7v-9h6m/GHSA-2f9f-gq7v-9h6m.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43868"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/thrift/commit/d5152211af61f850ec393604316804096dd4632e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2026:26586"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2026:42644"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-43868"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2466670"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/thrift"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/zj76dtwnbbs1m7z3focf4wd51pqpsmn9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-43868.json"
+        }
+      ],
+      "matchedIds": [
+        "GHSA-2f9f-gq7v-9h6m"
+      ],
+      "cveId": null,
+      "status": "covered_by_explicit_id_or_alias"
+    },
+    {
+      "id": "RUSTSEC-2026-0436",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0436",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:17.510746Z",
+        "bytes": 2667,
+        "sha256": "0e89c35d1d4b3c7d3827c9e2a657da6d23da6c4e5ef6c96e43f81f732b410cf6",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:17 GMT",
+          "server": "envoy",
+          "traceparent": "00-29e7788ea9713152d7587bb6bda4e3ce-27112aafee9bdf71-00",
+          "x-cloud-trace-context": "29e7788ea9713152d7587bb6bda4e3ce/2815078177194106737",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "2667",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "130",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Keep candidate; no stable GHSA/CVE alias verified. Do not manufacture an ID or infer memory corruption from denial of service.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-03T09:45:02.760678368Z",
+      "sourcePublishedAt": "2026-10-28T12:00:00Z",
+      "withdrawn": null,
+      "summary": "Panic and unbounded allocation (OOM) in the CFB/OLE2 parser on malformed input",
+      "affected": [
+        {
+          "package": {
+            "name": "calamine",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/calamine"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "0.38.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "functions": [],
+              "arch": [],
+              "os": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0436.json",
+            "categories": [
+              "denial-of-service"
+            ],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/calamine"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0436.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/tafia/calamine/pull/762"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "GO-2026-5932",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/GO-2026-5932",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:17.496245Z",
+        "bytes": 2073,
+        "sha256": "aaa5a9f81a41e8de91ac1cb1db606c6ac1c50ee8249a7375584dca3907df3364",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:16 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "fdc19197edf8aba5d7587bb6bda4eab5/16891358828859329500",
+          "traceparent": "00-fdc19197edf8aba5d7587bb6bda4eab5-ea6a295c4fd18bdc-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "2073",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "165",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve both separate module ranges. golang.org/x/crypto has fixed boundary 0.58.1-0.20261009181718-2f1f834330b2; golang.org/x/crypto/openpgp remains open-ended. Do not treat this as a currently safe OpenPGP version or merge related IDs.",
+      "priorStatus": "held_missing_stable_ghsa_cve",
+      "aliases": [],
+      "sourceModifiedAt": "2026-11-02T22:15:06.677088389Z",
+      "sourcePublishedAt": "2026-07-07T22:15:29Z",
+      "withdrawn": null,
+      "summary": "The golang.org/x/crypto/openpgp package is unmaintained, unsafe by design, and has known security issues",
+      "affected": [
+        {
+          "package": {
+            "name": "golang.org/x/crypto",
+            "ecosystem": "Go",
+            "purl": "pkg:golang/golang.org/x/crypto"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "0.58.1-0.20261009181718-2f1f834330b2"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "imports": [
+              {
+                "path": "golang.org/x/crypto/openpgp"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/packet"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/armor"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/clearsign"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/errors"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/elgamal"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/s2k"
+              }
+            ]
+          },
+          "database_specific": {
+            "source": "https://vuln.go.dev/ID/GO-2026-5932.json"
+          }
+        },
+        {
+          "package": {
+            "name": "golang.org/x/crypto/openpgp",
+            "ecosystem": "Go",
+            "purl": "pkg:golang/golang.org/x/crypto/openpgp"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "imports": [
+              {
+                "path": "golang.org/x/crypto/openpgp"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/packet"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/armor"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/clearsign"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/errors"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/elgamal"
+              },
+              {
+                "path": "golang.org/x/crypto/openpgp/s2k"
+              }
+            ]
+          },
+          "database_specific": {
+            "source": "https://vuln.go.dev/ID/GO-2026-5932.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "REPORT",
+          "url": "https://go.dev/issue/44226"
+        },
+        {
+          "type": "WEB",
+          "url": "https://go.dev/issue/81227"
+        }
+      ],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "held_missing_stable_ghsa_cve",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "PYSEC-2026-3811",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-3811",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:17.543145Z",
+        "bytes": 10931,
+        "sha256": "ea2e7c10d87e56bbc0b90665af3ac7617737c365f6ef062cbe1ed08fbd32b31e",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:17 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "e7f996ae795ce02b52fb5e9cf9492736/17204771819149979653",
+          "traceparent": "00-e7f996ae795ce02b52fb5e9cf9492736-eec3a0d09215f005-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "10931",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "125",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Source equivalence verified in full API/export. No curated record presently exists; preserve supplementary alias in audit and do not create a duplicate. Display-source overlay remains unmodified in this pass.",
+      "priorStatus": "existing_alias_match_additional_alias_held_for_display_overlay",
+      "aliases": [
+        "CVE-2026-120492",
+        "CVE-2026-45019",
+        "GHSA-hvfh-5mj3-5f3j"
+      ],
+      "sourceModifiedAt": "2026-11-03T02:55:55.261817313Z",
+      "sourcePublishedAt": "2026-09-10T09:44:56.911091Z",
+      "withdrawn": null,
+      "summary": "Chainlist has SSRF via MCP SSE and streamable-http transports that allows unauthenticated internal network access",
+      "affected": [
+        {
+          "package": {
+            "name": "chainlit",
+            "ecosystem": "PyPI",
+            "purl": "pkg:pypi/chainlit"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "2.4.0rc0"
+                },
+                {
+                  "fixed": "2.12.0"
+                }
+              ]
+            }
+          ],
+          "versions": [
+            "2.10.0",
+            "2.10.1",
+            "2.11.0",
+            "2.11.1",
+            "2.4.0",
+            "2.4.0rc0",
+            "2.4.1",
+            "2.4.2",
+            "2.4.201",
+            "2.4.3",
+            "2.4.301",
+            "2.4.302",
+            "2.4.400",
+            "2.5.5",
+            "2.6.0",
+            "2.6.1",
+            "2.6.2",
+            "2.6.3",
+            "2.6.4",
+            "2.6.5",
+            "2.6.6",
+            "2.6.7",
+            "2.6.8",
+            "2.6.9",
+            "2.7.0",
+            "2.7.1",
+            "2.7.1.1",
+            "2.7.2",
+            "2.8.0",
+            "2.8.1",
+            "2.8.2",
+            "2.8.3",
+            "2.8.4",
+            "2.8.5",
+            "2.9.0",
+            "2.9.1",
+            "2.9.2",
+            "2.9.3",
+            "2.9.4",
+            "2.9.5",
+            "2.9.6"
+          ],
+          "database_specific": {
+            "source": "https://github.com/pypa/advisory-database/blob/main/vulns/chainlit/PYSEC-2026-3811.yaml"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/Chainlit/chainlit/security/advisories/GHSA-hvfh-5mj3-5f3j"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Chainlit/chainlit/commit/0565fd0eccb915fce159929598b053ed79f6e0c9"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/Chainlit/chainlit"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Chainlit/chainlit/blob/2.12.0/docs/security-advisory-2026-mcp.md#spl-2026-002--ssrf-via-mcp-streamable-http--sse"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Chainlit/chainlit/releases/tag/2.12.0"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://pypi.org/project/chainlit"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-hvfh-5mj3-5f3j"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45019"
+        }
+      ],
+      "matchedIds": [
+        "GHSA-hvfh-5mj3-5f3j"
+      ],
+      "cveId": null,
+      "status": "covered_by_explicit_id_or_alias",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "GHSA-h26j-4vp7-x9w2",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/GHSA-h26j-4vp7-x9w2",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:22.482962Z",
+        "bytes": 12073,
+        "sha256": "a708f2da37c9495ad309bc364e4f36966ba98c75fa78a0ddf84bb584f57019c3",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:22 GMT",
+          "server": "envoy",
+          "traceparent": "00-598bf9e743ac06f0497269ee2d6aa67f-cdf67ccc1d2c6067-00",
+          "x-cloud-trace-context": "598bf9e743ac06f0497269ee2d6aa67f/14841186838150668391",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "12073",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "120",
+          "connection": "close"
+        }
+      },
+      "priorDecision": "Preserve source distinctions. Do not flatten all NuGet branches to one version or claim command-line/MSBuild affected; source restricts channel to Visual Studio integration. Database publication time is not maintainer publication time.",
+      "priorStatus": "maintainer_verified_conflicting_fields",
+      "aliases": [
+        "CVE-2026-62848"
+      ],
+      "sourceModifiedAt": "2026-11-03T16:45:05.710760592Z",
+      "sourcePublishedAt": "2026-11-03T16:37:44Z",
+      "withdrawn": null,
+      "summary": "Metalama: Unsafe deserialization over Metalama's Visual Studio inter-process named pipe enables local code execution",
+      "affected": [
+        {
+          "package": {
+            "name": "Metalama.Framework",
+            "ecosystem": "NuGet",
+            "purl": "pkg:nuget/Metalama.Framework"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "2026.1.0-preview"
+                },
+                {
+                  "fixed": "2026.1.19"
+                }
+              ]
+            }
+          ],
+          "versions": [
+            "2026.1.0-preview",
+            "2026.1.1-preview",
+            "2026.1.10-preview",
+            "2026.1.11-preview",
+            "2026.1.12-preview",
+            "2026.1.13-preview",
+            "2026.1.14-rc",
+            "2026.1.15-rc",
+            "2026.1.16",
+            "2026.1.17",
+            "2026.1.18",
+            "2026.1.2-preview",
+            "2026.1.3-preview",
+            "2026.1.4-preview",
+            "2026.1.5-preview",
+            "2026.1.6-preview",
+            "2026.1.7-preview",
+            "2026.1.8-preview",
+            "2026.1.9-preview"
+          ],
+          "database_specific": {
+            "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-h26j-4vp7-x9w2/GHSA-h26j-4vp7-x9w2.json"
+          }
+        },
+        {
+          "package": {
+            "name": "Metalama.Framework",
+            "ecosystem": "NuGet",
+            "purl": "pkg:nuget/Metalama.Framework"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "2025.1.18"
+                }
+              ]
+            }
+          ],
+          "versions": [
+            "0.5.0-preview",
+            "0.5.1-preview",
+            "0.5.10-preview",
+            "0.5.11-preview",
+            "0.5.12-preview",
+            "0.5.13-preview",
+            "0.5.15-preview",
+            "0.5.16-preview",
+            "0.5.17-preview",
+            "0.5.18-preview",
+            "0.5.19-preview",
+            "0.5.2-preview",
+            "0.5.20-preview",
+            "0.5.21-preview",
+            "0.5.22-preview",
+            "0.5.23-preview",
+            "0.5.24-preview",
+            "0.5.25-preview",
+            "0.5.26-preview",
+            "0.5.27-preview",
+            "0.5.28-preview",
+            "0.5.29-preview",
+            "0.5.3-preview",
+            "0.5.30-preview",
+            "0.5.31-preview",
+            "0.5.32-preview",
+            "0.5.33-preview",
+            "0.5.34-preview",
+            "0.5.35-preview",
+            "0.5.36-preview",
+            "0.5.37-preview",
+            "0.5.38-preview",
+            "0.5.39-preview",
+            "0.5.4-preview",
+            "0.5.40-preview",
+            "0.5.41-preview",
+            "0.5.42-preview",
+            "0.5.43-preview",
+            "0.5.44-preview",
+            "0.5.45-preview",
+            "0.5.46-preview",
+            "0.5.47-preview",
+            "0.5.48-preview",
+            "0.5.49-preview",
+            "0.5.5-preview",
+            "0.5.50-preview",
+            "0.5.51-preview",
+            "0.5.52-preview",
+            "0.5.53-preview",
+            "0.5.54-preview",
+            "0.5.55-preview",
+            "0.5.56-preview",
+            "0.5.57-preview",
+            "0.5.58-preview",
+            "0.5.59-preview",
+            "0.5.6-preview",
+            "0.5.60-preview",
+            "0.5.61-preview",
+            "0.5.62-preview",
+            "0.5.63-preview",
+            "0.5.64-preview",
+            "0.5.65-preview",
+            "0.5.66-preview",
+            "0.5.67-preview",
+            "0.5.68-preview",
+            "0.5.69-preview",
+            "0.5.7-preview",
+            "0.5.70-preview",
+            "0.5.71-preview",
+            "0.5.72-preview",
+            "0.5.73-preview",
+            "0.5.74-preview",
+            "0.5.75-preview",
+            "0.5.76-preview",
+            "0.5.77-preview",
+            "0.5.78-preview",
+            "0.5.79-preview",
+            "0.5.8-preview",
+            "0.5.80-preview",
+            "0.5.81-preview",
+            "0.5.82-preview",
+            "0.5.83-preview",
+            "0.5.9-preview",
+            "2023.0.101-rc",
+            "2023.0.102-rc",
+            "2023.0.103-rc",
+            "2023.0.104-rc",
+            "2023.0.105-rc",
+            "2023.0.106-rc",
+            "2023.0.107-rc",
+            "2023.0.108-rc",
+            "2023.0.109-rc",
+            "2023.0.110-rc",
+            "2023.0.111-rc",
+            "2023.0.112-rc",
+            "2023.0.113-rc",
+            "2023.0.114",
+            "2023.0.115",
+            "2023.0.116",
+            "2023.0.117",
+            "2023.0.118",
+            "2023.0.119",
+            "2023.0.120",
+            "2023.0.121",
+            "2023.1.1-preview",
+            "2023.1.10",
+            "2023.1.11",
+            "2023.1.12",
+            "2023.1.2-preview",
+            "2023.1.3-preview",
+            "2023.1.4-preview",
+            "2023.1.5-preview",
+            "2023.1.6-rc",
+            "2023.1.7-rc",
+            "2023.1.8-rc",
+            "2023.1.9",
+            "2023.2.1-preview",
+            "2023.2.2-rc",
+            "2023.2.3-rc",
+            "2023.2.4",
+            "2023.2.5",
+            "2023.3.1-preview",
+            "2023.3.10",
+            "2023.3.2-preview",
+            "2023.3.3-preview",
+            "2023.3.4-preview",
+            "2023.3.5-rc",
+            "2023.3.6-rc",
+            "2023.3.7-rc",
+            "2023.3.8",
+            "2023.3.9",
+            "2023.4.1-preview",
+            "2023.4.2-preview",
+            "2023.4.3-preview",
+            "2023.4.4-preview",
+            "2023.4.5-rc",
+            "2023.4.6",
+            "2023.4.7",
+            "2023.4.8",
+            "2023.4.9",
+            "2024.0.1-preview",
+            "2024.0.10",
+            "2024.0.11",
+            "2024.0.12",
+            "2024.0.13",
+            "2024.0.14",
+            "2024.0.15",
+            "2024.0.16",
+            "2024.0.2-preview",
+            "2024.0.3-preview",
+            "2024.0.4-rc",
+            "2024.0.5-rc",
+            "2024.0.6",
+            "2024.0.7",
+            "2024.0.8",
+            "2024.0.9",
+            "2024.1.1-preview",
+            "2024.1.10-rc",
+            "2024.1.11-rc",
+            "2024.1.12",
+            "2024.1.13",
+            "2024.1.14",
+            "2024.1.15",
+            "2024.1.16",
+            "2024.1.17",
+            "2024.1.18",
+            "2024.1.19",
+            "2024.1.2-preview",
+            "2024.1.20",
+            "2024.1.21",
+            "2024.1.22",
+            "2024.1.23",
+            "2024.1.24",
+            "2024.1.25",
+            "2024.1.26",
+            "2024.1.27",
+            "2024.1.28",
+            "2024.1.29",
+            "2024.1.3-preview",
+            "2024.1.30",
+            "2024.1.4-preview",
+            "2024.1.5-preview",
+            "2024.1.6-preview",
+            "2024.1.7-preview",
+            "2024.1.8-preview",
+            "2024.1.9-rc",
+            "2024.2.1-preview",
+            "2024.2.10-preview",
+            "2024.2.11-preview",
+            "2024.2.12-preview",
+            "2024.2.13-rc",
+            "2024.2.14-rc",
+            "2024.2.15-rc",
+            "2024.2.16-rc",
+            "2024.2.17-rc",
+            "2024.2.18",
+            "2024.2.19",
+            "2024.2.2-preview",
+            "2024.2.20",
+            "2024.2.21",
+            "2024.2.22",
+            "2024.2.23",
+            "2024.2.24",
+            "2024.2.25",
+            "2024.2.26",
+            "2024.2.27",
+            "2024.2.28",
+            "2024.2.29",
+            "2024.2.3-preview",
+            "2024.2.30",
+            "2024.2.31",
+            "2024.2.32",
+            "2024.2.4-preview",
+            "2024.2.5-preview",
+            "2024.2.6-preview",
+            "2024.2.7-preview",
+            "2024.2.8-preview",
+            "2024.2.9-preview",
+            "2025.0.1-preview",
+            "2025.0.10",
+            "2025.0.11",
+            "2025.0.12",
+            "2025.0.2-preview",
+            "2025.0.3-preview",
+            "2025.0.4-preview",
+            "2025.0.5-preview",
+            "2025.0.6-rc",
+            "2025.0.7-rc",
+            "2025.0.8",
+            "2025.0.9",
+            "2025.1.1-preview",
+            "2025.1.10",
+            "2025.1.11",
+            "2025.1.12",
+            "2025.1.13",
+            "2025.1.14",
+            "2025.1.15",
+            "2025.1.16",
+            "2025.1.17",
+            "2025.1.2-preview",
+            "2025.1.3-rc",
+            "2025.1.4-rc",
+            "2025.1.5",
+            "2025.1.6",
+            "2025.1.7",
+            "2025.1.8",
+            "2025.1.9"
+          ],
+          "database_specific": {
+            "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-h26j-4vp7-x9w2/GHSA-h26j-4vp7-x9w2.json"
+          }
+        },
+        {
+          "package": {
+            "name": "Metalama.Framework",
+            "ecosystem": "NuGet",
+            "purl": "pkg:nuget/Metalama.Framework"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "2026.0.1-preview"
+                },
+                {
+                  "fixed": "2026.0.25"
+                }
+              ]
+            }
+          ],
+          "versions": [
+            "2026.0.1-preview",
+            "2026.0.10-rc",
+            "2026.0.11",
+            "2026.0.12",
+            "2026.0.13",
+            "2026.0.14",
+            "2026.0.15",
+            "2026.0.16",
+            "2026.0.17",
+            "2026.0.18",
+            "2026.0.19",
+            "2026.0.2-preview",
+            "2026.0.20",
+            "2026.0.21",
+            "2026.0.22",
+            "2026.0.23",
+            "2026.0.24",
+            "2026.0.3-preview",
+            "2026.0.4-preview",
+            "2026.0.5-preview",
+            "2026.0.6-rc",
+            "2026.0.7-rc",
+            "2026.0.8-rc",
+            "2026.0.9-rc"
+          ],
+          "database_specific": {
+            "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-h26j-4vp7-x9w2/GHSA-h26j-4vp7-x9w2.json"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/metalama/Metalama/security/advisories/GHSA-h26j-4vp7-x9w2"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62848"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/metalama/Metalama/pull/1651"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/metalama/Metalama/commit/5b4ced29f2b25631cc2e44d05b0fd5fe838b6cbe"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/metalama/Metalama/commit/d97f52e1b53ffe4176b2b05c56ffdf1ccd2f53a9"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/metalama/Metalama"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/metalama/Metalama/releases/tag/release/2025.1.18"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/metalama/Metalama/releases/tag/release/2026.0.25"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/metalama/Metalama/releases/tag/release/2026.1.19"
+        }
+      ],
+      "matchedIds": [
+        "GHSA-h26j-4vp7-x9w2"
+      ],
+      "cveId": null,
+      "status": "covered_by_explicit_id_or_alias",
+      "conflicts": [
+        "Maintainer prose says no backports; structured NuGet fields include 2025.1.18 and 2026.0.25 alongside 2026.1.19.",
+        "Maintainer prose says maintained PostSharp VS extension fixed in 2026.1.5; structured extension field says 2026.1.19, which is the bundled framework version.",
+        "High CVSS/base severity versus practical Medium discussed in prose, because pipe write requires already executing as same user."
+      ],
+      "decision": "Keep distinctions between NuGet branches, extension and framework fixes, structured and prose statements; no new flattening or unsupported fix assertion."
+    },
+    {
+      "id": "maintainer-Metalama",
+      "fetch": {
+        "url": "https://api.github.com/repos/metalama/Metalama/security-advisories/GHSA-h26j-4vp7-x9w2",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:24.263774Z",
+        "bytes": 9214,
+        "sha256": "f688de2abc89affd6c2e6835ea2b2a1ca309bb58788a9ec6c17289737f9800c0",
+        "headers": {
+          "date": "Wed, 04 Nov 2026 21:13:24 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "vary": "Accept,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"f688de2abc89affd6c2e6835ea2b2a1ca309bb58788a9ec6c17289737f9800c0\"",
+          "last-modified": "Tue, 14 Jul 2026 22:33:31 GMT",
+          "x-github-media-type": "github.v3; format=json",
+          "x-github-api-version-selected": "2022-11-28",
+          "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+          "access-control-allow-origin": "*",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "x-frame-options": "deny",
+          "x-content-type-options": "nosniff",
+          "x-xss-protection": "0",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "content-security-policy": "default-src 'none'",
+          "server": "envoy",
+          "accept-ranges": "bytes",
+          "x-ratelimit-limit": "60",
+          "x-ratelimit-remaining": "58",
+          "x-ratelimit-used": "2",
+          "x-ratelimit-resource": "core",
+          "x-ratelimit-reset": "1793830403",
+          "content-length": "9214",
+          "x-github-request-id": "FDB1:BBF97:44FAC1:49CDC9:6AEB9FF3",
+          "x-github-edge-region": "westus3",
+          "x-envoy-upstream-service-time": "370",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [],
+      "sourceModifiedAt": "2026-07-14T22:33:31Z",
+      "sourcePublishedAt": "2026-06-27T09:47:48Z",
+      "withdrawn": null,
+      "summary": "Unsafe deserialization over Metalama's Visual Studio inter-process named pipe enables local code execution",
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "nuget",
+            "name": "Metalama.Framework"
+          },
+          "vulnerable_version_range": "< 2026.1.19",
+          "patched_versions": "2026.1.19",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "visual studio marketplace",
+            "name": "PostSharpTechnologies.PostSharp"
+          },
+          "vulnerable_version_range": "< 2026.1.19",
+          "patched_versions": "2026.1.19",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "visual studio marketplace",
+            "name": " PostSharpTechnologies.Metalama"
+          },
+          "vulnerable_version_range": "All",
+          "patched_versions": "None (Upgrade to PostSharpTechnologies.PostSharp)",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "visual studio marketplace",
+            "name": " PostSharpTechnologies.caravela "
+          },
+          "vulnerable_version_range": "All",
+          "patched_versions": "None (Upgrade to PostSharpTechnologies.PostSharp)",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "nuget",
+            "name": "Metalama.Framework"
+          },
+          "vulnerable_version_range": "< 2025.1.18",
+          "patched_versions": "2025.1.18",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "nuget",
+            "name": "Metalama.Framework"
+          },
+          "vulnerable_version_range": "< 2026.0.25",
+          "patched_versions": "2026.0.25",
+          "vulnerable_functions": []
+        }
+      ],
+      "references": [],
+      "matchedIds": [
+        "GHSA-h26j-4vp7-x9w2"
+      ],
+      "cveId": "CVE-2026-62848",
+      "status": "maintainer_rechecked_prior_decision_retained",
+      "conflicts": [
+        "Maintainer prose says no backports; structured NuGet fields include 2025.1.18 and 2026.0.25 alongside 2026.1.19.",
+        "Maintainer prose says maintained PostSharp VS extension fixed in 2026.1.5; structured extension field says 2026.1.19, which is the bundled framework version.",
+        "High CVSS/base severity versus practical Medium discussed in prose, because pipe write requires already executing as same user."
+      ],
+      "decision": "Keep distinctions between NuGet branches, extension and framework fixes, structured and prose statements; no new flattening or unsupported fix assertion."
+    },
+    {
+      "id": "maintainer-Incus",
+      "fetch": {
+        "url": "https://api.github.com/repos/lxc/incus/security-advisories/GHSA-xg75-xf37-cph9",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:24.215006Z",
+        "bytes": 5316,
+        "sha256": "c42fb252568c06eb3dd5c8c0ef2e3fab0702a93b97e07e0ea0c3bf36a419cc92",
+        "headers": {
+          "date": "Wed, 04 Nov 2026 21:13:24 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "vary": "Accept,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"c42fb252568c06eb3dd5c8c0ef2e3fab0702a93b97e07e0ea0c3bf36a419cc92\"",
+          "last-modified": "Thu, 29 Oct 2026 22:17:06 GMT",
+          "x-github-media-type": "github.v3; format=json",
+          "x-github-api-version-selected": "2022-11-28",
+          "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+          "access-control-allow-origin": "*",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "x-frame-options": "deny",
+          "x-content-type-options": "nosniff",
+          "x-xss-protection": "0",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "content-security-policy": "default-src 'none'",
+          "server": "envoy",
+          "accept-ranges": "bytes",
+          "x-ratelimit-limit": "60",
+          "x-ratelimit-remaining": "59",
+          "x-ratelimit-used": "1",
+          "x-ratelimit-resource": "core",
+          "x-ratelimit-reset": "1793830403",
+          "content-length": "5316",
+          "x-github-request-id": "FDB1:BBF97:44FAC1:49CDC8:6AEB9FF3",
+          "x-github-edge-region": "westus3",
+          "x-envoy-upstream-service-time": "393",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [],
+      "sourceModifiedAt": "2026-10-29T22:17:06Z",
+      "sourcePublishedAt": "2026-10-29T22:17:06Z",
+      "withdrawn": null,
+      "summary": "Authentication and authorization bypass through unverified client certificate chains",
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "go",
+            "name": "github.com/lxc/incus/v7/cmd/incusd"
+          },
+          "vulnerable_version_range": "< v7.6.0",
+          "patched_versions": ">= v7.6.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "references": [],
+      "matchedIds": [],
+      "cveId": null,
+      "status": "maintainer_rechecked_prior_decision_retained"
+    },
+    {
+      "id": "RUSTSEC-2026-0375",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0375",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:32.857238Z",
+        "bytes": 1442,
+        "sha256": "c0352a2500557db9eea44507e8623c2cc16b72084fd489ccbef6d1c54469589b",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:32 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "4a2a8e728e79fb6d15f902a9167221c0/13828487070962347744",
+          "traceparent": "00-4a2a8e728e79fb6d15f902a9167221c0-bfe8a7b97dcaeee0-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1442",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "116",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [
+        "CVE-2026-121439",
+        "GHSA-9prg-84vf-g5fc"
+      ],
+      "sourceModifiedAt": "2026-11-04T02:55:43.025714915Z",
+      "sourcePublishedAt": "2026-10-19T12:00:00Z",
+      "withdrawn": null,
+      "summary": "`wasi-http` p3: Guests can set incorrect content-length for spliced response bodies",
+      "affected": [
+        {
+          "package": {
+            "name": "wasmtime-wasi-http",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasmtime-wasi-http"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "46.0.0"
+                },
+                {
+                  "fixed": "48.0.7"
+                },
+                {
+                  "introduced": "49.0.0"
+                },
+                {
+                  "fixed": "49.0.4"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "functions": [],
+              "arch": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0375.json",
+            "categories": [],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/wasmtime-wasi-http"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0375.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/bytecodealliance/wasmtime/pull/14822"
+        }
+      ],
+      "matchedIds": [
+        "GHSA-9prg-84vf-g5fc"
+      ],
+      "cveId": null,
+      "status": "verified_alias_added_to_existing_curated_record",
+      "decision": "OSV explicit aliases and CNA vendor-advisory references identify existing GHSA. Maintainer API cve_id remains null; preserve that distinction and original dates/ranges.",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0376",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0376",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:32.835862Z",
+        "bytes": 1471,
+        "sha256": "71b0f5b39057574e46a8f8fc39f53ba424ab630fa0e83687d1c7b538f650d126",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:32 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "dfa1a3ff9cb014a5041489754ea7d0b3/2946433687047984693",
+          "traceparent": "00-dfa1a3ff9cb014a5041489754ea7d0b3-28e3d5d3d6bd5635-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1471",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "137",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [
+        "CVE-2026-121441",
+        "GHSA-r8xh-cgf7-392j"
+      ],
+      "sourceModifiedAt": "2026-11-04T02:55:53.874468619Z",
+      "sourcePublishedAt": "2026-10-19T12:00:00Z",
+      "withdrawn": null,
+      "summary": "`wasi-http`: Guests can add conflicting content lengths to messages",
+      "affected": [
+        {
+          "package": {
+            "name": "wasmtime-wasi-http",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasmtime-wasi-http"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "36.0.19"
+                },
+                {
+                  "introduced": "37.0.0"
+                },
+                {
+                  "fixed": "48.0.7"
+                },
+                {
+                  "introduced": "49.0.0"
+                },
+                {
+                  "fixed": "49.0.4"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "arch": [],
+              "os": [],
+              "functions": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0376.json",
+            "categories": [],
+            "cvss": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "informational": null
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/wasmtime-wasi-http"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0376.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/bytecodealliance/wasmtime/pull/14824"
+        }
+      ],
+      "matchedIds": [
+        "GHSA-r8xh-cgf7-392j"
+      ],
+      "cveId": null,
+      "status": "verified_alias_added_to_existing_curated_record",
+      "decision": "OSV explicit aliases and CNA vendor-advisory references identify existing GHSA. Maintainer API cve_id remains null; preserve that distinction and original dates/ranges.",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "RUSTSEC-2026-0377",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0377",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:32.898805Z",
+        "bytes": 1443,
+        "sha256": "b14e63ae8968c7cbdf469b22f5e0144bb6054350d2e44f84470212b1c2142fd3",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:13:32 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "df45e30cf1ed0b6615f902a916722490/15117929081863970757",
+          "traceparent": "00-df45e30cf1ed0b6615f902a916722490-d1cdac66d80c9fc5-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1443",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "146",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [
+        "CVE-2026-121440",
+        "GHSA-jxcf-8qw5-5c33"
+      ],
+      "sourceModifiedAt": "2026-11-04T02:55:58.676339211Z",
+      "sourcePublishedAt": "2026-10-19T12:00:00Z",
+      "withdrawn": null,
+      "summary": "`wasi-http` p3: forwarded trailers aren't checked against `is_forbidden_header` hook",
+      "affected": [
+        {
+          "package": {
+            "name": "wasmtime-wasi-http",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/wasmtime-wasi-http"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "46.0.0"
+                },
+                {
+                  "fixed": "48.0.7"
+                },
+                {
+                  "introduced": "49.0.0"
+                },
+                {
+                  "fixed": "49.0.4"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affects": {
+              "functions": [],
+              "arch": [],
+              "os": []
+            },
+            "affected_functions": null
+          },
+          "database_specific": {
+            "cvss": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0377.json",
+            "categories": []
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://crates.io/crates/wasmtime-wasi-http"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0377.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/bytecodealliance/wasmtime/pull/14823"
+        }
+      ],
+      "matchedIds": [
+        "GHSA-jxcf-8qw5-5c33"
+      ],
+      "cveId": null,
+      "status": "verified_alias_added_to_existing_curated_record",
+      "decision": "OSV explicit aliases and CNA vendor-advisory references identify existing GHSA. Maintainer API cve_id remains null; preserve that distinction and original dates/ranges.",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "GHSA-9prg-84vf-g5fc",
+      "fetch": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-9prg-84vf-g5fc",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:35.842929Z",
+        "bytes": 2589,
+        "sha256": "f5ea657a95353cc76f18a1bda5a70418e139dd65c3f8fd64cc8ddf3488e416aa",
+        "headers": {
+          "date": "Wed, 04 Nov 2026 21:13:35 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "vary": "Accept,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"f5ea657a95353cc76f18a1bda5a70418e139dd65c3f8fd64cc8ddf3488e416aa\"",
+          "last-modified": "Mon, 19 Oct 2026 19:20:41 GMT",
+          "x-github-media-type": "github.v3; format=json",
+          "x-github-api-version-selected": "2022-11-28",
+          "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+          "access-control-allow-origin": "*",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "x-frame-options": "deny",
+          "x-content-type-options": "nosniff",
+          "x-xss-protection": "0",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "content-security-policy": "default-src 'none'",
+          "server": "envoy",
+          "accept-ranges": "bytes",
+          "x-ratelimit-limit": "60",
+          "x-ratelimit-remaining": "55",
+          "x-ratelimit-used": "5",
+          "x-ratelimit-resource": "core",
+          "x-ratelimit-reset": "1793830403",
+          "content-length": "2589",
+          "x-github-request-id": "FDB1:BBF97:4504F2:49D86D:6AEB9FFF",
+          "x-github-edge-region": "westus3",
+          "x-envoy-upstream-service-time": "288",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [],
+      "sourceModifiedAt": "2026-10-19T19:20:41Z",
+      "sourcePublishedAt": "2026-10-19T19:20:41Z",
+      "withdrawn": null,
+      "summary": "wasi-http p3: Guests can set incorrect content-length for spliced response bodies",
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "wasmtime-wasi-http"
+          },
+          "vulnerable_version_range": ">= 46.0.0, < 48.0.7, >= 49.0.0, < 49.0.4",
+          "patched_versions": "48.0.7, 49.0.4",
+          "vulnerable_functions": []
+        }
+      ],
+      "references": [],
+      "matchedIds": [
+        "GHSA-9prg-84vf-g5fc"
+      ],
+      "cveId": null,
+      "status": "covered_by_explicit_id_or_alias"
+    },
+    {
+      "id": "GHSA-r8xh-cgf7-392j",
+      "fetch": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-r8xh-cgf7-392j",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:35.893959Z",
+        "bytes": 2712,
+        "sha256": "a8d649828b7cd888a60822d1638365c6dec928b71e9a1a0fd2c9b90bddce84e1",
+        "headers": {
+          "date": "Wed, 04 Nov 2026 21:13:35 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "vary": "Accept,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"a8d649828b7cd888a60822d1638365c6dec928b71e9a1a0fd2c9b90bddce84e1\"",
+          "last-modified": "Mon, 19 Oct 2026 19:29:11 GMT",
+          "x-github-media-type": "github.v3; format=json",
+          "x-github-api-version-selected": "2022-11-28",
+          "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+          "access-control-allow-origin": "*",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "x-frame-options": "deny",
+          "x-content-type-options": "nosniff",
+          "x-xss-protection": "0",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "content-security-policy": "default-src 'none'",
+          "server": "envoy",
+          "accept-ranges": "bytes",
+          "x-ratelimit-limit": "60",
+          "x-ratelimit-remaining": "56",
+          "x-ratelimit-used": "4",
+          "x-ratelimit-resource": "core",
+          "x-ratelimit-reset": "1793830403",
+          "content-length": "2712",
+          "x-github-request-id": "FDB1:BBF97:4504EC:49D863:6AEB9FF7",
+          "x-github-edge-region": "westus3",
+          "x-envoy-upstream-service-time": "385",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [],
+      "sourceModifiedAt": "2026-10-19T19:29:11Z",
+      "sourcePublishedAt": "2026-10-19T19:20:02Z",
+      "withdrawn": null,
+      "summary": "wasi-http: Guests can add conflicting content lengths to messages",
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "wasmtime-wasi-http"
+          },
+          "vulnerable_version_range": "< 36.0.19, >= 37.0.0, < 48.0.7, >= 49.0.0, < 49.0.4",
+          "patched_versions": "36.0.19, 48.0.7, 49.0.4",
+          "vulnerable_functions": []
+        }
+      ],
+      "references": [],
+      "matchedIds": [
+        "GHSA-r8xh-cgf7-392j"
+      ],
+      "cveId": null,
+      "status": "covered_by_explicit_id_or_alias"
+    },
+    {
+      "id": "GHSA-jxcf-8qw5-5c33",
+      "fetch": {
+        "url": "https://api.github.com/repos/bytecodealliance/wasmtime/security-advisories/GHSA-jxcf-8qw5-5c33",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:13:35.854916Z",
+        "bytes": 3370,
+        "sha256": "05dfa235beea6a17f02f53153615a9d3fc4515120b75a7dd89df9f05ec42db3d",
+        "headers": {
+          "date": "Wed, 04 Nov 2026 21:13:35 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "vary": "Accept,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"05dfa235beea6a17f02f53153615a9d3fc4515120b75a7dd89df9f05ec42db3d\"",
+          "last-modified": "Mon, 19 Oct 2026 19:20:21 GMT",
+          "x-github-media-type": "github.v3; format=json",
+          "x-github-api-version-selected": "2022-11-28",
+          "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+          "access-control-allow-origin": "*",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "x-frame-options": "deny",
+          "x-content-type-options": "nosniff",
+          "x-xss-protection": "0",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "content-security-policy": "default-src 'none'",
+          "server": "envoy",
+          "accept-ranges": "bytes",
+          "x-ratelimit-limit": "60",
+          "x-ratelimit-remaining": "54",
+          "x-ratelimit-used": "6",
+          "x-ratelimit-resource": "core",
+          "x-ratelimit-reset": "1793830403",
+          "content-length": "3370",
+          "x-github-request-id": "FDB1:BBF97:4504F3:49D872:6AEB9FFF",
+          "x-github-edge-region": "westus3",
+          "x-envoy-upstream-service-time": "292",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [],
+      "sourceModifiedAt": "2026-10-19T19:20:21Z",
+      "sourcePublishedAt": "2026-10-19T19:20:21Z",
+      "withdrawn": null,
+      "summary": "wasi-http p3: forwarded trailers aren't checked against `is_forbidden_header` hook",
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "rust",
+            "name": "wasmtime-wasi-http"
+          },
+          "vulnerable_version_range": ">= 46.0.0, < 48.0.7, >= 49.0.0, < 49.0.4",
+          "patched_versions": "48.0.7, 49.0.4",
+          "vulnerable_functions": []
+        }
+      ],
+      "references": [],
+      "matchedIds": [
+        "GHSA-jxcf-8qw5-5c33"
+      ],
+      "cveId": null,
+      "status": "covered_by_explicit_id_or_alias"
+    },
+    {
+      "id": "PYSEC-2026-4361",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4361",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:15:15.108619Z",
+        "bytes": 1491,
+        "sha256": "b88b6bfd8f14d657769484f6eca34245225e61aae858e3f65e3c8aeb8be2a88f",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:15:14 GMT",
+          "server": "envoy",
+          "x-cloud-trace-context": "85abf137617622a31ce660c4ca1a7f4c/8680365550086843161",
+          "traceparent": "00-85abf137617622a31ce660c4ca1a7f4c-7876da7a2d76eb19-00",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "1491",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "111",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [
+        "CVE-2026-114052",
+        "GHSA-823j-m4cj-hmjf"
+      ],
+      "sourceModifiedAt": "2026-11-04T11:00:04.171049902Z",
+      "sourcePublishedAt": "2026-10-21T01:17:27.943Z",
+      "withdrawn": null,
+      "summary": null,
+      "affected": [
+        {
+          "package": {
+            "name": "vllm",
+            "ecosystem": "PyPI",
+            "purl": "pkg:pypi/vllm"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0.24.0"
+                },
+                {
+                  "fixed": "0.31.0"
+                }
+              ]
+            }
+          ],
+          "versions": [
+            "0.24.0",
+            "0.25.0",
+            "0.25.1",
+            "0.26.0",
+            "0.27.0",
+            "0.27.1",
+            "0.28.0",
+            "0.29.0",
+            "0.30.0"
+          ],
+          "ecosystem_specific": {},
+          "database_specific": {
+            "source": "https://github.com/pypa/advisory-database/blob/main/vulns/vllm/PYSEC-2026-4361.yaml"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-823j-m4cj-hmjf"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://www.vulncheck.com/advisories/vllm-0.25.0-before-0.31.0-moss-audio-memory-exhaustion-via-tokenize-mm-processor-kwargs"
+        }
+      ],
+      "matchedIds": [
+        "GHSA-823j-m4cj-hmjf"
+      ],
+      "cveId": null,
+      "status": "verified_new_curated_record",
+      "decision": "New explicit OSV aliases, exact PyPI package mapping and accessible official maintainer structured affected/fixed fields support addition. MOSS-Audio runtime prerequisite preserved. Maintainer range >0.24.0 differs from OSV >=0.24.0 including explicit 0.24.0; retain both. Database publication 2026-10-21 differs from maintainer 2026-10-06.",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "PYSEC-2026-4362",
+      "fetch": {
+        "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4362",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:15:15.109890Z",
+        "bytes": 2242,
+        "sha256": "3b654d028c0280c44dbef880ee2a1bf9cc800ad6e733297fdc81ca8980d7bb32",
+        "headers": {
+          "content-type": "application/json",
+          "date": "Wed, 04 Nov 2026 21:15:14 GMT",
+          "server": "envoy",
+          "traceparent": "00-ecd822f8bfab08c11ce660c4ca1a7fcf-45df79bb2c2ed4d1-00",
+          "x-cloud-trace-context": "ecd822f8bfab08c11ce660c4ca1a7fcf/5034876753230615761",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "grpc-status": "0",
+          "grpc-message": "",
+          "content-length": "2242",
+          "x-envoy-decorator-operation": "ingress GetVulnById",
+          "x-envoy-upstream-service-time": "108",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [
+        "CVE-2026-114054",
+        "GHSA-rh6f-3x46-j33q"
+      ],
+      "sourceModifiedAt": "2026-11-04T11:00:04.171438724Z",
+      "sourcePublishedAt": "2026-10-21T01:17:28.223Z",
+      "withdrawn": null,
+      "summary": null,
+      "affected": [
+        {
+          "package": {
+            "name": "vllm",
+            "ecosystem": "PyPI",
+            "purl": "pkg:pypi/vllm"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "0.31.0"
+                }
+              ]
+            }
+          ],
+          "versions": [
+            "0.0.1",
+            "0.1.0",
+            "0.1.1",
+            "0.1.2",
+            "0.1.3",
+            "0.1.4",
+            "0.1.5",
+            "0.1.6",
+            "0.1.7",
+            "0.10.0",
+            "0.10.1",
+            "0.10.1.1",
+            "0.10.2",
+            "0.11.0",
+            "0.11.1",
+            "0.11.2",
+            "0.12.0",
+            "0.13.0",
+            "0.14.0",
+            "0.14.1",
+            "0.15.0",
+            "0.15.1",
+            "0.16.0",
+            "0.17.0",
+            "0.17.1",
+            "0.18.0",
+            "0.18.1",
+            "0.19.0",
+            "0.19.1",
+            "0.2.0",
+            "0.2.1",
+            "0.2.1.post1",
+            "0.2.2",
+            "0.2.3",
+            "0.2.4",
+            "0.2.5",
+            "0.2.6",
+            "0.2.7",
+            "0.20.0",
+            "0.20.1",
+            "0.20.2",
+            "0.21.0",
+            "0.22.0",
+            "0.22.1",
+            "0.23.0",
+            "0.24.0",
+            "0.25.0",
+            "0.25.1",
+            "0.26.0",
+            "0.27.0",
+            "0.27.1",
+            "0.28.0",
+            "0.29.0",
+            "0.3.0",
+            "0.3.1",
+            "0.3.2",
+            "0.3.3",
+            "0.30.0",
+            "0.4.0",
+            "0.4.0.post1",
+            "0.4.1",
+            "0.4.2",
+            "0.4.3",
+            "0.5.0",
+            "0.5.0.post1",
+            "0.5.1",
+            "0.5.2",
+            "0.5.3",
+            "0.5.3.post1",
+            "0.5.4",
+            "0.5.5",
+            "0.6.0",
+            "0.6.1",
+            "0.6.1.post1",
+            "0.6.1.post2",
+            "0.6.2",
+            "0.6.3",
+            "0.6.3.post1",
+            "0.6.4",
+            "0.6.4.post1",
+            "0.6.5",
+            "0.6.6",
+            "0.6.6.post1",
+            "0.7.0",
+            "0.7.1",
+            "0.7.2",
+            "0.7.3",
+            "0.8.0",
+            "0.8.1",
+            "0.8.2",
+            "0.8.3",
+            "0.8.4",
+            "0.8.5",
+            "0.8.5.post1",
+            "0.9.0",
+            "0.9.0.1",
+            "0.9.1",
+            "0.9.2"
+          ],
+          "ecosystem_specific": {},
+          "database_specific": {
+            "source": "https://github.com/pypa/advisory-database/blob/main/vulns/vllm/PYSEC-2026-4362.yaml"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-rh6f-3x46-j33q"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://www.vulncheck.com/advisories/vllm-before-0.31.0-cross-request-cache-aliasing-via-exif-imageid-and-prefix-cache-keys"
+        }
+      ],
+      "matchedIds": [
+        "GHSA-rh6f-3x46-j33q"
+      ],
+      "cveId": null,
+      "status": "verified_new_curated_record",
+      "decision": "Official maintainer structured vulnerable range <0.31.0 and patched >=0.31.0 plus OSV package mapping support addition without inferring that a cited PR is merged. Body retains confirmed0.25.1 and unknown lower bound; structured range is separately attributed. Maintainer cve_id null and OSV explicit CVE alias remain distinct. Two impact scores remain distinct in caveat.",
+      "matchesExportFullObject": true
+    },
+    {
+      "id": "GHSA-823j-m4cj-hmjf",
+      "fetch": {
+        "url": "https://api.github.com/repos/vllm-project/vllm/security-advisories/GHSA-823j-m4cj-hmjf",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:15:16.017826Z",
+        "bytes": 10724,
+        "sha256": "c75ed991ef2b93f0361535c8502d9e547b112784064d2430d3004f77868e1e7d",
+        "headers": {
+          "date": "Wed, 04 Nov 2026 21:15:15 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "vary": "Accept,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"c75ed991ef2b93f0361535c8502d9e547b112784064d2430d3004f77868e1e7d\"",
+          "last-modified": "Fri, 23 Oct 2026 18:59:09 GMT",
+          "x-github-media-type": "github.v3; format=json",
+          "x-github-api-version-selected": "2022-11-28",
+          "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+          "access-control-allow-origin": "*",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "x-frame-options": "deny",
+          "x-content-type-options": "nosniff",
+          "x-xss-protection": "0",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "content-security-policy": "default-src 'none'",
+          "server": "envoy",
+          "accept-ranges": "bytes",
+          "x-ratelimit-limit": "60",
+          "x-ratelimit-remaining": "42",
+          "x-ratelimit-used": "18",
+          "x-ratelimit-resource": "core",
+          "x-ratelimit-reset": "1793830459",
+          "content-length": "10724",
+          "x-github-request-id": "FC29:2ECE09:1263D93:1A17013:6AEBA05E",
+          "x-github-edge-region": "sea",
+          "x-envoy-upstream-service-time": "379",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [],
+      "sourceModifiedAt": "2026-10-23T18:59:09Z",
+      "sourcePublishedAt": "2026-10-06T06:59:51Z",
+      "withdrawn": null,
+      "summary": "MOSS-Audio request-controlled processor cache permits remote memory exhaustion",
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "vllm"
+          },
+          "vulnerable_version_range": "> 0.24.0, < 0.31.0",
+          "patched_versions": ">= 0.31.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "references": [],
+      "matchedIds": [
+        "GHSA-823j-m4cj-hmjf"
+      ],
+      "cveId": "CVE-2026-114052",
+      "status": "verified_new_curated_record",
+      "decision": "New explicit OSV aliases, exact PyPI package mapping and accessible official maintainer structured affected/fixed fields support addition. MOSS-Audio runtime prerequisite preserved. Maintainer range >0.24.0 differs from OSV >=0.24.0 including explicit 0.24.0; retain both. Database publication 2026-10-21 differs from maintainer 2026-10-06."
+    },
+    {
+      "id": "GHSA-rh6f-3x46-j33q",
+      "fetch": {
+        "url": "https://api.github.com/repos/vllm-project/vllm/security-advisories/GHSA-rh6f-3x46-j33q",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:15:15.953020Z",
+        "bytes": 17223,
+        "sha256": "f92ab923d703e539716e0ae27deb8770c5e92e5132d25e77d5240734798d8089",
+        "headers": {
+          "date": "Wed, 04 Nov 2026 21:15:15 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "cache-control": "public, max-age=60, s-maxage=60",
+          "vary": "Accept,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"f92ab923d703e539716e0ae27deb8770c5e92e5132d25e77d5240734798d8089\"",
+          "last-modified": "Tue, 06 Oct 2026 07:08:41 GMT",
+          "x-github-media-type": "github.v3; format=json",
+          "x-github-api-version-selected": "2022-11-28",
+          "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning",
+          "access-control-allow-origin": "*",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "x-frame-options": "deny",
+          "x-content-type-options": "nosniff",
+          "x-xss-protection": "0",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "content-security-policy": "default-src 'none'",
+          "server": "envoy",
+          "accept-ranges": "bytes",
+          "x-ratelimit-limit": "60",
+          "x-ratelimit-remaining": "43",
+          "x-ratelimit-used": "17",
+          "x-ratelimit-resource": "core",
+          "x-ratelimit-reset": "1793830459",
+          "content-length": "17223",
+          "x-github-request-id": "FC29:2ECE09:1263D93:1A17014:6AEBA063",
+          "x-github-edge-region": "sea",
+          "x-envoy-upstream-service-time": "308",
+          "connection": "close"
+        }
+      },
+      "priorDecision": null,
+      "priorStatus": null,
+      "aliases": [],
+      "sourceModifiedAt": "2026-10-06T07:08:41Z",
+      "sourcePublishedAt": "2026-10-06T07:08:41Z",
+      "withdrawn": null,
+      "summary": "Caller-controllable values become or collide with shared cache keys, enabling cross-request cache aliasing (2 sites: multimodal EXIF hash and prefix-cache extra keys)",
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "vllm"
+          },
+          "vulnerable_version_range": "< 0.31.0",
+          "patched_versions": ">= 0.31.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "references": [],
+      "matchedIds": [
+        "GHSA-rh6f-3x46-j33q"
+      ],
+      "cveId": null,
+      "status": "verified_new_curated_record",
+      "decision": "Official maintainer structured vulnerable range <0.31.0 and patched >=0.31.0 plus OSV package mapping support addition without inferring that a cited PR is merged. Body retains confirmed0.25.1 and unknown lower bound; structured range is separately attributed. Maintainer cve_id null and OSV explicit CVE alias remain distinct. Two impact scores remain distinct in caveat."
+    }
+  ],
+  "cnaAliasVerification": [
+    {
+      "id": "CVE-2026-121440",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-121440",
+      "responseSha256": "bddde02a6450c262fef9831be3274a455ab858f87d8bf6b7729a1888e1b1b7a4",
+      "metadata": {
+        "cveId": "CVE-2026-121440",
+        "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+        "state": "PUBLISHED",
+        "assignerShortName": "VulnCheck",
+        "dateReserved": "2026-11-03T12:32:14.752Z",
+        "datePublished": "2026-11-03T14:28:31.228Z",
+        "dateUpdated": "2026-11-03T18:28:48.629Z"
+      },
+      "references": [
+        {
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-jxcf-8qw5-5c33",
+          "tags": [
+            "vendor-advisory"
+          ],
+          "name": "GitHub Security Advisory (GHSA-jxcf-8qw5-5c33)"
+        },
+        {
+          "name": "VulnCheck Advisory: Wasmtime 46.0.0 before 48.0.7 and 49.0.0 before 49.0.4 Forwarded Trailers Header Filter Bypass",
+          "tags": [
+            "third-party-advisory"
+          ],
+          "url": "https://www.vulncheck.com/advisories/wasmtime-46.0.0-before-48.0.7-and-49.0.0-before-49.0.4-forwarded-trailers-header-filter-bypass"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-121439",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-121439",
+      "responseSha256": "1d5139437377cab4e666a253305c671cf6e2978c6d29874c7a0117e3b6e4c1d6",
+      "metadata": {
+        "cveId": "CVE-2026-121439",
+        "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+        "state": "PUBLISHED",
+        "assignerShortName": "VulnCheck",
+        "dateReserved": "2026-11-03T12:32:14.752Z",
+        "datePublished": "2026-11-03T14:28:30.570Z",
+        "dateUpdated": "2026-11-03T14:28:30.570Z"
+      },
+      "references": [
+        {
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc",
+          "tags": [
+            "vendor-advisory"
+          ],
+          "name": "GitHub Security Advisory (GHSA-9prg-84vf-g5fc)"
+        },
+        {
+          "name": "VulnCheck Advisory: Wasmtime 46.0.0 before 48.0.7 and 49.0.0 before 49.0.4 HTTP Response Splitting via wasi-http",
+          "tags": [
+            "third-party-advisory"
+          ],
+          "url": "https://www.vulncheck.com/advisories/wasmtime-46.0.0-before-48.0.7-and-49.0.0-before-49.0.4-http-response-splitting-via-wasi-http"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-121441",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-121441",
+      "responseSha256": "3d002268eeb1c40f7cf0b310463050b358b890416e744cfc930e00870a68d10f",
+      "metadata": {
+        "cveId": "CVE-2026-121441",
+        "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+        "state": "PUBLISHED",
+        "assignerShortName": "VulnCheck",
+        "dateReserved": "2026-11-03T12:32:14.752Z",
+        "datePublished": "2026-11-03T14:28:31.931Z",
+        "dateUpdated": "2026-11-03T16:57:45.823Z"
+      },
+      "references": [
+        {
+          "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-r8xh-cgf7-392j",
+          "tags": [
+            "vendor-advisory"
+          ],
+          "name": "GitHub Security Advisory (GHSA-r8xh-cgf7-392j)"
+        },
+        {
+          "name": "VulnCheck Advisory: Wasmtime before 36.0.19, 37.0.0 before 48.0.7, and 49.0.0 before 49.0.4 wasi-http Request Smuggling",
+          "tags": [
+            "third-party-advisory"
+          ],
+          "url": "https://www.vulncheck.com/advisories/wasmtime-before-36.0.19-37.0.0-before-48.0.7-and-49.0.0-before-49.0.4-wasi-http-request-smuggling"
+        }
+      ]
+    }
+  ],
+  "deltaAudit": "osv-supplemental-delta-2026-11-05.json",
+  "limitations": [
+    "Only explicit IDs/aliases used for deduplication; related/upstream/reference similarity does not imply equivalence.",
+    "Maintainer checks are targeted, not a claim of checking every upstream reference.",
+    "OSV 404 on held CVEs means unavailable in that API at check time, not nonexistent or safe.",
+    "No target scan, private dependency submission, malicious-package import, or PoC execution."
+  ],
+  "curatedChanges": {
+    "added": [
+      "GHSA-823j-m4cj-hmjf",
+      "GHSA-rh6f-3x46-j33q"
+    ],
+    "aliasUpdated": [
+      "GHSA-9prg-84vf-g5fc",
+      "GHSA-r8xh-cgf7-392j",
+      "GHSA-jxcf-8qw5-5c33"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3fxj-6jh8-hvhx",
+  "aliases": [],
+  "title": "chi Has an IP Spoofing Vulnerability in `middleware.RealIP`",
+  "summary": "chi Has an IP Spoofing Vulnerability in `middleware.RealIP`",
+  "publishedAt": "2026-06-25T18:21:37Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/06/GHSA-3fxj-6jh8-hvhx/GHSA-3fxj-6jh8-hvhx.json",
+  "modifiedAt": "2026-11-04T03:49:24Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-04T21:17:09.476046Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/go-chi/chi/v5",
+      "ranges": [
+        {
+          "affected": ">= 5.2.1, < 5.3.0",
+          "fixed": "5.3.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/06/GHSA-3fxj-6jh8-hvhx/GHSA-3fxj-6jh8-hvhx.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.2.1"
+            },
+            {
+              "fixed": "5.3.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/go-chi/chi/v5/middleware",
+      "ranges": [
+        {
+          "affected": ">= 5.2.1, < 5.3.0",
+          "fixed": "5.3.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/06/GHSA-3fxj-6jh8-hvhx/GHSA-3fxj-6jh8-hvhx.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "5.2.1"
+            },
+            {
+              "fixed": "5.3.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/06/GHSA-3fxj-6jh8-hvhx/GHSA-3fxj-6jh8-hvhx.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/06/GHSA-3fxj-6jh8-hvhx/GHSA-3fxj-6jh8-hvhx.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/06/GHSA-3fxj-6jh8-hvhx/GHSA-3fxj-6jh8-hvhx.json",
+      "publishedDate": "2026-06-25",
+      "publishedAt": "2026-06-25T18:21:37Z",
+      "modifiedAt": "2026-11-04T03:49:24Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "chi Has an IP Spoofing Vulnerability in `middleware.RealIP`",
+      "url": "https://github.com/advisories/GHSA-3fxj-6jh8-hvhx",
+      "publishedDate": "2026-06-25"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/go-chi/chi/security/advisories/GHSA-3fxj-6jh8-hvhx",
+      "publishedDate": "2026-05-22",
+      "publishedAt": "2026-05-22T15:53:05Z",
+      "modifiedAt": "2026-05-22T16:00:01Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元APIはpackage名をURL https://github.com/go-chi/chi、影響>=5.2.1、修正版5.3.0と記載する。ReviewedはGoモジュールgithub.com/go-chi/chi/v5と/middlewareの両行を保持する。開発元の開いた影響範囲を独自に閉じず、DBの系列別範囲と分ける。",
+    "実悪用・KEVはこの資料確認では未確認。公開PoCや深刻度から実悪用や企業被害を推定しない。"
+  ]
+}
