@@ -1,0 +1,103 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-823j-m4cj-hmjf",
+  "aliases": [
+    "CVE-2026-114052",
+    "PYSEC-2026-4361"
+  ],
+  "title": "vLLM：MOSS-Audioプロセッサキャッシュによるメモリ枯渇",
+  "summary": "MOSS-Audioモデルを提供する構成で、/tokenizeへの入力によって上限のないプロセッサキャッシュが増大し、メモリ枯渇やAPIプロセスの停止につながる。",
+  "publishedAt": "2026-10-21T01:17:27.943Z",
+  "modifiedAt": "2026-11-04T11:00:04.171049902Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-04T21:16:45.579772Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/PYSEC-2026-4361",
+  "affected": [
+    {
+      "ecosystem": "pypi",
+      "packageName": "vllm",
+      "ranges": [
+        {
+          "affected": "> 0.24.0, < 0.31.0",
+          "fixed": "0.31.0",
+          "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-823j-m4cj-hmjf"
+        },
+        {
+          "affected": ">= 0.24.0, < 0.31.0",
+          "fixed": "0.31.0",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/PYSEC-2026-4361"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.24.0"
+            },
+            {
+              "fixed": "0.31.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [
+        "0.24.0",
+        "0.25.0",
+        "0.25.1",
+        "0.26.0",
+        "0.27.0",
+        "0.27.1",
+        "0.28.0",
+        "0.29.0",
+        "0.30.0"
+      ],
+      "packageUrl": "pkg:pypi/vllm"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-823j-m4cj-hmjf",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 7.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://github.com/vllm-project/vllm/security/advisories/GHSA-823j-m4cj-hmjf"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / PyPI：PYSEC-2026-4361",
+      "url": "https://api.osv.dev/v1/vulns/PYSEC-2026-4361",
+      "publishedDate": "2026-10-21",
+      "publishedAt": "2026-10-21T01:17:27.943Z",
+      "modifiedAt": "2026-11-04T11:00:04.171049902Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "vLLM公式セキュリティアドバイザリ",
+      "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-823j-m4cj-hmjf",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T06:59:51Z",
+      "modifiedAt": "2026-10-23T18:59:09Z"
+    }
+  ],
+  "caveats": [
+    "OSV/PyPIの公表・更新日時と開発元の公表日時は別の日時として保持する。",
+    "修正版の記載はこの問題についての境界であり、現在の全脆弱性に対する安全性を保証しない。CISA KEV取得失敗を未掲載や実悪用なしとは扱わない。",
+    "開発元の構造化範囲は > 0.24.0、OSV/PyPIのイベントと列挙バージョンは0.24.0を含む。不一致を統合せず出典別に保持する。",
+    "MOSS-Audioを提供する構成に限定される。開発元は/tokenizeが--api-keyの保護対象外と説明しており、APIキー設定だけで露出がなくなるとはしない。"
+  ]
+}

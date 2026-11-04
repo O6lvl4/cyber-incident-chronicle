@@ -1,0 +1,489 @@
+{
+  "reportDateJst": "2026-11-05",
+  "checkedAt": "2026-11-04T21:15:37Z",
+  "baseCommit": "0e3cf2e36e337c80eb60e148bf167ecfc309f4a2",
+  "recordsBefore": 55,
+  "recordsAfter": 58,
+  "addedRecords": 3,
+  "updatedRecords": 0,
+  "added": [
+    "CVE-2026-109849",
+    "GHSA-g35w-6r6v-h4r7",
+    "CVE-2026-105296"
+  ],
+  "updated": [],
+  "scope": "既存製品カテゴリーを独立確認。前回2026-11-03T21:09:00Zに対し11月1日以降の重複窓で公的一覧・oss-security・選定開発元本文を確認。既存55件の全本文再調査、全製品Critical網羅を意味しない。",
+  "sources": [
+    {
+      "name": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "status": "verified-no-change",
+      "latestUpdate": "2026-10-29",
+      "checkedAt": "2026-11-04T21:15:37Z"
+    },
+    {
+      "name": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "status": "verified-no-change",
+      "latestUpdate": "2026-11-02",
+      "checkedAt": "2026-11-04T21:15:37Z"
+    },
+    {
+      "name": "JVN",
+      "url": "https://jvn.jp/",
+      "status": "verified-new-candidates",
+      "latestUpdate": "2026-11-04",
+      "checkedAt": "2026-11-04T21:15:37Z"
+    },
+    {
+      "name": "CISA KEV",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "status": "fetch-failed",
+      "error": "HTTP403",
+      "successfulCheckpointAdvanced": false,
+      "checkedAt": "2026-11-04T21:15:37Z"
+    },
+    {
+      "name": "CISA official GitHub mirror",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "status": "verified-new-candidate",
+      "catalogVersion": "2026.11.03",
+      "snapshotCount": 1767,
+      "newSinceOverlap": [
+        "CVE-2026-119977"
+      ],
+      "note": "cisa.gov限定検証は変更しない。旧成功確認点は保持。",
+      "checkedAt": "2026-11-04T21:15:37Z"
+    },
+    {
+      "name": "oss-security",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/",
+      "status": "verified-new-candidates",
+      "messages": 59,
+      "note": "11月1〜4日の一覧。11月3日後半と4日の製品候補本文を選定確認。全本文の網羅確認ではない。",
+      "checkedAt": "2026-11-04T21:15:37Z"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CVE-2026-109849",
+      "decision": "included",
+      "reason": "開発元の系列別修正とJVN公的注意喚起を確認。CNA404は保持。"
+    },
+    {
+      "id": "GHSA-g35w-6r6v-h4r7",
+      "decision": "included",
+      "reason": "開発元Critical、JVNの実悪用確認と注意喚起。10月17日の開発元公表と11月4日のJVN公表を区別。"
+    },
+    {
+      "id": "CVE-2026-105296",
+      "decision": "included",
+      "reason": "開発元7月30日リリースと11月4日JVN注意喚起を区別。JVNの複数製品範囲を保持。"
+    },
+    {
+      "id": "CVE-2026-119977",
+      "decision": "held-kev-source-contract",
+      "sourceUrl": "https://wordpress.org/news/2026/10/wordpress-7-1-4/",
+      "reason": "WordPress開発元10月28日公表・7.1.4修正とWordfence CNA High8.1を確認。CISA公式ミラーとCISA-ADPは11月3日KEV掲載を示すが、本体403とcisa.gov限定検証のため構造化KEVを付けない。実悪用の記述を別基準へ付け替えて制約を回避しない。"
+    },
+    {
+      "id": "INFINITT-PACS-VU-203719",
+      "aliases": [
+        "CVE-2026-16305",
+        "CVE-2026-16306"
+      ],
+      "decision": "held-maintainer-publication",
+      "sourceUrl": "https://kb.cert.org/vuls/id/203719",
+      "reason": "CERT/CCの11月2日告知とJVN11月4日告知を確認。3.0.11.3/3.0.11.5に影響、3.0.12.3/3.0.12.5に修正。開発元声明なしと明記され、開発元の公表日を確認できないため代用しない。"
+    },
+    {
+      "id": "BASECHAT-VU-124705",
+      "decision": "held-maintainer-publication",
+      "sourceUrl": "https://kb.cert.org/vuls/id/124705",
+      "reason": "CERT/CCとJVNの公的告知を確認。Android9.8.1、開発元との調整不能・声明未受領。開発元公表日と修正版を推定しない。"
+    },
+    {
+      "id": "ICSA-26-307-01",
+      "aliases": [
+        "CVE-2026-63017",
+        "CVE-2026-63774"
+      ],
+      "decision": "held-maintainer-publication",
+      "sourceUrl": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-307-01.json",
+      "reason": "CISA公式CSAFでCritical9.0と版別対策を確認。CISA本体403。資料はCISA発行で独立した開発元公表日を確認できず、CISAの日付を開発元日付へ置換しない。"
+    },
+    {
+      "id": "NODEJS-NOVEMBER-2026-PREALERT",
+      "decision": "held-prerelease",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/04/3",
+      "reason": "開発元による11月11日以降の22/24/26系列更新予告。最高High、CVE・修正版未公表。既存October記録へ混入しない。"
+    },
+    {
+      "id": "APACHE-OFBIZ-2026-11-04",
+      "decision": "held-per-cve-inclusion-evidence",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/04/9",
+      "aliases": [
+        "CVE-2026-100168",
+        "CVE-2026-100228",
+        "CVE-2026-105325",
+        "CVE-2026-105330",
+        "CVE-2026-105461",
+        "CVE-2026-109129",
+        "CVE-2026-109837",
+        "CVE-2026-109856",
+        "CVE-2026-109928",
+        "CVE-2026-114229",
+        "CVE-2026-114233",
+        "CVE-2026-114235",
+        "CVE-2026-114271",
+        "CVE-2026-114272",
+        "CVE-2026-114277",
+        "CVE-2026-66903",
+        "CVE-2026-68524",
+        "CVE-2026-71901",
+        "CVE-2026-73577",
+        "CVE-2026-73578",
+        "CVE-2026-73580",
+        "CVE-2026-74841",
+        "CVE-2026-76150",
+        "CVE-2026-76152",
+        "CVE-2026-81734",
+        "CVE-2026-81744",
+        "CVE-2026-81808",
+        "CVE-2026-81815",
+        "CVE-2026-81816",
+        "CVE-2026-81828",
+        "CVE-2026-82894",
+        "CVE-2026-82902",
+        "CVE-2026-82904",
+        "CVE-2026-82907",
+        "CVE-2026-82910",
+        "CVE-2026-82912",
+        "CVE-2026-82916",
+        "CVE-2026-82960",
+        "CVE-2026-83538",
+        "CVE-2026-83542",
+        "CVE-2026-84183",
+        "CVE-2026-84728",
+        "CVE-2026-85627",
+        "CVE-2026-92887",
+        "CVE-2026-97355",
+        "CVE-2026-97356"
+      ],
+      "reason": "開発元は46 CVEと24.09.08修正、一部Criticalと記載。開発元一覧の範囲も確認したが46件のCNA APIは全て404。どのCVEがCriticalか確定せず、集合の全CVEをCriticalと扱わない。"
+    },
+    {
+      "id": "APACHE-OPENOFFICE-2026-11-03",
+      "decision": "held-inclusion-evidence",
+      "sourceUrls": [
+        "https://www.openwall.com/lists/oss-security/2026/11/03/21",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/22",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/23",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/24",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/25",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/26",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/27",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/28",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/29",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/30",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/31",
+        "https://www.openwall.com/lists/oss-security/2026/11/03/32"
+      ],
+      "reason": "開発元12件の本文は取得。Low/Medium/Moderate/Importantで、Criticalや実悪用・公開PoCを確認していない。ImportantをHigh/Criticalへ換算しない。"
+    },
+    {
+      "id": "GODOTSTEAM-PEER-ID-CLAIM",
+      "decision": "held-stable-identity-and-maintainer-evidence",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/04/11",
+      "reason": "公表者の実証と公開リポジトリへのリンクを確認したが、CVEは申請段階、開発元応答なし。攻撃コード自体は未検証・未実行で、CVE申請番号を割当CVEへ置換しない。"
+    },
+    {
+      "id": "CVE-2026-122054",
+      "decision": "excluded-scope-and-inclusion",
+      "sourceUrl": "https://www.openwall.com/lists/oss-security/2026/11/04/10",
+      "reason": "GNU C LibraryのCVSS5.9、Public-Dateは2020-03-27、2.32修正。11月4日の告知を初回公表と混同しない。今回の選定製品基準も未確認。"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.akeeba.com/news/1789-security-hardening-in-todays-akeeba-backup-solo-and-admin-tools-releases.html",
+      "error": "Web inaccessible; direct HTTP403",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109849",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01",
+      "error": "HTTP403",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "error": "HTTP403",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://nodejs.org/en/blog/vulnerability/november-2026-security-releases",
+      "error": "Web inaccessible",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/03/",
+      "error": "Direct HTTP500; monthly index and selected message bodies succeeded",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-100168",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-100228",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105325",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105330",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105461",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109129",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109837",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109856",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109928",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114229",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114233",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114235",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114271",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114272",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114277",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-66903",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-68524",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-71901",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-73577",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-73578",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-73580",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-74841",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-76150",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-76152",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-81734",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-81744",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-81808",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-81815",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-81816",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-81828",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-82894",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-82902",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-82904",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-82907",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-82910",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-82912",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-82916",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-82960",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-83538",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-83542",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-84183",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-84728",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-85627",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-92887",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-97355",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-97356",
+      "error": "HTTP404",
+      "successfulCheckpointAdvanced": false
+    }
+  ],
+  "recoveredSources": [
+    {
+      "url": "https://www.hinemos.info/news/hinemos-vulnerability-20261104",
+      "note": "Web inaccessible; direct HTTP body succeeded"
+    },
+    {
+      "url": "https://api.github.com/repos/airbytehq/airbyte/security-advisories/GHSA-g35w-6r6v-h4r7",
+      "note": "Direct API succeeded; publication/update timestamp and no CVE verified"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105296",
+      "note": "CNA succeeded and affected ranges agree with JVN"
+    }
+  ],
+  "priorHolds": "docs/data/product-advisory-review-2026-11-03.json と2026-11-04.jsonの未解決候補・日付制約・別名衝突を維持。Linux98432、PHP Windows/Brotli、Envoy、TNS-2026-32等を解決済みと扱わない。",
+  "validation": {
+    "products": "node scripts/product-status.mjs passed 58 records",
+    "fullCheck": "pnpm 10.34.6 check passed: data and coverage gates, 161 tests, TypeScript and production build (2026-11-04 UTC). Browser/quality gates remain required in the unchanged PR workflow before merge."
+  },
+  "evidenceSnapshots": []
+}

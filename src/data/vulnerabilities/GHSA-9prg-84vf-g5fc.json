@@ -2,14 +2,15 @@
   "kind": "vulnerability",
   "id": "GHSA-9prg-84vf-g5fc",
   "aliases": [
+    "CVE-2026-121439",
     "RUSTSEC-2026-0375"
   ],
   "title": "Wasmtime：WASIp3のContent-Length不整合でレスポンス分割",
   "summary": "WASIp3ゲストが既存bodyを新しい応答へ転送する際、不正なContent-Lengthが検証されず応答の分割・注入につながる。",
   "publishedAt": "2026-10-19T12:00:00Z",
-  "modifiedAt": "2026-10-20T11:15:37.071259108Z",
+  "modifiedAt": "2026-11-04T02:55:43.025714915Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-20T21:38:45.948346Z",
+  "lastVerifiedAt": "2026-11-04T21:14:45.328459Z",
   "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0375",
   "affected": [
     {
@@ -78,7 +79,7 @@
       "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0375",
       "publishedDate": "2026-10-19",
       "publishedAt": "2026-10-19T12:00:00Z",
-      "modifiedAt": "2026-10-20T11:15:37.071259108Z"
+      "modifiedAt": "2026-11-04T02:55:43.025714915Z"
     },
     {
       "type": "advisoryDatabase",
@@ -92,12 +93,19 @@
       "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-9prg-84vf-g5fc",
       "publishedDate": "2026-10-19",
       "publishedAt": "2026-10-19T19:20:41Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE公式レコード：CVE-2026-121439",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-121439",
+      "publishedDate": "2026-11-03"
     }
   ],
   "caveats": [
     "収録日は脆弱性の初回公表日・実悪用日ではない。パッケージの導入だけで実被害を確認した意味ではない。",
     "修正境界はこの問題についての公表値であり、現在の全脆弱性に対する安全性を保証しない。CISA KEVの取得失敗を未掲載や悪用なしとは扱わない。",
     "WASIp3でbodyを転送する条件に依存する。",
-    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。"
+    "OSV/RustSecの公表・更新日時を記録の日時とし、開発元アドバイザリの実際の公表日時を出典に別記する。開発元HTMLは更新日時を示さないため推定しない。",
+    "2026-11-05（JST）にOSV/RustSecの明示的な別名とCVE公式レコードの開発元参照からCVEを追補。開発元APIのcve_idは未設定のままであり、開発元が識別子を設定したとは扱わない。元の公表日・修正境界は保持する。"
   ]
 }

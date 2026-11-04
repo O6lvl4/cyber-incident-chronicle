@@ -8,18 +8,18 @@
   "summary": "minimatch has potential denial of service via globparts amplification",
   "publishedAt": "2026-10-30T23:09:55Z",
   "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-g3hv-75wg-m249/GHSA-g3hv-75wg-m249.json",
-  "modifiedAt": "2026-10-30T23:09:55Z",
+  "modifiedAt": "2026-11-04T16:50:00Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-31T21:09:50.355034Z",
+  "lastVerifiedAt": "2026-11-04T21:17:09.476046Z",
   "affected": [
     {
       "ecosystem": "npm",
       "packageName": "minimatch",
       "ranges": [
         {
-          "affected": "< 11.0.1",
+          "affected": ">= 7.0.0, < 11.0.1",
           "fixed": "11.0.1",
-          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-g3hv-75wg-m249/GHSA-g3hv-75wg-m249.json"
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/10/GHSA-g3hv-75wg-m249/GHSA-g3hv-75wg-m249.json"
         }
       ],
       "rawRanges": [
@@ -27,7 +27,7 @@
           "type": "ECOSYSTEM",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "7.0.0"
             },
             {
               "fixed": "11.0.1"
@@ -83,11 +83,22 @@
       "publishedAt": "2026-10-27T22:23:27Z",
       "modifiedAt": "2026-10-29T17:05:52Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (2026-11-05 JST pinned correction)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/10/GHSA-g3hv-75wg-m249/GHSA-g3hv-75wg-m249.json",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T23:09:55Z",
+      "modifiedAt": "2026-11-04T16:50:00Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
     "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
-    "開発元APIはecosystem・package名が空欄で確認版10.2.6、修正版11.0.1。Reviewedのnpm/minimatch,<11.0.1と別に保持する。optimizationLevel>=2で攻撃者由来のpatternを処理する条件が示されている。"
+    "開発元APIはecosystem・package名が空欄で確認版10.2.6、修正版11.0.1。Reviewedのnpm/minimatch,<11.0.1と別に保持する。optimizationLevel>=2で攻撃者由来のpatternを処理する条件が示されている。",
+    "2026-11-05(JST)確認のReviewedは影響下限を7.0.0へ訂正したため表示範囲を>=7.0.0,<11.0.1へ更新。開発元APIはpackage欄空白、確認版10.2.6・修正版11.0.1を維持し、この差を保持する。",
+    "実悪用・KEVはこの資料確認では未確認。公開PoCや深刻度から実悪用や企業被害を推定しない。"
   ]
 }

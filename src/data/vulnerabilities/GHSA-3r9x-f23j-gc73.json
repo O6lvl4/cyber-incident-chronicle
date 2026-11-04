@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3r9x-f23j-gc73",
+  "aliases": [
+    "CVE-2026-27489"
+  ],
+  "title": "onnx Vulnerable to Path Traversal via Symlink",
+  "summary": "onnx Vulnerable to Path Traversal via Symlink",
+  "publishedAt": "2026-03-31T22:34:25Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/03/GHSA-3r9x-f23j-gc73/GHSA-3r9x-f23j-gc73.json",
+  "modifiedAt": "2026-11-04T03:15:26Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-04T21:17:09.476046Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "onnx",
+      "ranges": [
+        {
+          "affected": "< 1.21.0",
+          "fixed": "1.21.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/03/GHSA-3r9x-f23j-gc73/GHSA-3r9x-f23j-gc73.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.21.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/03/GHSA-3r9x-f23j-gc73/GHSA-3r9x-f23j-gc73.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/03/GHSA-3r9x-f23j-gc73/GHSA-3r9x-f23j-gc73.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/03/GHSA-3r9x-f23j-gc73/GHSA-3r9x-f23j-gc73.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/03/GHSA-3r9x-f23j-gc73/GHSA-3r9x-f23j-gc73.json",
+      "publishedDate": "2026-03-31",
+      "publishedAt": "2026-03-31T22:34:25Z",
+      "modifiedAt": "2026-11-04T03:15:26Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "onnx Vulnerable to Path Traversal via Symlink",
+      "url": "https://github.com/advisories/GHSA-3r9x-f23j-gc73",
+      "publishedDate": "2026-03-31"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/onnx/onnx/security/advisories/GHSA-3r9x-f23j-gc73",
+      "publishedDate": "2026-03-31",
+      "publishedAt": "2026-03-31T15:56:11Z",
+      "modifiedAt": "2026-03-31T15:56:11Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元APIの影響範囲<1.20.0と修正版1.21.0に間隔がある。Reviewedの<1.21.0とは別の記述として保持し、この間の版が安全と推定しない。",
+    "実悪用・KEVはこの資料確認では未確認。公開PoCや深刻度から実悪用や企業被害を推定しない。"
+  ]
+}

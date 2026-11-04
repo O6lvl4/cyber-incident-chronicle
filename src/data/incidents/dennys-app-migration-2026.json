@@ -1,0 +1,65 @@
+{
+  "id": "dennys-app-migration-2026",
+  "company": "株式会社デニーズジャパン",
+  "geography": "日本",
+  "title": "旧デニーズアプリの移行処理で認証情報が不正作成され情報漏えいの可能性",
+  "announcementDate": "2026-11-03",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-03",
+  "statusAsOfDate": "2026-11-03",
+  "lastVerifiedDate": "2026-11-05",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "アプリ移行処理における認証情報の不正作成。具体的な初期侵入経路は未公表",
+    "status": "confirmed"
+  },
+  "summary": "10月30日、旧アプリ移行処理で認証情報が不正作成され、一部アカウントへアクセスできる状態が判明。個人情報取得処理の履歴はあるが本人操作との区別ができず、取得の有無・内容・人数を調査中。",
+  "affectedData": [
+    "会員コード、メールアドレス、生年月日、性別、都道府県、お気に入り店舗、キッズバースデー"
+  ],
+  "counts": [],
+  "caveats": [
+    "10月7日のアクセス記録に関する調査結果であり、他の期間も調査中。10月7日を確定攻撃開始日としない。",
+    "氏名・住所・電話番号・パスワード・カード情報は保持していない。",
+    "10月30日に改修、31日と11月2日に不正な認証情報を無効化。31日に個人情報保護委員会へ速報済み。",
+    "一部利用者には再ログインが必要となるが、サービス全面停止とは公表していない。"
+  ],
+  "sources": [
+    {
+      "title": "デニーズアプリへの不正アクセスに関するお詫びとお知らせ（第一報）",
+      "url": "https://www.dennys.jp/pdf/261103.pdf",
+      "publishedDate": "2026-11-03"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-03",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月30日、旧アプリ移行処理で認証情報が不正作成され、一部アカウントへアクセスできる状態が判明。個人情報取得処理の履歴はあるが本人操作との区別ができず、取得の有無・内容・人数を調査中。",
+      "sourceUrl": "https://www.dennys.jp/pdf/261103.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃開始日を推定しない。",
+      "sourceUrl": "https://www.dennys.jp/pdf/261103.pdf",
+      "reviewedDate": "2026-11-05"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "被害の初確認日は明示されていない。検知・可能性の把握と区別する。",
+      "sourceUrl": "https://www.dennys.jp/pdf/261103.pdf",
+      "reviewedDate": "2026-11-05"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mc8m-rr6c-r5qr",
+  "aliases": [
+    "CVE-2026-93363"
+  ],
+  "title": "@payloadcms/storage-vercel-blob has access control bypass of uploads in Vercel Storage adapter",
+  "summary": "@payloadcms/storage-vercel-blob has access control bypass of uploads in Vercel Storage adapter",
+  "publishedAt": "2026-11-04T17:00:39Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/11/GHSA-mc8m-rr6c-r5qr/GHSA-mc8m-rr6c-r5qr.json",
+  "modifiedAt": "2026-11-04T17:00:39Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-04T21:17:09.476046Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@payloadcms/storage-vercel-blob",
+      "ranges": [
+        {
+          "affected": ">= 3.25.0, < 3.90.0",
+          "fixed": "3.90.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/11/GHSA-mc8m-rr6c-r5qr/GHSA-mc8m-rr6c-r5qr.json"
+        },
+        {
+          "affected": ">= 4.0.0-canary.0, < 4.0.0-canary.34",
+          "fixed": "4.0.0-canary.34",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/11/GHSA-mc8m-rr6c-r5qr/GHSA-mc8m-rr6c-r5qr.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.25.0"
+            },
+            {
+              "fixed": "3.90.0"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0-canary.0"
+            },
+            {
+              "fixed": "4.0.0-canary.34"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/11/GHSA-mc8m-rr6c-r5qr/GHSA-mc8m-rr6c-r5qr.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/11/GHSA-mc8m-rr6c-r5qr/GHSA-mc8m-rr6c-r5qr.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/11/GHSA-mc8m-rr6c-r5qr/GHSA-mc8m-rr6c-r5qr.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/11/GHSA-mc8m-rr6c-r5qr/GHSA-mc8m-rr6c-r5qr.json",
+      "publishedDate": "2026-11-04",
+      "publishedAt": "2026-11-04T17:00:39Z",
+      "modifiedAt": "2026-11-04T17:00:39Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "@payloadcms/storage-vercel-blob has access control bypass of uploads in Vercel Storage adapter",
+      "url": "https://github.com/advisories/GHSA-mc8m-rr6c-r5qr",
+      "publishedDate": "2026-11-04"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/payloadcms/payload/security/advisories/GHSA-mc8m-rr6c-r5qr",
+      "publishedDate": "2026-09-25",
+      "publishedAt": "2026-09-25T13:57:20Z",
+      "modifiedAt": "2026-10-14T20:53:27Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "client uploadsを有効にした@payloadcms/storage-vercel-blobが対象で、無効な構成は開発元によれば影響しない。修正版は安定版3.90.0と4.0.0-canary.34。両系列の範囲とcollection-level access条件を分ける。",
+    "実悪用・KEVはこの資料確認では未確認。公開PoCや深刻度から実悪用や企業被害を推定しない。"
+  ]
+}

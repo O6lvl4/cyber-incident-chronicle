@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-p423-j2cm-9vmq",
+  "aliases": [
+    "CVE-2026-39892"
+  ],
+  "title": "Cryptography vulnerable to buffer overflow if non-contiguous buffers were passed to APIs",
+  "summary": "Cryptography vulnerable to buffer overflow if non-contiguous buffers were passed to APIs",
+  "publishedAt": "2026-04-08T19:23:08Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/04/GHSA-p423-j2cm-9vmq/GHSA-p423-j2cm-9vmq.json",
+  "modifiedAt": "2026-11-04T03:16:29Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-04T21:17:09.476046Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "cryptography",
+      "ranges": [
+        {
+          "affected": ">= 45.0.0, < 46.0.7",
+          "fixed": "46.0.7",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/04/GHSA-p423-j2cm-9vmq/GHSA-p423-j2cm-9vmq.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "45.0.0"
+            },
+            {
+              "fixed": "46.0.7"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/04/GHSA-p423-j2cm-9vmq/GHSA-p423-j2cm-9vmq.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/04/GHSA-p423-j2cm-9vmq/GHSA-p423-j2cm-9vmq.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/04/GHSA-p423-j2cm-9vmq/GHSA-p423-j2cm-9vmq.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/7a766ee5a5ba897bab2181e56b8275e9cfb2349c/advisories/github-reviewed/2026/04/GHSA-p423-j2cm-9vmq/GHSA-p423-j2cm-9vmq.json",
+      "publishedDate": "2026-04-08",
+      "publishedAt": "2026-04-08T19:23:08Z",
+      "modifiedAt": "2026-11-04T03:16:29Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Cryptography vulnerable to buffer overflow if non-contiguous buffers were passed to APIs",
+      "url": "https://github.com/advisories/GHSA-p423-j2cm-9vmq",
+      "publishedDate": "2026-04-08"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-p423-j2cm-9vmq",
+      "publishedDate": "2026-04-08",
+      "publishedAt": "2026-04-08T01:50:53Z",
+      "modifiedAt": "2026-04-08T01:50:53Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元は非連続PythonバッファをAPIへ渡す場合の問題とし、影響>=45.0.0・修正>=46.0.7を別欄に記載。開いた影響範囲を修正版の影響継続という主張に読み替えない。",
+    "実悪用・KEVはこの資料確認では未確認。公開PoCや深刻度から実悪用や企業被害を推定しない。"
+  ]
+}

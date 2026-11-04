@@ -1,0 +1,1404 @@
+{
+  "reportDateJst": "2026-11-05",
+  "generatedAt": "2026-11-04T21:14:47.983113Z",
+  "previousAudit": "supplemental-source-status-2026-11-04.json",
+  "overlapPolicy": "Complete ZIP CRC and normalized JSON comparison against exact SHA256-verified last successful immutable generations, including modifications older than 24-hour overlap. Failed sources retain success watermarks.",
+  "osv": [
+    {
+      "ecosystem": "npm",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip",
+      "previousSuccess": "2026-11-03T21:09:37.828616+00:00",
+      "attemptAt": "2026-11-04T21:12:27.529917Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:12:42.314657Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:14:37.013636Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/npm/all.zip",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:12:42.314657Z",
+        "bytes": 219955115,
+        "sha256": "312744f9338fb06777c511a9f66c7ba2ff67e24bb174bd15e3f5376a3e36428f",
+        "headers": {
+          "content-type": "application/zip",
+          "x-guploader-uploadid": "AFy3sg0mORncfJTcFHqJWp-jS1JqhF07fq4TSL7tyNg5l_hbZqJm9U8sI0klPi5yN42akmsdwFV__Q",
+          "expires": "Wed, 04 Nov 2026 22:12:31 GMT",
+          "date": "Wed, 04 Nov 2026 21:12:31 GMT",
+          "cache-control": "public, max-age=3600",
+          "last-modified": "Wed, 04 Nov 2026 20:33:19 GMT",
+          "etag": "\"1e56b96631431042a26b429055d5fcff\"",
+          "x-goog-generation": "1793824399563350",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-encoding": "identity",
+          "x-goog-stored-content-length": "219955115",
+          "x-goog-hash": "crc32c=A12owQ==",
+          "x-goog-storage-class": "STANDARD",
+          "accept-ranges": "bytes",
+          "content-length": "219955115",
+          "server": "envoy",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-envoy-upstream-service-time": "88",
+          "connection": "close"
+        }
+      },
+      "status": "checked_changed",
+      "records": 231202,
+      "baselineRecords": 231142,
+      "baselineGeneration": "1793737126393972",
+      "baselineExpectedSha256": "7055c2e29668b6369a693cbdc25841c7e33e39e0d58ab88252023c25ac14c1a0",
+      "baselineSha256Verified": true,
+      "crcVerified": true,
+      "diff": {
+        "added": {
+          "ordinary": [
+            "GHSA-3cgg-c5pp-57h6",
+            "GHSA-mc8m-rr6c-r5qr"
+          ],
+          "mal": [
+            "MAL-2026-18585",
+            "MAL-2026-18586",
+            "MAL-2026-18587",
+            "MAL-2026-18588",
+            "MAL-2026-18589",
+            "MAL-2026-18590",
+            "MAL-2026-18591",
+            "MAL-2026-18592",
+            "MAL-2026-18593",
+            "MAL-2026-18594",
+            "MAL-2026-18595",
+            "MAL-2026-18596",
+            "MAL-2026-18597",
+            "MAL-2026-18600",
+            "MAL-2026-18601",
+            "MAL-2026-18602",
+            "MAL-2026-18603",
+            "MAL-2026-18604",
+            "MAL-2026-18605",
+            "MAL-2026-18606",
+            "MAL-2026-18607",
+            "MAL-2026-18608",
+            "MAL-2026-18609",
+            "MAL-2026-18610",
+            "MAL-2026-18611",
+            "MAL-2026-18612",
+            "MAL-2026-18613",
+            "MAL-2026-18614",
+            "MAL-2026-18615",
+            "MAL-2026-18616",
+            "MAL-2026-18617",
+            "MAL-2026-18618",
+            "MAL-2026-18619",
+            "MAL-2026-18620",
+            "MAL-2026-18621",
+            "MAL-2026-18622",
+            "MAL-2026-18623",
+            "MAL-2026-18624",
+            "MAL-2026-18626",
+            "MAL-2026-18628",
+            "MAL-2026-18629",
+            "MAL-2026-18630",
+            "MAL-2026-18631",
+            "MAL-2026-18632",
+            "MAL-2026-18634",
+            "MAL-2026-18635",
+            "MAL-2026-18636",
+            "MAL-2026-18637",
+            "MAL-2026-18638",
+            "MAL-2026-18639",
+            "MAL-2026-18640",
+            "MAL-2026-18641",
+            "MAL-2026-18642",
+            "MAL-2026-18643",
+            "MAL-2026-18644",
+            "MAL-2026-18645",
+            "MAL-2026-18646",
+            "MAL-2026-18647"
+          ]
+        },
+        "changed": {
+          "ordinary": [
+            "GHSA-26hh-7cqf-hhc6",
+            "GHSA-55hx-c926-fr95",
+            "GHSA-85x2-q946-cp5h",
+            "GHSA-8c8m-p3m8-cjg8",
+            "GHSA-8hg8-63c5-gwmx",
+            "GHSA-9qj6-qjgg-37qq",
+            "GHSA-9vg3-4rfj-wgcm",
+            "GHSA-g3hv-75wg-m249",
+            "GHSA-grj5-jjm8-h35p",
+            "GHSA-m943-m63m-w62w",
+            "GHSA-v37h-5mfm-c47c",
+            "GHSA-vxpw-j846-p89q",
+            "GHSA-wp3c-266w-4qfq",
+            "GHSA-xq3m-2v4x-88gg",
+            "GHSA-xxjr-mmjv-4gpg"
+          ],
+          "mal": [
+            "MAL-2026-11986",
+            "MAL-2026-16070",
+            "MAL-2026-16251",
+            "MAL-2026-16263",
+            "MAL-2026-17310",
+            "MAL-2026-17864",
+            "MAL-2026-17865",
+            "MAL-2026-17869",
+            "MAL-2026-17870",
+            "MAL-2026-17871",
+            "MAL-2026-17874",
+            "MAL-2026-17875",
+            "MAL-2026-17893",
+            "MAL-2026-17894",
+            "MAL-2026-17895",
+            "MAL-2026-17896",
+            "MAL-2026-18489",
+            "MAL-2026-18519",
+            "MAL-2026-18526",
+            "MAL-2026-3420",
+            "MAL-2026-4496",
+            "MAL-2026-5543"
+          ]
+        },
+        "deleted": {
+          "ordinary": [],
+          "mal": []
+        }
+      },
+      "checkedAt": "2026-11-04T21:14:37.013506Z"
+    },
+    {
+      "ecosystem": "PyPI",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip",
+      "previousSuccess": "2026-11-03T21:08:59.340066+00:00",
+      "attemptAt": "2026-11-04T21:12:27.531348Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:12:34.628793Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:13:21.417928Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/PyPI/all.zip",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:12:34.628793Z",
+        "bytes": 37630473,
+        "sha256": "1ef08a99c425f7badb5ce8a5334cade6db1d2661e5ca00e924af7fe0fd02cb40",
+        "headers": {
+          "content-type": "application/zip",
+          "x-guploader-uploadid": "AFy3sg2prQy97garOofwZGwtUlrD9SPt4yKNj4LFxE2uOUcOXG6LsqLDQA_C2k8WhTvDR8TGq6brJw",
+          "expires": "Wed, 04 Nov 2026 22:12:31 GMT",
+          "date": "Wed, 04 Nov 2026 21:12:31 GMT",
+          "cache-control": "public, max-age=3600",
+          "last-modified": "Wed, 04 Nov 2026 17:48:46 GMT",
+          "etag": "\"a22f4c11c172ffe14333b3b8a73c15a6\"",
+          "x-goog-generation": "1793814526055241",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-encoding": "identity",
+          "x-goog-stored-content-length": "37630473",
+          "x-goog-hash": "crc32c=kMndsw==",
+          "x-goog-storage-class": "STANDARD",
+          "accept-ranges": "bytes",
+          "content-length": "37630473",
+          "server": "envoy",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-envoy-upstream-service-time": "221",
+          "connection": "close"
+        }
+      },
+      "status": "checked_changed",
+      "records": 26794,
+      "baselineRecords": 26783,
+      "baselineGeneration": "1793738903671527",
+      "baselineExpectedSha256": "ac9587b25e4c0ac1bcf4d71c354b7846d195a67fb6757f1c7f9170d2d0b046d8",
+      "baselineSha256Verified": true,
+      "crcVerified": true,
+      "diff": {
+        "added": {
+          "ordinary": [
+            "GHSA-7pm4-56h2-5rxr",
+            "GHSA-q63x-9pfm-mjx4",
+            "PYSEC-2026-4361",
+            "PYSEC-2026-4362"
+          ],
+          "mal": [
+            "MAL-2026-18581",
+            "MAL-2026-18582",
+            "MAL-2026-18583",
+            "MAL-2026-18584",
+            "MAL-2026-18625",
+            "MAL-2026-18627",
+            "MAL-2026-18633"
+          ]
+        },
+        "changed": {
+          "ordinary": [
+            "GHSA-3r9x-f23j-gc73",
+            "GHSA-469j-vmhf-r6v7",
+            "GHSA-57q6-fvp4-pqmm",
+            "GHSA-63cw-57p8-fm3p",
+            "GHSA-68j8-pq59-fqgm",
+            "GHSA-p423-j2cm-9vmq"
+          ],
+          "mal": [
+            "MAL-2026-18110",
+            "MAL-2026-18111",
+            "MAL-2026-18112",
+            "MAL-2026-18113",
+            "MAL-2026-18443",
+            "MAL-2026-18580"
+          ]
+        },
+        "deleted": {
+          "ordinary": [],
+          "mal": []
+        }
+      },
+      "checkedAt": "2026-11-04T21:13:21.417905Z"
+    },
+    {
+      "ecosystem": "RubyGems",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip",
+      "previousSuccess": "2026-11-03T21:08:38.733812+00:00",
+      "attemptAt": "2026-11-04T21:12:27.531987Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:12:32.284089Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:12:44.588411Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/RubyGems/all.zip",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:12:32.284089Z",
+        "bytes": 5213495,
+        "sha256": "c09a1e117266b92361471d2b48285021b3d88c0e0f210d27192ddd8424ab9f51",
+        "headers": {
+          "content-type": "application/zip",
+          "x-guploader-uploadid": "AFy3sg20vR9s0T7wNeT6Lqi3SqBrm-cv2M9qHgk_BqPK_37HbZybSLzi0sPIUp7c2_ygqORWdc_eDA",
+          "expires": "Wed, 04 Nov 2026 22:12:31 GMT",
+          "date": "Wed, 04 Nov 2026 21:12:31 GMT",
+          "cache-control": "public, max-age=3600",
+          "last-modified": "Wed, 04 Nov 2026 03:33:17 GMT",
+          "etag": "\"25443a2b4e39685d0f638720724207b0\"",
+          "x-goog-generation": "1793763196904585",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-encoding": "identity",
+          "x-goog-stored-content-length": "5213495",
+          "x-goog-hash": "crc32c=RDQ+fQ==",
+          "x-goog-storage-class": "STANDARD",
+          "accept-ranges": "bytes",
+          "content-length": "5213495",
+          "server": "envoy",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-envoy-upstream-service-time": "219",
+          "connection": "close"
+        }
+      },
+      "status": "checked_changed",
+      "records": 5477,
+      "baselineRecords": 5475,
+      "baselineGeneration": "1793687602447948",
+      "baselineExpectedSha256": "8e865fd8adb4f53b8ffe19c8e9ab1ae73fb3da5153d9d358b1d6e0e81656ed81",
+      "baselineSha256Verified": true,
+      "crcVerified": true,
+      "diff": {
+        "added": {
+          "ordinary": [],
+          "mal": [
+            "MAL-2026-18598",
+            "MAL-2026-18599"
+          ]
+        },
+        "changed": {
+          "ordinary": [],
+          "mal": []
+        },
+        "deleted": {
+          "ordinary": [],
+          "mal": []
+        }
+      },
+      "checkedAt": "2026-11-04T21:12:44.588391Z"
+    },
+    {
+      "ecosystem": "Go",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip",
+      "previousSuccess": "2026-11-03T21:08:43.703510+00:00",
+      "attemptAt": "2026-11-04T21:12:27.533043Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:12:33.285506Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:12:52.495940Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/Go/all.zip",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:12:33.285506Z",
+        "bytes": 12714819,
+        "sha256": "581c10013893b486272a4616c5433ea01ef3ed4b669a496d520ddf82ec33b838",
+        "headers": {
+          "content-type": "application/zip",
+          "x-guploader-uploadid": "AFy3sg0ElI39aOTJt0z5gsRLoil0xBqRJ0OaJg_FY3YUEpaGGyKulUYaIE0kMRgEMIuUpA10Qgic4A",
+          "expires": "Wed, 04 Nov 2026 22:12:31 GMT",
+          "date": "Wed, 04 Nov 2026 21:12:31 GMT",
+          "cache-control": "public, max-age=3600",
+          "last-modified": "Wed, 04 Nov 2026 17:34:03 GMT",
+          "etag": "\"992453a37fd290cbdd8e6d5fb5d0c8ad\"",
+          "x-goog-generation": "1793813643853376",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-encoding": "identity",
+          "x-goog-stored-content-length": "12714819",
+          "x-goog-hash": "crc32c=HB9PCQ==",
+          "x-goog-storage-class": "STANDARD",
+          "accept-ranges": "bytes",
+          "content-length": "12714819",
+          "server": "envoy",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-envoy-upstream-service-time": "109",
+          "connection": "close"
+        }
+      },
+      "status": "checked_changed",
+      "records": 9823,
+      "baselineRecords": 9818,
+      "baselineGeneration": "1793737122475858",
+      "baselineExpectedSha256": "2b96b674b484ba071d40247b89b0f7e48fccd68c4565133849e16dfd453770a2",
+      "baselineSha256Verified": true,
+      "crcVerified": true,
+      "diff": {
+        "added": {
+          "ordinary": [
+            "GHSA-6f2p-2qg2-qqch",
+            "GHSA-72v2-v53v-4qmm",
+            "GHSA-93cm-2v4m-c56c",
+            "GHSA-cgm6-wvp9-4g5h",
+            "GHSA-q3jc-42cq-33fj"
+          ],
+          "mal": []
+        },
+        "changed": {
+          "ordinary": [
+            "GHSA-3fxj-6jh8-hvhx",
+            "GHSA-qr99-7898-vr7c"
+          ],
+          "mal": []
+        },
+        "deleted": {
+          "ordinary": [],
+          "mal": []
+        }
+      },
+      "checkedAt": "2026-11-04T21:12:52.495920Z"
+    },
+    {
+      "ecosystem": "crates.io",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip",
+      "previousSuccess": "2026-11-03T21:08:50.392882+00:00",
+      "attemptAt": "2026-11-04T21:12:27.534110Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:12:31.994364Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:12:42.702949Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/crates.io/all.zip",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:12:31.994364Z",
+        "bytes": 3778692,
+        "sha256": "dea150c55f72b6e6764c8e138fd4c66793d4889a80e57ed53985ddeabd6ee3fc",
+        "headers": {
+          "x-guploader-uploadid": "AFy3sg0F40xR__n0yP6zRI1QpMcvKIBEoMTQC2hQBuyMgTznuX-OBC2A69rm5UrStqx0g4bNlBsHUQ",
+          "x-goog-generation": "1793774894013088",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-encoding": "identity",
+          "x-goog-stored-content-length": "3778692",
+          "x-goog-hash": "crc32c=sYE82Q==",
+          "x-goog-storage-class": "STANDARD",
+          "accept-ranges": "bytes",
+          "content-length": "3778692",
+          "server": "envoy",
+          "date": "Wed, 04 Nov 2026 21:11:41 GMT",
+          "expires": "Wed, 04 Nov 2026 22:11:41 GMT",
+          "cache-control": "public, max-age=3600",
+          "age": "50",
+          "last-modified": "Wed, 04 Nov 2026 06:48:14 GMT",
+          "etag": "\"ffab016d43c8dce5b400627a13aac096\"",
+          "content-type": "application/zip",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-envoy-upstream-service-time": "104",
+          "connection": "close"
+        }
+      },
+      "status": "checked_changed",
+      "records": 3036,
+      "baselineRecords": 3036,
+      "baselineGeneration": "1793737975939074",
+      "baselineExpectedSha256": "e08dd1dc0f79099997ab2eb0128a7cdb91b4f1a07ee1aa629e06675061a9691c",
+      "baselineSha256Verified": true,
+      "crcVerified": true,
+      "diff": {
+        "added": {
+          "ordinary": [],
+          "mal": []
+        },
+        "changed": {
+          "ordinary": [
+            "GHSA-4m82-p8cx-f94j",
+            "GHSA-4v76-cw68-4vc9",
+            "GHSA-4vgr-h27g-cf9p",
+            "GHSA-5qfp-32cf-69jh",
+            "GHSA-65rj-r9fh-jp2v",
+            "GHSA-6vg3-hgrw-p5gf",
+            "GHSA-6wqw-vhfr-9999",
+            "GHSA-c8jx-96c9-8xrp",
+            "GHSA-cc8f-fcx3-gpjr",
+            "GHSA-f82j-v89j-mf86",
+            "GHSA-h4h3-3rfj-x6fq",
+            "GHSA-h5rg-8p7f-47g2",
+            "GHSA-jv2j-mqmw-xvv5",
+            "GHSA-q8qp-67f9-wr3f",
+            "GHSA-v653-r55g-hcmg",
+            "GHSA-wjjj-24cx-f28g",
+            "GHSA-wp87-mgvq-5j93",
+            "RUSTSEC-2026-0375",
+            "RUSTSEC-2026-0376",
+            "RUSTSEC-2026-0377"
+          ],
+          "mal": []
+        },
+        "deleted": {
+          "ordinary": [],
+          "mal": []
+        }
+      },
+      "checkedAt": "2026-11-04T21:12:42.702928Z"
+    },
+    {
+      "ecosystem": "Maven",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip",
+      "previousSuccess": "2026-11-03T21:08:59.902219+00:00",
+      "attemptAt": "2026-11-04T21:12:42.784866Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:12:46.494171Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:13:07.211769Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/Maven/all.zip",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:12:46.494171Z",
+        "bytes": 10516954,
+        "sha256": "19dbb91e8b2061ae54ecf659f2e38bc07af3c4de2b5bbb203d91254a72a792ca",
+        "headers": {
+          "content-type": "application/zip",
+          "x-guploader-uploadid": "AFy3sg239A1WsHn_A8__DHAUDAG4eZTonLRUhFjCvyttVXPk1UiaIUMRt0gdOkwBlvKsk1vJlJuBEw",
+          "expires": "Wed, 04 Nov 2026 22:12:46 GMT",
+          "date": "Wed, 04 Nov 2026 21:12:46 GMT",
+          "cache-control": "public, max-age=3600",
+          "last-modified": "Wed, 04 Nov 2026 21:03:41 GMT",
+          "etag": "\"7b68fa6b564ce4b8acc76466a92f89b3\"",
+          "x-goog-generation": "1793826221875494",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-encoding": "identity",
+          "x-goog-stored-content-length": "10516954",
+          "x-goog-hash": "crc32c=Xd1BkA==",
+          "x-goog-storage-class": "STANDARD",
+          "accept-ranges": "bytes",
+          "content-length": "10516954",
+          "server": "envoy",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-envoy-upstream-service-time": "125",
+          "connection": "close"
+        }
+      },
+      "status": "checked_changed",
+      "records": 7247,
+      "baselineRecords": 7226,
+      "baselineGeneration": "1793728991170295",
+      "baselineExpectedSha256": "3bd18d8fd3fb2d1e5fbc1905cb6e7188b2a49c71cd73ccc2889e34859f6c3abd",
+      "baselineSha256Verified": true,
+      "crcVerified": true,
+      "diff": {
+        "added": {
+          "ordinary": [
+            "GHSA-262p-fj3f-xh7v",
+            "GHSA-5v3h-fjv2-54fg",
+            "GHSA-7259-vf48-52q3",
+            "GHSA-748j-wm96-4wh5",
+            "GHSA-7895-gffq-w6jq",
+            "GHSA-7g64-f2hm-vjxp",
+            "GHSA-9qj4-v6r6-3wmx",
+            "GHSA-c5ph-rghf-fjfj",
+            "GHSA-f77w-px59-cqf5",
+            "GHSA-f892-4h9f-j7g9",
+            "GHSA-h548-jhj8-q85h",
+            "GHSA-h5gm-rvw6-2xpx",
+            "GHSA-h792-v28v-ppgr",
+            "GHSA-m8g6-vrr2-x7ff",
+            "GHSA-mqg3-r7h5-24x4",
+            "GHSA-p2gc-fm5w-94jj",
+            "GHSA-pg42-rg8c-j886",
+            "GHSA-qj64-jj84-w38j",
+            "GHSA-rcmh-vfq7-8gf4",
+            "GHSA-x6vc-x4v4-hjhr",
+            "GHSA-xrvj-h9w2-3q69"
+          ],
+          "mal": []
+        },
+        "changed": {
+          "ordinary": [
+            "GHSA-659w-93r5-9j6m",
+            "GHSA-c3fc-8qff-9hwx",
+            "GHSA-mgp5-rv84-w37q",
+            "GHSA-p93r-85wp-75v3",
+            "GHSA-v3vg-332r-mw99",
+            "GHSA-vqqj-9cmv-hx43"
+          ],
+          "mal": []
+        },
+        "deleted": {
+          "ordinary": [],
+          "mal": []
+        }
+      },
+      "checkedAt": "2026-11-04T21:13:07.211743Z"
+    },
+    {
+      "ecosystem": "NuGet",
+      "url": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip",
+      "previousSuccess": "2026-11-03T21:08:57.934566+00:00",
+      "attemptAt": "2026-11-04T21:12:44.689703Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:12:46.337218Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:13:00.043223Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://storage.googleapis.com/osv-vulnerabilities/NuGet/all.zip",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:12:46.337218Z",
+        "bytes": 2695287,
+        "sha256": "e12f081b7124e79ef12c92b193d8b5665d46b54e95148e14d081ff9609f5b9af",
+        "headers": {
+          "x-guploader-uploadid": "AFy3sg3wZ-wBa4paRyIZrB5mavhkjm2g7AUggU8HQMKPyDJox_0GxuECWQ6-9b8w5-bs8lAyxZ6qHg",
+          "x-goog-generation": "1793766792217614",
+          "x-goog-metageneration": "1",
+          "x-goog-stored-content-encoding": "identity",
+          "x-goog-stored-content-length": "2695287",
+          "x-goog-hash": "crc32c=xPyPHg==",
+          "x-goog-storage-class": "STANDARD",
+          "accept-ranges": "bytes",
+          "content-length": "2695287",
+          "server": "envoy",
+          "date": "Wed, 04 Nov 2026 20:27:45 GMT",
+          "expires": "Wed, 04 Nov 2026 21:27:45 GMT",
+          "cache-control": "public, max-age=3600",
+          "age": "2700",
+          "last-modified": "Wed, 04 Nov 2026 04:33:12 GMT",
+          "etag": "\"b002a9eea9de5d1491b8c3583cc3133c\"",
+          "content-type": "application/zip",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-envoy-upstream-service-time": "48",
+          "connection": "close"
+        }
+      },
+      "status": "checked_changed",
+      "records": 1970,
+      "baselineRecords": 1970,
+      "baselineGeneration": "1793728991028981",
+      "baselineExpectedSha256": "3d1d2b7368c20c760f820384176e3ac3239249f6ba2f041c0034413e1bbfef4e",
+      "baselineSha256Verified": true,
+      "crcVerified": true,
+      "diff": {
+        "added": {
+          "ordinary": [],
+          "mal": []
+        },
+        "changed": {
+          "ordinary": [
+            "GHSA-2969-4q4w-w5h3",
+            "GHSA-2j8r-3c22-8565",
+            "GHSA-rp2p-6cmp-jxj9",
+            "GHSA-w7cw-xp7h-6j5j",
+            "GHSA-wp74-jgxh-gv4q"
+          ],
+          "mal": []
+        },
+        "deleted": {
+          "ordinary": [],
+          "mal": []
+        }
+      },
+      "checkedAt": "2026-11-04T21:13:00.043205Z"
+    }
+  ],
+  "jvnJpcertFeeds": [
+    {
+      "name": "jvn.rdf",
+      "url": "https://jvn.jp/rss/jvn.rdf",
+      "attemptAt": "2026-11-04T21:14:39.028641Z",
+      "previousSuccess": "2026-11-03T21:10:51.887385Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:14:46.456202Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:14:46.457269Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://jvn.jp/rss/jvn.rdf",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:14:46.456202Z",
+        "bytes": 16756,
+        "sha256": "e47605ceaa2bc88000796a9065b5ab0c3ca953ea89d3144a9284490278499fef",
+        "headers": {
+          "content-type": "application/rdf+xml",
+          "content-length": "16756",
+          "server": "envoy",
+          "last-modified": "Wed, 04 Nov 2026 07:00:03 GMT",
+          "accept-ranges": "bytes",
+          "date": "Wed, 04 Nov 2026 21:14:46 GMT",
+          "etag": "\"a459ef0824d80ddf3e834118de8b53d2496efa73\"",
+          "x-cache": "RefreshHit from cloudfront",
+          "via": "1.1 b02f02cf8cf65aef5d6048e0e5066d32.cloudfront.net (CloudFront)",
+          "x-amz-cf-pop": "SFO53-P4",
+          "x-amz-cf-id": "9Xvir-J8tprjIzVzJdiv40P9ggIXCcvBtTFiQ3MVcB8Z6ugbmZD2RQ==",
+          "x-envoy-upstream-service-time": "155",
+          "connection": "close"
+        }
+      },
+      "items": [
+        {
+          "title": "Hinemosにおける不適切な権限の割り当ての脆弱性",
+          "link": "https://jvn.jp/jp/JVN46901199/",
+          "description": "株式会社NTTデータ先端技術が提供するHinemosには、不適切な権限の割り当ての脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#46901199",
+          "relation": "https://jvn.jp/jp/JVN46901199/",
+          "date": "2026-11-04T16:00:00+09:00",
+          "issued": "2026-11-04T16:00:00+09:00",
+          "modified": "2026-11-04T16:00:00+09:00"
+        },
+        {
+          "title": "Airbyteにおける任意のコードが実行可能な脆弱性",
+          "link": "https://jvn.jp/jp/JVN12040144/",
+          "description": "Airbyteには、不適切なクラスロードにより想定外のコンポーネントを読み込むことができるため、任意のコード実行が可能となる脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#12040144",
+          "relation": "https://jvn.jp/jp/JVN12040144/",
+          "date": "2026-11-04T12:00:15+09:00",
+          "issued": "2026-11-04T12:00:15+09:00",
+          "modified": "2026-11-04T12:00:15+09:00"
+        },
+        {
+          "title": "複数のAkeeba製品におけるクロスサイトリクエストフォージェリの脆弱性",
+          "link": "https://jvn.jp/jp/JVN44272550/",
+          "description": "Akeeba Ltd.が提供する複数の製品には、クロスサイトリクエストフォージェリの脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#44272550",
+          "relation": "https://jvn.jp/jp/JVN44272550/",
+          "date": "2026-11-04T12:00:00+09:00",
+          "issued": "2026-11-04T12:00:00+09:00",
+          "modified": "2026-11-04T12:00:00+09:00"
+        },
+        {
+          "title": "INFINITT Healthcare製INFINITT PACS System Managerにおける複数の任意コード実行の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU99859918/",
+          "description": "CERT/CCから本件に関するアドバイザリが公表されました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#99859918",
+          "relation": "https://jvn.jp/vu/JVNVU99859918/",
+          "date": "2026-11-04T10:15:30+09:00",
+          "issued": "2026-11-04T10:15:30+09:00",
+          "modified": "2026-11-04T10:15:30+09:00"
+        },
+        {
+          "title": "Androidアプリ「BaseChat - Audio Dating App」における複数の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU92281274/",
+          "description": "CERT/CCから本件に関するアドバイザリが公表されました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#92281274",
+          "relation": "https://jvn.jp/vu/JVNVU92281274/",
+          "date": "2026-11-04T10:15:15+09:00",
+          "issued": "2026-11-04T10:15:15+09:00",
+          "modified": "2026-11-04T10:15:15+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年11月03日）",
+          "link": "https://jvn.jp/vu/JVNVU91151184/",
+          "description": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#91151184",
+          "relation": "https://jvn.jp/vu/JVNVU91151184/",
+          "date": "2026-11-04T10:15:00+09:00",
+          "issued": "2026-11-04T10:15:00+09:00",
+          "modified": "2026-11-04T10:15:00+09:00"
+        },
+        {
+          "title": "Core TempのカーネルドライバにおけるIOCTLインタフェースに対するアクセス制御が不十分な脆弱性",
+          "link": "https://jvn.jp/jp/JVN23328936/",
+          "description": "ALCPUが提供するCore Tempのカーネルドライバには、IOCTLインタフェースに対するアクセス制御が不十分な脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#23328936",
+          "relation": "https://jvn.jp/jp/JVN23328936/",
+          "date": "2026-11-02T12:00:00+09:00",
+          "issued": "2026-11-02T12:00:00+09:00",
+          "modified": "2026-11-02T12:00:00+09:00"
+        },
+        {
+          "title": "Siemens製品に対するアップデート（2026年10月）",
+          "link": "https://jvn.jp/vu/JVNVU90141693/",
+          "description": "Siemensから各製品向けのアドバイザリが公表されました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#90141693",
+          "relation": "https://jvn.jp/vu/JVNVU90141693/",
+          "date": "2026-11-02T09:15:00+09:00",
+          "issued": "2026-10-14T13:30:50+09:00",
+          "modified": "2026-11-02T09:15:00+09:00"
+        },
+        {
+          "title": "三菱電機製の複数製品における複数の脆弱性（2026-006）",
+          "link": "https://jvn.jp/vu/JVNVU93251594/",
+          "description": "三菱電機株式会社が提供するGENESIS、GENESIS64、ICONICS Suite、Hyper Historian、AnalytiX、MobileHMI、IoTWorX、MC Works64、GENESIS32およびBizVizには、複数の脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#93251594",
+          "relation": "https://jvn.jp/vu/JVNVU93251594/",
+          "date": "2026-10-30T14:00:00+09:00",
+          "issued": "2026-10-23T11:00:15+09:00",
+          "modified": "2026-10-30T14:00:00+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月29日）",
+          "link": "https://jvn.jp/vu/JVNVU95856220/",
+          "description": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#95856220",
+          "relation": "https://jvn.jp/vu/JVNVU95856220/",
+          "date": "2026-10-30T09:15:00+09:00",
+          "issued": "2026-10-30T09:15:00+09:00",
+          "modified": "2026-10-30T09:15:00+09:00"
+        },
+        {
+          "title": "Apache Struts 2 RESTプラグインにおける、@StrutsParameterの制限が@JsonAnySetterに適用されない問題",
+          "link": "https://jvn.jp/jp/JVN82782759/",
+          "description": "The Apache Software Foundationが提供するApache Struts 2のRESTプラグインには、Jacksonの<code>@JsonAnySetter</code>が指定されたフィールドやメソッドに対して<code>@StrutsParameter</code>の制限が行われない問題が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#82782759",
+          "relation": "https://jvn.jp/jp/JVN82782759/",
+          "date": "2026-10-29T12:00:00+09:00",
+          "issued": "2026-10-29T12:00:00+09:00",
+          "modified": "2026-10-29T12:00:00+09:00"
+        },
+        {
+          "title": "PHPにおける複数の任意のコードが実行可能な脆弱性（CVE-2026-109618、CVE-2026-109619）",
+          "link": "https://jvn.jp/vu/JVNVU99905564/",
+          "description": "The PHP Groupから、PHPの2件の脆弱性（CVE-2026-109618、CVE-2026-109619）に対してアドバイザリが公開されました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#99905564",
+          "relation": "https://jvn.jp/vu/JVNVU99905564/",
+          "date": "2026-10-28T16:30:00+09:00",
+          "issued": "2026-10-22T10:30:00+09:00",
+          "modified": "2026-10-28T16:30:00+09:00"
+        },
+        {
+          "title": "ヤマハ製NWR100における複数の脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU91027179/",
+          "description": "ヤマハ株式会社が提供する無線LANルーターNWR100には、複数の脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#91027179",
+          "relation": "https://jvn.jp/vu/JVNVU91027179/",
+          "date": "2026-10-28T14:15:00+09:00",
+          "issued": "2026-10-28T14:15:00+09:00",
+          "modified": "2026-10-28T14:15:00+09:00"
+        },
+        {
+          "title": "Yamaha LAN Monitor for WindowsのインストーラにおけるDLL読み込みに関する脆弱性",
+          "link": "https://jvn.jp/jp/JVN23695234/",
+          "description": "ヤマハ株式会社が提供するYamaha LAN Monitor for Windowsのインストーラには、DLL読み込みに関する脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#23695234",
+          "relation": "https://jvn.jp/jp/JVN23695234/",
+          "date": "2026-10-28T14:00:15+09:00",
+          "issued": "2026-10-28T14:00:15+09:00",
+          "modified": "2026-10-28T14:00:15+09:00"
+        },
+        {
+          "title": "ヤマハ製YMS-VPN8およびYMS-VPN8-CPにおける引用符で囲まれていないファイルパスの脆弱性",
+          "link": "https://jvn.jp/jp/JVN30675482/",
+          "description": "ヤマハ株式会社が提供するYMS-VPN8およびYMS-VPN8-CPには、登録されるWindowsサービスプログラムのファイルパスが引用符で囲まれていない問題が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#30675482",
+          "relation": "https://jvn.jp/jp/JVN30675482/",
+          "date": "2026-10-28T14:00:00+09:00",
+          "issued": "2026-10-28T14:00:00+09:00",
+          "modified": "2026-10-28T14:00:00+09:00"
+        },
+        {
+          "title": "CISA ICS Advisory / ICS Medical Advisory（2026年10月27日）",
+          "link": "https://jvn.jp/vu/JVNVU96093239/",
+          "description": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#96093239",
+          "relation": "https://jvn.jp/vu/JVNVU96093239/",
+          "date": "2026-10-28T09:00:00+09:00",
+          "issued": "2026-10-28T09:00:00+09:00",
+          "modified": "2026-10-28T09:00:00+09:00"
+        },
+        {
+          "title": "GROWIにおける複数の脆弱性",
+          "link": "https://jvn.jp/jp/JVN51223238/",
+          "description": "株式会社GROWIが提供するGROWIには、複数の脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#51223238",
+          "relation": "https://jvn.jp/jp/JVN51223238/",
+          "date": "2026-10-27T15:00:00+09:00",
+          "issued": "2026-10-27T15:00:00+09:00",
+          "modified": "2026-10-27T15:00:00+09:00"
+        },
+        {
+          "title": "Sleipnir Mobile for Androidのユーザーインターフェースにおいて偽のアドレスバーなどを表示される脆弱性",
+          "link": "https://jvn.jp/jp/JVN90463048/",
+          "description": "フェンリル株式会社が提供するSleipnir Mobile for Androidには、ユーザーインターフェースにおいて偽のアドレスバーなどを表示される脆弱性が存在します。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVN#90463048",
+          "relation": "https://jvn.jp/jp/JVN90463048/",
+          "date": "2026-10-27T12:00:00+09:00",
+          "issued": "2026-10-27T12:00:00+09:00",
+          "modified": "2026-10-27T12:00:00+09:00"
+        },
+        {
+          "title": "Fireblocks製mpc-libの強化導出（Hardened Derivation）処理における脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU90547696/",
+          "description": "CERT/CCから本件に関するアドバイザリが公表されました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#90547696",
+          "relation": "https://jvn.jp/vu/JVNVU90547696/",
+          "date": "2026-10-27T10:30:15+09:00",
+          "issued": "2026-10-27T10:30:15+09:00",
+          "modified": "2026-10-27T10:30:15+09:00"
+        },
+        {
+          "title": "COVESA vsomeipにおける過剰なメモリ割り当ての脆弱性",
+          "link": "https://jvn.jp/vu/JVNVU90363302/",
+          "description": "CERT/CCから本件に関するアドバイザリが公表されました。",
+          "publisher": "JVN",
+          "creator": "jvn@jvn.jp",
+          "identifier": "JVNVU#90363302",
+          "relation": "https://jvn.jp/vu/JVNVU90363302/",
+          "date": "2026-10-27T10:30:00+09:00",
+          "issued": "2026-10-27T10:30:00+09:00",
+          "modified": "2026-10-27T10:30:00+09:00"
+        }
+      ],
+      "status": "checked_changed"
+    },
+    {
+      "name": "jpcert.rdf",
+      "url": "https://www.jpcert.or.jp/rss/jpcert.rdf",
+      "attemptAt": "2026-11-04T21:14:39.039111Z",
+      "previousSuccess": "2026-11-03T21:10:52.582673Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:14:43.970815Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:14:43.972664Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://www.jpcert.or.jp/rss/jpcert.rdf",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:14:43.970815Z",
+        "bytes": 14116,
+        "sha256": "abbae78146febc8f4e766ec5b9c2851109977925527daf8bf45b03fb6ee99b2b",
+        "headers": {
+          "content-type": "application/rdf+xml",
+          "content-length": "14116",
+          "accept-ranges": "bytes",
+          "server": "envoy",
+          "last-modified": "Wed, 04 Nov 2026 09:10:46 GMT",
+          "date": "Wed, 04 Nov 2026 21:14:33 GMT",
+          "etag": "\"3724-65f6fc11a5180\"",
+          "x-cache": "Hit from cloudfront",
+          "via": "1.1 854d26865576ec09b27bbf1990553426.cloudfront.net (CloudFront)",
+          "x-amz-cf-pop": "SFO53-P12",
+          "x-amz-cf-id": "mMzfKXOHnwseg5CouTgwj7wvU9E7VXoW3QHpglu5jd-wyQ_zsn9enA==",
+          "age": "10",
+          "x-envoy-upstream-service-time": "431",
+          "connection": "close"
+        }
+      },
+      "items": [
+        {
+          "title": "注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260033.html",
+          "identifier": "at260033",
+          "date": "2026-10-29T15:43+09:00"
+        },
+        {
+          "title": "注意喚起: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260034.html",
+          "identifier": "at260034",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "注意喚起: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260030.html",
+          "identifier": "at260030",
+          "date": "2026-10-23T11:37+09:00"
+        },
+        {
+          "title": "注意喚起: SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性（CVE-2026-106931）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260032.html",
+          "identifier": "at260032",
+          "date": "2026-10-14T14:18+09:00"
+        },
+        {
+          "title": "注意喚起: 2026年10月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260031.html",
+          "identifier": "at260031",
+          "date": "2026-10-14T11:25+09:00"
+        },
+        {
+          "title": "注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260029.html",
+          "identifier": "at260029",
+          "date": "2026-10-02T14:15+09:00"
+        },
+        {
+          "title": "Weekly Report: VeloCloud OrchestratorにSQLインジェクションの脆弱性",
+          "description": "VeloCloud OrchestratorにSQLインジェクションの脆弱性",
+          "encoded": "\n\tVeloCloud OrchestratorにSQLインジェクションの脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#1\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#1",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: ISC BINDに複数の脆弱性",
+          "description": "ISC BINDに複数の脆弱性",
+          "encoded": "\n\tISC BINDに複数の脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#2\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#2",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のCisco製品に脆弱性",
+          "description": "複数のCisco製品に脆弱性",
+          "encoded": "\n\t複数のCisco製品に脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#3\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#3",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: GitLabに複数の脆弱性",
+          "description": "GitLabに複数の脆弱性",
+          "encoded": "\n\tGitLabに複数の脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#4\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#4",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: Apache Tomcatに複数の脆弱性",
+          "description": "Apache Tomcatに複数の脆弱性",
+          "encoded": "\n\tApache Tomcatに複数の脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#5\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#5",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: Google Chromeに複数の脆弱性",
+          "description": "Google Chromeに複数の脆弱性",
+          "encoded": "\n\tGoogle Chromeに複数の脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#6\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#6",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のAtlassian製品に脆弱性",
+          "description": "複数のAtlassian製品に脆弱性",
+          "encoded": "\n\t複数のAtlassian製品に脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#7\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#7",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のMozilla製品に脆弱性",
+          "description": "複数のMozilla製品に脆弱性",
+          "encoded": "\n\t複数のMozilla製品に脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#8\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#8",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: LaravelのTokenGuardに認証回避につながる脆弱性",
+          "description": "LaravelのTokenGuardに認証回避につながる脆弱性",
+          "encoded": "\n\tLaravelのTokenGuardに認証回避につながる脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#9\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#9",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: Roundcube Webmailに複数の脆弱性",
+          "description": "Roundcube Webmailに複数の脆弱性",
+          "encoded": "\n\tRoundcube Webmailに複数の脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#10\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#10",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: MOVEit Transferに複数の脆弱性",
+          "description": "MOVEit Transferに複数の脆弱性",
+          "encoded": "\n\tMOVEit Transferに複数の脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#11\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#11",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のOracle製品に脆弱性",
+          "description": "複数のOracle製品に脆弱性",
+          "encoded": "\n\t複数のOracle製品に脆弱性<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#12\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#12",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起",
+          "description": "PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起",
+          "encoded": "\n\tPHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#13\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#13",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: JPCERT/CCが2026年7月から2026年9月分の「ソフトウェア等の脆弱性関連情報に関する届出状況」を公開",
+          "description": "JPCERT/CCが2026年7月から2026年9月分の「ソフトウェア等の脆弱性関連情報に関する届出状況」を公開",
+          "encoded": "\n\tJPCERT/CCが2026年7月から2026年9月分の「ソフトウェア等の脆弱性関連情報に関する届出状況」を公開<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#14\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#14",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: JPCERT/CCが2026年7月から9月分の「JPCERT/CC 四半期レポート」を公開",
+          "description": "JPCERT/CCが2026年7月から9月分の「JPCERT/CC 四半期レポート」を公開",
+          "encoded": "\n\tJPCERT/CCが2026年7月から9月分の「JPCERT/CC 四半期レポート」を公開<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#15\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#15",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        }
+      ],
+      "status": "checked_unchanged"
+    },
+    {
+      "name": "jpcert-all.rdf",
+      "url": "https://www.jpcert.or.jp/rss/jpcert-all.rdf",
+      "attemptAt": "2026-11-04T21:14:39.040929Z",
+      "previousSuccess": "2026-11-03T21:10:53.006917Z",
+      "lastSuccessfulFetchAt": "2026-11-04T21:14:44.085675Z",
+      "lastSuccessfulContentCheckAt": "2026-11-04T21:14:44.088539Z",
+      "lastSuccessfulFetchAtAdvanced": true,
+      "lastSuccessfulContentCheckAtAdvanced": true,
+      "fetch": {
+        "url": "https://www.jpcert.or.jp/rss/jpcert-all.rdf",
+        "httpStatus": 200,
+        "checkedAt": "2026-11-04T21:14:44.085675Z",
+        "bytes": 28010,
+        "sha256": "3424f7a47c0b2676e09ef142062b59b133a2775a3ea0df32a7f837c948f2921f",
+        "headers": {
+          "content-type": "application/rdf+xml",
+          "content-length": "28010",
+          "accept-ranges": "bytes",
+          "server": "envoy",
+          "last-modified": "Wed, 04 Nov 2026 09:10:46 GMT",
+          "date": "Wed, 04 Nov 2026 21:14:43 GMT",
+          "etag": "\"6d6a-65f6fc11a5180\"",
+          "x-cache": "RefreshHit from cloudfront",
+          "via": "1.1 854d26865576ec09b27bbf1990553426.cloudfront.net (CloudFront)",
+          "x-amz-cf-pop": "SFO53-P12",
+          "x-amz-cf-id": "nDPbimHlTZRNHYGPQPIfdTdyYxHumqcnrqFrq0aY1S-Ld8zcTkLMmA==",
+          "x-envoy-upstream-service-time": "535",
+          "connection": "close"
+        }
+      },
+      "items": [
+        {
+          "title": "お知らせ：オープンリゾルバー確認サイト長期メンテナンスのお知らせ",
+          "link": "https://www.jpcert.or.jp/maintenance20261030.html",
+          "date": "2026-10-30T10:04+09:00"
+        },
+        {
+          "title": "お知らせ：インシデント報告Webフォーム緊急メンテナンス終了のお知らせ",
+          "link": "https://www.jpcert.or.jp/maintenance20261023.html",
+          "date": "2026-10-23T13:06+09:00"
+        },
+        {
+          "title": "お知らせ：インシデント報告Webフォーム緊急メンテナンスのお知らせ",
+          "link": "https://www.jpcert.or.jp/maintenance20261022.html",
+          "date": "2026-10-22T15:06+09:00"
+        },
+        {
+          "title": "お知らせ：ソフトウェア等の脆弱性関連情報に関する届出状況［2026年第3四半期（7月～9月）］",
+          "link": "https://www.jpcert.or.jp/report/press.html",
+          "date": "2026-10-22T11:52+09:00"
+        },
+        {
+          "title": "お知らせ：JPCERT/CC 四半期レポート［2026年7月1日～2026年9月30日］",
+          "link": "https://www.jpcert.or.jp/qr/index.html",
+          "date": "2026-10-22T11:03+09:00"
+        },
+        {
+          "title": "注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260033.html",
+          "identifier": "at260033",
+          "date": "2026-10-29T15:43+09:00"
+        },
+        {
+          "title": "注意喚起: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260034.html",
+          "identifier": "at260034",
+          "date": "2026-10-26T16:25+09:00"
+        },
+        {
+          "title": "注意喚起: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260030.html",
+          "identifier": "at260030",
+          "date": "2026-10-23T11:37+09:00"
+        },
+        {
+          "title": "注意喚起: SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性（CVE-2026-106931）に関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260032.html",
+          "identifier": "at260032",
+          "date": "2026-10-14T14:18+09:00"
+        },
+        {
+          "title": "注意喚起: 2026年10月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260031.html",
+          "identifier": "at260031",
+          "date": "2026-10-14T11:25+09:00"
+        },
+        {
+          "title": "注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起  (更新)",
+          "link": "https://www.jpcert.or.jp/at/2026/at260029.html",
+          "identifier": "at260029",
+          "date": "2026-10-02T14:15+09:00"
+        },
+        {
+          "title": "Weekly Report: VeloCloud OrchestratorにSQLインジェクションの脆弱性",
+          "description": "Aristaが提供するVeloCloud Orchestratorには、SQLインジェクションの脆弱性があります。Aristaは、今回修正された脆弱性を悪用した攻撃を確認しているとのことです。ホスト型はすでに修正済みです。オンプレミス版の利用者は、当該製品を修正済みのバージョンに更新してください。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tAristaが提供するVeloCloud Orchestratorには、SQLインジェクションの脆弱性があります。Aristaは、今回修正された脆弱性を悪用した攻撃を確認しているとのことです。ホスト型はすでに修正済みです。オンプレミス版の利用者は、当該製品を修正済みのバージョンに更新してください。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#1\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#1",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: ISC BINDに複数の脆弱性",
+          "description": "Internet Systems Consortiumが提供するBINDには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tInternet Systems Consortiumが提供するBINDには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#2\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#2",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のCisco製品に脆弱性",
+          "description": "複数のCisco製品には、脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\t複数のCisco製品には、脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#3\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#3",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: GitLabに複数の脆弱性",
+          "description": "GitLabには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tGitLabには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#4\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#4",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: Apache Tomcatに複数の脆弱性",
+          "description": "Apache Tomcatには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tApache Tomcatには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#5\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#5",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: Google Chromeに複数の脆弱性",
+          "description": "Google Chromeには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tGoogle Chromeには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#6\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#6",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のAtlassian製品に脆弱性",
+          "description": "複数のAtlassian製品には、脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\t複数のAtlassian製品には、脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#7\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#7",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のMozilla製品に脆弱性",
+          "description": "複数のMozilla製品には、脆弱性があります。Firefox、Firefox ESR、Thunderbird、Firefox for Androidが影響を受けます。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\t複数のMozilla製品には、脆弱性があります。Firefox、Firefox ESR、Thunderbird、Firefox for Androidが影響を受けます。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#8\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#8",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: LaravelのTokenGuardに認証回避につながる脆弱性",
+          "description": "Laravelに標準搭載されているトークン認証機構「TokenGuard」には、特定の構成において認証回避につながる脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tLaravelに標準搭載されているトークン認証機構「TokenGuard」には、特定の構成において認証回避につながる脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#9\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#9",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: Roundcube Webmailに複数の脆弱性",
+          "description": "Roundcube Webmailには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tRoundcube Webmailには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#10\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#10",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: MOVEit Transferに複数の脆弱性",
+          "description": "Progress Softwareが提供するMOVEit Transferには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tProgress Softwareが提供するMOVEit Transferには、複数の脆弱性があります。この問題は、当該製品を修正済みのバージョンに更新することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#11\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#11",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: 複数のOracle製品に脆弱性",
+          "description": "複数のOracle製品には、脆弱性があります。対象となる製品およびバージョンは多岐にわたります。この問題は、Oracleが提供するセキュリティパッチを適用することで解決します。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\t複数のOracle製品には、脆弱性があります。対象となる製品およびバージョンは多岐にわたります。この問題は、Oracleが提供するセキュリティパッチを適用することで解決します。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#12\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#12",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起",
+          "description": "PHPには、複数のリモートコード実行につながる脆弱性があります。本脆弱性を悪用できると主張する実証コードが多数公開されているほか、本脆弱性の悪用を試みる通信を観測したとの報告も相次いでいます。この問題は、バージョンアップを実施することで解決します。ただし、すでにサポートが終了したバージョンに関しては修正版はリリースされません。詳細は、開発者が提供する情報を参照してください。",
+          "encoded": "\n\tPHPには、複数のリモートコード実行につながる脆弱性があります。本脆弱性を悪用できると主張する実証コードが多数公開されているほか、本脆弱性の悪用を試みる通信を観測したとの報告も相次いでいます。この問題は、バージョンアップを実施することで解決します。ただし、すでにサポートが終了したバージョンに関しては修正版はリリースされません。詳細は、開発者が提供する情報を参照してください。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#13\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#13",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: JPCERT/CCが2026年7月から2026年9月分の「ソフトウェア等の脆弱性関連情報に関する届出状況」を公開",
+          "description": "JPCERT/CCは、2026年7月から9月分の「ソフトウェア等の脆弱性関連情報に関する届出状況」を公開しました。本レポートでは、ソフトウェア製品の脆弱性、Webサイトの脆弱性に関する取扱状況についてまとめています。",
+          "encoded": "\n\tJPCERT/CCは、2026年7月から9月分の「ソフトウェア等の脆弱性関連情報に関する届出状況」を公開しました。本レポートでは、ソフトウェア製品の脆弱性、Webサイトの脆弱性に関する取扱状況についてまとめています。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#14\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#14",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "Weekly Report: JPCERT/CCが2026年7月から9月分の「JPCERT/CC 四半期レポート」を公開",
+          "description": "JPCERT/CCは、2026年7月から9月分の四半期レポートを公開しました。JPCERT/CCが報告を受けたインシデントの統計や事例をはじめ、国内外の活動についてまとめています。",
+          "encoded": "\n\tJPCERT/CCは、2026年7月から9月分の四半期レポートを公開しました。JPCERT/CCが報告を受けたインシデントの統計や事例をはじめ、国内外の活動についてまとめています。<a href=\"https://www.jpcert.or.jp/wr/2026/wr261028.html#15\">続きを読む</a>\n\t",
+          "link": "https://www.jpcert.or.jp/wr/2026/wr261028.html#15",
+          "identifier": "wr261028",
+          "date": "2026-10-28T09:07+09:00"
+        },
+        {
+          "title": "JVN: Hinemosにおける不適切な権限の割り当ての脆弱性",
+          "description": "株式会社NTTデータ先端技術が提供するHinemosには、不適切な権限の割り当ての脆弱性が存在します。",
+          "encoded": "\n\t株式会社NTTデータ先端技術が提供するHinemosには、不適切な権限の割り当ての脆弱性が存在します。<a href=\"https://jvn.jp/jp/JVN46901199/\">続きを読む</a>\n\t",
+          "link": "https://jvn.jp/jp/JVN46901199/",
+          "date": "2026-11-04T16:00:00+09:00"
+        },
+        {
+          "title": "JVN: Airbyteにおける任意のコードが実行可能な脆弱性",
+          "description": "Airbyteには、不適切なクラスロードにより想定外のコンポーネントを読み込むことができるため、任意のコード実行が可能となる脆弱性が存在します。",
+          "encoded": "\n\tAirbyteには、不適切なクラスロードにより想定外のコンポーネントを読み込むことができるため、任意のコード実行が可能となる脆弱性が存在します。<a href=\"https://jvn.jp/jp/JVN12040144/\">続きを読む</a>\n\t",
+          "link": "https://jvn.jp/jp/JVN12040144/",
+          "date": "2026-11-04T12:00:15+09:00"
+        },
+        {
+          "title": "JVN: 複数のAkeeba製品におけるクロスサイトリクエストフォージェリの脆弱性",
+          "description": "Akeeba Ltd.が提供する複数の製品には、クロスサイトリクエストフォージェリの脆弱性が存在します。",
+          "encoded": "\n\tAkeeba Ltd.が提供する複数の製品には、クロスサイトリクエストフォージェリの脆弱性が存在します。<a href=\"https://jvn.jp/jp/JVN44272550/\">続きを読む</a>\n\t",
+          "link": "https://jvn.jp/jp/JVN44272550/",
+          "date": "2026-11-04T12:00:00+09:00"
+        },
+        {
+          "title": "JVN: INFINITT Healthcare製INFINITT PACS System Managerにおける複数の任意コード実行の脆弱性",
+          "description": "CERT/CCから本件に関するアドバイザリが公表されました。",
+          "encoded": "\n\tCERT/CCから本件に関するアドバイザリが公表されました。<a href=\"https://jvn.jp/vu/JVNVU99859918/\">続きを読む</a>\n\t",
+          "link": "https://jvn.jp/vu/JVNVU99859918/",
+          "date": "2026-11-04T10:15:30+09:00"
+        },
+        {
+          "title": "JVN: Androidアプリ「BaseChat - Audio Dating App」における複数の脆弱性",
+          "description": "CERT/CCから本件に関するアドバイザリが公表されました。",
+          "encoded": "\n\tCERT/CCから本件に関するアドバイザリが公表されました。<a href=\"https://jvn.jp/vu/JVNVU92281274/\">続きを読む</a>\n\t",
+          "link": "https://jvn.jp/vu/JVNVU92281274/",
+          "date": "2026-11-04T10:15:15+09:00"
+        },
+        {
+          "title": "JVN: CISA ICS Advisory / ICS Medical Advisory（2026年11月03日）",
+          "description": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。",
+          "encoded": "\n\t米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。<a href=\"https://jvn.jp/vu/JVNVU91151184/\">続きを読む</a>\n\t",
+          "link": "https://jvn.jp/vu/JVNVU91151184/",
+          "date": "2026-11-04T10:15:00+09:00"
+        }
+      ],
+      "status": "checked_changed"
+    }
+  ],
+  "otherSources": [
+    {
+      "name": "cisaKev",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "attemptAt": "2026-11-04T21:14:39.042796Z",
+      "previousSuccess": null,
+      "lastSuccessfulFetchAt": null,
+      "lastSuccessfulContentCheckAt": null,
+      "lastSuccessfulFetchAtAdvanced": false,
+      "lastSuccessfulContentCheckAtAdvanced": false,
+      "status": "fetch_or_content_check_failed",
+      "error": "HTTP Error 403: Forbidden",
+      "httpStatus": 403
+    },
+    {
+      "name": "jvnIpedia",
+      "url": "https://jvndb.jvn.jp/myjvn?method=getVulnOverviewList&feed=hnd&startItem=1&maxCountItem=50&rangeDatePublic=n&rangeDatePublished=n&rangeDateFirstPublished=n&lang=ja&datePublishedStartY=2026&datePublishedStartM=10&datePublishedStartD=19&datePublishedEndY=2026&datePublishedEndM=11&datePublishedEndD=5",
+      "attemptAt": "2026-11-04T21:14:43.972907Z",
+      "previousSuccess": "2026-10-20T21:35:52.516599Z",
+      "lastSuccessfulFetchAt": "2026-10-20T21:35:52.504140Z",
+      "lastSuccessfulContentCheckAt": "2026-10-20T21:35:52.516599Z",
+      "lastSuccessfulFetchAtAdvanced": false,
+      "lastSuccessfulContentCheckAtAdvanced": false,
+      "status": "fetch_or_content_check_failed",
+      "error": "HTTP Error 503: Service Unavailable",
+      "httpStatus": 503,
+      "overlapFromInclusive": "2026-10-19T21:35:52.516599Z",
+      "requestedCalendarWindow": "2026-10-19 through 2026-11-05 JST modification dates; retained last successful checkpoint minus at least 24 hours"
+    }
+  ],
+  "aggregateExportCounts": 285549,
+  "deltaCountsByExportRows": {
+    "added": {
+      "ordinary": 32,
+      "mal": 67
+    },
+    "changed": {
+      "ordinary": 54,
+      "mal": 28
+    },
+    "deleted": {
+      "ordinary": 0,
+      "mal": 0
+    }
+  },
+  "limitations": [
+    "Counts are export rows, not distinct newly published vulnerabilities. MAL remains separate.",
+    "The seven OSV exports have separate generation times and are not a synchronized snapshot.",
+    "CISA canonical 403 and MyJVN 503 do not establish absence. Official CISA GitHub mirror inspection is separately recorded by the product review.",
+    "JVN/JPCERT unchanged feed bytes do not establish no changes to linked pages."
+  ]
+}
