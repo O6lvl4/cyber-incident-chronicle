@@ -1,0 +1,989 @@
+[
+  {
+    "path": "advisories/github-reviewed/2026/03/GHSA-vm69-h85x-8p85/GHSA-vm69-h85x-8p85.json",
+    "change": "modified",
+    "oldBlob": "5f7a27307bb8119864e0300d06648378c232d317",
+    "newBlob": "a9cf7a30d930c843860870be876fc816745373f9",
+    "sha256": "05bd15cbaee19e983bbb64addb98d23ba2f49c8c08fda77c429bb3ee93c95ea0",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-vm69-h85x-8p85",
+      "modified": "2026-11-05T21:33:44Z",
+      "published": "2026-03-18T20:10:44Z",
+      "aliases": [
+        "CVE-2026-33194"
+      ],
+      "summary": "SiYuan has an Incomplete Fix for IsSensitivePath Denylist Allows File Read from /opt, /usr, /home (GHSA-h5vh-m7fg-w5h6 Bypass)",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "Go",
+            "name": "github.com/siyuan-note/siyuan/kernel"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "3.6.2"
+                }
+              ]
+            }
+          ],
+          "database_specific": {
+            "last_known_affected_version_range": "<= 3.6.1"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vm69-h85x-8p85"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33194"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/siyuan-note/siyuan/commit/501571c2d22bb1207ea5da3450a903434026256b"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/siyuan-note/siyuan"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-22"
+        ],
+        "severity": "MODERATE",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-03-18T20:10:44Z",
+        "nvd_published_at": "2026-03-20T23:16:45Z"
+      },
+      "detailsSha256": "29941fe4b4b7c090e6a3b36b1d89c70137f84e72dbba4c7d0dde686f2f98648f",
+      "detailsCharacters": 3557
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/04/GHSA-3p24-9x7v-7789/GHSA-3p24-9x7v-7789.json",
+    "change": "modified",
+    "oldBlob": "969622337f8b5bfdcb2dfd93eea25d5a785f7326",
+    "newBlob": "892cf1232e132036788b67c411382568de1360b5",
+    "sha256": "987871c9459f5aee3635fcae6eb6555345750ad022b60aabec4ad1e9e19d16b4",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-3p24-9x7v-7789",
+      "modified": "2026-11-04T22:12:58Z",
+      "published": "2026-04-13T16:38:25Z",
+      "aliases": [
+        "CVE-2026-35582"
+      ],
+      "summary": "Emissary has an OS Command Injection via Unvalidated IN_FILE_ENDING / OUT_FILE_ENDING in Executrix",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "gov.nsa.emissary:emissary"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "8.43.0"
+                }
+              ]
+            }
+          ],
+          "database_specific": {
+            "last_known_affected_version_range": "<= 8.42.0"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/security/advisories/GHSA-3p24-9x7v-7789"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35582"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/commit/1faf33f2494c0128f250d7d2e8f2da99bbd32ae8"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/NationalSecurityAgency/emissary"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/releases/tag/8.43.0"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-116",
+          "CWE-78"
+        ],
+        "severity": "HIGH",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-04-13T16:38:25Z",
+        "nvd_published_at": "2026-04-18T02:16:11Z"
+      },
+      "detailsSha256": "f81e4a6917c2391b35b5d221a2f92bdfc783692936d7848d38abc555ecbb7834",
+      "detailsCharacters": 19401
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/04/GHSA-6c37-7w4p-jg9v/GHSA-6c37-7w4p-jg9v.json",
+    "change": "modified",
+    "oldBlob": "1f4cb372294e20a8cef7b55c1aec27f7a4ae14a8",
+    "newBlob": "4f4e01105909124fecc8c658fae4cfd7da1cea9e",
+    "sha256": "6fa731b402492cee187275d1f97298b66fd8d0358ffdbb066af50326397fe843",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-6c37-7w4p-jg9v",
+      "modified": "2026-11-04T22:10:22Z",
+      "published": "2026-04-08T00:12:50Z",
+      "aliases": [
+        "CVE-2026-35581"
+      ],
+      "summary": "Emissary has a Command Injection via PLACE_NAME Configuration in Executrix",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "gov.nsa.emissary:emissary"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "8.39.0"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/security/advisories/GHSA-6c37-7w4p-jg9v"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35581"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/pull/1290"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/NationalSecurityAgency/emissary"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/releases/tag/8.39.0"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-78"
+        ],
+        "severity": "HIGH",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-04-08T00:12:50Z",
+        "nvd_published_at": "2026-04-07T17:16:33Z"
+      },
+      "detailsSha256": "63f642e8890842cfb4d48ee52720d91e5f1dde79cbf9c2e53f42cb2d808b72cd",
+      "detailsCharacters": 2640
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/04/GHSA-cpm7-cfpx-3hvp/GHSA-cpm7-cfpx-3hvp.json",
+    "change": "modified",
+    "oldBlob": "cc68b20e7f93f0034eeac467980c939e1b01b43d",
+    "newBlob": "dd783a5de008b59a3a236c10368e6199c2645f8d",
+    "sha256": "68ac7363e23c4adeea45d777d448ec620dc14f9b9611871255328859ca5d5255",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-cpm7-cfpx-3hvp",
+      "modified": "2026-11-04T22:07:20Z",
+      "published": "2026-04-07T20:17:14Z",
+      "aliases": [
+        "CVE-2026-35571"
+      ],
+      "summary": "Emissary has Stored XSS via Navigation Template Link Injection",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "gov.nsa.emissary:emissary"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "8.39.0"
+                }
+              ]
+            }
+          ],
+          "database_specific": {
+            "last_known_affected_version_range": "<= 8.38.0"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/security/advisories/GHSA-cpm7-cfpx-3hvp"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35571"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/pull/1293"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/commit/e2078417464b9004620dde28dcbca2f73ea06c13"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/NationalSecurityAgency/emissary"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/NationalSecurityAgency/emissary/releases/tag/8.39.0"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-79"
+        ],
+        "severity": "MODERATE",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-04-07T20:17:14Z",
+        "nvd_published_at": "2026-04-07T16:16:29Z"
+      },
+      "detailsSha256": "ab3f84fcf9ecb5243fc9bd80e6a3fa7bf5bfbe1ef2d2f27cec34d5c434e6ffd5",
+      "detailsCharacters": 2936
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/05/GHSA-2cm2-m3w5-gp2f/GHSA-2cm2-m3w5-gp2f.json",
+    "change": "modified",
+    "oldBlob": "5ce1379ec68226db9547c3bd5c24bc45aba2727f",
+    "newBlob": "06f89eef77761673953b2c7a5e0b3977dcd04d2e",
+    "sha256": "381a04c9a2d8941b561358493a9a0ff79d65fa4e811adaaec723678521943db9",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-2cm2-m3w5-gp2f",
+      "modified": "2026-11-05T21:42:50Z",
+      "published": "2026-05-08T16:22:52Z",
+      "aliases": [],
+      "summary": "vm2 has access to `VM2_INTERNAL_STATE_DO_NOT_USE_OR_PROGRAM_WILL_FAIL`",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "vm2"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "3.11.2"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-2cm2-m3w5-gp2f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/patriksimek/vm2/commit/99d410bb7e0d607c56e68b420720a586dc0dd300"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/patriksimek/vm2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/patriksimek/vm2/releases/tag/v3.11.2"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-693"
+        ],
+        "severity": "MODERATE",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-05-08T16:22:52Z",
+        "nvd_published_at": null
+      },
+      "detailsSha256": "c2ff088c6edfc6f3bcb225be35c9cc529f05baddc6c90f6a1be0b0de0e0b8e49",
+      "detailsCharacters": 377
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/05/GHSA-cmxg-94mg-jq94/GHSA-cmxg-94mg-jq94.json",
+    "change": "modified",
+    "oldBlob": "8a0dec70bcd1d9b9b3908b9f19d65c87a4c1646f",
+    "newBlob": "32835bc85cfb79c58d282c9cee02f2fe156a4fac",
+    "sha256": "8dd31ed37d0c32bbae2d61bb08bacd3aa140d37afda0ef816519f16fbe9137a9",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-cmxg-94mg-jq94",
+      "modified": "2026-11-05T20:00:34Z",
+      "published": "2026-05-18T17:07:04Z",
+      "aliases": [
+        "CVE-2026-45325"
+      ],
+      "summary": "@tmlmobilidade/utils has prototype pollution in its setValueAtPath",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "@tmlmobilidade/utils"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "20260509.340.15"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/tmlmobilidade/go/security/advisories/GHSA-cmxg-94mg-jq94"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45325"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/tmlmobilidade/go/commit/b10505baa7ba0701f830a05f3007c0a6bdd00eb7"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/tmlmobilidade/go"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/tmlmobilidade/go/blob/prd/packages/utils/src/generic/value-at-path.ts"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-1321"
+        ],
+        "severity": "HIGH",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-05-18T17:07:04Z",
+        "nvd_published_at": "2026-07-16T17:16:56Z"
+      },
+      "detailsSha256": "62c90d5c339ae7a236678eed1332058bbd99b6a637c8a44aa7646eea32bbdd03",
+      "detailsCharacters": 158
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/05/GHSA-xh5j-727m-w6gg/GHSA-xh5j-727m-w6gg.json",
+    "change": "modified",
+    "oldBlob": "c9b532b2bf72fcc883f7a8bf81f78bafc9b4ef16",
+    "newBlob": "7977297fc4a964a10a47b8e089c08f1713de2e73",
+    "sha256": "f95d91edd39378a2f1d030bc2f07a48694cd75ce9b8f4e68cfd6a3e0714260e6",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-xh5j-727m-w6gg",
+      "modified": "2026-11-05T21:41:04Z",
+      "published": "2026-05-11T16:20:27Z",
+      "aliases": [
+        "CVE-2026-45061"
+      ],
+      "summary": "Budibase vulnerable to SSRF via trivial `.tar.gz` substring bypass in Plugin URL upload (`/api/plugin`)",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "npm",
+            "name": "budibase"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "3.35.10"
+                }
+              ]
+            }
+          ],
+          "database_specific": {
+            "last_known_affected_version_range": "<= 3.34.11"
+          }
+        }
+      ],
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-xh5j-727m-w6gg"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45061"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Budibase/budibase/commit/fc659c9cb61af067daec8610219c75eb3fd7c34d"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/Budibase/budibase"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-918"
+        ],
+        "severity": "HIGH",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-05-11T16:20:27Z",
+        "nvd_published_at": "2026-05-27T18:16:24Z"
+      },
+      "detailsSha256": "58b33b907fab813eb0e41c206c670ecc752b909a7569e0d25ba5307fda006e9e",
+      "detailsCharacters": 12341
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/06/GHSA-7ph3-grqh-pv9v/GHSA-7ph3-grqh-pv9v.json",
+    "change": "added",
+    "oldBlob": null,
+    "newBlob": "9d952541a00044a6532410a7662e582648183f49",
+    "sha256": "5254cc6edd17931ab972e6aca9c27af4a107f0a372197c86ce04d3e08f4149cc",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-7ph3-grqh-pv9v",
+      "modified": "2026-11-05T18:05:11Z",
+      "published": "2026-06-30T15:30:46Z",
+      "aliases": [
+        "CVE-2025-53648"
+      ],
+      "summary": "Apache Gravitino JDBC configuration validation bypass can allow file reads or truncation",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.gravitino:catalog-jdbc-common"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0.5.0"
+                },
+                {
+                  "fixed": "1.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53648"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/gravitino/pull/8000"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/github/advisory-database/pull/10102"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/gravitino/commit/5355bd075d54cad1323606723e72cc32ca564f24"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/gravitino"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/gravitino/releases/tag/v1.0.0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/s0hytcv17z52dwp5dojjjwgrtqtyh2xk"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2026/06/30/2"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-89"
+        ],
+        "severity": "MODERATE",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-11-05T18:05:11Z",
+        "nvd_published_at": "2026-06-30T14:16:24Z"
+      },
+      "detailsSha256": "a5629ed2577cf615d18f7005b5595d7f1506706b1e2f91d2e75452c878309d7d",
+      "detailsCharacters": 201
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/06/GHSA-j548-68g5-9j7x/GHSA-j548-68g5-9j7x.json",
+    "change": "added",
+    "oldBlob": null,
+    "newBlob": "c8a8bfcb8c6292942022e0b3bceb0b3eb2c6a351",
+    "sha256": "602f52a1136ae4212db78b76948d46b27bc957934fbd88ef1b91ecb591e899f2",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-j548-68g5-9j7x",
+      "modified": "2026-11-05T17:35:05Z",
+      "published": "2026-06-30T12:31:52Z",
+      "aliases": [
+        "CVE-2026-52760"
+      ],
+      "summary": "Apache ActiveMQ, Apache ActiveMQ Web Console vulnerable to Cross-site Scripting",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:apache-activemq"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "5.19.8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:apache-activemq"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "6.0.0"
+                },
+                {
+                  "fixed": "6.2.7"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:activemq-web-console"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "5.19.8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:activemq-web-console"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "6.0.0"
+                },
+                {
+                  "fixed": "6.2.7"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52760"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/pull/2089"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/commit/1cbe5ab1122e299852b821ba33e7abd0cd76f77c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/commit/90c509f49b88fa71a55020e7ebb5d7264d7804e9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/commit/ea5a33ce87a203e0c8335f46f976e0a29c90f18a"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/activemq"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/releases/tag/activemq-5.19.8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/releases/tag/activemq-6.2.7"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/d3mhyo2116nomz2lwxppyy4pclvdxq3n"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2026/06/29/12"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-79"
+        ],
+        "severity": "MODERATE",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-11-05T17:35:05Z",
+        "nvd_published_at": "2026-06-30T11:16:30Z"
+      },
+      "detailsSha256": "1ef5ce81b5f414b8213824f57d819f35a151905b79e93367fba7a171fac49f77",
+      "detailsCharacters": 701
+    }
+  },
+  {
+    "path": "advisories/github-reviewed/2026/06/GHSA-mhp6-f224-j2c3/GHSA-mhp6-f224-j2c3.json",
+    "change": "added",
+    "oldBlob": null,
+    "newBlob": "12954d8313d861c56e6307c0d6f9d4d922017ce3",
+    "sha256": "46dc87b1306ede728174d7756e44a65e181cd33afd2f125584f256f44f23e7bb",
+    "eligible": true,
+    "record": {
+      "schema_version": "1.4.0",
+      "id": "GHSA-mhp6-f224-j2c3",
+      "modified": "2026-11-05T17:36:18Z",
+      "published": "2026-06-30T12:31:52Z",
+      "aliases": [
+        "CVE-2026-54475"
+      ],
+      "summary": "Apache ActiveMQ Broker, Apache ActiveMQ All, Apache ActiveMQ have a Missing Authorization vulnerability",
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "affected": [
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:activemq-broker"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "5.19.8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:activemq-broker"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "6.0.0"
+                },
+                {
+                  "fixed": "6.2.7"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:activemq-all"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "5.19.8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:activemq-all"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "6.0.0"
+                },
+                {
+                  "fixed": "6.2.7"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:apache-activemq"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "0"
+                },
+                {
+                  "fixed": "5.19.8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "ecosystem": "Maven",
+            "name": "org.apache.activemq:apache-activemq"
+          },
+          "ranges": [
+            {
+              "type": "ECOSYSTEM",
+              "events": [
+                {
+                  "introduced": "6.0.0"
+                },
+                {
+                  "fixed": "6.2.7"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54475"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/pull/2122"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/commit/225dcb649c5994463df12549a3f4eb9f6c509b34"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/commit/708c90f2c0f0d874649ea0f0454760668a8f90fc"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/commit/d8c5672e224883a16465f8550d0e6d900bfa383c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/activemq"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/releases/tag/activemq-5.19.8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/activemq/releases/tag/activemq-6.2.7"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/85f3q7mkh71y7qwyn6wvgw0bw4jl06ys"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2026/06/29/15"
+        }
+      ],
+      "database_specific": {
+        "cwe_ids": [
+          "CWE-862"
+        ],
+        "severity": "HIGH",
+        "github_reviewed": true,
+        "github_reviewed_at": "2026-11-05T17:36:18Z",
+        "nvd_published_at": "2026-06-30T11:16:30Z"
+      },
+      "detailsSha256": "c992ed3deeaf12ade8ff86f1d8c9e7a2755f019f441cc646aebe46064a2ceadf",
+      "detailsCharacters": 648
+    }
+  }
+]

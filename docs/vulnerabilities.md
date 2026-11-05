@@ -74,6 +74,20 @@ OSVの `related` / `upstream` は同一性を保証しないので別名とし�
 
 2026-10-08の個別50件拡充ではCISA公式カタログがHTTP403で取得できなかったためKEV未確認を維持した。React Server Componentsの実悪用試行はAWSの独立した一次観測報告を引用している。
 
+## 2026-11-06の更新記録
+
+固定ソースを `791a7d38dba2f98458199d10ad2cc55304c3d3d4`（2026-11-05T21:49:52Z）へ更新。前回成功点に24時間の重複窓を設け、固定Reviewed全ツリーのGitオブジェクトを比較した。全37,552 JSON・対象19,596アドバイザリを再生成・ハッシュ照合。10追加・27変更・削除なしのうち、対象は10追加・26変更で、Dolibarrの対象エコシステム外変更1件と区別する。変換失敗0。
+
+表示は19,747件（未撤回18,870・撤回履歴877）で11件増。Reviewed追加10件には新たに収録した撤回済み重複告知2件を含む。補助ソースのArrow1件を加え、当日の新規公表数とはしない。元ソースの撤回893アドバイザリと表示記録は異なる分母。既存695個別編集は保持し、Reviewed重ね合わせ9件とArrowを加えて705件とした。
+
+- kanikoのAzure ID漏えい、Banksのツールimport経由RCE、LXDのゲスト間ボリュームアクセス、filecoin-pinの資源枯渇を開発元公開API本文・構造化項目で確認。必要な設定や攻撃者が影響できる入力、再ビルドの要否を区別する。Banksの構造化修正版2.4.3と本文に残る2.4.2未修正の記載を保存する。
+- Undertowのパッケージ座標・系列別修正境界、各種版表記や参照先の訂正を固定DBから反映。claude-code-ui、Incus、Budibase、OAuthLibの開発元とDBの座標・範囲の差は留保する。Red Hatのエラー画面とApache Pony Mailのスクリプト画面はHTTP200でも本文取得成功としない。
+- OSV7エクスポート285,625行を前回固定generationとSHA256・ZIP CRC・正規化全文で比較。通常追加16・変更31、MAL追加60・変更7、削除0。MALは通常データへ混入しない。
+- Arrowの旧保留を、RustSec/OSVの明示GHSA/CVE別名・arrow-data座標と開発元oss-security投稿で解消。4系列の修正版を保持。CVE単独OSVと開発元GHSA APIの404は成功扱いせず、RustSec ID APIとエクスポートを根拠とする。別名が未確定のAzure Key Vault等は保留、未保守通知は脆弱性に追加しない。
+- JVN/JPCERTの3フィードは変更あり。CISA本体403・MyJVN503は最後の成功点と良好データを保持。製品情報は独立カテゴリーへ引き継ぐ。
+
+[Reviewed差分](data/github-reviewed-delta-2026-11-06.json)、[開発元確認](data/reviewed-maintainer-review-2026-11-06.json)、[補助取得](data/supplemental-source-status-2026-11-06.json)、[補助全文差分](data/osv-supplemental-delta-2026-11-06.json)、[候補](data/library-candidate-review-2026-11-06.json)を参照。選定した変更資料の確認であり、全開発元の個別再確認ではない。
+
 ## 2026-11-05の更新記録
 
 固定ソースを `7a766ee5a5ba897bab2181e56b8275e9cfb2349c`（2026-11-04T20:45:05Z）へ更新。前回成功点とのReviewed全JSONの比較で30追加・33変更・削除なしを確認した。対象変更は30追加・32既存変更で、対象外のTwig変更1件と区別する。全37,542ファイル・対象19,586アドバイザリを再生成・ハッシュ照合し、24時間重複窓の外の訂正も全文比較に含めた。変換失敗0。

@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-64vx-6h2c-rjh7",
+  "aliases": [
+    "CVE-2026-61536"
+  ],
+  "title": "Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE",
+  "summary": "Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE",
+  "publishedAt": "2026-11-05T17:51:02Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-64vx-6h2c-rjh7/GHSA-64vx-6h2c-rjh7.json",
+  "modifiedAt": "2026-11-05T17:57:43Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-05T21:55:56.946Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "banks",
+      "ranges": [
+        {
+          "affected": "< 2.4.3",
+          "fixed": "2.4.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-64vx-6h2c-rjh7/GHSA-64vx-6h2c-rjh7.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.4.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-64vx-6h2c-rjh7/GHSA-64vx-6h2c-rjh7.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-64vx-6h2c-rjh7/GHSA-64vx-6h2c-rjh7.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-64vx-6h2c-rjh7/GHSA-64vx-6h2c-rjh7.json",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T17:51:02Z",
+      "modifiedAt": "2026-11-05T17:57:43Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Banks: Unsafe importlib.import_module of attacker-controlled Tool.import_path in CompletionExtension allows RCE",
+      "url": "https://github.com/advisories/GHSA-64vx-6h2c-rjh7",
+      "publishedDate": "2026-11-05"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/masci/banks/security/advisories/GHSA-64vx-6h2c-rjh7",
+      "publishedDate": "2026-06-26",
+      "publishedAt": "2026-06-26T07:46:42Z",
+      "modifiedAt": "2026-07-10T16:55:58Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は留保と確認記録に保持する。",
+    "攻撃者が影響できるプロンプトのcompletion本文とツール呼び出しが条件。開発元の構造化修正版は2.4.3だが、本文のStatusは2.4.2未修正との記載を残す。2.4.2で修正された別件GHSA-gphh-9q3h-jgppと混同しない。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}
