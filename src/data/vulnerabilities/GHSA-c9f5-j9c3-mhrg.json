@@ -1,0 +1,118 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c9f5-j9c3-mhrg",
+  "aliases": [
+    "CVE-2026-55622"
+  ],
+  "title": "Incus has a project restriction bypass in instance copy across projects",
+  "summary": "Incus has a project restriction bypass in instance copy across projects",
+  "publishedAt": "2026-08-28T18:57:27Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/08/GHSA-c9f5-j9c3-mhrg/GHSA-c9f5-j9c3-mhrg.json",
+  "modifiedAt": "2026-11-05T21:43:49Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-05T21:55:56.946Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/lxc/incus/v7",
+      "ranges": [
+        {
+          "affected": "< 7.2.0",
+          "fixed": "7.2.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/08/GHSA-c9f5-j9c3-mhrg/GHSA-c9f5-j9c3-mhrg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.2.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/lxc/incus/v7/cmd/incusd",
+      "ranges": [
+        {
+          "affected": "< 7.2.0",
+          "fixed": "7.2.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/08/GHSA-c9f5-j9c3-mhrg/GHSA-c9f5-j9c3-mhrg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.2.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/08/GHSA-c9f5-j9c3-mhrg/GHSA-c9f5-j9c3-mhrg.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/08/GHSA-c9f5-j9c3-mhrg/GHSA-c9f5-j9c3-mhrg.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/08/GHSA-c9f5-j9c3-mhrg/GHSA-c9f5-j9c3-mhrg.json",
+      "publishedDate": "2026-08-28",
+      "publishedAt": "2026-08-28T18:57:27Z",
+      "modifiedAt": "2026-11-05T21:43:49Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Incus has a project restriction bypass in instance copy across projects",
+      "url": "https://github.com/advisories/GHSA-c9f5-j9c3-mhrg",
+      "publishedDate": "2026-08-28"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/lxc/incus/security/advisories/GHSA-c9f5-j9c3-mhrg",
+      "publishedDate": "2026-06-25",
+      "publishedAt": "2026-06-25T22:01:43Z",
+      "modifiedAt": "2026-06-25T22:01:43Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は留保と確認記録に保持する。",
+    "開発元構造化項目はgithub.com/lxc/incus/v7/cmd/incusd、Reviewedはこれに加えgithub.com/lxc/incus/v7を列挙する。表示はReviewedの座標・範囲を保持する。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "kyuden-td-electricity-data-2026",
+  "company": "九州電力送配電株式会社",
+  "geography": "日本",
+  "title": "電力量情報の漏えい可能性と電力量・料金照会サービス停止",
+  "announcementDate": "2026-11-05",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-05",
+  "statusAsOfDate": "2026-11-05",
+  "lastVerifiedDate": "2026-11-06",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な攻撃手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月30日に不自然なエラーと不正アクセスの可能性を検知して停止。ログ調査で電力量情報4,139件の漏えい可能性が判明。電力量・料金照会サービスは停止中だが、電力の安定供給に支障はない。",
+  "affectedData": [
+    "使用・売電電力量（月間値、30分値）、需要側の供給地点特定番号、発電側の受電地点特定番号。",
+    "氏名、住所、電話番号、メールアドレス、口座情報などの契約情報は含まない。"
+  ],
+  "counts": [
+    {
+      "value": 4139,
+      "unit": "件",
+      "status": "possible",
+      "label": "漏えいの可能性がある電力量情報。顧客人数ではない。",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "11月2日に個人情報保護委員会と監督官庁へ報告済み。個別通知は11月中旬目途の予定。",
+    "10月30日は検知・停止日。攻撃開始日や流出確定日ではない。電力供給停止ではない。"
+  ],
+  "sources": [
+    {
+      "title": "電力量情報の漏えい可能性と電力量・料金照会サービス停止",
+      "url": "https://www.kyuden.co.jp/td/press/2026/261105.html",
+      "publishedDate": "2026-11-05"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-05",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "10月30日に不自然なエラーと不正アクセスの可能性を検知して停止。ログ調査で電力量情報4,139件の漏えい可能性が判明。電力量・料金照会サービスは停止中だが、電力の安定供給に支障はない。",
+      "sourceUrl": "https://www.kyuden.co.jp/td/press/2026/261105.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日・報告受領日から推定しない。",
+      "sourceUrl": "https://www.kyuden.co.jp/td/press/2026/261105.html",
+      "reviewedDate": "2026-11-06"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日・報告受領日から推定しない。",
+      "sourceUrl": "https://www.kyuden.co.jp/td/press/2026/261105.html",
+      "reviewedDate": "2026-11-06"
+    }
+  }
+}

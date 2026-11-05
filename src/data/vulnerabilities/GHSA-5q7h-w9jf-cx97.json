@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5q7h-w9jf-cx97",
+  "aliases": [
+    "CVE-2026-105769"
+  ],
+  "title": "kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
+  "summary": "kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
+  "publishedAt": "2026-11-05T17:48:54Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-5q7h-w9jf-cx97/GHSA-5q7h-w9jf-cx97.json",
+  "modifiedAt": "2026-11-05T17:48:54Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-05T21:55:56.946Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/chainguard-dev/kaniko",
+      "ranges": [
+        {
+          "affected": "< 1.25.20",
+          "fixed": "1.25.20",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-5q7h-w9jf-cx97/GHSA-5q7h-w9jf-cx97.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.25.20"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-5q7h-w9jf-cx97/GHSA-5q7h-w9jf-cx97.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-5q7h-w9jf-cx97/GHSA-5q7h-w9jf-cx97.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-5q7h-w9jf-cx97/GHSA-5q7h-w9jf-cx97.json",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T17:48:54Z",
+      "modifiedAt": "2026-11-05T17:48:54Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "kaniko can send the build's Azure (Entra ID) access token to lookalike ACR registry hosts",
+      "url": "https://github.com/advisories/GHSA-5q7h-w9jf-cx97",
+      "publishedDate": "2026-11-05"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/chainguard-forks/kaniko/security/advisories/GHSA-5q7h-w9jf-cx97",
+      "publishedDate": "2026-11-02",
+      "publishedAt": "2026-11-02T16:32:58Z",
+      "modifiedAt": "2026-11-02T16:52:17Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は留保と確認記録に保持する。",
+    "AzureのIDを取得できる環境で信頼できないDockerfile等を処理する場合に影響する。開発元は1.25.20以降からexecutor・warmer・補助バイナリの再ビルドを案内し、このリポジトリはバイナリやイメージを配布しない。上流の補助モジュールには修正版がないためkanikoの修正版と混同しない。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xh5j-727m-w6gg",
+  "aliases": [
+    "CVE-2026-45061"
+  ],
+  "title": "Budibase vulnerable to SSRF via trivial `.tar.gz` substring bypass in Plugin URL upload (`/api/plugin`)",
+  "summary": "Budibase vulnerable to SSRF via trivial `.tar.gz` substring bypass in Plugin URL upload (`/api/plugin`)",
+  "publishedAt": "2026-05-11T16:20:27Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/05/GHSA-xh5j-727m-w6gg/GHSA-xh5j-727m-w6gg.json",
+  "modifiedAt": "2026-11-05T21:41:04Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-05T21:55:56.946Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "budibase",
+      "ranges": [
+        {
+          "affected": "< 3.35.10",
+          "fixed": "3.35.10",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/05/GHSA-xh5j-727m-w6gg/GHSA-xh5j-727m-w6gg.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.35.10"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/05/GHSA-xh5j-727m-w6gg/GHSA-xh5j-727m-w6gg.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/05/GHSA-xh5j-727m-w6gg/GHSA-xh5j-727m-w6gg.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/05/GHSA-xh5j-727m-w6gg/GHSA-xh5j-727m-w6gg.json",
+      "publishedDate": "2026-05-11",
+      "publishedAt": "2026-05-11T16:20:27Z",
+      "modifiedAt": "2026-11-05T21:41:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Budibase vulnerable to SSRF via trivial `.tar.gz` substring bypass in Plugin URL upload (`/api/plugin`)",
+      "url": "https://github.com/advisories/GHSA-xh5j-727m-w6gg",
+      "publishedDate": "2026-05-11"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-xh5j-727m-w6gg",
+      "publishedDate": "2026-05-07",
+      "publishedAt": "2026-05-07T08:35:49Z",
+      "modifiedAt": "2026-05-21T08:43:13Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は留保と確認記録に保持する。",
+    "開発元構造化項目は影響<3.35.10、修正版欄は空欄。Reviewedが記す修正境界と、開発元の未記載を区別する。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

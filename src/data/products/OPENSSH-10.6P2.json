@@ -1,0 +1,96 @@
+{
+  "kind": "product",
+  "aliases": [],
+  "publishedDate": "2026-11-05",
+  "publishedAt": null,
+  "listedDate": "2026-11-05",
+  "modifiedAt": null,
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-05T21:55:57Z",
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "id": "OPENSSH-10.6P2",
+  "vendor": "OpenSSH",
+  "product": "Portable OpenSSH（musl libc・PAM無効構成）",
+  "productKey": "openssh",
+  "title": "OpenSSH 10.6p2：musl libc・PAM無効構成の認証回避への回避策",
+  "summary": "musl libcを使いPAMを無効にしてビルド・実行する一部Linuxシステムで、sshd経由のパスワード認証回避を防ぐ回避策を提供。開発元は根本原因がsshd外部にあると説明している。",
+  "dateSourceUrl": "https://www.openssh.com/txt/release-10.6p2",
+  "dateNote": "開発元のリリース告知に明記された公開日。",
+  "listedNote": "開発元がcritical security workaroundと記載した10.6p2公開日。CVSS値を推定していない。",
+  "affected": [
+    {
+      "name": "Portable OpenSSH / sshd",
+      "affected": "musl libcを使用し、PAMサポートを無効にしてビルド・実行する一部Linuxシステム。影響するOpenSSHの版範囲は告知に未記載。",
+      "fixed": "10.6p2（sshd側の回避策）",
+      "sourceUrl": "https://www.openssh.com/txt/release-10.6p2"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://www.openssh.com/txt/release-10.6p2",
+    "cvss": []
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-05T21:55:57Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-05T21:55:57Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "JVN",
+      "url": "https://jvn.jp/",
+      "checkedAt": "2026-11-05T21:55:57Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "critical"
+  ],
+  "mitigations": [
+    {
+      "text": "開発元が提供する10.6p2の回避策、または利用ディストリビューションの対応更新を確認して適用する。",
+      "sourceUrl": "https://www.openssh.com/txt/release-10.6p2"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Portable OpenSSH 10.6p2 release",
+      "url": "https://www.openssh.com/txt/release-10.6p2",
+      "publishedDate": "2026-11-05"
+    },
+    {
+      "type": "release",
+      "title": "OpenSSH開発者による10.6p2公開通知",
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/05/2",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T09:01:24Z"
+    }
+  ],
+  "caveats": [
+    "開発元はcritical security workaroundと記載。CVSSの公表値・CVE識別子は今回確認した開発元告知にないため補完しない。",
+    "OpenSSH全環境や全Linuxが影響を受けるとはしない。musl libcとPAM無効の条件を保持する。",
+    "開発元は根本原因をsshd外部とし、sshd側で回避できると説明している。10.6p2をmusl自体の修正版とは扱わない。",
+    "CISA本体JSONはHTTP403。実悪用やKEV掲載を深刻度から推定しない。"
+  ]
+}

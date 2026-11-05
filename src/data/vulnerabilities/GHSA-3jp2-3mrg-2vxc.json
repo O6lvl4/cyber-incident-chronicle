@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3jp2-3mrg-2vxc",
+  "aliases": [
+    "CVE-2026-49272"
+  ],
+  "title": "OAuthLib: Bearer token can be retrieved as long as client knows a valid client ID for device workflow",
+  "summary": "OAuthLib: Bearer token can be retrieved as long as client knows a valid client ID for device workflow",
+  "publishedAt": "2026-10-27T13:30:17Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/10/GHSA-3jp2-3mrg-2vxc/GHSA-3jp2-3mrg-2vxc.json",
+  "modifiedAt": "2026-11-05T20:58:32Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-05T21:55:56.946Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "oauthlib",
+      "ranges": [
+        {
+          "affected": ">= 3.3.0, < 4.0.1",
+          "fixed": "4.0.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/10/GHSA-3jp2-3mrg-2vxc/GHSA-3jp2-3mrg-2vxc.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "3.3.0"
+            },
+            {
+              "fixed": "4.0.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/10/GHSA-3jp2-3mrg-2vxc/GHSA-3jp2-3mrg-2vxc.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/10/GHSA-3jp2-3mrg-2vxc/GHSA-3jp2-3mrg-2vxc.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/10/GHSA-3jp2-3mrg-2vxc/GHSA-3jp2-3mrg-2vxc.json",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T13:30:17Z",
+      "modifiedAt": "2026-11-05T20:58:32Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OAuthLib: Bearer token can be retrieved as long as client knows a valid client ID for device workflow",
+      "url": "https://github.com/advisories/GHSA-3jp2-3mrg-2vxc",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-3jp2-3mrg-2vxc",
+      "publishedDate": "2026-10-23",
+      "publishedAt": "2026-10-23T22:25:13Z",
+      "modifiedAt": "2026-10-23T22:25:13Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は留保と確認記録に保持する。",
+    "開発元構造化項目は影響>=3.3.0・修正版4.0.1。影響上限はReviewedの対応する境界を表示し、開発元表現と区別する。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

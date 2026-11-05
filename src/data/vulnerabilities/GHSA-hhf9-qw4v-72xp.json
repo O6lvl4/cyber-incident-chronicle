@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-hhf9-qw4v-72xp",
+  "aliases": [
+    "CVE-2026-12411"
+  ],
+  "title": "lxd allows Cross-guest volume hijack via DevLXD device patch",
+  "summary": "lxd allows Cross-guest volume hijack via DevLXD device patch",
+  "publishedAt": "2026-11-05T17:40:59Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-hhf9-qw4v-72xp/GHSA-hhf9-qw4v-72xp.json",
+  "modifiedAt": "2026-11-05T17:40:59Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-05T21:55:56.946Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/canonical/lxd",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-20250721152936-fe86ceb2c3fa, < 0.0.0-20260626085133-7cb96ac80a6d",
+          "fixed": "0.0.0-20260626085133-7cb96ac80a6d",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-hhf9-qw4v-72xp/GHSA-hhf9-qw4v-72xp.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.0.0-20250721152936-fe86ceb2c3fa"
+            },
+            {
+              "fixed": "0.0.0-20260626085133-7cb96ac80a6d"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-hhf9-qw4v-72xp/GHSA-hhf9-qw4v-72xp.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-hhf9-qw4v-72xp/GHSA-hhf9-qw4v-72xp.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/791a7d38dba2f98458199d10ad2cc55304c3d3d4/advisories/github-reviewed/2026/11/GHSA-hhf9-qw4v-72xp/GHSA-hhf9-qw4v-72xp.json",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T17:40:59Z",
+      "modifiedAt": "2026-11-05T17:40:59Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "lxd allows Cross-guest volume hijack via DevLXD device patch",
+      "url": "https://github.com/advisories/GHSA-hhf9-qw4v-72xp",
+      "publishedDate": "2026-11-05"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/canonical/lxd/security/advisories/GHSA-hhf9-qw4v-72xp",
+      "publishedDate": "2026-06-26",
+      "publishedAt": "2026-06-26T08:25:29Z",
+      "modifiedAt": "2026-06-26T08:25:29Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は留保と確認記録に保持する。",
+    "security.devlxd.management.volumesが有効な共有プロジェクトで別ゲストのカスタムストレージを読み書きできる。開発元は製品名lxd、影響>=6.6・修正版6.9を記載。ReviewedのGoモジュール座標と版境界はDB由来として表示する。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}
