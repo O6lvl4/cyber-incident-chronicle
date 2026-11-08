@@ -1,0 +1,101 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8qm3-746x-r74r",
+  "aliases": [
+    "CVE-2026-123568"
+  ],
+  "title": "devalue `uneval`ed code can create objects with polluted prototypes when `eval`ed",
+  "summary": "devalue `uneval`ed code can create objects with polluted prototypes when `eval`ed",
+  "publishedAt": "2026-02-19T20:29:17Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/GHSA-8qm3-746x-r74r",
+  "modifiedAt": "2026-11-08T10:56:11.293593905Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T21:08:18.008541Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "devalue",
+      "ranges": [
+        {
+          "affected": "< 5.6.3",
+          "fixed": "5.6.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/02/GHSA-8qm3-746x-r74r/GHSA-8qm3-746x-r74r.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.6.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/02/GHSA-8qm3-746x-r74r/GHSA-8qm3-746x-r74r.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/02/GHSA-8qm3-746x-r74r/GHSA-8qm3-746x-r74r.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/02/GHSA-8qm3-746x-r74r/GHSA-8qm3-746x-r74r.json",
+      "publishedDate": "2026-02-19",
+      "publishedAt": "2026-02-19T20:29:17Z",
+      "modifiedAt": "2026-02-19T20:29:17Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "devalue `uneval`ed code can create objects with polluted prototypes when `eval`ed",
+      "url": "https://github.com/advisories/GHSA-8qm3-746x-r74r",
+      "publishedDate": "2026-02-19"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV supplementary alias verification: GHSA-8qm3-746x-r74r",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-8qm3-746x-r74r",
+      "publishedDate": "2026-02-19",
+      "publishedAt": "2026-02-19T20:29:17Z",
+      "modifiedAt": "2026-11-08T10:56:11.293593905Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "`uneval`ed code can create objects with polluted prototypes when `eval`ed",
+      "url": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-8qm3-746x-r74r",
+      "publishedDate": "2026-02-18",
+      "publishedAt": "2026-02-18T20:31:19Z",
+      "modifiedAt": "2026-02-18T20:31:19Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "影響範囲・評価は固定GitHub Reviewedデータに基づく。今回の補助更新はOSVの明示別名と更新日時の反映。",
+    "2026-11-09補助確認：OSVの明示CVE別名を反映。今回のOSV差分は別名と更新日時のみ。開発元公開APIも取得したがCVE欄はnullのため、CVE対応の根拠はOSVと区別する。影響範囲・修正版・CVSS・実悪用状態は変更していない。"
+  ]
+}

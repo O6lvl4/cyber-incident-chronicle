@@ -1,0 +1,101 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mwv9-gp5h-frr4",
+  "aliases": [
+    "CVE-2026-123567"
+  ],
+  "title": "Sveltejs devalue's `devalue.parse` and `devalue.unflatten` emit objects with `__proto__` own properties",
+  "summary": "Sveltejs devalue's `devalue.parse` and `devalue.unflatten` emit objects with `__proto__` own properties",
+  "publishedAt": "2026-03-12T16:38:15Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/GHSA-mwv9-gp5h-frr4",
+  "modifiedAt": "2026-11-08T10:56:14.491676861Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T21:08:13.581272Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "devalue",
+      "ranges": [
+        {
+          "affected": ">= 4.0.0, < 5.6.4",
+          "fixed": "5.6.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/03/GHSA-mwv9-gp5h-frr4/GHSA-mwv9-gp5h-frr4.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "5.6.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/03/GHSA-mwv9-gp5h-frr4/GHSA-mwv9-gp5h-frr4.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/03/GHSA-mwv9-gp5h-frr4/GHSA-mwv9-gp5h-frr4.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/03/GHSA-mwv9-gp5h-frr4/GHSA-mwv9-gp5h-frr4.json",
+      "publishedDate": "2026-03-12",
+      "publishedAt": "2026-03-12T16:38:15Z",
+      "modifiedAt": "2026-06-26T20:30:20Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Sveltejs devalue's `devalue.parse` and `devalue.unflatten` emit objects with `__proto__` own properties",
+      "url": "https://github.com/advisories/GHSA-mwv9-gp5h-frr4",
+      "publishedDate": "2026-03-12"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV supplementary alias verification: GHSA-mwv9-gp5h-frr4",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-mwv9-gp5h-frr4",
+      "publishedDate": "2026-03-12",
+      "publishedAt": "2026-03-12T16:38:15Z",
+      "modifiedAt": "2026-11-08T10:56:14.491676861Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "`devalue.parse` and `devalue.unflatten` emit objects with `__proto__` own properties",
+      "url": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-mwv9-gp5h-frr4",
+      "publishedDate": "2026-03-11",
+      "publishedAt": "2026-03-11T16:50:02Z",
+      "modifiedAt": "2026-03-11T16:50:03Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "影響範囲・評価は固定GitHub Reviewedデータに基づく。今回の補助更新はOSVの明示別名と更新日時の反映。",
+    "2026-11-09補助確認：OSVの明示CVE別名を反映。今回のOSV差分は別名と更新日時のみ。開発元公開APIも取得したがCVE欄はnullのため、CVE対応の根拠はOSVと区別する。影響範囲・修正版・CVSS・実悪用状態は変更していない。"
+  ]
+}

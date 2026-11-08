@@ -1,14 +1,17 @@
 {
   "kind": "vulnerability",
   "id": "GHSA-494m-4556-wf5p",
-  "aliases": [],
+  "aliases": [
+    "CVE-2026-123615",
+    "GO-2026-6895"
+  ],
   "title": "imgproxy has out-of-bounds heap read/write in ICO loader BMP header reconstruction that allows unauthenticated remote worker crash",
   "summary": "imgproxy has out-of-bounds heap read/write in ICO loader BMP header reconstruction that allows unauthenticated remote worker crash",
   "publishedAt": "2026-10-30T22:56:14Z",
-  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-494m-4556-wf5p/GHSA-494m-4556-wf5p.json",
-  "modifiedAt": "2026-10-30T22:56:14Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/GHSA-494m-4556-wf5p",
+  "modifiedAt": "2026-11-08T10:55:46.197261202Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-31T21:09:46.835002Z",
+  "lastVerifiedAt": "2026-11-08T21:08:30.548921Z",
   "affected": [
     {
       "ecosystem": "go",
@@ -87,11 +90,30 @@
       "publishedAt": "2026-10-06T15:29:47Z",
       "modifiedAt": "2026-10-06T15:29:47Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV supplementary alias verification: GHSA-494m-4556-wf5p",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-494m-4556-wf5p",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:56:14Z",
+      "modifiedAt": "2026-11-08T10:55:46.197261202Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Out-of-bounds heap read/write in ICO loader BMP header reconstruction allows unauthenticated remote worker crash",
+      "url": "https://api.github.com/repos/imgproxy/imgproxy/security-advisories/GHSA-494m-4556-wf5p",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T15:29:47Z",
+      "modifiedAt": "2026-10-06T15:29:47Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
-    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "初回公開日時は固定GitHub Reviewed原データ、今回の更新日時はOSVに基づく。開発元を含む各原データの日時・範囲・評価は出典欄と監査に区別して保持する。",
     "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
-    "開発元APIのgithub.com/darthsim/imgproxy（ecosystem空欄）とReviewedのgithub.com/imgproxy/imgproxy/v3を同一のパッケージ表記へ推測統一しない。開発元は製品系列3.3.0〜4.0.16・4.0.17以降を示す。"
+    "開発元APIのgithub.com/darthsim/imgproxy（ecosystem空欄）とReviewedのgithub.com/imgproxy/imgproxy/v3を同一のパッケージ表記へ推測統一しない。開発元は製品系列3.3.0〜4.0.16・4.0.17以降を示す。",
+    "2026-11-09補助確認：OSVの明示CVE別名を反映。今回のOSV差分は別名と更新日時のみ。開発元公開APIも取得したがCVE欄はnullのため、CVE対応の根拠はOSVと区別する。影響範囲・修正版・CVSS・実悪用状態は変更していない。"
   ]
 }

@@ -1,0 +1,128 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3v94-mw7p-v465",
+  "aliases": [
+    "CVE-2026-123607",
+    "RUSTSEC-2026-0118",
+    "RUSTSEC-2026-0120"
+  ],
+  "title": "hickory-proto: NSEC3 closest-encloser proof validation enters unbounded loop on cross-zone responses",
+  "summary": "hickory-proto: NSEC3 closest-encloser proof validation enters unbounded loop on cross-zone responses",
+  "publishedAt": "2026-05-07T02:59:20Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/GHSA-3v94-mw7p-v465",
+  "modifiedAt": "2026-11-08T10:55:55.393700581Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T21:08:26.120316Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "hickory-net",
+      "ranges": [
+        {
+          "affected": ">= 0.26.0-alpha.1, < 0.26.1",
+          "fixed": "0.26.1",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-3v94-mw7p-v465/GHSA-3v94-mw7p-v465.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.26.0-alpha.1"
+            },
+            {
+              "fixed": "0.26.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "hickory-proto",
+      "ranges": [
+        {
+          "affected": ">= 0.25.0-alpha.3, <= 0.25.2",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-3v94-mw7p-v465/GHSA-3v94-mw7p-v465.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0.25.0-alpha.3"
+            },
+            {
+              "last_affected": "0.25.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-3v94-mw7p-v465/GHSA-3v94-mw7p-v465.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-3v94-mw7p-v465/GHSA-3v94-mw7p-v465.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-3v94-mw7p-v465/GHSA-3v94-mw7p-v465.json",
+      "publishedDate": "2026-05-07",
+      "publishedAt": "2026-05-07T02:59:20Z",
+      "modifiedAt": "2026-05-07T02:59:20Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "hickory-proto: NSEC3 closest-encloser proof validation enters unbounded loop on cross-zone responses",
+      "url": "https://github.com/advisories/GHSA-3v94-mw7p-v465",
+      "publishedDate": "2026-05-07"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV supplementary alias verification: GHSA-3v94-mw7p-v465",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-3v94-mw7p-v465",
+      "publishedDate": "2026-05-07",
+      "publishedAt": "2026-05-07T02:59:20Z",
+      "modifiedAt": "2026-11-08T10:55:55.393700581Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "NSEC3 closest-encloser proof validation enters unbounded loop on cross-zone responses",
+      "url": "https://api.github.com/repos/hickory-dns/hickory-dns/security-advisories/GHSA-3v94-mw7p-v465",
+      "publishedDate": "2026-05-01",
+      "publishedAt": "2026-05-01T13:58:47Z",
+      "modifiedAt": "2026-05-01T13:58:47Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "影響範囲・評価は固定GitHub Reviewedデータに基づく。今回の補助更新はOSVの明示別名と更新日時の反映。",
+    "2026-11-09補助確認：OSVの明示CVE別名を反映。今回のOSV差分は別名と更新日時のみ。開発元公開APIも取得したがCVE欄はnullのため、CVE対応の根拠はOSVと区別する。影響範囲・修正版・CVSS・実悪用状態は変更していない。"
+  ]
+}

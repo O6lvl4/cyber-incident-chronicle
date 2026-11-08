@@ -1,14 +1,17 @@
 {
   "kind": "vulnerability",
   "id": "GHSA-hff9-5pqw-6w9f",
-  "aliases": [],
+  "aliases": [
+    "CVE-2026-123614",
+    "GO-2026-6897"
+  ],
   "title": "imgproxy has integer overflow in imgproxy ICO loader that causes denial of service and may permit remote code execution",
   "summary": "imgproxy has integer overflow in imgproxy ICO loader that causes denial of service and may permit remote code execution",
   "publishedAt": "2026-10-30T22:57:00Z",
-  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/9c5259313420aa2a0fdd7b88d1cf6ebd31109604/advisories/github-reviewed/2026/10/GHSA-hff9-5pqw-6w9f/GHSA-hff9-5pqw-6w9f.json",
-  "modifiedAt": "2026-10-30T22:57:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/GHSA-hff9-5pqw-6w9f",
+  "modifiedAt": "2026-11-08T10:56:03.570793708Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-31T21:09:50.271112Z",
+  "lastVerifiedAt": "2026-11-08T21:08:26.164540Z",
   "affected": [
     {
       "ecosystem": "go",
@@ -137,12 +140,31 @@
       "publishedAt": "2026-10-06T15:30:41Z",
       "modifiedAt": "2026-10-06T15:30:41Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV supplementary alias verification: GHSA-hff9-5pqw-6w9f",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-hff9-5pqw-6w9f",
+      "publishedDate": "2026-10-30",
+      "publishedAt": "2026-10-30T22:57:00Z",
+      "modifiedAt": "2026-11-08T10:56:03.570793708Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Integer overflow in ICO loader causes remote denial of service and permits remote code execution via heap buffer overflow",
+      "url": "https://api.github.com/repos/imgproxy/imgproxy/security-advisories/GHSA-hff9-5pqw-6w9f",
+      "publishedDate": "2026-10-06",
+      "publishedAt": "2026-10-06T15:30:41Z",
+      "modifiedAt": "2026-10-06T15:30:41Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
-    "開発元公開API本文・構造化項目を確認。公表・更新日時の表示は固定Reviewed原データに基づき、開発元の日時・範囲表・評価は出典と確認監査へ別に保持する。",
+    "初回公開日時は固定GitHub Reviewed原データ、今回の更新日時はOSVに基づく。開発元を含む各原データの日時・範囲・評価は出典欄と監査に区別して保持する。",
     "実悪用とCISA KEVはこの開発元確認では未確認。PoC・重大度・修正版の公開から企業被害や実悪用を推定しない。",
     "開発元APIはGoモジュールgithub.com/imgproxy/imgproxy/v4、Reviewedは/v3・/v2・末尾なしの3座標。製品4.0.0〜4.0.15と修正版4.0.16の表記を各モジュール版へ推測で変換しない。座標差は未解決として原データを保持。",
-    "開発元はヒープ破壊によるプロセス停止とRCEの可能性を述べている。公開検証コードや重大度は企業被害・実悪用の証拠ではない。"
+    "開発元はヒープ破壊によるプロセス停止とRCEの可能性を述べている。公開検証コードや重大度は企業被害・実悪用の証拠ではない。",
+    "2026-11-09補助確認：OSVの明示CVE別名を反映。今回のOSV差分は別名と更新日時のみ。開発元公開APIも取得したがCVE欄はnullのため、CVE対応の根拠はOSVと区別する。影響範囲・修正版・CVSS・実悪用状態は変更していない。"
   ]
 }
