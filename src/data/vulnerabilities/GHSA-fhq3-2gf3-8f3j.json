@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fhq3-2gf3-8f3j",
+  "aliases": [
+    "CVE-2026-44363"
+  ],
+  "title": "misp-modules has unsafe remote resource fetching in expansion",
+  "summary": "misp-modules has unsafe remote resource fetching in expansion",
+  "publishedAt": "2026-05-06T22:31:03Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-fhq3-2gf3-8f3j/GHSA-fhq3-2gf3-8f3j.json",
+  "modifiedAt": "2026-11-07T00:15:46Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "misp-modules",
+      "ranges": [
+        {
+          "affected": "< 3.0.8",
+          "fixed": "3.0.8",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-fhq3-2gf3-8f3j/GHSA-fhq3-2gf3-8f3j.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.0.8"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-fhq3-2gf3-8f3j/GHSA-fhq3-2gf3-8f3j.json",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-fhq3-2gf3-8f3j/GHSA-fhq3-2gf3-8f3j.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-fhq3-2gf3-8f3j/GHSA-fhq3-2gf3-8f3j.json",
+      "publishedDate": "2026-05-06",
+      "publishedAt": "2026-05-06T22:31:03Z",
+      "modifiedAt": "2026-11-07T00:15:46Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "misp-modules has unsafe remote resource fetching in expansion",
+      "url": "https://github.com/advisories/GHSA-fhq3-2gf3-8f3j",
+      "publishedDate": "2026-05-06"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/MISP/misp-modules/security/advisories/GHSA-fhq3-2gf3-8f3j",
+      "publishedDate": "2026-04-29",
+      "publishedAt": "2026-04-29T12:41:09Z",
+      "modifiedAt": "2026-05-06T14:49:36Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "開発元は影響<3.0.7、修正版欄空、修正内容として内部アドレス制限・タイムアウト・TLS検証復元を説明。ReviewedはPyPI misp-modules <3.0.8・修正版3.0.8。版の差と開発元座標未記載を保持し、全拡張モジュールが一律に同じ影響とはしない。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

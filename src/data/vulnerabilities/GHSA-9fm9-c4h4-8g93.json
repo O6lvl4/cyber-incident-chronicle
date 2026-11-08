@@ -1,0 +1,88 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9fm9-c4h4-8g93",
+  "aliases": [
+    "RUSTSEC-2026-0452"
+  ],
+  "title": "surrealkv：短い内部キーのデコードによる範囲外読取り",
+  "summary": "壊れた短い内部キーで長さ計算や読取りの境界検証が不足し、リリースビルドで範囲外読取りを招き得る。RustSecは1.2.0を修正版とし、開発元PRは短いキーの拒否と境界チェックを追加する。",
+  "publishedAt": "2026-11-03T12:00:00Z",
+  "modifiedAt": "2026-11-06T15:45:02.399716444Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:30:29.653310Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0452",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "surrealkv",
+      "ranges": [
+        {
+          "affected": "< 1.2.0",
+          "fixed": "1.2.0",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0452"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "1.2.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/surrealkv"
+    }
+  ],
+  "severity": {
+    "label": "unknown",
+    "sourceUrl": null,
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+        "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0452"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec: RUSTSEC-2026-0452",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0452",
+      "publishedDate": "2026-11-03",
+      "publishedAt": "2026-11-03T12:00:00Z",
+      "modifiedAt": "2026-11-06T15:45:02.399716444Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "fix(sstable): guard against malformed internal keys when decoding blocks",
+      "url": "https://api.github.com/repos/surrealdb/surrealkv/pulls/497",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日はOSV/RustSecの日時。開発元日時は出典別に保持する。",
+    "公開OSV APIの明示GHSA/CVE別名を使用。rawRangesはOSV原文で0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・KEVは未確認。CISA公式取得の403を未掲載や悪用なしとしない。",
+    "開発元GHSA APIは404のため本文を確認済みとはしない。OSV/RustSecの明示GHSA別名と開発元PR #497を使用する。",
+    "RustSec本文の旧16バイト条件と開発元PRの8バイトトレーラー説明の差を保持する。修正後は8バイト未満の内部キーを拒否するという開発元説明を参照。",
+    "深刻度ラベル・数値は推定せずunknown/null。RustSecのCVSS3.1ベクトルを保持する。"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-7p9w-p5qm-5gc5",
+  "aliases": [
+    "RUSTSEC-2026-0455"
+  ],
+  "title": "actix-http：large-window Brotliによる展開メモリ制限回避",
+  "summary": "compress-brotliが有効な構成で、非標準large-window形式が出力サイズ制限前に大きな内部バッファを確保し得る。actix-http 3.20.3で修正される。",
+  "publishedAt": "2026-11-06T12:00:00Z",
+  "modifiedAt": "2026-11-06T15:45:02.402173674Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:30:29.654515Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0455",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "actix-http",
+      "ranges": [
+        {
+          "affected": "< 3.20.3",
+          "fixed": ">= 3.20.3",
+          "sourceUrl": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-7p9w-p5qm-5gc5"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "3.20.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/actix-http"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-7p9w-p5qm-5gc5",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-7p9w-p5qm-5gc5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec: RUSTSEC-2026-0455",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0455",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:00:00Z",
+      "modifiedAt": "2026-11-06T15:45:02.402173674Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Large-window brotli request bodies bypass the decompression limit (~1 GiB per request)",
+      "url": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-7p9w-p5qm-5gc5",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:17:08Z",
+      "modifiedAt": "2026-11-06T14:09:40Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日はOSV/RustSecの日時。開発元日時は出典別に保持する。",
+    "公開OSV APIの明示GHSA/CVE別名を使用。rawRangesはOSV原文で0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・KEVは未確認。CISA公式取得の403を未掲載や悪用なしとしない。",
+    "GHSA-qph8向けの3.20.1/actix-web 4.18.2更新だけでは本件を解消しない。",
+    "展開がハンドラーより前に行われるためハンドラー内認証では防げない。展開前にbrを拒否するか依存グラフ全体でfeatureを無効化する回避策を参照。",
+    "awcクライアントへの影響は開発元が未試験の推測と区別しており確認済み影響に拡張しない。"
+  ]
+}

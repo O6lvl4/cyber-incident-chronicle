@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-fqpv-mq26-pr4j",
+  "aliases": [
+    "CVE-2026-46429"
+  ],
+  "title": "GeoNode has Unrestricted File Upload",
+  "summary": "GeoNode has Unrestricted File Upload",
+  "publishedAt": "2026-11-06T19:41:23Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-fqpv-mq26-pr4j/GHSA-fqpv-mq26-pr4j.json",
+  "modifiedAt": "2026-11-06T19:41:23Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "GeoNode",
+      "ranges": [
+        {
+          "affected": "< 5.0.3",
+          "fixed": "5.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-fqpv-mq26-pr4j/GHSA-fqpv-mq26-pr4j.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-fqpv-mq26-pr4j/GHSA-fqpv-mq26-pr4j.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-fqpv-mq26-pr4j/GHSA-fqpv-mq26-pr4j.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-fqpv-mq26-pr4j/GHSA-fqpv-mq26-pr4j.json",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T19:41:23Z",
+      "modifiedAt": "2026-11-06T19:41:23Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GeoNode has Unrestricted File Upload",
+      "url": "https://github.com/advisories/GHSA-fqpv-mq26-pr4j",
+      "publishedDate": "2026-11-06"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/GeoNode/geonode/security/advisories/GHSA-fqpv-mq26-pr4j",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T18:17:38Z",
+      "modifiedAt": "2026-11-05T18:17:38Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "開発元はUpload document機能の<=5.0.2と修正版5.0.3を記載。ReviewedのPyPI座標GeoNodeと区別し、細工した要求でファイル検証を回避し保存・配信できる問題として扱う。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

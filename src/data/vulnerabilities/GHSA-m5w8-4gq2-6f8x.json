@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-m5w8-4gq2-6f8x",
+  "aliases": [],
+  "title": "vm2: NodeVM `builtin: ['*']` exposes `os` and `dns` — process-wide observability reads AND writes that hijack the host (sibling class of GHSA-9g8x-92q2-p28f)",
+  "summary": "vm2: NodeVM `builtin: ['*']` exposes `os` and `dns` — process-wide observability reads AND writes that hijack the host (sibling class of GHSA-9g8x-92q2-p28f)",
+  "publishedAt": "2026-08-17T17:32:47Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/08/GHSA-m5w8-4gq2-6f8x/GHSA-m5w8-4gq2-6f8x.json",
+  "modifiedAt": "2026-11-05T22:26:50Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "vm2",
+      "ranges": [
+        {
+          "affected": "< 3.11.6",
+          "fixed": "3.11.6",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/08/GHSA-m5w8-4gq2-6f8x/GHSA-m5w8-4gq2-6f8x.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.11.6"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/08/GHSA-m5w8-4gq2-6f8x/GHSA-m5w8-4gq2-6f8x.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/08/GHSA-m5w8-4gq2-6f8x/GHSA-m5w8-4gq2-6f8x.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/08/GHSA-m5w8-4gq2-6f8x/GHSA-m5w8-4gq2-6f8x.json",
+      "publishedDate": "2026-08-17",
+      "publishedAt": "2026-08-17T17:32:47Z",
+      "modifiedAt": "2026-11-05T22:26:50Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "vm2: NodeVM `builtin: ['*']` exposes `os` and `dns` — process-wide observability reads AND writes that hijack the host (sibling class of GHSA-9g8x-92q2-p28f)",
+      "url": "https://github.com/advisories/GHSA-m5w8-4gq2-6f8x",
+      "publishedDate": "2026-08-17"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-m5w8-4gq2-6f8x",
+      "publishedDate": "2026-08-14",
+      "publishedAt": "2026-08-14T20:12:56Z",
+      "modifiedAt": "2026-08-14T20:12:56Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "NodeVMのbuiltinワイルドカード許可構成でos/dnsがホスト状態にアクセス・変更できる問題。開発元は<=3.11.5・修正版3.11.6と記載し、本文Critical/CVSS3.1 9.3を示す。全構成のvm2が同じ露出を持つとはしない。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

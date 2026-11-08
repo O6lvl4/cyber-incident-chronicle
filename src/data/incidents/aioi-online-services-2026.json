@@ -2,37 +2,68 @@
   "id": "aioi-online-services-2026",
   "company": "あいおいニッセイ同和損害保険株式会社",
   "geography": "日本",
-  "title": "不審なアクセス検知に伴う契約者向け等オンラインサービス停止",
+  "title": "オンラインサービスへの不正アクセスによる情報漏えいを確認",
   "announcementDate": "2026-11-03",
   "announcementDateLabel": "収録した公式公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日未公表",
-  "updatedDate": "2026-11-04",
-  "statusAsOfDate": "2026-11-04",
-  "lastVerifiedDate": "2026-11-05",
+  "updatedDate": "2026-11-06",
+  "statusAsOfDate": "2026-11-06",
+  "lastVerifiedDate": "2026-11-08",
   "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
     "outage"
   ],
-  "disclosureStatus": "investigating",
+  "disclosureStatus": "confirmed",
   "attackMethod": {
     "label": "具体的な攻撃手法・初期侵入経路は未公表",
     "status": "unknown"
   },
-  "summary": "第三者からの不審なアクセスを検知し、顧客情報保護・被害拡大防止・影響調査のためサービスを停止。11月4日8時時点の停止範囲を公表した。",
+  "summary": "11月2日夜に不正アクセスを検知し3日深夜に関連サービスを停止。情報漏えいを確認し、11月6日9時時点で約444,000件と公表。原因・影響範囲の外部調査を継続。",
   "affectedData": [
-    "個人情報の流出の有無・対象範囲について本文に記載なし"
+    "証券番号・氏名・住所・電話番号・メールアドレス等",
+    "専用ページID",
+    "一部にカード名義・末尾4桁、銀行名・口座名義・口座番号の末尾3桁を除いた番号"
   ],
-  "counts": [],
+  "counts": [
+    {
+      "value": 444000,
+      "label": "11月6日9時時点。人数ではなく記録件数",
+      "status": "confirmed",
+      "unit": "件",
+      "approximate": true
+    },
+    {
+      "value": 3,
+      "label": "カード情報の一部を含む内数。総数に加算しない",
+      "status": "confirmed",
+      "unit": "件",
+      "approximate": false
+    },
+    {
+      "value": 19,
+      "label": "口座情報の一部を含む内数。総数に加算しない",
+      "status": "confirmed",
+      "unit": "件",
+      "approximate": false
+    }
+  ],
   "caveats": [
-    "ご契約者さま専用ページ、ワンデーサポーター、eとらべる海外旅行保険、Myエージェント、法人お客さまWebサービス、e-G1を停止。",
-    "不審なアクセスの検知を侵入成功・漏えい確認と読み替えない。情報漏えいの記載がないことは漏えい否定ではない。",
-    "同じグループの他社発表との同一侵入は一次資料から確認できないため、別記録として保持する。"
+    "原因・範囲は調査中。情報の不正利用は確認されていない。",
+    "同じグループの他社発表との同一侵入は確認できず別記録として保持。",
+    "カード番号や口座番号の全桁ではない。カードセキュリティコード・暗証番号等は含まれない。"
   ],
   "sources": [
     {
       "title": "ご契約者さま専用ページ等のサービス一時停止について（11月4日更新）",
       "url": "https://www.aioinissaydowa.co.jp/info/notice_dtl.aspx?notice_id=2026110300001",
       "publishedDate": "2026-11-04"
+    },
+    {
+      "url": "https://aioinissaydowa.co.jp/corporate/about/news/pdf/2026/news_2026110601531.pdf",
+      "publishedDate": "2026-11-06",
+      "title": "情報漏えい確認・調査状況の公表"
     }
   ],
   "timeline": [
@@ -42,6 +73,13 @@
       "kind": "update",
       "summary": "不審アクセスの検知とサービス停止の範囲を公表。",
       "sourceUrl": "https://www.aioinissaydowa.co.jp/info/notice_dtl.aspx?notice_id=2026110300001"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "情報漏えい確認・調査状況の公表",
+      "kind": "update",
+      "summary": "11月2日夜に不正アクセスを検知し3日深夜に関連サービスを停止。情報漏えいを確認し、11月6日9時時点で約444,000件と公表。原因・影響範囲の外部調査を継続。",
+      "sourceUrl": "https://aioinissaydowa.co.jp/corporate/about/news/pdf/2026/news_2026110601531.pdf"
     }
   ],
   "eventDates": {

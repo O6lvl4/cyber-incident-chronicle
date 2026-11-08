@@ -1,0 +1,74 @@
+{
+  "id": "jnsa-security-check-2026",
+  "company": "特定非営利活動法人日本ネットワークセキュリティ協会",
+  "geography": "日本",
+  "title": "情報セキュリティ理解度チェックサービスへの不正アクセスと情報漏えいのおそれ",
+  "announcementDate": "2026-11-06",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-06",
+  "statusAsOfDate": "2026-11-06",
+  "lastVerifiedDate": "2026-11-08",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な攻撃手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "11月4日に不正アクセスを確認してサービス停止。10月30日夜頃から攻撃を受けた可能性があり、登録管理者・利用者の情報最大15,128件が漏えいしたおそれ。原因と範囲は調査中。",
+  "affectedData": [
+    "管理者氏名・企業名・メールアドレス、組織所在地・従業員数・業種、利用ユーザ数",
+    "利用者IDとハッシュ化されたパスワード"
+  ],
+  "counts": [
+    {
+      "value": 15128,
+      "label": "最大見込みの対象件数。確定流出人数ではない",
+      "status": "possible",
+      "unit": "件",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "パスワードはハッシュ化との公表を保持。",
+    "11月6日の個人情報保護委員会への報告は公表時点の予定であり完了としない。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.jnsa.org/dl/annual/20261106.pdf",
+      "publishedDate": "2026-11-06",
+      "title": "情報セキュリティ理解度チェックサービスへの不正アクセスと情報漏えいのおそれ"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-06",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "11月4日に不正アクセスを確認してサービス停止。10月30日夜頃から攻撃を受けた可能性があり、登録管理者・利用者の情報最大15,128件が漏えいしたおそれ。原因と範囲は調査中。",
+      "sourceUrl": "https://www.jnsa.org/dl/annual/20261106.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "approximate",
+      "label": "10月30日夜頃からの可能性",
+      "note": "暫定調査結果。開始日確定ではない。",
+      "sourceUrl": "https://www.jnsa.org/dl/annual/20261106.pdf",
+      "reviewedDate": "2026-11-08",
+      "startDate": "2026-10-30"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃開始日や被害確認日を推定しない。",
+      "sourceUrl": "https://www.jnsa.org/dl/annual/20261106.pdf",
+      "reviewedDate": "2026-11-08"
+    }
+  }
+}

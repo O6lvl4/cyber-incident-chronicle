@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-cj9g-27ph-4cgv",
+  "aliases": [
+    "CVE-2026-43977"
+  ],
+  "title": "wger Vulnerable to IDOR: Authenticated Users Can Read Any User's Private Workout Session Data via Template Routine API",
+  "summary": "wger Vulnerable to IDOR: Authenticated Users Can Read Any User's Private Workout Session Data via Template Routine API",
+  "publishedAt": "2026-05-14T16:16:21Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-cj9g-27ph-4cgv/GHSA-cj9g-27ph-4cgv.json",
+  "modifiedAt": "2026-11-06T18:29:45Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "wger",
+      "ranges": [
+        {
+          "affected": "<= 2.5",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-cj9g-27ph-4cgv/GHSA-cj9g-27ph-4cgv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2.5"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-cj9g-27ph-4cgv/GHSA-cj9g-27ph-4cgv.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-cj9g-27ph-4cgv/GHSA-cj9g-27ph-4cgv.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-cj9g-27ph-4cgv/GHSA-cj9g-27ph-4cgv.json",
+      "publishedDate": "2026-05-14",
+      "publishedAt": "2026-05-14T16:16:21Z",
+      "modifiedAt": "2026-11-06T18:29:45Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "wger Vulnerable to IDOR: Authenticated Users Can Read Any User's Private Workout Session Data via Template Routine API",
+      "url": "https://github.com/advisories/GHSA-cj9g-27ph-4cgv",
+      "publishedDate": "2026-05-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/wger-project/wger/security/advisories/GHSA-cj9g-27ph-4cgv",
+      "publishedDate": "2026-05-14",
+      "publishedAt": "2026-05-14T12:37:19Z",
+      "modifiedAt": "2026-05-14T12:37:19Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "認証済み利用者が公開テンプレートの所有者の非公開運動記録へアクセスできる問題。開発元の範囲<2.5・修正版>=2.6と、Reviewedの含む上限<=2.5・修正版不明を区別する。開発元本文は認証が必要とするがCVSSベクトルはPR:Nであり、独自に再計算しない。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

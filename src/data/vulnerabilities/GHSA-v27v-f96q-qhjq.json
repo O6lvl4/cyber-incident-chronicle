@@ -1,0 +1,82 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-v27v-f96q-qhjq",
+  "aliases": [
+    "RUSTSEC-2026-0451"
+  ],
+  "title": "vodozemac：OlmラチェットのHKDF出力の消去不足",
+  "summary": "0.11.1以前ではラチェット更新時の鍵が解放済みメモリに残る可能性がある。別のメモリ読取り手段を持つ攻撃者が過去の鍵を取得し得る。0.11.2で修正。",
+  "publishedAt": "2026-11-06T12:00:00Z",
+  "modifiedAt": "2026-11-06T15:45:02.403869632Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:30:29.653040Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0451",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "vodozemac",
+      "ranges": [
+        {
+          "affected": "< 0.11.2",
+          "fixed": "0.11.2",
+          "sourceUrl": "https://api.github.com/repos/matrix-org/vodozemac/security-advisories/GHSA-v27v-f96q-qhjq"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.11.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/vodozemac"
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/matrix-org/vodozemac/security-advisories/GHSA-v27v-f96q-qhjq",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec: RUSTSEC-2026-0451",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0451",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:00:00Z",
+      "modifiedAt": "2026-11-06T15:45:02.403869632Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Olm root key KDF output not zeroized after use",
+      "url": "https://api.github.com/repos/matrix-org/vodozemac/security-advisories/GHSA-v27v-f96q-qhjq",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:03:50Z",
+      "modifiedAt": "2026-11-06T12:03:50Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日はOSV/RustSecの日時。開発元日時は出典別に保持する。",
+    "公開OSV APIの明示GHSA/CVE別名を使用。rawRangesはOSV原文で0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・KEVは未確認。CISA公式取得の403を未掲載や悪用なしとしない。",
+    "別の情報開示不具合やコアダンプ等によるメモリ読取り手段が前提。単独の遠隔読取り脆弱性としない。"
+  ]
+}
