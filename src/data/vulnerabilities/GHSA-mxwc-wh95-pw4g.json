@@ -1,0 +1,91 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mxwc-wh95-pw4g",
+  "aliases": [],
+  "title": "Trapster Community: Unauthenticated malformed DNS compression pointers crash per-packet honeypot handler",
+  "summary": "Trapster Community: Unauthenticated malformed DNS compression pointers crash per-packet honeypot handler",
+  "publishedAt": "2026-07-08T20:24:46Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/07/GHSA-mxwc-wh95-pw4g/GHSA-mxwc-wh95-pw4g.json",
+  "modifiedAt": "2026-11-06T19:28:50Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "trapster",
+      "ranges": [
+        {
+          "affected": "< 1.2.2",
+          "fixed": "1.2.2",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/07/GHSA-mxwc-wh95-pw4g/GHSA-mxwc-wh95-pw4g.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.2.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/07/GHSA-mxwc-wh95-pw4g/GHSA-mxwc-wh95-pw4g.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/07/GHSA-mxwc-wh95-pw4g/GHSA-mxwc-wh95-pw4g.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/07/GHSA-mxwc-wh95-pw4g/GHSA-mxwc-wh95-pw4g.json",
+      "publishedDate": "2026-07-08",
+      "publishedAt": "2026-07-08T20:24:46Z",
+      "modifiedAt": "2026-11-06T19:28:50Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Trapster Community: Unauthenticated malformed DNS compression pointers crash per-packet honeypot handler",
+      "url": "https://github.com/advisories/GHSA-mxwc-wh95-pw4g",
+      "publishedDate": "2026-07-08"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/0xBallpoint/trapster-community/security/advisories/GHSA-mxwc-wh95-pw4g",
+      "publishedDate": "2026-06-01",
+      "publishedAt": "2026-06-01T14:35:14Z",
+      "modifiedAt": "2026-08-03T06:42:46Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "DNSハニーポットのパケット処理例外・CPU負荷とログ増加であり、全プロセス停止と同一視しない。開発元は<=1.2.0・修正版1.2.1、Reviewedは<1.2.2・修正版1.2.2。開発元の構造化Lowと本文Medium/CVSS3.1ベクトルの差も保持し、独自スコアを算出しない。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

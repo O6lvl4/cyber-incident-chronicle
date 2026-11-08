@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-r4hm-p9f9-fj9v",
+  "aliases": [
+    "CVE-2026-55649"
+  ],
+  "title": "GeoNode has Stored XSS in Documents metadata abstract field",
+  "summary": "GeoNode has Stored XSS in Documents metadata abstract field",
+  "publishedAt": "2026-11-06T19:50:34Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-r4hm-p9f9-fj9v/GHSA-r4hm-p9f9-fj9v.json",
+  "modifiedAt": "2026-11-06T19:50:34Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "GeoNode",
+      "ranges": [
+        {
+          "affected": "< 5.0.3",
+          "fixed": "5.0.3",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-r4hm-p9f9-fj9v/GHSA-r4hm-p9f9-fj9v.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.0.3"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-r4hm-p9f9-fj9v/GHSA-r4hm-p9f9-fj9v.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-r4hm-p9f9-fj9v/GHSA-r4hm-p9f9-fj9v.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-r4hm-p9f9-fj9v/GHSA-r4hm-p9f9-fj9v.json",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T19:50:34Z",
+      "modifiedAt": "2026-11-06T19:50:34Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "GeoNode has Stored XSS in Documents metadata abstract field",
+      "url": "https://github.com/advisories/GHSA-r4hm-p9f9-fj9v",
+      "publishedDate": "2026-11-06"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/GeoNode/geonode/security/advisories/GHSA-r4hm-p9f9-fj9v",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T18:06:25Z",
+      "modifiedAt": "2026-11-05T18:06:25Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "開発元は影響<5.0.1・修正版5.0.1と記載する一方、ReviewedはPyPI GeoNode <5.0.3・修正版5.0.3。本文は文書abstractの未サニタイズによる保存型XSSであり、範囲の差を推測で解消しない。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "reportDateJst": "2026-11-08",
+  "checkedAt": "2026-11-07T21:34:00Z",
+  "checkedAtNote": "Original pass approximate end; individual Allura verification 21:31:54Z. Restored audit does not claim original end timestamp precision.",
+  "baseCommit": "e687919",
+  "recordsBefore": 61,
+  "recordsAfter": 62,
+  "addedRecords": 1,
+  "updatedRecords": 0,
+  "added": [
+    "CVE-2026-118196"
+  ],
+  "updated": [],
+  "scope": "Independent product pass after previous successful review 2026-11-05T21:59:49Z with Nov4 overlap. Selected feeds, vendor advisories and maintainer announcements; not exhaustive review of every source of all products.",
+  "recovery": {
+    "reason": "Execution environment restored after publication preparation interruption; original uncommitted artifacts and cache disappeared.",
+    "restoredAt": "2026-11-08T01:27:29.572740+00:00",
+    "originalFetchManifestEntries": 132,
+    "originalManifestRecovered": false,
+    "note": "Prior checks and decisions restored from retained task transcript. Missing original hashes are not invented. Only the 3 Allura sources below were fetched anew during recovery; they reconfirm the inserted record. Original 47 successful CVE reads are not counted as recovery fetches.",
+    "newFetches": [
+      {
+        "url": "https://allura.apache.org/posts/2026-allura-1.22.1.html",
+        "fetchedAt": "2026-11-08T01:26:15.020410+00:00",
+        "status": 200,
+        "sha256": "2dee34f319a216408dbf76a2b5a200550a56b4d5ca4700d9ddf022bb3c0c2db4"
+      },
+      {
+        "url": "https://lists.apache.org/api/source.lua/0yy21j7lf1nldvo8xct30j87j8365nkv",
+        "fetchedAt": "2026-11-08T01:26:21.185451+00:00",
+        "status": 200,
+        "sha256": "f407c2a7c9953ec6436d0f74a267bc9a86f810f10be51fd02a45d49acfb694e3"
+      },
+      {
+        "url": "https://www.openwall.com/lists/oss-security/2026/11/07/1",
+        "fetchedAt": "2026-11-08T01:26:29.414028+00:00",
+        "status": 200,
+        "sha256": "7ad6f799f5a110a643d9b2c845c2a932f24c4cb8128f8815791f34fe16e9f497"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "status": "fetch-failed",
+      "note": "HTTP403 at 2026-11-07T21:28:02.437Z. Preserve prior successful checkpoint/data.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "status": "verified-no-new-candidate",
+      "note": "35 items fetched21:28:04.805Z, latest Oct29.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "status": "verified-no-new-candidate",
+      "note": "30 items fetched21:28:05.895Z; latest PHP Nov2.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://jvn.jp/",
+      "status": "verified-updates",
+      "note": "Latest Nov6; JVNVU90841469 CISA ICS and JVNVU98354779 Siemens notices followed to primary sources.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "status": "verified-new-candidate",
+      "note": "Official mirror catalog2026.11.06 count1769; SonicWall CVE-2026-19868 addedNov6. Distinct from failed cisa.gov source.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/",
+      "status": "verified-new-candidate",
+      "note": "Nov5–7 indexes and56 messages retrieved. Allura selected; library reports handed off. Source-author attribution applied.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/",
+      "status": "partial-fetch-failure",
+      "note": "48 existing primary CVE identifiers queried;47 success all PUBLISHED, CVE-2026-115560404. Only CoreTemp CVE-2026-109836 metadata updated since prior review, CISA ADP SSVC exploitation none; original CNA range/CVSS unchanged. Not a full revalidation of every source or alias.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://allura.apache.org/posts/2026-allura-1.22.1.html",
+      "status": "added",
+      "note": "CVE-2026-118196: vendor Critical, <=1.22.0, fixed1.22.1, publishedNov6; oss archiveNov7 is not publication date. CNA404; no CVSS guessed.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014",
+      "status": "held-source-and-schema",
+      "note": "CVE-2026-19868: official KEV mirror and CNA checked. VendorHTTP200 only JS shell, no body verified. CNA Gen7<=7.3.3-7015/Gen8<=8.2.2-8015; fixed version unknown. CISA ADP CVSS3.1 7.5High/active exploitation. Current validator cisa.gov-only, source403; do not weaken.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-045512.html",
+      "status": "held-existing-alias-collision",
+      "note": "V1.2Nov6 adds Gridscale X Dynamic Security Assessment and PSS E affected scope; CVE-2026-111497 already Node.js, downstream separate row violates global alias uniqueness.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html",
+      "status": "held-existing-alias-collision",
+      "note": "V1.3Nov5 revises affected/not-affected products; PHP CVE-2026-109618/109619 already recorded, do not broaden PHP ranges with downstream versions.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html",
+      "status": "verified-no-new-change",
+      "note": "Nov4 additions Process/Discrete are NOT affected; PHP alias blocker persists.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html",
+      "status": "verified-no-new-change",
+      "note": "V1.2Nov4 history wording; no new affected range.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-834709.html",
+      "status": "outside-initial-window",
+      "note": "InitialAug11, Nov4 scope clarification does not move publication into Oct1 window.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2026-005_en.pdf",
+      "status": "outside-initial-window",
+      "note": "PDF read: CVE-2026-13584 initialJuly30 updatedNov5, new NZ2CT-GN/FR-D800-E allversions; CVSS4.0 7.1 and network/physical mitigations. Not existing record; initial outsideOct1 window.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://ofbiz.apache.org/security.html",
+      "status": "held-date-model",
+      "note": "CVE-2026-83542 prior blocker: combined bulletinNov4 vs individual CriticalNov5, cannot preserve distinct qualifying date in existing validation. No fabricated date.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.openssh.com/txt/release-10.6p2",
+      "status": "verified-no-new-vendor-change",
+      "note": "Release and releasenotes rechecked unchanged. Third-party discussion not new official vulnerability. sshhole.com403 retained as failure.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://nodejs.org/en/blog/vulnerability/november-2026-security-releases",
+      "status": "preannouncement",
+      "note": "Nov11 or later planned release, no released fix/CVE inferred.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/06/9",
+      "status": "held-inclusion-evidence",
+      "note": "XSA526/527/528 messages9/10/11 Linux Xen backendsUAF and patches; inspected sources lack Critical/KEV/qualifying alert/public exploit. Patch is not PoC.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/06/30",
+      "status": "held-inclusion-evidence",
+      "note": "CPython CVE-2026-119170 Python3.14.10 FIPS enforcement High, not Critical; no other qualifying evidence.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/06/4",
+      "status": "held-source-verification",
+      "note": "Open WebUI researcher refers rejectedCVE2025-15603; no resurrection. InfiniteWP message29 lacks verified vendor disclosure/stableID.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/06/12",
+      "status": "library-handoff",
+      "note": "Axis1 CVE-2026-90436 Critical <=1.4 is library; Axis2/MIME4J similarly not duplicated as product.",
+      "evidencePeriod": "original pass 2026-11-07T21:28–21:34Z; restored from retained task results, not a new fetch"
+    }
+  ],
+  "retainedBlockers": [
+    "AppleCVE-2024-27834 and WordPressCVE-2026-119977 prior KEV validator blockers not silently resolved."
+  ],
+  "validation": {
+    "original": "product-status passed62 before environment restoration",
+    "recovery": "Pending parent integration validation",
+    "publication": "Not performed by product worker"
+  }
+}

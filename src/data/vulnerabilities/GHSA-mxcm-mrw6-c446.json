@@ -1,0 +1,82 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-mxcm-mrw6-c446",
+  "aliases": [
+    "RUSTSEC-2026-0445"
+  ],
+  "title": "vodozemac：依存暗号ライブラリのゼロ化機能無効化",
+  "summary": "0.11.0と0.11.1では依存関係のfeature変更により秘密情報のメモリ消去が弱まる。秘密が必要以上に残存する可能性があり、0.11.2で修正。",
+  "publishedAt": "2026-11-06T12:00:00Z",
+  "modifiedAt": "2026-11-06T14:45:02.847323520Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:30:29.652068Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0445",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "vodozemac",
+      "ranges": [
+        {
+          "affected": "0.11.0, 0.11.1",
+          "fixed": "0.11.2",
+          "sourceUrl": "https://api.github.com/repos/matrix-org/vodozemac/security-advisories/GHSA-mxcm-mrw6-c446"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.11.0"
+            },
+            {
+              "fixed": "0.11.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/vodozemac"
+    }
+  ],
+  "severity": {
+    "label": "low",
+    "sourceUrl": "https://api.github.com/repos/matrix-org/vodozemac/security-advisories/GHSA-mxcm-mrw6-c446",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec: RUSTSEC-2026-0445",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0445",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:00:00Z",
+      "modifiedAt": "2026-11-06T14:45:02.847323520Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Degraded secret zeroization capabilities ",
+      "url": "https://api.github.com/repos/matrix-org/vodozemac/security-advisories/GHSA-mxcm-mrw6-c446",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:02:38Z",
+      "modifiedAt": "2026-11-06T12:02:38Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日はOSV/RustSecの日時。開発元日時は出典別に保持する。",
+    "公開OSV APIの明示GHSA/CVE別名を使用。rawRangesはOSV原文で0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・KEVは未確認。CISA公式取得の403を未掲載や悪用なしとしない。",
+    "開発元はLowと評価。リスクの増加と実際の漏えい確認を区別する。"
+  ]
+}

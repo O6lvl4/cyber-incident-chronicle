@@ -1,0 +1,81 @@
+{
+  "id": "rohto-mailorder-systems-2026",
+  "company": "ロート製薬株式会社",
+  "geography": "日本",
+  "title": "通販電話システム経由の顧客情報・通話録音の不正取得",
+  "announcementDate": "2026-11-06",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-06",
+  "statusAsOfDate": "2026-11-06",
+  "lastVerifiedDate": "2026-11-08",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "電話システムのアカウント情報を悪用したアクセス",
+    "status": "confirmed"
+  },
+  "summary": "電話システムのアカウント情報を悪用した侵入と、同システム経由の顧客管理情報の不正取得を確認。顧客管理情報の対象は2,797,545人。カード番号・有効期限を含む通話録音の対象9,715人は別範囲として保持。",
+  "affectedData": [
+    "氏名・住所・電話番号等（対象者によって項目が異なる）",
+    "通話録音に含まれるクレジットカード番号・有効期限"
+  ],
+  "counts": [
+    {
+      "value": 2797545,
+      "label": "顧客管理情報の対象者",
+      "status": "confirmed",
+      "unit": "人",
+      "approximate": false
+    },
+    {
+      "value": 9715,
+      "label": "カード情報を含む通話録音の対象者。顧客管理情報との重複不明、加算しない",
+      "status": "confirmed",
+      "unit": "人",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "初報は9月11日、続報は9月15日と本文に記載。本収録の11月6日を最初の公表日とみなさない。",
+    "9月10日に提供元から不審アクセスの報告を受け、アカウント停止・パスワード変更。10月16日は電話システム側の調査完了日で全調査完了とはしない。",
+    "通話録音の保存対象期間は攻撃期間ではない。セキュリティコードや暗証番号は取得・保存していない。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.rohto.co.jp/news/whatsnew/2026/1106_01/",
+      "publishedDate": "2026-11-06",
+      "title": "通販電話システム経由の顧客情報・通話録音の不正取得"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-06",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "電話システムのアカウント情報を悪用した侵入と、同システム経由の顧客管理情報の不正取得を確認。顧客管理情報の対象は2,797,545人。カード番号・有効期限を含む通話録音の対象9,715人は別範囲として保持。",
+      "sourceUrl": "https://www.rohto.co.jp/news/whatsnew/2026/1106_01/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃開始日や被害確認日を推定しない。",
+      "sourceUrl": "https://www.rohto.co.jp/news/whatsnew/2026/1106_01/",
+      "reviewedDate": "2026-11-08"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃開始日や被害確認日を推定しない。",
+      "sourceUrl": "https://www.rohto.co.jp/news/whatsnew/2026/1106_01/",
+      "reviewedDate": "2026-11-08"
+    }
+  }
+}

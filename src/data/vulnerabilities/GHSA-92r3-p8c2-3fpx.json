@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-92r3-p8c2-3fpx",
+  "aliases": [
+    "CVE-2026-16454"
+  ],
+  "title": "Eclipse hawkBit DDI has Privilege Escalation that allows Tenant-Isolated Firmware Exfiltration",
+  "summary": "Eclipse hawkBit DDI has Privilege Escalation that allows Tenant-Isolated Firmware Exfiltration",
+  "publishedAt": "2026-11-06T18:09:45Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-92r3-p8c2-3fpx/GHSA-92r3-p8c2-3fpx.json",
+  "modifiedAt": "2026-11-06T18:09:45Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.eclipse.hawkbit:hawkbit-ddi-resource",
+      "ranges": [
+        {
+          "affected": "< 1.0.4",
+          "fixed": "1.0.4",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-92r3-p8c2-3fpx/GHSA-92r3-p8c2-3fpx.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.0.4"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-92r3-p8c2-3fpx/GHSA-92r3-p8c2-3fpx.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-92r3-p8c2-3fpx/GHSA-92r3-p8c2-3fpx.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-92r3-p8c2-3fpx/GHSA-92r3-p8c2-3fpx.json",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T18:09:45Z",
+      "modifiedAt": "2026-11-06T18:09:45Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Eclipse hawkBit DDI has Privilege Escalation that allows Tenant-Isolated Firmware Exfiltration",
+      "url": "https://github.com/advisories/GHSA-92r3-p8c2-3fpx",
+      "publishedDate": "2026-11-06"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/eclipse-hawkbit/hawkbit/security/advisories/GHSA-92r3-p8c2-3fpx",
+      "publishedDate": "2026-06-26",
+      "publishedAt": "2026-06-26T09:35:51Z",
+      "modifiedAt": "2026-07-22T05:44:14Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "有効な認証情報を持つデバイスによる、同一テナント内の未割当ファームウェア取得。認証回避やテナント横断の漏えいとはしない。開発元は<=1.0.3・修正版1.0.4、Medium/CVSS3.1 4.3。撤回された別GHSAは元データの履歴として統合される。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

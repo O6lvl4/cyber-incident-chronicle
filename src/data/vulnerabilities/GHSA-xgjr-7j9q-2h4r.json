@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-xgjr-7j9q-2h4r",
+  "aliases": [
+    "CVE-2026-62361"
+  ],
+  "title": "listmonk: SQL Injection in `/api/subscribers/export` bypasses table access control, leaking admin password hashes and SMTP credentials",
+  "summary": "listmonk: SQL Injection in `/api/subscribers/export` bypasses table access control, leaking admin password hashes and SMTP credentials",
+  "publishedAt": "2026-11-06T18:15:17Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-xgjr-7j9q-2h4r/GHSA-xgjr-7j9q-2h4r.json",
+  "modifiedAt": "2026-11-06T18:15:17Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/knadh/listmonk",
+      "ranges": [
+        {
+          "affected": "< 1.1.1-0.20260619102436-c0a6525009a6",
+          "fixed": "1.1.1-0.20260619102436-c0a6525009a6",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-xgjr-7j9q-2h4r/GHSA-xgjr-7j9q-2h4r.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.1.1-0.20260619102436-c0a6525009a6"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-xgjr-7j9q-2h4r/GHSA-xgjr-7j9q-2h4r.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-xgjr-7j9q-2h4r/GHSA-xgjr-7j9q-2h4r.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/11/GHSA-xgjr-7j9q-2h4r/GHSA-xgjr-7j9q-2h4r.json",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T18:15:17Z",
+      "modifiedAt": "2026-11-06T18:15:17Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "listmonk: SQL Injection in `/api/subscribers/export` bypasses table access control, leaking admin password hashes and SMTP credentials",
+      "url": "https://github.com/advisories/GHSA-xgjr-7j9q-2h4r",
+      "publishedDate": "2026-11-06"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/knadh/listmonk/security/advisories/GHSA-xgjr-7j9q-2h4r",
+      "publishedDate": "2026-06-26",
+      "publishedAt": "2026-06-26T10:36:18Z",
+      "modifiedAt": "2026-07-14T20:54:35Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "認証済み利用者のsubscribers:sql_query権限等が必要なエクスポート経路のSQL制限回避。開発元の製品影響<=6.1.0・修正版6.2.0と、ReviewedのGoモジュール修正擬似版1.1.1-0.20260619102436-c0a6525009a6を別々に保持する。PoCの成立や連鎖例は実悪用観測ではない。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}

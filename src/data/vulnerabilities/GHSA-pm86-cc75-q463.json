@@ -1,0 +1,98 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-pm86-cc75-q463",
+  "aliases": [
+    "CVE-2026-121417",
+    "RUSTSEC-2026-0453"
+  ],
+  "title": "SurrealDB：借用を保持するfutureのリークによるuse-after-free",
+  "summary": "KVバックエンドがaffinitypoolへ渡した借用状態はfutureのDrop実行に依存する。Rust埋め込み側がfutureをリークすると解放後参照が生じ得る。開発元は3.3.0を修正境界とする。",
+  "publishedAt": "2026-10-19T12:00:00Z",
+  "modifiedAt": "2026-11-06T15:55:56.754284946Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:30:29.653846Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0453",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "surrealdb",
+      "ranges": [
+        {
+          "affected": "< 3.3.0",
+          "fixed": "3.3.0",
+          "sourceUrl": "https://api.github.com/repos/surrealdb/surrealdb/security-advisories/GHSA-pm86-cc75-q463"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "3.3.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/surrealdb"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/surrealdb/surrealdb/security-advisories/GHSA-pm86-cc75-q463",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0453"
+      },
+      {
+        "version": "3.1",
+        "score": 7.8,
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/repos/surrealdb/surrealdb/security-advisories/GHSA-pm86-cc75-q463"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec: RUSTSEC-2026-0453",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0453",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T12:00:00Z",
+      "modifiedAt": "2026-11-06T15:55:56.754284946Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Use-after-free in `surrealdb-core` KV backends via `affinitypool::spawn_local` leak amplification",
+      "url": "https://api.github.com/repos/surrealdb/surrealdb/security-advisories/GHSA-pm86-cc75-q463",
+      "publishedDate": "2026-10-19",
+      "publishedAt": "2026-10-19T08:52:13Z",
+      "modifiedAt": "2026-10-19T08:52:13Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日はOSV/RustSecの日時。開発元日時は出典別に保持する。",
+    "公開OSV APIの明示GHSA/CVE別名を使用。rawRangesはOSV原文で0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・KEVは未確認。CISA公式取得の403を未掲載や悪用なしとしない。",
+    "Rust呼び出し側によるfutureリークが必要。開発元は既存のリーク箇所やネットワーク/SurrealQLからの遠隔トリガーを確認していない。",
+    "開発元の構造化CVSS3.1スコア7.8と本文暫定7.1の差を保持し、再計算しない。",
+    "CVE-2026-121417はOSVの明示別名。開発元APIのcve_idはnullであり出典を区別する。"
+  ]
+}

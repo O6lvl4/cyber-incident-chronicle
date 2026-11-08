@@ -7,32 +7,66 @@
   "announcementDateLabel": "収録した公式公表日",
   "occurredDate": "2026-10-31",
   "occurredDateLabel": "2026年10月31日〜11月1日（確認された不正アクセス期間）",
-  "updatedDate": "2026-11-01",
-  "statusAsOfDate": "2026-11-01",
-  "lastVerifiedDate": "2026-11-02",
+  "updatedDate": "2026-11-06",
+  "statusAsOfDate": "2026-11-06",
+  "lastVerifiedDate": "2026-11-08",
   "impactTypes": [
     "unauthorizedAccess",
-    "outage"
+    "outage",
+    "leak"
   ],
-  "disclosureStatus": "investigating",
+  "disclosureStatus": "possible",
   "attackMethod": {
     "label": "第三者による不正アクセス。具体的な侵入手法は未公表",
     "status": "unknown"
   },
-  "summary": "10月31日〜11月1日にシステムへの不正アクセスが発生。ポイント・特典の不正操作を確認し、ポイント交換や通知等を停止・制限。アカウントや広告関連情報への影響は調査中。",
+  "summary": "10月31日の不正アクセスに関連し、媒体社担当者等のメール1,582件、広告取引先メール207件、利用者内部ID1,033件に漏えいの可能性。通知等は11月2日に復旧したが、ポイント交換・一部特典は同日時点で停止継続。",
   "affectedData": [
-    "アカウントへの影響の有無・広告関連システムや情報への影響を調査中"
+    "媒体社等・広告取引先担当者のメールアドレス",
+    "利用者内部ID"
   ],
-  "counts": [],
+  "counts": [
+    {
+      "value": 1582,
+      "label": "媒体社等の担当者メール",
+      "status": "possible",
+      "unit": "件",
+      "approximate": false
+    },
+    {
+      "value": 207,
+      "label": "広告取引先担当者メール",
+      "status": "possible",
+      "unit": "件",
+      "approximate": false
+    },
+    {
+      "value": 1033,
+      "label": "利用者内部ID。ID単独で個人特定できない",
+      "status": "possible",
+      "unit": "件",
+      "approximate": false
+    }
+  ],
   "caveats": [
-    "10月22日に公表されたセキュリティ問題とは別の事案として対応すると公式に明記。",
-    "広告配信は継続。個人情報漏えいや被害人数は確認済みとしない。認証情報の無効化・更新は進行中。"
+    "パスワード・カード情報等の高リスク情報は含まれない。二次被害は確認されていない。",
+    "10月22日の別事案と混同しない。11月2日時点の復旧を全面復旧としない。"
   ],
   "sources": [
     {
       "title": "セキュリティ上の問題への対応について（続報：2026年11月1日15時時点）",
       "url": "https://about.smartnews.com/ja/news/2617.html",
       "publishedDate": "2026-11-01"
+    },
+    {
+      "url": "https://about.smartnews.com/ja/news/2619.html",
+      "publishedDate": "2026-11-02",
+      "title": "サービス復旧状況"
+    },
+    {
+      "url": "https://about.smartnews.com/ja/news/2623.html",
+      "publishedDate": "2026-11-06",
+      "title": "影響範囲の公表"
     }
   ],
   "timeline": [
@@ -42,6 +76,13 @@
       "kind": "disclosure",
       "summary": "10月31日〜11月1日にシステムへの不正アクセスが発生。ポイント・特典の不正操作を確認し、ポイント交換や通知等を停止・制限。アカウントや広告関連情報への影響は調査中。",
       "sourceUrl": "https://about.smartnews.com/ja/news/2617.html"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "影響範囲の公表",
+      "kind": "update",
+      "summary": "10月31日の不正アクセスに関連し、媒体社担当者等のメール1,582件、広告取引先メール207件、利用者内部ID1,033件に漏えいの可能性。通知等は11月2日に復旧したが、ポイント交換・一部特典は同日時点で停止継続。",
+      "sourceUrl": "https://about.smartnews.com/ja/news/2623.html"
     }
   ],
   "eventDates": {

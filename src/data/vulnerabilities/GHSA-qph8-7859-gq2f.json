@@ -1,0 +1,127 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-qph8-7859-gq2f",
+  "aliases": [
+    "RUSTSEC-2026-0447",
+    "RUSTSEC-2026-0448"
+  ],
+  "title": "Actix：展開制限の適用前に圧縮ボディが資源を消費",
+  "summary": "圧縮されたリクエストまたはレスポンスの展開層で、呼び出し側のボディ制限が適用される前にメモリやCPUを大量消費し得る。actix-http 3.20.1とactix-web 4.18.2が修正境界。",
+  "publishedAt": "2026-11-06T12:00:00Z",
+  "modifiedAt": "2026-11-06T14:56:05.870288153Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:30:29.652797Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0447",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "actix-web",
+      "ranges": [
+        {
+          "affected": "< 4.18.2",
+          "fixed": ">= 4.18.2",
+          "sourceUrl": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-qph8-7859-gq2f"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "4.18.2"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/actix-web"
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "actix-http",
+      "ranges": [
+        {
+          "affected": "< 3.20.1",
+          "fixed": ">= 3.20.1",
+          "sourceUrl": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-qph8-7859-gq2f"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "3.20.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": [],
+      "packageUrl": "pkg:cargo/actix-http"
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-qph8-7859-gq2f",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.7,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-qph8-7859-gq2f"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec: RUSTSEC-2026-0447",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0447",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:00:00Z",
+      "modifiedAt": "2026-11-06T14:56:05.870288153Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV / RustSec: RUSTSEC-2026-0448",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0448",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:00:00Z",
+      "modifiedAt": "2026-11-06T14:56:05.870288153Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Uncontrolled Resource Consumption / Decompression Amplification in actix-http Decoder",
+      "url": "https://api.github.com/repos/actix/actix-web/security-advisories/GHSA-qph8-7859-gq2f",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T12:17:07Z",
+      "modifiedAt": "2026-11-06T12:17:07Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日はOSV/RustSecの日時。開発元日時は出典別に保持する。",
+    "公開OSV APIの明示GHSA/CVE別名を使用。rawRangesはOSV原文で0.0.0-0を実在する最初のリリースと推定しない。",
+    "実悪用・KEVは未確認。CISA公式取得の403を未掲載や悪用なしとしない。",
+    "同じGHSAに明示的に関連付けられた2件のRustSecを集約。actix-httpとactix-webの修正境界は別々に保持する。",
+    "開発元GHSA本文はawc/Decoderクライアントを説明しサーバーは自動展開しないと記載する一方、構造化affectedとRustSecはactix-webも対象とする。範囲差の解消を推定しない。",
+    "Decoderを直接使う場合はDecoder::limit()も必要。別件large-window Brotliは3.20.3で修正され、本件の修正版で全圧縮問題が解消するとはしない。"
+  ]
+}

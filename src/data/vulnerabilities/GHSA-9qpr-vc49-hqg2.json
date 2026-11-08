@@ -1,0 +1,93 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-9qpr-vc49-hqg2",
+  "aliases": [
+    "CVE-2026-43978"
+  ],
+  "title": "wger: Privilege escalation via trainer-login session chaining allows gym trainer to impersonate gym manager",
+  "summary": "wger: Privilege escalation via trainer-login session chaining allows gym trainer to impersonate gym manager",
+  "publishedAt": "2026-05-14T16:16:30Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-9qpr-vc49-hqg2/GHSA-9qpr-vc49-hqg2.json",
+  "modifiedAt": "2026-11-06T00:14:57Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-08T01:27:48.260Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "wger",
+      "ranges": [
+        {
+          "affected": "<= 2.5",
+          "fixed": null,
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-9qpr-vc49-hqg2/GHSA-9qpr-vc49-hqg2.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2.5"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-9qpr-vc49-hqg2/GHSA-9qpr-vc49-hqg2.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-9qpr-vc49-hqg2/GHSA-9qpr-vc49-hqg2.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/1d27c14287e910ae3ddc214bb86dd9ee9a4ba4be/advisories/github-reviewed/2026/05/GHSA-9qpr-vc49-hqg2/GHSA-9qpr-vc49-hqg2.json",
+      "publishedDate": "2026-05-14",
+      "publishedAt": "2026-05-14T16:16:30Z",
+      "modifiedAt": "2026-11-06T00:14:57Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "wger: Privilege escalation via trainer-login session chaining allows gym trainer to impersonate gym manager",
+      "url": "https://github.com/advisories/GHSA-9qpr-vc49-hqg2",
+      "publishedDate": "2026-05-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "開発元公開セキュリティアドバイザリ",
+      "url": "https://github.com/wger-project/wger/security/advisories/GHSA-9qpr-vc49-hqg2",
+      "publishedDate": "2026-05-14",
+      "publishedAt": "2026-05-14T12:36:41Z",
+      "modifiedAt": "2026-05-14T12:36:41Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "開発元の公開API本文と構造化項目を確認。表示する日時・パッケージ範囲・評価は固定Reviewed原データに基づく。開発元との差は以下の留保と確認記録に保持する。",
+    "同一ジムのトレーナーがセッション切替を連鎖して管理者権限を取得する問題。開発元の構造化範囲<2.5・修正版>=2.6と、Reviewedの含む上限<=2.5・修正版不明は異なる。公開DBの修正版を推定で埋めず、開発元表記を留保に保持する。",
+    "実悪用とCISA KEVは未確認。脆弱性やPoCの公開だけから企業被害を推定しない。"
+  ]
+}
