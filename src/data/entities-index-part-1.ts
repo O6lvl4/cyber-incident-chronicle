@@ -42,64 +42,64 @@ import record38 from './entities/citizen-watch.json' with { type: 'json' };
 import record39 from './entities/club-tourism-reservation.json' with { type: 'json' };
 import record40 from './entities/coconala.json' with { type: 'json' };
 import record41 from './entities/commune.json' with { type: 'json' };
-import record42 from './entities/core-concept-technologies.json' with { type: 'json' };
-import record43 from './entities/cosmos-hotel.json' with { type: 'json' };
-import record44 from './entities/cotta.json' with { type: 'json' };
-import record45 from './entities/credit-saison.json' with { type: 'json' };
-import record46 from './entities/cress-tech.json' with { type: 'json' };
-import record47 from './entities/ctc.json' with { type: 'json' };
-import record48 from './entities/dai-ichi-life-group.json' with { type: 'json' };
-import record49 from './entities/dai-ichi-life.json' with { type: 'json' };
-import record50 from './entities/daiichikosho.json' with { type: 'json' };
-import record51 from './entities/daiki-suisan.json' with { type: 'json' };
-import record52 from './entities/daiwa-institute-research.json' with { type: 'json' };
-import record53 from './entities/daiwa-securities.json' with { type: 'json' };
-import record54 from './entities/dennys-japan.json' with { type: 'json' };
-import record55 from './entities/dentsu-soken.json' with { type: 'json' };
-import record56 from './entities/dhc.json' with { type: 'json' };
-import record57 from './entities/digital-agency.json' with { type: 'json' };
-import record58 from './entities/digital-arts.json' with { type: 'json' };
-import record59 from './entities/dip.json' with { type: 'json' };
-import record60 from './entities/dirigio.json' with { type: 'json' };
-import record61 from './entities/doutor-coffee.json' with { type: 'json' };
-import record62 from './entities/dwango.json' with { type: 'json' };
-import record63 from './entities/enecom.json' with { type: 'json' };
-import record64 from './entities/ensapia-tokyo.json' with { type: 'json' };
-import record65 from './entities/epark-relax.json' with { type: 'json' };
-import record66 from './entities/eplus.json' with { type: 'json' };
-import record67 from './entities/estore.json' with { type: 'json' };
-import record68 from './entities/evergreen-marketing.json' with { type: 'json' };
-import record69 from './entities/fancl.json' with { type: 'json' };
-import record70 from './entities/fdma.json' with { type: 'json' };
-import record71 from './entities/fines.json' with { type: 'json' };
-import record72 from './entities/flex-gallery.json' with { type: 'json' };
-import record73 from './entities/fuji-television.json' with { type: 'json' };
-import record74 from './entities/fujicco.json' with { type: 'json' };
-import record75 from './entities/fujikura.json' with { type: 'json' };
-import record76 from './entities/fujitsu.json' with { type: 'json' };
-import record77 from './entities/furuno-electric.json' with { type: 'json' };
-import record78 from './entities/furuno-systems.json' with { type: 'json' };
-import record79 from './entities/future-shop.json' with { type: 'json' };
-import record80 from './entities/gallery2.json' with { type: 'json' };
-import record81 from './entities/giftee.json' with { type: 'json' };
-import record82 from './entities/ginpo-pack.json' with { type: 'json' };
-import record83 from './entities/glory.json' with { type: 'json' };
-import record84 from './entities/gmo-internet.json' with { type: 'json' };
-import record85 from './entities/gmo-payment-gateway.json' with { type: 'json' };
-import record86 from './entities/gmo-research-ai.json' with { type: 'json' };
-import record87 from './entities/gmo-trustlogin-unidentified.json' with { type: 'json' };
-import record88 from './entities/golf-digest-online.json' with { type: 'json' };
-import record89 from './entities/goodsmile-official-shop.json' with { type: 'json' };
-import record90 from './entities/greenmonster.json' with { type: 'json' };
-import record91 from './entities/hana-cupid.json' with { type: 'json' };
-import record92 from './entities/hanshin-expressway.json' with { type: 'json' };
-import record93 from './entities/harada.json' with { type: 'json' };
-import record94 from './entities/helpfeel.json' with { type: 'json' };
-import record95 from './entities/hi-ho.json' with { type: 'json' };
-import record96 from './entities/his-thailand.json' with { type: 'json' };
-import record97 from './entities/hj-holdings.json' with { type: 'json' };
-import record98 from './entities/hokan.json' with { type: 'json' };
-import record99 from './entities/hoya.json' with { type: 'json' };
+import record42 from './entities/consortium-osaka.json' with { type: 'json' };
+import record43 from './entities/core-concept-technologies.json' with { type: 'json' };
+import record44 from './entities/cosmos-hotel.json' with { type: 'json' };
+import record45 from './entities/cotta.json' with { type: 'json' };
+import record46 from './entities/credit-saison.json' with { type: 'json' };
+import record47 from './entities/cress-tech.json' with { type: 'json' };
+import record48 from './entities/ctc.json' with { type: 'json' };
+import record49 from './entities/dai-ichi-life-group.json' with { type: 'json' };
+import record50 from './entities/dai-ichi-life.json' with { type: 'json' };
+import record51 from './entities/daiichikosho.json' with { type: 'json' };
+import record52 from './entities/daiki-suisan.json' with { type: 'json' };
+import record53 from './entities/daiwa-institute-research.json' with { type: 'json' };
+import record54 from './entities/daiwa-securities.json' with { type: 'json' };
+import record55 from './entities/dennys-japan.json' with { type: 'json' };
+import record56 from './entities/dentsu-soken.json' with { type: 'json' };
+import record57 from './entities/dhc.json' with { type: 'json' };
+import record58 from './entities/digital-agency.json' with { type: 'json' };
+import record59 from './entities/digital-arts.json' with { type: 'json' };
+import record60 from './entities/dip.json' with { type: 'json' };
+import record61 from './entities/dirigio.json' with { type: 'json' };
+import record62 from './entities/doutor-coffee.json' with { type: 'json' };
+import record63 from './entities/dwango.json' with { type: 'json' };
+import record64 from './entities/enecom.json' with { type: 'json' };
+import record65 from './entities/ensapia-tokyo.json' with { type: 'json' };
+import record66 from './entities/epark-relax.json' with { type: 'json' };
+import record67 from './entities/eplus.json' with { type: 'json' };
+import record68 from './entities/estore.json' with { type: 'json' };
+import record69 from './entities/evergreen-marketing.json' with { type: 'json' };
+import record70 from './entities/fancl.json' with { type: 'json' };
+import record71 from './entities/fdma.json' with { type: 'json' };
+import record72 from './entities/fines.json' with { type: 'json' };
+import record73 from './entities/flex-gallery.json' with { type: 'json' };
+import record74 from './entities/fuji-television.json' with { type: 'json' };
+import record75 from './entities/fujicco.json' with { type: 'json' };
+import record76 from './entities/fujikura.json' with { type: 'json' };
+import record77 from './entities/fujitsu.json' with { type: 'json' };
+import record78 from './entities/furuno-electric.json' with { type: 'json' };
+import record79 from './entities/furuno-systems.json' with { type: 'json' };
+import record80 from './entities/future-shop.json' with { type: 'json' };
+import record81 from './entities/gallery2.json' with { type: 'json' };
+import record82 from './entities/giftee.json' with { type: 'json' };
+import record83 from './entities/ginpo-pack.json' with { type: 'json' };
+import record84 from './entities/glory.json' with { type: 'json' };
+import record85 from './entities/gmo-internet.json' with { type: 'json' };
+import record86 from './entities/gmo-payment-gateway.json' with { type: 'json' };
+import record87 from './entities/gmo-research-ai.json' with { type: 'json' };
+import record88 from './entities/gmo-trustlogin-unidentified.json' with { type: 'json' };
+import record89 from './entities/golf-digest-online.json' with { type: 'json' };
+import record90 from './entities/goodsmile-official-shop.json' with { type: 'json' };
+import record91 from './entities/greenmonster.json' with { type: 'json' };
+import record92 from './entities/hana-cupid.json' with { type: 'json' };
+import record93 from './entities/hanshin-expressway.json' with { type: 'json' };
+import record94 from './entities/harada.json' with { type: 'json' };
+import record95 from './entities/helpfeel.json' with { type: 'json' };
+import record96 from './entities/hi-ho.json' with { type: 'json' };
+import record97 from './entities/his-thailand.json' with { type: 'json' };
+import record98 from './entities/hj-holdings.json' with { type: 'json' };
+import record99 from './entities/hokan.json' with { type: 'json' };
 
 export const ENTITIES_PART_1 = {
   "2rinkan-yellowhat": record0,
@@ -144,62 +144,62 @@ export const ENTITIES_PART_1 = {
   "club-tourism-reservation": record39,
   "coconala": record40,
   "commune": record41,
-  "core-concept-technologies": record42,
-  "cosmos-hotel": record43,
-  "cotta": record44,
-  "credit-saison": record45,
-  "cress-tech": record46,
-  "ctc": record47,
-  "dai-ichi-life-group": record48,
-  "dai-ichi-life": record49,
-  "daiichikosho": record50,
-  "daiki-suisan": record51,
-  "daiwa-institute-research": record52,
-  "daiwa-securities": record53,
-  "dennys-japan": record54,
-  "dentsu-soken": record55,
-  "dhc": record56,
-  "digital-agency": record57,
-  "digital-arts": record58,
-  "dip": record59,
-  "dirigio": record60,
-  "doutor-coffee": record61,
-  "dwango": record62,
-  "enecom": record63,
-  "ensapia-tokyo": record64,
-  "epark-relax": record65,
-  "eplus": record66,
-  "estore": record67,
-  "evergreen-marketing": record68,
-  "fancl": record69,
-  "fdma": record70,
-  "fines": record71,
-  "flex-gallery": record72,
-  "fuji-television": record73,
-  "fujicco": record74,
-  "fujikura": record75,
-  "fujitsu": record76,
-  "furuno-electric": record77,
-  "furuno-systems": record78,
-  "future-shop": record79,
-  "gallery2": record80,
-  "giftee": record81,
-  "ginpo-pack": record82,
-  "glory": record83,
-  "gmo-internet": record84,
-  "gmo-payment-gateway": record85,
-  "gmo-research-ai": record86,
-  "gmo-trustlogin-unidentified": record87,
-  "golf-digest-online": record88,
-  "goodsmile-official-shop": record89,
-  "greenmonster": record90,
-  "hana-cupid": record91,
-  "hanshin-expressway": record92,
-  "harada": record93,
-  "helpfeel": record94,
-  "hi-ho": record95,
-  "his-thailand": record96,
-  "hj-holdings": record97,
-  "hokan": record98,
-  "hoya": record99,
+  "consortium-osaka": record42,
+  "core-concept-technologies": record43,
+  "cosmos-hotel": record44,
+  "cotta": record45,
+  "credit-saison": record46,
+  "cress-tech": record47,
+  "ctc": record48,
+  "dai-ichi-life-group": record49,
+  "dai-ichi-life": record50,
+  "daiichikosho": record51,
+  "daiki-suisan": record52,
+  "daiwa-institute-research": record53,
+  "daiwa-securities": record54,
+  "dennys-japan": record55,
+  "dentsu-soken": record56,
+  "dhc": record57,
+  "digital-agency": record58,
+  "digital-arts": record59,
+  "dip": record60,
+  "dirigio": record61,
+  "doutor-coffee": record62,
+  "dwango": record63,
+  "enecom": record64,
+  "ensapia-tokyo": record65,
+  "epark-relax": record66,
+  "eplus": record67,
+  "estore": record68,
+  "evergreen-marketing": record69,
+  "fancl": record70,
+  "fdma": record71,
+  "fines": record72,
+  "flex-gallery": record73,
+  "fuji-television": record74,
+  "fujicco": record75,
+  "fujikura": record76,
+  "fujitsu": record77,
+  "furuno-electric": record78,
+  "furuno-systems": record79,
+  "future-shop": record80,
+  "gallery2": record81,
+  "giftee": record82,
+  "ginpo-pack": record83,
+  "glory": record84,
+  "gmo-internet": record85,
+  "gmo-payment-gateway": record86,
+  "gmo-research-ai": record87,
+  "gmo-trustlogin-unidentified": record88,
+  "golf-digest-online": record89,
+  "goodsmile-official-shop": record90,
+  "greenmonster": record91,
+  "hana-cupid": record92,
+  "hanshin-expressway": record93,
+  "harada": record94,
+  "helpfeel": record95,
+  "hi-ho": record96,
+  "his-thailand": record97,
+  "hj-holdings": record98,
+  "hokan": record99,
 } as Record<string, EntityClassification>;

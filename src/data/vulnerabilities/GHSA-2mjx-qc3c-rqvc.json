@@ -1,14 +1,17 @@
 {
   "kind": "vulnerability",
   "id": "GHSA-2mjx-qc3c-rqvc",
-  "aliases": [],
+  "aliases": [
+    "CVE-2026-123613",
+    "RUSTSEC-2026-0285"
+  ],
   "title": "Rustls：TLS 1.3の暗号化レベル境界の検証不備",
   "summary": "TLS 1.3で鍵を切り替えるメッセージと同じレコードに続くハンドシェイクメッセージを、不適切な暗号化レベルでも受け入れる。本来暗号化されるべきメッセージを平文で送る接続相手を拒否できず、0.23.45で修正。",
   "publishedAt": "2026-10-05T23:30:17Z",
-  "modifiedAt": "2026-10-05T23:30:18Z",
+  "modifiedAt": "2026-11-08T10:55:54.395419388Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-08T01:49:04Z",
-  "dateSourceUrl": "https://api.github.com/advisories/GHSA-2mjx-qc3c-rqvc",
+  "lastVerifiedAt": "2026-11-08T21:08:26.164850Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/GHSA-2mjx-qc3c-rqvc",
   "affected": [
     {
       "ecosystem": "rust",
@@ -61,6 +64,15 @@
       "withdrawnAt": null
     },
     {
+      "type": "advisoryDatabase",
+      "title": "OSV supplementary alias verification: GHSA-2mjx-qc3c-rqvc",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-2mjx-qc3c-rqvc",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T23:30:17Z",
+      "modifiedAt": "2026-11-08T10:55:54.395419388Z",
+      "withdrawnAt": null
+    },
+    {
       "type": "maintainer",
       "title": "TLS 1.3 handshake messages incorrectly accepted across encryption level boundaries",
       "url": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-2mjx-qc3c-rqvc",
@@ -73,7 +85,8 @@
   "caveats": [
     "ハンドシェイクのトランスクリプト認証は維持される。メンテナーは、経路上の攻撃者がこの不備だけでハンドシェイクを改変・完了できるわけではないと説明している。",
     "メンテナーの影響範囲は>=0.23.13, <=0.23.44。対応する修正版を除外したGitHub Reviewedの範囲を保持。",
-    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
-    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+    "初回公開日時は固定GitHub Reviewed原データ、今回の更新日時はOSVに基づく。開発元を含む各原データの日時・範囲・評価は出典欄と監査に区別して保持する。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。",
+    "2026-11-09補助確認：OSVの明示CVE別名を反映。今回のOSV差分は別名と更新日時のみ。開発元公開APIも取得したがCVE欄はnullのため、CVE対応の根拠はOSVと区別する。影響範囲・修正版・CVSS・実悪用状態は変更していない。"
   ]
 }

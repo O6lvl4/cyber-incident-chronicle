@@ -2,15 +2,16 @@
   "kind": "vulnerability",
   "id": "GHSA-w44r-93j7-qv28",
   "aliases": [
+    "CVE-2026-123611",
     "RUSTSEC-2026-0349"
   ],
   "title": "rustls：未認証ServerHelloによる後続接続の鍵交換予測の変更",
   "summary": "未認証ServerHelloがサーバー名ごとの鍵交換予測を変更し、本来ハイブリッド鍵交換に対応する後続接続がX25519のみで成立する可能性がある。影響はサーバー方針とセッション保存に依存し、鍵の漏えいや認証回避を示すものではない。",
   "publishedAt": "2026-10-14T12:00:00Z",
-  "modifiedAt": "2026-10-14T13:30:02.475705129Z",
+  "modifiedAt": "2026-11-08T10:55:46.312019109Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-14T23:09:03.560882Z",
-  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0349",
+  "lastVerifiedAt": "2026-11-08T21:08:21.968577Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/GHSA-w44r-93j7-qv28",
   "affected": [
     {
       "ecosystem": "rust",
@@ -86,6 +87,15 @@
       "withdrawnAt": null
     },
     {
+      "type": "advisoryDatabase",
+      "title": "OSV supplementary alias verification: GHSA-w44r-93j7-qv28",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-w44r-93j7-qv28",
+      "publishedDate": "2026-10-27",
+      "publishedAt": "2026-10-27T16:08:54Z",
+      "modifiedAt": "2026-11-08T10:55:46.312019109Z",
+      "withdrawnAt": null
+    },
+    {
       "type": "maintainer",
       "title": "An unauthenticated ServerHello poisons the per-name key-exchange record, so later ClientHellos carry only a classical X25519 share",
       "url": "https://api.github.com/repos/rustls/rustls/security-advisories/GHSA-w44r-93j7-qv28",
@@ -100,6 +110,7 @@
     "公表・更新日時はOSVのデータベース日時。開発元の初回公表日時と更新日時は出典ごとに別保存する。",
     "CVSSは開発元公表の点数・ベクトルで独自計算しない。脆弱性公表は実悪用や企業被害の確認ではない。CISA KEVの最新掲載状況は未確認。",
     "開発元は< 0.23.46と開発版修正>= 0.24.0-dev.2を示す。RustSecは0.0.0-0以上0.23.46未満とし、開発版系列を列挙しない。表示はRustSecを採用し、開発版の影響下限を推定しない。",
-    "2026-10-29再確認：固定DBの影響範囲更新と開発元APIの表記を個別に取得。出典間の範囲・修正版の違いを監査およびprovenance.databaseAffectedに保持し、既存の個別解釈を一律に上書きしない。"
+    "2026-10-29再確認：固定DBの影響範囲更新と開発元APIの表記を個別に取得。出典間の範囲・修正版の違いを監査およびprovenance.databaseAffectedに保持し、既存の個別解釈を一律に上書きしない。",
+    "2026-11-09補助確認：OSVの明示CVE別名を反映。今回のOSV差分は別名と更新日時のみ。開発元公開APIも取得したがCVE欄はnullのため、CVE対応の根拠はOSVと区別する。影響範囲・修正版・CVSS・実悪用状態は変更していない。"
   ]
 }

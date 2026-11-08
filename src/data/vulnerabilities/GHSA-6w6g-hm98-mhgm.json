@@ -1,14 +1,16 @@
 {
   "kind": "vulnerability",
   "id": "GHSA-6w6g-hm98-mhgm",
-  "aliases": [],
+  "aliases": [
+    "CVE-2026-123604"
+  ],
   "title": "Hickory Resolver：切り詰め応答の再試行ループによるDoS",
   "summary": "上流DNSサーバーが各トランスポートでTCフラグ付き応答を返すと、同じサーバーへの再試行が繰り返される。TCP接続上のループで要求のタイムアウトまで資源を消費し、0.26.2で修正。",
   "publishedAt": "2026-10-05T22:55:10Z",
-  "modifiedAt": "2026-10-05T22:55:12Z",
+  "modifiedAt": "2026-11-08T10:56:09.807310548Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-10-08T01:49:04Z",
-  "dateSourceUrl": "https://api.github.com/advisories/GHSA-6w6g-hm98-mhgm",
+  "lastVerifiedAt": "2026-11-08T21:08:18.000569Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/GHSA-6w6g-hm98-mhgm",
   "affected": [
     {
       "ecosystem": "rust",
@@ -59,11 +61,30 @@
       "publishedAt": "2026-10-05T22:55:10Z",
       "modifiedAt": "2026-10-05T22:55:12Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV supplementary alias verification: GHSA-6w6g-hm98-mhgm",
+      "url": "https://api.osv.dev/v1/vulns/GHSA-6w6g-hm98-mhgm",
+      "publishedDate": "2026-10-05",
+      "publishedAt": "2026-10-05T22:55:10Z",
+      "modifiedAt": "2026-11-08T10:56:09.807310548Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Unbounded TC-retry loop in `NameServerPool::try_send` (resource-exhaustion DoS)",
+      "url": "https://api.github.com/repos/hickory-dns/hickory-dns/security-advisories/GHSA-6w6g-hm98-mhgm",
+      "publishedDate": "2026-09-03",
+      "publishedAt": "2026-09-03T21:42:55Z",
+      "modifiedAt": "2026-09-03T21:42:56Z",
+      "withdrawnAt": null
     }
   ],
   "caveats": [
     "攻撃成立には、権威DNSサーバー等が利用可能なすべてのトランスポートでTC=1を返す条件がある。公式資料では1要求あたり5秒の期限まで再試行が続く。",
-    "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
-    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
+    "初回公開日時は固定GitHub Reviewed原データ、今回の更新日時はOSVに基づく。開発元を含む各原データの日時・範囲・評価は出典欄と監査に区別して保持する。",
+    "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。",
+    "2026-11-09補助確認：OSVの明示CVE別名を反映。今回のOSV差分は別名と更新日時のみ。開発元公開APIも取得したがCVE欄はnullのため、CVE対応の根拠はOSVと区別する。影響範囲・修正版・CVSS・実悪用状態は変更していない。"
   ]
 }

@@ -1,0 +1,82 @@
+{
+  "id": "teket-member-system-2026",
+  "company": "株式会社teket",
+  "geography": "日本",
+  "title": "電子チケットサービスへの不正アクセスと会員情報流出",
+  "announcementDate": "2026-11-08",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-08",
+  "statusAsOfDate": "2026-11-08",
+  "lastVerifiedDate": "2026-11-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "具体的な攻撃手法・初期侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "11月5日に不正アクセスの可能性が高いと判断して20時30分にサービスを停止。6日に会員情報等の流出を確認し、8日に公表。全会員の氏名・メールアドレス等が対象で、件数は精査中。サービス再開時期は未定。",
+  "affectedData": [
+    "全会員の氏名・メールアドレス",
+    "登録・購入した会員のみ：生年月日、年齢、性別、住所、電話番号",
+    "対象会員のチケット情報（発券用コード・主催者発行シリアルコード）"
+  ],
+  "counts": [],
+  "caveats": [
+    "件数は精査中であり数値を推定しない。項目ごとに全会員と登録・購入した会員の範囲が異なる。",
+    "11月5日は不正アクセスの可能性が高いと判断した日であり、攻撃開始日とはしない。",
+    "11月8日公表時点では不正ログイン等の二次被害・新たな不正アクセス・被害拡大は未確認。サービスは全面停止中。"
+  ],
+  "sources": [
+    {
+      "title": "電子チケットサービスへの不正アクセスと会員情報流出",
+      "url": "https://corporate.teket.jp/news/privacy_261108",
+      "publishedDate": "2026-11-08"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-05",
+      "label": "不正アクセス疑いへの対応・サービス停止",
+      "kind": "occurrence",
+      "summary": "不正アクセスの可能性が高いと判断し20時30分に停止・遮断。",
+      "sourceUrl": "https://corporate.teket.jp/news/privacy_261108"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "情報流出の確認",
+      "kind": "occurrence",
+      "summary": "調査・分析で顧客情報の流出を確認し個人情報保護委員会へ報告。",
+      "sourceUrl": "https://corporate.teket.jp/news/privacy_261108"
+    },
+    {
+      "date": "2026-11-08",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "11月5日に不正アクセスの可能性が高いと判断して20時30分にサービスを停止。6日に会員情報等の流出を確認し、8日に公表。全会員の氏名・メールアドレス等が対象で、件数は精査中。サービス再開時期は未定。",
+      "sourceUrl": "https://corporate.teket.jp/news/privacy_261108"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "検知日・公表日から推定しない。",
+      "sourceUrl": "https://corporate.teket.jp/news/privacy_261108",
+      "reviewedDate": "2026-11-09"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年11月6日",
+      "startDate": "2026-11-06",
+      "note": "公式発表が顧客情報流出を確認した日として明示。",
+      "sourceUrl": "https://corporate.teket.jp/news/privacy_261108",
+      "reviewedDate": "2026-11-09"
+    }
+  }
+}
