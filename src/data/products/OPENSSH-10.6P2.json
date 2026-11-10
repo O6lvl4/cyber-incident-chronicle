@@ -1,12 +1,14 @@
 {
   "kind": "product",
-  "aliases": [],
+  "aliases": [
+    "CVE-2026-123158"
+  ],
   "publishedDate": "2026-11-05",
   "publishedAt": null,
   "listedDate": "2026-11-05",
-  "modifiedAt": null,
+  "modifiedAt": "2026-11-10T04:55:54.758Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-11-05T21:55:57Z",
+  "lastVerifiedAt": "2026-11-10T21:21:13.334416Z",
   "exploitation": {
     "status": "unknown",
     "sourceUrl": null
@@ -32,17 +34,31 @@
   "affected": [
     {
       "name": "Portable OpenSSH / sshd",
-      "affected": "musl libcを使用し、PAMサポートを無効にしてビルド・実行する一部Linuxシステム。影響するOpenSSHの版範囲は告知に未記載。",
+      "affected": "10.6p2未満のうち、musl libcを使用しPAM認証を無効にしたLinux環境。パスワード認証有効、無効化用の*が設定されたアカウント、別アカウントの特定形式ハッシュなどの条件が必要。",
       "fixed": "10.6p2（sshd側の回避策）",
-      "sourceUrl": "https://www.openssh.com/txt/release-10.6p2"
+      "sourceUrl": "https://www.jpcert.or.jp/newsflash/2026110901.html"
     }
   ],
   "severity": {
     "label": "critical",
     "sourceUrl": "https://www.openssh.com/txt/release-10.6p2",
-    "cvss": []
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.1,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-123158"
+      }
+    ]
   },
-  "alerts": [],
+  "alerts": [
+    {
+      "issuer": "JPCERT/CC",
+      "title": "OpenSSHにおける認証回避の脆弱性（CVE-2026-123158）について（CyberNewsFlash）",
+      "url": "https://www.jpcert.or.jp/newsflash/2026110901.html",
+      "publishedDate": "2026-11-09"
+    }
+  ],
   "alertChecks": [
     {
       "issuer": "JPCERT/CC",
@@ -61,10 +77,17 @@
       "url": "https://jvn.jp/",
       "checkedAt": "2026-11-05T21:55:57Z",
       "result": "notFound"
+    },
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/newsflash/2026110901.html",
+      "checkedAt": "2026-11-10T21:21:13.334416Z",
+      "result": "found"
     }
   ],
   "inclusion": [
-    "critical"
+    "critical",
+    "alert"
   ],
   "mitigations": [
     {
@@ -85,12 +108,29 @@
       "url": "https://www.openwall.com/lists/oss-security/2026/11/05/2",
       "publishedDate": "2026-11-05",
       "publishedAt": "2026-11-05T09:01:24Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-123158 CNA公開レコード",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-123158",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T15:46:26.488Z",
+      "modifiedAt": "2026-11-10T04:55:54.758Z"
+    },
+    {
+      "type": "alert",
+      "title": "OpenSSHにおける認証回避の脆弱性（CVE-2026-123158）について（CyberNewsFlash）",
+      "url": "https://www.jpcert.or.jp/newsflash/2026110901.html",
+      "publishedDate": "2026-11-09"
     }
   ],
   "caveats": [
-    "開発元はcritical security workaroundと記載。CVSSの公表値・CVE識別子は今回確認した開発元告知にないため補完しない。",
     "OpenSSH全環境や全Linuxが影響を受けるとはしない。musl libcとPAM無効の条件を保持する。",
     "開発元は根本原因をsshd外部とし、sshd側で回避できると説明している。10.6p2をmusl自体の修正版とは扱わない。",
-    "CISA本体JSONはHTTP403。実悪用やKEV掲載を深刻度から推定しない。"
+    "CISA本体JSONはHTTP403。実悪用やKEV掲載を深刻度から推定しない。",
+    "開発元Criticalの表現とCNA CVSS3.1 8.1 Highは異なる評価。CVE別名はCNAとJPCERTの製品・修正版対応を照合して追加した。",
+    "JPCERT/CCの11月9日資料はCyberNewsFlashであり、定例の「注意喚起」一覧とは別の公的情報。GreyNoiseの観測用環境での悪用成功を紹介するが、一般組織の侵害事例は未確認と明記している。第三者の観測報告だけで構造化実悪用値を変更しない。",
+    "JPCERTは概念実証コード公開を記載するが、公表者本人によるコードの出典を今回未検証のためpocはunknownを保持する。",
+    "CISA公式GitHubミラー2026.11.10とCISA-ADPは11月9日KEV追加を示す。本体JSONは403、cisa.gov限定検証契約のため構造化KEV値はunknownを保持し、未掲載とは説明しない。"
   ]
 }

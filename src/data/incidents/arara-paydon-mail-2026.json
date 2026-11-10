@@ -7,9 +7,9 @@
   "announcementDateLabel": "確認できた公式公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日未公表",
-  "updatedDate": "2026-11-06",
-  "statusAsOfDate": "2026-11-06",
-  "lastVerifiedDate": "2026-11-08",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-11",
   "impactTypes": [
     "unauthorizedAccess",
     "leak",
@@ -68,6 +68,20 @@
       "status": "confirmed",
       "label": "はせがわが公表した利用企業の部分範囲。アララ全体値へ加算しない",
       "approximate": false
+    },
+    {
+      "value": 2196044,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "セガ・セガ フェイブの部分範囲。提供元総数へ加算しない",
+      "approximate": false
+    },
+    {
+      "value": 92273,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "上記2,196,044件の内数。配信付随情報を含む",
+      "approximate": false
     }
   ],
   "caveats": [
@@ -79,7 +93,8 @@
     "旧約301万件、第2報3,386,187件、第3報2,842,400件と訂正。旧値は過去の公表値としてタイムラインに保持。",
     "第2報の共用環境5社の顧客情報最大411,827件は過去の別集計。第3報要約で対応する最新内数は未確認。",
     "第3報の最大約380社は共用環境61社・別クラウド環境を含む契約企業数。精査中。",
-    "11月6日本文で当局への11月2日・6日の報告等を実施済みと確認。再開時期は未定。"
+    "11月6日本文で当局への11月2日・6日の報告等を実施済みと確認。再開時期は未定。",
+    "セガの数値はメールアドレス件数で人数ではない。対象メール11通の配信期間を攻撃期間と扱わない。アーケードネットワークの別事案とは混同しない。"
   ],
   "sources": [
     {
@@ -111,6 +126,11 @@
       "url": "https://www.arara.com/news/info/20261106_arara",
       "publishedDate": "2026-11-06",
       "title": "第3報：重複除外総数と共用環境の訂正"
+    },
+    {
+      "title": "セガ・セガ フェイブの利用範囲を公表",
+      "url": "https://www.sega.co.jp/release/261109_1.html",
+      "publishedDate": "2026-11-09"
     }
   ],
   "timeline": [
@@ -169,6 +189,13 @@
       "kind": "update",
       "summary": "流出したおそれを含むメールアドレスは、区分間の重複を除き81,329,467件と公表。共用環境の件数を2,842,400件へ再訂正し、別クラウド環境3,249,492件を追加した。人数ではなく、対象企業は最大約380社（精査中）。全サービス停止を継続し、再開時期は未定。",
       "sourceUrl": "https://www.arara.com/news/info/20261106_arara"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "セガ・セガ フェイブの利用範囲を公表",
+      "kind": "update",
+      "summary": "アララメッセージ経由の配信先メールアドレス2,196,044件と、その内数92,273件に付随情報の流出。SEGA Accountは別基盤のため対象外。",
+      "sourceUrl": "https://www.sega.co.jp/release/261109_1.html"
     }
   ],
   "eventDates": {

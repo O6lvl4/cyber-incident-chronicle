@@ -1,0 +1,73 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c9f9-cp8h-jcj5",
+  "aliases": [
+    "RUSTSEC-2026-0462"
+  ],
+  "title": "rmcp：HTTP応答本文の無制限バッファリングによるメモリ枯渇",
+  "summary": "悪意ある、または侵害されたMCPサーバーへ接続するクライアントで、非ストリーミング応答本文の読み込みがメモリを枯渇させる。",
+  "publishedAt": "2026-11-05T12:00:00Z",
+  "modifiedAt": "2026-11-09T10:30:02.590803911Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T21:20:20.997680Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0462",
+  "affected": [
+    {
+      "ecosystem": "cargo",
+      "packageName": "rmcp",
+      "ranges": [
+        {
+          "affected": ">= 0.2.0, < 3.9.0",
+          "fixed": "3.9.0",
+          "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV RustSec export record; explicit stable-ID aliases",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0462",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T12:00:00Z",
+      "modifiedAt": "2026-11-09T10:30:02.590803911Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory API; narrative and structured fields verified",
+      "url": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T16:46:53Z",
+      "modifiedAt": "2026-11-05T16:46:53Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "組み込みreqwest・Unix socketクライアントが対象。SSE経路はこの告知の対象外。JSON経路は0.2.0、エラー応答経路は1.0.0、Unix socketは1.3.0から。初期化中にも発生し得る。独自実装の上限は利用者側で設定する。",
+    "公表・更新日時はOSV収録値。開発元の日時は出典別に保持。修正境界は最新安全版を保証しない。実悪用は未確認、CISA本体403のためKEV未確認を維持。",
+    "固定Reviewed 7f16e6e8a374a5674859808ddd08b7680c2f3b3fの対象記録と明示IDを照合し、補助ソースとして追加。related/upstreamを別名扱いしていない。"
+  ]
+}

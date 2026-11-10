@@ -1,0 +1,94 @@
+{
+  "id": "sharefull-internal-management-2026",
+  "company": "シェアフル株式会社",
+  "geography": "日本",
+  "title": "社内管理システムへの侵入、個人アカウント・求人企業情報に流出の可能性",
+  "announcementDate": "2026-11-09",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": "2026-11-04",
+  "occurredDateLabel": "公式資料が明示した攻撃日",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-11",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "具体的な攻撃手法・初期侵入経路は未公表。",
+    "status": "unknown"
+  },
+  "summary": "11月4日23時30分頃に不正アクセスが発生し、5日に検知・遮断。最大約750万件の個人アカウントと約7,500社の法人情報に流出の可能性。現時点で通常サービスを提供し原因調査を継続。",
+  "affectedData": [
+    "氏名・連絡先・生年月日・給与振込口座情報・顔写真URL・緊急連絡先・在留資格関連情報等",
+    "求人企業の企業情報、担当者連絡先、営業管理データの一部"
+  ],
+  "counts": [
+    {
+      "value": 7500000,
+      "unit": "件",
+      "status": "possible",
+      "label": "流出可能性のある情報を含む個人アカウントの最大件数",
+      "approximate": true
+    },
+    {
+      "value": 7500,
+      "unit": "社",
+      "status": "possible",
+      "label": "流出可能性のある企業の最大社数。アカウント件数と合算しない",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "アカウント件数と実人数を同一視しない。企業数と合算しない。",
+    "顔写真URLと別サーバー管理の画像データを区別する。給与・ポイント情報、契約・就業データ、本人確認書類画像は対象外と説明。",
+    "法人向け発表では顔写真表示の一時停止と復旧を説明。通常提供は調査終了を意味しない。"
+  ],
+  "sources": [
+    {
+      "title": "社内管理システムへの侵入、個人アカウント・求人企業情報に流出の可能性",
+      "url": "https://sharefull.com/information/9480/",
+      "publishedDate": "2026-11-09"
+    },
+    {
+      "title": "法人向け：社内管理システムへの不正アクセスに関する報告",
+      "url": "https://sharefull.com/information/9489/",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-05",
+      "label": "検知・遮断",
+      "kind": "occurrence",
+      "summary": "9時45分頃に判明、14時頃までにアクセス経路を遮断。",
+      "sourceUrl": "https://sharefull.com/information/9480/"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "11月4日23時30分頃に不正アクセスが発生し、5日に検知・遮断。最大約750万件の個人アカウントと約7,500社の法人情報に流出の可能性。現時点で通常サービスを提供し原因調査を継続。",
+      "sourceUrl": "https://sharefull.com/information/9480/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026-11-04",
+      "note": "公式本文が不正アクセスの実行日を明示。",
+      "sourceUrl": "https://sharefull.com/information/9480/",
+      "reviewedDate": "2026-11-11",
+      "startDate": "2026-11-04"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "個人情報流出等の被害を初めて確認した日は特定されていない。検知・公表日では代用しない。",
+      "sourceUrl": "https://sharefull.com/information/9480/",
+      "reviewedDate": "2026-11-11"
+    }
+  }
+}

@@ -1,0 +1,587 @@
+{
+  "checkedAt": "2026-11-10T21:20:20.997680Z",
+  "reviewedSnapshot": "7f16e6e8a374a5674859808ddd08b7680c2f3b3f",
+  "records": [
+    {
+      "id": "GHSA-rcff-5x58-7w2p",
+      "url": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rcff-5x58-7w2p",
+      "checkedAt": "2026-11-10T21:18:36.868826Z",
+      "httpStatus": 200,
+      "sha256": "e19e6ae0c505d2851625da8db3ea71597158b7decde1ab7286709298f6fdf29b",
+      "status": "verified_and_added",
+      "osvId": "RUSTSEC-2026-0456",
+      "maintainer": {
+        "ghsa_id": "GHSA-rcff-5x58-7w2p",
+        "cve_id": null,
+        "summary": "Panic on an HEVC tile layout that does not match the active SPS",
+        "severity": "medium",
+        "published_at": "2026-11-06T21:30:24Z",
+        "updated_at": "2026-11-06T21:30:24Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "heifer-hevc-dec"
+            },
+            "vulnerable_version_range": "< 0.3.27",
+            "patched_versions": "0.3.27",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "heifer"
+            },
+            "vulnerable_version_range": "< 0.3.27",
+            "patched_versions": "0.3.27",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "identifiers": [
+          {
+            "value": "GHSA-rcff-5x58-7w2p",
+            "type": "GHSA"
+          }
+        ]
+      },
+      "descriptionSha256": "b01001dd246ce7b6ed0babea6660d5249b26e28f14fc2677b591bb1cc3ed51ec",
+      "descriptionLength": 1078,
+      "databaseAffected": [
+        {
+          "package": {
+            "name": "heifer-hevc-dec",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/heifer-hevc-dec"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "0.3.27"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "arch": [],
+              "functions": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "categories": [
+              "denial-of-service"
+            ],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0456.json"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5p52-q7pq-9fq2",
+      "url": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-5p52-q7pq-9fq2",
+      "checkedAt": "2026-11-10T21:18:36.869363Z",
+      "httpStatus": 200,
+      "sha256": "18f332c6fd1ada352dee4c171930f9a772e050aaf1652bf5f2b1170202a35476",
+      "status": "verified_and_added",
+      "osvId": "RUSTSEC-2026-0457",
+      "maintainer": {
+        "ghsa_id": "GHSA-5p52-q7pq-9fq2",
+        "cve_id": null,
+        "summary": "OAuth authorization-server metadata SSRF filter checks host strings, not resolved addresses (incomplete fix of GHSA-c9xm-49cp-xcr9)",
+        "severity": "medium",
+        "published_at": "2026-10-22T20:27:36Z",
+        "updated_at": "2026-10-22T20:27:37Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "rmcp"
+            },
+            "vulnerable_version_range": ">= 2.0.0, <= 3.6.0",
+            "patched_versions": "3.7.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": null,
+            "score": null
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "identifiers": [
+          {
+            "value": "GHSA-5p52-q7pq-9fq2",
+            "type": "GHSA"
+          }
+        ]
+      },
+      "descriptionSha256": "ea97f6bb14925201d377f43cb72c03cc2685451194ac1f557f11be99502b6f59",
+      "descriptionLength": 9924,
+      "databaseAffected": [
+        {
+          "package": {
+            "name": "rmcp",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rmcp"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "2.0.0"
+                },
+                {
+                  "fixed": "3.7.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "arch": [],
+              "functions": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "categories": [],
+            "cvss": null,
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0457.json"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3243-948x-x627",
+      "url": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-3243-948x-x627",
+      "checkedAt": "2026-11-10T21:18:36.869962Z",
+      "httpStatus": 200,
+      "sha256": "b17f30693810da1cd145bb9b608b84319aa61d7f4d42b6f80bbb4e934dfe7fb9",
+      "status": "verified_and_added",
+      "osvId": "RUSTSEC-2026-0458",
+      "maintainer": {
+        "ghsa_id": "GHSA-3243-948x-x627",
+        "cve_id": null,
+        "summary": "Memory exhaustion when parsing a crafted iloc box",
+        "severity": "medium",
+        "published_at": "2026-11-06T21:30:22Z",
+        "updated_at": "2026-11-06T21:30:22Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "heifer-isobmff"
+            },
+            "vulnerable_version_range": "< 0.3.27",
+            "patched_versions": "0.3.27",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "heifer"
+            },
+            "vulnerable_version_range": "< 0.3.27",
+            "patched_versions": "0.3.27",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "identifiers": [
+          {
+            "value": "GHSA-3243-948x-x627",
+            "type": "GHSA"
+          }
+        ]
+      },
+      "descriptionSha256": "fab3cd6f48a79c9bc8265dcbaacfe35d2cb95a18d44d53cf18b39c9e54be5c0d",
+      "descriptionLength": 1071,
+      "databaseAffected": [
+        {
+          "package": {
+            "name": "heifer-isobmff",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/heifer-isobmff"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "0.3.27"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "arch": [],
+              "functions": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "categories": [
+              "denial-of-service"
+            ],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0458.json"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GHSA-72w2-rjgg-q729",
+      "url": "https://api.github.com/repos/rusqlite/rusqlite/security-advisories/GHSA-72w2-rjgg-q729",
+      "checkedAt": "2026-11-10T21:18:36.870743Z",
+      "status": "verified_release_and_crate_mapping_added",
+      "error": "HTTP Error 404: Not Found",
+      "advisoryApiStatus": "HTTP404",
+      "osvId": "RUSTSEC-2026-0459",
+      "sourceChecks": [
+        {
+          "url": "https://api.github.com/repos/rusqlite/rusqlite/releases/tags/v0.41.0",
+          "httpStatus": 200,
+          "checkedAt": "2026-11-10T21:21:23.269620Z",
+          "bytes": 3719,
+          "sha256": "a2d1e04a001a0cf56be3ca8b3009f17ef3beee007cd71473be6c01c2268028a8"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/rusqlite/rusqlite/v0.41.0/libsqlite3-sys/Cargo.toml",
+          "httpStatus": 200,
+          "checkedAt": "2026-11-10T21:21:23.269620Z",
+          "bytes": 2211,
+          "sha256": "c45dbb3753c77b5f00c49fd6c8648a037c1ce4bac43644a53783362ae2b2d09b"
+        },
+        {
+          "url": "https://sqlite.org/bugs/info/2026-08-17T15:54:41Z",
+          "httpStatus": 200,
+          "checkedAt": "2026-11-10T21:21:23.269620Z",
+          "bytes": 94041,
+          "sha256": "0b1400ebfaff55bfa7cdfdf23b31527fa93dfcc7c7e959d3608ab1a52551e011"
+        },
+        {
+          "url": "https://sqlite.org/releaselog/3_54_0.html",
+          "httpStatus": 200,
+          "checkedAt": "2026-11-10T21:21:23.269620Z",
+          "bytes": 10105,
+          "sha256": "4d165141db6131282bdca42ed9092008585b09d0e553420e13dbd12b98d3c4ed"
+        }
+      ],
+      "caveats": [
+        "bundled SQLite構成の修正境界0.39.0を、bundled-sqlcipherにも適用しない。OSV本文では0.39.0／0.39.1のbundled-sqlcipherも影響ありとし、その修正版は不明。",
+        "システムSQLiteへリンクする構成は同梱コピーの影響とは別で、システムライブラリの版に依存する。未信頼のDBファイルとWALを被害側で開く条件が必要。",
+        "開発元リリースとCargo.tomlでcrate 0.39.0／SQLite 3.54.0の対応を確認。脆弱性の版範囲とSQLCipher条件はRustSec本文へ帰属。GHSA開発元API404を確認成功とは扱わない。",
+        "OSVの明示別名で同一性を確認。GitHub固定スナップショットではunreviewedにのみ存在し、Reviewedの収録対象へ重複追加していない。",
+        "開発元の公表日とOSV収録日時は区別。実悪用・KEVは未確認。公開PoCの存在を実悪用とはしない。"
+      ]
+    },
+    {
+      "id": "GHSA-rmc9-8qp4-gjhx",
+      "url": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx",
+      "checkedAt": "2026-11-10T21:18:36.871542Z",
+      "httpStatus": 200,
+      "sha256": "2b0c118aa55214e95078096440f056fb2b15f857eab9c3670a624125d4b76bee",
+      "status": "verified_and_added",
+      "osvId": "RUSTSEC-2026-0460",
+      "maintainer": {
+        "ghsa_id": "GHSA-rmc9-8qp4-gjhx",
+        "cve_id": null,
+        "summary": "Panic on chroma QP offsets enabled with an empty offset list",
+        "severity": "medium",
+        "published_at": "2026-11-06T21:30:25Z",
+        "updated_at": "2026-11-06T21:30:25Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "heifer-hevc-dec"
+            },
+            "vulnerable_version_range": "< 0.3.27",
+            "patched_versions": "0.3.27",
+            "vulnerable_functions": []
+          },
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "heifer"
+            },
+            "vulnerable_version_range": "< 0.3.27",
+            "patched_versions": "0.3.27",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "identifiers": [
+          {
+            "value": "GHSA-rmc9-8qp4-gjhx",
+            "type": "GHSA"
+          }
+        ]
+      },
+      "descriptionSha256": "1ea0776009e7ff6b3d0e9fb2a5c4b128ef58905c20932e0f6649f9878b260eaf",
+      "descriptionLength": 896,
+      "databaseAffected": [
+        {
+          "package": {
+            "name": "heifer-hevc-dec",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/heifer-hevc-dec"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.0.0-0"
+                },
+                {
+                  "fixed": "0.3.27"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "arch": [],
+              "functions": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "categories": [
+              "denial-of-service"
+            ],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0460.json"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4432-vg92-fqh6",
+      "url": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-4432-vg92-fqh6",
+      "checkedAt": "2026-11-10T21:18:41.136137Z",
+      "httpStatus": 200,
+      "sha256": "3cd767ef962f59392973efb60b4926080018b3e6d1c2fc74cfedfba771269d92",
+      "status": "verified_and_added",
+      "osvId": "RUSTSEC-2026-0461",
+      "maintainer": {
+        "ghsa_id": "GHSA-4432-vg92-fqh6",
+        "cve_id": null,
+        "summary": "Unauthenticated unbounded tool_schemas cache growth in rmcp Streamable HTTP server transport leads to remote denial-of-service",
+        "severity": "high",
+        "published_at": "2026-10-20T19:19:02Z",
+        "updated_at": "2026-10-20T19:19:02Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "rmcp"
+            },
+            "vulnerable_version_range": ">= 3.0.0, < 3.6.0",
+            "patched_versions": "3.6.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "identifiers": [
+          {
+            "value": "GHSA-4432-vg92-fqh6",
+            "type": "GHSA"
+          }
+        ]
+      },
+      "descriptionSha256": "b94c2866ad3dc6fdb2d3b92119afccd9bf7aaf06cf1f65840507f24d2d87f39a",
+      "descriptionLength": 1440,
+      "databaseAffected": [
+        {
+          "package": {
+            "name": "rmcp",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rmcp"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "3.0.0"
+                },
+                {
+                  "fixed": "3.6.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "arch": [],
+              "functions": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "categories": [
+              "denial-of-service"
+            ],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0461.json"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c9f9-cp8h-jcj5",
+      "url": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5",
+      "checkedAt": "2026-11-10T21:18:41.206884Z",
+      "httpStatus": 200,
+      "sha256": "f740d8bdb112330ff672950300f1aaeaa4f80b0fa9661bc878a776e8cb0814b7",
+      "status": "verified_and_added",
+      "osvId": "RUSTSEC-2026-0462",
+      "maintainer": {
+        "ghsa_id": "GHSA-c9f9-cp8h-jcj5",
+        "cve_id": null,
+        "summary": "Unbounded response-body buffering in rmcp Streamable HTTP clients allows memory exhaustion",
+        "severity": "medium",
+        "published_at": "2026-11-05T16:46:53Z",
+        "updated_at": "2026-11-05T16:46:53Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "rmcp"
+            },
+            "vulnerable_version_range": ">= 0.2.0, < 3.9.0",
+            "patched_versions": "3.9.0",
+            "vulnerable_functions": []
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": null
+          }
+        },
+        "identifiers": [
+          {
+            "value": "GHSA-c9f9-cp8h-jcj5",
+            "type": "GHSA"
+          }
+        ]
+      },
+      "descriptionSha256": "10325e7cdffe57ece0f9fce8c70ddccd9d62e903201b9ab02ac7d0c72958ded7",
+      "descriptionLength": 3274,
+      "databaseAffected": [
+        {
+          "package": {
+            "name": "rmcp",
+            "ecosystem": "crates.io",
+            "purl": "pkg:cargo/rmcp"
+          },
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0.2.0"
+                },
+                {
+                  "fixed": "3.9.0"
+                }
+              ]
+            }
+          ],
+          "ecosystem_specific": {
+            "affected_functions": null,
+            "affects": {
+              "arch": [],
+              "functions": [],
+              "os": []
+            }
+          },
+          "database_specific": {
+            "categories": [
+              "denial-of-service"
+            ],
+            "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "informational": null,
+            "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2026-0462.json"
+          }
+        }
+      ]
+    }
+  ]
+}

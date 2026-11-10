@@ -1,0 +1,67 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-5p52-q7pq-9fq2",
+  "aliases": [
+    "RUSTSEC-2026-0457"
+  ],
+  "title": "rmcp：OAuthメタデータ取得時のSSRF保護回避",
+  "summary": "悪意あるMCPサーバーなどが示すOAuth関連URLを通じ、クライアントから内部アドレスへの要求を発生させられる。",
+  "publishedAt": "2026-10-22T12:00:00Z",
+  "modifiedAt": "2026-11-09T10:00:02.336894229Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T21:20:20.997680Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0457",
+  "affected": [
+    {
+      "ecosystem": "cargo",
+      "packageName": "rmcp",
+      "ranges": [
+        {
+          "affected": ">= 2.0.0, <= 3.6.0",
+          "fixed": "3.7.0",
+          "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-5p52-q7pq-9fq2"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-5p52-q7pq-9fq2",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV RustSec export record; explicit stable-ID aliases",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0457",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T12:00:00Z",
+      "modifiedAt": "2026-11-09T10:00:02.336894229Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory API; narrative and structured fields verified",
+      "url": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-5p52-q7pq-9fq2",
+      "publishedDate": "2026-10-22",
+      "publishedAt": "2026-10-22T20:27:36Z",
+      "modifiedAt": "2026-10-22T20:27:37Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "GHSA-c9xm-49cp-xcr9の不完全な修正に関する別告知。DNS解決後のアドレス、IPv6リテラル、トークン・登録エンドポイントとリダイレクトが関係する。応答が攻撃者へ直接返るとはしていない。修正済みでも独自OAuthHttpClientには独自の送信先制限が必要。",
+    "公表・更新日時はOSV収録値。開発元の日時は出典別に保持。修正境界は最新安全版を保証しない。実悪用は未確認、CISA本体403のためKEV未確認を維持。",
+    "固定Reviewed 7f16e6e8a374a5674859808ddd08b7680c2f3b3fの対象記録と明示IDを照合し、補助ソースとして追加。related/upstreamを別名扱いしていない。",
+    "開発元構造化範囲は>=2.0.0, <=3.6.0、RustSec範囲は>=2.0.0, <3.7.0。上限表現の差を留保し、中間版の存在や安全性を推定しない。"
+  ]
+}

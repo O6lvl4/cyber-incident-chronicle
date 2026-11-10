@@ -1,0 +1,1436 @@
+{
+  "reportDateJst": "2026-11-11",
+  "checkedAt": "2026-11-10T21:22:33.658069Z",
+  "baseCommit": "767dd27",
+  "recordsBefore": 63,
+  "recordsAfter": 68,
+  "addedRecords": 5,
+  "updatedRecords": 5,
+  "added": [
+    "CVE-2026-111793",
+    "NV26-006",
+    "CVE-2026-109582",
+    "CVE-2026-113437",
+    "CVE-2026-117477"
+  ],
+  "updated": [
+    "CVE-2026-118196",
+    "CVE-2026-0322",
+    "CVE-2026-96951",
+    "GHSA-g35w-6r6v-h4r7",
+    "OPENSSH-10.6P2"
+  ],
+  "scope": "Independent selected-product review Nov10 21UTC, Nov11 JST. Overlap Nov6 onward with prior successful checkpoints. Main alert lists, JVN bodies, selected vendor notices, prior primary CVEs, official KEV mirror, and delegated Nov9/10 oss-security review. Not exhaustive all-vendor Critical coverage.",
+  "sources": [
+    {
+      "name": "CISA KEV",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "status": "failed",
+      "fetchedAt": "2026-11-10T21:15:27.758Z",
+      "error": "HTTP 403"
+    },
+    {
+      "name": "JPCERT/CC 注意喚起",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "status": "ok",
+      "fetchedAt": "2026-11-10T21:15:28.201Z",
+      "items": 35
+    },
+    {
+      "name": "IPA 重要なセキュリティ情報",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "status": "ok",
+      "fetchedAt": "2026-11-10T21:15:29.041Z",
+      "items": 30
+    }
+  ],
+  "cveReview": {
+    "attempted": 57,
+    "succeeded": 55,
+    "failed": [
+      {
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-119314",
+        "fetchedAt": "2026-11-10T21:15:47.375117+00:00",
+        "status": "failed",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://cveawg.mitre.org/api/cve/CVE-2026-115560",
+        "fetchedAt": "2026-11-10T21:15:57.427155+00:00",
+        "status": "failed",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "result": "Retrieved prior CVEs remain PUBLISHED. Allura CNA404 resolved to publicationNov9. Windows CNA metadata updatedNov10 with unchanged stored ranges/CVSS. PAN-OS Nov10 update is Siemens supplier ADP; upstream vendor unchanged. Per-record dates preserved unless explicitly updated. Not every alias or every source reverified."
+  },
+  "changeDetails": {
+    "CVE-2026-118196": "CNA now available, agrees Critical/<=1.22.0/fix1.22.1; vendorNov6 versus CNANov9 retained.",
+    "CVE-2026-0322": "Siemens supplier ADP added Nov10, upstream vendorOct15 unchanged.",
+    "CVE-2026-96951": "CNA dateUpdatedNov10; stored ranges/fixes/CVSS unchanged.",
+    "GHSA-g35w-6r6v-h4r7": "JVN Nov10 corrected affected scope to<2.2.0; vendor GHSA API remains unwithdrawn, cve_id null.",
+    "OPENSSH-10.6P2": "Added CVE-2026-123158 alias, CNA8.1High separately from vendorCritical, JPCERT CyberNewsFlashNov9. Third-party exploitation and original PoC verification bounds explicit."
+  },
+  "decisions": [
+    {
+      "id": "CVE-2026-111793",
+      "status": "added",
+      "note": "Primary vendor, CNA and JVN evidence verified; see product record for source-specific dates, versions and CVSS."
+    },
+    {
+      "id": "NV26-006",
+      "status": "added",
+      "note": "Primary vendor, CNA and JVN evidence verified; see product record for source-specific dates, versions and CVSS."
+    },
+    {
+      "id": "CVE-2026-109582",
+      "status": "added",
+      "note": "Primary vendor, CNA and JVN evidence verified; see product record for source-specific dates, versions and CVSS."
+    },
+    {
+      "id": "CVE-2026-113437",
+      "status": "added",
+      "note": "Primary vendor, CNA and JVN evidence verified; see product record for source-specific dates, versions and CVSS."
+    },
+    {
+      "id": "CVE-2026-117477",
+      "status": "added",
+      "note": "Primary vendor, CNA and JVN evidence verified; see product record for source-specific dates, versions and CVSS."
+    },
+    {
+      "id": "CVE-2026-118196",
+      "status": "updated",
+      "note": "Existing record preserved, not a new vulnerability. See changeDetails."
+    },
+    {
+      "id": "CVE-2026-0322",
+      "status": "updated",
+      "note": "Existing record preserved, not a new vulnerability. See changeDetails."
+    },
+    {
+      "id": "CVE-2026-96951",
+      "status": "updated",
+      "note": "Existing record preserved, not a new vulnerability. See changeDetails."
+    },
+    {
+      "id": "GHSA-g35w-6r6v-h4r7",
+      "status": "updated",
+      "note": "Existing record preserved, not a new vulnerability. See changeDetails."
+    },
+    {
+      "id": "OPENSSH-10.6P2",
+      "status": "updated",
+      "note": "Existing record preserved, not a new vulnerability. See changeDetails."
+    },
+    {
+      "id": "JVN feeds",
+      "status": "reviewed",
+      "note": "JVN latest Nov10; new Nov9/10 bodies checked, not equivalent to JPCERT AT/IPA lists. Automatic detector returned zero candidates/drift but does not parse CyberNewsFlash or all JVN notices."
+    },
+    {
+      "id": "CVE-2026-19868",
+      "status": "held-source-and-schema",
+      "note": "SonicWall vendor HTTP200 remains same JS shell SHA256 as Nov9; no advisory text verified. CNA and official KEV mirror establish candidate; KEV host validator constraint retained, no fixed version guessed.",
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014"
+    },
+    {
+      "id": "SSA-045512",
+      "status": "held-existing-alias-collision",
+      "note": "Vendor HTML SHA256 unchanged from prior Nov9 audit. Existing downstream Node/PHP/PAN-OS identities cannot be duplicated or have upstream ranges replaced.",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-045512.html"
+    },
+    {
+      "id": "SSA-166980",
+      "status": "held-existing-alias-collision",
+      "note": "Vendor HTML SHA256 unchanged from prior Nov9 audit. Existing downstream Node/PHP/PAN-OS identities cannot be duplicated or have upstream ranges replaced.",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html"
+    },
+    {
+      "id": "SSA-566435",
+      "status": "held-existing-alias-collision",
+      "note": "Vendor HTML SHA256 unchanged from prior Nov9 audit. Existing downstream Node/PHP/PAN-OS identities cannot be duplicated or have upstream ranges replaced.",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html"
+    },
+    {
+      "id": "SSA-566512",
+      "status": "held-existing-alias-collision",
+      "note": "Vendor HTML SHA256 unchanged from prior Nov9 audit. Existing downstream Node/PHP/PAN-OS identities cannot be duplicated or have upstream ranges replaced.",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html"
+    },
+    {
+      "id": "SSA-443410",
+      "status": "held-existing-alias-collision",
+      "note": "V1.1 Nov6 vendor notice; CVE-2026-111497 already Node.js alias. Industrial Edge Management/device application ranges cannot be merged into upstream Node.js. Cloud services fixed centrally Oct28/29; some applications no fix.",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-443410.html"
+    },
+    {
+      "id": "SSA-834709",
+      "status": "outside-initial-window",
+      "note": "V1.2 Nov10 adds Example Image configurations with no fix; Industrial OS fix4.3.4-1. Initial Critical publication Aug11 remains before Oct1 window, not moved to Nov10.",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-834709.html"
+    },
+    {
+      "id": "SSA-104023",
+      "status": "held-downstream-and-incomplete-review",
+      "note": "Retrieved following new supplier ADP in CVE-2026-0322; downstream RUGGEDCOM bulletin includes many CVEs. PAN-OS record retains upstream range and notes ADP. Full per-CVE downstream bulletin ingestion not completed; no all-vendor completeness claim.",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-104023.html"
+    },
+    {
+      "id": "CVE-2026-83542",
+      "status": "held-date-model",
+      "note": "OFBiz vendor security page SHA256 unchanged from prior audit. Combined Nov4 bulletin versus individual Critical Nov5 date blocker retained; no synthetic date or schema workaround.",
+      "url": "https://ofbiz.apache.org/security.html"
+    },
+    {
+      "id": "Node.js November releases",
+      "status": "future-announcement",
+      "note": "Primary body still promises on/after Nov11, highest severity HIGH. No released CVEs or fix versions inferred from page layout hash changes.",
+      "url": "https://nodejs.org/en/blog/vulnerability/november-2026-security-releases"
+    },
+    {
+      "id": "CVE-2026-59781",
+      "status": "outside-initial-window",
+      "note": "Zabbix JVN initial Aug28, Nov9 range update. Revised fixed6.0.48/7.0.29/7.4.13 does not move first qualifying alert date into October.",
+      "url": "https://jvn.jp/jp/JVN42011956/index.html"
+    },
+    {
+      "id": "CVE-2026-120386",
+      "status": "held-publication-verification",
+      "note": "Effekseer JVN/CNA Nov9 medium, fixed1.80.8. Vendor release API publishedOct30 14:06:47Z, body empty; patch commit viewed. Vulnerability-specific original vendor disclosure day not conclusively established, so release timestamp is not silently substituted.",
+      "url": "https://jvn.jp/jp/JVN56286875/index.html"
+    },
+    {
+      "id": "VU-188754",
+      "status": "held-vendor-date-and-version-verification",
+      "note": "CERT/CC Nov9 and JVN Nov10 describe FrodoBots EarthRover Mini+ CVEs121685–121690. Observed firmware6.2.4_6.2.5_0.614.0; current summary says fixed/mitigated/not applicable, but embedded vendor statement datedJuly12 says firmware update still in development. No precise corrected firmware release or first vendor disclosure date inferred.",
+      "url": "https://kb.cert.org/vuls/id/188754"
+    },
+    {
+      "id": "CVE-2026-124916",
+      "status": "held-vendor-verification",
+      "note": "CERT/CC Nov9 / JVN Nov10 PrestaShop Performance Debug PHP injection; CERT says affected releases remain to be confirmed, fix9.2.1, vendor statusUnknown/no statement. Vendor original disclosure not verified.",
+      "url": "https://kb.cert.org/vuls/id/385711"
+    }
+  ],
+  "kevMirror": {
+    "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+    "catalogVersion": "2026.11.10",
+    "count": 1779,
+    "dateAddedFrom": "2026-11-06",
+    "entries": 11,
+    "checkpointStatus": "Mirror successful only. Direct cisa.gov latest successful checkpoint not advanced.",
+    "pendingCandidates": [
+      {
+        "id": "CVE-2026-124194",
+        "dateAdded": "2026-11-10",
+        "vendor": "Microsoft",
+        "product": "Office",
+        "vendorReference": "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-124194 ; https://nvd.nist.gov/vuln/detail/CVE-2026-124194",
+        "status": "held-direct-kev-and-vendor-verification",
+        "note": "Official GitHub mirror entry observed. cisa.gov direct feed failed; current validator rejects mirror host. Independent vendor/CNA evidence and ranges for this candidate not completed in this pass. Not evidence of no qualifying issue."
+      },
+      {
+        "id": "CVE-2026-20320",
+        "dateAdded": "2026-11-10",
+        "vendor": "Cisco",
+        "product": "BroadWorks",
+        "vendorReference": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-bworks-xxe-uwUd7CEt ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-20320",
+        "status": "held-direct-kev-and-vendor-verification",
+        "note": "Official GitHub mirror entry observed. cisa.gov direct feed failed; current validator rejects mirror host. Independent vendor/CNA evidence and ranges for this candidate not completed in this pass. Not evidence of no qualifying issue."
+      },
+      {
+        "id": "CVE-2026-111560",
+        "dateAdded": "2026-11-10",
+        "vendor": "Barracuda Networks",
+        "product": "Multiple Products",
+        "vendorReference": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection ; https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0041.md ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-111560",
+        "status": "held-direct-kev-and-vendor-verification",
+        "note": "Official GitHub mirror entry observed. cisa.gov direct feed failed; current validator rejects mirror host. Independent vendor/CNA evidence and ranges for this candidate not completed in this pass. Not evidence of no qualifying issue."
+      },
+      {
+        "id": "CVE-2026-116606",
+        "dateAdded": "2026-11-10",
+        "vendor": "Barracuda Networks",
+        "product": "Barracuda Email Security Gateway (ESG)",
+        "vendorReference": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection ; https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0042.md ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-116606",
+        "status": "held-direct-kev-and-vendor-verification",
+        "note": "Official GitHub mirror entry observed. cisa.gov direct feed failed; current validator rejects mirror host. Independent vendor/CNA evidence and ranges for this candidate not completed in this pass. Not evidence of no qualifying issue."
+      },
+      {
+        "id": "CVE-2026-125350",
+        "dateAdded": "2026-11-10",
+        "vendor": "Google",
+        "product": "Chromium",
+        "vendorReference": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-125350",
+        "status": "held-direct-kev-and-vendor-verification",
+        "note": "Official GitHub mirror entry observed. cisa.gov direct feed failed; current validator rejects mirror host. Independent vendor/CNA evidence and ranges for this candidate not completed in this pass. Not evidence of no qualifying issue."
+      },
+      {
+        "id": "CVE-2026-102895",
+        "dateAdded": "2026-11-09",
+        "vendor": "GPUStack",
+        "product": "GPUStack",
+        "vendorReference": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: ; https://github.com/gpustack/gpustack/security/advisories/GHSA-gj9m-f8ph-pmhr ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102895",
+        "status": "held-direct-kev-and-vendor-verification",
+        "note": "Official GitHub mirror entry observed. cisa.gov direct feed failed; current validator rejects mirror host. Independent vendor/CNA evidence and ranges for this candidate not completed in this pass. Not evidence of no qualifying issue."
+      },
+      {
+        "id": "CVE-2026-116779",
+        "dateAdded": "2026-11-09",
+        "vendor": "SignalWire",
+        "product": "FreeSwitch",
+        "vendorReference": "This vulnerability affects an open-source component, third-party library, protocol, or proprietary implementation that could be used by different products. For more information, please see: https://github.com/signalwire/freeswitch/security/advisories/GHSA-mg63-h38w-8p9p ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-116779",
+        "status": "held-direct-kev-and-vendor-verification",
+        "note": "Official GitHub mirror entry observed. cisa.gov direct feed failed; current validator rejects mirror host. Independent vendor/CNA evidence and ranges for this candidate not completed in this pass. Not evidence of no qualifying issue."
+      },
+      {
+        "id": "CVE-2026-123218",
+        "dateAdded": "2026-11-09",
+        "vendor": "IBM",
+        "product": "Aspera Faspex",
+        "vendorReference": "https://www.ibm.com/support/pages/node/7295921 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-123218",
+        "status": "held-direct-kev-and-vendor-verification",
+        "note": "Official GitHub mirror entry observed. cisa.gov direct feed failed; current validator rejects mirror host. Independent vendor/CNA evidence and ranges for this candidate not completed in this pass. Not evidence of no qualifying issue."
+      }
+    ]
+  },
+  "fetches": [
+    {
+      "url": "https://jvn.jp/",
+      "fetchedAt": "2026-11-10T21:15:41.663392+00:00",
+      "status": 200,
+      "sha256": "bfb68b49c8465181e83a22a6e1f3b515016fd75a077e951431d18de45b6de38e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "fetchedAt": "2026-11-10T21:15:41.664486+00:00",
+      "status": 200,
+      "sha256": "41c8091ad62d508d6f8906ad5cd26b20efe551f7d51b95ecc8a6981fa640b4ea"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/",
+      "fetchedAt": "2026-11-10T21:15:41.665112+00:00",
+      "status": 200,
+      "sha256": "c21a37d477c950ce841ebc5f5e5c00412016be836e81f19b0b2f326ffd3fdc12"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/07/",
+      "fetchedAt": "2026-11-10T21:15:41.665546+00:00",
+      "status": 200,
+      "sha256": "0329a5a8196470c41472b9c931bb45a65beff0b1c18b39ff561627b6e6929e9e"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/08/",
+      "fetchedAt": "2026-11-10T21:15:41.666353+00:00",
+      "status": 200,
+      "sha256": "01681fb93395ccaf4175bfba22757f59757f637d7c86ca65e915ed4a6d218ae9"
+    },
+    {
+      "url": "https://allura.apache.org/posts/2026-allura-1.22.1.html",
+      "fetchedAt": "2026-11-10T21:15:41.667180+00:00",
+      "status": 200,
+      "sha256": "2dee34f319a216408dbf76a2b5a200550a56b4d5ca4700d9ddf022bb3c0c2db4"
+    },
+    {
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014",
+      "fetchedAt": "2026-11-10T21:15:41.667714+00:00",
+      "status": 200,
+      "sha256": "e7f0026e34e37ba03ee2ce84f89e1ebaa0933c4de6cba2228dcc1236436b09e1"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-045512.html",
+      "fetchedAt": "2026-11-10T21:15:41.668204+00:00",
+      "status": 200,
+      "sha256": "6d703c863cf8c37c9a21933a4e3f3717e05bbb258bdf110a7add0dd957d3dd2c"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-166980.html",
+      "fetchedAt": "2026-11-10T21:15:41.669541+00:00",
+      "status": 200,
+      "sha256": "68330f182404a2462c4aad5b0b07da9d4b7c4970bdafca36379242f0429e34a3"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-566435.html",
+      "fetchedAt": "2026-11-10T21:15:41.670794+00:00",
+      "status": 200,
+      "sha256": "323f01d886d9e2a55d651fc8519cb70d9d60975efead1913500ea0e0c925678d"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-566512.html",
+      "fetchedAt": "2026-11-10T21:15:41.671407+00:00",
+      "status": 200,
+      "sha256": "04efd1b76283fdf7442137212fd61baacfd10770bd55a9d7d3328c7accb39d6c"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-834709.html",
+      "fetchedAt": "2026-11-10T21:15:41.673313+00:00",
+      "status": 200,
+      "sha256": "a3b698893b8b352f3ac22f942aad55d36477877057f7e3da9aed2a3173a82ea6"
+    },
+    {
+      "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2026-005_en.pdf",
+      "fetchedAt": "2026-11-10T21:15:45.584860+00:00",
+      "status": 200,
+      "sha256": "c3f09d6e5945658b11c4ef1b9a16e3166234fda374bff849e079b8b5ddf9e625"
+    },
+    {
+      "url": "https://ofbiz.apache.org/security.html",
+      "fetchedAt": "2026-11-10T21:15:46.037984+00:00",
+      "status": 200,
+      "sha256": "1e3260888998320ef1aea9e28bd780a060564c607a95f90a0a07342d967aec10"
+    },
+    {
+      "url": "https://www.openssh.com/txt/release-10.6p2",
+      "fetchedAt": "2026-11-10T21:15:46.124175+00:00",
+      "status": 200,
+      "sha256": "014391c199d31c98253ad5c9fd6befbc5a31598faf93a2ed18e90bbf6d2e340c"
+    },
+    {
+      "url": "https://nodejs.org/en/blog/vulnerability/november-2026-security-releases",
+      "fetchedAt": "2026-11-10T21:15:46.546452+00:00",
+      "status": 200,
+      "sha256": "09689d0ddfaaffa205e72b3620c0717d0ec2d2b98d2fbb87b8b08b11bc5e2158"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/06/9",
+      "fetchedAt": "2026-11-10T21:15:46.797128+00:00",
+      "status": 200,
+      "sha256": "9ea0a0054b686ebd54e9eab925be8e6d009a42a2056387475905276d130ac00a"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/06/30",
+      "fetchedAt": "2026-11-10T21:15:47.023592+00:00",
+      "status": 200,
+      "sha256": "b6f69b0c09bb043c3345d2207951dbdc4700216694bbd881a1a99a0fd7ddd9a6"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/06/4",
+      "fetchedAt": "2026-11-10T21:15:47.122840+00:00",
+      "status": 200,
+      "sha256": "f9e4e59eb17af1651d405595e4a98b793dacff173bb2d2c5ea1d72c3cad2c3f6"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/06/12",
+      "fetchedAt": "2026-11-10T21:15:47.370865+00:00",
+      "status": 200,
+      "sha256": "2796cba36495a3abc45939de80f72eadb48d7bda3ceb134be0ce0718b98e3fb8"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-119314",
+      "fetchedAt": "2026-11-10T21:15:47.375117+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-91484",
+      "fetchedAt": "2026-11-10T21:15:47.384895+00:00",
+      "status": 200,
+      "sha256": "fa6888c7eb430a0d4f435e918e2e2c23a4d3ae3f65b936c1630788b7463d5ffb"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105482",
+      "fetchedAt": "2026-11-10T21:15:47.403329+00:00",
+      "status": 200,
+      "sha256": "71922aa75f07f97731e36a039108dfeb8e1b7f5d43fc5655ecb6237f030dfdcb"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2023-4863",
+      "fetchedAt": "2026-11-10T21:15:47.430717+00:00",
+      "status": 200,
+      "sha256": "ebad3c8097c8b086599204b46e3cef87e9a3ba0fd2cc2e8864a1ca80799ac61a"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-13162",
+      "fetchedAt": "2026-11-10T21:15:48.979551+00:00",
+      "status": 200,
+      "sha256": "f0a6457003661263351176f2d31b6de9c15eb51d4e27508ab0870cf4067630b5"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-10756",
+      "fetchedAt": "2026-11-10T21:15:49.499908+00:00",
+      "status": 200,
+      "sha256": "09c0d3159769d1e7c8f51fafbb434c358766701bcf9b90f0e9b9bdcacd452f36"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2025-64702",
+      "fetchedAt": "2026-11-10T21:15:50.803615+00:00",
+      "status": 200,
+      "sha256": "775ec8b542166c2b3ba1ea20ac1f537bc690b8e600b83a105cebac1d5210ba64"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-98385",
+      "fetchedAt": "2026-11-10T21:15:51.631881+00:00",
+      "status": 200,
+      "sha256": "43dc43b2d79d379dc1f8cc2463cd11101a531dfe1cdedb351ece4549a7f017c0"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-98260",
+      "fetchedAt": "2026-11-10T21:15:51.674767+00:00",
+      "status": 200,
+      "sha256": "99b83d553671b26e3c0f63f5f405a20982f1d2ec503a00586a5ae24342965f06"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-98256",
+      "fetchedAt": "2026-11-10T21:15:51.692517+00:00",
+      "status": 200,
+      "sha256": "f4c469216d9026667d9ac3e91dcafcdd1e27c6f5eddbba8765885a084df4c4b7"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-97941",
+      "fetchedAt": "2026-11-10T21:15:51.693589+00:00",
+      "status": 200,
+      "sha256": "24ffe1d4938107226dd7c0f45d31a1e1261553db60bd1a6c1f9960a98c3a92f0"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-97229",
+      "fetchedAt": "2026-11-10T21:15:51.693827+00:00",
+      "status": 200,
+      "sha256": "6ba85077fa641d17198c1caab388b64565510fcb35ba7db594228c2b2ddba4ba"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-96951",
+      "fetchedAt": "2026-11-10T21:15:51.695786+00:00",
+      "status": 200,
+      "sha256": "5cef4274b9ca24d51a6c673ed24900747983264d2d71a1259be95dfc4f12a3f7"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-96656",
+      "fetchedAt": "2026-11-10T21:15:51.897848+00:00",
+      "status": 200,
+      "sha256": "77d6b2619ecf662de14e3e5e7e48e26fbf62761686ed76e74c854e459fe84700"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-96655",
+      "fetchedAt": "2026-11-10T21:15:51.901534+00:00",
+      "status": 200,
+      "sha256": "42b622abda70558149f5a2b215d1adb59a069d85c40671bfb7ef009803b22cb4"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-96654",
+      "fetchedAt": "2026-11-10T21:15:51.923133+00:00",
+      "status": 200,
+      "sha256": "0b894d38351635cd5038791334e4710c0034ff33e5e77b0f1a84d358307cf013"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-96652",
+      "fetchedAt": "2026-11-10T21:15:52.263875+00:00",
+      "status": 200,
+      "sha256": "b5ab35f8298c968f4ecda663ca92f01f64ad675fccf9f38e186950663efa8c47"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-96408",
+      "fetchedAt": "2026-11-10T21:15:54.744801+00:00",
+      "status": 200,
+      "sha256": "ffc59f2a60fe1ee9c5ca88f1d733c43b8a67de0986c6e6c7860833a4bc474d1d"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-94300",
+      "fetchedAt": "2026-11-10T21:15:54.791140+00:00",
+      "status": 200,
+      "sha256": "83300834028f2d9c0fee1fa30e706d72dce139b5509c7bc1747677aabcfa0533"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-91403",
+      "fetchedAt": "2026-11-10T21:15:54.795002+00:00",
+      "status": 200,
+      "sha256": "f705220991e37a821e5adad6ad0fe1a575148e7bfd55afd1c6b41e1af94936b3"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-89754",
+      "fetchedAt": "2026-11-10T21:15:54.795515+00:00",
+      "status": 200,
+      "sha256": "4b54bf3358f3054bd83e5d423563dc48c4af043bc9ec98f4fc0e9b08e385e9c2"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-89209",
+      "fetchedAt": "2026-11-10T21:15:54.796109+00:00",
+      "status": 200,
+      "sha256": "5a35f62b7786b689533c356b1a7e71de61b4c5921bd6a55b7ad39df7e735d545"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-88779",
+      "fetchedAt": "2026-11-10T21:15:54.797608+00:00",
+      "status": 200,
+      "sha256": "ff93ab6e2982237fdd6892b2362934306038eef694b53d89bc18a2f4f13c37e0"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-80775",
+      "fetchedAt": "2026-11-10T21:15:54.821950+00:00",
+      "status": 200,
+      "sha256": "e101c82fd5f175d70fdac1b1ae2f634d45cf3d91710782661b585841737d8641"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-76519",
+      "fetchedAt": "2026-11-10T21:15:54.863236+00:00",
+      "status": 200,
+      "sha256": "c59893a4cb4d1d8d337bc67dd755a08880bb04c971d978fab3e69332556e8306"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-76418",
+      "fetchedAt": "2026-11-10T21:15:54.863683+00:00",
+      "status": 200,
+      "sha256": "f98e0137ff3a682bd005eb9980f27c31f4012ad3158fc1134d88c1d0084590ff"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-21589",
+      "fetchedAt": "2026-11-10T21:15:54.866543+00:00",
+      "status": 200,
+      "sha256": "e5c8d358938fa3e3a2c61ed073def0e33a46f69f77f3a8ab5d4dc44b48b80a9a"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-118869",
+      "fetchedAt": "2026-11-10T21:15:54.906884+00:00",
+      "status": 200,
+      "sha256": "b90577a53103912773ee67eed4f6e74d89925542a514a6759ea320516aed43bc"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-118196",
+      "fetchedAt": "2026-11-10T21:15:55.538988+00:00",
+      "status": 200,
+      "sha256": "0a121599cb88323eb68317ab7363ecb68d70340605d64a8bdc33fae378d60ba5"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-117679",
+      "fetchedAt": "2026-11-10T21:15:57.423165+00:00",
+      "status": 200,
+      "sha256": "b9057b24379c361ea936587dfd92658a014ae2a15dd07c323f33e107a6a34ec9"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-115560",
+      "fetchedAt": "2026-11-10T21:15:57.427155+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114625",
+      "fetchedAt": "2026-11-10T21:15:57.427398+00:00",
+      "status": 200,
+      "sha256": "ec3ef226aa4e747fbf98f8182a74ff2613a6f9787998613093bbeeb133769d71"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112816",
+      "fetchedAt": "2026-11-10T21:15:57.566900+00:00",
+      "status": 200,
+      "sha256": "c24c4fcc5050132562b0cd2bd40450c3fce680438fc0a6f4b89688ba1e96dbb1"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-110936",
+      "fetchedAt": "2026-11-10T21:15:57.567247+00:00",
+      "status": 200,
+      "sha256": "8d25a30edb8de9b073efc9e9a50cac2aae926406a3d45c0daadd174cff2cf42c"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-110264",
+      "fetchedAt": "2026-11-10T21:15:57.568632+00:00",
+      "status": 200,
+      "sha256": "7a1f44937d01a5696a9622f5bb01f70d14c249cca3dd7ec9cf82bfe2c7b8a687"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109849",
+      "fetchedAt": "2026-11-10T21:15:57.571170+00:00",
+      "status": 200,
+      "sha256": "c78f68c88bb7610f2aaa2a6875c3ed356f52aed302b071bed8d794ec2d3786b3"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109836",
+      "fetchedAt": "2026-11-10T21:15:57.573648+00:00",
+      "status": 200,
+      "sha256": "36636f69812ff2f2f2e27f1e9c29c4b4350bddd25199a3c6b5e28500d989c71a"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109619",
+      "fetchedAt": "2026-11-10T21:15:57.591215+00:00",
+      "status": 200,
+      "sha256": "e20ab128ca18eeee7c85ebc0628fabeb9a2aed8af238284eb14183269f16e7f6"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109618",
+      "fetchedAt": "2026-11-10T21:15:57.595498+00:00",
+      "status": 200,
+      "sha256": "e016c059bf35db67c5a58e7730ca469c5647b5bceb807e2f456ab3ad232d5542"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106931",
+      "fetchedAt": "2026-11-10T21:15:57.639182+00:00",
+      "status": 200,
+      "sha256": "23b87f8e759d87b0bba2c06c1ca9d23ea349abfd4b08423ddc27f3eca320616e"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105296",
+      "fetchedAt": "2026-11-10T21:15:57.643118+00:00",
+      "status": 200,
+      "sha256": "111c1ea6e4b9c539c8d94eb3d64fc6433e47aa5c431de37445299d8c85faa0a7"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105134",
+      "fetchedAt": "2026-11-10T21:16:00.892411+00:00",
+      "status": 200,
+      "sha256": "5141d891d77c3ea17378f7b53308774e08e8070466f4bbc4c66c42cc81105574"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-105133",
+      "fetchedAt": "2026-11-10T21:16:00.893725+00:00",
+      "status": 200,
+      "sha256": "b1b438abafa7ecce896c028bd345262d9321720f5c11d772ad010372184f40be"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-104935",
+      "fetchedAt": "2026-11-10T21:16:00.895619+00:00",
+      "status": 200,
+      "sha256": "3ea3901cd1371613692cfea61b2de0f1ca1dddc3aafba6e192473ec6bc2a01cd"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-104286",
+      "fetchedAt": "2026-11-10T21:16:00.896181+00:00",
+      "status": 200,
+      "sha256": "35910072be1c6e0c7d0255a32f8391c4198e281400389afcf9e6cb020ee1dbf2"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-103668",
+      "fetchedAt": "2026-11-10T21:16:00.974422+00:00",
+      "status": 200,
+      "sha256": "bc4adb617e9464ab62d4dd42ca3d49034d7e3472717264aefef9a56029640f48"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102764",
+      "fetchedAt": "2026-11-10T21:16:00.975218+00:00",
+      "status": 200,
+      "sha256": "d18cc30ff984dc098b2d210d556380457e196c3aefe23458118d10b8d61b8580"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102490",
+      "fetchedAt": "2026-11-10T21:16:00.986315+00:00",
+      "status": 200,
+      "sha256": "bb3af0de4144e80632b05b1a09a303a6b54dd8cbd0d7633349461b4623bdc155"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102489",
+      "fetchedAt": "2026-11-10T21:16:00.986615+00:00",
+      "status": 200,
+      "sha256": "90d1c11c1c7aa3662e6f8b475abff68acd63a79394671fe438abf32cbc666084"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-0322",
+      "fetchedAt": "2026-11-10T21:16:00.986811+00:00",
+      "status": 200,
+      "sha256": "2a18b53e6a655bfcb7c8aa52a540b1a10f71355812b80aae330823a4e9ffad4b"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2025-61624",
+      "fetchedAt": "2026-11-10T21:16:01.031363+00:00",
+      "status": 200,
+      "sha256": "a7cc50d645492ac21252fe8fa316c609b5449d53385516ee99339551820a5895"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2023-22894",
+      "fetchedAt": "2026-11-10T21:16:01.031612+00:00",
+      "status": 200,
+      "sha256": "9e14125acba71ef3587587a1d9bf273abeac8bd3fa9ec2c8782e81179f348244"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2021-3199",
+      "fetchedAt": "2026-11-10T21:16:01.136257+00:00",
+      "status": 200,
+      "sha256": "01204c55667d2691afde9d8c539406fa1f162a33fd6bc3fe63bfa1006637c803"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2016-3081",
+      "fetchedAt": "2026-11-10T21:16:03.668196+00:00",
+      "status": 200,
+      "sha256": "f4649ff10a971547bf7f00d4c263380847ee14bab9d5ac68dc246b0f61439c27"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2015-5477",
+      "fetchedAt": "2026-11-10T21:16:03.686692+00:00",
+      "status": 200,
+      "sha256": "9ffe5188fcac49964b6fbd639fd9f1b8ff967864e92de3dc85090784838854c1"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2015-3306",
+      "fetchedAt": "2026-11-10T21:16:03.686980+00:00",
+      "status": 200,
+      "sha256": "1b19f766c5ef14d23ffe346c82a83b537f8ff273bb2a547a641899201945895f"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/08/1",
+      "fetchedAt": "2026-11-10T21:16:03.713153+00:00",
+      "status": 200,
+      "sha256": "8c997ca5fed70eef0079a790d1bf094ac856116cb1c27f2f7f529ea73b5dbc96"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/07/10",
+      "fetchedAt": "2026-11-10T21:16:03.714518+00:00",
+      "status": 200,
+      "sha256": "1e1b7c4b8a7ba3eaeb6f409927d7be6d0f6c26f1f302b66e598a56837df4f2a6"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/07/11",
+      "fetchedAt": "2026-11-10T21:16:03.715285+00:00",
+      "status": 200,
+      "sha256": "520ac029c8a95d94b81635dd7e07cdc1a981264a86afdae1c6d7dedea66a41f9"
+    },
+    {
+      "url": "https://forums.unrealircd.org/viewtopic.php?t=9487",
+      "fetchedAt": "2026-11-10T21:16:03.731023+00:00",
+      "status": 200,
+      "sha256": "ce0047090abe41b62b16b58be419bdc16d8cc4494def1821ccbd46c93e0f47fc"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-114713",
+      "fetchedAt": "2026-11-10T21:16:03.745887+00:00",
+      "status": 200,
+      "sha256": "a907ac910ba4f4736ab448e281560a9cf0d6edb376ad02d3b92c135ad090c506"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/",
+      "fetchedAt": "2026-11-10T21:16:03.756096+00:00",
+      "status": 200,
+      "sha256": "668e6a399d50a0f44628b7c2df282b67df40c8a3b2e1661905ac3ff23379b1c9"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/",
+      "fetchedAt": "2026-11-10T21:16:03.757824+00:00",
+      "status": 200,
+      "sha256": "6f055e014df9c5d95e3ac29f22757f03997b240f31c1baa45aa17d03d3028063"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU96830794/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.428741+00:00",
+      "status": 200,
+      "sha256": "c7f78765b12da2e598ae3f7e745f2acf964563655906fcb5d57b7d258a0e91d7"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU98836795/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.429573+00:00",
+      "status": 200,
+      "sha256": "7aada0193ad8f88f26ba829c57858557df804b928ed5b645ad1dca85b850c22d"
+    },
+    {
+      "url": "https://jvn.jp/jp/JVN12040144/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.430089+00:00",
+      "status": 200,
+      "sha256": "7fff9d95c85e0c48e66946268eefb6eafaad4ed137c20add86dc3aca4161ba5c"
+    },
+    {
+      "url": "https://jvn.jp/jp/JVN76179675/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.430744+00:00",
+      "status": 200,
+      "sha256": "7ef9f2f12137c466ed8dabc3bcf4dc21fce243f17eb0af8ac5dc1a3332560477"
+    },
+    {
+      "url": "https://jvn.jp/jp/JVN89009783/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.432405+00:00",
+      "status": 200,
+      "sha256": "e91fd6002a7a2146102b57dc1ead2c0953be68be58059c053ac8f9b176c454c1"
+    },
+    {
+      "url": "https://jvn.jp/jp/JVN56286875/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.433431+00:00",
+      "status": 200,
+      "sha256": "4003f3e16a9ffd519f5e21d539e33065f82c1b7b0fbea1db00637a68027e2fcd"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU92635551/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.434434+00:00",
+      "status": 200,
+      "sha256": "d07a8df84d713288771e537217520d03f97e30be87b14d28e6618a1cb3d24e15"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU93403064/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.435198+00:00",
+      "status": 200,
+      "sha256": "0152bc19e4f5e6264a2c50a6dec2a476d7bf397435ffc08188391c789e4731c0"
+    },
+    {
+      "url": "https://jvn.jp/jp/JVN42011956/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.439162+00:00",
+      "status": 200,
+      "sha256": "1de6d6230b9a51f18106e43bcc025f6576f20ca6d7a16d8c73e0719ae22c4e55"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU98354779/index.html",
+      "fetchedAt": "2026-11-10T21:16:33.439623+00:00",
+      "status": 200,
+      "sha256": "d74d78dcc5b2c0e39d5e750abf594a8286500a00394f0691a6580f1dc46cf488"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/1",
+      "fetchedAt": "2026-11-10T21:16:33.440284+00:00",
+      "status": 200,
+      "sha256": "6feb7173f5162605d82a344f47b919c5f34072af9ca17ea829562572f5bd9924"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/2",
+      "fetchedAt": "2026-11-10T21:16:33.441044+00:00",
+      "status": 200,
+      "sha256": "ceecba9d9f16aaf7133f9208c8c9a3aca5f372b46ed757e0a0e5516c40086602"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/3",
+      "fetchedAt": "2026-11-10T21:16:33.441507+00:00",
+      "status": 200,
+      "sha256": "da44ad38e127714b00cf139ee3c66630f0e7e70d3d85106764691f832b6e8da6"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/4",
+      "fetchedAt": "2026-11-10T21:16:33.443574+00:00",
+      "status": 200,
+      "sha256": "0aab31dfe733c339540490c8228bd744dad2fe3a098e50fa99fccdb20549440f"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/5",
+      "fetchedAt": "2026-11-10T21:16:33.444388+00:00",
+      "status": 200,
+      "sha256": "b87cc27b10234a5a0b3dbcfb3b22cd44b4963a696c30f85dad5b4e67306150f0"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/6",
+      "fetchedAt": "2026-11-10T21:16:36.642955+00:00",
+      "status": 200,
+      "sha256": "e48639f85b4a76b2072d25c43826540db19ea9dc06e4161a0ed7c42cc1c55af8"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/7",
+      "fetchedAt": "2026-11-10T21:16:36.643677+00:00",
+      "status": 200,
+      "sha256": "c22b39af06ad14904bd3ea7a2f2fd8109e1242f82b67b54e62f5692b8a67a3c8"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/8",
+      "fetchedAt": "2026-11-10T21:16:36.654697+00:00",
+      "status": 200,
+      "sha256": "5881e1c1b4f0a80efbd0479689fbfd02ead42d21d2601a84fb3215cd6230c4c7"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/9",
+      "fetchedAt": "2026-11-10T21:16:36.826948+00:00",
+      "status": 200,
+      "sha256": "23d869776f9181c8e89a78e0f91ea4d72eb8e6d23e423ce69f24c520d087f24c"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/10",
+      "fetchedAt": "2026-11-10T21:16:36.862766+00:00",
+      "status": 200,
+      "sha256": "837637f2d5f25750d44728d2aa3eac4fc3ad1b1fc5925daf417c3a9dee9af841"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/11",
+      "fetchedAt": "2026-11-10T21:16:36.867420+00:00",
+      "status": 200,
+      "sha256": "bba3039daca32b19614c9dc96a4de3a283124d2375826c60eacde870db8c531f"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/12",
+      "fetchedAt": "2026-11-10T21:16:37.446833+00:00",
+      "status": 200,
+      "sha256": "3b6d1935509be1412e303b84814e4f8378f888990506b618234d65df412c824c"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/13",
+      "fetchedAt": "2026-11-10T21:16:37.458807+00:00",
+      "status": 200,
+      "sha256": "cd35ab929597b0cf462594cd7e21529f896faa864611baabbfb1ce2b4b6f7acc"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/14",
+      "fetchedAt": "2026-11-10T21:16:37.486676+00:00",
+      "status": 200,
+      "sha256": "3ad9d25b5b7c8523d95393d5aabd1137f5d6dda8ba3b4273e89f1c725eabf0d8"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/15",
+      "fetchedAt": "2026-11-10T21:16:37.546916+00:00",
+      "status": 200,
+      "sha256": "4225a05fc323f4ec868856ba3454b5ab897dd5f6e03e00417b47a0509c75e7c0"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/16",
+      "fetchedAt": "2026-11-10T21:16:39.466967+00:00",
+      "status": 200,
+      "sha256": "3cf8b2b44bc68d5fb6bc6cc86a9b8b11ec09557ecd354e381d4338fa24055745"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/17",
+      "fetchedAt": "2026-11-10T21:16:39.469221+00:00",
+      "status": 200,
+      "sha256": "9e02f87dbdcd85a3c1b4d30cd44e01470262a7e5a8afc7a8e763d3a9b3af2f4d"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/18",
+      "fetchedAt": "2026-11-10T21:16:39.473673+00:00",
+      "status": 200,
+      "sha256": "3ddeb99dfbb34da06b420ca05dcabcd96984ce02905603895df80e73a6789382"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/19",
+      "fetchedAt": "2026-11-10T21:16:39.473868+00:00",
+      "status": 200,
+      "sha256": "4542111d48db1c01ba67acb0a90398102e7224fb872a9148bcdebbc6af808a81"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/20",
+      "fetchedAt": "2026-11-10T21:16:39.539832+00:00",
+      "status": 200,
+      "sha256": "738ec71e218f62240ecbba2096a1bb32f5a382bfd192185f961d5fd30b2972a3"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/21",
+      "fetchedAt": "2026-11-10T21:16:39.833493+00:00",
+      "status": 200,
+      "sha256": "ca3d1e09b0acdcb7adad04e01d7898e21dbfb24437fce3c9c7e03d4c61e4a0a8"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/22",
+      "fetchedAt": "2026-11-10T21:16:39.842446+00:00",
+      "status": 200,
+      "sha256": "4b2b4251f67fe903a8e3ac15dd4f34d8fdf155a64b047ed679093c2f20a2567e"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/23",
+      "fetchedAt": "2026-11-10T21:16:39.849980+00:00",
+      "status": 200,
+      "sha256": "d51ce40e1bff0a4b24dfdc58bd5898aeda2cf12853a2327f276641463f7db517"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/24",
+      "fetchedAt": "2026-11-10T21:16:39.877493+00:00",
+      "status": 200,
+      "sha256": "e9230e59f829b296330e5871e74c5fb939131beed2f7c2d09a06d38d92ade10d"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/25",
+      "fetchedAt": "2026-11-10T21:16:39.892505+00:00",
+      "status": 200,
+      "sha256": "502c4974a67309fb82c2e2cce04b9ed2b3c4dd73b7c70187ea356023efef7c1d"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/26",
+      "fetchedAt": "2026-11-10T21:16:40.206374+00:00",
+      "status": 200,
+      "sha256": "e3fb288781644d64de0f786a9579aeb5ee25f9d817c12ca2448fa8c4f72b6c4b"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/27",
+      "fetchedAt": "2026-11-10T21:16:40.214415+00:00",
+      "status": 200,
+      "sha256": "2cd544350f6a74a802afd9bb315098ffdfc5de5a270745563ddea4e9db7ac5c4"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/28",
+      "fetchedAt": "2026-11-10T21:16:40.218951+00:00",
+      "status": 200,
+      "sha256": "861c49607116309f8490b471762d7253b0fc609d8a83c968bcaec9d355fc46f0"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/29",
+      "fetchedAt": "2026-11-10T21:16:40.244742+00:00",
+      "status": 200,
+      "sha256": "528a7b6f2a2db1ba2dda3ed5daf91481bcd3baad76fafb1d6007289d387a6298"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/30",
+      "fetchedAt": "2026-11-10T21:16:40.259889+00:00",
+      "status": 200,
+      "sha256": "5e0fbe993399f3115f56755e3e7cbbc49c07e5482ab9d0aabac4fde23a1d3a88"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/31",
+      "fetchedAt": "2026-11-10T21:16:42.263345+00:00",
+      "status": 200,
+      "sha256": "d2e2c7b8117993c5526fe919fdb0d69bd1f1a763e9d35bc59c7dc3bce2abca68"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/32",
+      "fetchedAt": "2026-11-10T21:16:42.275437+00:00",
+      "status": 200,
+      "sha256": "e583feb5ba7cf01e8db537014e619e986a1ef2f0abe10635a1c0db68f2c7d3c1"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/33",
+      "fetchedAt": "2026-11-10T21:16:42.276274+00:00",
+      "status": 200,
+      "sha256": "90d5e72dbb64633b1e7a39db9e9992151c0b5971201f2023006c4320219718c4"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/34",
+      "fetchedAt": "2026-11-10T21:16:42.277384+00:00",
+      "status": 200,
+      "sha256": "b5029798aad9c25d1b6896c9d4259656836b662a0558299ec00769f68f9b1b7b"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/35",
+      "fetchedAt": "2026-11-10T21:16:42.297252+00:00",
+      "status": 200,
+      "sha256": "4c716f950715ff53294f44cc598c5ce1745e22121f0c8631028e226bb399aae0"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/36",
+      "fetchedAt": "2026-11-10T21:16:42.310307+00:00",
+      "status": 200,
+      "sha256": "35bb3411c2f7712a06447e178f672cf0760c8ca6a71d21a2fa508539f94cc7e1"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/37",
+      "fetchedAt": "2026-11-10T21:16:42.330725+00:00",
+      "status": 200,
+      "sha256": "ec83ee18a9acc04b14e86f0b78e0276814d9a787946810260098502331e33d0e"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/09/38",
+      "fetchedAt": "2026-11-10T21:16:42.641025+00:00",
+      "status": 200,
+      "sha256": "bc46e70fc6dc0f563e909ddbd2c2a263fe33ae4629b37745b13dec47fcc1b80e"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/1",
+      "fetchedAt": "2026-11-10T21:16:42.643112+00:00",
+      "status": 200,
+      "sha256": "5aef58fe8d6a4f8f223c391038da194d77425e55322ac9760a8be1fdf6aa2a10"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/2",
+      "fetchedAt": "2026-11-10T21:16:42.649180+00:00",
+      "status": 200,
+      "sha256": "09bd8bb567ee4253f80f37cfb4bbdae2740b445b79fb6632aadd8857c4a96a2c"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/3",
+      "fetchedAt": "2026-11-10T21:16:42.661275+00:00",
+      "status": 200,
+      "sha256": "c7171bfd325abd9d32b356dcf3682e0d05f7debde8840de45880089d4444c3da"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/4",
+      "fetchedAt": "2026-11-10T21:16:42.673787+00:00",
+      "status": 200,
+      "sha256": "e275523685d6350457476fb84f3346eb2761fa3b56dbca3506175221e28893a4"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/5",
+      "fetchedAt": "2026-11-10T21:16:42.675298+00:00",
+      "status": 200,
+      "sha256": "65e1c8ce028267e7381b95d4ed03cee791f75ed8d807cd1f404cbd33c767e981"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/6",
+      "fetchedAt": "2026-11-10T21:16:42.689756+00:00",
+      "status": 200,
+      "sha256": "7d20ac5fa1fb2b96bc2a572cb418141f72ec786e9289dc20a4e58ba6776063f9"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/7",
+      "fetchedAt": "2026-11-10T21:16:42.926706+00:00",
+      "status": 200,
+      "sha256": "6c851d0acd8ff16a978c74b0ba7e6ca7369a1fb484ab5d04ff8f100c463f1ab8"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/8",
+      "fetchedAt": "2026-11-10T21:16:45.578024+00:00",
+      "status": 200,
+      "sha256": "f3e2a0a54c21fba5191f79f5f7fa47b34350523a320d647bac33d79eb12e2f33"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/9",
+      "fetchedAt": "2026-11-10T21:16:45.586659+00:00",
+      "status": 200,
+      "sha256": "6af3d092f74135a69056bc0f2a8fca6a98e7ea37b10f5db4f233c582fe806f15"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/10",
+      "fetchedAt": "2026-11-10T21:16:45.594071+00:00",
+      "status": 200,
+      "sha256": "7ba73549e5af7d0e0446592e2500a072ac49be1b4da5d3e5cbaef23e9c356392"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/11",
+      "fetchedAt": "2026-11-10T21:16:45.618983+00:00",
+      "status": 200,
+      "sha256": "15b0b210f429d25efd4b62e3dc49e526b7ba0f9f7a22157bf48f7e5d106c5bd0"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/12",
+      "fetchedAt": "2026-11-10T21:16:45.636918+00:00",
+      "status": 200,
+      "sha256": "4d89d11a13401600904177f51a37673018197633f3ee49da945596ec4f1734c4"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/13",
+      "fetchedAt": "2026-11-10T21:16:45.640331+00:00",
+      "status": 200,
+      "sha256": "2f32f69c2ece0ab62bf89c1ae1438967e4791ac8a12a88f3907838e21de471a4"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/14",
+      "fetchedAt": "2026-11-10T21:16:45.650550+00:00",
+      "status": 200,
+      "sha256": "27ffb7baf9469b0e6c7b342b0af64f706e9c1367492dcf669ec9da6696fb7d2a"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/15",
+      "fetchedAt": "2026-11-10T21:16:45.651079+00:00",
+      "status": 200,
+      "sha256": "6b5b38649512ecfd9fb0d6b28bc8f80bfe3e62740c682fb22fa1b87258ac0e95"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/16",
+      "fetchedAt": "2026-11-10T21:16:45.703318+00:00",
+      "status": 200,
+      "sha256": "7497b5338830006fd1cb7f8e27f1316015ea3fa8a84d90c1c8ba210d1c0f4294"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/17",
+      "fetchedAt": "2026-11-10T21:16:45.965998+00:00",
+      "status": 200,
+      "sha256": "ed438963fbfc1f7c239d2e31dc403e5ca2cf835b054b645147a07c4ee91a81d8"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/18",
+      "fetchedAt": "2026-11-10T21:16:45.977546+00:00",
+      "status": 200,
+      "sha256": "ebb531107caa1c9ed366f5341c39c6033df3669305f382f3834d379ef7ad83e5"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/19",
+      "fetchedAt": "2026-11-10T21:16:45.986006+00:00",
+      "status": 200,
+      "sha256": "d62cb924e977b17baac7a6a4cb1237133636ee490d9bbd968a653b79d433d8a9"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/20",
+      "fetchedAt": "2026-11-10T21:16:45.989001+00:00",
+      "status": 200,
+      "sha256": "7edffae54265b70f02f4d4ff30449d185ba188c833951cc64f88965694ced507"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/21",
+      "fetchedAt": "2026-11-10T21:16:45.994930+00:00",
+      "status": 200,
+      "sha256": "afebf0d699c7746fa88f381cf4d66405a747b09ab85b6f0aee0132b44a3d420a"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/22",
+      "fetchedAt": "2026-11-10T21:16:46.022156+00:00",
+      "status": 200,
+      "sha256": "955b6ceca5791448890c600578344ccaf60b6bd8d78e6bf12d05f97d81e66f07"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/23",
+      "fetchedAt": "2026-11-10T21:16:48.937836+00:00",
+      "status": 200,
+      "sha256": "fab899e140a51e4bef55b0c97e3b13e93cbd2e2d70c8308c349535dea4a1c416"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/24",
+      "fetchedAt": "2026-11-10T21:16:49.013625+00:00",
+      "status": 200,
+      "sha256": "1f3f2ae4c897ace40f662fb723d84d26ccb8530329d8d9f573aa16fa8885a7cf"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/25",
+      "fetchedAt": "2026-11-10T21:16:49.014644+00:00",
+      "status": 200,
+      "sha256": "46dc501c98cc8759e624369d372e18214538b7b13bd82bb01dcb7280f5dcc305"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/26",
+      "fetchedAt": "2026-11-10T21:16:49.017342+00:00",
+      "status": 200,
+      "sha256": "ca53db25915df7e8ec5fd6da2eb4f253aea8bee95ac28cf8d45b4cbfd7c58b7b"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/27",
+      "fetchedAt": "2026-11-10T21:16:49.043917+00:00",
+      "status": 200,
+      "sha256": "746a035f3b57f7155f3157ef6e4db9ff5d1845018c20d06a014af03894ca0e41"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/28",
+      "fetchedAt": "2026-11-10T21:16:49.058792+00:00",
+      "status": 200,
+      "sha256": "9ce73af037748bb14d324861661deb0ea633981cdc608d84b8093ca7d38e1d18"
+    },
+    {
+      "url": "https://www.openwall.com/lists/oss-security/2026/11/10/29",
+      "fetchedAt": "2026-11-10T21:16:49.066988+00:00",
+      "status": 200,
+      "sha256": "102590e11a197b7f65b0528b4889f8a155f81b3b262489d8121c75eff09ff7dc"
+    },
+    {
+      "url": "https://kb.cert.org/vuls/id/188754",
+      "fetchedAt": "2026-11-10T21:17:31.343277+00:00",
+      "status": 200,
+      "sha256": "b4e2a53c6a98b6c748d406babd6ef82bc6812e55fede374b1aa3919bd597c10b"
+    },
+    {
+      "url": "https://kb.cert.org/vuls/id/385711",
+      "fetchedAt": "2026-11-10T21:17:31.344031+00:00",
+      "status": 200,
+      "sha256": "ab2d60438ad8c2e69349891e0c49188d765991e987108357936cdb85e0b00799"
+    },
+    {
+      "url": "https://docs.airbyte.com/release_notes/self-managed/v-2.2",
+      "fetchedAt": "2026-11-10T21:17:31.344550+00:00",
+      "status": 200,
+      "sha256": "19794bc15bdec9b2b33e9b7642b9814ad6238ffdaed8bcc2ea87643ad0a0c0e4"
+    },
+    {
+      "url": "https://github.com/airbytehq/airbyte/security/advisories/GHSA-g35w-6r6v-h4r7",
+      "fetchedAt": "2026-11-10T21:17:31.345058+00:00",
+      "status": 200,
+      "sha256": "d679f7caf50107da645e47daef8c35d31220e34ebd9c71c629007da1e8aa1f70"
+    },
+    {
+      "url": "https://www.dos-osaka.co.jp/news/2026/11/261109.html",
+      "fetchedAt": "2026-11-10T21:17:31.345603+00:00",
+      "status": 200,
+      "sha256": "ab80d6b98d1541dcd818033ca326cd66b8f48905b6194df70cc1d708c0ea5bcf"
+    },
+    {
+      "url": "https://www.rococo.co.jp/wp-content/uploads/2026/11/20261109_rocoeyes.pdf",
+      "fetchedAt": "2026-11-10T21:17:31.346161+00:00",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://jpn.nec.com/security-info/secinfo/nv26-006.html",
+      "fetchedAt": "2026-11-10T21:17:31.347223+00:00",
+      "status": 200,
+      "sha256": "c0c3f6322316b5cc17ccf832167345d7c55399c0a6b33c7b3154feb2f4be78a4"
+    },
+    {
+      "url": "https://github.com/effekseer/Effekseer/releases/tag/1808",
+      "fetchedAt": "2026-11-10T21:17:31.348685+00:00",
+      "status": 200,
+      "sha256": "21532219d224524935ba173912055ac9364f787763593127927ad2c71fdb5248"
+    },
+    {
+      "url": "https://github.com/effekseer/Effekseer/commit/6cf1cb853383765153219ba5ce9b47eff5ad8398",
+      "fetchedAt": "2026-11-10T21:17:31.349103+00:00",
+      "status": 200,
+      "sha256": "ad052c9821baa71feea44c49b4dd9be5c087cc65146985b9ce79a52c3db3533f"
+    },
+    {
+      "url": "https://kusanagi.tokyo/releases/27993/",
+      "fetchedAt": "2026-11-10T21:17:31.350063+00:00",
+      "status": 200,
+      "sha256": "82081acf8c257885415cb889854ab674fa063d56c77bc171872f45a3671c9c01"
+    },
+    {
+      "url": "https://github.com/GISOpenwave/security-advisories-public/blob/main/CAN-2026-2032674.md",
+      "fetchedAt": "2026-11-10T21:17:31.350414+00:00",
+      "status": 200,
+      "sha256": "612dd0c04e570e30c41ccd082ec9ba23f5d3577a0171c6f7034d615a3d513505"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-443410.html",
+      "fetchedAt": "2026-11-10T21:17:31.350718+00:00",
+      "status": 200,
+      "sha256": "1f24df76788d7b2a9303210cb86ee588cf5c0241092ea5abad3a866bea2ef951"
+    },
+    {
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0322",
+      "fetchedAt": "2026-11-10T21:17:34.443245+00:00",
+      "status": 200,
+      "sha256": "c6254df484eb1f87da98d7d01349e115da174229683cbca8e2609f2a50b24702"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/GISOpenwave/security-advisories-public/main/CAN-2026-2032674.md",
+      "fetchedAt": "2026-11-10T21:17:34.478969+00:00",
+      "status": 200,
+      "sha256": "4cc078feaa11720e9225009f7acfde33d9718ea1e27ece2eb20b2709f1d3d37f"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109582",
+      "fetchedAt": "2026-11-10T21:17:35.806991+00:00",
+      "status": 200,
+      "sha256": "2cbb76707effe49c0ef8d6b2597ad1fb4ea78e71523815d9e9eef1b95f2aff38"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-113437",
+      "fetchedAt": "2026-11-10T21:17:36.064171+00:00",
+      "status": 200,
+      "sha256": "dced9acd0d08bc2de65fac7b2c997350644ca6f3ddafdc0c9762696f96e4cdb0"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-113362",
+      "fetchedAt": "2026-11-10T21:17:36.084506+00:00",
+      "status": 200,
+      "sha256": "1a52160cf0791f2e3c209559cbe34cc0da5b710db78efe79695d9ffb35b883d5"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-113363",
+      "fetchedAt": "2026-11-10T21:17:36.169438+00:00",
+      "status": 200,
+      "sha256": "06aded60b37aef69da22a27daccdf50c2bfa0b4d5aa558c3071f9a96cbd24678"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-113364",
+      "fetchedAt": "2026-11-10T21:17:36.348120+00:00",
+      "status": 200,
+      "sha256": "7f24fc94c9b9d2bc2ba5a74f11d48f572e532029e4496fea097d39bfefcd53ab"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-120386",
+      "fetchedAt": "2026-11-10T21:17:36.539384+00:00",
+      "status": 200,
+      "sha256": "2bc1381d505a6f1d9c0239ce8964cd12af67a38e9b4850038f4cac8cb6ec77d7"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-117477",
+      "fetchedAt": "2026-11-10T21:17:36.698737+00:00",
+      "status": 200,
+      "sha256": "4f59ace0858874ee59e13ea3127e20118807de0f8bd4e099ea2f029d561ea9d7"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-111793",
+      "fetchedAt": "2026-11-10T21:17:37.022472+00:00",
+      "status": 200,
+      "sha256": "f2787e0f1c25a103b201316db395a1a0696ca877146965860e3d0c85d702942d"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-19868",
+      "fetchedAt": "2026-11-10T21:17:37.352935+00:00",
+      "status": 200,
+      "sha256": "e79d086c691244d542179a4dfb320771f50c1c656b6574f145239002a1d81b88"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/newsflash/2026110901.html",
+      "fetchedAt": "2026-11-10T21:20:14.832062+00:00",
+      "status": 200,
+      "sha256": "351c3d6c93d371033743aa7e220066d677e398fffb8980fc8a6c47129b2e5f6c"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-104023.html",
+      "fetchedAt": "2026-11-10T21:20:14.832778+00:00",
+      "status": 200,
+      "sha256": "1c868755586b4f34bc2c04736bea24a6496a11aa67d9666535b287e6e3cd8260"
+    },
+    {
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-123158",
+      "fetchedAt": "2026-11-10T21:20:14.833275+00:00",
+      "status": 200,
+      "sha256": "cbdf5efdd423cdd5283716c762980309ec2571d52a6cf2ce213aa09314ec31a2"
+    },
+    {
+      "url": "https://api.github.com/repos/effekseer/Effekseer/releases/tags/1808",
+      "fetchedAt": "2026-11-10T21:20:14.833673+00:00",
+      "status": 200,
+      "sha256": "828d0c1304a075c99d0ddb34b59985f0bb1092abfad577cbcf14dfbd0b6aceb9"
+    },
+    {
+      "url": "https://api.github.com/repos/airbytehq/airbyte/security-advisories/GHSA-g35w-6r6v-h4r7",
+      "fetchedAt": "2026-11-10T21:20:14.834591+00:00",
+      "status": 200,
+      "sha256": "65d9476df2b792171d82c3701b53b457fa946f132ca77fe29f89a2a0207d5d32"
+    }
+  ],
+  "relatedAudit": "docs/data/product-advisory-review-2026-11-11-oss-notices.json",
+  "limitations": [
+    "HTTP200 is not full body verification; vendor JS shell, PDF and full downstream bulletin limits individually recorded.",
+    "KEV mirror has ten new Nov9/10 entries; unresolved eight vendor candidates remain gaps, not no-change.",
+    "JVN candidates with unresolved first vendor disclosure dates are held; fixes and release dates are not substituted for disclosure.",
+    "No exploit code executed; public reports not proof of user exposure.",
+    "Fetch sha256 describes received bytes; gzip responses were decompressed locally for review.",
+    "New records use independently established alert/critical/exploited grounds; KEV unknown does not mean absent.",
+    "Product meta left to integration owner. Validation succeeds with windowEnd and lastVerifiedDate2026-11-11."
+  ]
+}

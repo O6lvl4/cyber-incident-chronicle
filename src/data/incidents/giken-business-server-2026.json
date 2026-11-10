@@ -1,0 +1,86 @@
+{
+  "id": "giken-business-server-2026",
+  "company": "株式会社技研製作所",
+  "geography": "日本（海外企業の担当者情報を含む）",
+  "title": "業務サーバーのランサムウェア被害と約3,200名の情報漏えいのおそれ",
+  "announcementDate": "2026-11-09",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-11",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "ランサムウェアを含む外部からの不正アクセス。初期侵入経路は調査中",
+    "status": "confirmed"
+  },
+  "summary": "業務サーバー1台がランサムウェアを含む不正アクセスを受けたと公表。11月5日に異常を確認し6日に外部接続を遮断。取引先担当者やグループ従業員約3,200名に漏えいのおそれがあるが、外部送信の痕跡は未確認。",
+  "affectedData": [
+    "海外企業を含む顧客・指定工場担当者の氏名・会社名・部署・役職・連絡先",
+    "従業員の氏名・メールアドレス・社員番号、顧客支援システムのID・暗号化保存パスワード"
+  ],
+  "counts": [
+    {
+      "value": 3200,
+      "unit": "名",
+      "status": "possible",
+      "label": "対象となる方の概数。情報送信の痕跡は未確認",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "情報窃取の可能性を否定できないため公表。漏えい確認済みとはしない。",
+    "11月5日はサーバー異常の確認日。攻撃開始日・確定した情報流出の初確認日に転用しない。"
+  ],
+  "sources": [
+    {
+      "title": "業務サーバーのランサムウェア被害と約3,200名の情報漏えいのおそれ",
+      "url": "https://www.giken.com/ja/news/notices/notice_20261109/",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-05",
+      "label": "異常確認",
+      "kind": "occurrence",
+      "summary": "業務用サーバーの異常を確認。",
+      "sourceUrl": "https://www.giken.com/ja/news/notices/notice_20261109/"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "外部接続遮断",
+      "kind": "occurrence",
+      "summary": "外部接続を遮断し調査。",
+      "sourceUrl": "https://www.giken.com/ja/news/notices/notice_20261109/"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "業務サーバー1台がランサムウェアを含む不正アクセスを受けたと公表。11月5日に異常を確認し6日に外部接続を遮断。取引先担当者やグループ従業員約3,200名に漏えいのおそれがあるが、外部送信の痕跡は未確認。",
+      "sourceUrl": "https://www.giken.com/ja/news/notices/notice_20261109/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "検知日から攻撃開始日を推定しない。",
+      "sourceUrl": "https://www.giken.com/ja/news/notices/notice_20261109/",
+      "reviewedDate": "2026-11-11"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "個人情報流出等の被害を初めて確認した日は特定されていない。検知・公表日では代用しない。",
+      "sourceUrl": "https://www.giken.com/ja/news/notices/notice_20261109/",
+      "reviewedDate": "2026-11-11"
+    }
+  }
+}
