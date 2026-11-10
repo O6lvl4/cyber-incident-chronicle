@@ -1,0 +1,101 @@
+{
+  "id": "nttdata-sumitomo-vitality-2026",
+  "company": "株式会社NTTデータ（住友生命Vitality申込サービス）",
+  "geography": "日本",
+  "title": "Vitality単独利用サービスの申込システムで約8万名の情報漏えい",
+  "announcementDate": "2026-11-09",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃発生時期は未公表",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-10",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "NTTデータが住友生命から受託するVitality単独利用サービスの申込システムで不正アクセスを確認。約8万名の情報漏えいが判明し、うち約1,000名は一部マスキング済みカード番号を含む。11月3日に外部アクセスを遮断し、一部手続きを停止。",
+  "affectedData": [
+    "Vitality体験版・企業型、Vitalityスマート（福利厚生タイプ含む）の利用者・過去利用者の氏名、住所、電話番号、生年月日、メールアドレス、一部マスキング済みクレジットカード番号のいずれか。",
+    "保険契約・保険契約に付随するVitalityの情報や、歩数等の健康プログラム利用データは含まれない。"
+  ],
+  "counts": [
+    {
+      "value": 80000,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "漏えいを確認した単独利用サービスの利用者の約数。",
+      "approximate": true
+    },
+    {
+      "value": 1000,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "約8万名の内数：一部マスキング済みカード番号が漏えいした利用者の約数。",
+      "approximate": true
+    }
+  ],
+  "caveats": [
+    "11月2日は不正アクセスを確認した日。攻撃開始日や個人情報漏えいの初確認日とは断定しない。",
+    "単独利用の新規申込、登録情報変更、企業担当者ポータル等は停止。Vitalityアプリの利用や保険契約手続き全体の停止ではない。",
+    "原因・経緯は調査中で再開時期は未定。不正利用やインターネット上での公開は公表時点で確認されていない。",
+    "他のNTTデータ関連サービスの事案との共通侵入は確認できないため統合しない。"
+  ],
+  "sources": [
+    {
+      "title": "NTTデータ：当社受託システムにおける個人情報漏えいについて",
+      "url": "https://www.nttdata.com/global/ja/news/release/2026/110900/",
+      "publishedDate": "2026-11-09"
+    },
+    {
+      "title": "住友生命：業務委託先システムへの不正アクセスによるお客さま情報漏えいに関するお詫びとお知らせ",
+      "url": "https://www.sumitomolife.co.jp/news/detail/newsrelease_261109.html",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-02",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "受託申込サービスへの不正アクセスを確認。後続の調査で個人情報漏えいが判明した。",
+      "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/110900/"
+    },
+    {
+      "date": "2026-11-03",
+      "label": "外部アクセス遮断",
+      "kind": "occurrence",
+      "summary": "該当サービスへの外部アクセスを遮断し一時停止。",
+      "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/110900/"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "対象範囲を公表",
+      "kind": "disclosure",
+      "summary": "NTTデータが住友生命から受託するVitality単独利用サービスの申込システムで不正アクセスを確認。約8万名の情報漏えいが判明し、うち約1,000名は一部マスキング済みカード番号を含む。11月3日に外部アクセスを遮断し、一部手続きを停止。",
+      "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/110900/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃時期や被害確認日を推定しない。",
+      "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/110900/",
+      "reviewedDate": "2026-11-10"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃時期や被害確認日を推定しない。",
+      "sourceUrl": "https://www.nttdata.com/global/ja/news/release/2026/110900/",
+      "reviewedDate": "2026-11-10"
+    }
+  }
+}

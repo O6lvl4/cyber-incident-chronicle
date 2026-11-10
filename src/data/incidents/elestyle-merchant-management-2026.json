@@ -1,0 +1,116 @@
+{
+  "id": "elestyle-merchant-management-2026",
+  "company": "ELESTYLE（OneQR・elepay／楽天銀行インバウンド決済）",
+  "geography": "日本企業・国内サービス",
+  "title": "加盟店登録7,162件に取得可能性、楽天銀行が最大907件の範囲を公表",
+  "announcementDate": "2026-10-29",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-10-25",
+  "occurredDateLabel": "不正アクセスの時間帯（9時30分頃から16時頃）",
+  "updatedDate": "2026-11-06",
+  "statusAsOfDate": "2026-11-06",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "管理システムの一部機能におけるアクセス制御不備の悪用",
+    "status": "confirmed"
+  },
+  "summary": "10月25日にアクセス制御不備を悪用した不正アクセスを確認。加盟店登録情報7,162件の一部が取得された可能性を公表した。11月6日に楽天銀行が委託先の同事案による最大907件の可能性範囲を説明。銀行自身のシステム侵害ではない。",
+  "affectedData": [
+    "ELESTYLEの加盟店登録情報7,162件：ユーザー名、メールアドレス、システム内部識別子等。ユーザー名に会社名・氏名を登録した場合はそれらも対象",
+    "楽天銀行インバウンド決済サービス加盟店の最大907件：個人事業主・法人顧客のユーザー名とメールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 7162,
+      "unit": "件",
+      "status": "possible",
+      "label": "ELESTYLE加盟店登録情報の取得可能性範囲。情報取得が確定した件数ではない",
+      "approximate": false
+    },
+    {
+      "value": 907,
+      "unit": "件",
+      "status": "possible",
+      "label": "楽天銀行が公表した委託先事案の最大対象範囲。7,162件と重複し得る利用者側の範囲で加算しない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "同じELESTYLE事案と楽天銀行の利用者側公表を統合。別の独立攻撃として重複計上しない。",
+    "楽天銀行のシステムが不正アクセスを受けたものではない。楽天銀行の判明日は委託先報告を受けた10月29日で、攻撃日とは区別。",
+    "ログインパスワード、エンドユーザー情報、カード・銀行口座情報、注文・決済情報、本人確認書類等は取得可能性のある情報に含まれない。",
+    "管理画面への不正ログインやサーバー侵入は現時点で未確認。管理画面利用、注文受付、決済処理への影響はない。",
+    "アクセス制御不備は公式の原因説明。具体的な設定・実装の種類やCVEは未公表で、推定しない。"
+  ],
+  "sources": [
+    {
+      "title": "ELESTYLE：システムへの不正アクセスと情報漏えいの可能性",
+      "url": "https://elestyle.jp/20261029-report",
+      "publishedDate": "2026-10-29"
+    },
+    {
+      "title": "楽天銀行：ELESTYLE委託先事案によるメールアドレス等の漏えい可能性",
+      "url": "https://www.rakuten-bank.co.jp/info/2026/261106.html",
+      "publishedDate": "2026-11-06"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-25",
+      "label": "アクセス制御不備を悪用した不正アクセス",
+      "kind": "occurrence",
+      "summary": "9時30分頃から16時頃までのアクセスを確認し、同日中に外部アクセスを遮断。",
+      "sourceUrl": "https://elestyle.jp/20261029-report"
+    },
+    {
+      "date": "2026-10-27",
+      "label": "原因となった不備を修正",
+      "kind": "update",
+      "summary": "一部機能のアクセス制御不備を修正。",
+      "sourceUrl": "https://elestyle.jp/20261029-report"
+    },
+    {
+      "date": "2026-10-29",
+      "label": "加盟店情報の取得可能性を公表",
+      "kind": "disclosure",
+      "summary": "7,162件の登録情報を可能性範囲として公表。管理画面の不正ログインやサーバー侵入は未確認。",
+      "sourceUrl": "https://elestyle.jp/20261029-report"
+    },
+    {
+      "date": "2026-10-29",
+      "label": "楽天銀行が委託先報告で把握",
+      "kind": "update",
+      "summary": "楽天銀行がELESTYLEから報告を受けて判明。銀行自身のシステム侵害ではない。",
+      "sourceUrl": "https://www.rakuten-bank.co.jp/info/2026/261106.html"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "楽天銀行が最大907件の可能性範囲を公表",
+      "kind": "update",
+      "summary": "対象サービス加盟店のユーザー名・メールアドレス。決済情報等は含まれず、二次被害は未確認。",
+      "sourceUrl": "https://www.rakuten-bank.co.jp/info/2026/261106.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-11-10",
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年10月25日9時30分頃から16時頃",
+      "note": "公式がアクセス制御不備を悪用した不正アクセスの時間帯を明示。同日中に遮断。",
+      "sourceUrl": "https://elestyle.jp/20261029-report",
+      "reviewedDate": "2026-11-10",
+      "startDate": "2026-10-25"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "流出被害の初確認日未公表",
+      "note": "情報取得は可能性の段階。10月25日のアクセス確認日や、10月29日の楽天銀行の報告受領日を流出被害の初確認日へ転用しない。",
+      "sourceUrl": "https://elestyle.jp/20261029-report",
+      "reviewedDate": "2026-11-10"
+    }
+  }
+}

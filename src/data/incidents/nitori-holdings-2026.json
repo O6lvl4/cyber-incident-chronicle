@@ -1,0 +1,82 @@
+{
+  "id": "nitori-holdings-2026",
+  "company": "ニトリホールディングス",
+  "geography": "日本企業・国内サービス",
+  "title": "個人・法人会員や購入者情報、最大3,762万件の流出可能性",
+  "announcementDate": "2026-11-09",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "10月中旬から下旬にアクセスの可能性（11月6日に不正アクセス判明）",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "管理システムへの第三者による不正アクセス。原因・侵入経路は調査中",
+    "status": "unknown"
+  },
+  "summary": "11月6日に管理システムへの不正アクセスを確認し遮断。個人・法人会員、商品購入者、公式ECショップの注文に関する情報が最大3,762万件流出した可能性を公表した。10月中旬から下旬のアクセスの可能性も調査している。",
+  "affectedData": [
+    "個人会員・商品購入者：会員番号、氏名・フリガナ、メールアドレス、住所、電話番号、生年月日、性別",
+    "法人会員：会員番号、会社名、部署名、代表者氏名、会社住所・電話番号、担当者氏名・メールアドレス・電話番号",
+    "ニトリネットおよびECモールのニトリ公式ショップを通じた注文情報"
+  ],
+  "counts": [
+    {
+      "value": 37620000,
+      "unit": "件",
+      "status": "possible",
+      "label": "流出した可能性がある情報の最大件数。実人数や流出確定件数ではない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "情報の組み合わせは対象者ごとに異なる。最大件数はログ解析・照合で変更される可能性がある。",
+    "ログインパスワードとクレジットカード情報は対象に含まれない。",
+    "10月中旬から下旬は第三者アクセスの可能性として示された時期。確定した攻撃開始日や便宜的な日付境界を置かない。",
+    "脆弱箇所への対応を実施したとの記載だけから、特定脆弱性・PHP・認証情報悪用を侵入原因と推定しない。"
+  ],
+  "sources": [
+    {
+      "title": "ニトリホールディングス：個人情報漏えいの可能性に関するお知らせ",
+      "url": "https://www.nitorihd.co.jp/news/items/2b702dbe4d438f7fef74945d68e5bd27_3.pdf",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-06",
+      "label": "不正アクセスを確認・遮断",
+      "kind": "occurrence",
+      "summary": "管理システムへの不正アクセスを確認し、遮断と外部専門機関による調査を開始。流出確定日ではない。",
+      "sourceUrl": "https://www.nitorihd.co.jp/news/items/2b702dbe4d438f7fef74945d68e5bd27_3.pdf"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "最大3,762万件の流出可能性を公表",
+      "kind": "disclosure",
+      "summary": "10月中旬から下旬のアクセスの可能性も判明。原因、侵入経路、影響範囲および二次被害を引き続き調査。",
+      "sourceUrl": "https://www.nitorihd.co.jp/news/items/2b702dbe4d438f7fef74945d68e5bd27_3.pdf"
+    }
+  ],
+  "lastVerifiedDate": "2026-11-10",
+  "eventDates": {
+    "attack": {
+      "precision": "approximate",
+      "label": "2026年10月中旬から下旬（アクセスの可能性）",
+      "note": "11月6日判明後のログ解析等で、それ以前の第三者アクセスの可能性を確認。公表は中旬から下旬までの精度で、開始日・終了日を作らない。",
+      "sourceUrl": "https://www.nitorihd.co.jp/news/items/2b702dbe4d438f7fef74945d68e5bd27_3.pdf",
+      "reviewedDate": "2026-11-10"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "被害の初確認日未公表",
+      "note": "11月6日は不正アクセスの判明日。情報流出は可能性の段階であり、確定した流出被害の初確認日は示されていない。",
+      "sourceUrl": "https://www.nitorihd.co.jp/news/items/2b702dbe4d438f7fef74945d68e5bd27_3.pdf",
+      "reviewedDate": "2026-11-10"
+    }
+  }
+}

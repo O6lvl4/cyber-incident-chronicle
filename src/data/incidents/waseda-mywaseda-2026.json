@@ -1,0 +1,99 @@
+{
+  "id": "waseda-mywaseda-2026",
+  "company": "早稲田大学（MyWaseda）",
+  "geography": "日本・大学",
+  "title": "MyWasedaのログイン用ユーザー情報、延べ3,342件の取得を確認",
+  "announcementDate": "2026-11-09",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": "2026-08-31",
+  "occurredDateLabel": "不正アクセスの痕跡の日付",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ユーザー情報管理システムへの不正侵入。侵入経路は調査中",
+    "status": "unknown"
+  },
+  "summary": "MyWasedaのログイン用ユーザー情報を管理するシステムへの侵入で、延べ3,342件の取得を確認。8月31日の不正アクセス痕跡が調査の端緒となった。学生・教職員へのパスワード変更案内や、卒業生向けWaseda ID利用サービスの一時停止を実施した。",
+  "affectedData": [
+    "個別情報81件：氏名・資格名38件、氏名・資格名・Wasedaメールアドレス23件、氏名・暗号化された状態で保存されたパスワード20件",
+    "職員等のユーザー情報3,261件：教職員番号、氏名、Wasedaメールアドレス、所属部署名、資格名、暗号化された状態で保存されたパスワード"
+  ],
+  "counts": [
+    {
+      "value": 3342,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "第三者による取得を確認した延べ件数。81件と3,261件の合計で、実人数ではない",
+      "approximate": false
+    },
+    {
+      "value": 81,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "個別に取得された情報。延べ3,342件の内数で再加算しない",
+      "approximate": false
+    },
+    {
+      "value": 3261,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "6項目が一体として取得された職員等のユーザー情報。延べ3,342件の内数",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "同一利用者が複数のメールアドレスを持つ場合があり、延べ件数は実人数と一致しない。冒頭の約3,400件とは同じ対象。",
+    "パスワードは利用者が設定した文字列をそのまま保存したものではない。暗号方式・ハッシュ方式など未公表の実装は補わない。",
+    "PHP脆弱性への対応は調査の契機。公表資料はPHP脆弱性の悪用を今回の侵入原因と断定していない。",
+    "8月31日は不正アクセスの痕跡が示す日で、痕跡を発見した日や情報取得を確認した日ではない。",
+    "上記以外の情報取得は未確認だが否定できず調査中。入試志願者・オープンカレッジ受講生への影響は現時点で未確認。",
+    "卒業生のMyWaseda、メール、証明書発行等の一時停止は安全確認のため。再開日は未公表。"
+  ],
+  "sources": [
+    {
+      "title": "早稲田大学：不正アクセスによる個人情報漏えいについて",
+      "url": "https://www.waseda.jp/top/news/topic/124183",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-31",
+      "label": "不正アクセスの痕跡が示す日",
+      "kind": "occurrence",
+      "summary": "後日の点検で、この日に行われた不正アクセスの痕跡を確認。発見日とは区別。",
+      "sourceUrl": "https://www.waseda.jp/top/news/topic/124183"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "情報取得とサービス制限を公表",
+      "kind": "disclosure",
+      "summary": "延べ3,342件の取得確認、関連システムの停止・アクセス制限、卒業生向けサービスの一時停止を説明。",
+      "sourceUrl": "https://www.waseda.jp/top/news/topic/124183"
+    }
+  ],
+  "lastVerifiedDate": "2026-11-10",
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年8月31日（不正アクセスの痕跡）",
+      "note": "公表がこの日に行われた不正アクセスの痕跡を明示。初期侵入の開始や攻撃期間全体を確定するものではない。",
+      "sourceUrl": "https://www.waseda.jp/top/news/topic/124183",
+      "reviewedDate": "2026-11-10",
+      "startDate": "2026-08-31"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "情報取得の初確認日未公表",
+      "note": "点検で痕跡を発見し、調査範囲を広げて侵入と情報取得を確認したとの説明。発見・取得確認の日付は示されていない。",
+      "sourceUrl": "https://www.waseda.jp/top/news/topic/124183",
+      "reviewedDate": "2026-11-10"
+    }
+  }
+}

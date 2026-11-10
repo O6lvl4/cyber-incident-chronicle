@@ -1,0 +1,84 @@
+{
+  "kind": "product",
+  "id": "DENTSUSOKEN-IPLASS-2026-11-04",
+  "aliases": [],
+  "vendor": "電通総研",
+  "product": "iPLAss Ver.2",
+  "productKey": "dentsusoken-iplass",
+  "title": "iPLAss Ver.2：管理機能への認証なしアクセス（実悪用報告あり）",
+  "summary": "iPLAss Ver.2と利用環境側の不十分なアクセス制御の組み合わせにより、認証を経ずに非公開想定の管理機能へ到達できる場合がある。開発元は顧客環境で不正アクセスと情報ダウンロードを確認した。",
+  "publishedDate": "2026-11-04",
+  "publishedAt": null,
+  "dateSourceUrl": "https://www.dentsusoken.com/news/topics/2026/1104_2.html",
+  "dateNote": "開発元告知に明記された公表日。CVEデータベースの公開日時とは区別する。",
+  "listedDate": "2026-11-04",
+  "listedNote": "開発元が実悪用を11月4日に公表した日。検知日11月2日とは区別する。",
+  "modifiedAt": null,
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:20:58.938753Z",
+  "affected": [
+    {
+      "name": "iPLAss Ver.2",
+      "affected": "Ver.2でアプリケーションサーバー等の特定管理機能へのアクセス制御が十分でない構成",
+      "fixed": "Ver.3以降では同様の脆弱性が生じないと開発元が確認。最新版への更新を推奨。",
+      "sourceUrl": "https://www.dentsusoken.com/news/topics/2026/1104_2.html",
+      "note": "Ver.2の具体的なパッチ番号や各環境への適用方法は公開本文にない。"
+    }
+  ],
+  "severity": {
+    "label": "unknown",
+    "sourceUrl": null,
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "reported",
+    "sourceUrl": "https://www.dentsusoken.com/news/topics/2026/1104_2.html"
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-10T05:17:08.655891Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-10T05:17:09.341815Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "exploited"
+  ],
+  "mitigations": [
+    {
+      "text": "利用版と管理機能へのアクセス制御を確認し、開発元の案内に従い最新版への更新を検討する。",
+      "sourceUrl": "https://www.dentsusoken.com/news/topics/2026/1104_2.html"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "開発元セキュリティ告知",
+      "url": "https://www.dentsusoken.com/news/topics/2026/1104_2.html",
+      "publishedDate": "2026-11-04"
+    }
+  ],
+  "caveats": [
+    "CISA本体KEV JSONはHTTP403。取得失敗を未掲載という判定にせず、KEVはunknownとする。",
+    "開発元告知単位の識別子でありCVE番号ではない。CVE・CVSS・深刻度評価は未公表のため推測しない。",
+    "調査継続中。製品の挙動と利用環境のアクセス設定との組み合わせという条件を保持する。",
+    "LAWSON DO! SPORTS等の顧客事案や別のFACERE事案と本製品記録は区別する。顧客数、流出件数、攻撃開始日は推定しない。"
+  ]
+}

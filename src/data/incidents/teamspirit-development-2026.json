@@ -1,0 +1,107 @@
+{
+  "id": "teamspirit-development-2026",
+  "company": "チームスピリット",
+  "geography": "日本企業・国内サービス",
+  "title": "開発用サーバーからの侵害で重複除外2万8,824件が流出",
+  "announcementDate": "2026-11-06",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表（10月27日に不正ログイン・データ取得を確認）",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "開発用サーバーの設定・情報管理不備に伴う不正ログインと、保存認証情報を使ったクラウドデータ取得",
+    "status": "confirmed"
+  },
+  "summary": "10月27日に開発用サーバーへの不正ログインと、保存されていた認証情報を用いたクラウドデータ取得を確認。重複除外28,824件が流出し、要配慮個人情報35件を含む。11月9日のFAQで本番環境とは別に保有したデータの範囲を補足した。",
+  "affectedData": [
+    "契約企業担当者・一部利用ユーザー：氏名、メール、ログインID、識別番号・アカウント情報、問い合わせ・依頼記録の一部",
+    "サービス提供・維持のため本番環境とは別に保管した顧客企業従業員の勤怠記録の一部、契約・利用環境等の企業情報",
+    "資料請求・問い合わせ・セミナー申込者の識別番号や企業情報",
+    "従業員・退職者：氏名、社員番号、業務用メール、入退社日、誕生日（月日）、社内システムID等、業務管理記録。要配慮個人情報も含む"
+  ],
+  "counts": [
+    {
+      "value": 28824,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "現時点で確認した重複を除く流出個人情報の件数",
+      "approximate": false
+    },
+    {
+      "value": 35,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "流出した要配慮個人情報。28,824件の内数で再加算しない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "顧客が本番のTeamSpirit上で運用する勤怠・工数・経費・稟議等のデータへの不正アクセスは現時点で未確認。漏えいした勤怠記録は別環境に保管していたもの。",
+    "原因は開発用サーバーの設定と情報管理の不備が重なったこと。未知の脆弱性によるものではないと公式が明記。",
+    "保存認証情報によるクラウド取得は開発用サーバーへの不正ログイン後の段階。初期侵入を認証情報悪用だけで分類しない。",
+    "全利用企業の全従業員が対象ではない。対象者により流出項目が異なる。件数をサービス利用者総数に広げない。",
+    "カード情報・銀行口座情報は今回の流出情報に含まれない。二次被害や外部Web・SNSでの公開は現時点で未確認。",
+    "11月9日はFAQ追加日で、新たな攻撃・件数増加の公表ではない。サービスは通常提供を継続。"
+  ],
+  "sources": [
+    {
+      "title": "チームスピリット：不正アクセスによる情報漏えい（11月6日公表・11月9日FAQ追加）",
+      "url": "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/",
+      "publishedDate": "2026-11-06"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-27",
+      "label": "不正ログインとデータ取得を確認",
+      "kind": "occurrence",
+      "summary": "開発用サーバーに保管した認証情報を使ったクラウドデータ取得を確認。同日サーバー停止・外部接続経路遮断。",
+      "sourceUrl": "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/"
+    },
+    {
+      "date": "2026-10-30",
+      "label": "個人情報保護委員会へ報告",
+      "kind": "update",
+      "summary": "速報を提出。被害確認日・攻撃開始日とは別の手続日。",
+      "sourceUrl": "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "流出件数・原因を公表",
+      "kind": "disclosure",
+      "summary": "16時公表。重複除外28,824件、うち要配慮個人情報35件。対象者への通知を順次開始。",
+      "sourceUrl": "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "FAQで対象範囲を補足",
+      "kind": "update",
+      "summary": "本番データへの不正アクセス未確認、対象者は一部、カード・銀行口座情報の流出なし等を説明。",
+      "sourceUrl": "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/"
+    }
+  ],
+  "lastVerifiedDate": "2026-11-10",
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃開始日未公表",
+      "note": "10月27日は不正ログインとクラウドデータ取得を確認した日。実際の初期侵入日や実行期間は明示されていない。",
+      "sourceUrl": "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/",
+      "reviewedDate": "2026-11-10"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年10月27日（クラウドデータ取得の確認）",
+      "note": "発生の経緯で、第三者の不正ログインと保存認証情報を用いたクラウドからのデータ取得をこの日に確認したと説明。",
+      "sourceUrl": "https://corp.teamspirit.com/news/information/2026/11/2026_1106_01/",
+      "reviewedDate": "2026-11-10",
+      "startDate": "2026-10-27"
+    }
+  }
+}

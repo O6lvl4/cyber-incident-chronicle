@@ -1,0 +1,81 @@
+{
+  "id": "gains-getchu-2026",
+  "company": "ゲインズ（Getchu.com）",
+  "geography": "日本企業・国内サービス",
+  "title": "会員情報が流出、続報でアフィリエイターの支払口座情報も確認",
+  "announcementDate": "2026-11-04",
+  "announcementDateLabel": "収録した公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表（10月28日17時30分頃に不正アクセス確認）",
+  "updatedDate": "2026-11-06",
+  "statusAsOfDate": "2026-11-06",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "会員管理システムへの不正アクセス。具体的な侵入手法は未公表",
+    "status": "unknown"
+  },
+  "summary": "10月28日に会員管理システムへの不正アクセスを確認し、11月4日1時頃に遮断・安全確認を完了。個人情報の一部流出を公表し、11月6日の更新でアフィリエイター会員の支払口座情報の流出も確認した。件数は公表していない。",
+  "affectedData": [
+    "流出可能性のある会員情報：会員ID、メールアドレス、パスワード、氏名、郵便番号、住所、電話番号",
+    "流出確認済みのアフィリエイター会員支払口座情報：銀行名、支店名、口座種類、口座番号"
+  ],
+  "counts": [],
+  "caveats": [
+    "冒頭は個人情報の一部流出を確認済みとする一方、会員情報の列挙は流出可能性のある全項目。全会員の全項目流出とはしない。",
+    "対象は10月28日17時30分頃までに会員登録した利用者。登録対象期間を攻撃期間へ読み替えない。件数・実人数は未公表。",
+    "パスワードの保存方式は未公表。平文・暗号化・ハッシュ化を推測しない。緊急リセットとログイン時の再設定措置を実施。",
+    "カード情報は対象システムに保持していない。DL.Getchu.comとGyutto.comでは本件による流出は発生していないと説明。",
+    "10月28日は不正アクセス確認日、11月6日17時は支払口座情報流出の追記公表時刻。流出の初確認日とは断定しない。"
+  ],
+  "sources": [
+    {
+      "title": "ゲインズ：Getchu.comの情報流出（11月4日公表・11月6日17時更新）",
+      "url": "https://www.getchu.com/getchu/news20261104.html",
+      "publishedDate": "2026-11-04"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-28",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "17時30分頃に会員管理システムへの不正アクセスを確認。緊急の通信遮断等を開始。",
+      "sourceUrl": "https://www.getchu.com/getchu/news20261104.html"
+    },
+    {
+      "date": "2026-11-04",
+      "label": "遮断・安全確認を完了し公表",
+      "kind": "disclosure",
+      "summary": "1時頃に遮断と安全確認を完了。個人情報の一部流出と対象情報の可能性範囲を公表。",
+      "sourceUrl": "https://www.getchu.com/getchu/news20261104.html"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "支払口座情報の流出を追記",
+      "kind": "update",
+      "summary": "17時更新。アフィリエイター会員の銀行名・支店名・口座種類・口座番号の流出を確認したと説明。",
+      "sourceUrl": "https://www.getchu.com/getchu/news20261104.html"
+    }
+  ],
+  "lastVerifiedDate": "2026-11-10",
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃開始日未公表",
+      "note": "10月28日17時30分頃は不正アクセスの確認時刻。攻撃開始・期間自体は示されていない。",
+      "sourceUrl": "https://www.getchu.com/getchu/news20261104.html",
+      "reviewedDate": "2026-11-10"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "情報流出の初確認日未公表",
+      "note": "個人情報の一部流出と支払口座情報流出を確認しているが、初めて流出被害を確認した日は明示されていない。検知日・追記公表日から補完しない。",
+      "sourceUrl": "https://www.getchu.com/getchu/news20261104.html",
+      "reviewedDate": "2026-11-10"
+    }
+  }
+}
