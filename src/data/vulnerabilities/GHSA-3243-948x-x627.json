@@ -1,0 +1,81 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-3243-948x-x627",
+  "aliases": [
+    "RUSTSEC-2026-0458"
+  ],
+  "title": "Memory exhaustion when parsing a crafted iloc box",
+  "summary": "`heifer-isobmff` read the item and extent counts of the `iloc` box (item\nlocations) from the file and allocated memory for them before checking that the\nbox was large enough to hold that many entries. Extents that declare no field at\nall take zero bytes each, so a small crafted file could declare an enormous\nnumber of them. A 42 KB file made parsing allocate several gigabytes, which can\nexhaust memory and abort the process.\n\nAny application that parses untrusted HEIF/HEIC files with `heifer-isobmff`,\ndirectly or through the `heifer` crate, is affected: `HeifFile::parse` and every\ndecoding and metadata function built on it.\n\nThe flaw was corrected in 0.3.27 (commit\n[`1a8426e`](https://github.com/HarpeLm/Heifer/commit/1a8426e1b41160fb48d8baf8be858238570a8093)):\nitem and extent counts are bounded by the size of the box, extents that carry no\nfield are rejected, and the total number of extents is capped.",
+  "publishedAt": "2026-11-06T21:30:22Z",
+  "modifiedAt": "2026-11-06T21:30:22Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:21:53.895676Z",
+  "dateSourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-3243-948x-x627",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "heifer-isobmff",
+      "ranges": [
+        {
+          "affected": "< 0.3.27",
+          "fixed": "0.3.27",
+          "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-3243-948x-x627"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "heifer",
+      "ranges": [
+        {
+          "affected": "< 0.3.27",
+          "fixed": "0.3.27",
+          "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-3243-948x-x627"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-3243-948x-x627",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-3243-948x-x627"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-3243-948x-x627",
+      "type": "maintainer",
+      "title": "Memory exhaustion when parsing a crafted iloc box",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T21:30:22Z",
+      "modifiedAt": "2026-11-06T21:30:22Z"
+    },
+    {
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0458",
+      "type": "advisoryDatabase",
+      "title": "Memory exhaustion when parsing a crafted `iloc` box",
+      "publishedDate": "2026-11-04",
+      "publishedAt": "2026-11-04T12:00:00Z",
+      "modifiedAt": "2026-11-09T10:00:02.350064057Z"
+    }
+  ],
+  "caveats": [
+    "開発元の初回公表日時とOSV・Reviewedの登録日時は出典別に保持。実悪用とKEVのunknownは安全・未掲載を意味しない。",
+    "OSVの元範囲: [[{\"type\":\"SEMVER\",\"events\":[{\"introduced\":\"0.0.0-0\"},{\"fixed\":\"0.3.27\"}]}]]"
+  ]
+}

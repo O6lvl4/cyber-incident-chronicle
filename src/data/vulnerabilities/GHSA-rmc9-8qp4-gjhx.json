@@ -1,0 +1,81 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rmc9-8qp4-gjhx",
+  "aliases": [
+    "RUSTSEC-2026-0460"
+  ],
+  "title": "Panic on chroma QP offsets enabled with an empty offset list",
+  "summary": "An HEVC Range Extensions stream can set `cu_chroma_qp_offset_enabled_flag` in a\nslice while its picture parameter set carries an empty chroma QP offset list.\nThe decoder then read the list at the signalled index, which panicked on the\nout-of-range access. A panic aborts the decoding thread, or the whole process\nwhen built with `panic = \"abort\"`. The crate forbids `unsafe` code, so there is\nno memory corruption.\n\nAny application that decodes untrusted HEIC files or HEVC streams with\n`heifer-hevc-dec`, directly or through the `heifer` crate, is affected.\n\nThe flaw was corrected in 0.3.27 (commit\n[`1a8426e`](https://github.com/HarpeLm/Heifer/commit/1a8426e1b41160fb48d8baf8be858238570a8093)):\nwith an empty list there is no offset to apply, and the offset is zero.",
+  "publishedAt": "2026-11-06T21:30:25Z",
+  "modifiedAt": "2026-11-06T21:30:25Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:21:53.895676Z",
+  "dateSourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "heifer-hevc-dec",
+      "ranges": [
+        {
+          "affected": "< 0.3.27",
+          "fixed": "0.3.27",
+          "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "heifer",
+      "ranges": [
+        {
+          "affected": "< 0.3.27",
+          "fixed": "0.3.27",
+          "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx",
+      "type": "maintainer",
+      "title": "Panic on chroma QP offsets enabled with an empty offset list",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T21:30:25Z",
+      "modifiedAt": "2026-11-06T21:30:25Z"
+    },
+    {
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0460",
+      "type": "advisoryDatabase",
+      "title": "Panic on chroma QP offsets enabled with an empty offset list",
+      "publishedDate": "2026-11-04",
+      "publishedAt": "2026-11-04T12:00:00Z",
+      "modifiedAt": "2026-11-09T10:15:02.433477015Z"
+    }
+  ],
+  "caveats": [
+    "開発元の初回公表日時とOSV・Reviewedの登録日時は出典別に保持。実悪用とKEVのunknownは安全・未掲載を意味しない。",
+    "OSVの元範囲: [[{\"type\":\"SEMVER\",\"events\":[{\"introduced\":\"0.0.0-0\"},{\"fixed\":\"0.3.27\"}]}]]"
+  ]
+}

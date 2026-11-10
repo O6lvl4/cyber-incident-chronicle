@@ -6,9 +6,9 @@
   "announcementDateLabel": "初報公表",
   "occurredDate": "2026-10-07",
   "occurredDateLabel": "公表されたサービス障害発生日時（午前3時40分頃）",
-  "updatedDate": "2026-10-27",
-  "statusAsOfDate": "2026-10-27",
-  "lastVerifiedDate": "2026-10-29",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-10",
   "impactTypes": [
     "leak",
     "outage",
@@ -141,55 +141,292 @@
     "10月25日18時の確認は公式トップの対応継続表示。未取得の過去資料・全利用企業を再監査したものではなく、全面復旧や流出状況の変化を意味しない。",
     "第7報の最大71社への不正照会と最大31社31件の内数を、外部持ち出し確定数へ転用しない。旧48社・2社メールと重複加算しない。",
     "206顧客は495組織の内数で旧194顧客を更新した値。全顧客の全面復旧を意味しない。",
-    "原因のOSS名・バージョン・CVEは第7報に明記されておらず推測しない。社長説明のAI進化への言及を当該攻撃のAI利用証拠にしない。"
+    "原因のOSS名・バージョン・CVEは第7報に明記されておらず推測しない。社長説明のAI進化への言及を当該攻撃のAI利用証拠にしない。",
+    "11月9日の全サービス再開は利用企業ファイバーゲートの停止範囲に限定。IDCFの被害全体の解消や他利用企業の復旧を推定しない。"
   ],
   "geography": "日本のIDCFクラウド（東日本リージョン1）",
   "sources": [
-    {"title": "IDCフロンティア：不正アクセスによる障害の初報", "url": "https://www.idcf.jp/news/topics/20261007001", "publishedDate": "2026-10-07"},
-    {"title": "IDCフロンティア：第2報、ランサムウェアと影響範囲を確認", "url": "https://www.idcf.jp/news/topics/20261007002", "publishedDate": "2026-10-07"},
-    {"title": "IDCフロンティア：第3報、4ゾーンのデータ復元困難と別環境での再構築を案内", "url": "https://www.idcf.jp/news/topics/20261008001", "publishedDate": "2026-10-08"},
-    {"title": "IDCフロンティア：第4報、不正アクセスによる障害への対応体制", "url": "https://www.idcf.jp/news/topics/20261009001/", "publishedDate": "2026-10-09"},
-    {"title": "JR東日本：IDCF起因のメール配信サービスからの漏えい可能性", "url": "https://www.jreast.co.jp/press/2026/20261009_ho02.pdf", "publishedDate": "2026-10-09"},
-    {"title": "ビューカード：IDCF起因のメールアドレス漏えい可能性", "url": "https://www.jreast.co.jp/card/news/pdf/20261009.pdf", "publishedDate": "2026-10-09"},
-    {"title": "ニッスイ：日水物流のシステム障害と入出荷停止（第1報）", "url": "https://www.nissui.co.jp/news/2026100702.html", "publishedDate": "2026-10-07"},
-    {"title": "ニッスイ：IDCF起因と一部入出荷再開方針、被害サーバーの情報範囲（第2報）", "url": "https://www.nissui.co.jp/news/20261009.html", "publishedDate": "2026-10-09"},
-    {"title": "JR九州：IDCF起因のWeb会員メールアドレス漏えいの可能性", "url": "https://www.jrkyushu.co.jp/common/inc/news/newtopics/__icsFiles/afieldfile/2026/10/09/202691009_mail_address_access_1.pdf", "publishedDate": "2026-10-09"},
-    {"title": "IDCフロンティア：調査・復旧の対応状況（10月26日18時更新）", "url": "https://www.idcf.jp/", "publishedDate": "2026-10-26"},
-    {"title": "JR東海：IDCF起因の2通販サイトのメールアドレス等漏えい可能性", "url": "https://market.jr-central.co.jp/shop/pages/20261013.aspx", "publishedDate": "2026-10-13"},
-    {"title": "IDCフロンティア：第5報、仮想サーバー調査・バックアップ・ポータル照会", "url": "https://www.idcf.jp/news/topics/20261014001", "publishedDate": "2026-10-14"},
-    {"title": "SB C&S：一部機能を除き概ね通常利用、登録情報流出なしと判断（10月14日更新）", "url": "https://cas.softbank.jp/information/261007_01/", "publishedDate": "2026-10-07"},
-    {"title": "ピーチ・ジョン：IDCF起因のメールアドレス漏えい可能性", "url": "https://www.peachjohn.co.jp/information/detail/137", "publishedDate": "2026-10-14"},
-    {"title": "IDCフロンティア：第6報、バックアップサービス提供再開・スナップショット停止継続", "url": "https://www.idcf.jp/news/topics/20261018001/", "publishedDate": "2026-10-18"},
-    {"title": "フューチャーショップ：IDCF起因メール配信オプションの流出なしと判断", "url": "https://www.future-shop.jp/news/2026/10/15-2.html", "publishedDate": "2026-10-15"},
-    {"title": "IDCフロンティア：第7報・調査結果と再発防止", "url": "https://www.idcf.jp/news/topics/20261027001/", "publishedDate": "2026-10-27"}
+    {
+      "title": "IDCフロンティア：不正アクセスによる障害の初報",
+      "url": "https://www.idcf.jp/news/topics/20261007001",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "title": "IDCフロンティア：第2報、ランサムウェアと影響範囲を確認",
+      "url": "https://www.idcf.jp/news/topics/20261007002",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "title": "IDCフロンティア：第3報、4ゾーンのデータ復元困難と別環境での再構築を案内",
+      "url": "https://www.idcf.jp/news/topics/20261008001",
+      "publishedDate": "2026-10-08"
+    },
+    {
+      "title": "IDCフロンティア：第4報、不正アクセスによる障害への対応体制",
+      "url": "https://www.idcf.jp/news/topics/20261009001/",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "JR東日本：IDCF起因のメール配信サービスからの漏えい可能性",
+      "url": "https://www.jreast.co.jp/press/2026/20261009_ho02.pdf",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "ビューカード：IDCF起因のメールアドレス漏えい可能性",
+      "url": "https://www.jreast.co.jp/card/news/pdf/20261009.pdf",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "ニッスイ：日水物流のシステム障害と入出荷停止（第1報）",
+      "url": "https://www.nissui.co.jp/news/2026100702.html",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "title": "ニッスイ：IDCF起因と一部入出荷再開方針、被害サーバーの情報範囲（第2報）",
+      "url": "https://www.nissui.co.jp/news/20261009.html",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "JR九州：IDCF起因のWeb会員メールアドレス漏えいの可能性",
+      "url": "https://www.jrkyushu.co.jp/common/inc/news/newtopics/__icsFiles/afieldfile/2026/10/09/202691009_mail_address_access_1.pdf",
+      "publishedDate": "2026-10-09"
+    },
+    {
+      "title": "IDCフロンティア：調査・復旧の対応状況（10月26日18時更新）",
+      "url": "https://www.idcf.jp/",
+      "publishedDate": "2026-10-26"
+    },
+    {
+      "title": "JR東海：IDCF起因の2通販サイトのメールアドレス等漏えい可能性",
+      "url": "https://market.jr-central.co.jp/shop/pages/20261013.aspx",
+      "publishedDate": "2026-10-13"
+    },
+    {
+      "title": "IDCフロンティア：第5報、仮想サーバー調査・バックアップ・ポータル照会",
+      "url": "https://www.idcf.jp/news/topics/20261014001",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "title": "SB C&S：一部機能を除き概ね通常利用、登録情報流出なしと判断（10月14日更新）",
+      "url": "https://cas.softbank.jp/information/261007_01/",
+      "publishedDate": "2026-10-07"
+    },
+    {
+      "title": "ピーチ・ジョン：IDCF起因のメールアドレス漏えい可能性",
+      "url": "https://www.peachjohn.co.jp/information/detail/137",
+      "publishedDate": "2026-10-14"
+    },
+    {
+      "title": "IDCフロンティア：第6報、バックアップサービス提供再開・スナップショット停止継続",
+      "url": "https://www.idcf.jp/news/topics/20261018001/",
+      "publishedDate": "2026-10-18"
+    },
+    {
+      "title": "フューチャーショップ：IDCF起因メール配信オプションの流出なしと判断",
+      "url": "https://www.future-shop.jp/news/2026/10/15-2.html",
+      "publishedDate": "2026-10-15"
+    },
+    {
+      "title": "IDCフロンティア：第7報・調査結果と再発防止",
+      "url": "https://www.idcf.jp/news/topics/20261027001/",
+      "publishedDate": "2026-10-27"
+    },
+    {
+      "title": "ファイバーゲート：クラウドサーバー停止に伴うサービス影響について（最終報）",
+      "url": "https://www.fibergate.co.jp/news/32970/",
+      "publishedDate": "2026-11-09"
+    }
   ],
   "timeline": [
-    {"date": "2026-10-07", "label": "障害発生", "kind": "occurrence", "summary": "午前3時40分頃から東日本リージョン1でサービス障害", "sourceUrl": "https://www.idcf.jp/news/topics/20261007001"},
-    {"date": "2026-10-07", "label": "初報公表", "kind": "disclosure", "summary": "第三者による不正アクセスと一部サービス障害を公表", "sourceUrl": "https://www.idcf.jp/news/topics/20261007001"},
-    {"date": "2026-10-07", "label": "第2報公表", "kind": "update", "summary": "ランサムウェア攻撃、影響495組織、対象リージョンの遮断・停止を公表", "sourceUrl": "https://www.idcf.jp/news/topics/20261007002"},
-    {"date": "2026-10-07", "label": "日水物流の入出荷停止を公表", "kind": "update", "summary": "委託先データセンターへの不正アクセスが原因とみられるシステム障害で、日水物流が扱う商品の入出荷ができないと公表", "sourceUrl": "https://www.nissui.co.jp/news/2026100702.html"},
-    {"date": "2026-10-08", "label": "復旧方針と影響範囲を更新", "kind": "update", "summary": "対象4ゾーンのデータ取り出し・復元は困難な見通し。顧客保有バックアップでの別環境再構築を案内", "sourceUrl": "https://www.idcf.jp/news/topics/20261008001"},
-    {"date": "2026-10-09", "label": "第4報で対応体制を公表", "kind": "update", "summary": "親会社ソフトバンクと顧客対応・調査復旧・当局対応を行う体制を説明", "sourceUrl": "https://www.idcf.jp/news/topics/20261009001/"},
-    {"date": "2026-10-09", "label": "利用企業の漏えい可能性公表", "kind": "update", "summary": "JR東日本がえきねっと・大人の休日倶楽部のメール配信障害と情報閲覧・取得の可能性を公表", "sourceUrl": "https://www.jreast.co.jp/press/2026/20261009_ho02.pdf"},
-    {"date": "2026-10-09", "label": "ビューカードの対象範囲公表", "kind": "update", "summary": "VIEW’s NET向けメール配信障害と、約403万件のメールアドレスの閲覧・取得の可能性を公表", "sourceUrl": "https://www.jreast.co.jp/card/news/pdf/20261009.pdf"},
-    {"date": "2026-10-09", "label": "日水物流の一部入出荷再開方針", "kind": "update", "summary": "委託先IDCフロンティアの不正アクセスに起因すると明記し、同日から一部の入出荷を再開すると発表。全面復旧の見通しは未公表", "sourceUrl": "https://www.nissui.co.jp/news/20261009.html"},
-    {"date": "2026-10-09", "label": "JR九州が利用者別の可能性を公表", "kind": "update", "summary": "Web会員のメールアドレス最大約130万件に漏えいの可能性。メールマガジン配信ができない状態と説明", "sourceUrl": "https://www.jrkyushu.co.jp/common/inc/news/newtopics/__icsFiles/afieldfile/2026/10/09/202691009_mail_address_access_1.pdf"},
-    {"date": "2026-10-12", "label": "調査・復旧継続の案内を更新", "kind": "update", "summary": "18時更新のホームページ案内で影響範囲の調査・復旧作業の継続を説明。新たに公表すべき重要な事実はないとする", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-13", "label": "JR東海が利用者別範囲を公表", "kind": "update", "summary": "JR東海MARKETといいもの探訪の合計約15,000件に閲覧・取得の可能性。確定流出は未確認", "sourceUrl": "https://market.jr-central.co.jp/shop/pages/20261013.aspx"},
-    {"date": "2026-10-13", "label": "調査・復旧継続を再案内", "kind": "update", "summary": "18時更新。前回以降、新たに公表すべき重要事実はないと説明", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-14", "label": "第5報で範囲別の調査結果を公表", "kind": "update", "summary": "仮想サーバー内データ流出なしと判断。194顧客のバックアップ取り出し可能、ポータル48社への不正照会を確認", "sourceUrl": "https://www.idcf.jp/news/topics/20261014001"},
-    {"date": "2026-10-14", "label": "SB C&Sが復旧状況と情報調査を更新", "kind": "update", "summary": "一部機能を除き概ね通常利用可能。同社登録情報は外部流出なしと判断", "sourceUrl": "https://cas.softbank.jp/information/261007_01/"},
-    {"date": "2026-10-14", "label": "ピーチ・ジョンが可能性を公表", "kind": "update", "summary": "メール配信委託先のIDCF利用に伴うメールアドレスの漏えい可能性。件数は未公表", "sourceUrl": "https://www.peachjohn.co.jp/information/detail/137"},
-    {"date": "2026-10-15", "label": "ホームページの対応状況を更新", "kind": "update", "summary": "18時時点で影響調査・復旧対応は継続し、前回公表以降の新たな重要事実はないと案内。最新は10月14日第5報", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-16", "label": "対応継続・重要な新事実なし", "kind": "update", "summary": "公式トップの18時更新で影響範囲の調査・復旧を継続し、新たに公表すべき重要事実はないと説明。第5報の件数や復旧完了を更新したものではない", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-17", "label": "調査・復旧継続を再案内", "kind": "update", "summary": "公式トップ18時更新。対応継続と新たに公表すべき重要な事実なしと説明。第5報の範囲・数値や全面復旧を更新したものではない", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-18", "label": "バックアップサービス再開を案内（第6報）", "kind": "update", "summary": "安全性確認が完了しIDCFクラウド バックアップの提供再開を案内。稼働中リージョン等のデータ保全・別環境への復元に利用可能とし、スナップショット機能は停止継続", "sourceUrl": "https://www.idcf.jp/news/topics/20261018001/"},
-    {"date": "2026-10-20", "label": "調査・復旧対応は継続", "kind": "update", "summary": "18時更新の公式トップは第6報以降に公表すべき重要な新事実なしと説明。全面復旧の発表ではない", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-15", "label": "メール配信オプション利用者の調査結果", "kind": "update", "summary": "future Scenario Cast・futureCartRecoveryはメール配信データの外部流出なしと判断。9日に別データセンターで再開済み。本体ECは別基盤で本件対象外。", "sourceUrl": "https://www.future-shop.jp/news/2026/10/15-2.html"},
-    {"date": "2026-10-24", "label": "影響調査・復旧作業を継続", "kind": "update", "summary": "18時の公式トップ更新で対応継続、前回以降の新たな重要事実なしと案内。番号付きの最新続報は18日第6報。", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-25", "label": "影響調査・復旧作業を継続", "kind": "update", "summary": "18時更新の公式トップは前回以降の新たな重要事実なしと案内。最新の番号付き続報は18日第6報で、全面復旧や流出状況の変化を意味しない。", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-26", "label": "調査・復旧の対応継続", "kind": "update", "summary": "18時更新で前回以降の新たな重要事実なしと説明。最新の番号付き公表は18日第6報で、全面復旧ではない。", "sourceUrl": "https://www.idcf.jp/"},
-    {"date": "2026-10-27", "label": "調査完了と原因・対象範囲を公表", "kind": "update", "summary": "OSS脆弱性悪用、不正照会最大71社と内数を確認。バックアップ取り出し可能206顧客へ更新。", "sourceUrl": "https://www.idcf.jp/news/topics/20261027001/"}
+    {
+      "date": "2026-10-07",
+      "label": "障害発生",
+      "kind": "occurrence",
+      "summary": "午前3時40分頃から東日本リージョン1でサービス障害",
+      "sourceUrl": "https://www.idcf.jp/news/topics/20261007001"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "初報公表",
+      "kind": "disclosure",
+      "summary": "第三者による不正アクセスと一部サービス障害を公表",
+      "sourceUrl": "https://www.idcf.jp/news/topics/20261007001"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "第2報公表",
+      "kind": "update",
+      "summary": "ランサムウェア攻撃、影響495組織、対象リージョンの遮断・停止を公表",
+      "sourceUrl": "https://www.idcf.jp/news/topics/20261007002"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "日水物流の入出荷停止を公表",
+      "kind": "update",
+      "summary": "委託先データセンターへの不正アクセスが原因とみられるシステム障害で、日水物流が扱う商品の入出荷ができないと公表",
+      "sourceUrl": "https://www.nissui.co.jp/news/2026100702.html"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "復旧方針と影響範囲を更新",
+      "kind": "update",
+      "summary": "対象4ゾーンのデータ取り出し・復元は困難な見通し。顧客保有バックアップでの別環境再構築を案内",
+      "sourceUrl": "https://www.idcf.jp/news/topics/20261008001"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "第4報で対応体制を公表",
+      "kind": "update",
+      "summary": "親会社ソフトバンクと顧客対応・調査復旧・当局対応を行う体制を説明",
+      "sourceUrl": "https://www.idcf.jp/news/topics/20261009001/"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "利用企業の漏えい可能性公表",
+      "kind": "update",
+      "summary": "JR東日本がえきねっと・大人の休日倶楽部のメール配信障害と情報閲覧・取得の可能性を公表",
+      "sourceUrl": "https://www.jreast.co.jp/press/2026/20261009_ho02.pdf"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "ビューカードの対象範囲公表",
+      "kind": "update",
+      "summary": "VIEW’s NET向けメール配信障害と、約403万件のメールアドレスの閲覧・取得の可能性を公表",
+      "sourceUrl": "https://www.jreast.co.jp/card/news/pdf/20261009.pdf"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "日水物流の一部入出荷再開方針",
+      "kind": "update",
+      "summary": "委託先IDCフロンティアの不正アクセスに起因すると明記し、同日から一部の入出荷を再開すると発表。全面復旧の見通しは未公表",
+      "sourceUrl": "https://www.nissui.co.jp/news/20261009.html"
+    },
+    {
+      "date": "2026-10-09",
+      "label": "JR九州が利用者別の可能性を公表",
+      "kind": "update",
+      "summary": "Web会員のメールアドレス最大約130万件に漏えいの可能性。メールマガジン配信ができない状態と説明",
+      "sourceUrl": "https://www.jrkyushu.co.jp/common/inc/news/newtopics/__icsFiles/afieldfile/2026/10/09/202691009_mail_address_access_1.pdf"
+    },
+    {
+      "date": "2026-10-12",
+      "label": "調査・復旧継続の案内を更新",
+      "kind": "update",
+      "summary": "18時更新のホームページ案内で影響範囲の調査・復旧作業の継続を説明。新たに公表すべき重要な事実はないとする",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "JR東海が利用者別範囲を公表",
+      "kind": "update",
+      "summary": "JR東海MARKETといいもの探訪の合計約15,000件に閲覧・取得の可能性。確定流出は未確認",
+      "sourceUrl": "https://market.jr-central.co.jp/shop/pages/20261013.aspx"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "調査・復旧継続を再案内",
+      "kind": "update",
+      "summary": "18時更新。前回以降、新たに公表すべき重要事実はないと説明",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "第5報で範囲別の調査結果を公表",
+      "kind": "update",
+      "summary": "仮想サーバー内データ流出なしと判断。194顧客のバックアップ取り出し可能、ポータル48社への不正照会を確認",
+      "sourceUrl": "https://www.idcf.jp/news/topics/20261014001"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "SB C&Sが復旧状況と情報調査を更新",
+      "kind": "update",
+      "summary": "一部機能を除き概ね通常利用可能。同社登録情報は外部流出なしと判断",
+      "sourceUrl": "https://cas.softbank.jp/information/261007_01/"
+    },
+    {
+      "date": "2026-10-14",
+      "label": "ピーチ・ジョンが可能性を公表",
+      "kind": "update",
+      "summary": "メール配信委託先のIDCF利用に伴うメールアドレスの漏えい可能性。件数は未公表",
+      "sourceUrl": "https://www.peachjohn.co.jp/information/detail/137"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "ホームページの対応状況を更新",
+      "kind": "update",
+      "summary": "18時時点で影響調査・復旧対応は継続し、前回公表以降の新たな重要事実はないと案内。最新は10月14日第5報",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "対応継続・重要な新事実なし",
+      "kind": "update",
+      "summary": "公式トップの18時更新で影響範囲の調査・復旧を継続し、新たに公表すべき重要事実はないと説明。第5報の件数や復旧完了を更新したものではない",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-17",
+      "label": "調査・復旧継続を再案内",
+      "kind": "update",
+      "summary": "公式トップ18時更新。対応継続と新たに公表すべき重要な事実なしと説明。第5報の範囲・数値や全面復旧を更新したものではない",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-18",
+      "label": "バックアップサービス再開を案内（第6報）",
+      "kind": "update",
+      "summary": "安全性確認が完了しIDCFクラウド バックアップの提供再開を案内。稼働中リージョン等のデータ保全・別環境への復元に利用可能とし、スナップショット機能は停止継続",
+      "sourceUrl": "https://www.idcf.jp/news/topics/20261018001/"
+    },
+    {
+      "date": "2026-10-20",
+      "label": "調査・復旧対応は継続",
+      "kind": "update",
+      "summary": "18時更新の公式トップは第6報以降に公表すべき重要な新事実なしと説明。全面復旧の発表ではない",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-15",
+      "label": "メール配信オプション利用者の調査結果",
+      "kind": "update",
+      "summary": "future Scenario Cast・futureCartRecoveryはメール配信データの外部流出なしと判断。9日に別データセンターで再開済み。本体ECは別基盤で本件対象外。",
+      "sourceUrl": "https://www.future-shop.jp/news/2026/10/15-2.html"
+    },
+    {
+      "date": "2026-10-24",
+      "label": "影響調査・復旧作業を継続",
+      "kind": "update",
+      "summary": "18時の公式トップ更新で対応継続、前回以降の新たな重要事実なしと案内。番号付きの最新続報は18日第6報。",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-25",
+      "label": "影響調査・復旧作業を継続",
+      "kind": "update",
+      "summary": "18時更新の公式トップは前回以降の新たな重要事実なしと案内。最新の番号付き続報は18日第6報で、全面復旧や流出状況の変化を意味しない。",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-26",
+      "label": "調査・復旧の対応継続",
+      "kind": "update",
+      "summary": "18時更新で前回以降の新たな重要事実なしと説明。最新の番号付き公表は18日第6報で、全面復旧ではない。",
+      "sourceUrl": "https://www.idcf.jp/"
+    },
+    {
+      "date": "2026-10-27",
+      "label": "調査完了と原因・対象範囲を公表",
+      "kind": "update",
+      "summary": "OSS脆弱性悪用、不正照会最大71社と内数を確認。バックアップ取り出し可能206顧客へ更新。",
+      "sourceUrl": "https://www.idcf.jp/news/topics/20261027001/"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "利用企業ファイバーゲートが再開を公表",
+      "kind": "update",
+      "summary": "同日13時に同社が停止していた全サービスを再開したと公表。IDCF全顧客の復旧を示すものではない。",
+      "sourceUrl": "https://www.fibergate.co.jp/news/32970/"
+    }
   ],
   "eventDates": {
     "attack": {

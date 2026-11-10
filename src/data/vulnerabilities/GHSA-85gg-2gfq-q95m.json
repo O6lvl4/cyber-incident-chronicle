@@ -1,0 +1,99 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-85gg-2gfq-q95m",
+  "aliases": [
+    "CVE-2026-87008"
+  ],
+  "title": "Code Graph RAG structural tools follow out-of-root symlinks",
+  "summary": "Code Graph RAG structural tools follow out-of-root symlinks",
+  "publishedAt": "2026-11-09T22:16:41Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-85gg-2gfq-q95m/GHSA-85gg-2gfq-q95m.json",
+  "modifiedAt": "2026-11-09T22:16:41Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:24:30.135134Z",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "code-graph-rag",
+      "ranges": [
+        {
+          "affected": "<= 0.0.588",
+          "fixed": "0.0.589",
+          "sourceUrl": "https://api.github.com/repos/vitali87/code-graph-rag/security-advisories/GHSA-85gg-2gfq-q95m"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-85gg-2gfq-q95m/GHSA-85gg-2gfq-q95m.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-85gg-2gfq-q95m/GHSA-85gg-2gfq-q95m.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-85gg-2gfq-q95m/GHSA-85gg-2gfq-q95m.json",
+      "publishedDate": "2026-11-09",
+      "publishedAt": "2026-11-09T22:16:41Z",
+      "modifiedAt": "2026-11-09T22:16:41Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Code Graph RAG structural tools follow out-of-root symlinks",
+      "url": "https://github.com/advisories/GHSA-85gg-2gfq-q95m",
+      "publishedDate": "2026-11-09"
+    },
+    {
+      "url": "https://api.github.com/repos/vitali87/code-graph-rag/security-advisories/GHSA-85gg-2gfq-q95m",
+      "type": "maintainer",
+      "title": "Symlink following in AstGrepService lets structural_search/structural_replace read and overwrite arbitrary files outside the configured project root",
+      "publishedDate": "2026-08-10",
+      "publishedAt": "2026-08-10T00:10:54Z",
+      "modifiedAt": "2026-09-09T19:49:04Z"
+    }
+  ],
+  "caveats": [
+    "GitHub-reviewed Advisory Databaseの固定スナップショットから収録。開発元の資料は個別に確認していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元は<=0.0.588→0.0.589、Reviewedは<0.0.587→0.0.587で異なる。構造検索・置換のsymlink問題であり、別のページ指定read_file問題の修正とは別。",
+    "今回取得した開発元の構造化項目と本文を照合。DBと開発元の日時・版・評価は出典別に保持し、未知値を推測で補わない。"
+  ],
+  "verification": {
+    "level": "database",
+    "sourceSnapshot": "819a1f4bd3a3f9dfe39d37a723efdf25a58f0715",
+    "checkedAt": "2026-11-10T05:20:44.564912Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-85gg-2gfq-q95m",
+        "aliases": [
+          "CVE-2026-87008"
+        ],
+        "publishedAt": "2026-11-09T22:16:41Z",
+        "modifiedAt": "2026-11-09T22:16:41Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-85gg-2gfq-q95m/GHSA-85gg-2gfq-q95m.json"
+      }
+    ]
+  }
+}

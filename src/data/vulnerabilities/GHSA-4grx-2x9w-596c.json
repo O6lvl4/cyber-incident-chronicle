@@ -1,0 +1,126 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4grx-2x9w-596c",
+  "aliases": [
+    "CVE-2023-49092",
+    "GHSA-c38w-74pg-36hr",
+    "RUSTSEC-2023-0071"
+  ],
+  "title": "Marvin Attack: potential key recovery through timing sidechannels",
+  "summary": "Marvin Attack: potential key recovery through timing sidechannels",
+  "publishedAt": "2023-11-28T23:28:25Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2023/11/GHSA-4grx-2x9w-596c/GHSA-4grx-2x9w-596c.json",
+  "modifiedAt": "2026-05-04T20:43:22Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:24:30.135134Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "rsa",
+      "ranges": [
+        {
+          "affected": ">= 0.0.0-0, < 0.10.0",
+          "fixed": "0.10.0",
+          "sourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2023-0071"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.10.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2023/11/GHSA-4grx-2x9w-596c/GHSA-4grx-2x9w-596c.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2023/11/GHSA-4grx-2x9w-596c/GHSA-4grx-2x9w-596c.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2023/11/GHSA-4grx-2x9w-596c/GHSA-4grx-2x9w-596c.json",
+      "publishedDate": "2023-11-28",
+      "publishedAt": "2023-11-28T23:28:25Z",
+      "modifiedAt": "2026-05-04T20:43:22Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Marvin Attack: potential key recovery through timing sidechannels",
+      "url": "https://github.com/advisories/GHSA-4grx-2x9w-596c",
+      "publishedDate": "2023-11-28"
+    },
+    {
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2023-0071",
+      "type": "advisoryDatabase",
+      "title": "Marvin Attack: potential key recovery through timing sidechannels",
+      "publishedDate": "2023-11-22",
+      "publishedAt": "2023-11-22T12:00:00Z",
+      "modifiedAt": "2026-11-08T23:15:02.609337046Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/RustCrypto/RSA/master/CHANGELOG.md",
+      "type": "maintainer",
+      "title": "RustCrypto RSA 0.10.0 changelog",
+      "publishedDate": null
+    },
+    {
+      "url": "https://crates.io/api/v1/crates/rsa",
+      "type": "release",
+      "title": "rsa crate release metadata",
+      "publishedDate": null
+    }
+  ],
+  "caveats": [
+    "GitHub-reviewed Advisory Databaseの固定スナップショットから収録。開発元の資料は個別に確認していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "OSVの明示別名でGHSA2件とCVE-2023-49092を統合し、元記録の来歴を保持。類似タイトルによる推測統合ではない。",
+    "修正境界0.10.0はOSV・開発元CHANGELOGの定数時間演算への移行・crates.io公開を照合。旧Reviewedの<=0.9.6・修正版不明は原資料として保持。",
+    "0.10系列には公開API変更がある。開発元GHSA API404を確認成功としない。"
+  ],
+  "verification": {
+    "level": "database",
+    "sourceSnapshot": "819a1f4bd3a3f9dfe39d37a723efdf25a58f0715",
+    "checkedAt": "2026-11-10T05:20:44.564912Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-4grx-2x9w-596c",
+        "aliases": [],
+        "publishedAt": "2023-11-28T23:28:25Z",
+        "modifiedAt": "2026-05-04T20:43:22Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2023/11/GHSA-4grx-2x9w-596c/GHSA-4grx-2x9w-596c.json"
+      }
+    ]
+  }
+}

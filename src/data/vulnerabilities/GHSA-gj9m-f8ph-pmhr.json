@@ -1,0 +1,71 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-gj9m-f8ph-pmhr",
+  "aliases": [
+    "CVE-2026-102895"
+  ],
+  "title": "GPUStack：loopback信頼を利用した認証回避と実悪用報告",
+  "summary": "GPUStack2.2.0未満は、同一ホストのリバースプロキシや実IPヘッダーをloopbackと判定すると、既定のforce_auth_localhost=Falseで未認証要求を管理者へ昇格させ得る。開発元は2.1.1環境で実悪用を観測したと報告し、2.2.0への更新を案内している。",
+  "publishedAt": "2026-07-31T11:58:14Z",
+  "modifiedAt": "2026-09-29T20:39:56Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:21:53.895676Z",
+  "dateSourceUrl": "https://api.github.com/repos/gpustack/gpustack/security-advisories/GHSA-gj9m-f8ph-pmhr",
+  "affected": [
+    {
+      "ecosystem": "pip",
+      "packageName": "gpustack",
+      "ranges": [
+        {
+          "affected": "< 2.2.0",
+          "fixed": "2.2.0",
+          "sourceUrl": "https://api.github.com/repos/gpustack/gpustack/security-advisories/GHSA-gj9m-f8ph-pmhr"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://api.github.com/repos/gpustack/gpustack/security-advisories/GHSA-gj9m-f8ph-pmhr",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 9.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://api.github.com/repos/gpustack/gpustack/security-advisories/GHSA-gj9m-f8ph-pmhr"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "reported",
+    "sourceUrl": "https://api.github.com/repos/gpustack/gpustack/security-advisories/GHSA-gj9m-f8ph-pmhr"
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/gpustack/gpustack/security-advisories/GHSA-gj9m-f8ph-pmhr",
+      "type": "maintainer",
+      "title": "Authentication bypass via trusted loopback source (reverse-proxy TCP peer or X-GPUStack-Real-IP header) grants unauthenticated admin",
+      "publishedDate": "2026-07-31",
+      "publishedAt": "2026-07-31T11:58:14Z",
+      "modifiedAt": "2026-09-29T20:39:56Z"
+    },
+    {
+      "url": "https://api.osv.dev/v1/vulns/GHSA-gj9m-f8ph-pmhr",
+      "type": "advisoryDatabase",
+      "title": "GPUStack: Authentication bypass via trusted loopback source (reverse-proxy TCP peer or X-GPUStack-Real-IP header) grants unauthenticated admin",
+      "publishedDate": "2026-11-09",
+      "publishedAt": "2026-11-09T22:15:27Z",
+      "modifiedAt": "2026-11-09T22:30:04.096651997Z"
+    }
+  ],
+  "caveats": [
+    "開発元の初回公表日時とOSV・Reviewedの登録日時は出典別に保持。実悪用とKEVのunknownは安全・未掲載を意味しない。",
+    "実悪用は開発元の明記によるものでCritical評価からの推定ではない。2.2.0ではloopback自動admin経路を削除。",
+    "復旧再取得時にOSV個別APIは成功した。失われた実行での404を現在の失敗として再利用しない。CISA本体の確認状況と既存証拠制約に従いKEVはunknownのまま。"
+  ]
+}

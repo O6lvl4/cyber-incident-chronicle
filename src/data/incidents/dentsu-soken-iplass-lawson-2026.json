@@ -1,0 +1,104 @@
+{
+  "id": "dentsu-soken-iplass-lawson-2026",
+  "company": "株式会社電通総研（LAWSON DO! SPORTS利用環境）",
+  "geography": "日本",
+  "title": "iPLAss利用環境からZIP57件取得、27,908名分の情報漏えいの可能性",
+  "announcementDate": "2026-11-04",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": "2026-11-01",
+  "occurredDateLabel": "不正アクセス期間の開始（11月1日早朝～2日午前）",
+  "updatedDate": "2026-11-06",
+  "statusAsOfDate": "2026-11-06",
+  "lastVerifiedDate": "2026-11-10",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "アクセス権限の設定不備とiPLAss Ver.2の脆弱性による管理機能への不正アクセス",
+    "status": "confirmed"
+  },
+  "summary": "電通総研のiPLAssを利用するLAWSON DO! SPORTS環境で11月1日早朝～2日午前に不正アクセスがあり、個人情報を含むパスワード付きZIP57件が取得された。11月6日に全ファイル確認を終え、内容の漏えい可能性を27,908名分へ更新した。",
+  "affectedData": [
+    "LAWSON DO! SPORTSの氏名、住所、電話番号、メールアドレス、性別、生年月日、大会エントリー時の体調等のアンケート情報。",
+    "クレジットカード等の決済情報と利用者アカウントのパスワードは保持していないため対象外。取得ファイル自体にはZIPパスワードが設定されている。"
+  ],
+  "counts": [
+    {
+      "value": 57,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "不正に取得された個人情報を含むパスワード付きZIPファイル数。",
+      "approximate": false
+    },
+    {
+      "value": 27908,
+      "unit": "名分",
+      "status": "possible",
+      "label": "11月6日に確認済みとなった全57ファイルの個人情報。内容の漏えいは可能性。",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "11月4日は56ファイル25,858名分まで確認。残る1ファイルを11月6日に確認し全57ファイル27,908名分へ更新した。旧人数との合算はしない。",
+    "ZIP取得は確認済みだが、パスワード保護された内容の閲覧・漏えいは可能性として区別する。",
+    "電通総研はiPLAss Ver.2とアクセス制御設定の組合せで認証なしに管理機能へ到達し得ることを説明。ローソンは初期構築時の権限設定不備を原因と公表。",
+    "11月2日夕方以降の不正アクセスは未確認。ローソン独自システムへの不正アクセスは確認されていない。",
+    "同じ資料中のFACERE・エンタGOは9月10日の別環境の事案。最大12,196名を本件へ加算しない。"
+  ],
+  "sources": [
+    {
+      "title": "ローソンエンタテインメント：エンタGOおよびLAWSON DO! SPORTSへの不正アクセス（11月6日追記）",
+      "url": "https://www.ent.lawson.co.jp/wp/wp-content/uploads/2026/11/20261104.pdf",
+      "publishedDate": "2026-11-04"
+    },
+    {
+      "title": "電通総研：iPLAss Ver.2における脆弱性について",
+      "url": "https://www.dentsusoken.com/news/topics/2026/1104_2.html",
+      "publishedDate": "2026-11-04"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-02",
+      "label": "不正アクセス・取得を確認",
+      "kind": "occurrence",
+      "summary": "電通総研が監視アラートから調査し不正アクセスと情報ダウンロードを確認。",
+      "sourceUrl": "https://www.dentsusoken.com/news/topics/2026/1104_2.html"
+    },
+    {
+      "date": "2026-11-04",
+      "label": "初回公表",
+      "kind": "disclosure",
+      "summary": "57ファイルの取得を確認。56ファイル25,858名分を確認し、残る1ファイルは調査中と公表。",
+      "sourceUrl": "https://www.ent.lawson.co.jp/wp/wp-content/uploads/2026/11/20261104.pdf"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "全ファイルの確認を完了",
+      "kind": "update",
+      "summary": "残る1ファイルを確認し、全57ファイル27,908名分へ更新。内容の漏えいは可能性。",
+      "sourceUrl": "https://www.ent.lawson.co.jp/wp/wp-content/uploads/2026/11/20261104.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026年11月1日早朝～2日午前",
+      "note": "ローソン公式が当該環境への不正アクセス期間を明記。",
+      "sourceUrl": "https://www.ent.lawson.co.jp/wp/wp-content/uploads/2026/11/20261104.pdf",
+      "reviewedDate": "2026-11-10",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-02"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年11月2日",
+      "note": "電通総研は監視アラートを契機とした同日の調査で不正アクセスと情報ダウンロードが判明したと説明。ZIP内容の解読確認日ではない。",
+      "sourceUrl": "https://www.dentsusoken.com/news/topics/2026/1104_2.html",
+      "reviewedDate": "2026-11-10",
+      "startDate": "2026-11-02"
+    }
+  }
+}

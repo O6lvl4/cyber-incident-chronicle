@@ -1,0 +1,90 @@
+{
+  "id": "shogakukan-education-websites-2026",
+  "company": "株式会社小学館",
+  "geography": "日本",
+  "title": "教育系2サイトへの不正アクセスで会員情報漏えいのおそれ",
+  "announcementDate": "2026-11-09",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": "2026-07-17",
+  "occurredDateLabel": "公式が示す不正アクセスのあった期間の開始境界（7月17日～8月25日の期間内）",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-10",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "サイトの脆弱性を通じた不正アクセス（具体的手法は未公表）",
+    "status": "confirmed"
+  },
+  "summary": "「みんなの教育技術」「みんなの幼児と保育」で7月17日～8月25日に存在した脆弱性を通じた不正アクセスが10月27日に判明。両サイトで保管していた会員情報が漏えいしたおそれがある。小学館IDの基幹システムへの侵入は確認されていない。",
+  "affectedData": [
+    "両サイトへログインした小学館ID会員の内部識別コード、認証用トークン、ニックネーム、性別、年齢、職業、都道府県、好きな作家・ジャンル、利用サービス、有料記事購入履歴。",
+    "登録がある場合のみ子どもの氏名・ふりがな・生年月日。メールアドレスはニックネームとして登録された場合のみ。",
+    "会員本人の氏名、住所、電話番号、生年月日、通常のメールアドレス、クレジットカード情報、小学館IDパスワードは両サイトに保存せず対象外。"
+  ],
+  "counts": [],
+  "caveats": [
+    "漏えいは可能性として公表され、対象人数・件数は未公表。",
+    "7月17日～8月25日は脆弱性が存在し、その期間内に不正アクセスがあった範囲。全期間連続して攻撃があったとはしない。",
+    "脆弱性は8月25日に修正済み。10月29日に認証用トークンを全無効化し、不要な子どもの登録情報等を削除。悪用は公表時点で未確認。",
+    "小学館IDシステム自体への不正アクセスは未確認。アララ委託先のメール配信事案とは別の対象・経緯として収録。"
+  ],
+  "sources": [
+    {
+      "title": "「みんなの教育技術」「みんなの幼児と保育」不正アクセスおよび会員情報漏えいのおそれについて",
+      "url": "https://kyoiku.sho.jp/news/470901/",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-25",
+      "label": "脆弱性を修正",
+      "kind": "occurrence",
+      "summary": "両サイトの脆弱性を修正。",
+      "sourceUrl": "https://kyoiku.sho.jp/news/470901/"
+    },
+    {
+      "date": "2026-10-27",
+      "label": "不正アクセスが判明",
+      "kind": "occurrence",
+      "summary": "脆弱性が存在した期間内の不正アクセスが判明。情報漏えいは可能性。",
+      "sourceUrl": "https://kyoiku.sho.jp/news/470901/"
+    },
+    {
+      "date": "2026-10-29",
+      "label": "トークン無効化等",
+      "kind": "occurrence",
+      "summary": "全認証用トークンを無効化し、不要な保存情報を削除。",
+      "sourceUrl": "https://kyoiku.sho.jp/news/470901/"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "「みんなの教育技術」「みんなの幼児と保育」で7月17日～8月25日に存在した脆弱性を通じた不正アクセスが10月27日に判明。両サイトで保管していた会員情報が漏えいしたおそれがある。小学館IDの基幹システムへの侵入は確認されていない。",
+      "sourceUrl": "https://kyoiku.sho.jp/news/470901/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026年7月17日～8月25日の期間内",
+      "note": "脆弱性が存在し、その期間内に不正アクセスが行われたと公表。連続した攻撃とは断定しない。",
+      "sourceUrl": "https://kyoiku.sho.jp/news/470901/",
+      "reviewedDate": "2026-11-10",
+      "startDate": "2026-07-17",
+      "endDate": "2026-08-25"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃時期や被害確認日を推定しない。",
+      "sourceUrl": "https://kyoiku.sho.jp/news/470901/",
+      "reviewedDate": "2026-11-10"
+    }
+  }
+}

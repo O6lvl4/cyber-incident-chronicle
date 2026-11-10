@@ -1,0 +1,99 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6j3h-rp73-6rvf",
+  "aliases": [
+    "CVE-2026-102339"
+  ],
+  "title": "Telepresence: Tunnel endpoint accepts caller-supplied session ID with no ownership proof — active client sessions hijackable",
+  "summary": "Telepresence: Tunnel endpoint accepts caller-supplied session ID with no ownership proof — active client sessions hijackable",
+  "publishedAt": "2026-11-09T21:58:00Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-6j3h-rp73-6rvf/GHSA-6j3h-rp73-6rvf.json",
+  "modifiedAt": "2026-11-09T21:58:00Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:24:30.135134Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/telepresenceio/telepresence",
+      "ranges": [
+        {
+          "affected": "<= v2.28.0",
+          "fixed": null,
+          "sourceUrl": "https://api.github.com/repos/telepresenceio/telepresence/security-advisories/GHSA-6j3h-rp73-6rvf"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-6j3h-rp73-6rvf/GHSA-6j3h-rp73-6rvf.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-6j3h-rp73-6rvf/GHSA-6j3h-rp73-6rvf.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-6j3h-rp73-6rvf/GHSA-6j3h-rp73-6rvf.json",
+      "publishedDate": "2026-11-09",
+      "publishedAt": "2026-11-09T21:58:00Z",
+      "modifiedAt": "2026-11-09T21:58:00Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Telepresence: Tunnel endpoint accepts caller-supplied session ID with no ownership proof — active client sessions hijackable",
+      "url": "https://github.com/advisories/GHSA-6j3h-rp73-6rvf",
+      "publishedDate": "2026-11-09"
+    },
+    {
+      "url": "https://api.github.com/repos/telepresenceio/telepresence/security-advisories/GHSA-6j3h-rp73-6rvf",
+      "type": "maintainer",
+      "title": "Tunnel endpoint accepts caller-supplied session ID with no ownership proof — active client sessions hijackable",
+      "publishedDate": "2026-07-22",
+      "publishedAt": "2026-07-22T07:19:42Z",
+      "modifiedAt": "2026-09-28T22:51:05Z"
+    }
+  ],
+  "caveats": [
+    "GitHub-reviewed Advisory Databaseの固定スナップショットから収録。開発元の資料は個別に確認していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元の影響上限<=v2.28.0・修正版未記載を保持。Traffic Managerへの到達と有効なセッションIDが前提で、推測で安全版を補わない。",
+    "今回取得した開発元の構造化項目と本文を照合。DBと開発元の日時・版・評価は出典別に保持し、未知値を推測で補わない。"
+  ],
+  "verification": {
+    "level": "database",
+    "sourceSnapshot": "819a1f4bd3a3f9dfe39d37a723efdf25a58f0715",
+    "checkedAt": "2026-11-10T05:20:44.564912Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-6j3h-rp73-6rvf",
+        "aliases": [
+          "CVE-2026-102339"
+        ],
+        "publishedAt": "2026-11-09T21:58:00Z",
+        "modifiedAt": "2026-11-09T21:58:00Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-6j3h-rp73-6rvf/GHSA-6j3h-rp73-6rvf.json"
+      }
+    ]
+  }
+}

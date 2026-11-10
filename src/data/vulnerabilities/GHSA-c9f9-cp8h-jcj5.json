@@ -1,0 +1,70 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-c9f9-cp8h-jcj5",
+  "aliases": [
+    "RUSTSEC-2026-0462"
+  ],
+  "title": "Unbounded response-body buffering in rmcp Streamable HTTP clients allows memory exhaustion",
+  "summary": "Before 3.9.0, the built-in Streamable HTTP clients in rmcp read non-streaming\nHTTP response bodies into memory with no size limit. Both the reqwest client\n(`transport-streamable-http-client-reqwest`) and the Unix socket client\n(`transport-streamable-http-client-unix-socket`) were affected:\n\n- `application/json` responses to POST requests were read in full before\n  parsing.\n- Non-2xx responses were read in full for error reporting.\n\nA malicious or compromised MCP server can answer with a body that never ends,\nfor example a chunked `application/json` response that streams whitespace. The\nclient buffers it until the process runs out of memory. This works during\n`initialize`, before any authentication. On desktop or agent hosts, this\nterminates the whole host application.\n\nServer-sent event streams are not affected. Each event is already capped by\n`max_sse_event_size`, and events are not accumulated.\n\nThe flaw was corrected in 3.9.0. Successful JSON bodies are limited to 16 MiB\nand non-success bodies to 64 KiB. Bytes are counted while streaming, after\ndecompression. An oversized `Content-Length` is rejected before the body is\nread, and an oversized body is rejected with\n`StreamableHttpError::ResponseBodyTooLarge` instead of being truncated.\n\nIf you cannot upgrade, use a custom `StreamableHttpClient` that enforces a\nresponse body limit, or connect only to trusted MCP servers.",
+  "publishedAt": "2026-11-05T16:46:53Z",
+  "modifiedAt": "2026-11-05T16:46:53Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:21:53.895676Z",
+  "dateSourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "rmcp",
+      "ranges": [
+        {
+          "affected": ">= 0.2.0, < 3.9.0",
+          "fixed": "3.9.0",
+          "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/modelcontextprotocol/rust-sdk/security-advisories/GHSA-c9f9-cp8h-jcj5",
+      "type": "maintainer",
+      "title": "Unbounded response-body buffering in rmcp Streamable HTTP clients allows memory exhaustion",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T16:46:53Z",
+      "modifiedAt": "2026-11-05T16:46:53Z"
+    },
+    {
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0462",
+      "type": "advisoryDatabase",
+      "title": "Unbounded response body buffering in Streamable HTTP clients",
+      "publishedDate": "2026-11-05",
+      "publishedAt": "2026-11-05T12:00:00Z",
+      "modifiedAt": "2026-11-09T10:30:02.590803911Z"
+    }
+  ],
+  "caveats": [
+    "開発元の初回公表日時とOSV・Reviewedの登録日時は出典別に保持。実悪用とKEVのunknownは安全・未掲載を意味しない。",
+    "OSVの元範囲: [[{\"type\":\"SEMVER\",\"events\":[{\"introduced\":\"0.2.0\"},{\"fixed\":\"3.9.0\"}]}]]"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-ghc9-756g-vrcv",
+  "aliases": [
+    "CVE-2026-59171"
+  ],
+  "title": "JSON-java: JSONTokener Has Unbounded Numeric String Resource-Exhaustion DoS",
+  "summary": "JSON-java: JSONTokener Has Unbounded Numeric String Resource-Exhaustion DoS",
+  "publishedAt": "2026-11-09T21:12:46Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-ghc9-756g-vrcv/GHSA-ghc9-756g-vrcv.json",
+  "modifiedAt": "2026-11-09T21:12:46Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:24:30.135134Z",
+  "affected": [
+    {
+      "ecosystem": "maven",
+      "packageName": "org.json:json",
+      "ranges": [
+        {
+          "affected": ">= 20150729, < 20260719",
+          "fixed": "20260719",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-ghc9-756g-vrcv/GHSA-ghc9-756g-vrcv.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "20150729"
+            },
+            {
+              "fixed": "20260719"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-ghc9-756g-vrcv/GHSA-ghc9-756g-vrcv.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-ghc9-756g-vrcv/GHSA-ghc9-756g-vrcv.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-ghc9-756g-vrcv/GHSA-ghc9-756g-vrcv.json",
+      "publishedDate": "2026-11-09",
+      "publishedAt": "2026-11-09T21:12:46Z",
+      "modifiedAt": "2026-11-09T21:12:46Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "JSON-java: JSONTokener Has Unbounded Numeric String Resource-Exhaustion DoS",
+      "url": "https://github.com/advisories/GHSA-ghc9-756g-vrcv",
+      "publishedDate": "2026-11-09"
+    },
+    {
+      "url": "https://api.github.com/repos/stleary/JSON-java/security-advisories/GHSA-ghc9-756g-vrcv",
+      "type": "maintainer",
+      "title": "JSONTokener Unbounded Numeric String Resource-Exhaustion DoS",
+      "publishedDate": "2026-08-01",
+      "publishedAt": "2026-08-01T12:48:08Z",
+      "modifiedAt": "2026-08-01T12:48:08Z"
+    }
+  ],
+  "caveats": [
+    "GitHub-reviewed Advisory Databaseの固定スナップショットから収録。開発元の資料は個別に確認していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元構造化欄は<=20260522→20260719、本文は導入20150729と確認版20260522を説明。本文に残る未修正の説明と構造化修正版を区別。",
+    "今回取得した開発元の構造化項目と本文を照合。DBと開発元の日時・版・評価は出典別に保持し、未知値を推測で補わない。"
+  ],
+  "verification": {
+    "level": "database",
+    "sourceSnapshot": "819a1f4bd3a3f9dfe39d37a723efdf25a58f0715",
+    "checkedAt": "2026-11-10T05:20:44.564912Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-ghc9-756g-vrcv",
+        "aliases": [
+          "CVE-2026-59171"
+        ],
+        "publishedAt": "2026-11-09T21:12:46Z",
+        "modifiedAt": "2026-11-09T21:12:46Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-ghc9-756g-vrcv/GHSA-ghc9-756g-vrcv.json"
+      }
+    ]
+  }
+}

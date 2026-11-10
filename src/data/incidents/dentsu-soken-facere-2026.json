@@ -9,7 +9,7 @@
   "occurredDateLabel": "公式が示す不正アクセス日",
   "updatedDate": "2026-11-04",
   "statusAsOfDate": "2026-11-04",
-  "lastVerifiedDate": "2026-11-06",
+  "lastVerifiedDate": "2026-11-10",
   "impactTypes": [
     "leak",
     "unauthorizedAccess"
@@ -19,18 +19,34 @@
     "label": "FACEREのアクセス権限設定不備を介した第三者の不正アクセス",
     "status": "confirmed"
   },
-  "summary": "10月29日に特定企業のFACERE環境で権限設定不備による第三者閲覧可能状態が判明。調査で9月10日の不正アクセスを確認し、個人情報流出の可能性を公表。設定変更と不正経路遮断を実施した。",
+  "summary": "FACEREの権限設定不備を調べた結果、9月10日の不正アクセスを確認。利用企業ローソンエンタテインメントはエンタGOの最大12,196名の個人情報が閲覧された可能性を公表。提供元と利用企業の対象範囲を区別する。",
   "affectedData": [
-    "特定企業のFACERE環境に保管されていた個人情報。企業名・項目・件数は未公表。"
+    "電通総研の11月4日公表では対象企業・項目・件数は未記載。利用企業ローソンの同日資料でエンタGOの氏名、電話番号、メールアドレス、予約内容が追加判明。",
+    "エンタGOはクレジットカード等の決済情報と利用者パスワードを保持していないため対象外。"
   ],
-  "counts": [],
+  "counts": [
+    {
+      "value": 12196,
+      "unit": "名",
+      "status": "possible",
+      "label": "利用企業エンタGOに限る最大対象。FACERE全体の人数ではない。",
+      "approximate": false
+    }
+  ],
   "caveats": [
-    "11月3日時点で他の設定不備、不正利用や二次被害は未確認。二次被害未確認を漏えい否定とはしない。"
+    "11月3日時点で他の設定不備、不正利用や二次被害は未確認。二次被害未確認を漏えい否定とはしない。",
+    "12,196名はエンタGOだけの最大人数。提供元の全顧客合計としない。ローソン自身の別システムへの不正アクセスは確認されていない。",
+    "同じ利用企業資料にあるiPLAss・LAWSON DO! SPORTSは11月1～2日の別環境の事案。11月6日の追記もiPLAss対象人数の更新であり、FACEREの実質最終公表日は11月4日のまま保持。"
   ],
   "sources": [
     {
       "title": "FACEREのアクセス権限設定不備による個人情報流出の可能性",
       "url": "https://www.dentsusoken.com/news/topics/2026/1104_1.html",
+      "publishedDate": "2026-11-04"
+    },
+    {
+      "title": "ローソンエンタテインメント：エンタGOおよびLAWSON DO! SPORTSへの不正アクセス（FACERE対象範囲）",
+      "url": "https://www.ent.lawson.co.jp/wp/wp-content/uploads/2026/11/20261104.pdf",
       "publishedDate": "2026-11-04"
     }
   ],
@@ -41,6 +57,13 @@
       "kind": "disclosure",
       "summary": "10月29日に特定企業のFACERE環境で権限設定不備による第三者閲覧可能状態が判明。調査で9月10日の不正アクセスを確認し、個人情報流出の可能性を公表。設定変更と不正経路遮断を実施した。",
       "sourceUrl": "https://www.dentsusoken.com/news/topics/2026/1104_1.html"
+    },
+    {
+      "date": "2026-11-04",
+      "label": "利用企業が対象範囲を公表",
+      "kind": "update",
+      "summary": "エンタGOに限る最大12,196名が閲覧された可能性を公表。9月11日以降の不正アクセスは未確認。",
+      "sourceUrl": "https://www.ent.lawson.co.jp/wp/wp-content/uploads/2026/11/20261104.pdf"
     }
   ],
   "eventDates": {

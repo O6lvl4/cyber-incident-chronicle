@@ -1,0 +1,81 @@
+{
+  "id": "yojiya-member-api-2026",
+  "company": "株式会社よーじや",
+  "geography": "日本",
+  "title": "会員情報APIへの不正アクセスで131,557名の情報流出を確認",
+  "announcementDate": "2026-11-09",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃発生時期は未公表",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-10",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "会員情報APIの不正利用（API認証キー悪用の可能性、経路は調査中）",
+    "status": "confirmed"
+  },
+  "summary": "11月7日未明に会員情報APIへの不正アクセスと外部取得を確認。131,557名の情報漏えいを確認し、潜在的な最大対象は134,344名。疑いのあるAPI認証キーを無効化して経路を遮断し、キー流出経路を調査している。",
+  "affectedData": [
+    "11月7日時点の店舗・オンラインショップ・アプリ会員の一部。氏名、フリガナ、住所、電話番号、生年月日、性別、メールアドレス、会員番号、購買統計情報など。",
+    "クレジットカード等の決済情報と会員ログインパスワードは保持していないため対象外。"
+  ],
+  "counts": [
+    {
+      "value": 131557,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "外部漏えいが確認された会員。",
+      "approximate": false
+    },
+    {
+      "value": 134344,
+      "unit": "名",
+      "status": "possible",
+      "label": "潜在的な最大対象人数。確認済み131,557名を含み、合算しない。",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "APIの不正利用は確認済みだが、特定のAPI認証キーの利用は可能性として公表。キーの流出経路は調査中。",
+    "店舗、オンラインショップ、アプリは継続利用可能。店頭での会員番号・電話番号の口頭申告だけによるポイント利用は一時停止。",
+    "11月9日時点で不正使用は未確認。顧客への連絡と個人情報保護委員会・警察への報告は今後の対応として記載されており、完了扱いにしない。"
+  ],
+  "sources": [
+    {
+      "title": "当社システムへの不正アクセスによる個人情報流出に関するお詫びとお知らせ（第一報）",
+      "url": "https://www.yojiya.co.jp/261109-01",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-09",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "11月7日未明に会員情報APIへの不正アクセスと外部取得を確認。131,557名の情報漏えいを確認し、潜在的な最大対象は134,344名。疑いのあるAPI認証キーを無効化して経路を遮断し、キー流出経路を調査している。",
+      "sourceUrl": "https://www.yojiya.co.jp/261109-01"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃時期や被害確認日を推定しない。",
+      "sourceUrl": "https://www.yojiya.co.jp/261109-01",
+      "reviewedDate": "2026-11-10"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年11月7日",
+      "note": "公式が未明の不正アクセス確認と会員情報の外部取得判明を同日に結び付けている。",
+      "sourceUrl": "https://www.yojiya.co.jp/261109-01",
+      "reviewedDate": "2026-11-10",
+      "startDate": "2026-11-07"
+    }
+  }
+}

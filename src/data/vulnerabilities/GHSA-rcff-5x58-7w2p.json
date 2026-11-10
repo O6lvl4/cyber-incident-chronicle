@@ -1,0 +1,81 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rcff-5x58-7w2p",
+  "aliases": [
+    "RUSTSEC-2026-0456"
+  ],
+  "title": "Panic on an HEVC tile layout that does not match the active SPS",
+  "summary": "An HEVC picture parameter set (PPS) stores explicit tile column widths and row\nheights computed against the sequence parameter set (SPS) active when it was\nparsed. A crafted stream can redefine that SPS afterwards, so that the tile sizes\nadd up to more than the picture. The decoder then indexed past its coding tree\nblock tables: Rust's bounds checks turned this into a panic, or the picture was\ndecoded wrongly. A panic aborts the decoding thread, or the whole process when\nbuilt with `panic = \"abort\"`. The crate forbids `unsafe` code, so there is no\nmemory corruption.\n\nAny application that decodes untrusted HEIC files or HEVC streams with\n`heifer-hevc-dec`, directly or through the `heifer` crate, is affected.\n\nThe flaw was corrected in 0.3.27 (commit\n[`71dfc67`](https://github.com/HarpeLm/Heifer/commit/71dfc67f1e3ae3c4b7e4cf633e83a26c94b06a92)):\na tile layout that does not match the picture size is rejected with\n`Error::Invalid` at decode time.",
+  "publishedAt": "2026-11-06T21:30:24Z",
+  "modifiedAt": "2026-11-06T21:30:24Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:21:53.895676Z",
+  "dateSourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rcff-5x58-7w2p",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "heifer-hevc-dec",
+      "ranges": [
+        {
+          "affected": "< 0.3.27",
+          "fixed": "0.3.27",
+          "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rcff-5x58-7w2p"
+        }
+      ]
+    },
+    {
+      "ecosystem": "rust",
+      "packageName": "heifer",
+      "ranges": [
+        {
+          "affected": "< 0.3.27",
+          "fixed": "0.3.27",
+          "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rcff-5x58-7w2p"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rcff-5x58-7w2p",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rcff-5x58-7w2p"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rcff-5x58-7w2p",
+      "type": "maintainer",
+      "title": "Panic on an HEVC tile layout that does not match the active SPS",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T21:30:24Z",
+      "modifiedAt": "2026-11-06T21:30:24Z"
+    },
+    {
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0456",
+      "type": "advisoryDatabase",
+      "title": "Panic on an HEVC tile layout that does not match the active SPS",
+      "publishedDate": "2026-11-04",
+      "publishedAt": "2026-11-04T12:00:00Z",
+      "modifiedAt": "2026-11-09T10:00:02.340396376Z"
+    }
+  ],
+  "caveats": [
+    "開発元の初回公表日時とOSV・Reviewedの登録日時は出典別に保持。実悪用とKEVのunknownは安全・未掲載を意味しない。",
+    "OSVの元範囲: [[{\"type\":\"SEMVER\",\"events\":[{\"introduced\":\"0.0.0-0\"},{\"fixed\":\"0.3.27\"}]}]]"
+  ]
+}

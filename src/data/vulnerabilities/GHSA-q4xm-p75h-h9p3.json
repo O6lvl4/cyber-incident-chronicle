@@ -1,0 +1,113 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-q4xm-p75h-h9p3",
+  "aliases": [
+    "CVE-2026-62662"
+  ],
+  "title": "Pocket ID: The client credentials grant allows any OIDC client to obtain tokens for arbitrary audiences",
+  "summary": "Pocket ID: The client credentials grant allows any OIDC client to obtain tokens for arbitrary audiences",
+  "publishedAt": "2026-11-09T21:17:04Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-q4xm-p75h-h9p3/GHSA-q4xm-p75h-h9p3.json",
+  "modifiedAt": "2026-11-09T21:17:04Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T05:24:30.135134Z",
+  "affected": [
+    {
+      "ecosystem": "go",
+      "packageName": "github.com/pocket-id/pocket-id/backend",
+      "ranges": [
+        {
+          "affected": "< 0.0.0-20260622164202-8158452b3730",
+          "fixed": "0.0.0-20260622164202-8158452b3730",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-q4xm-p75h-h9p3/GHSA-q4xm-p75h-h9p3.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.0.0-20260622164202-8158452b3730"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-q4xm-p75h-h9p3/GHSA-q4xm-p75h-h9p3.json",
+    "cvss": [
+      {
+        "version": "3.0",
+        "score": null,
+        "vector": "CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-q4xm-p75h-h9p3/GHSA-q4xm-p75h-h9p3.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-q4xm-p75h-h9p3/GHSA-q4xm-p75h-h9p3.json",
+      "publishedDate": "2026-11-09",
+      "publishedAt": "2026-11-09T21:17:04Z",
+      "modifiedAt": "2026-11-09T21:17:04Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Pocket ID: The client credentials grant allows any OIDC client to obtain tokens for arbitrary audiences",
+      "url": "https://github.com/advisories/GHSA-q4xm-p75h-h9p3",
+      "publishedDate": "2026-11-09"
+    },
+    {
+      "url": "https://api.github.com/repos/pocket-id/pocket-id/security-advisories/GHSA-q4xm-p75h-h9p3",
+      "type": "maintainer",
+      "title": "Client credentials grant allows any OIDC client to obtain tokens for arbitrary audiences",
+      "publishedDate": "2026-07-13",
+      "publishedAt": "2026-07-13T09:04:15Z",
+      "modifiedAt": "2026-07-16T20:35:49Z"
+    }
+  ],
+  "caveats": [
+    "GitHub-reviewed Advisory Databaseの固定スナップショットから収録。開発元の資料は個別に確認していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "開発元の製品版v1.11.0–v2.9.0→v2.10.0とGo擬似バージョンを区別。認証済みOIDCクライアントが前提。",
+    "今回取得した開発元の構造化項目と本文を照合。DBと開発元の日時・版・評価は出典別に保持し、未知値を推測で補わない。"
+  ],
+  "verification": {
+    "level": "database",
+    "sourceSnapshot": "819a1f4bd3a3f9dfe39d37a723efdf25a58f0715",
+    "checkedAt": "2026-11-10T05:20:44.564912Z"
+  },
+  "provenance": {
+    "advisories": [
+      {
+        "id": "GHSA-q4xm-p75h-h9p3",
+        "aliases": [
+          "CVE-2026-62662"
+        ],
+        "publishedAt": "2026-11-09T21:17:04Z",
+        "modifiedAt": "2026-11-09T21:17:04Z",
+        "withdrawnAt": null,
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/819a1f4bd3a3f9dfe39d37a723efdf25a58f0715/advisories/github-reviewed/2026/11/GHSA-q4xm-p75h-h9p3/GHSA-q4xm-p75h-h9p3.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "id": "edion-ec-logs-payment-2026",
+  "company": "株式会社エディオン",
+  "geography": "日本",
+  "title": "ECログ情報流出・PC決済処理改ざん、ギフトカード漏えいを確認",
+  "announcementDate": "2026-11-06",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": "2026-11-04",
+  "occurredDateLabel": "PC向け不正プログラムの稼働開始（19時過ぎ）。ログ領域への侵入開始日は未公表。",
+  "updatedDate": "2026-11-10",
+  "statusAsOfDate": "2026-11-10",
+  "lastVerifiedDate": "2026-11-10",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ログ領域のシステム脆弱性悪用とPC向け決済入力処理への不正プログラム組込み",
+    "status": "confirmed"
+  },
+  "summary": "ECサイトのログ領域への侵入に続き、PC決済入力処理の不正プログラムが判明。ギフトカード5,360枚の情報漏えいを確認し、決済入力最大556回などは漏えいの可能性を調査中。11月10日訂正で緊急停止は11月7日22時と修正された。",
+  "affectedData": [
+    "第1報：氏名、メールアドレス、電話番号、生年月日、性別、住所、お客様番号等を紐付けたログ、注文情報や他ログとの照合で結び付き得る情報。単独ログの対象件数は精査中。",
+    "第2報：注文エラーログ中のクレジットカード番号・有効期限・名義・セキュリティコード、ギフトカード番号・PIN・利用履歴、ログインID・パスワード。カード・パスワードを含まないとした第1報を訂正。",
+    "PC向け決済入力の改ざんで新規入力されたカード情報が直接外部に漏えいした可能性。スマートフォンからの決済入力はこの不正プログラムの対象外。"
+  ],
+  "counts": [
+    {
+      "value": 4131,
+      "unit": "名",
+      "status": "possible",
+      "label": "第1報：複数項目が紐付いたログの最大対象。",
+      "approximate": false
+    },
+    {
+      "value": 9554,
+      "unit": "名",
+      "status": "possible",
+      "label": "第1報：注文ログと他ログを照合した場合の最大対象。4,131名との重複があり合算しない。",
+      "approximate": false
+    },
+    {
+      "value": 5,
+      "unit": "件",
+      "status": "possible",
+      "label": "第2報：カード情報が一時記録された注文エラーログの最大対象。",
+      "approximate": false
+    },
+    {
+      "value": 5360,
+      "unit": "枚",
+      "status": "confirmed",
+      "label": "第2報で漏えい確認と明記されたエディオンギフトカード。",
+      "approximate": false
+    },
+    {
+      "value": 1141,
+      "unit": "名分",
+      "status": "possible",
+      "label": "第2報：ログインID・パスワードの最大対象。",
+      "approximate": false
+    },
+    {
+      "value": 556,
+      "unit": "回",
+      "status": "possible",
+      "label": "PCの決済情報入力画面で新たにカード情報を入力した最大回数。人数・カード枚数ではない。",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "第1報の4,131名と9,554名は重複し実人数は単純合計13,685名を下回る。後続の件・枚・名分・回も合算しない。",
+    "ログ領域はシステム脆弱性を悪用され、顧客データベース本体への不正アクセス・漏えいは第1報で未確認。決済処理改ざんとの具体的な技術的つながりは断定しない。",
+    "11月9日第2報の緊急停止日「11月8日」は、11月10日に「11月7日22時」へ訂正。訂正版の本文では旧記載に取り消し線がある。",
+    "11月8日21時10分からアプリのデジタル会員証・クーポン表示等だけ再開。ECサイトは停止継続・再開未定。",
+    "第1報のカード番号・ログインパスワード除外は第2報で訂正されており、現状の安全性を示す記述として用いない。スマートフォンの除外は決済改ざんだけに適用する。"
+  ],
+  "sources": [
+    {
+      "title": "ECサイトへの不正アクセスによる個人情報漏洩の可能性について（第1報）",
+      "url": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261106_pr_1.pdf",
+      "publishedDate": "2026-11-06"
+    },
+    {
+      "title": "新たに判明した事象・個人情報漏洩の可能性とサービス停止（第2報、11月10日停止日時訂正）",
+      "url": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261109_pr_1_1.pdf",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-05",
+      "label": "ログ領域への侵入を確認",
+      "kind": "occurrence",
+      "summary": "18時30分頃に不正アクセスとログ情報漏えいの可能性を確認。",
+      "sourceUrl": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261106_pr_1.pdf"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "第1報",
+      "kind": "disclosure",
+      "summary": "ログ領域の侵入と対象範囲を公表。カード・パスワード除外の記載は後日訂正された。",
+      "sourceUrl": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261106_pr_1.pdf"
+    },
+    {
+      "date": "2026-11-07",
+      "label": "関連サービス緊急停止",
+      "kind": "occurrence",
+      "summary": "22時にECサイトと関連アプリを緊急停止。11月10日の訂正後日時。",
+      "sourceUrl": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261109_pr_1_1.pdf"
+    },
+    {
+      "date": "2026-11-08",
+      "label": "アプリの一部機能再開",
+      "kind": "occurrence",
+      "summary": "21時10分から会員証・クーポン表示等に限定して再開。",
+      "sourceUrl": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261109_pr_1_1.pdf"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "第2報・対象情報を訂正",
+      "kind": "update",
+      "summary": "ギフトカード漏えい確認、カード・パスワード対象とPC決済処理改ざんを公表。",
+      "sourceUrl": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261109_pr_1_1.pdf"
+    },
+    {
+      "date": "2026-11-10",
+      "label": "停止日時を訂正",
+      "kind": "update",
+      "summary": "第2報のサービス緊急停止日時を11月8日から11月7日22時へ訂正。",
+      "sourceUrl": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261109_pr_1_1.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年11月4日19時過ぎ",
+      "note": "第2報で示すPC向け不正プログラムの稼働開始。別段階のログ領域侵入開始には適用しない。",
+      "sourceUrl": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261109_pr_1_1.pdf",
+      "reviewedDate": "2026-11-10",
+      "startDate": "2026-11-04"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表日・検知日から攻撃時期や被害確認日を推定しない。",
+      "sourceUrl": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261109_pr_1_1.pdf",
+      "reviewedDate": "2026-11-10"
+    }
+  }
+}

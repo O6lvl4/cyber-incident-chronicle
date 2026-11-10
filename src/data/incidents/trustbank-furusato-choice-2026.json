@@ -6,9 +6,9 @@
   "announcementDateLabel": "収録した公表日",
   "occurredDate": "2026-10-17",
   "occurredDateLabel": "公式が示す不正アクセス発生日",
-  "updatedDate": "2026-10-20",
-  "statusAsOfDate": "2026-10-20",
-  "lastVerifiedDate": "2026-10-21",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-10",
   "impactTypes": [
     "leak",
     "outage",
@@ -19,9 +19,11 @@
     "label": "具体的な侵入手法は未公表",
     "status": "unknown"
   },
-  "summary": "10月19日に異常なアクセス傾向を調査し、17日の不正アクセスと会員情報の流出を確認。19日15時50分に関連サービスを停止した。公表時点で4,454,097件の流出を確認し、件数・範囲は引き続き調査中。",
+  "summary": "10月17日の不正アクセスで会員情報4,454,097件が流出。10月23日に既公表対象の内数5名の追加項目を公表した。段階再開を進め、11月5日にWeb版の6日正午再開、9日にアプリ版の同日15時再開を発表。チョイスPayは今後の再開予定。",
   "affectedData": [
-    "氏名、メールアドレス、住所、電話番号、ハッシュ化されたパスワード、寄附控除試算額"
+    "氏名、メールアドレス、住所、電話番号、ハッシュ化されたパスワード、寄附控除試算額",
+    "10月23日追加：既公表対象の内数5名について、ポイント履歴5名、寄附履歴2名、カード情報（下4桁・名義・有効期限）2名、生年月日2名、送付先1名。項目間の重複あり。",
+    "住所の県名の一部削除1名も公表。これは情報の変更として区別し、流出した項目の追加だけとはしない。"
   ],
   "counts": [
     {
@@ -30,13 +32,30 @@
       "status": "confirmed",
       "label": "公表時点で外部流出を確認した会員情報の件数（調査により変動し得る）",
       "approximate": false
+    },
+    {
+      "value": 5,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "既公表4,454,097件の対象内数：追加項目・変更のあった寄附者。項目間重複を除いた人数。",
+      "approximate": false
+    },
+    {
+      "value": 2,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "上記5名の内数：保存済みカード情報表示ページへの第三者アクセスを確認。カード下4桁・名義・有効期限。",
+      "approximate": false
     }
   ],
   "caveats": [
     "公表された単位は件であり、人数・寄附者総数へ換算しない。",
     "パスワードはハッシュ化された状態と公表しており、平文パスワード流出とは扱わない。",
     "脆弱性への対応調査の記載はあるが、具体的な悪用手法・初期侵入経路は未公表。",
-    "10月20日の個人情報保護委員会への報告は完了、21日の警察への被害申告は予定と区別。再開時期は未定。"
+    "10月20日の個人情報保護委員会への報告は完了、21日の警察への被害申告は当初公表時点では予定。10月20日時点の再開時期未定は後続の段階再開発表で更新された。",
+    "カード表示情報は決済代行会社から都度取得するものでトラストバンク内に保存されていない。同情報だけでカード決済はできない。下4桁をカード番号全桁流出としない。",
+    "10月26日の再開は自治体・事業者向け管理システムで、新規寄附受付再開ではない。10月28日の連携再開も提携各社の同時再開を意味しない。",
+    "Web版・アプリ版の再開日時は公式発表に基づく。独立した稼働確認はしておらず、チョイスPayを含む全面復旧としない。全会員の旧パスワードを無効化し再設定を案内。"
   ],
   "geography": "日本",
   "sources": [
@@ -44,6 +63,31 @@
       "title": "トラストバンク：不正アクセスによる寄附者様情報の外部流出に関するお詫びとお知らせ",
       "url": "https://www.trustbank.co.jp/newsroom/newsrelease/news261020/",
       "publishedDate": "2026-10-20"
+    },
+    {
+      "title": "第2報・追加項目",
+      "url": "https://www.trustbank.co.jp/newsroom/newsrelease/news20261023/",
+      "publishedDate": "2026-10-23"
+    },
+    {
+      "title": "第3報・管理システムの再開",
+      "url": "https://www.trustbank.co.jp/newsroom/newsrelease/new20261026/",
+      "publishedDate": "2026-10-26"
+    },
+    {
+      "title": "第4報・提携先連携の再開",
+      "url": "https://www.trustbank.co.jp/newsroom/newsrelease/news20261028/",
+      "publishedDate": "2026-10-28"
+    },
+    {
+      "title": "第5報・Web版の再開を発表",
+      "url": "https://www.trustbank.co.jp/newsroom/newsrelease/news20261105/",
+      "publishedDate": "2026-11-05"
+    },
+    {
+      "title": "第6報・アプリ版の再開を発表",
+      "url": "https://www.trustbank.co.jp/newsroom/newsrelease/news20261109/",
+      "publishedDate": "2026-11-09"
     }
   ],
   "timeline": [
@@ -67,6 +111,41 @@
       "kind": "disclosure",
       "summary": "4,454,097件と対象項目を公表。原因・範囲の調査を続け、再開時期は未定。",
       "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news261020/"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "第2報・追加項目",
+      "kind": "update",
+      "summary": "既公表対象の内数5名について追加流出項目・住所の一部削除を公表。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news20261023/"
+    },
+    {
+      "date": "2026-10-26",
+      "label": "第3報・管理システムの再開",
+      "kind": "update",
+      "summary": "自治体・事業者向け寄附管理システムを順次再開すると発表。新規寄附受付は対象外。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/new20261026/"
+    },
+    {
+      "date": "2026-10-28",
+      "label": "第4報・提携先連携の再開",
+      "kind": "update",
+      "summary": "提携先サイトの申込・決済に関する連携システムを再開すると発表。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news20261028/"
+    },
+    {
+      "date": "2026-11-05",
+      "label": "第5報・Web版の再開を発表",
+      "kind": "update",
+      "summary": "11月6日12時からWeb版の寄附受付を順次再開すると発表。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news20261105/"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "第6報・アプリ版の再開を発表",
+      "kind": "update",
+      "summary": "11月9日15時からアプリ版を再開すると発表。チョイスPayは今後の再開予定。",
+      "sourceUrl": "https://www.trustbank.co.jp/newsroom/newsrelease/news20261109/"
     }
   ],
   "eventDates": {
