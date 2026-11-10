@@ -1,0 +1,154 @@
+{
+  "kind": "product",
+  "id": "NV26-006",
+  "aliases": [
+    "CVE-2026-113362",
+    "CVE-2026-113363",
+    "CVE-2026-113364"
+  ],
+  "vendor": "日本電気株式会社",
+  "product": "WebSAM WinShare",
+  "productKey": "nec-websam-winshare",
+  "title": "WebSAM WinShare：権限昇格・任意コマンド実行・コード実行",
+  "summary": "3件の脆弱性をNEC告知NV26-006に集約。2件は認証不要のネットワーク攻撃でSYSTEM権限の処理が実行される可能性があり、CNAはCriticalと評価する。",
+  "publishedDate": "2026-11-09",
+  "publishedAt": null,
+  "dateSourceUrl": "https://jpn.nec.com/security-info/secinfo/nv26-006.html",
+  "dateNote": "開発元告知の公開日。CNAレコードやJVN注意喚起の公開日とは区別する。",
+  "listedDate": "2026-11-09",
+  "listedNote": "JVNの製品別注意喚起公開日。",
+  "modifiedAt": "2026-11-10T14:10:50.204Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T21:19:57.829264Z",
+  "affected": [
+    {
+      "name": "WebSAM WinShare / CVE-2026-113362",
+      "affected": "7.5.0以前（7.3.3を除く）、7.6.0、7.7.0〜7.7.1",
+      "fixed": null,
+      "sourceUrl": "https://jpn.nec.com/security-info/secinfo/nv26-006.html",
+      "note": "7.6用・7.7用の修正モジュールを適用。これらは7.5.0以下にも適用可能。公開告知は修正後の版番号を示さない。"
+    },
+    {
+      "name": "WebSAM WinShare / CVE-2026-113363",
+      "affected": "7.2.0〜7.5.0、7.6.0、7.7.0〜7.7.2",
+      "fixed": null,
+      "sourceUrl": "https://jpn.nec.com/security-info/secinfo/nv26-006.html",
+      "note": "7.6用・7.7用の修正モジュールを適用。これらは7.5.0以下にも適用可能。公開告知は修正後の版番号を示さない。"
+    },
+    {
+      "name": "WebSAM WinShare / CVE-2026-113364",
+      "affected": "7.5.0以前、7.6.0、7.7.0〜7.7.2",
+      "fixed": null,
+      "sourceUrl": "https://jpn.nec.com/security-info/secinfo/nv26-006.html",
+      "note": "7.6用・7.7用の修正モジュールを適用。これらは7.5.0以下にも適用可能。公開告知は修正後の版番号を示さない。"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-113363",
+    "cvss": [
+      {
+        "version": "4.0",
+        "score": 8.5,
+        "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-113362"
+      },
+      {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-113363"
+      },
+      {
+        "version": "4.0",
+        "score": 9.3,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-113364"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [
+    {
+      "issuer": "JVN",
+      "title": "WebSAM WinShare：権限昇格・任意コマンド実行・コード実行",
+      "url": "https://jvn.jp/jp/JVN89009783/index.html",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "alertChecks": [
+    {
+      "issuer": "JVN",
+      "url": "https://jvn.jp/",
+      "checkedAt": "2026-11-10T21:19:57.829264Z",
+      "result": "found"
+    }
+  ],
+  "inclusion": [
+    "alert",
+    "critical"
+  ],
+  "mitigations": [
+    {
+      "text": "NECサポートポータルの7.6用／7.7用修正モジュールを適用する。ダウンロードにはログインが必要。",
+      "sourceUrl": "https://jpn.nec.com/security-info/secinfo/nv26-006.html"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "WebSAM WinShare 開発元告知",
+      "url": "https://jpn.nec.com/security-info/secinfo/nv26-006.html",
+      "publishedDate": "2026-11-09"
+    },
+    {
+      "type": "alert",
+      "title": "JVN: WebSAM WinShare：権限昇格・任意コマンド実行・コード実行",
+      "url": "https://jvn.jp/jp/JVN89009783/index.html",
+      "publishedDate": "2026-11-09"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-113362 CNA公開レコード",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-113362",
+      "publishedDate": "2026-11-09",
+      "publishedAt": "2026-11-09T04:10:22.553Z",
+      "modifiedAt": "2026-11-10T14:10:50.204Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-113363 CNA公開レコード",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-113363",
+      "publishedDate": "2026-11-09",
+      "publishedAt": "2026-11-09T04:12:35.450Z",
+      "modifiedAt": "2026-11-10T14:10:12.854Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-113364 CNA公開レコード",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-113364",
+      "publishedDate": "2026-11-09",
+      "publishedAt": "2026-11-09T04:14:03.038Z",
+      "modifiedAt": "2026-11-10T14:09:26.558Z"
+    }
+  ],
+  "caveats": [
+    "CISA本体JSONは今回HTTP403。成功した過去の確認日時や他の出典を、本体の最新取得成功として扱わない。",
+    "公開攻撃コード・実悪用の有無は、根拠を明記したもの以外は未確認。",
+    "CVE-2026-113362はCNA CVSS4.0 8.5 High、113363と113364は9.3 Critical。告知全体のラベルは最大値であり全3件をCriticalと扱わない。",
+    "JVNはそれぞれCVSS3.0 7.8／9.8／9.8も記載する。表示のCVSS4.0はNEC CNA由来。",
+    "修正モジュールのダウンロード・適用確認は行っていない。"
+  ]
+}

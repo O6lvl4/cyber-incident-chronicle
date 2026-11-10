@@ -1,0 +1,1325 @@
+{
+  "checkedAt": "2026-11-10T21:19:35.653630+00:00",
+  "scope": "Targeted Nov 9-10 oss-security product notices. Not a comprehensive search of all vendor Critical advisories. No product records added by this audit. Alert checks are owned by the main product review; absence is not inferred here.",
+  "candidates": [
+    {
+      "product": "Dokploy",
+      "ids": [],
+      "decision": "held",
+      "reason": "New database-password/username injection report has no verified CVE or vendor advisory ID. CVE-2026-72868 and 9.9 in the report refer to an earlier issue used as comparison, not assignment or vendor rating of this report. Researcher demonstration is not evidence of malicious exploitation.",
+      "sources": [
+        "https://www.openwall.com/lists/oss-security/2026/11/10/2"
+      ]
+    },
+    {
+      "product": "hyperglass",
+      "ids": [],
+      "decision": "held",
+      "reason": "Upstream reporter issue #383 contains reproducible payload, but is dated 2026-07-14, before this product period. No CVE/vendor advisory ID verified. November report severity is researcher-authored, not vendor/CNA. Do not manufacture an ID or move first PoC publication date to November. Distributed as a Python application; package-library coverage is separately evaluated.",
+      "sources": [
+        "https://www.openwall.com/lists/oss-security/2026/11/10/7",
+        "https://hyperpwn.xyz/",
+        "https://github.com/thatmattlove/hyperglass/issues/383"
+      ]
+    },
+    {
+      "product": "sblim-sfcb",
+      "ids": [],
+      "decision": "excluded",
+      "reason": "Reporter explicitly withdrew the 7.5 score, remote DoS description and CVE request in follow-up: only the forked child serving the attacking connection crashes, and reporter now describes a robustness bug. CVE-2026-73583/73584 are distinct issues and must not be reused.",
+      "sources": [
+        "https://www.openwall.com/lists/oss-security/2026/11/10/9",
+        "https://www.openwall.com/lists/oss-security/2026/11/10/27"
+      ]
+    },
+    {
+      "product": "CPython",
+      "ids": [
+        "CVE-2026-124249",
+        "CVE-2026-19552"
+      ],
+      "decision": "not-included",
+      "reason": "Forwarded official notices rate the cookie-domain issue Medium and certificate-identity issue Low. No public exploit code, malicious exploitation or qualifying alert established by reviewed notices. CPython runtime is a product rather than an independent package-library entry.",
+      "sources": [
+        "https://www.openwall.com/lists/oss-security/2026/11/09/24",
+        "https://www.openwall.com/lists/oss-security/2026/11/09/25"
+      ]
+    },
+    {
+      "product": "X.Org X server / Xwayland",
+      "ids": [
+        "CVE-2026-109091",
+        "CVE-2026-109092",
+        "CVE-2026-109093",
+        "CVE-2026-109904",
+        "CVE-2026-109094",
+        "CVE-2026-109095",
+        "CVE-2026-109096",
+        "CVE-2026-109903"
+      ],
+      "decision": "held",
+      "reason": "Official announcement supplies fix versions 21.1.26 / 24.1.15 and patch links but no Critical rating, public exploit or actual exploitation report. CNA requests for all eight returned HTTP 404; no qualifying basis verified. Patches are not PoCs.",
+      "sources": [
+        "https://www.openwall.com/lists/oss-security/2026/11/10/13"
+      ]
+    },
+    {
+      "product": "Xen / XAPI / Linux xen-netback",
+      "ids": [
+        "CVE-2024-21963",
+        "CVE-2024-36350",
+        "CVE-2024-36357",
+        "CVE-2026-0004",
+        "CVE-2026-102705",
+        "CVE-2026-102706",
+        "CVE-2026-102707",
+        "CVE-2026-102708",
+        "CVE-2026-119779",
+        "CVE-2026-119780",
+        "CVE-2026-99286",
+        "CVE-2026-99287"
+      ],
+      "decision": "held",
+      "reason": "Official XSA-524,525,529,530,531,532 notices provide impacts and patches, not public attack code, Critical rating or actual exploitation. Most queried CNA records returned 404; Linux CVE-2026-99286/99287 have no CNA severity. XSA-531 explicitly requires the earlier XSA-526 patch too. AMD-SB-3031 could not be retrieved (404).",
+      "sources": [
+        "https://www.openwall.com/lists/oss-security/2026/11/10/21",
+        "https://www.openwall.com/lists/oss-security/2026/11/10/22",
+        "https://www.openwall.com/lists/oss-security/2026/11/10/23",
+        "https://www.openwall.com/lists/oss-security/2026/11/10/24",
+        "https://www.openwall.com/lists/oss-security/2026/11/10/25",
+        "https://www.openwall.com/lists/oss-security/2026/11/10/26"
+      ]
+    },
+    {
+      "product": "MIT Kerberos 5",
+      "ids": [
+        "MITKRB5-SA-2026-001"
+      ],
+      "decision": "held",
+      "reason": "Official advisory and release fix 21 CVEs in 1.22.3; no qualifying Critical/exploitation/PoC basis in advisory. Available CNA ratings are non-Critical. CISA SSVC says poc for CVE-2026-40355,112314,112319 but this does not itself satisfy required original-public-code source. Red Hat Bugzilla 2478446/2478684 could not be read. CVE-2026-40355 researcher link dates to April, not the new release. PR1510/1511 describe bugs and patches without verified exploit code. Some components are libraries but KDC/kadmind are product daemons.",
+      "sources": [
+        "https://www.openwall.com/lists/oss-security/2026/11/09/38",
+        "https://web.mit.edu/kerberos/advisories/MITKRB5-SA-2026-001.txt",
+        "https://github.com/krb5/krb5/pull/1510",
+        "https://github.com/krb5/krb5/pull/1511"
+      ]
+    }
+  ],
+  "cnaChecks": [
+    {
+      "id": "CVE-2026-109091",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109091",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-109092",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109092",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-109093",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109093",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-109904",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109904",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-109094",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109094",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-109095",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109095",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-109096",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109096",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-109903",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109903",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-102705",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102705",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-102706",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102706",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-102707",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102707",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-102708",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-102708",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-119779",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-119779",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-119780",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-119780",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-99286",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-99286",
+      "status": 200,
+      "metrics": [],
+      "adpMetrics": [
+        null
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/ade3082dcdee17c5767069883936d64ff83f6c9f"
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a97aa838903d15f865d80809f5198ff459c6634a"
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/07aca7d25ce8578fedde49855983a01c537a782b"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-99287",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-99287",
+      "status": 200,
+      "metrics": [],
+      "adpMetrics": [
+        null
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/87fd475dc4e354088f6534285388e7b061f54b35"
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c5f54af611ff6fe1d53fa05d8e87b469dc56122b"
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e7ba61734d6ad6adfd5bf617052e590743211669"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-71199",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-71199",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-107884",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-107884",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-111423",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-111423",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-40355",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-40355",
+      "status": 200,
+      "metrics": [
+        {
+          "cvssV3_1": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS",
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-04-28T12:53:15.785781Z",
+                "id": "CVE-2026-40355",
+                "options": [
+                  {
+                    "Exploitation": "poc"
+                  },
+                  {
+                    "Automatable": "no"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ],
+        null
+      ],
+      "references": [
+        {
+          "url": "https://web.mit.edu/kerberos/advisories/"
+        },
+        {
+          "url": "https://cems.fun/2026/04/27/krb5-two-unauthenticated-network-vulnerabilities.html"
+        },
+        {
+          "url": "https://github.com/krb5/krb5/commit/2e75f0d9362fb979f5fc92829431a590a130929f"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-40356",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-40356",
+      "status": 200,
+      "metrics": [
+        {
+          "cvssV3_1": {
+            "attackComplexity": "HIGH",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 5.9,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS",
+          "scenarios": [
+            {
+              "lang": "en",
+              "value": "GENERAL"
+            }
+          ]
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-04-28T13:10:05.740836Z",
+                "id": "CVE-2026-40356",
+                "options": [
+                  {
+                    "Exploitation": "none"
+                  },
+                  {
+                    "Automatable": "no"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ]
+      ],
+      "references": [
+        {
+          "url": "https://web.mit.edu/kerberos/advisories/"
+        },
+        {
+          "url": "https://cems.fun/2026/04/27/krb5-two-unauthenticated-network-vulnerabilities.html"
+        },
+        {
+          "url": "https://github.com/krb5/krb5/commit/2e75f0d9362fb979f5fc92829431a590a130929f"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-71200",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-71200",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-107364",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-107364",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-107708",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-107708",
+      "status": 200,
+      "metrics": [
+        {
+          "format": "CVSS",
+          "cvssV4_0": {
+            "version": "4.0",
+            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "attackRequirements": "NONE",
+            "privilegesRequired": "HIGH",
+            "userInteraction": "NONE",
+            "vulnConfidentialityImpact": "NONE",
+            "vulnIntegrityImpact": "NONE",
+            "vulnAvailabilityImpact": "HIGH",
+            "subConfidentialityImpact": "NONE",
+            "subIntegrityImpact": "NONE",
+            "subAvailabilityImpact": "NONE",
+            "baseScore": 6.9,
+            "baseSeverity": "MEDIUM"
+          }
+        },
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "HIGH",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "HIGH",
+            "baseScore": 4.9,
+            "baseSeverity": "MEDIUM"
+          }
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-10-14T01:18:41.034364Z",
+                "id": "CVE-2026-107708",
+                "options": [
+                  {
+                    "Exploitation": "none"
+                  },
+                  {
+                    "Automatable": "no"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ]
+      ],
+      "references": [
+        {
+          "url": "https://github.com/krb5/krb5/pull/1510",
+          "tags": [
+            "issue-tracking",
+            "patch"
+          ],
+          "name": "Pull Request #1510"
+        },
+        {
+          "url": "https://github.com/krb5/krb5/commit/f6e2c397ceda6467ebbaab8ed66d4895c9f1d6a7",
+          "tags": [
+            "patch"
+          ],
+          "name": "Patch Commit"
+        },
+        {
+          "url": "https://github.com/krb5/krb5/commit/a88a18cafa1040a0c4f9c8d08288fc98831ec86d",
+          "tags": [
+            "patch"
+          ]
+        },
+        {
+          "url": "https://github.com/krb5/krb5/blob/krb5-1.22.2-final/src/kdc/kdc_util.c#L639-L676",
+          "tags": [
+            "technical-description"
+          ]
+        },
+        {
+          "url": "https://github.com/krb5/krb5",
+          "tags": [
+            "product"
+          ]
+        },
+        {
+          "name": "VulnCheck Advisory: MIT krb5 through 1.22.2 KDC NULL Pointer Dereference via S4U2Proxy PAC",
+          "tags": [
+            "third-party-advisory"
+          ],
+          "url": "https://www.vulncheck.com/advisories/mit-krb5-through-1.22.2-kdc-null-pointer-dereference-via-s4u2proxy-pac"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-107778",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-107778",
+      "status": 200,
+      "metrics": [
+        {
+          "format": "CVSS",
+          "cvssV4_0": {
+            "version": "4.0",
+            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "attackRequirements": "NONE",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "vulnConfidentialityImpact": "NONE",
+            "vulnIntegrityImpact": "NONE",
+            "vulnAvailabilityImpact": "HIGH",
+            "subConfidentialityImpact": "NONE",
+            "subIntegrityImpact": "NONE",
+            "subAvailabilityImpact": "NONE",
+            "baseScore": 7.1,
+            "baseSeverity": "HIGH"
+          }
+        },
+        {
+          "format": "CVSS",
+          "cvssV3_1": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM"
+          }
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-10-09T11:49:50.551974Z",
+                "id": "CVE-2026-107778",
+                "options": [
+                  {
+                    "Exploitation": "none"
+                  },
+                  {
+                    "Automatable": "no"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ]
+      ],
+      "references": [
+        {
+          "url": "https://github.com/krb5/krb5/pull/1511",
+          "tags": [
+            "issue-tracking",
+            "patch"
+          ],
+          "name": "Pull Request #1511"
+        },
+        {
+          "url": "https://github.com/krb5/krb5/commit/48afa9abb89ab2176bb20624d87d010b9984fc08",
+          "tags": [
+            "patch"
+          ],
+          "name": "Patch Commit"
+        },
+        {
+          "url": "https://github.com/krb5/krb5/commit/62196e2b269159a5465f5b8d0ed7cf6f29c3282a",
+          "tags": [
+            "patch"
+          ]
+        },
+        {
+          "url": "https://github.com/krb5/krb5/blob/krb5-1.22.2-final/src/lib/krb5/krb/rd_cred.c#L77-L112",
+          "tags": [
+            "technical-description"
+          ]
+        },
+        {
+          "url": "https://github.com/krb5/krb5",
+          "tags": [
+            "product"
+          ]
+        },
+        {
+          "name": "VulnCheck Advisory: MIT krb5 through 1.22.2 NULL Pointer Dereference via krb5_rd_cred()",
+          "tags": [
+            "third-party-advisory"
+          ],
+          "url": "https://www.vulncheck.com/advisories/mit-krb5-through-1.22.2-null-pointer-dereference-via-krb5-rd-cred"
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112314",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112314",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Moderate",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-11-09T19:57:01.092807Z",
+                "id": "CVE-2026-112314",
+                "options": [
+                  {
+                    "Exploitation": "poc"
+                  },
+                  {
+                    "Automatable": "yes"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ]
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112314",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478446",
+          "name": "RHBZ#2478446",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112315",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112315",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112315",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2479403",
+          "name": "RHBZ#2479403",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112316",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112316",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-11-09T23:01:26.177622Z",
+                "id": "CVE-2026-112316",
+                "options": [
+                  {
+                    "Exploitation": "none"
+                  },
+                  {
+                    "Automatable": "no"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ]
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112316",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2479331",
+          "name": "RHBZ#2479331",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112317",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112317",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "LOW",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112317",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2479209",
+          "name": "RHBZ#2479209",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112318",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112318",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112318",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478792",
+          "name": "RHBZ#2478792",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112319",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112319",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 6.5,
+            "baseSeverity": "MEDIUM",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "LOW",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-11-09T19:34:58.762680Z",
+                "id": "CVE-2026-112319",
+                "options": [
+                  {
+                    "Exploitation": "poc"
+                  },
+                  {
+                    "Automatable": "no"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ]
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112319",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478684",
+          "name": "RHBZ#2478684",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112320",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112320",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112320",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478449",
+          "name": "RHBZ#2478449",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112321",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112321",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-11-09T23:02:10.203184Z",
+                "id": "CVE-2026-112321",
+                "options": [
+                  {
+                    "Exploitation": "none"
+                  },
+                  {
+                    "Automatable": "yes"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ]
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112321",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478448",
+          "name": "RHBZ#2478448",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112322",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112322",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [
+        [
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2026-11-09T22:59:29.778085Z",
+                "id": "CVE-2026-112322",
+                "options": [
+                  {
+                    "Exploitation": "none"
+                  },
+                  {
+                    "Automatable": "yes"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ]
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112322",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478445",
+          "name": "RHBZ#2478445",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-112323",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-112323",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-112323",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478440",
+          "name": "RHBZ#2478440",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-119079",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-119079",
+      "status": 200,
+      "metrics": [
+        {
+          "other": {
+            "content": {
+              "value": "Important",
+              "namespace": "https://access.redhat.com/security/updates/classification/"
+            },
+            "type": "Red Hat severity rating"
+          }
+        },
+        {
+          "cvssV3_1": {
+            "attackComplexity": "LOW",
+            "attackVector": "NETWORK",
+            "availabilityImpact": "HIGH",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "NONE",
+            "privilegesRequired": "NONE",
+            "scope": "UNCHANGED",
+            "userInteraction": "NONE",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "version": "3.1"
+          },
+          "format": "CVSS"
+        }
+      ],
+      "adpMetrics": [],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-119079",
+          "tags": [
+            "vdb-entry",
+            "x_refsource_REDHAT"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2479231",
+          "name": "RHBZ#2479231",
+          "tags": [
+            "issue-tracking",
+            "x_refsource_REDHAT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2026-118380",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-118380",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2024-21963",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2024-21963",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "CVE-2026-0004",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-0004",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "kevCheck": {
+    "source": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+    "fetchedAt": "2026-11-10T21:15:41.664486+00:00",
+    "sha256": "41c8091ad62d508d6f8906ad5cd26b20efe551f7d51b95ecc8a6981fa640b4ea",
+    "matchingEntries": []
+  },
+  "fetchLimitations": [
+    {
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478446",
+      "result": "Web retrieval unavailable; original PoC not verified"
+    },
+    {
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2478684",
+      "result": "Web retrieval unavailable; original PoC not verified"
+    },
+    {
+      "url": "https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3031.html",
+      "result": "HTTP 404 through web tool"
+    }
+  ]
+}

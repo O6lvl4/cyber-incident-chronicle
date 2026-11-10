@@ -1,0 +1,88 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-4x48-cgf9-q33f",
+  "aliases": [
+    "CVE-2026-125114"
+  ],
+  "title": "Novu has SSRF via conditions filter webhook bypasses validateUrlSsrf() protection",
+  "summary": "Novu has SSRF via conditions filter webhook bypasses validateUrlSsrf() protection",
+  "publishedAt": "2026-04-14T23:22:48Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7f16e6e8a374a5674859808ddd08b7680c2f3b3f/advisories/github-reviewed/2026/04/GHSA-4x48-cgf9-q33f/GHSA-4x48-cgf9-q33f.json",
+  "modifiedAt": "2026-11-09T22:15:03Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T21:17:46.734593Z",
+  "affected": [
+    {
+      "ecosystem": "npm",
+      "packageName": "@novu/api",
+      "ranges": [
+        {
+          "affected": "< 3.15.0",
+          "fixed": "3.15.0",
+          "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7f16e6e8a374a5674859808ddd08b7680c2f3b3f/advisories/github-reviewed/2026/04/GHSA-4x48-cgf9-q33f/GHSA-4x48-cgf9-q33f.json"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.15.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "high",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/7f16e6e8a374a5674859808ddd08b7680c2f3b3f/advisories/github-reviewed/2026/04/GHSA-4x48-cgf9-q33f/GHSA-4x48-cgf9-q33f.json",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/7f16e6e8a374a5674859808ddd08b7680c2f3b3f/advisories/github-reviewed/2026/04/GHSA-4x48-cgf9-q33f/GHSA-4x48-cgf9-q33f.json",
+      "publishedDate": "2026-04-14",
+      "publishedAt": "2026-04-14T23:22:48Z",
+      "modifiedAt": "2026-11-09T22:15:03Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Novu has SSRF via conditions filter webhook bypasses validateUrlSsrf() protection",
+      "url": "https://github.com/advisories/GHSA-4x48-cgf9-q33f",
+      "publishedDate": "2026-04-14"
+    },
+    {
+      "type": "maintainer",
+      "title": "SSRF via conditions filter webhook bypasses validateUrlSsrf() protection",
+      "url": "https://api.github.com/repos/novuhq/novu/security-advisories/GHSA-4x48-cgf9-q33f",
+      "publishedDate": "2026-04-13",
+      "publishedAt": "2026-04-13T16:34:50Z",
+      "modifiedAt": "2026-11-09T22:13:45Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "GitHub-reviewed Advisory Databaseの固定スナップショットから収録。開発元の資料は個別に確認していない。",
+    "公開・更新・撤回日と影響範囲はデータベースの記録。英語の概要は上流原文で、独自の翻訳・評価は行っていない。",
+    "実悪用とCISA KEVは未確認。未確認は実悪用なし・KEV未掲載を意味しない。",
+    "2026-11-11：開発元公開APIと固定Reviewedデータの差を確認。区間の空白や異なるecosystemの対応は推測で埋めない。",
+    "開発元はdocker分類で@novu/apiと@novu/worker（影響<=2.6.1、修正>=3.15.0）を記載。固定DBはnpm分類の@novu/api（<3.15.0）のみ。分類・範囲が一致しないためdocker情報をnpmへ転記せず、表示は固定DBのnpm情報を保持する。"
+  ]
+}

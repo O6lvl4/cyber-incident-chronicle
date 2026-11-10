@@ -1,0 +1,92 @@
+{
+  "aliases": [
+    {
+      "id": "GHSA-c2xx-cjmh-9q8f",
+      "addedAlias": "CVE-2026-123820",
+      "sourceUrl": "https://api.osv.dev/v1/vulns/GHSA-c2xx-cjmh-9q8f",
+      "checkedAt": "2026-11-10T21:24:28.820733Z",
+      "sha256": "72b02e42fdaaffcba8e33c4ec51cd6d8ca7468db0563adcc2371461663f04b47",
+      "status": "held_integrated_schema_requires_maintainer_source",
+      "reason": "Exact OSV alias verified, but integrated importer changes overlay to mixed and requires maintainer source. New local overlay removed from curated directory and preserved in cache. No maintainer verification was performed."
+    },
+    {
+      "id": "GHSA-gj2h-2fpw-fhv9",
+      "addedAlias": "CVE-2026-123808",
+      "sourceUrl": "https://api.osv.dev/v1/vulns/GHSA-gj2h-2fpw-fhv9",
+      "checkedAt": "2026-11-10T21:24:28.820733Z",
+      "sha256": "8d642a212f02d8e1cb52d33a8a2e2ae8d9e2f47ce8240b488003d1afb8c770a7",
+      "status": "held_integrated_schema_requires_maintainer_source",
+      "reason": "Exact OSV alias verified, but integrated importer changes overlay to mixed and requires maintainer source. New local overlay removed from curated directory and preserved in cache. No maintainer verification was performed."
+    },
+    {
+      "id": "GHSA-pc2w-4mq8-32qw",
+      "addedAlias": "CVE-2026-123812",
+      "sourceUrl": "https://api.osv.dev/v1/vulns/GHSA-pc2w-4mq8-32qw",
+      "checkedAt": "2026-11-10T21:24:28.820733Z",
+      "sha256": "697be1454fec3ff286ae38b4938f6f6d4ae6cd5e488310e3cbffea92c325179d",
+      "status": "held_integrated_schema_requires_maintainer_source",
+      "reason": "Exact OSV alias verified, but integrated importer changes overlay to mixed and requires maintainer source. New local overlay removed from curated directory and preserved in cache. No maintainer verification was performed."
+    }
+  ],
+  "rsa": [
+    {
+      "url": "https://api.github.com/repos/RustCrypto/RSA/releases/tags/v0.10.0",
+      "checkedAt": "2026-11-10T21:24:28.820733Z",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://api.github.com/repos/RustCrypto/RSA/issues/626",
+      "checkedAt": "2026-11-10T21:24:28.820733Z",
+      "httpStatus": 200,
+      "sha256": "2111d41d35560bdd9d319855ea661fac83446e7d96d5cf29a3d3f6938909cedd",
+      "status": "fetched",
+      "data": {
+        "title": "Padding implementation is not constant-time",
+        "body": "This is a followup to #19, which was originally about the modular exponentiation implementation not being constant-time, and also became our general tracking issue for the subsequent [Marvin Attack](https://people.redhat.com/~hkario/marvin/).\n\nWe've gone to great lengths in `crypto-bigint` to produce the closest thing we can to a constant-time implementation of modular exponentiation, and while we still need to e.g. verify that's truly the case via static analysis tooling, based on the [latest analysis from the Marvin Toolkit](https://github.com/RustCrypto/RSA/issues/19#issuecomment-3719177009) it seems like the remaining sidechannels in our implementation are probably no longer coming from `crypto-bigint`, but are instead in this crate's implementation of RSA padding modes.\n\nPKCS#1 v1.5 in particular notably has a long history of sidechannels going back to Bleichenbacher's original 1998 attack, and attacks like Marvin can be seen as an evolution of that attack.\n\nThis I-D contains guidance for implementing RSA in constant-time, including things like handling depadding errors using strategies like implicit rejection:\n\nhttps://datatracker.ietf.org/doc/draft-irtf-cfrg-rsa-guidance/",
+        "description": null,
+        "published_at": null,
+        "updated_at": "2026-11-01T20:41:21Z",
+        "vulnerabilities": null,
+        "state": "closed",
+        "closed_at": "2026-11-01T20:41:21Z"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/RustCrypto/RSA/security-advisories/GHSA-4grx-2x9w-596c",
+      "checkedAt": "2026-11-10T21:24:28.820733Z",
+      "status": "fetch_failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://api.github.com/repos/RustCrypto/RSA/security-advisories/GHSA-c38w-74pg-36hr",
+      "checkedAt": "2026-11-10T21:24:28.820733Z",
+      "httpStatus": 200,
+      "sha256": "53a16215f62231ac9d1eb1beb65a83a75d23a816209effb80db81a408455aae6",
+      "status": "fetched",
+      "data": {
+        "title": null,
+        "body": null,
+        "description": "### Impact\r\nDue to a non-constant-time implementation, information about the private key is leaked through timing information which is observable over the network. An attacker may be able to use that information to recover the key.\r\n\r\n### Patches\r\nNo patch is yet available, however work is underway to migrate to a fully constant-time implementation.\r\n\r\n### Workarounds\r\nThe only currently available workaround is to avoid using the `rsa` crate in settings where attackers are able to observe timing information, e.g. local use on a non-compromised computer is fine.\r\n\r\n### References\r\nThis vulnerability was discovered as part of the \"Marvin Attack\", which revealed several implementations of RSA including OpenSSL had not properly mitigated timing sidechannel attacks.\r\n\r\n- https://rustsec.org/advisories/RUSTSEC-2023-0071.html\r\n- https://people.redhat.com/~hkario/marvin/\r\n- https://github.com/RustCrypto/RSA/issues/19",
+        "published_at": "2023-11-28T15:31:30Z",
+        "updated_at": "2023-12-15T14:56:51Z",
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "rust",
+              "name": "rsa"
+            },
+            "vulnerable_version_range": "*",
+            "patched_versions": "",
+            "vulnerable_functions": []
+          }
+        ],
+        "state": "published",
+        "closed_at": null
+      }
+    }
+  ],
+  "rsaDisposition": "held_conflicting_primary_evidence",
+  "rsaReason": "OSV RustSec states fixed0.10.0, but retrieved developer GHSA-c38w-74pg-36hr still states no patch, affected*, patched_versions empty. Release tag v0.10.0 and GHSA-4grx API failed. No rsa range/fix overlay created.",
+  "aliasOverlayValidationNote": "Isolated database-level validation passed, but integrated mixed import requires maintainer source. All three new alias overlays removed from curated dataset; source evidence retained as held candidates."
+}

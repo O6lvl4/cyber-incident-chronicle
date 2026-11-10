@@ -1,0 +1,86 @@
+{
+  "id": "ill-cross-point-api-2026",
+  "company": "株式会社アイル",
+  "geography": "日本",
+  "title": "CROSS POINT導入企業1社のAPIキー悪用による会員情報取得",
+  "announcementDate": "2026-11-10",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-10",
+  "statusAsOfDate": "2026-11-10",
+  "lastVerifiedDate": "2026-11-11",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "外部へ流出した導入企業専用の正規API認証キーを悪用",
+    "status": "confirmed"
+  },
+  "summary": "11月7日未明に不正アクセスを検知。流出した導入企業専用の正規APIキーが悪用され、1社の会員情報取得を確認。9日22時15分に全利用企業のキー無効化・再発行を完了。",
+  "affectedData": [
+    "会員の氏名・住所・連絡先・生年月日・性別・会員番号、会員ランク、保有ポイント、カード番号、購買統計等"
+  ],
+  "counts": [
+    {
+      "value": 1,
+      "unit": "社",
+      "status": "confirmed",
+      "label": "被害を確認した導入企業数。会員人数・件数は未公表",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "内部データベースへの直接侵入・改ざんやプログラム脆弱性によるものではないと説明。キー流出原因は推定しない。",
+    "カード情報・ログインパスワードはシステムに保持しておらず対象外。他の導入企業で漏えいの痕跡は未確認。",
+    "同社のメール配信委託先事案とは別事案。"
+  ],
+  "sources": [
+    {
+      "title": "CROSS POINT導入企業1社のAPIキー悪用による会員情報取得",
+      "url": "https://www.ill.co.jp/info/261110/",
+      "publishedDate": "2026-11-10"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-07",
+      "label": "不正アクセス検知",
+      "kind": "occurrence",
+      "summary": "未明に検知。調査で会員情報取得APIを通じた取得を確認。",
+      "sourceUrl": "https://www.ill.co.jp/info/261110/"
+    },
+    {
+      "date": "2026-11-09",
+      "label": "全企業のAPIキー再発行完了",
+      "kind": "occurrence",
+      "summary": "22時15分に全利用企業分の無効化と再発行を完了。",
+      "sourceUrl": "https://www.ill.co.jp/info/261110/"
+    },
+    {
+      "date": "2026-11-10",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "11月7日未明に不正アクセスを検知。流出した導入企業専用の正規APIキーが悪用され、1社の会員情報取得を確認。9日22時15分に全利用企業のキー無効化・再発行を完了。",
+      "sourceUrl": "https://www.ill.co.jp/info/261110/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "検知日から攻撃開始日を推定しない。",
+      "sourceUrl": "https://www.ill.co.jp/info/261110/",
+      "reviewedDate": "2026-11-11"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "個人情報流出等の被害を初めて確認した日は特定されていない。検知・公表日では代用しない。",
+      "sourceUrl": "https://www.ill.co.jp/info/261110/",
+      "reviewedDate": "2026-11-11"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "waseda-mywaseda-users-2026",
+  "company": "早稲田大学",
+  "geography": "日本",
+  "title": "MyWasedaユーザー管理情報の延べ3,342件の取得を確認",
+  "announcementDate": "2026-11-09",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": "2026-08-31",
+  "occurredDateLabel": "公式資料が明示した攻撃日",
+  "updatedDate": "2026-11-09",
+  "statusAsOfDate": "2026-11-09",
+  "lastVerifiedDate": "2026-11-11",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "具体的な攻撃手法・初期侵入経路は未公表。",
+    "status": "unknown"
+  },
+  "summary": "8月31日の不正アクセス痕跡を確認した後の調査で、ログイン用ユーザー情報の取得が判明。延べ3,342件で実人数ではない。卒業生向けの関連サービス等を停止して調査を継続。",
+  "affectedData": [
+    "教職員・学生・卒業生等の氏名・資格名・メールアドレス等の個別情報81件",
+    "職員等の教職員番号・氏名・メールアドレス・所属部署・資格名・暗号化保存パスワード3,261件"
+  ],
+  "counts": [
+    {
+      "value": 3342,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "情報の延べ件数。81件と3,261件の合計で実人数ではない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "81件と3,261件は合計の内訳。同一利用者の複数アドレスを含み実人数に換算しない。",
+    "PHPの脆弱性対応は調査開始の契機。侵入原因がPHPだったとは断定しない。",
+    "パスワードは暗号化保存されたもの。その他の情報の取得は未確認だが可能性を否定できず調査中。"
+  ],
+  "sources": [
+    {
+      "title": "MyWasedaユーザー管理情報の延べ3,342件の取得を確認",
+      "url": "https://www.waseda.jp/top/news/topic/124183",
+      "publishedDate": "2026-11-09"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-09",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "8月31日の不正アクセス痕跡を確認した後の調査で、ログイン用ユーザー情報の取得が判明。延べ3,342件で実人数ではない。卒業生向けの関連サービス等を停止して調査を継続。",
+      "sourceUrl": "https://www.waseda.jp/top/news/topic/124183"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026-08-31",
+      "note": "公式本文が不正アクセスの実行日を明示。",
+      "sourceUrl": "https://www.waseda.jp/top/news/topic/124183",
+      "reviewedDate": "2026-11-11",
+      "startDate": "2026-08-31"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "個人情報流出等の被害を初めて確認した日は特定されていない。検知・公表日では代用しない。",
+      "sourceUrl": "https://www.waseda.jp/top/news/topic/124183",
+      "reviewedDate": "2026-11-11"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-rmc9-8qp4-gjhx",
+  "aliases": [
+    "RUSTSEC-2026-0460"
+  ],
+  "title": "Heifer：空のchroma QPオフセット一覧によるパニック",
+  "summary": "HEVC Range Extensions入力で空のオフセット一覧を参照し、境界検査のパニックが発生する。",
+  "publishedAt": "2026-11-04T12:00:00Z",
+  "modifiedAt": "2026-11-09T10:15:02.433477015Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-10T21:20:20.997680Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0460",
+  "affected": [
+    {
+      "ecosystem": "cargo",
+      "packageName": "heifer-hevc-dec",
+      "ranges": [
+        {
+          "affected": "< 0.3.27",
+          "fixed": "0.3.27",
+          "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx"
+        }
+      ]
+    },
+    {
+      "ecosystem": "cargo",
+      "packageName": "heifer",
+      "ranges": [
+        {
+          "affected": "< 0.3.27",
+          "fixed": "0.3.27",
+          "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx"
+        }
+      ]
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 6.5,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "sourceUrl": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV RustSec export record; explicit stable-ID aliases",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0460",
+      "publishedDate": "2026-11-04",
+      "publishedAt": "2026-11-04T12:00:00Z",
+      "modifiedAt": "2026-11-09T10:15:02.433477015Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "maintainer",
+      "title": "Developer public advisory API; narrative and structured fields verified",
+      "url": "https://api.github.com/repos/HarpeLm/Heifer/security-advisories/GHSA-rmc9-8qp4-gjhx",
+      "publishedDate": "2026-11-06",
+      "publishedAt": "2026-11-06T21:30:25Z",
+      "modifiedAt": "2026-11-06T21:30:25Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "未信頼のHEIC／HEVCをデコードする利用が対象。panic=abortではプロセス全体が停止する。",
+    "公表・更新日時はOSV収録値。開発元の日時は出典別に保持。修正境界は最新安全版を保証しない。実悪用は未確認、CISA本体403のためKEV未確認を維持。",
+    "固定Reviewed 7f16e6e8a374a5674859808ddd08b7680c2f3b3fの対象記録と明示IDを照合し、補助ソースとして追加。related/upstreamを別名扱いしていない。",
+    "OSV RustSecは低レベルcrateのみを列挙。開発元はheiferも影響ありと明記するため両方を保持。"
+  ]
+}

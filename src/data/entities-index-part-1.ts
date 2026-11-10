@@ -83,23 +83,23 @@ import record79 from './entities/furuno-systems.json' with { type: 'json' };
 import record80 from './entities/future-shop.json' with { type: 'json' };
 import record81 from './entities/gallery2.json' with { type: 'json' };
 import record82 from './entities/giftee.json' with { type: 'json' };
-import record83 from './entities/ginpo-pack.json' with { type: 'json' };
-import record84 from './entities/glory.json' with { type: 'json' };
-import record85 from './entities/gmo-internet.json' with { type: 'json' };
-import record86 from './entities/gmo-payment-gateway.json' with { type: 'json' };
-import record87 from './entities/gmo-research-ai.json' with { type: 'json' };
-import record88 from './entities/gmo-trustlogin-unidentified.json' with { type: 'json' };
-import record89 from './entities/golf-digest-online.json' with { type: 'json' };
-import record90 from './entities/goodsmile-official-shop.json' with { type: 'json' };
-import record91 from './entities/greenmonster.json' with { type: 'json' };
-import record92 from './entities/hana-cupid.json' with { type: 'json' };
-import record93 from './entities/hanshin-expressway.json' with { type: 'json' };
-import record94 from './entities/harada.json' with { type: 'json' };
-import record95 from './entities/helpfeel.json' with { type: 'json' };
-import record96 from './entities/hi-ho.json' with { type: 'json' };
-import record97 from './entities/his-thailand.json' with { type: 'json' };
-import record98 from './entities/hj-holdings.json' with { type: 'json' };
-import record99 from './entities/hokan.json' with { type: 'json' };
+import record83 from './entities/giken-business-server.json' with { type: 'json' };
+import record84 from './entities/ginpo-pack.json' with { type: 'json' };
+import record85 from './entities/glory.json' with { type: 'json' };
+import record86 from './entities/gmo-internet.json' with { type: 'json' };
+import record87 from './entities/gmo-payment-gateway.json' with { type: 'json' };
+import record88 from './entities/gmo-research-ai.json' with { type: 'json' };
+import record89 from './entities/gmo-trustlogin-unidentified.json' with { type: 'json' };
+import record90 from './entities/golf-digest-online.json' with { type: 'json' };
+import record91 from './entities/goodsmile-official-shop.json' with { type: 'json' };
+import record92 from './entities/greenmonster.json' with { type: 'json' };
+import record93 from './entities/hana-cupid.json' with { type: 'json' };
+import record94 from './entities/hanshin-expressway.json' with { type: 'json' };
+import record95 from './entities/harada.json' with { type: 'json' };
+import record96 from './entities/helpfeel.json' with { type: 'json' };
+import record97 from './entities/hi-ho.json' with { type: 'json' };
+import record98 from './entities/his-thailand.json' with { type: 'json' };
+import record99 from './entities/hj-holdings.json' with { type: 'json' };
 
 export const ENTITIES_PART_1 = {
   "2rinkan-yellowhat": record0,
@@ -185,21 +185,21 @@ export const ENTITIES_PART_1 = {
   "future-shop": record80,
   "gallery2": record81,
   "giftee": record82,
-  "ginpo-pack": record83,
-  "glory": record84,
-  "gmo-internet": record85,
-  "gmo-payment-gateway": record86,
-  "gmo-research-ai": record87,
-  "gmo-trustlogin-unidentified": record88,
-  "golf-digest-online": record89,
-  "goodsmile-official-shop": record90,
-  "greenmonster": record91,
-  "hana-cupid": record92,
-  "hanshin-expressway": record93,
-  "harada": record94,
-  "helpfeel": record95,
-  "hi-ho": record96,
-  "his-thailand": record97,
-  "hj-holdings": record98,
-  "hokan": record99,
+  "giken-business-server": record83,
+  "ginpo-pack": record84,
+  "glory": record85,
+  "gmo-internet": record86,
+  "gmo-payment-gateway": record87,
+  "gmo-research-ai": record88,
+  "gmo-trustlogin-unidentified": record89,
+  "golf-digest-online": record90,
+  "goodsmile-official-shop": record91,
+  "greenmonster": record92,
+  "hana-cupid": record93,
+  "hanshin-expressway": record94,
+  "harada": record95,
+  "helpfeel": record96,
+  "hi-ho": record97,
+  "his-thailand": record98,
+  "hj-holdings": record99,
 } as Record<string, EntityClassification>;

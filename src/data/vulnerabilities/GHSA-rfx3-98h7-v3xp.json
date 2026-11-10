@@ -66,10 +66,18 @@
       "publishedAt": "2026-09-17T14:51:41Z",
       "modifiedAt": "2026-09-17T14:51:44Z",
       "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "2026-11-11 JST: corrected Reviewed ranges now agree with existing maintainer interpretation",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/7f16e6e8a374a5674859808ddd08b7680c2f3b3f/advisories/github-reviewed/2026/09/GHSA-rfx3-98h7-v3xp/GHSA-rfx3-98h7-v3xp.json",
+      "publishedDate": "2026-09-17",
+      "publishedAt": "2026-09-17T14:51:41Z",
+      "modifiedAt": "2026-11-09T16:39:11Z"
     }
   ],
   "caveats": [
-    "メンテナーのパッケージ表は>=7.0.0, <8.37.4→8.37.4と、>=9.0.0, <9.13.0→9.13.0。GitHub Reviewedは>=7.0.0, <=9.12.0→9.13.0にまとめているため、修正済み8系列を巻き込まないメンテナーの2範囲を採用した。",
+    "初回確認時のGitHub Reviewedは>=7.0.0, <=9.12.0→9.13.0にまとめていたため、メンテナーの2範囲を採用した。2026-11-11 JSTの固定DB確認では、Reviewed 7f16e6e8a374a5674859808ddd08b7680c2f3b3fも>=7.0.0, <8.37.4→8.37.4と>=9.0.0, <9.13.0→9.13.0へ訂正され、現行表示と一致する。この確認はDB差分の照合であり、開発元の再確認日時は進めていない。",
     "攻撃者の入力が辞書インデクサーのキー、ContainsKey引数、Selectの定数、テナントID等の対象経路へ到達することが前提。複数SQL文の実行可否などで影響が変わる。",
     "公開・更新日時はGitHub Reviewed Advisory Databaseの登録・更新日時で、メンテナーの初回公開日時とは異なる。メンテナーの日時は出典欄に別記した。",
     "確認した公式資料だけでは実悪用を確認できない。CISA KEV掲載状況は未照合で、いずれも「なし」を意味しない。"
