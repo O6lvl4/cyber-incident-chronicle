@@ -345,3 +345,14 @@ GitHub Advisory DatabaseのデータはCC-BY-4.0。GitHub Advisory Databaseと�
 ### 10月14日 Wasmtime補完
 
 上記の日次収集後、以前から未収録候補として保持していたWasmtimeの8件を開発元・OSV・固定RustSecソースで個別確認して追加した。公表日は各原文の7月31日・8月20日・9月24日・10月2日のまま。現在の表示は18,939件、撤回849件、未撤回18,090件、個別確認111件（重ね合わせ63・範囲外48）。日次監査の当時の集計・成功取得点は変更しない。[確認根拠](data/wasmtime-backfill-2026-10-14.json)
+
+
+## 2026-11-14 の継続更新
+
+固定ソースを `96f64df1e8d2a1a4d3f7cf72e5c5a95a648fdfa1`（2026-11-13T21:19:22Z）へ更新。前回固定点から全Reviewedツリーを比較し、古い更新日時の訂正も対象とした。全37,799件・対象19,837件を既存インポーターで再生成。対象138追加・6変更、削除なし。表示20,004件（137件増）。既存749個別記録は不変で、既存補助1件がReviewedへ入ったため表示増分とは分母が異なる。新規差分には撤回履歴も含み、当日の新規発見数ではない。
+
+OSVの7全件エクスポートは前回の固定generationをSHA256で再確認し、全JSONを比較。MALは別扱い。差分のうち現行表示ID/明示別名に一致しない95候補は、古いGo標準ライブラリの更新やRustSec別名集約候補を含み、95個の追加対象を意味しない。個別の開発元・範囲確認を終えていないため公開本体に自動投入しない。JVN/JVNDB/JPCERTフィード取得は成功、CISA KEVは403で前回状態を保持。フィード抽出は個別本文の全件確認ではない。
+
+[Reviewed差分](data/github-reviewed-delta-2026-11-14.json)、[開発元API](data/reviewed-maintainer-review-2026-11-14.json)、[補助ソース](data/supplemental-source-status-2026-11-14.json)、[保留候補](data/supplemental-held-candidates-2026-11-14.json)、[フィード](data/library-feed-review-2026-11-14.json)に確認段階を区別して保持する。
+
+今回、変更対象の参照先から開発元GitHub Advisory API 124 URLを実取得し、57成功・67 HTTP403。成功レスポンスの影響範囲とReviewed原文を別々に保持し、未取得先を開発元確認済みに格上げしていない。固定DB確認と開発元個別確認は別段階である。

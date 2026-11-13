@@ -1,0 +1,137 @@
+{
+  "kind": "product",
+  "id": "APACHE-HTTPD-2.4.71",
+  "aliases": [
+    "CVE-2026-119618",
+    "CVE-2026-106023",
+    "CVE-2026-109163"
+  ],
+  "vendor": "Apache Software Foundation",
+  "product": "Apache HTTP Server",
+  "productKey": "apache-httpd",
+  "title": "Apache HTTP Server 2.4.71：mod_http2のCriticalを含む3件修正",
+  "summary": "mod_http2 assign_headersの競合によるヒープ破壊・リモートコード実行、mod_mdのNULLポインタ参照による子プロセス停止、mod_vhost_aliasの1バイトスタック領域上書きを修正。各モジュールで影響範囲と深刻度は異なる。",
+  "publishedDate": "2026-11-11",
+  "publishedAt": null,
+  "dateSourceUrl": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71",
+  "dateNote": "Apache公式の2.4.71リリース日。個別CVEの登録日時とは区別。",
+  "listedDate": "2026-11-11",
+  "listedNote": "開発元がmod_http2 CVE-2026-119618をCriticalとして公表した日。JVN注意喚起は翌12日。",
+  "modifiedAt": "2026-11-13T14:17:19.945Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-13T21:29:27.892929Z",
+  "affected": [
+    {
+      "name": "CVE-2026-119618 / Apache HTTP Server mod_http2",
+      "affected": "2.4.55〜2.4.70",
+      "fixed": "2.4.71",
+      "sourceUrl": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71"
+    },
+    {
+      "name": "CVE-2026-119618 / GitHub mod_h2",
+      "affected": "2.0.8〜2.0.42",
+      "fixed": null,
+      "sourceUrl": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71",
+      "note": "Apache告知の影響範囲を保持。独立mod_h2の修正版は今回未確認。"
+    },
+    {
+      "name": "CVE-2026-106023 / mod_md",
+      "affected": "Apache HTTP Server 2.4.30〜2.4.70",
+      "fixed": "2.4.71",
+      "sourceUrl": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71"
+    },
+    {
+      "name": "CVE-2026-109163 / mod_vhost_alias",
+      "affected": "Apache HTTP Server 2.4.69、2.4.70",
+      "fixed": "2.4.71",
+      "sourceUrl": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [
+    {
+      "issuer": "JVN",
+      "title": "Apache HTTP Server 2.4における複数の脆弱性に対するアップデート（2026年11月11日）",
+      "url": "https://jvn.jp/vu/JVNVU90805396/",
+      "publishedDate": "2026-11-12"
+    }
+  ],
+  "alertChecks": [
+    {
+      "issuer": "JVN",
+      "url": "https://jvn.jp/vu/JVNVU90805396/",
+      "checkedAt": "2026-11-13T21:29:27.892929Z",
+      "result": "found"
+    }
+  ],
+  "inclusion": [
+    "critical",
+    "alert"
+  ],
+  "mitigations": [
+    {
+      "text": "影響するApache HTTP Serverを2.4.71へ更新する。",
+      "sourceUrl": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Fixed in Apache HTTP Server 2.4.71",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71",
+      "publishedDate": "2026-11-11"
+    },
+    {
+      "type": "alert",
+      "title": "JVNVU#90805396 Apache HTTP Server 2.4.71更新",
+      "url": "https://jvn.jp/vu/JVNVU90805396/",
+      "publishedDate": "2026-11-12"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-119618 Apache CNA",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-119618",
+      "publishedDate": "2026-11-11",
+      "publishedAt": "2026-11-11T14:54:08.155Z",
+      "modifiedAt": "2026-11-13T14:17:19.945Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-106023 Apache CNA",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-106023",
+      "publishedDate": "2026-11-11",
+      "publishedAt": "2026-11-11T14:55:26.491Z",
+      "modifiedAt": "2026-11-11T19:05:04.256Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-109163 Apache CNA",
+      "url": "https://cveawg.mitre.org/api/cve/CVE-2026-109163",
+      "publishedDate": "2026-11-11",
+      "publishedAt": "2026-11-11T14:55:08.116Z",
+      "modifiedAt": "2026-11-11T14:55:08.116Z"
+    }
+  ],
+  "caveats": [
+    "告知単位の3CVE集約。CriticalはCVE-2026-119618のみで、CVE-2026-106023は開発元Important、CVE-2026-109163はLow。ImportantをHighへ換算しない。",
+    "深刻度や修正コミットの公開は、実悪用や攻撃用PoCの公開を意味しない。",
+    "CISA KEV本体はHTTP403で今回未確認。従来の他製品記録の掲載状態も上書きしない。"
+  ]
+}

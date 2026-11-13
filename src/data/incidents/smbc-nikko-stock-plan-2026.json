@@ -1,0 +1,78 @@
+{
+  "id": "smbc-nikko-stock-plan-2026",
+  "company": "ＳＭＢＣ日興証券株式会社",
+  "geography": "日本",
+  "title": "持株会管理システムで情報漏えい、可能性を含む最大56,487名",
+  "announcementDate": "2026-11-11",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-11",
+  "statusAsOfDate": "2026-11-11",
+  "lastVerifiedDate": "2026-11-14",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "具体的な攻撃手法・初期侵入経路は未公表。",
+    "status": "unknown"
+  },
+  "summary": "11月9日に持株会管理システムへの不正アクセスを確認し、同日遮断・一時停止。その後の調査で一部会員の情報漏えいを確認。漏えいまたはその可能性がある対象は最大56,487名で、原因と範囲を調査中。",
+  "affectedData": [
+    "持株会名、投資銘柄情報、会員識別番号、氏名、住所、配当金・諸税、持分残高、振替先口座情報（会員ごとに異なる）"
+  ],
+  "counts": [
+    {
+      "value": 56487,
+      "unit": "名",
+      "status": "possible",
+      "label": "漏えい確認済みと可能性を含む最大対象人数。全員・全項目の漏えい確定ではない"
+    }
+  ],
+  "caveats": [
+    "電話番号・メールアドレスはシステムに登録されず対象外。",
+    "11月11日時点で二次被害は確認されていない。再開予定は未定で、再開済みとはしない。"
+  ],
+  "sources": [
+    {
+      "title": "持株会管理システムで情報漏えい、可能性を含む最大56,487名",
+      "url": "https://www.smbcnikko.co.jp/news/release/2026/pdf/261111_01.pdf",
+      "publishedDate": "2026-11-11"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-09",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "不正アクセスを確認した日。侵入開始日や情報漏えいの初確認日ではない。",
+      "sourceUrl": "https://www.smbcnikko.co.jp/news/release/2026/pdf/261111_01.pdf"
+    },
+    {
+      "date": "2026-11-11",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "11月9日に持株会管理システムへの不正アクセスを確認し、同日遮断・一時停止。その後の調査で一部会員の情報漏えいを確認。漏えいまたはその可能性がある対象は最大56,487名で、原因と範囲を調査中。",
+      "sourceUrl": "https://www.smbcnikko.co.jp/news/release/2026/pdf/261111_01.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "検知日から攻撃開始日を推定しない。",
+      "sourceUrl": "https://www.smbcnikko.co.jp/news/release/2026/pdf/261111_01.pdf",
+      "reviewedDate": "2026-11-14"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "個人情報流出等の被害を初めて確認した日は特定されていない。検知・公表日では代用しない。",
+      "sourceUrl": "https://www.smbcnikko.co.jp/news/release/2026/pdf/261111_01.pdf",
+      "reviewedDate": "2026-11-14"
+    }
+  }
+}

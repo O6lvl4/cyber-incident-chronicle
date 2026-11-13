@@ -1,0 +1,73 @@
+{
+  "id": "cyber-security-cloud-github-2026",
+  "company": "株式会社サイバーセキュリティクラウド",
+  "geography": "日本",
+  "title": "開発用GitHub領域への不審なアクセス、顧客情報に漏えいのおそれ",
+  "announcementDate": "2026-11-12",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-12",
+  "statusAsOfDate": "2026-11-12",
+  "lastVerifiedDate": "2026-11-14",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "流出したGitHub認証情報を使用した第三者によるものと考えられる不審なアクセス。認証情報の流出原因・経路は調査中。",
+    "status": "possible"
+  },
+  "summary": "外部からの情報提供を受け、流出した従業員のGitHub認証情報1件を使ったと考えられる不審なアクセスを11月5日に確認。開発領域の顧客情報等に漏えいのおそれがあり、範囲を調査中。",
+  "affectedData": [
+    "一部顧客の企業名・氏名・メールアドレス等",
+    "サービス利用に伴う通信関連情報"
+  ],
+  "counts": [],
+  "caveats": [
+    "認証情報1件は被害人数や顧客件数ではない。",
+    "ログの期間・内容に制約があり、認証情報有効期間全体のアクセスを確認できていない。",
+    "本件に起因する提供サービスへの不正アクセス・操作・二次被害、提供やセキュリティ機能への影響は確認されず、通常提供を継続。",
+    "流出原因・経路は調査中。認証情報失効、関連認証情報変更、端末隔離等は実施済み。"
+  ],
+  "sources": [
+    {
+      "title": "開発用GitHub領域への不審なアクセス、顧客情報に漏えいのおそれ",
+      "url": "https://www.cscloud.co.jp/news/info/20261112-2/",
+      "publishedDate": "2026-11-12"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-05",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "不正アクセスを確認した日。侵入開始日や情報漏えいの初確認日ではない。",
+      "sourceUrl": "https://www.cscloud.co.jp/news/info/20261112-2/"
+    },
+    {
+      "date": "2026-11-12",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "外部からの情報提供を受け、流出した従業員のGitHub認証情報1件を使ったと考えられる不審なアクセスを11月5日に確認。開発領域の顧客情報等に漏えいのおそれがあり、範囲を調査中。",
+      "sourceUrl": "https://www.cscloud.co.jp/news/info/20261112-2/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "検知日から攻撃開始日を推定しない。",
+      "sourceUrl": "https://www.cscloud.co.jp/news/info/20261112-2/",
+      "reviewedDate": "2026-11-14"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "個人情報流出等の被害を初めて確認した日は特定されていない。検知・公表日では代用しない。",
+      "sourceUrl": "https://www.cscloud.co.jp/news/info/20261112-2/",
+      "reviewedDate": "2026-11-14"
+    }
+  }
+}

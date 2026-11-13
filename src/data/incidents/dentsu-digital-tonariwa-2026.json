@@ -1,0 +1,92 @@
+{
+  "id": "dentsu-digital-tonariwa-2026",
+  "company": "株式会社電通デジタル",
+  "geography": "日本",
+  "title": "TONARIWAに不正アクセス、導入企業2社の個人情報漏えいを確認",
+  "announcementDate": "2026-11-11",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-12",
+  "statusAsOfDate": "2026-11-12",
+  "lastVerifiedDate": "2026-11-14",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "流出した認証情報を用いたアクセス。流出原因・経路は調査中。",
+    "status": "confirmed"
+  },
+  "summary": "11月10日に流出した管理アカウント認証情報による不正アクセスと権限昇格を確認しサービス停止。12日の第2報で外部持出しログに基づき導入企業2社の個人情報漏えいを確認。件数と他社への影響は調査中。",
+  "affectedData": [
+    "一部導入企業のエンドユーザーの氏名・生年月日・連絡先等",
+    "TONARIWA管理用アカウント情報、LINE公式アカウント連携用アクセストークン等"
+  ],
+  "counts": [
+    {
+      "value": 2,
+      "unit": "社",
+      "status": "confirmed",
+      "label": "11月12日時点で個人情報漏えいを確認した導入企業数。人数・レコード件数ではない"
+    }
+  ],
+  "caveats": [
+    "カード・金融機関口座等の決済情報は対象外と公表。",
+    "11月12日時点で個人情報の不正利用等の二次被害は未確認。全利用企業に漏えいがあったと推定しない。",
+    "全サーバー停止・隔離と認証情報失効を実施。トークン再発行等は企業と調整中。復旧方針を検証中で再開完了ではない。"
+  ],
+  "sources": [
+    {
+      "title": "TONARIWAに不正アクセス、導入企業2社の個人情報漏えいを確認",
+      "url": "https://www.dentsudigital.co.jp/news/updates/services/2026-1111-001111",
+      "publishedDate": "2026-11-11"
+    },
+    {
+      "title": "TONARIWA不正アクセス・個人情報漏えい 第2報",
+      "url": "https://www.dentsudigital.co.jp/news/updates/services/2026-1112-001112",
+      "publishedDate": "2026-11-12"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-10",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "不正アクセスを確認した日。侵入開始日や情報漏えいの初確認日ではない。",
+      "sourceUrl": "https://www.dentsudigital.co.jp/news/updates/services/2026-1111-001111"
+    },
+    {
+      "date": "2026-11-11",
+      "label": "公式公表",
+      "kind": "disclosure",
+      "summary": "管理アカウントへの不正アクセスと個人情報漏えいの可能性、サービス停止を公表。",
+      "sourceUrl": "https://www.dentsudigital.co.jp/news/updates/services/2026-1111-001111"
+    },
+    {
+      "date": "2026-11-12",
+      "label": "第2報：2社の漏えいを確認",
+      "kind": "update",
+      "summary": "11月10日に流出した管理アカウント認証情報による不正アクセスと権限昇格を確認しサービス停止。12日の第2報で外部持出しログに基づき導入企業2社の個人情報漏えいを確認。件数と他社への影響は調査中。",
+      "sourceUrl": "https://www.dentsudigital.co.jp/news/updates/services/2026-1112-001112"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "検知日から攻撃開始日を推定しない。",
+      "sourceUrl": "https://www.dentsudigital.co.jp/news/updates/services/2026-1111-001111",
+      "reviewedDate": "2026-11-14"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "個人情報流出等の被害を初めて確認した日は特定されていない。検知・公表日では代用しない。",
+      "sourceUrl": "https://www.dentsudigital.co.jp/news/updates/services/2026-1111-001111",
+      "reviewedDate": "2026-11-14"
+    }
+  }
+}
