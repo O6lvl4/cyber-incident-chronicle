@@ -1,10 +1,11 @@
 import { readdirSync, readFileSync } from 'node:fs';
+import { mergeIncidentEntities } from '../src/lib/incidentEntityLinks.ts';
 import { CLASSIFICATION_OPTIONS } from '../src/lib/classification.ts';
 const root = new URL('../src/data/', import.meta.url);
 export function loadClassifications() {
   const load = name => JSON.parse(readFileSync(new URL(name, root), 'utf8'));
   const records = folder => Object.fromEntries(readdirSync(new URL(`${folder}/`, root)).filter(name => name.endsWith('.json')).sort().map(name => [name.slice(0, -5), load(`${folder}/${name}`)]));
-  return { entities: records('entities'), links: load('incident-entities.json'), attacks: records('attack-classifications') };
+  return { entities: records('entities'), links: mergeIncidentEntities(Object.values(records('incident-entities'))), attacks: records('attack-classifications') };
 }
 const day = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
 const https = value => { try { return new URL(value).protocol === 'https:'; } catch { return false; } };
