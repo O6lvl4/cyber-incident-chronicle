@@ -274,3 +274,9 @@
   .research-list .vulnerability-card > .vulnerability-badges { grid-area: severity; align-items: flex-end; }
   .research-list .vulnerability-card .vulnerability-badges .status-badge { align-self: flex-end; padding-top: 1px; padding-bottom: 1px; }
 }
+
+/* Keep the first advisory complete on narrow phones without shrinking controls. */
+@media (max-width: 359px) {
+  .research-advisories > .package-back-row { padding-top: 0; }
+  .workspace.view-list .research-list.research-advisories > .list-heading { padding-block: 2px; }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "lakeel-aws-2026",
+  "company": "株式会社ラキール",
+  "geography": "日本",
+  "title": "AWS環境への不正アクセス、顧客1社の140名分の漏えいを確認",
+  "announcementDate": "2026-11-11",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-13",
+  "statusAsOfDate": "2026-11-13",
+  "lastVerifiedDate": "2026-11-15",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "ソースコード管理サーバーのアクセス制御設定不足を悪用したAWSアクセスキー窃取と不正アクセス。",
+    "status": "confirmed"
+  },
+  "summary": "11月10日に不正アクセスを検知し、12日に顧客1社の140名分の情報漏えいを確認。ソース管理サーバーのアクセス制御設定不足を突かれAWSアクセスキーが窃取されたと公表した。",
+  "affectedData": [
+    "顧客1社の氏名・メールアドレス"
+  ],
+  "counts": [
+    {
+      "value": 140,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "顧客1社の環境で漏えいを確認した個人情報の人数",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "別の顧客環境でも不正ユーザー作成を確認。他環境の痕跡も調査中で、140名を全顧客の確定総数としない。",
+    "一部顧客は再開、他は準備中。全面復旧とはしない。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.lakeel.com/ja/news-event/news/detail_20261113.html",
+      "title": "ラキール：AWS環境への不正アクセス（第2報）",
+      "publishedDate": "2026-11-13"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-10",
+      "label": "検知・遮断",
+      "kind": "occurrence",
+      "summary": "不正アクセス確認後、外部接続を遮断。",
+      "sourceUrl": "https://www.lakeel.com/ja/news-event/news/detail_20261113.html"
+    },
+    {
+      "date": "2026-11-12",
+      "label": "個人情報漏えい確認",
+      "kind": "occurrence",
+      "summary": "顧客1社の140名分。",
+      "sourceUrl": "https://www.lakeel.com/ja/news-event/news/detail_20261113.html"
+    },
+    {
+      "date": "2026-11-13",
+      "label": "第2報",
+      "kind": "update",
+      "summary": "原因と判明範囲を公表。",
+      "sourceUrl": "https://www.lakeel.com/ja/news-event/news/detail_20261113.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表資料から攻撃開始日を確定できない。検知日や対象データの処理期間と区別。",
+      "sourceUrl": "https://www.lakeel.com/ja/news-event/news/detail_20261113.html",
+      "reviewedDate": "2026-11-15"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026-11-12",
+      "startDate": "2026-11-12",
+      "note": "顧客1社の個人情報漏えい確認日。",
+      "sourceUrl": "https://www.lakeel.com/ja/news-event/news/detail_20261113.html",
+      "reviewedDate": "2026-11-15"
+    }
+  },
+  "detectedDate": "2026-11-10"
+}

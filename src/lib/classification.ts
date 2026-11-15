@@ -1,5 +1,5 @@
 import { ENTITIES } from '../data/entities-index.ts';
-import incidentEntitiesJson from '../data/incident-entities.json' with { type: 'json' };
+import { INCIDENT_ENTITIES } from '../data/incident-entities-index.ts';
 import { ATTACKS } from '../data/attack-classifications-index.ts';
 import type { AttackClassification, ClassificationFilters, EntityClassification } from '../classificationTypes';
 import type { Incident } from '../types';
@@ -35,7 +35,7 @@ export const CLASSIFICATION_OPTIONS = {
   attackKind: ATTACK_LABELS, initialAccess: ACCESS_LABELS, confidence: CONFIDENCE_LABELS,
 };
 const entities = ENTITIES;
-const incidentEntities = incidentEntitiesJson as Record<string, string[]>;
+const incidentEntities = INCIDENT_ENTITIES;
 const attacks = ATTACKS;
 const unknownEntity: EntityClassification = { name: '対象組織（未分類）', industry: 'unknown', manufacturingType: 'unknown', listingStatus: 'unknown', listingAsOfDate: '', sources: [] };
 const unknownAttack: AttackClassification = { attackKind: 'unknown', attackKindStatus: 'unknown', initialAccess: 'unknown', initialAccessStatus: 'unknown', sourceUrls: [], reviewedDate: '', note: '分類資料は未確認です' };

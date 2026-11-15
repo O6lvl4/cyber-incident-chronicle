@@ -36,6 +36,10 @@ URLハッシュには業種、製造細分類、上場区分、攻撃種別、�
 
 ## 更新・検証
 
-`src/data/entities/<entity-id>.json` が法人情報、`src/data/incident-entities.json` が事案から法人への参照、`src/data/attack-classifications/<incident-id>.json` が攻撃分類の正本です。新しいIDの追加後は `pnpm data:index` で型付きインポート一覧を更新します。生成済み一覧の手編集はしません。
+`src/data/entities/<entity-id>.json` が法人情報、`src/data/incident-entities/*.json` が事案から法人への参照、`src/data/attack-classifications/<incident-id>.json` が攻撃分類の正本です。新しい事案の対応表はIDの先頭文字に応じた `0-9` / `a-d` / `e-h` / `i-l` / `m-p` / `q-t` / `u-z` の既存ファイルへ追加します。法人ID配列の順序を保持し、同じ事案IDを複数ファイルへ登録しません。
+
+対応表は `src/data/incident-entities-index.ts` の明示的インポートで読み込み、検証スクリプトはディレクトリ内の全JSONを独立して読み込みます。統合時には重複IDをエラーにし、テストで両者の内容一致を確認します。分割ファイルを増やす場合はこのインポート一覧も更新してください。
+
+新しい法人・攻撃分類IDの追加後は `pnpm data:index` で型付きインポート一覧を更新します。これらの生成済み一覧の手編集はしません。更新後は `pnpm check` と既存の品質ゲートを実行します。
 
 新規事案には対象法人参照と攻撃分類が必要です。根拠が未確認でも、資料URLと不明である理由を残してください。`pnpm check` は網羅性、参照先、列挙値、確度の整合性、出典・日付を検証します。URL・組合せ・未知値・親子会社・集計の単体テストに加え、`pnpm test:ui` はフィルター操作、再読込、戻る/進む、ゼロ件、解除、スマホ表示を確認します。

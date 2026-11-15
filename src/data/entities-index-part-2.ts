@@ -48,58 +48,58 @@ import record44 from './entities/kurashiki-hampu.json' with { type: 'json' };
 import record45 from './entities/kyusai.json' with { type: 'json' };
 import record46 from './entities/kyushu-electric-transmission.json' with { type: 'json' };
 import record47 from './entities/lafool.json' with { type: 'json' };
-import record48 from './entities/lashinbang.json' with { type: 'json' };
-import record49 from './entities/laurel.json' with { type: 'json' };
-import record50 from './entities/lawson.json' with { type: 'json' };
-import record51 from './entities/lean-body.json' with { type: 'json' };
-import record52 from './entities/legoland-japan.json' with { type: 'json' };
-import record53 from './entities/lifenet.json' with { type: 'json' };
-import record54 from './entities/lindt-japan.json' with { type: 'json' };
-import record55 from './entities/line-yahoo.json' with { type: 'json' };
-import record56 from './entities/m3.json' with { type: 'json' };
-import record57 from './entities/maruki-medical-systems.json' with { type: 'json' };
-import record58 from './entities/matsuya-app-order.json' with { type: 'json' };
-import record59 from './entities/mazda.json' with { type: 'json' };
-import record60 from './entities/medley.json' with { type: 'json' };
-import record61 from './entities/mitsubishi-home.json' with { type: 'json' };
-import record62 from './entities/mitsui-fudosan.json' with { type: 'json' };
-import record63 from './entities/mitsui-sumitomo-insurance.json' with { type: 'json' };
-import record64 from './entities/mk-system.json' with { type: 'json' };
-import record65 from './entities/mofa.json' with { type: 'json' };
-import record66 from './entities/moneyforward.json' with { type: 'json' };
-import record67 from './entities/monogatari.json' with { type: 'json' };
-import record68 from './entities/moonstar.json' with { type: 'json' };
-import record69 from './entities/morinaga-confectionery.json' with { type: 'json' };
-import record70 from './entities/murauchi.json' with { type: 'json' };
-import record71 from './entities/nagoya-container-committee.json' with { type: 'json' };
-import record72 from './entities/nagoya-port-association.json' with { type: 'json' };
-import record73 from './entities/naito-securities.json' with { type: 'json' };
-import record74 from './entities/naniwa-pump.json' with { type: 'json' };
-import record75 from './entities/nec.json' with { type: 'json' };
-import record76 from './entities/netprotections.json' with { type: 'json' };
-import record77 from './entities/nexco-central.json' with { type: 'json' };
-import record78 from './entities/nexco-east.json' with { type: 'json' };
-import record79 from './entities/nexco-west.json' with { type: 'json' };
-import record80 from './entities/nichirei.json' with { type: 'json' };
-import record81 from './entities/nidec-instruments.json' with { type: 'json' };
-import record82 from './entities/nidec-precision-vietnam.json' with { type: 'json' };
-import record83 from './entities/nifty.json' with { type: 'json' };
-import record84 from './entities/nikkei-bp.json' with { type: 'json' };
-import record85 from './entities/nikkei-media-marketing.json' with { type: 'json' };
-import record86 from './entities/nikkei.json' with { type: 'json' };
-import record87 from './entities/nimoca.json' with { type: 'json' };
-import record88 from './entities/nippon-rentacar-service.json' with { type: 'json' };
-import record89 from './entities/nipro-china.json' with { type: 'json' };
-import record90 from './entities/nitori-group-customer-systems.json' with { type: 'json' };
-import record91 from './entities/nojima-online-members.json' with { type: 'json' };
-import record92 from './entities/nomura-investor-relations.json' with { type: 'json' };
-import record93 from './entities/nssol.json' with { type: 'json' };
-import record94 from './entities/ntt-business-solutions.json' with { type: 'json' };
-import record95 from './entities/ntt-communications.json' with { type: 'json' };
-import record96 from './entities/ntt-data.json' with { type: 'json' };
-import record97 from './entities/ntt-docomo.json' with { type: 'json' };
-import record98 from './entities/ntt-marketing-act-procx.json' with { type: 'json' };
-import record99 from './entities/ntt-nexia.json' with { type: 'json' };
+import record48 from './entities/lakeel.json' with { type: 'json' };
+import record49 from './entities/lashinbang.json' with { type: 'json' };
+import record50 from './entities/laurel.json' with { type: 'json' };
+import record51 from './entities/lawson.json' with { type: 'json' };
+import record52 from './entities/lean-body.json' with { type: 'json' };
+import record53 from './entities/legalon-technologies.json' with { type: 'json' };
+import record54 from './entities/legoland-japan.json' with { type: 'json' };
+import record55 from './entities/lifenet.json' with { type: 'json' };
+import record56 from './entities/lindt-japan.json' with { type: 'json' };
+import record57 from './entities/line-yahoo.json' with { type: 'json' };
+import record58 from './entities/m3.json' with { type: 'json' };
+import record59 from './entities/maruki-medical-systems.json' with { type: 'json' };
+import record60 from './entities/matsuya-app-order.json' with { type: 'json' };
+import record61 from './entities/mazda.json' with { type: 'json' };
+import record62 from './entities/medley.json' with { type: 'json' };
+import record63 from './entities/mitsubishi-home.json' with { type: 'json' };
+import record64 from './entities/mitsui-fudosan.json' with { type: 'json' };
+import record65 from './entities/mitsui-sumitomo-insurance.json' with { type: 'json' };
+import record66 from './entities/mk-system.json' with { type: 'json' };
+import record67 from './entities/mofa.json' with { type: 'json' };
+import record68 from './entities/monex-securities.json' with { type: 'json' };
+import record69 from './entities/moneyforward.json' with { type: 'json' };
+import record70 from './entities/monogatari.json' with { type: 'json' };
+import record71 from './entities/moonstar.json' with { type: 'json' };
+import record72 from './entities/morinaga-confectionery.json' with { type: 'json' };
+import record73 from './entities/murauchi.json' with { type: 'json' };
+import record74 from './entities/nagoya-container-committee.json' with { type: 'json' };
+import record75 from './entities/nagoya-port-association.json' with { type: 'json' };
+import record76 from './entities/naito-securities.json' with { type: 'json' };
+import record77 from './entities/naniwa-pump.json' with { type: 'json' };
+import record78 from './entities/nec.json' with { type: 'json' };
+import record79 from './entities/netprotections.json' with { type: 'json' };
+import record80 from './entities/nexco-central.json' with { type: 'json' };
+import record81 from './entities/nexco-east.json' with { type: 'json' };
+import record82 from './entities/nexco-west.json' with { type: 'json' };
+import record83 from './entities/nichirei.json' with { type: 'json' };
+import record84 from './entities/nidec-instruments.json' with { type: 'json' };
+import record85 from './entities/nidec-precision-vietnam.json' with { type: 'json' };
+import record86 from './entities/nifty.json' with { type: 'json' };
+import record87 from './entities/nikkei-bp.json' with { type: 'json' };
+import record88 from './entities/nikkei-media-marketing.json' with { type: 'json' };
+import record89 from './entities/nikkei.json' with { type: 'json' };
+import record90 from './entities/nimoca.json' with { type: 'json' };
+import record91 from './entities/nippon-rentacar-service.json' with { type: 'json' };
+import record92 from './entities/nipro-china.json' with { type: 'json' };
+import record93 from './entities/nitori-group-customer-systems.json' with { type: 'json' };
+import record94 from './entities/nojima-online-members.json' with { type: 'json' };
+import record95 from './entities/nomura-investor-relations.json' with { type: 'json' };
+import record96 from './entities/nssol.json' with { type: 'json' };
+import record97 from './entities/ntt-business-solutions.json' with { type: 'json' };
+import record98 from './entities/ntt-communications.json' with { type: 'json' };
+import record99 from './entities/ntt-data.json' with { type: 'json' };
 
 export const ENTITIES_PART_2 = {
   "his-thailand": record0,
@@ -150,56 +150,56 @@ export const ENTITIES_PART_2 = {
   "kyusai": record45,
   "kyushu-electric-transmission": record46,
   "lafool": record47,
-  "lashinbang": record48,
-  "laurel": record49,
-  "lawson": record50,
-  "lean-body": record51,
-  "legoland-japan": record52,
-  "lifenet": record53,
-  "lindt-japan": record54,
-  "line-yahoo": record55,
-  "m3": record56,
-  "maruki-medical-systems": record57,
-  "matsuya-app-order": record58,
-  "mazda": record59,
-  "medley": record60,
-  "mitsubishi-home": record61,
-  "mitsui-fudosan": record62,
-  "mitsui-sumitomo-insurance": record63,
-  "mk-system": record64,
-  "mofa": record65,
-  "moneyforward": record66,
-  "monogatari": record67,
-  "moonstar": record68,
-  "morinaga-confectionery": record69,
-  "murauchi": record70,
-  "nagoya-container-committee": record71,
-  "nagoya-port-association": record72,
-  "naito-securities": record73,
-  "naniwa-pump": record74,
-  "nec": record75,
-  "netprotections": record76,
-  "nexco-central": record77,
-  "nexco-east": record78,
-  "nexco-west": record79,
-  "nichirei": record80,
-  "nidec-instruments": record81,
-  "nidec-precision-vietnam": record82,
-  "nifty": record83,
-  "nikkei-bp": record84,
-  "nikkei-media-marketing": record85,
-  "nikkei": record86,
-  "nimoca": record87,
-  "nippon-rentacar-service": record88,
-  "nipro-china": record89,
-  "nitori-group-customer-systems": record90,
-  "nojima-online-members": record91,
-  "nomura-investor-relations": record92,
-  "nssol": record93,
-  "ntt-business-solutions": record94,
-  "ntt-communications": record95,
-  "ntt-data": record96,
-  "ntt-docomo": record97,
-  "ntt-marketing-act-procx": record98,
-  "ntt-nexia": record99,
+  "lakeel": record48,
+  "lashinbang": record49,
+  "laurel": record50,
+  "lawson": record51,
+  "lean-body": record52,
+  "legalon-technologies": record53,
+  "legoland-japan": record54,
+  "lifenet": record55,
+  "lindt-japan": record56,
+  "line-yahoo": record57,
+  "m3": record58,
+  "maruki-medical-systems": record59,
+  "matsuya-app-order": record60,
+  "mazda": record61,
+  "medley": record62,
+  "mitsubishi-home": record63,
+  "mitsui-fudosan": record64,
+  "mitsui-sumitomo-insurance": record65,
+  "mk-system": record66,
+  "mofa": record67,
+  "monex-securities": record68,
+  "moneyforward": record69,
+  "monogatari": record70,
+  "moonstar": record71,
+  "morinaga-confectionery": record72,
+  "murauchi": record73,
+  "nagoya-container-committee": record74,
+  "nagoya-port-association": record75,
+  "naito-securities": record76,
+  "naniwa-pump": record77,
+  "nec": record78,
+  "netprotections": record79,
+  "nexco-central": record80,
+  "nexco-east": record81,
+  "nexco-west": record82,
+  "nichirei": record83,
+  "nidec-instruments": record84,
+  "nidec-precision-vietnam": record85,
+  "nifty": record86,
+  "nikkei-bp": record87,
+  "nikkei-media-marketing": record88,
+  "nikkei": record89,
+  "nimoca": record90,
+  "nippon-rentacar-service": record91,
+  "nipro-china": record92,
+  "nitori-group-customer-systems": record93,
+  "nojima-online-members": record94,
+  "nomura-investor-relations": record95,
+  "nssol": record96,
+  "ntt-business-solutions": record97,
+  "ntt-communications": record98,
+  "ntt-data": record99,
 } as Record<string, EntityClassification>;

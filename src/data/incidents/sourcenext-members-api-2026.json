@@ -5,10 +5,10 @@
   "announcementDate": "2026-10-15",
   "announcementDateLabel": "収録した公表日",
   "occurredDate": "2026-10-09",
-  "occurredDateLabel": "調査で確認した不正アクセス開始日時（10時頃）",
-  "updatedDate": "2026-10-15",
-  "statusAsOfDate": "2026-10-15",
-  "lastVerifiedDate": "2026-10-21",
+  "occurredDateLabel": "第2報で訂正された不正取得開始時刻（午前4時台）",
+  "updatedDate": "2026-11-13",
+  "statusAsOfDate": "2026-11-13",
+  "lastVerifiedDate": "2026-11-15",
   "impactTypes": [
     "leak",
     "unauthorizedAccess"
@@ -18,7 +18,7 @@
     "label": "会員情報取得APIの不正利用。FAQは原因となったシステムの脆弱性修正を説明",
     "status": "confirmed"
   },
-  "summary": "10月9日から会員情報取得APIを不正利用され、13日9時頃に検知して13時36分までに封じ込めた。会社は情報流出の発生を公表する一方、22,519,960件と各情報項目は流出可能性の範囲として示し、パスワード再設定を案内している。",
+  "summary": "会員情報取得APIの不正利用による情報流出。第2報は、不正取得期間を10月9日午前4時台から11日午前1時40分頃までと訂正・特定した。対象22,519,960件は流出可能性の範囲で変更なく、調査は継続中。",
   "affectedData": [
     "メールアドレス、パスワード、氏名・氏名カナ、住所、性別、電話番号、FAX番号、生年月日",
     "会社名、役職名、部署名、加入サービス・登録日・ログイン日等の識別情報"
@@ -40,7 +40,8 @@
     "パスワードの保存形式は未公表。ハッシュ化・平文流出のいずれも断定しない",
     "10月13日は検知・封じ込め日、10月9日は確認された不正アクセス開始日、10月15日は公表日。2023年の決済アプリ改ざんとは別事案",
     "10月15日付告知では翌16日の警察申告を予定としていたが、更新日時のない現在のFAQは10月16日の所轄警察署への相談と外部専門機関による第三者調査開始を明記。FAQの更新公表日は不明のため、最終公表日を確認日から推定しない",
-    "FAQにはパスワードリセットの順次実施と措置完了の両表現があり、全利用者の再設定完了や外部調査完了と読み替えない"
+    "FAQにはパスワードリセットの順次実施と措置完了の両表現があり、全利用者の再設定完了や外部調査完了と読み替えない",
+    "第2報は11月13日時点の中間調査。12月上旬の最終報告は予定であり、調査完了ではない。"
   ],
   "geography": "日本",
   "sources": [
@@ -53,15 +54,20 @@
       "title": "ソースネクスト：情報漏えいFAQ・対象範囲と対応",
       "url": "https://www.sourcenext.com/support/i/2026/1015_1/",
       "publishedDate": "2026-10-15"
+    },
+    {
+      "url": "https://www.sourcenext.com/support/i/2026/1113_info/",
+      "title": "ソースネクスト：情報流出の第二報・開始時刻の訂正",
+      "publishedDate": "2026-11-13"
     }
   ],
   "timeline": [
     {
       "date": "2026-10-09",
-      "label": "API不正利用を開始",
+      "label": "API不正利用開始（開始時刻は後日訂正）",
       "kind": "occurrence",
-      "summary": "10時頃から会員情報取得APIを不正利用し登録情報を取得したと調査で判明",
-      "sourceUrl": "https://www.sourcenext.com/support/i/2026/1015_info/"
+      "summary": "初報は10時頃としたが、11月13日の第2報で午前4時台と訂正。",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2026/1113_info/"
     },
     {
       "date": "2026-10-13",
@@ -83,17 +89,25 @@
       "kind": "occurrence",
       "summary": "現在の公式FAQに、所轄警察署への相談と独立したセキュリティ専門機関への依頼・調査開始を実施済みと記載。FAQの更新公表日時は不明",
       "sourceUrl": "https://www.sourcenext.com/support/i/2026/1015_1/"
+    },
+    {
+      "date": "2026-11-13",
+      "label": "第2報で開始時刻と取得期間を訂正",
+      "kind": "update",
+      "summary": "取得期間を10月9日午前4時台〜11日午前1時40分頃と特定。対象件数は変更なし、調査継続。",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2026/1113_info/"
     }
   ],
   "detectedDate": "2026-10-13",
   "eventDates": {
     "attack": {
       "precision": "period",
-      "label": "2026-10-09 10時頃以降",
-      "note": "公表文の調査結果に10月9日10時頃から不正アクセスがあり、会員情報取得APIを悪用して情報取得と明記。10月13日13:36は封じ込め完了で、攻撃の終期とは断定せず終了境界は保存しない。",
-      "sourceUrl": "https://www.sourcenext.com/support/i/2026/1015_info/",
-      "reviewedDate": "2026-10-18",
-      "startDate": "2026-10-09"
+      "label": "2026-10-09 午前4時台〜10-11 午前1時40分頃",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-11",
+      "note": "第2報が確認した情報取得期間。10月13日の検知・封じ込めとは区別。",
+      "sourceUrl": "https://www.sourcenext.com/support/i/2026/1113_info/",
+      "reviewedDate": "2026-11-15"
     },
     "damageConfirmed": {
       "precision": "unknown",

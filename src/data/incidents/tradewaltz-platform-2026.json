@@ -1,0 +1,88 @@
+{
+  "id": "tradewaltz-platform-2026",
+  "company": "株式会社トレードワルツ",
+  "geography": "日本",
+  "title": "不正アクセスにより貿易書類130件の流出を確認、サービス停止",
+  "announcementDate": "2026-11-10",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-13",
+  "statusAsOfDate": "2026-11-13",
+  "lastVerifiedDate": "2026-11-15",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "外部委託先のサーバー侵害で盗まれた管理用アクセスキーを悪用。委託先への侵入手口・社名は未公表。",
+    "status": "confirmed"
+  },
+  "summary": "11月10日に不正アクセスを検知しサービスを停止。11日に貿易書類130件の流出を確認した。委託先から盗まれた管理用アクセスキーの悪用が原因と説明している。",
+  "affectedData": [
+    "氏名・イニシャル等を含む貿易書類"
+  ],
+  "counts": [
+    {
+      "value": 130,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "流出を確認した貿易書類。人数ではない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "11月16日の再開を目指す予定であり、11月13日時点で再開済みではない。",
+    "TradeWaltz for Grain Importers・for Export Documentaryは影響なしと説明。",
+    "委託先名未公表。同時期の他社事案との関連を推測で統合しない。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.tradewaltz.com/news/13816/",
+      "title": "TradeWaltz：不正アクセス・一時停止（第10報まで）",
+      "publishedDate": "2026-11-13"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-10",
+      "label": "検知・一時停止",
+      "kind": "occurrence",
+      "summary": "不正アクセス検知後、本番・トレーニング環境停止。",
+      "sourceUrl": "https://www.tradewaltz.com/news/13816/"
+    },
+    {
+      "date": "2026-11-11",
+      "label": "流出確認",
+      "kind": "occurrence",
+      "summary": "貿易書類130件の漏えいを確認。",
+      "sourceUrl": "https://www.tradewaltz.com/news/13816/"
+    },
+    {
+      "date": "2026-11-13",
+      "label": "第10報",
+      "kind": "update",
+      "summary": "対象範囲を特定し通知、再開準備中。",
+      "sourceUrl": "https://www.tradewaltz.com/news/13816/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表資料から攻撃開始日を確定できない。検知日や対象データの処理期間と区別。",
+      "sourceUrl": "https://www.tradewaltz.com/news/13816/",
+      "reviewedDate": "2026-11-15"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026-11-11",
+      "startDate": "2026-11-11",
+      "note": "公式経緯で午前3時30分に漏えい確認。",
+      "sourceUrl": "https://www.tradewaltz.com/news/13816/",
+      "reviewedDate": "2026-11-15"
+    }
+  },
+  "detectedDate": "2026-11-10"
+}
