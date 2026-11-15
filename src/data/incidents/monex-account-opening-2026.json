@@ -1,0 +1,95 @@
+{
+  "id": "monex-account-opening-2026",
+  "company": "マネックス証券株式会社",
+  "geography": "日本",
+  "title": "委託先の口座開設システムで個人情報漏えいのおそれ",
+  "announcementDate": "2026-11-13",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "攻撃開始日未公表",
+  "updatedDate": "2026-11-13",
+  "statusAsOfDate": "2026-11-13",
+  "lastVerifiedDate": "2026-11-15",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "不正アクセス。具体的な侵入手口は未確認。",
+    "status": "unknown"
+  },
+  "summary": "委託先が10月18日に不正アクセスの試みを検知し、19日に遮断。中間調査によりメールアドレス最大113万件と本人確認書類等画像1,592件に漏えいのおそれがあると公表した。",
+  "affectedData": [
+    "メールアドレス",
+    "本人確認書類・自撮り写真等の画像（マイナンバーカード表面、運転免許証等）"
+  ],
+  "counts": [
+    {
+      "value": 1130000,
+      "unit": "件",
+      "status": "possible",
+      "label": "メールアドレスの最大対象件数。重複・手続未完了を含む",
+      "approximate": false
+    },
+    {
+      "value": 1592,
+      "unit": "件",
+      "status": "possible",
+      "label": "本人確認書類等画像の対象件数。人数ではない",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "対象個人の特定と原因調査は継続。メール件数と画像件数を合算して被害人数にしない。",
+    "マイナンバーの漏えいは確認されず、ログイン・取引パスワード等は同一DBに含まれない。",
+    "通常の取引・ログインに影響なし。不正取引や顧客資産への影響は確認されていない。"
+  ],
+  "sources": [
+    {
+      "url": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf",
+      "title": "マネックス証券：口座開設システムへの不正アクセス",
+      "publishedDate": "2026-11-13"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-18",
+      "label": "試みを検知",
+      "kind": "occurrence",
+      "summary": "外部委託先が不正アクセスの試みを検知。",
+      "sourceUrl": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf"
+    },
+    {
+      "date": "2026-10-19",
+      "label": "外部アクセス遮断",
+      "kind": "occurrence",
+      "summary": "一部口座開設サービスを停止。",
+      "sourceUrl": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf"
+    },
+    {
+      "date": "2026-11-13",
+      "label": "中間調査公表",
+      "kind": "disclosure",
+      "summary": "情報漏えいのおそれと対象範囲を公表。",
+      "sourceUrl": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "公表資料から攻撃開始日を確定できない。検知日や対象データの処理期間と区別。",
+      "sourceUrl": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf",
+      "reviewedDate": "2026-11-15"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "情報漏えいの初確認日は確定できない。",
+      "sourceUrl": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf",
+      "reviewedDate": "2026-11-15"
+    }
+  },
+  "detectedDate": "2026-10-18"
+}

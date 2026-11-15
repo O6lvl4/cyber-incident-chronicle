@@ -17,9 +17,9 @@
   "dateNote": "Apache公式の2.4.71リリース日。個別CVEの登録日時とは区別。",
   "listedDate": "2026-11-11",
   "listedNote": "開発元がmod_http2 CVE-2026-119618をCriticalとして公表した日。JVN注意喚起は翌12日。",
-  "modifiedAt": "2026-11-13T14:17:19.945Z",
+  "modifiedAt": "2026-11-14T04:56:47.271Z",
   "withdrawnAt": null,
-  "lastVerifiedAt": "2026-11-13T21:29:27.892929Z",
+  "lastVerifiedAt": "2026-11-14T21:40:37.033825Z",
   "affected": [
     {
       "name": "CVE-2026-119618 / Apache HTTP Server mod_http2",
@@ -50,7 +50,14 @@
   "severity": {
     "label": "critical",
     "sourceUrl": "https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71",
-    "cvss": []
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.1,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://cveawg.mitre.org/api/cve/CVE-2026-119618"
+      }
+    ]
   },
   "exploitation": {
     "status": "unknown",
@@ -106,11 +113,11 @@
     },
     {
       "type": "advisoryDatabase",
-      "title": "CVE-2026-119618 Apache CNA",
+      "title": "CVE-2026-119618 Apache CNA / CISA ADP",
       "url": "https://cveawg.mitre.org/api/cve/CVE-2026-119618",
       "publishedDate": "2026-11-11",
       "publishedAt": "2026-11-11T14:54:08.155Z",
-      "modifiedAt": "2026-11-13T14:17:19.945Z"
+      "modifiedAt": "2026-11-14T04:56:47.271Z"
     },
     {
       "type": "advisoryDatabase",
@@ -132,6 +139,7 @@
   "caveats": [
     "告知単位の3CVE集約。CriticalはCVE-2026-119618のみで、CVE-2026-106023は開発元Important、CVE-2026-109163はLow。ImportantをHighへ換算しない。",
     "深刻度や修正コミットの公開は、実悪用や攻撃用PoCの公開を意味しない。",
-    "CISA KEV本体はHTTP403で今回未確認。従来の他製品記録の掲載状態も上書きしない。"
+    "CISA KEV本体はHTTP403で今回未確認。従来の他製品記録の掲載状態も上書きしない。",
+    "2026年11月14日更新のCISA ADPによるCVE-2026-119618のCVSS 3.1は8.1 High。ApacheのCriticalラベルとは出典・評価方式を区別し、他の2CVEへ適用しない。"
   ]
 }

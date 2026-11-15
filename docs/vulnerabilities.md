@@ -356,3 +356,11 @@ OSVの7全件エクスポートは前回の固定generationをSHA256で再確認
 [Reviewed差分](data/github-reviewed-delta-2026-11-14.json)、[開発元API](data/reviewed-maintainer-review-2026-11-14.json)、[補助ソース](data/supplemental-source-status-2026-11-14.json)、[保留候補](data/supplemental-held-candidates-2026-11-14.json)、[フィード](data/library-feed-review-2026-11-14.json)に確認段階を区別して保持する。
 
 今回、変更対象の参照先から開発元GitHub Advisory API 124 URLを実取得し、57成功・67 HTTP403。成功レスポンスの影響範囲とReviewed原文を別々に保持し、未取得先を開発元確認済みに格上げしていない。固定DB確認と開発元個別確認は別段階である。
+
+## 2026-11-15 の継続更新
+
+固定ソース `78a4da5a20b1f6688316ec27303bc3f9c99587cd`（2026-11-14T18:35:12Z）を前回成功点の全Reviewedツリーと比較。全37,810件・対象19,848件を再生成し、対象11追加・既存変更0・削除0。表示20,015件（11件増）で、追加には撤回済み重複告知5件を含む。新規発見11件という意味ではない。既存749個別編集を保持した。開発元公開API7件を実取得し、NLTK、ag-psd、File Browserの範囲・修正版・公表日時をDB原文と分離して保存。
+
+OSV補助7エクスポートを前回固定generationのSHA256とCRC、正規化JSON全文で比較。通常追加14・変更94、MAL追加649・変更5、削除0。未一致48行（Go47・PYSEC1）は検証済み追加対象ではなく保留候補。CISA KEV本体は403で成功点と既存状態を保持。JVN/JPCERTフィードは不変、JVNDBは外枠のみ変化し500項目の内容は不変。
+
+[Reviewed差分](data/github-reviewed-delta-2026-11-15.json)、[開発元API](data/reviewed-maintainer-review-2026-11-15.json)、[補助ソース](data/supplemental-source-status-2026-11-15.json)、[フィード](data/library-feed-review-2026-11-15.json)を参照。

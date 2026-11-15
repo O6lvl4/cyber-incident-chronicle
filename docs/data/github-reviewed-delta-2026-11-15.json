@@ -1,0 +1,885 @@
+{
+  "checkedAt": "2026-11-14T21:38:07.042664+00:00",
+  "previousSnapshot": "96f64df1e8d2a1a4d3f7cf72e5c5a95a648fdfa1",
+  "snapshot": "78a4da5a20b1f6688316ec27303bc3f9c99587cd",
+  "method": "Full git tree comparison, including updates older than 24-hour overlap; database evidence, not all maintainer-verified.",
+  "counts": {
+    "A": 11,
+    "M": 0,
+    "D": 0
+  },
+  "records": [
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-6665-2vj3-h76r/GHSA-6665-2vj3-h76r.json",
+      "id": "GHSA-6665-2vj3-h76r",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-6665-2vj3-h76r/GHSA-6665-2vj3-h76r.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-6665-2vj3-h76r",
+        "modified": "2026-11-14T00:06:57Z",
+        "published": "2026-11-13T12:31:16Z",
+        "withdrawn": "2026-11-14T00:06:57Z",
+        "aliases": [],
+        "summary": "Duplicate Advisory: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0)",
+        "details": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-r53h-rw34-8h97. This link is maintained to preserve external references.\n\n## Original Description\nNLTK before 3.10.4 contains a denial of service vulnerability in Tree.chomsky_normal_form that allows remote attackers to exhaust CPU through quadratic-time right-factor binarization using list.pop(0). Attackers can supply a wide flat treebank tree parsed by Tree.fromstring to force tens of seconds of single-threaded CPU consumption, blocking the processing thread.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "< 3.10.4"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-r53h-rw34-8h97"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126298"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-before-3.10.4-quadratic-cpu-denial-of-service-via-tree-chomsky-normal-form"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-400"
+          ],
+          "severity": "HIGH",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-14T00:06:57Z",
+          "nvd_published_at": "2026-11-13T10:17:34Z"
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-89p3-fcch-88ph/GHSA-89p3-fcch-88ph.json",
+      "id": "GHSA-89p3-fcch-88ph",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-89p3-fcch-88ph/GHSA-89p3-fcch-88ph.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-89p3-fcch-88ph",
+        "modified": "2026-11-14T00:08:50Z",
+        "published": "2026-11-14T00:08:50Z",
+        "aliases": [
+          "CVE-2026-126299"
+        ],
+        "summary": "NLTK: Quadratic-time CPU denial of service in CCG lexicon parser (fromstring) on wide bracket bodies and operator chains",
+        "details": "## Summary\n\nThe public CCG lexicon parser `nltk.ccg.lexicon.fromstring` parses caller-influenced lexicon text with two pure-Python loops whose cost is quadratic in the input width. A service that parses an untrusted CCG lexicon string can be driven into tens of seconds of single-threaded CPU by a few-megabyte input, starving the request worker. No authentication or user interaction is required.\n\n## Root Cause\n\n`matchBrackets` consumes a bracket body one character at a time with `inside = inside + rest[0]; rest = rest[1:]`. The `rest = rest[1:]` tail re-slice copies the entire remaining string on every iteration, so a flat bracket body costs O(n^2). `augParseCategory` drives a `while rest != \"\":` operator loop that re-copies the regular-expression match tail (`rest = app[3]`) once per operator, which is also O(n^2) over a long operator chain. The parser carries a recursion-depth guard (`MAX_PARSE_DEPTH = 500`) that raises on deeply nested categories, but both quadratic loops run on flat input whose nesting depth stays at zero, so that guard never fires. No bound is applied to line length or category width before the text reaches these loops.\n\n```text\nAffected functions:\n- nltk.ccg.lexicon.matchBrackets       (nltk/ccg/lexicon.py:149-172; tail re-slice at line 168)\n- nltk.ccg.lexicon.augParseCategory    (nltk/ccg/lexicon.py:223-268; APP_RE tail re-copy at line 250)\nPublic entry point: nltk.ccg.lexicon.fromstring (nltk/ccg/lexicon.py:271), also re-exported as nltk.ccg.chart.fromstring.\n```\n\n## Impact\n\nAn attacker who can influence the CCG lexicon string parsed by an application causes sustained single-threaded CPU consumption (availability loss). The vulnerable path is network-reachable (AV:N) and needs no privileges or user interaction (PR:N, UI:N). Because the cost grows quadratically with attacker-chosen input size, a few-megabyte payload costs tens of seconds per core, and a small number of concurrent requests can exhaust worker threads. Confidentiality and integrity are not affected. The NLTK regular-expression wall-clock timeout wraps regex matching only; it does not wrap these pure-Python slicing loops, so it provides no protection here.\n\n## Proof of Concept\n\n```text\nEnvironment: nltk 3.10.3, regex 2026.9.10, CPython. Run the parser on the shipped public API.\n```\n\n```python\nimport nltk.ccg.lexicon as L\n\n# Vector A: flat bracket body -> matchBrackets tail re-slice is O(n^2)\nn = 400000\nlex_a = \":- S\\nw => (\" + \"a\" * n + \")\\n\"\n\n# Vector B: long operator chain -> augParseCategory tail re-copy is O(n^2)\nm = 32000\nlex_b = \":- a\\nw => \" + \"a\" + \"/a\" * m + \"\\n\"\n\nimport time\nfor name, s in ((\"A\", lex_a), (\"B\", lex_b)):\n    t = time.perf_counter()\n    try:\n        L.fromstring(s)\n    except Exception:\n        pass  # downstream parse error is irrelevant; the CPU is already burned\n    print(name, round(time.perf_counter() - t, 3), \"s\")\n```\n\n```text\nNegative control (\":- a\\nw => (a/a)\"):   ~0.00007 s\nVector A (matchBrackets, flat body):     n=50k 0.078s | 100k 0.260s | 200k 1.046s | 400k 2.083s   (~4x per doubling => O(n^2))\nVector B (augParseCategory, operators):  m=4k 0.078s | 8k 0.215s | 16k 0.485s | 32k 1.329s        (super-linear)\n```\n\n## Attack Chain\n\n1. **Exposure:** An application calls the public `nltk.ccg.lexicon.fromstring(lex_str)` (also reachable as `nltk.ccg.chart.fromstring`) on lexicon text the attacker can influence.\n2. **Control:** The attacker fully controls the body width (a run of characters inside one bracket) and the operator-chain length; neither is capped by `fromstring`.\n3. **Path:** `fromstring` splits input into lines and routes each category through `nextCategory`, which dispatches to `matchBrackets` (Vector A) or into the `augParseCategory` operator loop (Vector B).\n4. **Guard:** The only relevant guard is the `MAX_PARSE_DEPTH = 500` recursion-depth check. On flat input the recursion depth is zero, so `if _depth > max_depth` is never reached; the width loops run unbounded.\n5. **Primitive:** The tail re-slice `rest = rest[1:]` and tail re-copy `rest = app[3]` execute a quadratic number of string copies.\n6. **Result:** Sustained single-core CPU exhaustion; a few-megabyte lexicon costs tens of seconds and scales quadratically, blocking the parsing thread.\n\n## Bypass Evidence\n\nThe one protection present on this path is the recursion-depth guard `MAX_PARSE_DEPTH = 500` (nltk/ccg/lexicon.py:22), checked at lexicon.py:153 and lexicon.py:228. It defends only against nesting depth and raises a bounded `ValueError` for deeply nested categories. The quadratic payloads here are flat: a single bracket body or a single operator run has nesting depth zero to one, so the depth check provably never fires while the width loops consume quadratic time. This was confirmed by running the shipped parser: the payloads complete without a `ValueError` or a regex `TimeoutError` while consuming quadratic CPU (Vector A shows a clean 4x cost per input doubling). A repository search finds no line-length or category-width cap anywhere on the `fromstring` path; the regex source-length limit bounds regex patterns, not lexicon text. The strongest disproof attempt (that CPython in-place string concatenation makes Vector A linear) fails because `rest = rest[1:]` is an unconditional copy of the remaining input that the concatenation fast path cannot elide, and the measured 4x-per-doubling ratio confirms the quadratic empirically.\n\n## Affected Versions\n\n- `Ecosystem: PyPI (pip)`\n- `Package: nltk`\n- `Confirmed affected range: <= 3.10.3`\n- `Latest release checked: 3.10.3 (PyPI, https://pypi.org/pypi/nltk/json)`\n- `Fix status: 3.10.4`\n\nThe width-slicing loops ship in every release carrying the CCG lexicon parser and are present in the current latest published release, 3.10.3. The lower boundary was not bisected, so the introducing version is left open; the behavior long predates the recent regular-expression and recursion-depth hardening.\n\n## Suggested Fix\n\nScan the bracket body and the operator chain with an index cursor into the original string (or a `collections.deque`) instead of repeatedly re-slicing or re-copying the tail, so each character is handled in constant amortized time. As defense in depth, impose an explicit bound on lexicon line length and category width at the `fromstring` chokepoint and raise a bounded error when it is exceeded, mirroring the existing depth guard. No configuration-only mitigation fully removes the exposure for a service that must parse untrusted lexicons; until a fix ships, callers should cap the size of accepted lexicon input and parse it under a CPU or time budget in an isolated worker.\n\nReported by zx (GitHub: @manus-pi).\n\n\n## Fix status\n\nPR: #3753 \"[Do not merge yet] Fix GHSA-8mgp-746c-j5xp: URL-scheme bypass of pathsec.validate_path\", open; head da55cab0e at the time of this note (a develop merge on top of 238f81500, the head on which the verdicts below were measured).\n\nFix commit: cf12a5e6a (nltk/ccg/lexicon.py: matchBrackets, nextCategory and augParseCategory thread a cursor instead of re-slicing the tail; the trailing capture group is dropped; MAX_PARSE_LEN=100000 caps the input).\n\nProbe: nltk/test/unit/security_probes/ghsa_89p3_fcch_88ph.py (on the PR). Verdict on the PR head: FIXED (scaling 4.4x over a 4x input; an over-cap chain is rejected by MAX_PARSE_LEN). The advisory PoC re-run on develop 2fa3f48fe: vector A (bracket body, 100k vs 400k) 15.8x and vector B (operator chain, 8k vs 32k) 11.3x over a 4x input, so develop is still VULNERABLE.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.10.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.10.3"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-89p3-fcch-88ph"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126299"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/pull/3944"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/commit/0bb5b947bd235b950cf2f90e893a498e16da0fe3"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/commit/cf12a5e6a"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/nltk/nltk"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/releases/tag/v3.10.4"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-before-3.10.4-quadratic-time-denial-of-service-via-ccg-lexicon-fromstring"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "severity": "HIGH",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-14T00:08:50Z",
+          "nvd_published_at": null
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-f7j6-hf97-9v99/GHSA-f7j6-hf97-9v99.json",
+      "id": "GHSA-f7j6-hf97-9v99",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-f7j6-hf97-9v99/GHSA-f7j6-hf97-9v99.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-f7j6-hf97-9v99",
+        "modified": "2026-11-13T23:20:08Z",
+        "published": "2026-11-13T12:31:16Z",
+        "withdrawn": "2026-11-13T23:20:08Z",
+        "aliases": [],
+        "summary": "Duplicate Advisory: BllipParser passes caller-supplied model paths to the bllipparser C extension with no pathsec check, enabling arbitrary read",
+        "details": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-fg9w-wfp5-j933. This link is maintained to preserve external references.\n\n## Original Description\n\nNLTK from 3.10.0 before 3.10.4 contains an arbitrary file read vulnerability in BllipParser that allows attackers to open files outside NLTK data roots by supplying unvalidated model paths. Attackers controlling parser_model, reranker_features, reranker_weights, or from_unified_model_dir() input can make the bllipparser C extension read sensitive files or block on FIFOs and devices.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "< 3.10.4"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-fg9w-wfp5-j933"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126295"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-3.10.0-before-3.10.4-arbitrary-file-read-via-bllipparser-model-paths"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-22"
+          ],
+          "severity": "HIGH",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-13T23:20:08Z",
+          "nvd_published_at": "2026-11-13T10:17:34Z"
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-fg9w-wfp5-j933/GHSA-fg9w-wfp5-j933.json",
+      "id": "GHSA-fg9w-wfp5-j933",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-fg9w-wfp5-j933/GHSA-fg9w-wfp5-j933.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-fg9w-wfp5-j933",
+        "modified": "2026-11-13T23:20:56Z",
+        "published": "2026-11-13T23:20:56Z",
+        "aliases": [
+          "CVE-2026-126295"
+        ],
+        "summary": "NLTK: BllipParser passes caller-supplied model paths to the bllipparser C extension with no pathsec check, enabling arbitrary read",
+        "details": "## Summary\n\n`BllipParser` in `nltk/parse/bllip.py` hands caller-supplied filesystem paths to the native `bllipparser` C extension without routing them through NLTK's `pathsec` validation. The constructor parameters `parser_model`, `reranker_features`, and `reranker_weights`, and the alternative `from_unified_model_dir()` entry point, flow directly to the C extension's `load_parser_model()` and `load_reranker_model()` calls, which open and read the given path at the OS level. Any application that passes an attacker-influenced path to this API reads a file of the attacker's choosing from anywhere on the filesystem, outside the NLTK data roots that every other NLTK tool wrapper confines access to.\n\n## Root Cause\n\nAs of NLTK 3.10.0, `SECURITY.md` documents a centralized I/O security module (`nltk.pathsec`) with strict enforcement enabled by default, under which file-backed resources must resolve inside allowed NLTK data directories. For paths handed to external tools and native extensions that open files themselves, the module provides `validate_tool_path()`, which runs name-safety checks, rejects option-shaped, URL-shaped, and traversal inputs, opens the path with `O_NOFOLLOW` requiring a regular single-linked file, and returns the validated string the caller must use. Every sibling tool wrapper applies it. `BllipParser` applies none of it: the module imports only `ParserI`, `safe_print`, and `Tree`, with zero `pathsec` references, so the three model-path parameters reach the C extension unchecked. The violated invariant is that NLTK tool wrappers must bound caller-supplied native-tool paths to the data roots before the native code opens them.\n\n```text\nnltk/parse/bllip.py:125-131   BllipParser.__init__ accepts parser_model,\n                              reranker_features, reranker_weights (no validation)\nnltk/parse/bllip.py:164       self.rrp.load_parser_model(parser_model, ...)   -> C extension open\nnltk/parse/bllip.py:166-170   self.rrp.load_reranker_model(features_filename=...,\n                              weights_filename=...)                          -> C extension open\nnltk/parse/bllip.py:218-255   from_unified_model_dir(model_dir) -> __init__ (no validation)\nnltk/parse/bllip.py:9-11      imports: ParserI, safe_print, Tree (no pathsec import)\n```\n\n## Impact\n\nAn application that uses `BllipParser` (requiring the optional `bllipparser` package to be installed) and that passes a model path derived from untrusted input to the constructor or to `from_unified_model_dir()` allows that input to designate an arbitrary filesystem path. The native extension opens and reads the designated file into process memory to parse it as model data. This defeats the pathsec data-root confinement that NLTK applies to all other native-tool model loads. The attacker-controlled path can target files outside the NLTK data directories, for example local configuration or credential files readable by the process. Content disclosure to the attacker depends on how the application surfaces parser errors or results; file existence, size, and open behavior provide an oracle regardless. Because the same unvalidated path also skips the checks that refuse a non-regular file or an over-large model, the attacker can instead designate a FIFO, socket, device, or directory, or an oversized regular file, so the native load blocks or reads unbounded data into memory and the component performing the parse suffers reduced performance or a stalled worker. The primitive demonstrated by source analysis is attacker control of which file the process opens and reads.\n\n## Proof of Concept\n\n```text\nRequires the optional bllipparser C extension to be installed\n(pip install bllipparser) so that RerankingParser.load_parser_model\nis available. No NLTK data download is needed to exercise the path.\n```\n\n```python\n# An application forwards an untrusted \"model\" path into BllipParser.\nfrom nltk.parse.bllip import BllipParser\n\n# Attacker-controlled value reaches the constructor unchanged.\nuntrusted_path = \"/etc/passwd\"\nBllipParser(parser_model=untrusted_path)\n# The bllipparser C extension opens and reads untrusted_path at the OS\n# level with no NLTK pathsec confinement to the data roots.\n```\n\n```text\nStructural confirmation without the optional extension installed:\n\n$ grep -n \"pathsec\\|validate_path\\|validate_tool\" nltk/parse/bllip.py\n(no output)\n\n$ grep -n \"validate_tool_path\" nltk/tag/crf.py nltk/tag/hunpos.py \\\n      nltk/tag/stanford.py nltk/parse/malt.py\nnltk/tag/crf.py:140\nnltk/tag/crf.py:311\nnltk/tag/hunpos.py:111\nnltk/tag/stanford.py:85\nnltk/tag/stanford.py:137\nnltk/parse/malt.py:340\nnltk/parse/malt.py:344\n\nBllipParser is the only native-tool wrapper with no validate_tool_path call.\n```\n\n## Attack Chain\n\n1. **Exposure:** An application imports `BllipParser` (exported at `nltk/parse/bllip.py:83` and re-exported at `nltk/parse/__init__.py:47`) and constructs it with a model path influenced by untrusted input.\n2. **Control:** The attacker controls the `parser_model`, `reranker_features`, or `reranker_weights` string (or the `model_dir` passed to `from_unified_model_dir()` at `nltk/parse/bllip.py:218`); it is accepted as an arbitrary string with no type or content constraint.\n3. **Path:** The value flows unchanged from `BllipParser.__init__` (`nltk/parse/bllip.py:125`) to `self.rrp.load_parser_model(parser_model, ...)` at `nltk/parse/bllip.py:164`, and the reranker values to `self.rrp.load_reranker_model(...)` at `nltk/parse/bllip.py:166-170`.\n4. **Guard:** No pathsec guard is present on this path. `nltk/parse/bllip.py` imports no pathsec symbol, so `validate_tool_path()` (the guard applied by every sibling wrapper) is never invoked before the native open.\n5. **Primitive:** The `bllipparser` C extension performs an OS-level open and read of the supplied path to parse model data, reaching the filesystem directly.\n6. **Result:** A file at an attacker-chosen path, including locations outside the NLTK data roots, is opened and read by the process, bypassing the pathsec data-root confinement enforced elsewhere.\n\n## Bypass Evidence\n\nThe relevant protection is `nltk.pathsec.validate_tool_path()` (`nltk/pathsec.py:950`), documented as bounding \"a filesystem path handed to an external tool to read or write\" and designed exactly for native loaders that open the file themselves. The strongest counter-argument is that `SECURITY.md` disclaims being \"a general operating-system sandbox\" and does \"not prevent all unsafe behavior an application might perform outside NLTK.\" That disclaimer concerns application code outside NLTK, not NLTK's own tool wrappers: the project added `validate_tool_path()` and applied it to `CRFTagger.set_model_file()` (`nltk/tag/crf.py:140`), `HunposTagger` (`nltk/tag/hunpos.py:111`), `StanfordTagger` (`nltk/tag/stanford.py:85,137`), and `MaltParser` (`nltk/parse/malt.py:340,344`), with the CRFTagger and HunposTagger wrappers citing a prior tool-path advisory and explaining that `pathsec.open` cannot be used because the C extension does its own open. `BllipParser` is the single native-tool wrapper that omits the guard. The alternative `from_unified_model_dir()` path offers no mitigation: `get_unified_model_parameters()` belongs to the third-party `bllipparser` package and performs no NLTK data-root validation, so the derived sub-paths reach the constructor and the C extension unchecked.\n\n## Affected Versions\n\n- **Ecosystem:** `pip`\n- **Package:** `nltk`\n- **Confirmed affected range:** `>= 3.10.0, <= 3.10.3`\n- **Latest release checked:** `3.10.3` ([PyPI](https://pypi.org/project/nltk/3.10.3/))\n- **Fix status:** 3.10.4\n\nThe lower bound is 3.10.0 because the pathsec enforcement model and the `validate_tool_path()` guard were introduced in that release; before 3.10.0 no such boundary existed for NLTK to violate. The missing validation persists unchanged through 3.10.3, the current PyPI release, and on the repository default branch (no `pathsec`, `validate_path`, or `validate_tool` reference exists in `nltk/parse/bllip.py`). No fixed release is established.\n\n## Suggested Fix\n\nValidate every caller-supplied native-tool path in `BllipParser` before it reaches the `bllipparser` C extension, matching the pattern already used by the other wrappers. In `BllipParser.__init__`, pass `parser_model`, `reranker_features`, and `reranker_weights` through `nltk.pathsec.validate_tool_path()` (with `max_bytes=MAX_TOOL_MODEL_BYTES` and `require_private=True`, as `CRFTagger.set_model_file()` does) and build the C-extension arguments from the returned strings so a path swapped after the check is not reopened. Because `parser_model` denotes a model directory for this loader, the fix must cover the directory argument and the reranker file arguments, and should apply equally to the paths derived inside `from_unified_model_dir()`. As an interim measure, applications should refuse to pass untrusted input as any `BllipParser` model path and should load models only through `nltk.data.find()`, which already enforces pathsec confinement.\n\n---\n\nReported by zx.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.10.0"
+                  },
+                  {
+                    "fixed": "3.10.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.10.3"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-fg9w-wfp5-j933"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126295"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/commit/fdde6d9ebf5fd612e817b49ec7fecd752802c268"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/nltk/nltk"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/releases/tag/v3.10.4"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-3.10.0-before-3.10.4-arbitrary-file-read-via-bllipparser-model-paths"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-22",
+            "CWE-400",
+            "CWE-73"
+          ],
+          "severity": "MODERATE",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-13T23:20:56Z",
+          "nvd_published_at": null
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-g5wx-957h-f4wj/GHSA-g5wx-957h-f4wj.json",
+      "id": "GHSA-g5wx-957h-f4wj",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-g5wx-957h-f4wj/GHSA-g5wx-957h-f4wj.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-g5wx-957h-f4wj",
+        "modified": "2026-11-13T21:42:29Z",
+        "published": "2026-11-13T12:31:16Z",
+        "withdrawn": "2026-11-13T21:42:29Z",
+        "aliases": [],
+        "summary": "Duplicate Advisory: Path Traversal in save_maxent_params / load_maxent_params Allow Arbitrary File READ/WRITE",
+        "details": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-59f9-gqg8-mqpj. This link is maintained to preserve external references.\n\n## Original Description\n\nNLTK before 3.10.4 contains a path traversal vulnerability in save_maxent_params() and load_maxent_params() that bypasses the pathsec filesystem restriction mechanism. Attackers who control the tab_dir argument can read or overwrite model parameter files outside permitted data roots, because the functions call Python's built-in open() directly.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "< 3.10.4"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-59f9-gqg8-mqpj"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126296"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-before-3.10.4-path-traversal-via-save-maxent-params-and-load-maxent-params"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-73"
+          ],
+          "severity": "MODERATE",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-13T21:42:29Z",
+          "nvd_published_at": "2026-11-13T10:17:34Z"
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-jh6r-h4rx-2j3w/GHSA-jh6r-h4rx-2j3w.json",
+      "id": "GHSA-jh6r-h4rx-2j3w",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-jh6r-h4rx-2j3w/GHSA-jh6r-h4rx-2j3w.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-jh6r-h4rx-2j3w",
+        "modified": "2026-11-13T23:04:15Z",
+        "published": "2026-11-13T12:31:16Z",
+        "withdrawn": "2026-11-13T23:04:15Z",
+        "aliases": [],
+        "summary": "Duplicate Advisory: Quadratic-time CPU denial of service in NLTK CCG lexicon parser (fromstring) on wide bracket bodies and operator chains",
+        "details": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-89p3-fcch-88ph. This link is maintained to preserve external references.\n\n## Original Description\nNLTK before 3.10.4 contains a denial of service vulnerability in the CCG lexicon parser fromstring that allows remote attackers to exhaust CPU by supplying wide inputs. Attackers can submit lexicon text with long flat bracket bodies or operator chains, triggering quadratic string re-slicing in matchBrackets and augParseCategory that blocks worker threads.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "< 3.10.4"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-89p3-fcch-88ph"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126299"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-before-3.10.4-quadratic-time-denial-of-service-via-ccg-lexicon-fromstring"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-400"
+          ],
+          "severity": "HIGH",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-13T23:04:15Z",
+          "nvd_published_at": "2026-11-13T10:17:34Z"
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-pp88-jhwj-5qh5/GHSA-pp88-jhwj-5qh5.json",
+      "id": "GHSA-pp88-jhwj-5qh5",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-pp88-jhwj-5qh5/GHSA-pp88-jhwj-5qh5.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-pp88-jhwj-5qh5",
+        "modified": "2026-11-13T23:12:06Z",
+        "published": "2026-11-13T23:12:06Z",
+        "aliases": [
+          "CVE-2026-62683"
+        ],
+        "summary": "File Browser: Trailing-slash directory deletion leaves public shares active for recreated paths",
+        "details": "## Summary\n\nFile Browser v2.63.15 can leave a public directory share behind when the shared directory is deleted through a path with a trailing slash. The share cleanup path calls `DeleteWithPathPrefix(file.Path, userID)`, but the Bolt backend performs the database prefix query with the unnormalized argument before trimming the slash for boundary checks. For a stored share at `/a`, deleting `/a/` queries for paths prefixed by `/a/`, so the exact `/a` share is never loaded and never deleted.\n\nIf a directory with the same path is later recreated, the stale public share becomes active again and exposes the new directory contents through the old public URL.\n\n## Impact\n\nAn authenticated user with share, download, and delete permissions can create a valid public share, delete the shared path with a trailing slash, and leave the public link in storage. The link is dormant while the path does not exist, but it exposes future content if the same path is recreated later. The final data exposure is unauthenticated through the public share URL.\n\nThis bypasses the intended lifecycle cleanup around public shares and is adjacent to the recent public-share path-existence and prefix-boundary fixes.\n\n## Reproduction\n\nThe following test was run against v2.63.15, commit `be23ab3a15bf957928ecfed88de5ab67850c1b9c`.\n\n1. Create a scoped user with share, download, and delete permissions.\n2. Create `/a/old.txt` in that user's scope.\n3. Store a valid public share row with `Hash: \"h\"`, `UserID: 1`, and `Path: \"/a\"`.\n4. Send an authenticated delete request for `/a/` through the resource delete handler.\n5. Confirm the directory is deleted.\n6. Confirm share hash `h` still exists in storage.\n7. Recreate `/a/future.txt`.\n8. Request the public share handler at `h/` and observe that the unauthenticated response includes `future.txt`.\n\nCommand used for the local proof:\n\n```bash\ngo test ./http -run TestValidationTrailingSlashDeleteLeavesExactDirectoryShare -count=1 -v\n```\n\nObserved result:\n\n```text\n=== RUN   TestValidationTrailingSlashDeleteLeavesExactDirectoryShare\n--- PASS: TestValidationTrailingSlashDeleteLeavesExactDirectoryShare (0.03s)\nPASS\nok  github.com/filebrowser/filebrowser/v2/http  0.044s\n```\n\n## Root cause\n\n`storage/bolt/share.go` queries the share index before normalizing the path:\n\n```go\nfunc (s shareBackend) DeleteWithPathPrefix(pathPrefix string, userID uint) error {\n    var links []share.Link\n    if err := s.db.Prefix(\"Path\", pathPrefix, &links); err != nil {\n        ...\n    }\n\n    prefix := strings.TrimRight(pathPrefix, \"/\")\n\n    for _, link := range links {\n        if link.UserID != userID {\n            continue\n        }\n\n        if link.Path != prefix && !strings.HasPrefix(link.Path, prefix+\"/\") {\n            continue\n        }\n        ...\n    }\n}\n```\n\nFor `pathPrefix == \"/a/\"`, the database prefix query can return descendants such as `/a/child`, but it does not return the exact share path `/a`. The later `TrimRight` cannot delete the exact share because that row was not loaded from storage.\n\n`http/resource.go` passes the request-derived path into this cleanup before removing the resource:\n\n```go\nfile, err := files.NewFileInfo(... Path: r.URL.Path ...)\n...\nerr = d.store.Share.DeleteWithPathPrefix(file.Path, d.user.ID)\n...\nreturn d.user.Fs.RemoveAll(r.URL.Path)\n```\n\nA request for `/a/` therefore removes the directory but misses the exact `/a` share row.\n\n## Remediation\n\nNormalize the path before querying the share index, and cover both the exact normalized path and its descendants. Add regression tests where a stored share path `/a` is removed by `DeleteWithPathPrefix(\"/a/\", userID)` and where `DELETE /api/resources/a/` deletes the exact public share row.\n\nFixed in version 2.63.17.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "Go",
+              "name": "github.com/filebrowser/filebrowser/v2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.63.17"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/filebrowser/filebrowser/security/advisories/GHSA-pp88-jhwj-5qh5"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/filebrowser/filebrowser/commit/f30fca636c1af9ef401e9a82ff60391cb3db97e1"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/filebrowser/filebrowser"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/filebrowser/filebrowser/releases/tag/v2.63.17"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/cve-2026-62683"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-863"
+          ],
+          "severity": "LOW",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-13T23:12:06Z",
+          "nvd_published_at": "2026-07-15T16:16:51Z"
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-qfx6-q44v-9qqw/GHSA-qfx6-q44v-9qqw.json",
+      "id": "GHSA-qfx6-q44v-9qqw",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-qfx6-q44v-9qqw/GHSA-qfx6-q44v-9qqw.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-qfx6-q44v-9qqw",
+        "modified": "2026-11-13T23:19:38Z",
+        "published": "2026-11-13T23:19:38Z",
+        "aliases": [
+          "CVE-2026-62297"
+        ],
+        "summary": "ag-psd can exhaust memory when parsing crafted PSD dimensions",
+        "details": "### Summary\nreadPsd() commits the image/layer buffers from the declared header geometry (width x height x channels x depth, and per-layer rectangles) before validating those values against the actual data. A tiny crafted PSD declaring huge geometry forces a multi-gigabyte allocation.\n\n### Impact\nOn ag-psd 30.2.0, Node 24, a 52-byte PSD makes readPsd(buf) commit ~3.17 GB (measured peak RSS) in ~0.45 s before throwing a catchable RangeError (\"Offset is outside the bounds of the DataView\") — about 61,000,000x amplification. Because the buffer is committed before validation, the allocation OOM-kills the process before the error on essentially any host (uncatchable), and concurrent requests exhaust memory. Any service reading untrusted PSDs with ag-psd is exposed to a remote DoS.\n\nThis is distinct from #39 and #206, which involve genuinely large PSDs (memory proportional to real data). Here the input is 52 bytes: the file declares enormous geometry that is never present, so the allocation is driven by an unvalidated header field, not by actual content, an uncontrolled-allocation denial-of-service vulnerability, not proportional memory use.\n\n### Steps to reproduce\nThe PoC is a 52-byte PSD (sha256 a1146a6fabdfef289472f99a56851249e7a46e8d19d4d8bf85fe833e2f0158b6). Reconstruct with:\n\n    base64 -d > poc.psd <<'EOF'\n    OEJQUwABAAAAAAAAAA0AADcuAAA58wAgAAMAAAAAAAAAAAAAAAAAAdEgNZv+i9bc9ygd2A==\n    EOF\n\nThen (commits ~3.17 GB before throwing a catchable RangeError):\n\n    const { readPsd } = require('ag-psd');\n    const buf = require('fs').readFileSync('poc.psd');\n    readPsd(buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength));\n\n### Root cause\npsdReader.js sizes the off-heap typed-array buffers from the declared header dimensions (and per-layer rectangles, a second independent lever) before validating against the available bytes.\n\n### Suggested fix\nValidate the declared dimensions, channel count, depth, and per-layer rectangles against the actual input length (and a sane maximum) before allocating.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "ag-psd"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/Agamnentzar/ag-psd/security/advisories/GHSA-qfx6-q44v-9qqw"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/Agamnentzar/ag-psd/commit/2d7da68400990bae8ba248a065eb45021fa8000a"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/Agamnentzar/ag-psd"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/Agamnentzar/ag-psd/blob/2d7da68400990bae8ba248a065eb45021fa8000a/CHANGELOG.md"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/Agamnentzar/ag-psd/tree/31.0.0"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/cve-2026-62297"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-789"
+          ],
+          "severity": "HIGH",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-13T23:19:38Z",
+          "nvd_published_at": "2026-10-30T21:17:13Z"
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-qvhx-rvgc-jhwf/GHSA-qvhx-rvgc-jhwf.json",
+      "id": "GHSA-qvhx-rvgc-jhwf",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-qvhx-rvgc-jhwf/GHSA-qvhx-rvgc-jhwf.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-qvhx-rvgc-jhwf",
+        "modified": "2026-11-14T00:04:15Z",
+        "published": "2026-11-13T12:31:16Z",
+        "withdrawn": "2026-11-14T00:04:15Z",
+        "aliases": [],
+        "summary": "Duplicate Advisory: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan",
+        "details": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-v8f3-6phw-6mh9. This link is maintained to preserve external references.\n\n## Original Description\nNLTK before 3.10.4 contains a quadratic-time denial of service vulnerability in ConllCorpusReader._get_srl_instances that allows remote attackers to exhaust CPU through nested span rescans. Attackers can supply a crafted CoNLL SRL corpus with many predicates and span columns, placing the head span last, to pin a core for minutes.",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          {
+            "type": "CVSS_V4",
+            "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "< 3.10.4"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-v8f3-6phw-6mh9"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126297"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-before-3.10.4-cpu-denial-of-service-via-conllcorpusreader-srl-instances"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-400"
+          ],
+          "severity": "HIGH",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-14T00:04:15Z",
+          "nvd_published_at": "2026-11-13T10:17:34Z"
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-r53h-rw34-8h97/GHSA-r53h-rw34-8h97.json",
+      "id": "GHSA-r53h-rw34-8h97",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-r53h-rw34-8h97/GHSA-r53h-rw34-8h97.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-r53h-rw34-8h97",
+        "modified": "2026-11-14T00:07:59Z",
+        "published": "2026-11-14T00:07:59Z",
+        "aliases": [
+          "CVE-2026-126298"
+        ],
+        "summary": "NLTK: Quadratic-time CPU denial of service in Tree.chomsky_normal_form right-factor binarization via list.pop(0)",
+        "details": "## Summary\n\n`Tree.chomsky_normal_form()` binarizes a parse tree and defaults to right factoring. For a node with N children the right-factor branch repeatedly removes the first element of a working list with `list.pop(0)`, which shifts all remaining elements each time, so binarizing one wide node costs O(N^2). An application that converts an attacker-supplied treebank tree to Chomsky Normal Form can be forced into tens of seconds of single-threaded CPU by one wide flat tree. No authentication or user interaction is required.\n\n## Root Cause\n\nIn the default right-factor branch the transform executes `curNode[0:] = [nodeCopy.pop(0), newNode]` inside a loop over the N children of a node. `list.pop(0)` is O(len) because it shifts every remaining element down by one; performed N-2 times over a shrinking length-N list this sums to O(N^2). The left-factor branch instead uses `nodeCopy.pop()` (removing the last element), which is O(1) and linear overall, so the two branches differ only by this front-versus-back removal. No cap is placed on the child count of a node, and the public `Tree.fromstring` parser accepts an arbitrarily wide bracketed tree.\n\n```text\nAffected function:\n- nltk.tree.transforms.chomsky_normal_form (nltk/tree/transforms.py; right-factor sink at line 168, O(1) left control at line 179)\nPublic entry points: nltk.tree.Tree.chomsky_normal_form (nltk/tree/tree.py:455, default factor=\"right\"); nltk.tree.Tree.fromstring (nltk/tree/tree.py:592).\n```\n\n## Impact\n\nAn attacker who can influence the tree that an application normalizes to Chomsky Normal Form causes sustained single-threaded CPU consumption (availability loss). The path is network-reachable (AV:N) and needs no privileges or user interaction (PR:N, UI:N). Because the cost grows quadratically with the attacker-chosen child count, roughly 1.5 MB of treebank input costs about 14 seconds on one core and scales as N^2 above that. Confidentiality and integrity are not affected. The NLTK regular-expression wall-clock timeout wraps regex matching only and does not wrap this pure-Python list loop.\n\n## Proof of Concept\n\n```text\nEnvironment: nltk 3.10.3, CPython. Drive the public transform on a wide flat tree.\n```\n\n```python\nimport time\nfrom nltk.tree import Tree\n\nfor N in (80000, 160000, 320000):\n    s = \"(S \" + \"(A a)\" * N + \")\"\n    t = Tree.fromstring(s)\n    start = time.perf_counter()\n    t.chomsky_normal_form()          # default factor=\"right\"\n    print(\"right\", N, round(time.perf_counter() - start, 3), \"s\")\n```\n\n```text\nright (default):  N=80000 1.972s | N=160000 5.004s (2.54x) | N=320000 14.518s (2.90x)   -> super-linear\nleft  (control):  N=80000 1.399s | N=160000 2.731s (1.95x) | N=320000  5.379s (1.97x)   -> linear\n```\n\n## Attack Chain\n\n1. **Exposure:** An application parses an attacker-influenced treebank string with the public `Tree.fromstring` and normalizes it with `Tree.chomsky_normal_form()`.\n2. **Control:** The attacker controls the number of children of a node (a wide flat tree such as `(S (A a)(A a)...(A a))`); no child-count cap exists in `fromstring` or the transform.\n3. **Path:** `Tree.chomsky_normal_form` delegates to `nltk.tree.transforms.chomsky_normal_form` with the default `factor=\"right\"`.\n4. **Guard:** None. There is no width bound on the loop, and the regex match timeout does not wrap this pure-Python list operation.\n5. **Primitive:** `curNode[0:] = [nodeCopy.pop(0), newNode]` performs an O(N) front shift on each of N iterations.\n6. **Result:** O(N^2) single-core CPU exhaustion; roughly 1.5 MB of input costs about 14 seconds and scales quadratically, blocking the processing thread.\n\n## Bypass Evidence\n\nThere is no guard to bypass on this path: neither `Tree.fromstring` nor `chomsky_normal_form` caps the child count, and the regular-expression wall-clock timeout wraps only regex matching, not this list loop. The finding was confirmed by fresh timing that isolates the cause: the right-factor default and the left-factor branch build the identical bounded head strings and copy the node once, so the only differing term is `pop(0)` versus `pop()`. The measured right-versus-left divergence grows with N (right rises toward a 4x per-doubling ratio while left holds near 2x), which proves a quadratic component beyond the shared linear costs. A relevant corroboration is that the inverse transform `un_chomsky_normal_form` was already rewritten to a single linear pass to remove exactly this quadratic class (see the comment at nltk/tree/transforms.py:195-201), while the forward default path retained the `pop(0)` idiom. The strongest disproof attempt (that the head-string join dominates and is linear) fails because that join is bounded and present in both branches and therefore cannot explain the branch-dependent quadratic growth.\n\n## Affected Versions\n\n- `Ecosystem: PyPI (pip)`\n- `Package: nltk`\n- `Confirmed affected range: <= 3.10.3`\n- `Latest release checked: 3.10.3 (PyPI, https://pypi.org/pypi/nltk/json)`\n- `Fix status: 3.10.4`\n\nThe right-factor `pop(0)` idiom ships in every release carrying this transform and is present in the current latest published release, 3.10.3. The lower boundary was not bisected, so the introducing version is left open.\n\n## Suggested Fix\n\nRewrite the right-factor binarization to avoid removing from the front of a list: iterate the children with an index cursor or a `collections.deque` so each step is constant time, mirroring the linear rebuild already applied to `un_chomsky_normal_form`. As defense in depth, bound the child count accepted for normalization and raise a clear error past a configurable maximum. No configuration-only mitigation removes the exposure for a service that normalizes untrusted trees; until a fix ships, callers should cap accepted tree width and run the transform under a CPU or time budget in an isolated worker.\n\nReported by zx (GitHub: @manus-pi).\n\n\n## Fix status (2026-09-28)\n\nPR: #3909 \"Fix quadratic DoS in Tree.chomsky_normal_form right-factor binarization (GHSA-r53h-rw34-8h97)\", merged 2026-09-23, merge commit 2f53e20ce on develop.\n\nFix commits: 457ebe349 (linear front consume in chomsky_normal_form) and 677857dca (refuse a binarisation that would nest a tree beyond MAX_TREE_DEPTH). Follow-up #3917 (merge 9ba132e43, commit f0686dea6) walks Tree equality and conversion with an explicit stack so the deep-tree tests pass on Python 3.10 and 3.11.\n\nProbe: nltk/test/unit/security_probes/ghsa_r53h_rw34_8h97.py; verdict on develop 2fa3f48fe: FIXED (chomsky_normal_form scales 5.1x over a 4x input).",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.10.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.10.3"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-r53h-rw34-8h97"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126298"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/pull/3909"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/commit/457ebe349f8dd8080224f76a64aff806dd437057"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/commit/677857dcafd84e4591865d976b562a27dfde566e"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/nltk/nltk"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/releases/tag/v3.10.4"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-before-3.10.4-quadratic-cpu-denial-of-service-via-tree-chomsky-normal-form"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "severity": "HIGH",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-14T00:07:59Z",
+          "nvd_published_at": null
+        }
+      }
+    },
+    {
+      "change": "A",
+      "path": "advisories/github-reviewed/2026/11/GHSA-v8f3-6phw-6mh9/GHSA-v8f3-6phw-6mh9.json",
+      "id": "GHSA-v8f3-6phw-6mh9",
+      "eligible": true,
+      "sourceUrl": "https://github.com/github/advisory-database/blob/78a4da5a20b1f6688316ec27303bc3f9c99587cd/advisories/github-reviewed/2026/11/GHSA-v8f3-6phw-6mh9/GHSA-v8f3-6phw-6mh9.json",
+      "raw": {
+        "schema_version": "1.4.0",
+        "id": "GHSA-v8f3-6phw-6mh9",
+        "modified": "2026-11-14T00:05:57Z",
+        "published": "2026-11-14T00:05:57Z",
+        "aliases": [
+          "CVE-2026-126297"
+        ],
+        "summary": "NLTK: Quadratic-time CPU denial of service in ConllCorpusReader SRL instance builder via nested span rescan",
+        "details": "## Summary\n\n`ConllCorpusReader.srl_instances()` builds semantic-role-labeling instances from a CoNLL corpus block. For a sentence block with P predicates and P span columns, the instance builder rescans every span column (and every span within it) once per predicate while searching for each predicate's head, giving O(P^2 * R) work. A single well-formed block that places the head span in the last column forces the full scan on every predicate, so an application that reads an attacker-supplied CoNLL SRL corpus can be driven into tens of seconds of single-threaded CPU. No authentication or user interaction is required.\n\n## Root Cause\n\n`_get_srl_instances` iterates over the P predicates of a block; for each predicate it scans every span list and every span within it, using an inner `break` that stops only when a span tagged `V` or `C-V` containing the predicate word is found. When the sole head span is placed in the last span column, no earlier column matches, so the `for ... else: continue` construct traverses every span of every earlier column before matching. Over P predicates each scanning up to P columns of R spans, the cost is O(P^2 * R). The block is read whole with no size cap, and the grid-consistency check enforces only uniform column count, not a bound on P, R, or total work.\n\n```text\nAffected function:\n- nltk.corpus.reader.conll.ConllCorpusReader._get_srl_instances (nltk/corpus/reader/conll.py:394-424; nested rescan at lines 405-419)\nPublic entry point: nltk.corpus.reader.conll.ConllCorpusReader.srl_instances (nltk/corpus/reader/conll.py:158-169).\n```\n\n## Impact\n\nAn attacker who can supply a CoNLL corpus that an application loads and iterates with `srl_instances()` causes sustained single-threaded CPU consumption (availability loss). The path is network-reachable through any corpus-ingestion surface (AV:N) and needs no privileges or user interaction (PR:N, UI:N). Because the cost is super-linear in attacker-chosen predicate and column counts, a roughly 1 MB crafted corpus pins a core for tens of seconds and a few megabytes reaches minutes. Confidentiality and integrity are not affected. The NLTK regular-expression wall-clock timeout wraps regex matching only and does not cover this pure-Python nested loop over the parsed grid. Exploitation requires the application to use the SRL-specific API on untrusted CoNLL data with `words`, `pos`, `tree`, and `srl` columns; a deployment that never calls `srl_instances()` is unaffected.\n\n## Proof of Concept\n\n```text\nEnvironment: nltk 3.10.3, CPython. Stage a crafted CoNLL corpus under an authorized data root and iterate srl_instances().\nCorpus construction: one blank-line-delimited block with P predicate rows and P SRL span columns, the sole \"V\" head span in the last column.\n```\n\n```python\nimport time, os, tempfile\nfrom nltk.corpus.reader.conll import ConllCorpusReader\n\ndef build_block(n):\n    # n predicates, n SRL columns; the single V head placed in the last column\n    # (columns: words pos tree srl...): emit n predicate rows and n SRL span\n    # columns, with the single \"V\" head span placed in the final column.\n    ...\n\nfor n in (40, 80, 160, 320):\n    root = tempfile.mkdtemp()\n    open(os.path.join(root, \"c.conll\"), \"w\").write(build_block(n))\n    r = ConllCorpusReader(root, [\"c.conll\"], (\"words\", \"pos\", \"tree\", \"srl\"))\n    t = time.perf_counter()\n    list(r.srl_instances())\n    print(n, round(time.perf_counter() - t, 3), \"s\")\n```\n\n```text\nNegative control (single predicate): n=40 -> 1.88 ms ; n=320 -> 4.45 ms      (flat)\nAttack (P=R=n):  n=40 -> 0.022s (10 KB) | n=80 -> 0.148s (39 KB) | n=160 -> 1.164s (156 KB) | n=320 -> 10.002s (619 KB)\n```\n\nThe attack timing rises about 8x per doubling of n while the file grows only about 4x, confirming super-linear cost driven by attacker-chosen predicate and column count; the single-predicate control stays in the millisecond range.\n\n## Attack Chain\n\n1. **Exposure:** An application loads an attacker-supplied CoNLL corpus (columns include `srl`) and iterates it with the public `ConllCorpusReader(...).srl_instances()`.\n2. **Control:** The attacker controls the predicate count P, the span-column count, and the placement of the single head span; the block is read whole with no size cap.\n3. **Path:** `srl_instances()` calls `_get_srl_instances`, which pairs each predicate against the span columns via a doubly-nested scan.\n4. **Guard:** The inner `break` on the first matching `V` or `C-V` head is defeated by placing the sole head span in the last column, so every earlier column is scanned in full. The path-containment sandbox bounds where files load, not how much work a block costs.\n5. **Primitive:** The nested rescan performs O(P^2 * R) span comparisons with no work cap or timeout.\n6. **Result:** Sustained single-core CPU exhaustion; a roughly 1 MB corpus costs tens of seconds and scales super-linearly, blocking the processing thread.\n\n## Bypass Evidence\n\nThe only short-circuit on this path is the inner `break` that fires when a predicate's `V` or `C-V` head span is found. It is defeated by construction: placing the sole head span in the last span column means no earlier column matches, so the `for ... else: continue` traverses every span of every earlier column for every predicate. This was confirmed in source (nltk/corpus/reader/conll.py:405-419) and reproduced end-to-end through the real public `srl_instances()` API, where the attack timing scales super-linearly while a single-predicate control stays flat. The path-containment sandbox is a file-location control and imposes no bound on parse cost, and the regular-expression timeout does not wrap this loop. The strongest disproof attempts (that Python `range` membership is O(1) so the loop is linear, and that the `break` fires early) both fail: the O(1) membership test is evaluated once per span, and the number of spans traversed is exactly what the last-column head placement maximizes.\n\n## Affected Versions\n\n- `Ecosystem: PyPI (pip)`\n- `Package: nltk`\n- `Confirmed affected range: <= 3.10.3`\n- `Latest release checked: 3.10.3 (PyPI, https://pypi.org/pypi/nltk/json)`\n- `Fix status: 3.10.4`\n\nThe nested rescan ships in every release carrying this reader and is present in the current latest published release, 3.10.3. The lower boundary was not bisected, so the introducing version is left open; the behavior predates the recent regular-expression hardening.\n\n## Suggested Fix\n\nReplace the per-predicate linear search over all span columns with a single pass that indexes head spans by word position (for example, build a map from word index to the owning span column once, then look up each predicate in constant time), reducing the total cost to about O(P * R). As defense in depth, bound the predicate and span counts accepted from a single block and process untrusted corpora under a CPU or time budget. No configuration-only mitigation removes the exposure for a service that must read untrusted CoNLL SRL data; until a fix ships, callers should cap accepted corpus size and isolate the parsing worker.\n\nReported by zx (GitHub: @manus-pi).\n\n\n## Fix status (2026-09-28)\n\nPR: #3753 \"[Do not merge yet] Fix GHSA-8mgp-746c-j5xp: URL-scheme bypass of pathsec.validate_path\", open; head da55cab0e at the time of this note (a develop merge on top of 238f81500, the head on which the verdicts below were measured).\n\nFix commit: cf12a5e6a \"Patch seven algorithmic-DoS and path/exec GHSA classes across all affected modules\" (ConllCorpusReader._get_srl_instances builds a one-pass wordnum to spanlist index instead of rescanning per predicate).\n\nProbe: nltk/test/unit/security_probes/ghsa_v8f3_6phw_6mh9.py (on the PR). Verdict on the PR head: FIXED (srl_instances scaled 3.9x over 4x predicates). The same probe run against develop 2fa3f48fe: VULNERABLE (45.8x over 4x predicates).",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "nltk"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.10.4"
+                  }
+                ]
+              }
+            ],
+            "database_specific": {
+              "last_known_affected_version_range": "<= 3.10.3"
+            }
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/security/advisories/GHSA-v8f3-6phw-6mh9"
+          },
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126297"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/pull/3933"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/commit/7bae75fc0f7b1f057ff7d89d24c81bb5a4a0f05a"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/commit/9cacbb95d97eaac7debb30d6e7decbe74d2c635f"
+          },
+          {
+            "type": "PACKAGE",
+            "url": "https://github.com/nltk/nltk"
+          },
+          {
+            "type": "WEB",
+            "url": "https://github.com/nltk/nltk/releases/tag/v3.10.4"
+          },
+          {
+            "type": "WEB",
+            "url": "https://www.vulncheck.com/advisories/nltk-before-3.10.4-cpu-denial-of-service-via-conllcorpusreader-srl-instances"
+          }
+        ],
+        "database_specific": {
+          "cwe_ids": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "severity": "HIGH",
+          "github_reviewed": true,
+          "github_reviewed_at": "2026-11-14T00:05:57Z",
+          "nvd_published_at": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "checkedDate": "2026-11-15",
+  "timezone": "Asia/Tokyo",
+  "reviewedAt": "2026-11-14T21:40:42.235416+00:00",
+  "baseCommit": "2fdda4e58038d823c45e3978915ea44f2ddb41bb",
+  "status": "verified-selection-with-fetch-failures-and-unreviewed-candidates",
+  "overlap": {
+    "previousAudit": "docs/data/corporate-review-2026-11-14.json",
+    "overlapFromUTC": "2026-11-11T00:00:00Z",
+    "policy": "11/13〜14公表を検索し、前回の取得失敗と国内企業の新規・続報を選択検証。全既存事案の巡回や2022年以降全期間の未収録調査は未実施。未巡回を変更なしとしない。"
+  },
+  "baselineIncidentCount": 296,
+  "addedIncidentCount": 4,
+  "updatedIncidentCount": 1,
+  "resultIncidentCount": 300,
+  "records": [
+    {
+      "id": "notion-fireworks-japan-2026",
+      "action": "added",
+      "summary": "Notion AIの再委託先Fireworksへの不正アクセスについて、LegalOnとリバスタが従業員の会話内容等の流出可能性を公表。同一委託先事案として集約し、各社の対象範囲を分けて記録する。"
+    },
+    {
+      "id": "lakeel-aws-2026",
+      "action": "added",
+      "summary": "11月10日に不正アクセスを検知し、12日に顧客1社の140名分の情報漏えいを確認。ソース管理サーバーのアクセス制御設定不足を突かれAWSアクセスキーが窃取されたと公表した。"
+    },
+    {
+      "id": "tradewaltz-platform-2026",
+      "action": "added",
+      "summary": "11月10日に不正アクセスを検知しサービスを停止。11日に貿易書類130件の流出を確認した。委託先から盗まれた管理用アクセスキーの悪用が原因と説明している。"
+    },
+    {
+      "id": "monex-account-opening-2026",
+      "action": "added",
+      "summary": "委託先が10月18日に不正アクセスの試みを検知し、19日に遮断。中間調査によりメールアドレス最大113万件と本人確認書類等画像1,592件に漏えいのおそれがあると公表した。"
+    },
+    {
+      "id": "sourcenext-members-api-2026",
+      "action": "updated",
+      "summary": "第2報による開始時刻・取得期間訂正。22,519,960件の可能性範囲は維持。"
+    }
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://www.sourcenext.com/support/i/2026/1113_info/",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body"
+    },
+    {
+      "url": "https://legalontech.jp/11330/",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body"
+    },
+    {
+      "url": "https://www.rvsta.co.jp/news/20261113_2/",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body"
+    },
+    {
+      "url": "https://www.lakeel.com/ja/news-event/news/detail_20261113.html",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body"
+    },
+    {
+      "url": "https://www.tradewaltz.com/news/13816/",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body"
+    },
+    {
+      "url": "https://info.monex.co.jp/press/pdf/press2026_11_13_monex_pr.pdf",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body"
+    },
+    {
+      "url": "https://www.accelia.net/news/2026/20261113-2/",
+      "status": "fetch-failed",
+      "note": "web openを2回試行して本文取得失敗。検索断片だけで新規登録しない。"
+    },
+    {
+      "url": "https://www.notion.com/ja/help/security-incident-involving-a-third-party-ai-vendor",
+      "status": "body-not-verified",
+      "note": "取得本文はナビゲーション主体。国内利用企業の公式発表を採用し、このページを検証根拠に使わない。"
+    },
+    {
+      "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update",
+      "status": "verified-body-context-only",
+      "note": "11/9更新の第三者クラウド侵害・影響範囲を参照。異なる工程の開始日を国内2社の対象データ期間に統合しない。"
+    }
+  ],
+  "heldCandidates": [
+    "アクセリア11/13公表（本文取得失敗）",
+    "MUFGのアララ関連部分範囲（前回保留、今回未再取得）",
+    "図研海外子会社（前回取得失敗、今回未再取得）",
+    "日本郵便のTONARIWA利用者範囲（前回本文未確認、今回未再取得）"
+  ],
+  "discoveredNotReviewed": [
+    "KEYUCA続報・メール配信委託先",
+    "日本商工会議所ネット試験",
+    "Qoo10",
+    "マクロミル",
+    "giftee/prismatix",
+    "Scan＆Go ignica",
+    "アットホーム",
+    "オープンロジ",
+    "内閣府のアララ委託先関連",
+    "産経新聞Notion/Fireworks関連（11/14 PDF）",
+    "アクサダイレクト11/13第2報",
+    "広島ガス11/13続報",
+    "山口フィナンシャルグループ公表",
+    "Hange関連",
+    "大阪公立大学第6報",
+    "KARTE関連",
+    "JA晴れの国岡山・JR九州のアララ関連範囲"
+  ],
+  "retentionPolicy": "回復した一次本文だけ追加・訂正。その他の失敗・未再取得の成功取得点は保持。TradeWaltzの委託先名は未公表でLaKeelと推測統合しない。",
+  "validation": {
+    "incidentValidation": "passed with in-memory meta date/count integration",
+    "classificationValidation": "passed with in-memory incident-entity mappings",
+    "focusedTests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "fullCheck": "pending parent integration; no build or publication performed by this worker"
+  }
+}
