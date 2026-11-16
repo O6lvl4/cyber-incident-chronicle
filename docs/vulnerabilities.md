@@ -364,3 +364,7 @@ OSVの7全件エクスポートは前回の固定generationをSHA256で再確認
 OSV補助7エクスポートを前回固定generationのSHA256とCRC、正規化JSON全文で比較。通常追加14・変更94、MAL追加649・変更5、削除0。未一致48行（Go47・PYSEC1）は検証済み追加対象ではなく保留候補。CISA KEV本体は403で成功点と既存状態を保持。JVN/JPCERTフィードは不変、JVNDBは外枠のみ変化し500項目の内容は不変。
 
 [Reviewed差分](data/github-reviewed-delta-2026-11-15.json)、[開発元API](data/reviewed-maintainer-review-2026-11-15.json)、[補助ソース](data/supplemental-source-status-2026-11-15.json)、[フィード](data/library-feed-review-2026-11-15.json)を参照。
+
+### 2026-11-16 の独立確認
+
+Reviewed subtreeは前回と同一で20,015件を保持。開発元API7件を再取得。GHSA-59f9-gqg8-mqpjはstructured CVE・修正版と本文に不一致があり、withdrawn duplicateからの昇格や推測登録を行わず保留。OSV・公的情報の結果と取得失敗は当日監査記録を参照。
