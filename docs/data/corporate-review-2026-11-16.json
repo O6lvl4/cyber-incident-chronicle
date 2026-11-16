@@ -1,0 +1,132 @@
+{
+  "checkedDate": "2026-11-16",
+  "timezone": "Asia/Tokyo",
+  "baseCommit": "311d38cd",
+  "status": "verified-selection-with-fetch-failures-and-unreviewed-candidates",
+  "overlap": {
+    "previousAudit": "docs/data/corporate-review-2026-11-15.json",
+    "overlapFromUTC": "2026-11-12T00:00:00Z",
+    "policy": "11月14〜15日公表検索、直近既存事案・前回失敗の選択再確認。全300件巡回と2022年以降全期間の追加調査は未実施。"
+  },
+  "baselineIncidentCount": 300,
+  "addedIncidentCount": 2,
+  "updatedIncidentCount": 3,
+  "resultIncidentCount": 302,
+  "records": [
+    {
+      "id": "accelia-web-server-2026",
+      "action": "added",
+      "summary": "Webサイトのサーバーで第三者による不正ファイル設置を確認。問い合わせ・資料ダウンロード申込者の個人情報に漏えいのおそれがあり、ファイル除去と原因・範囲の調査を進めている。"
+    },
+    {
+      "id": "atlas-confit-2026",
+      "action": "added",
+      "summary": "11月12日14時39分頃に不正アクセスを確認し、21時までに遮断等を実施。Confitのオプション機能で63学会に関係する約1万件の発表者情報等の外部取得を確認した。"
+    },
+    {
+      "id": "tradewaltz-platform-2026",
+      "action": "updated",
+      "summary": "11月10日に不正アクセスを検知しサービスを停止。11日に貿易書類130件の流出を確認した。委託先から盗まれた管理用アクセスキーの悪用が原因と説明している。"
+    },
+    {
+      "id": "notion-fireworks-japan-2026",
+      "action": "updated",
+      "summary": "Notion AIの再委託先Fireworksへの不正アクセスについて、LegalOnとリバスタが従業員の会話内容等の流出可能性を公表。同一委託先事案として集約し、各社の対象範囲を分けて記録する。 産経新聞社も取引先経由のシステム情報流出可能性を公表し、産経iDを一時停止後に再開した。"
+    },
+    {
+      "id": "dentsu-digital-tonariwa-2026",
+      "action": "updated",
+      "summary": "11月10日に流出した管理アカウント認証情報による不正アクセスと権限昇格を確認しサービス停止。12日の第2報で外部持出しログに基づき導入企業2社の個人情報漏えいを確認。件数と他社への影響は調査中。"
+    }
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://www.accelia.net/news/2026/20261113-2/",
+      "title": "Webサイトサーバーに不正ファイル、フォーム利用者情報の漏えい可能性",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.atlas.jp/news/2026-11-14",
+      "title": "Confitの発表データ収集公開機能で約1万件の情報漏えい",
+      "publishedDate": "2026-11-14",
+      "status": "verified-body",
+      "method": "urllib HTML parser (web open twice failed)"
+    },
+    {
+      "url": "https://www.tradewaltz.com/news/13816/",
+      "title": "TradeWaltz：不正アクセス・一時停止（第12報まで）",
+      "publishedDate": "2026-11-15",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.sankei.jp/wp-content/uploads/2026/11/当社の取引先が利用するクラウドツールでの不正アクセスおよび産経iDサービスの一時停止（現在は再開）について.pdf",
+      "title": "産経新聞社：取引先クラウドツールの不正アクセスと産経iD一時停止・再開",
+      "publishedDate": "2026-11-14",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.post.japanpost.jp/newsrelease/pressrelease/685401036.html",
+      "title": "日本郵便：ぽすくまのTONARIWA利用と情報漏えいのおそれ",
+      "publishedDate": "2026-11-11",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.post.japanpost.jp/newsrelease/pressrelease/29949563644.html",
+      "title": "日本郵便：ぽすくま緊急メンテナンス終了",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.mufg.jp/dam/pressrelease/2026/pdf/news-20261111-001_ja.pdf",
+      "status": "fetch-failed",
+      "note": "web open失敗。前回成功点を更新しない。"
+    },
+    {
+      "url": "https://pdf.irpocket.com/C6947/xoA3/DnNg/ah0Z/sqpN.pdf",
+      "status": "fetch-failed",
+      "note": "図研海外子会社のPDF本文取得失敗。未確認を変更なし扱いにしない。"
+    }
+  ],
+  "heldCandidates": [
+    "MUFGのアララ関連範囲",
+    "図研海外子会社"
+  ],
+  "discoveredNotReviewed": [
+    "KEYUCA続報・メール配信委託先",
+    "日本商工会議所ネット試験",
+    "Qoo10",
+    "マクロミル",
+    "giftee/prismatix",
+    "Scan＆Go ignica",
+    "アットホーム",
+    "オープンロジ",
+    "内閣府のアララ委託先関連",
+    "アクサダイレクト11/13第2報",
+    "広島ガス11/13続報",
+    "山口フィナンシャルグループ公表",
+    "Hange関連",
+    "大阪公立大学第6報",
+    "KARTE関連",
+    "JA晴れの国岡山・JR九州のアララ関連範囲",
+    "京阪COMSBI利用者範囲11/14",
+    "京成電鉄スカイライナー予約11/13",
+    "CLUB GIANTS11/13"
+  ],
+  "retentionPolicy": "国内利用者の追補はNotion/FireworksとTONARIWA既存事案へ統合。漏えい未確認の日本郵便を漏えい確認2社の内数としない。取得失敗・未巡回の成功取得点は維持。",
+  "validation": {
+    "incidentValidation": "passed with in-memory meta date/count integration",
+    "classificationValidation": "passed",
+    "fullCheck": "parent integration pending",
+    "focusedTests": {
+      "passed": 6,
+      "failed": 0
+    }
+  },
+  "recoveryNote": "同一runで確認・作成した生成コードから環境再起動後に復旧。新たな一次情報再取得ではない。元のreviewedAt精密時刻は回復できないため再作成時刻で代用しない。"
+}

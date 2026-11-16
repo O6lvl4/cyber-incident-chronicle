@@ -146,7 +146,7 @@ test('public attack code needs a discloser/vendor poc source, and is declared as
   assert.match(validateProducts([a], meta).join(' '), /public attack code must be declared/);
   const b = structuredClone(poc); b.poc.sourceUrl = b.sources.find(source => source.type === 'maintainer').url;
   assert.match(validateProducts([b], meta).join(' '), /public poc requires a cited poc-typed source/);
-  const c = structuredClone(critical); c.inclusion.push('poc');
+  const c = structuredClone(critical); c.inclusion.push('poc'); c.poc = { status: 'unknown', sourceUrl: null };
   assert.match(validateProducts([c], meta).join(' '), /poc inclusion without public attack code/);
   const d = structuredClone(critical); d.poc = { status: 'unknown', sourceUrl: 'https://example.com' };
   assert.match(validateProducts([d], meta).join(' '), /unknown poc must have null source/);
