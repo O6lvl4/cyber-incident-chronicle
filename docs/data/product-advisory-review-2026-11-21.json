@@ -1,0 +1,151 @@
+{
+  "reportDateJst": "2026-11-21",
+  "checkedAt": "2026-11-20T21:15:30Z",
+  "baseCommit": "fd35262883abc4c0ef5c2bec77eb869865dad2a3",
+  "scope": "2026-11-16の前回収録点に重なる公式一覧確認の一部。JPCERT/CC・IPA・JVNと個別告知を確認。CISAの直接取得失敗と、公式GitHub mirrorで確認した候補を区別。全既収録CVEや全開発元の再照合ではない。",
+  "recordsBefore": 72,
+  "recordsAfter": 79,
+  "addedRecords": 7,
+  "updatedRecords": 1,
+  "added": [
+    "CVE-2026-126714",
+    "CVE-2026-123007",
+    "CVE-2026-123633",
+    "CVE-2026-121810",
+    "CVE-2026-123634",
+    "CVE-2026-113425",
+    "OPENSSL-NOV2026-SECURITY"
+  ],
+  "updated": [
+    "CVE-2026-115560"
+  ],
+  "sources": [
+    {
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://jvn.jp/",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/alert20261120.html",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/at/2026/at260033.html",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/alert20261119.html",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://nginx.org/news.html",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://nginx.org/en/security_advisories.html",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://www.php.net/archive/2026.php#2026-11-19-4",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://openssl-library.org/news/secadv/20261117.txt",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU96847970/index.html",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "ok",
+      "interpretation": "公式本文または一覧を確認"
+    },
+    {
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "failed",
+      "error": "HTTP 403 for direct CISA feed via web retrieval; successful checkpoint unchanged"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "checkedAt": "2026-11-20T21:15:30Z",
+      "status": "partially-confirmed",
+      "interpretation": "CISA公式の公開ミラー 2026.11.20。対象項目の抜粋を確認、全件の機械照合は未実施。"
+    }
+  ],
+  "pendingCandidates": [
+    {
+      "id": "PHP-NOV2026-SECURITY-REMAINING",
+      "url": "https://www.php.net/ChangeLog-8.php#8.5.13",
+      "reason": "11月19日版のその他の個別CVEについて全系列、アドバイザリとCNAの精査が未完了。記録済み2件と重複させない。"
+    },
+    {
+      "id": "NGINX-NOV2026-REMAINING",
+      "url": "https://nginx.org/news.html",
+      "reason": "11月18日更新のうちIPAが個別列挙しなかったその他の5件は保留。個別の収録理由を再検証する。"
+    },
+    {
+      "id": "CVE-2026-129448",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "reason": "11月20日付のKEV候補として抜粋で確認、直接CISA取得不可。開発元・CNA・既存別名を照合し、構造化KEVの根拠を解決するまで保留。"
+    },
+    {
+      "id": "CVE-2026-123890",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "reason": "11月20日付のKEV候補として抜粋で確認、直接CISA取得不可。開発元・CNA・既存別名を照合し、構造化KEVの根拠を解決するまで保留。"
+    },
+    {
+      "id": "CVE-2025-42884",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "reason": "11月20日付のKEV候補として抜粋で確認、直接CISA取得不可。開発元・CNA・既存別名を照合し、構造化KEVの根拠を解決するまで保留。"
+    },
+    {
+      "id": "CVE-2026-76466",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "reason": "11月20日付のKEV候補として抜粋で確認、直接CISA取得不可。開発元・CNA・既存別名を照合し、構造化KEVの根拠を解決するまで保留。"
+    },
+    {
+      "id": "JVN-2026-11-20-REMAINING",
+      "url": "https://jvn.jp/",
+      "reason": "産業用製品の集約注意喚起、SoftBank Air及びSiemensの更新はこの差分で個別未精査。取得成功・変更なし扱いにしない。"
+    },
+    {
+      "id": "CVE-2026-109618/CVE-2026-109619",
+      "status": "verified-follow-up-not-published",
+      "note": "JPCERT/CCの11月20日付続報を確認。公開差分に直接の攻撃コード情報を含めないため、今回は既存データを保持した。",
+      "source": "https://www.jpcert.or.jp/at/2026/at260033.html"
+    }
+  ],
+  "checkpointPolicy": "今回の追加・更新は検証した個別レコードのみ。CISA直接取得点、未照合製品と未検証の各候補の既存成功点は保持。",
+  "validation": {
+    "productStatus": "79 records, 0 errors",
+    "pnpmCheck": "別途実行、ここでは未確認"
+  },
+  "nginxGrouping": "IPAが列挙したNGINX 5 CVEは、系列別の影響範囲・個別のCNA更新日時・評価をそれぞれ保持して、CVEごとに収録した。注意喚起URLは共通。"
+}

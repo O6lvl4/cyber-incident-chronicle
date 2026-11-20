@@ -1,37 +1,47 @@
 {
   "id": "notion-fireworks-japan-2026",
-  "company": "LegalOn Technologies・リバスタ・産業経済新聞社（Notion AI再委託先事案）",
+  "company": "国内利用企業（Notion AI再委託先事案）",
   "geography": "日本",
-  "title": "Notion AI再委託先の不正アクセスで国内利用企業の情報流出のおそれ",
+  "title": "Notion AI再委託先の不正アクセスで国内利用企業の一部情報流出を確認",
   "announcementDate": "2026-11-13",
   "announcementDateLabel": "収録した公式公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日未公表",
-  "updatedDate": "2026-11-14",
-  "statusAsOfDate": "2026-11-14",
-  "lastVerifiedDate": "2026-11-16",
+  "updatedDate": "2026-11-17",
+  "statusAsOfDate": "2026-11-17",
+  "lastVerifiedDate": "2026-11-21",
   "impactTypes": [
     "leak",
     "unauthorizedAccess",
     "outage"
   ],
-  "disclosureStatus": "possible",
+  "disclosureStatus": "confirmed",
   "attackMethod": {
     "label": "不正アクセス。具体的な侵入手口は未確認。",
     "status": "unknown"
   },
-  "summary": "Notion AIの再委託先Fireworksへの不正アクセスについて、LegalOnとリバスタが従業員の会話内容等の流出可能性を公表。同一委託先事案として集約し、各社の対象範囲を分けて記録する。 産経新聞社も取引先経由のシステム情報流出可能性を公表し、産経iDを一時停止後に再開した。",
+  "summary": "Notion AI再委託先の不正アクセスについて、キリンホールディングスが対話内容の一部の外部漏えいと対象260名を確認。収録済みのLegalOn・リバスタ・産経新聞社の情報は流出の可能性として区分する。",
   "affectedData": [
     "LegalOn：会話に含まれた顧客企業名、担当者名・メールアドレス等",
     "リバスタ：従業員の会話に含まれ得る業務・機密・個人情報",
-    "産経新聞社：取引先がNotionで扱った当社システムに関する情報の一部（流出可能性）"
+    "産経新聞社：取引先がNotionで扱った当社システムに関する情報の一部（流出可能性）",
+    "キリンホールディングス：Notion AIとの対話に含まれた氏名・社用電話番号・社用メールアドレス等の一部。"
   ],
-  "counts": [],
+  "counts": [
+    {
+      "value": 260,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "キリンホールディングスが漏えいを確認した対象者のみ",
+      "approximate": false
+    }
+  ],
   "caveats": [
     "対象処理期間はLegalOnが10月5〜23日、リバスタが10月5〜24日と説明。処理期間を攻撃継続期間と同一視しない。",
     "LegalOn製品の顧客保存契約書・認証情報は対象外。リバスタは第三者の閲覧・取得の事実を未確認。両社の対象件数は不明で合算しない。",
     "通知受領日はリバスタ11月10日、LegalOn11月11日。国内企業の公表に限定した選択収録で、全利用企業を網羅しない。",
-    "産経新聞社はシステム関連情報の流出可能性を調査中。会員個人情報の漏えい確認や対象件数の公表ではない。"
+    "産経新聞社はシステム関連情報の流出可能性を調査中。会員個人情報の漏えい確認や対象件数の公表ではない。",
+    "260名はキリンホールディングスの部分範囲。ほかの利用企業の漏えい確認や対象人数を意味しない。同社の対象チャット記録期間10月5〜24日は攻撃期間ではない。"
   ],
   "sources": [
     {
@@ -48,6 +58,11 @@
       "url": "https://www.sankei.jp/wp-content/uploads/2026/11/当社の取引先が利用するクラウドツールでの不正アクセスおよび産経iDサービスの一時停止（現在は再開）について.pdf",
       "title": "産経新聞社：取引先クラウドツールの不正アクセスと産経iD一時停止・再開",
       "publishedDate": "2026-11-14"
+    },
+    {
+      "url": "https://info.kirinholdings.com/faq_detail.html?id=122842",
+      "title": "キリンホールディングス：Notion AI再委託先事案で260名の情報漏えいを確認",
+      "publishedDate": "2026-11-17"
     }
   ],
   "timeline": [
@@ -71,6 +86,13 @@
       "summary": "取引先のNotion/Fireworks事案を受け13日夜に産経iDを停止。安全性確認後14日午前に再開。",
       "sourceUrl": "https://www.sankei.jp/wp-content/uploads/2026/11/当社の取引先が利用するクラウドツールでの不正アクセスおよび産経iDサービスの一時停止（現在は再開）について.pdf",
       "kind": "update"
+    },
+    {
+      "date": "2026-11-17",
+      "label": "キリンホールディングスが漏えいを公表",
+      "kind": "update",
+      "summary": "11月13日にNotion社の通知を受け同社の漏えいを確認。対象260名。",
+      "sourceUrl": "https://info.kirinholdings.com/faq_detail.html?id=122842"
     }
   ],
   "eventDates": {
@@ -82,11 +104,12 @@
       "reviewedDate": "2026-11-15"
     },
     "damageConfirmed": {
-      "precision": "unknown",
-      "label": "未公表・不明",
-      "note": "情報漏えいの初確認日は確定できない。",
-      "sourceUrl": "https://legalontech.jp/11330/",
-      "reviewedDate": "2026-11-15"
+      "precision": "day",
+      "label": "2026年11月13日（キリンホールディングス分）",
+      "note": "キリンホールディングスはNotion社の通知を受けたこの日に同社分の漏えいを確認。全事案・利用者の初確認日を示さない。",
+      "sourceUrl": "https://info.kirinholdings.com/faq_detail.html?id=122842",
+      "reviewedDate": "2026-11-21",
+      "startDate": "2026-11-13"
     }
   }
 }
