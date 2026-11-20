@@ -1,43 +1,50 @@
 {
   "id": "fines-reservation-2026",
   "company": "ファインズ（予約システム）",
-  "title": "予約システムに不正アクセス、予約者情報1,536,322件を影響範囲として公表",
+  "title": "予約システムの不正アクセスで情報取得、対象1,542,254件に更新",
   "announcementDate": "2026-09-25",
   "announcementDateLabel": "収録した公表日",
   "occurredDate": null,
-  "occurredDateLabel": "侵入開始日は未公表（9月22日に異常を検知）",
-  "updatedDate": "2026-09-25",
-  "statusAsOfDate": "2026-09-25",
-  "lastVerifiedDate": "2026-10-16",
+  "occurredDateLabel": "2026年9月21〜22日・10月6〜7日と2024年12月〜2025年5月に不正アクセス（断続・別期間）",
+  "updatedDate": "2026-11-20",
+  "statusAsOfDate": "2026-11-20",
+  "lastVerifiedDate": "2026-11-21",
   "impactTypes": [
     "leak",
     "unauthorizedAccess"
   ],
-  "disclosureStatus": "investigating",
+  "disclosureStatus": "confirmed",
   "attackMethod": {
-    "label": "具体的な侵入手法は未公表",
-    "status": "unknown"
+    "label": "プログラムの不備を突いた不正アクセス。権限設定・監視の不足で被害が拡大。",
+    "status": "confirmed"
   },
-  "summary": "9月22日に予約システムの異常を検知し、調査で第三者の不正アクセスを確認。速報で予約者情報1,536,322件を影響範囲として示し、アクセス遮断と詳細調査を進めている。",
+  "summary": "予約システム「いつあき」「TSUNAGU」への不正アクセスで顧客情報取得を確認。11月20日の第2報は、漏えい又はそのおそれの対象を1,542,254件へ更新。別時期の1名分のメールアドレス読み取りは推定で、上記件数に含まない。",
   "affectedData": [
-    "予約者の氏名、電話番号、メールアドレス、予約店舗・メニュー・日時等"
+    "予約者の氏名・フリガナ・電話番号・メール・住所・生年月日・性別",
+    "予約の内容、店舗の顧客メモ（健康状態等を含む場合）、予約時コメント・入力内容等。項目は店舗や顧客で異なる。"
   ],
   "counts": [
     {
-      "value": 1536322,
+      "value": 1542254,
       "unit": "件",
-      "status": "investigating",
-      "label": "速報で影響範囲として公表された予約者情報の対象件数",
+      "status": "possible",
+      "label": "漏えい又はそのおそれの対象となる店舗ごとの登録情報（混合値で、重複の可能性あり）",
+      "approximate": false
+    },
+    {
+      "value": 1,
+      "unit": "名",
+      "status": "possible",
+      "label": "別時期にメールアドレスが読み取られたと推定される顧客（上記の対象件数とは別）",
       "approximate": false
     }
   ],
-  "scaleLabel": "対象1,536,322件（影響範囲を調査中）",
+  "scaleLabel": "漏えい又はおそれの対象1,542,254件。別に1名の読み取りを推定。",
   "caveats": [
-    "表題は情報漏えいについてのお知らせだが、本文で明示される確認は不正アクセスと対象件数。全件の外部持ち出し確認や確度別内訳は書かれていないため調査中とする",
-    "1,536,322は件数であり、重複を除いた予約者人数ではない",
-    "9月22日は異常検知日。侵入開始日や公表日と混同しない",
-    "アクセス遮断措置は公表されているが、予約サービス全体の停止や復旧完了は明記されていない",
-    "速報時点で影響範囲特定を継続。漏えい項目の追加や他社の同名企業との混同をしない"
+    "情報の取得は公式確認済みだが、対象1,542,254件の確度別内訳は未公表。9月25日速報の1,536,322件に調査判明分を加えた数であり、両者を合算しない。",
+    "店舗単位の登録件数で、複数店舗利用者の重複があり得る。人数ではない。2024年12月〜2025年5月の1名のメール読取り推定も別。",
+    "第2報では異常検知を9月21日夜、不正アクセス確認と遮断を9月22日と区別。別々の不正アクセス時期は連続としない。",
+    "クレジットカード情報は保存せず漏えいしていないと説明。暗号化・システム停止や二次被害は11月20日公表時点で確認されていない。"
   ],
   "geography": "日本",
   "sources": [
@@ -45,14 +52,26 @@
       "title": "ファインズ：予約システム不正アクセスの速報",
       "url": "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/",
       "publishedDate": "2026-09-25"
+    },
+    {
+      "url": "https://e-tenki.co.jp/news/reserve-system-incident-final/",
+      "title": "ファインズ：予約システム不正アクセス（第2報・調査結果）",
+      "publishedDate": "2026-11-20"
     }
   ],
   "timeline": [
     {
-      "date": "2026-09-22",
-      "label": "異常を検知し不正アクセスを確認",
+      "date": "2026-09-21",
+      "label": "異常を検知",
       "kind": "occurrence",
-      "summary": "アクセス遮断等の緊急措置を実施し詳細調査を開始",
+      "summary": "保守委託先による監視で異常を検知。翌22日に不正アクセスと確認。",
+      "sourceUrl": "https://e-tenki.co.jp/news/reserve-system-incident-final/"
+    },
+    {
+      "date": "2026-09-22",
+      "label": "不正アクセスの確認",
+      "kind": "occurrence",
+      "summary": "速報では9月22日の対応を公表。第2報で9月21日夜の異常検知と翌日の不正アクセス確認を区別した。",
       "sourceUrl": "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/"
     },
     {
@@ -61,23 +80,32 @@
       "kind": "disclosure",
       "summary": "予約者情報1,536,322件と情報項目を公表。影響範囲特定を継続",
       "sourceUrl": "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/"
+    },
+    {
+      "date": "2026-11-20",
+      "label": "第2報・確報提出",
+      "kind": "update",
+      "summary": "予約システム「いつあき」「TSUNAGU」への不正アクセスで顧客情報取得を確認。11月20日の第2報は、漏えい又はそのおそれの対象を1,542,254件へ更新。別時期の1名分のメールアドレス読み取りは推定で、上記件数に含まない。",
+      "sourceUrl": "https://e-tenki.co.jp/news/reserve-system-incident-final/"
     }
   ],
-  "detectedDate": "2026-09-22",
+  "detectedDate": "2026-09-21",
   "eventDates": {
     "attack": {
-      "precision": "unknown",
-      "label": "未公表・不明",
-      "note": "確認した公表資料に記載なし。9月22日は異常検知と調査による不正アクセス確認の日であり、攻撃の実施時期は示されていない。",
-      "sourceUrl": "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/",
-      "reviewedDate": "2026-10-18"
+      "precision": "period",
+      "label": "2026年9月21〜22日・10月6〜7日（別時期：2024年12月〜2025年5月）",
+      "note": "第2報の主たる2026年9月21〜22日の明示期間を境界に採用。10月の追加分および2024〜2025年の月精度期間は別であり、連続とはみなさない。",
+      "sourceUrl": "https://e-tenki.co.jp/news/reserve-system-incident-final/",
+      "reviewedDate": "2026-11-21",
+      "startDate": "2026-09-21",
+      "endDate": "2026-09-22"
     },
     "damageConfirmed": {
       "precision": "unknown",
-      "label": "未公表・不明",
-      "note": "確認した公表資料に記載なし。対象件数と情報項目を速報として示すが、個人情報漏えい等の被害を最初に確認した日は記載されていない。",
-      "sourceUrl": "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/",
-      "reviewedDate": "2026-10-18"
+      "label": "漏えい初確認日は未公表",
+      "note": "不正アクセスの確認日や第2報の公表日と、情報取得の初確認日を混同しない。",
+      "sourceUrl": "https://e-tenki.co.jp/news/reserve-system-incident-final/",
+      "reviewedDate": "2026-11-21"
     }
   }
 }

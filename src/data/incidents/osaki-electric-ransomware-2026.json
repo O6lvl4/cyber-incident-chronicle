@@ -1,0 +1,86 @@
+{
+  "id": "osaki-electric-ransomware-2026",
+  "company": "大崎電気工業株式会社",
+  "geography": "日本",
+  "title": "ランサムウェアで社内サーバーが暗号化され生産・出荷が停止",
+  "announcementDate": "2026-11-18",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "侵入は11月15日午前1時30分頃と推定",
+  "updatedDate": "2026-11-20",
+  "statusAsOfDate": "2026-11-20",
+  "lastVerifiedDate": "2026-11-21",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "investigating",
+  "attackMethod": {
+    "label": "ランサムウェア。VPN機器経由の侵入を確認。",
+    "status": "confirmed"
+  },
+  "summary": "11月17日に一部社内サーバーの暗号化を確認し、埼玉事業所と関連2拠点の生産関連システムを停止。11月20日の第二報でVPN機器経由の侵入を確認したと説明。生産・出荷の再開時期と漏えいの内容・範囲は調査中。",
+  "affectedData": [
+    "外部サイト掲載の情報は同社の技術情報と思われるもの。掲載内容・範囲および他情報の漏えい有無は調査中。"
+  ],
+  "counts": [],
+  "caveats": [
+    "外部サイトへの情報掲載を11月19日に認知したが、会社による内容・範囲の調査は継続中。外部の主張のみで漏えいを確定しない。",
+    "11月15日午前1時30分頃は侵入時期の推定。認証突破の詳細は調査を継続。",
+    "影響は埼玉事業所、岩手大崎電気、大崎プラテックの生産。スマートメーター等の製品やサービスそのものへの攻撃・影響ではない。バックアップの無事は確認済みだが、生産・出荷の再開時期は未定。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.osaki.co.jp/ja/notice/20261118.html",
+      "title": "大崎電気工業：ランサムウェアに伴う生産停止（第一報）",
+      "publishedDate": "2026-11-18"
+    },
+    {
+      "url": "https://www.osaki.co.jp/ja/notice/20261120.html",
+      "title": "大崎電気工業：VPN経由侵入の確認と復旧状況（第二報）",
+      "publishedDate": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-17",
+      "label": "データの暗号化を確認し生産関連システムを停止",
+      "kind": "occurrence",
+      "summary": "同日10時35分頃に暗号化を確認。正午以降に外部接続遮断・生産関連システム停止。",
+      "sourceUrl": "https://www.osaki.co.jp/ja/notice/20261120.html"
+    },
+    {
+      "date": "2026-11-18",
+      "label": "ランサムウェア被害の第一報",
+      "kind": "disclosure",
+      "summary": "生産拠点の停止によりスマートメーター等を生産・出荷できない状態を公表。",
+      "sourceUrl": "https://www.osaki.co.jp/ja/notice/20261118.html"
+    },
+    {
+      "date": "2026-11-20",
+      "label": "第二報",
+      "kind": "update",
+      "summary": "11月17日に一部社内サーバーの暗号化を確認し、埼玉事業所と関連2拠点の生産関連システムを停止。11月20日の第二報でVPN機器経由の侵入を確認したと説明。生産・出荷の再開時期と漏えいの内容・範囲は調査中。",
+      "sourceUrl": "https://www.osaki.co.jp/ja/notice/20261120.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "approximate",
+      "label": "2026年11月15日午前1時30分頃（推定）",
+      "note": "外部ネットワークからの侵入時期は公式の推定で、暗号化確認日とは別。",
+      "sourceUrl": "https://www.osaki.co.jp/ja/notice/20261120.html",
+      "reviewedDate": "2026-11-21"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年11月17日（暗号化）",
+      "note": "10時35分頃にサーバー内の暗号化を確認。漏えい確認日ではない。",
+      "sourceUrl": "https://www.osaki.co.jp/ja/notice/20261120.html",
+      "reviewedDate": "2026-11-21",
+      "startDate": "2026-11-17"
+    }
+  },
+  "detectedDate": "2026-11-17"
+}

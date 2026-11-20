@@ -1,0 +1,144 @@
+{
+  "id": "plaid-karte-2026",
+  "company": "株式会社プレイド（KARTE）",
+  "geography": "日本",
+  "title": "KARTEの不正アクセスで漏えい確認・全サービス停止",
+  "announcementDate": "2026-11-13",
+  "announcementDateLabel": "収録した公式公表日",
+  "occurredDate": "2026-11-13",
+  "occurredDateLabel": "11月13日未明に不正アクセス",
+  "updatedDate": "2026-11-20",
+  "statusAsOfDate": "2026-11-20",
+  "lastVerifiedDate": "2026-11-21",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "公開経路の一部処理の脆弱性を悪用。取得された認証情報で管理画面への不正アクセスも発生。",
+    "status": "confirmed"
+  },
+  "summary": "11月13日未明にKARTEで不正アクセスが発生し、全サービスを停止。11月16日に情報の一部の流出を公表。20日に分類別の対象範囲、一部キャッシュの流出可能性、契約終了企業も対象に含む訂正を発表した。2027年1月中旬を段階的再開の目標とする。",
+  "affectedData": [
+    "KARTE連携データ、エンドユーザーの解析データ、外部サービス連携用の認証情報",
+    "エンドユーザーの一時キャッシュ（個別に流出の有無を判別できない）",
+    "プレイド自身が保有していた登録メールアドレス（Wicleを含む）と営業・利用支援で取得した連絡先"
+  ],
+  "counts": [
+    {
+      "value": 570,
+      "unit": "社",
+      "status": "confirmed",
+      "label": "KARTEへ連携したデータの分類対象",
+      "approximate": false
+    },
+    {
+      "value": 487,
+      "unit": "社",
+      "status": "confirmed",
+      "label": "エンドユーザー解析データの分類対象",
+      "approximate": false
+    },
+    {
+      "value": 409,
+      "unit": "社",
+      "status": "possible",
+      "label": "エンドユーザー一時キャッシュの推定最大対象",
+      "approximate": false
+    },
+    {
+      "value": 754,
+      "unit": "社",
+      "status": "confirmed",
+      "label": "外部サービス連携用認証情報の分類対象（個人情報なし）",
+      "approximate": false
+    },
+    {
+      "value": 79249,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "KARTE等を利用するための登録メールアドレス（Wicleを含む）",
+      "approximate": false
+    },
+    {
+      "value": 45816,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "プレイドの営業・利用支援で取得した連絡先情報",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "社数は分類間で重複があり、合算しない。分類対象社数は各社で扱う情報の種類や件数、漏えい対象の個人総数を示さない。",
+    "キャッシュは読出し有無を個々に復元できず、当該時間帯に保存されていた可能性があるものを対象とした推定最大値。",
+    "11月20日に、契約終了企業も対象に含むと訂正。終了後に削除されるべき情報が残っていたと説明。",
+    "顧客企業への詳細データ提供は11月24日からの予定。2027年1月中旬の段階的再開は目標で、再開確認ではない。"
+  ],
+  "sources": [
+    {
+      "url": "https://plaid.co.jp/news/20261113/",
+      "title": "プレイド：KARTEへの不正アクセス初報",
+      "publishedDate": "2026-11-13"
+    },
+    {
+      "url": "https://plaid.co.jp/news/20261116/",
+      "title": "プレイド：KARTEの一部情報漏えいを確認",
+      "publishedDate": "2026-11-16"
+    },
+    {
+      "url": "https://plaid.co.jp/news/20261120/",
+      "title": "プレイド：KARTEの調査結果、対象範囲訂正と再開見通し",
+      "publishedDate": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-13",
+      "label": "不正アクセス検知・停止",
+      "kind": "occurrence",
+      "summary": "8時59分に検知し、同日午後に全サービスを順次停止。",
+      "sourceUrl": "https://plaid.co.jp/news/20261116/"
+    },
+    {
+      "date": "2026-11-13",
+      "label": "初報",
+      "kind": "disclosure",
+      "summary": "第三者による不正アクセスを公表。",
+      "sourceUrl": "https://plaid.co.jp/news/20261113/"
+    },
+    {
+      "date": "2026-11-16",
+      "label": "情報漏えいを公表",
+      "kind": "update",
+      "summary": "登録メールや連携情報の一部の流出を公表。",
+      "sourceUrl": "https://plaid.co.jp/news/20261116/"
+    },
+    {
+      "date": "2026-11-20",
+      "label": "調査結果と対象範囲の訂正",
+      "kind": "update",
+      "summary": "分類別の対象範囲と再開見通しを公表し、契約終了企業も含むと訂正。",
+      "sourceUrl": "https://plaid.co.jp/news/20261120/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年11月13日未明",
+      "note": "公式資料で不正アクセス発生。最初の試行や脆弱性の発生時期を示さない。",
+      "sourceUrl": "https://plaid.co.jp/news/20261120/",
+      "reviewedDate": "2026-11-21",
+      "startDate": "2026-11-13"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "漏えい初確認日は未公表",
+      "note": "11月16日は漏えい確認を公表した日。漏えいの初確認日とは断定しない。",
+      "sourceUrl": "https://plaid.co.jp/news/20261116/",
+      "reviewedDate": "2026-11-21"
+    }
+  },
+  "detectedDate": "2026-11-13"
+}

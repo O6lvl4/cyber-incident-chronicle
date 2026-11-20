@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-11-20T21:17:19.850240Z",
+  "scope": "Source-level retrieval distinctions, with original success points unchanged on failures. KEV entries are not corporate incidents and do not establish ransomware use.",
+  "sources": [
+    {
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "previousStatus": "fetch-failed",
+      "lastSuccessfulFetchAt": null,
+      "status": "fetch-failed",
+      "error": "Canonical source HTTP403 on web route and shell network timeout"
+    },
+    {
+      "url": "https://jvn.jp/rss/jvn.rdf",
+      "previousStatus": "unchanged",
+      "lastSuccessfulFetchAt": "2026-11-15T23:34:03.980477+00:00",
+      "status": "fetch-failed",
+      "error": "Web transport rejected RDF content type; no equivalent byte-level feed comparison completed"
+    },
+    {
+      "url": "https://jvndb.jvn.jp/ja/rss/jvndb.rdf",
+      "previousStatus": "retrieved-envelope-changed-items-unchanged",
+      "lastSuccessfulFetchAt": "2026-11-15T23:34:09.400830+00:00",
+      "status": "fetch-failed",
+      "error": "Web transport rejected RDF content type; no equivalent byte-level feed comparison completed"
+    },
+    {
+      "url": "https://www.jpcert.or.jp/rss/jpcert.rdf",
+      "previousStatus": "unchanged",
+      "lastSuccessfulFetchAt": "2026-11-15T23:34:11.517985+00:00",
+      "status": "fetch-failed",
+      "error": "Web transport rejected RDF content type; no equivalent byte-level feed comparison completed"
+    },
+    {
+      "url": "https://github.com/cisagov/kev-data/blob/9c564f4dfa6dab393748a3b37038cde6a11b3585/known_exploited_vulnerabilities.json",
+      "status": "verified-official-agency-mirror",
+      "catalogVersion": "2026.11.20",
+      "dateReleased": "2026-11-20T17:48:39.1516Z",
+      "count": 1790,
+      "uniqueCveIds": 1790,
+      "scope": "Immutable official CISA GitHub-repository copy, identical to the retrieved default-branch copy. Independent from failed canonical source; no advancement of the canonical success checkpoint."
+    },
+    {
+      "url": "https://jvn.jp/vu/index.html",
+      "status": "index-verified-only",
+      "scope": "Official HTML index opened; not a substitute for byte comparison of JVN or JPCERT RDF feeds."
+    }
+  ],
+  "relevantKevMatches": [
+    {
+      "id": "GHSA-wxxx-gvqv-xp7p",
+      "alias": "CVE-2026-40217",
+      "knownExploitedCatalogDate": "2026-11-18",
+      "dueDate": "2026-12-02",
+      "knownRansomwareCampaignUse": "Unknown",
+      "alreadyInLibraryCorpus": true
+    },
+    {
+      "id": "CVE-2026-90436",
+      "knownExploitedCatalogDate": "2026-11-18",
+      "dueDate": "2026-11-21",
+      "knownRansomwareCampaignUse": "Unknown",
+      "alreadyInLibraryCorpus": true
+    }
+  ],
+  "recordProjection": "CISA agency mirror holdings are audit evidence only. The existing library validator requires cisa.gov-hosted evidence to set listed/notListed. Neither the canonical JSON nor the official HTML catalog was retrievable (HTTP 403 via web), so published KEV status is not changed from the mirror alone."
+}
