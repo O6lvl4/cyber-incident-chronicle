@@ -1,0 +1,147 @@
+{
+  "reportDateJst": "2026-11-22",
+  "checkedAt": "2026-11-21T21:11:30Z",
+  "baseCommit": "4cdbbb4b88b6fed484cb01d60f54d45405a1d913",
+  "scope": "11月21日の前回確認と重なる11月17日以降の公式一覧・固定CISAミラーと、前回保留を中心に個別照合。すべてのメーカー、全掲載済みCVE、全ミラーや全派生製品の網羅ではない。",
+  "recordsBefore": 79,
+  "recordsAfter": 84,
+  "addedRecords": 5,
+  "updatedRecords": 0,
+  "added": [
+    "CVE-2026-123890",
+    "CVE-2026-76466",
+    "CVE-2026-114938",
+    "CVE-2026-101107",
+    "CVE-2026-129448"
+  ],
+  "updated": [],
+  "sources": [
+    {
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "unchanged",
+      "interpretation": "最新は11月20日のPHP既存続報。新規掲載なし。前回と同じ続報を再確認したが、直接の攻撃コード情報は更新差分に含めない。"
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "unchanged",
+      "interpretation": "最新は11月20日のPHP注意喚起。11月18日のOracle Java注意喚起は取りこぼしとして個別確認。"
+    },
+    {
+      "url": "https://jvn.jp/",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "unchanged",
+      "interpretation": "最新は11月20日。SoftBank Airターミナル6の訂正版とOracle関連の個別情報を確認。Siemensの集約告知も確認したが、傘下の製品別告知は全件未照合。"
+    },
+    {
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "failed",
+      "interpretation": "HTTP 403。CISA本体の直接取得成功点は変更しない。"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/9c564f4dfa6dab393748a3b37038cde6a11b3585/known_exploited_vulnerabilities.json",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "partially-confirmed",
+      "interpretation": "公式の固定ミラー2026.11.20版、1790件の先頭の対象項目を照合。全件機械照合は未実施。cisa.gov証拠を要する構造化KEV判定には使わない。"
+    },
+    {
+      "url": "https://openjdk.org/groups/vulnerability/advisories/2026-11-17",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "failed",
+      "interpretation": "HTTP 403。Oracle製品については開発元Oracle本文とOracle CNAを使用。"
+    },
+    {
+      "url": "https://lists.apache.org/thread/lnz4s26tv6hdo03wngtdbpfj4hg4gtds",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "failed",
+      "interpretation": "メーリングリスト本文が抽出できず。Apache Software Foundation CNAの公開本文とApache Rollerの公式セキュリティ一覧を代替確認。"
+    },
+    {
+      "url": "https://me.sap.com/notes/3660969",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "failed",
+      "interpretation": "個別Noteの本文は確認できず。公開一覧とSAP CNAのみ確認。"
+    },
+    {
+      "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/39495",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "ok",
+      "interpretation": "発行元本文、影響範囲・対処を確認。別途CNA記録を照合。"
+    },
+    {
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vcs-static-cred-hr7EWZ8t",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "ok",
+      "interpretation": "発行元本文、影響範囲・対処を確認。別途CNA記録を照合。"
+    },
+    {
+      "url": "https://www.oracle.com/security-alerts/cspunov2026.html",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "ok",
+      "interpretation": "発行元本文、影響範囲・対処を確認。別途CNA記録を照合。"
+    },
+    {
+      "url": "https://jvn.jp/jp/JVN64740097/397327/index.html",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "ok",
+      "interpretation": "発行元本文、影響範囲・対処を確認。別途CNA記録を照合。"
+    },
+    {
+      "url": "https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/129xxx/CVE-2026-129448.json",
+      "checkedAt": "2026-11-21T21:11:30Z",
+      "status": "ok",
+      "interpretation": "発行元本文、影響範囲・対処を確認。別途CNA記録を照合。"
+    }
+  ],
+  "pendingCandidates": [
+    {
+      "id": "CVE-2025-42884",
+      "status": "held",
+      "reason": "SAPの公開パッチ一覧とSAP CNAで対象版・CVSSを確認。CISA固定ミラーでは2026-11-20掲載。CISA本体取得不可、SAPの個別Note本文未取得。現行スキーマでKEV理由を立証できず保留。",
+      "url": "https://support.sap.com/en/my-support/knowledge-base/security-notes-news/bulletin-2025.html"
+    },
+    {
+      "id": "CVE-2024-10441",
+      "status": "held",
+      "reason": "Synologyの2告知とCNAを照合。開発元のCritical公表は対象期間前、11月18日付のKEVはCISA固定ミラーのみ。CISA本体の取得失敗により期間内の構造化根拠を立証できず保留。DSM 7.1の適用範囲は開発元告知の個別CVE本文とCNAで記載に差がある。",
+      "url": "https://www.synology.com/en-global/security/advisory/Synology_SA_24_20"
+    },
+    {
+      "id": "CVE-2026-40217",
+      "status": "routed-to-library-review",
+      "reason": "CISA固定ミラーでは11月18日掲載。PyPI配布のLiteLLM。製品レコードを作らずライブラリ側の確認候補。"
+    },
+    {
+      "id": "JVNVU98354779",
+      "status": "held",
+      "reason": "Siemens製品の集約告知本文を確認。11月20日更新分について製品・修正版の個別網羅は未完了。"
+    },
+    {
+      "id": "JVNVU92814490",
+      "status": "held",
+      "reason": "JVN 11月20日のCISA ICS集約告知を一覧にて確認。個別製品の出典・修正版は未検証。"
+    },
+    {
+      "id": "PHP-NOV2026-SECURITY-REMAINING",
+      "status": "held",
+      "reason": "11月19日版の未収録個別CVEの全系列照合は未完了。"
+    },
+    {
+      "id": "NGINX-NOV2026-REMAINING",
+      "status": "held",
+      "reason": "IPAの列挙外の個別CVEは今回も未精査。"
+    },
+    {
+      "id": "CVE-2026-109618/CVE-2026-109619",
+      "status": "held",
+      "reason": "JPCERTの11月20日続報は前回と同じ。攻撃再現につながる情報は差分に追加しない。"
+    }
+  ],
+  "checkpointPolicy": "成功確認したレコードだけを追加。CISA直接取得点と未検証候補の既存成功点を維持。JSTの日付は記録ごとの公開日や変更日時とは別。",
+  "validation": {
+    "productStatus": "84 records, 0 errors",
+    "pnpmCheck": "全カテゴリ編集後に別途実行"
+  }
+}
