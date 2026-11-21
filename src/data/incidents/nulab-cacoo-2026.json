@@ -1,0 +1,123 @@
+{
+  "id": "nulab-cacoo-2026",
+  "company": "ヌーラボ（Cacoo）",
+  "title": "Cacooの不正アクセスで問い合わせ記録の流出を確認",
+  "geography": "日本",
+  "announcementDate": "2026-11-16",
+  "announcementDateLabel": "公式初報公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "最初の侵入時期は未公表",
+  "detectedDate": "2026-11-14",
+  "updatedDate": "2026-11-20",
+  "statusAsOfDate": "2026-11-20",
+  "lastVerifiedDate": "2026-11-22",
+  "impactTypes": [
+    "leak",
+    "outage",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "外部の第三者が認証情報を不正使用",
+    "status": "confirmed"
+  },
+  "summary": "11月14日に第三者による認証情報の不正利用を検知し、安全確認のためCacooを停止。11月20日時点で問い合わせ記録765件の流出を確認し、請求情報890件と過去の社内調査用データ310件は流出のおそれと区別。11月24～27日のサービス再開は見通し。",
+  "affectedData": [
+    "問い合わせ記録（氏名、メールアドレス、電話番号、住所等。一部にカード番号下4桁等）",
+    "Cacoo旧プランで外部決済を利用した顧客の請求情報（流出のおそれ）",
+    "運用環境に保存した過去の社内調査用データ（流出のおそれ、一部に認証情報）"
+  ],
+  "counts": [
+    {
+      "value": 765,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "問い合わせ記録の流出確認。初報の約792件を更新",
+      "approximate": false
+    },
+    {
+      "value": 890,
+      "unit": "件",
+      "status": "possible",
+      "label": "外部決済サービスの請求情報",
+      "approximate": false
+    },
+    {
+      "value": 310,
+      "unit": "件",
+      "status": "possible",
+      "label": "運用環境に保存した過去の社内調査用データ",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "765件の流出確認／別範囲890件・310件のおそれ",
+  "caveats": [
+    "異なる情報区分の件数は人数とみなさず、確認済みとおそれは合算しない。",
+    "Cacooの図・アカウント情報を保存するデータベース、およびBacklog等の顧客データへの不正アクセスは確認されていない。",
+    "11月24～27日は第3報時点の再開見通しで、再開済みではない。"
+  ],
+  "sources": [
+    {
+      "url": "https://nulab.com/ja/info/20261116_cacoo_01/",
+      "title": "ヌーラボ：Cacooへの不正アクセス（第一報）",
+      "publishedDate": "2026-11-16"
+    },
+    {
+      "url": "https://nulab.com/ja/info/20261118_cacoo_02/",
+      "title": "ヌーラボ：Cacooの調査状況（第二報）",
+      "publishedDate": "2026-11-18"
+    },
+    {
+      "url": "https://nulab.com/ja/info/20261120_cacoo_03/",
+      "title": "ヌーラボ：Cacooの再開目処と調査状況（第三報）",
+      "publishedDate": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-14",
+      "label": "認証情報の不正使用を検知・サービス停止",
+      "kind": "occurrence",
+      "summary": "午前に検知。18時45分からCacooを停止。",
+      "sourceUrl": "https://nulab.com/ja/info/20261116_cacoo_01/"
+    },
+    {
+      "date": "2026-11-16",
+      "label": "不正アクセスと流出の公表",
+      "kind": "disclosure",
+      "summary": "初報で問い合わせ記録の流出と約792件の精査中の件数を公表。",
+      "sourceUrl": "https://nulab.com/ja/info/20261116_cacoo_01/"
+    },
+    {
+      "date": "2026-11-18",
+      "label": "調査状況を更新",
+      "kind": "update",
+      "summary": "確認した流出と、アクセス可能だった情報の流出のおそれを分けて説明。",
+      "sourceUrl": "https://nulab.com/ja/info/20261118_cacoo_02/"
+    },
+    {
+      "date": "2026-11-20",
+      "label": "対象範囲と再開見通しを公表",
+      "kind": "update",
+      "summary": "流出765件、おそれ890件・310件。11月24～27日を再開の目処と公表。",
+      "sourceUrl": "https://nulab.com/ja/info/20261120_cacoo_03/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年11月14日（検知時点）",
+      "note": "午前に認証情報の不正使用を検知した日。最初の侵入時期や認証情報を取得した日は不明。",
+      "sourceUrl": "https://nulab.com/ja/info/20261116_cacoo_01/",
+      "reviewedDate": "2026-11-22",
+      "startDate": "2026-11-14"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "流出初確認日は未公表",
+      "note": "11月16日は問い合わせ記録の流出確認を公表した日。初確認日と断定しない。",
+      "sourceUrl": "https://nulab.com/ja/info/20261116_cacoo_01/",
+      "reviewedDate": "2026-11-22"
+    }
+  }
+}
