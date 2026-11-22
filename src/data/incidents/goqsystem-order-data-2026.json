@@ -1,0 +1,132 @@
+{
+  "id": "goqsystem-order-data-2026",
+  "company": "株式会社GoQSystem",
+  "title": "GoQSystemへの不正アクセスによる注文データの流出",
+  "geography": "日本",
+  "announcementDate": "2026-11-12",
+  "announcementDateLabel": "公式初報公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "最初の侵入日は未公表",
+  "updatedDate": "2026-11-20",
+  "statusAsOfDate": "2026-11-20",
+  "lastVerifiedDate": "2026-11-23",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "問い合わせ機能の脆弱性悪用を提供元が確認",
+    "status": "confirmed"
+  },
+  "summary": "11月10～11日にGoQSystemへ不正アクセスがあり、注文データの一部の持ち出しを確認。第2報は対象店舗・企業1,694（第3報で集計はアカウント単位と説明）、注文4,984,595件、本人4,367,390名。11日に一時停止し、緊急対策後に接続元を限定して再開。",
+  "affectedData": [
+    "注文者・届け先の氏名、住所、電話番号、メールアドレス、注文内容等。カード情報は提供元が保持せず対象外"
+  ],
+  "counts": [
+    {
+      "value": 1694,
+      "unit": "アカウント",
+      "status": "confirmed",
+      "label": "第2報の対象店舗・企業数1,694社と表記。第3報で集計はGoQSystemのアカウント単位と説明",
+      "approximate": false
+    },
+    {
+      "value": 4984595,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "提供元公表の対象注文件数",
+      "approximate": false
+    },
+    {
+      "value": 4367390,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "提供元公表の対象となる本人の人数",
+      "approximate": false
+    }
+  ],
+  "scaleLabel": "対象店舗・企業1,694（アカウント単位）・注文4,984,595件・本人4,367,390名",
+  "caveats": [
+    "店舗のアカウント・注文・本人の数は別単位。第3報は影響集計は法人単位ではないと説明。利用企業側の件数も提供元全体の値に加えない。",
+    "提供元の再開は接続元の制限付き。全ユーザーへの制限解除や復旧完了とは扱わない。"
+  ],
+  "sources": [
+    {
+      "url": "https://goq.co.jp/security-incident.html",
+      "title": "GoQSystem：注文情報の持ち出し確認（第1報）",
+      "publishedDate": "2026-11-12"
+    },
+    {
+      "url": "https://goq.co.jp/security-incident-2.html",
+      "title": "GoQSystem：対象規模と今後の対応（第2報）",
+      "publishedDate": "2026-11-13"
+    },
+    {
+      "url": "https://goq.co.jp/security-incident-3.html",
+      "title": "GoQSystem：影響範囲のアカウント単位と個人情報保護委員会への連名報告（第3報、訂正注記あり）",
+      "publishedDate": "2026-11-16"
+    },
+    {
+      "url": "https://www.granvista.co.jp/news/detail/1434",
+      "title": "グランビスタ：委託先GoQSystemの不正アクセスによる影響",
+      "publishedDate": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-11",
+      "label": "不正アクセス経路を遮断、一時停止",
+      "kind": "occurrence",
+      "summary": "提供元は10時36分に遮断し10時55分にサービスを一時停止。",
+      "sourceUrl": "https://goq.co.jp/security-incident.html"
+    },
+    {
+      "date": "2026-11-12",
+      "label": "流出公表、限定再開",
+      "kind": "disclosure",
+      "summary": "外部への持ち出しを確認。接続元を限定してサービスを再開。",
+      "sourceUrl": "https://goq.co.jp/security-incident.html"
+    },
+    {
+      "date": "2026-11-13",
+      "label": "対象規模・原因を公表",
+      "kind": "update",
+      "summary": "対象店舗、注文、本人の規模をそれぞれ公表し、悪用された機能は削除。",
+      "sourceUrl": "https://goq.co.jp/security-incident-2.html"
+    },
+    {
+      "date": "2026-11-16",
+      "label": "報告手続きと影響集計の単位を説明",
+      "kind": "update",
+      "summary": "提供元は11月13日に当局への速報を提出済み。影響集計はアカウント単位。連名報告の対象は同日訂正後、漏えいの確認された全アカウント。",
+      "sourceUrl": "https://goq.co.jp/security-incident-3.html"
+    },
+    {
+      "date": "2026-11-20",
+      "label": "利用企業側の対象規模を公表",
+      "kind": "update",
+      "summary": "グランビスタは鴨川シーワールドの通販155件、神戸須磨シーワールドの通販660件を公表。人数や提供元との合算ではない。",
+      "sourceUrl": "https://www.granvista.co.jp/news/detail/1434"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "period",
+      "label": "2026年11月10～11日",
+      "note": "提供元が明記した不正アクセスの発生期間。",
+      "sourceUrl": "https://goq.co.jp/security-incident.html",
+      "reviewedDate": "2026-11-23",
+      "startDate": "2026-11-10",
+      "endDate": "2026-11-11"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "データ持ち出しの初確認日は未公表",
+      "note": "11月12日は持ち出し確認の公表日。11日の遮断・停止と初確認日は同一と断定しない。",
+      "sourceUrl": "https://goq.co.jp/security-incident.html",
+      "reviewedDate": "2026-11-23"
+    }
+  }
+}

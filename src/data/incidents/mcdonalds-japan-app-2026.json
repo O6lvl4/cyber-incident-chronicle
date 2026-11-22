@@ -1,0 +1,62 @@
+{
+  "id": "mcdonalds-japan-app-2026",
+  "company": "日本マクドナルド株式会社",
+  "title": "公式アプリのデータベースへの不正アクセスを確認",
+  "geography": "日本",
+  "announcementDate": "2026-11-20",
+  "announcementDateLabel": "公式初報公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "最初の侵入日は未公表",
+  "updatedDate": "2026-11-20",
+  "statusAsOfDate": "2026-11-20",
+  "lastVerifiedDate": "2026-11-23",
+  "impactTypes": [
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "investigating",
+  "attackMethod": {
+    "label": "不正アクセスに使用された認証情報を無効化。認証情報の入手経路は未公表",
+    "status": "confirmed"
+  },
+  "summary": "公式アプリのデータベースの一部の顧客関連情報への第三者の不正アクセスを確認。購入履歴、顧客管理用ID、IPアドレス、サービス提供時に用いた端末位置情報が対象。外部流出の有無・件数と攻撃時期は公表本文で特定できず。",
+  "affectedData": [
+    "商品購入履歴、システム上の顧客管理用ID、IPアドレス、サービス提供時の端末位置情報（不正アクセス対象）"
+  ],
+  "counts": [],
+  "caveats": [
+    "顧客管理用IDは単体で顧客を識別できず、アプリ会員IDやメールアドレスとは異なる。アプリに登録する氏名・メールアドレス・電話番号・住所・クレジットカード情報は対象外。",
+    "不正アクセスが確認された情報の列挙であり、外部持ち出しを確認したとの記載はない。アプリ等の不正利用は確認されていない。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.mcdonalds.co.jp/company/info/261120a/",
+      "title": "日本マクドナルド：公式アプリのデータベースへの不正アクセス",
+      "publishedDate": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-20",
+      "label": "アクセス確認を公表",
+      "kind": "disclosure",
+      "summary": "不正アクセス対象と対象外情報を公表。使用された認証情報の無効化や調査などを進めている。",
+      "sourceUrl": "https://www.mcdonalds.co.jp/company/info/261120a/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "不正アクセスの時期は未公表",
+      "note": "11月20日は公式公表日。アクセスの時期は公表資料に明示がない。",
+      "sourceUrl": "https://www.mcdonalds.co.jp/company/info/261120a/",
+      "reviewedDate": "2026-11-23"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "外部流出の初確認日は未公表",
+      "note": "不正アクセス対象は公表されたが、外部流出の確認は公表本文に記載されていない。",
+      "sourceUrl": "https://www.mcdonalds.co.jp/company/info/261120a/",
+      "reviewedDate": "2026-11-23"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "schoo-swing-2026",
+  "company": "株式会社Schoo",
+  "title": "学習管理システムSchoo Swingへの不正アクセスと情報漏えい",
+  "geography": "日本",
+  "announcementDate": "2026-11-19",
+  "announcementDateLabel": "公式初報公表日",
+  "occurredDate": "2026-11-14",
+  "occurredDateLabel": "公式に示された不正アクセス日",
+  "detectedDate": "2026-11-14",
+  "updatedDate": "2026-11-19",
+  "statusAsOfDate": "2026-11-19",
+  "lastVerifiedDate": "2026-11-23",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak",
+    "outage"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "体験用の共通アカウントを悪用してログイン後、サービスのアクセス制御の不備を悪用",
+    "status": "confirmed"
+  },
+  "summary": "11月14日未明に不正アクセスが発生。体験用の共通アカウントでのログイン後、学校間のアクセス制御の不備を悪用されたと公表。教員9名と77校の代表者77名分の流出を確認。一部の学校情報の書き換えは復元済み。5時30分から18時56分まで停止し、当日再開。",
+  "affectedData": [
+    "1校の教員9名の氏名、メールアドレス等",
+    "77校の代表者名、学校所在地・電話番号"
+  ],
+  "counts": [
+    {
+      "value": 86,
+      "unit": "名",
+      "status": "confirmed",
+      "label": "会社発表の計86名分（教員9名・代表者77名）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "ログイン用パスワード、受講者情報、授業データは漏えい対象外と会社が説明。一部学校情報の書き換えは復元済み。",
+    "11月18日公表の別件「Schoo」の外部委託先経由の事案と区別。"
+  ],
+  "sources": [
+    {
+      "url": "https://tdnet-pdf.kabutan.jp/20261119/140120261119583325.pdf",
+      "title": "Schoo：表題公表と別紙本文（同日付の発行会社適時開示PDF、配信ミラー）",
+      "publishedDate": "2026-11-19"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-14",
+      "label": "不正アクセスを検知、停止・再開",
+      "kind": "occurrence",
+      "summary": "当日5時30分に停止。修正等を実施し18時56分に再開。",
+      "sourceUrl": "https://tdnet-pdf.kabutan.jp/20261119/140120261119583325.pdf"
+    },
+    {
+      "date": "2026-11-19",
+      "label": "漏えい確認を公表",
+      "kind": "disclosure",
+      "summary": "教員・学校代表者の計86名分の漏えい、学校情報の一部書き換えを公表。",
+      "sourceUrl": "https://tdnet-pdf.kabutan.jp/20261119/140120261119583325.pdf"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年11月14日",
+      "note": "11月14日未明に第三者アクセスを受けたと公表。",
+      "sourceUrl": "https://tdnet-pdf.kabutan.jp/20261119/140120261119583325.pdf",
+      "reviewedDate": "2026-11-23",
+      "startDate": "2026-11-14"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "情報流出を初めて確認した日は未公表",
+      "note": "11月19日は情報流出確認の公表日。11月14日は不正アクセスの検知・停止日。",
+      "sourceUrl": "https://tdnet-pdf.kabutan.jp/20261119/140120261119583325.pdf",
+      "reviewedDate": "2026-11-23"
+    }
+  }
+}

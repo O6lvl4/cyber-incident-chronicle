@@ -1,0 +1,75 @@
+{
+  "id": "ill-saas-test-2026",
+  "company": "株式会社アイル",
+  "title": "SaaSの開発・検証環境に不正アクセス、情報漏えいを確認",
+  "geography": "日本",
+  "announcementDate": "2026-11-22",
+  "announcementDateLabel": "公式初報公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "最初の侵入日は未公表",
+  "detectedDate": "2026-11-18",
+  "updatedDate": "2026-11-22",
+  "statusAsOfDate": "2026-11-22",
+  "lastVerifiedDate": "2026-11-23",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入経路は未公表",
+    "status": "unknown"
+  },
+  "summary": "11月18日にSaaSの開発・検証環境で不正アクセスと情報取得を確認。検証データに加え、一部の実在する会員・注文情報や外部連携用認証情報が対象。本番環境への侵入は確認されず、各本番サービスは通常稼働。対象件数は精査中。",
+  "affectedData": [
+    "検証用のデータ・アカウント情報と開発・検証担当者情報",
+    "外部取引先担当者情報、連携テスト等に含まれた会員情報・注文情報",
+    "外部データ連携のAPI認証情報の一部"
+  ],
+  "counts": [],
+  "caveats": [
+    "11月10日公表のCROSS POINT事案とは無関係と会社が明記。",
+    "検証環境に本番由来の情報が含まれたことと、本番環境そのものへの侵入は区別。認証情報の無効化・再発行・再設定は進行中と公表。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.ill.co.jp/info/261122/",
+      "title": "アイル：SaaS系サービスの検証環境への不正アクセスと情報漏えい",
+      "publishedDate": "2026-11-22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-18",
+      "label": "検証環境で不正アクセス・情報取得を確認",
+      "kind": "occurrence",
+      "summary": "対象の検証サーバーを停止し、通信を遮断。",
+      "sourceUrl": "https://www.ill.co.jp/info/261122/"
+    },
+    {
+      "date": "2026-11-22",
+      "label": "漏えいの公表",
+      "kind": "disclosure",
+      "summary": "実データ等が一部含まれ、本番システムへの侵入は確認されていない。件数は精査中。",
+      "sourceUrl": "https://www.ill.co.jp/info/261122/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026年11月18日",
+      "note": "検証環境への第三者アクセスが行われたと会社が記載。初期侵入経路の全容は未公表。",
+      "sourceUrl": "https://www.ill.co.jp/info/261122/",
+      "reviewedDate": "2026-11-23",
+      "startDate": "2026-11-18"
+    },
+    "damageConfirmed": {
+      "precision": "day",
+      "label": "2026年11月18日",
+      "note": "同日付の説明で一部情報が外部に取得されたことを確認。",
+      "sourceUrl": "https://www.ill.co.jp/info/261122/",
+      "reviewedDate": "2026-11-23",
+      "startDate": "2026-11-18"
+    }
+  }
+}
