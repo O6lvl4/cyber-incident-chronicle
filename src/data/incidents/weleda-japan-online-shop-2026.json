@@ -1,0 +1,115 @@
+{
+  "id": "weleda-japan-online-shop-2026",
+  "company": "株式会社ヴェレダ・ジャパン",
+  "title": "ヴェレダ公式オンラインショップで個人情報とカード情報に漏えいの可能性",
+  "geography": "日本",
+  "announcementDate": "2026-11-24",
+  "announcementDateLabel": "公式告知日",
+  "occurredDate": null,
+  "occurredDateLabel": "不正アクセスの開始時期は未公表",
+  "detectedDate": "2026-06-30",
+  "updatedDate": "2026-11-24",
+  "statusAsOfDate": "2026-11-24",
+  "lastVerifiedDate": "2026-11-25",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "outage",
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "公式発表はシステムの一部の脆弱性を突いた不正アクセスと改ざんを報告",
+    "status": "confirmed"
+  },
+  "summary": "第三者の不正アクセスと改ざんを公表。オンラインショップの個人情報198,792件、カード決済者45,689名のカード情報に漏えいの可能性。決済は7月3日から、サイトは8月19日から一時停止。",
+  "affectedData": [
+    "会員・非会員注文者・配送先の情報。項目は登録状況による。",
+    "カード名義、番号、有効期限、セキュリティコード。"
+  ],
+  "counts": [
+    {
+      "value": 198792,
+      "unit": "件",
+      "status": "possible",
+      "label": "個人情報の漏えい可能性（公表本文の単位）",
+      "approximate": false
+    },
+    {
+      "value": 45689,
+      "unit": "名",
+      "status": "possible",
+      "label": "カード情報の漏えい可能性のある決済者",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "入力・利用対象期間は2021年10月1日～2026年6月30日。侵入期間とは区別。",
+    "カード決済者と他の個人情報の対象は重複しうるため、合算しない。いずれも漏えい確定数ではない。",
+    "2027年3月頃の再開は目標で、再開済みではない。"
+  ],
+  "sources": [
+    {
+      "url": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html",
+      "title": "ヴェレダ・ジャパン公式告知",
+      "publishedDate": "2026-11-24"
+    },
+    {
+      "url": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/202611_faq.html",
+      "title": "ヴェレダ公式Q&A",
+      "publishedDate": "2026-11-24"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-30",
+      "label": "警視庁から連絡",
+      "kind": "occurrence",
+      "summary": "不正アクセスの可能性について連絡を受けた。",
+      "sourceUrl": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html"
+    },
+    {
+      "date": "2026-07-03",
+      "label": "カード決済を停止",
+      "kind": "occurrence",
+      "summary": "公式オンラインショップのクレジットカード決済を停止。",
+      "sourceUrl": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html"
+    },
+    {
+      "date": "2026-08-19",
+      "label": "ショップを一時停止",
+      "kind": "occurrence",
+      "summary": "個人情報の漏えい懸念を調査するためサイトを停止。",
+      "sourceUrl": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html"
+    },
+    {
+      "date": "2026-08-29",
+      "label": "調査機関が調査完了",
+      "kind": "occurrence",
+      "summary": "漏えい懸念の対象となる期間と情報の種類を特定。",
+      "sourceUrl": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html"
+    },
+    {
+      "date": "2026-11-24",
+      "label": "漏えいの可能性を公表",
+      "kind": "disclosure",
+      "summary": "個人情報の件数とカード決済対象者を公表。",
+      "sourceUrl": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "攻撃開始日は未公表",
+      "note": "利用対象期間は攻撃期間ではない。",
+      "sourceUrl": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html",
+      "reviewedDate": "2026-11-25"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "情報流出の初確認日は未公表",
+      "note": "対象人数の特定は流出確定ではない。",
+      "sourceUrl": "https://weleda-notice-static-apne1.s3.ap-northeast-1.amazonaws.com/news/20261116.html",
+      "reviewedDate": "2026-11-25"
+    }
+  }
+}
