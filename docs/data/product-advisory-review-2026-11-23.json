@@ -1,0 +1,112 @@
+{
+  "reportDateJst": "2026-11-23",
+  "checkedAt": "2026-11-22T21:10:36Z",
+  "baseCommit": "7e920ebeedf1853374cbb24f6cdbe9ad42cc0149",
+  "scope": "前回確認（11月22日JST）との重複期間を設け、11月17日以降の公式一覧と保留候補を再確認。収録根拠は独立に確認し、今回の2記録は公開元のCriticalで採録。すべてのメーカー・既存レコード・集約告知内の全製品を確認したものではない。",
+  "recordsBefore": 84,
+  "recordsAfter": 86,
+  "addedRecords": 2,
+  "updatedRecords": 0,
+  "added": [
+    "SSA-710379",
+    "CHROME-DESKTOP-158-2026-11-17"
+  ],
+  "updated": [],
+  "sources": [
+    {
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "status": "unchanged",
+      "interpretation": "一覧最新は11月20日の既知のPHP続報。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    },
+    {
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "status": "unchanged",
+      "interpretation": "一覧最新は11月20日の既知のPHP告知。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    },
+    {
+      "url": "https://jvn.jp/",
+      "status": "unchanged",
+      "interpretation": "最終更新11月20日。未確認だった個別・集約告知を一部再確認した。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU98354779/index.html",
+      "status": "ok",
+      "interpretation": "月次集約は11月20日更新。ここから確認したMendixを、開発元CNAのCriticalに基づき収録。他の個別告知は部分確認。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    },
+    {
+      "url": "https://jvn.jp/vu/JVNVU92814490/index.html",
+      "status": "ok",
+      "interpretation": "11月20日のICS集約告知。CISAのOpenPLC・Elecbrakes個別本文はHTTP 403。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    },
+    {
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "status": "failed",
+      "interpretation": "HTTP 403。従前の直接取得成功点を維持。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/9c564f4dfa6dab393748a3b37038cde6a11b3585/known_exploited_vulnerabilities.json",
+      "status": "partially-confirmed",
+      "interpretation": "同一2026.11.20版、1790件のミラー。件数と先頭の差分を確認、全件機械照合なし。現行検証に必要なcisa.gov直接取得の代わりにはしない。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    },
+    {
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-710379.html",
+      "status": "ok",
+      "interpretation": "開発元本文とCNA 2件の範囲・対処・CVSSを確認。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    },
+    {
+      "url": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01699533288.html?amp=1",
+      "status": "ok",
+      "interpretation": "AMP版で公式本文とプラットフォーム別修正版、全6 Critical CVEの開発元CNAを照合。",
+      "checkedAt": "2026-11-22T21:10:36Z"
+    }
+  ],
+  "pendingCandidates": [
+    {
+      "id": "CVE-2026-113347",
+      "status": "held",
+      "url": "https://jvn.jp/jp/JVN28897261/index.html",
+      "reason": "Ruijieの7機種の修正版とJPCERT CNAのHighを確認。通常のJVN掲載に加えて方針上の独立した根拠を確認できず保留。"
+    },
+    {
+      "id": "CVE-2026-101113",
+      "status": "held",
+      "url": "https://www.elecom.co.jp/news/security/20261117-01/",
+      "reason": "エレコムの3機種の修正版2.2.3以降とJPCERT CNAのHighを確認。通常のJVN掲載に加えて方針上の独立した根拠を確認できず保留。"
+    },
+    {
+      "id": "CVE-2026-114938",
+      "status": "already-listed",
+      "url": "https://www.adobe.com/trust/security/products/animate/apsb26-208.html",
+      "reason": "Adobe Animate 2027の27.0.1、2024の24.0.16が依存するOracle JDKの対策を含む。既存Oracle製品の対象別記録と混同せず、重複するCVEを追加しない。"
+    },
+    {
+      "id": "JVNVU92814490",
+      "status": "held",
+      "reason": "OpenPLC・Elecbrakesの個別CISA本文はHTTP 403。libumqttはライブラリ候補で製品の記録に含めない。"
+    },
+    {
+      "id": "JVNVU98354779",
+      "status": "partially-confirmed",
+      "reason": "Mendixを収録、Femap等のHighのみの候補は独立収録根拠なし。他の個別告知は全件照合未完了。"
+    },
+    {
+      "id": "CVE-2025-42884 / CVE-2024-10441",
+      "status": "held",
+      "reason": "前回のSAP/Synologyの候補は固定ミラー掲載のまま。直接CISA本文の取得なし。"
+    },
+    {
+      "id": "PHP-NOV2026-SECURITY-REMAINING / NGINX-NOV2026-REMAINING",
+      "status": "held",
+      "reason": "前回から保留。残りの個別最新版・収録根拠の全照合は未完了。"
+    }
+  ],
+  "checkpointPolicy": "製品・ランタイムを独立点検。CISA直接取得点と未検証候補の既存成功点を保持し、取得失敗や未調査を変更なしとしない。"
+}

@@ -1,0 +1,200 @@
+{
+  "checkedDate": "2026-11-23",
+  "timezone": "Asia/Tokyo",
+  "baseCommit": "7e920ebeedf1853374cbb24f6cdbe9ad42cc0149",
+  "status": "verified-selection-with-unreviewed-candidates",
+  "overlap": {
+    "previousAudit": "docs/data/corporate-review-2026-11-22.json",
+    "overlapFromUTC": "2026-11-15T00:00:00Z",
+    "policy": "前回基準から重ねて11月16～23日JSTの企業公表・続報を検索。一部の遡及資料（Payどん、GoQSystem）を追加確認。全件巡回ではない。"
+  },
+  "baselineIncidentCount": 307,
+  "addedIncidentCount": 6,
+  "updatedIncidentCount": 3,
+  "resultIncidentCount": 313,
+  "records": [
+    {
+      "id": "ill-saas-test-2026",
+      "action": "added",
+      "summary": "11月18日にSaaSの開発・検証環境で不正アクセスと情報取得を確認。検証データに加え、一部の実在する会員・注文情報や外部連携用認証情報が対象。本番環境への侵入は確認されず、各本番サービスは通常稼働。対象件数は精査中。"
+    },
+    {
+      "id": "bestco-education-system-2026",
+      "action": "added",
+      "summary": "11月20日に利用システムへの第三者の不正アクセスを確認。学習塾の在籍歴がある顧客情報最大50,196件、過去問い合わせ情報最大95,937件に漏えいの可能性。外部専門機関と調査を継続。"
+    },
+    {
+      "id": "mcdonalds-japan-app-2026",
+      "action": "added",
+      "summary": "公式アプリのデータベースの一部の顧客関連情報への第三者の不正アクセスを確認。購入履歴、顧客管理用ID、IPアドレス、サービス提供時に用いた端末位置情報が対象。外部流出の有無・件数と攻撃時期は公表本文で特定できず。"
+    },
+    {
+      "id": "schoo-swing-2026",
+      "action": "added",
+      "summary": "11月14日未明に不正アクセスが発生。体験用の共通アカウントでのログイン後、学校間のアクセス制御の不備を悪用されたと公表。教員9名と77校の代表者77名分の流出を確認。一部の学校情報の書き換えは復元済み。5時30分から18時56分まで停止し、当日再開。"
+    },
+    {
+      "id": "mitsui-shopping-park-app-2026",
+      "action": "added",
+      "summary": "11月18日に三井ショッピングパークアプリへの不正アクセスを確認し、同アプリを一時停止。停止前にポイント会員情報の一部が漏えいしたことを同日確認。人数・件数を調査中。公式通販サイト等は通常営業を継続。"
+    },
+    {
+      "id": "goqsystem-order-data-2026",
+      "action": "added",
+      "summary": "11月10～11日にGoQSystemへ不正アクセスがあり、注文データの一部の持ち出しを確認。第2報は対象店舗・企業1,694（第3報で集計はアカウント単位と説明）、注文4,984,595件、本人4,367,390名。11日に一時停止し、緊急対策後に接続元を限定して再開。"
+    },
+    {
+      "id": "arara-paydon-mail-2026",
+      "action": "updated",
+      "summary": "Payどん運営側の11月10日公表を追補。アドレス125,972件、委託先変更・通知内容の縮小と17時の再開目処を、アララ提供元の状況と区別。"
+    },
+    {
+      "id": "infcurion-wallet-station-2026",
+      "action": "updated",
+      "summary": "11月20日の顧客側公表2本。Payどんの全停止・下流公表件数とジャックスの2サービス停止を、提供元の全体値・再開状況および各社の漏えい確度と分けた。"
+    },
+    {
+      "id": "plaid-karte-2026",
+      "action": "updated",
+      "summary": "既存の11月20日提供元報告に加え、東京ガスの利用企業側での確認日（11月16日）と件数調査中を別の経過として追補。"
+    }
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://www.ill.co.jp/info/261122/",
+      "title": "アイル：SaaS系サービスの検証環境への不正アクセスと情報漏えい",
+      "publishedDate": "2026-11-22",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://bestco.jp/news/74/",
+      "title": "ベストコ：不正アクセスによる個人情報漏洩の可能性",
+      "publishedDate": "2026-11-21",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://united.jp/news/info/post_170.html",
+      "title": "ユナイテッド：連結子会社ベストコの不正アクセスに関する発表",
+      "publishedDate": "2026-11-21",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.mcdonalds.co.jp/company/info/261120a/",
+      "title": "日本マクドナルド：公式アプリのデータベースへの不正アクセス",
+      "publishedDate": "2026-11-20",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://corp.schoo.jp/post/0bDA5P_w",
+      "title": "Schoo：Schoo Swingへの不正アクセスに関する公式掲載",
+      "publishedDate": "2026-11-19",
+      "status": "verified-title-body-unavailable",
+      "method": "official page title only; same-day issuer disclosure attachment verified separately"
+    },
+    {
+      "url": "https://tdnet-pdf.kabutan.jp/20261119/140120261119583325.pdf",
+      "title": "Schoo：表題公表と別紙本文（同日付の発行会社適時開示PDF、配信ミラー）",
+      "publishedDate": "2026-11-19",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.mf-shogyo.co.jp/pdf/info-20261119-94.pdf",
+      "title": "三井不動産商業マネジメント／三井不動産：ポイント会員情報漏えいとアプリ停止",
+      "publishedDate": "2026-11-19",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://goq.co.jp/security-incident.html",
+      "title": "GoQSystem：注文情報の持ち出し確認（第1報）",
+      "publishedDate": "2026-11-12",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://goq.co.jp/security-incident-2.html",
+      "title": "GoQSystem：対象規模と今後の対応（第2報）",
+      "publishedDate": "2026-11-13",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.granvista.co.jp/news/detail/1434",
+      "title": "グランビスタ：委託先GoQSystemの不正アクセスによる影響",
+      "publishedDate": "2026-11-20",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://paydon.jp/2026/11/10/newsrelease20261110",
+      "title": "Payどん：メールアドレスの対象件数、委託先変更と通知再開の目処",
+      "publishedDate": "2026-11-10",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://paydon.jp/2026/11/20/newsrelease20261120",
+      "title": "Payどん：Wallet Stationの不正アクセスによる漏えい報告と全サービス停止",
+      "publishedDate": "2026-11-20",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.jaccs.co.jp/information/emerge/page_01212.html",
+      "title": "ジャックス：SPLIE・ハウスPayの一時停止",
+      "publishedDate": "2026-11-20",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://www.tokyo-gas.co.jp/news/press/20261120-01.html",
+      "title": "東京ガス：外部サービスKARTE経由のお客さま情報の流出",
+      "publishedDate": "2026-11-20",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://goq.co.jp/security-incident-3.html",
+      "title": "GoQSystem：影響範囲のアカウント単位と個人情報保護委員会への連名報告（第3報、訂正注記あり）",
+      "publishedDate": "2026-11-16",
+      "status": "verified-body",
+      "method": "web open"
+    },
+    {
+      "url": "https://goq.co.jp/security-incident-3-correction.html",
+      "title": "GoQSystem：連名報告の対象を全影響アカウントへ訂正",
+      "publishedDate": "2026-11-16",
+      "status": "verified-body",
+      "method": "web source linked from official third report"
+    },
+    {
+      "url": "https://www.release.tdnet.info/inbs/140120261119583325.pdf",
+      "title": "Schoo：同日付の発行会社適時開示PDFの原配信先",
+      "publishedDate": "2026-11-19",
+      "status": "access-failed",
+      "method": "web open failed; issuer PDF obtained via the distribution mirror"
+    }
+  ],
+  "heldCandidates": [
+    "オープングループ：11/18時点のBizRobo! miniとその他サーバーの公式本文確認（https://open-group.co.jp/info/2026/11/202611-unauthorized-access/?type=news）。収録時点の影響・追加資料・分類は未精査。",
+    "佐川急便：手荷物一時預かりWeb事前予約の第7報（https://www2.sagawa-exp.co.jp/information/detail/438/）を確認候補としたが、当該URLの本文取得は不十分。既存のお荷物問い合わせサービスとは別と明記された部分を、新規事案の根拠が確定する前に当該既存事案へ統合しない。",
+    "理化学研究所：富岳・理究の11/16初報と11/20第2報の候補を確認（https://www.riken.jp/pr/news/2026/20261120_1/index.html）。研究機関の収録範囲とアクセス痕跡・外部持出しの区別を別途精査。",
+    "COMSBI（SaaS版）・別のエンタープライズ基盤、Notion委託先国内影響、KARTEの他利用企業について一部の公表を確認したが、今回の掲載対象の全体照合は未完了。単一提供元事案を利用企業ごとに分割しない。",
+    "GoQSystemの11/12・13・16・同日の訂正と利用企業側の11/20本文を確認。提供元トップにある11/20案内の本文とその他利用企業の全発表は未確認。",
+    "Payどん公式お知らせ、インフキュリオン公式トップ、ヌーラボのCacoo続報一覧の取得範囲では、最終収録後の再開を確認できる新しい全体発表を特定していない。掲載時点の実稼働確認ではない。"
+  ],
+  "retentionPolicy": "一次資料の公表・確認・攻撃の各日付を分け、対象者・件数・会社と確認・可能性を区別。取得できなかった本文や未精査候補を成功扱いにしない。",
+  "validation": {
+    "status": "corporate-records-validated",
+    "checks": [
+      "企業データと日付の参照整合性",
+      "対象法人リンクと攻撃分類の整合性"
+    ],
+    "publicationGate": "全件検証・CI・公開確認は別途実施。"
+  }
+}

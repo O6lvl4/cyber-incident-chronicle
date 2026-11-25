@@ -10,7 +10,7 @@
   "detectedDate": "2026-11-19",
   "updatedDate": "2026-11-21",
   "statusAsOfDate": "2026-11-21",
-  "lastVerifiedDate": "2026-11-22",
+  "lastVerifiedDate": "2026-11-23",
   "impactTypes": [
     "leak",
     "outage",
@@ -40,7 +40,8 @@
   "caveats": [
     "最大約25万件は提供先サービスを横断する個人情報の会社公表上限で、対象者の一意人数ではない。",
     "11月21日時点で再開は点検済みで漏えい対象外の提供先から順次。全提供先の再開ではない。",
-    "脆弱性対策は公表されたが具体的な初期侵入経路・手法は公表資料から特定しない。"
+    "脆弱性対策は公表されたが具体的な初期侵入経路・手法は公表資料から特定しない。",
+    "Payどん運営側の251,172件と提供元の最大約25万件は公表主体・精度が異なり、重複・算定方法は未公表。合算せず、ユニーク人数ともみなさない。提供元の点検済み顧客からの順次再開をPayどんやジャックスの再開に外挿しない。"
   ],
   "sources": [
     {
@@ -57,6 +58,16 @@
       "url": "https://infcurion.com/news/news-20261121_001/",
       "title": "インフキュリオン：点検進捗と一部提供先の順次再開（第3報）",
       "publishedDate": "2026-11-21"
+    },
+    {
+      "url": "https://paydon.jp/2026/11/20/newsrelease20261120",
+      "title": "Payどん：Wallet Stationの不正アクセスによる漏えい報告と全サービス停止",
+      "publishedDate": "2026-11-20"
+    },
+    {
+      "url": "https://www.jaccs.co.jp/information/emerge/page_01212.html",
+      "title": "ジャックス：SPLIE・ハウスPayの一時停止",
+      "publishedDate": "2026-11-20"
     }
   ],
   "timeline": [
@@ -80,6 +91,20 @@
       "kind": "update",
       "summary": "最大約25万件と公表。影響のない提供先も緊急点検。",
       "sourceUrl": "https://infcurion.com/news/news-20261120_002/"
+    },
+    {
+      "date": "2026-11-20",
+      "label": "利用サービスの停止と個別影響を公表",
+      "kind": "update",
+      "summary": "Payどんは同日6時20分の全サービス停止と、下流での個人情報251,172件の漏えいを公表。10月のメール委託先事案とは別。",
+      "sourceUrl": "https://paydon.jp/2026/11/20/newsrelease20261120"
+    },
+    {
+      "date": "2026-11-20",
+      "label": "ジャックスの決済アプリが一時停止",
+      "kind": "update",
+      "summary": "SPLIEとハウスPayを一時停止。ジャックスの利用者情報が流出対象かは確認中。",
+      "sourceUrl": "https://www.jaccs.co.jp/information/emerge/page_01212.html"
     },
     {
       "date": "2026-11-21",

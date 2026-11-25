@@ -51,7 +51,8 @@ export default function PackageAdvisoryList({ hidden, group, positionKey, initia
   }, [selectedId, hidden, group.advisories, position.list]);
   const select = (id: string) => { rememberPackageReturn(positionKey, id); onSelect(id); };
   return <aside hidden={hidden} id="vulnerability-list-panel" role="tabpanel" aria-labelledby="vulnerability-list-panel-tab" className="incident-list vulnerability-list package-advisory-list research-list research-advisories" data-package-key={group.key} data-filtered={group.advisories.length}>
-    <div className="package-back-row"><button className="n-btn package-back" onClick={onBack}><span aria-hidden="true">←</span> パッケージ一覧に戻る</button></div>
+    <div className="package-back-row"><button className="n-btn package-back" onClick={onBack}><span aria-hidden="true">←</span> パッケージ一覧に戻る</button>
+      <span className="package-compact-count">{group.advisories.length.toLocaleString()}件のアドバイザリ</span></div>
     <div className="list-heading"><div className="package-heading"><span className="eyebrow">{group.ecosystem}</span><h2 id="package-advisory-heading" tabIndex={-1}>{group.packageName}</h2></div>
       <span className="count-badge">{group.advisories.length.toLocaleString()}<small> 件</small></span>{viewTabs}
     <p className="list-note">{group.advisories.length.toLocaleString()}件のアドバイザリ</p></div>

@@ -1,0 +1,119 @@
+{
+  "kind": "product",
+  "id": "SSA-710379",
+  "aliases": [
+    "CVE-2026-112136",
+    "CVE-2026-112137"
+  ],
+  "vendor": "Siemens",
+  "product": "Mendix Studio Pro",
+  "productKey": "mendix-studio-pro",
+  "title": "Mendix Studio ProのMCPサーバー向けセキュリティ更新",
+  "summary": "Mendix Studio ProのMCPサーバーについて、開発元が複数の脆弱性を公表した。対象系列の修正版を適用する。",
+  "publishedDate": "2026-11-10",
+  "publishedAt": null,
+  "dateSourceUrl": "https://cert-portal.siemens.com/productcert/html/ssa-710379.html",
+  "dateNote": "Siemens ProductCERTの初出日。11月16日の更新でMendix製品の告知フィードへの掲載対応を追加。更新時刻は開発元本文にない。",
+  "listedDate": "2026-11-10",
+  "listedNote": "開発元がCritical評価を公表した日。",
+  "modifiedAt": null,
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-22T21:10:36Z",
+  "affected": [
+    {
+      "name": "Mendix Studio Pro 11",
+      "affected": "11.15.0以上、11.16.0未満",
+      "fixed": "11.16.0以降",
+      "sourceUrl": "https://cert-portal.siemens.com/productcert/html/ssa-710379.html"
+    },
+    {
+      "name": "Mendix Studio Pro 11.12",
+      "affected": "11.12.6以上、11.12.7未満",
+      "fixed": "11.12.7以降",
+      "sourceUrl": "https://cert-portal.siemens.com/productcert/html/ssa-710379.html"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/112xxx/CVE-2026-112136.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 8.8,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "sourceUrl": "https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/112xxx/CVE-2026-112136.json"
+      },
+      {
+        "version": "4.0",
+        "score": 9.2,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/112xxx/CVE-2026-112136.json"
+      },
+      {
+        "version": "3.1",
+        "score": 5.4,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L",
+        "sourceUrl": "https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/112xxx/CVE-2026-112137.json"
+      },
+      {
+        "version": "4.0",
+        "score": 5.1,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/112xxx/CVE-2026-112137.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [],
+  "alertChecks": [],
+  "inclusion": [
+    "critical"
+  ],
+  "mitigations": [
+    {
+      "text": "使用中の系列に対応する修正版へ更新し、Siemensのセキュリティ推奨事項を確認する。",
+      "sourceUrl": "https://cert-portal.siemens.com/productcert/html/ssa-710379.html"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Siemens ProductCERT: SSA-710379",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-710379.html",
+      "publishedDate": "2026-11-10"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-112136：siemens CNA公開レコード",
+      "url": "https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/112xxx/CVE-2026-112136.json",
+      "publishedDate": "2026-11-10",
+      "publishedAt": "2026-11-10T11:30:41.077Z",
+      "modifiedAt": "2026-11-10T16:34:11.685Z"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "CVE-2026-112137：siemens CNA公開レコード",
+      "url": "https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/112xxx/CVE-2026-112137.json",
+      "publishedDate": "2026-11-10",
+      "publishedAt": "2026-11-10T11:30:42.179Z",
+      "modifiedAt": "2026-11-14T02:46:25.645Z"
+    }
+  ],
+  "caveats": [
+    "2 CVEを同一の開発元告知単位で集約。CriticalはCVE-2026-112136のSiemens CNAによるCVSS 4.0評価（9.2）。同CVEのCVSS 3.1は8.8 High、CVE-2026-112137は中程度で、2件ともCriticalではない。",
+    "JVNの月次集約ページを発見経路として確認したが、それ単独を注意喚起の収録理由にしていない。",
+    "CISA本体の取得はHTTP 403。現行の構造化KEV状態は不明とし、実悪用・攻撃コードの有無は判断しない。"
+  ]
+}

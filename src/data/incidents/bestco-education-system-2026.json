@@ -1,0 +1,92 @@
+{
+  "id": "bestco-education-system-2026",
+  "company": "株式会社ベストコ（ユナイテッド連結子会社）",
+  "title": "ベストコの利用システムへの不正アクセス、学習塾関連情報の漏えいの可能性",
+  "geography": "日本",
+  "announcementDate": "2026-11-21",
+  "announcementDateLabel": "公式初報公表日",
+  "occurredDate": null,
+  "occurredDateLabel": "最初の侵入日は未公表",
+  "detectedDate": "2026-11-20",
+  "updatedDate": "2026-11-21",
+  "statusAsOfDate": "2026-11-21",
+  "lastVerifiedDate": "2026-11-23",
+  "impactTypes": [
+    "unauthorizedAccess",
+    "leak"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス。具体的な侵入方法は未公表",
+    "status": "unknown"
+  },
+  "summary": "11月20日に利用システムへの第三者の不正アクセスを確認。学習塾の在籍歴がある顧客情報最大50,196件、過去問い合わせ情報最大95,937件に漏えいの可能性。外部専門機関と調査を継続。",
+  "affectedData": [
+    "在籍者・在籍歴のある顧客情報（連絡先、成績、口座情報、教育情報アプリの認証情報等）",
+    "過去問い合わせの情報。クレジットカード情報は対象外"
+  ],
+  "counts": [
+    {
+      "value": 50196,
+      "unit": "件",
+      "status": "possible",
+      "label": "在籍歴がある顧客情報の公表上限",
+      "approximate": false
+    },
+    {
+      "value": 95937,
+      "unit": "件",
+      "status": "possible",
+      "label": "過去問い合わせ情報の公表上限",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "いずれも漏えいの可能性を示す件数上限。確定人数ではなく、分類間の重複が未公表のため加算しない。",
+    "11月20日は不正アクセス確認日であり、侵入日・流出の初確認日とは断定しない。"
+  ],
+  "sources": [
+    {
+      "url": "https://bestco.jp/news/74/",
+      "title": "ベストコ：不正アクセスによる個人情報漏洩の可能性",
+      "publishedDate": "2026-11-21"
+    },
+    {
+      "url": "https://united.jp/news/info/post_170.html",
+      "title": "ユナイテッド：連結子会社ベストコの不正アクセスに関する発表",
+      "publishedDate": "2026-11-21"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-20",
+      "label": "不正アクセスを確認",
+      "kind": "occurrence",
+      "summary": "確認後、被害拡大防止措置を講じ調査を開始。",
+      "sourceUrl": "https://bestco.jp/news/74/"
+    },
+    {
+      "date": "2026-11-21",
+      "label": "漏えいの可能性を公表",
+      "kind": "disclosure",
+      "summary": "在籍関係情報と過去の問い合わせ情報のそれぞれの上限を発表。",
+      "sourceUrl": "https://bestco.jp/news/74/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "不正アクセスの開始時期は未公表",
+      "note": "11月20日は不正アクセスの確認日。対象の在籍者情報の基準日でもあるが、攻撃期間とは区別。",
+      "sourceUrl": "https://bestco.jp/news/74/",
+      "reviewedDate": "2026-11-23"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "漏えいの初確認日は未公表",
+      "note": "11月21日時点では流出の可能性。侵入の確認日を漏えいの確認日に転用しない。",
+      "sourceUrl": "https://bestco.jp/news/74/",
+      "reviewedDate": "2026-11-23"
+    }
+  }
+}

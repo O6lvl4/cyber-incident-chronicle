@@ -275,8 +275,23 @@
   .research-list .vulnerability-card .vulnerability-badges .status-badge { align-self: flex-end; padding-top: 1px; padding-bottom: 1px; }
 }
 
-/* Keep the first advisory complete on narrow phones without shrinking controls. */
+.package-compact-count { display: none; }
+
+/* Share the back row with the count on narrow phones; leave touch targets intact. */
 @media (max-width: 359px) {
-  .research-advisories > .package-back-row { padding-top: 0; }
+  .research-advisories > .package-back-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    padding-top: 0;
+  }
+  .research-advisories .package-compact-count {
+    display: block;
+    color: var(--text-sub);
+    font-size: 11px;
+    text-align: end;
+  }
   .workspace.view-list .research-list.research-advisories > .list-heading { padding-block: 2px; }
+  .research-advisories > .list-heading .list-note { display: none; }
 }
