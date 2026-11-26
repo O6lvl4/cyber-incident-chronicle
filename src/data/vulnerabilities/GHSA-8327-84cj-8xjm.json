@@ -1,0 +1,114 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-8327-84cj-8xjm",
+  "aliases": [
+    "RUSTSEC-2024-0362"
+  ],
+  "title": "Stack overflow when parsing specially crafted JSON ABI strings",
+  "summary": "alloy-json-abiの一部バージョンではABIの解析処理で異常終了が生じることがある。RustSecは0.8.0以降を修正済みと記載。",
+  "publishedAt": "2024-08-15T22:10:06Z",
+  "dateSourceUrl": "https://raw.githubusercontent.com/github/advisory-database/a67478317bed991650fe7b5d88a61d9fc6f209dd/advisories/github-reviewed/2024/08/GHSA-8327-84cj-8xjm/GHSA-8327-84cj-8xjm.json",
+  "modifiedAt": "2024-08-15T22:10:07Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-26T21:49:45Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "alloy-json-abi",
+      "ranges": [
+        {
+          "affected": "< 0.8.0",
+          "fixed": "0.8.0",
+          "sourceUrl": "https://rustsec.org/advisories/RUSTSEC-2024-0362.html"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "0.8.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "medium",
+    "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/a67478317bed991650fe7b5d88a61d9fc6f209dd/advisories/github-reviewed/2024/08/GHSA-8327-84cj-8xjm/GHSA-8327-84cj-8xjm.json",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/a67478317bed991650fe7b5d88a61d9fc6f209dd/advisories/github-reviewed/2024/08/GHSA-8327-84cj-8xjm/GHSA-8327-84cj-8xjm.json"
+      },
+      {
+        "version": "4.0",
+        "score": null,
+        "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "sourceUrl": "https://raw.githubusercontent.com/github/advisory-database/a67478317bed991650fe7b5d88a61d9fc6f209dd/advisories/github-reviewed/2024/08/GHSA-8327-84cj-8xjm/GHSA-8327-84cj-8xjm.json"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "checkedAt": null,
+    "sourceUrl": null
+  },
+  "sources": [
+    {
+      "type": "advisoryDatabase",
+      "title": "GitHub Advisory Database (pinned OSV JSON)",
+      "url": "https://raw.githubusercontent.com/github/advisory-database/a67478317bed991650fe7b5d88a61d9fc6f209dd/advisories/github-reviewed/2024/08/GHSA-8327-84cj-8xjm/GHSA-8327-84cj-8xjm.json",
+      "publishedDate": "2024-08-15",
+      "publishedAt": "2024-08-15T22:10:06Z",
+      "modifiedAt": "2024-08-15T22:10:07Z",
+      "withdrawnAt": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "Stack overflow when parsing specially crafted JSON ABI strings",
+      "url": "https://github.com/advisories/GHSA-8327-84cj-8xjm",
+      "publishedDate": "2024-08-15"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec: alloy-json-abiの修正済みバージョン",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2024-0362.html",
+      "publishedDate": "2024-07-30"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV: RustSecレコードの更新",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2024-0362",
+      "publishedDate": "2024-07-30",
+      "publishedAt": "2024-07-30T12:00:00Z",
+      "modifiedAt": "2026-11-26T08:15:02.251827019Z"
+    },
+    {
+      "type": "maintainer",
+      "title": "alloy-rs/core v0.8.0（修正コミットを含むことをタグで確認）",
+      "url": "https://github.com/alloy-rs/core/releases/tag/v0.8.0",
+      "publishedDate": "2024-08-21"
+    }
+  ],
+  "caveats": [
+    "RustSecとそのOSV原データは修正版0.8.0、旧OSVは0.7.7と記載。GitHub Reviewed固定版は影響上限0.7.7で修正版未記載。差分を保持し、RustSecの最新版を表示する。",
+    "実悪用とKEVは未確認。"
+  ],
+  "verification": {
+    "level": "mixed",
+    "sourceSnapshot": "a67478317bed991650fe7b5d88a61d9fc6f209dd",
+    "checkedAt": "2026-11-26T21:49:45Z"
+  }
+}
