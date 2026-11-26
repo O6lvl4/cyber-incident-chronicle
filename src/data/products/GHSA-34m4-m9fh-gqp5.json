@@ -1,0 +1,103 @@
+{
+  "kind": "product",
+  "id": "GHSA-34m4-m9fh-gqp5",
+  "aliases": [],
+  "vendor": "Ruby",
+  "product": "Ruby",
+  "productKey": "ruby",
+  "title": "Rubyの文字列変換でコード実行につながる脆弱性",
+  "summary": "Rubyの文字列の大文字・小文字変換に脆弱性があり、条件によって遠隔でのコード実行につながる。開発元は修正版への更新を推奨。",
+  "publishedDate": "2026-11-19",
+  "publishedAt": null,
+  "dateSourceUrl": "https://github.com/ruby/ruby/security/advisories/GHSA-34m4-m9fh-gqp5",
+  "dateNote": "個別GHSAの表示上の公開日。Rubyの複数件を扱う告知は11月18日。",
+  "listedDate": "2026-11-19",
+  "listedNote": "開発元の個別GHSAがCriticalと評価。",
+  "modifiedAt": null,
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-26T21:46:21Z",
+  "affected": [
+    {
+      "name": "Ruby 3.3系以前",
+      "affected": "<=3.3.13",
+      "fixed": "3.3.14",
+      "sourceUrl": "https://github.com/ruby/ruby/security/advisories/GHSA-34m4-m9fh-gqp5",
+      "note": "3.2以前はサポート終了で修正版の提供対象外。"
+    },
+    {
+      "name": "Ruby 3.4系",
+      "affected": ">=3.4.0 <=3.4.12",
+      "fixed": "3.4.13",
+      "sourceUrl": "https://github.com/ruby/ruby/security/advisories/GHSA-34m4-m9fh-gqp5",
+      "note": "開発元GHSAの対象範囲。"
+    },
+    {
+      "name": "Ruby 4.0系",
+      "affected": ">=4.0.0 <=4.0.9",
+      "fixed": "4.0.10",
+      "sourceUrl": "https://github.com/ruby/ruby/security/advisories/GHSA-34m4-m9fh-gqp5",
+      "note": "開発元GHSAの対象範囲。"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://github.com/ruby/ruby/security/advisories/GHSA-34m4-m9fh-gqp5",
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-26T21:46:21Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-26T21:46:21Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "critical"
+  ],
+  "mitigations": [
+    {
+      "text": "Ruby 3.3.14、3.4.13、4.0.10以降の該当系列へ更新。サポートが終了した系列はサポート対象に移行。",
+      "sourceUrl": "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Ruby開発元：文字列変換等のセキュリティ修正",
+      "url": "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/",
+      "publishedDate": "2026-11-18"
+    },
+    {
+      "type": "maintainer",
+      "title": "Ruby開発元：文字列変換の個別Critical告知",
+      "url": "https://github.com/ruby/ruby/security/advisories/GHSA-34m4-m9fh-gqp5",
+      "publishedDate": "2026-11-19"
+    }
+  ],
+  "caveats": [
+    "開発元は実証例の存在を報告しているが、公開された攻撃コードや実際の悪用の確認ではない。",
+    "個別GHSAはCVE未割り当てと記載。CVSSスコアは確認していない。",
+    "JPCERT/CC週報で言及を確認したが、独立した注意喚起の扱いにはしない。CISA正本の取得はHTTP 403。"
+  ]
+}

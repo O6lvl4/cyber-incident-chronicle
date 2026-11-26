@@ -82,24 +82,24 @@ import record78 from './attack-classifications/ms-ins-mscompass-2026.json' with 
 import record79 from './attack-classifications/ms-ins-online-services-2026.json' with { type: 'json' };
 import record80 from './attack-classifications/murauchi-2026.json' with { type: 'json' };
 import record81 from './attack-classifications/nagoya-port-nuts-2023.json' with { type: 'json' };
-import record82 from './attack-classifications/naniwa-pump-2024.json' with { type: 'json' };
-import record83 from './attack-classifications/nec-contractor-2026.json' with { type: 'json' };
-import record84 from './attack-classifications/netprotections-invoice-reissue-2026.json' with { type: 'json' };
-import record85 from './attack-classifications/nichirei-2026.json' with { type: 'json' };
-import record86 from './attack-classifications/nidec-instruments-2024.json' with { type: 'json' };
-import record87 from './attack-classifications/nidec-precision-vietnam-2024.json' with { type: 'json' };
-import record88 from './attack-classifications/nifty-line-application-2026.json' with { type: 'json' };
-import record89 from './attack-classifications/nikkei-bp-mail-phishing-2026.json' with { type: 'json' };
-import record90 from './attack-classifications/nikkei-development-cloud-2026.json' with { type: 'json' };
-import record91 from './attack-classifications/nikkei-smartclip-2022.json' with { type: 'json' };
-import record92 from './attack-classifications/nimoca-history-2026.json' with { type: 'json' };
-import record93 from './attack-classifications/nipponrentacar-app-second-2026.json' with { type: 'json' };
-import record94 from './attack-classifications/nipro-china-2023.json' with { type: 'json' };
-import record95 from './attack-classifications/nitori-group-customer-systems-2026.json' with { type: 'json' };
-import record96 from './attack-classifications/nojima-online-members-2026.json' with { type: 'json' };
-import record97 from './attack-classifications/nomura-ir-kikannavi-2026.json' with { type: 'json' };
-import record98 from './attack-classifications/notion-fireworks-japan-2026.json' with { type: 'json' };
-import record99 from './attack-classifications/nssol-2025.json' with { type: 'json' };
+import record82 from './attack-classifications/nakano-first-birthday-2026.json' with { type: 'json' };
+import record83 from './attack-classifications/naniwa-pump-2024.json' with { type: 'json' };
+import record84 from './attack-classifications/nec-contractor-2026.json' with { type: 'json' };
+import record85 from './attack-classifications/netprotections-invoice-reissue-2026.json' with { type: 'json' };
+import record86 from './attack-classifications/nichirei-2026.json' with { type: 'json' };
+import record87 from './attack-classifications/nidec-instruments-2024.json' with { type: 'json' };
+import record88 from './attack-classifications/nidec-precision-vietnam-2024.json' with { type: 'json' };
+import record89 from './attack-classifications/nifty-line-application-2026.json' with { type: 'json' };
+import record90 from './attack-classifications/nikkei-bp-mail-phishing-2026.json' with { type: 'json' };
+import record91 from './attack-classifications/nikkei-development-cloud-2026.json' with { type: 'json' };
+import record92 from './attack-classifications/nikkei-smartclip-2022.json' with { type: 'json' };
+import record93 from './attack-classifications/nimoca-history-2026.json' with { type: 'json' };
+import record94 from './attack-classifications/nipponrentacar-app-second-2026.json' with { type: 'json' };
+import record95 from './attack-classifications/nipro-china-2023.json' with { type: 'json' };
+import record96 from './attack-classifications/nitori-group-customer-systems-2026.json' with { type: 'json' };
+import record97 from './attack-classifications/nojima-online-members-2026.json' with { type: 'json' };
+import record98 from './attack-classifications/nomura-ir-kikannavi-2026.json' with { type: 'json' };
+import record99 from './attack-classifications/notion-fireworks-japan-2026.json' with { type: 'json' };
 
 export const ATTACKS_PART_2 = {
   "hi-ho-mypage-2026": record0,
@@ -184,22 +184,22 @@ export const ATTACKS_PART_2 = {
   "ms-ins-online-services-2026": record79,
   "murauchi-2026": record80,
   "nagoya-port-nuts-2023": record81,
-  "naniwa-pump-2024": record82,
-  "nec-contractor-2026": record83,
-  "netprotections-invoice-reissue-2026": record84,
-  "nichirei-2026": record85,
-  "nidec-instruments-2024": record86,
-  "nidec-precision-vietnam-2024": record87,
-  "nifty-line-application-2026": record88,
-  "nikkei-bp-mail-phishing-2026": record89,
-  "nikkei-development-cloud-2026": record90,
-  "nikkei-smartclip-2022": record91,
-  "nimoca-history-2026": record92,
-  "nipponrentacar-app-second-2026": record93,
-  "nipro-china-2023": record94,
-  "nitori-group-customer-systems-2026": record95,
-  "nojima-online-members-2026": record96,
-  "nomura-ir-kikannavi-2026": record97,
-  "notion-fireworks-japan-2026": record98,
-  "nssol-2025": record99,
+  "nakano-first-birthday-2026": record82,
+  "naniwa-pump-2024": record83,
+  "nec-contractor-2026": record84,
+  "netprotections-invoice-reissue-2026": record85,
+  "nichirei-2026": record86,
+  "nidec-instruments-2024": record87,
+  "nidec-precision-vietnam-2024": record88,
+  "nifty-line-application-2026": record89,
+  "nikkei-bp-mail-phishing-2026": record90,
+  "nikkei-development-cloud-2026": record91,
+  "nikkei-smartclip-2022": record92,
+  "nimoca-history-2026": record93,
+  "nipponrentacar-app-second-2026": record94,
+  "nipro-china-2023": record95,
+  "nitori-group-customer-systems-2026": record96,
+  "nojima-online-members-2026": record97,
+  "nomura-ir-kikannavi-2026": record98,
+  "notion-fireworks-japan-2026": record99,
 } as Record<string, AttackClassification>;

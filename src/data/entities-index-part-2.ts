@@ -86,20 +86,20 @@ import record82 from './entities/murauchi.json' with { type: 'json' };
 import record83 from './entities/nagoya-container-committee.json' with { type: 'json' };
 import record84 from './entities/nagoya-port-association.json' with { type: 'json' };
 import record85 from './entities/naito-securities.json' with { type: 'json' };
-import record86 from './entities/naniwa-pump.json' with { type: 'json' };
-import record87 from './entities/nec.json' with { type: 'json' };
-import record88 from './entities/netprotections.json' with { type: 'json' };
-import record89 from './entities/nexco-central.json' with { type: 'json' };
-import record90 from './entities/nexco-east.json' with { type: 'json' };
-import record91 from './entities/nexco-west.json' with { type: 'json' };
-import record92 from './entities/nichirei.json' with { type: 'json' };
-import record93 from './entities/nidec-instruments.json' with { type: 'json' };
-import record94 from './entities/nidec-precision-vietnam.json' with { type: 'json' };
-import record95 from './entities/nifty.json' with { type: 'json' };
-import record96 from './entities/nikkei-bp.json' with { type: 'json' };
-import record97 from './entities/nikkei-media-marketing.json' with { type: 'json' };
-import record98 from './entities/nikkei.json' with { type: 'json' };
-import record99 from './entities/nimoca.json' with { type: 'json' };
+import record86 from './entities/nakano-ward.json' with { type: 'json' };
+import record87 from './entities/naniwa-pump.json' with { type: 'json' };
+import record88 from './entities/nec.json' with { type: 'json' };
+import record89 from './entities/netprotections.json' with { type: 'json' };
+import record90 from './entities/nexco-central.json' with { type: 'json' };
+import record91 from './entities/nexco-east.json' with { type: 'json' };
+import record92 from './entities/nexco-west.json' with { type: 'json' };
+import record93 from './entities/nichirei.json' with { type: 'json' };
+import record94 from './entities/nidec-instruments.json' with { type: 'json' };
+import record95 from './entities/nidec-precision-vietnam.json' with { type: 'json' };
+import record96 from './entities/nifty.json' with { type: 'json' };
+import record97 from './entities/nikkei-bp.json' with { type: 'json' };
+import record98 from './entities/nikkei-media-marketing.json' with { type: 'json' };
+import record99 from './entities/nikkei.json' with { type: 'json' };
 
 export const ENTITIES_PART_2 = {
   "hanshin-expressway": record0,
@@ -188,18 +188,18 @@ export const ENTITIES_PART_2 = {
   "nagoya-container-committee": record83,
   "nagoya-port-association": record84,
   "naito-securities": record85,
-  "naniwa-pump": record86,
-  "nec": record87,
-  "netprotections": record88,
-  "nexco-central": record89,
-  "nexco-east": record90,
-  "nexco-west": record91,
-  "nichirei": record92,
-  "nidec-instruments": record93,
-  "nidec-precision-vietnam": record94,
-  "nifty": record95,
-  "nikkei-bp": record96,
-  "nikkei-media-marketing": record97,
-  "nikkei": record98,
-  "nimoca": record99,
+  "nakano-ward": record86,
+  "naniwa-pump": record87,
+  "nec": record88,
+  "netprotections": record89,
+  "nexco-central": record90,
+  "nexco-east": record91,
+  "nexco-west": record92,
+  "nichirei": record93,
+  "nidec-instruments": record94,
+  "nidec-precision-vietnam": record95,
+  "nifty": record96,
+  "nikkei-bp": record97,
+  "nikkei-media-marketing": record98,
+  "nikkei": record99,
 } as Record<string, EntityClassification>;

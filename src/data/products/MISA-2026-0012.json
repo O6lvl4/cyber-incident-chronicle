@@ -1,0 +1,95 @@
+{
+  "kind": "product",
+  "id": "MISA-2026-0012",
+  "aliases": [
+    "CVE-2026-133275",
+    "CVE-2026-133303",
+    "CVE-2026-133311",
+    "CVE-2026-133323",
+    "CVE-2026-133324"
+  ],
+  "vendor": "Mitel",
+  "product": "MiCollab",
+  "productKey": "mitel-micollab",
+  "title": "Mitel MiCollabの複数の脆弱性",
+  "summary": "MiCollabの会議機能に複数の脆弱性。開発元はうち2件をCriticalとし、パッチ適用または後続版への更新を案内。",
+  "publishedDate": "2026-11-16",
+  "publishedAt": null,
+  "dateSourceUrl": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012",
+  "dateNote": "開発元告知の初版は11月16日。11月24日の改訂ではCVE番号を更新。",
+  "listedDate": "2026-11-16",
+  "listedNote": "開発元のCritical評価を根拠に収録。",
+  "modifiedAt": null,
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-26T21:46:21Z",
+  "affected": [
+    {
+      "name": "MiCollab",
+      "affected": "10.3 (10.3.0.18) 以前",
+      "fixed": "10.3 (10.3.0.18) + Mitel提供パッチ、または後続版",
+      "sourceUrl": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012",
+      "note": "10.3.0.18単体では修正済みではない。"
+    }
+  ],
+  "severity": {
+    "label": "critical",
+    "sourceUrl": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012",
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": 10.0,
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+        "sourceUrl": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-26T21:46:21Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-26T21:46:21Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "critical"
+  ],
+  "mitigations": [
+    {
+      "text": "10.3.0.18に提供パッチを適用するか後続版へ更新。すぐ適用できない場合は会議機能への外部アクセスを制限。",
+      "sourceUrl": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Mitel Product Security Advisory MISA-2026-0012",
+      "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2026-0012",
+      "publishedDate": "2026-11-16"
+    }
+  ],
+  "caveats": [
+    "CVSS 3.1の10.0はCVE-2026-133323の評価。CVE-2026-133303は9.0、他3件はMedium。",
+    "CISA正本の取得はHTTP 403。11月25日版公式ミラーには5件の掲載があるが、構造化したKEVと実悪用の欄は未確認のまま保持。"
+  ]
+}
