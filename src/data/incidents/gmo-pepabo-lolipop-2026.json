@@ -1,0 +1,111 @@
+{
+  "id": "gmo-pepabo-lolipop-2026",
+  "company": "GMOペパボ",
+  "geography": "日本",
+  "title": "ロリポップ！と関連サービスで顧客情報漏えい",
+  "announcementDate": "2026-11-27",
+  "updatedDate": "2026-11-27",
+  "statusAsOfDate": "2026-11-27",
+  "lastVerifiedDate": "2026-11-28",
+  "occurredDate": null,
+  "occurredDateLabel": "発生日時は未公表",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス（侵入手法は未確認）",
+    "status": "unknown"
+  },
+  "summary": "11月24日に内部システムの異常を検知し、調査によりデータ分析基盤経由で顧客情報の持ち出しを確認。対象はロリポップ！と関連3サービスの516,564件。",
+  "affectedData": [
+    "氏名、郵便番号、都道府県、メールアドレス、一部の生年月日",
+    "一部利用者の初期FTP・WebDAV／ユーザー専用ページ認証情報とBasic認証情報"
+  ],
+  "counts": [
+    {
+      "value": 516564,
+      "unit": "件",
+      "status": "possible",
+      "label": "4サービスの公表対象範囲",
+      "approximate": false
+    },
+    {
+      "value": 8322,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "仮設定FTP・WebDAVパスワード（部分範囲）",
+      "approximate": false
+    },
+    {
+      "value": 4170,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "ムームードメイン経由契約の初期ログインパスワード（部分範囲）",
+      "approximate": false
+    },
+    {
+      "value": 105608,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "Basic認証情報（部分範囲）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "対象件数は流出確認のある事案の調査対象範囲であり、ユニーク利用者数や全項目の流出件数ではない。認証情報の部分範囲は合算しない。",
+    "カード・銀行口座情報は対象外。Webサイトのファイル・メールデータ等への影響はFAQ時点で調査中。"
+  ],
+  "sources": [
+    {
+      "url": "https://pepabo.com/news/information/202611271430/",
+      "title": "GMOペパボ：顧客情報の漏えいに関する公表",
+      "publishedDate": "2026-11-27"
+    },
+    {
+      "url": "https://lolipop.jp/info/news/8279/",
+      "title": "ロリポップ！：対象範囲とFAQ",
+      "publishedDate": "2026-11-27"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-24",
+      "label": "内部システムの不正アクセスを検知",
+      "kind": "update",
+      "summary": "同日にアクセスを遮断し関連認証情報を無効化。",
+      "sourceUrl": "https://pepabo.com/news/information/202611271430/"
+    },
+    {
+      "date": "2026-11-25",
+      "label": "対象パスワードをリセット",
+      "kind": "update",
+      "summary": "総務省へ報告。",
+      "sourceUrl": "https://pepabo.com/news/information/202611271430/"
+    },
+    {
+      "date": "2026-11-27",
+      "label": "漏えいを公表",
+      "kind": "disclosure",
+      "summary": "個別通知と公式発表を実施。",
+      "sourceUrl": "https://pepabo.com/news/information/202611271430/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "検知日を攻撃日として代用しない。",
+      "sourceUrl": "https://pepabo.com/news/information/202611271430/",
+      "reviewedDate": "2026-11-28"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "漏えい自体の初確認日は特定できない。検知・公表・可能性判明とは区別。",
+      "sourceUrl": "https://pepabo.com/news/information/202611271430/",
+      "reviewedDate": "2026-11-28"
+    }
+  }
+}

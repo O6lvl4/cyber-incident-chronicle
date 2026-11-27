@@ -7,9 +7,9 @@
   "announcementDateLabel": "収録した公式公表日",
   "occurredDate": null,
   "occurredDateLabel": "攻撃開始日未公表",
-  "updatedDate": "2026-11-17",
-  "statusAsOfDate": "2026-11-17",
-  "lastVerifiedDate": "2026-11-21",
+  "updatedDate": "2026-11-25",
+  "statusAsOfDate": "2026-11-25",
+  "lastVerifiedDate": "2026-11-28",
   "impactTypes": [
     "leak",
     "unauthorizedAccess",
@@ -34,6 +34,20 @@
       "status": "confirmed",
       "label": "キリンホールディングスが漏えいを確認した対象者のみ",
       "approximate": false
+    },
+    {
+      "value": 110,
+      "unit": "名",
+      "status": "possible",
+      "label": "オプロの対象会話記録に含まれる人",
+      "approximate": false
+    },
+    {
+      "value": 126,
+      "unit": "社",
+      "status": "possible",
+      "label": "オプロの対象会話記録に含まれる会社（氏名のない企業を含む）",
+      "approximate": false
     }
   ],
   "caveats": [
@@ -41,7 +55,8 @@
     "LegalOn製品の顧客保存契約書・認証情報は対象外。リバスタは第三者の閲覧・取得の事実を未確認。両社の対象件数は不明で合算しない。",
     "通知受領日はリバスタ11月10日、LegalOn11月11日。国内企業の公表に限定した選択収録で、全利用企業を網羅しない。",
     "産経新聞社はシステム関連情報の流出可能性を調査中。会員個人情報の漏えい確認や対象件数の公表ではない。",
-    "260名はキリンホールディングスの部分範囲。ほかの利用企業の漏えい確認や対象人数を意味しない。同社の対象チャット記録期間10月5〜24日は攻撃期間ではない。"
+    "260名はキリンホールディングスの部分範囲。ほかの利用企業の漏えい確認や対象人数を意味しない。同社の対象チャット記録期間10月5〜24日は攻撃期間ではない。",
+    "オプロの部分範囲は110名・126社。訓練データではなく利用状況分析のため送信された記録。認証情報・住所・電話番号・カード情報は対象に含まれないと同社が確認。"
   ],
   "sources": [
     {
@@ -63,6 +78,11 @@
       "url": "https://info.kirinholdings.com/faq_detail.html?id=122842",
       "title": "キリンホールディングス：Notion AI再委託先事案で260名の情報漏えいを確認",
       "publishedDate": "2026-11-17"
+    },
+    {
+      "url": "https://corp.opro.net/news/2026/11/cloud-service-notice.html",
+      "title": "オプロ：Notion AI委託先経由の漏えいのおそれ",
+      "publishedDate": "2026-11-25"
     }
   ],
   "timeline": [
@@ -93,6 +113,13 @@
       "kind": "update",
       "summary": "11月13日にNotion社の通知を受け同社の漏えいを確認。対象260名。",
       "sourceUrl": "https://info.kirinholdings.com/faq_detail.html?id=122842"
+    },
+    {
+      "date": "2026-11-25",
+      "label": "オプロ：Notion AI委託先経由の漏えいのおそれ",
+      "kind": "update",
+      "summary": "10月5〜24日の一部会話記録に顧客等の情報を含むことを確認。11月24日から個別連絡。内容の対象確認と外部漏えいの確定を区別。",
+      "sourceUrl": "https://corp.opro.net/news/2026/11/cloud-service-notice.html"
     }
   ],
   "eventDates": {

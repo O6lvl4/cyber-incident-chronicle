@@ -1,0 +1,97 @@
+{
+  "id": "thinca-internal-systems-2026",
+  "company": "シンカ",
+  "geography": "日本",
+  "title": "シンカ社内業務システムで漏えい5,286件を確認",
+  "announcementDate": "2026-11-26",
+  "updatedDate": "2026-11-26",
+  "statusAsOfDate": "2026-11-26",
+  "lastVerifiedDate": "2026-11-28",
+  "occurredDate": "2026-10-27",
+  "occurredDateLabel": "2026-10-27（確認された開始日）",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "confirmed",
+  "attackMethod": {
+    "label": "第三者による不正アクセス（侵入手法は未確認）",
+    "status": "unknown"
+  },
+  "summary": "社内業務システムへの不正アクセスは10月27日から。11月21日のセキュリティ点検で異常を検知。データ5,286件の漏えいを確認した。",
+  "affectedData": [
+    "社内業務システムの一部データ。個人情報に該当するものを含む。"
+  ],
+  "counts": [
+    {
+      "value": 5286,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "確認された漏えいデータ総数",
+      "approximate": false
+    },
+    {
+      "value": 4777,
+      "unit": "件",
+      "status": "confirmed",
+      "label": "うち個人情報に該当するデータ",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "8〜9月の運営サイト事案との関連をシンカは否定。点検強化を通じて発見したという経緯とは区別。",
+    "公表時点でカイクラへの不正アクセスや同サービスの登録顧客情報・会話録音の漏えいは確認されていない。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.thinca.co.jp/news/incident1126/",
+      "title": "シンカ：社内業務システムへの不正アクセス",
+      "publishedDate": "2026-11-26"
+    },
+    {
+      "url": "https://www.thinca.co.jp/news/owabi/",
+      "title": "シンカ：漏えい件数に関するお詫び",
+      "publishedDate": "2026-11-26"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-27",
+      "label": "社内業務システムへの不正アクセス開始",
+      "kind": "occurrence",
+      "summary": "同社調査でこの日からのアクセスを確認。",
+      "sourceUrl": "https://www.thinca.co.jp/news/incident1126/"
+    },
+    {
+      "date": "2026-11-21",
+      "label": "点検で異常を検知",
+      "kind": "update",
+      "summary": "社内業務システムに対するアクセスを調査。",
+      "sourceUrl": "https://www.thinca.co.jp/news/incident1126/"
+    },
+    {
+      "date": "2026-11-26",
+      "label": "影響範囲を公表",
+      "kind": "disclosure",
+      "summary": "漏えい5,286件、うち個人情報4,777件。",
+      "sourceUrl": "https://www.thinca.co.jp/news/incident1126/"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "day",
+      "label": "2026-10-27",
+      "note": "発表本文における不正アクセス開始日。",
+      "sourceUrl": "https://www.thinca.co.jp/news/incident1126/",
+      "reviewedDate": "2026-11-28",
+      "startDate": "2026-10-27"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "漏えい自体の初確認日は特定できない。検知・公表・可能性判明とは区別。",
+      "sourceUrl": "https://www.thinca.co.jp/news/incident1126/",
+      "reviewedDate": "2026-11-28"
+    }
+  }
+}

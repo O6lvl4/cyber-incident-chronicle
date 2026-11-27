@@ -1,0 +1,94 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-6xqm-2982-gvrm",
+  "aliases": [
+    "RUSTSEC-2026-0603"
+  ],
+  "title": "dryocのX25519公開鍵入力検証の問題",
+  "summary": "RustSecはdryocの1.0.0未満を影響範囲、1.0.0以降を修正済みと記載。利用中の版を確認し、修正版への更新を検討。",
+  "publishedAt": "2026-11-16T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0603",
+  "modifiedAt": "2026-11-27T10:45:03.327197436Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-27T22:03:04Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "dryoc",
+      "ranges": [
+        {
+          "affected": "< 1.0.0",
+          "fixed": "1.0.0",
+          "sourceUrl": "https://rustsec.org/advisories/RUSTSEC-2026-0603.html"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "1.0.0"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "unknown",
+    "sourceUrl": null,
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+        "sourceUrl": "https://rustsec.org/advisories/RUSTSEC-2026-0603.html"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "dryoc v1.0.0 (開発元のリリース)",
+      "url": "https://github.com/brndnmtthws/dryoc/releases/tag/v1.0.0",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec: RUSTSEC-2026-0603",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0603.html",
+      "publishedDate": "2026-11-16"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec固定スナップショット",
+      "url": "https://github.com/RustSec/advisory-db/blob/c5279d0b0c9e8b70df666eb6d1edbabcfd1176bd/crates/dryoc/RUSTSEC-2026-0603.md",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV: RUSTSEC-2026-0603",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0603",
+      "publishedDate": "2026-11-16",
+      "publishedAt": "2026-11-16T12:00:00Z",
+      "modifiedAt": "2026-11-27T10:45:03.327197436Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日時はRustSecのOSVレコード。実悪用とKEVは未確認。"
+  ]
+}

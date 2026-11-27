@@ -93,13 +93,13 @@ import record89 from './entities/ginpo-pack.json' with { type: 'json' };
 import record90 from './entities/glory.json' with { type: 'json' };
 import record91 from './entities/gmo-internet.json' with { type: 'json' };
 import record92 from './entities/gmo-payment-gateway.json' with { type: 'json' };
-import record93 from './entities/gmo-research-ai.json' with { type: 'json' };
-import record94 from './entities/gmo-trustlogin-unidentified.json' with { type: 'json' };
-import record95 from './entities/golf-digest-online.json' with { type: 'json' };
-import record96 from './entities/goodsmile-official-shop.json' with { type: 'json' };
-import record97 from './entities/goqsystem.json' with { type: 'json' };
-import record98 from './entities/greenmonster.json' with { type: 'json' };
-import record99 from './entities/hana-cupid.json' with { type: 'json' };
+import record93 from './entities/gmo-pepabo.json' with { type: 'json' };
+import record94 from './entities/gmo-research-ai.json' with { type: 'json' };
+import record95 from './entities/gmo-trustlogin-unidentified.json' with { type: 'json' };
+import record96 from './entities/golf-digest-online.json' with { type: 'json' };
+import record97 from './entities/goodsmile-official-shop.json' with { type: 'json' };
+import record98 from './entities/goqsystem.json' with { type: 'json' };
+import record99 from './entities/greenmonster.json' with { type: 'json' };
 
 export const ENTITIES_PART_1 = {
   "2rinkan-yellowhat": record0,
@@ -195,11 +195,11 @@ export const ENTITIES_PART_1 = {
   "glory": record90,
   "gmo-internet": record91,
   "gmo-payment-gateway": record92,
-  "gmo-research-ai": record93,
-  "gmo-trustlogin-unidentified": record94,
-  "golf-digest-online": record95,
-  "goodsmile-official-shop": record96,
-  "goqsystem": record97,
-  "greenmonster": record98,
-  "hana-cupid": record99,
+  "gmo-pepabo": record93,
+  "gmo-research-ai": record94,
+  "gmo-trustlogin-unidentified": record95,
+  "golf-digest-online": record96,
+  "goodsmile-official-shop": record97,
+  "goqsystem": record98,
+  "greenmonster": record99,
 } as Record<string, EntityClassification>;

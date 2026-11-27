@@ -1,0 +1,84 @@
+{
+  "id": "mext-procurement-2026",
+  "company": "文部科学省",
+  "geography": "日本",
+  "title": "政府調達情報システムへの不正アクセスで事業者情報に漏えいのおそれ",
+  "announcementDate": "2026-11-25",
+  "updatedDate": "2026-11-25",
+  "statusAsOfDate": "2026-11-25",
+  "lastVerifiedDate": "2026-11-28",
+  "occurredDate": null,
+  "occurredDateLabel": "発生日時は未公表",
+  "impactTypes": [
+    "leak",
+    "unauthorizedAccess"
+  ],
+  "disclosureStatus": "possible",
+  "attackMethod": {
+    "label": "第三者による不正アクセス（侵入手法は未確認）",
+    "status": "unknown"
+  },
+  "summary": "10月1日、政府調達情報システムを構成するサーバーへの第三者による不正アクセスを検知。外部専門機関との調査により、保管情報に漏えいの可能性が判明した。",
+  "affectedData": [
+    "メールアドレス",
+    "事業者の会社名および代表者氏名等"
+  ],
+  "counts": [
+    {
+      "value": 1778,
+      "unit": "件",
+      "status": "possible",
+      "label": "メールアドレス（最大）",
+      "approximate": false
+    },
+    {
+      "value": 163953,
+      "unit": "件",
+      "status": "possible",
+      "label": "会社名・代表者氏名等（最大）",
+      "approximate": false
+    }
+  ],
+  "caveats": [
+    "別項目の上限を合算せず、確定件数や人数としない。公表時点で不特定多数への公開や不正利用は未確認。"
+  ],
+  "sources": [
+    {
+      "url": "https://www.mext.go.jp/a_menu/mext_00012.html",
+      "title": "文部科学省：不正アクセスによる情報漏えいの可能性",
+      "publishedDate": "2026-11-25"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-01",
+      "label": "第三者の不正アクセス検知",
+      "kind": "update",
+      "summary": "検知日は開始日と区別。",
+      "sourceUrl": "https://www.mext.go.jp/a_menu/mext_00012.html"
+    },
+    {
+      "date": "2026-11-25",
+      "label": "漏えいの可能性を公表",
+      "kind": "disclosure",
+      "summary": "当該システムの内外通信を遮断済み。個人情報保護委員会へ報告。",
+      "sourceUrl": "https://www.mext.go.jp/a_menu/mext_00012.html"
+    }
+  ],
+  "eventDates": {
+    "attack": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "検知日を攻撃日として代用しない。",
+      "sourceUrl": "https://www.mext.go.jp/a_menu/mext_00012.html",
+      "reviewedDate": "2026-11-28"
+    },
+    "damageConfirmed": {
+      "precision": "unknown",
+      "label": "未公表・不明",
+      "note": "漏えい自体の初確認日は特定できない。検知・公表・可能性判明とは区別。",
+      "sourceUrl": "https://www.mext.go.jp/a_menu/mext_00012.html",
+      "reviewedDate": "2026-11-28"
+    }
+  }
+}
