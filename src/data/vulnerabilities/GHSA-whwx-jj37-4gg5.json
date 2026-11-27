@@ -1,0 +1,94 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-whwx-jj37-4gg5",
+  "aliases": [
+    "RUSTSEC-2026-0601"
+  ],
+  "title": "wstsの鍵生成処理における入力検証の問題",
+  "summary": "RustSecはwstsの15.0.1未満を影響範囲、15.0.1以降を修正済みと記載。利用中の版を確認し、修正版への更新を検討。",
+  "publishedAt": "2026-11-26T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0601",
+  "modifiedAt": "2026-11-27T10:45:03.331670300Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-27T22:03:04Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "wsts",
+      "ranges": [
+        {
+          "affected": "< 15.0.1",
+          "fixed": "15.0.1",
+          "sourceUrl": "https://rustsec.org/advisories/RUSTSEC-2026-0601.html"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "15.0.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "unknown",
+    "sourceUrl": null,
+    "cvss": [
+      {
+        "version": "3.1",
+        "score": null,
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:H/A:H",
+        "sourceUrl": "https://rustsec.org/advisories/RUSTSEC-2026-0601.html"
+      }
+    ]
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "wsts v15.0.1 (開発元のリリース)",
+      "url": "https://github.com/xoloki/wsts/releases/tag/v15.0.1",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec: RUSTSEC-2026-0601",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0601.html",
+      "publishedDate": "2026-11-26"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec固定スナップショット",
+      "url": "https://github.com/RustSec/advisory-db/blob/c5279d0b0c9e8b70df666eb6d1edbabcfd1176bd/crates/wsts/RUSTSEC-2026-0601.md",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV: RUSTSEC-2026-0601",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0601",
+      "publishedDate": "2026-11-26",
+      "publishedAt": "2026-11-26T12:00:00Z",
+      "modifiedAt": "2026-11-27T10:45:03.331670300Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日時はRustSecのOSVレコード。実悪用とKEVは未確認。"
+  ]
+}

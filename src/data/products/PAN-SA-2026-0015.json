@@ -1,0 +1,92 @@
+{
+  "kind": "product",
+  "id": "PAN-SA-2026-0015",
+  "aliases": [
+    "CVE-2026-46300"
+  ],
+  "vendor": "Palo Alto Networks",
+  "product": "PAN-OS",
+  "productKey": "palo-alto-pan-os",
+  "title": "Palo Alto NetworksがPAN-OSで観測された悪用への対処を案内",
+  "summary": "開発元はPAN-OSでの悪用を観測し、更新と管理用アクセスの制限を案内。",
+  "publishedDate": "2026-11-25",
+  "publishedAt": "2026-11-25T00:10:00.000Z",
+  "dateSourceUrl": "https://security.paloaltonetworks.com/PAN-SA-2026-0015",
+  "dateNote": "見出しの公表日は11月25日、履歴欄の初版と更新表示は11月24日。見出しの日付を採用。",
+  "listedDate": "2026-11-25",
+  "listedNote": "開発元による観測済みの悪用報告で収録。",
+  "modifiedAt": "2026-11-25T01:43:57.913Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-27T22:01:05Z",
+  "affected": [
+    {
+      "name": "PAN-OS",
+      "affected": "開発元告知に全影響版の範囲は未列挙",
+      "fixed": "10.2.7-h41／10.2.10-h45／10.2.13-h29／10.2.16-h14／10.2.18-h15、11.1.4-h40／11.1.6-h42／11.1.7-h14／11.1.10-h38／11.1.13-h18／11.1.16-h6、11.2.4-h25／11.2.7-h25／11.2.10-h19／11.2.13-h6／11.2.16-h3、12.1.4-h15／12.1.7-h15／12.1.10-h6、12.2.4-h3、および後続版",
+      "sourceUrl": "https://security.paloaltonetworks.com/PAN-SA-2026-0015",
+      "note": "ホットフィックスは版系列ごとに開発元一覧と照合。"
+    }
+  ],
+  "severity": {
+    "label": "unknown",
+    "sourceUrl": null,
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "reported",
+    "sourceUrl": "https://security.paloaltonetworks.com/PAN-SA-2026-0015"
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "poc": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "alerts": [],
+  "alertChecks": [
+    {
+      "issuer": "JPCERT/CC",
+      "url": "https://www.jpcert.or.jp/at/2026.html",
+      "checkedAt": "2026-11-27T22:01:05Z",
+      "result": "notFound"
+    },
+    {
+      "issuer": "IPA",
+      "url": "https://www.ipa.go.jp/security/security-alert/2026/index.html",
+      "checkedAt": "2026-11-27T22:01:05Z",
+      "result": "notFound"
+    }
+  ],
+  "inclusion": [
+    "exploited"
+  ],
+  "mitigations": [
+    {
+      "text": "管理インターフェースへのアクセスを信頼済み内部IPに制限し、対応する修正版へ更新。",
+      "sourceUrl": "https://security.paloaltonetworks.com/PAN-SA-2026-0015"
+    }
+  ],
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "Palo Alto Networks PAN-SA-2026-0015",
+      "url": "https://security.paloaltonetworks.com/PAN-SA-2026-0015",
+      "publishedDate": "2026-11-25"
+    },
+    {
+      "type": "maintainer",
+      "title": "Palo Alto Networks: PAN-SA-2026-0015 CSAF",
+      "url": "https://security.paloaltonetworks.com/csaf/PAN-SA-2026-0015",
+      "publishedDate": "2026-11-25",
+      "publishedAt": "2026-11-25T00:10:00.000Z",
+      "modifiedAt": "2026-11-25T01:43:57.913Z"
+    }
+  ],
+  "caveats": [
+    "製品告知の評価はInformational。LinuxカーネルのCVSSをPAN-OSの評価として転用しない。",
+    "ここでの実悪用はベンダーの観測報告。個別組織の事故の証拠ではない。"
+  ]
+}

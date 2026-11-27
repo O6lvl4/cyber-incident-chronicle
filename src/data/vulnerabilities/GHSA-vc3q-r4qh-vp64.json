@@ -1,0 +1,87 @@
+{
+  "kind": "vulnerability",
+  "id": "GHSA-vc3q-r4qh-vp64",
+  "aliases": [
+    "RUSTSEC-2026-0602"
+  ],
+  "title": "dryocのEd25519鍵ペア入力検証の問題",
+  "summary": "RustSecはdryocの2.0.1未満を影響範囲、2.0.1以降を修正済みと記載。利用中の版を確認し、修正版への更新を検討。",
+  "publishedAt": "2026-11-16T12:00:00Z",
+  "dateSourceUrl": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0602",
+  "modifiedAt": "2026-11-27T10:45:03.336131361Z",
+  "withdrawnAt": null,
+  "lastVerifiedAt": "2026-11-27T22:03:04Z",
+  "affected": [
+    {
+      "ecosystem": "rust",
+      "packageName": "dryoc",
+      "ranges": [
+        {
+          "affected": "< 2.0.1",
+          "fixed": "2.0.1",
+          "sourceUrl": "https://rustsec.org/advisories/RUSTSEC-2026-0602.html"
+        }
+      ],
+      "rawRanges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0-0"
+            },
+            {
+              "fixed": "2.0.1"
+            }
+          ]
+        }
+      ],
+      "explicitVersions": []
+    }
+  ],
+  "severity": {
+    "label": "unknown",
+    "sourceUrl": null,
+    "cvss": []
+  },
+  "exploitation": {
+    "status": "unknown",
+    "sourceUrl": null
+  },
+  "kev": {
+    "status": "unknown",
+    "sourceUrl": null,
+    "checkedAt": null
+  },
+  "sources": [
+    {
+      "type": "maintainer",
+      "title": "dryoc v2.0.1 (開発元のリリース)",
+      "url": "https://github.com/brndnmtthws/dryoc/releases/tag/v2.0.1",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec: RUSTSEC-2026-0602",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0602.html",
+      "publishedDate": "2026-11-16"
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "RustSec固定スナップショット",
+      "url": "https://github.com/RustSec/advisory-db/blob/c5279d0b0c9e8b70df666eb6d1edbabcfd1176bd/crates/dryoc/RUSTSEC-2026-0602.md",
+      "publishedDate": null
+    },
+    {
+      "type": "advisoryDatabase",
+      "title": "OSV: RUSTSEC-2026-0602",
+      "url": "https://api.osv.dev/v1/vulns/RUSTSEC-2026-0602",
+      "publishedDate": "2026-11-16",
+      "publishedAt": "2026-11-16T12:00:00Z",
+      "modifiedAt": "2026-11-27T10:45:03.336131361Z",
+      "withdrawnAt": null
+    }
+  ],
+  "caveats": [
+    "公表・更新日時はRustSecのOSVレコード。実悪用とKEVは未確認。"
+  ]
+}

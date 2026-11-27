@@ -92,14 +92,14 @@ import record88 from './attack-classifications/ginpo-pack-2023.json' with { type
 import record89 from './attack-classifications/glory-2023.json' with { type: 'json' };
 import record90 from './attack-classifications/gmo-infoq-2026.json' with { type: 'json' };
 import record91 from './attack-classifications/gmo-onamae-desktop-2026.json' with { type: 'json' };
-import record92 from './attack-classifications/gmo-pg-lifecard-issuing-2026.json' with { type: 'json' };
-import record93 from './attack-classifications/gmo-trustlogin-public-storage-2026.json' with { type: 'json' };
-import record94 from './attack-classifications/goodsmile-official-shop-2026.json' with { type: 'json' };
-import record95 from './attack-classifications/goqsystem-order-data-2026.json' with { type: 'json' };
-import record96 from './attack-classifications/greenmonster-fxnavi-2026.json' with { type: 'json' };
-import record97 from './attack-classifications/hana-cupid-member-system-2026.json' with { type: 'json' };
-import record98 from './attack-classifications/harada-beer-engawa-2026.json' with { type: 'json' };
-import record99 from './attack-classifications/helpfeel-gyazo-2026.json' with { type: 'json' };
+import record92 from './attack-classifications/gmo-pepabo-lolipop-2026.json' with { type: 'json' };
+import record93 from './attack-classifications/gmo-pg-lifecard-issuing-2026.json' with { type: 'json' };
+import record94 from './attack-classifications/gmo-trustlogin-public-storage-2026.json' with { type: 'json' };
+import record95 from './attack-classifications/goodsmile-official-shop-2026.json' with { type: 'json' };
+import record96 from './attack-classifications/goqsystem-order-data-2026.json' with { type: 'json' };
+import record97 from './attack-classifications/greenmonster-fxnavi-2026.json' with { type: 'json' };
+import record98 from './attack-classifications/hana-cupid-member-system-2026.json' with { type: 'json' };
+import record99 from './attack-classifications/harada-beer-engawa-2026.json' with { type: 'json' };
 
 export const ATTACKS_PART_1 = {
   "2rinkan-2026": record0,
@@ -194,12 +194,12 @@ export const ATTACKS_PART_1 = {
   "glory-2023": record89,
   "gmo-infoq-2026": record90,
   "gmo-onamae-desktop-2026": record91,
-  "gmo-pg-lifecard-issuing-2026": record92,
-  "gmo-trustlogin-public-storage-2026": record93,
-  "goodsmile-official-shop-2026": record94,
-  "goqsystem-order-data-2026": record95,
-  "greenmonster-fxnavi-2026": record96,
-  "hana-cupid-member-system-2026": record97,
-  "harada-beer-engawa-2026": record98,
-  "helpfeel-gyazo-2026": record99,
+  "gmo-pepabo-lolipop-2026": record92,
+  "gmo-pg-lifecard-issuing-2026": record93,
+  "gmo-trustlogin-public-storage-2026": record94,
+  "goodsmile-official-shop-2026": record95,
+  "goqsystem-order-data-2026": record96,
+  "greenmonster-fxnavi-2026": record97,
+  "hana-cupid-member-system-2026": record98,
+  "harada-beer-engawa-2026": record99,
 } as Record<string, AttackClassification>;
